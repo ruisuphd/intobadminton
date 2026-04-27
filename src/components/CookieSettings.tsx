@@ -1,0 +1,178 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useConsent } from "@/context/ConsentContext";
+
+export function CookieSettings() {
+  const { consent, settingsOpen, closeSettings, saveConsent } = useConsent();
+  const [draft, setDraft] = useState(consent);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!settingsOpen) return;
+    /* eslint-disable react-hooks/set-state-in-effect -- sync draft when dialog opens */
+    setDraft(consent);
+    /* eslint-enable react-hooks/set-state-in-effect */
+    window.setTimeout(() => closeRef.current?.focus(), 0);
+  }, [settingsOpen, consent]);
+
+  if (!settingsOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-end bg-black/40 p-4 backdrop-blur-sm sm:items-center sm:justify-center"
+      role="presentation"
+    >
+      <section
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cookie-settings-title"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-zinc-200 bg-[var(--surface)] p-6 shadow-2xl dark:border-zinc-700"
+      >
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h2
+              id="cookie-settings-title"
+              className="text-2xl font-semibold tracking-tight text-[var(--text)]"
+            >
+              Cookie settings
+            </h2>
+            <p className="mt-2 text-sm text-[var(--color-muted)]">
+              Necessary storage keeps the finder, compare list, theme, and local
+              review drafts working. Analytics and advertising are optional.
+            </p>
+          </div>
+          <button
+            ref={closeRef}
+            type="button"
+            onClick={closeSettings}
+            className="rounded-full border border-zinc-300 px-3 py-1 text-sm dark:border-zinc-600"
+          >
+            Close
+          </button>
+        </div>
+
+        <div className="mt-6 space-y-4">
+          <PreferenceRow
+            title="Necessary"
+            description="Required for local settings, profile, compare, and consent records."
+            checked
+            disabled
+            onChange={() => undefined}
+          />
+          <PreferenceRow
+            title="Analytics"
+            description="GA4 usage and Core Web Vitals measurement."
+            checked={draft.analytics}
+            onChange={(analytics) => setDraft((d) => ({ ...d, analytics }))}
+          />
+          <PreferenceRow
+            title="Advertising"
+            description="AdSense ad loading and ad measurement."
+            checked={draft.ads && !draft.doNotSellShare}
+            disabled={draft.doNotSellShare}
+            onChange={(ads) => setDraft((d) => ({ ...d, ads }))}
+          />
+          <PreferenceRow
+            title="Personalization"
+            description="Personalized ads where lawful and supported by a certified CMP."
+            checked={draft.personalization && !draft.doNotSellShare}
+            disabled={draft.doNotSellShare || !draft.ads}
+            onChange={(personalization) =>
+              setDraft((d) => ({ ...d, personalization }))
+            }
+          />
+          <PreferenceRow
+            title="Do Not Sell or Share"
+            description="CCPA/CPRA-style opt-out from sale/share or targeted advertising."
+            checked={draft.doNotSellShare}
+            onChange={(doNotSellShare) =>
+              setDraft((d) => ({
+                ...d,
+                doNotSellShare,
+                ads: doNotSellShare ? false : d.ads,
+                personalization: doNotSellShare ? false : d.personalization,
+              }))
+            }
+          />
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <button
+            type="button"
+            onClick={() =>
+              saveConsent({
+                analytics: draft.analytics,
+                ads: draft.ads,
+                personalization: draft.personalization,
+                doNotSellShare: draft.doNotSellShare,
+              })
+            }
+            className="rounded-2xl bg-[var(--color-accent)] px-5 py-3 text-sm font-medium text-white"
+          >
+            Save preferences
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              saveConsent({
+                analytics: false,
+                ads: false,
+                personalization: false,
+                doNotSellShare: true,
+              })
+            }
+            className="rounded-2xl border border-zinc-300 px-5 py-3 text-sm dark:border-zinc-600"
+          >
+            Reject non-essential
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function PreferenceRow({
+  title,
+  description,
+  checked,
+  disabled,
+  onChange,
+}: {
+  title: string;
+  description: string;
+  checked: boolean;
+  disabled?: boolean;
+  onChange: (checked: boolean) => void;
+}) {
+  return (
+    <label className="flex items-start justify-between gap-5 rounded-2xl border border-zinc-200 p-4 dark:border-zinc-700">
+      <span>
+        <span className="block font-medium text-[var(--text)]">{title}</span>
+        <span className="mt-1 block text-sm text-[var(--color-muted)]">
+          {description}
+        </span>
+      </span>
+      <input
+        type="checkbox"
+        checked={checked}
+        disabled={disabled}
+        onChange={(e) => onChange(e.target.checked)}
+        className="mt-1 h-5 w-5"
+      />
+    </label>
+  );
+}
+
+export function CookieSettingsLink() {
+  const { openSettings } = useConsent();
+  return (
+    <button
+      type="button"
+      onClick={openSettings}
+      className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+    >
+      Cookie settings
+    </button>
+  );
+}

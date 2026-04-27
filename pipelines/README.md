@@ -12,6 +12,10 @@ This directory holds **future** jobs for Tier A–B ingestion. The MVP ships a s
 | `sentiment/themes.ts` | Optional: theme labels from licensed review text (post-MVP). |
 | `rag/` | Optional: index only corpora you own or have permission to host. |
 
+## Data model
+
+See [docs/INGESTION_MODEL.md](../docs/INGESTION_MODEL.md) and `src/lib/types/evidence.ts`.
+
 ## Running
 
 Wire `npm run ingest` (not added in MVP) to your CI or a scheduled worker **after** legal review of each connector.

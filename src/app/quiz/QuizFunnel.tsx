@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { trackEvent } from "@/components/Analytics";
 import {
   DISCIPLINES,
   FOOT_WIDTH,
@@ -48,9 +49,21 @@ export function QuizFunnel() {
     [step]
   );
 
+  useEffect(() => {
+    if (step === 0) trackEvent("quiz_start", { category: "racket" });
+  }, [step]);
+
   const next = () => {
+    trackEvent("quiz_step_complete", { step: step + 1 });
     if (step < STEPS - 1) setStep((s) => s + 1);
-    else router.push("/results/");
+    else {
+      trackEvent("quiz_complete", {
+        level: profile.level ?? "unknown",
+        discipline: profile.discipline ?? "unknown",
+        category: profile.category ?? "unknown",
+      });
+      router.push("/results/");
+    }
   };
 
   const back = () => {

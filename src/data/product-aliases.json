@@ -1,0 +1,59 @@
+[
+  {
+    "productId": "yy-nanoflare-1000z",
+    "canonicalName": "Yonex Nanoflare 1000Z",
+    "brandAliases": ["Yonex", "YY", "尤尼克斯"],
+    "modelAliases": ["Nanoflare 1000Z", "NF1000Z", "疾光1000Z"],
+    "languages": ["en", "zh", "ja"],
+    "notes": "Normalize posts that use model abbreviation or Chinese series nickname."
+  },
+  {
+    "productId": "yy-astrox-100zz",
+    "canonicalName": "Yonex Astrox 100ZZ",
+    "brandAliases": ["Yonex", "YY", "尤尼克斯"],
+    "modelAliases": ["Astrox 100ZZ", "AX100ZZ", "天斧100ZZ"],
+    "languages": ["en", "zh", "ja"]
+  },
+  {
+    "productId": "yy-astrox-99-pro",
+    "canonicalName": "Yonex Astrox 99 Pro",
+    "brandAliases": ["Yonex", "YY", "尤尼克斯"],
+    "modelAliases": ["Astrox 99 Pro", "AX99 Pro", "天斧99 Pro"],
+    "languages": ["en", "zh", "ja"]
+  },
+  {
+    "productId": "yy-arcsaber-11-pro",
+    "canonicalName": "Yonex Arcsaber 11 Pro",
+    "brandAliases": ["Yonex", "YY", "尤尼克斯"],
+    "modelAliases": ["Arcsaber 11 Pro", "Arc 11 Pro", "ARC11P", "弓箭11 Pro"],
+    "languages": ["en", "zh", "ja"]
+  },
+  {
+    "productId": "vic-thruster-ryuga-ii",
+    "canonicalName": "Victor Thruster Ryuga II",
+    "brandAliases": ["Victor", "胜利", "VICTOR"],
+    "modelAliases": ["Thruster Ryuga II", "TK Ryuga II", "龙牙二代", "龙牙2"],
+    "languages": ["en", "zh", "ja"]
+  },
+  {
+    "productId": "vic-auraspeed-90k-ii",
+    "canonicalName": "Victor Auraspeed 90K II",
+    "brandAliases": ["Victor", "胜利", "VICTOR"],
+    "modelAliases": ["Auraspeed 90K II", "ARS-90K II", "极速90K II"],
+    "languages": ["en", "zh", "ja"]
+  },
+  {
+    "productId": "li-3d-calibar-900b",
+    "canonicalName": "Li-Ning 3D Calibar 900B",
+    "brandAliases": ["Li-Ning", "李宁", "LN"],
+    "modelAliases": ["3D Calibar 900B", "Calibar 900B", "3D风刃900B"],
+    "languages": ["en", "zh"]
+  },
+  {
+    "productId": "li-halbertec-8000",
+    "canonicalName": "Li-Ning Halbertec 8000",
+    "brandAliases": ["Li-Ning", "李宁", "LN"],
+    "modelAliases": ["Halbertec 8000", "战戟8000"],
+    "languages": ["en", "zh"]
+  }
+]

@@ -21,6 +21,15 @@ export default function AboutPage() {
           affiliate links. Suggestions are informational; always verify specs
           on official sites and try gear in person when you can.
         </p>
+        <h2 className="pt-4 text-xl font-semibold text-[var(--text)]">
+          Commercial disclosure
+        </h2>
+        <p>
+          Ads may appear on the site through Google AdSense or another ad
+          network. Future outbound retailer links may be affiliate links. Paid
+          placement must be labelled separately and must not silently override
+          the recommendation score.
+        </p>
       </div>
     </main>
   );
