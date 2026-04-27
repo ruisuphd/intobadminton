@@ -1,0 +1,11 @@
+{
+  "description": "Example manufacturer row shape before mapping to RacketProduct",
+  "example": {
+    "brand": "Sample",
+    "model": "Demo X",
+    "head_weight_g": 88,
+    "balance_mm": 295,
+    "shaft_flex": "stiff",
+    "weight_class": "4U"
+  }
+}
