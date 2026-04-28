@@ -24,7 +24,10 @@ function pushReason(
 }
 
 function styleHeadPreference(styles: PlayStyle[]): "heavy" | "light" | "even" {
-  if (styles.some((s) => ["offensive", "smash_heavy", "front_court"].includes(s)))
+  if (styles.includes("front_court") && !styles.includes("smash_heavy")) {
+    return "light";
+  }
+  if (styles.some((s) => ["offensive", "smash_heavy"].includes(s)))
     return "heavy";
   if (styles.includes("defensive") && !styles.some((s) => s === "offensive")) {
     return "light";
@@ -190,7 +193,11 @@ function scoreBody(
 
 function buildSourceChips(p: RacketProduct): { type: SourceChip; label: string; href?: string }[] {
   const chips: { type: SourceChip; label: string; href?: string }[] = [
-    { type: "manufacturer_spec", label: "Manufacturer / catalog basis" },
+    {
+      type: "manufacturer_spec",
+      label: `${p.verificationStatus.replace("_", " ")} · ${p.lastVerifiedAt}`,
+      href: p.officialSourceUrl,
+    },
   ];
   if (p.reviewCount && p.reviewCount > 0) {
     chips.push({
@@ -201,9 +208,6 @@ function buildSourceChips(p: RacketProduct): { type: SourceChip; label: string; 
   if (p.editorNote) {
     chips.push({ type: "editor_note", label: "Editor note" });
   }
-  if (p.sourceUrls[0]) {
-    chips[0] = { ...chips[0], href: p.sourceUrls[0] };
-  }
   return chips;
 }
 
@@ -212,9 +216,15 @@ function buildProsCons(p: RacketProduct): { pros: string[]; cons: string[] } {
     `${p.brand} ${p.name}: ${p.headWeight.replace("_", " ")} head, ${p.shaftFlex} shaft (${p.weightClass}).`,
   ];
   if (p.balanceMm) pros.push(`Balance ~${p.balanceMm} mm (as listed).`);
+  pros.push(
+    `Common variants: ${p.weightVariants.join("/")} · grip ${p.gripSizes.join("/")}.`
+  );
   const cons: string[] = [
     "Feel is personal—demo when possible; specs vary by production batch and region.",
   ];
+  if (p.verificationStatus === "needs_review") {
+    cons.push("This row still needs final official page-level verification.");
+  }
   if (p.shaftFlex === "extra_stiff") {
     cons.push("Stiff setup demands clean timing; may feel harsh for developing technique.");
   }

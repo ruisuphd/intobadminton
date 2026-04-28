@@ -20,6 +20,25 @@ NEXT_PUBLIC_BASE_PATH=/intobadminton npm run build
 2. `NEXT_PUBLIC_BASE_PATH` empty for apex or custom domain.
 3. If you add Cloud Functions for APIs later, move off pure static or split the app—see the main plan (§2.4).
 
+## Backend recommendation
+
+For the growth phase, prefer Firebase / Google Cloud rather than GitHub Pages alone. See [BACKEND_DECISION.md](./BACKEND_DECISION.md).
+
 ## Company billing
 
 Use a **company** GCP / Firebase project for production; set **billing alerts** on Blaze.
+
+## Security headers
+
+Configure equivalent headers in Firebase Hosting, Cloudflare, or your host:
+
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+- `Content-Security-Policy` allowing your own origin plus Google domains required for GA4/AdSense only when those features are enabled.
+
+Because AdSense injects resources dynamically, test CSP in report-only mode before enforcing.
+
+## Compliance launch
+
+See [COMPLIANCE.md](./COMPLIANCE.md), [DATA_INVENTORY.md](./DATA_INVENTORY.md), and [LAUNCH_CHECKLIST.md](./LAUNCH_CHECKLIST.md).

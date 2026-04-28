@@ -30,6 +30,12 @@ export function SiteHeader() {
           >
             Compare
           </Link>
+          <Link
+            href="/review/"
+            className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
+          >
+            Review
+          </Link>
           <ThemeToggle />
         </nav>
       </div>

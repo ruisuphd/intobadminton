@@ -27,6 +27,11 @@ const guides = [
     title: "Doubles court roles (basics)",
     desc: "How front vs back can influence what you optimize for in doubles.",
   },
+  {
+    href: "/guides/wide-feet-badminton-shoes/",
+    title: "Badminton shoes for wide feet",
+    desc: "How to think about fit, stability, and future shoe recommendations.",
+  },
 ] as const;
 
 export default function GuidesIndex() {

@@ -19,7 +19,13 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
+      - name: Test
+        run: npm test
       - name: Build
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ""
+      - name: Build GitHub Pages base path
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: "/intobadminton"

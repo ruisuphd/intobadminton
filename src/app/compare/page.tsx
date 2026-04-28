@@ -49,8 +49,16 @@ export default function ComparePage() {
                   </tr>
                 </thead>
                 <tbody className="text-[var(--color-muted)]">
-                  {["brand", "priceUsd", "headWeight", "shaftFlex", "weightClass", "balanceMm"].map(
-                    (k) => (
+                  {[
+                    "brand",
+                    "priceUsd",
+                    "headWeight",
+                    "shaftFlex",
+                    "weightVariants",
+                    "gripSizes",
+                    "balanceMm",
+                    "lastVerifiedAt",
+                  ].map((k) => (
                       <tr
                         key={k}
                         className="border-b border-zinc-100 dark:border-zinc-800"
@@ -64,8 +72,7 @@ export default function ComparePage() {
                           </td>
                         ))}
                       </tr>
-                    )
-                  )}
+                    ))}
                 </tbody>
               </table>
             </div>

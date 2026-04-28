@@ -1,27 +1,67 @@
+"use client";
+
+import { useEffect } from "react";
+import { useConsent } from "@/context/ConsentContext";
+
 /**
  * Reserves a layout band for AdSense (plan §2.3.1). Replace the inner placeholder
  * with your ad unit after AdSense approval.
  */
+declare global {
+  interface Window {
+    adsbygoogle?: unknown[];
+  }
+}
+
 export function AdSlot({
   id,
   label = "Ad",
+  slot,
   className = "",
 }: {
   id: string;
   label?: string;
+  slot?: string;
   className?: string;
 }) {
+  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+  const { consent } = useConsent();
+  const canLoadAd = Boolean(client && slot && consent.ads);
+
+  useEffect(() => {
+    if (!canLoadAd) return;
+    try {
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push({});
+    } catch {
+      // AdSense can throw during local development or repeated test renders.
+    }
+  }, [canLoadAd]);
+
   return (
     <aside
-      className={`my-8 w-full rounded-2xl border border-dashed border-zinc-300 bg-[var(--surface)] p-6 text-center dark:border-zinc-600 ${className}`}
+      id={`ad-wrap-${id}`}
+      className={`my-8 min-h-[180px] w-full rounded-2xl border border-dashed border-zinc-300 bg-[var(--surface)] p-6 text-center dark:border-zinc-600 ${className}`}
       data-ad-region={id}
     >
       <p className="text-xs font-medium tracking-wide text-[var(--color-muted)] uppercase">
-        {label}
+        {label === "Ad" ? "Advertisement" : label}
       </p>
-      <p className="mt-1 text-sm text-[var(--color-muted)]">
-        Reserved for Google AdSense — slot <code className="text-xs">{id}</code>
-      </p>
+      {canLoadAd ? (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client={client}
+          data-ad-slot={slot}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      ) : (
+        <p className="mt-1 text-sm text-[var(--color-muted)]">
+          Non-essential advertising is off. Reserved slot{" "}
+          <code className="text-xs">{id}</code>
+        </p>
+      )}
     </aside>
   );
 }

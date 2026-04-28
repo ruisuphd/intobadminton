@@ -4,6 +4,12 @@ export type HeadWeight = "head_light" | "even" | "head_heavy";
 export type ShaftFlex = "flexible" | "medium" | "stiff" | "extra_stiff";
 export type WeightClass = "3U" | "4U" | "5U" | "6U" | "F";
 export type SourceChip = "manufacturer_spec" | "review_summary" | "editor_note";
+export type BalanceCategory = "head_light" | "even" | "head_heavy";
+export type VerificationStatus =
+  | "official_verified"
+  | "editor_verified"
+  | "needs_review";
+export type RegionCode = "global" | "sg" | "cn" | "jp" | "kr" | "uk" | "us";
 
 export type RacketProduct = {
   id: string;
@@ -14,8 +20,21 @@ export type RacketProduct = {
   headWeight: HeadWeight;
   shaftFlex: ShaftFlex;
   weightClass: WeightClass;
+  weightVariants: WeightClass[];
+  gripSizes: string[];
   balanceMm: number;
-  stringPattern: string;
+  balanceCategory: BalanceCategory;
+  swingWeightEstimate: "fast" | "medium" | "heavy";
+  commonStringTensionLbs: {
+    min: number;
+    max: number;
+  };
+  shaftFlexSource: "official" | "retailer" | "editor_estimate";
+  launchYear?: number;
+  regionAvailability: RegionCode[];
+  officialSourceUrl: string;
+  lastVerifiedAt: string;
+  verificationStatus: VerificationStatus;
   maxRecommendedLevel: SkillLevel;
   minRecommendedLevel: SkillLevel;
   bestFor: string[];

@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: /sitemap.xml
+
+# Replace YOUR_DOMAIN in public/sitemap.xml before production deploy.

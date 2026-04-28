@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CookieSettingsLink } from "@/components/CookieSettings";
 
 export function SiteFooter() {
   return (
@@ -31,6 +32,31 @@ export function SiteFooter() {
             >
               Privacy
             </Link>
+            <Link
+              href="/cookies/"
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              Cookies
+            </Link>
+            <Link
+              href="/privacy-choices/"
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              Privacy choices
+            </Link>
+            <Link
+              href="/terms/"
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              Terms
+            </Link>
+            <Link
+              href="/source-policy/"
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              Source policy
+            </Link>
+            <CookieSettingsLink />
           </div>
         </div>
         <p className="mt-10 text-xs text-[var(--color-muted)]">

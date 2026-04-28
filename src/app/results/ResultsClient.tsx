@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/components/Analytics";
 import { ResultCard } from "@/components/ResultCard";
 import { useProfile } from "@/context/ProfileContext";
 import { scoreProductCatalog } from "@/lib/scoring";
@@ -20,17 +21,26 @@ export function ResultsClient() {
     if (sessionStorage.getItem(key)) return;
     sessionStorage.setItem(key, "1");
     pushHistory(rows.map((r) => r.id));
+    trackEvent("recommendations_viewed", {
+      result_count: rows.length,
+      top_product_id: rows[0]?.id,
+    });
   }, [rows, pushHistory]);
 
   if (!profile.level || !profile.discipline) {
     return (
-      <p className="text-[var(--color-muted)]">
-        Complete the{" "}
-        <Link href="/quiz/" className="text-[var(--color-accent)] underline">
-          finder
-        </Link>{" "}
-        first.
-      </p>
+      <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6 dark:border-zinc-700">
+        <h2 className="font-semibold text-[var(--text)]">
+          Complete your player profile first
+        </h2>
+        <p className="mt-2 text-[var(--color-muted)]">
+          We need at least your level and discipline to produce a responsible
+          shortlist.
+        </p>
+        <Link href="/quiz/" className="mt-4 inline-block text-[var(--color-accent)] underline">
+          Start the finder
+        </Link>
+      </div>
     );
   }
 
@@ -44,10 +54,15 @@ export function ResultsClient() {
 
   if (rows.length === 0) {
     return (
-      <p className="text-[var(--color-muted)]">
-        No strong matches for this profile yet — try relaxing budget or
-        style inputs.
-      </p>
+      <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6 dark:border-zinc-700">
+        <h2 className="font-semibold text-[var(--text)]">
+          No strong matches yet
+        </h2>
+        <p className="mt-2 text-[var(--color-muted)]">
+          Try relaxing budget, choosing one fewer style tag, or selecting a
+          less restrictive category when more equipment types go live.
+        </p>
+      </div>
     );
   }
 

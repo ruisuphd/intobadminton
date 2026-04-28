@@ -45,6 +45,11 @@ body {
   line-height: 1.6;
 }
 
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 .layout-band {
   max-width: 72rem;
   margin-left: auto;
