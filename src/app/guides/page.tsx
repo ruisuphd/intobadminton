@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { t } from "@/lib/i18n";
 
 const guides = [
   {
@@ -34,22 +36,29 @@ const guides = [
   },
 ] as const;
 
-export default function GuidesIndex() {
+export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
+  const copy = t(locale).guides;
+  const localized = (path: string) => buildLocalizedPath(locale, path);
+
   return (
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
-          Guides
+          {copy.title}
         </h1>
         <p className="mt-3 max-w-2xl text-[var(--color-muted)]">
-          Short, practical notes to support the finder. Always cross-check
-          product specs on official sites before buying.
+          {copy.subtitle}
         </p>
+        <div className="mt-8 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 text-sm text-[var(--color-muted)] dark:border-zinc-700">
+          {locale === "zh"
+            ? "指南优先使用原创解释和官方规格链接。第三方论坛或社区内容只作为主题摘要和链接，不复制原文。"
+            : "Guides prioritize original analysis and official spec links. Third-party community sources are used only as theme summaries and links, not copied review text."}
+        </div>
         <ul className="mt-10 space-y-4">
           {guides.map((g) => (
             <li key={g.href}>
               <Link
-                href={g.href}
+                href={localized(g.href)}
                 className="block rounded-2xl border border-zinc-200/90 bg-[var(--surface)] p-5 transition hover:border-[var(--color-accent)] dark:border-zinc-700/90"
               >
                 <h2 className="font-semibold text-[var(--text)]">{g.title}</h2>
@@ -58,8 +67,12 @@ export default function GuidesIndex() {
             </li>
           ))}
         </ul>
-        <AdSlot id="guides-end" className="mt-12" />
+        <AdSlot id={`${locale}-guides-end`} className="mt-12" />
       </div>
     </main>
   );
+}
+
+export default function GuidesIndex() {
+  return <GuidesShell locale="en" />;
 }

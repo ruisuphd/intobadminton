@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AdSlot } from "@/components/AdSlot";
 
 export const metadata: Metadata = {
   title: "String tension basics — IntoBadminton",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default function StringTensionGuide() {
   return (
     <main className="flex-1 py-16">
-      <article className="layout-band max-w-2xl space-y-4 text-[var(--text)]">
+      <article className="layout-band max-w-3xl space-y-5 text-[var(--text)]">
         <p>
           <Link
             href="/guides/"
@@ -29,6 +30,22 @@ export default function StringTensionGuide() {
           rackets, strings, and players—your timing matters as much as the
           number on the machine.
         </p>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {[
+            ["18-22 lb", "Beginner / comfort", "Easy length and larger sweet spot."],
+            ["23-26 lb", "Club all-round", "Sharper response without an extreme timing window."],
+            ["27+ lb", "Advanced control", "Only useful when contact timing is repeatable."],
+          ].map(([range, fit, note]) => (
+            <div
+              key={range}
+              className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-4 dark:border-zinc-700"
+            >
+              <p className="font-semibold text-[var(--text)]">{range}</p>
+              <p className="mt-1 text-sm text-[var(--color-muted)]">{fit}</p>
+              <p className="mt-3 text-sm text-[var(--color-muted)]">{note}</p>
+            </div>
+          ))}
+        </div>
         <h2 className="pt-2 text-xl font-semibold">What to test</h2>
         <p className="text-[var(--color-muted)] leading-relaxed">
           If you are unsure, small steps (0.5–1 lb or ~0.5 kg blocks) between
@@ -41,6 +58,12 @@ export default function StringTensionGuide() {
           This is general education, not pro stringing advice for your
           specific frame or warranty. A certified stringer who inspects grommets
           and your racket model should have the last word.
+        </p>
+        <AdSlot id="guide-string-tension-mid" />
+        <p className="text-[var(--color-muted)] leading-relaxed">
+          The finder can use preferred tension later, but v1 keeps tension as
+          advice rather than a hard filter because string gauge, shuttle speed,
+          local machines, and climate all change feel.
         </p>
       </article>
     </main>

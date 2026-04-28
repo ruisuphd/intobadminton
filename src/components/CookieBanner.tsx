@@ -5,6 +5,7 @@ import { useConsent } from "@/context/ConsentContext";
 export function CookieBanner() {
   const { hasChoice, acceptAll, rejectNonEssential, openSettings } =
     useConsent();
+  const adsMode = process.env.NEXT_PUBLIC_ADSENSE_MODE || "disabled";
 
   if (hasChoice) return null;
 
@@ -21,13 +22,16 @@ export function CookieBanner() {
           <p className="mt-1 text-sm text-[var(--color-muted)]">
             We use necessary local storage for the finder. Analytics and ads are
             optional and are off by default under our strict global baseline.
+            {adsMode !== "cmp_tcf"
+              ? " Ads remain operationally disabled until a compliant consent platform is configured."
+              : ""}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
             onClick={rejectNonEssential}
-            className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm dark:border-zinc-600"
+            className="rounded-2xl bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white"
           >
             Reject non-essential
           </button>
@@ -41,7 +45,7 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={acceptAll}
-            className="rounded-2xl bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white"
+            className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm dark:border-zinc-600"
           >
             Accept all
           </button>

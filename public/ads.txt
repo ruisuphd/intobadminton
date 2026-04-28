@@ -1,0 +1,3 @@
+# Replace the publisher id after AdSense approval. Do not enable AdSense mode
+# until a compliant CMP/TCF setup is live where required:
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

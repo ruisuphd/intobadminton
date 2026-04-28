@@ -1,9 +1,13 @@
-import type { SkillLevel } from "@/lib/taxonomy";
+import type { EquipmentCategory, FootWidth, SkillLevel } from "@/lib/taxonomy";
 
 export type HeadWeight = "head_light" | "even" | "head_heavy";
 export type ShaftFlex = "flexible" | "medium" | "stiff" | "extra_stiff";
 export type WeightClass = "3U" | "4U" | "5U" | "6U" | "F";
-export type SourceChip = "manufacturer_spec" | "review_summary" | "editor_note";
+export type SourceChip =
+  | "manufacturer_spec"
+  | "review_summary"
+  | "editor_note"
+  | "market_signal";
 export type BalanceCategory = "head_light" | "even" | "head_heavy";
 export type VerificationStatus =
   | "official_verified"
@@ -11,12 +15,45 @@ export type VerificationStatus =
   | "needs_review";
 export type RegionCode = "global" | "sg" | "cn" | "jp" | "kr" | "uk" | "us";
 
-export type RacketProduct = {
+export type ResaleEstimate = {
+  estimatedUsedUsd: number;
+  depreciationPct: number;
+  confidence: "low" | "medium" | "high";
+  basis: string;
+  updatedAt: string;
+};
+
+export type MarketSignal = {
+  source: "badmintoncn" | "reddit" | "youtube" | "marketplace" | "editor";
+  label: string;
+  summary: string;
+  href?: string;
+  confidence: "low" | "medium" | "high";
+};
+
+type BaseProduct = {
   id: string;
-  category: "racket";
+  category: EquipmentCategory;
   name: string;
   brand: string;
   priceUsd: number;
+  launchYear?: number;
+  regionAvailability: RegionCode[];
+  officialSourceUrl: string;
+  lastVerifiedAt: string;
+  verificationStatus: VerificationStatus;
+  maxRecommendedLevel: SkillLevel;
+  minRecommendedLevel: SkillLevel;
+  bestFor: string[];
+  sourceUrls: string[];
+  editorNote?: string;
+  reviewCount?: number;
+  resale?: ResaleEstimate;
+  marketSignals?: MarketSignal[];
+};
+
+export type RacketProduct = BaseProduct & {
+  category: "racket";
   headWeight: HeadWeight;
   shaftFlex: ShaftFlex;
   weightClass: WeightClass;
@@ -30,23 +67,67 @@ export type RacketProduct = {
     max: number;
   };
   shaftFlexSource: "official" | "retailer" | "editor_estimate";
-  launchYear?: number;
-  regionAvailability: RegionCode[];
-  officialSourceUrl: string;
-  lastVerifiedAt: string;
-  verificationStatus: VerificationStatus;
-  maxRecommendedLevel: SkillLevel;
-  minRecommendedLevel: SkillLevel;
-  bestFor: string[];
-  sourceUrls: string[];
-  editorNote?: string;
-  reviewCount?: number;
 };
 
-export type ProductRecord = RacketProduct;
+export type StringProduct = BaseProduct & {
+  category: "string";
+  gaugeMm: number;
+  feel: "soft" | "medium" | "hard";
+  repulsion: "medium" | "high" | "very_high";
+  control: "medium" | "high" | "very_high";
+  durability: "low" | "medium" | "high" | "very_high";
+  tensionRangeLbs: { min: number; max: number };
+};
 
-export type ScoredRacket = RacketProduct & {
+export type ShoeProduct = BaseProduct & {
+  category: "shoes";
+  fitWidth: FootWidth | "wide_available";
+  cushioning: "low" | "medium" | "high";
+  stability: "medium" | "high" | "very_high";
+  weightFeel: "fast" | "medium" | "protective";
+  hasWideOption?: boolean;
+};
+
+export type BagProduct = BaseProduct & {
+  category: "bag";
+  capacityRackets: number;
+  sizeClass: "compact" | "club" | "tournament";
+  hasShoeCompartment: boolean;
+  hasWetCompartment: boolean;
+  carryStyle: "backpack" | "duffel" | "racket_bag";
+};
+
+export type ProductRecord =
+  | RacketProduct
+  | StringProduct
+  | ShoeProduct
+  | BagProduct;
+
+export type ScoredProduct = ProductRecord & {
   fitScore: number;
+  confidence: {
+    level: "high" | "medium" | "low" | "needs_verification";
+    score: number;
+    label: string;
+  };
+  evidenceProfile: {
+    officialSpec: {
+      status: VerificationStatus;
+      lastVerifiedAt: string;
+      href: string;
+    };
+    editorSignal: {
+      note?: string;
+      source: "official" | "retailer" | "editor_estimate" | "community_signal";
+    };
+    reviewEvidence: {
+      count: number;
+      positive: number;
+      caution: number;
+      confidence: "none" | "low" | "medium";
+      displayPolicy: "metadata_summary_link_only";
+    };
+  };
   subscores: {
     style: number;
     discipline: number;
@@ -59,3 +140,5 @@ export type ScoredRacket = RacketProduct & {
   cons: string[];
   sourceChips: { type: SourceChip; label: string; href?: string }[];
 };
+
+export type ScoredRacket = ScoredProduct & RacketProduct;

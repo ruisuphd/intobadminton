@@ -14,6 +14,51 @@ function profile(p: Partial<UserProfile>): UserProfile {
 }
 
 describe("scoreProductCatalog", () => {
+  it("attaches confidence signals from official specs and review evidence", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "competitive",
+        discipline: "doubles",
+        styles: ["defensive", "front_court"],
+        category: "racket",
+        body: { budgetMaxUsd: 320, injuryFlags: ["none"] },
+      })
+    );
+
+    const withEvidence = rows.find((r) => r.id === "yy-nanoflare-1000z");
+
+    expect(withEvidence?.confidence.level).toMatch(/^(medium|high)$/);
+    expect(withEvidence?.evidenceProfile.officialSpec.status).toBe(
+      "editor_verified"
+    );
+    expect(withEvidence?.evidenceProfile.reviewEvidence.count).toBeGreaterThan(
+      0
+    );
+    expect(
+      withEvidence?.evidenceProfile.reviewEvidence.displayPolicy
+    ).toBe("metadata_summary_link_only");
+  });
+
+  it("downgrades products that still need official verification", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "singles",
+        styles: ["offensive", "smash_heavy"],
+        category: "racket",
+        body: { budgetMaxUsd: 230, injuryFlags: ["none"] },
+      })
+    );
+
+    const needsReview = rows.find((r) => r.verificationStatus === "needs_review");
+    const editorVerified = rows.find(
+      (r) => r.verificationStatus === "editor_verified"
+    );
+
+    expect(needsReview?.confidence.level).toBe("needs_verification");
+    expect(needsReview?.fitScore).toBeLessThan(editorVerified?.fitScore ?? 0);
+  });
+
   it("keeps beginner/budget users away from pro-only rackets", () => {
     const rows = scoreProductCatalog(
       profile({
@@ -78,16 +123,77 @@ describe("scoreProductCatalog", () => {
     expect(rows[0]?.shaftFlex).not.toBe("extra_stiff");
   });
 
-  it("returns no equipment for categories that are not live yet", () => {
+  it("recommends strings with tension and durability tradeoffs", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["defensive", "front_court"],
+        category: "string",
+        body: { budgetMaxUsd: 25, stringTensionLbs: 25, injuryFlags: ["none"] },
+      })
+    );
+
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows[0]?.category).toBe("string");
+    expect(rows[0]?.id).toMatch(/exbolt|bg80|bg65/);
+    expect(rows[0]?.reasons.some((r) => r.code.includes("STRING"))).toBe(true);
+  });
+
+  it("recommends shoes by foot width and joint comfort flags", () => {
     const rows = scoreProductCatalog(
       profile({
         level: "club",
         discipline: "doubles",
         styles: ["balanced"],
         category: "shoes",
+        body: {
+          budgetMaxUsd: 180,
+          footWidth: "wide",
+          injuryFlags: ["ankle", "knee"],
+        },
       })
     );
 
-    expect(rows).toEqual([]);
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows[0]?.category).toBe("shoes");
+    expect(rows[0]?.reasons.some((r) => r.code.includes("SHOE"))).toBe(true);
+    expect(rows[0]?.cons.join(" ")).toMatch(/fit|try|size/i);
+  });
+
+  it("recommends bags by capacity and wet/shoe compartment needs", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "recreational",
+        discipline: "mixed",
+        styles: ["balanced"],
+        category: "bag",
+        body: { budgetMaxUsd: 120, injuryFlags: ["none"] },
+      })
+    );
+
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows[0]?.category).toBe("bag");
+    expect(rows[0]?.reasons.some((r) => r.code.includes("BAG"))).toBe(true);
+  });
+
+  it("attaches resale and depreciation estimates to scored gear", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "competitive",
+        discipline: "doubles",
+        styles: ["offensive", "smash_heavy"],
+        category: "racket",
+        body: { budgetMaxUsd: 350, injuryFlags: ["none"] },
+      })
+    );
+
+    const resaleAware = rows.find((r) => r.id === "yy-astrox-88d-pro-2024");
+
+    expect(resaleAware?.resale?.estimatedUsedUsd).toBeGreaterThan(0);
+    expect(resaleAware?.resale?.depreciationPct).toBeGreaterThan(0);
+    expect(resaleAware?.sourceChips.some((c) => c.type === "market_signal")).toBe(
+      true
+    );
   });
 });

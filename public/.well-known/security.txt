@@ -1,0 +1,4 @@
+Contact: mailto:info@intonationlabs.com
+Preferred-Languages: en, zh
+Canonical: https://intobadminton.com/.well-known/security.txt
+Policy: https://intobadminton.com/security/

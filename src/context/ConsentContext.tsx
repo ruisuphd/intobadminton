@@ -13,6 +13,7 @@ import {
   consentModePayload,
   defaultConsent,
   makeConsent,
+  makeConsentForMode,
   normalizeConsent,
   type ConsentDraft,
   type ConsentPreferences,
@@ -47,6 +48,8 @@ function gpcEnabled() {
   return navigator.globalPrivacyControl === true;
 }
 
+const adOperationalMode = process.env.NEXT_PUBLIC_ADSENSE_MODE || "disabled";
+
 export function ConsentProvider({ children }: { children: React.ReactNode }) {
   const [hasChoice, setHasChoice] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -79,7 +82,7 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
 
   const saveConsent = useCallback(
     (draft: ConsentDraft) => {
-      persist(makeConsent(draft));
+      persist(makeConsentForMode(draft, adOperationalMode));
       setSettingsOpen(false);
     },
     [persist]
@@ -89,8 +92,8 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
     persist(
       makeConsent({
         analytics: true,
-        ads: true,
-        personalization: true,
+        ads: adOperationalMode === "cmp_tcf",
+        personalization: adOperationalMode === "cmp_tcf",
         doNotSellShare: false,
       })
     );

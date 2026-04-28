@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import { MarketResearchPage } from "@/components/MarketResearchPage";
+
+export const metadata: Metadata = {
+  title: "Market research — IntoBadminton",
+  description:
+    "Rights-safe badminton market research signals used to improve equipment recommendations.",
+};
+
+export default function ResearchPage() {
+  return <MarketResearchPage locale="en" />;
+}

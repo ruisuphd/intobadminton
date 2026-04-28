@@ -2,11 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useConsent } from "@/context/ConsentContext";
+import { consentAuditSummary } from "@/lib/consent";
 
 export function CookieSettings() {
   const { consent, settingsOpen, closeSettings, saveConsent } = useConsent();
   const [draft, setDraft] = useState(consent);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const adsMode = process.env.NEXT_PUBLIC_ADSENSE_MODE || "disabled";
+  const audit = consentAuditSummary();
 
   useEffect(() => {
     if (!settingsOpen) return;
@@ -39,8 +42,15 @@ export function CookieSettings() {
             </h2>
             <p className="mt-2 text-sm text-[var(--color-muted)]">
               Necessary storage keeps the finder, compare list, theme, and local
-              review drafts working. Analytics and advertising are optional.
+              review drafts working. Analytics and advertising are optional and
+              remain off unless you choose them.
             </p>
+            {adsMode !== "cmp_tcf" && (
+              <p className="mt-2 text-sm text-[var(--color-muted)]">
+                Advertising scripts are disabled at deployment level until a
+                Google-certified CMP/IAB TCF setup is live for covered regions.
+              </p>
+            )}
           </div>
           <button
             ref={closeRef}
@@ -68,9 +78,13 @@ export function CookieSettings() {
           />
           <PreferenceRow
             title="Advertising"
-            description="AdSense ad loading and ad measurement."
+            description={
+              adsMode === "cmp_tcf"
+                ? "AdSense ad loading and ad measurement after consent."
+                : "Disabled until compliant AdSense consent mode is configured."
+            }
             checked={draft.ads && !draft.doNotSellShare}
-            disabled={draft.doNotSellShare}
+            disabled={draft.doNotSellShare || adsMode !== "cmp_tcf"}
             onChange={(ads) => setDraft((d) => ({ ...d, ads }))}
           />
           <PreferenceRow
@@ -95,6 +109,24 @@ export function CookieSettings() {
               }))
             }
           />
+        </div>
+        <div className="mt-6 rounded-2xl border border-zinc-200 p-4 dark:border-zinc-700">
+          <h3 className="font-semibold text-[var(--text)]">
+            Storage summary
+          </h3>
+          <div className="mt-3 space-y-3">
+            {audit.map((row) => (
+              <div key={row.category} className="text-sm">
+                <p className="font-medium text-[var(--text)]">
+                  {row.category} · default {row.defaultState}
+                </p>
+                <p className="text-[var(--color-muted)]">
+                  {row.storage}. Legal basis: {row.legalBasis}. Third parties:{" "}
+                  {row.thirdParties}.
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-3">

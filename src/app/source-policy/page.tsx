@@ -27,6 +27,16 @@ export default function SourcePolicyPage() {
           user-generated content from those sources without appropriate rights.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
+          BadmintonCN search references
+        </h2>
+        <p>
+          BadmintonCN is valuable for Chinese-language equipment sentiment. Our
+          safe starting point is source discovery through search-visible
+          metadata: source name, link, language, theme summary, and confidence.
+          We do not bypass verification prompts, log in with automated tools,
+          or display copied review excerpts.
+        </p>
+        <h2 className="text-xl font-semibold text-[var(--text)]">
           Evidence model
         </h2>
         <p>

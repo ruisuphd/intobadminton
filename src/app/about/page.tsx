@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "About — IntoBadminton",
@@ -12,9 +13,14 @@ export default function AboutPage() {
         <h1 className="text-3xl font-semibold text-[var(--text)]">About</h1>
         <p>
           IntoBadminton helps players shortlist equipment with explainable
-          scores—starting with rackets. We combine structured product data and
-          editorial notes, and we are explicit about what is a manufacturer
-          line vs community signal vs our own summary.
+          scores across rackets, strings, shoes, and bags. We combine
+          structured product data and editorial notes, and we are explicit about
+          what is a manufacturer line vs community signal vs our own summary.
+        </p>
+        <p>
+          The site is operated by {companyInfo.operatorLegalName}.{" "}
+          {companyInfo.businessDescription} IntoBadminton applies that
+          evidence-first engineering approach to badminton equipment discovery.
         </p>
         <p>
           Revenue may come from display advertising and, when disclosed,
