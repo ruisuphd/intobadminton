@@ -47,7 +47,7 @@
     "sourceUrls": [
       "https://www.yonex.com/badminton/racquets/nanoflare-1000z"
     ],
-    "editorNote": "Fast, stiff, head-light profile for advanced drive speed and defense.",
+    "editorNote": "Founder current doubles racket (Rui, Div 4 IE): extremely fast — head-light Z-axis design pays off in drives and defense. Power is harder to generate than from a comparable head-heavy frame, so you need good timing and strength. With those, this is the doubles weapon.",
     "reviewCount": 0
   },
   {
@@ -98,7 +98,7 @@
     "sourceUrls": [
       "https://www.yonex.com/badminton/racquets/astrox-100zz"
     ],
-    "editorNote": "Demanding, very stiff attack frame. Strong fit only for clean timing.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): very demanding but surprisingly fast — and very repulsive. Needs good timing and is tiring to play with for full matches. Try the 100ZZ VA before this if you like the feel but find the regular ZZ punishing.",
     "reviewCount": 0
   },
   {
@@ -200,7 +200,7 @@
     "sourceUrls": [
       "https://www.yonex.com/badminton/racquets/astrox-77-pro"
     ],
-    "editorNote": "More accessible attacking Astrox option than the 99/100 family.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): very good overall racket and not that demanding — easy power. Recommended over the Astrox 88D Pro for most players who want head-heavy power without the stiffer-shaft penalty. Solid intermediate-to-advanced upgrade.",
     "reviewCount": 0
   },
   {
@@ -771,7 +771,7 @@
       "https://www.youtube.com/watch?v=c-q1ppdC-AU",
       "https://www.carousell.sg/yonex-astrox-88d-pro/q/"
     ],
-    "editorNote": "Market research consistently positions this as a rear-court doubles attack frame: powerful enough for smashes but more usable than ultra-stiff singles-only rackets.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): similar feel to the Astrox 77 Pro but harder to generate power. For most players the 77 Pro is the better pick unless you have the technique to load the 88D Pro stiffer profile and want pure rear-court doubles power.",
     "reviewCount": 5,
     "resale": {
       "estimatedUsedUsd": 210,
@@ -1588,6 +1588,431 @@
       "https://www.yonex.com/badminton/accessories/strong-grap-ac130ex"
     ],
     "editorNote": "Tackier than Super Grap; some players love it, others find it sticks too much in heat. Try a 3-pack before committing.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-astrox-100zz-va",
+    "category": "racket",
+    "name": "Astrox 100ZZ VA (Viktor Axelsen)",
+    "brand": "Yonex",
+    "priceUsd": 320,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 21,
+      "max": 29
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/astrox-100va-zz",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "smash_heavy",
+      "singles",
+      "advanced_timing"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/astrox-100va-zz",
+      "https://us.yonex.com/products/astrox-100-zz-va"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-astrox-100-game",
+    "category": "racket",
+    "name": "Astrox 100 Game",
+    "brand": "Yonex",
+    "priceUsd": 130,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/astrox-100-game",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "intermediate_smash",
+      "head_heavy_practice"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/astrox-100-game"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): feels not as stable as the Pro frames — a bit off. At a similar price you might as well buy the Astrox 77 Pro instead.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-astrox-88s-pro-2024",
+    "category": "racket",
+    "name": "Astrox 88S Pro (2024)",
+    "brand": "Yonex",
+    "priceUsd": 260,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-88s-pro",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles_front_court",
+      "balanced_attack",
+      "control"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/astrox-88s-pro",
+      "https://www.badmintonwarehouse.com/products/yonex-astrox-88s-pro-2024-badminton-racket"
+    ],
+    "editorNote": "Founder current racket (Rui, Div 4 IE, doubles front-court): very good balanced racket, recommended for most players. Feels close to Astrox 77 Pro but with a stiffer shaft — better when you have the timing to load it. 2G-Namd FLEX FORCE shaft snaps back fast.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-astrox-88d-tour-2024",
+    "category": "racket",
+    "name": "Astrox 88D Tour (2024)",
+    "brand": "Yonex",
+    "priceUsd": 195,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/astrox-88d-tour",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles_rear_court",
+      "successive_smash"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/astrox-88d-tour"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): feels heavier than the 88D Pro. For most players, just go for the Pro version — the Tour's added swing weight isn't an upgrade unless you specifically want the heavier feel.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-arcsaber-7-pro",
+    "category": "racket",
+    "name": "Arcsaber 7 Pro",
+    "brand": "Yonex",
+    "priceUsd": 220,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 27
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/arc7-p",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "all_round_singles",
+      "control_singles",
+      "shot_placement"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/arc7-p",
+      "https://us.yonex.com/products/arcsaber-7-pro"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): very good overall racket, but you need to bring the power yourself — it doesn't give you the head-heavy assist for smashes. Excellent for control players. POCKETING BOOSTER frame extends contact time.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-nanoflare-700-pro-2024",
+    "category": "racket",
+    "name": "Nanoflare 700 Pro (2024)",
+    "brand": "Yonex",
+    "priceUsd": 240,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 285,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/nanoflare-700-pro",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles_speed",
+      "fast_drive",
+      "front_court_pressure"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/nanoflare-700-pro"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): like the Arcsaber 7 Pro, hard to generate power but very very fast. Pair with thinner strings to maximize the speed advantage — try Aerobite or BG66 Ultimax over thicker strings.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-nanoflare-700-game",
+    "category": "racket",
+    "name": "Nanoflare 700 Game",
+    "brand": "Yonex",
+    "priceUsd": 130,
+    "headWeight": "head_light",
+    "shaftFlex": "flexible",
+    "weightClass": "5U",
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 285,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/nanoflare-700-game",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner_friendly",
+      "fast_handling",
+      "doubles_starter"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/nanoflare-700-game"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): a bit more flexible than the 700 Pro and overall much easier to play. The 5U version is very beginner-friendly while still giving the head-light speed feel — a great first-step racket up from entry frames.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-aerus-z2",
+    "category": "shoes",
+    "name": "Power Cushion Aerus Z2",
+    "brand": "Yonex",
+    "priceUsd": 175,
+    "fitWidth": "narrow",
+    "cushioning": "low",
+    "stability": "medium",
+    "weightFeel": "fast",
+    "hasWideOption": true,
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/power-cushion-aerus-z-men-shbaz2m",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "lightweight",
+      "tournament_speed",
+      "close_to_ground_feel"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/power-cushion-aerus-z-men-shbaz2m",
+      "https://us.yonex.com/products/power-cushion-aerus-z-2nd-gen-mens"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): liked the lightness — at 240g per shoe it really is fast — but barely any cushioning. Switched to the Comfort Z3 for joint protection. If your knees and ankles are happy, this is a brilliant tournament shoe.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-comfort-z3",
+    "category": "shoes",
+    "name": "Power Cushion Comfort Z3",
+    "brand": "Yonex",
+    "priceUsd": 165,
+    "fitWidth": "wide_available",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": true,
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/power-cushion-comfort-z3",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "max_cushioning",
+      "joint_protection",
+      "smash_landings",
+      "long_match_comfort"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/power-cushion-comfort-z3",
+      "https://www.nydhi.com/blogs/news/precision-underfoot-yonex-power-cushion-aerus-z2-vs-eclipsion-z3-vs-comfort-z3-vs-65-z4"
+    ],
+    "editorNote": "Founder current shoe (Rui, Div 4 IE): switched from Aerus Z2 and love it. Way better cushioning, especially for landing after smashes. Heavier (370g) but joint comfort is worth it for full-match wear. Stiffer break-in than the Z2.",
     "reviewCount": 0
   }
 ]
