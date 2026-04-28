@@ -28,6 +28,8 @@ const canonicalRoutes = [
   "/setup/",
   "/blog/",
   "/research/",
+  "/sources/",
+  "/about/",
   ...blogSlugs.map((slug) => `/blog/${slug}/`),
   "/best/beginner-rackets/",
   "/best/doubles-rackets/",

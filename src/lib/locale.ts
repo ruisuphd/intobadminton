@@ -13,6 +13,8 @@ const coreRoutes = [
   "/review/",
   "/methodology/",
   "/source-policy/",
+  "/sources/",
+  "/about/",
   "/security/",
   "/privacy/",
   "/cookies/",

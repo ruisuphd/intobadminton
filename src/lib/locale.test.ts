@@ -31,6 +31,8 @@ describe("locale routing", () => {
       "/zh/review/",
       "/zh/methodology/",
       "/zh/source-policy/",
+      "/zh/sources/",
+      "/zh/about/",
       "/zh/security/",
       "/zh/privacy/",
       "/zh/cookies/",
