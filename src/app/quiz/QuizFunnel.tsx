@@ -15,6 +15,8 @@ import {
   type SkillLevel,
 } from "@/lib/taxonomy";
 import { useProfile } from "@/context/ProfileContext";
+import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { t } from "@/lib/i18n";
 
 const STEPS = 5;
 
@@ -25,10 +27,23 @@ const levelLabel: Record<SkillLevel, string> = {
   pro_oriented: "Pro-oriented",
 };
 
+const levelLabelZh: Record<SkillLevel, string> = {
+  recreational: "休闲 / 新手",
+  club: "俱乐部",
+  competitive: "比赛型",
+  pro_oriented: "专业取向",
+};
+
 const discLabel: Record<Discipline, string> = {
   singles: "Singles",
   doubles: "Doubles",
   mixed: "Mixed",
+};
+
+const discLabelZh: Record<Discipline, string> = {
+  singles: "单打",
+  doubles: "双打",
+  mixed: "混双",
 };
 
 const styleLabel: Record<PlayStyle, string> = {
@@ -39,10 +54,22 @@ const styleLabel: Record<PlayStyle, string> = {
   smash_heavy: "Smash-heavy",
 };
 
-export function QuizFunnel() {
+const styleLabelZh: Record<PlayStyle, string> = {
+  offensive: "进攻",
+  balanced: "均衡",
+  defensive: "防守",
+  front_court: "网前",
+  smash_heavy: "重杀",
+};
+
+export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   const router = useRouter();
   const { profile, setProfile } = useProfile();
   const [step, setStep] = useState(0);
+  const copy = t(locale).quiz;
+  const levels = locale === "zh" ? levelLabelZh : levelLabel;
+  const disciplines = locale === "zh" ? discLabelZh : discLabel;
+  const styles = locale === "zh" ? styleLabelZh : styleLabel;
 
   const progress = useMemo(
     () => Math.round(((step + 1) / STEPS) * 100),
@@ -62,7 +89,7 @@ export function QuizFunnel() {
         discipline: profile.discipline ?? "unknown",
         category: profile.category ?? "unknown",
       });
-      router.push("/results/");
+      router.push(buildLocalizedPath(locale, "/results/"));
     }
   };
 
@@ -85,17 +112,18 @@ export function QuizFunnel() {
         />
       </div>
       <p className="text-sm text-[var(--color-muted)]">
-        Step {step + 1} of {STEPS}
+        {locale === "zh"
+          ? `${copy.step} ${step + 1} ${copy.of} ${STEPS}`
+          : `${copy.step} ${step + 1} ${copy.of} ${STEPS}`}
       </p>
 
       {step === 0 && (
         <section className="mt-6 space-y-4">
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            What’s your level?
+            {copy.levelTitle}
           </h1>
           <p className="text-[var(--color-muted)]">
-            Self-assessed is fine — we use this to match shaft stiffness and
-            racket class.
+            {copy.levelHelp}
           </p>
           <div className="flex flex-col gap-2">
             {SKILL_LEVELS.map((lv) => (
@@ -112,7 +140,7 @@ export function QuizFunnel() {
                     : "border-zinc-200 dark:border-zinc-600"
                 }`}
               >
-                {levelLabel[lv]}
+                {levels[lv]}
               </button>
             ))}
           </div>
@@ -122,7 +150,7 @@ export function QuizFunnel() {
       {step === 1 && (
         <section className="mt-6 space-y-4">
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            What do you mostly play?
+            {copy.disciplineTitle}
           </h1>
           <div className="flex flex-col gap-2">
             {DISCIPLINES.map((d) => (
@@ -139,7 +167,7 @@ export function QuizFunnel() {
                     : "border-zinc-200 dark:border-zinc-600"
                 }`}
               >
-                {discLabel[d]}
+                {disciplines[d]}
               </button>
             ))}
           </div>
@@ -149,10 +177,10 @@ export function QuizFunnel() {
       {step === 2 && (
         <section className="mt-6 space-y-4">
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            Pick up to two styles
+            {copy.styleTitle}
           </h1>
           <p className="text-sm text-[var(--color-muted)]">
-            Tap to toggle. We weight head balance and stiffness from this.
+            {copy.styleHelp}
           </p>
           <div className="flex flex-wrap gap-2">
             {PLAY_STYLES.map((s) => {
@@ -182,7 +210,7 @@ export function QuizFunnel() {
                       : "border border-zinc-300 dark:border-zinc-600"
                   }`}
                 >
-                  {styleLabel[s]}
+                  {styles[s]}
                 </button>
               );
             })}
@@ -192,7 +220,7 @@ export function QuizFunnel() {
             onClick={next}
             className="mt-4 w-full rounded-2xl bg-[var(--color-accent)] py-3 text-sm font-medium text-white"
           >
-            Continue
+            {copy.continue}
           </button>
         </section>
       )}
@@ -200,18 +228,18 @@ export function QuizFunnel() {
       {step === 3 && (
         <section className="mt-6 space-y-4">
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            What are you shopping for?
+            {copy.categoryTitle}
           </h1>
           <p className="text-sm text-[var(--color-muted)]">
-            MVP ships with rackets; other categories follow the same flow.
+            {copy.categoryHelp}
           </p>
           {(
             [
-              ["racket", "Racket"],
-              ["shoes", "Shoes (soon)"],
-              ["string", "String (soon)"],
-              ["grip", "Grip (soon)"],
-              ["bag", "Bag (soon)"],
+              ["racket", locale === "zh" ? "球拍" : "Racket"],
+              ["shoes", locale === "zh" ? "球鞋（即将推出）" : "Shoes (soon)"],
+              ["string", locale === "zh" ? "球线（即将推出）" : "String (soon)"],
+              ["grip", locale === "zh" ? "手胶（即将推出）" : "Grip (soon)"],
+              ["bag", locale === "zh" ? "球包（即将推出）" : "Bag (soon)"],
             ] as [EquipmentCategory, string][]
           ).map(([id, label]) => (
             <button
@@ -237,10 +265,10 @@ export function QuizFunnel() {
       {step === 4 && (
         <section className="mt-6 space-y-4">
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            Optional body & budget
+            {copy.bodyTitle}
           </h1>
           <p className="text-sm text-[var(--color-muted)]">
-            Skip anything you prefer not to share. Not medical advice.
+            {copy.bodyHelp}
           </p>
           <label className="block text-sm">
             <span className="text-[var(--color-muted)]">Budget max (USD)</span>
@@ -350,7 +378,7 @@ export function QuizFunnel() {
             onClick={next}
             className="w-full rounded-2xl bg-[var(--color-accent)] py-3 text-sm font-medium text-white"
           >
-            See recommendations
+            {copy.see}
           </button>
         </section>
       )}
@@ -361,7 +389,7 @@ export function QuizFunnel() {
           onClick={back}
           className="mt-8 text-sm text-[var(--color-muted)] hover:text-[var(--text)]"
         >
-          ← Back
+          ← {copy.back}
         </button>
       )}
     </div>

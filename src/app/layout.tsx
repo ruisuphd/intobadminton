@@ -29,6 +29,13 @@ export const metadata: Metadata = {
     description: "Equipment suggestions tuned to how you play.",
     type: "website",
   },
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en/",
+      "zh-Hans": "/zh/",
+    },
+  },
   robots: {
     index: true,
     follow: true,

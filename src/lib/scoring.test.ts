@@ -14,6 +14,51 @@ function profile(p: Partial<UserProfile>): UserProfile {
 }
 
 describe("scoreProductCatalog", () => {
+  it("attaches confidence signals from official specs and review evidence", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "competitive",
+        discipline: "doubles",
+        styles: ["defensive", "front_court"],
+        category: "racket",
+        body: { budgetMaxUsd: 320, injuryFlags: ["none"] },
+      })
+    );
+
+    const withEvidence = rows.find((r) => r.id === "yy-nanoflare-1000z");
+
+    expect(withEvidence?.confidence.level).toMatch(/^(medium|high)$/);
+    expect(withEvidence?.evidenceProfile.officialSpec.status).toBe(
+      "editor_verified"
+    );
+    expect(withEvidence?.evidenceProfile.reviewEvidence.count).toBeGreaterThan(
+      0
+    );
+    expect(
+      withEvidence?.evidenceProfile.reviewEvidence.displayPolicy
+    ).toBe("metadata_summary_link_only");
+  });
+
+  it("downgrades products that still need official verification", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "singles",
+        styles: ["offensive", "smash_heavy"],
+        category: "racket",
+        body: { budgetMaxUsd: 230, injuryFlags: ["none"] },
+      })
+    );
+
+    const needsReview = rows.find((r) => r.verificationStatus === "needs_review");
+    const editorVerified = rows.find(
+      (r) => r.verificationStatus === "editor_verified"
+    );
+
+    expect(needsReview?.confidence.level).toBe("needs_verification");
+    expect(needsReview?.fitScore).toBeLessThan(editorVerified?.fitScore ?? 0);
+  });
+
   it("keeps beginner/budget users away from pro-only rackets", () => {
     const rows = scoreProductCatalog(
       profile({

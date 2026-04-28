@@ -5,9 +5,10 @@ import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { ResultCard } from "@/components/ResultCard";
 import { useProfile } from "@/context/ProfileContext";
+import type { SiteLocale } from "@/lib/locale";
 import { scoreProductCatalog } from "@/lib/scoring";
 
-export function ResultsClient() {
+export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
   const { profile, pushHistory } = useProfile();
   const rows = useMemo(
     () => scoreProductCatalog(profile).slice(0, 8),
@@ -37,8 +38,11 @@ export function ResultsClient() {
           We need at least your level and discipline to produce a responsible
           shortlist.
         </p>
-        <Link href="/quiz/" className="mt-4 inline-block text-[var(--color-accent)] underline">
-          Start the finder
+        <Link
+          href={locale === "zh" ? "/zh/quiz/" : "/en/quiz/"}
+          className="mt-4 inline-block text-[var(--color-accent)] underline"
+        >
+          {locale === "zh" ? "开始推荐" : "Start the finder"}
         </Link>
       </div>
     );
@@ -47,7 +51,9 @@ export function ResultsClient() {
   if (profile.category !== "racket") {
     return (
       <p className="text-[var(--color-muted)]">
-        Rackets are live first — switch category in the finder when available.
+        {locale === "zh"
+          ? "v1 先上线球拍推荐；其他装备类别会在后续开放。"
+          : "Rackets are live first — switch category in the finder when available."}
       </p>
     );
   }
@@ -56,11 +62,12 @@ export function ResultsClient() {
     return (
       <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6 dark:border-zinc-700">
         <h2 className="font-semibold text-[var(--text)]">
-          No strong matches yet
+          {locale === "zh" ? "暂时没有强匹配" : "No strong matches yet"}
         </h2>
         <p className="mt-2 text-[var(--color-muted)]">
-          Try relaxing budget, choosing one fewer style tag, or selecting a
-          less restrictive category when more equipment types go live.
+          {locale === "zh"
+            ? "可以放宽预算、减少一个打法标签，或等待更多装备类别上线。"
+            : "Try relaxing budget, choosing one fewer style tag, or selecting a less restrictive category when more equipment types go live."}
         </p>
       </div>
     );
@@ -69,7 +76,7 @@ export function ResultsClient() {
   return (
     <div className="space-y-6">
       {rows.map((r, i) => (
-        <ResultCard key={r.id} r={r} rank={i + 1} />
+        <ResultCard key={r.id} r={r} rank={i + 1} locale={locale} />
       ))}
     </div>
   );

@@ -47,6 +47,29 @@ export type ProductRecord = RacketProduct;
 
 export type ScoredRacket = RacketProduct & {
   fitScore: number;
+  confidence: {
+    level: "high" | "medium" | "low" | "needs_verification";
+    score: number;
+    label: string;
+  };
+  evidenceProfile: {
+    officialSpec: {
+      status: VerificationStatus;
+      lastVerifiedAt: string;
+      href: string;
+    };
+    editorSignal: {
+      note?: string;
+      source: RacketProduct["shaftFlexSource"];
+    };
+    reviewEvidence: {
+      count: number;
+      positive: number;
+      caution: number;
+      confidence: "none" | "low" | "medium";
+      displayPolicy: "metadata_summary_link_only";
+    };
+  };
   subscores: {
     style: number;
     discipline: number;

@@ -2,14 +2,12 @@
 
 import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
+import { EvidenceCards } from "@/components/EvidenceCards";
 import { compareLimit, useProfile } from "@/context/ProfileContext";
 import type { ScoredRacket } from "@/lib/types/product";
 
 function confidence(r: ScoredRacket) {
-  if (r.verificationStatus === "official_verified" && r.fitScore >= 0.78)
-    return "High";
-  if (r.verificationStatus !== "needs_review" && r.fitScore >= 0.6) return "Medium";
-  return "Needs review";
+  return r.confidence.label;
 }
 
 function reasonGroup(code: string) {
@@ -23,9 +21,11 @@ function reasonGroup(code: string) {
 export function ResultCard({
   r,
   rank,
+  locale = "en",
 }: {
   r: ScoredRacket;
   rank: number;
+  locale?: "en" | "zh";
 }) {
   const { compareIds, toggleCompare } = useProfile();
   const inCompare = compareIds.includes(r.id);
@@ -46,24 +46,55 @@ export function ResultCard({
           <p className="text-2xl font-semibold text-[var(--color-accent)]">
             {(r.fitScore * 100).toFixed(0)}
           </p>
-          <p className="text-xs text-[var(--color-muted)]">fit score (demo)</p>
-        </div>
+          <p className="text-xs text-[var(--color-muted)]">
+            {locale === "zh" ? "匹配分（演示）" : "fit score (demo)"}
+          </p>
+      </div>
       </div>
       <p className="mt-1 text-sm text-[var(--color-muted)]">
         ${r.priceUsd} · {r.weightVariants.join("/")} ·{" "}
         {r.headWeight.replace("_", " ")} · {r.shaftFlex} shaft
       </p>
       <p className="mt-1 text-xs text-[var(--color-muted)]">
-        Confidence: {confidence(r)} · Verified: {r.lastVerifiedAt} ·{" "}
-        {r.verificationStatus.replace("_", " ")}
+        {locale === "zh" ? "置信度" : "Confidence"}: {confidence(r)} ·{" "}
+        {locale === "zh" ? "官方规格" : "Official spec"}:{" "}
+        {r.evidenceProfile.officialSpec.status.replace("_", " ")} · Verified:{" "}
+        {r.evidenceProfile.officialSpec.lastVerifiedAt}
       </p>
+      <div className="mt-4 grid gap-2 text-xs sm:grid-cols-3">
+        <div className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-700">
+          <p className="font-medium text-[var(--text)]">
+            {locale === "zh" ? "官方规格" : "Official spec"}
+          </p>
+          <p className="mt-1 text-[var(--color-muted)]">
+            {r.evidenceProfile.officialSpec.status.replace("_", " ")}
+          </p>
+        </div>
+        <div className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-700">
+          <p className="font-medium text-[var(--text)]">
+            {locale === "zh" ? "编辑信号" : "Editor signal"}
+          </p>
+          <p className="mt-1 text-[var(--color-muted)]">
+            {r.evidenceProfile.editorSignal.source.replace("_", " ")}
+          </p>
+        </div>
+        <div className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-700">
+          <p className="font-medium text-[var(--text)]">
+            {locale === "zh" ? "评价证据" : "Review evidence"}
+          </p>
+          <p className="mt-1 text-[var(--color-muted)]">
+            {r.evidenceProfile.reviewEvidence.count}{" "}
+            {locale === "zh" ? "条元数据摘要" : "metadata summaries"}
+          </p>
+        </div>
+      </div>
       {r.reasons.length > 0 && (
         <ul className="mt-4 space-y-2 text-sm text-[var(--text)]">
           {r.reasons.map((x) => (
             <li key={x.code} className="flex gap-2">
               <span className="text-[var(--color-accent)]">·</span>
               <span>
-                <span className="font-medium">{reasonGroup(x.code)}:</span>{" "}
+              <span className="font-medium">{reasonGroup(x.code)}:</span>{" "}
                 {x.label}
               </span>
             </li>
@@ -85,6 +116,7 @@ export function ResultCard({
           {r.editorNote}
         </p>
       )}
+      <EvidenceCards productId={r.id} />
       <div className="mt-5 flex flex-wrap gap-2">
         <button
           type="button"
@@ -105,7 +137,9 @@ export function ResultCard({
             ? "Remove from compare"
             : full
               ? `Max ${compareLimit} in compare`
-              : "Add to compare"}
+              : locale === "zh"
+                ? "加入对比"
+                : "Add to compare"}
         </button>
         <Link
           href="/compare/"
@@ -114,13 +148,13 @@ export function ResultCard({
           }
           className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm dark:border-zinc-600"
         >
-          Open compare
+          {locale === "zh" ? "打开对比" : "Open compare"}
         </Link>
         <Link
           href={`/contact/?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
           className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm dark:border-zinc-600"
         >
-          Report data issue
+          {locale === "zh" ? "报告数据问题" : "Report data issue"}
         </Link>
       </div>
     </article>

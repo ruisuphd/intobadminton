@@ -1,4 +1,5 @@
 import products from "@/data/products.json";
+import { getEvidenceSummary } from "@/lib/review-evidence";
 import { REASON_LABELS, type ReasonCode } from "@/lib/reason-codes";
 import type { RacketProduct, ScoredRacket, SourceChip } from "@/lib/types/product";
 import type { Discipline, PlayStyle, SkillLevel, UserProfile } from "@/lib/taxonomy";
@@ -231,6 +232,67 @@ function buildProsCons(p: RacketProduct): { pros: string[]; cons: string[] } {
   return { pros, cons };
 }
 
+function buildEvidenceProfile(p: RacketProduct): ScoredRacket["evidenceProfile"] {
+  const reviewEvidence = getEvidenceSummary(p.id);
+  return {
+    officialSpec: {
+      status: p.verificationStatus,
+      lastVerifiedAt: p.lastVerifiedAt,
+      href: p.officialSourceUrl,
+    },
+    editorSignal: {
+      note: p.editorNote,
+      source: p.shaftFlexSource,
+    },
+    reviewEvidence: {
+      ...reviewEvidence,
+      displayPolicy: "metadata_summary_link_only",
+    },
+  };
+}
+
+function buildConfidence(
+  p: RacketProduct,
+  fitScore: number,
+  evidenceProfile: ScoredRacket["evidenceProfile"]
+): ScoredRacket["confidence"] {
+  if (p.verificationStatus === "needs_review") {
+    return {
+      level: "needs_verification",
+      score: 0.25,
+      label: "Needs official verification",
+    };
+  }
+  const officialBase = p.verificationStatus === "official_verified" ? 0.62 : 0.5;
+  const reviewBoost =
+    evidenceProfile.reviewEvidence.confidence === "medium"
+      ? 0.18
+      : evidenceProfile.reviewEvidence.confidence === "low"
+        ? 0.08
+        : 0;
+  const fitBoost = fitScore >= 0.78 ? 0.16 : fitScore >= 0.62 ? 0.1 : 0.04;
+  const score = Math.min(1, officialBase + reviewBoost + fitBoost);
+  if (score >= 0.78) return { level: "high", score, label: "High confidence" };
+  if (score >= 0.58)
+    return { level: "medium", score, label: "Medium confidence" };
+  return { level: "low", score, label: "Low confidence" };
+}
+
+function verificationMultiplier(p: RacketProduct, profile: UserProfile): number {
+  const budgetMax = profile.body.budgetMaxUsd;
+  if (
+    p.verificationStatus === "needs_review" &&
+    profile.level === "recreational" &&
+    budgetMax != null &&
+    p.priceUsd <= budgetMax
+  ) {
+    return 0.96;
+  }
+  if (p.verificationStatus === "needs_review") return 0.86;
+  if (p.verificationStatus === "official_verified") return 1.03;
+  return 1;
+}
+
 function scoreRacket(
   p: RacketProduct,
   profile: UserProfile
@@ -238,10 +300,13 @@ function scoreRacket(
   const reasons: { code: ReasonCode; label: string; weight: number }[] = [];
   if (!profile.level || !profile.discipline) {
     const { pros, cons } = buildProsCons(p);
+    const evidenceProfile = buildEvidenceProfile(p);
     return {
       ...p,
       subscores: { style: 0, discipline: 0, level: 0, budget: 0, body: 0 },
       fitScore: 0,
+      confidence: buildConfidence(p, 0, evidenceProfile),
+      evidenceProfile,
       reasons: [],
       pros,
       cons,
@@ -250,10 +315,13 @@ function scoreRacket(
   }
   if (!productAllowedForUserLevel(p, profile.level)) {
     const { pros, cons } = buildProsCons(p);
+    const evidenceProfile = buildEvidenceProfile(p);
     return {
       ...p,
       subscores: { style: 0, discipline: 0, level: 0, budget: 0, body: 0 },
       fitScore: 0.05,
+      confidence: buildConfidence(p, 0.05, evidenceProfile),
+      evidenceProfile,
       reasons: [],
       pros,
       cons,
@@ -271,17 +339,21 @@ function scoreRacket(
     ),
     body: scoreBody(p, profile.level, profile.body, reasons),
   };
-  const fitScore =
+  const rawFitScore =
     sub.style * 0.24 +
     sub.discipline * 0.12 +
     sub.level * 0.26 +
     sub.budget * 0.2 +
     sub.body * 0.18;
+  const fitScore = Math.min(1, rawFitScore * verificationMultiplier(p, profile));
   const { pros, cons } = buildProsCons(p);
+  const evidenceProfile = buildEvidenceProfile(p);
   return {
     ...p,
     subscores: sub,
     fitScore: Math.round(fitScore * 1000) / 1000,
+    confidence: buildConfidence(p, fitScore, evidenceProfile),
+    evidenceProfile,
     reasons: reasons
       .sort((a, b) => b.weight - a.weight)
       .filter(

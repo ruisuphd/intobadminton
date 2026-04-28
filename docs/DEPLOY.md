@@ -14,6 +14,20 @@ NEXT_PUBLIC_BASE_PATH=/intobadminton npm run build
 
 **Note:** `NEXT_PUBLIC_SITE_URL` should match the public origin for `metadata` in `src/app/layout.tsx`.
 
+## GitHub Pages (custom domain, v1 recommendation)
+
+For the AdSense-first static launch, use a custom domain such as
+`intobadminton.com` instead of the default GitHub subdomain.
+
+1. Keep `public/CNAME` set to the exact custom domain.
+2. Set `NEXT_PUBLIC_SITE_URL=https://intobadminton.com` during build.
+3. Leave `NEXT_PUBLIC_BASE_PATH` empty for the apex/custom domain.
+4. Publish the generated `out/` directory to GitHub Pages.
+5. Verify `/ads.txt`, `/sitemap.xml`, `/robots.txt`, `/en/`, and `/zh/`.
+
+`public/ads.txt` intentionally contains a placeholder comment. Replace it with
+the exact AdSense line after the AdSense account provides the publisher ID.
+
 ## Firebase Hosting
 
 1. `firebase init hosting` in this repo, point to `out` as the public directory.

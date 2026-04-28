@@ -4,6 +4,7 @@ The app uses optional environment variables:
 
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID` for Google Analytics 4.
 - `NEXT_PUBLIC_ADSENSE_CLIENT` for AdSense.
+- `NEXT_PUBLIC_ADSENSE_SLOT_DEFAULT` for the v1 responsive display ad unit.
 
 ## Events
 

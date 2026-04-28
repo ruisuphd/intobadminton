@@ -25,8 +25,14 @@ export function AdSlot({
   className?: string;
 }) {
   const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+  const defaultSlot = process.env.NEXT_PUBLIC_ADSENSE_SLOT_DEFAULT;
+  const resolvedSlot = slot || defaultSlot;
   const { consent } = useConsent();
-  const canLoadAd = Boolean(client && slot && consent.ads);
+  const canLoadAd = canRenderAdSlot({
+    client,
+    slot: resolvedSlot,
+    adsConsent: consent.ads,
+  });
 
   useEffect(() => {
     if (!canLoadAd) return;
@@ -52,7 +58,7 @@ export function AdSlot({
           className="adsbygoogle"
           style={{ display: "block" }}
           data-ad-client={client}
-          data-ad-slot={slot}
+          data-ad-slot={resolvedSlot}
           data-ad-format="auto"
           data-full-width-responsive="true"
         />
@@ -64,6 +70,18 @@ export function AdSlot({
       )}
     </aside>
   );
+}
+
+export function canRenderAdSlot({
+  client,
+  slot,
+  adsConsent,
+}: {
+  client: string | undefined;
+  slot: string | undefined;
+  adsConsent: boolean;
+}) {
+  return Boolean(client && slot && adsConsent);
 }
 
 export function AdSidebar() {
