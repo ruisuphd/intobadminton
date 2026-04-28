@@ -14,7 +14,11 @@ export const companyInfo = {
   businessDescription:
     "Intonation Labs designs and builds production-grade ML systems, GenAI solutions, and real-time inference pipelines.",
   founderDescription:
-    "Rui Su is the founder and director of Intonation Labs and a PhD candidate at Maynooth University.",
+    "Rui Su is the founder and director of Intonation Labs and a PhD candidate at Maynooth University. He started badminton as a child in China, played for the Maynooth University team and across multiple Dublin clubs, and currently competes in Division 4 of the Irish Badminton league. He has trained under a former Malaysian national-team player and a former Chinese provincial-team player.",
+  authorBylineEn:
+    "Rui Su · Founder, IntoBadminton · Div 4 Ireland · trained under former Malaysia national and China provincial-team coaches",
+  authorBylineZh:
+    "苏睿 · IntoBadminton 创始人 · 爱尔兰 Div 4 联赛球员 · 师从前马来西亚国手与前中国省队教练",
 } as const;
 
 export const organizationJsonLd = {

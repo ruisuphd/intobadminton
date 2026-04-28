@@ -49,6 +49,10 @@ export type BodyProfile = {
 
 export type UserProfile = {
   level: SkillLevel | null;
+  /** Optional ISO-style country code keyed in skill-levels.ts (e.g. "CN", "IE"). */
+  countryCode?: string;
+  /** Country-specific level value (e.g. "5" for 中羽 5, "4" for IE Div 4). */
+  countryLevel?: string;
   discipline: Discipline | null;
   styles: PlayStyle[];
   category: EquipmentCategory | null;
@@ -61,6 +65,8 @@ export const defaultBodyProfile = (): BodyProfile => ({
 
 export const defaultUserProfile = (): UserProfile => ({
   level: null,
+  countryCode: "GENERIC",
+  countryLevel: undefined,
   discipline: null,
   styles: [],
   category: "racket",
