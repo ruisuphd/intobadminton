@@ -3,13 +3,16 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { useProfile } from "@/context/ProfileContext";
-import type { RacketProduct, ScoredRacket } from "@/lib/types/product";
+import type { ProductRecord, ScoredProduct } from "@/lib/types/product";
 import { byId, scoreProductCatalog } from "@/lib/scoring";
 import type { SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
-function cell(p: RacketProduct | ScoredRacket, k: string): string {
+function cell(p: ProductRecord | ScoredProduct, k: string): string {
   if (k === "confidence" && "confidence" in p) return p.confidence.label;
+  if (k === "resale" && p.resale) {
+    return `$${p.resale.estimatedUsedUsd} used · ${p.resale.depreciationPct}% dep.`;
+  }
   const v = (p as unknown as Record<string, unknown>)[k];
   if (v == null) return "—";
   if (Array.isArray(v)) return v.join(", ");
@@ -22,7 +25,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
   const scored = new Map(scoreProductCatalog(profile).map((row) => [row.id, row]));
   const items = compareIds
     .map((id) => scored.get(id) ?? byId(id))
-    .filter((x): x is RacketProduct | ScoredRacket => x != null);
+    .filter((x): x is ProductRecord | ScoredProduct => x != null);
 
   return (
     <main className="flex-1 py-16">
@@ -33,14 +36,14 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
         <p className="mt-2 text-[var(--color-muted)]">{copy.subtitle}</p>
         {compareIds.length === 0 ? (
           <p className="mt-8 text-sm text-[var(--color-muted)]">
-            {locale === "zh" ? "从你的" : "Add rackets from your"}{" "}
+            {locale === "zh" ? "从你的" : "Add gear from your"}{" "}
             <Link
               href={locale === "zh" ? "/zh/results/" : "/en/results/"}
               className="text-[var(--color-accent)] underline"
             >
               {locale === "zh" ? "推荐结果" : "results"}
             </Link>
-            {locale === "zh" ? "中加入球拍。" : "."}
+            {locale === "zh" ? "中加入装备。" : "."}
           </p>
         ) : (
           <>
@@ -59,9 +62,14 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
                 <tbody className="text-[var(--color-muted)]">
                   {[
                     "brand",
+                    "category",
                     "priceUsd",
+                    "resale",
                     "headWeight",
                     "shaftFlex",
+                    "gaugeMm",
+                    "fitWidth",
+                    "capacityRackets",
                     "weightVariants",
                     "gripSizes",
                     "balanceMm",

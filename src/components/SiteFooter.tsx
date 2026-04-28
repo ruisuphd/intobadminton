@@ -64,6 +64,18 @@ export function SiteFooter() {
             >
               {copy.footer.methodology}
             </Link>
+            <Link
+              href={localized("/research/")}
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              {locale === "zh" ? "市场调研" : "Market research"}
+            </Link>
+            <Link
+              href={localized("/security/")}
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              {locale === "zh" ? "安全" : "Security"}
+            </Link>
             <CookieSettingsLink />
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Contact — IntoBadminton",
@@ -11,13 +12,18 @@ export default function ContactPage() {
       <div className="layout-band max-w-2xl space-y-4 text-[var(--color-muted)]">
         <h1 className="text-3xl font-semibold text-[var(--text)]">Contact</h1>
         <p>
-          IntoBadminton should be operated under the company entity that
-          receives advertising or affiliate income. Before launch, replace this
-          section with the company legal name, registration number if
-          applicable, business address or service address, and support email.
+          IntoBadminton is operated by {companyInfo.operatorLegalName}, a
+          Singapore-registered company. The site is an independent badminton
+          equipment research and recommendation project.
         </p>
         <p>
-          Support email: <strong className="text-[var(--text)]">support@YOUR_DOMAIN</strong>
+          Support email:{" "}
+          <a
+            href={`mailto:${companyInfo.supportEmail}`}
+            className="font-medium text-[var(--color-accent)] underline"
+          >
+            {companyInfo.supportEmail}
+          </a>
         </p>
         <p>
           Product data corrections, source-rights questions, and review removal
@@ -26,8 +32,22 @@ export default function ContactPage() {
         </p>
         <p>
           Privacy/DPO contact:{" "}
-          <strong className="text-[var(--text)]">privacy@YOUR_DOMAIN</strong>.
-          Replace before launch with the appointed company privacy contact.
+          <a
+            href={`mailto:${companyInfo.privacyEmail}`}
+            className="font-medium text-[var(--color-accent)] underline"
+          >
+            {companyInfo.privacyEmail}
+          </a>
+          .
+        </p>
+        <p>
+          Operator website:{" "}
+          <a
+            href={companyInfo.operatorWebsite}
+            className="font-medium text-[var(--color-accent)] underline"
+          >
+            {companyInfo.operatorWebsite}
+          </a>
         </p>
       </div>
     </main>

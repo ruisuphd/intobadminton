@@ -15,7 +15,7 @@ export async function generateMetadata({
       : "Personalized badminton equipment finder — IntoBadminton",
     description: zh
       ? "根据水平、打法、身体舒适度和预算推荐羽毛球装备。"
-      : "Badminton equipment recommendations based on level, style, body comfort, and budget.",
+      : "Badminton equipment recommendations for rackets, strings, shoes, and bags based on level, style, body comfort, and budget.",
     alternates: {
       canonical: `/${locale}/`,
       languages: {

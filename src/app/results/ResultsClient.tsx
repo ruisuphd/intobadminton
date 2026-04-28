@@ -24,9 +24,10 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
     pushHistory(rows.map((r) => r.id));
     trackEvent("recommendations_viewed", {
       result_count: rows.length,
+      category: profile.category ?? "unknown",
       top_product_id: rows[0]?.id,
     });
-  }, [rows, pushHistory]);
+  }, [rows, pushHistory, profile.category]);
 
   if (!profile.level || !profile.discipline) {
     return (
@@ -48,16 +49,6 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
     );
   }
 
-  if (profile.category !== "racket") {
-    return (
-      <p className="text-[var(--color-muted)]">
-        {locale === "zh"
-          ? "v1 先上线球拍推荐；其他装备类别会在后续开放。"
-          : "Rackets are live first — switch category in the finder when available."}
-      </p>
-    );
-  }
-
   if (rows.length === 0) {
     return (
       <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6 dark:border-zinc-700">
@@ -66,8 +57,8 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
         </h2>
         <p className="mt-2 text-[var(--color-muted)]">
           {locale === "zh"
-            ? "可以放宽预算、减少一个打法标签，或等待更多装备类别上线。"
-            : "Try relaxing budget, choosing one fewer style tag, or selecting a less restrictive category when more equipment types go live."}
+            ? "可以放宽预算、减少一个打法标签，或换一个装备类别。"
+            : "Try relaxing budget, choosing one fewer style tag, or selecting another equipment category."}
         </p>
       </div>
     );

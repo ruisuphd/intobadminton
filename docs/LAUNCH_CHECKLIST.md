@@ -2,8 +2,9 @@
 
 ## Legal and company
 
-- Replace `YOUR_DOMAIN`, `support@YOUR_DOMAIN`, and `privacy@YOUR_DOMAIN`.
-- Add company legal name, registration number if applicable, and privacy/DPO contact.
+- Domain is `https://intobadminton.com`.
+- Operator is listed as Intonation Labs Pte. Ltd. with `info@intonationlabs.com` for support, privacy, source-rights, and security intake.
+- Add a registration number and registered street/service address if your legal counsel wants them public.
 - Counsel/accountant review of privacy, cookies, terms, affiliate, and AdSense disclosures.
 - Confirm minors/parental-consent stance.
 
@@ -18,7 +19,7 @@
 
 ## SEO and traffic quality
 
-- Replace sitemap host and submit Search Console.
+- Submit `https://intobadminton.com/sitemap.xml` in Search Console.
 - Add GA4 property and AdSense channels by page type.
 - Avoid purchased/low-quality/incentivized traffic.
 - Monitor Core Web Vitals and invalid traffic warnings.

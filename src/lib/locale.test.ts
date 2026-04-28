@@ -31,10 +31,13 @@ describe("locale routing", () => {
       "/zh/review/",
       "/zh/methodology/",
       "/zh/source-policy/",
+      "/zh/security/",
       "/zh/privacy/",
       "/zh/cookies/",
       "/zh/terms/",
       "/zh/contact/",
+      "/zh/blog/",
+      "/zh/research/",
     ]);
   });
 });
@@ -48,5 +51,17 @@ describe("sitemapEntries", () => {
     expect(urls).toContain("https://example.com/zh/");
     expect(urls).toContain("https://example.com/zh/quiz/");
     expect(urls).toContain("https://example.com/en/guides/");
+    expect(urls).toContain("https://example.com/security/");
+    expect(urls).toContain("https://example.com/zh/security/");
+    expect(urls).toContain("https://example.com/blog/");
+    expect(urls).toContain("https://example.com/zh/blog/");
+    expect(urls).toContain(
+      "https://example.com/blog/used-racket-depreciation/"
+    );
+    expect(urls).toContain(
+      "https://example.com/zh/blog/used-racket-depreciation/"
+    );
+    expect(urls).toContain("https://example.com/research/");
+    expect(urls).toContain("https://example.com/zh/research/");
   });
 });

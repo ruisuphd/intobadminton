@@ -2,6 +2,7 @@ export const CONSENT_VERSION = 1;
 export const CONSENT_STORAGE_KEY = "intobadminton.consent.v1";
 
 export type ConsentMode = "global_strict" | "custom";
+export type AdOperationalMode = "disabled" | "cmp_tcf";
 
 export type ConsentPreferences = {
   version: number;
@@ -62,6 +63,20 @@ export function makeConsent(draft: ConsentDraft): ConsentPreferences {
   };
 }
 
+export function makeConsentForMode(
+  draft: ConsentDraft,
+  mode: AdOperationalMode | string | undefined
+): ConsentPreferences {
+  if (mode !== "cmp_tcf") {
+    return makeConsent({
+      ...draft,
+      ads: false,
+      personalization: false,
+    });
+  }
+  return makeConsent(draft);
+}
+
 export function consentModePayload(c: ConsentPreferences) {
   return {
     analytics_storage: c.analytics ? "granted" : "denied",
@@ -70,4 +85,45 @@ export function consentModePayload(c: ConsentPreferences) {
     ad_personalization:
       c.personalization && !c.doNotSellShare ? "granted" : "denied",
   };
+}
+
+export function adConsentOperational(
+  c: Pick<ConsentPreferences, "ads" | "doNotSellShare">,
+  mode: AdOperationalMode | string | undefined
+) {
+  return Boolean(c.ads && !c.doNotSellShare && mode === "cmp_tcf");
+}
+
+export function consentAuditSummary() {
+  return [
+    {
+      category: "Necessary",
+      defaultState: "on",
+      legalBasis: "strictly necessary",
+      storage:
+        "localStorage for consent, theme, finder profile, compare list, history, and local review drafts",
+      thirdParties: "none",
+    },
+    {
+      category: "Analytics",
+      defaultState: "off",
+      legalBasis: "consent",
+      storage: "GA4 cookies/storage after opt-in",
+      thirdParties: "Google Analytics 4",
+    },
+    {
+      category: "Advertising",
+      defaultState: "off",
+      legalBasis: "consent plus compliant AdSense operational mode",
+      storage: "AdSense cookies/storage after opt-in and CMP/TCF deployment mode",
+      thirdParties: "Google AdSense",
+    },
+    {
+      category: "Personalization",
+      defaultState: "off",
+      legalBasis: "explicit consent where lawful",
+      storage: "ad personalization signals only after compliant consent",
+      thirdParties: "Google AdSense",
+    },
+  ] as const;
 }

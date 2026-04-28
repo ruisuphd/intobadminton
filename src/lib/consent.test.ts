@@ -1,8 +1,11 @@
 import { describe, expect, it } from "vitest";
 import {
+  adConsentOperational,
+  consentAuditSummary,
   consentModePayload,
   defaultConsent,
   makeConsent,
+  makeConsentForMode,
   normalizeConsent,
 } from "@/lib/consent";
 
@@ -54,5 +57,51 @@ describe("consent", () => {
 
   it("rejects incompatible stored versions", () => {
     expect(normalizeConsent({ version: 999 }, false)).toEqual(defaultConsent());
+  });
+
+  it("keeps AdSense operationally disabled until a compliant mode is configured", () => {
+    const c = makeConsent({
+      analytics: true,
+      ads: true,
+      personalization: false,
+      doNotSellShare: false,
+    });
+
+    expect(adConsentOperational(c, "disabled")).toBe(false);
+    expect(adConsentOperational(c, "cmp_tcf")).toBe(true);
+    expect(adConsentOperational({ ...c, ads: false }, "cmp_tcf")).toBe(false);
+  });
+
+  it("forces stored ad consent off when deployment mode is disabled", () => {
+    const c = makeConsentForMode(
+      {
+        analytics: true,
+        ads: true,
+        personalization: true,
+        doNotSellShare: false,
+      },
+      "disabled"
+    );
+
+    expect(c.analytics).toBe(true);
+    expect(c.ads).toBe(false);
+    expect(c.personalization).toBe(false);
+  });
+
+  it("summarizes storage categories for policy and cookie settings", () => {
+    const summary = consentAuditSummary();
+
+    expect(summary).toContainEqual(
+      expect.objectContaining({
+        category: "Necessary",
+        legalBasis: "strictly necessary",
+      })
+    );
+    expect(summary).toContainEqual(
+      expect.objectContaining({
+        category: "Advertising",
+        defaultState: "off",
+      })
+    );
   });
 });

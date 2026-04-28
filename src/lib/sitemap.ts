@@ -3,6 +3,7 @@ import {
   siteLocales,
   type SiteLocale,
 } from "@/lib/locale";
+import { blogSlugs } from "@/lib/blog";
 
 export type SitemapEntry = {
   url: string;
@@ -19,10 +20,15 @@ const canonicalRoutes = [
   "/review/",
   "/methodology/",
   "/source-policy/",
+  "/security/",
   "/privacy/",
   "/cookies/",
   "/terms/",
   "/contact/",
+  "/setup/",
+  "/blog/",
+  "/research/",
+  ...blogSlugs.map((slug) => `/blog/${slug}/`),
   "/best/beginner-rackets/",
   "/best/doubles-rackets/",
   "/best/smash-heavy-rackets/",
@@ -63,10 +69,10 @@ function entry(origin: string, path: string): SitemapEntry {
 export function sitemapEntries(
   origin = process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
 ): SitemapEntry[] {
-  const localized = siteLocales.flatMap((locale: SiteLocale) =>
-    localizedRoutesFor(locale)
-  );
+  const localized = siteLocales.flatMap((locale: SiteLocale) => [
+    ...localizedRoutesFor(locale),
+    ...blogSlugs.map((slug) => `/${locale}/blog/${slug}/`),
+  ]);
   const paths = [...canonicalRoutes, ...localized];
   return Array.from(new Set(paths)).map((path) => entry(origin, path));
 }
-

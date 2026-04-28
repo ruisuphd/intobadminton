@@ -19,6 +19,7 @@ import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
 const STEPS = 5;
+const LIVE_CATEGORIES: EquipmentCategory[] = ["racket", "shoes", "string", "bag"];
 
 const levelLabel: Record<SkillLevel, string> = {
   recreational: "Recreational",
@@ -236,29 +237,32 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           {(
             [
               ["racket", locale === "zh" ? "球拍" : "Racket"],
-              ["shoes", locale === "zh" ? "球鞋（即将推出）" : "Shoes (soon)"],
-              ["string", locale === "zh" ? "球线（即将推出）" : "String (soon)"],
+              ["shoes", locale === "zh" ? "球鞋" : "Shoes"],
+              ["string", locale === "zh" ? "球线" : "String"],
               ["grip", locale === "zh" ? "手胶（即将推出）" : "Grip (soon)"],
-              ["bag", locale === "zh" ? "球包（即将推出）" : "Bag (soon)"],
+              ["bag", locale === "zh" ? "球包" : "Bag"],
             ] as [EquipmentCategory, string][]
-          ).map(([id, label]) => (
-            <button
-              type="button"
-              key={id}
-              disabled={id !== "racket"}
-              onClick={() => {
-                setProfile((p) => ({ ...p, category: id }));
-                next();
-              }}
-              className={`flex w-full rounded-2xl border px-4 py-3 text-left text-sm ${
-                id === "racket"
-                  ? "border-zinc-200 dark:border-zinc-600"
-                  : "cursor-not-allowed opacity-50"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+          ).map(([id, label]) => {
+            const live = LIVE_CATEGORIES.includes(id);
+            return (
+              <button
+                type="button"
+                key={id}
+                disabled={!live}
+                onClick={() => {
+                  setProfile((p) => ({ ...p, category: id }));
+                  next();
+                }}
+                className={`flex w-full rounded-2xl border px-4 py-3 text-left text-sm ${
+                  live
+                    ? "border-zinc-200 dark:border-zinc-600"
+                    : "cursor-not-allowed opacity-50"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
         </section>
       )}
 

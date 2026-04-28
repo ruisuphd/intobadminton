@@ -4,9 +4,10 @@ import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { EvidenceCards } from "@/components/EvidenceCards";
 import { compareLimit, useProfile } from "@/context/ProfileContext";
-import type { ScoredRacket } from "@/lib/types/product";
+import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import type { ScoredProduct } from "@/lib/types/product";
 
-function confidence(r: ScoredRacket) {
+function confidence(r: ScoredProduct) {
   return r.confidence.label;
 }
 
@@ -15,7 +16,44 @@ function reasonGroup(code: string) {
   if (code.includes("LEVEL")) return "Level fit";
   if (code.includes("BUDGET")) return "Budget fit";
   if (code.includes("INJURY") || code.includes("WEIGHT")) return "Comfort caution";
+  if (code.includes("STRING")) return "String fit";
+  if (code.includes("SHOE")) return "Shoe fit";
+  if (code.includes("BAG")) return "Bag fit";
   return "Evidence";
+}
+
+function categoryLabel(category: ScoredProduct["category"], locale: SiteLocale) {
+  const en = {
+    racket: "Racket",
+    string: "String",
+    shoes: "Shoes",
+    bag: "Bag",
+    grip: "Grip",
+  };
+  const zh = {
+    racket: "球拍",
+    string: "球线",
+    shoes: "球鞋",
+    bag: "球包",
+    grip: "手胶",
+  };
+  return (locale === "zh" ? zh : en)[category];
+}
+
+function specLine(r: ScoredProduct) {
+  if (r.category === "racket") {
+    return `${r.weightVariants.join("/")} · ${r.headWeight.replace("_", " ")} · ${r.shaftFlex} shaft`;
+  }
+  if (r.category === "string") {
+    return `${r.gaugeMm.toFixed(2)} mm · ${r.feel} feel · ${r.repulsion.replace("_", " ")} repulsion · ${r.durability} durability`;
+  }
+  if (r.category === "shoes") {
+    return `${r.fitWidth.replace("_", " ")} fit · ${r.cushioning} cushioning · ${r.stability.replace("_", " ")} stability`;
+  }
+  if (r.category === "bag") {
+    return `${r.capacityRackets} rackets · ${r.sizeClass} size · ${r.hasShoeCompartment ? "shoe compartment" : "no shoe compartment"}`;
+  }
+  return "";
 }
 
 export function ResultCard({
@@ -23,9 +61,9 @@ export function ResultCard({
   rank,
   locale = "en",
 }: {
-  r: ScoredRacket;
+  r: ScoredProduct;
   rank: number;
-  locale?: "en" | "zh";
+  locale?: SiteLocale;
 }) {
   const { compareIds, toggleCompare } = useProfile();
   const inCompare = compareIds.includes(r.id);
@@ -36,7 +74,7 @@ export function ResultCard({
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <p className="text-xs font-medium text-[var(--color-muted)]">
-            #{rank} · {r.brand}
+            #{rank} · {categoryLabel(r.category, locale)} · {r.brand}
           </p>
           <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">
             {r.name}
@@ -52,9 +90,16 @@ export function ResultCard({
       </div>
       </div>
       <p className="mt-1 text-sm text-[var(--color-muted)]">
-        ${r.priceUsd} · {r.weightVariants.join("/")} ·{" "}
-        {r.headWeight.replace("_", " ")} · {r.shaftFlex} shaft
+        ${r.priceUsd} · {specLine(r)}
       </p>
+      {r.resale && (
+        <p className="mt-1 text-xs text-[var(--color-muted)]">
+          {locale === "zh" ? "二手价值估计" : "Estimated resale"}: $
+          {r.resale.estimatedUsedUsd} · {r.resale.depreciationPct}%{" "}
+          {locale === "zh" ? "折旧" : "depreciation"} ·{" "}
+          {r.resale.confidence} confidence
+        </p>
+      )}
       <p className="mt-1 text-xs text-[var(--color-muted)]">
         {locale === "zh" ? "置信度" : "Confidence"}: {confidence(r)} ·{" "}
         {locale === "zh" ? "官方规格" : "Official spec"}:{" "}
@@ -88,6 +133,14 @@ export function ResultCard({
           </p>
         </div>
       </div>
+      {r.resale && (
+        <div className="mt-4 rounded-xl border border-zinc-200 bg-[var(--background)] p-3 text-xs dark:border-zinc-700">
+          <p className="font-medium text-[var(--text)]">
+            {locale === "zh" ? "转售/折旧信号" : "Resale/depreciation signal"}
+          </p>
+          <p className="mt-1 text-[var(--color-muted)]">{r.resale.basis}</p>
+        </div>
+      )}
       {r.reasons.length > 0 && (
         <ul className="mt-4 space-y-2 text-sm text-[var(--text)]">
           {r.reasons.map((x) => (
@@ -142,7 +195,7 @@ export function ResultCard({
                 : "Add to compare"}
         </button>
         <Link
-          href="/compare/"
+          href={buildLocalizedPath(locale, "/compare/")}
           onClick={() =>
             trackEvent("open_compare", { product_id: r.id, rank })
           }
@@ -151,7 +204,7 @@ export function ResultCard({
           {locale === "zh" ? "打开对比" : "Open compare"}
         </Link>
         <Link
-          href={`/contact/?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
+          href={`${buildLocalizedPath(locale, "/contact/")}?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
           className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm dark:border-zinc-600"
         >
           {locale === "zh" ? "报告数据问题" : "Report data issue"}

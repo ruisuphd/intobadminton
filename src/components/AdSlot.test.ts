@@ -8,6 +8,7 @@ describe("canRenderAdSlot", () => {
         client: "ca-pub-1234567890123456",
         slot: "1234567890",
         adsConsent: true,
+        operationalMode: "cmp_tcf",
       })
     ).toBe(true);
 
@@ -16,6 +17,7 @@ describe("canRenderAdSlot", () => {
         client: undefined,
         slot: "1234567890",
         adsConsent: true,
+        operationalMode: "cmp_tcf",
       })
     ).toBe(false);
 
@@ -24,6 +26,7 @@ describe("canRenderAdSlot", () => {
         client: "ca-pub-1234567890123456",
         slot: undefined,
         adsConsent: true,
+        operationalMode: "cmp_tcf",
       })
     ).toBe(false);
 
@@ -32,6 +35,18 @@ describe("canRenderAdSlot", () => {
         client: "ca-pub-1234567890123456",
         slot: "1234567890",
         adsConsent: false,
+        operationalMode: "cmp_tcf",
+      })
+    ).toBe(false);
+  });
+
+  it("does not render ads in the default disabled operational mode", () => {
+    expect(
+      canRenderAdSlot({
+        client: "ca-pub-1234567890123456",
+        slot: "1234567890",
+        adsConsent: true,
+        operationalMode: "disabled",
       })
     ).toBe(false);
   });

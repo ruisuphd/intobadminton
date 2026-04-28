@@ -5,6 +5,8 @@ export const messages = {
     nav: {
       finder: "Finder",
       guides: "Guides",
+      blog: "Blog",
+      research: "Research",
       compare: "Compare",
       review: "Review",
       language: "中文",
@@ -18,7 +20,7 @@ export const messages = {
     home: {
       title: "Personalized badminton equipment finder",
       subtitle:
-        "Tell us your level, playing style, discipline, body comfort needs, and budget. IntoBadminton ranks rackets with transparent specs, editor signals, and rights-safe review evidence.",
+        "Tell us your level, playing style, discipline, body comfort needs, and budget. IntoBadminton ranks rackets, strings, shoes, and bags with transparent specs, review signals, and resale context.",
       start: "Start finder",
       guides: "Read guides",
       proof: [
@@ -28,7 +30,7 @@ export const messages = {
         },
         {
           title: "Built around badminton profiles",
-          body: "Singles, doubles, front-court speed, smash-heavy play, injury comfort flags, and budget all affect the shortlist.",
+          body: "Singles, doubles, front-court speed, smash-heavy play, foot width, comfort flags, string tension, and budget all affect the shortlist.",
         },
         {
           title: "Static-first and privacy-first",
@@ -46,7 +48,7 @@ export const messages = {
       styleTitle: "Pick up to two playing styles",
       styleHelp: "We use this to weight head balance, speed, and power fit.",
       categoryTitle: "What are you shopping for?",
-      categoryHelp: "Rackets are live first; other categories follow the same profile model later.",
+      categoryHelp: "Rackets, strings, shoes, and bags are live. Grip recommendations need more verified data first.",
       bodyTitle: "Optional body comfort and budget",
       bodyHelp: "Skip anything you prefer not to share. This is not medical advice.",
       continue: "Continue",
@@ -64,7 +66,7 @@ export const messages = {
         "Practical, original notes that explain the recommendation model and help badminton players inspect gear tradeoffs.",
     },
     compare: {
-      title: "Compare rackets",
+      title: "Compare gear",
       subtitle: "Inspect specs, confidence, and tradeoffs side by side.",
     },
   },
@@ -72,6 +74,8 @@ export const messages = {
     nav: {
       finder: "推荐问卷",
       guides: "装备指南",
+      blog: "博客",
+      research: "调研",
       compare: "对比",
       review: "评价",
       language: "English",
@@ -85,7 +89,7 @@ export const messages = {
     home: {
       title: "个性化羽毛球装备推荐",
       subtitle:
-        "输入你的水平、打法、单双打习惯、身体舒适度和预算。IntoBadminton 会结合官方规格、编辑判断和合规的评价证据，给出更透明的球拍推荐。",
+        "输入你的水平、打法、单双打习惯、身体舒适度和预算。IntoBadminton 会结合官方规格、评价信号和二手折旧信息，给出更透明的球拍、球线、球鞋和球包推荐。",
       start: "开始推荐",
       guides: "阅读指南",
       proof: [
@@ -95,7 +99,7 @@ export const messages = {
         },
         {
           title: "围绕真实打法建模",
-          body: "单打、双打、网前速度、重杀打法、关节舒适度和预算都会影响推荐排序。",
+          body: "单打、双打、网前速度、重杀打法、脚宽、关节舒适度、线磅和预算都会影响推荐排序。",
         },
         {
           title: "静态优先，隐私优先",
@@ -112,7 +116,7 @@ export const messages = {
       styleTitle: "最多选择两种打法",
       styleHelp: "系统会据此调整拍头重量、速度和进攻权重。",
       categoryTitle: "你想找哪类装备？",
-      categoryHelp: "v1 先上线球拍；其他装备以后沿用同一套画像模型。",
+      categoryHelp: "球拍、球线、球鞋和球包已上线；手胶需要更多核验数据后再开放。",
       bodyTitle: "可选：身体舒适度和预算",
       bodyHelp: "不想填写可以跳过。本内容不构成医疗建议。",
       continue: "继续",
@@ -130,7 +134,7 @@ export const messages = {
         "用原创内容解释推荐逻辑，帮助羽毛球玩家看懂装备取舍。",
     },
     compare: {
-      title: "球拍对比",
+      title: "装备对比",
       subtitle: "并排查看规格、置信度和打法取舍。",
     },
   },
@@ -139,4 +143,3 @@ export const messages = {
 export function t(locale: SiteLocale) {
   return messages[locale];
 }
-

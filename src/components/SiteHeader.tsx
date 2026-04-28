@@ -42,6 +42,18 @@ export function SiteHeader() {
             {copy.nav.guides}
           </Link>
           <Link
+            href={localized("/blog/")}
+            className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
+          >
+            {copy.nav.blog}
+          </Link>
+          <Link
+            href={localized("/research/")}
+            className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
+          >
+            {copy.nav.research}
+          </Link>
+          <Link
             href={localized("/compare/")}
             className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
           >

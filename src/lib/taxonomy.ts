@@ -1,6 +1,6 @@
 /**
  * Input taxonomy and recommendation I/O (plan §2.1, §2.2).
- * Frozen for MVP: rackets only; English UI; Singapore/USD display optional later.
+ * Finder inputs shared by racket, string, shoe, grip, and bag recommendations.
  */
 
 export const SKILL_LEVELS = [

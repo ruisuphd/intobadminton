@@ -13,10 +13,13 @@ const coreRoutes = [
   "/review/",
   "/methodology/",
   "/source-policy/",
+  "/security/",
   "/privacy/",
   "/cookies/",
   "/terms/",
   "/contact/",
+  "/blog/",
+  "/research/",
 ] as const;
 
 export function isSupportedLocale(value: string): value is SiteLocale {
@@ -49,4 +52,3 @@ export function stripLocaleFromPath(pathname: string): string {
   }
   return normalizePath(pathname);
 }
-

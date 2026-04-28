@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useConsent } from "@/context/ConsentContext";
+import { adConsentOperational, type AdOperationalMode } from "@/lib/consent";
 
 /**
  * Reserves a layout band for AdSense (plan §2.3.1). Replace the inner placeholder
@@ -26,12 +27,16 @@ export function AdSlot({
 }) {
   const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
   const defaultSlot = process.env.NEXT_PUBLIC_ADSENSE_SLOT_DEFAULT;
+  const operationalMode =
+    process.env.NEXT_PUBLIC_ADSENSE_MODE || "disabled";
   const resolvedSlot = slot || defaultSlot;
   const { consent } = useConsent();
   const canLoadAd = canRenderAdSlot({
     client,
     slot: resolvedSlot,
     adsConsent: consent.ads,
+    doNotSellShare: consent.doNotSellShare,
+    operationalMode,
   });
 
   useEffect(() => {
@@ -76,12 +81,23 @@ export function canRenderAdSlot({
   client,
   slot,
   adsConsent,
+  doNotSellShare = false,
+  operationalMode = "disabled",
 }: {
   client: string | undefined;
   slot: string | undefined;
   adsConsent: boolean;
+  doNotSellShare?: boolean;
+  operationalMode?: AdOperationalMode | string;
 }) {
-  return Boolean(client && slot && adsConsent);
+  return Boolean(
+    client &&
+      slot &&
+      adConsentOperational(
+        { ads: adsConsent, doNotSellShare },
+        operationalMode
+      )
+  );
 }
 
 export function AdSidebar() {

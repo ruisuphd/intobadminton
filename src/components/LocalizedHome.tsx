@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AdSlot } from "@/components/AdSlot";
 import { ShuttleMotif } from "@/components/ShuttleMotif";
+import { blogArticles } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
@@ -10,6 +11,14 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = t(locale);
   const localized = (path: string) => buildLocalizedPath(locale, path);
+  const featuredSlugs = [
+    "used-racket-depreciation",
+    "badminton-string-selector",
+    "badminton-shoe-fit-stability",
+  ];
+  const latest = blogArticles[locale].filter((article) =>
+    featuredSlugs.includes(article.slug)
+  );
 
   return (
     <main className="flex-1">
@@ -70,6 +79,85 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             </div>
           ))}
         </div>
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6 dark:border-zinc-700">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+                {locale === "zh"
+                  ? "现在覆盖整套装备"
+                  : "Now covers the full gear stack"}
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-[var(--color-muted)]">
+                {locale === "zh"
+                  ? "推荐器会区分球拍、球线、球鞋和球包，并显示二手折旧估算，帮助你判断真实持有成本。"
+                  : "The finder separates rackets, strings, shoes, and bags, then adds depreciation estimates so players can judge total cost of ownership."}
+              </p>
+            </div>
+            <Link
+              href={localized("/research/")}
+              className="text-sm text-[var(--color-accent)] underline"
+            >
+              {locale === "zh" ? "查看调研" : "View research"}
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-3 text-sm sm:grid-cols-4">
+            {[
+              locale === "zh" ? "球拍 + 转售" : "Rackets + resale",
+              locale === "zh" ? "球线 + 磅数" : "Strings + tension",
+              locale === "zh" ? "球鞋 + 脚宽" : "Shoes + foot width",
+              locale === "zh" ? "球包 + 分区" : "Bags + compartments",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-xl border border-zinc-200 px-4 py-3 text-[var(--text)] dark:border-zinc-700"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="mt-12" aria-labelledby="latest-notes">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2
+                id="latest-notes"
+                className="text-2xl font-semibold tracking-tight text-[var(--text)]"
+              >
+                {locale === "zh" ? "最新装备笔记" : "Latest equipment notes"}
+              </h2>
+              <p className="mt-2 text-sm text-[var(--color-muted)]">
+                {locale === "zh"
+                  ? "定期更新的原创文章，让玩家有理由回来复查装备选择。"
+                  : "Original updates that give players a reason to come back and re-check gear choices."}
+              </p>
+            </div>
+            <Link
+              href={localized("/blog/")}
+              className="text-sm text-[var(--color-accent)] underline"
+            >
+              {locale === "zh" ? "查看博客" : "View blog"}
+            </Link>
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            {latest.map((article) => (
+              <Link
+                key={article.slug}
+                href={localized(`/blog/${article.slug}/`)}
+                className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 transition hover:border-[var(--color-accent)] dark:border-zinc-700"
+              >
+                <p className="text-xs text-[var(--color-muted)]">
+                  {article.updatedAt}
+                </p>
+                <h3 className="mt-2 font-semibold text-[var(--text)]">
+                  {article.title}
+                </h3>
+                <p className="mt-2 text-sm text-[var(--color-muted)]">
+                  {article.dek}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
         <AdSlot id={`${locale}-home-mid`} />
       </div>
     </main>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Privacy — IntoBadminton",
@@ -13,20 +14,32 @@ export default function PrivacyPage() {
           Privacy policy
         </h1>
         <p>
-          IntoBadminton is operated by the company entity shown on the Contact
-          page. Before production, replace the placeholders with your legal
-          company name, registered address, support email, and DPO/privacy
-          contact. This template is not legal advice.
+          IntoBadminton is operated by {companyInfo.operatorLegalName}, a
+          company registered in {companyInfo.registrationJurisdiction}. Privacy,
+          support, product data, source-rights, and review-removal questions can
+          be sent to{" "}
+          <a
+            href={`mailto:${companyInfo.privacyEmail}`}
+            className="text-[var(--color-accent)] underline"
+          >
+            {companyInfo.privacyEmail}
+          </a>
+          . This policy is provided for transparency and is not legal advice.
         </p>
+        <div className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+          Launch note: company identity, jurisdiction, and contact email are now
+          listed. If your legal counsel requires a registered street address,
+          add it before AdSense review and public launch.
+        </div>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           Data we process
         </h2>
         <p>
           The current static app stores quiz profiles, compare choices,
           shortlist history, consent choices, theme preferences, and review
-          drafts in your browser’s <code>localStorage</code>. Optional GA4 and
-          AdSense scripts load only after the relevant consent category is
-          granted.
+          drafts in your browser’s <code>localStorage</code>. Optional GA4
+          loads only after analytics consent. AdSense remains disabled unless a
+          compliant operational mode is configured in addition to user consent.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           Purposes
@@ -73,7 +86,16 @@ export default function PrivacyPage() {
           transfer, retention, and subprocessors. For EEA/UK/Switzerland
           personalized ads, use a Google-certified CMP integrated with IAB TCF.
         </p>
-        <p className="text-sm">Last reviewed: 2026-04-27.</p>
+        <h2 className="text-xl font-semibold text-[var(--text)]">
+          Retention
+        </h2>
+        <p>
+          Local browser data remains until you clear it, delete local review
+          drafts, or reset browser storage. If a backend is added later, this
+          policy must define server retention periods for profiles, reviews,
+          moderation records, logs, and support requests.
+        </p>
+        <p className="text-sm">Last reviewed: 2026-04-28.</p>
       </article>
     </main>
   );

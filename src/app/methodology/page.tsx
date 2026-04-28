@@ -24,16 +24,18 @@ export default function MethodologyPage() {
           1. Player fit
         </h2>
         <p>
-          We use level, singles/doubles/mixed, play style, budget, weight, and
-          comfort flags to score racket fit. These rules are tested with persona
+          We use level, singles/doubles/mixed, play style, budget, weight, foot
+          width, preferred string tension, and comfort flags to score fit across
+          rackets, strings, shoes, and bags. These rules are tested with persona
           fixtures and shown through reason codes.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           2. Official specs
         </h2>
         <p>
-          Product records include weight variants, grip sizes, balance category,
-          flex, source URLs, and verification dates. Official specs take
+          Product records include category-specific specs: racket weight and
+          balance, string gauge and tension range, shoe width/stability, bag
+          capacity, source URLs, and verification dates. Official specs take
           priority over forum opinions.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
@@ -44,6 +46,14 @@ export default function MethodologyPage() {
           When we use search-visible references, we show source name, language,
           theme summary, confidence, and a link. We do not display copied forum
           review text unless rights allow it.
+        </p>
+        <h2 className="text-xl font-semibold text-[var(--text)]">
+          4. Resale and depreciation
+        </h2>
+        <p>
+          Resale estimates are market signals, not promises. They use visible
+          listing and community price metadata to estimate total cost of
+          ownership, then clearly show confidence and assumptions.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           Why links instead of copied reviews?

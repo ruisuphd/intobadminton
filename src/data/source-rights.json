@@ -42,7 +42,7 @@
     "id": "intobadminton-first-party",
     "platform": "first_party",
     "name": "IntoBadminton player reviews",
-    "homepage": "https://YOUR_DOMAIN/review/",
+    "homepage": "https://intobadminton.com/review/",
     "language": ["en", "zh"],
     "rightsStatus": "approved",
     "crawlMethod": "user_submission",

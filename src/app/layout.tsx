@@ -7,6 +7,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { CookieSettings } from "@/components/CookieSettings";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StructuredData } from "@/components/StructuredData";
 import { Providers } from "./providers";
 
 const inter = Inter({
@@ -20,26 +21,24 @@ export const metadata: Metadata = {
     template: "%s | IntoBadminton",
   },
   description:
-    "Level, style, and discipline-matched badminton racket and gear suggestions with transparent scoring.",
+    "Level, style, and discipline-matched badminton equipment suggestions for rackets, strings, shoes, and bags.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
   ),
   openGraph: {
     title: "IntoBadminton",
     description: "Equipment suggestions tuned to how you play.",
     type: "website",
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      en: "/en/",
-      "zh-Hans": "/zh/",
-    },
-  },
   robots: {
     index: true,
     follow: true,
   },
+  other: process.env.NEXT_PUBLIC_ADSENSE_CLIENT
+    ? {
+        "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT,
+      }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -51,6 +50,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <Providers>
+          <StructuredData />
           <ConsentModeDefaults />
           <Analytics />
           <AdSenseScript />

@@ -418,5 +418,316 @@
     "sourceUrls": ["https://www.mizuno.com/"],
     "editorNote": "Mid-tier speed reference retained for future official verification.",
     "reviewCount": 0
+  },
+  {
+    "id": "yy-astrox-88d-pro-2024",
+    "category": "racket",
+    "name": "Astrox 88D Pro (2024)",
+    "brand": "Yonex",
+    "priceUsd": 290,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": ["3U", "4U"],
+    "gripSizes": ["G4", "G5", "G6"],
+    "balanceMm": 302,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": { "min": 20, "max": 29 },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "officialSourceUrl": "https://www.yonex.com/3ax88d-p",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["doubles", "rear_court", "smash", "all_round_attack"],
+    "sourceUrls": [
+      "https://www.yonex.com/3ax88d-p",
+      "https://www.badmintoncn.com/eqm.php?a=view&eid=19393",
+      "https://www.ckyew.com/post/yonex-astrox-88s-88d-tour-game-play-gen-3-badminton-racket-review-comparison",
+      "https://www.youtube.com/watch?v=c-q1ppdC-AU",
+      "https://www.carousell.sg/yonex-astrox-88d-pro/q/"
+    ],
+    "editorNote": "Market research consistently positions this as a rear-court doubles attack frame: powerful enough for smashes but more usable than ultra-stiff singles-only rackets.",
+    "reviewCount": 5,
+    "resale": {
+      "estimatedUsedUsd": 210,
+      "depreciationPct": 28,
+      "confidence": "medium",
+      "basis": "Carousell Singapore/eBay listings and BadmintonCN self-reported buy-price metadata; assumes authentic 8.5/10+ condition.",
+      "updatedAt": "2026-04-28"
+    },
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Large Chinese community sample",
+        "summary": "BadmintonCN product pages show high engagement and repeated themes around power, elasticity, higher skill threshold, and price sensitivity.",
+        "href": "https://www.badmintoncn.com/eqm.php?a=view&eid=19393",
+        "confidence": "medium"
+      },
+      {
+        "source": "youtube",
+        "label": "Creator court testing",
+        "summary": "Video reviewers frame the 88D/88S split around rear-court power versus front-court control, reinforcing role-based recommendations.",
+        "href": "https://www.youtube.com/watch?v=c-q1ppdC-AU",
+        "confidence": "medium"
+      },
+      {
+        "source": "marketplace",
+        "label": "Resale liquidity",
+        "summary": "Current Singapore listings suggest recognizable Yonex Pro models retain stronger resale demand than obscure or entry-tier frames.",
+        "href": "https://www.carousell.sg/yonex-astrox-88d-pro/q/",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "yy-exbolt-63",
+    "category": "string",
+    "name": "EXBOLT 63",
+    "brand": "Yonex",
+    "priceUsd": 15,
+    "gaugeMm": 0.63,
+    "feel": "hard",
+    "repulsion": "very_high",
+    "control": "high",
+    "durability": "medium",
+    "tensionRangeLbs": { "min": 20, "max": 28 },
+    "launchYear": 2021,
+    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "officialSourceUrl": "https://www.yonex.com/bgxb63",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["repulsion", "fast_doubles", "sound", "control_with_practice"],
+    "sourceUrls": [
+      "https://www.yonex.com/bgxb63",
+      "https://www.reddit.com/r/badminton/comments/14lqwso",
+      "https://www.youtube.com/watch?v=DbQyBZt3FWs"
+    ],
+    "editorNote": "Best for players who want a lively, crisp string and can tolerate a smaller timing window than thicker durability strings.",
+    "reviewCount": 4,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-04-28"
+    },
+    "marketSignals": [
+      {
+        "source": "reddit",
+        "label": "Repulsion vs control split",
+        "summary": "Community discussion often praises repulsion and sound while warning that control and off-center forgiveness depend on setup and timing.",
+        "href": "https://www.reddit.com/r/badminton/comments/14lqwso",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "yy-bg80",
+    "category": "string",
+    "name": "BG80",
+    "brand": "Yonex",
+    "priceUsd": 13,
+    "gaugeMm": 0.68,
+    "feel": "hard",
+    "repulsion": "medium",
+    "control": "very_high",
+    "durability": "high",
+    "tensionRangeLbs": { "min": 20, "max": 30 },
+    "launchYear": 2000,
+    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "officialSourceUrl": "https://www.yonex.com/bg80",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["control", "slice", "tension_hold", "attacking_control"],
+    "sourceUrls": [
+      "https://www.yonex.com/bg80",
+      "https://www.reddit.com/r/badminton/comments/14lqwso"
+    ],
+    "editorNote": "A control-first reference string for players who generate their own power and value bite on cuts, drops, and net shots.",
+    "reviewCount": 3,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-04-28"
+    }
+  },
+  {
+    "id": "yy-bg65",
+    "category": "string",
+    "name": "BG65",
+    "brand": "Yonex",
+    "priceUsd": 11,
+    "gaugeMm": 0.70,
+    "feel": "medium",
+    "repulsion": "medium",
+    "control": "medium",
+    "durability": "very_high",
+    "tensionRangeLbs": { "min": 18, "max": 28 },
+    "launchYear": 1990,
+    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "officialSourceUrl": "https://www.yonex.com/bg65",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": ["durability", "budget", "beginners", "frequent_restring_cost"],
+    "sourceUrls": ["https://www.yonex.com/bg65"],
+    "editorNote": "Conservative durability pick when cost per session matters more than maximum bite or sound.",
+    "reviewCount": 1,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-04-28"
+    }
+  },
+  {
+    "id": "yy-power-cushion-65z-wide",
+    "category": "shoes",
+    "name": "Power Cushion 65 Z Wide",
+    "brand": "Yonex",
+    "priceUsd": 160,
+    "fitWidth": "wide",
+    "cushioning": "high",
+    "stability": "high",
+    "weightFeel": "medium",
+    "hasWideOption": true,
+    "launchYear": 2025,
+    "regionAvailability": ["global", "sg", "jp", "uk", "us"],
+    "officialSourceUrl": "https://us.yonex.com/products/power-cushion-65-z-wide-va",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["wide_feet", "comfort", "agility", "stability"],
+    "sourceUrls": [
+      "https://us.yonex.com/products/power-cushion-65-z-wide-va",
+      "https://shuttleselect.com/articles/yonex-vs-victor-shoes"
+    ],
+    "editorNote": "Strong first recommendation for wide-foot players who still want a familiar Yonex court feel.",
+    "reviewCount": 2,
+    "resale": {
+      "estimatedUsedUsd": 45,
+      "depreciationPct": 72,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons; estimate assumes lightly used clean pair.",
+      "updatedAt": "2026-04-28"
+    }
+  },
+  {
+    "id": "vic-p9200",
+    "category": "shoes",
+    "name": "P9200 Series",
+    "brand": "Victor",
+    "priceUsd": 145,
+    "fitWidth": "wide_available",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": true,
+    "launchYear": 2022,
+    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "officialSourceUrl": "https://www.victorsport.com/product/p9200-s",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["wide_feet", "ankle_stability", "protection", "club_sessions"],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/p9200-s",
+      "https://www.badmintoncn.com/eqm.php?a=eqCommView&cid=482578"
+    ],
+    "editorNote": "Protective shoe signal: better for players prioritizing stability and support over the fastest, lowest-to-court feel.",
+    "reviewCount": 5,
+    "resale": {
+      "estimatedUsedUsd": 35,
+      "depreciationPct": 76,
+      "confidence": "low",
+      "basis": "Shoes are condition-sensitive; estimate assumes authentic pair with low outsole wear.",
+      "updatedAt": "2026-04-28"
+    },
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Protection reputation",
+        "summary": "BadmintonCN shoe reviews repeatedly mention support, anti-twist behavior, wide-foot comfort, and weight/protection tradeoffs.",
+        "href": "https://www.badmintoncn.com/eqm.php?a=eqCommView&cid=482578",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "yy-pro-racket-bag-92429",
+    "category": "bag",
+    "name": "Pro Tournament Racket Bag",
+    "brand": "Yonex",
+    "priceUsd": 110,
+    "capacityRackets": 6,
+    "sizeClass": "club",
+    "hasShoeCompartment": true,
+    "hasWetCompartment": true,
+    "carryStyle": "racket_bag",
+    "launchYear": 2024,
+    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "officialSourceUrl": "https://www.yonex.com/badminton/bags",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["club_sessions", "shoes", "wet_clothes", "multiple_rackets"],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/bags",
+      "https://www.badmintoncn.com/eqm.php?a=eqCommView&cid=903012"
+    ],
+    "editorNote": "Bag recommendation focuses on repeat-visit utility: separation for shoes/wet kit and enough capacity for regular sessions.",
+    "reviewCount": 1,
+    "resale": {
+      "estimatedUsedUsd": 45,
+      "depreciationPct": 59,
+      "confidence": "low",
+      "basis": "Bags retain value only when clean, non-odorous, and visually undamaged.",
+      "updatedAt": "2026-04-28"
+    }
+  },
+  {
+    "id": "vic-compact-backpack",
+    "category": "bag",
+    "name": "Compact Court Backpack",
+    "brand": "Victor",
+    "priceUsd": 65,
+    "capacityRackets": 2,
+    "sizeClass": "compact",
+    "hasShoeCompartment": true,
+    "hasWetCompartment": false,
+    "carryStyle": "backpack",
+    "launchYear": 2024,
+    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": ["commute", "compact", "budget", "one_or_two_rackets"],
+    "sourceUrls": ["https://www.victorsport.com/"],
+    "editorNote": "Compact reference for casual players who commute light; verify exact local SKU before affiliate use.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 20,
+      "depreciationPct": 69,
+      "confidence": "low",
+      "basis": "Generic backpack depreciation estimate; condition and odor dominate resale.",
+      "updatedAt": "2026-04-28"
+    }
   }
 ]
