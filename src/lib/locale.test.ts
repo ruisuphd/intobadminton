@@ -33,6 +33,7 @@ describe("locale routing", () => {
       "/zh/source-policy/",
       "/zh/sources/",
       "/zh/about/",
+      "/zh/brands/",
       "/zh/security/",
       "/zh/privacy/",
       "/zh/cookies/",

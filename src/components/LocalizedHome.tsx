@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AdSlot } from "@/components/AdSlot";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ShuttleMotif } from "@/components/ShuttleMotif";
 import { blogArticles } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
@@ -159,9 +158,6 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             ))}
           </div>
         </section>
-        <div className="mt-12">
-          <NewsletterSignup locale={locale} />
-        </div>
         <AdSlot id={`${locale}-home-mid`} />
       </div>
     </main>

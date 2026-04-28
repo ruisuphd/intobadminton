@@ -23,19 +23,23 @@ function reasonGroup(code: string) {
 }
 
 function categoryLabel(category: ScoredProduct["category"], locale: SiteLocale) {
-  const en = {
+  const en: Record<ScoredProduct["category"], string> = {
     racket: "Racket",
     string: "String",
     shoes: "Shoes",
     bag: "Bag",
     grip: "Grip",
+    shuttle: "Shuttle",
+    accessory: "Accessory",
   };
-  const zh = {
+  const zh: Record<ScoredProduct["category"], string> = {
     racket: "球拍",
     string: "球线",
     shoes: "球鞋",
     bag: "球包",
     grip: "手胶",
+    shuttle: "羽毛球",
+    accessory: "配件",
   };
   return (locale === "zh" ? zh : en)[category];
 }

@@ -15,6 +15,7 @@ const coreRoutes = [
   "/source-policy/",
   "/sources/",
   "/about/",
+  "/brands/",
   "/security/",
   "/privacy/",
   "/cookies/",
