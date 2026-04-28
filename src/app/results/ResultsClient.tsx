@@ -5,8 +5,40 @@ import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { ResultCard } from "@/components/ResultCard";
 import { useProfile } from "@/context/ProfileContext";
+import { companyInfo } from "@/lib/company";
 import type { SiteLocale } from "@/lib/locale";
 import { scoreProductCatalog } from "@/lib/scoring";
+import type { ScoredProduct } from "@/lib/types/product";
+
+function buildProductJsonLd(rows: ScoredProduct[], locale: SiteLocale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name:
+      locale === "zh"
+        ? "IntoBadminton 装备推荐结果"
+        : "IntoBadminton equipment recommendations",
+    numberOfItems: rows.length,
+    itemListElement: rows.map((r, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Product",
+        "@id": `${companyInfo.siteUrl}/results/#${r.id}`,
+        name: r.name,
+        brand: { "@type": "Brand", name: r.brand },
+        category: r.category,
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          price: r.priceUsd,
+          availability: "https://schema.org/InStock",
+          url: `${companyInfo.siteUrl}/results/`,
+        },
+      },
+    })),
+  };
+}
 
 export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
   const { profile, pushHistory } = useProfile();
@@ -66,6 +98,12 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
 
   return (
     <div className="space-y-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildProductJsonLd(rows, locale)),
+        }}
+      />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} locale={locale} />
       ))}

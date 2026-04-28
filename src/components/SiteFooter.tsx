@@ -23,10 +23,16 @@ export function SiteFooter() {
           </div>
           <div className="flex flex-wrap gap-6 text-sm">
             <Link
-              href={localized("/")}
+              href={localized("/about/")}
               className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
             >
               {locale === "zh" ? "关于" : "About"}
+            </Link>
+            <Link
+              href={localized("/sources/")}
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              {locale === "zh" ? "信息来源" : "Sources"}
             </Link>
             <Link
               href={localized("/contact/")}
