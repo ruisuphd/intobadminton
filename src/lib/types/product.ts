@@ -97,11 +97,61 @@ export type BagProduct = BaseProduct & {
   carryStyle: "backpack" | "duffel" | "racket_bag";
 };
 
+/**
+ * Shuttles. Speed code 75/76/77 corresponds to slow/medium/fast (international
+ * convention; lower number = lower temperature room = slower flight).
+ */
+export type ShuttleProduct = BaseProduct & {
+  category: "shuttle";
+  feathered: boolean;
+  /** Goose, duck, or nylon synthetic. */
+  material: "goose_feather" | "duck_feather" | "nylon" | "hybrid";
+  /** International speed code: 75 (slow) – 79 (fast). */
+  speedCode?: number;
+  /** Tube count, typically 12. */
+  unitsPerTube: number;
+  /** BWF approval for tournament use. */
+  bwfApproved: boolean;
+  durabilityTier: "practice" | "club" | "tournament" | "pro";
+};
+
+export type GripProduct = BaseProduct & {
+  category: "grip";
+  /** Overgrip wraps over the existing grip; replacement substitutes it. */
+  gripType: "overgrip" | "replacement";
+  feel: "tacky" | "dry" | "towel" | "perforated";
+  thicknessMm?: number;
+  sweatAbsorption: "low" | "medium" | "high";
+  /** Pieces per package. */
+  packCount: number;
+};
+
+/** Catch-all for vibration dampeners, racket covers, towels, stencils, etc. */
+export type AccessoryProduct = BaseProduct & {
+  category: "accessory";
+  accessoryType:
+    | "vibration_dampener"
+    | "racket_cover"
+    | "stencil"
+    | "towel"
+    | "wristband"
+    | "headband"
+    | "ankle_brace"
+    | "knee_brace"
+    | "stringing_clamp"
+    | "other";
+  /** Free-form short description in case the type alone isn't enough. */
+  detail?: string;
+};
+
 export type ProductRecord =
   | RacketProduct
   | StringProduct
   | ShoeProduct
-  | BagProduct;
+  | BagProduct
+  | ShuttleProduct
+  | GripProduct
+  | AccessoryProduct;
 
 export type ScoredProduct = ProductRecord & {
   fitScore: number;

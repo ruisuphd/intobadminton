@@ -29,6 +29,8 @@ export const CATEGORIES = [
   "string",
   "grip",
   "bag",
+  "shuttle",
+  "accessory",
 ] as const;
 export type EquipmentCategory = (typeof CATEGORIES)[number];
 

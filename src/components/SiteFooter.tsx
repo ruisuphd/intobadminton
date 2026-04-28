@@ -29,6 +29,12 @@ export function SiteFooter() {
               {locale === "zh" ? "关于" : "About"}
             </Link>
             <Link
+              href={localized("/brands/")}
+              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
+            >
+              {locale === "zh" ? "覆盖品牌" : "Brands"}
+            </Link>
+            <Link
               href={localized("/sources/")}
               className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
             >

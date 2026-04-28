@@ -8,22 +8,45 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2023,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/nanoflare-1000z",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles", "fast_drive", "defense"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/nanoflare-1000z"],
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "defense"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/nanoflare-1000z"
+    ],
     "editorNote": "Fast, stiff, head-light profile for advanced drive speed and defense.",
     "reviewCount": 0
   },
@@ -36,22 +59,45 @@
     "headWeight": "head_heavy",
     "shaftFlex": "extra_stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 29 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
     "shaftFlexSource": "official",
     "launchYear": 2020,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-100zz",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles", "smash", "attack"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/astrox-100zz"],
+    "bestFor": [
+      "singles",
+      "smash",
+      "attack"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/astrox-100zz"
+    ],
     "editorNote": "Demanding, very stiff attack frame. Strong fit only for clean timing.",
     "reviewCount": 0
   },
@@ -64,22 +110,45 @@
     "headWeight": "head_heavy",
     "shaftFlex": "extra_stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 29 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
     "shaftFlexSource": "official",
     "launchYear": 2021,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-99-pro",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles", "smash", "rear_court"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/astrox-99-pro"],
+    "bestFor": [
+      "singles",
+      "smash",
+      "rear_court"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/astrox-99-pro"
+    ],
     "editorNote": "Power-first profile; less forgiving for speed-oriented doubles.",
     "reviewCount": 0
   },
@@ -92,22 +161,45 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2022,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-77-pro",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["doubles", "attack", "midcourt"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/astrox-77-pro"],
+    "bestFor": [
+      "doubles",
+      "attack",
+      "midcourt"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/astrox-77-pro"
+    ],
     "editorNote": "More accessible attacking Astrox option than the 99/100 family.",
     "reviewCount": 0
   },
@@ -120,22 +212,45 @@
     "headWeight": "even",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 295,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2022,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/arcsaber-11-pro",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["control", "placement", "all_round"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/arcsaber-11-pro"],
+    "bestFor": [
+      "control",
+      "placement",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/arcsaber-11-pro"
+    ],
     "editorNote": "Control-first all-round frame; strong baseline for advanced club players.",
     "reviewCount": 0
   },
@@ -148,22 +263,45 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 288,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2024,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/nanoflare-800-pro",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles", "defense", "flat_drive"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/nanoflare-800-pro"],
+    "bestFor": [
+      "doubles",
+      "defense",
+      "flat_drive"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/nanoflare-800-pro"
+    ],
     "editorNote": "Speed-oriented pro frame for flat exchanges and defense.",
     "reviewCount": 0
   },
@@ -176,22 +314,39 @@
     "headWeight": "head_light",
     "shaftFlex": "flexible",
     "weightClass": "5U",
-    "weightVariants": ["5U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 18, "max": 26 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
     "shaftFlexSource": "retailer",
     "launchYear": 2018,
-    "regionAvailability": ["global", "sg", "cn"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn"
+    ],
     "officialSourceUrl": "https://www.yonex.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["beginner", "lightweight", "doubles"],
-    "sourceUrls": ["https://www.yonex.com/"],
+    "bestFor": [
+      "beginner",
+      "lightweight",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/"
+    ],
     "editorNote": "Entry-level lightweight reference; confirm regional availability before displaying as in-stock.",
     "reviewCount": 0
   },
@@ -204,22 +359,40 @@
     "headWeight": "head_heavy",
     "shaftFlex": "flexible",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 19, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 27
+    },
     "shaftFlexSource": "retailer",
     "launchYear": 2016,
-    "regionAvailability": ["sg", "cn"],
+    "regionAvailability": [
+      "sg",
+      "cn"
+    ],
     "officialSourceUrl": "https://www.yonex.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["learning_smash", "singles", "value"],
-    "sourceUrls": ["https://www.yonex.com/"],
+    "bestFor": [
+      "learning_smash",
+      "singles",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/"
+    ],
     "editorNote": "Legacy/value attack reference; keep hidden if no current official listing is available.",
     "reviewCount": 0
   },
@@ -232,22 +405,41 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 304,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2019,
-    "regionAvailability": ["global", "sg", "cn"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn"
+    ],
     "officialSourceUrl": "https://shoplining.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles", "attack", "power"],
-    "sourceUrls": ["https://shoplining.com/"],
+    "bestFor": [
+      "singles",
+      "attack",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://shoplining.com/"
+    ],
     "editorNote": "Power profile retained pending official page-level verification.",
     "reviewCount": 0
   },
@@ -260,22 +452,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "3U",
-    "weightVariants": ["3U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2018,
-    "regionAvailability": ["global", "cn"],
+    "regionAvailability": [
+      "global",
+      "cn"
+    ],
     "officialSourceUrl": "https://shoplining.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles", "rear_court", "power"],
-    "sourceUrls": ["https://shoplining.com/"],
+    "bestFor": [
+      "singles",
+      "rear_court",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://shoplining.com/"
+    ],
     "editorNote": "Advanced power/control profile; confirm exact regional spec before launch.",
     "reviewCount": 0
   },
@@ -288,22 +496,40 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 295,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
-    "regionAvailability": ["global", "sg", "cn"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn"
+    ],
     "officialSourceUrl": "https://shoplining.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round", "control", "doubles"],
-    "sourceUrls": ["https://shoplining.com/"],
+    "bestFor": [
+      "all_round",
+      "control",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://shoplining.com/"
+    ],
     "editorNote": "All-round Li-Ning reference for future community signal enrichment.",
     "reviewCount": 0
   },
@@ -316,22 +542,41 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 295,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2020,
-    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["balanced", "club", "doubles"],
-    "sourceUrls": ["https://www.victorsport.com/"],
+    "bestFor": [
+      "balanced",
+      "club",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
     "editorNote": "Balanced club-level reference frame; verify local SKU before affiliate display.",
     "reviewCount": 0
   },
@@ -344,22 +589,41 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 29 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
     "shaftFlexSource": "official",
     "launchYear": 2022,
-    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles", "smash", "power"],
-    "sourceUrls": ["https://www.victorsport.com/"],
+    "bestFor": [
+      "singles",
+      "smash",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
     "editorNote": "Advanced power frame; strong candidate for smash-heavy profiles.",
     "reviewCount": 0
   },
@@ -372,22 +636,41 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2022,
-    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles", "fast_drive", "counterattack"],
-    "sourceUrls": ["https://www.victorsport.com/"],
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "counterattack"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
     "editorNote": "Speed/counterattack reference for advanced doubles.",
     "reviewCount": 0
   },
@@ -400,22 +683,38 @@
     "headWeight": "head_light",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 292,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 19, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 27
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2021,
-    "regionAvailability": ["sg", "jp"],
+    "regionAvailability": [
+      "sg",
+      "jp"
+    ],
     "officialSourceUrl": "https://www.mizuno.com/",
     "lastVerifiedAt": "2026-04-27",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["doubles", "defense", "value"],
-    "sourceUrls": ["https://www.mizuno.com/"],
+    "bestFor": [
+      "doubles",
+      "defense",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.mizuno.com/"
+    ],
     "editorNote": "Mid-tier speed reference retained for future official verification.",
     "reviewCount": 0
   },
@@ -428,21 +727,43 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 29 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
     "shaftFlexSource": "official",
     "launchYear": 2024,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/3ax88d-p",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles", "rear_court", "smash", "all_round_attack"],
+    "bestFor": [
+      "doubles",
+      "rear_court",
+      "smash",
+      "all_round_attack"
+    ],
     "sourceUrls": [
       "https://www.yonex.com/3ax88d-p",
       "https://www.badmintoncn.com/eqm.php?a=view&eid=19393",
@@ -494,15 +815,30 @@
     "repulsion": "very_high",
     "control": "high",
     "durability": "medium",
-    "tensionRangeLbs": { "min": 20, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
     "launchYear": 2021,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/bgxb63",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["repulsion", "fast_doubles", "sound", "control_with_practice"],
+    "bestFor": [
+      "repulsion",
+      "fast_doubles",
+      "sound",
+      "control_with_practice"
+    ],
     "sourceUrls": [
       "https://www.yonex.com/bgxb63",
       "https://www.reddit.com/r/badminton/comments/14lqwso",
@@ -538,15 +874,30 @@
     "repulsion": "medium",
     "control": "very_high",
     "durability": "high",
-    "tensionRangeLbs": { "min": 20, "max": 30 },
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 30
+    },
     "launchYear": 2000,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/bg80",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["control", "slice", "tension_hold", "attacking_control"],
+    "bestFor": [
+      "control",
+      "slice",
+      "tension_hold",
+      "attacking_control"
+    ],
     "sourceUrls": [
       "https://www.yonex.com/bg80",
       "https://www.reddit.com/r/badminton/comments/14lqwso"
@@ -572,16 +923,33 @@
     "repulsion": "medium",
     "control": "medium",
     "durability": "very_high",
-    "tensionRangeLbs": { "min": 18, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 18,
+      "max": 28
+    },
     "launchYear": 1990,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/bg65",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["durability", "budget", "beginners", "frequent_restring_cost"],
-    "sourceUrls": ["https://www.yonex.com/bg65"],
+    "bestFor": [
+      "durability",
+      "budget",
+      "beginners",
+      "frequent_restring_cost"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/bg65"
+    ],
     "editorNote": "Conservative durability pick when cost per session matters more than maximum bite or sound.",
     "reviewCount": 1,
     "resale": {
@@ -604,13 +972,24 @@
     "weightFeel": "medium",
     "hasWideOption": true,
     "launchYear": 2025,
-    "regionAvailability": ["global", "sg", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://us.yonex.com/products/power-cushion-65-z-wide-va",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["wide_feet", "comfort", "agility", "stability"],
+    "bestFor": [
+      "wide_feet",
+      "comfort",
+      "agility",
+      "stability"
+    ],
     "sourceUrls": [
       "https://us.yonex.com/products/power-cushion-65-z-wide-va",
       "https://shuttleselect.com/articles/yonex-vs-victor-shoes"
@@ -637,13 +1016,23 @@
     "weightFeel": "protective",
     "hasWideOption": true,
     "launchYear": 2022,
-    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/product/p9200-s",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["wide_feet", "ankle_stability", "protection", "club_sessions"],
+    "bestFor": [
+      "wide_feet",
+      "ankle_stability",
+      "protection",
+      "club_sessions"
+    ],
     "sourceUrls": [
       "https://www.victorsport.com/product/p9200-s",
       "https://www.badmintoncn.com/eqm.php?a=eqCommView&cid=482578"
@@ -679,13 +1068,25 @@
     "hasWetCompartment": true,
     "carryStyle": "racket_bag",
     "launchYear": 2024,
-    "regionAvailability": ["global", "sg", "cn", "jp", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/bags",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["club_sessions", "shoes", "wet_clothes", "multiple_rackets"],
+    "bestFor": [
+      "club_sessions",
+      "shoes",
+      "wet_clothes",
+      "multiple_rackets"
+    ],
     "sourceUrls": [
       "https://www.yonex.com/badminton/bags",
       "https://www.badmintoncn.com/eqm.php?a=eqCommView&cid=903012"
@@ -712,14 +1113,26 @@
     "hasWetCompartment": false,
     "carryStyle": "backpack",
     "launchYear": 2024,
-    "regionAvailability": ["global", "sg", "cn", "jp"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/",
     "lastVerifiedAt": "2026-04-28",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["commute", "compact", "budget", "one_or_two_rackets"],
-    "sourceUrls": ["https://www.victorsport.com/"],
+    "bestFor": [
+      "commute",
+      "compact",
+      "budget",
+      "one_or_two_rackets"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
     "editorNote": "Compact reference for casual players who commute light; verify exact local SKU before affiliate use.",
     "reviewCount": 0,
     "resale": {
@@ -729,5 +1142,452 @@
       "basis": "Generic backpack depreciation estimate; condition and odor dominate resale.",
       "updatedAt": "2026-04-28"
     }
+  },
+  {
+    "id": "yy-as-50",
+    "category": "shuttle",
+    "name": "Aerosensa 50 (AS-50)",
+    "brand": "Yonex",
+    "priceUsd": 45,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 76,
+    "unitsPerTube": 12,
+    "bwfApproved": true,
+    "durabilityTier": "pro",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-50",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "tournament",
+      "bwf_sanctioned",
+      "premium_feel"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/aerosensa-50"
+    ],
+    "editorNote": "Yonex's top tournament shuttle. BWF-approved and used in pro events. Verify exact SKU/region before affiliate use; speed code varies by climate.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-as-40",
+    "category": "shuttle",
+    "name": "Aerosensa 40 (AS-40)",
+    "brand": "Yonex",
+    "priceUsd": 35,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 76,
+    "unitsPerTube": 12,
+    "bwfApproved": true,
+    "durabilityTier": "tournament",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-40",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "tournament",
+      "club_match",
+      "consistent_flight"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/aerosensa-40"
+    ],
+    "editorNote": "Reliable tournament shuttle one tier below AS-50. Common at national and regional events.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-as-30",
+    "category": "shuttle",
+    "name": "Aerosensa 30 (AS-30)",
+    "brand": "Yonex",
+    "priceUsd": 30,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 76,
+    "unitsPerTube": 12,
+    "bwfApproved": false,
+    "durabilityTier": "club",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-30",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "club_practice",
+      "value_tournament_feel"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/aerosensa-30"
+    ],
+    "editorNote": "Mid-tier feathered shuttle popular for serious club training. Good cost-per-rally compared to AS-40/50.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-as-20",
+    "category": "shuttle",
+    "name": "Aerosensa 20 (AS-20)",
+    "brand": "Yonex",
+    "priceUsd": 25,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 76,
+    "unitsPerTube": 12,
+    "bwfApproved": false,
+    "durabilityTier": "practice",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-20",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "club_practice",
+      "high_volume_drilling"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/aerosensa-20"
+    ],
+    "editorNote": "Common practice-grade shuttle for clubs and academies. Slightly less consistent than AS-30 but durable.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-as-10",
+    "category": "shuttle",
+    "name": "Aerosensa 10 (AS-10)",
+    "brand": "Yonex",
+    "priceUsd": 22,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 76,
+    "unitsPerTube": 12,
+    "bwfApproved": false,
+    "durabilityTier": "practice",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-10",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner_practice",
+      "budget_feathered"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/aerosensa-10"
+    ],
+    "editorNote": "Entry-level feathered shuttle. Good for newer players who want feather feel without AS-30+ pricing.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-mavis-350",
+    "category": "shuttle",
+    "name": "Mavis 350",
+    "brand": "Yonex",
+    "priceUsd": 22,
+    "feathered": false,
+    "material": "nylon",
+    "speedCode": 76,
+    "unitsPerTube": 6,
+    "bwfApproved": false,
+    "durabilityTier": "practice",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/mavis-350",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "nylon_practice",
+      "long_lasting",
+      "outdoor_friendly"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/mavis-350"
+    ],
+    "editorNote": "Top nylon shuttle. Far longer-lasting than feathered for casual or schools, at the cost of feathered flight feel.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-mavis-300",
+    "category": "shuttle",
+    "name": "Mavis 300",
+    "brand": "Yonex",
+    "priceUsd": 15,
+    "feathered": false,
+    "material": "nylon",
+    "speedCode": 76,
+    "unitsPerTube": 6,
+    "bwfApproved": false,
+    "durabilityTier": "practice",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/mavis-300",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "recreational",
+    "bestFor": [
+      "beginner_nylon",
+      "schools",
+      "social_play"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shuttlecocks/mavis-300"
+    ],
+    "editorNote": "Mid-tier nylon shuttle, common in schools and social play.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-ac102c",
+    "category": "grip",
+    "name": "Super Grap (AC102C, 3-pack)",
+    "brand": "Yonex",
+    "priceUsd": 8,
+    "gripType": "overgrip",
+    "feel": "tacky",
+    "thicknessMm": 0.6,
+    "sweatAbsorption": "medium",
+    "packCount": 3,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/super-grap-ac102",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "all_around",
+      "dry_to_medium_sweat",
+      "first_overgrip"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/accessories/super-grap-ac102"
+    ],
+    "editorNote": "The default overgrip in club bags worldwide. Soft, tacky, balanced thickness. AC102C is the 3-pack consumer SKU.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-ac102ex",
+    "category": "grip",
+    "name": "Super Grap (AC102EX, bulk reel)",
+    "brand": "Yonex",
+    "priceUsd": 50,
+    "gripType": "overgrip",
+    "feel": "tacky",
+    "thicknessMm": 0.6,
+    "sweatAbsorption": "medium",
+    "packCount": 30,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/super-grap-ac102ex",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "club_kit",
+      "stringer_supply",
+      "frequent_replace"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/accessories/super-grap-ac102ex"
+    ],
+    "editorNote": "30-piece bulk version of Super Grap. Per-grip cost drops vs AC102C. Same product as AC102C otherwise.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-ac108ex",
+    "category": "grip",
+    "name": "Towel Grip (AC108EX)",
+    "brand": "Yonex",
+    "priceUsd": 50,
+    "gripType": "overgrip",
+    "feel": "towel",
+    "thicknessMm": 1.8,
+    "sweatAbsorption": "high",
+    "packCount": 12,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/towel-grip-ac108ex",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "heavy_sweat",
+      "thicker_grip_feel",
+      "humid_climate"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/accessories/towel-grip-ac108ex"
+    ],
+    "editorNote": "Towelling-style grip; high sweat absorption and thicker handle feel. Wears faster than synthetic; replace more often.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-ac104ex",
+    "category": "grip",
+    "name": "Wave Grap (AC104EX)",
+    "brand": "Yonex",
+    "priceUsd": 10,
+    "gripType": "overgrip",
+    "feel": "perforated",
+    "thicknessMm": 0.65,
+    "sweatAbsorption": "medium",
+    "packCount": 3,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/wave-grap-ac104ex",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "wave_texture_feedback",
+      "moderate_sweat"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/accessories/wave-grap-ac104ex"
+    ],
+    "editorNote": "Wave-textured surface for grip feedback. Slightly thicker than Super Grap; popular with players who like a more locating handle.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-ac125ex",
+    "category": "grip",
+    "name": "Smash Grap (AC125EX)",
+    "brand": "Yonex",
+    "priceUsd": 10,
+    "gripType": "overgrip",
+    "feel": "dry",
+    "thicknessMm": 0.7,
+    "sweatAbsorption": "medium",
+    "packCount": 3,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/smash-grap-ac125ex",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "durability",
+      "dry_hands",
+      "longer_replacement_cycle"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/accessories/smash-grap-ac125ex"
+    ],
+    "editorNote": "More durable than Super Grap; dry feel rather than tacky. Good if you change overgrips less often.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-ac130ex",
+    "category": "grip",
+    "name": "Strong Grap (AC130EX)",
+    "brand": "Yonex",
+    "priceUsd": 10,
+    "gripType": "overgrip",
+    "feel": "tacky",
+    "thicknessMm": 0.7,
+    "sweatAbsorption": "medium",
+    "packCount": 3,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/strong-grap-ac130ex",
+    "lastVerifiedAt": "2026-04-28",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "extra_tacky_feel",
+      "secure_under_sweat"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/accessories/strong-grap-ac130ex"
+    ],
+    "editorNote": "Tackier than Super Grap; some players love it, others find it sticks too much in heat. Try a 3-pack before committing.",
+    "reviewCount": 0
   }
 ]
