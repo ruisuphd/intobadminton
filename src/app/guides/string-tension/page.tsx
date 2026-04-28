@@ -38,7 +38,7 @@ export default function StringTensionGuide() {
           ].map(([range, fit, note]) => (
             <div
               key={range}
-              className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-4 dark:border-zinc-700"
+              className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-4"
             >
               <p className="font-semibold text-[var(--text)]">{range}</p>
               <p className="mt-1 text-sm text-[var(--color-muted)]">{fit}</p>

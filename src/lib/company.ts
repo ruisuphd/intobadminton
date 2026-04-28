@@ -18,7 +18,7 @@ export const companyInfo = {
   authorBylineEn:
     "Rui Su · Founder, IntoBadminton · Div 4 Ireland · trained under former Malaysia national and China provincial-team coaches",
   authorBylineZh:
-    "苏睿 · IntoBadminton 创始人 · 爱尔兰 Div 4 联赛球员 · 师从前马来西亚国手与前中国省队教练",
+    "Rui Su · IntoBadminton 创始人 · 爱尔兰 Div 4 联赛球员 · 师从前马来西亚国手与前中国省队教练",
 } as const;
 
 export const organizationJsonLd = {

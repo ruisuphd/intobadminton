@@ -30,7 +30,7 @@ export function CookieSettings() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-settings-title"
-        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-zinc-200 bg-[var(--surface)] p-6 shadow-2xl dark:border-zinc-700"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-zinc-200 bg-[var(--surface)] p-6 shadow-2xl"
       >
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -56,7 +56,7 @@ export function CookieSettings() {
             ref={closeRef}
             type="button"
             onClick={closeSettings}
-            className="rounded-full border border-zinc-300 px-3 py-1 text-sm dark:border-zinc-600"
+            className="rounded-full border border-zinc-300 px-3 py-1 text-sm"
           >
             Close
           </button>
@@ -110,7 +110,7 @@ export function CookieSettings() {
             }
           />
         </div>
-        <div className="mt-6 rounded-2xl border border-zinc-200 p-4 dark:border-zinc-700">
+        <div className="mt-6 rounded-2xl border border-zinc-200 p-4">
           <h3 className="font-semibold text-[var(--text)]">
             Storage summary
           </h3>
@@ -154,7 +154,7 @@ export function CookieSettings() {
                 doNotSellShare: true,
               })
             }
-            className="rounded-2xl border border-zinc-300 px-5 py-3 text-sm dark:border-zinc-600"
+            className="rounded-2xl border border-zinc-300 px-5 py-3 text-sm"
           >
             Reject non-essential
           </button>
@@ -178,7 +178,7 @@ function PreferenceRow({
   onChange: (checked: boolean) => void;
 }) {
   return (
-    <label className="flex items-start justify-between gap-5 rounded-2xl border border-zinc-200 p-4 dark:border-zinc-700">
+    <label className="flex items-start justify-between gap-5 rounded-2xl border border-zinc-200 p-4">
       <span>
         <span className="block font-medium text-[var(--text)]">{title}</span>
         <span className="mt-1 block text-sm text-[var(--color-muted)]">

@@ -49,7 +49,7 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
             <Link
               key={article.slug}
               href={buildLocalizedPath(locale, `/blog/${article.slug}/`)}
-              className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 transition hover:border-[var(--color-accent)] dark:border-zinc-700"
+              className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 transition hover:border-[var(--color-accent)]"
             >
               <p className="text-xs text-[var(--color-muted)]">
                 {article.updatedAt}

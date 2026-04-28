@@ -162,10 +162,10 @@ function SourceTable({
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold text-[var(--text)]">{title}</h3>
-      <div className="overflow-x-auto rounded-2xl border border-zinc-200 dark:border-zinc-700">
+      <div className="overflow-x-auto rounded-2xl border border-zinc-200">
         <table className="w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-zinc-200 bg-[var(--surface)] text-xs uppercase tracking-wide text-[var(--color-muted)] dark:border-zinc-700">
+            <tr className="border-b border-zinc-200 bg-[var(--surface)] text-xs uppercase tracking-wide text-[var(--color-muted)]">
               <th className="px-4 py-3">{columns.source}</th>
               <th className="px-4 py-3">{columns.region}</th>
               <th className="px-4 py-3">{columns.use}</th>
@@ -175,7 +175,7 @@ function SourceTable({
             {rows.map((row) => (
               <tr
                 key={row.url}
-                className="border-b border-zinc-100 last:border-b-0 dark:border-zinc-800"
+                className="border-b border-zinc-100 last:border-b-0"
               >
                 <td className="px-4 py-3">
                   <a
@@ -235,7 +235,7 @@ export function SourcesPage({ locale }: { locale: SiteLocale }) {
             {c.triangulationSteps.map((s) => (
               <li
                 key={s.title}
-                className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 dark:border-zinc-700"
+                className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5"
               >
                 <p className="font-semibold text-[var(--text)]">{s.title}</p>
                 <p className="mt-1 text-sm text-[var(--color-muted)]">{s.body}</p>
@@ -278,7 +278,7 @@ export function SourcesPage({ locale }: { locale: SiteLocale }) {
           />
         </section>
 
-        <section className="space-y-3 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 dark:border-zinc-700">
+        <section className="space-y-3 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             {c.reportHeading}
           </h2>

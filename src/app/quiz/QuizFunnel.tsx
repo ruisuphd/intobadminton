@@ -106,7 +106,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   return (
     <div className="mx-auto max-w-lg">
       <div
-        className="mb-8 h-1.5 overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-700"
+        className="mb-8 h-1.5 overflow-hidden rounded-full bg-zinc-200"
         role="progressbar"
         aria-valuenow={progress}
         aria-valuemin={0}
@@ -137,7 +137,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                 : "Your country / rating system"}
             </span>
             <select
-              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2 text-[var(--text)] dark:border-zinc-600"
+              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2 text-[var(--text)]"
               value={profile.countryCode ?? "GENERIC"}
               onChange={(e) => {
                 const code = e.target.value as CountryCode;
@@ -192,7 +192,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                         className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${
                           selected
                             ? "border-[var(--color-accent)] bg-[var(--color-accent-soft)]"
-                            : "border-zinc-200 dark:border-zinc-600"
+                            : "border-zinc-200"
                         }`}
                       >
                         <span className="font-medium">
@@ -233,7 +233,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                 className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${
                   profile.discipline === d
                     ? "border-[var(--color-accent)] bg-[var(--color-accent-soft)]"
-                    : "border-zinc-200 dark:border-zinc-600"
+                    : "border-zinc-200"
                 }`}
               >
                 {disciplines[d]}
@@ -276,7 +276,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   className={`rounded-full px-4 py-2 text-sm transition ${
                     on
                       ? "bg-[var(--color-accent)] text-white"
-                      : "border border-zinc-300 dark:border-zinc-600"
+                      : "border border-zinc-300"
                   }`}
                 >
                   {styles[s]}
@@ -323,7 +323,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                 }}
                 className={`flex w-full rounded-2xl border px-4 py-3 text-left text-sm ${
                   live
-                    ? "border-zinc-200 dark:border-zinc-600"
+                    ? "border-zinc-200"
                     : "cursor-not-allowed opacity-50"
                 }`}
               >
@@ -347,7 +347,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
             <input
               type="number"
               min={0}
-              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2 dark:border-zinc-600"
+              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2"
               value={profile.body.budgetMaxUsd ?? ""}
               onChange={(e) => {
                 const v = e.target.value;
@@ -367,7 +367,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
               type="number"
               min={30}
               max={150}
-              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2 dark:border-zinc-600"
+              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2"
               value={profile.body.weightKg ?? ""}
               onChange={(e) => {
                 const v = e.target.value;
@@ -397,7 +397,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   className={`rounded-full px-3 py-1 text-xs ${
                     profile.body.footWidth === f
                       ? "bg-[var(--color-accent)] text-white"
-                      : "border border-zinc-300 dark:border-zinc-600"
+                      : "border border-zinc-300"
                   }`}
                 >
                   {f}
@@ -436,7 +436,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                     className={`rounded-full px-3 py-1 text-xs ${
                       has
                         ? "bg-[var(--color-accent)] text-white"
-                        : "border border-zinc-300 dark:border-zinc-600"
+                        : "border border-zinc-300"
                     }`}
                   >
                     {f}

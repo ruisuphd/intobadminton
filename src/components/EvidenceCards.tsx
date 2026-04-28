@@ -6,7 +6,7 @@ export function EvidenceCards({ productId }: { productId: string }) {
 
   if (rows.length === 0) {
     return (
-      <div className="mt-4 rounded-2xl border border-zinc-200 p-4 text-sm text-[var(--color-muted)] dark:border-zinc-700">
+      <div className="mt-4 rounded-2xl border border-zinc-200 p-4 text-sm text-[var(--color-muted)]">
         No community evidence references are attached yet. Official specs and
         scoring rules are still used.
       </div>
@@ -30,7 +30,7 @@ export function EvidenceCards({ productId }: { productId: string }) {
         {rows.map((row) => (
           <article
             key={row.id}
-            className="rounded-2xl border border-zinc-200 bg-[var(--background)] p-4 dark:border-zinc-700"
+            className="rounded-2xl border border-zinc-200 bg-[var(--background)] p-4"
           >
             <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-muted)]">
               <span>{row.sourceName}</span>
