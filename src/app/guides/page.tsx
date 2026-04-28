@@ -49,7 +49,7 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
         <p className="mt-3 max-w-2xl text-[var(--color-muted)]">
           {copy.subtitle}
         </p>
-        <div className="mt-8 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 text-sm text-[var(--color-muted)] dark:border-zinc-700">
+        <div className="mt-8 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 text-sm text-[var(--color-muted)]">
           {locale === "zh"
             ? "指南优先使用原创解释和官方规格链接。第三方论坛或社区内容只作为主题摘要和链接，不复制原文。"
             : "Guides prioritize original analysis and official spec links. Third-party community sources are used only as theme summaries and links, not copied review text."}
@@ -59,7 +59,7 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
             <li key={g.href}>
               <Link
                 href={localized(g.href)}
-                className="block rounded-2xl border border-zinc-200/90 bg-[var(--surface)] p-5 transition hover:border-[var(--color-accent)] dark:border-zinc-700/90"
+                className="block rounded-2xl border border-zinc-200/90 bg-[var(--surface)] p-5 transition hover:border-[var(--color-accent)]"
               >
                 <h2 className="font-semibold text-[var(--text)]">{g.title}</h2>
                 <p className="mt-1 text-sm text-[var(--color-muted)]">{g.desc}</p>

@@ -61,7 +61,7 @@ const copyZh: Copy = {
   dek: "由一名仍在打比赛的球员搭建的装备推荐站。我们厌倦了在球拍前靠猜，于是把推荐逻辑公开化。",
   founderHeading: "幕后是谁",
   founderBody: [
-    "我是 Rui Su（苏睿）。我童年在中国开始打球，移居爱尔兰后继续在 Maynooth 大学校队和都柏林多家俱乐部训练。曾接受前马来西亚国家队球员与前中国省队球员的指导，目前在爱尔兰联赛 Division 4 出战。",
+    "我是 Rui Su。童年在中国开始打球，移居爱尔兰后继续在 Maynooth 大学校队和都柏林多家俱乐部训练。曾接受前马来西亚国家队球员与前中国省队球员的指导，目前在爱尔兰联赛 Division 4 出战。",
     "球场之外，我经营注册于新加坡的 Intonation Labs，主业是搭建落地的机器学习系统。IntoBadminton 是我一直想要的那种装备推荐工具：结构化的数据、可看见的推荐理由，以及对真正测试过装备的人的引用。",
   ],
   editorialHeading: "推荐是如何产生的",
@@ -155,7 +155,7 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
             {c.editorialPrinciples.map((p) => (
               <li
                 key={p.title}
-                className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 dark:border-zinc-700"
+                className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5"
               >
                 <p className="font-semibold text-[var(--text)]">{p.title}</p>
                 <p className="mt-1 text-sm text-[var(--color-muted)]">{p.body}</p>
@@ -184,7 +184,7 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
           </p>
         </section>
 
-        <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5 dark:border-zinc-700">
+        <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5">
           <Link
             href={buildLocalizedPath(locale, c.ctaLink)}
             className="inline-flex h-11 items-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white"

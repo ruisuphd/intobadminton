@@ -28,9 +28,9 @@ export default function AstroxVsNanoflarePage() {
           won by first attack from the rear court or by speed through defense
           and mid-court exchanges.
         </p>
-        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-[var(--surface)] dark:border-zinc-700">
+        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-[var(--surface)]">
           <table className="w-full min-w-[40rem] text-left text-sm">
-            <thead className="border-b border-zinc-200 text-[var(--text)] dark:border-zinc-700">
+            <thead className="border-b border-zinc-200 text-[var(--text)]">
               <tr>
                 <th className="p-4">Family</th>
                 <th className="p-4">Best signal</th>
@@ -39,7 +39,7 @@ export default function AstroxVsNanoflarePage() {
               </tr>
             </thead>
             <tbody className="text-[var(--color-muted)]">
-              <tr className="border-b border-zinc-100 dark:border-zinc-800">
+              <tr className="border-b border-zinc-100">
                 <td className="p-4 font-medium text-[var(--text)]">Astrox</td>
                 <td className="p-4">Head-heavy attack and rear-court load</td>
                 <td className="p-4">Singles, smash-heavy, back-court doubles</td>

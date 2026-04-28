@@ -30,7 +30,7 @@ export default function PrivacyChoicesPage() {
           <button
             type="button"
             onClick={rejectNonEssential}
-            className="rounded-2xl border border-zinc-300 px-5 py-3 text-sm dark:border-zinc-600"
+            className="rounded-2xl border border-zinc-300 px-5 py-3 text-sm"
           >
             Do not sell/share or use non-essential tracking
           </button>

@@ -6,95 +6,92 @@ import { CookieSettingsLink } from "@/components/CookieSettings";
 import { buildLocalizedPath, localeFromPath } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
+type FooterColumn = { heading: string; links: { label: string; path: string }[] };
+
 export function SiteFooter() {
   const locale = localeFromPath(usePathname());
   const copy = t(locale);
   const localized = (path: string) => buildLocalizedPath(locale, path);
+  const isZh = locale === "zh";
+
+  const columns: FooterColumn[] = [
+    {
+      heading: isZh ? "推荐" : "Find gear",
+      links: [
+        { label: copy.nav.finder, path: "/quiz/" },
+        { label: isZh ? "对比" : "Compare", path: "/compare/" },
+        { label: isZh ? "覆盖品牌" : "Brands", path: "/brands/" },
+        { label: isZh ? "调研" : "Research", path: "/research/" },
+      ],
+    },
+    {
+      heading: isZh ? "内容" : "Read",
+      links: [
+        { label: copy.nav.blog, path: "/blog/" },
+        { label: isZh ? "指南" : "Guides", path: "/guides/" },
+        { label: copy.footer.methodology, path: "/methodology/" },
+        { label: isZh ? "信息来源" : "Sources", path: "/sources/" },
+      ],
+    },
+    {
+      heading: isZh ? "了解" : "About",
+      links: [
+        { label: isZh ? "关于" : "About", path: "/about/" },
+        { label: isZh ? "联系" : "Contact", path: "/contact/" },
+        { label: isZh ? "安全" : "Security", path: "/security/" },
+      ],
+    },
+    {
+      heading: isZh ? "法律" : "Legal",
+      links: [
+        { label: isZh ? "隐私" : "Privacy", path: "/privacy/" },
+        { label: isZh ? "条款" : "Terms", path: "/terms/" },
+        { label: isZh ? "Cookie" : "Cookies", path: "/cookies/" },
+        { label: isZh ? "来源政策" : "Source policy", path: "/source-policy/" },
+      ],
+    },
+  ];
 
   return (
-    <footer className="mt-auto border-t border-zinc-200/80 py-12 dark:border-zinc-700/80">
+    <footer className="mt-auto border-t border-[color:var(--line)] py-16">
       <div className="layout-band max-w-6xl">
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+        <div className="grid gap-10 md:grid-cols-[2fr_3fr]">
           <div>
-            <p className="font-semibold text-[var(--text)]">IntoBadminton</p>
-            <p className="mt-2 max-w-sm text-sm text-[var(--color-muted)]">
+            <p className="text-base font-semibold text-[var(--text)]">
+              IntoBadminton
+            </p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-[var(--color-muted)]">
               {copy.footer.summary}
             </p>
           </div>
-          <div className="flex flex-wrap gap-6 text-sm">
-            <Link
-              href={localized("/about/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "关于" : "About"}
-            </Link>
-            <Link
-              href={localized("/brands/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "覆盖品牌" : "Brands"}
-            </Link>
-            <Link
-              href={localized("/sources/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "信息来源" : "Sources"}
-            </Link>
-            <Link
-              href={localized("/contact/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "联系" : "Contact"}
-            </Link>
-            <Link
-              href={localized("/privacy/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "隐私" : "Privacy"}
-            </Link>
-            <Link
-              href={localized("/cookies/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "Cookie" : "Cookies"}
-            </Link>
-            <Link
-              href={localized("/terms/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "条款" : "Terms"}
-            </Link>
-            <Link
-              href={localized("/source-policy/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "来源政策" : "Source policy"}
-            </Link>
-            <Link
-              href={localized("/methodology/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {copy.footer.methodology}
-            </Link>
-            <Link
-              href={localized("/research/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "市场调研" : "Market research"}
-            </Link>
-            <Link
-              href={localized("/security/")}
-              className="text-[var(--color-muted)] hover:text-[var(--color-accent)]"
-            >
-              {locale === "zh" ? "安全" : "Security"}
-            </Link>
-            <CookieSettingsLink />
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+            {columns.map((col) => (
+              <div key={col.heading} className="text-sm">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+                  {col.heading}
+                </p>
+                <ul className="mt-3 space-y-2">
+                  {col.links.map((l) => (
+                    <li key={l.path}>
+                      <Link
+                        href={localized(l.path)}
+                        className="text-[var(--color-muted)] transition-colors hover:text-[var(--text)]"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-        <p className="mt-10 text-xs text-[var(--color-muted)]">
-          © {new Date().getFullYear()} IntoBadminton. Equipment is personal;
-          results are informational.
-        </p>
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-[color:var(--line)] pt-6 text-xs text-[var(--color-subtle)]">
+          <p>
+            © {new Date().getFullYear()} IntoBadminton · {isZh ? "装备建议仅供参考" : "Equipment is personal; results are informational."}
+          </p>
+          <CookieSettingsLink />
+        </div>
       </div>
     </footer>
   );

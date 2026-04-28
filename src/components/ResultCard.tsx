@@ -74,7 +74,7 @@ export function ResultCard({
   const full = compareIds.length >= compareLimit && !inCompare;
 
   return (
-    <article className="rounded-2xl border border-zinc-200/90 bg-[var(--surface)] p-6 shadow-sm dark:border-zinc-700/90">
+    <article className="rounded-2xl border border-zinc-200/90 bg-[var(--surface)] p-6 shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <p className="text-xs font-medium text-[var(--color-muted)]">
@@ -111,7 +111,7 @@ export function ResultCard({
         {r.evidenceProfile.officialSpec.lastVerifiedAt}
       </p>
       <div className="mt-4 grid gap-2 text-xs sm:grid-cols-3">
-        <div className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-700">
+        <div className="rounded-xl border border-zinc-200 p-3">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "官方规格" : "Official spec"}
           </p>
@@ -119,7 +119,7 @@ export function ResultCard({
             {r.evidenceProfile.officialSpec.status.replace("_", " ")}
           </p>
         </div>
-        <div className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-700">
+        <div className="rounded-xl border border-zinc-200 p-3">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "编辑信号" : "Editor signal"}
           </p>
@@ -127,7 +127,7 @@ export function ResultCard({
             {r.evidenceProfile.editorSignal.source.replace("_", " ")}
           </p>
         </div>
-        <div className="rounded-xl border border-zinc-200 p-3 dark:border-zinc-700">
+        <div className="rounded-xl border border-zinc-200 p-3">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "评价证据" : "Review evidence"}
           </p>
@@ -138,7 +138,7 @@ export function ResultCard({
         </div>
       </div>
       {r.resale && (
-        <div className="mt-4 rounded-xl border border-zinc-200 bg-[var(--background)] p-3 text-xs dark:border-zinc-700">
+        <div className="mt-4 rounded-xl border border-zinc-200 bg-[var(--background)] p-3 text-xs">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "转售/折旧信号" : "Resale/depreciation signal"}
           </p>
@@ -203,13 +203,13 @@ export function ResultCard({
           onClick={() =>
             trackEvent("open_compare", { product_id: r.id, rank })
           }
-          className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm dark:border-zinc-600"
+          className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm"
         >
           {locale === "zh" ? "打开对比" : "Open compare"}
         </Link>
         <Link
           href={`${buildLocalizedPath(locale, "/contact/")}?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
-          className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm dark:border-zinc-600"
+          className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm"
         >
           {locale === "zh" ? "报告数据问题" : "Report data issue"}
         </Link>
