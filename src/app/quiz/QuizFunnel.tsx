@@ -8,12 +8,17 @@ import {
   FOOT_WIDTH,
   INJURY_FLAGS,
   PLAY_STYLES,
-  SKILL_LEVELS,
   type Discipline,
   type EquipmentCategory,
   type PlayStyle,
   type SkillLevel,
 } from "@/lib/taxonomy";
+import {
+  COUNTRY_LIST,
+  getCountrySystem,
+  getInternalLevel,
+  type CountryCode,
+} from "@/lib/skill-levels";
 import { useProfile } from "@/context/ProfileContext";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
@@ -123,28 +128,91 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
             {copy.levelTitle}
           </h1>
-          <p className="text-[var(--color-muted)]">
-            {copy.levelHelp}
-          </p>
-          <div className="flex flex-col gap-2">
-            {SKILL_LEVELS.map((lv) => (
-              <button
-                type="button"
-                key={lv}
-                onClick={() => {
-                  setProfile((p) => ({ ...p, level: lv }));
-                  next();
-                }}
-                className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${
-                  profile.level === lv
-                    ? "border-[var(--color-accent)] bg-[var(--color-accent-soft)]"
-                    : "border-zinc-200 dark:border-zinc-600"
-                }`}
-              >
-                {levels[lv]}
-              </button>
-            ))}
-          </div>
+          <p className="text-[var(--color-muted)]">{copy.levelHelp}</p>
+
+          <label className="block text-sm">
+            <span className="text-[var(--color-muted)]">
+              {locale === "zh"
+                ? "你所在国家/地区的评级体系"
+                : "Your country / rating system"}
+            </span>
+            <select
+              className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2 text-[var(--text)] dark:border-zinc-600"
+              value={profile.countryCode ?? "GENERIC"}
+              onChange={(e) => {
+                const code = e.target.value as CountryCode;
+                setProfile((p) => ({
+                  ...p,
+                  countryCode: code,
+                  countryLevel: undefined,
+                  level: code === "GENERIC" ? p.level : null,
+                }));
+              }}
+            >
+              {COUNTRY_LIST.map((c) => (
+                <option key={c.code} value={c.code}>
+                  {locale === "zh" ? c.nameZh : c.nameEn}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          {(() => {
+            const code = (profile.countryCode ?? "GENERIC") as CountryCode;
+            const system = getCountrySystem(code);
+            return (
+              <>
+                <p className="text-xs text-[var(--color-muted)]">
+                  {locale === "zh" ? system.systemZh : system.systemEn}
+                </p>
+                <div className="flex flex-col gap-2">
+                  {system.options.map((opt) => {
+                    const selected =
+                      code === "GENERIC"
+                        ? profile.level === opt.internal
+                        : profile.countryLevel === opt.value;
+                    return (
+                      <button
+                        type="button"
+                        key={opt.value}
+                        onClick={() => {
+                          const internal =
+                            code === "GENERIC"
+                              ? (opt.internal as SkillLevel)
+                              : (getInternalLevel(code, opt.value) as SkillLevel);
+                          setProfile((p) => ({
+                            ...p,
+                            countryCode: code,
+                            countryLevel:
+                              code === "GENERIC" ? undefined : opt.value,
+                            level: internal,
+                          }));
+                          next();
+                        }}
+                        className={`rounded-2xl border px-4 py-3 text-left text-sm transition ${
+                          selected
+                            ? "border-[var(--color-accent)] bg-[var(--color-accent-soft)]"
+                            : "border-zinc-200 dark:border-zinc-600"
+                        }`}
+                      >
+                        <span className="font-medium">
+                          {locale === "zh" ? opt.labelZh : opt.labelEn}
+                        </span>
+                        {code !== "GENERIC" && (
+                          <span className="ml-2 text-xs text-[var(--color-muted)]">
+                            ≈ {levels[opt.internal]}
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="text-xs text-[var(--color-muted)]">
+                  {locale === "zh" ? system.noteZh : system.noteEn}
+                </p>
+              </>
+            );
+          })()}
         </section>
       )}
 

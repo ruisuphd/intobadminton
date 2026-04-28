@@ -1,12 +1,40 @@
 import Link from "next/link";
 import { blogArticles } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { companyInfo, organizationJsonLd } from "@/lib/company";
 
 export function BlogIndex({ locale }: { locale: SiteLocale }) {
   const articles = blogArticles[locale];
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${companyInfo.siteUrl}/${locale}/blog/#blog`,
+    name: locale === "zh" ? "羽毛球装备博客" : "Badminton equipment blog",
+    inLanguage: locale === "zh" ? "zh-Hans" : "en",
+    publisher: organizationJsonLd,
+    blogPost: articles.map((article) => ({
+      "@type": "BlogPosting",
+      "@id": `${companyInfo.siteUrl}/${locale}/blog/${article.slug}/#article`,
+      headline: article.title,
+      description: article.dek,
+      datePublished: article.updatedAt,
+      dateModified: article.updatedAt,
+      url: `${companyInfo.siteUrl}/${locale}/blog/${article.slug}/`,
+      author: {
+        "@type": "Person",
+        name: companyInfo.founderName,
+        url: companyInfo.founderWebsite,
+      },
+    })),
+  };
+
   return (
     <main className="flex-1 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <div className="layout-band max-w-6xl">
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           {locale === "zh" ? "羽毛球装备博客" : "Badminton equipment blog"}
@@ -31,6 +59,11 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
               </h2>
               <p className="mt-2 text-sm text-[var(--color-muted)]">
                 {article.dek}
+              </p>
+              <p className="mt-3 text-xs text-[var(--color-muted)]">
+                {locale === "zh"
+                  ? companyInfo.authorBylineZh
+                  : companyInfo.authorBylineEn}
               </p>
             </Link>
           ))}
