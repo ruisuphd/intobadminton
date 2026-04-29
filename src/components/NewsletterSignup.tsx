@@ -48,7 +48,7 @@ export function NewsletterSignup({ locale = "en" }: { locale?: SiteLocale }) {
 
   if (!configured) {
     return (
-      <section className="rounded-2xl border border-dashed border-zinc-300 bg-[var(--surface)] p-6">
+      <section className="rounded-2xl border border-dashed border-[color:var(--line-strong)] bg-[var(--surface)] p-6">
         <p className="text-sm text-[var(--color-muted)]">{c.notConfigured}</p>
       </section>
     );
@@ -57,7 +57,7 @@ export function NewsletterSignup({ locale = "en" }: { locale?: SiteLocale }) {
   const action = `https://buttondown.email/api/emails/embed-subscribe/${BUTTONDOWN_USERNAME}`;
 
   return (
-    <section className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6">
+    <section className="card p-6">
       <h2 className="text-xl font-semibold text-[var(--text)]">{c.heading}</h2>
       <p className="mt-2 text-sm text-[var(--color-muted)]">{c.blurb}</p>
       {submitted ? (
@@ -84,7 +84,7 @@ export function NewsletterSignup({ locale = "en" }: { locale?: SiteLocale }) {
             name="email"
             required
             placeholder={c.placeholder}
-            className="flex-1 rounded-2xl border border-zinc-300 bg-transparent px-4 py-3 text-sm text-[var(--text)]"
+            className="flex-1 rounded-2xl border border-[color:var(--line-strong)] bg-transparent px-4 py-3 text-sm text-[var(--text)]"
           />
           <input type="hidden" name="tag" value={`locale-${locale}`} />
           <button

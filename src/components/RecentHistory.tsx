@@ -8,7 +8,7 @@ export function RecentHistory() {
   if (history.length === 0) return null;
 
   return (
-    <section className="mt-12 border-t border-zinc-200/80 pt-10">
+    <section className="mt-12 border-t border-[color:var(--line)] pt-10">
       <h2 className="text-lg font-semibold text-[var(--text)]">
         Recent shortlists
       </h2>
@@ -23,7 +23,7 @@ export function RecentHistory() {
           return (
             <li
               key={h.at + names}
-              className="rounded-2xl border border-zinc-200/80 bg-[var(--surface)] px-4 py-3 text-sm"
+              className="rounded-2xl border border-[color:var(--line)] bg-[var(--surface)] px-4 py-3 text-sm"
             >
               <p className="text-xs text-[var(--color-muted)]">
                 {new Date(h.at).toLocaleString()}

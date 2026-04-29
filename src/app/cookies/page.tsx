@@ -19,9 +19,9 @@ export default function CookiesPage() {
           We use a strict global baseline: non-essential analytics and
           advertising storage are off until you choose otherwise.
         </p>
-        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-[var(--surface)]">
+        <div className="overflow-x-auto card">
           <table className="w-full min-w-[44rem] text-left text-sm">
-            <thead className="border-b border-zinc-200 text-[var(--text)]">
+            <thead className="border-b border-[color:var(--line-strong)] text-[var(--text)]">
               <tr>
                 <th className="p-4">Category</th>
                 <th className="p-4">Default</th>
@@ -33,7 +33,7 @@ export default function CookiesPage() {
               {rows.map((row) => (
                 <tr
                   key={row.category}
-                  className="border-b border-zinc-100 last:border-0"
+                  className="border-b border-[color:var(--line)] last:border-0"
                 >
                   <td className="p-4 font-medium text-[var(--text)]">
                     {row.category}

@@ -74,44 +74,39 @@ export function ResultCard({
   const full = compareIds.length >= compareLimit && !inCompare;
 
   return (
-    <article className="rounded-2xl border border-zinc-200/90 bg-[var(--surface)] p-6 shadow-sm">
-      <div className="flex flex-wrap items-start justify-between gap-3">
+    <article className="card p-7">
+      <header className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-medium text-[var(--color-muted)]">
+          <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
             #{rank} · {categoryLabel(r.category, locale)} · {r.brand}
           </p>
-          <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)]">
             {r.name}
           </h2>
         </div>
-        <div className="text-right">
-          <p className="text-2xl font-semibold text-[var(--color-accent)]">
+        <div className="flex flex-col items-end">
+          <p className="text-3xl font-semibold text-[var(--color-accent)]">
             {(r.fitScore * 100).toFixed(0)}
           </p>
-          <p className="text-xs text-[var(--color-muted)]">
-            {locale === "zh" ? "匹配分（演示）" : "fit score (demo)"}
+          <p className="text-xs text-[var(--color-subtle)]">
+            {locale === "zh" ? "匹配分" : "fit score"}
           </p>
-      </div>
-      </div>
-      <p className="mt-1 text-sm text-[var(--color-muted)]">
+        </div>
+      </header>
+
+      <p className="mt-3 text-sm text-[var(--color-muted)]">
         ${r.priceUsd} · {specLine(r)}
       </p>
-      {r.resale && (
-        <p className="mt-1 text-xs text-[var(--color-muted)]">
-          {locale === "zh" ? "二手价值估计" : "Estimated resale"}: $
-          {r.resale.estimatedUsedUsd} · {r.resale.depreciationPct}%{" "}
-          {locale === "zh" ? "折旧" : "depreciation"} ·{" "}
-          {r.resale.confidence} confidence
-        </p>
-      )}
-      <p className="mt-1 text-xs text-[var(--color-muted)]">
+
+      <p className="mt-4 text-xs text-[var(--color-subtle)]">
         {locale === "zh" ? "置信度" : "Confidence"}: {confidence(r)} ·{" "}
         {locale === "zh" ? "官方规格" : "Official spec"}:{" "}
-        {r.evidenceProfile.officialSpec.status.replace("_", " ")} · Verified:{" "}
+        {r.evidenceProfile.officialSpec.status.replace("_", " ")} ·{" "}
         {r.evidenceProfile.officialSpec.lastVerifiedAt}
       </p>
-      <div className="mt-4 grid gap-2 text-xs sm:grid-cols-3">
-        <div className="rounded-xl border border-zinc-200 p-3">
+
+      <div className="mt-5 grid gap-3 text-xs sm:grid-cols-3">
+        <div className="rounded-xl bg-[color:var(--surface-muted)] p-3">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "官方规格" : "Official spec"}
           </p>
@@ -119,7 +114,7 @@ export function ResultCard({
             {r.evidenceProfile.officialSpec.status.replace("_", " ")}
           </p>
         </div>
-        <div className="rounded-xl border border-zinc-200 p-3">
+        <div className="rounded-xl bg-[color:var(--surface-muted)] p-3">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "编辑信号" : "Editor signal"}
           </p>
@@ -127,54 +122,65 @@ export function ResultCard({
             {r.evidenceProfile.editorSignal.source.replace("_", " ")}
           </p>
         </div>
-        <div className="rounded-xl border border-zinc-200 p-3">
+        <div className="rounded-xl bg-[color:var(--surface-muted)] p-3">
           <p className="font-medium text-[var(--text)]">
             {locale === "zh" ? "评价证据" : "Review evidence"}
           </p>
           <p className="mt-1 text-[var(--color-muted)]">
             {r.evidenceProfile.reviewEvidence.count}{" "}
-            {locale === "zh" ? "条元数据摘要" : "metadata summaries"}
+            {locale === "zh" ? "条来源" : "sources"}
           </p>
         </div>
       </div>
+
       {r.resale && (
-        <div className="mt-4 rounded-xl border border-zinc-200 bg-[var(--background)] p-3 text-xs">
+        <div className="mt-4 rounded-xl bg-[color:var(--surface-muted)] p-4 text-xs">
           <p className="font-medium text-[var(--text)]">
-            {locale === "zh" ? "转售/折旧信号" : "Resale/depreciation signal"}
+            {locale === "zh" ? "二手价值" : "Estimated resale"}: $
+            {r.resale.estimatedUsedUsd}
+            <span className="ml-2 font-normal text-[var(--color-muted)]">
+              ({r.resale.depreciationPct}%{" "}
+              {locale === "zh" ? "折旧" : "depreciation"} · {r.resale.confidence}{" "}
+              {locale === "zh" ? "置信度" : "confidence"})
+            </span>
           </p>
           <p className="mt-1 text-[var(--color-muted)]">{r.resale.basis}</p>
         </div>
       )}
+
       {r.reasons.length > 0 && (
-        <ul className="mt-4 space-y-2 text-sm text-[var(--text)]">
+        <ul className="mt-5 space-y-2 text-sm text-[var(--text)]">
           {r.reasons.map((x) => (
-            <li key={x.code} className="flex gap-2">
+            <li key={x.code} className="flex gap-3">
               <span className="text-[var(--color-accent)]">·</span>
               <span>
-              <span className="font-medium">{reasonGroup(x.code)}:</span>{" "}
-                {x.label}
+                <span className="font-medium">{reasonGroup(x.code)}:</span>{" "}
+                <span className="text-[var(--color-muted)]">{x.label}</span>
               </span>
             </li>
           ))}
         </ul>
       )}
-      <div className="mt-4 flex flex-wrap gap-2">
-        {r.sourceChips.map((c) => (
-          <span
-            key={c.type + c.label}
-            className="rounded-full bg-[var(--color-accent-soft)] px-3 py-1 text-xs text-[var(--text)]"
-          >
-            {c.type.replace("_", " ")}: {c.label}
-          </span>
-        ))}
-      </div>
-      {r.editorNote && (
-        <p className="mt-3 text-sm italic text-[var(--color-muted)]">
-          {r.editorNote}
-        </p>
+
+      {r.sourceChips.length > 0 && (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {r.sourceChips.map((c) => (
+            <span key={c.type + c.label} className="chip chip-secondary">
+              {c.type.replace("_", " ")}: {c.label}
+            </span>
+          ))}
+        </div>
       )}
+
+      {r.editorNote && (
+        <blockquote className="mt-5 border-l-2 border-[var(--color-accent)] pl-4 text-sm italic text-[var(--color-muted)]">
+          {r.editorNote}
+        </blockquote>
+      )}
+
       <EvidenceCards productId={r.id} />
-      <div className="mt-5 flex flex-wrap gap-2">
+
+      <div className="mt-6 flex flex-wrap gap-2">
         <button
           type="button"
           onClick={() => {
@@ -188,30 +194,32 @@ export function ResultCard({
             }
           }}
           disabled={full && !inCompare}
-          className="inline-flex h-11 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white transition enabled:hover:opacity-90 disabled:opacity-40"
+          className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white transition-colors enabled:hover:bg-[var(--color-accent-hover)] disabled:opacity-40"
         >
           {inCompare
-            ? "Remove from compare"
+            ? locale === "zh"
+              ? "从对比中移除"
+              : "Remove from compare"
             : full
-              ? `Max ${compareLimit} in compare`
+              ? locale === "zh"
+                ? `已达${compareLimit}个上限`
+                : `Max ${compareLimit} in compare`
               : locale === "zh"
                 ? "加入对比"
                 : "Add to compare"}
         </button>
         <Link
           href={buildLocalizedPath(locale, "/compare/")}
-          onClick={() =>
-            trackEvent("open_compare", { product_id: r.id, rank })
-          }
-          className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm"
+          onClick={() => trackEvent("open_compare", { product_id: r.id, rank })}
+          className="inline-flex h-11 items-center justify-center rounded-full border border-[color:var(--line-strong)] px-4 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--text)]"
         >
           {locale === "zh" ? "打开对比" : "Open compare"}
         </Link>
         <Link
           href={`${buildLocalizedPath(locale, "/contact/")}?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
-          className="inline-flex h-11 items-center justify-center rounded-2xl border border-zinc-300 px-4 text-sm"
+          className="inline-flex h-11 items-center justify-center rounded-full border border-[color:var(--line-strong)] px-4 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--text)]"
         >
-          {locale === "zh" ? "报告数据问题" : "Report data issue"}
+          {locale === "zh" ? "报告问题" : "Report issue"}
         </Link>
       </div>
     </article>

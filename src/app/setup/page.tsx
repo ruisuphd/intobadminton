@@ -58,9 +58,9 @@ export default function SetupPage() {
           readiness depend on external setup you control. Keep AdSense disabled
           until the consent and policy requirements are actually satisfied.
         </p>
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-zinc-200 bg-[var(--surface)]">
+        <div className="mt-8 overflow-x-auto card">
           <table className="w-full min-w-[48rem] text-left text-sm">
-            <thead className="border-b border-zinc-200 text-[var(--text)]">
+            <thead className="border-b border-[color:var(--line-strong)] text-[var(--text)]">
               <tr>
                 <th className="p-4">Area</th>
                 <th className="p-4">Action</th>
@@ -71,7 +71,7 @@ export default function SetupPage() {
               {setupItems.map((item) => (
                 <tr
                   key={item.area}
-                  className="border-b border-zinc-100 last:border-0"
+                  className="border-b border-[color:var(--line)] last:border-0"
                 >
                   <td className="p-4 font-medium text-[var(--text)]">
                     {item.area}

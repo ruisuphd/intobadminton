@@ -91,14 +91,14 @@ export function ReviewForm() {
   return (
     <form
       onSubmit={submit}
-      className="mt-8 max-w-2xl space-y-6 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6"
+      className="mt-8 max-w-2xl space-y-6 card p-6"
     >
       <label className="block text-sm">
         <span className="text-[var(--color-muted)]">Equipment</span>
         <select
           value={productId}
           onChange={(e) => setProductId(e.target.value)}
-          className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2"
+          className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2"
         >
           {products.map((p) => (
             <option key={p.id} value={p.id}>
@@ -116,7 +116,7 @@ export function ReviewForm() {
           max={120}
           value={ownedMonths}
           onChange={(e) => setOwnedMonths(Number(e.target.value))}
-          className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2"
+          className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2"
         />
       </label>
 
@@ -133,7 +133,7 @@ export function ReviewForm() {
                   className={`h-9 w-9 rounded-full text-sm ${
                     scores[k] === n
                       ? "bg-[var(--color-accent)] text-white"
-                      : "border border-zinc-300"
+                      : "border border-[color:var(--line-strong)]"
                   }`}
                 >
                   {n}
@@ -152,11 +152,11 @@ export function ReviewForm() {
           rows={5}
           minLength={20}
           placeholder="What did it feel like in real games? Mention level, style, strengths, weaknesses."
-          className="mt-1 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2"
+          className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2"
         />
       </label>
 
-      <div className="rounded-2xl border border-zinc-200 p-4 text-sm text-[var(--color-muted)]">
+      <div className="rounded-2xl border border-[color:var(--line)] p-4 text-sm text-[var(--color-muted)]">
         <p className="font-medium text-[var(--text)]">Moderation status</p>
         <p className="mt-1">
           This static MVP saves review drafts locally only. They are not public,
@@ -194,18 +194,18 @@ export function ReviewForm() {
         </p>
       )}
 
-      <div className="flex flex-wrap gap-3 border-t border-zinc-200 pt-5">
+      <div className="flex flex-wrap gap-3 border-t border-[color:var(--line)] pt-5">
         <button
           type="button"
           onClick={exportDrafts}
-          className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm"
+          className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
         >
           Export local drafts{draftCount ? ` (${draftCount})` : ""}
         </button>
         <button
           type="button"
           onClick={deleteDrafts}
-          className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm"
+          className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
         >
           Delete local drafts
         </button>

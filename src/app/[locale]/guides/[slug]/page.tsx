@@ -188,7 +188,7 @@ export default async function LocalizedGuideArticlePage({
         </p>
         <ul className="space-y-3 text-[var(--color-muted)]">
           {copy.points.map((point) => (
-            <li key={point} className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-4">
+            <li key={point} className="card p-4">
               {point}
             </li>
           ))}
