@@ -112,37 +112,85 @@ business days.
 
 ---
 
+## Brand naming reference (these matter — earlier draft had errors)
+
+Chinese-language reviews use brand-internal series names that do not always
+map cleanly to English. Confirmed mappings:
+
+- **战戟 (Zhan Ji "war halberd")** = **Li-Ning Halbertec** series. NOT Victor.
+- **锋影 (Feng Ying "sharp shadow")** = **Li-Ning Bladex** series.
+- **雷霆 (Lei Ting "thunder")** = Li-Ning attack series (80, 90 龙虎,
+  90 New, 100). Distinct from AxForce.
+- **AxForce** = Li-Ning AxForce (90, 99) — different again from Lei Ting.
+- **神速 (Shen Su "speed god")** = Victor Hayabusa series.
+- **极音速 (Ji Yin Su "extreme sonic speed")** = Victor Auraspeed Hayabusa.
+- **黑金隼 (Hei Jin Sun "black gold falcon")** = Victor Hayabusa SE / Black
+  Gold colorway.
+- **突击 / 突击者 (Tu Ji "thrust/raid")** = Victor Thruster K series.
+- **疾光 (Ji Guang "fast light")** = Yonex Nanoflare line.
+
+When in doubt: **战戟 + 锋影 + 雷霆 + AxForce = Li-Ning. 神速 + 极音速 +
+黑金隼 + 突击 = Victor.**
+
+---
+
 ## Products NOT yet in our catalog but referenced
 
-For future Yonex / Victor / Li-Ning batches:
+Target list for upcoming batches.
 
-- **Yonex Nanoflare 100 XSE** — chengzhen's most-owned racket (5x). T0-tier speed.
-  84.5g unstrung, 89.6g w/ underbase removed, balance 302mm.
-- **Yonex Nanoflare 800** (non-Pro), **800 LT (5U)** — referenced as series context.
-- **Victor Thruster K 9000** — 4U/G5 reviewed; thinner frame than 8000; faster
-  but weaker rear-court solidity. "卸力" (loses power) on hard smash.
-- **Victor Thruster K 9000 Power** — 4U/G5: 83.5g unstrung, 86.4g w/ underbase
-  removed, balance 307mm. Yuan-style hardness 7.65. Sample variance: 5/10
-  samples ~82.5g. Speed-racket profile, not 8000 successor.
-- **Victor Thruster K 8000** — chengzhen's most-recommended Li-Ning racket.
-  Cost-effective vs 88SP New Color (~$400-500 cheaper). Best balance-racket
-  smash with underbase removed.
-- **Victor HS Plus** (神速 Plus) — 4U: 88.9g w/ underbase removed, balance 304mm.
-  Hardest Victor shaft. Like a hardened Hayabusa. Higher entry threshold than 100XSE.
-- **Victor TTY Ultima** — 89.1g w/ underbase removed, balance 310mm. Egg-frame
-  attack profile. Small sweet spot. Has alloy carbon + WES3.0.
-- **Li-Ning Bladex 800 Speed** (锋影 800 Speed) — 4U/G6: 85.2g unstrung,
-  90.8g grip+string, balance 299mm. Yuan-style hardness 7.83 (very stiff for
-  speed racket). Frame torsion 18.72 (best in speed-racket category).
-  M46X carbon → "tough-elastic" (韧弹) feel.
-- **Li-Ning Bladex 800 New** — 4U/G5: 84g unstrung, 89.3g w/ underbase
-  removed, balance 297mm. Yuan-style hardness 8.58 (softest among
-  high-end speed rackets). chengzhen rated only 3 stars.
-- **Li-Ning Lei Ting 90 New** (雷霆 90 New) — 4U: 89.5g w/ underbase removed,
-  balance 304mm. 6.4mm shaft (vs 6.2mm in 90 龙虎). chengzhen calls it Li-Ning's
-  best shaft yet. Replaces Lei Ting 80 in his rotation.
-- **Li-Ning Lei Ting 80** — 4U: 89.2g w/ underbase removed, balance 304mm.
-  Sweeter "sugar-water" entry-friendly attack; chengzhen plans to retire it.
+### Yonex (gap-fill — Phase C-2 remainder)
+- **Nanoflare 100 XSE** — chengzhen's most-owned racket (5x). T0-tier speed.
+  Already cited via Astrox 100ZZ VA editor note. Spec: 84.5g unstrung,
+  89.6g w/ underbase removed, balance 302mm. **Add to catalog.**
+- **Nanoflare 800** (non-Pro), **800 LT (5U)** — referenced as series context.
+- **Astrox 99 Game**, **Astrox 22**, **Astrox Smash**, **Astrox 88 Play** —
+  not in chengzhen's reviews but rounding out the Astrox line.
+- **Nanoflare 270/370/170 Speed**, **1000 Pro** — entry/series context.
+- **Arcsaber 11 Tour**, **Arcsaber 11 Play**, **Arcsaber 1 series**.
+- **Power Cushion shoes**: 65 Z3, 88 Dial, Eclipsion Z3.
+- **Bags**: BAG2331 / BAG2333.
+
+### Victor — Phase C-3 (this PR partially)
+**Added in this PR:** Auraspeed 100X H, Auraspeed 100X SE, Auraspeed HS Plus,
+Brave Sword 12, Thruster Falcon Enhanced.
+
+**Still to add:**
+- **Auraspeed 100X Ultra** — 5.8mm shaft variant. chengzhen's review mentions
+  he didn't keep his.
+- **Auraspeed Hayabusa** (regular, 极音速) and **Hayabusa SE Black Gold**
+  (黑金隼 SE) — heavily referenced.
+- **Auraspeed 80X**, **Auraspeed 90K Metallic R / II** (90K II already in catalog).
+- **Thruster Ryuga II** already in catalog.
+- **TTY Ultima** — 89.1g w/ underbase removed, balance 310mm. Egg-frame
+  attack profile. Small sweet spot. Has alloy carbon + WES3.0. Need to
+  identify exact Victor SKU before adding (likely **Victor TTY Ultima** =
+  Tang TY Yi or Talisman series — TBD).
+
+### Li-Ning — Phase C-4
+- **Halbertec 8000 (战戟 8000)** — chengzhen's #1 amateur recommendation. Cost-
+  effective vs Astrox 88S Pro New Color (~$400-500 cheaper). Best balance-
+  racket smash with underbase removed. Box-frame.
+- **Halbertec 9000 (战戟 9000)** — 4U/G5 reviewed; thinner frame than 8000;
+  faster but weaker rear-court solidity. "卸力" (loses power) on hard smash.
+  Marketed as "control king" but reviewer disagrees with that positioning.
+- **Halbertec 9000 Power (战戟 9000P)** — 4U/G5: 83.5g unstrung, 86.4g w/
+  underbase removed, balance 307mm. Yuan-style hardness 7.65. Sample variance:
+  5/10 samples ~82.5g (very light). Speed-racket profile, NOT a Halbertec 8000
+  successor in feel.
+- **Bladex 800 Speed (锋影 800 Speed)** — 4U/G6: 85.2g unstrung, 90.8g
+  grip+string, balance 299mm. Yuan-style hardness 7.83 (very stiff for
+  speed racket). Frame torsion 18.72 (best in speed-racket category, even
+  better than 99 Pro 2 at 19.87). M46X carbon → "tough-elastic" (韧弹) feel
+  with longer dwell vs other speed rackets.
+- **Bladex 800 New (锋影 800 New)** — 4U/G5: 84g unstrung, 89.3g w/ underbase
+  removed, balance 297mm. Yuan-style hardness 8.58 (softest among high-end
+  speed rackets). chengzhen rated only 3 stars.
+- **Lei Ting 90 New (雷霆 90 New)** — 4U: 89.5g w/ underbase removed, balance
+  304mm. 6.4mm shaft (vs 6.2mm in 90 龙虎 predecessor). chengzhen calls it
+  Li-Ning's best shaft yet, replaces Lei Ting 80 in his rotation. Small frame
+  but forgiving sweet spot.
+- **Lei Ting 80 (雷霆 80)** — 4U: 89.2g w/ underbase removed, balance 304mm.
+  Sweeter "sugar-water" entry-friendly attack racket; chengzhen plans to retire it.
 
 ---
 

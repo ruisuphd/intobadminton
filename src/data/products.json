@@ -2127,5 +2127,286 @@
         "confidence": "high"
       }
     ]
+  },
+  {
+    "id": "vic-auraspeed-100x-h",
+    "category": "racket",
+    "name": "Auraspeed 100X H",
+    "brand": "Victor",
+    "priceUsd": 230,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "jp",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/74262/auraspeed-100x-h",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles_speed",
+      "drives",
+      "front_court",
+      "thick_frame_stability"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/74262/auraspeed-100x-h",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Victor's signature large-frame speed racket — head-light, stiff shaft, designed for doubles drives and front-court reflexes. Frame is thicker than the rival Yonex Nanoflare 800 Pro, trading a touch of swing speed for more stable rear-court contact. Newer 100X H edition adds Shaft Recovery System for ~3% better recovery and ~4% more force transfer per Victor official.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-auraspeed-100x-se",
+    "category": "racket",
+    "name": "Auraspeed 100X SE (Mohammad Ahsan)",
+    "brand": "Victor",
+    "priceUsd": 245,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 297,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 29
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "jp",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.btracketsports.com/products/auraspeed-100x",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "men_doubles",
+      "balanced_speed",
+      "all_court_doubles",
+      "tournament_play"
+    ],
+    "sourceUrls": [
+      "https://www.btracketsports.com/products/auraspeed-100x",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Mohammad Ahsan signature edition. Stiffer shaft than non-SE, slightly higher tension ceiling. — BadmintonCN reviewer chengzhen owns five of these and ranks the 100X SE as one of two T0-tier speed rackets (alongside the Yonex Nanoflare 1000Z). Solid rear-court attack rare for a speed racket: smashes don't decay as fast as on the regular 100X. Top-tier defensive transition via shaft elasticity. Reviewer's measured 4U sample: 84.5g unstrung, 89.6g w/ underbase removed, balance 302mm.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Nanoflare 800 Pro comparison (Jul 2024)",
+        "summary": "Auraspeed 100X SE: 84.5g unstrung, 89.6g w/ underbase removed, balance 302mm. T0-tier speed racket alongside Yonex 1000Z. Solid rear-court attack — smashes don't fade like the non-SE 100X (whose smash 'feels a bit floaty, end-speed decays fast'). Stiffer shaft than non-SE, bend point higher → more crisp/snap, more transparent power transmission, stronger rear-court attack."
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Bladex 800 Speed comparison (Mar 2026)",
+        "summary": "Compared with Li-Ning Bladex 800 Speed: 100X SE has thinner frame edge profile (faster swing) but slightly less control precision; both are top-tier speed rackets but with different idioms (100X SE crisp/snap, 800 Speed tough-elastic with longer dwell)."
+      }
+    ]
+  },
+  {
+    "id": "vic-auraspeed-hs-plus",
+    "category": "racket",
+    "name": "Auraspeed HS Plus",
+    "brand": "Victor",
+    "priceUsd": 240,
+    "headWeight": "even",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 304,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.badmintonwarehouse.com/products/victor-auraspeed-hs-plus-c-badminton-racket",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "compact_frame_speed",
+      "men_doubles",
+      "advanced_smash"
+    ],
+    "sourceUrls": [
+      "https://www.badmintonwarehouse.com/products/victor-auraspeed-hs-plus-c-badminton-racket",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Compact-frame, very stiff Victor speed racket using WES 3.0 shaft tech. — BadmintonCN reviewer chengzhen describes the HS Plus as 'a hardened Hayabusa SE': harder shaft, faster, more rigid feedback. Excellent crisp + transparent feel with metallic ring on contact. Used by Hendra Setiawan / H.S. Prannoy. Hardest Victor shaft per chengzhen; high entry threshold. Good for advanced players who already have hard-shaft technique. Reviewer's measured 4U: 88.9g w/ underbase removed, balance 304mm.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Auraspeed HS Plus review (Jul 2024)",
+        "summary": "4U: 88.9g w/ underbase removed, balance 304mm — almost identical mass and balance to Yonex 1000Z. 'A hardened Hayabusa SE' — harder shaft, faster off-string, more rigid feedback. Smash quality stronger than Hayabusa SE and Brave Sword 12. Hardest shaft in Victor's lineup. Higher entry threshold than 100XSE: needs more active force. Frame slightly smaller; off-sweet-spot defense weaker. Suited to doubles rear-court or singles/mixed for advanced players."
+      }
+    ]
+  },
+  {
+    "id": "vic-brave-sword-12",
+    "category": "racket",
+    "name": "Brave Sword 12",
+    "brand": "Victor",
+    "priceUsd": 165,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2011,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.nydhi.com/blogs/news/victor-bravesword-12-comprehensive-review-of-classic-all-round-racket",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "all_round",
+      "classic_all_court",
+      "wide_audience"
+    ],
+    "sourceUrls": [
+      "https://www.nydhi.com/blogs/news/victor-bravesword-12-comprehensive-review-of-classic-all-round-racket"
+    ],
+    "editorNote": "Iconic 2011 Victor all-rounder still in print and beloved by club players worldwide. Even balance, medium-stiff 7.0 shaft, 5.0mm aerodynamic frame. The original 'do everything reasonably well' Victor. Reasonable smash, easy clears, forgiving sweet spot. Great choice if you don't yet know your style and want a frame that won't punish wrong choices.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-thruster-falcon-enhanced",
+    "category": "racket",
+    "name": "Thruster Falcon Enhanced (TK-F)",
+    "brand": "Victor",
+    "priceUsd": 195,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2022,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://badmintondirect.com/products/victor-thruster-falcon-enhanced-badminton-racket",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "smash_heavy",
+      "rear_court_attack",
+      "head_heavy_power"
+    ],
+    "sourceUrls": [
+      "https://badmintondirect.com/products/victor-thruster-falcon-enhanced-badminton-racket"
+    ],
+    "editorNote": "Power-focused head-heavy Victor with 6.5mm shaft and Hard Cored shaft tech. Enhanced revision lowered the swing weight slightly vs first-gen TK-F, making it less punishing in continuous play while keeping the smash bite. A reasonable counterpart to the Yonex Astrox 88D Pro for players who want classic head-heavy power outside the Yonex / Li-Ning ecosystems.",
+    "reviewCount": 0
   }
 ]
