@@ -21,19 +21,19 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
 
   return (
     <main className="flex-1">
-      <section className="pt-24 pb-20 lg:pt-32 lg:pb-28">
+      <section className="pt-20 pb-16 lg:pt-24 lg:pb-20">
         <div className="layout-band max-w-6xl">
           <div className="max-w-3xl">
             <span className="chip">
               {locale === "zh" ? "羽毛球装备推荐" : "Badminton equipment finder"}
             </span>
-            <h1 className="text-display mt-6 text-[var(--text)]">
+            <h1 className="text-display mt-5 text-[var(--text)]">
               {copy.home.title}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">
               {copy.home.subtitle}
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link href={localized("/quiz/")} className="btn-primary">
                 {copy.home.start}
               </Link>

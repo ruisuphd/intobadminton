@@ -100,7 +100,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
                   <article
                     key={b.id}
                     id={b.id}
-                    className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5"
+                    className="card p-6"
                   >
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
                       <h3 className="text-xl font-semibold text-[var(--text)]">
@@ -148,7 +148,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
           );
         })}
 
-        <section className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5">
+        <section className="card p-6">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             {c.requestHeading}
           </h2>

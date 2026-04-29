@@ -12,7 +12,7 @@ export function CookieBanner() {
   return (
     <section
       aria-label="Cookie notice"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-zinc-200 bg-[var(--surface)] p-4 shadow-2xl"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[color:var(--line)] bg-[var(--surface)] p-4 shadow-2xl"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="max-w-3xl">
@@ -38,14 +38,14 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={openSettings}
-            className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm"
+            className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
           >
             Customize
           </button>
           <button
             type="button"
             onClick={acceptAll}
-            className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm"
+            className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
           >
             Accept all
           </button>

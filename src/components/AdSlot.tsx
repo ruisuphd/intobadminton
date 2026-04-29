@@ -52,7 +52,7 @@ export function AdSlot({
   return (
     <aside
       id={`ad-wrap-${id}`}
-      className={`my-8 min-h-[180px] w-full rounded-2xl border border-dashed border-zinc-300 bg-[var(--surface)] p-6 text-center ${className}`}
+      className={`my-8 min-h-[180px] w-full rounded-2xl border border-dashed border-[color:var(--line-strong)] bg-[var(--surface)] p-6 text-center ${className}`}
       data-ad-region={id}
     >
       <p className="text-xs font-medium tracking-wide text-[var(--color-muted)] uppercase">

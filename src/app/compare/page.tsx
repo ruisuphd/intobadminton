@@ -50,7 +50,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
             <div className="mt-6 overflow-x-auto">
               <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
                 <thead>
-                  <tr className="border-b border-zinc-200">
+                  <tr className="border-b border-[color:var(--line-strong)]">
                     <th className="py-2 pr-4">Model</th>
                     {items.map((p) => (
                       <th key={p.id} className="py-2 pr-4 font-medium">
@@ -78,7 +78,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
                   ].map((k) => (
                       <tr
                         key={k}
-                        className="border-b border-zinc-100"
+                        className="border-b border-[color:var(--line)]"
                       >
                         <td className="py-2 pr-4 font-medium text-[var(--text)]">
                           {k}
@@ -97,7 +97,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
               <button
                 type="button"
                 onClick={clearCompare}
-                className="rounded-2xl border border-zinc-300 px-4 py-2 text-sm"
+                className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
               >
                 Clear all
               </button>

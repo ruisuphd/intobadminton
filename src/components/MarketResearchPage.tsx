@@ -51,7 +51,7 @@ export function MarketResearchPage({ locale = "en" }: { locale?: SiteLocale }) {
           {researchSummary(locale).map((row) => (
             <article
               key={row.source + row.category}
-              className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5"
+              className="card p-5"
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="text-sm font-semibold text-[var(--text)]">
@@ -74,7 +74,7 @@ export function MarketResearchPage({ locale = "en" }: { locale?: SiteLocale }) {
           ))}
         </div>
 
-        <section className="mt-10 rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6">
+        <section className="mt-10 card p-6">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             {text.roadmapTitle}
           </h2>

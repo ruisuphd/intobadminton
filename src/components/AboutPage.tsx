@@ -155,7 +155,7 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
             {c.editorialPrinciples.map((p) => (
               <li
                 key={p.title}
-                className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5"
+                className="card p-6"
               >
                 <p className="font-semibold text-[var(--text)]">{p.title}</p>
                 <p className="mt-1 text-sm text-[var(--color-muted)]">{p.body}</p>
@@ -184,7 +184,7 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
           </p>
         </section>
 
-        <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5">
+        <div className="card p-6">
           <Link
             href={buildLocalizedPath(locale, c.ctaLink)}
             className="inline-flex h-11 items-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white"

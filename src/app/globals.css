@@ -7,12 +7,14 @@
  */
 
 :root {
-  /* Surfaces */
-  --background: #ffffff;
-  --surface: #fafafa;
+  /* Surfaces — softer off-white body so elevated cards pop. Apple uses
+     a similar approach (#fbfbfd-ish body, white cards). */
+  --background: #f7f7f5;
+  --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --line: rgba(15, 23, 42, 0.06);
-  --line-strong: rgba(15, 23, 42, 0.12);
+  --surface-muted: #f0f0ec;
+  --line: rgba(15, 23, 42, 0.07);
+  --line-strong: rgba(15, 23, 42, 0.14);
 
   /* Type */
   --text: #0a0a0a;

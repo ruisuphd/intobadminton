@@ -100,7 +100,7 @@ export function BlogArticlePage({
           {article.title}
         </h1>
         <p className="text-lg text-[var(--color-muted)]">{article.dek}</p>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-y border-zinc-200 py-4 text-sm text-[var(--color-muted)]">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-y border-[color:var(--line)] py-4 text-sm text-[var(--color-muted)]">
           <span className="font-medium text-[var(--text)]">{byline}</span>
           <span aria-hidden>·</span>
           <span>
@@ -118,7 +118,7 @@ export function BlogArticlePage({
             {index === 1 && <AdSlot id={`${locale}-blog-${article.slug}-mid`} />}
           </section>
         ))}
-        <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-5">
+        <div className="card p-6">
           <p className="font-medium text-[var(--text)]">{article.cta}</p>
           <Link
             href={buildLocalizedPath(locale, "/quiz/")}

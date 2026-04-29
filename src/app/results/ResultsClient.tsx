@@ -63,7 +63,7 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
 
   if (!profile.level || !profile.discipline) {
     return (
-      <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6">
+      <div className="card p-6">
         <h2 className="font-semibold text-[var(--text)]">
           Complete your player profile first
         </h2>
@@ -83,7 +83,7 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
 
   if (rows.length === 0) {
     return (
-      <div className="rounded-2xl border border-zinc-200 bg-[var(--surface)] p-6">
+      <div className="card p-6">
         <h2 className="font-semibold text-[var(--text)]">
           {locale === "zh" ? "暂时没有强匹配" : "No strong matches yet"}
         </h2>

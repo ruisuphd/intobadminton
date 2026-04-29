@@ -27,9 +27,9 @@ export default function RacketBalanceGuide() {
           builds usually recover faster in defense. “Even” is the neutral
           compromise many doubles specialists prefer for flat exchanges.
         </p>
-        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-[var(--surface)]">
+        <div className="overflow-x-auto card">
           <table className="w-full min-w-[38rem] text-left text-sm">
-            <thead className="border-b border-zinc-200 text-[var(--text)]">
+            <thead className="border-b border-[color:var(--line-strong)] text-[var(--text)]">
               <tr>
                 <th className="p-4">Spec signal</th>
                 <th className="p-4">Usually helps</th>
@@ -37,12 +37,12 @@ export default function RacketBalanceGuide() {
               </tr>
             </thead>
             <tbody className="text-[var(--color-muted)]">
-              <tr className="border-b border-zinc-100">
+              <tr className="border-b border-[color:var(--line)]">
                 <td className="p-4 font-medium text-[var(--text)]">Head-heavy</td>
                 <td className="p-4">Rear-court pressure, steep smashes, singles attack</td>
                 <td className="p-4">Late defense, fast doubles blocks, shoulder fatigue</td>
               </tr>
-              <tr className="border-b border-zinc-100">
+              <tr className="border-b border-[color:var(--line)]">
                 <td className="p-4 font-medium text-[var(--text)]">Head-light</td>
                 <td className="p-4">Drive exchanges, front-court interception, defense</td>
                 <td className="p-4">Players who need the racket to help load power</td>
