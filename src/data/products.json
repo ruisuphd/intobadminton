@@ -1648,7 +1648,7 @@
       "https://www.yonex.com/astrox-100va-zz",
       "https://us.yonex.com/products/astrox-100-zz-va"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load. — Note: BadmintonCN reviewer chengzhen also references the 100XSE (Nanoflare 100 XSE) as the standard high-end speed racket benchmark; if you found the regular 100ZZ punishing, you may also want to demo the 100XSE which sits a tier easier.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load. — Note: BadmintonCN reviewer chengzhen also references the 100X SE (Victor Auraspeed 100X SE — already in our catalog) as the alternate high-end speed racket benchmark; if you found the regular 100ZZ punishing, you may also want to demo the 100XSE which sits a tier easier.",
     "reviewCount": 0
   },
   {
@@ -2408,5 +2408,451 @@
     ],
     "editorNote": "Power-focused head-heavy Victor with 6.5mm shaft and Hard Cored shaft tech. Enhanced revision lowered the swing weight slightly vs first-gen TK-F, making it less punishing in continuous play while keeping the smash bite. A reasonable counterpart to the Yonex Astrox 88D Pro for players who want classic head-heavy power outside the Yonex / Li-Ning ecosystems.",
     "reviewCount": 0
+  },
+  {
+    "id": "ln-halbertec-8000",
+    "category": "racket",
+    "name": "Halbertec 8000 (战戟 8000)",
+    "brand": "Li-Ning",
+    "priceUsd": 165,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 304,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://shopbadmintononline.com/halbertec-badminton-rackets-li-ning-c-38_266.html",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "all_round",
+      "wide_audience",
+      "value_balanced",
+      "control_with_smash"
+    ],
+    "sourceUrls": [
+      "https://shopbadmintononline.com/halbertec-badminton-rackets-li-ning-c-38_266.html",
+      "https://e78.us/products/li-ning-halbertec-8000",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Li-Ning's most-recommended amateur balance racket per BadmintonCN reviewer chengzhen — \"the racket I've recommended more than any other on the forum.\" 6.8mm hard-flex shaft, T1100 + TB Nano + High Density Carbon. Balance 301-304mm, large fluid box-frame, moderate swing weight. Cost-effective vs Astrox 88S Pro New Color (~$400-500 cheaper) or Arcsaber 11 Pro (~$600-700 cheaper); reviewer's smash test rates it the best balance-racket smash with underbase removed. Soft enough shaft for most amateur players to drive — closest thing to a 'safe pick' if you don't yet know your style.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen 88S Pro / Halbertec comparison (Apr 2024)",
+        "summary": "4U 88g w/ underbase removed, balance 304mm w/ 80@26-28lb. Cost-effective vs Arcsaber 11 Pro (~$600-700 cheaper); the BS-12 / Halbertec 8000 smash is better. Cost-effective vs Astrox 88S Pro New Color too — slightly worse but solid. Soft-medium shaft suits most amateur players.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Halbertec 9000 Power roundup (Jan 2026)",
+        "summary": "Yuan-style shaft hardness 8.33 (moderate). Most amateur players can drive it; chengzhen still owns two and keeps recommending it. NOT the same product family as 9000/9000P — different style, with pocketing for control. Better rear-court solidity than 9000.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-halbertec-9000",
+    "category": "racket",
+    "name": "Halbertec 9000 (战戟 9000)",
+    "brand": "Li-Ning",
+    "priceUsd": 215,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 297,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://li-ningfamily.com/products/1000-li-ning/3446-badminton-racket---halbertec-9000/",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles_speed",
+      "front_court",
+      "control_speed_hybrid"
+    ],
+    "sourceUrls": [
+      "https://li-ningfamily.com/products/1000-li-ning/3446-badminton-racket---halbertec-9000/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Li-Ning's repositioning of the Halbertec line toward speed: thinner / lighter frame than 8000, stiffer shaft, faster swing. Marketed as 'control king'. — BadmintonCN reviewer chengzhen disagrees with the 'control king' positioning: shaft is too stiff and the lighter head reduces leverage on smash, producing what he calls 卸力 (loses power). Better than 8000 at front-court speed and pointing accuracy; worse than 8000 for rear-court solidity and amateur-friendly entry. NOT a strict upgrade over 8000 — pick by playing style.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Halbertec roundup (Jan 2026)",
+        "summary": "Yuan-style shaft hardness 7.92. Multiple samples confirm 9000's frame is thinner than 8000 (per community measurements) — lower wind resistance, faster swing. Stiffer + more elastic shaft, but smash on hard contact has noticeable 'loses power' (卸力) feel; reviewer attributes this to softer frame relative to the harder shaft. Disagrees with the marketed 'control king' positioning since a softer frame undermines pure control claims.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-halbertec-9000-power",
+    "category": "racket",
+    "name": "Halbertec 9000 Power (战戟 9000P)",
+    "brand": "Li-Ning",
+    "priceUsd": 245,
+    "headWeight": "head_light",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.ckyew.com/post/li-ning-halbertec-9000-power-badminton-racket-review",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "advanced_doubles",
+      "speed_attack",
+      "crisp_feedback"
+    ],
+    "sourceUrls": [
+      "https://www.ckyew.com/post/li-ning-halbertec-9000-power-badminton-racket-review",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Power variant of the 9000: stiffer shaft, slightly more head weight, more crisp/snap. — BadmintonCN reviewer chengzhen tested 4U/G5: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm. Yuan-style shaft hardness 7.65 — same range as Astrox 88DP New Color (7.59) and 88SP New Color, much stiffer than Halbertec 8000 (8.33). Reviewer's verdict: 9000P is NOT a strict upgrade over 8000 — entirely different style and entry threshold. Better-suited to advanced doubles players; difficult for chengzhen's intermediate-level partner who couldn't drive the shaft. Sample variance is significant: 5/10 samples weigh ~82.5g unstrung — very light by Halbertec standards.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Halbertec 9000 Power review (Jan 2026)",
+        "summary": "4U/G5 sample: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm w/ N65@26-28lb. Yuan-style hardness 7.65 (same range as 88DP/SP New Color shafts). Frame nearly identical to 9000 except possibly more wind-cutting at the head. More crisp than 9000, sharper smash placement, stronger rear-court attack. Smash no longer has the 'loses power' feel of 9000. Speed-racket profile, NOT a Halbertec 8000 successor in feel. Reviewer says 9000/9000P together are substitutable by his other speed rackets (100XSE, 800 Pro, 1000Z); the 8000 is not — it has unique pocketing/balance character.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen sample variance note (Jan 2026)",
+        "summary": "Reviewer weighed 10 brand-new 4U samples: 5 came in around 82.5g unstrung, 3 around 83.5g, 1 at 84g, 1 at 84.5g. Half have very low unstrung weight by attack-racket standards. Buyer beware on perceived weight when comparing to other reviews.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-bladex-800-speed",
+    "category": "racket",
+    "name": "Bladex 800 Speed (锋影 800 Speed)",
+    "brand": "Li-Ning",
+    "priceUsd": 240,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 299,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 21,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://triplepointsports.com/products/li-ning-bladex-800-speed-power-badminton-racket-lightweight-high-speed-professional-racquet",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "control_speed_hybrid",
+      "tough_elastic_feel",
+      "advanced_doubles",
+      "singles"
+    ],
+    "sourceUrls": [
+      "https://triplepointsports.com/products/li-ning-bladex-800-speed-power-badminton-racket-lightweight-high-speed-professional-racquet",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "2026 successor to the Bladex 800 New. M46X carbon frame and stiffer shaft turn the line from a 'sugar-water' speed racket into a serious tournament option. — BadmintonCN reviewer chengzhen rates this as one of the most distinctive speed rackets on the market: \"tough-elastic\" (韧弹) feel — has a slight loading / dwell process before release, vs the instant-firing crisp profile of NF800 Pro and Auraspeed Hayabusa. Best for control players who want speed AND precise placement. Shaft hardness 7.83 (Yuan-style) — much stiffer than 800 New's 8.58. Frame torsion 18.72 — best in the speed-racket category measured.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen Bladex 800 Speed review (Mar 2026)",
+        "summary": "4U/G6: 85.2g unstrung, 90.8g w/ grip+string (underbase still on), balance 299mm w/ N65@26-28lb. 3U/G5: 89g unstrung, 91.4g w/ underbase removed, balance 302mm. Yuan-style shaft hardness 7.83 (very stiff for a speed racket). Frame torsion 18.72 (best of all speed rackets tested, beating even 99 Pro 2's 19.87). M46X carbon → 'tough-elastic' (韧弹) feel — distinct from crisp/snap idiom of NF800 Pro / 100X SE / Auraspeed. Has a brief loading + dwell + release process; small force inputs still produce good ejection if delivered with concentration. Best for organized attack via precise placement, not raw speed.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen vs 800 New (Mar 2026)",
+        "summary": "Frame and frame size identical to 800 New. The leap is in the shaft and frame stiffness: 800 Speed shaft hardness 7.83 vs 800 New's 8.58 (much stiffer). 800 Speed is for advanced players; 800 New stays as the entry pick. If you already own and love the 800 New, 800 Speed will likely feel demanding — don't switch on impulse.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-bladex-800-new",
+    "category": "racket",
+    "name": "Bladex 800 New (锋影 800 New)",
+    "brand": "Li-Ning",
+    "priceUsd": 175,
+    "headWeight": "head_light",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 297,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.shopnings.com/li-ning-bladex-800-new-badminton-racket/",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner_speed",
+      "wide_audience",
+      "easy_drive",
+      "front_court_doubles"
+    ],
+    "sourceUrls": [
+      "https://www.shopnings.com/li-ning-bladex-800-new-badminton-racket/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Entry-friendly Bladex with medium shaft for amateur drivers — head-light feel with low force threshold. — BadmintonCN reviewer chengzhen explicitly rates this 3 stars (one of only two products in his collection at that rating). Shaft hardness 8.58 (Yuan-style) — softest among high-end speed rackets tested. Slower off-string speed, lower pointing accuracy, weaker rear-court attack relative to its peers. Good for newer players who want a head-light Li-Ning frame without the demands of the 800 Speed; not the choice if you're looking for tournament-level speed-racket performance.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen review of 800 New (Mar 2026 retrospective)",
+        "summary": "4U/G5: 84g unstrung, 89.3g w/ underbase removed, balance 297mm. Yuan-style shaft hardness 8.58 — the softest among all high-end speed rackets tested. Reviewer's lowest rating in his rotation (along with Auraspeed 100X Ultra). Off-string speed slower, pointing weaker, rear-court attack less authoritative than Yonex NF1000Z, NF100XSE (Victor Auraspeed 100X SE), or Halbertec 9000 Power. Suits beginners + lower-force players; not a tournament racket.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-axforce-90-new",
+    "category": "racket",
+    "name": "AxForce 90 New (雷霆 90 New)",
+    "brand": "Li-Ning",
+    "priceUsd": 250,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 304,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 31
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://triplepointsports.com/products/li-ning-axforce-90-new-badminton-racket-unleash-your-power",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles_attack",
+      "all_round_attack",
+      "balanced_smash_and_control"
+    ],
+    "sourceUrls": [
+      "https://triplepointsports.com/products/li-ning-axforce-90-new-badminton-racket-unleash-your-power",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "AxForce 90 New (雷霆/Thunder line). Built around Li-Ning's M46 + T1100 carbon and the Thunder Technology platform. — BadmintonCN reviewer chengzhen calls this Li-Ning's strongest shaft to date: 6.4mm thick (up from 6.2mm in the AxForce 90 Dragon-Tiger), more permeable feel, excellent elasticity, balanced hardness. Forgiving sweet spot for a small frame, strong torsion control even with the thinner shaft. High break-section + narrow frame make swing surprisingly fast for an attack racket. Replaces the AxForce 80 in his rotation. Closest peer is the Yonex Astrox 88D Pro New Color: AxForce 90 New is slightly softer in shaft but offers more pocketing on net play.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen AxForce 90 New review (Jan 2026)",
+        "summary": "4U sample: 89.5g w/ underbase removed, balance 304mm w/ N65@26-28lb. 6.4mm shaft (up from 6.2mm of AxForce 90 Dragon-Tiger). Reviewer's verdict: Li-Ning's strongest shaft yet. Permeable feel, full elasticity, balanced hardness; high ceiling AND high floor. Despite small frame, sweet spot is forgiving — minimal mishits in fast men's doubles. Anti-torsion excellent even with the thinner shaft. Wins over the older AxForce 80 across the board; reviewer keeps the AxForce 90 New, retiring the 80.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen vs Astrox 88DP New Color (Jan 2026)",
+        "summary": "vs Yonex Astrox 88DP New Color: AxForce 90 New shaft is slightly softer (one tier). 88DP New Color edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy — all 'elite tier' on the Yonex. AxForce 90 New has better frame pocketing for delicate net shots and drops, where 88DP New Color feels comparatively quick-firing.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-axforce-80",
+    "category": "racket",
+    "name": "AxForce 80 (雷霆 80)",
+    "brand": "Li-Ning",
+    "priceUsd": 195,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 304,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.ckyew.com/post/li-ning-tectonic-9-axforce-80-aeronaut-9000c-review",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "sugar_water_attack",
+      "head_heavy_easy",
+      "intermediate_smash"
+    ],
+    "sourceUrls": [
+      "https://www.ckyew.com/post/li-ning-tectonic-9-axforce-80-aeronaut-9000c-review",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "AxForce 80 sits below the AxForce 90 New as the easier-driving 'sugar-water' attack pick in the Thunder line. — BadmintonCN reviewer chengzhen describes it as more head-heavy than 90 New — better one-shot smash for players who already lean on head weight — but weaker on shaft snap and smash continuity. Reviewer plans to retire his AxForce 80 in favor of the 90 New across the board.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen AxForce 90 New comparison (Jan 2026)",
+        "summary": "4U: 89.2g w/ underbase removed, balance 304mm w/ 80@26-28lb. Same balance as 90 New but heavier swing weight; softer shaft, less crisp. Stronger one-shot smash via head-weight leverage; weaker on continuous attack and barely-defended balls. Singles control favors 90 New; doubles continuity favors 90 New. AxForce 80 stays as the more entry-friendly option for amateurs who specifically want pure head-heavy feel without the demand of 90 New's shaft.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   }
 ]
