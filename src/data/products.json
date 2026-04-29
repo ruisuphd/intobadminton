@@ -47,8 +47,17 @@
     "sourceUrls": [
       "https://www.yonex.com/badminton/racquets/nanoflare-1000z"
     ],
-    "editorNote": "Founder current doubles racket (Rui, Div 4 IE): extremely fast — head-light Z-axis design pays off in drives and defense. Power is harder to generate than from a comparable head-heavy frame, so you need good timing and strength. With those, this is the doubles weapon.",
-    "reviewCount": 0
+    "editorNote": "Founder current doubles racket (Rui, Div 4 IE): extremely fast — head-light Z-axis design pays off in drives and defense. Power is harder to generate than from a comparable head-heavy frame, so you need good timing and strength. With those, this is the doubles weapon. — BadmintonCN reviewer chengzhen calls 1000Z his hexagonal warrior speed racket — the most balanced of all speed rackets, with no clear weakness. DR carbon adds pocketing for control; ranked alongside 100XSE as T0-tier speed.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen NF series comparison (Oct 2024)",
+        "summary": "4U/G5: 84g unstrung, 89.3g w/ underbase removed, balance 304mm. The most well-rounded speed racket in the Nanoflare line — best end-speed and pointing accuracy of the series. DR carbon gives noticeable pocketing feel for control, unusual for a small-frame fast racket. Higher entry threshold than NF700 Pro (shaft ~2 levels stiffer); recommends it for advanced players with enough force to load the stiff shaft on short power strokes.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   },
   {
     "id": "yy-astrox-100zz",
@@ -98,8 +107,17 @@
     "sourceUrls": [
       "https://www.yonex.com/badminton/racquets/astrox-100zz"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): very demanding but surprisingly fast — and very repulsive. Needs good timing and is tiring to play with for full matches. Try the 100ZZ VA before this if you like the feel but find the regular ZZ punishing.",
-    "reviewCount": 0
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): very demanding but surprisingly fast — and very repulsive. Needs good timing and is tiring to play with for full matches. Try the 100ZZ VA before this if you like the feel but find the regular ZZ punishing. — BadmintonCN reviewer chengzhen ranks the 88DP New Color above the 100ZZ for overall package, though 100ZZ remains a marquee model thanks to brand pull and pro endorsement.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen 2024 attack-racket roundup (Jan 2026)",
+        "summary": "Acknowledges 100ZZ's iconic status but argues the new-color 88DP outperforms it on the overall package (better continuity, lower fatigue, faster swing, similar smash power with more clarity). 100ZZ's success attributed partly to Yonex brand strength and national-team endorsement; many amateur buyers struggle to drive it.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   },
   {
     "id": "yy-astrox-99-pro",
@@ -771,7 +789,7 @@
       "https://www.youtube.com/watch?v=c-q1ppdC-AU",
       "https://www.carousell.sg/yonex-astrox-88d-pro/q/"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): similar feel to the Astrox 77 Pro but harder to generate power. For most players the 77 Pro is the better pick unless you have the technique to load the 88D Pro stiffer profile and want pure rear-court doubles power.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): similar feel to the Astrox 77 Pro but harder to generate power. For most players the 77 Pro is the better pick unless you have the technique to load the 88D Pro stiffer profile. — BadmintonCN reviewer chengzhen calls this the strongest 2024 attack racket overall (a hexagonal warrior): top-tier shaft, transparent power transmission, lower swing weight than peers, ranked above original 88DP camel-gold and even 100ZZ. Demands force; weaker on net-play pocketing than Lei Ting 90 New.",
     "reviewCount": 5,
     "resale": {
       "estimatedUsedUsd": 210,
@@ -783,24 +801,17 @@
     "marketSignals": [
       {
         "source": "badmintoncn",
-        "label": "Large Chinese community sample",
-        "summary": "BadmintonCN product pages show high engagement and repeated themes around power, elasticity, higher skill threshold, and price sensitivity.",
-        "href": "https://www.badmintoncn.com/eqm.php?a=view&eid=19393",
-        "confidence": "medium"
+        "label": "BadmintonCN: chengzhen review (Apr 2024)",
+        "summary": "Two 4U samples weighed: G6 sample 91.1g strung w/ 80 string @ 26-28lb (balance 305mm); G5 sample 89.5g w/ N65 (balance 308mm). vs older camel-gold: new color frame is smaller/narrower, stronger pocketing, higher net pressure, ~1g lower swing weight. New 2nd-gen Namd shaft snaps back faster, shorter dwell time, more direct power transmission. Smash power similar between generations; new color has better continuity and lower fatigue. Defense: new color has better placement accuracy on sweet-spot hits; old color has better off-sweet-spot tolerance.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
       },
       {
-        "source": "youtube",
-        "label": "Creator court testing",
-        "summary": "Video reviewers frame the 88D/88S split around rear-court power versus front-court control, reinforcing role-based recommendations.",
-        "href": "https://www.youtube.com/watch?v=c-q1ppdC-AU",
-        "confidence": "medium"
-      },
-      {
-        "source": "marketplace",
-        "label": "Resale liquidity",
-        "summary": "Current Singapore listings suggest recognizable Yonex Pro models retain stronger resale demand than obscure or entry-tier frames.",
-        "href": "https://www.carousell.sg/yonex-astrox-88d-pro/q/",
-        "confidence": "medium"
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen 2024 attack-racket roundup (Jan 2026)",
+        "summary": "4U 89.2g w/ underbase removed, balance 304mm w/ Z61 string. Ranked above 100ZZ and original 88DP camel-gold for overall package. Yonex strongest shaft to date. Compared with Li-Ning Lei Ting 90 New, 88DP New Color has slightly stiffer shaft, faster off-string, more direct feedback, sharper rear-court attack — but Lei Ting 90 New has better pocketing for delicate net shots.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
       }
     ]
   },
@@ -1637,7 +1648,7 @@
       "https://www.yonex.com/astrox-100va-zz",
       "https://us.yonex.com/products/astrox-100-zz-va"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load. — Note: BadmintonCN reviewer chengzhen also references the 100XSE (Nanoflare 100 XSE) as the standard high-end speed racket benchmark; if you found the regular 100ZZ punishing, you may also want to demo the 100XSE which sits a tier easier.",
     "reviewCount": 0
   },
   {
@@ -1737,8 +1748,24 @@
       "https://www.yonex.com/badminton/racquets/astrox-88s-pro",
       "https://www.badmintonwarehouse.com/products/yonex-astrox-88s-pro-2024-badminton-racket"
     ],
-    "editorNote": "Founder current racket (Rui, Div 4 IE, doubles front-court): very good balanced racket, recommended for most players. Feels close to Astrox 77 Pro but with a stiffer shaft — better when you have the timing to load it. 2G-Namd FLEX FORCE shaft snaps back fast.",
-    "reviewCount": 0
+    "editorNote": "Founder current racket (Rui, Div 4 IE, doubles front-court): very good balanced racket, recommended for most players. Feels close to Astrox 77 Pro but with a stiffer shaft — better when you have the timing to load it. — BadmintonCN reviewer chengzhen names this his #1 mixed-doubles main racket: the peak of control-balance frames right now — better all-round than Halberds 8000/9000/9000P and Arcsaber 11 Pro. Standard fluid box-frame, balance ~298mm, moderate swing speed, near-attack-racket rear-court solidity, perfect pocketing for net play.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen review (Apr 2024)",
+        "summary": "4U sample 84.3g unstrung, 89.5g strung w/ 80@26-28lb, balance 301mm. Frame one size bigger than 88DP New Color, slightly shorter handle and overall length. Shaft hardness similar to NF800 Pro, slightly stiffer than 77 Pro. Has clear pocketing feel even at 80 strung @ 26-28lb. Best for mixed doubles control: drops, hairpins, pushes, precise placement. Smash quality surprised reviewer — better than red/white old 88S and Victor Thruster 9000. Better than red/white 88S in rear-court stability and pocketing.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen control-racket positioning (Jan 2026)",
+        "summary": "Considered the strongest control-balance racket currently. Beats all Li-Ning Halberds plus Arcsaber 11 Pro for combined control + smash. Same shaft hardness range as 9000P (~7.5-7.6 on Yuan-style scale), but very different feel: pocketing makes it ideal for mixed doubles where every shot must be solid, vs 9000P's crisp speed-rack profile.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   },
   {
     "id": "yy-astrox-88d-tour-2024",
@@ -1886,8 +1913,17 @@
     "sourceUrls": [
       "https://www.yonex.com/nanoflare-700-pro"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): like the Arcsaber 7 Pro, hard to generate power but very very fast. Pair with thinner strings to maximize the speed advantage — try Aerobite or BG66 Ultimax over thicker strings.",
-    "reviewCount": 0
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): like the Arcsaber 7 Pro, hard to generate power but very very fast. Pair with thinner strings to maximize the speed advantage — try Aerobite or BG66 Ultimax over thicker strings. — BadmintonCN reviewer chengzhen confirms: shaft only marginally stiffer than NF700, but new SF filter + enhanced Sonic Flare add clarity and elasticity. Lower bend point than NF700 → easier downward pressure, better smash confidence.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen review (Oct 2024)",
+        "summary": "4U/G5 sample: 83.6g unstrung, 91.4g w/ grip+string (underbase still on), balance 292mm; 88.7g w/ underbase removed, balance 299mm. 5U/G5: 79.6g unstrung, 84.6g w/ underbase removed, balance 305mm. Reviewer also tested 3 different 4U samples ranging 83.6g-85.8g unstrung — meaningful variance in swing weight. Lighter sample with lower balance still smashed better than heavier NF700, suggesting shaft hardness matters more than gram-level mass for attack quality. 5U good for women / front-court doubles; 4U better for full-court doubles + singles.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   },
   {
     "id": "yy-nanoflare-700-game",
@@ -1937,8 +1973,17 @@
     "sourceUrls": [
       "https://us.yonex.com/products/nanoflare-700-game"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): a bit more flexible than the 700 Pro and overall much easier to play. The 5U version is very beginner-friendly while still giving the head-light speed feel — a great first-step racket up from entry frames.",
-    "reviewCount": 0
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): a bit more flexible than the 700 Pro and overall much easier to play. The 5U version is very beginner-friendly while still giving the head-light speed feel — a great first-step racket up from entry frames. — BadmintonCN reviewer chengzhen calls the regular NF700 the most popular sugar-water (糖水) speed racket: head-light, fast swing, soft-medium shaft, forgiving for women / weaker-force players. Less control precision than NF700 Pro; soft shaft makes feedback less clear for advanced players.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen NF series review (Oct 2024)",
+        "summary": "Considered a top sugar-water (糖水拍) speed racket — broad audience from beginners to higher-level players who want a relaxed front-court frame. Reviewer notes his wife switched from NS9000s and several other rackets to the NF700 magenta colorway and stayed. Bend point closer to handle than NF700 Pro → harder to apply downward pressure on smashes; less ideal for attack-leaning players.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   },
   {
     "id": "yy-aerus-z2",
@@ -2014,5 +2059,73 @@
     ],
     "editorNote": "Founder current shoe (Rui, Div 4 IE): switched from Aerus Z2 and love it. Way better cushioning, especially for landing after smashes. Heavier (370g) but joint comfort is worth it for full-match wear. Stiffer break-in than the Z2.",
     "reviewCount": 0
+  },
+  {
+    "id": "yy-nanoflare-800-pro-2024",
+    "category": "racket",
+    "name": "Nanoflare 800 Pro (2024)",
+    "brand": "Yonex",
+    "priceUsd": 270,
+    "headWeight": "head_light",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 21,
+      "max": 29
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/nanoflare-800-pro",
+    "lastVerifiedAt": "2026-04-29",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles_speed",
+      "drives",
+      "defense",
+      "front_court_pressure",
+      "fast_pace_men_doubles"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/nanoflare-800-pro",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Top-tier crisp/snap speed racket in the Nanoflare line. 78-hole stringbed (vs the usual 76) plus copper foil at the frame base for extra rigidity. BadmintonCN reviewer chengzhen tested 4U at 85.2g unstrung / 89.7g strung w/ underbase removed, balance 301mm, 26-27 lb AB string — reports the fastest off-string speed in the series with metallic ringing tone. Better drives + front-court reflexes than 1000Z; weaker control / pocketing because no DR carbon. Higher entry threshold than the regular NF700; rewards good technique.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen review (Jul 2024)",
+        "summary": "4U sample 85.2g unstrung, 89.7g w/ underbase removed, balance 301mm w/ AB string @ 26-27 lb. 'Crisp-elastic' (脆弹) feel; metallic ringing tone; swing speed faster than 100XSE and 1000Z. Frame anti-torsion excellent, fast snapback. Best in series for drives and flat exchanges. Net play mixed: easier to reach high contact point but harder to control drop placement (放网 sometimes too high). Not as good for rear-court control as 1000Z (no DR carbon → less pocketing).",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: chengzhen comparison (Oct 2024)",
+        "summary": "Stiffer shaft than NF700 Pro by ~one level. Best fit for fast-pace men's doubles where speed matters more than control. Sharper smash placement than non-Pro 100X. Higher entry threshold than NF700 Pro.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
   }
 ]

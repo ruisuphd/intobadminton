@@ -43,3 +43,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local-only research material — third-party content kept out of the repo.
+# See docs/research/ for the legal cited extracts we publish from.
+/blogs/
+
