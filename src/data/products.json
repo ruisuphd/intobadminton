@@ -116,6 +116,13 @@
         "summary": "Acknowledges 100ZZ's iconic status but argues the new-color 88DP outperforms it on the overall package (better continuity, lower fatigue, faster swing, similar smash power with more clarity). 100ZZ's success attributed partly to Yonex brand strength and national-team endorsement; many amateur buyers struggle to drive it.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: 100ZZ Antonsen / Anselm vs Kurenai (Apr 2026)",
+        "summary": "Anders Antonsen edition (\"Anselm\") swaps the original 100ZZ Kurenai's Black Micro Core frame material for Volume Cut Resin. Result: lighter swing weight, slightly softer shaft (Yuan-style hardness 8.23 vs 8.09 — softer/easier to drive). Reviewers measured 4U Antonsen at 88.7g w/ underbase removed, balance 309mm; 4U Kurenai at 89.7g/309mm. Frame, shaft length, and line holes are otherwise identical. Antonsen edition is faster but slightly less crisp on contact; Kurenai retains the marquee 100ZZ feel for players willing to load the stiffer shaft.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
       }
     ]
   },
@@ -2850,6 +2857,451 @@
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's AxForce 90 New comparison (Jan 2026)",
         "summary": "4U: 89.2g w/ underbase removed, balance 304mm w/ 80@26-28lb. Same balance as 90 New but heavier swing weight; softer shaft, less crisp. Stronger one-shot smash via head-weight leverage; weaker on continuous attack and barely-defended balls. Singles control favors 90 New; doubles continuity favors 90 New. AxForce 80 stays as the more entry-friendly option for amateurs who specifically want pure head-heavy feel without the demand of 90 New's shaft.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "vic-drivex-12",
+    "category": "racket",
+    "name": "DriveX 12 (TK-DX12)",
+    "brand": "Victor",
+    "priceUsd": 230,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 311,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles_attack",
+      "rear_court_smash",
+      "head_heavy_attack",
+      "all_court_attack"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Successor to the DriveX 10 with notable improvements: nano-aerogel-filled frame for lower swing weight, WES 3.0 shaft for more bend-point flex, 46T Bayer carbon for additional frame stiffness, and a new Power Ring Pro junction that fixes the shaft-rotation issue early DriveX 10 buyers reported. — BadmintonCN reviewers position the DriveX 12 as Victor's closest match to the Yonex Astrox 88D Pro 2024 — same frame footprint, similar weight and balance, slightly softer shaft, slightly more pocketing on net play. Reviewers' measured 4U: 89.2g w/ underbase removed, balance 311mm. Strong cost-vs-performance argument: ~67% the price of an Astrox 88D Pro 2024 in some markets, with 90%+ of the perceived performance.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: DriveX 12 review (Apr 2026)",
+        "summary": "4U: 89.2g w/ underbase removed, balance 311mm. WES 3.0 shaft + 46T Bayer carbon + nano-aerogel frame fill produce a noticeably faster swing than the DriveX 10 despite the same head-heavy profile. Smash power and pointing accuracy are first-tier. Slightly softer shaft than Astrox 88D Pro 2024. Better front-court reflex than DriveX 10 thanks to the lighter swing. Best as a positional doubles back-court / singles attack racket; not a fast doubles racket.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-l69-string",
+    "category": "string",
+    "name": "L69 String",
+    "brand": "Li-Ning",
+    "priceUsd": 14,
+    "gaugeMm": 0.69,
+    "feel": "hard",
+    "repulsion": "high",
+    "control": "high",
+    "durability": "very_high",
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "launchYear": 2026,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://lining.com/",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "smash_oriented",
+      "durability",
+      "crisp_feedback",
+      "high_tension_27_29lb"
+    ],
+    "sourceUrls": [
+      "https://lining.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Marketed as a durable balanced string but in practice it leans crisp and rewards strong swings. — BadmintonCN reviewers tested at 27 lb, four-knot, equal-tension across mains and crosses. Surprised by the smash quality on attack rackets like the Astrox 99 Pro 2 and Yonex Bluebird editions: smashes are sharp with strong audible feedback, drops sit close to the net, and durability is genuinely high. The shaft loading curve is a touch hard — soft-swing players may find it less elastic. Reviewers report it outperforms Yonex BG66 (66N) on smash for similarly-priced setups.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: L69 first-impression review (Apr 2026)",
+        "summary": "27 lb / four-knot test on a Yonex Astrox 99 Pro 2 (jewel blue). Crisp output, low elasticity (loads under hard force), strong net-play touch comparable to ABBT. Smash audio and drop angle both rated as high; outperforms BG66 / 66N on attack. Marketed as durable balanced; real-world use leans more attack-oriented when paired with stiff-shaft attack rackets.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "vic-p9200-iii",
+    "category": "shoes",
+    "name": "P9200 III",
+    "brand": "Victor",
+    "priceUsd": 180,
+    "fitWidth": "wide_available",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": true,
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "heavy_player_cushioning",
+      "arch_support",
+      "lateral_stability",
+      "long_match_durability"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Continuation of Victor's heritage 9200 line, now with built-in modular midsole architecture (Hyper EVA + Solid EVA dual density) replacing the older fixed midsole. Three-arch support design provides strong arch reinforcement; L-shape lateral stability structure handles cuts. — BadmintonCN reviewer measurements: 41 size, 265mm internal length, 336g per shoe (the modular midsole alone is 61g). U-SHAPE 2.5 last gives wide forefoot. Distinctive feel: firmer ground contact than soft-bounce shoes, near-instant initiation but a noticeable forward-lean angle that suits standard foot shapes better than Greek-foot (long second toe). Best for heavy players who want max cushioning durability over a long match.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: P9200 III experiential review (May 2023)",
+        "summary": "Built-in midsole modular design — Hyper EVA + Solid EVA dual density, replaceable midsole module. 41 size: 265mm internal, 336g per shoe, midsole alone 61g (vs VG-1's 80g — meaningfully lighter). U-SHAPE 2.5 last with wide forefoot fit. Three-arch support; L-shape lateral stability. Notable forward-lean initiation angle helps starts but tough on Greek foot shape. Cushioning is firm rather than soft — strong fatigue resistance vs traditional EVA. Best for heavier players or those needing durable cushioning.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-axforce-100-gen-2",
+    "category": "racket",
+    "name": "AxForce 100 Gen 2 (雷霆 100 二代)",
+    "brand": "Li-Ning",
+    "priceUsd": 235,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 308,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 31
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://lining.com/",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles_control_attack",
+      "alternative_to_100zz",
+      "tough_elastic_attack",
+      "doubles_back_court"
+    ],
+    "sourceUrls": [
+      "https://lining.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Second-generation AxForce 100 (雷霆 100 二代) — Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. 6.2mm thin shaft, small fluid box-frame square head, strong pocketing on contact. Slightly softer shaft than the 100ZZ and meaningfully easier to drive while keeping the tough-elastic attack feel. — BadmintonCN reviewers tested 4U: 88.6g w/ underbase removed, balance 308mm. Significant sample variance: 4 samples ranged 83.0g–85.1g unstrung. Frame slightly slimmer than AxForce 90 New; sweet spot is comparable but takes time to dial in. Reviewers position it as a viable alternative for players who like the 100ZZ profile but find it punishing.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: AxForce 100 Gen 2 attack-racket roundup (Mar 2026)",
+        "summary": "4U: 88.6g w/ underbase removed, balance 308mm. Sample variance: 4 brand-new 4U samples weighed 83.0/83.9/84.7/85.1g unstrung — ~2g range. Tough-elastic feel similar to Astrox 100ZZ; ~1 tier softer shaft than 100ZZ Kurenai. Stronger pocketing than Astrox 88DP New Color, less crisp off-string. Better defense than 100ZZ thanks to easier shaft loading; rear-court attack still authoritative but slightly less punishing than 100ZZ. Frame slightly narrower than AxForce 90 New, sweet spot smaller — needs ~10 sessions to dial in. Reviewers' consensus: sugar-water 100ZZ for advanced amateurs.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      },
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: AxForce 100 Gen 2 vs 90 New",
+        "summary": "Heavier swing weight than 90 New, slightly stiffer shaft. Better rear-court power and pointing accuracy; sharper drops. Worse on swing speed, front-court reflex, and forgiving sweet spot. 90 New is the better choice for amateurs and fast doubles; 100 Gen 2 is the better choice for players who want pure attack with control characteristics.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "yy-eclipsion-z3",
+    "category": "shoes",
+    "name": "Power Cushion Eclipsion Z3",
+    "brand": "Yonex",
+    "priceUsd": 165,
+    "fitWidth": "wide_available",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": true,
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/footwear/power-cushion-eclipsion-z3",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "competition_play",
+      "heavy_player_cushioning",
+      "lateral_stability",
+      "long_match_durability",
+      "tournament_use"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/footwear/power-cushion-eclipsion-z3",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Yonex's hardest-feeling competition shoe — Power Cushion+ + Power Carbon midfoot bridge + integrated TPU sidewall that extends from the outsole up the medial side. — Reviewers describe a noticeably firm contact feel (vs the soft-bounce of 65 Z3 / Comfort Z3) with strong arch support, especially noticeable for flat-foot players. 42 size measures 270mm internal length, ~351g per shoe, 3E wide last (narrower JP version also available). Cushioning ceiling is high — large players report consistent rebound feedback. Trade-off: cross-vane outsole is more sensitive to dust and sweat than traditional hex-pattern shoes. Pairs well with after-market supercritical insole if you want extra cushioning. Best for tournament play where you need confidence on extreme retrievals.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: Eclipsion Z3 review (Apr 2025)",
+        "summary": "42 size, 270mm internal, 351g per shoe, 3E last. Power Cushion+ + Power Carbon midfoot bridge + integrated outsole-to-sidewall TPU. Firm contact feel — distinct from 65 Z3 / Comfort Z3 soft-bounce. Strong arch support; dynamic carbon plate extends to forefoot. Heavy-player rebound is consistent. Cross-vane outsole more dust-sensitive than honeycomb hex pattern. Insole quality below flagship expectation; reviewer recommends supercritical aftermarket insole.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "yy-astrox-99-pro-2",
+    "category": "racket",
+    "name": "Astrox 99 Pro (2nd gen)",
+    "brand": "Yonex",
+    "priceUsd": 280,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 299,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 21,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2022,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-99-pro",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles_attack",
+      "demanding_smash",
+      "advanced_technique",
+      "kento_momota_style"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/astrox-99-pro",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Pro-tier head-heavy attack racket. NAMD shaft, e.cap, 68-hole stringbed (denser than the standard 76 — which raises perceived stiffness rather than the usual softness associated with denser stringbeds; this is engineered). Used by Lee Zii Jia after his switch from Astrox 100ZZ. — Reviewers consistently note this is a demanding frame: weighs ~96g strung at 4U with grip + heat-shrink, balance 299mm, but the head feel is even higher than the number suggests. Tolerance for off-sweet-spot hits is poor — even experienced players report frequent mishits during initial sessions. Reward profile: when you do hit clean, the directional precision and rear-court power are top-of-class. Skip this if you have shoulder issues or are still developing concentrated short-power swings — the Astrox 88D Pro 2024 is a more forgiving way to access head-heavy Yonex attack.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: Astrox 99 Pro 2 firsthand review (May 2022)",
+        "summary": "4U/G5 strung 96g w/ heat-shrink, balance 299mm. NAMD shaft 210mm. Box-frame, e.cap, 5-7 line slot. 68-hole stringbed (denser than usual 76; reviewer notes this raises perceived hardness, contrary to the conventional density-equals-softness rule). Frame is small. Hard. Low forgiveness. Headweight feels even heavier than balance number suggests due to handle weighting. Reward when clean; punishment when not. Reviewer reports difficulty driving it in fast doubles — recommends saving for singles or mixed where retrieval pace is lower.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "vic-auraspeed-99",
+    "category": "racket",
+    "name": "Auraspeed 99 (Hayabusa)",
+    "brand": "Victor",
+    "priceUsd": 260,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 31
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "advanced_attack",
+      "anders_antonsen_signature",
+      "concentrated_smash",
+      "all_court_advanced"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Anders Antonsen's signature Victor — flagship of the Hayabusa branch. Stacks the line's most aggressive engineering: alloy carbon fiber frame, 46T high-modulus carbon, WES 3.0 shaft inflection system, Resilience Shield, nano-aerogel filler. Despite the aggressive spec sheet, swing weight stays close to the Auraspeed 90KM thanks to the aerogel — the difficulty is in the active force needed to flex the shaft. — Reviewers report 4U/G5 measures 93.54g strung w/ underbase, balance 295mm, 6.8mm shaft @ 210mm. Surprising sweet spot on a wing-shape break-line frame. Higher driving threshold than 90KM despite similar balance — this racket asks for concentrated, short power strokes; rewards them with a sharp downward snap (\"whip-and-recover\" is the reviewer phrase). On flat exchanges in mid-court, the 99 hides its attack pedigree and produces fast crisp drives. Not for amateurs; not for soft-swing players.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: Auraspeed 99 (Hayabusa) review (Apr 2026)",
+        "summary": "4U/G5 strung 93.54g w/ underbase, balance 295mm, 6.8mm shaft 210mm. 76-hole stringbed, 9-3 line slot, max tension 31 lb. Anders Antonsen signature. Combines alloy carbon fiber + WES 3.0 + nano-aerogel + 46T carbon + Resilience Shield in one frame. Surprisingly large sweet spot for a wing-frame attack racket. Driving threshold higher than 90KM despite similar balance. Concentrated short power strokes are rewarded with sharp downward snap; soft swings under-utilize the engineered flex. Reviewer rates 99 as the best 'feel' racket Victor has produced — 'pinnacle of the Hayabusa series, not a 90KM upgrade but a different statement piece'.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ln-bladesabre-max",
+    "category": "shoes",
+    "name": "Bladesabre MAX",
+    "brand": "Li-Ning",
+    "priceUsd": 175,
+    "fitWidth": "normal",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "medium",
+    "hasWideOption": false,
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://lining.com/",
+    "lastVerifiedAt": "2026-04-30",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "all_round_competition",
+      "snug_normal_fit",
+      "balanced_cushioning",
+      "carbon_plate_stability",
+      "intermediate_to_advanced"
+    ],
+    "sourceUrls": [
+      "https://lining.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Li-Ning's mid-flagship competition shoe with a dual-density cushioning stack (BOUNSE+ in the forefoot, 䨻 in the heel) and a carbon-fiber + TPU plate for torsion control. — Reviewers describe a snug, last-tracking fit with low-stretch microfiber upper, a TPU heel counter that locks the foot, and crisp ground feedback at the forefoot for net-step adjustments. Heel landings absorb impact well — players report less knee/ankle fatigue after long sessions. Torsion plate is genuinely effective: cuts and 180° pivots stay aligned. Initiation is good but not class-leading: forefoot sits slightly thicker than ultra-light speed shoes, so absolute first-step is half a tick slower than e.g. Yonex Aerus Z2. Outsole grips clean wood floors well; reviewers note slipping on dusty / older courts (typical Li-Ning behavior — sand the sole on concrete to scrub the factory oxide layer).",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: Bladesabre MAX experiential review (Dec 2025)",
+        "summary": "Snug last-tracking fit; low-stretch microfiber upper; TPU heel reinforcement. BOUNSE+ forefoot for crisp ground feel; 䨻 (Li-Ning bounce foam) heel for impact absorption. Carbon-fiber + TPU torsion plate. Reviewer reports knee/ankle fatigue meaningfully reduced over long sessions vs traditional EVA shoes. Pivots stay aligned under torsion. Initiation half a tick slower than ultra-light speed shoes due to thicker forefoot. Outsole grip excellent on clean wood floors; slips on dusty / older courts (typical Li-Ning behavior — recommend sanding sole on concrete to remove factory oxide before first competition use).",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }

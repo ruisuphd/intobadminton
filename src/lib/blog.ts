@@ -14,7 +14,17 @@ export type BlogSlug =
   | "li-ning-bladex-800-speed-tough-elastic"
   | "li-ning-halbertec-8000-vs-9000-vs-9000-power"
   | "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp"
-  | "yuan-style-shaft-hardness-explained";
+  | "yuan-style-shaft-hardness-explained"
+  | "yonex-astrox-100zz-antonsen-vs-kurenai"
+  | "victor-drivex-12-vs-astrox-88d-pro"
+  | "li-ning-l69-string-review"
+  | "victor-p9200-iii-shoes-review"
+  | "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new"
+  | "yonex-eclipsion-z3-shoes-review"
+  | "yonex-astrox-99-pro-2-deep-dive"
+  | "victor-auraspeed-99-hayabusa-review"
+  | "li-ning-bladesabre-max-shoes-review"
+  | "victor-auraspeed-hs-plus-deep-dive";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -31,22 +41,89 @@ export const blogSlugs: BlogSlug[] = [
   "li-ning-halbertec-8000-vs-9000-vs-9000-power",
   "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp",
   "yuan-style-shaft-hardness-explained",
+  "yonex-astrox-100zz-antonsen-vs-kurenai",
+  "victor-drivex-12-vs-astrox-88d-pro",
+  "li-ning-l69-string-review",
+  "victor-p9200-iii-shoes-review",
+  "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
+  "yonex-eclipsion-z3-shoes-review",
+  "yonex-astrox-99-pro-2-deep-dive",
+  "victor-auraspeed-99-hayabusa-review",
+  "li-ning-bladesabre-max-shoes-review",
+  "victor-auraspeed-hs-plus-deep-dive",
 ];
+
+export type BlogCategory = "reviews" | "comparisons" | "guides";
 
 export type BlogArticle = {
   slug: BlogSlug;
+  /** First-published / last-revised date in ISO format (YYYY-MM-DD). */
   updatedAt: string;
+  category: BlogCategory;
   title: string;
   dek: string;
   sections: { heading: string; body: string }[];
   cta: string;
 };
 
+export const CATEGORY_LABELS: Record<BlogCategory, string> = {
+  reviews: "Reviews",
+  comparisons: "Comparisons",
+  guides: "Guides",
+};
+
+/**
+ * Rough reading-time estimate (minutes), based on ~225 words/min for non-fiction
+ * online prose. Returns at least 1.
+ */
+export function readingTimeMinutes(article: BlogArticle): number {
+  const words = article.sections
+    .map((s) => s.body.split(/\s+/).length)
+    .reduce((a, b) => a + b, 0);
+  return Math.max(1, Math.round(words / 225));
+}
+
+/** Articles sorted newest-first by updatedAt. */
+export function articlesByDateDesc(articles: BlogArticle[]): BlogArticle[] {
+  return [...articles].sort((a, b) =>
+    a.updatedAt < b.updatedAt ? 1 : a.updatedAt > b.updatedAt ? -1 : 0
+  );
+}
+
+/** Group articles by category, each group sorted newest-first. */
+export function articlesGroupedByCategory(
+  articles: BlogArticle[]
+): { category: BlogCategory; articles: BlogArticle[] }[] {
+  const order: BlogCategory[] = ["reviews", "comparisons", "guides"];
+  return order
+    .map((category) => ({
+      category,
+      articles: articlesByDateDesc(
+        articles.filter((a) => a.category === category)
+      ),
+    }))
+    .filter((group) => group.articles.length > 0);
+}
+
+/** Find up to `n` related articles in the same category (newest-first), excluding the current. */
+export function relatedArticles(
+  articles: BlogArticle[],
+  current: BlogArticle,
+  n = 3
+): BlogArticle[] {
+  return articlesByDateDesc(
+    articles.filter(
+      (a) => a.category === current.category && a.slug !== current.slug
+    )
+  ).slice(0, n);
+}
+
 export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
   en: [
     {
       slug: "racket-balance-vs-swing-speed",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "Racket balance vs swing speed: why the best smash racket may not fit you",
       dek: "A practical guide to matching head weight, timing, and doubles speed without chasing the most powerful spec on paper.",
       sections: [
@@ -68,6 +145,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "how-to-read-badminton-reviews",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "How to read badminton equipment reviews without copying someone else’s fit",
       dek: "A review is useful only when you translate it through the reviewer’s level, setup, and style.",
       sections: [
@@ -89,6 +167,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "beginner-racket-mistakes",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "Three beginner racket mistakes that make badminton harder",
       dek: "Avoid buying a frame that fights your timing before your technique is ready.",
       sections: [
@@ -110,6 +189,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "badminton-string-selector",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "BG80, EXBOLT 63, or BG65: choosing strings by outcome",
       dek: "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
       sections: [
@@ -131,6 +211,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "badminton-shoe-fit-stability",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "Badminton shoe fit: why width and stability beat brand loyalty",
       dek: "The best shoe is the one that locks your foot during lunges without creating pressure points.",
       sections: [
@@ -152,6 +233,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "badminton-bag-loadout",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "What your badminton bag should carry for a normal club session",
       dek: "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
       sections: [
@@ -173,6 +255,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "used-racket-depreciation",
       updatedAt: "2026-04-28",
+      category: "guides",
       title: "Used racket depreciation: how much value does badminton gear keep?",
       dek: "Resale value depends on brand demand, authenticity, generation, region, condition, and whether the model still has hype.",
       sections: [
@@ -194,6 +277,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "yonex-astrox-88d-pro-vs-88s-pro-2024",
       updatedAt: "2026-04-29",
+      category: "comparisons",
       title: "Yonex Astrox 88D Pro vs 88S Pro 2024: which 88 Pro fits your role",
       dek: "The 2024 third-generation 88 Pro twins share Namd Flex Force shafts but pull in opposite directions: 88D Pro for rear-court power, 88S Pro for front-court control. Here is how to pick.",
       sections: [
@@ -227,6 +311,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "yonex-nanoflare-speed-series-explained",
       updatedAt: "2026-04-29",
+      category: "comparisons",
       title: "Yonex Nanoflare 700, 700 Pro, and 1000Z: the speed series decoded",
       dek: "Three speed rackets, three different jobs. Here is who each one is for, and why the lighter sample sometimes smashes harder.",
       sections: [
@@ -260,6 +345,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "yonex-nanoflare-800-pro-and-victor-hs-plus",
       updatedAt: "2026-04-29",
+      category: "comparisons",
       title: "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus: two takes on extreme speed",
       dek: "Both have hard shafts and small frames. Both want fast doubles. They feel completely different on contact — here is why.",
       sections: [
@@ -293,6 +379,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "li-ning-bladex-800-speed-tough-elastic",
       updatedAt: "2026-04-29",
+      category: "reviews",
       title: "Li-Ning Bladex 800 Speed: the tough-elastic answer to Yonex and Victor",
       dek: "Most speed rackets fire crisp-elastic. Bladex 800 Speed deliberately does not — and that may be exactly the racket you are missing.",
       sections: [
@@ -322,6 +409,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "li-ning-halbertec-8000-vs-9000-vs-9000-power",
       updatedAt: "2026-04-29",
+      category: "comparisons",
       title: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which Halberd is yours",
       dek: "Three rackets in the same family, three completely different jobs. The 8000 is the amateur favorite. The 9000 is misunderstood. The 9000 Power is a speed racket in disguise.",
       sections: [
@@ -355,6 +443,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp",
       updatedAt: "2026-04-29",
+      category: "comparisons",
       title: "Li-Ning AxForce 90 New vs AxForce 80 and Yonex Astrox 88D Pro: head-heavy attack rackets compared",
       dek: "Three rackets aimed at the same job — back-court power. They reward different swings and different player styles. Here is how to pick.",
       sections: [
@@ -388,6 +477,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     {
       slug: "yuan-style-shaft-hardness-explained",
       updatedAt: "2026-04-29",
+      category: "guides",
       title: "What is Yuan-style shaft hardness, and why should you care",
       dek: "A Chinese-market measurement protocol that gives you a single number per shaft. It is not perfect, but it is the most useful cross-brand comparison data you will find online.",
       sections: [
@@ -417,6 +507,330 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
       ],
       cta: "When you run the finder, the stiffness data above is already baked into our level-fit factor — pick your level and we adjust accordingly.",
+    },
+    {
+      slug: "yonex-astrox-100zz-antonsen-vs-kurenai",
+      updatedAt: "2026-04-30",
+      title: "Yonex Astrox 100ZZ Kurenai vs Antonsen: same DNA, different demands",
+      dek: "Yonex's Anders Antonsen edition isn't a recolor — Volume Cut Resin replaces Black Micro Core in the frame, and the on-court behavior shifts more than the marketing implies.",
+      sections: [
+        {
+          heading: "What actually changed",
+          body: "Yonex's Antonsen / Anselm edition of the Astrox 100ZZ is sometimes pitched as a colorway, but the technical sheet shows otherwise. The frame swaps Black Micro Core (used in the Kurenai red and Navy blue editions) for Volume Cut Resin — a resin-system change that lowers frame mass and slightly softens the shaft response. Frame footprint, line-hole pattern, shaft diameter, and shaft length are otherwise identical. Yonex's hand on the dial here is subtle but real, and the on-court reading from BadmintonCN reviewers backs that up.",
+        },
+        {
+          heading: "The numbers",
+          body: "Reviewers' measured 4U samples: Antonsen 88.7g with underbase removed at balance 309mm; Kurenai 89.7g with underbase removed at balance 309mm. Both with 26-28 lb AB string. Unstrung weight ranges 84.6-85.7g across both editions — under-84g samples are rare. Yuan-style shaft hardness (lower = stiffer): Antonsen 8.23, Kurenai 8.09 — meaning the Antonsen is softer by about 0.14 on the scale. That's a small absolute number but a noticeable real-world tier difference. Combined with the slightly lower swing weight, the Antonsen is meaningfully easier to drive.",
+        },
+        {
+          heading: "What this means in singles",
+          body: "Founder firsthand (Rui Su, Division 4 Ireland): I have played the regular 100ZZ Kurenai and found it fast but very demanding — repulsive on contact and tiring across long matches. The Antonsen specs read like the version I would actually play. Lighter swing, slightly more flex, same head-heavy + extra-stiff DNA. For singles where you need consistent rear-court attack across a 21-21 game, the Antonsen edition should reduce fatigue without giving up the marquee 100ZZ feel. The Kurenai remains the right pick if you have time to condition for the stiffer shaft and want maximum power transmission on every swing.",
+        },
+        {
+          heading: "What this means in doubles",
+          body: "BadmintonCN reviewers note that even the Antonsen, with its lighter swing and easier shaft loading, is still a marginal pick for fast men's doubles. The 100ZZ family was built for singles back court and won't beat the Nanoflare 1000Z, Nanoflare 800 Pro, or Auraspeed 100X SE on swing speed and front-court reactivity. If you want a 100ZZ-style frame for doubles, the Antonsen is a more honest fit than the Kurenai because it shaves the swing weight that worked against you in fast exchanges. But your main racket should still be a speed-leaning frame.",
+        },
+        {
+          heading: "Compared to the 100ZZ VA",
+          body: "The Viktor Axelsen edition (100ZZ VA) is a separate variant again — keeps the head-heavy / extra-stiff DNA but with a different shaft tuning that makes it more forgiving than the Kurenai. The current variant ranking from easiest to most demanding is: 100ZZ VA → 100ZZ Antonsen → 100ZZ Kurenai. If you found the regular 100ZZ punishing, the VA is the most accessible. The Antonsen sits between the VA and Kurenai. The Kurenai stays as the no-compromise version.",
+        },
+        {
+          heading: "Buying guidance",
+          body: "Buy the Antonsen if: you like the 100ZZ profile but find the Kurenai tiring across full matches, you compete in singles or back-court doubles, and you want the lightest-swinging 100ZZ available. Buy the Kurenai if: you have the technique and conditioning to load a very stiff shaft, you prize maximum power transmission and pointing accuracy, and you have already played and outgrown the VA edition. Skip the entire 100ZZ family if: you play fast doubles primarily — start with the Astrox 88D Pro 2024 (head-heavy with lower swing weight) or a speed racket like the Nanoflare 1000Z.",
+        },
+      ],
+      cta: "Run the finder with singles or back-court attack and we'll score the 100ZZ variants against your level and budget.",
+      category: "comparisons",
+    },
+    {
+      slug: "victor-drivex-12-vs-astrox-88d-pro",
+      updatedAt: "2026-04-30",
+      title: "Victor DriveX 12: a credible Astrox 88D Pro alternative for 2/3 the money",
+      dek: "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket.",
+      sections: [
+        {
+          heading: "Why DriveX 10 owners should pay attention",
+          body: "Early DriveX 10 buyers documented a shaft-rotation problem at the cone-cap junction — the shaft would rotate in the handle under sustained big-swing load. Victor's warranty replaced affected frames, but the issue lingered as a hesitation point for serious attack-racket buyers. The DriveX 12 introduces Power Ring Pro: a mechanical clip-style junction that adds a rigid physical connection between the shaft and the suspension grip system. BadmintonCN reviewers report the rotation issue is fully resolved on the new generation, and the additional rigidity also produces measurably better anti-torsion when the frame is loaded off-axis.",
+        },
+        {
+          heading: "What's new under the paint",
+          body: "Three frame-level upgrades define the DriveX 12. First, nano-aerogel frame fill (the same low-density solid filler Victor uses in the Bladex / Auraspeed Hayabusa siblings) reduces frame mass without sacrificing wall thickness. Second, the Resilience Shield (glass carbon fiber, also seen in the 100X / 90K II) adds frame elasticity that translates to crisper off-string response. Third, 46T Bayer carbon raises the modulus tier, which Victor pairs with WES 3.0 — the in-shaft inflection-point system that adds bend points along the shaft's length and produces a sharper downward-pressure angle when you swing through.",
+        },
+        {
+          heading: "On court vs the DriveX 10",
+          body: "BadmintonCN measurements put both rackets in the same class — same frame footprint, similar weight and balance. But the DriveX 12 swings faster than the DriveX 10 at equal mass thanks to the aerogel fill, and reviewers report better continuity in fast doubles where the DriveX 10's heavier swing dragged. Defense and front-court reflexes are notably improved. Smashes feel comparable in raw power but the 12 has crisper feedback, so you know when you've hit the sweet spot. If you bought a DriveX 10 and felt like the swing was holding you back, the 12 is the upgrade — assuming you can absorb the cost of replacing rather than reselling.",
+        },
+        {
+          heading: "On court vs the Astrox 88D Pro 2024",
+          body: "The closer comparison for DriveX 12 buyers, since both are head-heavy stiff-shaft attack rackets in the same price tier. Reviewers' measured 4U DriveX 12: 89.2g unstrung at balance 311mm. 4U Astrox 88D Pro 2024: 89.2g unstrung at balance 308mm. The 88D Pro's shaft is slightly stiffer and crisper off-string, with the Yonex 2nd-gen Namd shaft producing snappier counter-attack on defense; the 88D Pro feels more 'connected' on the contact moment. The DriveX 12 has slightly better pocketing for net play and drops, where the 88D Pro can feel quick-firing. Smashes go to the 88D Pro by a small margin in absolute power; the DriveX 12 is sharper on placement.",
+        },
+        {
+          heading: "The price argument",
+          body: "Where the DriveX 12 wins decisively is the price per unit of performance. Depending on region, DriveX 12 sits at roughly 60-70% the cost of the Astrox 88D Pro 2024 with arguably 90% of the on-court performance. For a buyer who will not own multiple flagship attack rackets, the DriveX 12 is a smart hedge — you get tournament-tier performance without the Yonex tax. For a buyer who already owns multiple Yonex frames or whose teammates string for them, the brand alignment may still steer toward the 88D Pro 2024.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy the DriveX 12 if: you want a tournament head-heavy attack racket but can't justify Yonex flagship pricing, you play singles or back-court doubles, and you're willing to drive a stiff-shaft attack frame. Skip it if: you primarily play fast doubles (the swing weight is still high — look at the Auraspeed 100X SE or Nanoflare 1000Z instead), or your kit standardizes on Yonex shafts and you're willing to pay for that consistency.",
+        },
+      ],
+      cta: "Compare the DriveX 12 against the Astrox 88D Pro 2024 in our compare tool — both score against your profile.",
+      category: "reviews",
+    },
+    {
+      slug: "li-ning-l69-string-review",
+      updatedAt: "2026-04-30",
+      title: "Li-Ning L69 string review: marketed as durable balanced, plays like a smash string",
+      dek: "Li-Ning's new generalist string surprises in a way the package doesn't predict — paired with a stiff attack frame at 27 lb, the smash audio alone is reason to demo it.",
+      sections: [
+        {
+          heading: "What L69 actually is",
+          body: "Li-Ning's L69 is a 0.69mm gauge multi-filament string positioned as durable balanced — Li-Ning's marketing frames it as a daily-use option for players who restring less often and want consistent performance across the gauge's life. On paper that sounds unexciting next to the high-repulsion specialty strings most attack-racket players reach for (Yonex BG80, BG66 Ultimax, Ashaway ZyMax, Li-Ning No.5). But specs only tell part of the story — string feel depends heavily on tension, pattern, knot count, and the racket frame.",
+        },
+        {
+          heading: "Test setup",
+          body: "BadmintonCN reviewers tested the L69 in a Yonex Astrox 99 Pro 2 (Bluebird edition) at 27 lb tension, four-knot pattern, equal tension on mains and crosses. The 99 Pro 2 is a head-heavy attack racket with one of Yonex's stiffest shafts — typically paired with high-repulsion strings like BG80 or BG66 to milk every joule of smash power. The reviewers' expectation going in was that L69 would feel restrained on a frame this aggressive. The real-world result was the opposite.",
+        },
+        {
+          heading: "How it plays",
+          body: "The first surprise was crispness. L69 fires the shuttle with little dwell time — closer to a stiff specialty string than the slightly mushier feel typical of 'balanced' strings. The second was the smash audio. At 27 lb in a small attack frame, smashes produced strong, sharp audio and visible drop-angle steepness. Reviewers compared the smash performance favorably to the Yonex 66N (BG66 Ultimax variant) at similar tension, with reviewers reporting L69 came out ahead on hard smash. Drop placement was tight to the net. Hairpins and net-play touch were notably good — comparable to ABBT (Aerobite Boost) at similar setups.",
+        },
+        {
+          heading: "Where L69 will struggle",
+          body: "L69's crispness is the upside if you can deliver active force. If you can't, the same crispness becomes a downside: soft swings won't load the string, drops will fly long, and the harder feel will fatigue your forearm faster than a softer string would. Reviewers explicitly note that the L69 is force-hungry — it rewards strong, concentrated swings and punishes diffuse ones. That makes it a poor pairing for 5U speed rackets, sugar-water frames like the Nanoflare 700, or beginners still developing swing technique.",
+        },
+        {
+          heading: "Tension recommendations",
+          body: "The 27 lb test point hit a sweet spot, but the L69 spec range supports up to 30 lb on stiff frames. Founder editorial estimate: club players (BUI Div 5-7 / 中羽 4-5 / USAB C) should test at 24-26 lb on mid-stiff frames before pushing higher. Competitive players with concentrated swing technique can step into 27-29 lb on attack rackets like the Astrox 88D Pro 2024, AxForce 90 New, DriveX 12. Above 29 lb, the durability advantage diminishes because frames flex less and the string sees more concentrated impact stress per unit time.",
+        },
+        {
+          heading: "Buying guidance",
+          body: "Buy L69 if: you string an attack frame at 26+ lb, you're willing to swing through the shuttle on every shot, and you want a daily-use string that won't make you re-string every two weeks. Skip it if: you play with soft-feel strings deliberately (Yonex BG65 etc.), you string under 24 lb, or you play with sugar-water rackets where the L69's load curve will work against you. Per market price L69 sits around the same tier as Yonex BG80 and Li-Ning No.5 — it's a credible alternative, not a budget compromise.",
+        },
+      ],
+      cta: "Run the finder with smash-heavy preferences enabled — we score L69 alongside the strings that fit your frame and tension target.",
+      category: "reviews",
+    },
+    {
+      slug: "victor-p9200-iii-shoes-review",
+      updatedAt: "2026-04-30",
+      title: "Victor P9200 III review: the modular-midsole experiment that finally works",
+      dek: "Built-in modular midsole, three-arch support, dual-density Hyper EVA. The P9200 III is the version of the modular concept that earns its keep on court.",
+      sections: [
+        {
+          heading: "Why modular midsoles were a tough sell before this generation",
+          body: "Victor has experimented with built-in / modular midsole architecture across the VG-10, VG-1, VG-11, and the original P9200 II. The pitch was always the same: separate midsole module that can be swapped or upgraded as it compresses, distinct module-to-shoe coupling that allows custom fit per player. In practice the early generations had problems — the modules felt detached, the materials were too dense, the cushioning ran out before the wear pattern said it should. Victor kept iterating. The P9200 III is the version where the modular concept earns its keep.",
+        },
+        {
+          heading: "Build and weight",
+          body: "BadmintonCN reviewer measurements on a 41 size: 265mm internal length, 336g per shoe. The midsole module alone weighs 61g — meaningfully lighter than the older VG-1 at 80g, thanks to Victor's switch to Hyper EVA + Solid EVA dual density (lighter, more responsive than the older Hyper EVA + Neo EVA combination). Upper is microfiber PU + reinforcement at the toe + dual-layer breathable mesh. Outsole is Victor's VSR rubber. Last is U-SHAPE 2.5 — a Victor mid-wide forefoot last that fits comfortably for normal-to-wide feet.",
+        },
+        {
+          heading: "On-court feel: firm, not soft",
+          body: "The most distinctive characteristic is the contact firmness. Where Yonex Comfort Z3 and similar shoes feel soft and bouncy on landings, the P9200 III is firm — closer to a 'solid rubber' density. Some players love this; some find it harsh. The advantage is stability under landings: the foot doesn't sink, the shoe responds instantly. The disadvantage is fatigue accumulation across long matches, especially for lighter players who don't generate enough mass to compress the midsole. Heavier players (75 kg+) will benefit; 65 kg-ish players may find the firmness adds joint stress over a 90-minute session.",
+        },
+        {
+          heading: "Arch support and lateral stability",
+          body: "Two engineering details stand out. The midsole has a 'three-arch support' design — three pressure-redirection ridges along the medial arch that actively support the foot under sideways cuts. Reviewers report this materially reduces arch fatigue across long matches and helps prevent plantar-fascia flare-ups for players prone to them. Second, the L-shape lateral stability structure — a hard ABS-style shell extending from heel up the medial side — handles aggressive cuts. Comparable to Yonex's stability frame; not as aggressive as Victor's own P8500 II 'eagle claw' system but reliable.",
+        },
+        {
+          heading: "Initiation feel and the 'forward lean' caveat",
+          body: "P9200 III has a distinctive forward-lean angle in the midsole — there's a noticeable heel-to-toe drop, more than typical badminton shoes. This produces fast initiation: a half-step quicker than equivalent flat-midsole shoes. But it also pushes load onto the front of the foot. Reviewers with Greek foot shape (long second toe) report some discomfort at the front-second-toe pressure point. If you have Egyptian foot shape (descending toe length) or square foot, the lean is mostly an advantage. If you have Greek foot, demo before buying.",
+        },
+        {
+          heading: "Who this shoe is for",
+          body: "Buy the P9200 III if: you are a heavier player (75 kg+) who needs maximum cushioning durability across long matches, you have wide-to-very-wide forefoot, you compete in formats where you log 90+ minutes per session, or you specifically want Victor's modular-midsole architecture for replaceable cushioning. Skip it if: you are under 65 kg and value soft-bouncy cushioning (look at Yonex Comfort Z3 instead), you have Greek foot shape, or you prioritize ultra-light tournament feel (look at Yonex Aerus Z2 or Victor Auraspeed-line shoes).",
+        },
+      ],
+      cta: "Run the finder with foot-width and joint comfort flags set — we score the P9200 III alongside Yonex / Mizuno alternatives.",
+      category: "reviews",
+    },
+    {
+      slug: "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
+      updatedAt: "2026-04-30",
+      title: "Li-Ning AxForce 100 Gen 2 review: a sugar-water 100ZZ for advanced amateurs",
+      dek: "AxForce 100 Gen 2 (雷霆 100 二代) lands as Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. Same tough-elastic feel, same small-frame attack profile, slightly easier shaft.",
+      sections: [
+        {
+          heading: "Where the AxForce 100 Gen 2 sits in the Li-Ning lineup",
+          body: "Li-Ning's AxForce line (formerly published in Chinese markets as 雷霆 / Thunder) has an identifiable progression: AxForce 80 (sugar-water entry attack), AxForce 90 New (Li-Ning's strongest shaft to date, balanced attack), AxForce 100 Gen 2 (small-frame singles attack). They are not a strict ladder — each lives in a different style. The 100 Gen 2 is the most stylistically distinct: a small fluid box-frame square head with a thin 6.2mm shaft, designed for players who want pure tough-elastic attack feel rather than the AxForce 90 New's more crisp profile.",
+        },
+        {
+          heading: "Specs and sample variance",
+          body: "BadmintonCN reviewers measured a 4U AxForce 100 Gen 2 sample at 88.6g with the underbase removed, balance 308mm. Significant per-unit variance: across 4 brand-new 4U samples, unstrung weights came in at 83.0g, 83.9g, 84.7g, and 85.1g — a 2g range that materially affects swing feel. Buyer caution: weigh before purchase if at all possible. Frame is slightly slimmer than AxForce 90 New, with a noticeably tighter sweet spot (reviewers report 10+ sessions to fully adapt). 6.2mm shaft is the same diameter as the Yonex Astrox 100ZZ.",
+        },
+        {
+          heading: "On court vs the Astrox 100ZZ Kurenai",
+          body: "The AxForce 100 Gen 2 is the cleanest Li-Ning answer to the Yonex 100ZZ in feel. Both are tough-elastic, small-frame, head-heavy attack rackets. The 100 Gen 2 has a measurably softer shaft (~1 tier) and lighter swing weight than the Kurenai 100ZZ — meaningfully easier to drive while keeping the same on-contact character. Pocketing is comparable. Smash power: the 100ZZ Kurenai still wins on absolute force, but the 100 Gen 2's smash placement is sharper at the same effort level. Defense and counter-attack are easier on the 100 Gen 2 because shaft loading happens at lower force inputs.",
+        },
+        {
+          heading: "On court vs the AxForce 90 New",
+          body: "Different style entirely. AxForce 90 New is crisp-elastic — fast off-string, snappy feedback, big frame, forgiving sweet spot. AxForce 100 Gen 2 is tough-elastic — slight dwell on contact, more pocketing, smaller frame, less forgiving. Best for control players who win rallies through placement, drops, and tight rear-court attack. The 90 New is the better choice for fast doubles and amateurs; the 100 Gen 2 is the better choice for advanced singles players who want a singles-first attack frame with control characteristics.",
+        },
+        {
+          heading: "On court vs the Astrox 88D Pro 2024",
+          body: "Both are stiff-shaft attack rackets but they pull in opposite directions. 88D Pro 2024 is crisp-elastic, transparent power transmission, fastest off-string of any 2024 attack racket. 100 Gen 2 is tough-elastic, more pocketing on contact, sharper drops. 88D Pro 2024 wins on smash power and front-court reactivity. 100 Gen 2 wins on net-play touch and singles control rallies. If you have to pick one, choose the 88D Pro 2024 for doubles back court, the 100 Gen 2 for singles where placement matters more than raw smash speed.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy the AxForce 100 Gen 2 if: you play singles primarily, you like the Astrox 100ZZ profile but find the Kurenai punishing, you want Li-Ning's small-frame attack identity rather than the Yonex feel, and you're willing to invest 10+ sessions to dial in the sweet spot. Skip it if: you play fast doubles primarily (look at the AxForce 90 New or Halbertec 9000 Power instead), or you are an amateur still developing swing technique (the small sweet spot will frustrate). Sample variance is real — try in-person if possible.",
+        },
+      ],
+      cta: "Compare the AxForce 100 Gen 2 against the Astrox 100ZZ variants in our compare tool.",
+      category: "comparisons",
+    },
+    {
+      slug: "yonex-eclipsion-z3-shoes-review",
+      updatedAt: "2026-04-30",
+      category: "reviews",
+      title: "Yonex Power Cushion Eclipsion Z3: the firm flagship shoe most buyers overlook",
+      dek: "Eclipsion Z3 sits next to the marquee 65 Z3 and Aerus Z2 in Yonex's lineup but feels like neither. Here is who it is actually for.",
+      sections: [
+        {
+          heading: "Where it sits in the Yonex shoe lineup",
+          body: "Yonex's competition shoe lineup is busier than it looks. The 65 Z3 is the marquee performance shoe with the broadest fit and friendliest cushioning. The Aerus Z2 is the lightweight tournament shoe — fast and minimal. The Comfort Z3 leans into protection. Eclipsion Z3 sits in a different zone again: integrated outsole-to-sidewall TPU, dynamic Power Carbon midfoot bridge, and a noticeably firmer ground contact than any of the other three.",
+        },
+        {
+          heading: "Build and what makes Eclipsion distinct",
+          body: "Eclipsion Z3 uses Power Cushion+ in the midsole, but the heart of the shoe is structural. A dynamic carbon connector runs through the midfoot, the outsole and sidewall are integrated as one molded unit, and reinforced TPU sits at the medial side to prevent collapse on cuts. The 42-size measures 270mm internal length at roughly 351g per shoe — about 30g heavier than the Aerus Z2 in the same size. The 3E wide last is forgiving for most foot shapes; a narrower JP version is also available.",
+        },
+        {
+          heading: "On-court feel: firm, not soft",
+          body: "First impression is the firmness. Eclipsion Z3 contacts the ground harder than 65 Z3 or Comfort Z3. For flat-foot players the arch reinforcement stands out — supportive but borderline pushy at first. For neutral or higher-arched feet it reads as confidence. Stability under cuts is excellent; the integrated TPU sidewall plus midfoot carbon plate means the foot stays aligned through 180-degree pivots. Initiation is fast despite the weight — the firmer midsole returns energy more directly than soft-bouncy alternatives.",
+        },
+        {
+          heading: "Who benefits and who should skip",
+          body: "Buy Eclipsion Z3 if: you are a heavier player (75+ kg) who needs cushioning that does not bottom out across long matches, you compete in formats where 90+ minute sessions are common, you have wide-to-very-wide forefoot, and you want a shoe that feels stable enough to commit to extreme retrievals. Skip it if: you are under 65 kg and prefer soft-bouncy feel (look at Comfort Z3 instead), you prioritize ultra-light tournament weight (Aerus Z2), or you have very high arches that may find the supportive arch design intrusive.",
+        },
+        {
+          heading: "Quirks worth knowing",
+          body: "Two notes from extended use. First, the cross-vane outsole pattern is more sensitive to dust and sweat than traditional honeycomb hex patterns. On clean wood or fresh court tape you have full grip; on dusty rec center floors you may slip on aggressive cuts. Second, the stock insole is unimpressive for a flagship shoe — many serious players replace it with a supercritical aftermarket insole, which materially changes the cushioning ceiling and ground-feel balance.",
+        },
+        {
+          heading: "Founder firsthand",
+          body: "I have not personally rotated Eclipsion Z3 — my current shoe is the Comfort Z3, which I switched to from Aerus Z2 for joint comfort. From spec and community read, Eclipsion Z3 is a serious option for heavier players who find Comfort Z3's soft cushioning inconsistent under hard landings. If you fall in that gap, demo before buying — the firm contact feel is polarizing.",
+        },
+      ],
+      cta: "Run the finder with foot width and joint comfort flags set — we score Eclipsion Z3 alongside Comfort Z3, Aerus Z2, and the Mizuno Wave Claw line.",
+    },
+    {
+      slug: "yonex-astrox-99-pro-2-deep-dive",
+      updatedAt: "2026-04-30",
+      category: "reviews",
+      title: "Yonex Astrox 99 Pro: brutal precision for the player who can pay the cost",
+      dek: "The 99 Pro is unforgiving by design. Its 68-hole stringbed, NAMD shaft, and weighted handle add up to a racket that punishes everything except clean mechanics — and rewards them like nothing else.",
+      sections: [
+        {
+          heading: "Pedigree and design intent",
+          body: "Astrox 99 Pro is built for one thing: rear-court attack at the highest level. Lee Zii Jia switched to it from the 100ZZ; Kento Momota played its predecessor for years. Yonex did not engineer this frame as a do-everything pro racket — they engineered it as a head-heavy, extra-stiff statement, with no compromises toward forgiveness or front-court speed. The 100ZZ is its sibling in spirit but with a softer overall profile; the 99 Pro doubles down on demand.",
+        },
+        {
+          heading: "Specs that matter",
+          body: "Reviewers measured a 4U/G5 sample at 96g strung w/ heat-shrink and grip, balance 299mm. NAMD shaft, 210mm length. Hardness rates as 'extra stiff' on Yonex's scale — the highest tier they ship. Box-frame with e.cap. The unusual feature is the 68-hole stringbed (not the standard 76). Counter-intuitively, the 68-hole layout is engineered with tighter spacing in the sweet-spot zone, which raises perceived hardness rather than lowering it as denser stringbeds usually do.",
+        },
+        {
+          heading: "What you feel on court",
+          body: "Even at 4U the head-weight feels heavier than the published 299mm balance suggests — Yonex weighted the handle, so removing the underbase shifts the balance into the 315mm range where the racket really lives. Sweet-spot tolerance is poor for the first dozen sessions. Expect mishits on flat exchanges and front-court reflex shots. Rear-court attack is the reward: when a smash lands in the sweet spot, the directional precision and shuttle speed are top-of-class — sharper than the Astrox 88D Pro 2024 by a notable margin.",
+        },
+        {
+          heading: "Doubles vs singles",
+          body: "Reviewers consistently report that Astrox 99 Pro is not a fast-doubles racket. The combined head weight and air resistance slow drives and make front-court reflex slower than even the Astrox 88D Pro 2024. For singles or back-court mixed where rallies are longer and retrieval pace is lower, the 99 Pro shines. If you primarily play men's doubles, look at the 88D Pro 2024 or Auraspeed 100X SE instead.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Astrox 99 Pro if: you play singles seriously, you have the conditioning to drive an extra-stiff shaft for full matches, your match-winning shot is the smash, and you are willing to commit 10+ sessions to dial in the small sweet spot. Skip it if: you have any shoulder or elbow injury history, you primarily play fast men's doubles, you have not yet outgrown the Astrox 88D Pro 2024 (which is the more pragmatic head-heavy choice for advanced amateurs).",
+        },
+      ],
+      cta: "Use the finder with smash-heavy or singles-attack preferences and we score the 99 Pro against the AxForce 100 Gen 2 and Auraspeed 99.",
+    },
+    {
+      slug: "victor-auraspeed-99-hayabusa-review",
+      updatedAt: "2026-04-30",
+      category: "reviews",
+      title: "Victor Auraspeed 99 (Hayabusa): the Antonsen flagship that earns its difficulty",
+      dek: "Alloy carbon, WES 3.0, nano-aerogel, 46T fibers. The 99 stacks every Victor flagship technology in one frame. The reward profile is unusual.",
+      sections: [
+        {
+          heading: "What's actually different about the Hayabusa 99",
+          body: "Anders Antonsen's signature Victor — the 99 — is the most engineering-heavy frame Victor ships under the Hayabusa branch. Alloy carbon fiber in the frame, 46T high-modulus carbon, WES 3.0 in the shaft, Resilience Shield, and nano-aerogel filler all combine. The trick: despite the spec sheet, swing weight stays close to the Auraspeed 90KM thanks to the aerogel offsetting the additional carbon mass. The difficulty is not in carrying the racket; it is in driving the shaft.",
+        },
+        {
+          heading: "Specs reviewers measured",
+          body: "A 4U/G5 sample weighs 93.54g strung w/ underbase, balance 295mm, 6.8mm shaft at 210mm. Hard. 76-hole stringbed (standard for Victor), 9-3 line slot, max tension 31 lb. Strung at 25-27 lb VBS66N for the linked review. Frame uses a wing-shape break-line. Sweet spot is surprisingly large for an aggressive attack frame — the alloy carbon redistributes mass without shrinking the contact zone. This makes the 99 forgiving of contact placement while still being unforgiving of shaft loading.",
+        },
+        {
+          heading: "On-court character",
+          body: "First sessions are humbling. Without short, concentrated power strokes, the shaft does not flex, the racket feels lifeless on rear-court clears, and even retrieval pops feel under-loaded. Once you commit to short sharp swings, the WES 3.0 inflection system rewards you with a snap-and-recover that does not exist on simpler shafts. Smashes get a downward bite that the 90KM does not produce; flat-exchange drives are crisp but deep — a rare combination for an attack racket.",
+        },
+        {
+          heading: "Vs Auraspeed 90KM and 100X SE",
+          body: "Auraspeed 90KM is the easier sibling — softer-feeling shaft, more forgiving for amateur drivers, but fewer flex events per swing. The 100X SE is the speed-doubles benchmark — much faster swing, weaker rear-court bite. The 99 Hayabusa sits as the demanding singles or mixed-doubles back-court racket. If you can drive it, it is the closest thing Victor makes to a Yonex Astrox 99 Pro in feel — minus some of the punishment.",
+        },
+        {
+          heading: "Buying advice",
+          body: "Buy Auraspeed 99 if: you compete in singles or back-court mixed, you have established short-power swing technique, you have outgrown the 90KM and want more shaft event per stroke, and you are loyal to the Victor frame language. Skip it if: you primarily play fast men's doubles (the 100X SE will serve you better), you are still an intermediate-level driver, or your current racket is the Astrox 88D Pro 2024 and you are looking to switch ecosystems for a real reason — the 88D Pro is comparable.",
+        },
+      ],
+      cta: "Compare the Auraspeed 99 head-to-head with the Astrox 99 Pro and AxForce 100 Gen 2.",
+    },
+    {
+      slug: "li-ning-bladesabre-max-shoes-review",
+      updatedAt: "2026-04-30",
+      category: "reviews",
+      title: "Li-Ning Bladesabre MAX: the under-radar competition shoe to demo before your next 65 Z3",
+      dek: "BOUNSE+, 䨻, carbon plate. Li-Ning's Bladesabre MAX gets the shoe-stack right for serious doubles play — and at a price that keeps you honest.",
+      sections: [
+        {
+          heading: "Why this shoe matters",
+          body: "Yonex Comfort Z3 and Power Cushion 65 Z3 dominate amateur shoe conversations. Li-Ning's competition shoes get less airtime, partly because the 65 Z3 is genuinely good and partly because Li-Ning's English-language marketing lags Yonex's. The Bladesabre MAX is the shoe most likely to make Li-Ning's case to a serious amateur player — engineered cushioning, carbon-plate stability, and a fit that locks the foot without relying on a bulky upper.",
+        },
+        {
+          heading: "Build",
+          body: "Cushioning stack is dual-density: BOUNSE+ in the forefoot for direct ground contact and crisp net-step feedback, 䨻 (Li-Ning's bounce foam) in the heel for impact absorption on landings. A carbon-fiber + TPU torsion plate runs through the midfoot — distinct from the integrated outsole-sidewall TPU on Yonex Eclipsion Z3 and closer to a traditional plate. Upper is low-stretch microfiber with TPU heel reinforcement. Last fits a true normal-to-narrow foot well; wider feet should size up or look elsewhere.",
+        },
+        {
+          heading: "On-court feel",
+          body: "Snug from the moment you lace up. The microfiber upper does not give as you warm up, which means you can be confident about tracking without re-tying. Forefoot crispness is the standout: BOUNSE+ gives clean ground feedback for the small adjusting steps that matter at the net. Heel landings on smashes feel cushioned without feeling soft — the 䨻 foam absorbs without bottoming out. Carbon plate genuinely works under torsion: 180-degree pivots and aggressive cuts stay aligned.",
+        },
+        {
+          heading: "Where it falls short",
+          body: "Two limits worth knowing. First, initiation is good but not class-leading. The forefoot stack is slightly thicker than ultra-light tournament shoes like the Aerus Z2, so the absolute first-step is a half-tick slower. For most amateurs this is invisible; for fast-doubles specialists it might matter. Second, factory outsole grip is excellent on clean wood floors but slips on dusty or older rec-center courts. Reviewers recommend scrubbing the new sole on concrete to remove the factory oxide before competition use — typical Li-Ning behavior.",
+        },
+        {
+          heading: "Pick it if",
+          body: "Buy Bladesabre MAX if: you have a normal-to-narrow forefoot, you compete in doubles or singles where landing cushioning matters across long sessions, you want a Li-Ning competition shoe and don't want to pay 65 Z3 / Comfort Z3 pricing, and you have access to a clean-floor practice court for initial sole break-in. Skip it if: you have wide forefoot (look at Comfort Z3 wide or Mizuno Wave Claw wide), you specifically want ultra-light tournament weight, or you primarily play on dusty rec-center floors where the factory outsole will fight you.",
+        },
+      ],
+      cta: "Compare Bladesabre MAX against Comfort Z3 and Eclipsion Z3 in our finder — we score by foot width and weight class.",
+    },
+    {
+      slug: "victor-auraspeed-hs-plus-deep-dive",
+      updatedAt: "2026-04-30",
+      category: "reviews",
+      title: "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
+      dek: "HS Plus arrived as a successor to the popular Hayabusa SE but ended up reshaping what a speed racket can do under load. Here is what changes — and what does not.",
+      sections: [
+        {
+          heading: "From Hayabusa to HS Plus — what's new",
+          body: "Victor's Hayabusa lineup has long been the speed-attack hybrid for players who want frame-feedback closer to a head-heavy frame than a pure speed racket. The HS Plus inherits the visual identity of the line but commits harder. Power Ring junction (also seen on the 90KM) replaces the standard cone-cap interface for stiffer power transmission. WES 3.0 is added to the shaft. The frame moves to a smaller head than the previous HS — closer to the Auraspeed 100X SE size — with a more aggressive break-line.",
+        },
+        {
+          heading: "What you measure",
+          body: "Reviewers report a 4U/G5 with underbase removed at 88.21g, balance 305mm, 6.8mm shaft at 218mm. Hard. 76-hole stringbed, 9-3 line slot, max tension 28 lb. Strung at 26-28 lb VBS66N. The frame is noticeably thin. Sweet spot is small — reviewers explicitly call out frequent miss-frame hits during the first few sessions of acclimatization. The Antitorsion shaft system is shared with the Auraspeed 90K flagship — distinct from the simpler shaft of the original Hayabusa.",
+        },
+        {
+          heading: "On court — the speed surprise",
+          body: "Despite the higher swing weight, HS Plus feels faster than the previous HS through the air. The frame is narrow enough that air resistance drops sharply, and the additional shaft stiffness plus Power Ring junction make energy transfer crisp. Flat exchanges in mid-court reach a level reviewers describe as 'racket-led' — the racket arrives at contact ahead of the brain, and you find yourself with extra time per shot in transition.",
+        },
+        {
+          heading: "On court — the smash surprise",
+          body: "WES 3.0 does for HS Plus what it does for the Auraspeed 99: it allows short, concentrated power strokes to translate into deep, fast smashes that simpler shafts cannot produce at the same swing weight. Reviewers describe the smash bite as comparable to the Auraspeed 90K — unusual for a speed racket. The penalty: when fatigue sets in and you start swinging long instead of short, the same shaft loses its bite, and downward angle suffers. HS Plus rewards crisp form, punishes muddled mechanics.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy HS Plus if: you play men's doubles at a level where front-court speed is decisive, you have established short-stroke power technique, you are willing to spend 10+ sessions adapting to the smaller sweet spot, and you want a single racket that handles speed and back-court smash in the same frame. Skip it if: you are a comfortable sugar-water (NF700 / NF700 Pro) player and trying to upgrade — the gap is too large; the Auraspeed 100X SE is a better intermediate step. Also skip if you have pre-existing shoulder issues — the racket asks for force concentration that less-experienced shoulders may not deliver safely.",
+        },
+      ],
+      cta: "Run the finder for fast-doubles or speed-attack profile and we score HS Plus against 100X SE and 1000Z.",
     },
   ],
 };
