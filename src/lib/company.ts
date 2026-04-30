@@ -48,7 +48,7 @@ export const websiteJsonLd = {
   name: companyInfo.siteName,
   url: companyInfo.siteUrl,
   publisher: organizationJsonLd["@id"],
-  inLanguage: ["en", "zh-Hans"],
+  inLanguage: "en",
   description:
     "Badminton equipment recommendations for rackets, strings, shoes, and bags.",
   potentialAction: {

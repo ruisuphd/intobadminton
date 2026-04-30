@@ -1,35 +1,131 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { EditorialNotice } from "@/components/EditorialNotice";
+import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title: "Best badminton rackets for doubles players — IntoBadminton",
+  title: "Best badminton rackets for doubles (2026 picks)",
   description:
-    "Choose doubles rackets by speed, defense, front-court control, and flat-drive performance.",
+    "Six doubles rackets ranked for front-court speed, defensive recovery, and rear-court continuity. Picks for men's, women's, and mixed doubles by skill level.",
+  alternates: { canonical: "/best/doubles-rackets/" },
+};
+
+const config: BestPicksConfig = {
+  slug: "doubles-rackets",
+  breadcrumbLabel: "Doubles rackets",
+  title: "Best badminton rackets for doubles (2026)",
+  dek: "Doubles is won between blocks, drives, and recovery. Six rackets ranked for that game — front court, rear court, and the players who switch.",
+  productSchemaCategory: "BadmintonRacket",
+  intro: {
+    heading: "What 'best for doubles' actually means",
+    body: "Doubles is the fastest discipline in badminton. The rally lasts longer than singles, the second shot arrives before you have recovered, and most points are won (or saved) between net touches and flat drives. <strong>Speed and torsional stability matter more than raw smash mass.</strong> Pick a 4U head-light or even-balance frame as your default, and only graduate to head-heavy attack rackets if you reliably play rear court and your timing is consistent.",
+  },
+  picks: [
+    {
+      rank: 1,
+      name: "Astrox 88S Pro (2024)",
+      brand: "Yonex",
+      priceUsd: 240,
+      bestFor: "Front-court / mixed doubles control",
+      specs: [
+        { label: "Weight", value: "4U (~84g)" },
+        { label: "Balance", value: "Slight head-heavy (~301mm)" },
+        { label: "Shaft flex", value: "Stiff (Namd Flex Force)" },
+      ],
+      why: "Currently rated above the Halbertec 8000 / 9000 and Arcsaber 11 Pro on combined control and smash quality. Founder's main racket. Best in class if your job is to organise the rally with placement, not bury smashes.",
+      tradeoff: "If you only play rear court and your match-winner is the smash, the 88D Pro version is the better fit.",
+    },
+    {
+      rank: 2,
+      name: "Nanoflare 1000Z",
+      brand: "Yonex",
+      priceUsd: 289,
+      bestFor: "Pure speed doubles and defense",
+      specs: [
+        { label: "Weight", value: "4U (~84g)" },
+        { label: "Balance", value: "Head-light (~290mm)" },
+        { label: "Shaft flex", value: "Stiff" },
+      ],
+      why: "The doubles weapon when defense and flat exchanges are the game. Hexagonal Z-axis frame is the best end-speed in the Nanoflare line. DR carbon adds pocketing for crisper drops than other speed frames.",
+      tradeoff: "Higher entry threshold than NF700 Pro — you need force and timing to load the stiff shaft.",
+    },
+    {
+      rank: 3,
+      name: "Auraspeed HS Plus",
+      brand: "Victor",
+      priceUsd: 240,
+      bestFor: "Stable, well-rounded doubles attack",
+      specs: [
+        { label: "Weight", value: "4U" },
+        { label: "Balance", value: "Even / mild head-heavy" },
+        { label: "Shaft flex", value: "Stiff" },
+      ],
+      why: "Victor's most balanced top-tier doubles frame — stable enough to absorb hard returns, fast enough to cover front-court duties. Pairs well with a partner playing 88D Pro / 100ZZ.",
+      tradeoff: "Less marketing pull than Yonex flagships, so resale liquidity is lower outside Asia.",
+    },
+    {
+      rank: 4,
+      name: "Nanoflare 700 Pro (2024)",
+      brand: "Yonex",
+      priceUsd: 220,
+      bestFor: "Club doubles, women's doubles speed",
+      specs: [
+        { label: "Weight", value: "4U / 5U" },
+        { label: "Balance", value: "Head-light" },
+        { label: "Shaft flex", value: "Medium-stiff" },
+      ],
+      why: "The friendlier sibling of the 1000Z. Lower swing weight, more forgiving shaft, and noticeably easier to recover with on consecutive shots. Strong choice for women's doubles where rally speed exceeds smash power.",
+      tradeoff: "Top-end smash power capped relative to head-heavy frames — rear-court specialists may want more.",
+    },
+    {
+      rank: 5,
+      name: "Astrox 88D Pro (2024)",
+      brand: "Yonex",
+      priceUsd: 240,
+      bestFor: "Rear-court men's doubles attack",
+      specs: [
+        { label: "Weight", value: "4U" },
+        { label: "Balance", value: "Head-heavy (~305-308mm)" },
+        { label: "Shaft flex", value: "Very stiff" },
+      ],
+      why: "The 2024 reset improved continuity over the camel-gold predecessor — you fatigue less across long rallies because the new shaft loads and unloads faster. Smash power is similar to the original but with a cleaner contact feel.",
+      tradeoff: "Stiff shaft punishes timing errors. Skip if you also play significant front court and need defensive speed.",
+    },
+    {
+      rank: 6,
+      name: "DriveX 8S",
+      brand: "Victor",
+      priceUsd: 110,
+      bestFor: "Budget-conscious club doubles",
+      specs: [
+        { label: "Weight", value: "4U" },
+        { label: "Balance", value: "Even" },
+        { label: "Shaft flex", value: "Medium" },
+      ],
+      why: "Best $100-bracket racket for flat-drive doubles. Light enough for defense, stiff enough to teach clean contact, and built around the exact rally pattern doubles produces.",
+      tradeoff: "Pro-tier 88S Pro / 1000Z players will outscore you with absolute equipment ceiling — but at this price, the gap is closer than the price tag suggests.",
+    },
+  ],
+  faqs: [
+    {
+      q: "Should men's doubles and women's doubles use different rackets?",
+      a: "On average, women's doubles rallies are slightly faster and feature more flat-drive exchanges, so head-light or even-balance frames usually outperform head-heavy attack rackets. But this is a gross generalisation — pick by the rally style you actually play, not by gender.",
+    },
+    {
+      q: "Front court vs rear court — does it really change the racket?",
+      a: "Yes. Front-court players win on early interception and net taps, where swing speed and torsional stability matter most. Rear-court players win on first attack, where head weight helps load the smash. If you switch roles every game, an even-balance frame like the 88S Pro 2024 is the most universal answer.",
+    },
+    {
+      q: "What's the best racket for mixed doubles?",
+      a: "Mixed forces both partners into both roles regularly, so all-court frames win. Yonex Astrox 88S Pro 2024, Arcsaber 11 Pro, Victor Auraspeed HS Plus, and Li-Ning Halbertec 9000 (not 9000 Power) are good defaults. Avoid 100ZZ-tier head-heavy frames unless you specifically anchor rear court.",
+    },
+    {
+      q: "Is the new 88D Pro worth upgrading from the camel-gold version?",
+      a: "If you already own the original camel-gold 88D Pro and you adapted to its swing weight, the 2024 version is a marginal upgrade — better continuity, slightly less fatigue, similar smash power. If you do not currently own one, buy the 2024. If you are choosing between 88D Pro 2024 and 88S Pro 2024, the S is the more universal answer for amateurs.",
+    },
+  ],
+  ctaHeading: "Pick by your role and partner, not the marketing tier",
+  ctaBody: "The finder weighs your discipline, style, level, body, and budget — then names the rackets that actually fit how you play.",
 };
 
 export default function DoublesRacketsPage() {
-  return (
-    <main className="flex-1 py-16">
-      <article className="layout-band max-w-2xl space-y-5">
-        <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
-          Best badminton rackets for doubles players
-        </h1>
-        <EditorialNotice />
-        <p className="text-[var(--color-muted)]">
-          Doubles rewards recovery speed: a 4U or 5U racket with head-light or
-          even balance often helps in defense, blocks, and flat exchanges. If
-          you usually play rear court, a mild head-heavy profile can still work,
-          but avoid sacrificing every defensive touch for smash weight.
-        </p>
-        <p className="text-[var(--color-muted)]">
-          Choose <strong>Doubles</strong> or <strong>Mixed</strong> in the
-          finder so the ranking gives more credit to fast swing profiles.
-        </p>
-        <Link href="/quiz/" className="text-[var(--color-accent)] underline">
-          Find my doubles racket
-        </Link>
-      </article>
-    </main>
-  );
+  return <BestPicksPage config={config} />;
 }

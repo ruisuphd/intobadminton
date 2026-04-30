@@ -4,58 +4,40 @@ import type { SiteLocale } from "@/lib/locale";
 
 const tierOrder: BrandTier[] = ["flagship", "tier2", "tier3", "tier4"];
 
-const copy = {
-  en: {
-    hero: "Brands we cover",
-    dek: "The badminton manufacturers our recommendations draw from. Tiering reflects market presence and how deeply we cover their catalogue, not quality — many tier-3 and tier-4 brands beat the flagships on specific products.",
-    coverage: "Categories covered",
-    founded: "Founded",
-    country: "HQ",
-    visit: "Official site",
-    methodology:
-      "Tier placement is editorial, based on global availability, breadth of catalogue, and how often the brand appears in independent reviews and BWF-tour play. We keep the list updated as catalogues change.",
-    requestHeading: "Don't see a brand?",
-    requestBody:
-      "Email us with the brand name and a link to their official site. We add brands as we can responsibly verify product specs.",
-    contact: "Contact",
-  },
-  zh: {
-    hero: "我们覆盖的品牌",
-    dek: "推荐器使用的羽毛球品牌清单。分级反映市场存在度与目录覆盖深度，不代表品质 —— 许多三、四线品牌在具体产品上优于旗舰。",
-    coverage: "覆盖品类",
-    founded: "创立",
-    country: "总部",
-    visit: "官方网站",
-    methodology:
-      "分级为编辑判断，依据全球供应、产品线广度，以及品牌在独立评测和 BWF 巡回赛中的出现频率。目录变化时同步更新。",
-    requestHeading: "没找到某品牌？",
-    requestBody:
-      "把品牌名和官网链接发给我们 —— 只要能负责任地核验规格，我们就会加入。",
-    contact: "联系",
-  },
+const c = {
+  hero: "Badminton brands we cover",
+  dek: "The manufacturers our recommendations draw from — Yonex, Victor, Li-Ning, Kumpoo, and more. Tiering reflects global market presence and catalogue depth, not quality — many tier-3 and tier-4 brands beat the flagships on specific products.",
+  coverage: "Categories covered",
+  founded: "Founded",
+  country: "HQ",
+  visit: "Official site",
+  methodology:
+    "Tier placement is editorial, based on global availability, breadth of catalogue, and how often the brand appears in independent reviews and BWF-tour play. We keep the list updated as catalogues change.",
+  requestHeading: "Don't see a brand?",
+  requestBody:
+    "Email us with the brand name and a link to their official site. We add brands as we can responsibly verify product specs.",
+  contact: "Contact",
 } as const;
 
-const categoryLabels: Record<string, { en: string; zh: string }> = {
-  racket: { en: "Rackets", zh: "球拍" },
-  shoes: { en: "Shoes", zh: "球鞋" },
-  string: { en: "Strings", zh: "球线" },
-  bag: { en: "Bags", zh: "球包" },
-  shuttle: { en: "Shuttles", zh: "羽毛球" },
-  grip: { en: "Grips", zh: "手胶" },
-  accessory: { en: "Accessories", zh: "配件" },
+const categoryLabels: Record<string, string> = {
+  racket: "Rackets",
+  shoes: "Shoes",
+  string: "Strings",
+  bag: "Bags",
+  shuttle: "Shuttles",
+  grip: "Grips",
+  accessory: "Accessories",
 };
 
-function categoryLabel(cat: string, locale: SiteLocale): string {
-  return categoryLabels[cat]?.[locale] ?? cat;
+function categoryLabel(cat: string): string {
+  return categoryLabels[cat] ?? cat;
 }
 
-export function BrandsPage({ locale }: { locale: SiteLocale }) {
-  const c = copy[locale];
-
+export function BrandsPage({ locale: _locale }: { locale: SiteLocale }) {
   const brandsJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${companyInfo.siteUrl}/${locale}/brands/#list`,
+    "@id": `${companyInfo.siteUrl}/brands/#list`,
     name: c.hero,
     inLanguage: "en",
     numberOfItems: brands.length,
@@ -64,7 +46,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
       position: i + 1,
       item: {
         "@type": "Brand",
-        "@id": `${companyInfo.siteUrl}/${locale}/brands/#${b.id}`,
+        "@id": `${companyInfo.siteUrl}/brands/#${b.id}`,
         name: b.name,
         url: b.officialUrl,
         description: b.knownFor,
@@ -93,7 +75,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
           return (
             <section key={tier} className="space-y-4">
               <h2 className="text-2xl font-semibold text-[var(--text)]">
-                {BRAND_TIER_LABELS[tier][locale]}
+                {BRAND_TIER_LABELS[tier].en}
               </h2>
               <div className="grid gap-4 md:grid-cols-2">
                 {tierBrands.map((b) => (
@@ -132,7 +114,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
                             key={cat}
                             className="rounded-full bg-[var(--color-accent-soft)] px-2.5 py-0.5 text-xs text-[var(--text)]"
                           >
-                            {categoryLabel(cat, locale)}
+                            {categoryLabel(cat)}
                           </span>
                         ))}
                       </div>
