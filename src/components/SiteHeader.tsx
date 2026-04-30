@@ -1,63 +1,39 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import {
-  buildLocalizedPath,
-  localeFromPath,
-  stripLocaleFromPath,
-  type SiteLocale,
-} from "@/lib/locale";
-import { t } from "@/lib/i18n";
 
 export function SiteHeader() {
-  const pathname = usePathname();
-  const locale = localeFromPath(pathname);
-  const copy = t(locale);
-  const otherLocale: SiteLocale = locale === "zh" ? "en" : "zh";
-  const localized = (path: string) => buildLocalizedPath(locale, path);
-  const switchHref = buildLocalizedPath(otherLocale, stripLocaleFromPath(pathname));
-
   return (
     <header className="sticky top-0 z-40 border-b border-[color:var(--line)] bg-white/85 backdrop-blur-md">
       <div className="layout-band flex h-16 max-w-6xl items-center justify-between">
         <Link
-          href={localized("/")}
+          href="/"
           className="text-base font-semibold tracking-tight text-[var(--text)]"
         >
           IntoBadminton
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link
-            href={localized("/quiz/")}
+            href="/quiz/"
             className="text-[var(--color-muted)] transition-colors hover:text-[var(--text)]"
           >
-            {copy.nav.finder}
+            Finder
           </Link>
           <Link
-            href={localized("/blog/")}
+            href="/blog/"
             className="hidden text-[var(--color-muted)] transition-colors hover:text-[var(--text)] sm:inline-flex"
           >
-            {copy.nav.blog}
+            Blog
           </Link>
           <Link
-            href={localized("/brands/")}
+            href="/brands/"
             className="hidden text-[var(--color-muted)] transition-colors hover:text-[var(--text)] sm:inline-flex"
           >
-            {locale === "zh" ? "品牌" : "Brands"}
+            Brands
           </Link>
           <Link
-            href={localized("/compare/")}
+            href="/compare/"
             className="hidden text-[var(--color-muted)] transition-colors hover:text-[var(--text)] sm:inline-flex"
           >
-            {copy.nav.compare}
-          </Link>
-          <Link
-            href={switchHref}
-            className="text-[var(--color-muted)] transition-colors hover:text-[var(--text)]"
-            hrefLang={otherLocale === "zh" ? "zh-Hans" : "en"}
-          >
-            {copy.nav.language}
+            Compare
           </Link>
         </nav>
       </div>

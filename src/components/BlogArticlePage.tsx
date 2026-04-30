@@ -18,13 +18,13 @@ export function BlogArticlePage({
       <main className="flex-1 py-16">
         <div className="layout-band max-w-3xl">
           <h1 className="text-3xl font-semibold text-[var(--text)]">
-            {locale === "zh" ? "文章未找到" : "Article not found"}
+            {"Article not found"}
           </h1>
           <Link
             href={buildLocalizedPath(locale, "/blog/")}
             className="mt-4 inline-block text-[var(--color-accent)] underline"
           >
-            {locale === "zh" ? "返回博客" : "Back to blog"}
+            {"Back to blog"}
           </Link>
         </div>
       </main>
@@ -32,7 +32,7 @@ export function BlogArticlePage({
   }
 
   const canonicalUrl = `${companyInfo.siteUrl}/${locale}/blog/${article.slug}/`;
-  const byline = locale === "zh" ? companyInfo.authorBylineZh : companyInfo.authorBylineEn;
+  const byline = companyInfo.authorBylineEn;
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
@@ -41,7 +41,7 @@ export function BlogArticlePage({
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
     headline: article.title,
     description: article.dek,
-    inLanguage: locale === "zh" ? "zh-Hans" : "en",
+    inLanguage: "en",
     datePublished: article.updatedAt,
     dateModified: article.updatedAt,
     author: {
@@ -51,7 +51,7 @@ export function BlogArticlePage({
       description: companyInfo.founderDescription,
     },
     publisher: organizationJsonLd,
-    articleSection: locale === "zh" ? "羽毛球装备" : "Badminton equipment",
+    articleSection: "Badminton equipment",
   };
 
   const breadcrumbJsonLd = {
@@ -67,7 +67,7 @@ export function BlogArticlePage({
       {
         "@type": "ListItem",
         position: 2,
-        name: locale === "zh" ? "博客" : "Blog",
+        name: "Blog",
         item: `${companyInfo.siteUrl}/${locale}/blog/`,
       },
       {
@@ -94,7 +94,7 @@ export function BlogArticlePage({
           href={buildLocalizedPath(locale, "/blog/")}
           className="text-sm text-[var(--color-accent)] hover:underline"
         >
-          ← {locale === "zh" ? "博客" : "Blog"}
+          ← {"Blog"}
         </Link>
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           {article.title}
@@ -104,7 +104,7 @@ export function BlogArticlePage({
           <span className="font-medium text-[var(--text)]">{byline}</span>
           <span aria-hidden>·</span>
           <span>
-            {locale === "zh" ? "更新于" : "Updated"} {article.updatedAt}
+            {"Updated"} {article.updatedAt}
           </span>
         </div>
         {article.sections.map((section, index) => (
@@ -124,7 +124,7 @@ export function BlogArticlePage({
             href={buildLocalizedPath(locale, "/quiz/")}
             className="mt-3 inline-block text-sm text-[var(--color-accent)] underline"
           >
-            {locale === "zh" ? "开始推荐" : "Start the finder"}
+            {"Start the finder"}
           </Link>
         </div>
       </article>

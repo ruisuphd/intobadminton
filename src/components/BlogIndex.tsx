@@ -10,8 +10,8 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
     "@context": "https://schema.org",
     "@type": "Blog",
     "@id": `${companyInfo.siteUrl}/${locale}/blog/#blog`,
-    name: locale === "zh" ? "羽毛球装备博客" : "Badminton equipment blog",
-    inLanguage: locale === "zh" ? "zh-Hans" : "en",
+    name: "Badminton equipment blog",
+    inLanguage: "en",
     publisher: organizationJsonLd,
     blogPost: articles.map((article) => ({
       "@type": "BlogPosting",
@@ -37,12 +37,10 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
       />
       <div className="layout-band max-w-6xl">
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
-          {locale === "zh" ? "羽毛球装备博客" : "Badminton equipment blog"}
+          {"Badminton equipment blog"}
         </h1>
         <p className="mt-3 max-w-2xl text-[var(--color-muted)]">
-          {locale === "zh"
-            ? "原创、可复查、以打法适配为核心的装备内容。我们不会复制第三方评价原文。"
-            : "Original, checkable equipment content focused on player fit. We do not copy third-party review text."}
+          {"Original, checkable equipment content focused on player fit. We do not copy third-party review text."}
         </p>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {articles.map((article) => (
@@ -61,9 +59,7 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
                 {article.dek}
               </p>
               <p className="mt-3 text-xs text-[var(--color-muted)]">
-                {locale === "zh"
-                  ? companyInfo.authorBylineZh
-                  : companyInfo.authorBylineEn}
+                {companyInfo.authorBylineEn}
               </p>
             </Link>
           ))}

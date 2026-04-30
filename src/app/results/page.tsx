@@ -3,8 +3,8 @@ import { RecentHistory } from "@/components/RecentHistory";
 import { ResultsClient } from "./ResultsClient";
 import { t } from "@/lib/i18n";
 
-export function ResultsShell({ locale = "en" }: { locale?: "en" | "zh" }) {
-  const copy = t(locale).results;
+export function ResultsShell() {
+  const copy = t("en").results;
   return (
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
@@ -15,7 +15,7 @@ export function ResultsShell({ locale = "en" }: { locale?: "en" | "zh" }) {
           {copy.subtitle}
         </p>
         <div className="mt-8">
-          <ResultsClient locale={locale} />
+          <ResultsClient />
         </div>
         <RecentHistory />
         <AdSlot id="results-bottom" />
@@ -25,5 +25,5 @@ export function ResultsShell({ locale = "en" }: { locale?: "en" | "zh" }) {
 }
 
 export default function ResultsPage() {
-  return <ResultsShell locale="en" />;
+  return <ResultsShell />;
 }

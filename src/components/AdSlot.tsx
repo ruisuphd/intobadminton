@@ -49,30 +49,29 @@ export function AdSlot({
     }
   }, [canLoadAd]);
 
+  // Render nothing when ads can't load. We do NOT show a "Reserved slot"
+  // placeholder — that visible cruft hurts AdSense review and looks
+  // unprofessional to real users. Once AdSense approves and slot IDs are
+  // configured, the same JSX hierarchy hydrates with a live ad unit.
+  if (!canLoadAd) return null;
+
   return (
     <aside
       id={`ad-wrap-${id}`}
-      className={`my-8 min-h-[180px] w-full rounded-2xl border border-dashed border-[color:var(--line-strong)] bg-[var(--surface)] p-6 text-center ${className}`}
+      className={`my-8 w-full rounded-2xl bg-[var(--surface)] p-6 text-center ${className}`}
       data-ad-region={id}
     >
       <p className="text-xs font-medium tracking-wide text-[var(--color-muted)] uppercase">
         {label === "Ad" ? "Advertisement" : label}
       </p>
-      {canLoadAd ? (
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client={client}
-          data-ad-slot={resolvedSlot}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      ) : (
-        <p className="mt-1 text-sm text-[var(--color-muted)]">
-          Non-essential advertising is off. Reserved slot{" "}
-          <code className="text-xs">{id}</code>
-        </p>
-      )}
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client={client}
+        data-ad-slot={resolvedSlot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </aside>
   );
 }

@@ -6,18 +6,14 @@ import { trackEvent } from "@/components/Analytics";
 import { ResultCard } from "@/components/ResultCard";
 import { useProfile } from "@/context/ProfileContext";
 import { companyInfo } from "@/lib/company";
-import type { SiteLocale } from "@/lib/locale";
 import { scoreProductCatalog } from "@/lib/scoring";
 import type { ScoredProduct } from "@/lib/types/product";
 
-function buildProductJsonLd(rows: ScoredProduct[], locale: SiteLocale) {
+function buildProductJsonLd(rows: ScoredProduct[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name:
-      locale === "zh"
-        ? "IntoBadminton 装备推荐结果"
-        : "IntoBadminton equipment recommendations",
+    name: "IntoBadminton equipment recommendations",
     numberOfItems: rows.length,
     itemListElement: rows.map((r, i) => ({
       "@type": "ListItem",
@@ -40,7 +36,7 @@ function buildProductJsonLd(rows: ScoredProduct[], locale: SiteLocale) {
   };
 }
 
-export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
+export function ResultsClient() {
   const { profile, pushHistory } = useProfile();
   const rows = useMemo(
     () => scoreProductCatalog(profile).slice(0, 8),
@@ -72,10 +68,10 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
           shortlist.
         </p>
         <Link
-          href={locale === "zh" ? "/zh/quiz/" : "/en/quiz/"}
+          href="/quiz/"
           className="mt-4 inline-block text-[var(--color-accent)] underline"
         >
-          {locale === "zh" ? "开始推荐" : "Start the finder"}
+          Start the finder
         </Link>
       </div>
     );
@@ -85,12 +81,11 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
     return (
       <div className="card p-6">
         <h2 className="font-semibold text-[var(--text)]">
-          {locale === "zh" ? "暂时没有强匹配" : "No strong matches yet"}
+          No strong matches yet
         </h2>
         <p className="mt-2 text-[var(--color-muted)]">
-          {locale === "zh"
-            ? "可以放宽预算、减少一个打法标签，或换一个装备类别。"
-            : "Try relaxing budget, choosing one fewer style tag, or selecting another equipment category."}
+          Try relaxing budget, choosing one fewer style tag, or selecting
+          another equipment category.
         </p>
       </div>
     );
@@ -101,11 +96,11 @@ export function ResultsClient({ locale = "en" }: { locale?: SiteLocale }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildProductJsonLd(rows, locale)),
+          __html: JSON.stringify(buildProductJsonLd(rows)),
         }}
       />
       {rows.map((r, i) => (
-        <ResultCard key={r.id} r={r} rank={i + 1} locale={locale} />
+        <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}
     </div>
   );

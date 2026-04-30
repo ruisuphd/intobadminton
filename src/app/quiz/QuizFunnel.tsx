@@ -33,23 +33,10 @@ const levelLabel: Record<SkillLevel, string> = {
   pro_oriented: "Pro-oriented",
 };
 
-const levelLabelZh: Record<SkillLevel, string> = {
-  recreational: "休闲 / 新手",
-  club: "俱乐部",
-  competitive: "比赛型",
-  pro_oriented: "专业取向",
-};
-
 const discLabel: Record<Discipline, string> = {
   singles: "Singles",
   doubles: "Doubles",
   mixed: "Mixed",
-};
-
-const discLabelZh: Record<Discipline, string> = {
-  singles: "单打",
-  doubles: "双打",
-  mixed: "混双",
 };
 
 const styleLabel: Record<PlayStyle, string> = {
@@ -60,22 +47,14 @@ const styleLabel: Record<PlayStyle, string> = {
   smash_heavy: "Smash-heavy",
 };
 
-const styleLabelZh: Record<PlayStyle, string> = {
-  offensive: "进攻",
-  balanced: "均衡",
-  defensive: "防守",
-  front_court: "网前",
-  smash_heavy: "重杀",
-};
-
 export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   const router = useRouter();
   const { profile, setProfile } = useProfile();
   const [step, setStep] = useState(0);
   const copy = t(locale).quiz;
-  const levels = locale === "zh" ? levelLabelZh : levelLabel;
-  const disciplines = locale === "zh" ? discLabelZh : discLabel;
-  const styles = locale === "zh" ? styleLabelZh : styleLabel;
+  const levels = levelLabel;
+  const disciplines = discLabel;
+  const styles = styleLabel;
 
   const progress = useMemo(
     () => Math.round(((step + 1) / STEPS) * 100),
@@ -118,9 +97,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
         />
       </div>
       <p className="text-sm text-[var(--color-muted)]">
-        {locale === "zh"
-          ? `${copy.step} ${step + 1} ${copy.of} ${STEPS}`
-          : `${copy.step} ${step + 1} ${copy.of} ${STEPS}`}
+        {`${copy.step} ${step + 1} ${copy.of} ${STEPS}`}
       </p>
 
       {step === 0 && (
@@ -132,9 +109,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
 
           <label className="block text-sm">
             <span className="text-[var(--color-muted)]">
-              {locale === "zh"
-                ? "你所在国家/地区的评级体系"
-                : "Your country / rating system"}
+              {"Your country / rating system"}
             </span>
             <select
               className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2 text-[var(--text)]"
@@ -151,7 +126,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
             >
               {COUNTRY_LIST.map((c) => (
                 <option key={c.code} value={c.code}>
-                  {locale === "zh" ? c.nameZh : c.nameEn}
+                  {c.nameEn}
                 </option>
               ))}
             </select>
@@ -163,7 +138,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
             return (
               <>
                 <p className="text-xs text-[var(--color-muted)]">
-                  {locale === "zh" ? system.systemZh : system.systemEn}
+                  {system.systemEn}
                 </p>
                 <div className="flex flex-col gap-2">
                   {system.options.map((opt) => {
@@ -196,7 +171,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                         }`}
                       >
                         <span className="font-medium">
-                          {locale === "zh" ? opt.labelZh : opt.labelEn}
+                          {opt.labelEn}
                         </span>
                         {code !== "GENERIC" && (
                           <span className="ml-2 text-xs text-[var(--color-muted)]">
@@ -208,7 +183,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   })}
                 </div>
                 <p className="text-xs text-[var(--color-muted)]">
-                  {locale === "zh" ? system.noteZh : system.noteEn}
+                  {system.noteEn}
                 </p>
               </>
             );
@@ -304,11 +279,11 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           </p>
           {(
             [
-              ["racket", locale === "zh" ? "球拍" : "Racket"],
-              ["shoes", locale === "zh" ? "球鞋" : "Shoes"],
-              ["string", locale === "zh" ? "球线" : "String"],
-              ["grip", locale === "zh" ? "手胶（即将推出）" : "Grip (soon)"],
-              ["bag", locale === "zh" ? "球包" : "Bag"],
+              ["racket", "Racket"],
+              ["shoes", "Shoes"],
+              ["string", "String"],
+              ["grip", "Grip (soon)"],
+              ["bag", "Bag"],
             ] as [EquipmentCategory, string][]
           ).map(([id, label]) => {
             const live = LIVE_CATEGORIES.includes(id);

@@ -1,57 +1,50 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { CookieSettingsLink } from "@/components/CookieSettings";
-import { buildLocalizedPath, localeFromPath } from "@/lib/locale";
-import { t } from "@/lib/i18n";
 
-type FooterColumn = { heading: string; links: { label: string; path: string }[] };
+type FooterColumn = {
+  heading: string;
+  links: { label: string; path: string }[];
+};
+
+const COLUMNS: FooterColumn[] = [
+  {
+    heading: "Find gear",
+    links: [
+      { label: "Finder", path: "/quiz/" },
+      { label: "Compare", path: "/compare/" },
+      { label: "Brands", path: "/brands/" },
+      { label: "Research", path: "/research/" },
+    ],
+  },
+  {
+    heading: "Read",
+    links: [
+      { label: "Blog", path: "/blog/" },
+      { label: "Guides", path: "/guides/" },
+      { label: "Methodology", path: "/methodology/" },
+      { label: "Sources", path: "/sources/" },
+    ],
+  },
+  {
+    heading: "About",
+    links: [
+      { label: "About", path: "/about/" },
+      { label: "Contact", path: "/contact/" },
+      { label: "Security", path: "/security/" },
+    ],
+  },
+  {
+    heading: "Legal",
+    links: [
+      { label: "Privacy", path: "/privacy/" },
+      { label: "Terms", path: "/terms/" },
+      { label: "Cookies", path: "/cookies/" },
+      { label: "Source policy", path: "/source-policy/" },
+    ],
+  },
+];
 
 export function SiteFooter() {
-  const locale = localeFromPath(usePathname());
-  const copy = t(locale);
-  const localized = (path: string) => buildLocalizedPath(locale, path);
-  const isZh = locale === "zh";
-
-  const columns: FooterColumn[] = [
-    {
-      heading: isZh ? "推荐" : "Find gear",
-      links: [
-        { label: copy.nav.finder, path: "/quiz/" },
-        { label: isZh ? "对比" : "Compare", path: "/compare/" },
-        { label: isZh ? "覆盖品牌" : "Brands", path: "/brands/" },
-        { label: isZh ? "调研" : "Research", path: "/research/" },
-      ],
-    },
-    {
-      heading: isZh ? "内容" : "Read",
-      links: [
-        { label: copy.nav.blog, path: "/blog/" },
-        { label: isZh ? "指南" : "Guides", path: "/guides/" },
-        { label: copy.footer.methodology, path: "/methodology/" },
-        { label: isZh ? "信息来源" : "Sources", path: "/sources/" },
-      ],
-    },
-    {
-      heading: isZh ? "了解" : "About",
-      links: [
-        { label: isZh ? "关于" : "About", path: "/about/" },
-        { label: isZh ? "联系" : "Contact", path: "/contact/" },
-        { label: isZh ? "安全" : "Security", path: "/security/" },
-      ],
-    },
-    {
-      heading: isZh ? "法律" : "Legal",
-      links: [
-        { label: isZh ? "隐私" : "Privacy", path: "/privacy/" },
-        { label: isZh ? "条款" : "Terms", path: "/terms/" },
-        { label: isZh ? "Cookie" : "Cookies", path: "/cookies/" },
-        { label: isZh ? "来源政策" : "Source policy", path: "/source-policy/" },
-      ],
-    },
-  ];
-
   return (
     <footer className="mt-auto border-t border-[color:var(--line)] py-16">
       <div className="layout-band max-w-6xl">
@@ -61,11 +54,12 @@ export function SiteFooter() {
               IntoBadminton
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-[var(--color-muted)]">
-              {copy.footer.summary}
+              Curated equipment suggestions for badminton players. Not medical
+              advice; always try before you buy when possible.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {columns.map((col) => (
+            {COLUMNS.map((col) => (
               <div key={col.heading} className="text-sm">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
                   {col.heading}
@@ -74,7 +68,7 @@ export function SiteFooter() {
                   {col.links.map((l) => (
                     <li key={l.path}>
                       <Link
-                        href={localized(l.path)}
+                        href={l.path}
                         className="text-[var(--color-muted)] transition-colors hover:text-[var(--text)]"
                       >
                         {l.label}
@@ -88,7 +82,8 @@ export function SiteFooter() {
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-[color:var(--line)] pt-6 text-xs text-[var(--color-subtle)]">
           <p>
-            © {new Date().getFullYear()} IntoBadminton · {isZh ? "装备建议仅供参考" : "Equipment is personal; results are informational."}
+            © {new Date().getFullYear()} IntoBadminton · Equipment is personal;
+            results are informational.
           </p>
           <CookieSettingsLink />
         </div>

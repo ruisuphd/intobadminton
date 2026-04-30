@@ -36,14 +36,14 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
         <p className="mt-2 text-[var(--color-muted)]">{copy.subtitle}</p>
         {compareIds.length === 0 ? (
           <p className="mt-8 text-sm text-[var(--color-muted)]">
-            {locale === "zh" ? "从你的" : "Add gear from your"}{" "}
+            {"Add gear from your"}{" "}
             <Link
-              href={locale === "zh" ? "/zh/results/" : "/en/results/"}
+              href={"/en/results/"}
               className="text-[var(--color-accent)] underline"
             >
-              {locale === "zh" ? "推荐结果" : "results"}
+              {"results"}
             </Link>
-            {locale === "zh" ? "中加入装备。" : "."}
+            {"."}
           </p>
         ) : (
           <>
