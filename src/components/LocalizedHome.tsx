@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AdSlot } from "@/components/AdSlot";
-import { blogArticles } from "@/lib/blog";
+import {
+  articlesByDateDesc,
+  blogArticles,
+  CATEGORY_LABELS,
+  readingTimeMinutes,
+} from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
@@ -10,14 +15,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = t(locale);
   const localized = (path: string) => buildLocalizedPath(locale, path);
-  const featuredSlugs = [
-    "used-racket-depreciation",
-    "badminton-string-selector",
-    "badminton-shoe-fit-stability",
-  ];
-  const latest = blogArticles[locale].filter((article) =>
-    featuredSlugs.includes(article.slug)
-  );
+  // Take the 3 newest articles by updatedAt for the home "Latest reviews" strip.
+  const latest = articlesByDateDesc(blogArticles[locale]).slice(0, 3);
 
   return (
     <main className="flex-1">
@@ -134,9 +133,21 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                   href={localized(`/blog/${article.slug}/`)}
                   className="card card-interactive p-6 block"
                 >
-                  <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-                    {article.updatedAt}
-                  </p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="chip">
+                      {CATEGORY_LABELS[article.category]}
+                    </span>
+                    <span className="text-xs text-[var(--color-subtle)]">
+                      {readingTimeMinutes(article)} min read
+                    </span>
+                    <span className="text-xs text-[var(--color-subtle)]">·</span>
+                    <time
+                      className="text-xs text-[var(--color-subtle)]"
+                      dateTime={article.updatedAt}
+                    >
+                      {article.updatedAt}
+                    </time>
+                  </div>
                   <h3 className="mt-3 text-lg font-semibold text-[var(--text)]">
                     {article.title}
                   </h3>
