@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
 import {
   articlesByDateDesc,
   blogArticles,
@@ -328,13 +327,6 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
               </details>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="border-t border-[color:var(--line)] py-16 lg:py-20">
-        <div className="layout-band max-w-3xl">
-          <NewsletterSignup locale={locale} />
         </div>
       </section>
 
