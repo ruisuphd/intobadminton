@@ -336,50 +336,57 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
               }}
             />
           </label>
-          <label className="block text-sm">
-            <span className="text-[var(--color-muted)]">Weight (kg)</span>
-            <input
-              type="number"
-              min={30}
-              max={150}
-              className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2"
-              value={profile.body.weightKg ?? ""}
-              onChange={(e) => {
-                const v = e.target.value;
-                setProfile((p) => ({
-                  ...p,
-                  body: {
-                    ...p.body,
-                    weightKg: v === "" ? undefined : Number(v),
-                  },
-                }));
-              }}
-            />
-          </label>
-          <div>
-            <p className="text-sm text-[var(--color-muted)]">Foot width</p>
-            <div className="mt-1 flex flex-wrap gap-2">
-              {FOOT_WIDTH.map((f) => (
-                <button
-                  type="button"
-                  key={f}
-                  onClick={() =>
-                    setProfile((p) => ({
-                      ...p,
-                      body: { ...p.body, footWidth: f },
-                    }))
-                  }
-                  className={`rounded-full px-3 py-1 text-xs ${
-                    profile.body.footWidth === f
-                      ? "bg-[var(--color-accent)] text-white"
-                      : "border border-[color:var(--line-strong)]"
-                  }`}
-                >
-                  {f}
-                </button>
-              ))}
+          {(profile.category === "shoes" || profile.category === "racket") && (
+            <label className="block text-sm">
+              <span className="text-[var(--color-muted)]">Body weight (kg)</span>
+              <input
+                type="number"
+                min={30}
+                max={150}
+                className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2"
+                value={profile.body.weightKg ?? ""}
+                onChange={(e) => {
+                  const v = e.target.value;
+                  setProfile((p) => ({
+                    ...p,
+                    body: {
+                      ...p.body,
+                      weightKg: v === "" ? undefined : Number(v),
+                    },
+                  }));
+                }}
+              />
+              <span className="mt-1 block text-xs text-[var(--color-subtle)]">
+                Used for shoe cushioning fit and swing-weight matching. Optional.
+              </span>
+            </label>
+          )}
+          {profile.category === "shoes" && (
+            <div>
+              <p className="text-sm text-[var(--color-muted)]">Foot width</p>
+              <div className="mt-1 flex flex-wrap gap-2">
+                {FOOT_WIDTH.map((f) => (
+                  <button
+                    type="button"
+                    key={f}
+                    onClick={() =>
+                      setProfile((p) => ({
+                        ...p,
+                        body: { ...p.body, footWidth: f },
+                      }))
+                    }
+                    className={`rounded-full px-3 py-1 text-xs ${
+                      profile.body.footWidth === f
+                        ? "bg-[var(--color-accent)] text-white"
+                        : "border border-[color:var(--line-strong)]"
+                    }`}
+                  >
+                    {f}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
           <div>
             <p className="text-sm text-[var(--color-muted)]">
               Joint comfort flags
@@ -420,6 +427,94 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
               })}
             </div>
           </div>
+          <details className="rounded-2xl bg-[color:var(--surface-muted)] p-4">
+            <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
+              Optional: tell us what you currently use
+            </summary>
+            <p className="mt-2 text-xs text-[var(--color-subtle)]">
+              We use this to flag upgrades and avoid recommending something
+              you already own. Skip any field — none are required.
+            </p>
+            <div className="mt-4 grid gap-3">
+              <label className="block text-sm">
+                <span className="text-[var(--color-muted)]">Current racket</span>
+                <input
+                  type="text"
+                  placeholder="e.g. Yonex Astrox 77 Pro"
+                  className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-white px-3 py-2"
+                  value={profile.context?.currentRacket ?? ""}
+                  onChange={(e) =>
+                    setProfile((p) => ({
+                      ...p,
+                      context: {
+                        ...(p.context ?? {}),
+                        currentRacket: e.target.value || undefined,
+                      },
+                    }))
+                  }
+                />
+              </label>
+              <label className="block text-sm">
+                <span className="text-[var(--color-muted)]">Current strings</span>
+                <input
+                  type="text"
+                  placeholder="e.g. BG80 / Aerobite / Li-Ning No.5"
+                  className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-white px-3 py-2"
+                  value={profile.context?.currentStrings ?? ""}
+                  onChange={(e) =>
+                    setProfile((p) => ({
+                      ...p,
+                      context: {
+                        ...(p.context ?? {}),
+                        currentStrings: e.target.value || undefined,
+                      },
+                    }))
+                  }
+                />
+              </label>
+              <label className="block text-sm">
+                <span className="text-[var(--color-muted)]">Current tension (lb)</span>
+                <input
+                  type="number"
+                  min={18}
+                  max={35}
+                  step={0.5}
+                  placeholder="e.g. 26"
+                  className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-white px-3 py-2"
+                  value={profile.context?.currentTensionLbs ?? ""}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    setProfile((p) => ({
+                      ...p,
+                      context: {
+                        ...(p.context ?? {}),
+                        currentTensionLbs:
+                          v === "" ? undefined : Number(v),
+                      },
+                    }));
+                  }}
+                />
+              </label>
+              <label className="block text-sm">
+                <span className="text-[var(--color-muted)]">Current shoes</span>
+                <input
+                  type="text"
+                  placeholder="e.g. Yonex Comfort Z3"
+                  className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-white px-3 py-2"
+                  value={profile.context?.currentShoes ?? ""}
+                  onChange={(e) =>
+                    setProfile((p) => ({
+                      ...p,
+                      context: {
+                        ...(p.context ?? {}),
+                        currentShoes: e.target.value || undefined,
+                      },
+                    }))
+                  }
+                />
+              </label>
+            </div>
+          </details>
           <button
             type="button"
             onClick={next}

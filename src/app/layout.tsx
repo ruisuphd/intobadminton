@@ -18,11 +18,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "IntoBadminton — equipment that fits your game",
+    default: "IntoBadminton — the most accurate badminton equipment matcher",
     template: "%s | IntoBadminton",
   },
   description:
-    "Level, style, and discipline-matched badminton equipment suggestions for rackets, strings, shoes, and bags.",
+    "Personalized badminton equipment recommendations matched to your level, playing style, body, and budget. Rackets, strings, shoes, bags, shuttles, and grips ranked with transparent scoring backed by manufacturer specs, cited community reviews, and on-court testing by a competitive player.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
   ),

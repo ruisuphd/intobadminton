@@ -18,9 +18,9 @@ export const messages = {
       methodology: "Methodology",
     },
     home: {
-      title: "Personalized badminton equipment finder",
+      title: "The most accurate badminton equipment matcher",
       subtitle:
-        "Tell us your level, playing style, discipline, body comfort needs, and budget. IntoBadminton ranks rackets, strings, shoes, and bags with transparent specs, review signals, and resale context.",
+        "Tell us your level, playing style, discipline, body comfort needs, and budget. We rank rackets, strings, shoes, bags, shuttles, and grips with transparent scoring drawn from manufacturer specs, cited community reviews, and on-court testing — so you stop guessing and start playing.",
       start: "Start finder",
       guides: "Read guides",
       proof: [

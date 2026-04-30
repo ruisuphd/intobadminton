@@ -49,6 +49,21 @@ export type BodyProfile = {
   injuryFlags: InjuryFlag[];
 };
 
+/**
+ * Optional player-context fields. Captured in the quiz to enrich recommendations
+ * (e.g., "you're upgrading from X — here's what changes"). Not required.
+ */
+export type PlayerContext = {
+  /** Free-form: "Yonex Astrox 88S Pro 2024" or "Halbertec 8000". */
+  currentRacket?: string;
+  /** Free-form: "BG80", "Aerobite", "Li-Ning No.5". */
+  currentStrings?: string;
+  /** Lbs. Number 18–32 typical. */
+  currentTensionLbs?: number;
+  /** Free-form: "Yonex Comfort Z3", "Mizuno Wave Claw 2". */
+  currentShoes?: string;
+};
+
 export type UserProfile = {
   level: SkillLevel | null;
   /** Optional ISO-style country code keyed in skill-levels.ts (e.g. "CN", "IE"). */
@@ -59,6 +74,8 @@ export type UserProfile = {
   styles: PlayStyle[];
   category: EquipmentCategory | null;
   body: BodyProfile;
+  /** Optional context: what the user currently uses. Not required. */
+  context?: PlayerContext;
 };
 
 export const defaultBodyProfile = (): BodyProfile => ({
@@ -73,4 +90,5 @@ export const defaultUserProfile = (): UserProfile => ({
   styles: [],
   category: "racket",
   body: defaultBodyProfile(),
+  context: {},
 });
