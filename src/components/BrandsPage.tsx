@@ -57,7 +57,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
     "@type": "ItemList",
     "@id": `${companyInfo.siteUrl}/${locale}/brands/#list`,
     name: c.hero,
-    inLanguage: locale === "zh" ? "zh-Hans" : "en",
+    inLanguage: "en",
     numberOfItems: brands.length,
     itemListElement: brands.map((b, i) => ({
       "@type": "ListItem",
@@ -67,7 +67,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
         "@id": `${companyInfo.siteUrl}/${locale}/brands/#${b.id}`,
         name: b.name,
         url: b.officialUrl,
-        description: locale === "zh" ? b.knownForZh : b.knownFor,
+        description: b.knownFor,
       },
     })),
   };
@@ -105,11 +105,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
                       <h3 className="text-xl font-semibold text-[var(--text)]">
                         {b.name}
-                        {locale === "zh" && (
-                          <span className="ml-2 text-base text-[var(--color-muted)]">
-                            {b.nameZh}
-                          </span>
-                        )}
+                        
                       </h3>
                       <a
                         href={b.officialUrl}
@@ -124,7 +120,7 @@ export function BrandsPage({ locale }: { locale: SiteLocale }) {
                       {c.founded} {b.founded} · {c.country} {b.country}
                     </p>
                     <p className="mt-3 text-sm text-[var(--color-muted)]">
-                      {locale === "zh" ? b.knownForZh : b.knownFor}
+                      {b.knownFor}
                     </p>
                     <div className="mt-4">
                       <p className="text-xs uppercase tracking-wide text-[var(--color-muted)]">

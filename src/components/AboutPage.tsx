@@ -56,53 +56,15 @@ const copyEn: Copy = {
   ctaLink: "/quiz/",
 };
 
-const copyZh: Copy = {
-  hero: "关于 IntoBadminton",
-  dek: "由一名仍在打比赛的球员搭建的装备推荐站。我们厌倦了在球拍前靠猜，于是把推荐逻辑公开化。",
-  founderHeading: "幕后是谁",
-  founderBody: [
-    "我是 Rui Su。童年在中国开始打球，移居爱尔兰后继续在 Maynooth 大学校队和都柏林多家俱乐部训练。曾接受前马来西亚国家队球员与前中国省队球员的指导，目前在爱尔兰联赛 Division 4 出战。",
-    "球场之外，我经营注册于新加坡的 Intonation Labs，主业是搭建落地的机器学习系统。IntoBadminton 是我一直想要的那种装备推荐工具：结构化的数据、可看见的推荐理由，以及对真正测试过装备的人的引用。",
-  ],
-  editorialHeading: "推荐是如何产生的",
-  editorialBody: [
-    "推荐分数会拆成五个具名因子：打法匹配、单/双打匹配、水平匹配、预算匹配以及身体舒适度匹配。详细权重写在方法页。",
-    "证据分三档。品牌官网规格是最强信号；编辑判断把规格翻译成实际手感；社区证据（BadmintonCentral、Reddit、中羽、YouTube 测评等）以注明来源的元数据摘要 + 链接形式呈现，绝不复制原文。",
-  ],
-  editorialPrinciples: [
-    {
-      title: "我们不抓取。",
-      body: "第三方评测以转写 + 链接 + 出处的方式引用。即便是翻译复制评测原文，也属于版权问题、违反 AdSense 政策，并会让推荐结果变成噪音。",
-    },
-    {
-      title: "置信度对你可见。",
-      body: "每张产品卡都会显示官方规格是否经过校验、编辑信号来自厂商材料还是独立测试，以及背后有多少条社区证据。低置信度的产品依然展示，但会标明。",
-    },
-    {
-      title: "推荐与商业分离。",
-      body: "展示广告以及未来的零售联盟链接都必须明示，不会悄悄改变匹配分。分数就是分数，赞助就是赞助。",
-    },
-  ],
-  monetizationHeading: "网站的资金来源",
-  monetizationBody: [
-    "在你同意非必要 Cookie 之后，IntoBadminton 会显示 Google AdSense 广告；默认关闭。我们将来可能加入零售联盟链接，会清楚标注，不会改变推荐顺序。",
-    "如果你想支持这个项目而不是看广告：把推荐工具分享给队友、提交产品数据修正，或者带着授权一同贡献一段你的真实评测。",
-  ],
-  contactHeading: "联系",
-  contactBody: `产品数据更正、版权与来源相关问题、隐私问题、推荐结果反馈，请联系 ${companyInfo.contactEmail}。提交时请尽量附上品牌、型号、地区和官方来源链接，可以加速处理。`,
-  cta: "开始使用推荐",
-  ctaLink: "/quiz/",
-};
-
 export function AboutPage({ locale }: { locale: SiteLocale }) {
-  const c = locale === "zh" ? copyZh : copyEn;
+  const c = copyEn;
 
   const aboutJsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "@id": `${companyInfo.siteUrl}/${locale}/about/#about`,
     name: c.hero,
-    inLanguage: locale === "zh" ? "zh-Hans" : "en",
+    inLanguage: "en",
     mainEntity: {
       "@type": "Person",
       name: companyInfo.founderName,

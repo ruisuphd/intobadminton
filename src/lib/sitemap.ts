@@ -1,8 +1,3 @@
-import {
-  localizedRoutesFor,
-  siteLocales,
-  type SiteLocale,
-} from "@/lib/locale";
 import { blogSlugs } from "@/lib/blog";
 
 export type SitemapEntry = {
@@ -45,7 +40,7 @@ const canonicalRoutes = [
 ] as const;
 
 function routePriority(path: string): number {
-  if (path === "/" || path === "/en/" || path === "/zh/") return 1;
+  if (path === "/") return 1;
   if (path.includes("/quiz/") || path.includes("/guides/")) return 0.8;
   if (path.includes("/privacy/") || path.includes("/terms/")) return 0.3;
   return 0.6;
@@ -72,10 +67,6 @@ function entry(origin: string, path: string): SitemapEntry {
 export function sitemapEntries(
   origin = process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
 ): SitemapEntry[] {
-  const localized = siteLocales.flatMap((locale: SiteLocale) => [
-    ...localizedRoutesFor(locale),
-    ...blogSlugs.map((slug) => `/${locale}/blog/${slug}/`),
-  ]);
-  const paths = [...canonicalRoutes, ...localized];
+  const paths = [...canonicalRoutes];
   return Array.from(new Set(paths)).map((path) => entry(origin, path));
 }

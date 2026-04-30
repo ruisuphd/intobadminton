@@ -107,51 +107,6 @@ const copyEn: Copy = {
   ctaLink: "/contact/",
 };
 
-const copyZh: Copy = {
-  hero: "信息来源与编辑流程",
-  dek: "我们从哪里获取数据、如何交叉验证、以及让我们远离 AdSense 所谓“低质或抄袭内容”的版权模型。",
-  philosophyHeading: "我们的立场",
-  philosophyBody: [
-    "装备推荐的好坏只取决于背后的证据。一条评测——即使出自你信任的球友——也只描述了某一种身体条件、某一种技术、某一种线磅和某一种球速。推荐站要做的，是把许多条这样的描述压缩成你可以信任的结论。",
-    "因此我们的工作是“广泛阅读”而不是“批量复制”。下面是我们读得最多的几类来源，以及引用它们时遵循的规则。",
-  ],
-  triangulationHeading: "我们如何交叉验证",
-  triangulationBody: "对每一款产品，我们至少要交叉至少三类证据，才会给出置信度标签。",
-  triangulationSteps: [
-    {
-      title: "1. 厂商官方规格",
-      body: "重量等级、平衡点、中杆硬度、线磅范围、鞋楦、外底材质。需要校验的产品卡都会附上厂商官网链接。",
-    },
-    {
-      title: "2. 独立视频与文字评测",
-      body: "BadmintonCentral、中羽、Reddit 与 YouTube 测评者（见下表）。我们以注明来源 + 转写 + 外链方式引用，绝不复制原文。",
-    },
-    {
-      title: "3. 球员视角的语境",
-      body: "对一名 Div 4 双打球员、对一名拉到 28 磅的进阶单打球员，这件装备表现如何？凡是创始人能以自身打法语境补充的，都会作为“编辑信号”附在引用之外。",
-    },
-  ],
-  rightsHeading: "归属与版权",
-  rightsBody: [
-    "我们的博客文章、产品编辑笔记和推荐证据，参考独立评测者、厂商官网规格以及我们自己的实战测试。涉及社区来源时，我们以自己的语言进行转述并附上外链；不会原文复制或翻译评测原文，文章正文中也不会按论坛 ID 标注个人评测者 —— 想看完整原文的读者可以点击外链查看。",
-    "我们经常阅读的主要社区来源：badmintoncn.com（中羽在线论坛装备讨论）、Reddit r/badminton、BadmintonCentral 论坛、与 BadmintonCN 相关的 YouTube 评测频道、Tieba 羽毛球吧。再加上厂商官网规格、BWF 赛事报道和零售端测量数据。",
-    "如果你是作者、论坛用户或平台方，希望我们删除或修改任何引用、转述或外链，请将页面 URL 和具体修改内容发送至 " +
-      companyInfo.contactEmail +
-      "，我们会在 5 个工作日内回复，绝不与可验证身份的原作者就删除请求进行争议。",
-  ],
-  sectionHeadings: {
-    official: "厂商官方资料",
-    community: "社区 / 论坛资料",
-    video: "视频测评频道",
-    event: "赛事与管理机构",
-  },
-  columns: { source: "来源", region: "区域", use: "我们用来做什么" },
-  reportHeading: "发现错误引用？",
-  reportBody: "请告诉我们。提交时请附上页面 URL、来源链接，以及问题描述（链接失效、归属错误、过期等）。",
-  cta: "发送修正",
-  ctaLink: "/contact/",
-};
-
 function SourceTable({
   title,
   rows,
@@ -203,7 +158,7 @@ function SourceTable({
 }
 
 export function SourcesPage({ locale }: { locale: SiteLocale }) {
-  const c = locale === "zh" ? copyZh : copyEn;
+  const c = copyEn;
 
   return (
     <main className="flex-1 py-16">

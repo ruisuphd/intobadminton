@@ -29,21 +29,9 @@ const copyEn: Copy = {
     "Newsletter is not yet wired up. Configure NEXT_PUBLIC_BUTTONDOWN_USERNAME to enable.",
 };
 
-const copyZh: Copy = {
-  heading: "每月装备 + BWF 简报",
-  blurb: "每月一封短信：新拍发布、穿线优惠、值得看的 BWF 赛事。无垃圾邮件，一键退订。",
-  placeholder: "you@example.com",
-  submit: "订阅",
-  privacy:
-    "邮件由 Buttondown 发送，你的邮箱仅用于发送简报。详见隐私页。",
-  thanks: "已收到 — 请前往邮箱确认。",
-  notConfigured:
-    "通讯订阅尚未启用。请配置 NEXT_PUBLIC_BUTTONDOWN_USERNAME 以开启。",
-};
-
 export function NewsletterSignup({ locale = "en" }: { locale?: SiteLocale }) {
   const [submitted, setSubmitted] = useState(false);
-  const c = locale === "zh" ? copyZh : copyEn;
+  const c = copyEn;
   const configured = Boolean(BUTTONDOWN_USERNAME);
 
   if (!configured) {

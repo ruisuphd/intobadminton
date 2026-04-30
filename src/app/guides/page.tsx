@@ -50,9 +50,7 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
           {copy.subtitle}
         </p>
         <div className="mt-8 card p-5 text-sm text-[var(--color-muted)]">
-          {locale === "zh"
-            ? "指南优先使用原创解释和官方规格链接。第三方论坛或社区内容只作为主题摘要和链接，不复制原文。"
-            : "Guides prioritize original analysis and official spec links. Third-party community sources are used only as theme summaries and links, not copied review text."}
+          {"Guides prioritize original analysis and official spec links. Third-party community sources are used only as theme summaries and links, not copied review text."}
         </div>
         <ul className="mt-10 space-y-4">
           {guides.map((g) => (
