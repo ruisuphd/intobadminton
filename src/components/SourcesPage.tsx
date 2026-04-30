@@ -85,12 +85,13 @@ const copyEn: Copy = {
       body: "How does this product behave for a Div 4 doubles player? An advanced singles player on 28 lb tension? Where the founder's playing context applies, we add it as 'editor signal' alongside the cited reviews.",
     },
   ],
-  rightsHeading: "Rights and copyright",
+  rightsHeading: "Rights, attribution, and copyright",
   rightsBody: [
-    "We do not copy review text, even with translation. Forum and review content remains the property of the authors and platforms; we use metadata summaries and links.",
-    "If you are an author or platform and want a citation removed or amended, email " +
+    "Our blog articles, product editor notes, and recommendation evidence draw on independent reviewers, manufacturer official spec pages, and our own on-court testing. Where community sources inform a finding, we paraphrase the substance, write in our own voice, and link out. We do not republish or translate review prose, and we do not credit individual community-forum reviewers by name in article bodies — readers who want the full original review can follow the link.",
+    "Major community sources we read regularly: badmintoncn.com (中羽在线 forum threads, especially equipment reviews), Reddit r/badminton, BadmintonCentral forum, BadmintonCN-affiliated YouTube reviewers, plus Tieba 羽毛球吧. Manufacturer spec pages, BWF tournament event coverage, and retailer-side measurement data round out the input.",
+    "If you are an author, forum user, or platform and want any citation, paraphrase, or link on our site removed or amended, email " +
       companyInfo.contactEmail +
-      " with the page URL and the change requested. We respond within five business days.",
+      " with the page URL and the change requested. We respond within five business days. We will not contest a takedown request from a verifiable original author.",
   ],
   sectionHeadings: {
     official: "Manufacturer official sources",
@@ -130,12 +131,13 @@ const copyZh: Copy = {
       body: "对一名 Div 4 双打球员、对一名拉到 28 磅的进阶单打球员，这件装备表现如何？凡是创始人能以自身打法语境补充的，都会作为“编辑信号”附在引用之外。",
     },
   ],
-  rightsHeading: "版权与来源",
+  rightsHeading: "归属与版权",
   rightsBody: [
-    "我们不复制评测原文，即便经过翻译。论坛与评测内容的版权属于原作者与平台；我们只保存元数据摘要 + 外链。",
-    "如果你是作者或平台，希望某条引用被删除或修正，请将页面 URL 与修正内容发送至 " +
+    "我们的博客文章、产品编辑笔记和推荐证据，参考独立评测者、厂商官网规格以及我们自己的实战测试。涉及社区来源时，我们以自己的语言进行转述并附上外链；不会原文复制或翻译评测原文，文章正文中也不会按论坛 ID 标注个人评测者 —— 想看完整原文的读者可以点击外链查看。",
+    "我们经常阅读的主要社区来源：badmintoncn.com（中羽在线论坛装备讨论）、Reddit r/badminton、BadmintonCentral 论坛、与 BadmintonCN 相关的 YouTube 评测频道、Tieba 羽毛球吧。再加上厂商官网规格、BWF 赛事报道和零售端测量数据。",
+    "如果你是作者、论坛用户或平台方，希望我们删除或修改任何引用、转述或外链，请将页面 URL 和具体修改内容发送至 " +
       companyInfo.contactEmail +
-      "，我们会在 5 个工作日内回复。",
+      "，我们会在 5 个工作日内回复，绝不与可验证身份的原作者就删除请求进行争议。",
   ],
   sectionHeadings: {
     official: "厂商官方资料",
