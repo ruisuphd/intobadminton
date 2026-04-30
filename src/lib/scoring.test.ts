@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { scoreProductCatalog } from "@/lib/scoring";
 import { defaultUserProfile, type UserProfile } from "@/lib/taxonomy";
+import type { ScoredProduct, ScoredRacket } from "@/lib/types/product";
 
 function profile(p: Partial<UserProfile>): UserProfile {
   return {
@@ -11,6 +12,12 @@ function profile(p: Partial<UserProfile>): UserProfile {
       ...(p.body ?? {}),
     },
   };
+}
+
+function rackets(rows: ScoredProduct[]): ScoredRacket[] {
+  return rows.filter(
+    (r): r is ScoredRacket => r.category === "racket"
+  );
 }
 
 describe("scoreProductCatalog", () => {
@@ -86,9 +93,10 @@ describe("scoreProductCatalog", () => {
       })
     );
 
-    expect(rows.slice(0, 3).some((r) => r.headWeight === "head_light")).toBe(
-      true
-    );
+    const racketRows = rackets(rows);
+    expect(
+      racketRows.slice(0, 3).some((r) => r.headWeight === "head_light")
+    ).toBe(true);
     expect(rows[0]?.reasons.some((r) => r.code.includes("DOUBLES"))).toBe(true);
   });
 
@@ -103,7 +111,8 @@ describe("scoreProductCatalog", () => {
       })
     );
 
-    expect(rows[0]?.headWeight).toBe("head_heavy");
+    const racketRows = rackets(rows);
+    expect(racketRows[0]?.headWeight).toBe("head_heavy");
     expect(rows[0]?.reasons.some((r) => r.code.includes("OFFENSE"))).toBe(
       true
     );
@@ -120,7 +129,7 @@ describe("scoreProductCatalog", () => {
       })
     );
 
-    expect(rows[0]?.shaftFlex).not.toBe("extra_stiff");
+    expect(rackets(rows)[0]?.shaftFlex).not.toBe("extra_stiff");
   });
 
   it("recommends strings with tension and durability tradeoffs", () => {
