@@ -203,7 +203,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Frame: narrower D, larger S",
-          body: "The two frames are no longer identical. The 88D Pro 2024 has a slightly narrower frame than the original camel-gold version — strung at the same tension, you get higher net pressure and a stronger pocketing sensation. The 88S Pro frame is a step larger again, with a slightly shorter handle and overall length. Multiple BadmintonCN measurements (chengzhen, April 2024) put 4U 88D Pro samples around 84g unstrung with strung weights between 89.5g and 91.1g and balance points 305-308mm. A 4U 88S Pro sample measured 84.3g unstrung, 89.5g strung at 80 string and 26-28 lb, balance 301mm.",
+          body: "The two frames are no longer identical. The 88D Pro 2024 has a slightly narrower frame than the original camel-gold version — strung at the same tension, you get higher net pressure and a stronger pocketing sensation. The 88S Pro frame is a step larger again, with a slightly shorter handle and overall length. Multiple BadmintonCN measurements (BadmintonCN reviewers, April 2024) put 4U 88D Pro samples around 84g unstrung with strung weights between 89.5g and 91.1g and balance points 305-308mm. A 4U 88S Pro sample measured 84.3g unstrung, 89.5g strung at 80 string and 26-28 lb, balance 301mm.",
         },
         {
           heading: "Shaft hardness: the 88D is stiffer",
@@ -221,10 +221,6 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           heading: "Who should buy which",
           body: "Buy the 88D Pro 2024 if: you compete in men's doubles back court, you smash often as a primary attack pattern, your shoulder and core are conditioned for stiff-shaft frames, and you have time on court to adapt. Buy the 88S Pro 2024 if: you play mixed doubles or front-court doubles, you organize rallies through placement rather than raw smash, you valued the control feel of the 77 Pro and want a stiffer shaft tier above it, or you need one frame that can do both singles and doubles competently. Either way, plan to spend a few sessions adjusting your timing — both are pro-tier shafts.",
         },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review threads April 2024 and January 2026), Yonex official spec pages for the Astrox 88D Pro 2024 and 88S Pro 2024, BadmintonHQ and BadmintonWarehouse retailer specs, plus founder firsthand testing. Original measurements remain chengzhen's; we paraphrase the findings and link out, not republish. See the IntoBadminton Sources page for our full editorial process.",
-        },
       ],
       cta: "Run the finder if you are choosing your next 88 Pro — we score it against your level, role, and budget.",
     },
@@ -240,27 +236,23 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Nanoflare 700: the sugar-water front-court racket",
-          body: "The non-Pro Nanoflare 700 is a defining example of what Chinese reviewers call a sugar-water (糖水) racket: easy to drive, broad audience, soft-medium shaft, head-light feel. BadmintonCN reviewer chengzhen describes it as the racket his wife switched to from a Yonex NS9000s and stuck with — and the NS9000s is no joke. It rewards a fast swing without demanding a powerful one, and the 5U variant is particularly approachable for beginners and players moving up from entry frames. The trade-off: shaft feedback is less clear, and the bend point sits closer to the handle, which makes downward pressure on smashes harder to apply.",
+          body: "The non-Pro Nanoflare 700 is a defining example of what Chinese reviewers call a sugar-water (糖水) racket: easy to drive, broad audience, soft-medium shaft, head-light feel. BadmintonCN reviewers describes it as the racket his wife switched to from a Yonex NS9000s and stuck with — and the NS9000s is no joke. It rewards a fast swing without demanding a powerful one, and the 5U variant is particularly approachable for beginners and players moving up from entry frames. The trade-off: shaft feedback is less clear, and the bend point sits closer to the handle, which makes downward pressure on smashes harder to apply.",
         },
         {
           heading: "Nanoflare 700 Pro: the Pro upgrade that does not punish you",
-          body: "The 2024 Nanoflare 700 Pro is technically only marginally stiffer than the regular 700 — chengzhen describes the shaft difference as one tier at most — but Yonex moved the bend point higher and added the SF Filter and enhanced Sonic Flare frame system. The result: clearer feedback, faster snapback, easier high clears, and noticeably better smash confidence than the regular 700. Founder firsthand (Rui, Div 4 IE): the 700 Pro is genuinely fast — pair it with thinner strings like Aerobite or BG66 Ultimax to maximize the speed advantage rather than thicker durability strings.",
+          body: "The 2024 Nanoflare 700 Pro is technically only marginally stiffer than the regular 700 — BadmintonCN reviewers describe the shaft difference as one tier at most — but Yonex moved the bend point higher and added the SF Filter and enhanced Sonic Flare frame system. The result: clearer feedback, faster snapback, easier high clears, and noticeably better smash confidence than the regular 700. Founder firsthand (Rui, Div 4 IE): the 700 Pro is genuinely fast — pair it with thinner strings like Aerobite or BG66 Ultimax to maximize the speed advantage rather than thicker durability strings.",
         },
         {
           heading: "Sample variance is real",
-          body: "If you are picking a Nanoflare 700 Pro from a stack at a stringer, weigh it. chengzhen weighed three 4U/G5 samples and got 83.6g, 84.8g, and 85.8g unstrung — over 2g of variance from the same SKU. He kept the lightest sample. Even more interesting: he reports that lighter sample with a lower balance point still smashes harder than a heavier non-Pro Nanoflare 700, suggesting that in this line, shaft hardness matters more than gram-level mass for attack quality. This is also a reminder that aggregate review-based recommendations cannot tell you exactly how the racket in your hand will feel.",
+          body: "If you are picking a Nanoflare 700 Pro from a stack at a stringer, weigh it. the BadmintonCN reviewer's weighed three 4U/G5 samples and got 83.6g, 84.8g, and 85.8g unstrung — over 2g of variance from the same SKU. He kept the lightest sample. Even more interesting: he reports that lighter sample with a lower balance point still smashes harder than a heavier non-Pro Nanoflare 700, suggesting that in this line, shaft hardness matters more than gram-level mass for attack quality. This is also a reminder that aggregate review-based recommendations cannot tell you exactly how the racket in your hand will feel.",
         },
         {
           heading: "Nanoflare 1000Z: the hexagonal warrior",
-          body: "The 1000Z is the flagship and a different kind of racket. Small frame, hard shaft (around two tiers stiffer than the 700 Pro shaft), DR carbon for a touch of pocketing feel, and the best end-speed and pointing accuracy of the Nanoflare line. chengzhen calls it the most balanced of all speed rackets — no clear weakness, T0-tier alongside the Victor Auraspeed 100X SE. Founder firsthand (Rui, Div 4 IE): I currently play the 1000Z as my men's doubles racket. It is extremely fast on drives and defense, but power is harder to generate than from a comparable head-heavy frame. With good timing and strength, it is the doubles weapon. Without those, it can feel lifeless.",
+          body: "The 1000Z is the flagship and a different kind of racket. Small frame, hard shaft (around two tiers stiffer than the 700 Pro shaft), DR carbon for a touch of pocketing feel, and the best end-speed and pointing accuracy of the Nanoflare line. BadmintonCN reviewers call it the most balanced of all speed rackets — no clear weakness, T0-tier alongside the Victor Auraspeed 100X SE. Founder firsthand (Rui, Div 4 IE): I currently play the 1000Z as my men's doubles racket. It is extremely fast on drives and defense, but power is harder to generate than from a comparable head-heavy frame. With good timing and strength, it is the doubles weapon. Without those, it can feel lifeless.",
         },
         {
           heading: "Which one is for you",
           body: "Pick the Nanoflare 700 if you are upgrading from an entry-level frame, you are a player whose main need is a relaxed front-court doubles or mixed racket, or you want a forgiving frame to share with someone less experienced. Pick the Nanoflare 700 Pro if you are an intermediate player who wants the Nanoflare feel with sharper feedback and more attack. Pick the 1000Z if you are a competitive doubles player with the technique to load a stiff shaft, who prizes drive speed and counter-attack over raw rear-court smash. If raw smash is your thing, leave this whole line and look at the Astrox 88D Pro 2024 instead.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread October 2024), Yonex official spec pages for the Nanoflare 700, 700 Pro, and 1000Z, NYDHI and BadmintonWarehouse retailer specs, plus founder firsthand testing of the 700, 700 Pro, and 1000Z. Original measurements remain chengzhen's; we paraphrase findings and link out.",
         },
       ],
       cta: "Use the finder to compare any two of these rackets head-to-head against your level, role, and budget.",
@@ -285,7 +277,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Auraspeed HS Plus: a hardened Hayabusa",
-          body: "Victor's Auraspeed HS Plus uses WES 3.0 shaft tech and Victor's hardest production shaft tier. chengzhen describes it as a hardened version of the Hayabusa SE Black Gold: harder shaft, faster off-string, more rigid feedback. Used by Hendra Setiawan and H.S. Prannoy. A 4U sample measures 88.9g with the underbase removed, balance 304mm — almost identical mass and balance to a 4U Nanoflare 1000Z. But the contact feel is different: more transparent and force-driven where the 1000Z has a slight pocketing pause. Sweet spot is small. Off-sweet-spot defense is weaker than the 100XSE.",
+          body: "Victor's Auraspeed HS Plus uses WES 3.0 shaft tech and Victor's hardest production shaft tier. BadmintonCN reviewers describe it as a hardened version of the Hayabusa SE Black Gold: harder shaft, faster off-string, more rigid feedback. Used by Hendra Setiawan and H.S. Prannoy. A 4U sample measures 88.9g with the underbase removed, balance 304mm — almost identical mass and balance to a 4U Nanoflare 1000Z. But the contact feel is different: more transparent and force-driven where the 1000Z has a slight pocketing pause. Sweet spot is small. Off-sweet-spot defense is weaker than the 100XSE.",
         },
         {
           heading: "Pick by what you actually do",
@@ -293,11 +285,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "What about price and entry threshold",
-          body: "Both rackets sit in the 240-280 USD range new in most markets, with the 800 Pro typically slightly more expensive. Neither is a sugar-water frame: chengzhen, who plays 100X SE, 1000Z, and similar speed rackets daily, calls the HS Plus harder to drive than any of his usual rotation. If you are a Division 5/6 Irish-tier or 中羽 4-ish (BadmintonCN) player, you will likely benefit more from a 700 Pro or Halbertec 8000 first, and graduate to one of these only when your timing is reliable. There is no shame in waiting.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread July 2024), Yonex official spec page for the Nanoflare 800 Pro, Victor official spec page for the Auraspeed HS Plus, ckyew.com Z-shoes and racket comparison content, NYDHI and BadmintonWarehouse retailer specs.",
+          body: "Both rackets sit in the 240-280 USD range new in most markets, with the 800 Pro typically slightly more expensive. Neither is a sugar-water frame: BadmintonCN reviewers, who plays 100X SE, 1000Z, and similar speed rackets daily, calls the HS Plus harder to drive than any of his usual rotation. If you are a Division 5/6 Irish-tier or 中羽 4-ish (BadmintonCN) player, you will likely benefit more from a 700 Pro or Halbertec 8000 first, and graduate to one of these only when your timing is reliable. There is no shame in waiting.",
         },
       ],
       cta: "Compare these two side by side in our compare tool with your full profile.",
@@ -314,7 +302,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Specs and stiffness",
-          body: "BadmintonCN reviewer chengzhen measured a 4U/G6 Bladex 800 Speed at 85.2g unstrung, 90.8g with grip and string (underbase still on), balance 299mm. A 3U/G5 came in at 89g unstrung, 91.4g with the underbase removed, balance 302mm. On the Yuan-style hardness scale (lower = stiffer), the 800 Speed measures 7.83 — much stiffer than the previous Bladex 800 New (8.58). Frame torsion measures 18.72 — the best of any speed racket tested in chengzhen's roundup, even better than the 99 Pro 2 at 19.87. The frame uses M46X carbon to balance stiffness with elasticity.",
+          body: "BadmintonCN reviewers measured a 4U/G6 Bladex 800 Speed at 85.2g unstrung, 90.8g with grip and string (underbase still on), balance 299mm. A 3U/G5 came in at 89g unstrung, 91.4g with the underbase removed, balance 302mm. On the Yuan-style hardness scale (lower = stiffer), the 800 Speed measures 7.83 — much stiffer than the previous Bladex 800 New (8.58). Frame torsion measures 18.72 — the best of any speed racket tested in BadmintonCN reviewers' roundup, even better than the 99 Pro 2 at 19.87. The frame uses M46X carbon to balance stiffness with elasticity.",
         },
         {
           heading: "Where the dwell time pays off",
@@ -322,15 +310,11 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "What the 800 Speed asks of you",
-          body: "Tough-elastic loading rewards fast and concentrated swing technique. If your swing is slow or your force is diffuse, the 800 Speed will feel mushy — you give it force and the shuttle returns soft. chengzhen explicitly warns players who already own and like the Bladex 800 New (which is much softer at 8.58) not to switch on impulse: the 800 Speed will likely feel demanding. The closest comparison from another brand is the Astrox 88S Pro 2024, which has a similar shaft hardness but lives in the balance-racket space and has more pocketing depth.",
+          body: "Tough-elastic loading rewards fast and concentrated swing technique. If your swing is slow or your force is diffuse, the 800 Speed will feel mushy — you give it force and the shuttle returns soft. BadmintonCN reviewers explicitly warns players who already own and like the Bladex 800 New (which is much softer at 8.58) not to switch on impulse: the 800 Speed will likely feel demanding. The closest comparison from another brand is the Astrox 88S Pro 2024, which has a similar shaft hardness but lives in the balance-racket space and has more pocketing depth.",
         },
         {
           heading: "Buying guidance",
           body: "Buy the Bladex 800 Speed if: you play organized control rallies and have the swing speed to load a stiff shaft, you want a Li-Ning frame with M46X carbon (which is genuinely a step up in feel), and you are explicitly tired of the crisp-elastic pattern. Skip it if: you want maximum off-string speed (the Yonex 800 Pro is faster), you want pure rear-court attack (the Astrox 88D Pro 2024 is better), or you are not yet driving stiff shafts reliably (the Bladex 800 New is the friendlier sibling). It is genuinely cheaper than the Yonex flagship speed rackets, around 200-240 USD depending on region, which is also a real reason to consider it.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread March 2026), TriplePointSports retailer listing, Li-Ning Bladex official material, ckyew.com Bladex 800 review content.",
         },
       ],
       cta: "Add the Bladex 800 Speed to compare against your current racket — we surface the trade-offs explicitly.",
@@ -347,27 +331,23 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Halbertec 8000: the amateur all-rounder",
-          body: "BadmintonCN reviewer chengzhen has called the Halbertec 8000 the racket he has recommended more than any other on the forum, and he still owns two. It is around 400-500 USD cheaper than the Yonex Astrox 88S Pro 2024 and 600-700 USD cheaper than the Arcsaber 11 Pro, and yet it competes on smash quality (especially with the underbase removed) and on rear-court solidity. The 6.8mm hard-flex shaft is moderate enough that most amateur players can drive it. Yuan-style shaft hardness around 8.33. If you do not yet know your style or are buying your first serious racket above the entry tier, this is the safe pick.",
+          body: "BadmintonCN reviewers has called the Halbertec 8000 the racket he has recommended more than any other on the forum, and he still owns two. It is around 400-500 USD cheaper than the Yonex Astrox 88S Pro 2024 and 600-700 USD cheaper than the Arcsaber 11 Pro, and yet it competes on smash quality (especially with the underbase removed) and on rear-court solidity. The 6.8mm hard-flex shaft is moderate enough that most amateur players can drive it. Yuan-style shaft hardness around 8.33. If you do not yet know your style or are buying your first serious racket above the entry tier, this is the safe pick.",
         },
         {
           heading: "Halbertec 9000: thinner frame, faster swing, weaker rear",
-          body: "The 9000 was marketed as a control king, but reviewers disagree with that positioning. The 9000 has a thinner frame than the 8000 (lower wind resistance, faster swing) and a stiffer shaft (Yuan-style 7.92), but on hard smashes the combination produces what chengzhen calls 卸力 — a loss of power compared with other hard-shaft rackets. He attributes this to the relatively soft frame paired with the harder shaft: the frame absorbs energy that should travel to the shuttle. The 9000 is faster and more accurate at front court than the 8000. It is also less solid at the rear court. If you are choosing between 8000 and 9000 by hype alone, you may end up with the wrong one.",
+          body: "The 9000 was marketed as a control king, but reviewers disagree with that positioning. The 9000 has a thinner frame than the 8000 (lower wind resistance, faster swing) and a stiffer shaft (Yuan-style 7.92), but on hard smashes the combination produces what BadmintonCN reviewers call 卸力 — a loss of power compared with other hard-shaft rackets. He attributes this to the relatively soft frame paired with the harder shaft: the frame absorbs energy that should travel to the shuttle. The 9000 is faster and more accurate at front court than the 8000. It is also less solid at the rear court. If you are choosing between 8000 and 9000 by hype alone, you may end up with the wrong one.",
         },
         {
           heading: "Halbertec 9000 Power: a speed racket disguised as a balance racket",
-          body: "The 9000 Power (战戟 9000P) launched 2025 takes the 9000 thinner frame and makes the shaft even stiffer. Yuan-style hardness 7.65 — same range as the Astrox 88D Pro 2024 (7.59) and 88S Pro 2024. Frame is nearly identical to the 9000, with a minor wind-cutting tweak at the head. Slightly more head weight than the 9000. The 卸力 problem is mostly fixed. But chengzhen's verdict is direct: the 9000 Power is functionally a speed racket. It can be substituted by his other speed rackets (Yonex 1000Z, Yonex 800 Pro, Victor 100X SE) without much loss. The 8000 cannot — its pocketing and balance character are unique within Li-Ning's lineup.",
+          body: "The 9000 Power (战戟 9000P) launched 2025 takes the 9000 thinner frame and makes the shaft even stiffer. Yuan-style hardness 7.65 — same range as the Astrox 88D Pro 2024 (7.59) and 88S Pro 2024. Frame is nearly identical to the 9000, with a minor wind-cutting tweak at the head. Slightly more head weight than the 9000. The 卸力 problem is mostly fixed. But BadmintonCN reviewers' verdict is direct: the 9000 Power is functionally a speed racket. It can be substituted by his other speed rackets (Yonex 1000Z, Yonex 800 Pro, Victor 100X SE) without much loss. The 8000 cannot — its pocketing and balance character are unique within Li-Ning's lineup.",
         },
         {
           heading: "Sample variance: weigh before you buy",
-          body: "If you order a 9000 Power online, weigh it on arrival. chengzhen weighed 10 brand-new 4U samples and got: 5 around 82.5g unstrung, 3 around 83.5g, 1 at 84g, 1 at 84.5g. Half the samples weigh in at the very low end — meaningfully lighter than the average attack racket and noticeably different in swing feel. Buyer beware. This kind of variance is one of the strongest arguments for buying from a stringer or shop that lets you handle the racket before commitment.",
+          body: "If you order a 9000 Power online, weigh it on arrival. the BadmintonCN reviewer's weighed 10 brand-new 4U samples and got: 5 around 82.5g unstrung, 3 around 83.5g, 1 at 84g, 1 at 84.5g. Half the samples weigh in at the very low end — meaningfully lighter than the average attack racket and noticeably different in swing feel. Buyer beware. This kind of variance is one of the strongest arguments for buying from a stringer or shop that lets you handle the racket before commitment.",
         },
         {
           heading: "Final pick guide",
           body: "Buy the Halbertec 8000 if: you are an amateur or club-league player, you want a single racket that does not punish wrong choices, and you want best-in-budget smash and rear-court performance. Buy the Halbertec 9000 if: you specifically prioritize front-court speed and accept weaker rear-court attack — but honestly consider whether a Bladex 800 Speed or Yonex 700 Pro might serve the same need better. Buy the Halbertec 9000 Power only if: you are an advanced doubles player who already drives stiff shafts comfortably, and you specifically want a Li-Ning speed racket inside the Halbertec brand language.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review threads January 2026 and earlier), Li-Ning Halbertec official line page, ckyew.com Halbertec 9000 Power review, e78shop and SP x SPORT retailer listings.",
         },
       ],
       cta: "Compare any two Halberds in our compare tool — fit-score and rationale render side by side.",
@@ -384,15 +364,15 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "AxForce 90 New: Li-Ning's strongest shaft to date",
-          body: "BadmintonCN reviewer chengzhen calls the AxForce 90 New shaft Li-Ning's strongest to date. The shaft is 6.4mm thick — thicker than the 6.2mm of the AxForce 90 Dragon-Tiger predecessor — but the construction balances permeability, full elasticity, and balanced hardness. Surprisingly forgiving sweet spot for a small frame. Anti-torsion is excellent even with the thin shaft. A 4U sample measures 89.5g with the underbase removed, balance 304mm. The Thunder Technology platform is supposed to help players transition from defense to attack quickly, and on court the rapid recovery does seem to support continuous attack.",
+          body: "BadmintonCN reviewers calls the AxForce 90 New shaft Li-Ning's strongest to date. The shaft is 6.4mm thick — thicker than the 6.2mm of the AxForce 90 Dragon-Tiger predecessor — but the construction balances permeability, full elasticity, and balanced hardness. Surprisingly forgiving sweet spot for a small frame. Anti-torsion is excellent even with the thin shaft. A 4U sample measures 89.5g with the underbase removed, balance 304mm. The Thunder Technology platform is supposed to help players transition from defense to attack quickly, and on court the rapid recovery does seem to support continuous attack.",
         },
         {
           heading: "AxForce 80: the sugar-water sibling",
-          body: "The AxForce 80 lives below the 90 New as the easier-driving sugar-water option in the line. A 4U measures 89.2g with the underbase removed, balance 304mm — same balance as the 90 New, but heavier swing weight, softer shaft, and less crisp feel. Stronger one-shot smash for players who already lean on head weight to generate power; weaker on continuous attack and on barely-defended balls. chengzhen plans to retire his AxForce 80 in favor of the 90 New across the board, but says the 80 stays as the more entry-friendly option for amateurs who specifically want pure head-heavy feel without the demands of the 90 New shaft.",
+          body: "The AxForce 80 lives below the 90 New as the easier-driving sugar-water option in the line. A 4U measures 89.2g with the underbase removed, balance 304mm — same balance as the 90 New, but heavier swing weight, softer shaft, and less crisp feel. Stronger one-shot smash for players who already lean on head weight to generate power; weaker on continuous attack and on barely-defended balls. BadmintonCN reviewers plan to retire his AxForce 80 in favor of the 90 New across the board, but says the 80 stays as the more entry-friendly option for amateurs who specifically want pure head-heavy feel without the demands of the 90 New shaft.",
         },
         {
           heading: "Yonex Astrox 88D Pro 2024: the cross-brand benchmark",
-          body: "The Yonex Astrox 88D Pro 2024 is the cross-brand reference. Yuan-style shaft hardness 7.59 — slightly stiffer than the AxForce 90 New. chengzhen ranks it as the strongest 2024 attack racket in his collection on overall package: top-tier shaft, transparent power transmission, lower swing weight than peers, and ranked above the original 88DP camel-gold and even the Astrox 100ZZ. Versus the AxForce 90 New: the 88D Pro 2024 edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy. The AxForce 90 New responds with better frame pocketing for delicate net shots and drops.",
+          body: "The Yonex Astrox 88D Pro 2024 is the cross-brand reference. Yuan-style shaft hardness 7.59 — slightly stiffer than the AxForce 90 New. BadmintonCN reviewers rank it as the strongest 2024 attack racket in his collection on overall package: top-tier shaft, transparent power transmission, lower swing weight than peers, and ranked above the original 88DP camel-gold and even the Astrox 100ZZ. Versus the AxForce 90 New: the 88D Pro 2024 edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy. The AxForce 90 New responds with better frame pocketing for delicate net shots and drops.",
         },
         {
           heading: "Pick by hand profile, not just by smash power",
@@ -400,11 +380,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Founder firsthand notes",
-          body: "I (Rui Su, Division 4 Ireland) have not personally played the AxForce line, so the editorial weight on this article comes from chengzhen's measurements plus my own framing of what the comparisons mean for amateur and competitive players. I have played the Astrox 100ZZ and 88D Pro and found both demanding; if you find the 100ZZ punishing, the AxForce 90 New is likely a more comfortable home than the 88D Pro 2024 even though the Yonex has slightly stronger absolute attack. Try in person before you commit to either flagship.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread January 2026), Li-Ning AxForce official line page, TriplePointSports AxForce 90 New retailer listing, ckyew.com Tectonic 9 / AxForce 80 / Aeronaut 9000C comparison, Yonex Astrox 88D Pro 2024 official spec page.",
+          body: "I (Rui Su, Division 4 Ireland) have not personally played the AxForce line, so the editorial weight on this article comes from BadmintonCN reviewers' measurements plus my own framing of what the comparisons mean for amateur and competitive players. I have played the Astrox 100ZZ and 88D Pro and found both demanding; if you find the 100ZZ punishing, the AxForce 90 New is likely a more comfortable home than the 88D Pro 2024 even though the Yonex has slightly stronger absolute attack. Try in person before you commit to either flagship.",
         },
       ],
       cta: "Use the finder with smash-heavy or singles-attack preferences and we score these three for your level and budget.",
@@ -437,11 +413,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Caveats and limits",
-          body: "Yuan-style numbers come from independent testing and are not Yonex, Victor, or Li-Ning official data. The measurement rig and protocol can vary between labs, so a 7.6 from one rig may be a 7.4 on another. Per-batch shaft variance also exists — particularly with Li-Ning, where chengzhen weighed 10 Halbertec 9000 Power samples and got swing-weight variance well outside the published spec. Treat Yuan numbers as a useful guide, not a precise truth. They are still the best cross-brand quantitative data available to amateur shoppers.",
-        },
-        {
-          heading: "Sources",
-          body: "Yuan-style measurement values and the Halbertec sample variance data are cited per BadmintonCN reviewer chengzhen's roundup threads (April 2024 through March 2026). Brand-side stiffness labels come from Yonex, Victor, and Li-Ning official spec pages. We do not republish chengzhen's full testing methodology — that remains his original work — but we summarize the resulting numbers under fair-use citation.",
+          body: "Yuan-style numbers come from independent testing and are not Yonex, Victor, or Li-Ning official data. The measurement rig and protocol can vary between labs, so a 7.6 from one rig may be a 7.4 on another. Per-batch shaft variance also exists — particularly with Li-Ning, where the BadmintonCN reviewer's weighed 10 Halbertec 9000 Power samples and got swing-weight variance well outside the published spec. Treat Yuan numbers as a useful guide, not a precise truth. They are still the best cross-brand quantitative data available to amateur shoppers.",
         },
       ],
       cta: "When you run the finder, the stiffness data above is already baked into our level-fit factor — pick your level and we adjust accordingly.",
@@ -607,7 +579,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Frame: narrower D, larger S",
-          body: "The two frames are no longer identical. The 88D Pro 2024 has a slightly narrower frame than the original camel-gold version — strung at the same tension, you get higher net pressure and a stronger pocketing sensation. The 88S Pro frame is a step larger again, with a slightly shorter handle and overall length. Multiple BadmintonCN measurements (chengzhen, April 2024) put 4U 88D Pro samples around 84g unstrung with strung weights between 89.5g and 91.1g and balance points 305-308mm. A 4U 88S Pro sample measured 84.3g unstrung, 89.5g strung at 80 string and 26-28 lb, balance 301mm.",
+          body: "The two frames are no longer identical. The 88D Pro 2024 has a slightly narrower frame than the original camel-gold version — strung at the same tension, you get higher net pressure and a stronger pocketing sensation. The 88S Pro frame is a step larger again, with a slightly shorter handle and overall length. Multiple BadmintonCN measurements (BadmintonCN reviewers, April 2024) put 4U 88D Pro samples around 84g unstrung with strung weights between 89.5g and 91.1g and balance points 305-308mm. A 4U 88S Pro sample measured 84.3g unstrung, 89.5g strung at 80 string and 26-28 lb, balance 301mm.",
         },
         {
           heading: "Shaft hardness: the 88D is stiffer",
@@ -625,10 +597,6 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           heading: "Who should buy which",
           body: "Buy the 88D Pro 2024 if: you compete in men's doubles back court, you smash often as a primary attack pattern, your shoulder and core are conditioned for stiff-shaft frames, and you have time on court to adapt. Buy the 88S Pro 2024 if: you play mixed doubles or front-court doubles, you organize rallies through placement rather than raw smash, you valued the control feel of the 77 Pro and want a stiffer shaft tier above it, or you need one frame that can do both singles and doubles competently. Either way, plan to spend a few sessions adjusting your timing — both are pro-tier shafts.",
         },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review threads April 2024 and January 2026), Yonex official spec pages for the Astrox 88D Pro 2024 and 88S Pro 2024, BadmintonHQ and BadmintonWarehouse retailer specs, plus founder firsthand testing. Original measurements remain chengzhen's; we paraphrase the findings and link out, not republish. See the IntoBadminton Sources page for our full editorial process.",
-        },
       ],
       cta: "Run the finder if you are choosing your next 88 Pro — we score it against your level, role, and budget.",
     },
@@ -644,27 +612,23 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Nanoflare 700: the sugar-water front-court racket",
-          body: "The non-Pro Nanoflare 700 is a defining example of what Chinese reviewers call a sugar-water (糖水) racket: easy to drive, broad audience, soft-medium shaft, head-light feel. BadmintonCN reviewer chengzhen describes it as the racket his wife switched to from a Yonex NS9000s and stuck with — and the NS9000s is no joke. It rewards a fast swing without demanding a powerful one, and the 5U variant is particularly approachable for beginners and players moving up from entry frames. The trade-off: shaft feedback is less clear, and the bend point sits closer to the handle, which makes downward pressure on smashes harder to apply.",
+          body: "The non-Pro Nanoflare 700 is a defining example of what Chinese reviewers call a sugar-water (糖水) racket: easy to drive, broad audience, soft-medium shaft, head-light feel. BadmintonCN reviewers describes it as the racket his wife switched to from a Yonex NS9000s and stuck with — and the NS9000s is no joke. It rewards a fast swing without demanding a powerful one, and the 5U variant is particularly approachable for beginners and players moving up from entry frames. The trade-off: shaft feedback is less clear, and the bend point sits closer to the handle, which makes downward pressure on smashes harder to apply.",
         },
         {
           heading: "Nanoflare 700 Pro: the Pro upgrade that does not punish you",
-          body: "The 2024 Nanoflare 700 Pro is technically only marginally stiffer than the regular 700 — chengzhen describes the shaft difference as one tier at most — but Yonex moved the bend point higher and added the SF Filter and enhanced Sonic Flare frame system. The result: clearer feedback, faster snapback, easier high clears, and noticeably better smash confidence than the regular 700. Founder firsthand (Rui, Div 4 IE): the 700 Pro is genuinely fast — pair it with thinner strings like Aerobite or BG66 Ultimax to maximize the speed advantage rather than thicker durability strings.",
+          body: "The 2024 Nanoflare 700 Pro is technically only marginally stiffer than the regular 700 — BadmintonCN reviewers describe the shaft difference as one tier at most — but Yonex moved the bend point higher and added the SF Filter and enhanced Sonic Flare frame system. The result: clearer feedback, faster snapback, easier high clears, and noticeably better smash confidence than the regular 700. Founder firsthand (Rui, Div 4 IE): the 700 Pro is genuinely fast — pair it with thinner strings like Aerobite or BG66 Ultimax to maximize the speed advantage rather than thicker durability strings.",
         },
         {
           heading: "Sample variance is real",
-          body: "If you are picking a Nanoflare 700 Pro from a stack at a stringer, weigh it. chengzhen weighed three 4U/G5 samples and got 83.6g, 84.8g, and 85.8g unstrung — over 2g of variance from the same SKU. He kept the lightest sample. Even more interesting: he reports that lighter sample with a lower balance point still smashes harder than a heavier non-Pro Nanoflare 700, suggesting that in this line, shaft hardness matters more than gram-level mass for attack quality. This is also a reminder that aggregate review-based recommendations cannot tell you exactly how the racket in your hand will feel.",
+          body: "If you are picking a Nanoflare 700 Pro from a stack at a stringer, weigh it. the BadmintonCN reviewer's weighed three 4U/G5 samples and got 83.6g, 84.8g, and 85.8g unstrung — over 2g of variance from the same SKU. He kept the lightest sample. Even more interesting: he reports that lighter sample with a lower balance point still smashes harder than a heavier non-Pro Nanoflare 700, suggesting that in this line, shaft hardness matters more than gram-level mass for attack quality. This is also a reminder that aggregate review-based recommendations cannot tell you exactly how the racket in your hand will feel.",
         },
         {
           heading: "Nanoflare 1000Z: the hexagonal warrior",
-          body: "The 1000Z is the flagship and a different kind of racket. Small frame, hard shaft (around two tiers stiffer than the 700 Pro shaft), DR carbon for a touch of pocketing feel, and the best end-speed and pointing accuracy of the Nanoflare line. chengzhen calls it the most balanced of all speed rackets — no clear weakness, T0-tier alongside the Victor Auraspeed 100X SE. Founder firsthand (Rui, Div 4 IE): I currently play the 1000Z as my men's doubles racket. It is extremely fast on drives and defense, but power is harder to generate than from a comparable head-heavy frame. With good timing and strength, it is the doubles weapon. Without those, it can feel lifeless.",
+          body: "The 1000Z is the flagship and a different kind of racket. Small frame, hard shaft (around two tiers stiffer than the 700 Pro shaft), DR carbon for a touch of pocketing feel, and the best end-speed and pointing accuracy of the Nanoflare line. BadmintonCN reviewers call it the most balanced of all speed rackets — no clear weakness, T0-tier alongside the Victor Auraspeed 100X SE. Founder firsthand (Rui, Div 4 IE): I currently play the 1000Z as my men's doubles racket. It is extremely fast on drives and defense, but power is harder to generate than from a comparable head-heavy frame. With good timing and strength, it is the doubles weapon. Without those, it can feel lifeless.",
         },
         {
           heading: "Which one is for you",
           body: "Pick the Nanoflare 700 if you are upgrading from an entry-level frame, you are a player whose main need is a relaxed front-court doubles or mixed racket, or you want a forgiving frame to share with someone less experienced. Pick the Nanoflare 700 Pro if you are an intermediate player who wants the Nanoflare feel with sharper feedback and more attack. Pick the 1000Z if you are a competitive doubles player with the technique to load a stiff shaft, who prizes drive speed and counter-attack over raw rear-court smash. If raw smash is your thing, leave this whole line and look at the Astrox 88D Pro 2024 instead.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread October 2024), Yonex official spec pages for the Nanoflare 700, 700 Pro, and 1000Z, NYDHI and BadmintonWarehouse retailer specs, plus founder firsthand testing of the 700, 700 Pro, and 1000Z. Original measurements remain chengzhen's; we paraphrase findings and link out.",
         },
       ],
       cta: "Use the finder to compare any two of these rackets head-to-head against your level, role, and budget.",
@@ -689,7 +653,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Auraspeed HS Plus: a hardened Hayabusa",
-          body: "Victor's Auraspeed HS Plus uses WES 3.0 shaft tech and Victor's hardest production shaft tier. chengzhen describes it as a hardened version of the Hayabusa SE Black Gold: harder shaft, faster off-string, more rigid feedback. Used by Hendra Setiawan and H.S. Prannoy. A 4U sample measures 88.9g with the underbase removed, balance 304mm — almost identical mass and balance to a 4U Nanoflare 1000Z. But the contact feel is different: more transparent and force-driven where the 1000Z has a slight pocketing pause. Sweet spot is small. Off-sweet-spot defense is weaker than the 100XSE.",
+          body: "Victor's Auraspeed HS Plus uses WES 3.0 shaft tech and Victor's hardest production shaft tier. BadmintonCN reviewers describe it as a hardened version of the Hayabusa SE Black Gold: harder shaft, faster off-string, more rigid feedback. Used by Hendra Setiawan and H.S. Prannoy. A 4U sample measures 88.9g with the underbase removed, balance 304mm — almost identical mass and balance to a 4U Nanoflare 1000Z. But the contact feel is different: more transparent and force-driven where the 1000Z has a slight pocketing pause. Sweet spot is small. Off-sweet-spot defense is weaker than the 100XSE.",
         },
         {
           heading: "Pick by what you actually do",
@@ -697,11 +661,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "What about price and entry threshold",
-          body: "Both rackets sit in the 240-280 USD range new in most markets, with the 800 Pro typically slightly more expensive. Neither is a sugar-water frame: chengzhen, who plays 100X SE, 1000Z, and similar speed rackets daily, calls the HS Plus harder to drive than any of his usual rotation. If you are a Division 5/6 Irish-tier or 中羽 4-ish (BadmintonCN) player, you will likely benefit more from a 700 Pro or Halbertec 8000 first, and graduate to one of these only when your timing is reliable. There is no shame in waiting.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread July 2024), Yonex official spec page for the Nanoflare 800 Pro, Victor official spec page for the Auraspeed HS Plus, ckyew.com Z-shoes and racket comparison content, NYDHI and BadmintonWarehouse retailer specs.",
+          body: "Both rackets sit in the 240-280 USD range new in most markets, with the 800 Pro typically slightly more expensive. Neither is a sugar-water frame: BadmintonCN reviewers, who plays 100X SE, 1000Z, and similar speed rackets daily, calls the HS Plus harder to drive than any of his usual rotation. If you are a Division 5/6 Irish-tier or 中羽 4-ish (BadmintonCN) player, you will likely benefit more from a 700 Pro or Halbertec 8000 first, and graduate to one of these only when your timing is reliable. There is no shame in waiting.",
         },
       ],
       cta: "Compare these two side by side in our compare tool with your full profile.",
@@ -718,7 +678,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Specs and stiffness",
-          body: "BadmintonCN reviewer chengzhen measured a 4U/G6 Bladex 800 Speed at 85.2g unstrung, 90.8g with grip and string (underbase still on), balance 299mm. A 3U/G5 came in at 89g unstrung, 91.4g with the underbase removed, balance 302mm. On the Yuan-style hardness scale (lower = stiffer), the 800 Speed measures 7.83 — much stiffer than the previous Bladex 800 New (8.58). Frame torsion measures 18.72 — the best of any speed racket tested in chengzhen's roundup, even better than the 99 Pro 2 at 19.87. The frame uses M46X carbon to balance stiffness with elasticity.",
+          body: "BadmintonCN reviewers measured a 4U/G6 Bladex 800 Speed at 85.2g unstrung, 90.8g with grip and string (underbase still on), balance 299mm. A 3U/G5 came in at 89g unstrung, 91.4g with the underbase removed, balance 302mm. On the Yuan-style hardness scale (lower = stiffer), the 800 Speed measures 7.83 — much stiffer than the previous Bladex 800 New (8.58). Frame torsion measures 18.72 — the best of any speed racket tested in BadmintonCN reviewers' roundup, even better than the 99 Pro 2 at 19.87. The frame uses M46X carbon to balance stiffness with elasticity.",
         },
         {
           heading: "Where the dwell time pays off",
@@ -726,15 +686,11 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "What the 800 Speed asks of you",
-          body: "Tough-elastic loading rewards fast and concentrated swing technique. If your swing is slow or your force is diffuse, the 800 Speed will feel mushy — you give it force and the shuttle returns soft. chengzhen explicitly warns players who already own and like the Bladex 800 New (which is much softer at 8.58) not to switch on impulse: the 800 Speed will likely feel demanding. The closest comparison from another brand is the Astrox 88S Pro 2024, which has a similar shaft hardness but lives in the balance-racket space and has more pocketing depth.",
+          body: "Tough-elastic loading rewards fast and concentrated swing technique. If your swing is slow or your force is diffuse, the 800 Speed will feel mushy — you give it force and the shuttle returns soft. BadmintonCN reviewers explicitly warns players who already own and like the Bladex 800 New (which is much softer at 8.58) not to switch on impulse: the 800 Speed will likely feel demanding. The closest comparison from another brand is the Astrox 88S Pro 2024, which has a similar shaft hardness but lives in the balance-racket space and has more pocketing depth.",
         },
         {
           heading: "Buying guidance",
           body: "Buy the Bladex 800 Speed if: you play organized control rallies and have the swing speed to load a stiff shaft, you want a Li-Ning frame with M46X carbon (which is genuinely a step up in feel), and you are explicitly tired of the crisp-elastic pattern. Skip it if: you want maximum off-string speed (the Yonex 800 Pro is faster), you want pure rear-court attack (the Astrox 88D Pro 2024 is better), or you are not yet driving stiff shafts reliably (the Bladex 800 New is the friendlier sibling). It is genuinely cheaper than the Yonex flagship speed rackets, around 200-240 USD depending on region, which is also a real reason to consider it.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread March 2026), TriplePointSports retailer listing, Li-Ning Bladex official material, ckyew.com Bladex 800 review content.",
         },
       ],
       cta: "Add the Bladex 800 Speed to compare against your current racket — we surface the trade-offs explicitly.",
@@ -751,27 +707,23 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Halbertec 8000: the amateur all-rounder",
-          body: "BadmintonCN reviewer chengzhen has called the Halbertec 8000 the racket he has recommended more than any other on the forum, and he still owns two. It is around 400-500 USD cheaper than the Yonex Astrox 88S Pro 2024 and 600-700 USD cheaper than the Arcsaber 11 Pro, and yet it competes on smash quality (especially with the underbase removed) and on rear-court solidity. The 6.8mm hard-flex shaft is moderate enough that most amateur players can drive it. Yuan-style shaft hardness around 8.33. If you do not yet know your style or are buying your first serious racket above the entry tier, this is the safe pick.",
+          body: "BadmintonCN reviewers has called the Halbertec 8000 the racket he has recommended more than any other on the forum, and he still owns two. It is around 400-500 USD cheaper than the Yonex Astrox 88S Pro 2024 and 600-700 USD cheaper than the Arcsaber 11 Pro, and yet it competes on smash quality (especially with the underbase removed) and on rear-court solidity. The 6.8mm hard-flex shaft is moderate enough that most amateur players can drive it. Yuan-style shaft hardness around 8.33. If you do not yet know your style or are buying your first serious racket above the entry tier, this is the safe pick.",
         },
         {
           heading: "Halbertec 9000: thinner frame, faster swing, weaker rear",
-          body: "The 9000 was marketed as a control king, but reviewers disagree with that positioning. The 9000 has a thinner frame than the 8000 (lower wind resistance, faster swing) and a stiffer shaft (Yuan-style 7.92), but on hard smashes the combination produces what chengzhen calls 卸力 — a loss of power compared with other hard-shaft rackets. He attributes this to the relatively soft frame paired with the harder shaft: the frame absorbs energy that should travel to the shuttle. The 9000 is faster and more accurate at front court than the 8000. It is also less solid at the rear court. If you are choosing between 8000 and 9000 by hype alone, you may end up with the wrong one.",
+          body: "The 9000 was marketed as a control king, but reviewers disagree with that positioning. The 9000 has a thinner frame than the 8000 (lower wind resistance, faster swing) and a stiffer shaft (Yuan-style 7.92), but on hard smashes the combination produces what BadmintonCN reviewers call 卸力 — a loss of power compared with other hard-shaft rackets. He attributes this to the relatively soft frame paired with the harder shaft: the frame absorbs energy that should travel to the shuttle. The 9000 is faster and more accurate at front court than the 8000. It is also less solid at the rear court. If you are choosing between 8000 and 9000 by hype alone, you may end up with the wrong one.",
         },
         {
           heading: "Halbertec 9000 Power: a speed racket disguised as a balance racket",
-          body: "The 9000 Power (战戟 9000P) launched 2025 takes the 9000 thinner frame and makes the shaft even stiffer. Yuan-style hardness 7.65 — same range as the Astrox 88D Pro 2024 (7.59) and 88S Pro 2024. Frame is nearly identical to the 9000, with a minor wind-cutting tweak at the head. Slightly more head weight than the 9000. The 卸力 problem is mostly fixed. But chengzhen's verdict is direct: the 9000 Power is functionally a speed racket. It can be substituted by his other speed rackets (Yonex 1000Z, Yonex 800 Pro, Victor 100X SE) without much loss. The 8000 cannot — its pocketing and balance character are unique within Li-Ning's lineup.",
+          body: "The 9000 Power (战戟 9000P) launched 2025 takes the 9000 thinner frame and makes the shaft even stiffer. Yuan-style hardness 7.65 — same range as the Astrox 88D Pro 2024 (7.59) and 88S Pro 2024. Frame is nearly identical to the 9000, with a minor wind-cutting tweak at the head. Slightly more head weight than the 9000. The 卸力 problem is mostly fixed. But BadmintonCN reviewers' verdict is direct: the 9000 Power is functionally a speed racket. It can be substituted by his other speed rackets (Yonex 1000Z, Yonex 800 Pro, Victor 100X SE) without much loss. The 8000 cannot — its pocketing and balance character are unique within Li-Ning's lineup.",
         },
         {
           heading: "Sample variance: weigh before you buy",
-          body: "If you order a 9000 Power online, weigh it on arrival. chengzhen weighed 10 brand-new 4U samples and got: 5 around 82.5g unstrung, 3 around 83.5g, 1 at 84g, 1 at 84.5g. Half the samples weigh in at the very low end — meaningfully lighter than the average attack racket and noticeably different in swing feel. Buyer beware. This kind of variance is one of the strongest arguments for buying from a stringer or shop that lets you handle the racket before commitment.",
+          body: "If you order a 9000 Power online, weigh it on arrival. the BadmintonCN reviewer's weighed 10 brand-new 4U samples and got: 5 around 82.5g unstrung, 3 around 83.5g, 1 at 84g, 1 at 84.5g. Half the samples weigh in at the very low end — meaningfully lighter than the average attack racket and noticeably different in swing feel. Buyer beware. This kind of variance is one of the strongest arguments for buying from a stringer or shop that lets you handle the racket before commitment.",
         },
         {
           heading: "Final pick guide",
           body: "Buy the Halbertec 8000 if: you are an amateur or club-league player, you want a single racket that does not punish wrong choices, and you want best-in-budget smash and rear-court performance. Buy the Halbertec 9000 if: you specifically prioritize front-court speed and accept weaker rear-court attack — but honestly consider whether a Bladex 800 Speed or Yonex 700 Pro might serve the same need better. Buy the Halbertec 9000 Power only if: you are an advanced doubles player who already drives stiff shafts comfortably, and you specifically want a Li-Ning speed racket inside the Halbertec brand language.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review threads January 2026 and earlier), Li-Ning Halbertec official line page, ckyew.com Halbertec 9000 Power review, e78shop and SP x SPORT retailer listings.",
         },
       ],
       cta: "Compare any two Halberds in our compare tool — fit-score and rationale render side by side.",
@@ -788,15 +740,15 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "AxForce 90 New: Li-Ning's strongest shaft to date",
-          body: "BadmintonCN reviewer chengzhen calls the AxForce 90 New shaft Li-Ning's strongest to date. The shaft is 6.4mm thick — thicker than the 6.2mm of the AxForce 90 Dragon-Tiger predecessor — but the construction balances permeability, full elasticity, and balanced hardness. Surprisingly forgiving sweet spot for a small frame. Anti-torsion is excellent even with the thin shaft. A 4U sample measures 89.5g with the underbase removed, balance 304mm. The Thunder Technology platform is supposed to help players transition from defense to attack quickly, and on court the rapid recovery does seem to support continuous attack.",
+          body: "BadmintonCN reviewers calls the AxForce 90 New shaft Li-Ning's strongest to date. The shaft is 6.4mm thick — thicker than the 6.2mm of the AxForce 90 Dragon-Tiger predecessor — but the construction balances permeability, full elasticity, and balanced hardness. Surprisingly forgiving sweet spot for a small frame. Anti-torsion is excellent even with the thin shaft. A 4U sample measures 89.5g with the underbase removed, balance 304mm. The Thunder Technology platform is supposed to help players transition from defense to attack quickly, and on court the rapid recovery does seem to support continuous attack.",
         },
         {
           heading: "AxForce 80: the sugar-water sibling",
-          body: "The AxForce 80 lives below the 90 New as the easier-driving sugar-water option in the line. A 4U measures 89.2g with the underbase removed, balance 304mm — same balance as the 90 New, but heavier swing weight, softer shaft, and less crisp feel. Stronger one-shot smash for players who already lean on head weight to generate power; weaker on continuous attack and on barely-defended balls. chengzhen plans to retire his AxForce 80 in favor of the 90 New across the board, but says the 80 stays as the more entry-friendly option for amateurs who specifically want pure head-heavy feel without the demands of the 90 New shaft.",
+          body: "The AxForce 80 lives below the 90 New as the easier-driving sugar-water option in the line. A 4U measures 89.2g with the underbase removed, balance 304mm — same balance as the 90 New, but heavier swing weight, softer shaft, and less crisp feel. Stronger one-shot smash for players who already lean on head weight to generate power; weaker on continuous attack and on barely-defended balls. BadmintonCN reviewers plan to retire his AxForce 80 in favor of the 90 New across the board, but says the 80 stays as the more entry-friendly option for amateurs who specifically want pure head-heavy feel without the demands of the 90 New shaft.",
         },
         {
           heading: "Yonex Astrox 88D Pro 2024: the cross-brand benchmark",
-          body: "The Yonex Astrox 88D Pro 2024 is the cross-brand reference. Yuan-style shaft hardness 7.59 — slightly stiffer than the AxForce 90 New. chengzhen ranks it as the strongest 2024 attack racket in his collection on overall package: top-tier shaft, transparent power transmission, lower swing weight than peers, and ranked above the original 88DP camel-gold and even the Astrox 100ZZ. Versus the AxForce 90 New: the 88D Pro 2024 edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy. The AxForce 90 New responds with better frame pocketing for delicate net shots and drops.",
+          body: "The Yonex Astrox 88D Pro 2024 is the cross-brand reference. Yuan-style shaft hardness 7.59 — slightly stiffer than the AxForce 90 New. BadmintonCN reviewers rank it as the strongest 2024 attack racket in his collection on overall package: top-tier shaft, transparent power transmission, lower swing weight than peers, and ranked above the original 88DP camel-gold and even the Astrox 100ZZ. Versus the AxForce 90 New: the 88D Pro 2024 edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy. The AxForce 90 New responds with better frame pocketing for delicate net shots and drops.",
         },
         {
           heading: "Pick by hand profile, not just by smash power",
@@ -804,11 +756,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Founder firsthand notes",
-          body: "I (Rui Su, Division 4 Ireland) have not personally played the AxForce line, so the editorial weight on this article comes from chengzhen's measurements plus my own framing of what the comparisons mean for amateur and competitive players. I have played the Astrox 100ZZ and 88D Pro and found both demanding; if you find the 100ZZ punishing, the AxForce 90 New is likely a more comfortable home than the 88D Pro 2024 even though the Yonex has slightly stronger absolute attack. Try in person before you commit to either flagship.",
-        },
-        {
-          heading: "Sources",
-          body: "Findings adapted from BadmintonCN reviewer chengzhen (review thread January 2026), Li-Ning AxForce official line page, TriplePointSports AxForce 90 New retailer listing, ckyew.com Tectonic 9 / AxForce 80 / Aeronaut 9000C comparison, Yonex Astrox 88D Pro 2024 official spec page.",
+          body: "I (Rui Su, Division 4 Ireland) have not personally played the AxForce line, so the editorial weight on this article comes from BadmintonCN reviewers' measurements plus my own framing of what the comparisons mean for amateur and competitive players. I have played the Astrox 100ZZ and 88D Pro and found both demanding; if you find the 100ZZ punishing, the AxForce 90 New is likely a more comfortable home than the 88D Pro 2024 even though the Yonex has slightly stronger absolute attack. Try in person before you commit to either flagship.",
         },
       ],
       cta: "Use the finder with smash-heavy or singles-attack preferences and we score these three for your level and budget.",
@@ -841,11 +789,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Caveats and limits",
-          body: "Yuan-style numbers come from independent testing and are not Yonex, Victor, or Li-Ning official data. The measurement rig and protocol can vary between labs, so a 7.6 from one rig may be a 7.4 on another. Per-batch shaft variance also exists — particularly with Li-Ning, where chengzhen weighed 10 Halbertec 9000 Power samples and got swing-weight variance well outside the published spec. Treat Yuan numbers as a useful guide, not a precise truth. They are still the best cross-brand quantitative data available to amateur shoppers.",
-        },
-        {
-          heading: "Sources",
-          body: "Yuan-style measurement values and the Halbertec sample variance data are cited per BadmintonCN reviewer chengzhen's roundup threads (April 2024 through March 2026). Brand-side stiffness labels come from Yonex, Victor, and Li-Ning official spec pages. We do not republish chengzhen's full testing methodology — that remains his original work — but we summarize the resulting numbers under fair-use citation.",
+          body: "Yuan-style numbers come from independent testing and are not Yonex, Victor, or Li-Ning official data. The measurement rig and protocol can vary between labs, so a 7.6 from one rig may be a 7.4 on another. Per-batch shaft variance also exists — particularly with Li-Ning, where the BadmintonCN reviewer's weighed 10 Halbertec 9000 Power samples and got swing-weight variance well outside the published spec. Treat Yuan numbers as a useful guide, not a precise truth. They are still the best cross-brand quantitative data available to amateur shoppers.",
         },
       ],
       cta: "When you run the finder, the stiffness data above is already baked into our level-fit factor — pick your level and we adjust accordingly.",
