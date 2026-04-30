@@ -7,10 +7,6 @@ export const metadata: Metadata = {
     "The badminton brands IntoBadminton recommends from — Yonex, Victor, Li-Ning, Kumpoo, Kawasaki, Apacs, FZ Forza, RSL, and more — with regions and categories.",
   alternates: {
     canonical: "/brands/",
-    languages: {
-      en: "/en/brands/",
-      "zh-Hans": "/zh/brands/",
-    },
   },
 };
 

@@ -7,10 +7,6 @@ export const metadata: Metadata = {
     "Built by a competitive player. How IntoBadminton recommends gear, cites reviews, and stays editorially independent.",
   alternates: {
     canonical: "/about/",
-    languages: {
-      en: "/en/about/",
-      "zh-Hans": "/zh/about/",
-    },
   },
 };
 

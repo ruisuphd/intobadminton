@@ -62,7 +62,7 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
   const aboutJsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "@id": `${companyInfo.siteUrl}/${locale}/about/#about`,
+    "@id": `${companyInfo.siteUrl}/about/#about`,
     name: c.hero,
     inLanguage: "en",
     mainEntity: {

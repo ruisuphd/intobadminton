@@ -26,11 +26,6 @@ export default function PrivacyPage() {
           </a>
           . This policy is provided for transparency and is not legal advice.
         </p>
-        <div className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
-          Launch note: company identity, jurisdiction, and contact email are now
-          listed. If your legal counsel requires a registered street address,
-          add it before AdSense review and public launch.
-        </div>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           Data we process
         </h2>

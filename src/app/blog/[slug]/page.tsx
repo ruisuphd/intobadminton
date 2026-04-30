@@ -18,10 +18,6 @@ export async function generateMetadata({
     description: article?.dek,
     alternates: {
       canonical: `/blog/${slug}/`,
-      languages: {
-        en: `/en/blog/${slug}/`,
-        "zh-Hans": `/zh/blog/${slug}/`,
-      },
     },
   };
 }

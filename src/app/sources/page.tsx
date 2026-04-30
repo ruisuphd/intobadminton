@@ -7,10 +7,6 @@ export const metadata: Metadata = {
     "Where IntoBadminton sources data, how we triangulate evidence across manufacturer specs, community forums, video reviews, and BWF events.",
   alternates: {
     canonical: "/sources/",
-    languages: {
-      en: "/en/sources/",
-      "zh-Hans": "/zh/sources/",
-    },
   },
 };
 

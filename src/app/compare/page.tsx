@@ -38,7 +38,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
           <p className="mt-8 text-sm text-[var(--color-muted)]">
             {"Add gear from your"}{" "}
             <Link
-              href={"/en/results/"}
+              href={"/results/"}
               className="text-[var(--color-accent)] underline"
             >
               {"results"}

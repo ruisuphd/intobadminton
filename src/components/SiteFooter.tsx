@@ -11,9 +11,10 @@ const COLUMNS: FooterColumn[] = [
     heading: "Find gear",
     links: [
       { label: "Finder", path: "/quiz/" },
+      { label: "Best of", path: "/best/" },
       { label: "Compare", path: "/compare/" },
+      { label: "Compare guides", path: "/compare-guides/" },
       { label: "Brands", path: "/brands/" },
-      { label: "Research", path: "/research/" },
     ],
   },
   {
@@ -21,6 +22,7 @@ const COLUMNS: FooterColumn[] = [
     links: [
       { label: "Blog", path: "/blog/" },
       { label: "Guides", path: "/guides/" },
+      { label: "FAQ", path: "/faq/" },
       { label: "Methodology", path: "/methodology/" },
       { label: "Sources", path: "/sources/" },
     ],

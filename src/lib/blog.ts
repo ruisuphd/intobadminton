@@ -24,7 +24,11 @@ export type BlogSlug =
   | "yonex-astrox-99-pro-2-deep-dive"
   | "victor-auraspeed-99-hayabusa-review"
   | "li-ning-bladesabre-max-shoes-review"
-  | "victor-auraspeed-hs-plus-deep-dive";
+  | "victor-auraspeed-hs-plus-deep-dive"
+  | "how-to-choose-a-badminton-racket"
+  | "badminton-equipment-for-kids"
+  | "badminton-glossary-terms-every-player-should-know"
+  | "yonex-grip-sizes-explained";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -51,6 +55,10 @@ export const blogSlugs: BlogSlug[] = [
   "victor-auraspeed-99-hayabusa-review",
   "li-ning-bladesabre-max-shoes-review",
   "victor-auraspeed-hs-plus-deep-dive",
+  "how-to-choose-a-badminton-racket",
+  "badminton-equipment-for-kids",
+  "badminton-glossary-terms-every-player-should-know",
+  "yonex-grip-sizes-explained",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -831,6 +839,158 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
       ],
       cta: "Run the finder for fast-doubles or speed-attack profile and we score HS Plus against 100X SE and 1000Z.",
+    },
+    {
+      slug: "how-to-choose-a-badminton-racket",
+      updatedAt: "2026-04-30",
+      category: "guides",
+      title: "How to choose a badminton racket: a buyer's guide for beginners and intermediates",
+      dek: "Five decisions that matter — weight class, balance, shaft flex, string tension, grip size — and three that do not. The honest guide that pro shops will not give you.",
+      sections: [
+        {
+          heading: "Stop reading marketing language. Start with five questions.",
+          body: "Brand catalogues are written to make every racket sound special. Yours is not. The five decisions that actually determine whether a racket fits you are: (1) Weight class — 3U, 4U, or 5U. (2) Balance — head-light, even, or head-heavy. (3) Shaft flex — flexible, medium, stiff, or extra-stiff. (4) Common string tension range. (5) Grip size — G4, G5, G6. Every other spec on the box (frame width, grommet count, branded carbon names) is downstream of these five.",
+        },
+        {
+          heading: "1. Weight class — start with 4U if unsure",
+          body: "3U rackets weigh 85-89 grams unstrung, 4U is 80-84g, 5U is 75-79g, 6U is around 70g. The difference between 3U and 5U is dramatic in your hand — about 10% of the racket's mass. As a rough rule: 5U for new players, casual recreational players, and most women's doubles. 4U for the great majority of intermediate-and-up club players. 3U only if you specifically want a head-heavy attack feel and your shoulder is conditioned for it. Skip 6U entirely as an adult — they are toys.",
+        },
+        {
+          heading: "2. Balance — match it to your role, not your idol",
+          body: "Balance is where the racket's mass concentrates. Head-light frames (around 285-292mm balance point) recover quickly, defend better, and reward fast hands at the cost of smash mass. Head-heavy frames (around 295-310mm) load more weight into the smash but are slower to recover. Even-balance sits in the middle. The right answer depends on what kind of points you actually win — if you are not sure, watch a video of yourself. If your match-winners are smashes from the back court, head-heavy. If they are flat drives and net taps, head-light. If they are mostly errors against you, even.",
+        },
+        {
+          heading: "3. Shaft flex — go softer than you think",
+          body: "A flexible shaft bends more on contact and is much more forgiving of late timing — clears go further on imperfect contact, and the racket is gentler on your shoulder. A stiff or extra-stiff shaft transmits force directly with no buffer — when your timing is clean it produces faster smashes; when it is not, it produces shoulder pain and short clears. Most amateurs are over-stiffened: they buy pro-tier extra-stiff frames because their favourite player uses one, then lose smash power because their swing speed is not high enough to load the shaft cleanly. Default to medium or medium-stiff until your contact point is consistent.",
+        },
+        {
+          heading: "4. String tension — under-string, then go up slowly",
+          body: "Tension is independent of the racket — but it changes the racket's feel more than most spec swaps. Higher tension narrows the sweet spot and sharpens feedback, lower tension forgives mishits and adds repulsion on imperfect contact. As a starting band: 22-24 lb for new players, 24-26 lb for club players, 26-28 lb for league players, 28-30 lb only for tournament-tier players. Going above 30 lb on amateur swing speed reduces real-game power because too few hits land in the shrunken sweet spot. Restring every 30-50 sessions or every 3-4 months even if the string has not snapped — tension drops well before a break.",
+        },
+        {
+          heading: "5. Grip size — measure, do not guess",
+          body: "Yonex G4 is the largest commonly available size, G5 is medium, G6 is small. Most adult men with average hands fit G5; smaller hands and most adult women fit G6. The wrong grip size shows up as forearm fatigue (grip too small — you over-grip to compensate) or wrist soreness (grip too large — you cannot rotate cleanly on backhand). You can always add an overgrip to make a smaller grip slightly larger; you cannot easily make a large grip smaller. When in doubt, buy one size down and add an overgrip.",
+        },
+        {
+          heading: "What does NOT matter (much)",
+          body: "Frame colour. Whether the racket is named after a current pro. Carbon-marketing names that change every two years (Namd, Aero+Box, Power Boost Cap — these do real things, but the difference between racket A and racket B with the same balance and flex is small in your hand). Weight in grams down to single-digit precision. Whether the racket is 'singles' or 'doubles' specific in marketing — those tags are loose mappings of the five core specs above. Spend your attention on the five things that move performance, not the marketing language wrapped around them.",
+        },
+        {
+          heading: "Three honest first-racket recommendations",
+          body: "If you have $80-120 to spend: Yonex Nanoray Light 70i (5U, even-balance, flexible — friendliest possible first racket). If you have $120-180 and play 2+ times per week: Victor DriveX 8S or Yonex Astrox 7 (4U, even-to-slight-head-heavy, medium — handles attack and defense). If you have $180-250 and you are committed to staying with badminton for years: Yonex Astrox 77 Pro or Astrox 7 Pro (4U, slightly head-heavy, medium-stiff — the friendliest pro-tier upgrade Yonex makes). Avoid 100ZZ, 99 Pro, 88D Pro 2024, and 1000Z as a first racket — they are pro flagships that will actively make you worse before you learn to drive them.",
+        },
+      ],
+      cta: "Run the IntoBadminton finder — five quick questions, ranked picks with reasons.",
+    },
+    {
+      slug: "badminton-equipment-for-kids",
+      updatedAt: "2026-04-30",
+      category: "guides",
+      title: "Badminton equipment for kids: rackets, shoes, and shuttles for ages 6-14",
+      dek: "How to equip a young player without burning hundreds of dollars or stunting their technique. Honest picks from a coach-trained parent's perspective.",
+      sections: [
+        {
+          heading: "Why kid-specific equipment matters more than adult equipment",
+          body: "Kids learn motor patterns from the equipment that fits their body. A racket too heavy for a 9-year-old produces a permanent over-reliance on shoulder rather than wrist and core — the wrong technique gets locked in before the child has the strength to swing properly. The same is not true for adults, who can usually correct technique on whatever equipment fits their pocket. With kids, fit comes first.",
+        },
+        {
+          heading: "Rackets by age and height",
+          body: "Ages 6-8 / under 130cm: aluminium-shaft junior racket, 22-26 inches long, 80-90 grams. Yonex B-350Jr, Victor AL-2200JR, or any club-issued junior racket. Ages 8-11 / 130-150cm: Yonex Muscle Power 2 Junior, Astrox 01 Clear, or 5U adult lightweight rackets like the Nanoray Light 70i (the latter is fine for taller pre-teens). Ages 12-14 / 150cm+: most kids are ready for proper 5U adult rackets — Astrox 1, Nanoray 7, or Arcsaber 7 Junior. Avoid head-heavy or extra-stiff frames at every junior tier.",
+        },
+        {
+          heading: "Shoes — buy fitted, replace as feet grow",
+          body: "Junior badminton shoes exist (Yonex Power Cushion 65 Z Junior, Victor SH-A170JR) and they are worth the spend if your child plays more than once a week. Avoid hand-me-down running shoes — the raised heel is a real ankle-roll risk on lateral movement. Plan to replace every 6-12 months because feet grow faster than the shoe wears. Buy half a size up from current foot length and check fit every 3 months.",
+        },
+        {
+          heading: "Shuttles — plastic at home, feathers at training",
+          body: "Yonex Mavis 200/300/350 plastic shuttles cost more upfront but last 20-50 hours of play. Use plastic for backyard practice, family rallies, and beginner classes. Switch to inexpensive feathered shuttles (Yonex Aerosensa 10 / 20, Victor Champion No.1) once the child plays in club drills — feathered flight teaches proper timing in a way plastic cannot. Avoid premium tournament shuttles (AS-50, AS-40) until the child plays competitively; they break too fast on imperfect contact.",
+        },
+        {
+          heading: "Strings and tension — keep it low, replace it often",
+          body: "String junior rackets at 16-20 lb. Yonex BG65 is the right string for almost every kid — durable, forgiving, cheap. Restring every 3-4 months even if the string has not broken. The lower-tension stringbed gives a softer trampoline feel that helps young arms generate clears without needing adult swing speed.",
+        },
+        {
+          heading: "What to skip",
+          body: "Grip-size sizing — junior rackets come in one grip size, and adding a kid overgrip is enough fine-tuning. Vibration dampeners — the kid does not need them and they get lost. Branded racket bags — a backpack with a racket-shaped pocket is plenty until the player is in tournament-level training. Pro-shop level coaching gear — a bag of plastic shuttles and a court is far more valuable than $300 of equipment for a 10-year-old.",
+        },
+        {
+          heading: "Total reasonable budget by age",
+          body: "Ages 6-8: $60-100 covers everything — junior racket, shoes if needed, plastic shuttles, basic bag. Ages 8-11: $100-180 — better racket, dedicated junior badminton shoes, mix of plastic and feathered shuttles. Ages 12-14 once committed to the sport: $200-300 covers an adult-tier 5U racket, proper court shoes, restringing twice a year, and feathered shuttles for competition. Spending more than $300 on a junior is almost never justified by performance — keep the money for coaching and court time instead.",
+        },
+      ],
+      cta: "When the kid graduates to adult-tier rackets, start with the IntoBadminton finder — it weights light frames first.",
+    },
+    {
+      slug: "badminton-glossary-terms-every-player-should-know",
+      updatedAt: "2026-04-30",
+      category: "guides",
+      title: "Badminton glossary: 40+ terms every club player should understand",
+      dek: "From sweet spot to U-class to BWF tour — the working vocabulary you need to read reviews, talk to your stringer, and follow professional matches.",
+      sections: [
+        {
+          heading: "Equipment terms",
+          body: "U-class: weight class for unstrung rackets — lower number means heavier. 3U is ~85-89g, 4U is 80-84g, 5U is 75-79g. F: flyweight, lighter than 6U, almost always junior-only. Head-heavy / head-light / even-balance: where mass concentrates in the racket; measured as the balance point in millimetres from the butt cap (around 280-310mm in normal frames). Shaft flex: how much the shaft bends under load — flexible, medium, stiff, extra-stiff. Sweet spot: the area on the stringbed where contact produces maximum repulsion and minimum vibration. Frame: the head ring of the racket. T-joint: where the shaft meets the frame; modern rackets often use built-in T-joints for stiffness. Grommets: the plastic eyelets through which strings thread — replaceable when worn.",
+        },
+        {
+          heading: "String and tension terms",
+          body: "Gauge: string thickness in millimetres (0.61-0.72mm common). Thinner strings are more elastic, thicker strings are more durable. Tension: how tightly the string is pulled, measured in pounds (lb). Pre-stretch: a stringer technique to reduce post-stringing tension drop. Stencil: applied logo on the string after stringing for tournament identification. BG65, BG80, BG80 Power, EXBOLT 63, Aerobite, L69: common Yonex and Li-Ning strings, ranked by feel from soft / forgiving (BG65) to crisp / tour-tier (EXBOLT 63). Hybrid stringing: using different strings on the mains and crosses, like Aerobite. Restring trampoline: the soft repulsion feel of a fresh stringbed; degrades over weeks even if the string has not broken.",
+        },
+        {
+          heading: "Shoe terms",
+          body: "Power Cushion / Power Cushion+: Yonex's branded EVA midsole compound, designed to absorb landing impact. Toe drag protection: reinforced toe area on shoes for players whose front foot drags during lunges. Gum rubber: the soft outsole compound used on indoor court shoes for grip on wood. Last: the foot mould used to shape the shoe; Asian lasts (Victor, Mizuno) tend to be narrower than European/US lasts. Wide fit / Wide Last: shoes designed with extra forefoot width — note that 'wide' is measured against a brand's own regular fit, not absolutely.",
+        },
+        {
+          heading: "Stroke and tactical terms",
+          body: "Clear: an overhead shot sent deep to the opponent's back court. Drop: a soft shot from the back court that lands just over the net. Smash: an attacking overhead hit downward at speed. Drive: a flat, fast shot at body height. Net shot / hairpin: a soft shot from the net, just over the tape. Push: a fast, flat net shot that travels to the opponent's mid-court. Block: a defensive return that absorbs smash power and lands short. Lift: a defensive shot that sends the shuttle high and deep. Slice: a cut stroke that adds spin and changes shuttle trajectory.",
+        },
+        {
+          heading: "Court and rule terms",
+          body: "Service court / receiving court: the rectangles where the serve must land. Front court / mid court / back court: the three depth zones on each side of the net. Singles tramline / doubles tramline: the side lines that change between formats — singles uses the inner, doubles the outer. Rally point scoring: the modern format where every rally scores a point regardless of who served. Service judge: the official watching for service-height violations. Let: a replay of the rally with no point awarded.",
+        },
+        {
+          heading: "BWF and competition terms",
+          body: "BWF: Badminton World Federation, the global governing body. World Tour: BWF's professional ranking circuit (Super 1000, Super 750, Super 500, etc.). Super Series Finals: end-of-season top-8 event (renamed BWF World Tour Finals). Olympic qualification race: the 12-month points-based ranking that determines Olympic spots. World Championships: BWF's annual non-Olympic top event. Thomas Cup / Uber Cup / Sudirman Cup: men's, women's, and mixed-gender team championships.",
+        },
+        {
+          heading: "Player and tactical jargon",
+          body: "Sugar-water: forum slang for an extra-easy, forgiving racket — derives from Chinese badminton community usage. T0 / T1 / S-tier: forum tier rankings used on BadmintonCN to compare racket classes. Antonsen color / Kurenai / Camel-gold: colourway names that distinguish racket generations (e.g. Astrox 100ZZ Antonsen vs Kurenai). Yuan-style hardness: a community-developed shaft hardness scale (lower number = stiffer); cited frequently on BadmintonCN. SE / VA / Tour: subvariants of pro frames signed off by specific players (Mohammad Ahsan SE, Viktor Axelsen VA, Tour, Game).",
+        },
+      ],
+      cta: "Now you can read deep-dives without the language barrier — start with our racket-balance guide.",
+    },
+    {
+      slug: "yonex-grip-sizes-explained",
+      updatedAt: "2026-04-30",
+      category: "guides",
+      title: "Yonex grip sizes (G4, G5, G6) explained — and how to pick yours",
+      dek: "How Yonex grip sizes compare to Victor and Li-Ning, why most adults pick G5 or G6, and what an overgrip actually changes about size.",
+      sections: [
+        {
+          heading: "What the G-numbers mean",
+          body: "Yonex grip sizes use G3, G4, G5, and G6 nomenclature, where the higher number is a thinner grip. G3 is the largest commonly produced (rarely sold outside Asia). G4 is large — about 3.5 inches in circumference. G5 is medium — about 3.25 inches. G6 is small — about 3 inches. The same numbering is used on most Yonex rackets globally, though some regional retailers re-tag them with different conventions; always verify the circumference if you are unsure.",
+        },
+        {
+          heading: "Most adult men fit G5; most adult women fit G6",
+          body: "These are guidelines, not laws. Tall men with large hands sometimes prefer G4. Junior players, women with smaller hands, and adults with shorter palms generally prefer G6. The wrong grip size produces predictable symptoms: too small means you over-grip the racket to keep it stable, which fatigues your forearm. Too large means you cannot rotate the racket cleanly for backhand strokes, which fatigues your wrist. If you experience either symptom after a session, your grip is the wrong size.",
+        },
+        {
+          heading: "Victor and Li-Ning grip sizes — not directly comparable",
+          body: "Victor uses G2 / G4 / G5 / G6 nomenclature with different absolute measurements. A Victor G5 is roughly equivalent to a Yonex G5, but a Victor G4 is closer to a Yonex G4 / G3 mid-point. Li-Ning grip sizes use S1 / S2 / S3 conventions on some models and S0-S5 on others. The honest answer: do not assume cross-brand sizing translates directly. If you are switching brands, measure the grip circumference with a thread and ruler, then compare to your current racket.",
+        },
+        {
+          heading: "How an overgrip changes size",
+          body: "A standard overgrip adds approximately 0.6mm of thickness, which translates to about half a grip size. A Yonex Super Grap on a G5 racket effectively makes it close to G4. Two overgrips push it past G4 into G3 territory. Towel grips add slightly more thickness — about 0.8mm. Use this as a fine-tuning lever: buy one size smaller than ideal and adjust with overgrips, rather than buying one size larger and trying to make a too-thick handle smaller (which involves removing the underbase grip — risky on most rackets).",
+        },
+        {
+          heading: "Replacing the underbase vs adding overgrip",
+          body: "Most rackets ship with a synthetic underbase grip (Yonex Super Grap, Victor Wave, etc.). Players choose to either keep the underbase and add overgrips on top, or strip the underbase entirely and replace with a different replacement grip. Stripping the underbase is reversible but tedious; new players should start with the factory underbase plus one overgrip and only swap to a replacement grip if they find the underbase texture wrong. Towel grips replace the underbase entirely and add 1-2mm — often used by sweaty-handed players in tropical climates.",
+        },
+        {
+          heading: "How often to replace grips",
+          body: "Replace overgrips every 4-12 sessions of regular play, or whenever they feel slick. Replace underbase grips every 6-12 months — they degrade slowly and are easy to ignore, but a degraded underbase changes the racket's feel meaningfully. Good rule of thumb: if your grip is darker than the day you put it on, it is probably ready for replacement.",
+        },
+      ],
+      cta: "Get the racket recommendation right first, then dial in the grip size with one or two overgrips.",
     },
   ],
 };
