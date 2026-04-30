@@ -48,3 +48,5 @@ next-env.d.ts
 # See docs/research/ for the legal cited extracts we publish from.
 /blogs/
 
+# Local Claude Code session state
+/.claude/
