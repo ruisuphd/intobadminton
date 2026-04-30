@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const NAV_LINKS = [
   { href: "/quiz/", label: "Finder" },
@@ -32,23 +35,14 @@ export function SiteHeader() {
           href="/"
           className="flex items-center gap-2 text-base font-semibold tracking-tight text-[var(--text)]"
         >
-          <span
-            aria-hidden
-            className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[var(--text)]"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none">
-              <g
-                stroke="var(--color-accent)"
-                strokeWidth="2"
-                strokeLinecap="round"
-              >
-                <line x1="8" y1="4" x2="8" y2="20" />
-                <line x1="16" y1="4" x2="16" y2="20" />
-                <line x1="4" y1="8" x2="20" y2="8" />
-                <line x1="4" y1="16" x2="20" y2="16" />
-              </g>
-            </svg>
-          </span>
+          <Image
+            src={`${basePath}/intobadminton-mark.png`}
+            alt=""
+            width={28}
+            height={28}
+            priority
+            className="h-7 w-7"
+          />
           IntoBadminton
         </Link>
 
