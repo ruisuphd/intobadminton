@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { useProfile } from "@/context/ProfileContext";
 import type { ProductRecord, ScoredProduct } from "@/lib/types/product";
 import { byId, scoreProductCatalog } from "@/lib/scoring";
@@ -114,7 +113,6 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
             </div>
           </>
         )}
-        <AdSlot id={`${locale}-compare-below`} className="mt-12" />
       </div>
     </main>
   );

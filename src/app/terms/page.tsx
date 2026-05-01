@@ -4,6 +4,7 @@ import { companyInfo } from "@/lib/company";
 export const metadata: Metadata = {
   title: "Terms and disclaimer — IntoBadminton",
   description: "Terms, affiliate disclosure, and equipment advice disclaimer.",
+  alternates: { canonical: "/terms/" },
 };
 
 export default function TermsPage() {

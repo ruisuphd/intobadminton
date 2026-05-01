@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Security — IntoBadminton",
   description:
     "Security posture, reporting, and static-hosting controls for IntoBadminton.",
+  alternates: { canonical: "/security/" },
 };
 
 export default function SecurityPage() {
@@ -47,4 +48,3 @@ export default function SecurityPage() {
     </main>
   );
 }
-

@@ -1,7 +1,14 @@
-import { AdSlot } from "@/components/AdSlot";
+import type { Metadata } from "next";
 import { RecentHistory } from "@/components/RecentHistory";
 import { ResultsClient } from "./ResultsClient";
 import { t } from "@/lib/i18n";
+
+export const metadata: Metadata = {
+  title: "Your badminton equipment shortlist — IntoBadminton",
+  description: "Personalized badminton equipment recommendations from your finder profile.",
+  alternates: { canonical: "/results/" },
+  robots: { index: false, follow: true },
+};
 
 export function ResultsShell() {
   const copy = t("en").results;
@@ -18,7 +25,6 @@ export function ResultsShell() {
           <ResultsClient />
         </div>
         <RecentHistory />
-        <AdSlot id="results-bottom" />
       </div>
     </main>
   );

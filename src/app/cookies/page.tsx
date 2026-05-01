@@ -4,6 +4,7 @@ import { consentAuditSummary } from "@/lib/consent";
 export const metadata: Metadata = {
   title: "Cookie policy — IntoBadminton",
   description: "Cookie and local storage categories used by IntoBadminton.",
+  alternates: { canonical: "/cookies/" },
 };
 
 export default function CookiesPage() {

@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Commercial launch setup — IntoBadminton",
   description:
     "Operator checklist for AdSense, analytics, privacy, security, and launch readiness.",
+  alternates: { canonical: "/setup/" },
+  robots: { index: false, follow: true },
 };
 
 const setupItems = [

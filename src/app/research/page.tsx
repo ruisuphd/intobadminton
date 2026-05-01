@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Market research — IntoBadminton",
   description:
     "Rights-safe badminton market research signals used to improve equipment recommendations.",
+  alternates: { canonical: "/research/" },
 };
 
 export default function ResearchPage() {

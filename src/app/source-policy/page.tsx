@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Source and copyright policy — IntoBadminton",
   description:
     "How IntoBadminton handles Reddit, BadmintonCN, forum, and review evidence.",
+  alternates: { canonical: "/source-policy/" },
 };
 
 export default function SourcePolicyPage() {

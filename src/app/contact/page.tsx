@@ -4,6 +4,7 @@ import { companyInfo } from "@/lib/company";
 export const metadata: Metadata = {
   title: "Contact — IntoBadminton",
   description: "Contact IntoBadminton.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {

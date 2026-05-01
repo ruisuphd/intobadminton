@@ -8,12 +8,8 @@ export type SitemapEntry = {
 
 const canonicalRoutes = [
   "/",
-  "/quiz/",
-  "/results/",
   "/guides/",
-  "/compare/",
   "/compare-guides/",
-  "/review/",
   "/methodology/",
   "/source-policy/",
   "/security/",
@@ -21,7 +17,6 @@ const canonicalRoutes = [
   "/cookies/",
   "/terms/",
   "/contact/",
-  "/setup/",
   "/blog/",
   "/research/",
   "/sources/",

@@ -4,6 +4,7 @@ import { companyInfo } from "@/lib/company";
 export const metadata: Metadata = {
   title: "Privacy — IntoBadminton",
   description: "Privacy policy for IntoBadminton.",
+  alternates: { canonical: "/privacy/" },
 };
 
 export default function PrivacyPage() {
