@@ -40,6 +40,12 @@ export function BlogArticlePage({
   const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
   const byline = companyInfo.authorBylineEn;
   const minutes = readingTimeMinutes(article);
+  const articleWordCount = article.sections.reduce(
+    (sum, section) =>
+      sum + section.body.split(/\s+/).filter((word) => word.length > 0).length,
+    0
+  );
+  const canShowArticleAd = articleWordCount >= 600;
   const related = relatedArticles(blogArticles[locale], article, 3);
 
   const blogPostingJsonLd = {
@@ -161,9 +167,10 @@ export function BlogArticlePage({
               <p className="text-base leading-[1.7] text-[var(--text-secondary)]">
                 {section.body}
               </p>
-              {index === Math.floor(article.sections.length / 2) && (
-                <AdSlot id={`blog-${article.slug}-mid`} />
-              )}
+              {canShowArticleAd &&
+                index === Math.floor(article.sections.length / 2) && (
+                  <AdSlot id={`blog-${article.slug}-mid`} />
+                )}
             </section>
           ))}
         </div>

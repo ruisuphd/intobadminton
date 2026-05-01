@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Recommendation methodology — IntoBadminton",
   description:
     "How IntoBadminton combines specs, player inputs, and source references for badminton equipment recommendations.",
+  alternates: { canonical: "/methodology/" },
 };
 
 export default function MethodologyPage() {

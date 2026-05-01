@@ -37,7 +37,6 @@ describe("sitemapEntries", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
 
     expect(urls).toContain("https://example.com/");
-    expect(urls).toContain("https://example.com/quiz/");
     expect(urls).toContain("https://example.com/guides/");
     expect(urls).toContain("https://example.com/security/");
     expect(urls).toContain("https://example.com/blog/");
@@ -54,5 +53,16 @@ describe("sitemapEntries", () => {
 
     expect(urls.some((u) => u.includes("/zh/"))).toBe(false);
     expect(urls.some((u) => u.includes("/en/"))).toBe(false);
+  });
+
+  it("does not emit thin utility routes", () => {
+    const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
+
+    expect(urls).not.toContain("https://example.com/quiz/");
+    expect(urls).not.toContain("https://example.com/results/");
+    expect(urls).not.toContain("https://example.com/compare/");
+    expect(urls).not.toContain("https://example.com/review/");
+    expect(urls).not.toContain("https://example.com/setup/");
+    expect(urls).not.toContain("https://example.com/privacy-choices/");
   });
 });

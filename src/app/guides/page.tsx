@@ -1,7 +1,14 @@
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
+import type { Metadata } from "next";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
+
+export const metadata: Metadata = {
+  title: "Equipment guides — IntoBadminton",
+  description:
+    "Practical badminton equipment guides for rackets, strings, shoes, and gear setup.",
+  alternates: { canonical: "/guides/" },
+};
 
 const guides = [
   {
@@ -65,7 +72,6 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
             </li>
           ))}
         </ul>
-        <AdSlot id={`${locale}-guides-end`} className="mt-12" />
       </div>
     </main>
   );

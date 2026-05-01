@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Submit equipment review — IntoBadminton",
   description:
     "Submit a structured badminton equipment review to improve future recommendations.",
+  alternates: { canonical: "/review/" },
+  robots: { index: false, follow: true },
 };
 
 export function ReviewShell() {
