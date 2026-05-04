@@ -95,7 +95,7 @@ export default function Astrox77vs88SProPage() {
           The honest difference: shaft hardness
         </h2>
         <p className="text-base leading-relaxed text-[var(--color-muted)]">
-          The 77 Pro shaft loads gently — you feel the bend, you feel it snap back, and your timing window is forgiving. The 88S Pro 2024 shaft is meaningfully stiffer (mid-7s on Yuan-style measurement vs the 77 Pro&rsquo;s softer profile). When you load it cleanly, the response is crisper and faster. When your timing slips, the 88S Pro punishes it more than the 77 Pro does.
+          The 77 Pro shaft loads gently — you feel the bend, you feel it snap back, and your timing window is forgiving. The 88S Pro 2024 shaft is meaningfully stiffer — mid-7s on the YuanShi-rig hardness scale (lower = stiffer; YuanShi is a Chinese badminton creator who tests rackets on a professional shaft-deflection machine and posts the numbers) versus the 77 Pro&rsquo;s softer profile. When you load it cleanly, the response is crisper and faster. When your timing slips, the 88S Pro punishes it more than the 77 Pro does.
         </p>
 
         <h2 className="text-headline text-[var(--text)]">
