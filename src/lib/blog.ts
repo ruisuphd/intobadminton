@@ -15,7 +15,7 @@ export type BlogSlug =
   | "li-ning-halbertec-8000-vs-9000-vs-9000-power"
   | "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp"
   | "yuan-style-shaft-hardness-explained"
-  | "yonex-astrox-100zz-antonsen-vs-kurenai"
+  | "yonex-astrox-100zz-axelsen-va-vs-kurenai"
   | "victor-drivex-12-vs-astrox-88d-pro"
   | "li-ning-l69-string-review"
   | "victor-p9200-iii-shoes-review"
@@ -45,7 +45,7 @@ export const blogSlugs: BlogSlug[] = [
   "li-ning-halbertec-8000-vs-9000-vs-9000-power",
   "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp",
   "yuan-style-shaft-hardness-explained",
-  "yonex-astrox-100zz-antonsen-vs-kurenai",
+  "yonex-astrox-100zz-axelsen-va-vs-kurenai",
   "victor-drivex-12-vs-astrox-88d-pro",
   "li-ning-l69-string-review",
   "victor-p9200-iii-shoes-review",
@@ -299,7 +299,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Shaft hardness: the 88D is stiffer",
-          body: "Both shafts are stiffer than the older 77 Pro, but the D and S sit at different tiers. Per Yuan-style shaft-hardness measurements (lower = stiffer) cited on BadmintonCN, the 88D Pro 2024 sits around 7.59 — close to Yonex's hardest production shafts. The 88S Pro is in the same range (mid-7s) but feels noticeably less crisp because of the thicker frame and the slightly longer dwell time it produces on contact. The result: a 88D player is rewarded for short, concentrated power strokes; a 88S player benefits from longer, controlled swings that load the shaft into the bigger frame.",
+          body: "Both shafts are stiffer than the older 77 Pro, but the D and S sit at different tiers. On shaft-deflection measurements published by the Chinese creator YuanShi (源式) — widely cited on BadmintonCN, lower = stiffer — the 88D Pro 2024 sits around 7.59, close to Yonex's hardest production shafts. The 88S Pro is in the same range (mid-7s on the same rig) but feels noticeably less crisp because of the thicker frame and the slightly longer dwell time it produces on contact. The result: a 88D player is rewarded for short, concentrated power strokes; a 88S player benefits from longer, controlled swings that load the shaft into the bigger frame.",
         },
         {
           heading: "Smash vs control: pick by role, not by ego",
@@ -397,7 +397,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Specs and stiffness",
-          body: "BadmintonCN reviewers measured a 4U/G6 Bladex 800 Speed at 85.2g unstrung, 90.8g with grip and string (underbase still on), balance 299mm. A 3U/G5 came in at 89g unstrung, 91.4g with the underbase removed, balance 302mm. On the Yuan-style hardness scale (lower = stiffer), the 800 Speed measures 7.83 — much stiffer than the previous Bladex 800 New (8.58). Frame torsion measures 18.72 — the best of any speed racket tested in BadmintonCN reviewers' roundup, even better than the 99 Pro 2 at 19.87. The frame uses M46X carbon to balance stiffness with elasticity.",
+          body: "BadmintonCN reviewers measured a 4U/G6 Bladex 800 Speed at 85.2g unstrung, 90.8g with grip and string (underbase still on), balance 299mm. A 3U/G5 came in at 89g unstrung, 91.4g with the underbase removed, balance 302mm. On YuanShi's (源式) shaft-deflection rig (lower = stiffer; YuanShi is a Chinese badminton creator who tests rackets on a professional measurement machine), the 800 Speed measures around 7.83 — much stiffer than the previous Bladex 800 New (around 8.58). Frame torsion measures 18.72 — the best of any speed racket tested in BadmintonCN reviewers' roundup, even better than the 99 Pro 2 at 19.87. The frame uses M46X carbon to balance stiffness with elasticity.",
         },
         {
           heading: "Where the dwell time pays off",
@@ -427,15 +427,15 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Halbertec 8000: the amateur all-rounder",
-          body: "BadmintonCN reviewers has called the Halbertec 8000 the racket he has recommended more than any other on the forum, and he still owns two. It is around 400-500 USD cheaper than the Yonex Astrox 88S Pro 2024 and 600-700 USD cheaper than the Arcsaber 11 Pro, and yet it competes on smash quality (especially with the underbase removed) and on rear-court solidity. The 6.8mm hard-flex shaft is moderate enough that most amateur players can drive it. Yuan-style shaft hardness around 8.33. If you do not yet know your style or are buying your first serious racket above the entry tier, this is the safe pick.",
+          body: "BadmintonCN reviewers has called the Halbertec 8000 the racket he has recommended more than any other on the forum, and he still owns two. It is around 400-500 USD cheaper than the Yonex Astrox 88S Pro 2024 and 600-700 USD cheaper than the Arcsaber 11 Pro, and yet it competes on smash quality (especially with the underbase removed) and on rear-court solidity. The 6.8mm hard-flex shaft is moderate enough that most amateur players can drive it — around 8.33 on YuanShi's deflection rig (a Chinese badminton creator's measurements widely cited on BadmintonCN). If you do not yet know your style or are buying your first serious racket above the entry tier, this is the safe pick.",
         },
         {
           heading: "Halbertec 9000: thinner frame, faster swing, weaker rear",
-          body: "The 9000 was marketed as a control king, but reviewers disagree with that positioning. The 9000 has a thinner frame than the 8000 (lower wind resistance, faster swing) and a stiffer shaft (Yuan-style 7.92), but on hard smashes the combination produces what BadmintonCN reviewers call 卸力 — a loss of power compared with other hard-shaft rackets. He attributes this to the relatively soft frame paired with the harder shaft: the frame absorbs energy that should travel to the shuttle. The 9000 is faster and more accurate at front court than the 8000. It is also less solid at the rear court. If you are choosing between 8000 and 9000 by hype alone, you may end up with the wrong one.",
+          body: "The 9000 was marketed as a control king, but reviewers disagree with that positioning. The 9000 has a thinner frame than the 8000 (lower wind resistance, faster swing) and a stiffer shaft (around 7.92 on YuanShi's deflection rig, vs the 8000's 8.33), but on hard smashes the combination produces what BadmintonCN reviewers call 卸力 — a loss of power compared with other hard-shaft rackets. He attributes this to the relatively soft frame paired with the harder shaft: the frame absorbs energy that should travel to the shuttle. The 9000 is faster and more accurate at front court than the 8000. It is also less solid at the rear court. If you are choosing between 8000 and 9000 by hype alone, you may end up with the wrong one.",
         },
         {
           heading: "Halbertec 9000 Power: a speed racket disguised as a balance racket",
-          body: "The 9000 Power (战戟 9000P) launched 2025 takes the 9000 thinner frame and makes the shaft even stiffer. Yuan-style hardness 7.65 — same range as the Astrox 88D Pro 2024 (7.59) and 88S Pro 2024. Frame is nearly identical to the 9000, with a minor wind-cutting tweak at the head. Slightly more head weight than the 9000. The 卸力 problem is mostly fixed. But BadmintonCN reviewers' verdict is direct: the 9000 Power is functionally a speed racket. It can be substituted by his other speed rackets (Yonex 1000Z, Yonex 800 Pro, Victor 100X SE) without much loss. The 8000 cannot — its pocketing and balance character are unique within Li-Ning's lineup.",
+          body: "The 9000 Power (战戟 9000P) launched 2025 takes the 9000 thinner frame and makes the shaft even stiffer. Around 7.65 on YuanShi's deflection rig — same range as the Astrox 88D Pro 2024 (around 7.59) and 88S Pro 2024 on the same rig. Frame is nearly identical to the 9000, with a minor wind-cutting tweak at the head. Slightly more head weight than the 9000. The 卸力 problem is mostly fixed. But BadmintonCN reviewers' verdict is direct: the 9000 Power is functionally a speed racket. It can be substituted by his other speed rackets (Yonex 1000Z, Yonex 800 Pro, Victor 100X SE) without much loss. The 8000 cannot — its pocketing and balance character are unique within Li-Ning's lineup.",
         },
         {
           heading: "Sample variance: weigh before you buy",
@@ -469,7 +469,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Yonex Astrox 88D Pro 2024: the cross-brand benchmark",
-          body: "The Yonex Astrox 88D Pro 2024 is the cross-brand reference. Yuan-style shaft hardness 7.59 — slightly stiffer than the AxForce 90 New. BadmintonCN reviewers rank it as the strongest 2024 attack racket in his collection on overall package: top-tier shaft, transparent power transmission, lower swing weight than peers, and ranked above the original 88DP camel-gold and even the Astrox 100ZZ. Versus the AxForce 90 New: the 88D Pro 2024 edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy. The AxForce 90 New responds with better frame pocketing for delicate net shots and drops.",
+          body: "The Yonex Astrox 88D Pro 2024 is the cross-brand reference. Around 7.59 on YuanShi's shaft-deflection rig (Chinese creator measurements widely cited on BadmintonCN; lower = stiffer) — slightly stiffer than the AxForce 90 New on the same rig. BadmintonCN reviewers rank it as the strongest 2024 attack racket in his collection on overall package: top-tier shaft, transparent power transmission, lower swing weight than peers, and ranked above the original 88DP camel-gold and even the Astrox 100ZZ. Versus the AxForce 90 New: the 88D Pro 2024 edges it on raw rear-court attack, off-string speed, feedback clarity, and pointing accuracy. The AxForce 90 New responds with better frame pocketing for delicate net shots and drops.",
         },
         {
           heading: "Pick by hand profile, not just by smash power",
@@ -484,67 +484,71 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
     },
     {
       slug: "yuan-style-shaft-hardness-explained",
-      updatedAt: "2026-04-29",
+      updatedAt: "2026-05-05",
       category: "guides",
-      title: "What is Yuan-style shaft hardness, and why should you care",
-      dek: "A Chinese-market measurement protocol that gives you a single number per shaft. It is not perfect, but it is the most useful cross-brand comparison data you will find online.",
+      title: "YuanShi shaft hardness: what one Chinese badminton creator's testing rig actually tells you",
+      dek: "YuanShi (源式) is not a scientific protocol — it's the handle of a Chinese badminton creator who measures rackets on a professional shaft-deflection machine and posts the numbers. Here is what they mean, what they don't, and how to use them when shopping.",
       sections: [
         {
-          heading: "Why brand spec sheets are not enough",
-          body: "Yonex labels shafts Stiff or Extra Stiff. Victor uses similar text labels. Li-Ning uses Hard or Hi-Flex. None of these scales line up between brands — a Yonex Stiff is not the same as a Victor Stiff. This makes cross-brand racket comparison genuinely difficult unless you have all the rackets in your hands at once. Reviewers who want to compare a Yonex Astrox 88D Pro 2024 to a Li-Ning Halbertec 9000 Power need a more rigorous measurement, and that is where the Yuan-style protocol comes in.",
+          heading: "What YuanShi actually is",
+          body: "YuanShi (源式) is the handle of a Chinese badminton creator who posts racket measurements on Douyin (the Chinese TikTok) and BadmintonCN. They are not a brand, a lab, or a standards body. They use a commercially available shaft-deflection machine — clamp the shaft, apply a standardized force, read the deflection in millimeters — and publish the numbers along with weight, balance, and torsion measurements for popular rackets. The numbers got cited so often on BadmintonCN that 'Yuan number' or 'YuanShi number' became forum shorthand for 'the deflection figure published by that creator.' We previously described this as 'Yuan-style protocol' on this page, which made it sound like an industry standard. It is not — it's one creator's measurement rig. Calling it that was a mistake on our part, and we have corrected it.",
         },
         {
-          heading: "What the Yuan-style protocol does",
-          body: "Yuan-style (源式) is a shaft-stiffness measurement protocol that has gained traction on Chinese badminton forums, particularly badmintoncn.com. The protocol applies a standardized force to a clamped shaft and measures the deflection in millimeters. The result is a single number — typically between 6 and 9 — where lower means stiffer. So a shaft at 6.71 (Yonex Astrox 100ZZ) is harder than a shaft at 8.33 (Li-Ning Halbertec 8000). The numbers are reproducible across rackets when measured on the same rig, which is what makes them useful.",
+          heading: "Why brand spec sheets aren't enough",
+          body: "Yonex labels shafts Stiff or Extra Stiff. Victor uses similar text labels. Li-Ning uses Hard or Hi-Flex. None of these scales line up between brands — a Yonex Stiff is not the same as a Victor Stiff. This makes cross-brand racket comparison genuinely difficult unless you have all the rackets in your hands at once. So when forum reviewers want to compare, say, a Yonex Astrox 88D Pro 2024 against a Li-Ning Halbertec 9000 Power, they reach for one of the few independent measurement sources that covers both brands. YuanShi's numbers are popular precisely because they are consistent within their own dataset — same machine, same operator, same procedure — even if they are not authoritative.",
         },
         {
-          heading: "The 2024-2026 Yuan-style benchmark table",
-          body: "Here are commonly cited values from BadmintonCN testing, ordered stiffest to softest: Yonex Astrox 100ZZ 6.71, Victor Auraspeed Hayabusa around the same range, Yonex Astrox 99 Pro 2 7.43, Yonex Astrox 88DP New Color 7.59, Li-Ning Halbertec 9000 Power 7.65, Yonex Arcsaber 11 Pro 7.86, Li-Ning Halbertec 9000 7.92, Yonex Astrox 88SP New Color in the 7.5-7.6 range, Li-Ning Halbertec 8000 8.33, Li-Ning Bladex 800 Speed 7.83, Li-Ning Bladex 800 New 8.58. Not every shaft has a published number, but enough of the 2024-2026 flagships do that you can sanity-check a shopping decision.",
+          heading: "How to read the numbers",
+          body: "YuanShi's deflection numbers typically run between 6 and 9. Lower means the shaft deflected less under the standard force, i.e. it's stiffer. Higher means more deflection, i.e. softer. So a shaft published at 6.71 (e.g. an early Yonex Astrox 100ZZ sample) is harder than one at 8.33 (e.g. a Li-Ning Halbertec 8000 sample). Within YuanShi's own measurements, the ordering is generally consistent and useful. Across labs, it is not — another rig with a different clamp, force, or measurement point will give different absolute numbers, even if the relative ordering of rackets is similar.",
+        },
+        {
+          heading: "Commonly cited numbers (creator-published, not official)",
+          body: "Numbers seen on BadmintonCN attributed to YuanShi's rig, ordered stiffest to softest: Yonex Astrox 100ZZ around 6.71, Yonex Astrox 99 Pro 2 around 7.43, Yonex Astrox 88DP New Color around 7.59, Li-Ning Halbertec 9000 Power around 7.65, Li-Ning Bladex 800 Speed around 7.83, Yonex Arcsaber 11 Pro around 7.86, Li-Ning Halbertec 9000 around 7.92, Yonex Astrox 88SP New Color in the 7.5-7.6 range, Yonex Astrox 100ZZ Axelsen (VA) edition around 8.23, Li-Ning Halbertec 8000 around 8.33, Li-Ning Bladex 800 New around 8.58. These are creator-published numbers, not manufacturer specs. We cite them because they are widely referenced, not because they are authoritative.",
         },
         {
           heading: "What the number does and does not tell you",
-          body: "What it tells you: how much active force you need to flex the shaft. Shafts under 7.5 require concentrated, fast power strokes — they reward technique and punish soft swings. Shafts above 8.0 are forgiving for amateur players and recover well from imprecise force. Shafts at 8.5 or higher are sugar-water by design. What it does NOT tell you: how the frame transmits that energy, how the bend point sits, whether the racket is head-heavy or head-light, what the swing weight is, how the sweet spot feels. A stiff shaft in a soft frame can lose power on smash (this is the 卸力 problem reviewers discuss with the Halbertec 9000). A medium shaft in a thick frame can feel quicker than a stiffer shaft in a thin frame.",
+          body: "What it tells you: roughly how much active force you need to flex the shaft. Shafts under 7.5 require concentrated, fast power strokes — they reward technique and punish soft swings. Shafts above 8.0 are forgiving for amateur players and recover well from imprecise force. Shafts at 8.5 or higher are sugar-water by design. What the number does NOT tell you: how the frame transmits that energy, where the bend point sits, whether the racket is head-heavy or head-light, what the swing weight is, how the sweet spot feels. A stiff shaft in a soft frame can lose power on smash (the 卸力 problem reviewers discuss with the Halbertec 9000). A medium shaft in a thick frame can feel quicker than a stiffer shaft in a thin frame. The number is one input among many, not a verdict.",
         },
         {
           heading: "How to use it when shopping",
-          body: "First, locate yourself on the scale. If you are a recreational or club-tier player, target shafts at 8.0 or higher (Halbertec 8000, Astrox 77 Pro, Nanoflare 700 Pro, Bladex 800 New). If you are competitive (Division 4-2 Irish league, BadmintonCN 5-7, USAB Class B-A), 7.5-8.0 is your sweet spot (Astrox 88S Pro 2024, AxForce 90 New, Halbertec 9000 Power, Bladex 800 Speed). If you are pro-track, sub-7.5 is on the table (Astrox 100ZZ, 100ZZ VA, 88D Pro 2024, Auraspeed HS Plus). Then refine by frame profile, head weight, and play style — but the Yuan number rules out most rackets that will not match your force profile in the first 30 seconds of looking.",
+          body: "First, locate yourself on the scale. If you are a recreational or club-tier player, target shafts measured at 8.0 or higher (Halbertec 8000, Astrox 77 Pro, Nanoflare 700 Pro, Bladex 800 New). If you are competitive (Division 4-2 Irish league, BadmintonCN 5-7, USAB Class B-A), 7.5-8.0 is your sweet spot (Astrox 88S Pro 2024, AxForce 90 New, Halbertec 9000 Power, Bladex 800 Speed). If you are pro-track, sub-7.5 is on the table (Astrox 100ZZ, 88D Pro 2024, Auraspeed HS Plus). Then refine by frame profile, head weight, and play style. The hardness number rules out most rackets that won't match your force profile, but only if you remember it's one creator's measurement, not gospel.",
         },
         {
           heading: "Caveats and limits",
-          body: "Yuan-style numbers come from independent testing and are not Yonex, Victor, or Li-Ning official data. The measurement rig and protocol can vary between labs, so a 7.6 from one rig may be a 7.4 on another. Per-batch shaft variance also exists — particularly with Li-Ning, where the BadmintonCN reviewer's weighed 10 Halbertec 9000 Power samples and got swing-weight variance well outside the published spec. Treat Yuan numbers as a useful guide, not a precise truth. They are still the best cross-brand quantitative data available to amateur shoppers.",
+          body: "YuanShi's numbers come from one independent creator's testing rig and are not Yonex, Victor, or Li-Ning official data. The same shaft may register a different number on a different rig — a 7.6 here may be a 7.4 elsewhere. Per-batch shaft variance is also real: a BadmintonCN reviewer weighed 10 Halbertec 9000 Power samples and got swing-weight variance well outside the published spec, and shaft hardness varies similarly. Treat YuanShi's numbers as a useful guide for comparing within their own dataset, not as precise truth. Always cross-check against your own demo if possible, and remember that frame, balance, swing weight, sweet-spot size, and string setup matter as much as raw shaft hardness.",
         },
       ],
-      cta: "When you run the finder, the stiffness data above is already baked into our level-fit factor — pick your level and we adjust accordingly.",
+      cta: "When you run the finder, hardness is one of several signals — pick your level and we balance it against frame, balance, and play style.",
     },
     {
-      slug: "yonex-astrox-100zz-antonsen-vs-kurenai",
-      updatedAt: "2026-04-30",
-      title: "Yonex Astrox 100ZZ Kurenai vs Antonsen: same DNA, different demands",
-      dek: "Yonex's Anders Antonsen edition isn't a recolor — Volume Cut Resin replaces Black Micro Core in the frame, and the on-court behavior shifts more than the marketing implies.",
+      slug: "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      updatedAt: "2026-05-05",
+      title: "Yonex Astrox 100ZZ Kurenai vs Axelsen (VA): same DNA, different demands",
+      dek: "Yonex's Viktor Axelsen edition (called 安塞龙 on Chinese forums) isn't a recolor — Volume Cut Resin replaces Black Micro Core in the frame, and the on-court behavior shifts more than the marketing implies.",
       sections: [
         {
-          heading: "What actually changed",
-          body: "Yonex's Antonsen / Anselm edition of the Astrox 100ZZ is sometimes pitched as a colorway, but the technical sheet shows otherwise. The frame swaps Black Micro Core (used in the Kurenai red and Navy blue editions) for Volume Cut Resin — a resin-system change that lowers frame mass and slightly softens the shaft response. Frame footprint, line-hole pattern, shaft diameter, and shaft length are otherwise identical. Yonex's hand on the dial here is subtle but real, and the on-court reading from BadmintonCN reviewers backs that up.",
+          heading: "Naming note before we start",
+          body: "On Chinese badminton forums the Viktor Axelsen 100ZZ edition is referred to as 100ZZ 安塞龙 — 安塞龙 is the standard Chinese transliteration of Viktor Axelsen, NOT Anders Antonsen. Antonsen is sponsored by Victor (his signature racket is the Auraspeed 99). So when you see Chinese reviewers compare 100ZZ 安塞龙 vs 100ZZ 古红色 (Kurenai), they are comparing the Viktor Axelsen (VA) edition to the original red Kurenai. We previously got this wrong on this page and have corrected it.",
+        },
+        {
+          heading: "What actually changed in the VA edition",
+          body: "Yonex's Viktor Axelsen (VA) edition of the Astrox 100ZZ is sometimes pitched as a colorway, but the technical sheet shows otherwise. The frame swaps Black Micro Core (used in the Kurenai red and Navy blue editions) for Volume Cut Resin — a resin-system change that lowers frame mass and slightly softens the shaft response. Frame footprint, line-hole pattern, shaft diameter, and shaft length are otherwise identical. Yonex's hand on the dial here is subtle but real, and the on-court reading from BadmintonCN reviewers backs that up.",
         },
         {
           heading: "The numbers",
-          body: "Reviewers' measured 4U samples: Antonsen 88.7g with underbase removed at balance 309mm; Kurenai 89.7g with underbase removed at balance 309mm. Both with 26-28 lb AB string. Unstrung weight ranges 84.6-85.7g across both editions — under-84g samples are rare. Yuan-style shaft hardness (lower = stiffer): Antonsen 8.23, Kurenai 8.09 — meaning the Antonsen is softer by about 0.14 on the scale. That's a small absolute number but a noticeable real-world tier difference. Combined with the slightly lower swing weight, the Antonsen is meaningfully easier to drive.",
+          body: "Reviewers' measured 4U samples: VA edition 88.7g with underbase removed at balance 309mm; Kurenai 89.7g with underbase removed at balance 309mm. Both with 26-28 lb AB string. Unstrung weight ranges 84.6-85.7g across both editions — under-84g samples are rare. Shaft hardness numbers come from the YuanShi (源式) creator's racket testing rig — a Chinese badminton creator who measures rackets with a professional shaft-deflection machine and posts the results, lower number means stiffer: VA edition 8.23, Kurenai 8.09. The VA edition is softer by about 0.14 on YuanShi's scale. That's a small absolute number but a noticeable real-world tier difference. Combined with the slightly lower swing weight, the VA edition is meaningfully easier to drive. These are independent creator measurements, not Yonex official data, so treat them as a useful guide rather than a precise truth.",
         },
         {
           heading: "What this means in singles",
-          body: "Founder firsthand (Rui Su, Division 4 Ireland): I have played the regular 100ZZ Kurenai and found it fast but very demanding — repulsive on contact and tiring across long matches. The Antonsen specs read like the version I would actually play. Lighter swing, slightly more flex, same head-heavy + extra-stiff DNA. For singles where you need consistent rear-court attack across a 21-21 game, the Antonsen edition should reduce fatigue without giving up the marquee 100ZZ feel. The Kurenai remains the right pick if you have time to condition for the stiffer shaft and want maximum power transmission on every swing.",
+          body: "Founder firsthand (Rui Su, Division 4 Ireland): I have played the regular 100ZZ Kurenai and found it fast but very demanding — repulsive on contact and tiring across long matches. The VA specs read like the version I would actually play. Lighter swing, slightly more flex, same head-heavy + extra-stiff DNA. For singles where you need consistent rear-court attack across a 21-21 game, the VA edition should reduce fatigue without giving up the marquee 100ZZ feel. The Kurenai remains the right pick if you have time to condition for the stiffer shaft and want maximum power transmission on every swing.",
         },
         {
           heading: "What this means in doubles",
-          body: "BadmintonCN reviewers note that even the Antonsen, with its lighter swing and easier shaft loading, is still a marginal pick for fast men's doubles. The 100ZZ family was built for singles back court and won't beat the Nanoflare 1000Z, Nanoflare 800 Pro, or Auraspeed 100X SE on swing speed and front-court reactivity. If you want a 100ZZ-style frame for doubles, the Antonsen is a more honest fit than the Kurenai because it shaves the swing weight that worked against you in fast exchanges. But your main racket should still be a speed-leaning frame.",
-        },
-        {
-          heading: "Compared to the 100ZZ VA",
-          body: "The Viktor Axelsen edition (100ZZ VA) is a separate variant again — keeps the head-heavy / extra-stiff DNA but with a different shaft tuning that makes it more forgiving than the Kurenai. The current variant ranking from easiest to most demanding is: 100ZZ VA → 100ZZ Antonsen → 100ZZ Kurenai. If you found the regular 100ZZ punishing, the VA is the most accessible. The Antonsen sits between the VA and Kurenai. The Kurenai stays as the no-compromise version.",
+          body: "BadmintonCN reviewers note that even the VA edition, with its lighter swing and easier shaft loading, is still a marginal pick for fast men's doubles. The 100ZZ family was built for singles back court and won't beat the Nanoflare 1000Z, Nanoflare 800 Pro, or Auraspeed 100X SE on swing speed and front-court reactivity. If you want a 100ZZ-style frame for doubles, the VA edition is a more honest fit than the Kurenai because it shaves the swing weight that worked against you in fast exchanges. But your main racket should still be a speed-leaning frame.",
         },
         {
           heading: "Buying guidance",
-          body: "Buy the Antonsen if: you like the 100ZZ profile but find the Kurenai tiring across full matches, you compete in singles or back-court doubles, and you want the lightest-swinging 100ZZ available. Buy the Kurenai if: you have the technique and conditioning to load a very stiff shaft, you prize maximum power transmission and pointing accuracy, and you have already played and outgrown the VA edition. Skip the entire 100ZZ family if: you play fast doubles primarily — start with the Astrox 88D Pro 2024 (head-heavy with lower swing weight) or a speed racket like the Nanoflare 1000Z.",
+          body: "Buy the VA (Viktor Axelsen) edition if: you like the 100ZZ profile but find the Kurenai tiring across full matches, you compete in singles or back-court doubles, and you want the lightest-swinging 100ZZ. Buy the Kurenai if: you have the technique and conditioning to load a very stiff shaft, you prize maximum power transmission and pointing accuracy, and you want the no-compromise marquee 100ZZ feel. Skip the entire 100ZZ family if: you play fast doubles primarily — start with the Astrox 88D Pro 2024 (head-heavy with lower swing weight) or a speed racket like the Nanoflare 1000Z.",
         },
       ],
       cta: "Run the finder with singles or back-court attack and we'll score the 100ZZ variants against your level and budget.",
@@ -729,7 +733,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Pedigree and design intent",
-          body: "Astrox 99 Pro is built for one thing: rear-court attack at the highest level. Lee Zii Jia switched to it from the 100ZZ; Kento Momota played its predecessor for years. Yonex did not engineer this frame as a do-everything pro racket — they engineered it as a head-heavy, extra-stiff statement, with no compromises toward forgiveness or front-court speed. The 100ZZ is its sibling in spirit but with a softer overall profile; the 99 Pro doubles down on demand.",
+          body: "Astrox 99 Pro is built for one thing: rear-court attack at the highest level. Kento Momota played its predecessor (Astrox 99) for years and his feedback shaped multiple shaft and grommet revisions; Lee Zii Jia used the Yonex 100ZZ and 99 Pro during his Yonex era before switching to Victor in 2022 (he now plays the Thruster Ryuga / Ryuga II). Yonex did not engineer this frame as a do-everything pro racket — they engineered it as a head-heavy, extra-stiff statement, with no compromises toward forgiveness or front-court speed. The 100ZZ is its sibling in spirit but with a softer overall profile; the 99 Pro doubles down on demand.",
         },
         {
           heading: "Specs that matter",
@@ -953,7 +957,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Player and tactical jargon",
-          body: "Sugar-water: forum slang for an extra-easy, forgiving racket — derives from Chinese badminton community usage. T0 / T1 / S-tier: forum tier rankings used on BadmintonCN to compare racket classes. Antonsen color / Kurenai / Camel-gold: colourway names that distinguish racket generations (e.g. Astrox 100ZZ Antonsen vs Kurenai). Yuan-style hardness: a community-developed shaft hardness scale (lower number = stiffer); cited frequently on BadmintonCN. SE / VA / Tour: subvariants of pro frames signed off by specific players (Mohammad Ahsan SE, Viktor Axelsen VA, Tour, Game).",
+          body: "Sugar-water: forum slang for an extra-easy, forgiving racket — derives from Chinese badminton community usage. T0 / T1 / S-tier: forum tier rankings used on BadmintonCN to compare racket classes. Kurenai / Camel-gold / 安塞龙 (Axelsen): colourway names that distinguish racket generations (e.g. Astrox 100ZZ Kurenai is the original red Black-Micro-Core edition; 100ZZ 安塞龙 is the Viktor Axelsen / VA edition that uses Volume Cut Resin instead). Note: 安塞龙 is the Chinese transliteration of Viktor Axelsen, not Anders Antonsen — Antonsen is sponsored by Victor, not Yonex. YuanShi (源式) shaft hardness: shaft-deflection numbers measured and published by a Chinese badminton creator using a professional racket testing rig (lower number = stiffer); widely cited on BadmintonCN but not an official manufacturer spec. SE / VA / Tour: subvariants of pro frames signed off by specific players (e.g. Mohammad Ahsan SE, Viktor Axelsen VA, Tour, Game).",
         },
       ],
       cta: "Now you can read deep-dives without the language barrier — start with our racket-balance guide.",

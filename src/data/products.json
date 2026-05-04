@@ -119,8 +119,8 @@
       },
       {
         "source": "badmintoncn",
-        "label": "BadmintonCN: 100ZZ Antonsen / Anselm vs Kurenai (Apr 2026)",
-        "summary": "Anders Antonsen edition (\"Anselm\") swaps the original 100ZZ Kurenai's Black Micro Core frame material for Volume Cut Resin. Result: lighter swing weight, slightly softer shaft (Yuan-style hardness 8.23 vs 8.09 — softer/easier to drive). Reviewers measured 4U Antonsen at 88.7g w/ underbase removed, balance 309mm; 4U Kurenai at 89.7g/309mm. Frame, shaft length, and line holes are otherwise identical. Antonsen edition is faster but slightly less crisp on contact; Kurenai retains the marquee 100ZZ feel for players willing to load the stiffer shaft.",
+        "label": "BadmintonCN: 100ZZ Axelsen (VA) edition vs Kurenai (Apr 2026)",
+        "summary": "Viktor Axelsen edition (Chinese forum name 安塞龙, also known as the 100ZZ VA) swaps the original 100ZZ Kurenai's Black Micro Core frame material for Volume Cut Resin. Result: lighter swing weight, slightly softer shaft (creator YuanShi's rig measured shaft hardness 8.23 vs 8.09 — softer/easier to drive). Reviewers measured 4U Axelsen edition at 88.7g w/ underbase removed, balance 309mm; 4U Kurenai at 89.7g/309mm. Frame, shaft length, and line holes are otherwise identical. The Axelsen/VA edition is faster but slightly less crisp on contact; Kurenai retains the marquee 100ZZ feel for players willing to load the stiffer shaft.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
@@ -1768,7 +1768,7 @@
       {
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's control-racket positioning (Jan 2026)",
-        "summary": "Considered the strongest control-balance racket currently. Beats all Li-Ning Halberds plus Arcsaber 11 Pro for combined control + smash. Same shaft hardness range as 9000P (~7.5-7.6 on Yuan-style scale), but very different feel: pocketing makes it ideal for mixed doubles where every shot must be solid, vs 9000P's crisp speed-rack profile.",
+        "summary": "Considered the strongest control-balance racket currently. Beats all Li-Ning Halberds plus Arcsaber 11 Pro for combined control + smash. Same shaft hardness range as 9000P (~7.5-7.6 on the YuanShi creator's deflection rig, lower = stiffer), but very different feel: pocketing makes it ideal for mixed doubles where every shot must be solid, vs 9000P's crisp speed-rack profile.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
@@ -2478,7 +2478,7 @@
       {
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's Halbertec 9000 Power roundup (Jan 2026)",
-        "summary": "Yuan-style shaft hardness 8.33 (moderate). Most amateur players can drive it; the BadmintonCN reviewer's still owns two and keeps recommending it. NOT the same product family as 9000/9000P — different style, with pocketing for control. Better rear-court solidity than 9000.",
+        "summary": "Shaft hardness around 8.33 on the YuanShi creator's deflection rig (moderate; lower = stiffer). Most amateur players can drive it; the BadmintonCN reviewer's still owns two and keeps recommending it. NOT the same product family as 9000/9000P — different style, with pocketing for control. Better rear-court solidity than 9000.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
@@ -2537,7 +2537,7 @@
       {
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's Halbertec roundup (Jan 2026)",
-        "summary": "Yuan-style shaft hardness 7.92. Multiple samples confirm 9000's frame is thinner than 8000 (per community measurements) — lower wind resistance, faster swing. Stiffer + more elastic shaft, but smash on hard contact has noticeable 'loses power' (卸力) feel; reviewer attributes this to softer frame relative to the harder shaft. Disagrees with the marketed 'control king' positioning since a softer frame undermines pure control claims.",
+        "summary": "Shaft hardness around 7.92 on the YuanShi creator's deflection rig (Chinese badminton creator; lower = stiffer). Multiple samples confirm 9000's frame is thinner than 8000 (per community measurements) — lower wind resistance, faster swing. Stiffer + more elastic shaft, but smash on hard contact has noticeable 'loses power' (卸力) feel; reviewer attributes this to softer frame relative to the harder shaft. Disagrees with the marketed 'control king' positioning since a softer frame undermines pure control claims.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
@@ -2589,13 +2589,13 @@
       "https://www.ckyew.com/post/li-ning-halbertec-9000-power-badminton-racket-review",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Power variant of the 9000: stiffer shaft, slightly more head weight, more crisp/snap. — BadmintonCN reviewers tested 4U/G5: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm. Yuan-style shaft hardness 7.65 — same range as Astrox 88DP New Color (7.59) and 88SP New Color, much stiffer than Halbertec 8000 (8.33). Reviewer's verdict: 9000P is NOT a strict upgrade over 8000 — entirely different style and entry threshold. Better-suited to advanced doubles players; difficult for BadmintonCN reviewers's intermediate-level partner who couldn't drive the shaft. Sample variance is significant: 5/10 samples weigh ~82.5g unstrung — very light by Halbertec standards.",
+    "editorNote": "Power variant of the 9000: stiffer shaft, slightly more head weight, more crisp/snap. — BadmintonCN reviewers tested 4U/G5: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm. Around 7.65 on YuanShi's deflection rig (Chinese creator measurements; lower = stiffer) — same range as Astrox 88DP New Color (around 7.59) and 88SP New Color on the same rig, much stiffer than Halbertec 8000 (around 8.33). Reviewer's verdict: 9000P is NOT a strict upgrade over 8000 — entirely different style and entry threshold. Better-suited to advanced doubles players; difficult for BadmintonCN reviewers's intermediate-level partner who couldn't drive the shaft. Sample variance is significant: 5/10 samples weigh ~82.5g unstrung — very light by Halbertec standards.",
     "reviewCount": 0,
     "marketSignals": [
       {
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's Halbertec 9000 Power review (Jan 2026)",
-        "summary": "4U/G5 sample: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm w/ N65@26-28lb. Yuan-style hardness 7.65 (same range as 88DP/SP New Color shafts). Frame nearly identical to 9000 except possibly more wind-cutting at the head. More crisp than 9000, sharper smash placement, stronger rear-court attack. Smash no longer has the 'loses power' feel of 9000. Speed-racket profile, NOT a Halbertec 8000 successor in feel. Reviewer says 9000/9000P together are substitutable by his other speed rackets (100XSE, 800 Pro, 1000Z); the 8000 is not — it has unique pocketing/balance character.",
+        "summary": "4U/G5 sample: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm w/ N65@26-28lb. Around 7.65 on YuanShi's deflection rig (Chinese creator measurements; lower = stiffer; same range as 88DP/SP New Color shafts on the same rig). Frame nearly identical to 9000 except possibly more wind-cutting at the head. More crisp than 9000, sharper smash placement, stronger rear-court attack. Smash no longer has the 'loses power' feel of 9000. Speed-racket profile, NOT a Halbertec 8000 successor in feel. Reviewer says 9000/9000P together are substitutable by his other speed rackets (100XSE, 800 Pro, 1000Z); the 8000 is not — it has unique pocketing/balance character.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       },
@@ -2657,13 +2657,13 @@
       "https://triplepointsports.com/products/li-ning-bladex-800-speed-power-badminton-racket-lightweight-high-speed-professional-racquet",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "2026 successor to the Bladex 800 New. M46X carbon frame and stiffer shaft turn the line from a 'sugar-water' speed racket into a serious tournament option. — BadmintonCN reviewers rates this as one of the most distinctive speed rackets on the market: \"tough-elastic\" (韧弹) feel — has a slight loading / dwell process before release, vs the instant-firing crisp profile of NF800 Pro and Auraspeed Hayabusa. Best for control players who want speed AND precise placement. Shaft hardness 7.83 (Yuan-style) — much stiffer than 800 New's 8.58. Frame torsion 18.72 — best in the speed-racket category measured.",
+    "editorNote": "2026 successor to the Bladex 800 New. M46X carbon frame and stiffer shaft turn the line from a 'sugar-water' speed racket into a serious tournament option. — BadmintonCN reviewers rates this as one of the most distinctive speed rackets on the market: \"tough-elastic\" (韧弹) feel — has a slight loading / dwell process before release, vs the instant-firing crisp profile of NF800 Pro and Auraspeed Hayabusa. Best for control players who want speed AND precise placement. Shaft hardness around 7.83 on YuanShi's deflection rig (Chinese badminton creator's measurements; lower = stiffer) — much stiffer than 800 New's 8.58 on the same rig. Frame torsion around 18.72 — best in the speed-racket category measured.",
     "reviewCount": 0,
     "marketSignals": [
       {
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's Bladex 800 Speed review (Mar 2026)",
-        "summary": "4U/G6: 85.2g unstrung, 90.8g w/ grip+string (underbase still on), balance 299mm w/ N65@26-28lb. 3U/G5: 89g unstrung, 91.4g w/ underbase removed, balance 302mm. Yuan-style shaft hardness 7.83 (very stiff for a speed racket). Frame torsion 18.72 (best of all speed rackets tested, beating even 99 Pro 2's 19.87). M46X carbon → 'tough-elastic' (韧弹) feel — distinct from crisp/snap idiom of NF800 Pro / 100X SE / Auraspeed. Has a brief loading + dwell + release process; small force inputs still produce good ejection if delivered with concentration. Best for organized attack via precise placement, not raw speed.",
+        "summary": "4U/G6: 85.2g unstrung, 90.8g w/ grip+string (underbase still on), balance 299mm w/ N65@26-28lb. 3U/G5: 89g unstrung, 91.4g w/ underbase removed, balance 302mm. Around 7.83 on YuanShi's deflection rig (Chinese creator's measurements; lower = stiffer) — very stiff for a speed racket. Frame torsion around 18.72 (best of all speed rackets tested by BadmintonCN reviewers, beating even 99 Pro 2's 19.87). M46X carbon → 'tough-elastic' (韧弹) feel — distinct from crisp/snap idiom of NF800 Pro / 100X SE / Auraspeed. Has a brief loading + dwell + release process; small force inputs still produce good ejection if delivered with concentration. Best for organized attack via precise placement, not raw speed.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       },
@@ -2725,13 +2725,13 @@
       "https://www.shopnings.com/li-ning-bladex-800-new-badminton-racket/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Entry-friendly Bladex with medium shaft for amateur drivers — head-light feel with low force threshold. — BadmintonCN reviewers explicitly rates this 3 stars (one of only two products in his collection at that rating). Shaft hardness 8.58 (Yuan-style) — softest among high-end speed rackets tested. Slower off-string speed, lower pointing accuracy, weaker rear-court attack relative to its peers. Good for newer players who want a head-light Li-Ning frame without the demands of the 800 Speed; not the choice if you're looking for tournament-level speed-racket performance.",
+    "editorNote": "Entry-friendly Bladex with medium shaft for amateur drivers — head-light feel with low force threshold. — BadmintonCN reviewers explicitly rates this 3 stars (one of only two products in his collection at that rating). Shaft hardness around 8.58 on YuanShi's deflection rig (Chinese badminton creator's measurements; lower = stiffer) — softest among high-end speed rackets tested on that rig. Slower off-string speed, lower pointing accuracy, weaker rear-court attack relative to its peers. Good for newer players who want a head-light Li-Ning frame without the demands of the 800 Speed; not the choice if you're looking for tournament-level speed-racket performance.",
     "reviewCount": 0,
     "marketSignals": [
       {
         "source": "badmintoncn",
         "label": "BadmintonCN: the BadmintonCN reviewer's review of 800 New (Mar 2026 retrospective)",
-        "summary": "4U/G5: 84g unstrung, 89.3g w/ underbase removed, balance 297mm. Yuan-style shaft hardness 8.58 — the softest among all high-end speed rackets tested. Reviewer's lowest rating in his rotation (along with Auraspeed 100X Ultra). Off-string speed slower, pointing weaker, rear-court attack less authoritative than Yonex NF1000Z, NF100XSE (Victor Auraspeed 100X SE), or Halbertec 9000 Power. Suits beginners + lower-force players; not a tournament racket.",
+        "summary": "4U/G5: 84g unstrung, 89.3g w/ underbase removed, balance 297mm. Around 8.58 on YuanShi's deflection rig (Chinese creator's measurements; lower = stiffer) — the softest among all high-end speed rackets tested on that rig. Reviewer's lowest rating in his rotation (along with Auraspeed 100X Ultra). Off-string speed slower, pointing weaker, rear-court attack less authoritative than Yonex NF1000Z, NF100XSE (Victor Auraspeed 100X SE), or Halbertec 9000 Power. Suits beginners + lower-force players; not a tournament racket.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
@@ -3186,7 +3186,7 @@
       "https://www.yonex.com/badminton/racquets/astrox-99-pro",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Pro-tier head-heavy attack racket. NAMD shaft, e.cap, 68-hole stringbed (denser than the standard 76 — which raises perceived stiffness rather than the usual softness associated with denser stringbeds; this is engineered). Used by Lee Zii Jia after his switch from Astrox 100ZZ. — Reviewers consistently note this is a demanding frame: weighs ~96g strung at 4U with grip + heat-shrink, balance 299mm, but the head feel is even higher than the number suggests. Tolerance for off-sweet-spot hits is poor — even experienced players report frequent mishits during initial sessions. Reward profile: when you do hit clean, the directional precision and rear-court power are top-of-class. Skip this if you have shoulder issues or are still developing concentrated short-power swings — the Astrox 88D Pro 2024 is a more forgiving way to access head-heavy Yonex attack.",
+    "editorNote": "Pro-tier head-heavy attack racket. NAMD shaft, e.cap, 68-hole stringbed (denser than the standard 76 — which raises perceived stiffness rather than the usual softness associated with denser stringbeds; this is engineered). Yonex's flagship singles attack frame; Kento Momota played the Astrox 99 line for years and his feedback shaped the shaft and grommet design. Lee Zii Jia used the 99 Pro during his Yonex era before switching to Victor in 2022 (he now plays the Thruster Ryuga / Ryuga II). — Reviewers consistently note this is a demanding frame: weighs ~96g strung at 4U with grip + heat-shrink, balance 299mm, but the head feel is even higher than the number suggests. Tolerance for off-sweet-spot hits is poor — even experienced players report frequent mishits during initial sessions. Reward profile: when you do hit clean, the directional precision and rear-court power are top-of-class. Skip this if you have shoulder issues or are still developing concentrated short-power swings — the Astrox 88D Pro 2024 is a more forgiving way to access head-heavy Yonex attack.",
     "reviewCount": 0,
     "marketSignals": [
       {

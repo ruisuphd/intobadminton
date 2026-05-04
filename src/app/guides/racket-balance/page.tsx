@@ -90,10 +90,13 @@ export default function RacketBalanceGuide() {
           Voltric Lite, Nanoflare Junior); medium (Astrox 7, Arcsaber 7
           Pro, Halbertec 6000); stiff (Astrox 77 Pro, Auraspeed 90K II);
           and extra-stiff (Astrox 88D Pro 2024, 100ZZ, AxForce 90 New).
-          Yuan-style hardness measurements — popular on BadmintonCN — give
-          a more granular number where lower means stiffer; Astrox 88D Pro
-          2024 sits around 7.59 on that scale, near the stiffest production
-          shafts on the market.
+          Independent shaft-deflection measurements published by the
+          Chinese badminton creator YuanShi (源式) — widely cited on
+          BadmintonCN — give a more granular number where lower means
+          stiffer; the Astrox 88D Pro 2024 sits around 7.59 on YuanShi&rsquo;s
+          rig, near the stiffest production shafts on the market. These
+          are creator measurements, not official manufacturer specs, so
+          treat them as a useful guide rather than a precise truth.
         </p>
 
         <h2 className="pt-2 text-xl font-semibold text-[var(--text)]">
@@ -169,9 +172,10 @@ export default function RacketBalanceGuide() {
           Retail listings and forum specs are often re-worded
           approximations and may quietly compress &ldquo;medium&rdquo; and
           &ldquo;medium-stiff&rdquo; into one tier. When a community
-          source like BadmintonCN gives a measured Yuan-style hardness, that
-          is more reliable than the manufacturer&rsquo;s adjective because
-          the numbers are calibrated to the same scale across rackets.
+          source like BadmintonCN cites a YuanShi-rig hardness number, that
+          is more granular than the manufacturer&rsquo;s adjective because
+          the numbers are at least consistent within YuanShi&rsquo;s own
+          dataset, even if absolute values vary between testing rigs.
           IntoBadminton&rsquo;s finder treats official balance and shaft
           listings as primary, then uses editor notes and rights-safe
           review summaries to explain how those specs tend to feel on
@@ -191,7 +195,7 @@ export default function RacketBalanceGuide() {
           </Link>
           , and{" "}
           <Link href="/blog/yuan-style-shaft-hardness-explained/" className="text-[var(--color-accent)] underline">
-            Yuan-style shaft hardness explained
+            YuanShi shaft hardness measurements explained
           </Link>
           .
         </p>
