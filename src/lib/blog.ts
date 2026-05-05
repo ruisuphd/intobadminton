@@ -25,6 +25,11 @@ export type BlogSlug =
   | "victor-auraspeed-99-hayabusa-review"
   | "li-ning-bladesabre-max-shoes-review"
   | "victor-auraspeed-hs-plus-deep-dive"
+  | "li-ning-halbertec-7000-ii-review"
+  | "victor-carbonsonic-max-shuttle-review"
+  | "bonny-leisu-800-racket-review"
+  | "kumpoo-shanhai-new-racket-review"
+  | "li-ning-axforce-80-review"
   | "how-to-choose-a-badminton-racket"
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
@@ -55,6 +60,11 @@ export const blogSlugs: BlogSlug[] = [
   "victor-auraspeed-99-hayabusa-review",
   "li-ning-bladesabre-max-shoes-review",
   "victor-auraspeed-hs-plus-deep-dive",
+  "li-ning-halbertec-7000-ii-review",
+  "victor-carbonsonic-max-shuttle-review",
+  "bonny-leisu-800-racket-review",
+  "kumpoo-shanhai-new-racket-review",
+  "li-ning-axforce-80-review",
   "how-to-choose-a-badminton-racket",
   "badminton-equipment-for-kids",
   "badminton-glossary-terms-every-player-should-know",
@@ -843,6 +853,176 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
       ],
       cta: "Run the finder for fast-doubles or speed-attack profile and we score HS Plus against 100X SE and 1000Z.",
+    },
+    {
+      slug: "li-ning-halbertec-7000-ii-review",
+      updatedAt: "2026-05-05",
+      category: "reviews",
+      title: "Li-Ning Halbertec 7000 II review: the smarter buy before Halbertec 8000",
+      dek: "The second-generation Halbertec 7000 borrows enough of Li-Ning's control-platform language to make the 8000 feel less automatic for many club players.",
+      sections: [
+        {
+          heading: "Why this model matters",
+          body: "Halbertec 8000, 9000, and 9000 Power attract the high-end attention, but the Halbertec 7000 II is the more interesting value test. The source review frames it as a second-tier racket with high-end behavior: softer pricing, upgraded paint, a more composed vibration profile, and enough shared Halbertec DNA that shoppers considering the 8000 should pause before paying flagship money.",
+        },
+        {
+          heading: "Design and construction",
+          body: "The review highlights a calmer version of the Halbertec visual language: asymmetric aurora-style purple and ice-green panels, matte black and ivory shaft blocking, and metallic particles in both main frame colors rather than only one side. Under the paint, the talking points are Stabilized Layout frame reinforcement, SW Balance weight distribution, ACC-RIF composite control, and a 6.8mm medium-flex shaft with high-density vibration damping. The important buyer translation is simple: Li-Ning has tuned this as a balanced control racket first, not as a rear-court hammer.",
+        },
+        {
+          heading: "On-court feel",
+          body: "The 7000 II plays with the familiar Halbertec control identity, but the review calls out a harder, cleaner impact feel than expected from this series. Clears are easy enough because the 6.8mm shaft stores and returns energy without asking for pro-level force. Directional stability is the stronger note: the shuttle leaves predictably on high clears, pushes, and guided transitions, which is exactly what a control-first racket must do to justify itself.",
+        },
+        {
+          heading: "Attack and continuity",
+          body: "Do not buy this expecting 9000 Power smash behavior. The reviewer still gives the 8000 more weight and pressure on full-power smashes, while the 7000 II wins on comfort and short-stroke response. That makes the 7000 II more useful in ordinary doubles rallies than its spec sheet suggests: point smashes, quick follow-up attacks, and half-court pressure feel crisp, while full rear-court bombing is merely good rather than elite.",
+        },
+        {
+          heading: "Net and defense",
+          body: "The strongest part of the review is control. Net shots, cross-court touches, and guided placements benefit from a stable face and reduced unwanted vibration. On defense, the moderate balance keeps recovery manageable, and the shaft has enough elasticity to lift or redirect without a large swing. This is the profile many club players actually need: a racket that lets them survive speed, organize the rally, and still finish when the chance is obvious.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy the Halbertec 7000 II if you wanted the 8000 for control but worried about price, dull feedback, or long-term comfort. It suits intermediate club players, mixed doubles players, and all-round singles players who win through placement and patience. Skip it if your main need is maximum rear-court smash weight, or if you already know you want the sharper, more demanding flagship feel of the 9000 Power.",
+        },
+      ],
+      cta: "Use the finder with control-first or all-round profiles to compare Halbertec 7000 II against 8000 and 9000 Power.",
+    },
+    {
+      slug: "victor-carbonsonic-max-shuttle-review",
+      updatedAt: "2026-05-05",
+      category: "reviews",
+      title: "Victor Carbonsonic MAX shuttle review: when synthetic stops feeling like compromise",
+      dek: "Carbonsonic MAX is not just a cheaper practice shuttle. The latest version makes a serious case through consistency, durability, and predictable flight.",
+      sections: [
+        {
+          heading: "The problem it solves",
+          body: "Feather shuttle prices have climbed hard enough that many clubs now treat every tube as a budget decision. The source review reads Carbonsonic MAX as the mature version of Victor's synthetic-shuttle experiment: not a novelty, not a desperation choice, but a controlled product line aimed at reducing the variance and cost pain that come with natural feathers.",
+        },
+        {
+          heading: "What changed in MAX",
+          body: "Compared with earlier Carbonsonic / NCS models, MAX focuses on vane toughness, cleaner inner coating, tighter vane spacing, stronger stems, and a more secure cork-to-skirt connection. Those changes matter because synthetic shuttles often fail in ugly ways: the skirt deforms, the flight path wobbles after a hard smash, or the head connection gives up while the skirt still looks usable. MAX is designed to keep its structure intact longer, so the shuttle dies more gradually and more predictably.",
+        },
+        {
+          heading: "Weight consistency",
+          body: "The most persuasive part of the source review is the weighing comparison. A 12-shuttle Carbonsonic MAX tube measured almost exactly around 5.0g with a very narrow spread, while several premium feather tubes showed wider shuttle-to-shuttle variance. Weight alone does not prove flight quality, but it explains why the reviewer keeps returning to consistency: players are less likely to open a tube and discover one shuttle that flies fast, another that floats, and another that feels dead.",
+        },
+        {
+          heading: "On-court flight",
+          body: "The review's practical claim is that MAX now flies close enough to high-grade feather shuttles to be useful for serious training. Clears follow a stable arc, the shuttle holds shape after harder contacts better than previous generations, and speed changes are less erratic as the rally extends. The feel is still not identical to feather, especially for players who live on slice, deception, and tight net tumble, but the gap is narrow enough that the cost argument finally becomes serious.",
+        },
+        {
+          heading: "Durability and use case",
+          body: "Carbonsonic MAX makes most sense where repeatability matters more than prestige: coaching baskets, club nights, school programs, intermediate training groups, and players who want one tube to survive hard practice without turning every session into a feather-budget debate. High-level match play may still prefer premium feather shuttles for touch and tradition, but the synthetic option is no longer only for casual games.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Carbonsonic MAX if you run regular group sessions, you are tired of inconsistent budget feather tubes, or your club wants stable practice quality without premium feather cost. Skip it if your main benchmark is tournament touch at the net, or if your group refuses any synthetic feel regardless of practical performance. For most cost-sensitive clubs, MAX belongs on the shortlist.",
+        },
+      ],
+      cta: "Use the finder when shuttle recommendations launch; for now, treat Carbonsonic MAX as the serious synthetic benchmark.",
+    },
+    {
+      slug: "bonny-leisu-800-racket-review",
+      updatedAt: "2026-05-05",
+      category: "reviews",
+      title: "Bonny LeiSu 800 review: a fast attack racket with real bite",
+      dek: "NF800-style frame speed, foam-filled stability, and a 6.5mm solid shaft make the LeiSu 800 a sharper racket than its price tier suggests.",
+      sections: [
+        {
+          heading: "What it is",
+          body: "Bonny's LeiSu 800 sits in the speed-attack lane. The source review describes a 4U/G5 racket with a narrow NF800-style low-drag frame, 76-hole pattern, foam-filled frame construction, 40T carbon plus nickel-titanium shaft material, a 6.5mm solid shaft, and a 30 lb warranty tension. In plain terms: this is built to swing quickly, stay stable at contact, and reward players who can actually load a stiffer shaft.",
+        },
+        {
+          heading: "First feel",
+          body: "The reviewer removed the base grip and played with an overgrip, which increases the visible head-weight sensation. Even then, the swing weight is described as manageable. The sweet spot is not huge, but the frame gathers power cleanly when contact is centered. The hit is direct rather than sticky, with little unwanted vibration, which is exactly what you want from a fast attack frame: no dramatic dwell, no vague feedback, no soft delay.",
+        },
+        {
+          heading: "Power and control",
+          body: "The standout is power transmission. With JS63 at 28 lb, the source review describes both full smashes and stick smashes as heavy, fast, and easy to repeat for players with good force concentration. The racket's anti-torsion behavior also matters: it does not twist around the shuttle on off-center pressure as much as cheaper speed frames often do. That stability turns into better placement on drives, punch clears, and smash follow-ups.",
+        },
+        {
+          heading: "Speed play",
+          body: "Flat exchanges are where the LeiSu 800's frame shape pays off. The ultra-thin box profile keeps response quick, and the direct stringbed feel makes blocks and counters leave the racket fast. This is not a soft defensive helper for beginners. It is a racket that expects the player to meet the shuttle early and use the frame speed to steal time.",
+        },
+        {
+          heading: "Limits",
+          body: "The same traits that make LeiSu 800 exciting create the buying risk. The sweet spot is moderate, the shaft leans stiff, and the racket wants clean mechanics. Beginners or players with slow preparation may find it harsh or unforgiving. Players who already like Nanoflare 800-style frames but want a lower-cost, more solid-feeling alternative will understand it much faster.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy the LeiSu 800 if you are an intermediate-to-advanced player who wants one racket for singles control, doubles rear-court pressure, and fast mid-court countering. Skip it if you need sugar-water forgiveness, a large sweet spot, or a very low entry threshold. This is one of the better arguments for looking beyond the major three brands, but it is still a performance racket, not a shortcut.",
+        },
+      ],
+      cta: "Use the finder with speed-attack preferences to compare LeiSu 800 against Nanoflare 800 Pro and Victor HS Plus.",
+    },
+    {
+      slug: "kumpoo-shanhai-new-racket-review",
+      updatedAt: "2026-05-05",
+      category: "reviews",
+      title: "Kumpoo Shanhai NEW review: stable, heavy, and more patient than flashy",
+      dek: "Shanhai NEW looks like an Arcsaber 11 Pro reference point, but on court it trades whip for steadiness and a heavier finishing ball.",
+      sections: [
+        {
+          heading: "The reference point",
+          body: "The source review immediately compares Kumpoo Shanhai NEW with the Yonex Arcsaber 11 Pro because the frame language is similar: full fluid box frame, balanced-control intent, and a big enough face to invite all-round play. But the on-court behavior is not a clone. The 11 Pro has a clearer whip sensation through the second half of the swing. Shanhai NEW feels more even through the whole motion: steadier, heavier, and less springy.",
+        },
+        {
+          heading: "Measured setup",
+          body: "The review sample was 4U/G5, strung and overgripped without the base grip at 88.23g, with a 308mm balance point, 35 lb warranty tension, 205mm handle, and 215mm shaft. String was Yonex EXBOLT 65 at 25-27 lb with prestretch. That setup matters because it explains the reviewer's main theme: this is not a featherweight speed frame. It has enough mass and balance to feel composed, especially in singles patterns and patient build-up rallies.",
+        },
+        {
+          heading: "Hit feel",
+          body: "Shanhai NEW hits firm and stable. The 6.8mm shaft and rigid frame resist twisting, so the face stays honest through guided clears, pushes, and controlled transition shots. The tradeoff is that the racket gives less free launch than an elastic control racket. If you want deep clears, you still need to add active force. If you do, the payoff is accurate, low-noise response with very little frame wobble.",
+        },
+        {
+          heading: "Where it wins",
+          body: "Control is the clean win. The source review specifically likes tight net exchanges, short placements, and patient back-court control. Heavy smashes are also better than the Arcsaber comparison might imply: the shuttle may not leave at extreme speed, but it carries enough weight that opponents struggle to lift cleanly. This makes Shanhai NEW useful for singles players who build rallies through length, pressure, and one decisive finish rather than constant early attack.",
+        },
+        {
+          heading: "Where it loses",
+          body: "Flat drives and first-step racket speed are the concern. The reviewer's long-term use of lighter 5U and low-swing-weight rackets made Shanhai NEW feel slower in quick exchanges. The frame is stiff enough that the shuttle leaves cleanly once contact happens, but getting the racket to the contact point takes more work than with pure speed frames. Fast doubles specialists should take that seriously.",
+        },
+        {
+          heading: "Stringing and buyer fit",
+          body: "The source review recommends harder elastic or attack strings rather than thick 0.70mm durability strings, which can make the setup feel too meaty. Buy Shanhai NEW if you want a balanced racket with high stability, controlled singles behavior, and a heavier ball than the Arcsaber-style comparison suggests. Skip it if your main priority is fast doubles interception or ultra-easy lift assistance.",
+        },
+      ],
+      cta: "Run the finder with singles control or all-round profiles to compare Shanhai NEW against Arcsaber 11 Pro and Halbertec 7000 II.",
+    },
+    {
+      slug: "li-ning-axforce-80-review",
+      updatedAt: "2026-05-05",
+      category: "reviews",
+      title: "Li-Ning AxForce 80 review: the attack racket that doubles players should not ignore",
+      dek: "AxForce 80 carries a singles-attack reputation, but the 4U version has enough speed and directional confidence to work in ordinary doubles.",
+      sections: [
+        {
+          heading: "Why it aged well",
+          body: "AxForce 80 arrived with athlete-signature energy and the usual premium-racket hype, but the source review strips that away and lands on a more useful conclusion: it is a credible first-tier Li-Ning attack racket with a friendlier doubles profile than many expected. That matters because many players now compare it against newer AxForce and Astrox frames rather than buying it in a vacuum.",
+        },
+        {
+          heading: "Measured setup",
+          body: "The reviewed sample was 4U/G5 with base grip and heat-shrink still on, strung and overgripped at 95.8g total, 290mm balance, 6.6mm shaft, medium-stiff tuning, box frame, 76-hole stringbed, 9-3 line groove, and BG66 Ultimax at 26 lb. Because the base grip and wrap remained, the visible balance point understates the racket's attack identity. The more important practical note is that the 4U does not swing like a slow hammer.",
+        },
+        {
+          heading: "Getting used to it",
+          body: "The reviewer needed time to read the stringbed. The early feel with BG66U was slightly muted, which made the sweet spot less obvious during warm-up. Once adjusted, the better traits appeared: strong shaft elasticity, clean length on clears, and confident direction. The shaft is described as one of Li-Ning's better-feeling medium-stiff attack shafts, closer in perceived quality to the leading Yonex and Victor stiff ranges than older Li-Ning stereotypes suggest.",
+        },
+        {
+          heading: "Doubles behavior",
+          body: "The surprise is doubles. AxForce 80 is not as light or instantly reactive as a pure speed racket, but the 4U version recovers quickly enough for ordinary club doubles. Blocks, side lifts, flat counters, and push variations benefit from a crisp response and clear pointing. In rallies where the pace is fast but not professional-fast, the racket lets a player mix attack and control without feeling trapped in a singles-only frame.",
+        },
+        {
+          heading: "Attack ceiling",
+          body: "The review is honest about the ceiling: compared with Li-Ning's Dragonfang-style heavy attack feel, AxForce 80 gives up some raw finishing brutality. The reviewer also felt the BG66U setup softened the heavy smash, making the sound better than the absolute weight of shot. A harder or thicker attack string would likely suit the frame better for players buying it mainly to smash.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy AxForce 80 if you want a Li-Ning flagship attack profile that can still handle doubles, especially in 4U. It fits intermediate-to-advanced players who want head-heavy confidence without the full punishment of the most demanding pro frames. Skip it if you need maximum rear-court smash mass above all else, or if your doubles game is built on constant front-court interception where a pure speed frame will recover faster.",
+        },
+      ],
+      cta: "Use the finder to compare AxForce 80 against AxForce 90 New, AxForce 100 Gen 2, and Astrox 88D Pro.",
     },
     {
       slug: "how-to-choose-a-badminton-racket",
