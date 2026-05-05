@@ -42,6 +42,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const localized = (path: string) => buildLocalizedPath(locale, path);
   // Take the 3 newest articles by updatedAt for the home "Latest deep-dives" strip.
   const featured = articlesByDateDesc(blogArticles[locale]).slice(0, 3);
+  const articleCount = blogArticles[locale].length;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -115,7 +116,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 {copy.home.start}
               </Link>
               <Link href={localized("/blog/")} className="btn-secondary">
-                Read 24+ deep-dive reviews
+                Read {articleCount} equipment deep-dives
               </Link>
             </div>
             <p className="mt-6 text-xs text-[var(--color-subtle)]">
@@ -127,7 +128,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             {[
               { num: "60+", label: "rackets, shoes, strings & bags scored" },
               { num: "5", label: "transparent fit factors per result" },
-              { num: "24", label: "original deep-dive articles" },
+              { num: String(articleCount), label: "original deep-dive articles" },
             ].map((s) => (
               <div
                 key={s.label}
