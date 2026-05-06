@@ -29,9 +29,9 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
   return (
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
-        <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
+        <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
           {copy.title}
-        </h1>
+        </h2>
         <p className="mt-2 text-[var(--color-muted)]">{copy.subtitle}</p>
         {compareIds.length === 0 ? (
           <p className="mt-8 text-sm text-[var(--color-muted)]">

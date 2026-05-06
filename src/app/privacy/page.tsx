@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Privacy — IntoBadminton",
-  description: "Privacy policy for IntoBadminton.",
+  title: "Privacy Policy — IntoBadminton",
+  description:
+    "Privacy Policy for IntoBadminton: what personal data we process, why, your rights, third-party vendors, international transfers, retention, and how to contact us about privacy.",
   alternates: { canonical: "/privacy/" },
 };
 
@@ -12,7 +13,7 @@ export default function PrivacyPage() {
     <main className="flex-1 py-16">
       <article className="layout-band max-w-3xl space-y-6 text-[var(--color-muted)]">
         <h1 className="text-3xl font-semibold text-[var(--text)]">
-          Privacy policy
+          Privacy Policy
         </h1>
         <p>
           IntoBadminton is operated by {companyInfo.operatorLegalName}, a
