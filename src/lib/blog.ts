@@ -73,6 +73,14 @@ export const blogSlugs: BlogSlug[] = [
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
 
+export type BlogReviewSummary = {
+  verdict: string;
+  bestFor: string[];
+  avoidIf: string[];
+  setupNotes?: string[];
+  sourceHook: string;
+};
+
 export type BlogArticle = {
   slug: BlogSlug;
   /** First-published / last-revised date in ISO format (YYYY-MM-DD). */
@@ -80,6 +88,7 @@ export type BlogArticle = {
   category: BlogCategory;
   title: string;
   dek: string;
+  reviewSummary?: BlogReviewSummary;
   sections: { heading: string; body: string }[];
   cta: string;
 };
@@ -400,6 +409,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning Bladex 800 Speed: the tough-elastic answer to Yonex and Victor",
       dek: "Most speed rackets fire crisp-elastic. Bladex 800 Speed deliberately does not — and that may be exactly the racket you are missing.",
+      reviewSummary: {
+        verdict:
+          "A control player's speed racket: quick enough for doubles, but calmer than most crisp-elastic alternatives.",
+        bestFor: [
+          "Control-first doubles players",
+          "Stiff-shaft users wanting dwell",
+          "Li-Ning fans avoiding Yonex pricing",
+        ],
+        avoidIf: [
+          "You want maximum drive speed",
+          "You need sugar-water forgiveness",
+        ],
+        setupNotes: [
+          "4U/G6 source sample around 90.8g strung, 299mm balance.",
+          "YuanShi stiffness around 7.83; source torsion reading was notably strong.",
+        ],
+        sourceHook:
+          "The source review is interesting because it argues a speed racket can win through dwell and control, not just faster ejection.",
+      },
       sections: [
         {
           heading: "What 'tough-elastic' actually means",
@@ -569,6 +597,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Victor DriveX 12: a credible Astrox 88D Pro alternative for 2/3 the money",
       dek: "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket.",
+      reviewSummary: {
+        verdict:
+          "A smart attack buy if you want flagship-grade punch without paying the full Yonex premium.",
+        bestFor: [
+          "Back-court doubles attackers",
+          "Singles players wanting value",
+          "DriveX 10 owners upgrading",
+        ],
+        avoidIf: [
+          "You mainly play fast front court",
+          "You prefer Yonex shaft feel",
+        ],
+        setupNotes: [
+          "Source comparison used 4U attack frames near 89g unstrung.",
+          "Power Ring Pro is the key fix over the DriveX 10 generation.",
+        ],
+        sourceHook:
+          "The source review matters because it treats DriveX 12 as a practical value threat to Astrox 88D Pro, not a cheaper imitation.",
+      },
       sections: [
         {
           heading: "Why DriveX 10 owners should pay attention",
@@ -603,6 +650,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Li-Ning L69 string review: marketed as durable balanced, plays like a smash string",
       dek: "Li-Ning's new generalist string surprises in a way the package doesn't predict — paired with a stiff attack frame at 27 lb, the smash audio alone is reason to demo it.",
+      reviewSummary: {
+        verdict:
+          "L69 is the rare durable-leaning string that still makes an attack racket feel alive.",
+        bestFor: [
+          "Attack frames at 26 lb plus",
+          "Players who swing through contact",
+          "Frequent players wanting durability",
+        ],
+        avoidIf: [
+          "You string below 24 lb",
+          "You prefer soft shuttle hold",
+        ],
+        setupNotes: [
+          "Source test used Astrox 99 Pro 2 at 27 lb.",
+          "0.69mm gauge; positioned by Li-Ning as a durable balanced string.",
+        ],
+        sourceHook:
+          "The source review is useful because the string outperformed its quiet marketing on smash sound and crispness.",
+      },
       sections: [
         {
           heading: "What L69 actually is",
@@ -637,6 +703,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Victor P9200 III review: the modular-midsole experiment that finally works",
       dek: "Built-in modular midsole, three-arch support, dual-density Hyper EVA. The P9200 III is the version of the modular concept that earns its keep on court.",
+      reviewSummary: {
+        verdict:
+          "A serious stability shoe for heavier players, but too firm for everyone to love.",
+        bestFor: [
+          "Heavier players needing support",
+          "Wide-foot Victor loyalists",
+          "Long club-night sessions",
+        ],
+        avoidIf: [
+          "You want soft cushioning",
+          "You have Greek foot pressure",
+        ],
+        setupNotes: [
+          "Source size 41 sample measured 265mm internal length, 336g per shoe.",
+          "Modular midsole alone measured around 61g in the source review.",
+        ],
+        sourceHook:
+          "The source review is interesting because Victor's modular idea finally feels integrated instead of experimental.",
+      },
       sections: [
         {
           heading: "Why modular midsoles were a tough sell before this generation",
@@ -706,6 +791,26 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Yonex Power Cushion Eclipsion Z3: the firm flagship shoe most buyers overlook",
       dek: "Eclipsion Z3 sits next to the marquee 65 Z3 and Aerus Z2 in Yonex's lineup but feels like neither. Here is who it is actually for.",
+      reviewSummary: {
+        verdict:
+          "Eclipsion Z3 is the Yonex shoe for players who want structure before softness.",
+        bestFor: [
+          "Heavier players on long rallies",
+          "Wide-foot stability seekers",
+          "Players replacing soft shoes",
+        ],
+        avoidIf: [
+          "You prioritize ultra-light feel",
+          "Dusty courts are common",
+          "Arch pressure bothers you",
+        ],
+        setupNotes: [
+          "Source size 42 sample: about 270mm internal length and 351g per shoe.",
+          "3E wide last is the mainstream fit; narrower JP versions exist.",
+        ],
+        sourceHook:
+          "The source tension is that this flagship is easy to overlook until stability matters more than softness.",
+      },
       sections: [
         {
           heading: "Where it sits in the Yonex shoe lineup",
@@ -740,6 +845,26 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Yonex Astrox 99 Pro: brutal precision for the player who can pay the cost",
       dek: "The 99 Pro is unforgiving by design. Its 68-hole stringbed, NAMD shaft, and weighted handle add up to a racket that punishes everything except clean mechanics — and rewards them like nothing else.",
+      reviewSummary: {
+        verdict:
+          "A ruthless singles weapon: spectacular on clean contact, expensive on every lazy swing.",
+        bestFor: [
+          "Advanced singles attackers",
+          "Rear-court smash specialists",
+          "Players with clean timing",
+        ],
+        avoidIf: [
+          "You play fast doubles",
+          "You need easy clears",
+          "Your shoulder dislikes head weight",
+        ],
+        setupNotes: [
+          "Source 4U/G5 sample was 96g strung with heat-shrink and grip.",
+          "68-hole stringbed and NAMD shaft make the feel unusually demanding.",
+        ],
+        sourceHook:
+          "The source review is compelling because it frames the 99 Pro as a reward, not a shortcut.",
+      },
       sections: [
         {
           heading: "Pedigree and design intent",
@@ -770,6 +895,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Victor Auraspeed 99 (Hayabusa): the Antonsen flagship that earns its difficulty",
       dek: "Alloy carbon, WES 3.0, nano-aerogel, 46T fibers. The 99 stacks every Victor flagship technology in one frame. The reward profile is unusual.",
+      reviewSummary: {
+        verdict:
+          "A fast racket with real smash weight, but only if you can drive a hard shaft.",
+        bestFor: [
+          "Advanced doubles attackers",
+          "Victor fans wanting ceiling",
+          "Short-stroke power players",
+        ],
+        avoidIf: [
+          "You want easy warm-up clears",
+          "You need a large sweet spot",
+        ],
+        setupNotes: [
+          "Source positions it as a flagship speed-attack frame with WES 3.0.",
+          "Nano-aerogel and alloy carbon shape the denser Victor response.",
+        ],
+        sourceHook:
+          "The source hook is the contradiction: it starts difficult, then reveals heavy attack from a speed profile.",
+      },
       sections: [
         {
           heading: "What's actually different about the Hayabusa 99",
@@ -800,6 +944,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning Bladesabre MAX: the under-radar competition shoe to demo before your next 65 Z3",
       dek: "BOUNSE+, 䨻, carbon plate. Li-Ning's Bladesabre MAX gets the shoe-stack right for serious doubles play — and at a price that keeps you honest.",
+      reviewSummary: {
+        verdict:
+          "A credible competition shoe that makes Yonex buyers justify paying more.",
+        bestFor: [
+          "Doubles players wanting stability",
+          "Li-Ning shoe curious buyers",
+          "Value-focused competition players",
+        ],
+        avoidIf: [
+          "You need maximum softness",
+          "You only trust Yonex lasts",
+        ],
+        setupNotes: [
+          "Source highlights BOUNSE+, Boom foam, and carbon-plate support.",
+          "Positioned as a serious court shoe rather than a cosmetic alternative.",
+        ],
+        sourceHook:
+          "The source review is useful because it treats Bladesabre MAX as a real alternative to default Yonex picks.",
+      },
       sections: [
         {
           heading: "Why this shoe matters",
@@ -830,6 +993,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
       dek: "HS Plus arrived as a successor to the popular Hayabusa SE but ended up reshaping what a speed racket can do under load. Here is what changes — and what does not.",
+      reviewSummary: {
+        verdict:
+          "HS Plus is a speed racket for players who still want a threatening rear-court shot.",
+        bestFor: [
+          "Advanced fast-doubles players",
+          "Victor stiff-shaft fans",
+          "Back-court speed attackers",
+        ],
+        avoidIf: [
+          "You need off-center forgiveness",
+          "You prefer pocketing feel",
+        ],
+        setupNotes: [
+          "Source compares it against Hayabusa SE and hard-shaft speed frames.",
+          "The small sweet spot keeps the entry threshold high.",
+        ],
+        sourceHook:
+          "The source review works because HS Plus breaks the expectation that speed rackets must hit light.",
+      },
       sections: [
         {
           heading: "From Hayabusa to HS Plus — what's new",
@@ -860,6 +1042,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning Halbertec 7000 II review: the smarter buy before Halbertec 8000",
       dek: "The second-generation Halbertec 7000 borrows enough of Li-Ning's control-platform language to make the 8000 feel less automatic for many club players.",
+      reviewSummary: {
+        verdict:
+          "A smarter control buy than its tier suggests, especially before paying flagship money.",
+        bestFor: [
+          "Control-first club players",
+          "Halbertec 8000 shoppers",
+          "Mixed doubles all-rounders",
+        ],
+        avoidIf: [
+          "You need maximum smash mass",
+          "You want flagship stiffness",
+        ],
+        setupNotes: [
+          "Source frames it as a second-generation upgrade with better damping.",
+          "6.8mm medium-flex shaft keeps the control platform approachable.",
+        ],
+        sourceHook:
+          "The source review is interesting because it argues the cheaper sibling may be the better club-player buy.",
+      },
       sections: [
         {
           heading: "Why this model matters",
@@ -894,6 +1095,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Victor Carbonsonic MAX shuttle review: when synthetic stops feeling like compromise",
       dek: "Carbonsonic MAX is not just a cheaper practice shuttle. The latest version makes a serious case through consistency, durability, and predictable flight.",
+      reviewSummary: {
+        verdict:
+          "A synthetic shuttle that finally deserves consideration for serious training sessions.",
+        bestFor: [
+          "Clubs managing shuttle cost",
+          "Coaches running basket drills",
+          "Groups wanting consistency",
+        ],
+        avoidIf: [
+          "You need tournament feather touch",
+          "Your group rejects synthetic feel",
+        ],
+        setupNotes: [
+          "Source weighed a 12-shuttle tube and found tight weight consistency.",
+          "MAX focuses on vane toughness, coating, and cork-skirt connection.",
+        ],
+        sourceHook:
+          "The source review is persuasive because it compares consistency, not just price, against feather tubes.",
+      },
       sections: [
         {
           heading: "The problem it solves",
@@ -928,6 +1148,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Bonny LeiSu 800 review: a fast attack racket with real bite",
       dek: "NF800-style frame speed, foam-filled stability, and a 6.5mm solid shaft make the LeiSu 800 a sharper racket than its price tier suggests.",
+      reviewSummary: {
+        verdict:
+          "A sharp, lower-profile speed-attack frame for players who already time the shuttle well.",
+        bestFor: [
+          "Intermediate speed attackers",
+          "NF800-style frame fans",
+          "Players wanting brand value",
+        ],
+        avoidIf: [
+          "You need a huge sweet spot",
+          "Your preparation is often late",
+        ],
+        setupNotes: [
+          "Source sample used JS63 at 28 lb and an overgrip-only setup.",
+          "6.5mm solid shaft and foam-filled frame drive the stable feel.",
+        ],
+        sourceHook:
+          "The source review is engaging because the racket sounds cheaper than it plays once hit cleanly.",
+      },
       sections: [
         {
           heading: "What it is",
@@ -962,6 +1201,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Kumpoo Shanhai NEW review: stable, heavy, and more patient than flashy",
       dek: "Shanhai NEW looks like an Arcsaber 11 Pro reference point, but on court it trades whip for steadiness and a heavier finishing ball.",
+      reviewSummary: {
+        verdict:
+          "A patient control racket with real finishing weight, but not a fast-doubles shortcut.",
+        bestFor: [
+          "Singles control builders",
+          "Players wanting stable feedback",
+          "Arcsaber 11 Pro cross-shoppers",
+        ],
+        avoidIf: [
+          "You live on flat drives",
+          "You prefer light 5U frames",
+        ],
+        setupNotes: [
+          "Source sample was 4U/G5, 88.23g playing weight, 308mm balance.",
+          "EXBOLT 65 at 25-27 lb shaped the reviewed feel.",
+        ],
+        sourceHook:
+          "The source review stands out because the Arcsaber comparison reveals a heavier, steadier personality.",
+      },
       sections: [
         {
           heading: "The reference point",
@@ -996,6 +1254,25 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning AxForce 80 review: the attack racket that doubles players should not ignore",
       dek: "AxForce 80 carries a singles-attack reputation, but the 4U version has enough speed and directional confidence to work in ordinary doubles.",
+      reviewSummary: {
+        verdict:
+          "A friendlier Li-Ning attack flagship than its reputation suggests, especially in 4U.",
+        bestFor: [
+          "Attack players mixing doubles",
+          "Li-Ning flagship shoppers",
+          "Medium-stiff shaft users",
+        ],
+        avoidIf: [
+          "You need pure speed defense",
+          "You want maximum smash brutality",
+        ],
+        setupNotes: [
+          "Source 4U/G5 setup measured 95.8g total with BG66U at 26 lb.",
+          "6.6mm medium-stiff shaft gave the review its approachable attack feel.",
+        ],
+        sourceHook:
+          "The source review is useful because it reframes AxForce 80 as more doubles-capable than expected.",
+      },
       sections: [
         {
           heading: "Why it aged well",
