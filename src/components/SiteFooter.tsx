@@ -30,17 +30,17 @@ const COLUMNS: FooterColumn[] = [
   {
     heading: "About",
     links: [
-      { label: "About", path: "/about/" },
-      { label: "Contact", path: "/contact/" },
+      { label: "About Us", path: "/about/" },
+      { label: "Contact Us", path: "/contact/" },
       { label: "Security", path: "/security/" },
     ],
   },
   {
     heading: "Legal",
     links: [
-      { label: "Privacy", path: "/privacy/" },
-      { label: "Terms", path: "/terms/" },
-      { label: "Cookies", path: "/cookies/" },
+      { label: "Privacy Policy", path: "/privacy/" },
+      { label: "Terms of Service", path: "/terms/" },
+      { label: "Cookie Policy", path: "/cookies/" },
       { label: "Source policy", path: "/source-policy/" },
     ],
   },
