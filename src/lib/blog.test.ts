@@ -25,4 +25,46 @@ describe("blog publishing metadata", () => {
       ])
     );
   });
+
+  test("gives every review article a concise buyer-first summary", () => {
+    const reviews = blogArticles.en.filter(
+      (article) => article.category === "reviews"
+    );
+
+    expect(reviews.length).toBeGreaterThan(0);
+
+    for (const article of reviews) {
+      expect(article.reviewSummary, article.slug).toBeDefined();
+      expect(article.reviewSummary?.verdict.trim(), article.slug).not.toBe("");
+      expect(
+        article.reviewSummary?.bestFor.length,
+        article.slug
+      ).toBeGreaterThanOrEqual(2);
+      expect(
+        article.reviewSummary?.bestFor.length,
+        article.slug
+      ).toBeLessThanOrEqual(3);
+      expect(
+        article.reviewSummary?.avoidIf.length,
+        article.slug
+      ).toBeGreaterThanOrEqual(1);
+      expect(
+        article.reviewSummary?.avoidIf.length,
+        article.slug
+      ).toBeLessThanOrEqual(3);
+      expect(article.reviewSummary?.sourceHook.trim(), article.slug).not.toBe(
+        ""
+      );
+
+      for (const bullet of [
+        ...(article.reviewSummary?.bestFor ?? []),
+        ...(article.reviewSummary?.avoidIf ?? []),
+      ]) {
+        expect(
+          bullet.split(/\s+/).length,
+          `${article.slug}: ${bullet}`
+        ).toBeLessThanOrEqual(16);
+      }
+    }
+  });
 });

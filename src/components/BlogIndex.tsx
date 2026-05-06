@@ -26,6 +26,7 @@ function ArticleCard({
   featured?: boolean;
 }) {
   const minutes = readingTimeMinutes(article);
+  const reviewTeaser = article.reviewSummary?.bestFor.slice(0, 2).join(" · ");
   return (
     <Link
       href={buildLocalizedPath(locale, `/blog/${article.slug}/`)}
@@ -55,6 +56,11 @@ function ArticleCard({
       >
         {article.dek}
       </p>
+      {reviewTeaser && (
+        <p className="mt-3 text-xs font-medium leading-relaxed text-[var(--text-secondary)]">
+          Best for: {reviewTeaser}
+        </p>
+      )}
     </Link>
   );
 }

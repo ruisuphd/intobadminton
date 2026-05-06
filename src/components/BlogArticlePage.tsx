@@ -6,9 +6,66 @@ import {
   getBlogArticle,
   readingTimeMinutes,
   relatedArticles,
+  type BlogReviewSummary,
 } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+
+function ReviewSummaryPanel({ summary }: { summary: BlogReviewSummary }) {
+  return (
+    <div className="mt-8 rounded-2xl border border-[color:var(--line-strong)] bg-white/80 p-5 shadow-sm">
+      <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+        Bottom line
+      </p>
+      <p className="mt-2 text-lg font-semibold leading-snug text-[var(--text)]">
+        {summary.verdict}
+      </p>
+
+      <div className="mt-5 grid gap-5 md:grid-cols-2">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+            Best for
+          </p>
+          <ul className="mt-2 list-disc space-y-2 pl-4 text-sm leading-relaxed text-[var(--text-secondary)]">
+            {summary.bestFor.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+            Avoid if
+          </p>
+          <ul className="mt-2 list-disc space-y-2 pl-4 text-sm leading-relaxed text-[var(--text-secondary)]">
+            {summary.avoidIf.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {summary.setupNotes && summary.setupNotes.length > 0 && (
+        <div className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+            Setup notes
+          </p>
+          <ul className="mt-2 list-disc space-y-1 pl-4 text-sm leading-relaxed text-[var(--color-muted)]">
+            {summary.setupNotes.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <p className="mt-5 border-t border-[color:var(--line)] pt-4 text-sm leading-relaxed text-[var(--color-muted)]">
+        <span className="font-medium text-[var(--text)]">
+          Why this source mattered:
+        </span>{" "}
+        {summary.sourceHook}
+      </p>
+    </div>
+  );
+}
 
 export function BlogArticlePage({
   locale,
@@ -136,6 +193,9 @@ export function BlogArticlePage({
           <p className="mt-6 text-sm font-medium text-[var(--text)]">
             {byline}
           </p>
+          {article.reviewSummary && (
+            <ReviewSummaryPanel summary={article.reviewSummary} />
+          )}
         </div>
       </section>
 
