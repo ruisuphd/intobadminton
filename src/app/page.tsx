@@ -3,21 +3,26 @@ import { LocalizedHome } from "@/components/LocalizedHome";
 
 export const metadata: Metadata = {
   title:
-    "IntoBadminton — find the badminton racket, string, and shoe that fit your game",
+    "Badminton Racket, String & Shoe Finder — Match Gear to Your Game | IntoBadminton",
   description:
-    "Free badminton equipment finder. Get rackets, strings, shoes, and bags ranked for your level, play style, and budget — with transparent scoring backed by manufacturer specs and on-court testing by a competitive player.",
+    "Personalized badminton equipment finder. Rank rackets, strings, shoes, and bags for your level, playing style, and budget — transparent scoring drawn from manufacturer specs, cited community reviews, and on-court testing by a competitive player. No signup, no email gate.",
   keywords: [
     "badminton",
     "badminton racket",
     "best badminton racket",
     "badminton equipment",
+    "badminton equipment finder",
+    "badminton racket finder",
     "badminton shoes",
     "badminton string",
     "Yonex Astrox",
     "Yonex Nanoflare",
-    "Victor",
-    "Li-Ning",
+    "Victor Auraspeed",
+    "Li-Ning AxForce",
     "racket finder",
+    "badminton gear",
+    "best badminton shoes",
+    "best badminton string",
   ],
   alternates: {
     canonical: "/",

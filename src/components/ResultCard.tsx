@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { EvidenceCards } from "@/components/EvidenceCards";
+import {
+  ProductImageView,
+  canShowProductImage,
+} from "@/components/ProductImage";
 import { compareLimit, useProfile } from "@/context/ProfileContext";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import type { ScoredProduct } from "@/lib/types/product";
@@ -65,16 +69,23 @@ export function ResultCard({
   const inCompare = compareIds.includes(r.id);
   const full = compareIds.length >= compareLimit && !inCompare;
 
+  const showImage = canShowProductImage(r.image);
+
   return (
     <article className="card p-7">
       <header className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
-            #{rank} · {categoryLabel(r.category)} · {r.brand}
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)]">
-            {r.name}
-          </h2>
+        <div className="flex items-start gap-4">
+          {showImage && (
+            <ProductImageView image={r.image} size={96} className="shrink-0" />
+          )}
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
+              #{rank} · {categoryLabel(r.category)} · {r.brand}
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[var(--text)]">
+              {r.name}
+            </h2>
+          </div>
         </div>
         <div className="flex flex-col items-end">
           <p className="text-3xl font-semibold text-[var(--color-accent)]">

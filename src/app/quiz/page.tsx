@@ -3,11 +3,21 @@ import Link from "next/link";
 import { QuizFunnel } from "./QuizFunnel";
 
 export const metadata: Metadata = {
-  title: "Badminton equipment finder — IntoBadminton",
+  title:
+    "Badminton Equipment Finder — Personalized Racket, String & Shoe Picks | IntoBadminton",
   description:
-    "Answer a few questions about your level, playing style, body, and budget to get personalised badminton racket, string, shoe, and bag recommendations with transparent fit scoring.",
+    "Answer five quick questions about your level, playing style, body, and budget. Get personalized badminton racket, string, shoe, and bag recommendations with transparent fit scoring drawn from manufacturer specs and on-court testing. No signup, no email gate.",
+  keywords: [
+    "badminton equipment finder",
+    "badminton racket finder",
+    "personalized badminton recommendation",
+    "badminton gear quiz",
+    "which badminton racket",
+    "racket selector",
+    "shoe fit quiz",
+    "string recommendation",
+  ],
   alternates: { canonical: "/quiz/" },
-  robots: { index: false, follow: true },
 };
 
 export function QuizShell() {
@@ -15,7 +25,7 @@ export function QuizShell() {
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
         <header className="max-w-3xl">
-          <span className="chip">Free badminton finder · 5 minutes</span>
+          <span className="chip">Badminton equipment finder · 5 minutes · No signup</span>
           <h1 className="text-display mt-5 text-[var(--text)]">
             Find the badminton equipment that fits how you actually play
           </h1>

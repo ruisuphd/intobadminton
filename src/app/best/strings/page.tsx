@@ -2,9 +2,24 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title: "Best badminton strings (2026 picks)",
+  title:
+    "Best Badminton Strings 2026 — BG65, BG80, EXBOLT 63, Aerobite, L69 | IntoBadminton",
   description:
-    "Six badminton strings ranked by feel, repulsion, control, and durability — for beginners, club players, and tournament-tier players. Honest tradeoffs, recommended tensions.",
+    "Six badminton strings ranked by feel, repulsion, control, and durability. Yonex BG65, BG80, BG80 Power, EXBOLT 63, Aerobite, plus Li-Ning L69 — recommended tensions for beginners, club players, and tournament-tier attackers.",
+  keywords: [
+    "best badminton string",
+    "Yonex BG65",
+    "Yonex BG80",
+    "Yonex BG80 Power",
+    "Yonex EXBOLT 63",
+    "Yonex Aerobite",
+    "Li-Ning L69",
+    "best badminton string for beginners",
+    "best badminton string for smash",
+    "badminton string tension",
+    "badminton string gauge",
+    "badminton string durability",
+  ],
   alternates: { canonical: "/best/strings/" },
 };
 
@@ -32,6 +47,15 @@ const config: BestPicksConfig = {
       ],
       why: "The world's most-played badminton string for a reason. BG65 forgives bad contact, holds tension, lasts forever, and costs nothing. If you are stringing your first racket or you snap strings every fortnight, this is your default.",
       tradeoff: "Less crisp feel than premium strings. Once your technique is consistent, you will notice the muffled response.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_bg_65l.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex BG65 badminton string",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 2,
@@ -46,6 +70,15 @@ const config: BestPicksConfig = {
       ],
       why: "The classic 'first upgrade' string. Noticeably more repulsion than BG65, sharper sound on contact, and meaningfully more crisp on smashes. The sweet spot for most adult club players.",
       tradeoff: "Breaks faster than BG65 — plan to restring every 4-8 weeks if you play 2+ times per week.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_bg_80.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex BG80 badminton string",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,
@@ -60,6 +93,15 @@ const config: BestPicksConfig = {
       ],
       why: "Yonex's modern flagship string — the thinnest gauge in their tournament line. Generates exceptional repulsion at moderate tension, with surprisingly good control thanks to the heat-treated coating. Many tour pros prefer this over BG80.",
       tradeoff: "Snaps fast on mishits and abrasive court surfaces. Best at 24-27 lb for amateurs; pros run higher.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_exbolt63.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex EXBOLT 63 badminton string",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 4,
@@ -74,7 +116,19 @@ const config: BestPicksConfig = {
       ],
       why: "Hybrid string — thinner power string in the mains, textured control string in the crosses. Distinctly more bite on slices and net spin than any single-string setup. The thinking-player's choice.",
       tradeoff: "Marmite. Some players love the texture; others find the feedback too harsh. Try a friend's racket before committing.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/4/5/458719364.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Aerobite badminton string",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
+    // TODO: image — Li-Ning L69 string. Not on li-ningfamily.com (their
+    // current strings: No.1, N65, N68). Verify SKU naming; this may be the
+    // "No.5" or a regional variant. Check lining.com.cn or an Asian retailer.
     {
       rank: 5,
       name: "L69",
@@ -102,6 +156,15 @@ const config: BestPicksConfig = {
       ],
       why: "BG80's louder sibling. Same gauge, slightly different polymer mix that adds extra repulsion at the cost of a little control. The right pick if your priority is smash power and you do not mind a slightly less precise touch on net play.",
       tradeoff: "Less control than EXBOLT 63 or Aerobite. Front-court doubles specialists may prefer those instead.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/b/g/bg-80-power.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex BG80 Power badminton string",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
   ],
   faqs: [

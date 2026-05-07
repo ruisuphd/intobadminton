@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title: "Best badminton rackets for doubles (2026 picks)",
+  title:
+    "Best Badminton Rackets for Doubles 2026 — Front-Court, Rear-Court, Mixed Picks | IntoBadminton",
   description:
-    "Six doubles rackets ranked for front-court speed, defensive recovery, and rear-court continuity. Picks for men's, women's, and mixed doubles by skill level.",
+    "Six doubles badminton rackets ranked for front-court speed, defensive recovery, and rear-court continuity. Yonex Astrox 88S/D Pro, Nanoflare 1000Z, Victor Auraspeed HS Plus, DriveX 8S — picks for men's, women's, and mixed doubles.",
+  keywords: [
+    "best doubles badminton racket",
+    "badminton racket for doubles",
+    "Yonex Astrox 88S Pro",
+    "Yonex Astrox 88D Pro",
+    "Yonex Nanoflare 1000Z",
+    "Yonex Nanoflare 700 Pro",
+    "Victor Auraspeed HS Plus",
+    "Victor DriveX 8S",
+    "mixed doubles racket",
+    "front-court badminton racket",
+    "rear-court badminton racket",
+  ],
   alternates: { canonical: "/best/doubles-rackets/" },
 };
 
@@ -32,6 +46,15 @@ const config: BestPicksConfig = {
       ],
       why: "Currently rated above the Halbertec 8000 / 9000 and Arcsaber 11 Pro on combined control and smash quality. Founder's main racket. Best in class if your job is to organise the rally with placement, not bury smashes.",
       tradeoff: "If you only play rear court and your match-winner is the smash, the 88D Pro version is the better fit.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_astrox_88_s_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 88S Pro 2024 badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 2,
@@ -46,6 +69,15 @@ const config: BestPicksConfig = {
       ],
       why: "The doubles weapon when defense and flat exchanges are the game. Hexagonal Z-axis frame is the best end-speed in the Nanoflare line. DR carbon adds pocketing for crisper drops than other speed frames.",
       tradeoff: "Higher entry threshold than NF700 Pro — you need force and timing to load the stiff shaft.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_nanoflare_1000_zz.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Nanoflare 1000Z badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,
@@ -60,6 +92,15 @@ const config: BestPicksConfig = {
       ],
       why: "Victor's most balanced top-tier doubles frame — stable enough to absorb hard returns, fast enough to cover front-court duties. Pairs well with a partner playing 88D Pro / 100ZZ.",
       tradeoff: "Less marketing pull than Yonex flagships, so resale liquidity is lower outside Asia.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/png/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/2/0/202286_ars-hs_plus_mgrip.webp",
+        source: "victor",
+        credit: "Image: Victor / via BadmintonPlanet",
+        alt: "Victor Auraspeed HS Plus C badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 4,
@@ -74,6 +115,15 @@ const config: BestPicksConfig = {
       ],
       why: "The friendlier sibling of the 1000Z. Lower swing weight, more forgiving shaft, and noticeably easier to recover with on consecutive shots. Strong choice for women's doubles where rally speed exceeds smash power.",
       tradeoff: "Top-end smash power capped relative to head-heavy frames — rear-court specialists may want more.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_nanoflare_700_pro_frame_midnight_purple.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Nanoflare 700 Pro Midnight Purple badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 5,
@@ -88,6 +138,15 @@ const config: BestPicksConfig = {
       ],
       why: "The 2024 reset improved continuity over the camel-gold predecessor — you fatigue less across long rallies because the new shaft loads and unloads faster. Smash power is similar to the original but with a cleaner contact feel.",
       tradeoff: "Stiff shaft punishes timing errors. Skip if you also play significant front court and need defensive speed.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_astrox_88_d_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 88D Pro 2024 badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 6,
@@ -102,6 +161,15 @@ const config: BestPicksConfig = {
       ],
       why: "Best $100-bracket racket for flat-drive doubles. Light enough for defense, stiff enough to teach clean contact, and built around the exact rally pattern doubles produces.",
       tradeoff: "Pro-tier 88S Pro / 1000Z players will outscore you with absolute equipment ceiling — but at this price, the gap is closer than the price tag suggests.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/v/i/victor_drivex_8s_j.webp",
+        source: "victor",
+        credit: "Image: Victor / via BadmintonPlanet",
+        alt: "Victor DriveX 8S J badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
   ],
   faqs: [
