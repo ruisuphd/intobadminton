@@ -156,13 +156,13 @@ export default function EquipmentAuthenticityGuide() {
         <p className="text-[var(--color-muted)] leading-relaxed">
           These apply across every brand. If two or more apply to a racket
           you are looking at, treat it as suspect until you can verify it
-          through the brand's official channels below.
+          through the brand&apos;s official channels below.
         </p>
         <ul className="space-y-2 text-[var(--color-muted)]">
           <li>
             <strong className="text-[var(--text)]">Price too low.</strong>{" "}
             Current-generation flagships rarely discount below 15–20% off
-            MSRP at authorised retailers. A "new" Astrox 88D Pro at half off
+            MSRP at authorised retailers. A &ldquo;new&rdquo; Astrox 88D Pro at half off
             from an unfamiliar marketplace seller does not add up
             distribution-wise.
           </li>
@@ -171,7 +171,7 @@ export default function EquipmentAuthenticityGuide() {
             chain.</strong>{" "}
             Marketplaces (eBay, Carousell, Taobao, AliExpress, random
             Instagram sellers) carry genuine and fake stock side by side.
-            Authorised brand retailers are listed on the manufacturer's own
+            Authorised brand retailers are listed on the manufacturer&apos;s own
             site — if your seller is not on that list, do extra checks.
           </li>
           <li>
@@ -193,7 +193,7 @@ export default function EquipmentAuthenticityGuide() {
             <strong className="text-[var(--text)]">Wrong sound on tap
             test.</strong>{" "}
             Tap a strung genuine flagship lightly with a knuckle near the
-            12 o'clock position. The sound is bright and resonant.
+            12 o&apos;clock position. The sound is bright and resonant.
             Counterfeits usually sound dull because the carbon-resin ratio
             is off.
           </li>
@@ -203,7 +203,7 @@ export default function EquipmentAuthenticityGuide() {
             Brand logos on counterfeits often use slightly wrong typefaces
             or kerning, paint runs visible at edges, or lettering that looks
             sharp at a glance but blurs on close inspection. Compare to a
-            verified product photo from the brand's own site.
+            verified product photo from the brand&apos;s own site.
           </li>
         </ul>
 
@@ -211,7 +211,7 @@ export default function EquipmentAuthenticityGuide() {
           Per-brand official-source guidance
         </h2>
         <p className="text-[var(--color-muted)] leading-relaxed">
-          The cards below quote each brand's own published guidance,
+          The cards below quote each brand&apos;s own published guidance,
           including the source title, URL, and the date we last checked it.
           Use the official source as the final word; the steps and
           limitations are our reading of how to apply it as a buyer.
@@ -266,7 +266,7 @@ export default function EquipmentAuthenticityGuide() {
         <p className="text-[var(--color-muted)] leading-relaxed">
           Before buying, ask the seller for clear photos of the shaft, cone,
           QR or anti-counterfeit label, receipt, store name, and original
-          packaging. Compare the seller's claimed region with the code or
+          packaging. Compare the seller&apos;s claimed region with the code or
           warranty details where the brand publishes that guidance.
         </p>
         <p className="text-[var(--color-muted)] leading-relaxed">
@@ -283,7 +283,7 @@ export default function EquipmentAuthenticityGuide() {
             <strong className="text-[var(--text)]">Do not play with it at
             tournament tension.</strong>{" "}
             Counterfeit frames fail unpredictably. If you must use it for
-            anything at all, string it at the bottom of the genuine model's
+            anything at all, string it at the bottom of the genuine model&apos;s
             recommended range, and never above 22 lb.
           </li>
           <li>
@@ -313,12 +313,12 @@ export default function EquipmentAuthenticityGuide() {
         <p className="text-[var(--color-muted)] leading-relaxed">
           The reliable rule: buy from a retailer the manufacturer publishes
           on their own website as authorised. Across our region (Singapore,
-          Malaysia, South Asia), this typically includes the brand's own
+          Malaysia, South Asia), this typically includes the brand&apos;s own
           retail network plus a small number of authorised importers. In
           Europe, BadmintonPlanet, Li-Ning Family, and a handful of
           national distributors are authorised. In North America, the
-          brand's own US sites plus a few national chains are reliable.
-          When in doubt, email the brand's regional customer service and
+          brand&apos;s own US sites plus a few national chains are reliable.
+          When in doubt, email the brand&apos;s regional customer service and
           ask whether the retailer you are considering is authorised — they
           will confirm or deny within a day or two.
         </p>

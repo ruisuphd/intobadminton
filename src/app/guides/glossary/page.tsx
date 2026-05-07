@@ -423,7 +423,7 @@ export default function GlossaryPage() {
           <p className="text-[var(--color-muted)] leading-relaxed">
             Plain-English definitions for the terms we use across the site —
             weight class, shaft flex, balance, sweet spot, gauge, torsional
-            plate, T-throat, and the brand line names you'll see on every
+            plate, T-throat, and the brand line names you&apos;ll see on every
             product page. Skim by category, or use Find (Cmd/Ctrl+F) for a
             specific term.
           </p>
@@ -502,7 +502,7 @@ export default function GlossaryPage() {
           <Link href="/contact/" className="text-[var(--color-accent)] underline">
             Tell us
           </Link>{" "}
-          and we'll add it.
+          and we&apos;ll add it.
         </p>
       </article>
     </main>
