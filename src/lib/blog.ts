@@ -81,6 +81,41 @@ export type BlogReviewSummary = {
   sourceHook: string;
 };
 
+export type BlogStoryFact = {
+  label: string;
+  value: string;
+};
+
+export type BlogStoryBlock =
+  | {
+      kind: "facts";
+      heading: string;
+      items: BlogStoryFact[];
+    }
+  | {
+      kind: "callout";
+      label: string;
+      title: string;
+      body: string;
+    }
+  | {
+      kind: "comparison";
+      heading: string;
+      columns: string[];
+      rows: { label: string; values: string[] }[];
+    }
+  | {
+      kind: "verdict";
+      heading: string;
+      body: string;
+      bullets: string[];
+    };
+
+export type BlogStory = {
+  intro: string;
+  blocks: BlogStoryBlock[];
+};
+
 export type BlogArticle = {
   slug: BlogSlug;
   /** First-published / last-revised date in ISO format (YYYY-MM-DD). */
@@ -89,6 +124,7 @@ export type BlogArticle = {
   title: string;
   dek: string;
   reviewSummary?: BlogReviewSummary;
+  story?: BlogStory;
   sections: { heading: string; body: string }[];
   cta: string;
 };
@@ -104,8 +140,36 @@ export const CATEGORY_LABELS: Record<BlogCategory, string> = {
  * online prose. Returns at least 1.
  */
 export function readingTimeMinutes(article: BlogArticle): number {
-  const words = article.sections
-    .map((s) => s.body.split(/\s+/).length)
+  const sections = article.sections.map((s) => `${s.heading} ${s.body}`);
+  const storyParts = article.story
+    ? [
+        article.story.intro,
+        ...article.story.blocks.flatMap((block) => {
+          if (block.kind === "facts") {
+            return [
+              block.heading,
+              ...block.items.map((item) => `${item.label} ${item.value}`),
+            ];
+          }
+
+          if (block.kind === "callout") {
+            return [block.label, block.title, block.body];
+          }
+
+          if (block.kind === "comparison") {
+            return [
+              block.heading,
+              ...block.columns,
+              ...block.rows.flatMap((row) => [row.label, ...row.values]),
+            ];
+          }
+
+          return [block.heading, block.body, ...block.bullets];
+        }),
+      ]
+    : [];
+  const words = [...storyParts, ...sections]
+    .map((part) => part.split(/\s+/).filter((word) => word.length > 0).length)
     .reduce((a, b) => a + b, 0);
   return Math.max(1, Math.round(words / 225));
 }
@@ -458,6 +522,89 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "comparisons",
       title: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which Halberd is yours",
       dek: "Three rackets in the same family, three completely different jobs. The 8000 is the amateur favorite. The 9000 is misunderstood. The 9000 Power is a speed racket in disguise.",
+      story: {
+        intro:
+          "The trap with the Halbertec line is that the names look like a staircase. Many buyers read 8000, 9000, and 9000 Power as good, better, best. On court the story is less tidy: one racket protects ordinary club timing, one chases speed but gives up rear-court weight, and one asks for a much cleaner hit than the family name suggests.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value:
+                  "Original BadmintonCN markdown review plus IntoBadminton buyer framing.",
+              },
+              {
+                label: "Main setup",
+                value:
+                  "Recent 4U/G5 samples, N65 string at 26-28 lb, compared against 88S Pro, 88D Pro, and speed frames.",
+              },
+              {
+                label: "Measurement lens",
+                value:
+                  "YuanShi shaft-deflection numbers are treated as creator data, not official manufacturer specifications.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised us",
+            title: "The safest buy is not the newest one",
+            body:
+              "The 8000 remains the article's anchor because it gives ordinary amateur players the easiest path to length, control, and a useful smash. The 9000 Power is more exciting, but it narrows the timing window and behaves more like a speed racket than a forgiving control frame.",
+          },
+          {
+            kind: "comparison",
+            heading: "Court feel in one table",
+            columns: ["8000", "9000", "9000 Power"],
+            rows: [
+              {
+                label: "Best role",
+                values: [
+                  "Club all-round control",
+                  "Front-court speed",
+                  "Advanced doubles speed-attack",
+                ],
+              },
+              {
+                label: "Main risk",
+                values: [
+                  "Not the sharpest in fast exchanges",
+                  "Rear-court hit can feel underpowered",
+                  "Harder shaft asks for cleaner force",
+                ],
+              },
+              {
+                label: "Buyer read",
+                values: [
+                  "Best first serious Halbertec",
+                  "Only buy for a specific speed need",
+                  "Buy after demo or trusted weighing",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Who should ignore the hype",
+            title: "Do not buy 9000 Power as an 8000 upgrade",
+            body:
+              "If you like the 8000 because it gives you length when you are late, the 9000 Power may feel like a punishment, not a premium step. It improves crispness and pointing, but it does not make the shuttle easier to lift from a compromised position.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Treat this as a style choice rather than a price ladder. The 8000 is still the sensible default; the 9000 is a specialist speed-control experiment; the 9000 Power is for players who already know they like stiff, fast, low-dwell frames.",
+            bullets: [
+              "Best alternative to 9000 Power for pure speed: Yonex Nanoflare 1000Z or Victor Auraspeed 100X SE.",
+              "Best alternative to 8000 for softer attack help: Li-Ning AxForce 90 New.",
+              "Best buying habit: weigh the exact sample before stringing if the shop allows it.",
+            ],
+          },
+        ],
+      },
       sections: [
         {
           heading: "The Halbertec line is not a smooth upgrade path",
@@ -865,6 +1012,89 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         sourceHook:
           "The source review is compelling because it frames the 99 Pro as a reward, not a shortcut.",
       },
+      story: {
+        intro:
+          "The Astrox 99 Pro sells a simple fantasy: buy the heaviest Yonex answer and the smash will arrive with it. The original review is more useful because it breaks that fantasy. This racket can feel magnificent, but only after the player pays in timing, conditioning, and patience.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value:
+                  "Original Chinese review notes and IntoBadminton buyer analysis.",
+              },
+              {
+                label: "Sample setup",
+                value:
+                  "4U/G5 review sample, strung and gripped around 96g with a 68-hole stringbed.",
+              },
+              {
+                label: "Best format",
+                value:
+                  "Singles or back-court mixed where preparation time is worth more than first-three-shot speed.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised us",
+            title: "The racket is not heavy in the lazy way",
+            body:
+              "The 99 Pro does not merely swing like a blunt head-heavy frame. It is precise, compact, and hard to cheat. Lazy contact feels worse than expected; clean contact feels better than most players will ever need.",
+          },
+          {
+            kind: "comparison",
+            heading: "How it behaves against common alternatives",
+            columns: ["Astrox 99 Pro", "Astrox 88D Pro 2024", "Astrox 100ZZ"],
+            rows: [
+              {
+                label: "Primary reward",
+                values: [
+                  "Highest rear-court punishment",
+                  "Cleaner doubles attack package",
+                  "Small-frame precision with less head drag",
+                ],
+              },
+              {
+                label: "Primary cost",
+                values: [
+                  "Fatigue and mishits arrive quickly",
+                  "Less brutal at maximum contact",
+                  "Still punishing for ordinary amateurs",
+                ],
+              },
+              {
+                label: "Best buyer",
+                values: [
+                  "Advanced singles attacker",
+                  "Competitive doubles back court",
+                  "Singles player wanting 99-like demand with faster handling",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Who should ignore the hype",
+            title: "Fast-doubles players should not force this fit",
+            body:
+              "If your best points come from serve return, blocks, drive pressure, and interceptions, the 99 Pro gives away too much time. It can win rallies from the rear court, but it does not help you arrive early in the front-court chaos.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Buy the 99 Pro only if the extra demand is part of the point. It is not a shortcut to power; it is a high-ceiling frame for players who already create length, angle, and timing without help.",
+            bullets: [
+              "Best alternative for doubles attack: Astrox 88D Pro 2024.",
+              "Best alternative for slightly faster handling: Astrox 100ZZ VA.",
+              "Best practical test: play a full match, not a warm-up, before buying.",
+            ],
+          },
+        ],
+      },
       sections: [
         {
           heading: "Pedigree and design intent",
@@ -1011,6 +1241,89 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         ],
         sourceHook:
           "The source review works because HS Plus breaks the expectation that speed rackets must hit light.",
+      },
+      story: {
+        intro:
+          "HS Plus is interesting because it starts with a contradiction. It looks like a fast doubles racket, but the review reads more like a warning label for a compact smash weapon. The player who buys it only for speed may miss the point; the player who buys it for speed plus rear-court bite has a stronger case.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value:
+                  "Original Hayabusa HS Plus review notes, translated into original buyer analysis.",
+              },
+              {
+                label: "Sample setup",
+                value:
+                  "4U/G5 review sample, underbase removed, VBS66N at 26-28 lb.",
+              },
+              {
+                label: "Player lens",
+                value:
+                  "Advanced doubles players with short, concentrated power strokes.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised us",
+            title: "It is faster and meaner than the older HS idea",
+            body:
+              "The smaller frame and Power Ring junction make the racket feel quicker in exchanges, yet the WES 3.0 shaft gives it a smash profile that many speed rackets do not have. That combination is why the entry threshold matters.",
+          },
+          {
+            kind: "comparison",
+            heading: "Where HS Plus sits",
+            columns: ["HS Plus", "Auraspeed 100X SE", "Nanoflare 1000Z"],
+            rows: [
+              {
+                label: "Primary reward",
+                values: [
+                  "Speed with a real back-court bite",
+                  "Cleaner fast-doubles handling",
+                  "Most rounded Yonex speed flagship",
+                ],
+              },
+              {
+                label: "Primary cost",
+                values: [
+                  "Small sweet spot and stiff loading",
+                  "Less threatening rear-court hit",
+                  "Less dense Victor-style feedback",
+                ],
+              },
+              {
+                label: "Best buyer",
+                values: [
+                  "Advanced back-court speed attacker",
+                  "Fast men's doubles driver",
+                  "All-round competitive doubles player",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Who should ignore the hype",
+            title: "Do not jump from a sugar-water speed racket",
+            body:
+              "If Nanoflare 700, 700 Pro, or soft Victor frames feel like home, HS Plus is not a natural next step. The racket asks you to hit shorter, faster, and cleaner; without that, the shuttle leaves lighter than the spec sheet suggests.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "HS Plus is not a beginner-friendly speed racket. It is a compact, stiff, speed-attack frame for doubles players who already know how to load a hard shaft under pressure.",
+            bullets: [
+              "Best alternative for easier speed: Auraspeed 100X SE.",
+              "Best alternative for Yonex feel: Nanoflare 1000Z.",
+              "Best buying habit: allow several sessions before judging the sweet spot.",
+            ],
+          },
+        ],
       },
       sections: [
         {

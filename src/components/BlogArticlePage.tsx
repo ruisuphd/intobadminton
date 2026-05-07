@@ -7,6 +7,7 @@ import {
   readingTimeMinutes,
   relatedArticles,
   type BlogReviewSummary,
+  type BlogStoryBlock,
 } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
@@ -67,6 +68,100 @@ function ReviewSummaryPanel({ summary }: { summary: BlogReviewSummary }) {
   );
 }
 
+function StoryBlock({ block }: { block: BlogStoryBlock }) {
+  if (block.kind === "facts") {
+    return (
+      <section className="rounded-2xl border border-[color:var(--line)] bg-white p-5">
+        <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">
+          {block.heading}
+        </h2>
+        <dl className="mt-4 grid gap-4 sm:grid-cols-3">
+          {block.items.map((item) => (
+            <div key={item.label}>
+              <dt className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+                {item.label}
+              </dt>
+              <dd className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
+                {item.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    );
+  }
+
+  if (block.kind === "callout") {
+    return (
+      <aside className="rounded-2xl border border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] p-5">
+        <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+          {block.label}
+        </p>
+        <h2 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
+          {block.title}
+        </h2>
+        <p className="mt-3 text-base leading-[1.7] text-[var(--text-secondary)]">
+          {block.body}
+        </p>
+      </aside>
+    );
+  }
+
+  if (block.kind === "comparison") {
+    return (
+      <section>
+        <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+          {block.heading}
+        </h2>
+        <div className="mt-4 overflow-x-auto rounded-2xl border border-[color:var(--line)]">
+          <table className="min-w-full border-collapse bg-white text-left text-sm">
+            <thead className="bg-[color:var(--surface-muted)] text-[var(--text)]">
+              <tr>
+                <th className="w-36 px-4 py-3 font-semibold">Decision point</th>
+                {block.columns.map((column) => (
+                  <th key={column} className="px-4 py-3 font-semibold">
+                    {column}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[color:var(--line)] text-[var(--text-secondary)]">
+              {block.rows.map((row) => (
+                <tr key={row.label}>
+                  <th className="px-4 py-3 align-top font-semibold text-[var(--text)]">
+                    {row.label}
+                  </th>
+                  {row.values.map((value, index) => (
+                    <td key={`${row.label}-${index}`} className="px-4 py-3 align-top">
+                      {value}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="rounded-2xl border border-[color:var(--line-strong)] bg-white p-6 shadow-sm">
+      <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+        {block.heading}
+      </h2>
+      <p className="mt-3 text-base leading-[1.7] text-[var(--text-secondary)]">
+        {block.body}
+      </p>
+      <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+        {block.bullets.map((bullet) => (
+          <li key={bullet}>{bullet}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function BlogArticlePage({
   locale,
   slug,
@@ -97,11 +192,15 @@ export function BlogArticlePage({
   const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
   const byline = companyInfo.authorBylineEn;
   const minutes = readingTimeMinutes(article);
-  const articleWordCount = article.sections.reduce(
+  const storyWords = article.story
+    ? article.story.intro.split(/\s+/).filter((word) => word.length > 0).length
+    : 0;
+  const sectionWords = article.sections.reduce(
     (sum, section) =>
       sum + section.body.split(/\s+/).filter((word) => word.length > 0).length,
     0
   );
+  const articleWordCount = storyWords + sectionWords;
   const canShowArticleAd = articleWordCount >= 600;
   const related = relatedArticles(blogArticles[locale], article, 3);
 
@@ -215,6 +314,17 @@ export function BlogArticlePage({
         </p>
 
         <div className="space-y-8">
+          {article.story && (
+            <section className="space-y-8">
+              <p className="text-lg leading-[1.75] text-[var(--text-secondary)]">
+                {article.story.intro}
+              </p>
+              {article.story.blocks.map((block, index) => (
+                <StoryBlock key={`${block.kind}-${index}`} block={block} />
+              ))}
+            </section>
+          )}
+
           {article.sections.map((section, index) => (
             <section
               key={section.heading}
