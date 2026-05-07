@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { blogArticles, blogSlugs } from "@/lib/blog";
+import { blogArticles, blogSlugs, readingTimeMinutes } from "@/lib/blog";
 
 describe("blog publishing metadata", () => {
   test("keeps every English article reachable through static blog routes", () => {
@@ -66,5 +66,38 @@ describe("blog publishing metadata", () => {
         ).toBeLessThanOrEqual(16);
       }
     }
+  });
+
+  test("enriches priority review articles with narrative buyer-first blocks", () => {
+    const priorityReviewSlugs = [
+      "li-ning-halbertec-8000-vs-9000-vs-9000-power",
+      "yonex-astrox-99-pro-2-deep-dive",
+      "victor-auraspeed-hs-plus-deep-dive",
+    ];
+
+    for (const slug of priorityReviewSlugs) {
+      const article = blogArticles.en.find((item) => item.slug === slug);
+
+      expect(article, slug).toBeDefined();
+      expect(article?.story?.intro.trim(), slug).not.toBe("");
+
+      const blockKinds = new Set(
+        article?.story?.blocks.map((block) => block.kind)
+      );
+
+      expect(blockKinds.has("facts"), slug).toBe(true);
+      expect(blockKinds.has("callout"), slug).toBe(true);
+      expect(blockKinds.has("comparison"), slug).toBe(true);
+      expect(blockKinds.has("verdict"), slug).toBe(true);
+    }
+  });
+
+  test("counts rich narrative blocks in article reading time", () => {
+    const article = blogArticles.en.find(
+      (item) => item.slug === "li-ning-halbertec-8000-vs-9000-vs-9000-power"
+    );
+
+    expect(article?.story).toBeDefined();
+    expect(readingTimeMinutes(article!)).toBeGreaterThanOrEqual(4);
   });
 });

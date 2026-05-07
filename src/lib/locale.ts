@@ -18,6 +18,7 @@ const coreRoutes = [
   "/quiz/",
   "/results/",
   "/guides/",
+  "/guides/equipment-authenticity/",
   "/compare/",
   "/review/",
   "/methodology/",

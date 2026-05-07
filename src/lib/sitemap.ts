@@ -36,6 +36,7 @@ const canonicalRoutes = [
   "/compare-guides/astrox-77-pro-vs-88s-pro/",
   "/compare-guides/badminton-vs-tennis-shoes/",
   "/guides/doubles-roles/",
+  "/guides/equipment-authenticity/",
   "/guides/racket-balance/",
   "/guides/season-refresh/",
   "/guides/shoes-footwork/",

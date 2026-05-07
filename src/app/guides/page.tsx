@@ -6,7 +6,7 @@ import { t } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Badminton equipment guides — IntoBadminton",
   description:
-    "Practical badminton equipment guides on string tension, racket balance, shoes and footwork, doubles court roles, season refresh, and badminton shoes for wide feet.",
+    "Practical badminton equipment guides on string tension, racket balance, shoes and footwork, doubles court roles, season refresh, authenticity checks, and badminton shoes for wide feet.",
   alternates: { canonical: "/guides/" },
 };
 
@@ -53,6 +53,13 @@ const guides = [
     long:
       "What wide really means in badminton-shoe sizing, the heel-slip mistake most wide-footed players make, model recommendations to test, and how the finder filters for wider lasts.",
   },
+  {
+    href: "/guides/equipment-authenticity/",
+    title: "Equipment authenticity checks",
+    desc: "Official-source checks for Yonex, VICTOR, and Li-Ning purchases.",
+    long:
+      "How to use brand-published authenticity guidance without pretending a serial number, code, sticker, or marketplace listing can prove everything. Covers Yonex support verification, VICTOR shaft-number and hologram guidance, Li-Ning's 12-colour code query, and when to contact the seller or distributor.",
+  },
 ] as const;
 
 export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
@@ -63,7 +70,9 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
         <header className="max-w-3xl">
-          <span className="chip">Equipment guides · 6 deep dives</span>
+          <span className="chip">
+            Equipment guides · {guides.length} deep dives
+          </span>
           <h1 className="mt-5 text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
             {copy.title}
           </h1>
@@ -72,19 +81,18 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
             These badminton equipment guides go deeper than a typical product
-            page. Each one is built around a single decision — string tension,
-            shaft flex, shoe fit, doubles role, refresh cadence, or width-aware
-            sizing — and walks through the trade-offs with examples from real
-            Yonex, Victor, and Li-Ning models. Skim the summary, then click
-            into a guide for the full breakdown with manufacturer-spec links
-            and cited community evidence.
+            page. Each one is built around a single decision: string tension,
+            shaft flex, shoe fit, doubles role, refresh cadence, width-aware
+            sizing, or authenticity risk. Skim the summary, then click into a
+            guide for the full breakdown with manufacturer-spec links and cited
+            community evidence.
           </p>
         </header>
 
         <section className="mt-10 grid gap-3 sm:grid-cols-3">
           {[
             {
-              num: "6",
+              num: String(guides.length),
               label: "in-depth equipment guides",
             },
             {
