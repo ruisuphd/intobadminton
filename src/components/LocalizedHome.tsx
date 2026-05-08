@@ -31,10 +31,6 @@ const HOME_FAQ: { q: string; a: string }[] = [
     q: "How does the IntoBadminton finder score recommendations?",
     a: "Every result breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. Manufacturer specs are the strongest signal, editor interpretation translates specs into on-court feel, and community evidence (BadmintonCN, Reddit, BadmintonCentral, video reviewers) appears as cited metadata summaries with links — never copied text. Confidence labels show what is verified and what still needs cross-checking. Read the methodology page for the full weighting.",
   },
-  {
-    q: "Is IntoBadminton free?",
-    a: "Yes. The finder, comparisons, blog, and guides are free. The site runs Google AdSense ads after you opt in via the cookie banner. There are no paywalls, no subscription, and no required account. Recommendations are not sponsored — ads are clearly labelled and never change the fit-score order.",
-  },
 ];
 
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
@@ -81,8 +77,13 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Best intermediate rackets", href: "/best/intermediate-rackets/", tag: "Intermediate" },
     { label: "Best badminton shoes", href: "/best/shoes/", tag: "Shoes" },
     { label: "Best badminton strings", href: "/best/strings/", tag: "Strings" },
+    { label: "Yonex rackets decoded", href: "/brands/yonex/", tag: "Yonex" },
+    { label: "Victor rackets decoded", href: "/brands/victor/", tag: "Victor" },
+    { label: "Li-Ning rackets decoded", href: "/brands/li-ning/", tag: "Li-Ning" },
     { label: "Yonex Astrox vs Nanoflare", href: "/compare-guides/yonex-astrox-vs-nanoflare/", tag: "Compare" },
     { label: "Yonex vs Victor vs Li-Ning", href: "/compare-guides/yonex-victor-li-ning/", tag: "Compare" },
+    { label: "Spot fake rackets — authenticity check", href: "/guides/equipment-authenticity/", tag: "Authenticity" },
+    { label: "Glossary — 4U, head-heavy, T-throat explained", href: "/guides/glossary/", tag: "Glossary" },
   ];
 
   return (
@@ -120,7 +121,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
               </Link>
             </div>
             <p className="mt-6 text-xs text-[var(--color-subtle)]">
-              {"Free · No account · Profiles stay on device · Updated weekly"}
+              {"No signup · No email gate · Profiles stay on device · Updated weekly"}
             </p>
           </div>
 

@@ -59,28 +59,52 @@ const copyEn: Copy = {
 export function AboutPage({ locale }: { locale: SiteLocale }) {
   const c = copyEn;
 
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${companyInfo.siteUrl}/about/#person-rui-su`,
+    name: companyInfo.founderName,
+    url: companyInfo.founderWebsite,
+    jobTitle: "Founder",
+    description: companyInfo.founderDescription,
+    knowsAbout: [
+      "Badminton equipment",
+      "Badminton rackets",
+      "Badminton strings and stringing tension",
+      "Badminton shoes and footwork",
+      "Yonex Astrox, Nanoflare, Arcsaber",
+      "Victor Auraspeed, Thruster, Brave Sword, DriveX",
+      "Li-Ning AxForce, BladeX, Halbertec",
+      "Machine learning systems",
+    ],
+    award: "Division 4, Irish Badminton League",
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Maynooth University",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: companyInfo.operatorLegalName,
+      url: companyInfo.operatorWebsite,
+    },
+  };
+
   const aboutJsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "@id": `${companyInfo.siteUrl}/about/#about`,
     name: c.hero,
     inLanguage: "en",
-    mainEntity: {
-      "@type": "Person",
-      name: companyInfo.founderName,
-      url: companyInfo.founderWebsite,
-      jobTitle: "Founder",
-      description: companyInfo.founderDescription,
-      worksFor: {
-        "@type": "Organization",
-        name: companyInfo.operatorLegalName,
-        url: companyInfo.operatorWebsite,
-      },
-    },
+    mainEntity: { "@id": `${companyInfo.siteUrl}/about/#person-rui-su` },
+    primaryImageOfPage: undefined,
   };
 
   return (
     <main className="flex-1 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}

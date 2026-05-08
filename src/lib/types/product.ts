@@ -31,6 +31,26 @@ export type MarketSignal = {
   confidence: "low" | "medium" | "high";
 };
 
+export type ProductImageSource =
+  | "yonex"
+  | "victor"
+  | "lining"
+  | "kawasaki"
+  | "mizuno"
+  | "kumpoo"
+  | "amazon"
+  | "own";
+
+export type ProductImage = {
+  url: string;
+  source: ProductImageSource;
+  credit: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  verified: boolean;
+};
+
 type BaseProduct = {
   id: string;
   category: EquipmentCategory;
@@ -48,6 +68,7 @@ type BaseProduct = {
   sourceUrls: string[];
   editorNote?: string;
   reviewCount?: number;
+  image?: ProductImage;
   resale?: ResaleEstimate;
   marketSignals?: MarketSignal[];
 };

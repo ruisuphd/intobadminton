@@ -6,11 +6,25 @@ import { t } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Badminton equipment guides — IntoBadminton",
   description:
-    "Practical badminton equipment guides on string tension, racket balance, shoes and footwork, doubles court roles, season refresh, authenticity checks, and badminton shoes for wide feet.",
+    "Practical badminton equipment guides on string tension, racket balance, shoes and footwork, doubles court roles, season refresh, authenticity checks, badminton shoes for wide feet, and a glossary of every term you'll see on a spec sheet.",
   alternates: { canonical: "/guides/" },
 };
 
 const guides = [
+  {
+    href: "/guides/equipment-authenticity/",
+    title: "Spot fake rackets — authenticity check",
+    desc: "Verify Yonex, Victor, and Li-Ning are genuine before you string or buy.",
+    long:
+      "A per-brand authenticity guide with the official verification URLs for Yonex, Victor, and Li-Ning, the visual checks that catch most fakes (hologram, serial number, butt cap engraving), red flags that apply across brands, and what to do if you already bought a counterfeit.",
+  },
+  {
+    href: "/guides/glossary/",
+    title: "Badminton equipment glossary",
+    desc: "Plain-English definitions of 40+ terms — weight class, shaft flex, balance, and brand lines.",
+    long:
+      "A single-page reference for the language used across racket spec sheets and reviews — 3U/4U/5U weight class, shaft flex tiers, balance point in mm, sweet spot, repulsion, control, gauge, torsional plate, T-throat, plus the Yonex/Victor/Li-Ning line names you'll see on every product card. Categorised, searchable with browser Find, and cross-linked into the deep-dive guides.",
+  },
   {
     href: "/guides/string-tension/",
     title: "String tension basics",
@@ -53,13 +67,6 @@ const guides = [
     long:
       "What wide really means in badminton-shoe sizing, the heel-slip mistake most wide-footed players make, model recommendations to test, and how the finder filters for wider lasts.",
   },
-  {
-    href: "/guides/equipment-authenticity/",
-    title: "Equipment authenticity checks",
-    desc: "Official-source checks for Yonex, VICTOR, and Li-Ning purchases.",
-    long:
-      "How to use brand-published authenticity guidance without pretending a serial number, code, sticker, or marketplace listing can prove everything. Covers Yonex support verification, VICTOR shaft-number and hologram guidance, Li-Ning's 12-colour code query, and when to contact the seller or distributor.",
-  },
 ] as const;
 
 export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
@@ -83,9 +90,9 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
             These badminton equipment guides go deeper than a typical product
             page. Each one is built around a single decision: string tension,
             shaft flex, shoe fit, doubles role, refresh cadence, width-aware
-            sizing, or authenticity risk. Skim the summary, then click into a
-            guide for the full breakdown with manufacturer-spec links and cited
-            community evidence.
+            sizing, authenticity risk, or vocabulary. Skim the summary, then
+            click into a guide for the full breakdown with manufacturer-spec
+            links and cited community evidence.
           </p>
         </header>
 

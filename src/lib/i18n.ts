@@ -18,23 +18,23 @@ export const messages = {
       methodology: "Methodology",
     },
     home: {
-      title: "The most accurate badminton equipment matcher",
+      title: "Find the badminton gear that fits your game",
       subtitle:
-        "Tell us your level, playing style, discipline, body comfort needs, and budget. We rank rackets, strings, shoes, bags, shuttles, and grips with transparent scoring drawn from manufacturer specs, cited community reviews, and on-court testing — so you stop guessing and start playing.",
+        "Five quick questions about how you actually play. We rank rackets, strings, shoes, and the rest of the kit by what fits your level, role, swing, and budget — with the reasoning right there on the card. Manufacturer specs first. Cited community reviews second. On-court testing where it matters.",
       start: "Start finder",
       guides: "Read guides",
       proof: [
         {
-          title: "Recommendation logic you can inspect",
-          body: "Each result separates official specs, editor interpretation, review evidence, and confidence so you can see what is strong and what still needs verification.",
+          title: "You can check our work",
+          body: "Every pick splits into official specs, editor interpretation, and cited community evidence — with confidence labels showing which parts are verified and which still need a second look.",
         },
         {
-          title: "Built around badminton profiles",
-          body: "Singles, doubles, front-court speed, smash-heavy play, foot width, comfort flags, string tension, and budget all affect the shortlist.",
+          title: "Built for how badminton is actually played",
+          body: "Singles vs doubles, front-court vs rear-court, smash-heavy vs control, foot width, joint comfort, string tension, and budget all push the shortlist around.",
         },
         {
-          title: "Static-first and privacy-first",
-          body: "The v1 finder runs without accounts. Profiles, history, and compare lists stay on device unless a future backend is added.",
+          title: "No account, no email gate",
+          body: "The finder runs in your browser. Your profile, history, and compare list stay on your device — we don't need them on a server to give you a result.",
         },
       ],
     },

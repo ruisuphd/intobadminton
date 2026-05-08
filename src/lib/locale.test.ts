@@ -48,6 +48,15 @@ describe("sitemapEntries", () => {
     expect(urls).toContain("https://example.com/brands/");
   });
 
+  it("includes the finder and dedicated brand pages", () => {
+    const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
+
+    expect(urls).toContain("https://example.com/quiz/");
+    expect(urls).toContain("https://example.com/brands/yonex/");
+    expect(urls).toContain("https://example.com/brands/victor/");
+    expect(urls).toContain("https://example.com/brands/li-ning/");
+  });
+
   it("does not emit Chinese locale routes", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
 
@@ -55,10 +64,12 @@ describe("sitemapEntries", () => {
     expect(urls.some((u) => u.includes("/en/"))).toBe(false);
   });
 
-  it("does not emit thin utility routes", () => {
+  it("does not emit thin or stateful utility routes", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
 
-    expect(urls).not.toContain("https://example.com/quiz/");
+    // /results/ and /compare/ are stateful — they read from local storage and
+    // would index as empty pages. /review/ and /setup/ are internal tools.
+    // /privacy-choices/ is a CMP popup endpoint.
     expect(urls).not.toContain("https://example.com/results/");
     expect(urls).not.toContain("https://example.com/compare/");
     expect(urls).not.toContain("https://example.com/review/");

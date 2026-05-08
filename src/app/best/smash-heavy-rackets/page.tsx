@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title: "Best smash rackets for badminton (2026 picks)",
+  title:
+    "Best Smash Rackets in Badminton 2026 — Astrox 100ZZ, 99 Pro, 88D Pro, Halbertec 9000 | IntoBadminton",
   description:
-    "Six smash-heavy badminton rackets ranked by smash power, continuity, and shaft hardness — for singles and rear-court doubles attackers.",
+    "Six head-heavy attack rackets ranked by smash power, rally continuity, and shaft hardness your shoulder can actually drive. Yonex Astrox 100ZZ, 99 Pro, 88D Pro 2024, Li-Ning Halbertec 9000 Power, Victor Auraspeed 100X SE — for singles and rear-court doubles.",
+  keywords: [
+    "best smash badminton racket",
+    "best attacking badminton racket",
+    "Yonex Astrox 100ZZ",
+    "Yonex Astrox 99 Pro",
+    "Yonex Astrox 88D Pro",
+    "Li-Ning Halbertec 9000 Power",
+    "Victor Auraspeed 100X SE",
+    "Yonex Astrox 100ZZ Viktor Axelsen",
+    "head-heavy badminton racket",
+    "stiff shaft badminton",
+    "singles badminton racket",
+  ],
   alternates: { canonical: "/best/smash-heavy-rackets/" },
 };
 
@@ -32,6 +46,15 @@ const config: BestPicksConfig = {
       ],
       why: "The marquee smash racket. Massive top-end power and fast repulsion when you load it cleanly. Founder's firsthand take: very demanding but surprisingly fast and very repulsive. Try the 100ZZ VA before this if you find the regular ZZ punishing.",
       tradeoff: "Tiring across full matches. The new-color Astrox 88D Pro now beats it on overall package for many players.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_astrox_100zz_kurenai.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 100ZZ Kurenai badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 2,
@@ -46,6 +69,15 @@ const config: BestPicksConfig = {
       ],
       why: "The 99 Pro 2 is the friendlier path to a Yonex pro-tier smash frame. Slightly less brutal shaft than the 100ZZ, with similar real-match power for amateurs. Strong all-rounder if your singles pattern is built around back-court attack.",
       tradeoff: "Still demanding. If you compete in doubles too, the 88S Pro is more flexible.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_astrox_99_pro_white_tiger_badmintonplanet.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 99 Pro White Tiger badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,
@@ -60,7 +92,19 @@ const config: BestPicksConfig = {
       ],
       why: "Better continuity than the original camel-gold version — the new shaft loads and unloads faster, which is what really matters across a 30-shot rally. Some BadmintonCN reviewers now rank the new-color 88D Pro above the 100ZZ on overall package.",
       tradeoff: "Less raw top-end smash than the 100ZZ. Front-court players will prefer the 88S Pro.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_astrox_88_d_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 88D Pro 2024 badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
+    // Note: image is the standard Halbertec 9000 (the Power variant uses the
+    // same paint scheme, just heavier 3U weight). Replace with Power-specific
+    // image if Li-Ning ships a separate marketing image for the Power SKU.
     {
       rank: 4,
       name: "Halbertec 9000 Power",
@@ -74,7 +118,19 @@ const config: BestPicksConfig = {
       ],
       why: "Li-Ning's heaviest-feeling pro frame. The 9000 Power genuinely rivals 100ZZ-tier smash mass at a lower price, and the build quality has caught up with Yonex's flagships in recent years.",
       tradeoff: "The frame demands strength. Skip if you have shoulder, elbow, or wrist comfort flags.",
+      image: {
+        url: "https://sw3295.sfstatic.io/upload_dir/shop/_thumbs/Li-Ning-Halbertec-9000.w800.h800.fill.png",
+        source: "lining",
+        credit: "Image: Li-Ning / via Li-Ning Family",
+        alt: "Li-Ning Halbertec 9000 badminton racket (Power variant)",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
+    // TODO: image — Victor Auraspeed 100X SE (Mohammad Ahsan signature).
+    // Try victorsport.com/product/auraspeed-100x-se-h or au.victorsport.com
+    // (their site is JS-rendered; open in browser and copy image URL).
     {
       rank: 5,
       name: "Auraspeed 100X SE (Mohammad Ahsan)",
@@ -102,6 +158,15 @@ const config: BestPicksConfig = {
       ],
       why: "Viktor Axelsen's signature 100ZZ tune is what most amateur 100ZZ buyers actually want. Same iconic frame profile, slightly more forgiving on imperfect timing. If you tried the regular 100ZZ and felt punished, this is the answer.",
       tradeoff: "Premium pricing. Limited availability in some regions — verify retailer stock.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/1/0/100va_zz_1.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 100VA ZZ Viktor Axelsen badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
   ],
   faqs: [

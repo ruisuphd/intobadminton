@@ -8,10 +8,11 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const NAV_LINKS = [
   { href: "/quiz/", label: "Finder" },
+  { href: "/best/", label: "Best Of" },
   { href: "/blog/", label: "Blog" },
   { href: "/guides/", label: "Guides" },
   { href: "/brands/", label: "Brands" },
-  { href: "/compare/", label: "Compare" },
+  { href: "/faq/", label: "FAQ" },
 ] as const;
 
 export function SiteHeader() {

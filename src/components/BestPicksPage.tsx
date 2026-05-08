@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { EditorialNotice } from "@/components/EditorialNotice";
+import {
+  ProductImageView,
+  canShowProductImage,
+} from "@/components/ProductImage";
 import { companyInfo } from "@/lib/company";
+import type { ProductImage } from "@/lib/types/product";
 
 export type Pick = {
   rank: number;
@@ -12,6 +17,7 @@ export type Pick = {
   specs: { label: string; value: string }[];
   why: string;
   tradeoff: string;
+  image?: ProductImage;
 };
 
 export type FaqItem = { q: string; a: string };
@@ -45,6 +51,9 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
         name: `${p.brand} ${p.name}`,
         brand: { "@type": "Brand", name: p.brand },
         category: config.productSchemaCategory,
+        ...(canShowProductImage(p.image) && p.image
+          ? { image: p.image.url }
+          : {}),
         offers: {
           "@type": "Offer",
           priceCurrency: "USD",
@@ -130,13 +139,22 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
           {config.picks.map((p) => (
             <li key={p.name} className="card p-7">
               <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
-                    #{p.rank} · {p.brand}
-                  </p>
-                  <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
-                    {p.name}
-                  </h3>
+                <div className="flex items-start gap-4">
+                  {canShowProductImage(p.image) && (
+                    <ProductImageView
+                      image={p.image}
+                      size={88}
+                      className="shrink-0"
+                    />
+                  )}
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
+                      #{p.rank} · {p.brand}
+                    </p>
+                    <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
+                      {p.name}
+                    </h3>
+                  </div>
                 </div>
                 <p className="text-sm font-semibold text-[var(--color-accent)]">
                   ~${p.priceUsd}

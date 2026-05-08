@@ -8,6 +8,7 @@ export type SitemapEntry = {
 
 const canonicalRoutes = [
   "/",
+  "/quiz/",
   "/guides/",
   "/compare-guides/",
   "/methodology/",
@@ -22,6 +23,9 @@ const canonicalRoutes = [
   "/sources/",
   "/about/",
   "/brands/",
+  "/brands/yonex/",
+  "/brands/victor/",
+  "/brands/li-ning/",
   "/faq/",
   "/best/",
   ...blogSlugs.map((slug) => `/blog/${slug}/`),
@@ -37,6 +41,7 @@ const canonicalRoutes = [
   "/compare-guides/badminton-vs-tennis-shoes/",
   "/guides/doubles-roles/",
   "/guides/equipment-authenticity/",
+  "/guides/glossary/",
   "/guides/racket-balance/",
   "/guides/season-refresh/",
   "/guides/shoes-footwork/",
@@ -48,6 +53,8 @@ function routePriority(path: string): number {
   if (path === "/") return 1;
   if (path === "/quiz/") return 0.9;
   if (path.startsWith("/best/") || path.startsWith("/compare-guides/")) return 0.8;
+  if (path.startsWith("/brands/") && path !== "/brands/") return 0.8;
+  if (path === "/brands/") return 0.7;
   if (path.startsWith("/blog/") && path !== "/blog/") return 0.7;
   if (path === "/blog/" || path === "/guides/" || path.startsWith("/guides/"))
     return 0.7;

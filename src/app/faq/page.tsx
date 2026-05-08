@@ -3,9 +3,18 @@ import Link from "next/link";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Badminton equipment FAQ — IntoBadminton",
+  title:
+    "Badminton Equipment FAQ — Rackets, Strings, Shoes & Tension | IntoBadminton",
   description:
-    "Frequently asked questions about choosing badminton rackets, strings, shoes, and bags. Honest answers from a competitive player — no marketing language.",
+    "Honest answers from a competitive player. Choosing a badminton racket by level, weight class (3U/4U/5U), shaft flex, and balance; string tension; shoe-vs-running-shoe; restringing schedules; brand differences. No marketing language.",
+  keywords: [
+    "badminton FAQ",
+    "how to choose badminton racket",
+    "badminton string tension",
+    "3U vs 4U badminton",
+    "badminton shoes vs running shoes",
+    "how often to restring badminton",
+  ],
   alternates: { canonical: "/faq/" },
 };
 
@@ -73,8 +82,8 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
         a: "Every result breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. Manufacturer specs are the strongest signal, editor interpretation translates specs into on-court feel, and community evidence (BadmintonCN, Reddit, BadmintonCentral, video reviewers) appears as cited metadata summaries with links — never copied text.",
       },
       {
-        q: "Is IntoBadminton free?",
-        a: "Yes. The finder, comparisons, blog, and guides are free. The site runs Google AdSense ads after you opt in via the cookie banner. There are no paywalls, no subscription, and no required account.",
+        q: "Do I need to pay or create an account to use IntoBadminton?",
+        a: "No. There is no paywall, no subscription, no required signup, and no email gate to use the finder, comparisons, blog, or guides. The site is supported by display ads (clearly labelled and only after you opt in via the cookie banner) and may add affiliate retailer links in the future. Recommendations are editorially independent — ads and any future affiliate links never change the fit-score order.",
       },
       {
         q: "Are the recommendations sponsored?",

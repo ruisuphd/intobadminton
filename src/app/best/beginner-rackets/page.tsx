@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title: "Best badminton rackets for beginners (2026 picks)",
+  title:
+    "Best Badminton Rackets for Beginners 2026 — 6 Forgiving Picks Under $250 | IntoBadminton",
   description:
-    "Six forgiving, well-priced badminton rackets for beginners and recreational club players, ranked by shaft flex, weight, balance, and budget — by a competitive player.",
+    "Six forgiving, well-priced badminton rackets for beginners and recreational club players. Ranked by shaft flex, weight class (3U/4U/5U), balance, and budget — picked by a competitive Div 4 player who has played them.",
+  keywords: [
+    "best beginner badminton racket",
+    "beginner badminton racket",
+    "first badminton racket",
+    "Yonex Nanoray Light 70i",
+    "Yonex Astrox 77 Pro",
+    "Yonex Arcsaber 7 Pro",
+    "Victor DriveX 8S",
+    "4U badminton racket",
+    "5U badminton racket beginner",
+    "forgiving badminton racket",
+    "badminton racket under $200",
+  ],
   alternates: { canonical: "/best/beginner-rackets/" },
 };
 
@@ -19,6 +33,10 @@ const config: BestPicksConfig = {
     body: "Three things matter more than brand or marketing tier: <strong>shaft flex</strong> (medium or flexible — extra-stiff frames punish late contact), <strong>weight class</strong> (4U or 5U keeps the frame easy to time), and <strong>balance</strong> (even or slightly head-light protects your shoulder while you build technique). Get those three right and you will improve faster than someone with a $300 pro frame.",
   },
   picks: [
+    // TODO: image — Nanoray Light 70i is discontinued from current Yonex
+    // catalog (badmintonplanet.eu does not list it either). Try yonex.com
+    // /badminton archive pages, or source from a retailer like BadmintonAvenue
+    // or BadmintonBay. Consider replacing this pick with a current model.
     {
       rank: 1,
       name: "Nanoray Light 70i",
@@ -46,6 +64,15 @@ const config: BestPicksConfig = {
       ],
       why: "Built for higher tension (up to 30 lb) with a durable frame. A good choice if you snap strings on lighter rackets or want a frame that survives wall-clashes during footwork drills.",
       tradeoff: "The heavier head asks more from the shoulder. Skip if you have any rotator-cuff caution.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/v/o/voltric_8_dg.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Voltric 8 DG badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,
@@ -60,6 +87,15 @@ const config: BestPicksConfig = {
       ],
       why: "An honest all-court frame with a forgiving shaft. The Arcsaber line is engineered around control, so beginners learn placement before they chase smash speed. Worth the spend if you are committed.",
       tradeoff: "Premium tier — overkill if you are still deciding whether badminton is your sport.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_arcsaber_7_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Arcsaber 7 Pro badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 4,
@@ -74,6 +110,15 @@ const config: BestPicksConfig = {
       ],
       why: "Victor's DriveX series is tuned around flat-drive doubles play. The 8S is light enough to defend with and stiff enough to teach proper contact, without the price tag of an Auraspeed Pro.",
       tradeoff: "Less brand awareness in North America — string and grip swap on local stringer is fine.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/v/i/victor_drivex_8s_j.webp",
+        source: "victor",
+        credit: "Image: Victor / via BadmintonPlanet",
+        alt: "Victor DriveX 8S J badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 5,
@@ -88,20 +133,41 @@ const config: BestPicksConfig = {
       ],
       why: "Often called the friendliest 'Pro' frame Yonex makes. Forgives mishits a 88D Pro punishes, with enough head weight to start training rear-court attack. Founder's previous main racket — confirmed transition-friendly.",
       tradeoff: "If your level is still strictly recreational, the 77 Pro under-performs vs cheaper Nanoray 70i.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/a/s/astrox_77_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 77 Pro badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
+    // Note: model name updated from "Altius 01 Feel" to "Altius N-Feel" to
+    // match Mizuno's current Japan catalog (mizuno.jp/badminton). Image is
+    // sourced from the official Mizuno JP product page.
     {
       rank: 6,
-      name: "Altius 01 Feel",
+      name: "Altius N-Feel",
       brand: "Mizuno",
       priceUsd: 145,
       bestFor: "Beginner who wants something different",
       specs: [
         { label: "Weight", value: "4U" },
-        { label: "Balance", value: "Head-light" },
+        { label: "Balance", value: "Even / head-light" },
         { label: "Shaft flex", value: "Medium" },
       ],
-      why: "Mizuno's badminton line is sleeper-tier. Smooth swing, gentle on the arm, and well-built. Useful pick if you want to avoid the Yonex-Victor-Li-Ning monoculture without taking quality risk.",
-      tradeoff: "Limited availability outside Asia. Verify regional stock before ordering.",
+      why: "Mizuno's badminton line stays under the radar outside Japan, which is a shame. The N-Feel swings smooth, sits gentle on the arm, and the build quality matches anything in the Yonex mid-range. A good pick if you want to step off the Yonex-Victor-Li-Ning treadmill without taking a quality risk.",
+      tradeoff: "Limited availability outside Asia. Check regional stock before ordering — most stockists are in Japan, mainland China, and a handful of Singapore/Malaysia shops.",
+      image: {
+        url: "https://www.mizuno.jp/sites/default/files/2025-10/cs_ba_top_251010_altiusnfeel_1500_480_0.jpg",
+        source: "mizuno",
+        credit: "Image: Mizuno Japan",
+        alt: "Mizuno Altius N-Feel badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
   ],
   faqs: [

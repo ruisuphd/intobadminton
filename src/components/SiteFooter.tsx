@@ -42,6 +42,7 @@ const COLUMNS: FooterColumn[] = [
       { label: "Terms of Service", path: "/terms/" },
       { label: "Cookie Policy", path: "/cookies/" },
       { label: "Source policy", path: "/source-policy/" },
+      { label: "Sitemap", path: "/sitemap.xml" },
     ],
   },
 ];

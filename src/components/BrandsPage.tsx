@@ -1,8 +1,15 @@
+import Link from "next/link";
 import { brands, BRAND_TIER_LABELS, type BrandTier } from "@/lib/brands";
 import { companyInfo } from "@/lib/company";
 import type { SiteLocale } from "@/lib/locale";
 
 const tierOrder: BrandTier[] = ["flagship", "tier2", "tier3", "tier4"];
+
+const DEDICATED_BRAND_PAGES: Record<string, string> = {
+  yonex: "/brands/yonex/",
+  victor: "/brands/victor/",
+  "li-ning": "/brands/li-ning/",
+};
 
 const c = {
   hero: "Badminton brands we cover",
@@ -87,7 +94,6 @@ export function BrandsPage({ locale: _locale }: { locale: SiteLocale }) {
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
                       <h3 className="text-xl font-semibold text-[var(--text)]">
                         {b.name}
-                        
                       </h3>
                       <a
                         href={b.officialUrl}
@@ -119,6 +125,14 @@ export function BrandsPage({ locale: _locale }: { locale: SiteLocale }) {
                         ))}
                       </div>
                     </div>
+                    {DEDICATED_BRAND_PAGES[b.id] && (
+                      <Link
+                        href={DEDICATED_BRAND_PAGES[b.id]}
+                        className="mt-4 inline-flex text-sm font-medium text-[var(--color-accent)] hover:underline"
+                      >
+                        Read the {b.name} guide →
+                      </Link>
+                    )}
                   </article>
                 ))}
               </div>

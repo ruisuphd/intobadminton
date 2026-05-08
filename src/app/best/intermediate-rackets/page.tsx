@@ -2,9 +2,22 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title: "Best intermediate badminton rackets (2026 picks)",
+  title:
+    "Best Intermediate Badminton Rackets 2026 — Yonex, Victor, Li-Ning Picks $175–$240 | IntoBadminton",
   description:
-    "Six badminton rackets for intermediate club players who have outgrown beginner frames but are not ready for extra-stiff pro shafts. Picks by role and budget.",
+    "Six intermediate badminton rackets for club players who have outgrown beginner frames but aren't ready for extra-stiff pro shafts. Yonex Astrox 77 Pro, 88S Pro, Arcsaber 11 Pro, Li-Ning Halbertec 8000, Victor Auraspeed 90K II — ranked by role and budget.",
+  keywords: [
+    "best intermediate badminton racket",
+    "intermediate badminton racket 2026",
+    "Yonex Astrox 77 Pro",
+    "Yonex Astrox 88S Pro",
+    "Yonex Arcsaber 11 Pro",
+    "Li-Ning Halbertec 8000",
+    "Victor Auraspeed 90K II",
+    "Victor DriveX 12",
+    "club player badminton racket",
+    "step up from beginner racket",
+  ],
   alternates: { canonical: "/best/intermediate-rackets/" },
 };
 
@@ -32,6 +45,15 @@ const config: BestPicksConfig = {
       ],
       why: "The honest 'graduation racket'. Forgives mishits a 88D Pro punishes, and gives enough head weight to start training rear-court attack without overcommitting. Founder's previous main racket — confirmed transition-friendly.",
       tradeoff: "Plateaus once you can drive a stiffer pro shaft cleanly. Plan ~1-2 years before the next upgrade.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/a/s/astrox_77_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 77 Pro badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 2,
@@ -46,6 +68,15 @@ const config: BestPicksConfig = {
       ],
       why: "The most versatile pro-tier racket on the market right now. Founder uses this as the daily driver. Demanding when your timing is off, exceptional when it is on, and the sweet spot is more generous than the spec sheet implies.",
       tradeoff: "Stiff shaft expects clean contact. Skip if you still mishit more than 20% of overheads.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_astrox_88_s_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Astrox 88S Pro 2024 badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,
@@ -60,6 +91,15 @@ const config: BestPicksConfig = {
       ],
       why: "A throwback to old-school control rackets. Soft-feeling pocketing on contact, very predictable trajectories on drops and net play. If you grew up on Arcsaber 10 and never moved on, this is the modern equivalent.",
       tradeoff: "Lower top-end smash than 88-line frames. Less suited to attack-heavy singles.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_arc_saber_11_pro.webp",
+        source: "yonex",
+        credit: "Image: Yonex / via BadmintonPlanet",
+        alt: "Yonex Arcsaber 11 Pro badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 4,
@@ -74,6 +114,15 @@ const config: BestPicksConfig = {
       ],
       why: "Li-Ning's intermediate doubles workhorse. Cleaner build quality than older Halbertec generations, and a meaningful price gap below the 88D Pro 2024 with overlapping play characteristics.",
       tradeoff: "Less liquid resale outside Asia. Restring on a stringer who knows Li-Ning grommets.",
+      image: {
+        url: "https://sw3295.sfstatic.io/upload_dir/shop/2023/_thumbs/halbertec8000-3-(A).w800.h800.fill.jpg",
+        source: "lining",
+        credit: "Image: Li-Ning / via Li-Ning Family",
+        alt: "Li-Ning Halbertec 8000 badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 5,
@@ -88,7 +137,20 @@ const config: BestPicksConfig = {
       ],
       why: "A genuine speed racket at sub-$200. Recovers between shots fast, defends well, and the second-generation tune is noticeably crisper than the original 90K. A great way to test whether you actually like head-light frames before spending Nanoflare 1000Z money.",
       tradeoff: "Less smash mass than even-balance options. Pure singles attackers will outgrow it quickly.",
+      image: {
+        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/v/i/victor_auraspeed_90k_ii_b.webp",
+        source: "victor",
+        credit: "Image: Victor / via BadmintonPlanet",
+        alt: "Victor Auraspeed 90K II badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
+    // TODO: image — Victor DriveX 12 Metallic specific colorway. Try
+    // victorsport.com/product/135160/drivex-12 (their site is JS-rendered,
+    // copy image URL from browser) or use the standard DriveX 12 image
+    // from badmintonplanet.eu (/victor-drivex-12-o-4u-g5).
     {
       rank: 6,
       name: "DriveX 12 Metallic",

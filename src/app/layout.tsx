@@ -27,24 +27,34 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
   ),
   openGraph: {
-    title: "IntoBadminton",
-    description: "Equipment suggestions tuned to how you play.",
+    title: "IntoBadminton — Badminton Racket, String & Shoe Finder",
+    description:
+      "Personalized badminton equipment recommendations tuned to your level, playing style, body, and budget. Transparent fit scoring backed by manufacturer specs and on-court testing.",
     type: "website",
     siteName: "IntoBadminton",
+    locale: "en_US",
     images: [
       {
         url: "/intobadminton-logo.png",
         width: 1024,
         height: 1024,
-        alt: "IntoBadminton",
+        alt: "IntoBadminton — badminton equipment recommendations",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: "IntoBadminton",
-    description: "Equipment suggestions tuned to how you play.",
+    card: "summary_large_image",
+    title: "IntoBadminton — Badminton Equipment Finder",
+    description:
+      "Personalized badminton racket, string, shoe, and bag recommendations. Transparent fit scoring by a competitive player.",
     images: ["/intobadminton-logo.png"],
+  },
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      "x-default": "/",
+    },
   },
   robots: {
     index: true,

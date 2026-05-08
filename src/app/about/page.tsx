@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import { AboutPage } from "@/components/AboutPage";
 
 export const metadata: Metadata = {
-  title: "About Us — IntoBadminton",
+  title:
+    "About IntoBadminton — Built by a Competitive Player, Editorially Independent | IntoBadminton",
   description:
-    "About Us. Built by a competitive player. How IntoBadminton recommends badminton gear, cites reviews, stays editorially independent, and pays the bills.",
+    "Who runs IntoBadminton, how the gear recommendations work, where the data comes from, and how we stay editorially independent. Built by a Division 4 Ireland player trained under former Malaysian national-team and Chinese provincial-team coaches.",
+  keywords: [
+    "about IntoBadminton",
+    "Rui Su badminton",
+    "Intonation Labs",
+    "badminton equipment reviewer",
+    "editorial independence",
+    "badminton recommendation methodology",
+    "competitive badminton player",
+  ],
   alternates: {
     canonical: "/about/",
   },
