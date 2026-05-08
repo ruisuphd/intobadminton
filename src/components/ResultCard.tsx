@@ -15,6 +15,14 @@ function confidence(r: ScoredProduct) {
   return r.confidence.label;
 }
 
+function fitScoreBand(fitScore: number): { label: string; tone: string } {
+  const score = fitScore * 100;
+  if (score >= 80) return { label: "Strong match", tone: "text-emerald-700" };
+  if (score >= 65) return { label: "Solid match", tone: "text-[var(--color-accent)]" };
+  if (score >= 50) return { label: "Moderate match", tone: "text-amber-700" };
+  return { label: "Weak match", tone: "text-[var(--color-subtle)]" };
+}
+
 function reasonGroup(code: string) {
   if (code.includes("STYLE") || code.includes("DISCIPLINE")) return "Style fit";
   if (code.includes("LEVEL")) return "Level fit";
@@ -93,6 +101,9 @@ export function ResultCard({
           </p>
           <p className="text-xs text-[var(--color-subtle)]">
             {"fit score"}
+          </p>
+          <p className={`mt-1 text-xs font-medium ${fitScoreBand(r.fitScore).tone}`}>
+            {fitScoreBand(r.fitScore).label}
           </p>
         </div>
       </header>

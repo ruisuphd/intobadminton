@@ -212,6 +212,11 @@ function scoreBody(
   if (inj.length > 0 && p.shaftFlex === "extra_stiff") {
     pushReason(reasons, "INJURY_AVOID_ULTRA_STIFF", 0.4);
     s -= 0.25;
+  } else if (inj.length > 0 && p.shaftFlex === "stiff") {
+    // Stiff (not extra-stiff) shafts still ask more of joints than medium/flex.
+    // Smaller penalty so the racket can still surface, but reflected in score.
+    pushReason(reasons, "INJURY_AVOID_ULTRA_STIFF", 0.25);
+    s -= 0.1;
   }
   if (userLevel === "recreational" && p.shaftFlex === "extra_stiff") s -= 0.1;
   return Math.max(0, Math.min(1, s));
@@ -345,19 +350,33 @@ function buildConfidence(
   return { level: "low", score, label: "Low confidence" };
 }
 
+function resaleBonus(p: ProductRecord): number {
+  // Liquid resale lowers real cost of ownership. Tiny multiplier so it never
+  // dominates style / level / budget signals.
+  if (!p.resale) return 1;
+  if (p.resale.confidence === "high") return 1.02;
+  if (p.resale.confidence === "medium") return 1.01;
+  return 1;
+}
+
 function verificationMultiplier(p: RacketProduct, profile: UserProfile): number {
   const budgetMax = profile.body.budgetMaxUsd;
+  let base: number;
   if (
     p.verificationStatus === "needs_review" &&
     profile.level === "recreational" &&
     budgetMax != null &&
     p.priceUsd <= budgetMax
   ) {
-    return 0.96;
+    base = 0.96;
+  } else if (p.verificationStatus === "needs_review") {
+    base = 0.86;
+  } else if (p.verificationStatus === "official_verified") {
+    base = 1.03;
+  } else {
+    base = 1;
   }
-  if (p.verificationStatus === "needs_review") return 0.86;
-  if (p.verificationStatus === "official_verified") return 1.03;
-  return 1;
+  return base * resaleBonus(p);
 }
 
 function scoreRacket(
@@ -602,7 +621,7 @@ function finalizeScore(
       : p.verificationStatus === "official_verified"
         ? 1.04
         : 1;
-  const fitScore = Math.min(1, rawFitScore * verification);
+  const fitScore = Math.min(1, rawFitScore * verification * resaleBonus(p));
   const { pros, cons } = buildProsCons(p);
   const evidenceProfile = buildEvidenceProfile(p);
   return {

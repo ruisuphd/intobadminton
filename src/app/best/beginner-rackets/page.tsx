@@ -33,10 +33,11 @@ const config: BestPicksConfig = {
     body: "Three things matter more than brand or marketing tier: <strong>shaft flex</strong> (medium or flexible — extra-stiff frames punish late contact), <strong>weight class</strong> (4U or 5U keeps the frame easy to time), and <strong>balance</strong> (even or slightly head-light protects your shoulder while you build technique). Get those three right and you will improve faster than someone with a $300 pro frame.",
   },
   picks: [
-    // TODO: image — Nanoray Light 70i is discontinued from current Yonex
-    // catalog (badmintonplanet.eu does not list it either). Try yonex.com
-    // /badminton archive pages, or source from a retailer like BadmintonAvenue
-    // or BadmintonBay. Consider replacing this pick with a current model.
+    // TODO image: Nanoray Light 70i is discontinued from current Yonex
+    // catalog (yonex.com no longer lists it). Try yonex.com archived
+    // product pages or a regional Yonex distributor (Yonex Sunrise India,
+    // Yonex Korea). Consider replacing this pick with a current entry-tier
+    // racket like Astrox 1 DG, Nanoflare 100, or Astrox Smash.
     {
       rank: 1,
       name: "Nanoray Light 70i",
@@ -64,15 +65,10 @@ const config: BestPicksConfig = {
       ],
       why: "Built for higher tension (up to 30 lb) with a durable frame. A good choice if you snap strings on lighter rackets or want a frame that survives wall-clashes during footwork drills.",
       tradeoff: "The heavier head asks more from the shoulder. Skip if you have any rotator-cuff caution.",
-      image: {
-        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/v/o/voltric_8_dg.webp",
-        source: "yonex",
-        credit: "Image: Yonex / via BadmintonPlanet",
-        alt: "Yonex Voltric 8 DG badminton racket",
-        width: 480,
-        height: 480,
-        verified: true,
-      },
+      // TODO image: Yonex Voltric 8 DG — not currently in us.yonex.com
+      // /collections/badminton-racquets list. Source from yonex.com (JP)
+      // archive page or Yonex India product detail when verifiable; avoid
+      // watermarked third-party retailer CDNs.
     },
     {
       rank: 3,
@@ -88,9 +84,9 @@ const config: BestPicksConfig = {
       why: "An honest all-court frame with a forgiving shaft. The Arcsaber line is engineered around control, so beginners learn placement before they chase smash speed. Worth the spend if you are committed.",
       tradeoff: "Premium tier — overkill if you are still deciding whether badminton is your sport.",
       image: {
-        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/y/o/yonex_arcsaber_7_pro.webp",
+        url: "https://us.yonex.com/cdn/shop/files/arc7-p.png?v=1738288168&width=1946",
         source: "yonex",
-        credit: "Image: Yonex / via BadmintonPlanet",
+        credit: "Image: Yonex (us.yonex.com)",
         alt: "Yonex Arcsaber 7 Pro badminton racket",
         width: 480,
         height: 480,
@@ -110,15 +106,8 @@ const config: BestPicksConfig = {
       ],
       why: "Victor's DriveX series is tuned around flat-drive doubles play. The 8S is light enough to defend with and stiff enough to teach proper contact, without the price tag of an Auraspeed Pro.",
       tradeoff: "Less brand awareness in North America — string and grip swap on local stringer is fine.",
-      image: {
-        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/v/i/victor_drivex_8s_j.webp",
-        source: "victor",
-        credit: "Image: Victor / via BadmintonPlanet",
-        alt: "Victor DriveX 8S J badminton racket",
-        width: 480,
-        height: 480,
-        verified: true,
-      },
+      // TODO image: Victor DriveX 8S J — source from victorsport.com/product/drivex-8-s
+      // (page is JS-rendered, copy hero image URL from browser inspector).
     },
     {
       rank: 5,
@@ -134,9 +123,9 @@ const config: BestPicksConfig = {
       why: "Often called the friendliest 'Pro' frame Yonex makes. Forgives mishits a 88D Pro punishes, with enough head weight to start training rear-court attack. Founder's previous main racket — confirmed transition-friendly.",
       tradeoff: "If your level is still strictly recreational, the 77 Pro under-performs vs cheaper Nanoray 70i.",
       image: {
-        url: "https://www.badmintonplanet.eu/media/mf_webp/jpg/media/catalog/product/cache/823e6533370b49d0344e6a0285824513/a/s/astrox_77_pro.webp",
+        url: "https://us.yonex.com/cdn/shop/files/ax77-p.png",
         source: "yonex",
-        credit: "Image: Yonex / via BadmintonPlanet",
+        credit: "Image: Yonex (us.yonex.com)",
         alt: "Yonex Astrox 77 Pro badminton racket",
         width: 480,
         height: 480,

@@ -226,6 +226,15 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           <p className="text-sm text-[var(--color-muted)]">
             {copy.styleHelp}
           </p>
+          <p
+            className="text-xs text-[var(--color-subtle)]"
+            aria-live="polite"
+          >
+            Pick 1 or 2 tags. {profile.styles.length}/2 selected
+            {profile.styles.length >= 2
+              ? " — choosing a third replaces the oldest."
+              : "."}
+          </p>
           <div className="flex flex-wrap gap-2">
             {PLAY_STYLES.map((s) => {
               const on = profile.styles.includes(s);
@@ -233,6 +242,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                 <button
                   type="button"
                   key={s}
+                  aria-pressed={on}
                   onClick={() => {
                     setProfile((p) => {
                       const has = p.styles.includes(s);
@@ -251,7 +261,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   className={`rounded-full px-4 py-2 text-sm transition ${
                     on
                       ? "bg-[var(--color-accent)] text-white"
-                      : "border border-[color:var(--line-strong)]"
+                      : "border border-[color:var(--line-strong)] hover:border-[var(--text)]"
                   }`}
                 >
                   {styles[s]}
@@ -357,7 +367,9 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                 }}
               />
               <span className="mt-1 block text-xs text-[var(--color-subtle)]">
-                Used for shoe cushioning fit and swing-weight matching. Optional.
+                {profile.category === "shoes"
+                  ? "Heavier players benefit from more cushioning and stability."
+                  : "Lighter players can usually swing 4U/5U faster; heavier hitters often prefer 3U head weight. Optional."}
               </span>
             </label>
           )}

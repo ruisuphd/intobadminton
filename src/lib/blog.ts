@@ -30,6 +30,17 @@ export type BlogSlug =
   | "bonny-leisu-800-racket-review"
   | "kumpoo-shanhai-new-racket-review"
   | "li-ning-axforce-80-review"
+  | "victor-c90nl-shoes-review"
+  | "yonex-65z4-shoes-review"
+  | "kawasaki-master-mao-20-racket-review"
+  | "kumpoo-shura-2-racket-review"
+  | "victor-yu-12-racket-review"
+  | "victor-auraspeed-fantome-review"
+  | "li-ning-thunder-100-gen-2-vs-gen-1"
+  | "li-ning-aerus-iii-pro-shoes-review"
+  | "victor-tk-f-c-ultra-review"
+  | "kawasaki-kace-shoes-review"
+  | "kawasaki-star-cross-racket-review"
   | "how-to-choose-a-badminton-racket"
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
@@ -65,6 +76,17 @@ export const blogSlugs: BlogSlug[] = [
   "bonny-leisu-800-racket-review",
   "kumpoo-shanhai-new-racket-review",
   "li-ning-axforce-80-review",
+  "victor-c90nl-shoes-review",
+  "yonex-65z4-shoes-review",
+  "kawasaki-master-mao-20-racket-review",
+  "kumpoo-shura-2-racket-review",
+  "victor-yu-12-racket-review",
+  "victor-auraspeed-fantome-review",
+  "li-ning-thunder-100-gen-2-vs-gen-1",
+  "li-ning-aerus-iii-pro-shoes-review",
+  "victor-tk-f-c-ultra-review",
+  "kawasaki-kace-shoes-review",
+  "kawasaki-star-cross-racket-review",
   "how-to-choose-a-badminton-racket",
   "badminton-equipment-for-kids",
   "badminton-glossary-terms-every-player-should-know",
@@ -1613,6 +1635,1345 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
       ],
       cta: "Use the finder to compare AxForce 80 against AxForce 90 New, AxForce 100 Gen 2, and Astrox 88D Pro.",
+    },
+    {
+      slug: "victor-c90nl-shoes-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Victor C90NL review: the thick-cushion shoe that doesn't drag its feet",
+      dek: "Victor calls C90NL a fourth pillar of badminton footwear — strong cushion that still moves. Here is what the thick midsole actually feels like under match-pressure lunges.",
+      reviewSummary: {
+        verdict:
+          "A genuinely interesting cushion-first shoe that keeps enough speed to pass the doubles test.",
+        bestFor: [
+          "Heavier players (75kg+) who want joint protection",
+          "Smash-and-net repeat attackers",
+          "Wider feet that get pinched in Aerus Z2",
+        ],
+        avoidIf: [
+          "You play under 60kg and want ground feel",
+          "You hate raised midsoles",
+        ],
+        setupNotes: [
+          "Source sample EU 42, single-shoe weight 330-333g (still in the lightweight bracket).",
+          "12mm forefoot, 23mm heel — taller stack than 65 Z VA but lighter than Eclipsion Z3.",
+        ],
+        sourceHook:
+          "The original Chinese review framed C90NL as the answer to the speed-vs-cushion compromise. Our take: it is mostly true, with caveats for narrow feet and split-step purists.",
+      },
+      story: {
+        intro:
+          "Most badminton shoes pick a side. Aerus chases speed and gives up cushion. Eclipsion chases protection and gives up court feel. Victor's C90NLite tries to refuse the choice — a 23mm heel stack with rocker geometry, locked into a TPU cage so the foam does not collapse sideways during a lunge. On the court that does change the feel; whether it suits you depends on what you weigh and how you cover ground.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What the spec sheet actually means",
+            items: [
+              {
+                label: "Stack height",
+                value: "12mm forefoot, 23mm heel — taller than Aerus Z2 (low), shorter than Eclipsion Z3 stack but with similar foam density.",
+              },
+              {
+                label: "Midsole",
+                value: "Full-length supercritical nitrogen-foam EVA. Soft on landing, springy on push-off, holds shape better than older EVA.",
+              },
+              {
+                label: "Cage",
+                value: "Extended LS-S lateral plate plus K-shaped TPU under the arch — anti-collapse on side lunges.",
+              },
+              {
+                label: "Weight",
+                value: "330-333g per shoe (EU 42). Lighter than Eclipsion Z3, heavier than Aerus Z2.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "First impression",
+            title: "It walks like a running shoe and lands like a court shoe",
+            body:
+              "Lacing it up, you notice the rocker — there is a forward roll the moment your weight transfers. That is helpful for forward lunges and recovery steps but feels weird on a static split step until you adjust.",
+          },
+          {
+            kind: "comparison",
+            heading: "C90NL vs Yonex shoe family",
+            columns: ["C90NL", "Aerus Z2", "Eclipsion Z3"],
+            rows: [
+              {
+                label: "Cushion",
+                values: [
+                  "High, controlled rebound",
+                  "Low, ground-feel first",
+                  "High, dampened",
+                ],
+              },
+              {
+                label: "Speed",
+                values: [
+                  "Medium-fast (with rocker)",
+                  "Very fast",
+                  "Medium-slow",
+                ],
+              },
+              {
+                label: "Wide foot fit",
+                values: [
+                  "V-last fits wide forefoot well",
+                  "Narrow / regular only",
+                  "Regular only",
+                ],
+              },
+              {
+                label: "Best for",
+                values: [
+                  "Smash-net repeat attackers",
+                  "Singles speed players",
+                  "Heavy ankle/knee history",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "C90NL is the rare cushion shoe that does not feel slow. Buy it if you want joint protection without giving up jump-smash recovery. Skip it if you weigh under 60kg or value flat ground feel — Aerus Z2 will feel sharper.",
+            bullets: [
+              "Stronger pick than Comfort Z3 if you want forward propulsion, not just cushioning.",
+              "Keep an eye on the heel stack height — taller geometry is not for everyone.",
+              "Not a low-profile speed shoe; do not buy if you want one.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why a thicker midsole is not automatically slower",
+          body: "Cushion shoes used to mean slow shoes — the trade-off was real. Heavy foam soaked up energy that should have returned to the next step. Victor's argument with C90NL is that supercritical nitrogen foam plus a structured TPU cage flips that math: the foam is light enough to add stack without weight, and the cage stops it from squashing sideways under a lateral lunge. On court that translates into a noticeable forward propulsion when you transition from a deep landing into a recovery step. It feels like a slight rocker assist — closer to a modern running shoe than a flat 65 Z.",
+        },
+        {
+          heading: "What this means for jump-smash players",
+          body: "If your match pattern is jump-smash followed by a recovery up to the net, the C90NL is built for you. The deep heel cushion absorbs the landing, the foam returns enough energy on the next step to keep momentum, and the LS-S cage stops the foam from tipping you sideways. Doubles rear-court attackers will get the most out of it. Singles players with long rallies will appreciate the joint relief at session three. Players who weigh under 60kg or play primarily front court may not feel enough payoff to justify the higher heel stack.",
+        },
+        {
+          heading: "Fit and width",
+          body: "The V-shaped last fits wider forefeet better than most Yonex shoes — comparable to Aerus Z2 wide variant rather than the narrow Aerus Z2 standard. Heel cup is firm and locks well thanks to the additional TPU shell. Toe drag area uses KPU rubber, which is more abrasion-resistant than standard TPU and adds tactility on aggressive forward lunges. Overall: this is a wide-friendly shoe, even at the standard width.",
+        },
+        {
+          heading: "Where the design is a compromise",
+          body: "Two honest cautions. First: the higher stack means a higher centre of gravity. New users should expect a 2-3 session adaptation period before split steps feel automatic again. Second: the rocker geometry is not for everyone. If you prefer flat shoes that feel planted on every step, the rocker will feel unfamiliar and may take longer to trust. Test in store if you can.",
+        },
+        {
+          heading: "Who should pick C90NL over the Yonex options",
+          body: "Buy C90NL over Power Cushion 65 Z VA Wide if: you want a softer landing without giving up speed, your foot is wide, and you play matches longer than 60 minutes. Buy it over Aerus Z2 if you weigh more than 70kg or have a knee/heel history. Buy it over Eclipsion Z3 if you find Eclipsion too heavy and slow. Skip it if your priority is sub-300g weight and ground feel — Aerus Z2 still wins there.",
+        },
+      ],
+      cta: "Tell the finder your foot width and joint comfort flags — we surface the cushion-first shoes that match your weight and discipline.",
+    },
+    {
+      slug: "yonex-65z4-shoes-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Yonex Power Cushion 65 Z4 review: the most universal shoe Yonex makes",
+      dek: "Twenty years of 65-series iteration converge in the Z4 — same all-court DNA, sharper grip, lighter foot feel, and a sole that finally lets the shoe breathe.",
+      reviewSummary: {
+        verdict:
+          "The default recommendation if you want one shoe to do everything well.",
+        bestFor: [
+          "Players who switch singles and doubles",
+          "First serious tournament shoe upgrade",
+          "Those who want the wide variant for width without losing balance",
+        ],
+        avoidIf: [
+          "You only play singles speed",
+          "You only need maximum cushioning",
+        ],
+        setupNotes: [
+          "Source sample 325g per shoe (men's EU 43).",
+          "Radial Blade outsole pattern adds claimed +3% grip vs 65 Z3.",
+        ],
+        sourceHook:
+          "The 65 series anchors the Yonex shoe lineup because it does not specialise. The Z4 keeps that promise and shaves the weight problem the Z3 left behind.",
+      },
+      story: {
+        intro:
+          "Most badminton shoes ask you to commit. Speed or cushion. Wide or fast. Stable or light. The 65 Z4 is the rare shoe that refuses every commitment and ships you a shoe that does each thing 80%. That is the trade-off — you will not get the best speed or the best cushion. But you will get the shoe that behaves the most predictably across roles, and that turns out to be what most amateur players actually need.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What the Z4 changes vs the Z3",
+            items: [
+              {
+                label: "Weight",
+                value: "325g per shoe (EU 43, men) — about 15-20g lighter than 65 Z3 in the same size.",
+              },
+              {
+                label: "Outsole",
+                value: "Radial Blade pattern — claimed +3% grip on synthetic court vs 65 Z3.",
+              },
+              {
+                label: "Upper",
+                value: "Seamless construction reduces stitched panels, less hot-spot risk.",
+              },
+              {
+                label: "Ventilation",
+                value: "Underfoot perforations regulate temperature — distinct from the sealed Aerus Z2 sole.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Where it lands in the lineup",
+            title: "Speed of Aerus, cushion of Comfort, stability of Eclipsion",
+            body:
+              "Not better than each at their own thing — but the only Yonex shoe that does a reasonable version of all three. The wide variant is the rare badminton shoe that handles wide feet without losing structural stability.",
+          },
+          {
+            kind: "comparison",
+            heading: "65 Z4 vs the rest of the Yonex Z lineup",
+            columns: ["65 Z4", "Aerus Z2", "Comfort Z3", "Eclipsion Z3"],
+            rows: [
+              {
+                label: "Weight",
+                values: ["325g", "271g", "370g", "~360g"],
+              },
+              {
+                label: "Cushion",
+                values: ["Medium-high", "Low-medium", "High", "High"],
+              },
+              {
+                label: "Court speed",
+                values: ["Medium-fast", "Fast", "Medium", "Medium"],
+              },
+              {
+                label: "Wide variant",
+                values: ["Yes (Wide / VA)", "Limited", "Limited", "No"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "The 65 Z4 is the safest pick on the Yonex roster. If you do not have a strong reason to specialise, this is the shoe.",
+            bullets: [
+              "Default recommendation for first tournament-tier shoe.",
+              "Wide variant fits 90% of wide-footed players who get pinched in Aerus Z2.",
+              "Better grip than 65 Z3 — noticeable on synthetic and wood courts.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why the 65 series stays relevant",
+          body: "Twenty years on, 65 Z4 keeps the same trick that made the original 65 famous — refusing to specialise. Each Z generation has narrowed the gap with the more focused options: faster than Comfort Z3, more cushioned than Aerus Z2, more stable than entry-level shoes. The Z4 is the most evenly tuned of the line. If you cannot decide between Aerus Z2 and Comfort Z3, the 65 Z4 is almost always the answer that prevents future regret.",
+        },
+        {
+          heading: "What the Radial Blade outsole actually changes",
+          body: "Yonex claims +3% grip from the new pattern. On the floor, the difference shows up most on aggressive lateral pushes — split-step recoveries hold more decisively, and the squeak under hard direction changes is louder, which usually correlates with better friction. On dusty courts the improvement is subtler. Worth replacing 65 Z3 for? Only if your current pair is at end-of-life — the Z3 is still excellent. Worth picking over 65 Z3 for a fresh purchase? Yes, almost without question.",
+        },
+        {
+          heading: "Fit, width, and the wide variant",
+          body: "Standard Z4 runs slightly narrower than 65 Z3 because the seamless upper saves material. The Wide / VA variant remains the cleanest answer for wide feet on the Yonex roster — same midsole, same outsole, just a wider forefoot. Heel cup is firm and locks well. If you previously needed to size up half a size for forefoot space in 65 Z3, try the Z4 in your normal size first.",
+        },
+        {
+          heading: "Cushion vs ground feel",
+          body: "The Z4 sits midway between Aerus Z2 and Comfort Z3. Power Cushion+ in the heel handles landing impact better than Aerus Z2; the forefoot is firmer than Comfort Z3, which preserves split-step responsiveness. Players who currently wear Aerus Z2 and want more knee protection without giving up speed should test 65 Z4 first. Players in Comfort Z3 who feel sluggish on direction changes may also feel the upgrade.",
+        },
+        {
+          heading: "Who should pick another Yonex shoe instead",
+          body: "Pick Aerus Z2 if you weigh under 65kg, prioritize ground feel, and play primarily singles where speed wins. Pick Comfort Z3 if you have ankle, knee, or heel comfort flags and need maximum cushioning. Pick Eclipsion Z3 if you weigh over 80kg, play long singles tournaments back-to-back, and need maximum stability over speed. For everyone else — and that is most amateur club players — 65 Z4 is the right answer.",
+        },
+      ],
+      cta: "Run the shoe finder with your width and joint flags — 65 Z4 will rank high for most balanced profiles.",
+    },
+    {
+      slug: "kawasaki-master-mao-20-racket-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Kawasaki Master Mao 20 review: a budget brand starts pulling its punches up",
+      dek: "Coach Li Mao's signature attack racket pushes Kawasaki into pro-tier conversation. Surprising weight transfer, solid build, and a real argument against paying double for Yonex.",
+      reviewSummary: {
+        verdict:
+          "Genuinely competitive head-heavy attack racket at a sub-flagship price.",
+        bestFor: [
+          "Smash-focused players on a budget",
+          "Players with proven shaft-loading technique",
+          "Buyers tired of the Yonex / Victor / Li-Ning axis",
+        ],
+        avoidIf: [
+          "You need fast doubles defense",
+          "You want guaranteed resale liquidity",
+        ],
+        setupNotes: [
+          "Source 4U/G5 sample, BG65Ti at 26 lb, balance ~308mm.",
+          "Box-frame, Toray carbon yarn, butterfly cymbal sound system patent.",
+        ],
+        sourceHook:
+          "The KACE shoe review made Kawasaki worth taking seriously. The Mao 20 is the racket version of the same argument.",
+      },
+      story: {
+        intro:
+          "There is a category of badminton equipment that exists only because Yonex, Victor, and Li-Ning charge a premium for their flagship logos. Kawasaki has historically been the budget alternative — close-but-not-quite. The Master Mao 20 is the first Kawasaki frame that earns a serious comparison rather than a polite nod. It is built around Coach Li Mao's input, runs Toray carbon yarn, and the smash transfer feel is closer to an Astrox 88D Pro than the price tag would suggest.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What the Mao 20 brings",
+            items: [
+              {
+                label: "Frame",
+                value: "Box-type with butterfly cymbal sound system — patented top-frame holes that flatten string-bed peg profiles for cleaner transfer.",
+              },
+              {
+                label: "Carbon",
+                value: "Toray carbon yarn, similar grade to mid-tier Yonex frames.",
+              },
+              {
+                label: "Balance",
+                value: "Head-heavy (~308mm balance, 4U/G5 sample).",
+              },
+              {
+                label: "Coach input",
+                value: "Tuned with Coach Li Mao, longtime professional badminton coach.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised us",
+            title: "The smash sound is not the marketing — it is the hit feel",
+            body:
+              "The flat-frame string peg system is a small change in spec but a meaningful one in feel. Smash transfer is crisper than older Kawasaki flagships and closer to mid-Astrox character.",
+          },
+          {
+            kind: "comparison",
+            heading: "Mao 20 vs same-tier attack rackets",
+            columns: ["Mao 20", "Astrox 88D Pro 2024", "Halbertec 9000 Power"],
+            rows: [
+              {
+                label: "Smash transfer",
+                values: ["Crisp, direct", "Crisper, more direct", "Heavy, dense"],
+              },
+              {
+                label: "Build quality",
+                values: ["Solid mid-tier", "Best in class", "Best in class"],
+              },
+              {
+                label: "Price",
+                values: ["$140-180", "$240", "$260"],
+              },
+              {
+                label: "Resale",
+                values: ["Limited", "Strong", "Strong in Asia"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if you specifically want a head-heavy attack racket and resale value is not part of your decision. The shaft-loading expectations are real but not punishing.",
+            bullets: [
+              "First Kawasaki frame that justifies the comparison to Astrox 88D Pro.",
+              "Build quality has caught up with established brands.",
+              "Pricing genuinely undercuts Yonex flagships.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why the Master Mao 20 actually exists",
+          body: "Kawasaki has been adjacent to the badminton conversation for years — fine value rackets, occasionally a real performer, but rarely something that competed at the flagship level. The Mao series is the brand's deliberate push into pro-tier perception, signed off by Coach Li Mao who has worked with multiple national programs. Mao 20 is the line's flagship attack frame. The pitch: pro-tier feel and build, sub-flagship price.",
+        },
+        {
+          heading: "The flat-frame peg system, explained simply",
+          body: "Most rackets thread strings through grommets that sit slightly proud of the frame surface. Kawasaki's patented system flattens these — peg caps sit nearly flush with the frame inner wall. The practical effect: contact transfers force into the shuttle more directly because the string bed has less slack. On smashes the result is a sharper sound and a meaningfully cleaner pocket. It is a small spec change that produces a real feel change. This kind of detail is normally only seen on Yonex's top-tier frames.",
+        },
+        {
+          heading: "Where it competes head-to-head with Yonex 88D Pro",
+          body: "On smashes the Mao 20 transfers force with the directness usually reserved for Astrox-tier rackets. On clears it produces good length without requiring perfect timing. Box-frame stability holds the head straight under fast drives. Where it loses to the 88D Pro: the absolute top-end is still a step lower, and the shaft is slightly less elastic on continuous attack across long rallies. The gap is closer than the price suggests, but it exists.",
+        },
+        {
+          heading: "What you give up at this price",
+          body: "Three honest cautions. First, resale liquidity is limited — Kawasaki rackets do not hold value the way Yonex flagships do, so factor in higher real cost of ownership if you change rackets often. Second, build variance is real — weigh the exact sample before stringing. Third, the head-heavy balance is non-negotiable; this is not a doubles defender. If you play significant front-court doubles you will outgrow the Mao 20 quickly.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy the Mao 20 if you want a serious head-heavy attack frame at $140-180 and you accept the brand-equity trade-off. It fits intermediate-to-advanced players who already drive a stiff shaft cleanly and want pro-tier smash feel without the Yonex / Victor / Li-Ning premium. Skip if you need fast doubles defense, if you flip rackets every season, or if you want guaranteed strong resale. The 88D Pro 2024 still wins on absolute ceiling — the Mao 20 wins on value-per-dollar at the smash.",
+        },
+      ],
+      cta: "Compare Mao 20 with Astrox 88D Pro 2024 in the finder — we surface the trade-offs explicitly.",
+    },
+    {
+      slug: "kumpoo-shura-2-racket-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Kumpoo Shura II review: an honest violence racket for the right hand",
+      dek: "The 6.1mm shaft, the box frame, and the heavy head all say one thing: this racket exists to bury smashes. The trick is knowing whether your timing earns it.",
+      reviewSummary: {
+        verdict:
+          "Pure attack racket — punishing for the unprepared, devastating for those it fits.",
+        bestFor: [
+          "Players who already drive Astrox 100ZZ or Halbertec 9000 Power cleanly",
+          "Smash-focused singles players",
+          "Players who specifically want non-mainstream brand identity",
+        ],
+        avoidIf: [
+          "You play any meaningful doubles defense",
+          "Your shoulder fatigues on stiff frames",
+          "You are still developing power-stroke timing",
+        ],
+        setupNotes: [
+          "Source 4U/G5 sample, ~88g strung at 28 lb.",
+          "6.1mm extra-stiff shaft, box-frame head with bottom wind-cutting and top fluid-box.",
+        ],
+        sourceHook:
+          "The original Shura earned cult status as Kumpoo's attack flagship. The II tightens the shaft response and asks even more of the user.",
+      },
+      story: {
+        intro:
+          "Pure attack rackets are an honest category. They do one thing — load force, fire it through a stiff shaft, leave the shuttle steeper than it has any right to be. They are bad at most other things. The Kumpoo Shura II is the most committed example of the type on the market right now. The 6.1mm shaft is among the thinnest in production. The frame is heavy and stable. The recovery is slow. If those words describe what you want, the rest of this review will tell you whether it earns the price.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Spec snapshot",
+            items: [
+              {
+                label: "Shaft",
+                value: "6.1mm — among the thinnest production shafts. Extra-stiff response.",
+              },
+              {
+                label: "Frame",
+                value: "Bottom wind-cutting, top fluid-box — strong directional bias toward smash.",
+              },
+              {
+                label: "Balance",
+                value: "Head-heavy (~310mm range).",
+              },
+              {
+                label: "Heritage",
+                value: "Used by Kumpoo's pro tour squad. Successor to the original Shura cult favourite.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Who this is for",
+            title: "Players who already drive a 100ZZ cleanly",
+            body:
+              "If your current racket is a 100ZZ, 88D Pro 2024, or Halbertec 9000 Power and you find them rewarding (not punishing), Shura II is the next-tier conversation. If those rackets feel demanding to you, Shura II will be unkind.",
+          },
+          {
+            kind: "comparison",
+            heading: "Shura II vs cross-brand attack flagships",
+            columns: ["Shura II", "Astrox 100ZZ", "Halbertec 9000 Power"],
+            rows: [
+              {
+                label: "Shaft thinness",
+                values: ["6.1mm (thinnest)", "Standard", "Standard"],
+              },
+              {
+                label: "Smash density",
+                values: ["Very high", "Very high", "Highest"],
+              },
+              {
+                label: "Recovery speed",
+                values: ["Slow", "Medium", "Slow"],
+              },
+              {
+                label: "Brand identity",
+                values: ["Cult / niche", "Mainstream flagship", "Strong in Asia"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy only if your timing is genuinely tournament-tier and you specifically want a non-mainstream attack flagship. Skip if you mix doubles and singles or if your shoulder has any fatigue history.",
+            bullets: [
+              "Best paired with thin attack strings (BG80 Power, EXBOLT 63) at 27-29 lb.",
+              "Not a starter racket — never recommended below competitive tier.",
+              "Brand cult value is a feature for some buyers and a bug for others.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What 6.1mm actually feels like",
+          body: "Most rackets use 6.5-7.0mm shafts because that is the sweet spot for amateur swing speed — thin enough to bend usefully, thick enough to forgive late timing. 6.1mm sits below that range. When you connect cleanly, the shaft loads quickly and snaps back with sharper force than thicker shafts can match. When you connect late, the shaft is too stiff to compensate and you get short clears with shoulder strain. There is no middle ground; the racket is uncompromisingly black-or-white.",
+        },
+        {
+          heading: "Why the Shura II is sharper than the original",
+          body: "The first Shura earned a cult following for its directional honesty — what you swung at went there. The II tightens the shaft tolerance and adds a slightly heavier head. On smashes the result is a sharper crack of contact and meaningfully higher shuttle velocity off the string bed. On drops and net play the same tightening makes touches feel firmer and less forgiving. The II is more committed to its identity than the original.",
+        },
+        {
+          heading: "Singles-only territory",
+          body: "Front-court doubles is not a serious option here. The recovery between shots is too slow to handle continuous flat-drive exchanges. Mixed doubles where you anchor rear court is plausible but rarely optimal — the 88S Pro 2024 will produce more cumulative match power for the same player. Singles is where Shura II makes sense: long rallies with deliberate smashes, high control of trajectory, and the shoulder budget to absorb the demand.",
+        },
+        {
+          heading: "Stringing and tension",
+          body: "Pair Shura II with thin attack strings — BG80 Power, EXBOLT 63 — at 27-29 lb. Lower tension wastes the shaft's response. Higher tension narrows the sweet spot to a punishing degree even for skilled players. Standard durability strings (BG65) muffle the racket too much; the shaft is built to fire crisp, not crisp-and-soft.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Shura II if you compete in singles at a competitive or pro-track level, your current racket is a 100ZZ or equivalent, and you want a brand identity outside the Yonex / Victor / Li-Ning axis. Skip if you mix singles and doubles, if your shoulder has fatigue history, or if you ever play against players who hit fast flat drives — the recovery speed will not keep up.",
+        },
+      ],
+      cta: "Run the finder with smash-heavy and singles-attack preferences to compare Shura II against 100ZZ and 88D Pro 2024.",
+    },
+    {
+      slug: "victor-yu-12-racket-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Victor Yu 12 review: control players finally have a Victor flagship",
+      dek: "Yu series gets its biggest rebuild since launch — alloy carbon, WES 3.0, and Victor's full tech stack pointed at a single goal: control with finishing weight.",
+      reviewSummary: {
+        verdict:
+          "The cleanest expression of Victor's all-court control philosophy in years.",
+        bestFor: [
+          "Singles control players who attack from setup",
+          "Mixed doubles organisers",
+          "Victor loyalists tired of choosing between speed and head weight",
+        ],
+        avoidIf: [
+          "You want raw smash brutality",
+          "You play primarily fast flat-drive doubles",
+        ],
+        setupNotes: [
+          "Source 4U/G5 sample, ~84g unstrung.",
+          "Alloy carbon fiber + WES 3.0 whip-strike system.",
+        ],
+        sourceHook:
+          "Yu was historically Victor's quiet line. Yu 12 is the first version that earns the flagship label.",
+      },
+      story: {
+        intro:
+          "Most badminton brands have a clear flagship for each style. Yonex has the 88S Pro for control and the 88D Pro for attack. Li-Ning has the Halbertec line for both. Victor has been weaker at this — its lineup leans speed almost everywhere, which makes it harder for players who want a Victor frame for organised, control-first rallies. Yu 12 is Victor's deliberate fix. The line gets alloy carbon, WES 3.0 whip-strike, and the same precision tuning that the Auraspeed flagships received. The result is a control-with-finishing-weight racket that finally completes the brand's lineup.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What is new in the Yu 12",
+            items: [
+              {
+                label: "Frame material",
+                value: "Alloy carbon fiber — Victor's higher-grade composite mix.",
+              },
+              {
+                label: "WES 3.0",
+                value: "Updated whip-strike enhancement system — claimed faster shaft snap-back.",
+              },
+              {
+                label: "Force ring Pro",
+                value: "Frame-internal reinforcement — denser pocketing, less twist on off-centre hits.",
+              },
+              {
+                label: "Yu identity",
+                value: "Control-leaning balance with enough head weight to finish rallies.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Where it sits in Victor's lineup",
+            title: "Halfway between Auraspeed HS Plus and DriveX 12",
+            body:
+              "Auraspeed HS Plus is faster and more attack-oriented. DriveX 12 is more flat-drive specialised. Yu 12 is the all-court control answer that the Victor lineup has been missing.",
+          },
+          {
+            kind: "comparison",
+            heading: "Yu 12 vs cross-brand control rackets",
+            columns: ["Yu 12", "Astrox 88S Pro", "Arcsaber 11 Pro"],
+            rows: [
+              {
+                label: "Best for",
+                values: [
+                  "All-court control with finish",
+                  "Front-court doubles control",
+                  "Pure control / soft pocketing",
+                ],
+              },
+              {
+                label: "Smash quality",
+                values: ["Strong for control class", "Strong", "Modest"],
+              },
+              {
+                label: "Net touch",
+                values: ["Crisp, predictable", "Crisp, lively", "Soft, forgiving"],
+              },
+              {
+                label: "Speed of swing",
+                values: ["Medium", "Medium-fast", "Medium-slow"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if your match pattern is build-and-finish singles, mixed doubles organisation, or all-court doubles where you control rather than attack. Skip if you want raw smash power or fast flat-drive defense.",
+            bullets: [
+              "Best Victor frame for buyers who like Arcsaber 11 Pro behaviour but want more finish.",
+              "Pairs well with EXBOLT 63 or AeroBite at 25-27 lb.",
+              "First serious answer to 88S Pro 2024 from Victor.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why Yu 12 finally feels like a Victor flagship",
+          body: "Yu series rackets have historically been honest mid-tier control frames — fine for the price, never the conversation. Yu 12 changes that by inheriting Victor's full top-tier tech stack: alloy carbon, WES 3.0, Force Ring Pro, and the precision tuning the Auraspeed line received. The result is a frame that competes against Astrox 88S Pro and Arcsaber 11 Pro on substance, not just price.",
+        },
+        {
+          heading: "What WES 3.0 changes in practice",
+          body: "Whip-strike systems sit between marketing and engineering. WES 3.0 is Victor's third-generation tune — a slightly tighter shaft load curve that snaps back faster than WES 2.0 frames. On clears the difference is small but real: less wasted energy at the end of the swing. On drives the shaft transitions faster between bend and recovery, which matters when you redirect mid-stroke. None of this transforms the racket, but it does sharpen the feel of an already polished frame.",
+        },
+        {
+          heading: "Where it competes against 88S Pro 2024",
+          body: "Astrox 88S Pro 2024 is the cross-brand benchmark for control rackets right now. Yu 12 sits closer than any previous Victor frame — sharper net touch than 88S Pro, slightly less explosive on smashes, and a fractionally faster swing. Buyers cross-shopping these two should pick Yu 12 if their priority is build-rally singles or mixed doubles organisation, and 88S Pro if their priority is front-court doubles control with attack capability when needed.",
+        },
+        {
+          heading: "What it loses to the rest of the Victor line",
+          body: "If your goal is raw rear-court attack, Yu 12 is the wrong frame — Auraspeed 100X SE, HS Plus, or even 90K II will outperform it on absolute smash mass. If your goal is fastest possible drives, DriveX 12 will recover slightly quicker. Yu 12 wins when you need both speed and finish in the same racket; it loses when you need the maximum of either alone.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Yu 12 if you play singles built around length, control, and a finishing smash from setup; or mixed doubles where your role is to organize rallies rather than bury smashes. Skip if your match-winners are flat drives or rear-court attack — Auraspeed line frames remain better. The Victor brand finally has a flagship-tier control racket; Yu 12 is it.",
+        },
+      ],
+      cta: "Compare Yu 12 with Astrox 88S Pro 2024 and Arcsaber 11 Pro in the finder.",
+    },
+    {
+      slug: "victor-auraspeed-fantome-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Victor Auraspeed Fantome (Phantom) review: speed for the precision player",
+      dek: "Lavender pastels and a 5.8mm shaft sound like contradictions. The Fantome resolves them with the cleanest Auraspeed feel Victor has ever shipped.",
+      reviewSummary: {
+        verdict:
+          "A speed racket built around precision, not just velocity.",
+        bestFor: [
+          "Front-court doubles players who want sharper directional feedback",
+          "Control players who keep mishitting head-light frames",
+          "Players who specifically prefer thinner shafts",
+        ],
+        avoidIf: [
+          "You need raw smash power",
+          "Your timing is still developing",
+        ],
+        setupNotes: [
+          "Source 4U/G5 sample, balance ~290mm.",
+          "5.8mm shaft, alloy carbon, narrowest Auraspeed frame profile in the line.",
+        ],
+        sourceHook:
+          "Victor has shipped many Auraspeed variants. Fantome is the one that resolves the speed-vs-control trade-off cleanest.",
+      },
+      story: {
+        intro:
+          "Victor's Auraspeed line has explored speed in many directions — pure wind-cutting frames, thin-shaft frames, balanced control speed frames. Fantome takes the thin-shaft thesis to its current limit. The 5.8mm shaft is among the thinnest Victor has produced. The frame is among the narrowest Auraspeed profiles available. The result is a racket that is genuinely fast but rewards precision over force in ways that other speed frames do not.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Fantome at a glance",
+            items: [
+              {
+                label: "Shaft",
+                value: "5.8mm — thinnest in the Auraspeed family.",
+              },
+              {
+                label: "Balance",
+                value: "Head-light (~290mm range, 4U).",
+              },
+              {
+                label: "Frame",
+                value: "Narrow Auraspeed profile, lower wind resistance.",
+              },
+              {
+                label: "Identity",
+                value: "Speed-with-precision, not speed-with-defense.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Where it differs from Nanoflare 1000Z",
+            title: "Sharper feedback, less raw acceleration",
+            body:
+              "Nanoflare 1000Z prioritises end-speed of the shaft snap. Fantome prioritises directional clarity — you know exactly where the shuttle is going, even on a quick redirect.",
+          },
+          {
+            kind: "comparison",
+            heading: "Fantome vs other speed flagships",
+            columns: ["Fantome", "Nanoflare 1000Z", "Auraspeed HS Plus"],
+            rows: [
+              {
+                label: "Best for",
+                values: [
+                  "Precision speed",
+                  "Pure end-speed",
+                  "Speed + smash mass",
+                ],
+              },
+              {
+                label: "Shaft thickness",
+                values: ["5.8mm", "Standard", "Standard"],
+              },
+              {
+                label: "Smash quality",
+                values: ["Modest", "Modest", "Strong"],
+              },
+              {
+                label: "Net touch",
+                values: ["Excellent", "Good", "Good"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if you specifically want precision-speed for front-court doubles or control-leaning singles. Skip if you need rear-court attack or pure flat-drive defense.",
+            bullets: [
+              "Best in class for net play among speed rackets.",
+              "Lavender pastel cosmetic is unusual for a flagship — divisive.",
+              "Pair with thin elastic strings (Aerobite, BG66 Ultimax) at 24-26 lb.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What a 5.8mm shaft is actually for",
+          body: "Thinner shafts are not automatically better — they trade two things off. They have less torsional stability than thick shafts, so off-centre hits twist more. They also have a narrower force window — too soft a swing and they do not load, too hard a swing and they ring. The point of a 5.8mm shaft is precision: when your timing is right, you get sharper feedback than thicker shafts can transmit. The Fantome is built for players who already hit clean enough to benefit from that precision.",
+        },
+        {
+          heading: "Front-court doubles is where it shines",
+          body: "Net play is the strongest argument for the Fantome. Hairpin shots feel exact. Push variations land where you aim them. Directional clarity on flat drives is sharper than on Nanoflare 1000Z. Defensive lifts come off the string bed cleanly without the muddy feel some thicker-shaft speed rackets produce. If you are a designated front-court doubles player who values placement over power, this is the most precise speed flagship currently available.",
+        },
+        {
+          heading: "Where it loses to other speed rackets",
+          body: "Two things. First, the smash power is modest — even compared to other speed frames like Nanoflare 1000Z, Fantome's head-light balance and thin shaft mean the absolute smash ceiling is lower. Second, the Fantome's narrow margin for error makes it less forgiving on tired-arm sessions. Late-rally rallies start to feel uneven if your swing speed drops. Players with very stable consistent technique benefit; players whose timing varies session-to-session may find it punishing.",
+        },
+        {
+          heading: "What the cosmetic does and does not say",
+          body: "The lavender / Roland purple cosmetic is unusual for a serious badminton flagship. Some buyers will find it elegant; others will find it lightweight in image. Worth noting — the cosmetic does not affect performance, but second-hand buyers in some regions skew strongly traditional, so resale value may be slightly lower than equivalent darker-coloured Auraspeed frames. If resale matters, factor it in.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Fantome if you play front-court doubles or precision-control singles, your current racket is an Auraspeed 90K II or Nanoflare 700 Pro, and you want sharper directional feedback than those frames give you. Skip if you play primarily rear-court doubles, if your match-winners are smashes, or if you want a long-term investment that holds resale predictably. The Fantome is a deliberate choice for a specific play style — exactly what the Auraspeed line should produce.",
+        },
+      ],
+      cta: "Run the finder with front-court doubles or precision-control profile to compare Fantome with Nanoflare 1000Z.",
+    },
+    {
+      slug: "li-ning-thunder-100-gen-2-vs-gen-1",
+      updatedAt: "2026-05-08",
+      category: "comparisons",
+      title: "Li-Ning Thunder 100 II vs Thunder 100 (Gen 1): the rebuild that earns the name",
+      dek: "Two years on, Li-Ning rebuilds the Thunder 100 with new construction, broader sweet spot, and meaningfully cleaner hit feel. Here is how the generations actually compare.",
+      reviewSummary: {
+        verdict:
+          "Thunder 100 II is a real upgrade — sharper feel, better build, broader timing window than Gen 1.",
+        bestFor: [
+          "Players who own Gen 1 and want a more polished version",
+          "Smash-focused intermediate to advanced players",
+          "Buyers wanting a Yonex 100ZZ alternative",
+        ],
+        avoidIf: [
+          "Gen 1 already fits your match pattern perfectly",
+          "You need fast doubles defense over rear-court power",
+        ],
+        setupNotes: [
+          "Source 4U/G5 samples for both generations.",
+          "Gen 2 uses M50+T1100 carbon with reinforced composite frame.",
+        ],
+        sourceHook:
+          "Generation comparisons are usually marginal. This one is large enough to matter.",
+      },
+      story: {
+        intro:
+          "Most racket generation upgrades are small — slight cosmetic refresh, marginal spec changes, sometimes a new shaft tune. Thunder 100 II is the rare generation that earns the comparison rather than just inheriting the name. Li-Ning rebuilt the frame construction, broadened the sweet spot, and tightened the shaft response. Owners of Gen 1 will recognise the family character; new buyers should not assume Gen 1 reviews tell them what to expect from Gen 2.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What changed between generations",
+            items: [
+              {
+                label: "Frame construction",
+                value: "Gen 2 uses composite威力 (Power) frame design — internal-reinforced layers vs Gen 1's standard layup.",
+              },
+              {
+                label: "Carbon",
+                value: "M50+T1100 carbon retained from Gen 1; layup density and orientation refined.",
+              },
+              {
+                label: "Sweet spot",
+                value: "Gen 2 noticeably broader on off-centre hits.",
+              },
+              {
+                label: "Shaft",
+                value: "Gen 2 shaft is firmer and snaps back faster than Gen 1.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Why this matters",
+            title: "Gen 1 owners cannot assume Gen 2 will feel the same",
+            body:
+              "If you own Gen 1 and adapted to its slightly less forgiving sweet spot, Gen 2 will feel more polished but also slightly different on contact. Demo before swapping if possible.",
+          },
+          {
+            kind: "comparison",
+            heading: "Gen 1 vs Gen 2 in one table",
+            columns: ["Gen 1", "Gen 2"],
+            rows: [
+              {
+                label: "Sweet spot size",
+                values: ["Standard", "Broader"],
+              },
+              {
+                label: "Smash sound",
+                values: ["Sharp", "Sharper, denser"],
+              },
+              {
+                label: "Build quality",
+                values: ["Solid", "Higher density layup"],
+              },
+              {
+                label: "Forgiveness on late timing",
+                values: ["Lower", "Slightly higher"],
+              },
+              {
+                label: "Best buy",
+                values: ["Discount, if available", "Default for new buyers"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "New buyers: pick Gen 2. Gen 1 owners: only swap if you find Gen 1 timing demands cap your match performance. The Gen 2 upgrade is real but not transformational.",
+            bullets: [
+              "Gen 2 broadens the timing window, helping intermediate players reach the racket's potential.",
+              "Gen 1 still fine if it fits — do not chase the upgrade for its own sake.",
+              "Both pair best with attack strings (BG80, EXBOLT 63) at 26-28 lb.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What the composite frame actually changes",
+          body: "Li-Ning's composite威力 (Power) frame design adds internal reinforcement layers that change how energy travels through the head. On Gen 1 the frame transmitted force fairly cleanly but had a smaller forgiveness window on off-centre hits — late or early contact felt lifeless. Gen 2 spreads contact response more evenly across the string bed, which translates to a noticeably broader sweet spot. On smashes the result is denser sound and more consistent power across the head. On clears the result is more forgiving length on imperfect timing.",
+        },
+        {
+          heading: "Where Gen 2 wins on hit feel",
+          body: "Three observations from side-by-side comparison. First, the smash sound on Gen 2 is denser and lower-pitched, which usually correlates with cleaner energy transfer. Second, drops feel more controlled because the broader sweet spot reduces the muddy feel on off-centre net contact. Third, the shaft on Gen 2 snaps back faster — clears and drives both feel sharper. None of these are massive shifts, but together they make Gen 2 the polished version of Gen 1.",
+        },
+        {
+          heading: "Where Gen 1 still holds up",
+          body: "Gen 1 is not obsolete. It still produces top-tier smash power for the price, the build remains solid, and players who specifically liked the Gen 1 character (slightly more demanding, sharper edge on clean contact) may prefer it. If you find Gen 1 at meaningfully lower price (as it often discounts after Gen 2 launches), it is still a strong buy for players who already drive head-heavy attack rackets cleanly.",
+        },
+        {
+          heading: "Cross-brand comparison",
+          body: "Thunder 100 II competes most directly with Yonex Astrox 99 Pro 2 on the singles attack tier. Astrox 99 Pro 2 has slightly cleaner shaft response and stronger resale liquidity outside Asia. Thunder 100 II is meaningfully cheaper and has a broader sweet spot than the Yonex equivalent. On absolute peak smash power they trade blows. On overall package the Yonex still has a marginal edge, but the price gap matters.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Thunder 100 II if you are an intermediate-to-advanced singles player or a rear-court doubles attacker, and your current racket is an Astrox 88D Pro, AxForce 80, or earlier Halbertec model. Skip if you play primarily front-court doubles or fast flat drives — Thunder 100 II is unambiguously a rear-court attack frame. Gen 1 owners should only upgrade if they find Gen 1's timing demands holding back their match results.",
+        },
+      ],
+      cta: "Use the finder with rear-court attack and singles preferences to compare Thunder 100 II with Astrox 99 Pro 2 and Halbertec 9000 Power.",
+    },
+    {
+      slug: "li-ning-aerus-iii-pro-shoes-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Li-Ning Aerus III Pro review: the supercritical foam shoe grows up",
+      dek: "Fifteen years after the original Aerus introduced supercritical foam to badminton, the III Pro arrives with stability fixes the line has needed since launch.",
+      reviewSummary: {
+        verdict:
+          "Best Aerus generation yet — finally pairs the springy foam with the structural support it always needed.",
+        bestFor: [
+          "Players who liked Aerus II foam but found it unstable",
+          "Speed-leaning all-court players",
+          "Style-conscious buyers (5 colourways)",
+        ],
+        avoidIf: [
+          "You need maximum cushioning",
+          "You weigh under 60kg and want minimal stack",
+        ],
+        setupNotes: [
+          "Source sample EU 42 men's, ~300g per shoe.",
+          "Updated supercritical TPEE foam, paired with reinforced TPU cage.",
+        ],
+        sourceHook:
+          "Aerus pioneered supercritical foam for badminton. III Pro is the first version where the structure matches the foam's ambition.",
+      },
+      story: {
+        intro:
+          "Li-Ning's Aerus line has been the most influential and the most polarising shoe story in badminton. The 2010 original introduced supercritical foam to the sport — a stack of springy bounce that felt unlike anything Yonex or Victor were making. The 2020 II refined the formula. Both versions had the same problem: the foam was lively, but the chassis underneath did not always control where it bounced. III Pro is the version that finally fixes that — same airy, energetic foam, now wrapped in a stability cage that keeps the shoe pointed where you push it.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What III Pro changes",
+            items: [
+              {
+                label: "Foam",
+                value: "Updated supercritical TPEE — same character as II, more consistent rebound across temperature.",
+              },
+              {
+                label: "Cage",
+                value: "Reinforced TPU lateral cage — first Aerus generation that fully arrests sideways foam squish.",
+              },
+              {
+                label: "Outsole",
+                value: "Family-resemblance Aerus pattern with refined directional grip zones.",
+              },
+              {
+                label: "Colourways",
+                value: "5 options including Cotton Candy, Year of Snake, Artist, Warning, Dark Elf.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised us",
+            title: "The foam still feels alive",
+            body:
+              "Some fixes neutralise the personality of a product. III Pro retains the springy foam character that made Aerus famous — it just stops the foam from being the only thing in charge.",
+          },
+          {
+            kind: "comparison",
+            heading: "Aerus III Pro vs Yonex shoe family",
+            columns: ["Aerus III Pro", "65 Z4", "Aerus Z2"],
+            rows: [
+              {
+                label: "Foam character",
+                values: ["Springy / lively", "Damped", "Damped, low stack"],
+              },
+              {
+                label: "Stability",
+                values: ["Newly improved", "Strong", "Adequate"],
+              },
+              {
+                label: "Speed",
+                values: ["Medium-fast", "Medium-fast", "Very fast"],
+              },
+              {
+                label: "Cushion stack",
+                values: ["High", "Medium-high", "Low"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if you want lively foam with finally-fixed stability. Skip if you specifically prefer flat-foam ground feel.",
+            bullets: [
+              "Best Aerus version Li-Ning has shipped.",
+              "Wide colourway range — uncommon for serious court shoes.",
+              "Pair with sturdy lateral lacing for additional lockdown.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why supercritical foam was always a partial solution",
+          body: "Supercritical foam — gas-injected polymer that creates a uniform microcellular structure — is genuinely better than traditional EVA on bounce-back and weight. That is why Aerus changed the conversation when it launched. The catch was that the foam, by itself, did not control where the bounce went. On a hard lateral lunge, the foam compressed sideways before it returned upward, which produced a slightly drifty feel. Pros adapted; amateur players sometimes did not. III Pro adds the structural cage that keeps the foam compressing in the right direction.",
+        },
+        {
+          heading: "What the new TPU cage actually does",
+          body: "On III Pro, the lateral TPU panels extend further along the midfoot than on II, and they tie into a redesigned heel cup that locks the foot more decisively. The result: when you push laterally, the foam compresses downward more than sideways. You still feel the springy character because the foam is unchanged, but the energy returns in the direction you intended. On a quick split-step recovery, this difference is felt immediately. On a deep lunge, it shows up as faster recovery.",
+        },
+        {
+          heading: "Cushion vs ground feel",
+          body: "Aerus III Pro sits in the cushion-rich camp. The stack is taller than Aerus Z2 and noticeably above 65 Z4. If you prefer flat ground feel — short stack, immediate floor contact — III Pro is not for you. If you want a shoe that absorbs landing impact while still being responsive on push-off, this is the most refined version of that profile available right now. Players returning from ankle, knee, or heel issues will benefit from the cushion.",
+        },
+        {
+          heading: "Width, fit, and Asian last",
+          body: "Like most Li-Ning shoes, III Pro runs an Asian last — narrower forefoot than European or Yonex equivalents, with a snug heel cup. Players with wide feet should size up half a size or test in person before buying. The seamless upper helps reduce hot spots on standard-width feet. Heel lock is excellent thanks to the reinforced TPU.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Aerus III Pro if you want springy supercritical foam with stability that finally matches its energy, your current shoe is an Aerus II or Comfort Z3, and you play all-court badminton with significant lateral movement. Skip if you specifically prefer flat foam (Aerus Z2), need maximum cushioning above all (Comfort Z3), or have wide feet that do not adapt to Asian lasts. The III Pro is the most refined Aerus generation yet — and arguably the best Li-Ning shoe of the past five years.",
+        },
+      ],
+      cta: "Tell the finder your foot width and joint comfort flags — Aerus III Pro will rank high for Asian-fit speed-cushion profiles.",
+    },
+    {
+      slug: "victor-tk-f-c-ultra-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Victor TK-F C Ultra (Golden Talon) review: one model, three identities",
+      dek: "Most weight variants change only the swing weight. TK-F C Ultra changes the entire racket — different shaft thickness, different tech config, three rackets sold under one name.",
+      reviewSummary: {
+        verdict:
+          "An ambitious and largely successful experiment in weight-variant differentiation.",
+        bestFor: [
+          "Buyers torn between weight classes",
+          "Smash-focused players who want a frame that grows with them",
+          "TK-line fans who liked the Lóng Yá Zhī Rèn (Dragon Tooth Blade) but wanted variant flexibility",
+        ],
+        avoidIf: [
+          "You want a single uncompromised frame profile",
+          "You need fast doubles defense regardless of variant",
+        ],
+        setupNotes: [
+          "Three variants (3U, 4U, 5U) ship with different shaft thickness and tech config.",
+          "Source review weighted to 4U/G5 reference.",
+        ],
+        sourceHook:
+          "Victor takes the weight-variant idea further than any racket we have seen. The 3U, 4U, and 5U Ultra are genuinely different rackets.",
+      },
+      story: {
+        intro:
+          "Most rackets ship in two or three U-class variants — same frame, different swing weight. The TK-F C Ultra rejects that convention. The 3U, 4U, and 5U variants have different shaft thickness, different tech configs, and meaningfully different attack identities. The argument: a 3U attacker and a 5U attacker have different needs, so why ship them the same physics? It is an ambitious experiment, and on court it mostly works.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What is different across variants",
+            items: [
+              {
+                label: "3U / Heavy attacker",
+                value: "Thicker shaft, tuned for heavy power strokes, max smash mass.",
+              },
+              {
+                label: "4U / Balanced attacker",
+                value: "Mid-thickness shaft, balanced attack-recovery profile.",
+              },
+              {
+                label: "5U / Burst attacker",
+                value: "Thinner shaft, tuned for fast snap and attack burst rather than mass.",
+              },
+              {
+                label: "Frame",
+                value: "Common box-frame design across variants; layup tuning differs.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "Why this matters",
+            title: "You can pick by play style rather than just by hand strength",
+            body:
+              "Most players choose U-class by hand strength alone. With the Ultra, you can pick by attack identity instead — heavy power, balance, or burst — and the racket follows.",
+          },
+          {
+            kind: "comparison",
+            heading: "Ultra variants vs each other",
+            columns: ["3U Ultra", "4U Ultra", "5U Ultra"],
+            rows: [
+              {
+                label: "Shaft profile",
+                values: ["Thicker, denser load", "Mid-thickness", "Thinner, burst snap"],
+              },
+              {
+                label: "Smash style",
+                values: [
+                  "Heavy, dense",
+                  "Balanced",
+                  "Sharp, fast",
+                ],
+              },
+              {
+                label: "Recovery speed",
+                values: ["Slow", "Medium", "Faster"],
+              },
+              {
+                label: "Best fit",
+                values: [
+                  "Singles power smasher",
+                  "All-court attacker",
+                  "Doubles attacker who values speed",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if you can identify your attack identity clearly and want a frame tuned for it. Skip if you want one frame to do everything — pick a more traditional flagship instead.",
+            bullets: [
+              "Genuinely different rackets across variants — not just different swing weights.",
+              "Pricing is consistent across variants; choose by play style, not budget.",
+              "Pair with attack strings (BG80, EXBOLT 63) at 26-28 lb regardless of variant.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why most weight variants are not really different rackets",
+          body: "When Yonex ships an Astrox 88D Pro in 3U and 4U, the variants share the same shaft, frame, and tech. What changes is mass distribution — the 3U has more mass through the head, the 4U has slightly less. The character is the same; the swing speed differs. Victor's argument with the Ultra is that this is a missed opportunity. A player who buys 3U is usually telling you something different than a player who buys 5U. Why ship them the same character?",
+        },
+        {
+          heading: "What the variant differentiation actually changes",
+          body: "On court the differences are real and noticeable. The 3U Ultra produces denser smash sound and more energy retention through the head — heavier hitters will feel the payoff. The 4U Ultra balances attack and recovery more evenly, which is the most universal profile. The 5U Ultra's thinner shaft snaps back fastest, producing sharp burst-attack feel that pairs well with fast doubles or rear-court burst hitters. None of these would be the right answer for everyone.",
+        },
+        {
+          heading: "Where the experiment partly fails",
+          body: "Two cautions. First, the variants are not labelled clearly enough at retail — many buyers still pick by U-class out of habit, miss the differentiation, and end up with the wrong tuning for their play style. Second, the 5U Ultra's thin shaft is genuinely demanding — players choosing 5U for hand-strength reasons (smaller hands, lighter swing) may find the shaft too unforgiving despite the lighter mass. Read the spec sheet carefully before ordering.",
+        },
+        {
+          heading: "Cross-brand comparison",
+          body: "TK-F C Ultra competes most directly with Yonex Astrox 99 Pro 2 on the singles attack tier. Astrox is the more universally enjoyable racket — single character that suits most attackers. Ultra is the more configurable racket — three different rackets to suit three different attackers. If you know exactly what you want, Ultra wins. If you want a default that works, Astrox wins.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy TK-F C Ultra if you can identify your attack profile clearly: power-smasher (3U), balanced attacker (4U), or burst-attacker (5U), and you want a frame tuned for that specific identity. Skip if you want a single 'flagship' that handles all attack patterns — Astrox 99 Pro 2 or Halbertec 9000 Power are better answers. The Ultra rewards buyers who already know themselves; it confuses buyers who do not.",
+        },
+      ],
+      cta: "Run the finder with smash-heavy preferences — we surface the right TK-F C variant based on your level and body.",
+    },
+    {
+      slug: "kawasaki-kace-shoes-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Kawasaki KACE review: a budget brand finally builds a tournament-tier shoe",
+      dek: "Eighteen months of development, F1-inspired suspension geometry, and SGS-certified cushioning. Kawasaki's flagship court shoe is genuinely a different conversation.",
+      reviewSummary: {
+        verdict:
+          "First Kawasaki shoe that earns serious comparison with Yonex / Victor flagships.",
+        bestFor: [
+          "Players curious about Kawasaki's Master line",
+          "Stability-first players who want generous wrap",
+          "Buyers willing to trade brand equity for build quality",
+        ],
+        avoidIf: [
+          "You need maximum speed (this is a stability shoe)",
+          "Resale value matters",
+        ],
+        setupNotes: [
+          "Source sample EU 42 men's.",
+          "Multi-layer upper, supercritical foam, F1-inspired keel suspension geometry.",
+        ],
+        sourceHook:
+          "Kawasaki has historically been the budget alternative. KACE is the first time the brand seriously competes on construction.",
+      },
+      story: {
+        intro:
+          "Kawasaki has been adjacent to the badminton conversation for years — fine value shoes, occasionally a real performer, but rarely something that competed at the flagship level. KACE is the brand's deliberate push into pro-tier perception. Eighteen months of development. SGS-certified cushion, abrasion, and torsion performance. Used by Kawasaki's pro tour squad in BWF tournament play. The pitch: pro-tier construction, sub-flagship price.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "What KACE brings to the table",
+            items: [
+              {
+                label: "Upper",
+                value: "Four-layer multi-material construction — wraps the foot with progressive density.",
+              },
+              {
+                label: "Suspension",
+                value: "F1-inspired keel geometry — anti-twist plate that reinforces against torsion.",
+              },
+              {
+                label: "Foam",
+                value: "Supercritical EVA, SGS-certified for cushion performance.",
+              },
+              {
+                label: "Pro endorsement",
+                value: "Used by Kawasaki's pro tour squad in BWF tournament play.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised us",
+            title: "The wrap is the headline feature",
+            body:
+              "Most stability shoes lock the foot through stiff cage panels. KACE uses progressive-density layers that wrap the foot more like a sock — gentler on contact points, equally locked under lateral force.",
+          },
+          {
+            kind: "comparison",
+            heading: "KACE vs cross-brand stability shoes",
+            columns: ["KACE", "Eclipsion Z3", "Victor P9200"],
+            rows: [
+              {
+                label: "Upper feel",
+                values: ["Wrap-style multi-layer", "Reinforced cage", "Reinforced cage"],
+              },
+              {
+                label: "Stability",
+                values: ["Very high", "Highest", "Very high"],
+              },
+              {
+                label: "Cushion",
+                values: ["High", "High", "Medium"],
+              },
+              {
+                label: "Price",
+                values: ["$110-130", "$200", "$130"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if you want pro-tier stability shoe at sub-$130. Skip if resale matters or you specifically want speed over stability.",
+            bullets: [
+              "First Kawasaki shoe that justifies the cross-brand comparison.",
+              "Best wrap feel in the price range.",
+              "Brand equity / resale is the main trade-off.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why the multi-layer upper changes the feel",
+          body: "Most badminton stability shoes use stiff TPU cage panels to lock the foot under lateral force. The downside: cage panels are rigid where they need to be flexible, sometimes creating pressure points or lacing inconsistency. KACE replaces the cage with four progressively dense layers in the upper — softer next to the foot, firmer at the surface. The result is a sock-like wrap that locks the foot equally well under lunge load but feels gentler on extended sessions. It is the most distinctive feature on the shoe and the strongest reason to consider it over an Eclipsion Z3.",
+        },
+        {
+          heading: "F1-inspired keel suspension, in plain English",
+          body: "The midsole has a structural keel — a long anti-twist plate running heel-to-forefoot. Kawasaki claims F1 chassis inspiration; in practice the plate behaves like the Yonex Round Sole Hexagrip or Victor's torsion plate. Under hard direction changes, the plate prevents the midsole from twisting independently of the foot. On lunges, it spreads landing force more evenly. None of this is unique in 2026 badminton footwear — but the execution is solid and SGS certification confirms the performance is real, not marketing.",
+        },
+        {
+          heading: "Where KACE competes head-to-head",
+          body: "Most direct comparison is Yonex Eclipsion Z3 ($200) and Victor P9200 ($130). Eclipsion Z3 has the highest stability ceiling and the strongest brand equity, but at twice the price of KACE. Victor P9200 is closer in price and similar stability; KACE wins on upper wrap comfort but loses on Asian-fit lockdown if your foot suits Victor lasts well. KACE is the strongest pick for buyers who want stability and comfort over brand equity.",
+        },
+        {
+          heading: "Where it loses to other shoes",
+          body: "Three honest cautions. First, pure speed is not KACE's strength — players who prioritise sub-300g lightness should pick Aerus Z2 or Yonex 65 Z4 instead. Second, brand equity matters in second-hand markets — KACE will lose value faster than equivalent Yonex / Victor shoes. Third, availability outside Asia is uneven; verify regional stock before ordering.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy KACE if you want stability-first construction with a wrap-style upper at sub-$130, you do not need maximum speed, and brand equity is not part of your decision. It fits intermediate-to-advanced players who do long doubles or singles sessions, players returning from minor ankle issues, and buyers curious about Kawasaki's Master line. Skip if speed matters more than stability, if you have wide feet that need a true wide-fit option, or if resale value is part of your purchase math.",
+        },
+      ],
+      cta: "Tell the finder your foot width and joint comfort flags — KACE will rank well for stability-first profiles.",
+    },
+    {
+      slug: "kawasaki-star-cross-racket-review",
+      updatedAt: "2026-05-08",
+      category: "reviews",
+      title: "Kawasaki Star-Cross (Chuan Yue Xing He) review: high-end speed without the high-end weight",
+      dek: "Material refinement instead of mass. The Star-Cross is Kawasaki's argument that the next generation of speed flagships will be built around feel, not heft.",
+      reviewSummary: {
+        verdict:
+          "Genuinely refined high-end speed racket — competes on character, not just price.",
+        bestFor: [
+          "Front-court doubles players",
+          "Speed-leaning singles players",
+          "Buyers who want a Kawasaki flagship",
+        ],
+        avoidIf: [
+          "You need rear-court attack mass",
+          "You want established brand resale",
+        ],
+        setupNotes: [
+          "Source 4U/G5 sample.",
+          "Refined carbon layup; non-mass-based speed tuning.",
+        ],
+        sourceHook:
+          "Kawasaki's Master line keeps producing rackets that earn the comparison. Star-Cross is the speed flagship version.",
+      },
+      story: {
+        intro:
+          "Speed rackets used to be defined by what they removed — less head weight, thinner frame, lower swing weight. Kawasaki's Star-Cross argues for a different recipe: the speed comes from material refinement and shaft response, not from cutting mass. The result is a flagship-tier speed racket that does not feel hollow at contact, and that is a meaningful difference from many head-light speed frames.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Star-Cross spec snapshot",
+            items: [
+              {
+                label: "Identity",
+                value: "Speed flagship — quick swing, sharp rebound, balanced finishing weight.",
+              },
+              {
+                label: "Carbon",
+                value: "Refined layup with high-modulus carbon layers — material upgrade over older Kawasaki frames.",
+              },
+              {
+                label: "Frame",
+                value: "Standard speed-frame profile, but with denser layup for stability.",
+              },
+              {
+                label: "Balance",
+                value: "Head-light but not ultra-light — designed to retain finish weight.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What sets it apart",
+            title: "Speed without hollowness",
+            body:
+              "Many head-light speed frames feel thin at contact — fast but unsubstantial. Star-Cross retains enough mass and material density to feel solid through the hit, which is uncommon in this category.",
+          },
+          {
+            kind: "comparison",
+            heading: "Star-Cross vs other speed flagships",
+            columns: ["Star-Cross", "Nanoflare 1000Z", "Auraspeed Fantome"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Solid-feel speed",
+                  "Pure end-speed",
+                  "Precision speed",
+                ],
+              },
+              {
+                label: "Contact feel",
+                values: ["Substantial", "Crisp", "Sharp"],
+              },
+              {
+                label: "Smash quality",
+                values: ["Modest-strong", "Modest", "Modest"],
+              },
+              {
+                label: "Brand identity",
+                values: ["Niche", "Mainstream", "Niche-mainstream"],
+              },
+            ],
+          },
+          {
+            kind: "verdict",
+            heading: "Buying call",
+            body:
+              "Buy if you want a speed racket that does not feel hollow. Skip if you need rear-court attack or guaranteed resale.",
+            bullets: [
+              "Strong alternative to Nanoflare 1000Z for buyers who find 1000Z too crisp.",
+              "Pair with thin elastic strings at 25-27 lb.",
+              "Build quality has caught up with established brands.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why material refinement beats mass cutting",
+          body: "Two ways to make a racket faster. Cut mass (lighter head, thinner frame, head-light balance), or refine the material (higher-modulus carbon, denser weave, optimised resin). Most speed flagships use the first approach because it shows up clearly on a spec sheet. Star-Cross uses the second — the swing is fast not because the head is light but because the material transmits force faster. The trade-off: spec-sheet readers may find Star-Cross less obviously a speed racket; on court the speed is there.",
+        },
+        {
+          heading: "Where the substantial feel pays off",
+          body: "Hollow-feeling speed frames have a problem: when you connect off-centre, the racket gives a thin response that reduces directional confidence. Star-Cross's denser layup keeps the contact feel more substantial, which translates to better redirection on flat drives, more confident hairpin shots, and steadier net-touch placement. Front-court doubles players will feel the difference most on push variations and quick blocks.",
+        },
+        {
+          heading: "Where it loses to other flagships",
+          body: "Two honest cautions. First, pure end-speed is not Star-Cross's strength — Nanoflare 1000Z still produces a faster shaft snap on long swings. Second, the Kawasaki brand has limited resale liquidity outside Asia, so factor in higher real cost of ownership if you change rackets often. The build is excellent; the brand equity is the constraint.",
+        },
+        {
+          heading: "Stringing and tension",
+          body: "Pair Star-Cross with thin elastic strings — Aerobite, BG66 Ultimax — at 25-27 lb. Lower tension wastes the shaft's response. Higher tension narrows the sweet spot to a punishing degree. Standard durability strings (BG65) muffle the racket too much. Test pre-stretched stringing if your stringer offers it; the racket rewards consistent string-bed tension.",
+        },
+        {
+          heading: "Who should buy it",
+          body: "Buy Star-Cross if you want a speed flagship that does not feel hollow at contact, your current racket is a Nanoflare 700 Pro or Auraspeed 90K II, and you are open to a non-mainstream brand identity. Skip if you need rear-court attack power, fast resale liquidity, or established brand prestige. Star-Cross is the answer to the question 'why do speed flagships always feel slightly thin?'",
+        },
+      ],
+      cta: "Run the finder with front-court doubles or speed-leaning singles preferences to compare Star-Cross with Nanoflare 1000Z and Auraspeed Fantome.",
     },
     {
       slug: "how-to-choose-a-badminton-racket",
