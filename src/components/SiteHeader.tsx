@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -15,8 +16,15 @@ const NAV_LINKS = [
   { href: "/faq/", label: "FAQ" },
 ] as const;
 
+function isActive(pathname: string, href: string): boolean {
+  // Treat "/blog/" as active for "/blog/some-article/" too.
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(href);
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname() ?? "/";
 
   useEffect(() => {
     if (!open) return;
@@ -47,16 +55,24 @@ export function SiteHeader() {
           IntoBadminton
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm sm:flex">
-          {NAV_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-[var(--color-muted)] transition-colors hover:text-[var(--text)]"
-            >
-              {l.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-6 text-sm sm:flex" aria-label="Primary">
+          {NAV_LINKS.map((l) => {
+            const active = isActive(pathname, l.href);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={`transition-colors ${
+                  active
+                    ? "font-medium text-[var(--text)]"
+                    : "text-[var(--color-muted)] hover:text-[var(--text)]"
+                }`}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
           <Link
             href="/quiz/"
             className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--color-accent)] px-4 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
@@ -102,20 +118,29 @@ export function SiteHeader() {
       {open && (
         <nav
           id="mobile-nav"
+          aria-label="Primary"
           className="border-t border-[color:var(--line)] bg-white sm:hidden"
         >
           <ul className="layout-band max-w-6xl py-3">
-            {NAV_LINKS.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  onClick={close}
-                  className="block py-3 text-base font-medium text-[var(--text)]"
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((l) => {
+              const active = isActive(pathname, l.href);
+              return (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    aria-current={active ? "page" : undefined}
+                    onClick={close}
+                    className={`block py-3 text-base font-medium ${
+                      active
+                        ? "text-[var(--color-accent)]"
+                        : "text-[var(--text)]"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              );
+            })}
             <li>
               <Link
                 href="/quiz/"

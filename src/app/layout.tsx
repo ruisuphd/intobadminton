@@ -76,13 +76,19 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <Providers>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-[var(--color-accent)] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
+          >
+            Skip to main content
+          </a>
           <StructuredData />
           <ConsentModeDefaults />
           <FundingChoicesScript />
           <Analytics />
           <AdSenseScript />
           <SiteHeader />
-          {children}
+          <div id="main-content">{children}</div>
           <SiteFooter />
           <CookieBanner />
           <CookieSettings />

@@ -222,9 +222,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Rackets · 25+ models", body: "Astrox, Nanoflare, AxForce, BladeX, Auraspeed, Halbertec — by role, level, and shaft hardness." },
-              { title: "Shoes · 4 models", body: "Eclipsion, BladeSabre, P9200 III, Aerus — by foot width, stability, and cushioning." },
-              { title: "Strings · 3 models", body: "BG65, BG80, L69 — by feel, repulsion, and durability tradeoffs." },
+              { title: "Rackets · 40+ models", body: "Astrox, Nanoflare, AxForce, BladeX, Auraspeed, Halbertec, Bonny LeiSu, Kumpoo Shanhai — by role, level, and shaft hardness." },
+              { title: "Shoes · 7 models", body: "Eclipsion, BladeSabre, P9200 III, Aerus, Comfort, 65 Z VA — by foot width, stability, and cushioning." },
+              { title: "Strings · 4 models", body: "BG65, BG80, EXBOLT 63, L69 — by feel, repulsion, and durability tradeoffs." },
               { title: "Bags · 2 models", body: "By capacity, shoe compartment, and commute-vs-tournament workflow." },
               { title: "Shuttles · 7 models", body: "By speed grade, durability, and indoor temperature suitability." },
               { title: "Grips · 6 models", body: "Overgrip vs replacement, tackiness, sweat handling — coming soon." },
