@@ -106,9 +106,9 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
             Badminton equipment notes
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)]">
-            Original equipment writing by a competitive player, informed by
-            community sources, manufacturer specs, and on-court testing. No
-            copied review text — see the{" "}
+            Original equipment writing informed by product-page specs,
+            community sources, and on-court testing where available. No copied
+            review text — see the{" "}
             <Link
               href="/sources/"
               className="text-[var(--color-accent)] hover:underline"

@@ -24,13 +24,18 @@ function buildProductJsonLd(rows: ScoredProduct[]) {
         name: r.name,
         brand: { "@type": "Brand", name: r.brand },
         category: r.category,
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "USD",
-          price: r.priceUsd,
-          availability: "https://schema.org/InStock",
-          url: `${companyInfo.siteUrl}/results/`,
-        },
+        additionalProperty: [
+          {
+            "@type": "PropertyValue",
+            name: "Spec source",
+            value: r.evidenceProfile.officialSpec.sourceAuthority.label,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Confidence",
+            value: r.confidence.label,
+          },
+        ],
       },
     })),
   };

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Victor Badminton Rackets, Shoes & Strings — Auraspeed, Thruster, Brave Sword & DriveX | IntoBadminton",
   description:
-    "The complete IntoBadminton guide to Victor badminton: Auraspeed for speed, Thruster for power, Brave Sword for control, plus DriveX for doubles. Korean-tour proven, Taiwanese engineering. Decoded by playing role.",
+    "The complete IntoBadminton guide to Victor badminton: Auraspeed for speed, Thruster for power, Brave Sword for control, DriveX for doubles, plus P9200 / VG-1 shoes. Korean-tour proven, Taiwanese engineering — decoded by playing role and skill level.",
   keywords: [
     "Victor",
     "Victor badminton",
@@ -17,9 +17,29 @@ export const metadata: Metadata = {
     "Victor badminton shoes",
     "best Victor racket",
     "Auraspeed Pro",
-    "Thruster K Falcon",
+    "Auraspeed 100X",
+    "Auraspeed 90K II",
+    "Auraspeed 99 J",
+    "Thruster Ryuga II",
+    "Thruster Falcon Enhanced",
+    "Brave Sword 12",
+    "DriveX 12",
   ],
   alternates: { canonical: "/brands/victor/" },
+  openGraph: {
+    title: "Victor Badminton — Auraspeed, Thruster, Brave Sword & DriveX Decoded",
+    description:
+      "Auraspeed for speed, Thruster for power, Brave Sword for control, DriveX for doubles. Korean-tour proven, Taiwanese engineering — typically 10-20% under Yonex on equivalent tier.",
+    url: "/brands/victor/",
+    type: "article",
+    siteName: "IntoBadminton",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Victor Badminton — Auraspeed, Thruster, Brave Sword & DriveX",
+    description:
+      "Speed, power, control, doubles — Victor's racket lines decoded by role and skill level.",
+  },
 };
 
 const config: BrandPageConfig = {
@@ -126,7 +146,7 @@ const config: BrandPageConfig = {
   faqs: [
     {
       q: "Is Victor better than Yonex?",
-      a: "On raw spec-per-dollar, often yes — Auraspeed 90F Pro and Thruster K Falcon match or beat Yonex equivalents on swing speed and smash payload. What Yonex still leads on is global distribution, resale liquidity, and stringer familiarity. If you live where Victor is well-stocked (East Asia, much of Europe, and increasingly North America), Victor is a smart choice. If you live somewhere with thin Victor inventory, Yonex is safer.",
+      a: "Not universally. Compare the exact Victor and Yonex models, official product-page specs, warranty support, local stock, and stringer familiarity. The better choice is the one that fits your role and is supportable where you play.",
     },
     {
       q: "Auraspeed vs Thruster — which Victor line should I pick?",

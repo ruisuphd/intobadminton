@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Badminton Racket, String & Shoe Finder — Match Gear to Your Game | IntoBadminton",
   description:
-    "Personalized badminton equipment finder. Rank rackets, strings, shoes, and bags for your level, playing style, and budget — transparent scoring drawn from manufacturer specs, cited community reviews, and on-court testing by a competitive player. No signup, no email gate.",
+    "Personalised badminton equipment finder. Rank rackets, strings, shoes, and bags for your level, playing style, and budget with transparent scoring and source authority labels. No signup, no email gate.",
   keywords: [
     "badminton",
     "badminton racket",

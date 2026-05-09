@@ -7,7 +7,7 @@ import { companyInfo } from "@/lib/company";
 export const metadata: Metadata = {
   title: "Yonex vs Victor vs Li-Ning — which badminton brand is best (2026)",
   description:
-    "Honest comparison of the three flagship badminton brands. Yonex distribution, Victor speed bias, Li-Ning value-per-power — picks framed by region, role, and budget.",
+    "Comparison of Yonex, Victor, and Li-Ning badminton gear by model fit, source status, region, role, and budget.",
   alternates: { canonical: "/compare-guides/yonex-victor-li-ning/" },
 };
 
@@ -52,7 +52,9 @@ export default function YonexVictorLiningPage() {
           The one-line summary
         </h2>
         <p className="text-base leading-relaxed text-[var(--color-muted)]">
-          Yonex has the deepest catalogue and the strongest North American and European distribution. Victor is the speed-oriented specialist with the strongest Korean tour presence. Li-Ning leads on smash power per dollar and dominates Chinese national-team kit. Below the flagships, every brand has at least one model that beats the other two in its niche.
+          Do not choose by brand hierarchy alone. Compare the official product
+          page, weight / grip variant, shaft flex, balance profile, warranty
+          channel, and whether the IntoBadminton row is already verified.
         </p>
 
         <div className="overflow-x-auto card">
@@ -68,19 +70,19 @@ export default function YonexVictorLiningPage() {
             <tbody className="text-[var(--color-muted)]">
               <tr className="border-b border-[color:var(--line)]">
                 <td className="p-4 font-medium text-[var(--text)]">Yonex</td>
-                <td className="p-4">Catalogue depth, brand resale, distribution</td>
+                <td className="p-4">Broad official product-page coverage</td>
                 <td className="p-4">Global — easy in NA, EU, JP, SG, AU</td>
                 <td className="p-4">Astrox, Nanoflare, Arcsaber, Aerus / 65 Z shoes</td>
               </tr>
               <tr className="border-b border-[color:var(--line)]">
                 <td className="p-4 font-medium text-[var(--text)]">Victor</td>
-                <td className="p-4">Speed frames, Asian fit, KR/TW tour roster</td>
+                <td className="p-4">Detailed official spec pages for many models</td>
                 <td className="p-4">Strong in Asia, growing in NA / EU</td>
                 <td className="p-4">Auraspeed, DriveX, Thruster, P9200 shoes</td>
               </tr>
               <tr>
                 <td className="p-4 font-medium text-[var(--text)]">Li-Ning</td>
-                <td className="p-4">Smash mass per dollar, CN tour kit, value tier</td>
+                <td className="p-4">Strong line breadth; rows need product-page verification here</td>
                 <td className="p-4">Strong in CN/SEA; specialty stores in NA/EU</td>
                 <td className="p-4">AxForce, BladeX, Halbertec, Aeronaut</td>
               </tr>

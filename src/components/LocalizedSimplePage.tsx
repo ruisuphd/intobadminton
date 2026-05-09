@@ -7,7 +7,7 @@ const pages = {
       title: "Recommendation methodology",
       body: [
         "IntoBadminton uses a transparent heuristic rather than a black-box model. We score style, discipline, level, budget, body comfort, foot width, tension, and category-specific specs separately, then show the most important reasons on each result.",
-        "Official manufacturer specs are treated as the strongest source. Editor interpretation explains how those specs usually feel on court. Community evidence is displayed only as metadata summaries and links when rights are limited.",
+        "Product-specific official pages are treated as the strongest source for specs. Editor interpretation explains how those specs may feel on court. Community evidence is displayed only as metadata summaries and links when rights are limited.",
       ],
     },
     zh: {

@@ -10,11 +10,11 @@ type SourceEntry = {
 };
 
 const officialSources: SourceEntry[] = [
-  { name: "Yonex official", url: "https://www.yonex.com/badminton/", region: "Global", use: "Specs, balance, weight variants, string tension range" },
-  { name: "Victor Sport", url: "https://www.victorsport.com/", region: "Global", use: "Specs, racket frame data, shoes" },
-  { name: "Li-Ning badminton", url: "https://lining.com/", region: "Global", use: "Specs, shoe lasts, racket lines" },
-  { name: "Kawasaki", url: "https://kawasaki-sport.com/", region: "Asia", use: "Entry-level rackets and strings" },
-  { name: "Mizuno badminton", url: "https://www.mizuno.com/", region: "Global", use: "Shoes, fit data" },
+  { name: "Yonex official", url: "https://www.yonex.com/badminton/", region: "Global", use: "Product-page specs, weight variants, grip sizes, and stringing advice" },
+  { name: "Victor Sport", url: "https://www.victorsport.com/", region: "Global", use: "Product-page specs, material listings, and string tension limits" },
+  { name: "Li-Ning official", url: "https://lining.com/", region: "Global", use: "Brand and authorised-channel checks; model specs remain unverified unless product-page evidence is attached" },
+  { name: "Kawasaki", url: "https://kawasaki-sport.com/", region: "Asia", use: "Brand and product-line checks where an official page is available" },
+  { name: "Mizuno badminton", url: "https://www.mizuno.com/", region: "Global", use: "Brand and product-line checks where an official page is available" },
 ];
 
 const communitySources: SourceEntry[] = [
@@ -62,33 +62,33 @@ type Copy = {
 
 const copyEn: Copy = {
   hero: "Sources & editorial process",
-  dek: "Where we get our data, how we triangulate it, and the rights model that keeps us off the line that AdSense calls 'thin or copied content'.",
+  dek: "Where we get our data, how we label source authority, and how to report a correction.",
   philosophyHeading: "What we believe",
   philosophyBody: [
-    "Equipment recommendations are only as good as the evidence behind them. A single review — even from a player you trust — only describes one body, one technique, one string tension, and one shuttle speed. The job of a recommender site is to compress many such accounts into something that fits the user in front of it.",
+    "Equipment recommendations are only as good as the evidence behind them. A single review describes one body, one technique, one string tension, and one shuttle speed. A recommender should separate official product-page facts from player interpretation.",
     "That means our job is reading widely, not republishing. Below are the sources we read most, and the rules we follow when citing them.",
   ],
   triangulationHeading: "How we triangulate",
   triangulationBody:
-    "For each product, we cross-check at least three classes of evidence before publishing a confidence label.",
+    "For each product, we record the strongest source currently attached to that row and downgrade confidence when the source is not an official product page.",
   triangulationSteps: [
     {
       title: "1. Manufacturer official spec",
-      body: "Weight variant, balance point, shaft flex, string tension range, foot last, sole compound. We link the official product page on every result that needs verification.",
+      body: "Weight variant, shaft flex, stringing advice, grip size, and material fields are treated as product-page facts only when a product-specific official page is linked.",
     },
     {
       title: "2. Independent video and written reviews",
-      body: "BadmintonCentral, BadmintonCN, Reddit, and YouTube reviewers (see list below). We paraphrase findings with attribution and a link out — never copied prose.",
+      body: "BadmintonCentral, BadmintonCN, Reddit, and YouTube reviewers can inform editor notes and market signals. They do not replace manufacturer specs.",
     },
     {
       title: "3. Player-side context",
-      body: "How does this product behave for a Div 4 doubles player? An advanced singles player on 28 lb tension? Where the founder's playing context applies, we add it as 'editor signal' alongside the cited reviews.",
+      body: "Where first-hand testing is available, it appears as an editor signal alongside source status, not as an official product fact.",
     },
   ],
   rightsHeading: "Rights, attribution, and copyright",
   rightsBody: [
-    "Our blog articles, product editor notes, and recommendation evidence draw on independent reviewers, manufacturer official spec pages, and our own on-court testing. Where community sources inform a finding, we paraphrase the substance, write in our own voice, and link out. We do not republish or translate review prose, and we do not credit individual community-forum reviewers by name in article bodies — readers who want the full original review can follow the link.",
-    "Major community sources we read regularly: badmintoncn.com (中羽在线 forum threads, especially equipment reviews), Reddit r/badminton, BadmintonCentral forum, BadmintonCN-affiliated YouTube reviewers, plus Tieba 羽毛球吧. Manufacturer spec pages, BWF tournament event coverage, and retailer-side measurement data round out the input.",
+    "Our blog articles, product editor notes, and recommendation evidence may draw on independent reviewers, manufacturer official product pages, and on-court testing. Where community sources inform a finding, we paraphrase the substance, write in our own voice, and link out.",
+    "Community and retailer sources are useful for discovery, but the app now labels them separately from official product-page evidence.",
     "If you are an author, forum user, or platform and want any citation, paraphrase, or link on our site removed or amended, email " +
       companyInfo.contactEmail +
       " with the page URL and the change requested. We respond within five business days. We will not contest a takedown request from a verifiable original author.",

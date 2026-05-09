@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import products from "@/data/products.json";
 import {
   articlesByDateDesc,
   blogArticles,
@@ -9,27 +10,32 @@ import {
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import type { ProductRecord } from "@/lib/types/product";
+
+const PRODUCT_CATALOGUE = products as ProductRecord[];
+const categoryCount = (category: ProductRecord["category"]) =>
+  PRODUCT_CATALOGUE.filter((product) => product.category === category).length;
 
 const HOME_FAQ: { q: string; a: string }[] = [
   {
     q: "How do I choose the right badminton racket?",
-    a: "Match three things: skill level, playing role, and timing. Beginners and most club players do better with medium-flex 4U or 5U rackets that have even or slightly head-light balance. Smash-heavy singles and rear-court doubles players benefit from head-heavy frames once their technique is stable. The IntoBadminton finder asks for level, discipline, style, body, and budget, then ranks rackets transparently — you see exactly why each one fits.",
+    a: "Start with level, discipline, and comfort. A racket that fits your timing and shoulder is more useful than a flagship frame that you cannot load consistently. IntoBadminton asks for level, discipline, style, body, and budget, then shows the score factors and source authority for each result.",
   },
   {
     q: "Yonex, Victor, or Li-Ning — which brand is best?",
-    a: "There is no single best badminton brand. Yonex has the deepest catalogue and the strongest North American distribution. Victor leads on speed-oriented frames like the Auraspeed line and dominates Korean tour play. Li-Ning AxForce, BladeX, and Halbertec models lead on smash-power per dollar. The right brand depends on which specific model fits your role, not loyalty.",
+    a: "There is no single best badminton brand for every player. Compare the exact model, weight and grip variant, shaft flex, balance, warranty channel, and local availability. The finder treats brand as context, not as proof that a racket fits you.",
   },
   {
     q: "What badminton string should a club player use?",
-    a: "Most club players are over-strung and under-restrung. Try Yonex BG65 or Li-Ning No.1 at 22–24 lb if you want durability and forgiveness. Move to BG80, BG80 Power, or Li-Ning No.5 for crisper feel. Aerobite-style hybrids reward players with cleaner contact. Restring every 30–50 sessions of regular play, even if the string has not snapped — tension drops long before a break.",
+    a: "Match string gauge and tension to your contact quality, durability needs, and arm comfort. Treat any tension suggestion as a starting point, then ask a qualified stringer to account for your racket frame, string, shuttle speed, and injury history.",
   },
   {
     q: "Are badminton shoes really different from running shoes?",
-    a: "Yes — and the difference matters more than the racket for most amateurs. Badminton shoes use gum rubber outsoles for grip on wood courts, low-profile midsoles to keep your foot close to the floor, and lateral reinforcement for split steps and side lunges. Running shoes have raised heels and softer foams that promote forward roll, which is the opposite of what badminton footwork needs.",
+    a: "Badminton footwork includes split steps, lunges, braking, and side-to-side movement. Choose court shoes designed for lateral stability and indoor grip, and try them with badminton socks before relying on them in match play.",
   },
   {
     q: "How does the IntoBadminton finder score recommendations?",
-    a: "Every result breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. Manufacturer specs are the strongest signal, editor interpretation translates specs into on-court feel, and community evidence (BadmintonCN, Reddit, BadmintonCentral, video reviewers) appears as cited metadata summaries with links — never copied text. Confidence labels show what is verified and what still needs cross-checking. Read the methodology page for the full weighting.",
+    a: "Every result breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. Source labels distinguish official product pages from third-party or still-unverified references. Read the methodology page for the full weighting.",
   },
 ];
 
@@ -68,6 +74,29 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       description:
         "Badminton rackets, strings, shoes, bags, shuttles, and grips, with player-fit recommendations.",
     },
+    mainEntity: {
+      "@type": "ItemList",
+      name: "Badminton brands covered",
+      itemListElement: [
+        { "@type": "Brand", name: "Yonex", url: `${companyInfo.siteUrl}/brands/yonex/` },
+        { "@type": "Brand", name: "Victor", url: `${companyInfo.siteUrl}/brands/victor/` },
+        { "@type": "Brand", name: "Li-Ning", url: `${companyInfo.siteUrl}/brands/li-ning/` },
+      ],
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${companyInfo.siteUrl}/#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${companyInfo.siteUrl}/`,
+      },
+    ],
   };
 
   const popularSearches: { label: string; href: string; tag: string }[] = [
@@ -96,16 +125,16 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-24 lg:pb-20">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full bg-[var(--color-accent-soft)] blur-3xl"
-        />
+      <section className="hero-decoration relative overflow-hidden pt-20 pb-16 lg:pt-24 lg:pb-20">
         <div className="layout-band relative max-w-6xl">
           <div className="max-w-3xl">
-            <span className="chip">Badminton equipment finder · 2026 catalog</span>
+            <span className="chip">Badminton equipment finder · 2026 catalogue</span>
             <h1 className="text-display mt-5 text-[var(--text)]">
               {copy.home.title}
             </h1>
@@ -121,13 +150,13 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
               </Link>
             </div>
             <p className="mt-6 text-xs text-[var(--color-subtle)]">
-              {"No signup · No email gate · Profiles stay on device · Updated weekly"}
+              {"No signup · No email gate · Profiles stay on device · Source authority shown"}
             </p>
           </div>
 
           <div className="mt-12 grid gap-3 sm:grid-cols-3">
             {[
-              { num: "60+", label: "rackets, shoes, strings & bags scored" },
+              { num: `${PRODUCT_CATALOGUE.length}`, label: "catalogue rows scored with source status" },
               { num: "5", label: "transparent fit factors per result" },
               { num: String(articleCount), label: "original deep-dive articles" },
             ].map((s) => (
@@ -180,10 +209,10 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         <div className="layout-band max-w-6xl">
           <div className="max-w-3xl">
             <h2 className="text-headline text-[var(--text)]">
-              Built by a competitive player. Explainable. Verifiable.
+              Explainable recommendations with source labels
             </h2>
             <p className="mt-5 text-base leading-relaxed text-[var(--color-muted)]">
-              {"Every recommendation breaks down into five named factors: style, discipline, level, budget, body fit. All citations link out — never copied review text."}
+              {"Every recommendation breaks down into five named factors: style, discipline, level, budget, and body fit. Product-page sources, editor notes, and community references are labelled separately."}
             </p>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -210,7 +239,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 The full badminton gear stack
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-                Rackets, strings, shoes, bags, shuttles, grips — each scored against how you actually play.
+                Rackets, strings, shoes, bags, shuttles, and grips, each scored against how you actually play.
               </p>
             </div>
             <Link
@@ -222,12 +251,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Rackets · 40+ models", body: "Astrox, Nanoflare, AxForce, BladeX, Auraspeed, Halbertec, Bonny LeiSu, Kumpoo Shanhai — by role, level, and shaft hardness." },
-              { title: "Shoes · 7 models", body: "Eclipsion, BladeSabre, P9200 III, Aerus, Comfort, 65 Z VA — by foot width, stability, and cushioning." },
-              { title: "Strings · 4 models", body: "BG65, BG80, EXBOLT 63, L69 — by feel, repulsion, and durability tradeoffs." },
-              { title: "Bags · 2 models", body: "By capacity, shoe compartment, and commute-vs-tournament workflow." },
-              { title: "Shuttles · 7 models", body: "By speed grade, durability, and indoor temperature suitability." },
-              { title: "Grips · 6 models", body: "Overgrip vs replacement, tackiness, sweat handling — coming soon." },
+              { title: `Rackets · ${categoryCount("racket")} rows`, body: "Role, level, weight class, shaft flex, balance, and source authority are shown before purchase advice." },
+              { title: `Shoes · ${categoryCount("shoes")} rows`, body: "Foot width, stability, cushioning, and comfort cautions are separated from brand preference." },
+              { title: `Strings · ${categoryCount("string")} rows`, body: "Gauge, feel, repulsion, durability, and tension fit are treated as tradeoffs, not universal upgrades." },
+              { title: `Bags · ${categoryCount("bag")} rows`, body: "Capacity, shoe compartment, and commute-vs-tournament workflow." },
+              { title: `Shuttles · ${categoryCount("shuttle")} rows`, body: "Speed code, material, approval status, and durability tier." },
+              { title: `Grips · ${categoryCount("grip")} rows`, body: "Overgrip vs replacement, tackiness, and sweat handling." },
             ].map((item) => (
               <div
                 key={item.title}
@@ -254,7 +283,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                   Latest deep-dives
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-                  Original badminton equipment writing — manufacturer specs, on-court testing, cited community evidence.
+                  Original badminton equipment writing with source links, editor notes, and explicit confidence limits.
                 </p>
               </div>
               <Link
@@ -310,7 +339,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             Badminton equipment questions, answered
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-            Short, opinionated answers from a player who has actually swung the gear. For deeper context, jump into the finder or read a full deep-dive.
+            Short practical answers with clear limits. For deeper context, jump into the finder or read a full deep-dive.
           </p>
           <div className="mt-10 divide-y divide-[color:var(--line)]">
             {HOME_FAQ.map((f) => (

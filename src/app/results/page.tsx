@@ -5,7 +5,7 @@ import { t } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Your badminton equipment shortlist — IntoBadminton",
-  description: "Personalized badminton equipment recommendations from your finder profile.",
+  description: "Personalised badminton equipment recommendations from your finder profile.",
   alternates: { canonical: "/results/" },
   robots: { index: false, follow: true },
 };

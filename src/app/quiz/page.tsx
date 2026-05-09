@@ -4,9 +4,9 @@ import { QuizFunnel } from "./QuizFunnel";
 
 export const metadata: Metadata = {
   title:
-    "Badminton Equipment Finder — Personalized Racket, String & Shoe Picks | IntoBadminton",
+    "Badminton Equipment Finder — Personalised Racket, String & Shoe Picks",
   description:
-    "Answer five quick questions about your level, playing style, body, and budget. Get personalized badminton racket, string, shoe, and bag recommendations with transparent fit scoring drawn from manufacturer specs and on-court testing. No signup, no email gate.",
+    "Answer five quick questions about your level, playing style, body, and budget. Get badminton racket, string, shoe, and bag recommendations with transparent fit scoring and source authority labels. No signup, no email gate.",
   keywords: [
     "badminton equipment finder",
     "badminton racket finder",
@@ -76,16 +76,12 @@ export function QuizShell() {
             How the recommendations are scored
           </h2>
           <p>
-            Manufacturer specifications are the strongest signal. We layer
-            editor interpretation on top of those numbers to translate raw
-            specs into on-court feel: how head-heavy a 4U racket really plays
-            on a clear, how a stiff shaft loads on a defensive doubles flick,
-            why a 22-pound BG65 string bed feels softer than a 24-pound BG80
-            bed. Cited community evidence from BadmintonCN, Reddit, BadmintonCentral,
-            and trusted video reviewers contributes as theme summaries with
-            outbound links — never copied review text. Confidence labels show
-            what is verified and what still needs cross-checking, so you can
-            judge how strong each recommendation actually is.
+            Product-specific official pages are treated as the strongest spec
+            source. Editor interpretation and community references can explain
+            how a product may feel on court, but they are labelled separately
+            from manufacturer verification. Confidence labels show what is
+            verified and what still needs cross-checking, so you can judge how
+            strong each recommendation actually is.
           </p>
           <h2 className="text-xl font-semibold text-[var(--text)]">
             Privacy and data

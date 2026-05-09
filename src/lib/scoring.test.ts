@@ -36,8 +36,11 @@ describe("scoreProductCatalog", () => {
 
     expect(withEvidence?.confidence.level).toMatch(/^(medium|high)$/);
     expect(withEvidence?.evidenceProfile.officialSpec.status).toBe(
-      "editor_verified"
+      "official_verified"
     );
+    expect(
+      withEvidence?.evidenceProfile.officialSpec.sourceAuthority.canVerifySpecs
+    ).toBe(true);
     expect(withEvidence?.evidenceProfile.reviewEvidence.count).toBeGreaterThan(
       0
     );
@@ -58,12 +61,12 @@ describe("scoreProductCatalog", () => {
     );
 
     const needsReview = rows.find((r) => r.verificationStatus === "needs_review");
-    const editorVerified = rows.find(
-      (r) => r.verificationStatus === "editor_verified"
+    const verified = rows.find(
+      (r) => r.evidenceProfile.officialSpec.sourceAuthority.canVerifySpecs
     );
 
     expect(needsReview?.confidence.level).toBe("needs_verification");
-    expect(needsReview?.fitScore).toBeLessThan(editorVerified?.fitScore ?? 0);
+    expect(needsReview?.fitScore).toBeLessThan(verified?.fitScore ?? 0);
   });
 
   it("keeps beginner/budget users away from pro-only rackets", () => {

@@ -1,6 +1,7 @@
 import products from "@/data/products.json";
 import { getEvidenceSummary } from "@/lib/review-evidence";
 import { REASON_LABELS, type ReasonCode } from "@/lib/reason-codes";
+import { sourceAuthorityForProduct } from "@/lib/source-authority";
 import type {
   BagProduct,
   ProductRecord,
@@ -222,11 +223,18 @@ function scoreBody(
   return Math.max(0, Math.min(1, s));
 }
 
+function humanize(s: string): string {
+  return s.replace(/_/g, " ");
+}
+
 function buildSourceChips(p: ProductRecord): { type: SourceChip; label: string; href?: string }[] {
+  const sourceAuthority = sourceAuthorityForProduct(p);
   const chips: { type: SourceChip; label: string; href?: string }[] = [
     {
-      type: "manufacturer_spec",
-      label: `${p.verificationStatus.replace("_", " ")} · ${p.lastVerifiedAt}`,
+      type: sourceAuthority.canVerifySpecs
+        ? "manufacturer_spec"
+        : "source_status",
+      label: `${sourceAuthority.label} · ${humanize(p.verificationStatus)} · ${p.lastVerifiedAt}`,
       href: p.officialSourceUrl,
     },
   ];
@@ -252,7 +260,7 @@ function buildProsCons(p: ProductRecord): { pros: string[]; cons: string[] } {
   const pros: string[] = [];
   if (isRacket(p)) {
     pros.push(
-      `${p.brand} ${p.name}: ${p.headWeight.replace("_", " ")} head, ${p.shaftFlex} shaft (${p.weightClass}).`
+      `${p.brand} ${p.name}: ${humanize(p.headWeight)} head, ${humanize(p.shaftFlex)} shaft (${p.weightClass}).`
     );
     if (p.balanceMm) pros.push(`Balance ~${p.balanceMm} mm (as listed).`);
     pros.push(
@@ -260,17 +268,17 @@ function buildProsCons(p: ProductRecord): { pros: string[]; cons: string[] } {
     );
   } else if (isString(p)) {
     pros.push(
-      `${p.brand} ${p.name}: ${p.gaugeMm.toFixed(2)} mm, ${p.feel} feel, ${p.repulsion.replace("_", " ")} repulsion.`
+      `${p.brand} ${p.name}: ${p.gaugeMm.toFixed(2)} mm, ${p.feel} feel, ${humanize(p.repulsion)} repulsion.`
     );
     pros.push(`Practical tension range: ${p.tensionRangeLbs.min}-${p.tensionRangeLbs.max} lbs.`);
   } else if (isShoe(p)) {
     pros.push(
-      `${p.brand} ${p.name}: ${p.fitWidth.replace("_", " ")} fit, ${p.stability.replace("_", " ")} stability, ${p.cushioning} cushioning.`
+      `${p.brand} ${p.name}: ${humanize(p.fitWidth)} fit, ${humanize(p.stability)} stability, ${p.cushioning} cushioning.`
     );
     pros.push(`Court feel: ${p.weightFeel}; wide option: ${p.hasWideOption ? "yes" : "not listed"}.`);
   } else if (isBag(p)) {
     pros.push(
-      `${p.brand} ${p.name}: ${p.sizeClass} ${p.carryStyle.replace("_", " ")} for up to ${p.capacityRackets} rackets.`
+      `${p.brand} ${p.name}: ${p.sizeClass} ${humanize(p.carryStyle)} for up to ${p.capacityRackets} rackets.`
     );
     pros.push(
       `${p.hasShoeCompartment ? "Has" : "No"} shoe compartment · ${p.hasWetCompartment ? "has" : "no"} wet compartment.`
@@ -298,7 +306,11 @@ function buildProsCons(p: ProductRecord): { pros: string[]; cons: string[] } {
 }
 
 function editorSource(p: ProductRecord): ScoredProduct["evidenceProfile"]["editorSignal"]["source"] {
-  if (isRacket(p)) return p.shaftFlexSource;
+  if (isRacket(p)) {
+    return sourceAuthorityForProduct(p).canVerifySpecs
+      ? p.shaftFlexSource
+      : "editor_estimate";
+  }
   if (p.verificationStatus === "official_verified") return "official";
   if (p.marketSignals && p.marketSignals.length > 0) return "community_signal";
   return "editor_estimate";
@@ -306,11 +318,13 @@ function editorSource(p: ProductRecord): ScoredProduct["evidenceProfile"]["edito
 
 function buildEvidenceProfile(p: ProductRecord): ScoredProduct["evidenceProfile"] {
   const reviewEvidence = getEvidenceSummary(p.id);
+  const sourceAuthority = sourceAuthorityForProduct(p);
   return {
     officialSpec: {
       status: p.verificationStatus,
       lastVerifiedAt: p.lastVerifiedAt,
       href: p.officialSourceUrl,
+      sourceAuthority,
     },
     editorSignal: {
       note: p.editorNote,
@@ -333,6 +347,13 @@ function buildConfidence(
       level: "needs_verification",
       score: 0.25,
       label: "Needs official verification",
+    };
+  }
+  if (!evidenceProfile.officialSpec.sourceAuthority.canVerifySpecs) {
+    return {
+      level: "needs_verification",
+      score: 0.3,
+      label: "Needs official product source",
     };
   }
   const officialBase = p.verificationStatus === "official_verified" ? 0.62 : 0.5;
@@ -371,6 +392,8 @@ function verificationMultiplier(p: RacketProduct, profile: UserProfile): number 
     base = 0.96;
   } else if (p.verificationStatus === "needs_review") {
     base = 0.86;
+  } else if (!sourceAuthorityForProduct(p).canVerifySpecs) {
+    base = 0.9;
   } else if (p.verificationStatus === "official_verified") {
     base = 1.03;
   } else {
@@ -618,6 +641,8 @@ function finalizeScore(
   const verification =
     p.verificationStatus === "needs_review"
       ? 0.9
+      : !sourceAuthorityForProduct(p).canVerifySpecs
+        ? 0.92
       : p.verificationStatus === "official_verified"
         ? 1.04
         : 1;

@@ -50,10 +50,11 @@
     "languages": ["en", "zh"]
   },
   {
-    "productId": "li-halbertec-8000",
+    "productId": "ln-halbertec-8000",
     "canonicalName": "Li-Ning Halbertec 8000",
     "brandAliases": ["Li-Ning", "李宁", "LN"],
-    "modelAliases": ["Halbertec 8000", "战戟8000"],
-    "languages": ["en", "zh"]
+    "modelAliases": ["Halbertec 8000", "战戟8000", "战戟 8000"],
+    "languages": ["en", "zh"],
+    "notes": "AYPT013 (3U) / AYPT015 (4U); released 2022 Q4. Endorsed by Fu Haifeng."
   }
 ]

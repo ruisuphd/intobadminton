@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Li-Ning Badminton Rackets, Shoes & Strings — AxForce, BladeX, Halbertec & Aeronaut | IntoBadminton",
   description:
-    "The complete IntoBadminton guide to Li-Ning badminton: AxForce for power, BladeX for speed, Halbertec for technical attack, Aeronaut for aerodynamic control. Sponsor of the Chinese national team. Best smash-power per dollar in the catalogue.",
+    "IntoBadminton guide to Li-Ning badminton: AxForce (Thunder line, attack), BladeX (锋影, speed), Halbertec (战戟, Tectonic frame), Aeronaut, plus shoes and L-series strings. Decoded by playing role with current source-verification status.",
   keywords: [
     "Li-Ning",
     "Li-Ning badminton",
@@ -17,10 +17,32 @@ export const metadata: Metadata = {
     "Li-Ning Tectonic",
     "Li-Ning No.1 string",
     "best Li-Ning racket",
-    "AxForce 90 Tiger",
-    "BladeX 900 Sun",
+    "AxForce 90 New",
+    "AxForce 100 Gen 2",
+    "Halbertec 8000",
+    "Halbertec 9000",
+    "Halbertec 9000 Power",
+    "BladeX 800 Speed",
+    "BladeX 800 New",
+    "战戟 8000",
+    "雷霆 90",
+    "锋影 800",
   ],
   alternates: { canonical: "/brands/li-ning/" },
+  openGraph: {
+    title: "Li-Ning Badminton — AxForce, BladeX, Halbertec & Aeronaut Decoded",
+    description:
+      "AxForce (Thunder, attack), BladeX (Sunrise, speed), Halbertec (Tectonic, technical), Aeronaut. Chinese national-team frames, decoded by role with source-verification status.",
+    url: "/brands/li-ning/",
+    type: "article",
+    siteName: "IntoBadminton",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Li-Ning Badminton — AxForce, BladeX, Halbertec & Aeronaut",
+    description:
+      "Chinese national-team brand decoded — AxForce, BladeX, Halbertec, Aeronaut by role and skill level.",
+  },
 };
 
 const config: BrandPageConfig = {
@@ -31,11 +53,11 @@ const config: BrandPageConfig = {
   hqCountry: "China",
   officialUrl: "https://lining.com/",
   title: "Li-Ning badminton: AxForce, BladeX, Halbertec & Aeronaut decoded",
-  dek: "China's flagship sportswear brand and sponsor of the PRC national badminton team. AxForce for power, BladeX for speed, Halbertec for technical attack, Aeronaut for control. Often the best smash-power per dollar in the catalogue.",
+  dek: "AxForce for power, BladeX for speed, Halbertec for technical attack, and Aeronaut for control. Li-Ning rows currently need product-page verification before their specs should be treated as manufacturer-confirmed.",
   intro:
-    "Li-Ning was founded in 1990 by Chinese Olympic gymnast Li Ning and entered badminton seriously in the late 2000s. It now sponsors the entire PRC national team — Chen Long, Shi Yuqi, Chen Yufei, Wang Zhiyi — and is the dominant brand inside China. Engineering moved up sharply over the last decade; modern AxForce and BladeX rackets compete directly with Yonex and Victor flagships on raw performance.",
+    "Li-Ning was founded in 1990 by Chinese Olympic gymnast Li Ning. Its badminton catalogue includes AxForce, BladeX, Halbertec, Aeronaut, and Tectonic families, but IntoBadminton marks model specs as needing review unless an official product-specific source is attached.",
   positioning:
-    "Li-Ning's racket lines split by attack mode rather than by tier. AxForce is stiff-shaft head-heavy power. BladeX is even-balance speed. Halbertec is the technical-attacker line (think 'Astrox 88 with a different feel'). Aeronaut is the aerodynamic control line. Tectonic is the doubles-leaning line. Pricing tends to undercut Yonex by 15-25% at equivalent tier, which is why Li-Ning often wins our 'most racket for the money' pick.",
+    "Li-Ning's racket lines split by attack mode rather than by tier. AxForce is generally positioned around attack, BladeX around speed, Halbertec around technical attack, Aeronaut around control, and Tectonic around power-control. Check the exact model row before relying on any spec.",
   lines: [
     {
       name: "AxForce — head-heavy attack flagship",

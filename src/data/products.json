@@ -2,11 +2,11 @@
   {
     "id": "yy-nanoflare-1000z",
     "category": "racket",
-    "name": "Nanoflare 1000Z",
+    "name": "Nanoflare 1000 Z",
     "brand": "Yonex",
     "priceUsd": 289,
     "headWeight": "head_light",
-    "shaftFlex": "stiff",
+    "shaftFlex": "extra_stiff",
     "weightClass": "4U",
     "weightVariants": [
       "3U",
@@ -22,7 +22,7 @@
     "swingWeightEstimate": "fast",
     "commonStringTensionLbs": {
       "min": 20,
-      "max": 28
+      "max": 29
     },
     "shaftFlexSource": "official",
     "launchYear": 2023,
@@ -34,9 +34,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/nanoflare-1000z",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/nf-1000z",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -45,9 +45,9 @@
       "defense"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/nanoflare-1000z"
+      "https://www.yonex.com/nf-1000z"
     ],
-    "editorNote": "Founder current doubles racket (Rui, Div 4 IE): extremely fast — head-light Z-axis design pays off in drives and defense. Power is harder to generate than from a comparable head-heavy frame, so you need good timing and strength. With those, this is the doubles weapon. — BadmintonCN reviewers calls 1000Z his hexagonal warrior speed racket — the most balanced of all speed rackets, with no clear weakness. DR carbon adds pocketing for control; ranked alongside 100XSE as T0-tier speed.",
+    "editorNote": "Founder current doubles racket (Rui, Div 4 IE): extremely fast — head-light Z-axis design pays off in drives and defense. Power is harder to generate than from a comparable head-heavy frame, so you need good timing and strength. With those, this is the doubles weapon.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -64,7 +64,7 @@
     "category": "racket",
     "name": "Astrox 100ZZ",
     "brand": "Yonex",
-    "priceUsd": 320,
+    "priceUsd": 295,
     "headWeight": "head_heavy",
     "shaftFlex": "extra_stiff",
     "weightClass": "4U",
@@ -94,9 +94,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-100zz",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/badminton/astrox-100zz-ax100zz",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -105,9 +105,9 @@
       "attack"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/astrox-100zz"
+      "https://www.yonex.com/badminton/astrox-100zz-ax100zz"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): very demanding but surprisingly fast — and very repulsive. Needs good timing and is tiring to play with for full matches. Try the 100ZZ VA before this if you like the feel but find the regular ZZ punishing. — BadmintonCN reviewers ranks the 88DP New Color above the 100ZZ for overall package, though 100ZZ remains a marquee model thanks to brand pull and pro endorsement.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): very demanding but surprisingly fast — and very repulsive. Needs good timing and is tiring to play with for full matches. Try the 100ZZ VA before this if you like the feel but find the regular ZZ punishing.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -131,9 +131,9 @@
     "category": "racket",
     "name": "Astrox 99 Pro",
     "brand": "Yonex",
-    "priceUsd": 260,
+    "priceUsd": 290,
     "headWeight": "head_heavy",
-    "shaftFlex": "extra_stiff",
+    "shaftFlex": "stiff",
     "weightClass": "4U",
     "weightVariants": [
       "3U",
@@ -161,9 +161,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-99-pro",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -172,9 +172,9 @@
       "rear_court"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/astrox-99-pro"
+      "https://www.yonex.com/astrox-99-pro-3ax99-p"
     ],
-    "editorNote": "Power-first profile; less forgiving for speed-oriented doubles.",
+    "editorNote": "First-generation Kento Momota signature frame (2021). Stiff shaft, head-heavy, classic 99 Pro profile: power-first with demanding sweet spot. The 2nd Gen (2023) keeps the same DNA but lowers the entry threshold; if you can't load the original 99 Pro consistently, the Gen 2 or the 88D Pro is usually the smarter buy.",
     "reviewCount": 0
   },
   {
@@ -199,7 +199,7 @@
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
     "commonStringTensionLbs": {
-      "min": 20,
+      "min": 19,
       "max": 28
     },
     "shaftFlexSource": "official",
@@ -213,8 +213,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-77-pro",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -233,7 +233,7 @@
     "category": "racket",
     "name": "Arcsaber 11 Pro",
     "brand": "Yonex",
-    "priceUsd": 239,
+    "priceUsd": 285,
     "headWeight": "even",
     "shaftFlex": "stiff",
     "weightClass": "4U",
@@ -250,7 +250,7 @@
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
     "commonStringTensionLbs": {
-      "min": 20,
+      "min": 19,
       "max": 28
     },
     "shaftFlexSource": "official",
@@ -263,9 +263,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/arcsaber-11-pro",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/arc11-p",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -274,7 +274,7 @@
       "all_round"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/arcsaber-11-pro"
+      "https://www.yonex.com/arc11-p"
     ],
     "editorNote": "Control-first all-round frame; strong baseline for advanced club players.",
     "reviewCount": 0
@@ -284,7 +284,7 @@
     "category": "racket",
     "name": "Nanoflare 800 Pro",
     "brand": "Yonex",
-    "priceUsd": 249,
+    "priceUsd": 275,
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
@@ -302,7 +302,7 @@
     "swingWeightEstimate": "fast",
     "commonStringTensionLbs": {
       "min": 20,
-      "max": 28
+      "max": 29
     },
     "shaftFlexSource": "official",
     "launchYear": 2024,
@@ -314,9 +314,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/nanoflare-800-pro",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/nf-800pr",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -325,7 +325,7 @@
       "flat_drive"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/nanoflare-800-pro"
+      "https://www.yonex.com/nf-800pr"
     ],
     "editorNote": "Speed-oriented pro frame for flat exchanges and defense.",
     "reviewCount": 0
@@ -445,7 +445,7 @@
       "min": 20,
       "max": 30
     },
-    "shaftFlexSource": "editor_estimate",
+    "shaftFlexSource": "retailer",
     "launchYear": 2019,
     "regionAvailability": [
       "global",
@@ -453,7 +453,7 @@
       "cn"
     ],
     "officialSourceUrl": "https://shoplining.com/",
-    "lastVerifiedAt": "2026-04-27",
+    "lastVerifiedAt": "2026-05-09",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -490,14 +490,14 @@
       "min": 20,
       "max": 30
     },
-    "shaftFlexSource": "editor_estimate",
+    "shaftFlexSource": "retailer",
     "launchYear": 2018,
     "regionAvailability": [
       "global",
       "cn"
     ],
     "officialSourceUrl": "https://shoplining.com/",
-    "lastVerifiedAt": "2026-04-27",
+    "lastVerifiedAt": "2026-05-09",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -510,52 +510,6 @@
       "https://shoplining.com/"
     ],
     "editorNote": "Advanced power/control profile; confirm exact regional spec before launch.",
-    "reviewCount": 0
-  },
-  {
-    "id": "li-halbertec-8000",
-    "category": "racket",
-    "name": "Halbertec 8000",
-    "brand": "Li-Ning",
-    "priceUsd": 229,
-    "headWeight": "even",
-    "shaftFlex": "medium",
-    "weightClass": "4U",
-    "weightVariants": [
-      "4U"
-    ],
-    "gripSizes": [
-      "G5",
-      "G6"
-    ],
-    "balanceMm": 295,
-    "balanceCategory": "even",
-    "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": {
-      "min": 20,
-      "max": 30
-    },
-    "shaftFlexSource": "editor_estimate",
-    "launchYear": 2023,
-    "regionAvailability": [
-      "global",
-      "sg",
-      "cn"
-    ],
-    "officialSourceUrl": "https://shoplining.com/",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "needs_review",
-    "minRecommendedLevel": "club",
-    "maxRecommendedLevel": "competitive",
-    "bestFor": [
-      "all_round",
-      "control",
-      "doubles"
-    ],
-    "sourceUrls": [
-      "https://shoplining.com/"
-    ],
-    "editorNote": "All-round Li-Ning reference for future community signal enrichment.",
     "reviewCount": 0
   },
   {
@@ -581,7 +535,7 @@
       "min": 20,
       "max": 28
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2020,
     "regionAvailability": [
       "global",
@@ -590,8 +544,8 @@
       "jp"
     ],
     "officialSourceUrl": "https://www.victorsport.com/",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -626,7 +580,7 @@
     "swingWeightEstimate": "heavy",
     "commonStringTensionLbs": {
       "min": 20,
-      "max": 29
+      "max": 32
     },
     "shaftFlexSource": "official",
     "launchYear": 2022,
@@ -636,9 +590,9 @@
       "cn",
       "jp"
     ],
-    "officialSourceUrl": "https://www.victorsport.com/",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://ca.victorsport.com/product/89918",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -647,7 +601,7 @@
       "power"
     ],
     "sourceUrls": [
-      "https://www.victorsport.com/"
+      "https://ca.victorsport.com/product/89918"
     ],
     "editorNote": "Advanced power frame; strong candidate for smash-heavy profiles.",
     "reviewCount": 0
@@ -673,7 +627,7 @@
     "swingWeightEstimate": "fast",
     "commonStringTensionLbs": {
       "min": 20,
-      "max": 28
+      "max": 31
     },
     "shaftFlexSource": "official",
     "launchYear": 2022,
@@ -683,9 +637,9 @@
       "cn",
       "jp"
     ],
-    "officialSourceUrl": "https://www.victorsport.com/",
-    "lastVerifiedAt": "2026-04-27",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://ca.victorsport.com/product/95001",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -694,7 +648,7 @@
       "counterattack"
     ],
     "sourceUrls": [
-      "https://www.victorsport.com/"
+      "https://ca.victorsport.com/product/95001"
     ],
     "editorNote": "Speed/counterattack reference for advanced doubles.",
     "reviewCount": 0
@@ -796,7 +750,7 @@
       "https://www.youtube.com/watch?v=c-q1ppdC-AU",
       "https://www.carousell.sg/yonex-astrox-88d-pro/q/"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): similar feel to the Astrox 77 Pro but harder to generate power. For most players the 77 Pro is the better pick unless you have the technique to load the 88D Pro stiffer profile. — BadmintonCN reviewers calls this the strongest 2024 attack racket overall (a hexagonal warrior): top-tier shaft, transparent power transmission, lower swing weight than peers, ranked above original 88DP camel-gold and even 100ZZ. Demands force; weaker on net-play pocketing than Lei Ting 90 New.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): similar feel to the Astrox 77 Pro but harder to generate power. For most players the 77 Pro is the better pick unless you have the technique to load the 88D Pro stiffer profile.",
     "reviewCount": 5,
     "resale": {
       "estimatedUsedUsd": 210,
@@ -936,7 +890,7 @@
     "name": "BG65",
     "brand": "Yonex",
     "priceUsd": 11,
-    "gaugeMm": 0.70,
+    "gaugeMm": 0.7,
     "feel": "medium",
     "repulsion": "medium",
     "control": "medium",
@@ -1621,15 +1575,14 @@
       "4U"
     ],
     "gripSizes": [
-      "G4",
       "G5"
     ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
     "commonStringTensionLbs": {
-      "min": 21,
-      "max": 29
+      "min": 20,
+      "max": 28
     },
     "shaftFlexSource": "official",
     "launchYear": 2024,
@@ -1641,9 +1594,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/astrox-100va-zz",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://us.yonex.com/products/astrox-100-zz-va",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -1652,10 +1605,9 @@
       "advanced_timing"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/astrox-100va-zz",
       "https://us.yonex.com/products/astrox-100-zz-va"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load. — Note: BadmintonCN reviewers also references the 100X SE (Victor Auraspeed 100X SE — already in our catalog) as the alternate high-end speed racket benchmark; if you found the regular 100ZZ punishing, you may also want to demo the 100XSE which sits a tier easier.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load.",
     "reviewCount": 0
   },
   {
@@ -1693,8 +1645,8 @@
       "us"
     ],
     "officialSourceUrl": "https://us.yonex.com/products/astrox-100-game",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -1722,14 +1674,15 @@
     ],
     "gripSizes": [
       "G4",
-      "G5"
+      "G5",
+      "G6"
     ],
     "balanceMm": 295,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
     "commonStringTensionLbs": {
       "min": 20,
-      "max": 28
+      "max": 29
     },
     "shaftFlexSource": "official",
     "launchYear": 2024,
@@ -1741,9 +1694,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-88s-pro",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/3ax88s-p",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -1752,10 +1705,9 @@
       "control"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/astrox-88s-pro",
-      "https://www.badmintonwarehouse.com/products/yonex-astrox-88s-pro-2024-badminton-racket"
+      "https://www.yonex.com/3ax88s-p"
     ],
-    "editorNote": "Founder current racket (Rui, Div 4 IE, doubles front-court): very good balanced racket, recommended for most players. Feels close to Astrox 77 Pro but with a stiffer shaft — better when you have the timing to load it. — BadmintonCN reviewers names this his #1 mixed-doubles main racket: the peak of control-balance frames right now — better all-round than Halberds 8000/9000/9000P and Arcsaber 11 Pro. Standard fluid box-frame, balance ~298mm, moderate swing speed, near-attack-racket rear-court solidity, perfect pocketing for net play.",
+    "editorNote": "Founder current racket (Rui, Div 4 IE, doubles front-court): very good balanced racket, recommended for most players. Feels close to Astrox 77 Pro but with a stiffer shaft — better when you have the timing to load it.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -1784,18 +1736,20 @@
     "shaftFlex": "stiff",
     "weightClass": "4U",
     "weightVariants": [
+      "3U",
       "4U"
     ],
     "gripSizes": [
       "G4",
-      "G5"
+      "G5",
+      "G6"
     ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
     "commonStringTensionLbs": {
       "min": 20,
-      "max": 28
+      "max": 29
     },
     "shaftFlexSource": "official",
     "launchYear": 2024,
@@ -1807,9 +1761,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://us.yonex.com/products/astrox-88d-tour",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/3ax88d-t",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -1817,7 +1771,7 @@
       "successive_smash"
     ],
     "sourceUrls": [
-      "https://us.yonex.com/products/astrox-88d-tour"
+      "https://www.yonex.com/3ax88d-t"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): feels heavier than the 88D Pro. For most players, just go for the Pro version — the Tour's added swing weight isn't an upgrade unless you specifically want the heavier feel.",
     "reviewCount": 0
@@ -1835,14 +1789,14 @@
       "4U"
     ],
     "gripSizes": [
-      "G4",
-      "G5"
+      "G5",
+      "G6"
     ],
     "balanceMm": 290,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
     "commonStringTensionLbs": {
-      "min": 20,
+      "min": 19,
       "max": 27
     },
     "shaftFlexSource": "official",
@@ -1856,8 +1810,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.yonex.com/arc7-p",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -1866,8 +1820,7 @@
       "shot_placement"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/arc7-p",
-      "https://us.yonex.com/products/arcsaber-7-pro"
+      "https://www.yonex.com/arc7-p"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): very good overall racket, but you need to bring the power yourself — it doesn't give you the head-heavy assist for smashes. Excellent for control players. POCKETING BOOSTER frame extends contact time.",
     "reviewCount": 0
@@ -1879,14 +1832,13 @@
     "brand": "Yonex",
     "priceUsd": 240,
     "headWeight": "head_light",
-    "shaftFlex": "stiff",
+    "shaftFlex": "medium",
     "weightClass": "4U",
     "weightVariants": [
       "4U",
       "5U"
     ],
     "gripSizes": [
-      "G4",
       "G5",
       "G6"
     ],
@@ -1908,8 +1860,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.yonex.com/nanoflare-700-pro",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -1920,7 +1872,7 @@
     "sourceUrls": [
       "https://www.yonex.com/nanoflare-700-pro"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): like the Arcsaber 7 Pro, hard to generate power but very very fast. Pair with thinner strings to maximize the speed advantage — try Aerobite or BG66 Ultimax over thicker strings. — BadmintonCN reviewers confirms: shaft only marginally stiffer than NF700, but new SF filter + enhanced Sonic Flare add clarity and elasticity. Lower bend point than NF700 → easier downward pressure, better smash confidence.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): like the Arcsaber 7 Pro, hard to generate power but very very fast. Pair with thinner strings to maximize the speed advantage — try Aerobite or BG66 Ultimax over thicker strings.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -1940,13 +1892,11 @@
     "priceUsd": 130,
     "headWeight": "head_light",
     "shaftFlex": "flexible",
-    "weightClass": "5U",
+    "weightClass": "4U",
     "weightVariants": [
-      "4U",
-      "5U"
+      "4U"
     ],
     "gripSizes": [
-      "G4",
       "G5",
       "G6"
     ],
@@ -1967,9 +1917,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://us.yonex.com/products/nanoflare-700-game",
-    "lastVerifiedAt": "2026-04-28",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/2nf-700g",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
     "bestFor": [
@@ -1978,9 +1928,9 @@
       "doubles_starter"
     ],
     "sourceUrls": [
-      "https://us.yonex.com/products/nanoflare-700-game"
+      "https://www.yonex.com/2nf-700g"
     ],
-    "editorNote": "Founder firsthand (Rui, Div 4 IE): a bit more flexible than the 700 Pro and overall much easier to play. The 5U version is very beginner-friendly while still giving the head-light speed feel — a great first-step racket up from entry frames. — BadmintonCN reviewers calls the regular NF700 the most popular sugar-water (糖水) speed racket: head-light, fast swing, soft-medium shaft, forgiving for women / weaker-force players. Less control precision than NF700 Pro; soft shaft makes feedback less clear for advanced players.",
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): a bit more flexible than the 700 Pro and overall much easier to play. The 5U version is very beginner-friendly while still giving the head-light speed feel — a great first-step racket up from entry frames.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2074,7 +2024,7 @@
     "brand": "Yonex",
     "priceUsd": 270,
     "headWeight": "head_light",
-    "shaftFlex": "extra_stiff",
+    "shaftFlex": "stiff",
     "weightClass": "4U",
     "weightVariants": [
       "4U"
@@ -2087,7 +2037,7 @@
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
     "commonStringTensionLbs": {
-      "min": 21,
+      "min": 20,
       "max": 29
     },
     "shaftFlexSource": "official",
@@ -2100,9 +2050,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/nanoflare-800-pro",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.yonex.com/nf-800pr",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2113,10 +2063,8 @@
       "fast_pace_men_doubles"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/nanoflare-800-pro",
-      "https://bbs.badmintoncn.com/"
+      "https://www.yonex.com/nf-800pr"
     ],
-    "editorNote": "Top-tier crisp/snap speed racket in the Nanoflare line. 78-hole stringbed (vs the usual 76) plus copper foil at the frame base for extra rigidity. BadmintonCN reviewers tested 4U at 85.2g unstrung / 89.7g strung w/ underbase removed, balance 301mm, 26-27 lb AB string — reports the fastest off-string speed in the series with metallic ringing tone. Better drives + front-court reflexes than 1000Z; weaker control / pocketing because no DR carbon. Higher entry threshold than the regular NF700; rewards good technique.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2171,9 +2119,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.victorsport.com/product/74262/auraspeed-100x-h",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://id.victorsport.com/product/auraspeed-100x-h-1",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -2183,8 +2131,7 @@
       "thick_frame_stability"
     ],
     "sourceUrls": [
-      "https://www.victorsport.com/product/74262/auraspeed-100x-h",
-      "https://bbs.badmintoncn.com/"
+      "https://id.victorsport.com/product/auraspeed-100x-h-1"
     ],
     "editorNote": "Victor's signature large-frame speed racket — head-light, stiff shaft, designed for doubles drives and front-court reflexes. Frame is thicker than the rival Yonex Nanoflare 800 Pro, trading a touch of swing speed for more stable rear-court contact. Newer 100X H edition adds Shaft Recovery System for ~3% better recovery and ~4% more force transfer per Victor official.",
     "reviewCount": 0
@@ -2213,7 +2160,7 @@
       "min": 22,
       "max": 29
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
     "regionAvailability": [
       "global",
@@ -2226,8 +2173,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.btracketsports.com/products/auraspeed-100x",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2240,7 +2187,7 @@
       "https://www.btracketsports.com/products/auraspeed-100x",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Mohammad Ahsan signature edition. Stiffer shaft than non-SE, slightly higher tension ceiling. — BadmintonCN reviewers owns five of these and ranks the 100X SE as one of two T0-tier speed rackets (alongside the Yonex Nanoflare 1000Z). Solid rear-court attack rare for a speed racket: smashes don't decay as fast as on the regular 100X. Top-tier defensive transition via shaft elasticity. Reviewer's measured 4U sample: 84.5g unstrung, 89.6g w/ underbase removed, balance 302mm.",
+    "editorNote": "Mohammad Ahsan signature edition. Stiffer shaft than non-SE, slightly higher tension ceiling.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2279,7 +2226,7 @@
       "min": 22,
       "max": 28
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
     "regionAvailability": [
       "global",
@@ -2291,8 +2238,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.badmintonwarehouse.com/products/victor-auraspeed-hs-plus-c-badminton-racket",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2304,7 +2251,7 @@
       "https://www.badmintonwarehouse.com/products/victor-auraspeed-hs-plus-c-badminton-racket",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Compact-frame, very stiff Victor speed racket using WES 3.0 shaft tech. — BadmintonCN reviewers describes the HS Plus as 'a hardened Hayabusa SE': harder shaft, faster, more rigid feedback. Excellent crisp + transparent feel with metallic ring on contact. Used by Hendra Setiawan / H.S. Prannoy. Hardest Victor shaft per BadmintonCN; high entry threshold. Good for advanced players who already have hard-shaft technique. Reviewer's measured 4U: 88.9g w/ underbase removed, balance 304mm.",
+    "editorNote": "Compact-frame, very stiff Victor speed racket using WES 3.0 shaft tech.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2338,7 +2285,7 @@
       "min": 19,
       "max": 28
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2011,
     "regionAvailability": [
       "global",
@@ -2350,8 +2297,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.nydhi.com/blogs/news/victor-bravesword-12-comprehensive-review-of-classic-all-round-racket",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -2389,7 +2336,7 @@
       "min": 20,
       "max": 28
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2022,
     "regionAvailability": [
       "global",
@@ -2401,8 +2348,8 @@
       "us"
     ],
     "officialSourceUrl": "https://badmintondirect.com/products/victor-thruster-falcon-enhanced-badminton-racket",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -2430,7 +2377,6 @@
       "4U"
     ],
     "gripSizes": [
-      "G4",
       "G5"
     ],
     "balanceMm": 304,
@@ -2440,8 +2386,8 @@
       "min": 20,
       "max": 30
     },
-    "shaftFlexSource": "official",
-    "launchYear": 2023,
+    "shaftFlexSource": "retailer",
+    "launchYear": 2022,
     "regionAvailability": [
       "global",
       "cn",
@@ -2450,8 +2396,8 @@
       "us"
     ],
     "officialSourceUrl": "https://shopbadmintononline.com/halbertec-badminton-rackets-li-ning-c-38_266.html",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -2465,7 +2411,7 @@
       "https://e78.us/products/li-ning-halbertec-8000",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Li-Ning's most-recommended amateur balance racket per BadmintonCN reviewers — \"the racket I've recommended more than any other on the forum.\" 6.8mm hard-flex shaft, T1100 + TB Nano + High Density Carbon. Balance 301-304mm, large fluid box-frame, moderate swing weight. Cost-effective vs Astrox 88S Pro New Color (~$400-500 cheaper) or Arcsaber 11 Pro (~$600-700 cheaper); reviewer's smash test rates it the best balance-racket smash with underbase removed. Soft enough shaft for most amateur players to drive — closest thing to a 'safe pick' if you don't yet know your style.",
+    "editorNote": "Style code AYPT013 (3U) / AYPT015 (4U). Released 2022 Q4 — first racket in Li-Ning's Tectonic frame line, endorsed by Fu Haifeng. Pocketing-led control profile that complements rather than competes with the speedier Halbertec 9000 and 9000 Power.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2508,7 +2454,7 @@
       "min": 20,
       "max": 30
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "retailer",
     "launchYear": 2024,
     "regionAvailability": [
       "global",
@@ -2518,8 +2464,8 @@
       "us"
     ],
     "officialSourceUrl": "https://li-ningfamily.com/products/1000-li-ning/3446-badminton-racket---halbertec-9000/",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -2531,7 +2477,7 @@
       "https://li-ningfamily.com/products/1000-li-ning/3446-badminton-racket---halbertec-9000/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Li-Ning's repositioning of the Halbertec line toward speed: thinner / lighter frame than 8000, stiffer shaft, faster swing. Marketed as 'control king'. — BadmintonCN reviewers disagrees with the 'control king' positioning: shaft is too stiff and the lighter head reduces leverage on smash, producing what he calls 卸力 (loses power). Better than 8000 at front-court speed and pointing accuracy; worse than 8000 for rear-court solidity and amateur-friendly entry. NOT a strict upgrade over 8000 — pick by playing style.",
+    "editorNote": "Li-Ning's repositioning of the Halbertec line toward speed: thinner / lighter frame than 8000, stiffer shaft, faster swing. Marketed as 'control king'.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2566,7 +2512,7 @@
       "min": 22,
       "max": 30
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2025,
     "regionAvailability": [
       "global",
@@ -2576,8 +2522,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.ckyew.com/post/li-ning-halbertec-9000-power-badminton-racket-review",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2589,7 +2535,7 @@
       "https://www.ckyew.com/post/li-ning-halbertec-9000-power-badminton-racket-review",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Power variant of the 9000: stiffer shaft, slightly more head weight, more crisp/snap. — BadmintonCN reviewers tested 4U/G5: 83.5g unstrung, 86.4g w/ underbase removed, balance 307mm. Around 7.65 on YuanShi's deflection rig (Chinese creator measurements; lower = stiffer) — same range as Astrox 88DP New Color (around 7.59) and 88SP New Color on the same rig, much stiffer than Halbertec 8000 (around 8.33). Reviewer's verdict: 9000P is NOT a strict upgrade over 8000 — entirely different style and entry threshold. Better-suited to advanced doubles players; difficult for BadmintonCN reviewers's intermediate-level partner who couldn't drive the shaft. Sample variance is significant: 5/10 samples weigh ~82.5g unstrung — very light by Halbertec standards.",
+    "editorNote": "Power variant of the 9000: stiffer shaft, slightly more head weight, more crisp/snap.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2633,7 +2579,7 @@
       "min": 21,
       "max": 30
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "retailer",
     "launchYear": 2026,
     "regionAvailability": [
       "global",
@@ -2643,8 +2589,8 @@
       "us"
     ],
     "officialSourceUrl": "https://triplepointsports.com/products/li-ning-bladex-800-speed-power-badminton-racket-lightweight-high-speed-professional-racquet",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2657,7 +2603,7 @@
       "https://triplepointsports.com/products/li-ning-bladex-800-speed-power-badminton-racket-lightweight-high-speed-professional-racquet",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "2026 successor to the Bladex 800 New. M46X carbon frame and stiffer shaft turn the line from a 'sugar-water' speed racket into a serious tournament option. — BadmintonCN reviewers rates this as one of the most distinctive speed rackets on the market: \"tough-elastic\" (韧弹) feel — has a slight loading / dwell process before release, vs the instant-firing crisp profile of NF800 Pro and Auraspeed Hayabusa. Best for control players who want speed AND precise placement. Shaft hardness around 7.83 on YuanShi's deflection rig (Chinese badminton creator's measurements; lower = stiffer) — much stiffer than 800 New's 8.58 on the same rig. Frame torsion around 18.72 — best in the speed-racket category measured.",
+    "editorNote": "2026 successor to the Bladex 800 New. M46X carbon frame and stiffer shaft turn the line from a 'sugar-water' speed racket into a serious tournament option.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2701,7 +2647,7 @@
       "min": 20,
       "max": 28
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "retailer",
     "launchYear": 2024,
     "regionAvailability": [
       "global",
@@ -2711,8 +2657,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.shopnings.com/li-ning-bladex-800-new-badminton-racket/",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
     "bestFor": [
@@ -2725,7 +2671,7 @@
       "https://www.shopnings.com/li-ning-bladex-800-new-badminton-racket/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Entry-friendly Bladex with medium shaft for amateur drivers — head-light feel with low force threshold. — BadmintonCN reviewers explicitly rates this 3 stars (one of only two products in his collection at that rating). Shaft hardness around 8.58 on YuanShi's deflection rig (Chinese badminton creator's measurements; lower = stiffer) — softest among high-end speed rackets tested on that rig. Slower off-string speed, lower pointing accuracy, weaker rear-court attack relative to its peers. Good for newer players who want a head-light Li-Ning frame without the demands of the 800 Speed; not the choice if you're looking for tournament-level speed-racket performance.",
+    "editorNote": "Entry-friendly Bladex with medium shaft for amateur drivers — head-light feel with low force threshold.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2761,7 +2707,7 @@
       "min": 22,
       "max": 31
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "retailer",
     "launchYear": 2025,
     "regionAvailability": [
       "global",
@@ -2771,8 +2717,8 @@
       "us"
     ],
     "officialSourceUrl": "https://triplepointsports.com/products/li-ning-axforce-90-new-badminton-racket-unleash-your-power",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2784,7 +2730,7 @@
       "https://triplepointsports.com/products/li-ning-axforce-90-new-badminton-racket-unleash-your-power",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "AxForce 90 New (雷霆/Thunder line). Built around Li-Ning's M46 + T1100 carbon and the Thunder Technology platform. — BadmintonCN reviewers calls this Li-Ning's strongest shaft to date: 6.4mm thick (up from 6.2mm in the AxForce 90 Dragon-Tiger), more permeable feel, excellent elasticity, balanced hardness. Forgiving sweet spot for a small frame, strong torsion control even with the thinner shaft. High break-section + narrow frame make swing surprisingly fast for an attack racket. Replaces the AxForce 80 in his rotation. Closest peer is the Yonex Astrox 88D Pro New Color: AxForce 90 New is slightly softer in shaft but offers more pocketing on net play.",
+    "editorNote": "AxForce 90 New (雷霆/Thunder line). Built around Li-Ning's M46 + T1100 carbon and the Thunder Technology platform.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2827,7 +2773,7 @@
       "min": 20,
       "max": 28
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
     "regionAvailability": [
       "global",
@@ -2837,8 +2783,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.ckyew.com/post/li-ning-tectonic-9-axforce-80-aeronaut-9000c-review",
-    "lastVerifiedAt": "2026-04-29",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
     "bestFor": [
@@ -2850,7 +2796,7 @@
       "https://www.ckyew.com/post/li-ning-tectonic-9-axforce-80-aeronaut-9000c-review",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "AxForce 80 sits below the AxForce 90 New as the easier-driving 'sugar-water' attack pick in the Thunder line. — BadmintonCN reviewers describes it as more head-heavy than 90 New — better one-shot smash for players who already lean on head weight — but weaker on shaft snap and smash continuity. Reviewer plans to retire his AxForce 80 in favor of the 90 New across the board.",
+    "editorNote": "AxForce 80 sits below the AxForce 90 New as the easier-driving 'sugar-water' attack pick in the Thunder line.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2865,7 +2811,7 @@
   {
     "id": "vic-drivex-12",
     "category": "racket",
-    "name": "DriveX 12 (TK-DX12)",
+    "name": "DriveX 12 O",
     "brand": "Victor",
     "priceUsd": 230,
     "headWeight": "head_heavy",
@@ -2876,15 +2822,14 @@
       "4U"
     ],
     "gripSizes": [
-      "G4",
       "G5"
     ],
     "balanceMm": 311,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
     "commonStringTensionLbs": {
-      "min": 22,
-      "max": 30
+      "min": 20,
+      "max": 33
     },
     "shaftFlexSource": "official",
     "launchYear": 2025,
@@ -2897,9 +2842,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.victorsport.com/",
-    "lastVerifiedAt": "2026-04-30",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.victorsport.com/product/drivex",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -2909,10 +2854,9 @@
       "all_court_attack"
     ],
     "sourceUrls": [
-      "https://www.victorsport.com/",
-      "https://bbs.badmintoncn.com/"
+      "https://www.victorsport.com/product/drivex"
     ],
-    "editorNote": "Successor to the DriveX 10 with notable improvements: nano-aerogel-filled frame for lower swing weight, WES 3.0 shaft for more bend-point flex, 46T Bayer carbon for additional frame stiffness, and a new Power Ring Pro junction that fixes the shaft-rotation issue early DriveX 10 buyers reported. — BadmintonCN reviewers position the DriveX 12 as Victor's closest match to the Yonex Astrox 88D Pro 2024 — same frame footprint, similar weight and balance, slightly softer shaft, slightly more pocketing on net play. Reviewers' measured 4U: 89.2g w/ underbase removed, balance 311mm. Strong cost-vs-performance argument: ~67% the price of an Astrox 88D Pro 2024 in some markets, with 90%+ of the perceived performance.",
+    "editorNote": "Successor to the DriveX 10 with notable improvements: nano-aerogel-filled frame for lower swing weight, WES 3.0 shaft for more bend-point flex, 46T Bayer carbon for additional frame stiffness, and a new Power Ring Pro junction that fixes the shaft-rotation issue early DriveX 10 buyers reported.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -2962,7 +2906,7 @@
       "https://lining.com/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Marketed as a durable balanced string but in practice it leans crisp and rewards strong swings. — BadmintonCN reviewers tested at 27 lb, four-knot, equal-tension across mains and crosses. Surprised by the smash quality on attack rackets like the Astrox 99 Pro 2 and Yonex Bluebird editions: smashes are sharp with strong audible feedback, drops sit close to the net, and durability is genuinely high. The shaft loading curve is a touch hard — soft-swing players may find it less elastic. Reviewers report it outperforms Yonex BG66 (66N) on smash for similarly-priced setups.",
+    "editorNote": "Marketed as a durable balanced string but in practice it leans crisp and rewards strong swings.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -3010,7 +2954,7 @@
       "https://www.victorsport.com/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Continuation of Victor's heritage 9200 line, now with built-in modular midsole architecture (Hyper EVA + Solid EVA dual density) replacing the older fixed midsole. Three-arch support design provides strong arch reinforcement; L-shape lateral stability structure handles cuts. — BadmintonCN reviewer measurements: 41 size, 265mm internal length, 336g per shoe (the modular midsole alone is 61g). U-SHAPE 2.5 last gives wide forefoot. Distinctive feel: firmer ground contact than soft-bounce shoes, near-instant initiation but a noticeable forward-lean angle that suits standard foot shapes better than Greek-foot (long second toe). Best for heavy players who want max cushioning durability over a long match.",
+    "editorNote": "Continuation of Victor's heritage 9200 line, now with built-in modular midsole architecture (Hyper EVA + Solid EVA dual density) replacing the older fixed midsole. Three-arch support design provides strong arch reinforcement; L-shape lateral stability structure handles cuts.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -3046,7 +2990,7 @@
       "min": 22,
       "max": 31
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "editor_estimate",
     "launchYear": 2025,
     "regionAvailability": [
       "global",
@@ -3056,8 +3000,8 @@
       "us"
     ],
     "officialSourceUrl": "https://lining.com/",
-    "lastVerifiedAt": "2026-04-30",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -3070,7 +3014,7 @@
       "https://lining.com/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Second-generation AxForce 100 (雷霆 100 二代) — Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. 6.2mm thin shaft, small fluid box-frame square head, strong pocketing on contact. Slightly softer shaft than the 100ZZ and meaningfully easier to drive while keeping the tough-elastic attack feel. — BadmintonCN reviewers tested 4U: 88.6g w/ underbase removed, balance 308mm. Significant sample variance: 4 samples ranged 83.0g–85.1g unstrung. Frame slightly slimmer than AxForce 90 New; sweet spot is comparable but takes time to dial in. Reviewers position it as a viable alternative for players who like the 100ZZ profile but find it punishing.",
+    "editorNote": "Second-generation AxForce 100 (雷霆 100 二代) — Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. 6.2mm thin shaft, small fluid box-frame square head, strong pocketing on contact. Slightly softer shaft than the 100ZZ and meaningfully easier to drive while keeping the tough-elastic attack feel.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -3125,7 +3069,6 @@
       "https://www.yonex.com/badminton/footwear/power-cushion-eclipsion-z3",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Yonex's hardest-feeling competition shoe — Power Cushion+ + Power Carbon midfoot bridge + integrated TPU sidewall that extends from the outsole up the medial side. — Reviewers describe a noticeably firm contact feel (vs the soft-bounce of 65 Z3 / Comfort Z3) with strong arch support, especially noticeable for flat-foot players. 42 size measures 270mm internal length, ~351g per shoe, 3E wide last (narrower JP version also available). Cushioning ceiling is high — large players report consistent rebound feedback. Trade-off: cross-vane outsole is more sensitive to dust and sweat than traditional hex-pattern shoes. Pairs well with after-market supercritical insole if you want extra cushioning. Best for tournament play where you need confidence on extreme retrievals.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -3144,7 +3087,7 @@
     "brand": "Yonex",
     "priceUsd": 280,
     "headWeight": "head_heavy",
-    "shaftFlex": "extra_stiff",
+    "shaftFlex": "stiff",
     "weightClass": "4U",
     "weightVariants": [
       "3U",
@@ -3158,11 +3101,11 @@
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
     "commonStringTensionLbs": {
-      "min": 21,
-      "max": 28
+      "min": 20,
+      "max": 29
     },
     "shaftFlexSource": "official",
-    "launchYear": 2022,
+    "launchYear": 2023,
     "regionAvailability": [
       "global",
       "jp",
@@ -3171,9 +3114,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-99-pro",
-    "lastVerifiedAt": "2026-04-30",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://us.yonex.com/products/astrox-99-pro-gen2",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -3183,10 +3126,9 @@
       "kento_momota_style"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/racquets/astrox-99-pro",
-      "https://bbs.badmintoncn.com/"
+      "https://us.yonex.com/products/astrox-99-pro-gen2"
     ],
-    "editorNote": "Pro-tier head-heavy attack racket. NAMD shaft, e.cap, 68-hole stringbed (denser than the standard 76 — which raises perceived stiffness rather than the usual softness associated with denser stringbeds; this is engineered). Yonex's flagship singles attack frame; Kento Momota played the Astrox 99 line for years and his feedback shaped the shaft and grommet design. Lee Zii Jia used the 99 Pro during his Yonex era before switching to Victor in 2022 (he now plays the Thruster Ryuga / Ryuga II). — Reviewers consistently note this is a demanding frame: weighs ~96g strung at 4U with grip + heat-shrink, balance 299mm, but the head feel is even higher than the number suggests. Tolerance for off-sweet-spot hits is poor — even experienced players report frequent mishits during initial sessions. Reward profile: when you do hit clean, the directional precision and rear-court power are top-of-class. Skip this if you have shoulder issues or are still developing concentrated short-power swings — the Astrox 88D Pro 2024 is a more forgiving way to access head-heavy Yonex attack.",
+    "editorNote": "Yonex 2nd Generation Astrox 99 Pro — stiff shaft (HM Graphite + 2G-Namd FLEX FORCE + Ultra PE Fiber), most head-heavy frame in the current Astrox lineup. 4U avg 83g / 3U avg 86g; recommended tension 4U 20-28 lb, 3U 21-29 lb. Singles attack profile; rewards clean rear-court contact and is unforgiving on late timing.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -3201,10 +3143,10 @@
   {
     "id": "vic-auraspeed-99",
     "category": "racket",
-    "name": "Auraspeed 99 (Hayabusa)",
+    "name": "Auraspeed 99 J (Anders Antonsen)",
     "brand": "Victor",
     "priceUsd": 260,
-    "headWeight": "head_heavy",
+    "headWeight": "even",
     "shaftFlex": "extra_stiff",
     "weightClass": "4U",
     "weightVariants": [
@@ -3216,13 +3158,13 @@
       "G5"
     ],
     "balanceMm": 295,
-    "balanceCategory": "head_heavy",
+    "balanceCategory": "even",
     "swingWeightEstimate": "medium",
     "commonStringTensionLbs": {
       "min": 22,
       "max": 31
     },
-    "shaftFlexSource": "official",
+    "shaftFlexSource": "retailer",
     "launchYear": 2025,
     "regionAvailability": [
       "global",
@@ -3234,8 +3176,8 @@
       "us"
     ],
     "officialSourceUrl": "https://www.victorsport.com/",
-    "lastVerifiedAt": "2026-04-30",
-    "verificationStatus": "editor_verified",
+    "lastVerifiedAt": "2026-05-09",
+    "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -3248,13 +3190,13 @@
       "https://www.victorsport.com/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Anders Antonsen's signature Victor — flagship of the Hayabusa branch. Stacks the line's most aggressive engineering: alloy carbon fiber frame, 46T high-modulus carbon, WES 3.0 shaft inflection system, Resilience Shield, nano-aerogel filler. Despite the aggressive spec sheet, swing weight stays close to the Auraspeed 90KM thanks to the aerogel — the difficulty is in the active force needed to flex the shaft. — Reviewers report 4U/G5 measures 93.54g strung w/ underbase, balance 295mm, 6.8mm shaft @ 210mm. Surprising sweet spot on a wing-shape break-line frame. Higher driving threshold than 90KM despite similar balance — this racket asks for concentrated, short power strokes; rewards them with a sharp downward snap (\"whip-and-recover\" is the reviewer phrase). On flat exchanges in mid-court, the 99 hides its attack pedigree and produces fast crisp drives. Not for amateurs; not for soft-swing players.",
+    "editorNote": "Anders Antonsen signature edition (model code ARS-99 J). Per Victor official: extra-stiff shaft with even balance, 4UG5 spec, max tension 31 lb. Frame combines High Resilience Modulus Graphite, Metallic Carbon Fiber, Nano Aerogel, and Nano Fortify TR+; shaft pairs that with WES 3.0 and a 6.8 mm profile. Wooden handle (rare in Victor's flagships). Designed for advanced players who can load the stiff shaft on concentrated power strokes — soft swings under-utilize the engineered flex.",
     "reviewCount": 0,
     "marketSignals": [
       {
         "source": "badmintoncn",
-        "label": "BadmintonCN: Auraspeed 99 (Hayabusa) review (Apr 2026)",
-        "summary": "4U/G5 strung 93.54g w/ underbase, balance 295mm, 6.8mm shaft 210mm. 76-hole stringbed, 9-3 line slot, max tension 31 lb. Anders Antonsen signature. Combines alloy carbon fiber + WES 3.0 + nano-aerogel + 46T carbon + Resilience Shield in one frame. Surprisingly large sweet spot for a wing-frame attack racket. Driving threshold higher than 90KM despite similar balance. Concentrated short power strokes are rewarded with sharp downward snap; soft swings under-utilize the engineered flex. Reviewer rates 99 as the best 'feel' racket Victor has produced — 'pinnacle of the Hayabusa series, not a 90KM upgrade but a different statement piece'.",
+        "label": "BadmintonCN: Auraspeed 99 J review (Apr 2026)",
+        "summary": "4U/G5 strung 93.54g w/ underbase, balance 295mm, 6.8mm shaft 210mm. 76-hole stringbed, 9-3 line slot, max tension 31 lb. Anders Antonsen signature (ARS-99 J). Alloy carbon fiber + WES 3.0 + nano-aerogel + 46T carbon + Resilience Shield. Surprisingly large sweet spot for a wing-frame attack racket. Driving threshold higher than 90KM despite similar balance. Concentrated short power strokes are rewarded with sharp downward snap; soft swings under-utilize the engineered flex. Reviewer rates the 99 J as the best 'feel' racket Victor has produced — a statement piece, not a 90KM upgrade.",
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
@@ -3295,7 +3237,6 @@
       "https://lining.com/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Li-Ning's mid-flagship competition shoe with a dual-density cushioning stack (BOUNSE+ in the forefoot, 䨻 in the heel) and a carbon-fiber + TPU plate for torsion control. — Reviewers describe a snug, last-tracking fit with low-stretch microfiber upper, a TPU heel counter that locks the foot, and crisp ground feedback at the forefoot for net-step adjustments. Heel landings absorb impact well — players report less knee/ankle fatigue after long sessions. Torsion plate is genuinely effective: cuts and 180° pivots stay aligned. Initiation is good but not class-leading: forefoot sits slightly thicker than ultra-light speed shoes, so absolute first-step is half a tick slower than e.g. Yonex Aerus Z2. Outsole grips clean wood floors well; reviewers note slipping on dusty / older courts (typical Li-Ning behavior — sand the sole on concrete to scrub the factory oxide layer).",
     "reviewCount": 0,
     "marketSignals": [
       {

@@ -20,13 +20,13 @@ export const messages = {
     home: {
       title: "Find the badminton gear that fits your game",
       subtitle:
-        "Five quick questions about how you actually play. We rank rackets, strings, shoes, and the rest of the kit by what fits your level, role, swing, and budget — with the reasoning right there on the card. Manufacturer specs first. Cited community reviews second. On-court testing where it matters.",
+        "Five quick questions about how you play. We rank rackets, strings, shoes, and the rest of the kit by level, role, swing, comfort, and budget, then label whether each spec source is an official product page or still needs verification.",
       start: "Start finder",
       guides: "Read guides",
       proof: [
         {
           title: "You can check our work",
-          body: "Every pick splits into official specs, editor interpretation, and cited community evidence — with confidence labels showing which parts are verified and which still need a second look.",
+          body: "Every pick separates product-page specs, editor interpretation, and cited community evidence, with confidence labels showing which parts are verified and which still need a second look.",
         },
         {
           title: "Built for how badminton is actually played",

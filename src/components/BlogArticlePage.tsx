@@ -301,7 +301,7 @@ export function BlogArticlePage({
       {/* Body */}
       <article className="layout-band max-w-3xl py-12 lg:py-16">
         <p className="mb-8 rounded-2xl bg-[color:var(--surface-muted)] p-4 text-sm text-[var(--color-muted)]">
-          Findings drawn from manufacturer specs, community sources
+          Findings drawn from product-page specs, community sources
           (BadmintonCN, Reddit r/badminton, BadmintonCentral, video reviewers),
           and on-court testing. See our{" "}
           <Link
