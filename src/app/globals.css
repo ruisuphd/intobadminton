@@ -1,18 +1,15 @@
 @import "tailwindcss";
 
 /*
- * Design system — light-only, BWF-inspired.
- * Goal: minimalist sport aesthetic. Heavy use of whitespace, type hierarchy,
- * shadows for depth (not borders), and a single signature accent color.
+ * Design system - light-only, evidence-led sport utility.
+ * Goal: restrained editorial interface with clear source and confidence states.
  */
 
 :root {
-  /* Surfaces — softer off-white body so elevated cards pop. Apple uses
-     a similar approach (#fbfbfd-ish body, white cards). */
-  --background: #f7f7f5;
+  --background: #f7f8fa;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --surface-muted: #f0f0ec;
+  --surface-muted: #f1f3f5;
   --line: rgba(15, 23, 42, 0.07);
   --line-strong: rgba(15, 23, 42, 0.14);
 
@@ -28,15 +25,19 @@
   --color-accent-soft: rgba(226, 35, 26, 0.08);
   --color-secondary: #0f2f58;
   --color-secondary-soft: rgba(15, 47, 88, 0.06);
+  --color-success: #047857;
+  --color-success-soft: rgba(4, 120, 87, 0.08);
+  --color-warning: #b45309;
+  --color-warning-soft: rgba(180, 83, 9, 0.08);
 
   /* Elevation */
   --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04),
     0 4px 12px rgba(15, 23, 42, 0.04);
-  --shadow-elevated: 0 4px 8px rgba(15, 23, 42, 0.04),
-    0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow-elevated: 0 4px 10px rgba(15, 23, 42, 0.05),
+    0 20px 40px rgba(15, 23, 42, 0.08);
 
   /* Radii */
-  --radius-card: 1.25rem;
+  --radius-card: 0.75rem;
   --radius-button: 9999px;
 }
 
@@ -74,21 +75,25 @@ body {
 .text-display {
   font-size: clamp(2.75rem, 5vw + 1rem, 4rem);
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
 .text-headline {
   font-size: clamp(2rem, 3vw + 0.75rem, 2.75rem);
   line-height: 1.1;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
 h1,
 h2,
 h3 {
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
+}
+
+[class*="tracking-"] {
+  letter-spacing: 0 !important;
 }
 
 :focus-visible {
@@ -103,6 +108,11 @@ h3 {
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.rounded-xl,
+.rounded-2xl {
+  border-radius: var(--radius-card);
 }
 
 @media (min-width: 768px) {
@@ -124,13 +134,20 @@ h3 {
 .card {
   background: var(--surface-elevated);
   border-radius: var(--radius-card);
+  border: 1px solid var(--line);
   box-shadow: var(--shadow-card);
-  transition: box-shadow 200ms ease, transform 200ms ease;
+  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
 }
 
 .card-interactive:hover {
   box-shadow: var(--shadow-elevated);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+}
+
+.card-interactive:focus-within {
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--color-accent);
 }
 
 .btn-primary {
@@ -144,7 +161,7 @@ h3 {
   color: white;
   font-weight: 500;
   font-size: 0.95rem;
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
   transition: background 160ms ease, transform 160ms ease;
 }
 
@@ -179,13 +196,15 @@ h3 {
 .chip {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   background: var(--color-accent-soft);
   color: var(--color-accent);
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
+  white-space: normal;
 }
 
 .chip-secondary {
@@ -197,4 +216,37 @@ h3 {
   background: var(--surface);
   color: var(--color-muted);
   border: 1px solid var(--line-strong);
+}
+
+.chip-success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.chip-warning {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+/* Hero decoration — subtle radial gradient backdrop. */
+.hero-decoration {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-decoration::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 60% 50% at 85% 0%, rgba(226, 35, 26, 0.06), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 0% 30%, rgba(15, 47, 88, 0.05), transparent 65%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card-interactive {
+    will-change: transform;
+  }
 }

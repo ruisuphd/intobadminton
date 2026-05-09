@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Yonex Badminton Rackets, Shoes & Strings — Astrox, Nanoflare, Arcsaber Decoded | IntoBadminton",
   description:
-    "The complete IntoBadminton guide to Yonex badminton: Astrox, Nanoflare, Arcsaber, Voltric, and Duora racket lines decoded by playing role and skill level. Plus Aerosensa shuttles, SHB and Power Cushion shoes, and BG65/BG80 strings.",
+    "IntoBadminton guide to Yonex badminton: Astrox (power), Nanoflare (speed), Arcsaber (control), Voltric, and Duora racket lines, plus Power Cushion shoes and BG/Exbolt strings — mapped to playing role, skill level, and source status.",
   keywords: [
     "Yonex",
     "Yonex badminton",
@@ -16,12 +16,31 @@ export const metadata: Metadata = {
     "Yonex badminton shoes",
     "Yonex BG65",
     "Yonex BG80",
+    "Yonex Exbolt 63",
     "best Yonex racket",
     "Astrox 100ZZ",
-    "Nanoflare 700",
+    "Nanoflare 1000Z",
+    "Nanoflare 800 Pro",
     "Astrox 88D Pro",
+    "Astrox 88S Pro",
+    "Astrox 99 Pro",
+    "Astrox 77 Pro",
   ],
   alternates: { canonical: "/brands/yonex/" },
+  openGraph: {
+    title: "Yonex Badminton Rackets, Shoes & Strings Decoded — Astrox, Nanoflare, Arcsaber",
+    description:
+      "Yonex's main racket lines mapped to playing role and skill level: Astrox for power attack, Nanoflare for speed, Arcsaber for control. Plus Power Cushion shoes and BG / Exbolt strings.",
+    url: "/brands/yonex/",
+    type: "article",
+    siteName: "IntoBadminton",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yonex Badminton — Astrox, Nanoflare & Arcsaber Decoded",
+    description:
+      "Astrox (power), Nanoflare (speed), Arcsaber (control). Plus shoes and strings — by role, level, and budget.",
+  },
 };
 
 const config: BrandPageConfig = {
@@ -32,11 +51,11 @@ const config: BrandPageConfig = {
   hqCountry: "Japan",
   officialUrl: "https://www.yonex.com/badminton/",
   title: "Yonex badminton: every racket line, decoded",
-  dek: "The world's largest badminton brand. Astrox for power, Nanoflare for speed, Arcsaber for control, plus the deepest catalogue of shoes, strings, and shuttles. Here is what each line actually does on court.",
+  dek: "Astrox for power, Nanoflare for speed, Arcsaber for control, plus shoes, strings, and shuttles. Here is how IntoBadminton maps each line to player role and source status.",
   intro:
-    "Yonex is the default global badminton brand and the only one with truly worldwide distribution — from BWF tour stages to Singapore school halls to Dublin sports shops. Founded in Niigata, Japan in 1946, it sponsors a long list of top players (Viktor Axelsen, An Se Young, Loh Kean Yew, Akane Yamaguchi) and supplies the official shuttle of most major tournaments.",
+    "Yonex is one of the most visible badminton brands globally, with official product pages that usually publish racket flex, frame material, shaft material, weight / grip, stringing advice, colour, and item code. IntoBadminton uses those product pages wherever available.",
   positioning:
-    "Yonex's main racket lines are organized around what the racket does, not what tier it sits in. Astrox is power-attack head-heavy. Nanoflare is fast-swing head-light. Arcsaber is even-balance control. Voltric is older but still excellent for heavy-smash 3U setups. Duora is the dual-frame line. Once you know which line fits your role, model selection collapses to weight class (3U/4U/5U), shaft flex, and budget.",
+    "Yonex's main racket lines are organised around playing intent. Astrox generally leans power attack, Nanoflare generally leans fast swing speed, and Arcsaber generally leans control. Model selection still depends on the exact official spec row: weight class, grip size, shaft flex, stringing advice, and budget.",
   lines: [
     {
       name: "Astrox — head-heavy power and attack",
@@ -143,7 +162,7 @@ const config: BrandPageConfig = {
     },
     {
       q: "Are Yonex rackets worth the premium over Victor and Li-Ning?",
-      a: "On the racket itself, no — Victor Auraspeed and Li-Ning AxForce flagships often match or beat Yonex on raw smash power and swing speed at the same price tier. Where Yonex earns the premium is distribution (you can find them anywhere globally), resale liquidity (used Yonex sells fastest), stringer familiarity (any badminton-aware stringer knows Yonex grommet patterns), and the deepest accessory ecosystem.",
+      a: "Only if the specific Yonex model fits your level, role, and local support needs. Compare the exact official product-page specs, warranty channel, stringer familiarity, and local availability against the Victor or Li-Ning model you are considering.",
     },
     {
       q: "What strings come pre-strung on a new Yonex racket?",

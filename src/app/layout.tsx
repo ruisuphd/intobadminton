@@ -18,18 +18,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "IntoBadminton — the most accurate badminton equipment matcher",
+    default: "IntoBadminton — evidence-led badminton equipment finder",
     template: "%s | IntoBadminton",
   },
   description:
-    "Personalized badminton equipment recommendations matched to your level, playing style, body, and budget. Rackets, strings, shoes, bags, shuttles, and grips ranked with transparent scoring backed by manufacturer specs, cited community reviews, and on-court testing by a competitive player.",
+    "Badminton racket, string, shoe, bag, shuttle, and grip recommendations matched to your level, playing style, body, and budget, with source authority labels and transparent scoring.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
   ),
   openGraph: {
     title: "IntoBadminton — Badminton Racket, String & Shoe Finder",
     description:
-      "Personalized badminton equipment recommendations tuned to your level, playing style, body, and budget. Transparent fit scoring backed by manufacturer specs and on-court testing.",
+      "Badminton equipment recommendations tuned to your level, playing style, body, and budget. Transparent fit scoring with product-source authority labels.",
     type: "website",
     siteName: "IntoBadminton",
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IntoBadminton — Badminton Equipment Finder",
     description:
-      "Personalized badminton racket, string, shoe, and bag recommendations. Transparent fit scoring by a competitive player.",
+      "Badminton racket, string, shoe, and bag recommendations with transparent scoring and source authority labels.",
     images: ["/intobadminton-logo.png"],
   },
   alternates: {

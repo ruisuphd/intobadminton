@@ -6,16 +6,34 @@ export const metadata: Metadata = {
   title:
     "Badminton Equipment FAQ — Rackets, Strings, Shoes & Tension | IntoBadminton",
   description:
-    "Honest answers from a competitive player. Choosing a badminton racket by level, weight class (3U/4U/5U), shaft flex, and balance; string tension; shoe-vs-running-shoe; restringing schedules; brand differences. No marketing language.",
+    "Practical badminton equipment FAQ: racket level fit, weight class (3U/4U/5U), shaft flex, balance, string tension, shoe fit width, restringing cadence, and source verification — answered in plain English.",
   keywords: [
     "badminton FAQ",
     "how to choose badminton racket",
     "badminton string tension",
     "3U vs 4U badminton",
+    "what is head-heavy badminton racket",
     "badminton shoes vs running shoes",
     "how often to restring badminton",
+    "badminton racket shaft flex explained",
+    "Yonex vs Victor vs Li-Ning",
+    "badminton beginner racket guide",
   ],
   alternates: { canonical: "/faq/" },
+  openGraph: {
+    title: "Badminton Equipment FAQ — Rackets, Strings, Shoes & Tension",
+    description:
+      "Plain-English answers to the questions players actually ask about badminton rackets, strings, shoes, and tension.",
+    url: "/faq/",
+    type: "article",
+    siteName: "IntoBadminton",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Badminton Equipment FAQ — Plain Answers",
+    description:
+      "Racket level fit, 3U vs 4U, shaft flex, string tension, shoe fit width — all answered.",
+  },
 };
 
 const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
@@ -24,15 +42,15 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "How do I choose the right badminton racket?",
-        a: "Match three things: skill level, playing role, and timing. Beginners and most club players do better with medium-flex 4U or 5U rackets that have even or slightly head-light balance. Smash-heavy singles and rear-court doubles players benefit from head-heavy frames once their technique is stable. The IntoBadminton finder asks for level, discipline, style, body, and budget, then ranks rackets transparently.",
+        a: "Start with skill level, playing role, timing, and comfort. A racket that fits your contact quality is more useful than a flagship frame you cannot load consistently. The IntoBadminton finder asks for level, discipline, style, body, and budget, then ranks rackets transparently.",
       },
       {
         q: "Is a more expensive racket always better?",
-        a: "No, especially not for beginners. Flagship rackets are tuned around extreme stiffness and unforgiving sweet spots. A beginner with a $90 Nanoray Light 70i will usually outperform the same beginner with a $300 Astrox 100ZZ — and avoid tennis elbow.",
+        a: "No. Price does not prove fit. Some flagship rackets are stiff and demanding, while some lower-priced rackets are easier to time. Check the exact model, source status, weight class, shaft flex, and return policy before buying.",
       },
       {
         q: "Yonex, Victor, or Li-Ning — which brand is best?",
-        a: "There is no single best badminton brand. Yonex has the deepest catalogue and the strongest North American distribution. Victor leads on speed-oriented frames and dominates Korean tour play. Li-Ning AxForce, BladeX, and Halbertec models lead on smash-power per dollar. Pick by which model fits your role, not by brand loyalty.",
+        a: "There is no single best badminton brand for every player. Compare the exact model, weight and grip variant, shaft flex, balance, warranty channel, and local availability. Pick by model fit, not by brand loyalty.",
       },
       {
         q: "What weight class — 3U, 4U, or 5U — should I buy?",
@@ -45,15 +63,15 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "What badminton string should a club player use?",
-        a: "Most club players are over-strung and under-restrung. Try Yonex BG65 or Li-Ning No.1 at 22-24 lb if you want durability and forgiveness. Move to BG80, BG80 Power, or Li-Ning No.5 for crisper feel. Aerobite-style hybrids reward players with cleaner contact.",
+        a: "Match string gauge and tension to contact quality, durability needs, and arm comfort. Treat any tension suggestion as a starting point, then ask a qualified stringer to account for your racket frame, string, shuttle speed, and injury history.",
       },
       {
         q: "What tension should I string my badminton racket at?",
-        a: "If your racket is 4U/5U and you are a club player: 22-24 lb is the safe range. 4U intermediate doubles: 24-26 lb. Pro-level singles attackers: 27-29 lb. Anything above 30 lb on amateur swing speed reduces real-game power because the sweet spot becomes too narrow.",
+        a: "Use the racket maker's listed stringing advice as the hard boundary, then choose a tension based on contact quality, string type, shuttle speed, and arm comfort. Higher tension can reduce the effective sweet spot, so it should be earned gradually.",
       },
       {
         q: "How often should I restring my racket?",
-        a: "Restring at the earlier of: every 30-50 sessions of regular play, every 3-4 months even if the string has not broken, or immediately if you can press through the bed-plane more than 1 cm with your finger. Tension drops well before the string visibly fails.",
+        a: "Restring when playability drops, when strings fray, after a break, or when your stringer recommends it for your usage pattern. Tension loss happens before visible failure, but the right interval depends on hours played, string gauge, and hitting style.",
       },
     ],
   },
@@ -62,15 +80,15 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "Are badminton shoes really different from running shoes?",
-        a: "Yes — and the difference matters more than the racket for most amateurs. Badminton shoes use gum rubber outsoles for grip on wood courts, low-profile midsoles to keep your foot close to the floor, and lateral reinforcement for split steps and side lunges. Running shoes have raised heels and softer foams that promote forward roll, which is the opposite of what badminton footwork needs.",
+        a: "Badminton footwork includes split steps, lunges, braking, and side-to-side movement. Choose court shoes designed for lateral stability and indoor grip, and try them with badminton socks before relying on them in match play.",
       },
       {
         q: "Can I use my running shoes for badminton at first?",
-        a: "Strongly discouraged once you play more than once a week. Running shoes have raised heels that promote ankle rolling on lateral movement — it is the most common preventable ankle injury at club level. A $90 entry-tier badminton shoe is dramatically safer than a $200 running shoe on a wood court.",
+        a: "Use court shoes as soon as possible. Running shoes are designed primarily for forward motion, while badminton requires lateral braking and lunging. If you are uncertain, ask a coach or shoe fitter before playing hard sessions.",
       },
       {
         q: "How often should I replace my badminton shoes?",
-        a: "Most club players need new shoes every 9-15 months even if the upper looks fine. The midsole compresses and the outsole gum rubber loses grip long before visible wear. Track replacement by date, not by appearance.",
+        a: "Replace shoes when grip, cushioning, stability, or fit is no longer reliable. The interval depends on court surface, player weight, training hours, and shoe construction.",
       },
     ],
   },
@@ -79,7 +97,7 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: "How does the IntoBadminton finder score recommendations?",
-        a: "Every result breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. Manufacturer specs are the strongest signal, editor interpretation translates specs into on-court feel, and community evidence (BadmintonCN, Reddit, BadmintonCentral, video reviewers) appears as cited metadata summaries with links — never copied text.",
+        a: "Every result breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. Source labels distinguish official product pages from third-party or still-unverified references.",
       },
       {
         q: "Do I need to pay or create an account to use IntoBadminton?",

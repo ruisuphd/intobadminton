@@ -3,10 +3,38 @@ import Link from "next/link";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Best of badminton — buying guides for rackets, shoes, and strings",
+  title: "Best Badminton Rackets, Shoes & Strings — Buying Guides 2026",
   description:
-    "Curated badminton buying guides — best rackets for beginners, intermediates, doubles, and smash; best shoes by fit width; best strings by feel and durability.",
+    "Curated 2026 badminton buying guides: best rackets for beginners, intermediates, doubles, and smash; best shoes by fit width; best strings by feel and durability. Each pick is scored on transparent fit factors, with source authority labelled.",
+  keywords: [
+    "best badminton racket",
+    "best badminton rackets 2026",
+    "best beginner badminton racket",
+    "best intermediate badminton racket",
+    "best doubles badminton racket",
+    "best smash racket",
+    "best badminton shoes",
+    "best badminton strings",
+    "badminton buying guide",
+    "Yonex Astrox best",
+    "Victor Auraspeed best",
+    "Li-Ning AxForce best",
+  ],
   alternates: { canonical: "/best/" },
+  openGraph: {
+    title: "Best Badminton Rackets, Shoes & Strings — Buying Guides 2026",
+    description:
+      "Curated badminton buying guides for rackets, shoes, and strings — every pick is scored on transparent fit factors with source authority labelled.",
+    url: "/best/",
+    type: "website",
+    siteName: "IntoBadminton",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Badminton Rackets, Shoes & Strings — 2026 Buying Guides",
+    description:
+      "Best badminton rackets, shoes, and strings — by level, role, and fit width. Transparent scoring, source labels, no email gate.",
+  },
 };
 
 const SECTIONS: { heading: string; items: { href: string; title: string; dek: string }[] }[] = [
@@ -62,11 +90,34 @@ export default function BestIndexPage() {
     ],
   };
 
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${companyInfo.siteUrl}/best/#itemlist`,
+    name: "IntoBadminton best-of buying guides",
+    description:
+      "Hand-curated badminton buying guides covering rackets, shoes, and strings — each shortlist is scored on transparent fit factors.",
+    numberOfItems: SECTIONS.flatMap((s) => s.items).length,
+    itemListElement: SECTIONS.flatMap((section) =>
+      section.items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.title,
+        url: `${companyInfo.siteUrl}${item.href}`,
+        description: item.dek,
+      }))
+    ),
+  };
+
   return (
     <main className="flex-1 py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <div className="layout-band max-w-6xl">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">

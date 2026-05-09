@@ -36,8 +36,9 @@ export default function MethodologyPage() {
         <p>
           Product records include category-specific specs: racket weight and
           balance, string gauge and tension range, shoe width/stability, bag
-          capacity, source URLs, and verification dates. Official specs take
-          priority over forum opinions.
+          capacity, source URLs, and verification dates. A spec is treated as
+          manufacturer-verified only when the row points to an official
+          product-specific page.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           3. Evidence references

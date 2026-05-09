@@ -15,12 +15,39 @@ function confidence(r: ScoredProduct) {
   return r.confidence.label;
 }
 
-function fitScoreBand(fitScore: number): { label: string; tone: string } {
+function specSourceLabel(r: ScoredProduct) {
+  return r.evidenceProfile.officialSpec.sourceAuthority.label;
+}
+
+function fitScoreBand(fitScore: number): {
+  label: string;
+  tone: string;
+  chipClass: string;
+} {
   const score = fitScore * 100;
-  if (score >= 80) return { label: "Strong match", tone: "text-emerald-700" };
-  if (score >= 65) return { label: "Solid match", tone: "text-[var(--color-accent)]" };
-  if (score >= 50) return { label: "Moderate match", tone: "text-amber-700" };
-  return { label: "Weak match", tone: "text-[var(--color-subtle)]" };
+  if (score >= 80)
+    return {
+      label: "Strong match",
+      tone: "text-emerald-700",
+      chipClass: "chip-success",
+    };
+  if (score >= 65)
+    return {
+      label: "Solid match",
+      tone: "text-[var(--color-accent)]",
+      chipClass: "chip",
+    };
+  if (score >= 50)
+    return {
+      label: "Moderate match",
+      tone: "text-amber-700",
+      chipClass: "chip-warning",
+    };
+  return {
+    label: "Weak match",
+    tone: "text-[var(--color-subtle)]",
+    chipClass: "chip-neutral",
+  };
 }
 
 function reasonGroup(code: string) {
@@ -48,15 +75,19 @@ function categoryLabel(category: ScoredProduct["category"]) {
   return CATEGORY_LABEL[category];
 }
 
+function humanize(s: string): string {
+  return s.replace(/_/g, " ");
+}
+
 function specLine(r: ScoredProduct) {
   if (r.category === "racket") {
-    return `${r.weightVariants.join("/")} · ${r.headWeight.replace("_", " ")} · ${r.shaftFlex} shaft`;
+    return `${r.weightVariants.join("/")} · ${humanize(r.headWeight)} · ${humanize(r.shaftFlex)} shaft`;
   }
   if (r.category === "string") {
-    return `${r.gaugeMm.toFixed(2)} mm · ${r.feel} feel · ${r.repulsion.replace("_", " ")} repulsion · ${r.durability} durability`;
+    return `${r.gaugeMm.toFixed(2)} mm · ${r.feel} feel · ${humanize(r.repulsion)} repulsion · ${r.durability} durability`;
   }
   if (r.category === "shoes") {
-    return `${r.fitWidth.replace("_", " ")} fit · ${r.cushioning} cushioning · ${r.stability.replace("_", " ")} stability`;
+    return `${humanize(r.fitWidth)} fit · ${r.cushioning} cushioning · ${humanize(r.stability)} stability`;
   }
   if (r.category === "bag") {
     return `${r.capacityRackets} rackets · ${r.sizeClass} size · ${r.hasShoeCompartment ? "shoe compartment" : "no shoe compartment"}`;
@@ -96,36 +127,38 @@ export function ResultCard({
           </div>
         </div>
         <div className="flex flex-col items-end">
-          <p className="text-3xl font-semibold text-[var(--color-accent)]">
+          <p className="text-3xl font-semibold tabular-nums text-[var(--color-accent)]">
             {(r.fitScore * 100).toFixed(0)}
           </p>
           <p className="text-xs text-[var(--color-subtle)]">
             {"fit score"}
           </p>
-          <p className={`mt-1 text-xs font-medium ${fitScoreBand(r.fitScore).tone}`}>
+          <span
+            className={`mt-2 ${fitScoreBand(r.fitScore).chipClass}`}
+            aria-label={`${fitScoreBand(r.fitScore).label} for your profile`}
+          >
             {fitScoreBand(r.fitScore).label}
-          </p>
+          </span>
         </div>
       </header>
 
       <p className="mt-3 text-sm text-[var(--color-muted)]">
-        ${r.priceUsd} · {specLine(r)}
+        ~${r.priceUsd} street-price estimate · {specLine(r)}
       </p>
 
       <p className="mt-4 text-xs text-[var(--color-subtle)]">
-        {"Confidence"}: {confidence(r)} ·{" "}
-        {"Official spec"}:{" "}
-        {r.evidenceProfile.officialSpec.status.replace("_", " ")} ·{" "}
+        {"Confidence"}: {confidence(r)} · {"Spec source"}:{" "}
+        {specSourceLabel(r)} ·{" "}
         {r.evidenceProfile.officialSpec.lastVerifiedAt}
       </p>
 
       <div className="mt-5 grid gap-3 text-xs sm:grid-cols-3">
         <div className="rounded-xl bg-[color:var(--surface-muted)] p-3">
           <p className="font-medium text-[var(--text)]">
-            {"Official spec"}
+            {"Spec source"}
           </p>
           <p className="mt-1 text-[var(--color-muted)]">
-            {r.evidenceProfile.officialSpec.status.replace("_", " ")}
+            {specSourceLabel(r)}
           </p>
         </div>
         <div className="rounded-xl bg-[color:var(--surface-muted)] p-3">
@@ -133,7 +166,7 @@ export function ResultCard({
             {"Editor signal"}
           </p>
           <p className="mt-1 text-[var(--color-muted)]">
-            {r.evidenceProfile.editorSignal.source.replace("_", " ")}
+            {humanize(r.evidenceProfile.editorSignal.source)}
           </p>
         </div>
         <div className="rounded-xl bg-[color:var(--surface-muted)] p-3">
@@ -146,6 +179,13 @@ export function ResultCard({
           </p>
         </div>
       </div>
+
+      {!r.evidenceProfile.officialSpec.sourceAuthority.canVerifySpecs && (
+        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs leading-relaxed text-amber-900">
+          This product row still needs an official product-page source before
+          its listed specs should be treated as manufacturer-verified.
+        </div>
+      )}
 
       {r.resale && (
         <div className="mt-4 rounded-xl bg-[color:var(--surface-muted)] p-4 text-xs">
@@ -179,9 +219,21 @@ export function ResultCard({
       {r.sourceChips.length > 0 && (
         <div className="mt-5 flex flex-wrap gap-2">
           {r.sourceChips.map((c) => (
-            <span key={c.type + c.label} className="chip chip-secondary">
-              {c.type.replace("_", " ")}: {c.label}
-            </span>
+            c.href ? (
+              <a
+                key={c.type + c.label}
+                href={c.href}
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                className="chip chip-secondary hover:underline"
+              >
+                {humanize(c.type)}: {c.label}
+              </a>
+            ) : (
+              <span key={c.type + c.label} className="chip chip-secondary">
+                {humanize(c.type)}: {c.label}
+              </span>
+            )
           ))}
         </div>
       )}

@@ -29,7 +29,7 @@ const copyEn: Copy = {
   editorialHeading: "How recommendations are made",
   editorialBody: [
     "Every score the finder produces breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. You can read the exact weighting on the methodology page.",
-    "We treat sources in three tiers. Manufacturer official spec pages are the strongest signal. Editor interpretation translates those specs into how a frame usually feels on court. Community evidence — BadmintonCentral threads, Reddit, BadmintonCN, YouTube reviews — appears as cited metadata summaries with links, never as copied text.",
+    "We treat source authority explicitly. A product-specific official page is the strongest source for specs. Editor interpretation translates those specs into possible on-court feel. Community evidence — BadmintonCentral threads, Reddit, BadmintonCN, YouTube reviews — appears as cited metadata summaries with links, never as copied text.",
   ],
   editorialPrinciples: [
     {
@@ -38,7 +38,7 @@ const copyEn: Copy = {
     },
     {
       title: "Confidence is visible.",
-      body: "Every product card shows whether the official spec is verified, whether editor signal is from manufacturer materials or independent testing, and how many cited reviews back the result. Low-confidence items still appear, but they are labelled.",
+      body: "Every product card shows whether the source is an official product page, a third-party page, or a row that still needs review. Low-confidence items can still appear, but they are labelled.",
     },
     {
       title: "Editorial separation from monetization.",

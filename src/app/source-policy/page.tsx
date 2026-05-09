@@ -15,9 +15,10 @@ export default function SourcePolicyPage() {
           Source and copyright policy
         </h1>
         <p>
-          IntoBadminton uses official product specs first. Third-party reviews
-          and forum discussions are treated as permission-gated evidence, not as
-          content to bulk copy or republish.
+          IntoBadminton treats a product-specific official page as the strongest
+          source for product specs. Third-party reviews, retailer listings, and
+          forum discussions are labelled separately and are not presented as
+          manufacturer verification.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           Reddit and forums
@@ -43,8 +44,9 @@ export default function SourcePolicyPage() {
         <p>
           The planned ingestion pipeline stores source URLs, language, product
           matches, timestamps, hashes, themes, confidence, and human-reviewed
-          summaries. It avoids full copied third-party posts unless expressly
-          permitted.
+          summaries. It avoids copied third-party posts unless expressly
+          permitted, and any row without an official product-page source is
+          marked for review.
         </p>
       </article>
     </main>

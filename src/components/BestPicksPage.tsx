@@ -54,12 +54,11 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
         ...(canShowProductImage(p.image) && p.image
           ? { image: p.image.url }
           : {}),
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "USD",
-          price: p.priceUsd,
-          availability: "https://schema.org/InStock",
-        },
+        additionalProperty: p.specs.map((spec) => ({
+          "@type": "PropertyValue",
+          name: spec.label,
+          value: spec.value,
+        })),
       },
     })),
   };
@@ -156,8 +155,11 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     </h3>
                   </div>
                 </div>
-                <p className="text-sm font-semibold text-[var(--color-accent)]">
+                <p className="text-right text-sm font-semibold text-[var(--color-accent)]">
                   ~${p.priceUsd}
+                  <span className="block text-xs font-normal text-[var(--color-subtle)]">
+                    street estimate
+                  </span>
                 </p>
               </div>
               <p className="mt-2 text-xs uppercase tracking-wide text-[var(--color-subtle)]">

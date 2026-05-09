@@ -38,11 +38,12 @@ export function SiteHeader() {
   const close = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[color:var(--line)] bg-white/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-[color:var(--line)] bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/75">
       <div className="layout-band flex h-16 max-w-6xl items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 text-base font-semibold tracking-tight text-[var(--text)]"
+          aria-label="IntoBadminton — go to home"
+          className="flex items-center gap-2 text-base font-semibold tracking-tight text-[var(--text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:rounded-md"
         >
           <Image
             src={`${basePath}/intobadminton-mark.png`}
@@ -52,7 +53,7 @@ export function SiteHeader() {
             priority
             className="h-7 w-7"
           />
-          IntoBadminton
+          <span>IntoBadminton</span>
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm sm:flex" aria-label="Primary">

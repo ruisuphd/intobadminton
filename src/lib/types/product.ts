@@ -1,10 +1,12 @@
 import type { EquipmentCategory, FootWidth, SkillLevel } from "@/lib/taxonomy";
+import type { SourceAuthority } from "@/lib/source-authority";
 
 export type HeadWeight = "head_light" | "even" | "head_heavy";
 export type ShaftFlex = "flexible" | "medium" | "stiff" | "extra_stiff";
 export type WeightClass = "3U" | "4U" | "5U" | "6U" | "F";
 export type SourceChip =
   | "manufacturer_spec"
+  | "source_status"
   | "review_summary"
   | "editor_note"
   | "market_signal";
@@ -186,6 +188,7 @@ export type ScoredProduct = ProductRecord & {
       status: VerificationStatus;
       lastVerifiedAt: string;
       href: string;
+      sourceAuthority: SourceAuthority;
     };
     editorSignal: {
       note?: string;
