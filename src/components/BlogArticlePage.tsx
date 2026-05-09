@@ -225,6 +225,35 @@ export function BlogArticlePage({
     articleSection: CATEGORY_LABELS[article.category],
   };
 
+  // Emit a Review entity ONLY when the article is explicitly a review and
+  // has a reviewSummary verdict. The itemReviewed is the article topic
+  // (Thing), not a Product, because the review may cover multiple
+  // products (head-to-heads) and we do not want to overclaim.
+  const reviewJsonLd =
+    article.category === "reviews" && article.reviewSummary
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Review",
+          "@id": `${canonicalUrl}#review`,
+          name: `${article.title} — IntoBadminton review`,
+          itemReviewed: {
+            "@type": "Thing",
+            name: article.title.replace(/[—:]\s.+$/, "").trim(),
+            description: article.dek,
+          },
+          author: {
+            "@type": "Person",
+            name: companyInfo.founderName,
+            url: companyInfo.founderWebsite,
+          },
+          publisher: organizationJsonLd,
+          datePublished: article.updatedAt,
+          dateModified: article.updatedAt,
+          reviewBody: article.reviewSummary.verdict,
+          inLanguage: "en",
+        }
+      : null;
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -256,6 +285,12 @@ export function BlogArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
       />
+      {reviewJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

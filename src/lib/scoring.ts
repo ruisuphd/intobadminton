@@ -2,6 +2,7 @@ import products from "@/data/products.json";
 import { getEvidenceSummary } from "@/lib/review-evidence";
 import { REASON_LABELS, type ReasonCode } from "@/lib/reason-codes";
 import { sourceAuthorityForProduct } from "@/lib/source-authority";
+import { humanize } from "@/lib/text";
 import type {
   BagProduct,
   ProductRecord,
@@ -221,10 +222,6 @@ function scoreBody(
   }
   if (userLevel === "recreational" && p.shaftFlex === "extra_stiff") s -= 0.1;
   return Math.max(0, Math.min(1, s));
-}
-
-function humanize(s: string): string {
-  return s.replace(/_/g, " ");
 }
 
 function buildSourceChips(p: ProductRecord): { type: SourceChip; label: string; href?: string }[] {

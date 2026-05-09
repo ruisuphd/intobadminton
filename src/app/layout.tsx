@@ -14,6 +14,9 @@ import { Providers } from "./providers";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+  // Limit weights to what we actually use to keep the font payload tight.
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
