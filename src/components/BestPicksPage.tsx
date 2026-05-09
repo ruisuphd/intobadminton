@@ -6,7 +6,15 @@ import {
   canShowProductImage,
 } from "@/components/ProductImage";
 import { companyInfo } from "@/lib/company";
-import type { ProductImage } from "@/lib/types/product";
+import {
+  computeEditorialRating,
+  lookupCatalogProduct,
+  ratingDatePublished,
+} from "@/lib/editorial-rating";
+import productsCatalog from "@/data/products.json";
+import type { ProductImage, ProductRecord } from "@/lib/types/product";
+
+const CATALOG = productsCatalog as ProductRecord[];
 
 export type Pick = {
   rank: number;
@@ -43,24 +51,73 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
     name: config.title,
     inLanguage: "en",
     numberOfItems: config.picks.length,
-    itemListElement: config.picks.map((p) => ({
-      "@type": "ListItem",
-      position: p.rank,
-      item: {
-        "@type": "Product",
-        name: `${p.brand} ${p.name}`,
-        brand: { "@type": "Brand", name: p.brand },
-        category: config.productSchemaCategory,
-        ...(canShowProductImage(p.image) && p.image
-          ? { image: p.image.url }
+    itemListElement: config.picks.map((p) => {
+      const catalogMatch = lookupCatalogProduct(CATALOG, p.brand, p.name);
+      const rating = computeEditorialRating(catalogMatch);
+      const datePublished = ratingDatePublished(catalogMatch);
+      const reviewBody =
+        catalogMatch?.editorNote ?? `${p.why} ${p.tradeoff}`.trim();
+
+      const review = {
+        "@type": "Review" as const,
+        name: `${p.brand} ${p.name} — IntoBadminton editor's review`,
+        author: {
+          "@type": "Person" as const,
+          name: companyInfo.founderName,
+          url: companyInfo.founderWebsite,
+        },
+        publisher: {
+          "@type": "Organization" as const,
+          name: companyInfo.siteName,
+          url: companyInfo.siteUrl,
+        },
+        datePublished,
+        reviewBody,
+        ...(rating
+          ? {
+              reviewRating: {
+                "@type": "Rating" as const,
+                ratingValue: rating.ratingValue,
+                bestRating: rating.bestRating,
+                worstRating: rating.worstRating,
+              },
+            }
           : {}),
-        additionalProperty: p.specs.map((spec) => ({
-          "@type": "PropertyValue",
-          name: spec.label,
-          value: spec.value,
-        })),
-      },
-    })),
+      };
+
+      const aggregateRating =
+        rating && rating.meetsAggregateThreshold
+          ? {
+              "@type": "AggregateRating" as const,
+              ratingValue: rating.ratingValue,
+              reviewCount: rating.reviewCount,
+              bestRating: rating.bestRating,
+              worstRating: rating.worstRating,
+            }
+          : undefined;
+
+      return {
+        "@type": "ListItem" as const,
+        position: p.rank,
+        item: {
+          "@type": "Product" as const,
+          name: `${p.brand} ${p.name}`,
+          brand: { "@type": "Brand" as const, name: p.brand },
+          category: config.productSchemaCategory,
+          description: `${p.bestFor}. ${p.why}`,
+          ...(canShowProductImage(p.image) && p.image
+            ? { image: p.image.url }
+            : {}),
+          additionalProperty: p.specs.map((spec) => ({
+            "@type": "PropertyValue" as const,
+            name: spec.label,
+            value: spec.value,
+          })),
+          review,
+          ...(aggregateRating ? { aggregateRating } : {}),
+        },
+      };
+    }),
   };
 
   const faqJsonLd = {
