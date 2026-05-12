@@ -8,7 +8,6 @@ import { CookieSettings } from "@/components/CookieSettings";
 import { FundingChoicesScript } from "@/components/FundingChoicesScript";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { StructuredData } from "@/components/StructuredData";
 import { Providers } from "./providers";
 
 const inter = Inter({
@@ -25,14 +24,14 @@ export const metadata: Metadata = {
     template: "%s | IntoBadminton",
   },
   description:
-    "Badminton racket, string, shoe, bag, shuttle, and grip recommendations matched to your level, playing style, body, and budget, with source authority labels and transparent scoring.",
+    "Badminton racket, string, shoe, and bag recommendations matched to your level, style, body, and budget — with source authority labels and transparent scoring.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com"
   ),
   openGraph: {
     title: "IntoBadminton — Badminton Racket, String & Shoe Finder",
     description:
-      "Badminton equipment recommendations tuned to your level, playing style, body, and budget. Transparent fit scoring with product-source authority labels.",
+      "Badminton racket, string, shoe, and bag recommendations tuned to your level, style, body, and budget. Transparent fit scoring with source labels.",
     type: "website",
     siteName: "IntoBadminton",
     locale: "en_US",
@@ -51,13 +50,6 @@ export const metadata: Metadata = {
     description:
       "Badminton racket, string, shoe, and bag recommendations with transparent scoring and source authority labels.",
     images: ["/intobadminton-logo.png"],
-  },
-  alternates: {
-    canonical: "/",
-    languages: {
-      en: "/",
-      "x-default": "/",
-    },
   },
   robots: {
     index: true,
@@ -85,7 +77,6 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
-          <StructuredData />
           <ConsentModeDefaults />
           <FundingChoicesScript />
           <Analytics />

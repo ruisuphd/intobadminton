@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title:
-    "Li-Ning Badminton Rackets, Shoes & Strings — AxForce, BladeX, Halbertec & Aeronaut | IntoBadminton",
+  title: "Li-Ning Badminton — AxForce, BladeX, Halbertec",
   description:
-    "IntoBadminton guide to Li-Ning badminton: AxForce (Thunder line, attack), BladeX (锋影, speed), Halbertec (战戟, Tectonic frame), Aeronaut, plus shoes and L-series strings. Decoded by playing role with current source-verification status.",
+    "Li-Ning's racket lines decoded: AxForce (attack), BladeX (speed), Halbertec (technical), Aeronaut (control) — plus shoes and L-series strings.",
   keywords: [
     "Li-Ning",
     "Li-Ning badminton",
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     url: "/brands/li-ning/",
     type: "article",
     siteName: "IntoBadminton",
+    images: [...defaultOgImages],
   },
   twitter: {
     card: "summary_large_image",
@@ -55,7 +56,7 @@ const config: BrandPageConfig = {
   title: "Li-Ning badminton: AxForce, BladeX, Halbertec & Aeronaut decoded",
   dek: "AxForce for power, BladeX for speed, Halbertec for technical attack, and Aeronaut for control. Li-Ning rows currently need product-page verification before their specs should be treated as manufacturer-confirmed.",
   intro:
-    "Li-Ning was founded in 1990 by Chinese Olympic gymnast Li Ning. Its badminton catalogue includes AxForce, BladeX, Halbertec, Aeronaut, and Tectonic families, but IntoBadminton marks model specs as needing review unless an official product-specific source is attached.",
+    "Li-Ning was founded by Chinese Olympic gymnast Li Ning — he began the company in 1989 and the modern Li-Ning brand was officially incorporated in 1990, so you'll see both years cited in different sources. Its badminton catalogue includes AxForce, BladeX, Halbertec, Aeronaut, and Tectonic families, but IntoBadminton marks model specs as needing review unless an official product-specific source is attached.",
   positioning:
     "Li-Ning's racket lines split by attack mode rather than by tier. AxForce is generally positioned around attack, BladeX around speed, Halbertec around technical attack, Aeronaut around control, and Tectonic around power-control. Check the exact model row before relying on any spec.",
   lines: [

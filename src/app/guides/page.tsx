@@ -4,9 +4,9 @@ import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Badminton equipment guides — IntoBadminton",
+  title: "Badminton equipment guides",
   description:
-    "Practical badminton equipment guides on string tension, racket balance, shoes and footwork, doubles court roles, season refresh, authenticity checks, badminton shoes for wide feet, and a glossary of every term you'll see on a spec sheet.",
+    "Practical badminton guides — string tension, racket balance, shoes and footwork, doubles roles, season refresh, authenticity checks, plus a 40-term glossary.",
   alternates: { canonical: "/guides/" },
 };
 

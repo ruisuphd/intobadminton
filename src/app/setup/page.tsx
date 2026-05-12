@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Commercial launch setup — IntoBadminton",
+  title: "Commercial launch setup",
   description:
     "Operator checklist for AdSense, analytics, privacy, security, and launch readiness.",
   alternates: { canonical: "/setup/" },

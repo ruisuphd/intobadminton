@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ReviewForm } from "./ReviewForm";
 
 export const metadata: Metadata = {
-  title: "Submit equipment review — IntoBadminton",
+  title: "Submit equipment review",
   description:
     "Submit a structured badminton equipment review to improve future recommendations.",
   alternates: { canonical: "/review/" },

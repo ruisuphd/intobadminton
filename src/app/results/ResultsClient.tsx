@@ -3,6 +3,7 @@
 import { useEffect, useMemo } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
+import { JsonLd } from "@/components/JsonLd";
 import { ResultCard } from "@/components/ResultCard";
 import { useProfile } from "@/context/ProfileContext";
 import { companyInfo } from "@/lib/company";
@@ -13,6 +14,13 @@ import {
 import { scoreProductCatalog } from "@/lib/scoring";
 import type { ScoredProduct } from "@/lib/types/product";
 
+/**
+ * /results/ is `noindex` so the structured data won't appear in SERPs, but
+ * we still emit it: (1) honest signal for any non-Google crawler or AI
+ * agent that reads the page, (2) consistency with the editorial-rating
+ * module used on /best/* pages, (3) easier QA — a stale /results/ render
+ * can be inspected for the same schema shape as the public pages.
+ */
 function buildProductJsonLd(rows: ScoredProduct[]) {
   return {
     "@context": "https://schema.org",
@@ -153,12 +161,7 @@ export function ResultsClient() {
 
   return (
     <div className="space-y-6">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildProductJsonLd(rows)),
-        }}
-      />
+      <JsonLd data={buildProductJsonLd(rows)} />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}

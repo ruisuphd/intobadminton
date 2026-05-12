@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Source and copyright policy — IntoBadminton",
+  title: "Source and copyright policy",
   description:
     "How IntoBadminton handles Reddit, BadmintonCN, forum, and review evidence.",
   alternates: { canonical: "/source-policy/" },

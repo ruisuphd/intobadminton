@@ -22,7 +22,10 @@ export async function generateMetadata({
   }
   const url = `/blog/${slug}/`;
   return {
-    title: `${article.title} — IntoBadminton`,
+    // Let the root layout template add " | IntoBadminton" — avoid embedding
+    // the brand here, otherwise we'd hit the audit gate's
+    // `duplicate-title-brand` rule.
+    title: article.title,
     description: article.dek,
     alternates: { canonical: url },
     openGraph: {

@@ -1,17 +1,39 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
+import { articleJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Badminton vs tennis shoes — can you wear them on a badminton court?",
+  title: "Badminton Shoes vs Tennis Shoes — Compared",
   description:
-    "Honest comparison of badminton shoes and tennis shoes — outsole, stability, cushioning, and why mixing them causes ankle injuries. Picks for switching sports safely.",
+    "Honest comparison of badminton shoes vs tennis shoes — outsole, stability, cushioning, and why mixing them causes ankle injuries on a wood court.",
   alternates: { canonical: "/compare-guides/badminton-vs-tennis-shoes/" },
+  openGraph: {
+    title: "Badminton Shoes vs Tennis Shoes — Compared",
+    description:
+      "Outsole, heel drop, lateral stability — why tennis shoes belong on a tennis court, not a wood badminton court.",
+    url: "/compare-guides/badminton-vs-tennis-shoes/",
+    type: "article",
+    siteName: "IntoBadminton",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function BadmintonVsTennisShoesPage() {
+  const path = "/compare-guides/badminton-vs-tennis-shoes/";
+  const articleSchema = articleJsonLd({
+    path,
+    headline:
+      "Badminton vs tennis shoes — can you wear tennis shoes on a badminton court?",
+    description:
+      "Honest comparison of badminton shoes and tennis shoes — outsole, stability, cushioning, and why mixing them causes ankle injuries. Picks for switching sports safely.",
+    section: "Comparison",
+  });
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -24,10 +46,8 @@ export default function BadmintonVsTennisShoesPage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>
@@ -44,6 +64,7 @@ export default function BadmintonVsTennisShoesPage() {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             Short answer: badminton shoes belong on indoor wood courts, tennis shoes do not. Tennis shoes have raised heels designed for forward gait — the same feature that makes them comfortable on a tennis court is what causes ankle rolls during a badminton split step.
           </p>
+          <EditorialMeta path="/compare-guides/badminton-vs-tennis-shoes/" />
         </header>
 
         <EditorialNotice />

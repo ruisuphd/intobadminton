@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title:
-    "Badminton Equipment FAQ — Rackets, Strings, Shoes & Tension | IntoBadminton",
+  title: "Badminton Equipment FAQ — Plain-English Answers",
   description:
-    "Practical badminton equipment FAQ: racket level fit, weight class (3U/4U/5U), shaft flex, balance, string tension, shoe fit width, restringing cadence, and source verification — answered in plain English.",
+    "Practical badminton FAQ — racket fit, 3U/4U/5U weight, shaft flex, balance, string tension, shoe fit width, restringing cadence — answered in plain English.",
   keywords: [
     "badminton FAQ",
     "how to choose badminton racket",
@@ -21,12 +22,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/faq/" },
   openGraph: {
-    title: "Badminton Equipment FAQ — Rackets, Strings, Shoes & Tension",
+    title: "Badminton Equipment FAQ — Plain-English Answers",
     description:
-      "Plain-English answers to the questions players actually ask about badminton rackets, strings, shoes, and tension.",
+      "Plain-English answers to the questions players actually ask about rackets, strings, shoes, and tension.",
     url: "/faq/",
     type: "article",
     siteName: "IntoBadminton",
+    images: [...defaultOgImages],
   },
   twitter: {
     card: "summary_large_image",
@@ -139,14 +141,8 @@ export default function FaqPage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>

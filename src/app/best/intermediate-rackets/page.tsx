@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title:
-    "Best Intermediate Badminton Rackets 2026 — Yonex, Victor, Li-Ning Picks $175–$240 | IntoBadminton",
+  title: "Best Intermediate Badminton Rackets 2026",
   description:
-    "Six intermediate badminton rackets for club players who have outgrown beginner frames but aren't ready for extra-stiff pro shafts. Yonex Astrox 77 Pro, 88S Pro, Arcsaber 11 Pro, Li-Ning Halbertec 8000, Victor Auraspeed 90K II — ranked by role and budget.",
+    "Six intermediate badminton rackets for club players who have outgrown beginner frames — Astrox 77 Pro, 88S Pro, Arcsaber 11 Pro, Halbertec 8000, Auraspeed 90K II.",
   keywords: [
     "best intermediate badminton racket",
     "intermediate badminton racket 2026",
@@ -40,11 +39,12 @@ const config: BestPicksConfig = {
       bestFor: "All-court intermediate (most players)",
       specs: [
         { label: "Weight", value: "4U" },
-        { label: "Balance", value: "Slightly head-heavy" },
-        { label: "Shaft flex", value: "Medium-stiff" },
+        { label: "Balance", value: "Head-heavy" },
+        { label: "Shaft flex", value: "Medium" },
       ],
       why: "The honest 'graduation racket'. Forgives mishits a 88D Pro punishes, and gives enough head weight to start training rear-court attack without overcommitting. Founder's previous main racket — confirmed transition-friendly.",
       tradeoff: "Plateaus once you can drive a stiffer pro shaft cleanly. Plan ~1-2 years before the next upgrade.",
+      evidenceLevel: "tested",
       image: {
         url: "https://us.yonex.com/cdn/shop/files/ax77-p.png",
         source: "yonex",
@@ -64,10 +64,11 @@ const config: BestPicksConfig = {
       specs: [
         { label: "Weight", value: "4U (~84g)" },
         { label: "Balance", value: "Slight head-heavy (~301mm)" },
-        { label: "Shaft flex", value: "Stiff" },
+        { label: "Shaft flex", value: "Stiff (Namd Flex Force)" },
       ],
       why: "The most versatile pro-tier racket on the market right now. Founder uses this as the daily driver. Demanding when your timing is off, exceptional when it is on, and the sweet spot is more generous than the spec sheet implies.",
       tradeoff: "Stiff shaft expects clean contact. Skip if you still mishit more than 20% of overheads.",
+      evidenceLevel: "owned",
       image: {
         url: "https://us.yonex.com/cdn/shop/files/3AX88S-T_Silver_Black_1_02.jpg?v=1740597468&width=1946",
         source: "yonex",

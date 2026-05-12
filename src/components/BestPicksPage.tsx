@@ -1,17 +1,21 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
+import { EvidenceBadge, type EvidenceLevel } from "@/components/EvidenceBadge";
+import { JsonLd } from "@/components/JsonLd";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
 import { companyInfo } from "@/lib/company";
+import productsCatalog from "@/data/products.json";
 import {
   computeEditorialRating,
   lookupCatalogProduct,
   ratingDatePublished,
 } from "@/lib/editorial-rating";
-import productsCatalog from "@/data/products.json";
+import { articleJsonLd } from "@/lib/structured-data";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];
@@ -26,6 +30,13 @@ export type Pick = {
   why: string;
   tradeoff: string;
   image?: ProductImage;
+  /**
+   * Editorial signal of how this pick was vetted. Omit to skip the badge.
+   * - "owned" → Rui Su currently plays it in competition.
+   * - "tested" → played hands-on, but not a current main.
+   * - "specs"  → built from manufacturer + community evidence only.
+   */
+  evidenceLevel?: EvidenceLevel;
 };
 
 export type FaqItem = { q: string; a: string };
@@ -145,20 +156,20 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
     ],
   };
 
+  const path = `/best/${config.slug}/`;
+  const articleSchema = articleJsonLd({
+    path,
+    headline: config.title,
+    description: config.dek,
+    section: "Reviews",
+  });
+
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={itemListJsonLd} />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
 
       <article className="layout-band max-w-3xl space-y-6">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
@@ -174,9 +185,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             {config.dek}
           </p>
-          <p className="text-sm text-[var(--color-muted)]">
-            By {companyInfo.authorBylineEn}.
-          </p>
+          <EditorialMeta path={path} />
         </header>
 
         <EditorialNotice />
@@ -210,6 +219,11 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
                       {p.name}
                     </h3>
+                    {p.evidenceLevel && (
+                      <div className="mt-2">
+                        <EvidenceBadge level={p.evidenceLevel} />
+                      </div>
+                    )}
                   </div>
                 </div>
                 <p className="text-right text-sm font-semibold text-[var(--color-accent)]">

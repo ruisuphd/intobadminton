@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import products from "@/data/products.json";
 import {
   articlesByDateDesc,
@@ -117,18 +118,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
 
   return (
     <main className="flex-1">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={collectionJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
 
       {/* Hero */}
       <section className="hero-decoration relative overflow-hidden pt-20 pb-16 lg:pt-24 lg:pb-20">

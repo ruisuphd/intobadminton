@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { SourcesPage } from "@/components/SourcesPage";
 
 export const metadata: Metadata = {
-  title:
-    "Sources & Editorial Process — How We Cite Yonex Specs, BadmintonCN, and Reddit | IntoBadminton",
+  title: "Sources & Editorial Process",
   description:
-    "Where IntoBadminton sources its data and how we triangulate evidence: manufacturer spec sheets first, BadmintonCN and BadmintonCentral threads as cited summaries, BWF tour video reviews for confidence checks, and on-court testing by a competitive player.",
+    "How IntoBadminton sources data: manufacturer spec sheets first, BadmintonCN and BadmintonCentral as cited summaries, video reviews as checks, plus on-court testing.",
   keywords: [
     "badminton equipment sources",
     "badminton review methodology",

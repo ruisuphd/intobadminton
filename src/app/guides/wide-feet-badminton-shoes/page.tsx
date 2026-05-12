@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Badminton shoes for wide feet — IntoBadminton",
+  title: "Badminton shoes for wide feet",
   description:
-    "How wide-footed badminton players should choose court shoes. Wide-fit options from Yonex, Victor, and Mizuno, plus how to test fit and avoid the heel-slip mistake.",
+    "How wide-footed badminton players should choose court shoes — wide-fit options from Yonex, Victor, Mizuno, plus how to test fit and avoid heel slip.",
   alternates: { canonical: "/guides/wide-feet-badminton-shoes/" },
 };
 

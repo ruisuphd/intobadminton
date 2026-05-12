@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Badminton racket balance and shaft flex — IntoBadminton",
+  title: "Badminton racket balance and shaft flex",
   description:
-    "How head weight and shaft stiffness interact on court. Reading balance points in millimetres, choosing flex by skill level, and the four-tier shaft hardness scale used in deep reviews.",
+    "How head weight and shaft stiffness interact on court — reading balance points in millimetres, choosing flex by skill level, and the shaft hardness scale.",
   alternates: { canonical: "/guides/racket-balance/" },
 };
 

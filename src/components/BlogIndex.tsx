@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import {
   CATEGORY_LABELS,
   articlesByDateDesc,
@@ -96,10 +97,7 @@ export function BlogIndex({ locale }: { locale: SiteLocale }) {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
-      />
+      <JsonLd data={blogJsonLd} />
       <div className="layout-band max-w-6xl">
         <header className="max-w-2xl">
           <h1 className="text-display text-[var(--text)]">

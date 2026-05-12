@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { brands, BRAND_TIER_LABELS, type BrandTier } from "@/lib/brands";
 import { companyInfo } from "@/lib/company";
 import type { SiteLocale } from "@/lib/locale";
@@ -63,10 +64,7 @@ export function BrandsPage({ locale: _locale }: { locale: SiteLocale }) {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(brandsJsonLd) }}
-      />
+      <JsonLd data={brandsJsonLd} />
       <article className="layout-band max-w-5xl space-y-10">
         <header className="space-y-4">
           <h1 className="text-4xl font-semibold tracking-tight text-[var(--text)]">

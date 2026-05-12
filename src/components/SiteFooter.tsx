@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { CookieSettingsLink } from "@/components/CookieSettings";
 
 type FooterColumn = {
@@ -83,7 +84,8 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-[color:var(--line)] pt-6 text-xs text-[var(--color-subtle)]">
+        <AffiliateDisclosure />
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[color:var(--line)] pt-6 text-xs text-[var(--color-subtle)]">
           <p>
             © {new Date().getFullYear()} IntoBadminton · Equipment is personal;
             results are informational.

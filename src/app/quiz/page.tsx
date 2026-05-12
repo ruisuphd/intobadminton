@@ -3,10 +3,9 @@ import Link from "next/link";
 import { QuizFunnel } from "./QuizFunnel";
 
 export const metadata: Metadata = {
-  title:
-    "Badminton Equipment Finder — Personalised Racket, String & Shoe Picks",
+  title: "Badminton Equipment Finder — Personalised Picks",
   description:
-    "Answer five quick questions about your level, playing style, body, and budget. Get badminton racket, string, shoe, and bag recommendations with transparent fit scoring and source authority labels. No signup, no email gate.",
+    "Answer five questions about your level, style, body, and budget. Get racket, string, shoe, and bag picks with transparent fit scoring. No signup.",
   keywords: [
     "badminton equipment finder",
     "badminton racket finder",

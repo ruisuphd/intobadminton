@@ -1,17 +1,38 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
+import { articleJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Yonex Astrox vs Nanoflare — which family fits your game (2026)",
+  title: "Yonex Astrox vs Nanoflare — Which Fits You?",
   description:
-    "Yonex Astrox is the power line; Nanoflare is the speed line. Honest comparison of head balance, swing speed, and which family fits singles, doubles, and front-court players.",
+    "Astrox is the power line, Nanoflare is the speed line. Comparison of head balance, swing speed, and which family fits singles, doubles, and front-court players.",
   alternates: { canonical: "/compare-guides/yonex-astrox-vs-nanoflare/" },
+  openGraph: {
+    title: "Yonex Astrox vs Nanoflare — Which Fits You?",
+    description:
+      "Power vs speed: Yonex's two flagship racket families compared by balance, swing speed, and role fit.",
+    url: "/compare-guides/yonex-astrox-vs-nanoflare/",
+    type: "article",
+    siteName: "IntoBadminton",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function AstroxVsNanoflarePage() {
+  const path = "/compare-guides/yonex-astrox-vs-nanoflare/";
+  const articleSchema = articleJsonLd({
+    path,
+    headline: "Yonex Astrox vs Nanoflare: which family fits?",
+    description:
+      "Yonex Astrox is the power line; Nanoflare is the speed line. Honest comparison of head balance, swing speed, and which family fits singles, doubles, and front-court players.",
+    section: "Comparison",
+  });
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -24,10 +45,8 @@ export default function AstroxVsNanoflarePage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>
@@ -44,6 +63,7 @@ export default function AstroxVsNanoflarePage() {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             Astrox is the power-oriented Yonex line — head-heavy frames that reward technique with smash mass. Nanoflare is the speed-oriented line — head-light frames that win on flat drives, defense, and front-court interception.
           </p>
+          <EditorialMeta path="/compare-guides/yonex-astrox-vs-nanoflare/" />
         </header>
 
         <EditorialNotice />

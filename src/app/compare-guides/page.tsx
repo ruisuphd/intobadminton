@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Badminton equipment comparison guides — IntoBadminton",
+  title: "Badminton equipment comparison guides",
   description:
     "Side-by-side badminton comparisons — Astrox vs Nanoflare, Yonex vs Victor vs Li-Ning, Astrox 77 Pro vs 88S Pro, and more. Picks framed by player role.",
   alternates: { canonical: "/compare-guides/" },
@@ -44,10 +45,7 @@ export default function CompareGuidesIndex() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
       <div className="layout-band max-w-6xl">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>

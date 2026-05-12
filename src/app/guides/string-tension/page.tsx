@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Badminton string tension guide — IntoBadminton",
+  title: "Badminton string tension guide",
   description:
-    "How badminton string tension actually changes feel, power, and control. Recommended pound ranges by skill level, restring frequency, and the climate effects most players miss.",
+    "How badminton string tension changes feel, power, and control — recommended pound ranges by skill, restring frequency, and climate effects most players miss.",
   alternates: { canonical: "/guides/string-tension/" },
 };
 

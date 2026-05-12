@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Doubles court roles in badminton — IntoBadminton",
+  title: "Doubles court roles in badminton",
   description:
-    "Front, back, and rotational roles in badminton doubles — what each role does, how to play it well, and how role choice affects which racket and shoes you should buy.",
+    "Front, back, and rotational roles in badminton doubles — what each role does and how role choice affects which racket and shoes you should buy.",
   alternates: { canonical: "/guides/doubles-roles/" },
 };
 

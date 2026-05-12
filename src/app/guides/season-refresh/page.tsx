@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Badminton gear refresh checklist — IntoBadminton",
+  title: "Badminton gear refresh checklist",
   description:
-    "When to restring, regrip, replace shoes, and re-evaluate your racket. A practical seasonal checklist for badminton players, with the warning signs each item gives off.",
+    "When to restring, regrip, replace shoes, and re-evaluate your racket — a practical seasonal checklist with the warning signs each item gives off.",
   alternates: { canonical: "/guides/season-refresh/" },
 };
 

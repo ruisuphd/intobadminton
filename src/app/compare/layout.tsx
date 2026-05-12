@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compare badminton gear — IntoBadminton",
+  title: "Compare badminton gear",
   description:
-    "Compare badminton rackets, strings, shoes, and bags side by side on the specs that matter — price, balance, flex, fit width, capacity, gauge, and review confidence.",
+    "Compare badminton rackets, strings, shoes, and bags side by side on the specs that matter — price, balance, flex, fit width, capacity, gauge.",
   alternates: { canonical: "/compare/" },
   robots: { index: false, follow: true },
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Page not found - IntoBadminton",
+  title: "Page not found",
   description:
     "The requested IntoBadminton page could not be found. Continue to the equipment finder, blog, best picks, or contact page.",
   robots: {

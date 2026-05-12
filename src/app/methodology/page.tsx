@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Recommendation methodology — IntoBadminton",
+  title: "Recommendation methodology",
   description:
     "How IntoBadminton combines specs, player inputs, and source references for badminton equipment recommendations.",
   alternates: { canonical: "/methodology/" },
