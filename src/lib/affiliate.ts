@@ -38,9 +38,20 @@ export type AffiliateLinkOutput = {
 
 const AFFILIATE_REL = "sponsored nofollow noopener";
 
-function readEnv(name: string): string | undefined {
-  const value =
-    typeof process !== "undefined" ? process.env?.[name] : undefined;
+/**
+ * NEXT_PUBLIC env vars must be read via static property access, not a
+ * dynamic key lookup, so Next.js's build-time inliner replaces them in
+ * the client bundle. A `process.env[name]` lookup with a runtime string
+ * resolves to `undefined` in the browser and would silently drop our
+ * affiliate tags from every link.
+ */
+function amazonUsTag(): string | undefined {
+  const value = process.env.NEXT_PUBLIC_AMAZON_ASSOCIATES_TAG;
+  return value && value.length > 0 ? value : undefined;
+}
+
+function amazonUkTag(): string | undefined {
+  const value = process.env.NEXT_PUBLIC_AMAZON_UK_ASSOCIATES_TAG;
   return value && value.length > 0 ? value : undefined;
 }
 
@@ -66,7 +77,7 @@ export function buildAffiliateLink(
 
   switch (input.store) {
     case "amazon": {
-      const tag = readEnv("NEXT_PUBLIC_AMAZON_ASSOCIATES_TAG");
+      const tag = amazonUsTag();
       if (tag) {
         const result = withQueryParam(input.url, "tag", tag);
         href = result.url;
@@ -75,7 +86,7 @@ export function buildAffiliateLink(
       break;
     }
     case "amazon-uk": {
-      const tag = readEnv("NEXT_PUBLIC_AMAZON_UK_ASSOCIATES_TAG");
+      const tag = amazonUkTag();
       if (tag) {
         const result = withQueryParam(input.url, "tag", tag);
         href = result.url;

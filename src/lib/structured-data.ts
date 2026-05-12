@@ -89,11 +89,17 @@ export function articleJsonLd(input: ArticleJsonLdInput) {
 
   const url = `${companyInfo.siteUrl}${input.path}`;
 
+  // `mainEntityOfPage` deliberately uses an inline WebPage node (not an
+  // `@id` reference) so a validator can resolve the entire Article tree
+  // from this single script block. We intentionally do NOT emit an
+  // `isPartOf` pointer to a global WebSite node — that node lives only on
+  // the homepage, so a per-page reference would be dangling for crawlers
+  // that only fetch this URL.
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${url}#article`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url, url },
     headline: input.headline,
     description: input.description,
     inLanguage: "en",
@@ -102,6 +108,5 @@ export function articleJsonLd(input: ArticleJsonLdInput) {
     articleSection: input.section,
     author: ARTICLE_AUTHOR,
     publisher: ARTICLE_PUBLISHER,
-    isPartOf: { "@id": `${companyInfo.siteUrl}/#website` },
   };
 }
