@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Badminton shoes and footwork guide — IntoBadminton",
+  title: "Badminton shoes and footwork guide",
   description:
-    "Why badminton shoes matter more than the racket for most amateurs. How to choose by fit width, stability, cushioning, and outsole — plus how shoe choice supports footwork patterns.",
+    "Why badminton shoes matter more than the racket for most amateurs — choose by fit width, stability, cushioning, and outsole to support footwork patterns.",
   alternates: { canonical: "/guides/shoes-footwork/" },
 };
 

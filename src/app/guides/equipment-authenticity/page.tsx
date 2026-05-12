@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
 import {
   authenticityBrands,
   authenticityGuide,
@@ -7,10 +8,9 @@ import {
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title:
-    "Badminton Racket Authenticity Check — Spot Fake Yonex, Victor & Li-Ning | IntoBadminton",
+  title: "Badminton Racket Authenticity Check",
   description:
-    "How to check whether a Yonex, Victor, or Li-Ning badminton racket is genuine before you buy. Per-brand official-source guidance, universal red flags, visual checks, and what to do if you suspect a counterfeit.",
+    "Check whether a Yonex, Victor, or Li-Ning racket is genuine before you buy — per-brand official-source guidance, red flags, and counterfeit-response steps.",
   keywords: [
     "badminton racket authenticity",
     "fake Yonex racket",
@@ -105,18 +105,9 @@ export default function EquipmentAuthenticityGuide() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
 
       <article className="layout-band max-w-3xl space-y-6 text-[var(--text)]">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">

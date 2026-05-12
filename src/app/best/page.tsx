@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title: "Best Badminton Rackets, Shoes & Strings — Buying Guides 2026",
+  title: "Best Badminton Rackets, Shoes & Strings (2026)",
   description:
-    "Curated 2026 badminton buying guides: best rackets for beginners, intermediates, doubles, and smash; best shoes by fit width; best strings by feel and durability. Each pick is scored on transparent fit factors, with source authority labelled.",
+    "Curated 2026 badminton buying guides — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings by feel and durability.",
   keywords: [
     "best badminton racket",
     "best badminton rackets 2026",
@@ -22,12 +24,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/best/" },
   openGraph: {
-    title: "Best Badminton Rackets, Shoes & Strings — Buying Guides 2026",
+    title: "Best Badminton Rackets, Shoes & Strings (2026)",
     description:
-      "Curated badminton buying guides for rackets, shoes, and strings — every pick is scored on transparent fit factors with source authority labelled.",
+      "Curated badminton buying guides — every pick scored on transparent fit factors with source authority labelled.",
     url: "/best/",
     type: "website",
     siteName: "IntoBadminton",
+    images: [...defaultOgImages],
   },
   twitter: {
     card: "summary_large_image",
@@ -111,14 +114,8 @@ export default function BestIndexPage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={itemListJsonLd} />
       <div className="layout-band max-w-6xl">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>

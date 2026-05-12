@@ -14,7 +14,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = getBlogArticle("en", slug);
   return {
-    title: article ? `${article.title} — IntoBadminton` : "Blog — IntoBadminton",
+    title: article ? article.title : "Blog",
     description: article?.dek,
     alternates: {
       canonical: `/blog/${slug}/`,

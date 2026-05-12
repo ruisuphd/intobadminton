@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 
@@ -101,14 +102,8 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
-      />
+      <JsonLd data={personJsonLd} />
+      <JsonLd data={aboutJsonLd} />
       <article className="layout-band max-w-3xl space-y-10">
         <header className="space-y-4">
           <h1 className="text-4xl font-semibold tracking-tight text-[var(--text)]">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — IntoBadminton",
+  title: "Terms of Service",
   description:
     "Terms of Service and Conditions of Use for IntoBadminton: affiliate disclosure, equipment advice disclaimer, content rights, and acceptable use.",
   alternates: { canonical: "/terms/" },
@@ -74,18 +74,22 @@ export default function TermsPage() {
           coach before continuing to play or buying new gear.
         </p>
 
-        <h2 className="text-xl font-semibold text-[var(--text)]">
+        <h2 id="affiliate" className="text-xl font-semibold text-[var(--text)]">
           4. Affiliate, advertising, and editorial integrity
         </h2>
         <p>
           IntoBadminton may earn commissions through affiliate links and may
           serve advertisements through Google AdSense or other ad partners.
-          Advertising is clearly labelled and must never silently change the
-          fit-score order. Sponsored content, paid placements, or affiliate
-          relationships are disclosed where they apply. The Site may recommend
-          guides, comparisons, and saved-history prompts, but it must not use
-          deceptive urgency, hidden paid placement, forced consent, or
-          mechanics designed to exploit compulsive use.
+          Affiliate outbound links carry a visible{" "}
+          <span className="font-mono">Aff</span> chip in the page body and
+          the standard <span className="font-mono">rel=&quot;sponsored&quot;</span> link
+          relationship. The same disclosure is repeated in the site footer of
+          every page. Advertising is clearly labelled and must never silently
+          change the fit-score order. Sponsored content, paid placements, or
+          affiliate relationships are disclosed where they apply. The Site may
+          recommend guides, comparisons, and saved-history prompts, but it
+          must not use deceptive urgency, hidden paid placement, forced
+          consent, or mechanics designed to exploit compulsive use.
         </p>
 
         <h2 className="text-xl font-semibold text-[var(--text)]">

@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title:
-    "Best Badminton Shoes 2026 — Yonex 65 Z, Aerus, Eclipsion, Victor P9200 Picks | IntoBadminton",
+  title: "Best Badminton Shoes 2026 — Yonex & Victor Picks",
   description:
-    "Six badminton shoes ranked by stability, cushioning, fit width, and weight feel. Yonex Power Cushion 65 Z Wide, Aerus Z2, Comfort Z3, Eclipsion Z3, Victor P9200, Li-Ning BladeSabre Max — picks for narrow, regular, and wide feet, and for ankle recovery.",
+    "Six badminton shoes ranked by stability, cushioning, fit width, and weight feel — picks for narrow, regular, and wide feet, and for ankle recovery.",
   keywords: [
     "best badminton shoes",
     "Yonex Power Cushion 65 Z Wide",

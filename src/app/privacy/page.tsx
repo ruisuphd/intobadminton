@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — IntoBadminton",
+  title: "Privacy Policy",
   description:
-    "Privacy Policy for IntoBadminton: what personal data we process, why, your rights, third-party vendors, international transfers, retention, and how to contact us about privacy.",
+    "IntoBadminton Privacy Policy — what personal data we process, your rights, third-party vendors, international transfers, retention, and contact.",
   alternates: { canonical: "/privacy/" },
 };
 

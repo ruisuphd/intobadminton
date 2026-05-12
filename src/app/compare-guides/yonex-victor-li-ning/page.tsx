@@ -1,17 +1,38 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
+import { articleJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Yonex vs Victor vs Li-Ning — which badminton brand is best (2026)",
+  title: "Yonex vs Victor vs Li-Ning — Best Brand?",
   description:
-    "Comparison of Yonex, Victor, and Li-Ning badminton gear by model fit, source status, region, role, and budget.",
+    "Comparison of Yonex, Victor, and Li-Ning badminton gear by model fit, source status, region, role, and budget — pick by your game, not by the badge.",
   alternates: { canonical: "/compare-guides/yonex-victor-li-ning/" },
+  openGraph: {
+    title: "Yonex vs Victor vs Li-Ning — Best Brand?",
+    description:
+      "The three flagship badminton brands compared by strength, region, role fit, and price tier.",
+    url: "/compare-guides/yonex-victor-li-ning/",
+    type: "article",
+    siteName: "IntoBadminton",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function YonexVictorLiningPage() {
+  const path = "/compare-guides/yonex-victor-li-ning/";
+  const articleSchema = articleJsonLd({
+    path,
+    headline: "Yonex vs Victor vs Li-Ning: which is best?",
+    description:
+      "Comparison of Yonex, Victor, and Li-Ning badminton gear by model fit, source status, region, role, and budget.",
+    section: "Comparison",
+  });
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -24,10 +45,8 @@ export default function YonexVictorLiningPage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>
@@ -44,6 +63,7 @@ export default function YonexVictorLiningPage() {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             There is no single best badminton brand. Each of the three flagships has a clear personality — and your right pick depends more on your region, your role, and your budget than on brand hierarchy.
           </p>
+          <EditorialMeta path="/compare-guides/yonex-victor-li-ning/" />
         </header>
 
         <EditorialNotice />

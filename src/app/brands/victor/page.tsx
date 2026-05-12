@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title:
-    "Victor Badminton Rackets, Shoes & Strings — Auraspeed, Thruster, Brave Sword & DriveX | IntoBadminton",
+  title: "Victor Badminton — Auraspeed, Thruster, DriveX",
   description:
-    "The complete IntoBadminton guide to Victor badminton: Auraspeed for speed, Thruster for power, Brave Sword for control, DriveX for doubles, plus P9200 / VG-1 shoes. Korean-tour proven, Taiwanese engineering — decoded by playing role and skill level.",
+    "Victor's racket lines decoded: Auraspeed (speed), Thruster (power), Brave Sword (control), DriveX (doubles) — plus P9200 shoes. Korean-tour proven.",
   keywords: [
     "Victor",
     "Victor badminton",
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     url: "/brands/victor/",
     type: "article",
     siteName: "IntoBadminton",
+    images: [...defaultOgImages],
   },
   twitter: {
     card: "summary_large_image",

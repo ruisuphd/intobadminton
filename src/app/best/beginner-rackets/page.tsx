@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title:
-    "Best Badminton Rackets for Beginners 2026 — 6 Forgiving Picks Under $250 | IntoBadminton",
+  title: "Best Beginner Badminton Rackets 2026",
   description:
-    "Six forgiving, well-priced badminton rackets for beginners and recreational club players. Ranked by shaft flex, weight class (3U/4U/5U), balance, and budget — picked by a competitive Div 4 player who has played them.",
+    "Six forgiving badminton rackets for beginners — Nanoflare 700 Play, Astrox 77 Play, Arcsaber 7 Pro, DriveX 8S, Astrox 77 Pro, Mizuno Altius N-Feel.",
   keywords: [
     "best beginner badminton racket",
     "beginner badminton racket",
     "first badminton racket",
-    "Yonex Nanoray Light 70i",
+    "Yonex Nanoflare 700 Play",
+    "Yonex Astrox 77 Play",
     "Yonex Astrox 77 Pro",
     "Yonex Arcsaber 7 Pro",
     "Victor DriveX 8S",
     "4U badminton racket",
-    "5U badminton racket beginner",
+    "Hi-Flex shaft beginner",
     "forgiving badminton racket",
     "badminton racket under $200",
   ],
@@ -33,42 +33,51 @@ const config: BestPicksConfig = {
     body: "Three things matter more than brand or marketing tier: <strong>shaft flex</strong> (medium or flexible — extra-stiff frames punish late contact), <strong>weight class</strong> (4U or 5U keeps the frame easy to time), and <strong>balance</strong> (even or slightly head-light protects your shoulder while you build technique). Get those three right and you will improve faster than someone with a $300 pro frame.",
   },
   picks: [
-    // TODO image: Nanoray Light 70i is discontinued from current Yonex
-    // catalog (yonex.com no longer lists it). Try yonex.com archived
-    // product pages or a regional Yonex distributor (Yonex Sunrise India,
-    // Yonex Korea). Consider replacing this pick with a current entry-tier
-    // racket like Astrox 1 DG, Nanoflare 100, or Astrox Smash.
     {
       rank: 1,
-      name: "Nanoray Light 70i",
+      name: "Nanoflare 700 Play",
       brand: "Yonex",
-      priceUsd: 95,
-      bestFor: "First serious club racket",
+      priceUsd: 80,
+      bestFor: "First serious club racket — speed leaning",
       specs: [
-        { label: "Weight", value: "5U (~78g)" },
-        { label: "Balance", value: "Even" },
-        { label: "Shaft flex", value: "Flexible" },
+        { label: "Weight", value: "4U" },
+        { label: "Balance", value: "Head-light" },
+        { label: "Shaft flex", value: "Hi-Flex" },
       ],
-      why: "Light, easy to swing, and tolerant of late contact. The sweet spot is generous, the shaft loads quickly, and it forgives the mishits beginners actually make. Yonex resale liquidity is high if you outgrow it.",
-      tradeoff: "Will feel underpowered once your smash technique stabilises and you start playing more aggressive doubles.",
+      why: "The beginner-tier sibling of the Nanoflare 700 Pro that singles and doubles players use on the BWF tour. Hi-Flex shaft loads forgiving, the head-light bias makes the frame easy to recover with on flat-drive exchanges, and the 4U weight keeps it light on the shoulder. Standard 20-28 lb stringing window covers everything a beginner needs.",
+      tradeoff: "Less rear-court smash mass than the Astrox 77 Play below — pick this if speed and defense matter more than overhead attack.",
+      image: {
+        url: "https://us.yonex.com/cdn/shop/files/int_nf-700pl_529-1_2.png?v=1738288292&width=1445",
+        source: "yonex",
+        credit: "Image: Yonex (us.yonex.com)",
+        alt: "Yonex Nanoflare 700 Play badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 2,
-      name: "Voltric 8DG",
+      name: "Astrox 77 Play",
       brand: "Yonex",
-      priceUsd: 105,
-      bestFor: "Heavier hitter who breaks strings",
+      priceUsd: 100,
+      bestFor: "Beginner who wants Astrox attack feel",
       specs: [
-        { label: "Weight", value: "3U (~88g)" },
+        { label: "Weight", value: "4U (~83g)" },
         { label: "Balance", value: "Head-heavy" },
-        { label: "Shaft flex", value: "Medium" },
+        { label: "Shaft flex", value: "Hi-Flex" },
       ],
-      why: "Built for higher tension (up to 30 lb) with a durable frame. A good choice if you snap strings on lighter rackets or want a frame that survives wall-clashes during footwork drills.",
-      tradeoff: "The heavier head asks more from the shoulder. Skip if you have any rotator-cuff caution.",
-      // TODO image: Yonex Voltric 8 DG — not currently in us.yonex.com
-      // /collections/badminton-racquets list. Source from yonex.com (JP)
-      // archive page or Yonex India product detail when verifiable; avoid
-      // watermarked third-party retailer CDNs.
+      why: "The friendliest path into Yonex's head-heavy Astrox line. Hi-Flex shaft tolerates imperfect timing, but the head-heavy bias still teaches you what an Astrox feels like before you commit to the 77 Pro further down this list. Same Rotational Generator System geometry as the Pro, just dialled for first-year players.",
+      tradeoff: "Less defensive recovery than the Nanoflare 700 Play above — head-heavy frames slow your reset on fast-flat exchanges.",
+      image: {
+        url: "https://us.yonex.com/cdn/shop/files/INT_AX77-PL_343-1.jpg?v=1774596539&width=1946",
+        source: "yonex",
+        credit: "Image: Yonex (us.yonex.com)",
+        alt: "Yonex Astrox 77 Play badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,
@@ -117,11 +126,12 @@ const config: BestPicksConfig = {
       bestFor: "Ambitious club player",
       specs: [
         { label: "Weight", value: "4U" },
-        { label: "Balance", value: "Slightly head-heavy" },
-        { label: "Shaft flex", value: "Medium / Medium-stiff" },
+        { label: "Balance", value: "Head-heavy" },
+        { label: "Shaft flex", value: "Medium" },
       ],
       why: "Often called the friendliest 'Pro' frame Yonex makes. Forgives mishits a 88D Pro punishes, with enough head weight to start training rear-court attack. Founder's previous main racket — confirmed transition-friendly.",
-      tradeoff: "If your level is still strictly recreational, the 77 Pro under-performs vs cheaper Nanoray 70i.",
+      tradeoff: "If your level is still strictly recreational, the 77 Pro under-performs vs the cheaper 77 Play above.",
+      evidenceLevel: "tested",
       image: {
         url: "https://us.yonex.com/cdn/shop/files/ax77-p.png",
         source: "yonex",
@@ -149,7 +159,7 @@ const config: BestPicksConfig = {
       why: "Mizuno's badminton line stays under the radar outside Japan, which is a shame. The N-Feel swings smooth, sits gentle on the arm, and the build quality matches anything in the Yonex mid-range. A good pick if you want to step off the Yonex-Victor-Li-Ning treadmill without taking a quality risk.",
       tradeoff: "Limited availability outside Asia. Check regional stock before ordering — most stockists are in Japan, mainland China, and a handful of Singapore/Malaysia shops.",
       image: {
-        url: "https://www.mizuno.jp/sites/default/files/2025-10/cs_ba_top_251010_altiusnfeel_1500_480_0.jpg",
+        url: "https://jpn.mizuno.com/sites/default/files/2025-10/cs_ba_top_251010_altiusnfeel_1500_480_0.jpg",
         source: "mizuno",
         credit: "Image: Mizuno Japan",
         alt: "Mizuno Altius N-Feel badminton racket",

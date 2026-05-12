@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { articleJsonLd } from "@/lib/structured-data";
 
 export type BrandLine = {
   name: string;
@@ -36,6 +39,13 @@ export type BrandPageConfig = {
 };
 
 export function BrandPage({ config }: { config: BrandPageConfig }) {
+  const path = `/brands/${config.slug}/`;
+  const articleSchema = articleJsonLd({
+    path,
+    headline: config.title,
+    description: config.dek,
+    section: "Brand Profile",
+  });
   const brandJsonLd = {
     "@context": "https://schema.org",
     "@type": "Brand",
@@ -86,18 +96,10 @@ export function BrandPage({ config }: { config: BrandPageConfig }) {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(brandJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={brandJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <article className="layout-band max-w-3xl space-y-8">
         <nav
@@ -123,9 +125,7 @@ export function BrandPage({ config }: { config: BrandPageConfig }) {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             {config.dek}
           </p>
-          <p className="text-sm text-[var(--color-muted)]">
-            By {companyInfo.authorBylineEn}.
-          </p>
+          <EditorialMeta path={`/brands/${config.slug}/`} />
         </header>
 
         <EditorialNotice />

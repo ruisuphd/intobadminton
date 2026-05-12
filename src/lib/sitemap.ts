@@ -1,7 +1,9 @@
 import { blogSlugs } from "@/lib/blog";
+import { lastModifiedForRoute } from "@/lib/editorial-meta";
 
 export type SitemapEntry = {
   url: string;
+  lastModified?: string;
   changeFrequency: "weekly" | "monthly";
   priority: number;
 };
@@ -79,6 +81,7 @@ function cleanOrigin(origin: string): string {
 function entry(origin: string, path: string): SitemapEntry {
   return {
     url: `${cleanOrigin(origin)}${path}`,
+    lastModified: lastModifiedForRoute(path),
     changeFrequency: routeFrequency(path),
     priority: routePriority(path),
   };

@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
-  title:
-    "Best Badminton Rackets for Doubles 2026 — Front-Court, Rear-Court, Mixed Picks | IntoBadminton",
+  title: "Best Doubles Badminton Rackets 2026",
   description:
-    "Six doubles badminton rackets ranked for front-court speed, defensive recovery, and rear-court continuity. Yonex Astrox 88S/D Pro, Nanoflare 1000Z, Victor Auraspeed HS Plus, DriveX 8S — picks for men's, women's, and mixed doubles.",
+    "Six doubles badminton rackets ranked for front-court speed, defensive recovery, and rear-court continuity — Yonex 88S Pro, Nanoflare 1000Z, Auraspeed HS Plus.",
   keywords: [
     "best doubles badminton racket",
     "badminton racket for doubles",
@@ -46,6 +45,7 @@ const config: BestPicksConfig = {
       ],
       why: "Currently rated above the Halbertec 8000 / 9000 and Arcsaber 11 Pro on combined control and smash quality. Founder's main racket. Best in class if your job is to organise the rally with placement, not bury smashes.",
       tradeoff: "If you only play rear court and your match-winner is the smash, the 88D Pro version is the better fit.",
+      evidenceLevel: "owned",
       image: {
         url: "https://us.yonex.com/cdn/shop/files/3AX88S-T_Silver_Black_1_02.jpg?v=1740597468&width=1946",
         source: "yonex",
@@ -65,7 +65,7 @@ const config: BestPicksConfig = {
       specs: [
         { label: "Weight", value: "4U (~84g)" },
         { label: "Balance", value: "Head-light (~290mm)" },
-        { label: "Shaft flex", value: "Stiff" },
+        { label: "Shaft flex", value: "Extra stiff" },
       ],
       why: "The doubles weapon when defense and flat exchanges are the game. Hexagonal Z-axis frame is the best end-speed in the Nanoflare line. DR carbon adds pocketing for crisper drops than other speed frames.",
       tradeoff: "Higher entry threshold than NF700 Pro — you need force and timing to load the stiff shaft.",
@@ -87,8 +87,8 @@ const config: BestPicksConfig = {
       bestFor: "Stable, well-rounded doubles attack",
       specs: [
         { label: "Weight", value: "4U" },
-        { label: "Balance", value: "Even / mild head-heavy" },
-        { label: "Shaft flex", value: "Stiff" },
+        { label: "Balance", value: "Even" },
+        { label: "Shaft flex", value: "Extra stiff" },
       ],
       why: "Victor's most balanced top-tier doubles frame — stable enough to absorb hard returns, fast enough to cover front-court duties. Pairs well with a partner playing 88D Pro / 100ZZ.",
       tradeoff: "Less marketing pull than Yonex flagships, so resale liquidity is lower outside Asia.",

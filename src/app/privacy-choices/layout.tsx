@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy choices — IntoBadminton",
+  title: "Privacy choices",
   description: "Manage privacy and tracking choices for IntoBadminton.",
   alternates: { canonical: "/privacy-choices/" },
   robots: { index: false, follow: true },

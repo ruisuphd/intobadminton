@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { BlogIndex } from "@/components/BlogIndex";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title: "Badminton Equipment Blog — Reviews, Comparisons & Buying Guides | IntoBadminton",
+  title: "Badminton Equipment Blog — Reviews & Guides",
   description:
-    "Original badminton equipment writing — racket reviews, head-to-head comparisons, string deep-dives, shoe-fit guides, and authenticity advice. Built on official specs, player profiles, and rights-safe review signals.",
+    "Original badminton writing — racket reviews, comparisons, string deep-dives, shoe-fit guides. Built on official specs and rights-safe review signals.",
   keywords: [
     "badminton blog",
     "badminton racket review",
@@ -17,12 +18,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/blog/" },
   openGraph: {
-    title: "Badminton Equipment Blog — Reviews, Comparisons & Guides",
+    title: "Badminton Equipment Blog — Reviews & Guides",
     description:
-      "Original badminton equipment writing — racket reviews, comparisons, string deep-dives, and shoe-fit guides.",
+      "Racket reviews, comparisons, string deep-dives, shoe-fit guides — built on official specs.",
     url: "/blog/",
     type: "website",
     siteName: "IntoBadminton",
+    images: [...defaultOgImages],
   },
   twitter: {
     card: "summary_large_image",

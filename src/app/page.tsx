@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { LocalizedHome } from "@/components/LocalizedHome";
+import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title:
-    "Badminton Racket, String & Shoe Finder — Match Gear to Your Game | IntoBadminton",
+  title: "Badminton Racket, String & Shoe Finder",
   description:
-    "Personalised badminton equipment finder. Rank rackets, strings, shoes, and bags for your level, playing style, and budget with transparent scoring and source authority labels. No signup, no email gate.",
+    "Personalised badminton equipment finder — rank rackets, strings, shoes, and bags for your level, style, and budget. Transparent scoring, no signup.",
   keywords: [
     "badminton",
     "badminton racket",
@@ -30,5 +30,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <LocalizedHome locale="en" />;
+  return (
+    <>
+      <StructuredData />
+      <LocalizedHome locale="en" />
+    </>
+  );
 }

@@ -5,41 +5,7 @@ import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { ResultCard } from "@/components/ResultCard";
 import { useProfile } from "@/context/ProfileContext";
-import { companyInfo } from "@/lib/company";
 import { scoreProductCatalog } from "@/lib/scoring";
-import type { ScoredProduct } from "@/lib/types/product";
-
-function buildProductJsonLd(rows: ScoredProduct[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "IntoBadminton equipment recommendations",
-    numberOfItems: rows.length,
-    itemListElement: rows.map((r, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      item: {
-        "@type": "Product",
-        "@id": `${companyInfo.siteUrl}/results/#${r.id}`,
-        name: r.name,
-        brand: { "@type": "Brand", name: r.brand },
-        category: r.category,
-        additionalProperty: [
-          {
-            "@type": "PropertyValue",
-            name: "Spec source",
-            value: r.evidenceProfile.officialSpec.sourceAuthority.label,
-          },
-          {
-            "@type": "PropertyValue",
-            name: "Confidence",
-            value: r.confidence.label,
-          },
-        ],
-      },
-    })),
-  };
-}
 
 export function ResultsClient() {
   const { profile, pushHistory } = useProfile();
@@ -98,12 +64,6 @@ export function ResultsClient() {
 
   return (
     <div className="space-y-6">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildProductJsonLd(rows)),
-        }}
-      />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}

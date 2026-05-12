@@ -1,17 +1,38 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
+import { articleJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Astrox 77 Pro vs Astrox 88S Pro 2024 — which fits your timing?",
+  title: "Astrox 77 Pro vs 88S Pro 2024 — Which Fits You?",
   description:
-    "Both are even-balance Yonex Astrox frames. Honest comparison of shaft hardness, swing feel, and which player each suits — by a competitive player who has owned both.",
+    "Both 4U Yonex Astrox frames with slight head-heavy balance. Honest comparison of shaft hardness, swing feel, and which player each suits — by an owner of both.",
   alternates: { canonical: "/compare-guides/astrox-77-pro-vs-88s-pro/" },
+  openGraph: {
+    title: "Astrox 77 Pro vs 88S Pro 2024 — Which Fits You?",
+    description:
+      "Owner-level comparison of two Yonex Astrox frames — shaft hardness, balance, and which player each suits.",
+    url: "/compare-guides/astrox-77-pro-vs-88s-pro/",
+    type: "article",
+    siteName: "IntoBadminton",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function Astrox77vs88SProPage() {
+  const path = "/compare-guides/astrox-77-pro-vs-88s-pro/";
+  const articleSchema = articleJsonLd({
+    path,
+    headline: "Astrox 77 Pro vs Astrox 88S Pro 2024",
+    description:
+      "Both 4U Yonex Astrox frames with slight head-heavy balance. Honest comparison of shaft hardness, swing feel, and which player each suits — by an owner of both.",
+    section: "Comparison",
+  });
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -24,10 +45,8 @@ export default function Astrox77vs88SProPage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-[var(--text)]">Home</Link>
@@ -42,8 +61,9 @@ export default function Astrox77vs88SProPage() {
             Astrox 77 Pro vs Astrox 88S Pro 2024
           </h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            Both are 4U, slightly head-heavy, even-balance Yonex Astrox frames. The 77 Pro is the friendliest pro-tier upgrade Yonex makes. The 88S Pro 2024 is the market&rsquo;s current control-balance benchmark for doubles. Choose by your timing tier, not by the price tag.
+            Both are 4U Yonex Astrox frames with slight head-heavy balance &mdash; close to even within the Astrox line, in contrast to the 88D Pro and 100ZZ smash frames. The 77 Pro is the friendliest pro-tier upgrade Yonex makes. The 88S Pro 2024 is the market&rsquo;s current control-balance benchmark for doubles. Choose by your timing tier, not by the price tag.
           </p>
+          <EditorialMeta path="/compare-guides/astrox-77-pro-vs-88s-pro/" />
         </header>
 
         <EditorialNotice />
@@ -74,7 +94,7 @@ export default function Astrox77vs88SProPage() {
               </tr>
               <tr className="border-b border-[color:var(--line)]">
                 <td className="p-4 font-medium text-[var(--text)]">Shaft flex</td>
-                <td className="p-4">Medium-stiff</td>
+                <td className="p-4">Medium</td>
                 <td className="p-4">Stiff (Namd Flex Force)</td>
               </tr>
               <tr className="border-b border-[color:var(--line)]">

@@ -6,7 +6,7 @@ describe("robots metadata", () => {
     const config = robots();
 
     expect(config.sitemap).toBe("https://intobadminton.com/sitemap.xml");
-    expect(config.host).toBe("https://intobadminton.com");
+    expect(config).not.toHaveProperty("host");
     expect(config.rules).toEqual(
       expect.arrayContaining([
         expect.objectContaining({

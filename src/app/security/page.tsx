@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security — IntoBadminton",
+  title: "Security",
   description:
     "Security posture, reporting, and static-hosting controls for IntoBadminton.",
   alternates: { canonical: "/security/" },

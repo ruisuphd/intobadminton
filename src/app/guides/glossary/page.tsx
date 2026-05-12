@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title:
-    "Badminton Equipment Glossary — 40+ Terms Explained | IntoBadminton",
+  title: "Badminton Equipment Glossary — 40+ Terms",
   description:
-    "A plain-English glossary of badminton equipment terms — 3U/4U/5U weight class, shaft flex, balance point, head-heavy vs head-light, sweet spot, repulsion, control, gauge, torsional plate, gum rubber, T-throat, and more. Defined by a competitive player.",
+    "Plain-English glossary of badminton equipment terms — 3U/4U/5U, shaft flex, balance point, sweet spot, repulsion, control, gauge, T-throat, and more.",
   keywords: [
     "badminton glossary",
     "badminton terms explained",
@@ -398,14 +398,8 @@ export default function GlossaryPage() {
 
   return (
     <main className="flex-1 py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={definedTermSetJsonLd} />
 
       <article className="layout-band max-w-3xl space-y-6 text-[var(--text)]">
         <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">

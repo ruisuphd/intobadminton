@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title:
-    "Yonex Badminton Rackets, Shoes & Strings — Astrox, Nanoflare, Arcsaber Decoded | IntoBadminton",
+  title: "Yonex Badminton — Astrox, Nanoflare, Arcsaber",
   description:
-    "IntoBadminton guide to Yonex badminton: Astrox (power), Nanoflare (speed), Arcsaber (control), Voltric, and Duora racket lines, plus Power Cushion shoes and BG/Exbolt strings — mapped to playing role, skill level, and source status.",
+    "Yonex's racket lines decoded: Astrox (power), Nanoflare (speed), Arcsaber (control) — plus Power Cushion shoes and BG / Exbolt strings.",
   keywords: [
     "Yonex",
     "Yonex badminton",
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     url: "/brands/yonex/",
     type: "article",
     siteName: "IntoBadminton",
+    images: [...defaultOgImages],
   },
   twitter: {
     card: "summary_large_image",
@@ -119,10 +120,10 @@ const config: BrandPageConfig = {
   ],
   topPicks: [
     {
-      name: "Yonex Nanoray Light 70i",
-      line: "Nanoray (entry)",
+      name: "Yonex Nanoflare 700 Play",
+      line: "Nanoflare (Play tier)",
       bestFor: "First serious club racket",
-      priceUsd: 95,
+      priceUsd: 80,
       href: "/best/beginner-rackets/",
     },
     {
@@ -143,14 +144,14 @@ const config: BrandPageConfig = {
       name: "Yonex Astrox 88D Pro",
       line: "Astrox",
       bestFor: "Doubles rear-court attack",
-      priceUsd: 270,
+      priceUsd: 240,
       href: "/best/doubles-rackets/",
     },
   ],
   faqs: [
     {
       q: "Which Yonex racket should a beginner buy?",
-      a: "For most adult beginners, a 4U or 5U medium-flex frame with even or slightly head-light balance — Nanoray Light 70i, Arcsaber 7 Pro, or a Nanoflare 380 if you prefer a faster swing. Skip Astrox for at least the first six months: the line is engineered around stiff shafts and demanding sweet spots that punish late contact.",
+      a: "For most adult beginners, a 4U flexible-shaft frame with even or head-light balance — the Nanoflare 700 Play (speed-leaning) or Arcsaber 7 Pro (control) are both safe picks, and the Astrox 77 Play is the right answer if you specifically want to learn head-heavy attack from day one. Skip the Pro-tier Astrox line for at least the first six months: those frames are engineered around stiff shafts and demanding sweet spots that punish late contact.",
     },
     {
       q: "Astrox vs Nanoflare — which line is better?",
