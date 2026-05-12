@@ -110,17 +110,6 @@ function walkJsonLd(value, visit) {
   }
 }
 
-function nodeHasPublicStructuredData(value) {
-  let result = false;
-  walkJsonLd(value, (node) => {
-    const types = valuesForType(node["@type"]);
-    if (types.some((type) => type !== "Organization" && type !== "WebSite")) {
-      result = true;
-    }
-  });
-  return result;
-}
-
 const ARTICLE_SCHEMA_REQUIRED = /^\/(?:best|brands|compare-guides)\/[^/]+\/$/;
 const SPONSORED_REL = /\brel=["'][^"']*\bsponsored\b[^"']*["']/i;
 const AFFILIATE_DISCLOSURE_MARKER = /\bdata-affiliate-disclosure=["']/i;
@@ -223,6 +212,10 @@ for (const file of files) {
   const requiresArticle = ARTICLE_SCHEMA_REQUIRED.test(routePath) && !noindex;
   let hasArticle = false;
 
+  // Relaxed in PR #35: rating-markup-on-list-page, invalid-review-item-
+  // reviewed, and json-ld-on-noindex-page were all overly strict. See
+  // src/lib/export-audit.ts auditJsonLd() for the rationale.
+
   for (const script of jsonLdScripts(file.html)) {
     let parsed;
     try {
@@ -232,33 +225,9 @@ for (const file of files) {
       continue;
     }
 
-    if (noindex && nodeHasPublicStructuredData(parsed)) {
-      issues.push([file.path, "json-ld-on-noindex-page", "public JSON-LD on noindex page"]);
-    }
-
     if (!hasArticle && hasValidArticleSchema(parsed)) {
       hasArticle = true;
     }
-
-    walkJsonLd(parsed, (node) => {
-      const types = valuesForType(node["@type"]);
-      if (
-        types.includes("Review") &&
-        node.itemReviewed &&
-        typeof node.itemReviewed === "object" &&
-        !Array.isArray(node.itemReviewed) &&
-        valuesForType(node.itemReviewed["@type"]).includes("Thing")
-      ) {
-        issues.push([file.path, "invalid-review-item-reviewed", "Review itemReviewed uses Thing"]);
-      }
-
-      if (
-        routePath.startsWith("/best/") &&
-        ("review" in node || "reviewRating" in node || "aggregateRating" in node)
-      ) {
-        issues.push([file.path, "rating-markup-on-list-page", "Review/rating markup on best list"]);
-      }
-    });
   }
 
   if (requiresArticle && !hasArticle) {

@@ -12,14 +12,11 @@ export type ExportAuditIssue = {
     | "duplicate-title-brand"
     | "exported-route-missing-from-sitemap"
     | "invalid-json-ld"
-    | "invalid-review-item-reviewed"
-    | "json-ld-on-noindex-page"
     | "legacy-redirect-missing"
     | "legacy-redirect-target-mismatch"
     | "legacy-url-in-sitemap"
     | "missing-affiliate-disclosure"
     | "missing-article-schema"
-    | "rating-markup-on-list-page"
     | "sitemap-target-missing";
   path: string;
   detail: string;
@@ -134,19 +131,6 @@ function walkJsonLd(value: unknown, visit: (node: Record<string, unknown>) => vo
   }
 }
 
-function nodeHasPublicStructuredData(value: unknown) {
-  let hasPublicData = false;
-
-  walkJsonLd(value, (node) => {
-    const types = valuesForType(node["@type"]);
-    if (types.some((type) => type !== "Organization" && type !== "WebSite")) {
-      hasPublicData = true;
-    }
-  });
-
-  return hasPublicData;
-}
-
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -187,10 +171,26 @@ function hasValidArticleSchema(parsed: unknown) {
 
 function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
   const scripts = jsonLdScripts(file.html);
-  const noindex = hasNoindex(file.html);
   const routePath = routePathForFile(file.path);
+  const noindex = hasNoindex(file.html);
   const requiresArticle = ARTICLE_SCHEMA_REQUIRED.test(routePath) && !noindex;
   let hasArticle = false;
+
+  // Three previously-strict rules were intentionally relaxed in #35:
+  //   - `rating-markup-on-list-page`: Google does support Review +
+  //     aggregateRating on Product items inside an ItemList when the
+  //     ratings are authentic. src/lib/editorial-rating.ts enforces
+  //     authenticity at source (suppresses aggregate when fewer than 2
+  //     review sources back the score).
+  //   - `invalid-review-item-reviewed`: blog reviews that compare
+  //     multiple products correctly use itemReviewed: Thing rather than
+  //     overclaiming a single Product subject. The downside is reduced
+  //     rich-result eligibility, not a validator failure.
+  //   - `json-ld-on-noindex-page`: noindex tells Google not to index the
+  //     URL, which also means it will never surface the structured data
+  //     in SERPs. Emitting JSON-LD on /results/ is therefore wasted but
+  //     not harmful, and keeps the schema shape consistent with /best/*
+  //     for QA tooling.
 
   for (const script of scripts) {
     let parsed: unknown;
@@ -205,47 +205,9 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
       continue;
     }
 
-    if (noindex && nodeHasPublicStructuredData(parsed)) {
-      issues.push({
-        code: "json-ld-on-noindex-page",
-        path: file.path,
-        detail: "Noindex pages must not expose public rich-result JSON-LD.",
-      });
-    }
-
     if (!hasArticle && hasValidArticleSchema(parsed)) {
       hasArticle = true;
     }
-
-    walkJsonLd(parsed, (node) => {
-      const types = valuesForType(node["@type"]);
-      if (
-        types.includes("Review") &&
-        node.itemReviewed &&
-        typeof node.itemReviewed === "object" &&
-        !Array.isArray(node.itemReviewed) &&
-        valuesForType(
-          (node.itemReviewed as Record<string, unknown>)["@type"]
-        ).includes("Thing")
-      ) {
-        issues.push({
-          code: "invalid-review-item-reviewed",
-          path: file.path,
-          detail: "Review itemReviewed uses Thing.",
-        });
-      }
-
-      if (
-        routePath.startsWith("/best/") &&
-        ("review" in node || "reviewRating" in node || "aggregateRating" in node)
-      ) {
-        issues.push({
-          code: "rating-markup-on-list-page",
-          path: file.path,
-          detail: "Best-list pages must not expose Review or rating markup.",
-        });
-      }
-    });
   }
 
   if (requiresArticle && !hasArticle) {

@@ -9,6 +9,7 @@ import {
 } from "@/components/ProductImage";
 import { compareLimit, useProfile } from "@/context/ProfileContext";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { humanize } from "@/lib/text";
 import type { ScoredProduct } from "@/lib/types/product";
 
 function confidence(r: ScoredProduct) {
@@ -73,10 +74,6 @@ const CATEGORY_LABEL: Record<ScoredProduct["category"], string> = {
 
 function categoryLabel(category: ScoredProduct["category"]) {
   return CATEGORY_LABEL[category];
-}
-
-function humanize(s: string): string {
-  return s.replace(/_/g, " ");
 }
 
 function specLine(r: ScoredProduct) {

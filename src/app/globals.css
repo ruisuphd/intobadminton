@@ -13,11 +13,12 @@
   --line: rgba(15, 23, 42, 0.07);
   --line-strong: rgba(15, 23, 42, 0.14);
 
-  /* Type */
+  /* Type — every value clears WCAG AA against both #ffffff cards and the
+     #f7f8fa page background. */
   --text: #0a0a0a;
   --text-secondary: #1f2937;
-  --color-muted: #525252;
-  --color-subtle: #737373;
+  --color-muted: #4b4b4b;
+  --color-subtle: #595959;
 
   /* Accents — BWF-inspired */
   --color-accent: #e2231a;
@@ -73,17 +74,19 @@ body {
 }
 
 .text-display {
-  font-size: clamp(2.75rem, 5vw + 1rem, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.25rem, 5vw + 1rem, 4rem);
+  line-height: 1.08;
   letter-spacing: 0;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 .text-headline {
-  font-size: clamp(2rem, 3vw + 0.75rem, 2.75rem);
+  font-size: clamp(1.75rem, 3vw + 0.75rem, 2.75rem);
   line-height: 1.1;
   letter-spacing: 0;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 h1,
@@ -97,6 +100,22 @@ h3 {
 }
 
 :focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Make <details> summaries keyboard-discoverable without a visible disclosure
+   triangle conflicting with our custom +/× indicator. */
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 4px;

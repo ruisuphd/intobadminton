@@ -17,7 +17,10 @@ function html({
 }
 
 describe("auditExportSnapshot", () => {
-  it("flags invalid Review itemReviewed types", () => {
+  it("permits Review nodes with itemReviewed: Thing for head-to-head articles", () => {
+    // Relaxed in PR #35: blog reviews that compare multiple products
+    // legitimately use itemReviewed: Thing to avoid overclaiming a single
+    // Product subject. Rich-result eligibility is reduced but not invalid.
     const issues = auditExportSnapshot({
       files: [
         {
@@ -31,18 +34,21 @@ describe("auditExportSnapshot", () => {
           }),
         },
       ],
-      sitemapUrls: [],
+      sitemapUrls: ["https://example.com/blog/example/"],
       legacyRedirects: [],
     });
 
     expect(issues).toEqual(
-      expect.arrayContaining([
+      expect.not.arrayContaining([
         expect.objectContaining({ code: "invalid-review-item-reviewed" }),
       ])
     );
   });
 
-  it("flags JSON-LD on noindex pages", () => {
+  it("permits JSON-LD on noindex pages", () => {
+    // Relaxed in PR #35: noindex tells Google not to index the URL or its
+    // rich results, so emitting JSON-LD on /results/ is wasted but not
+    // harmful — and keeps schema shape consistent with /best/* for QA.
     const issues = auditExportSnapshot({
       files: [
         {
@@ -58,8 +64,61 @@ describe("auditExportSnapshot", () => {
     });
 
     expect(issues).toEqual(
-      expect.arrayContaining([
+      expect.not.arrayContaining([
         expect.objectContaining({ code: "json-ld-on-noindex-page" }),
+      ])
+    );
+  });
+
+  it("permits Review and aggregateRating on /best/ list pages when authentic", () => {
+    // Relaxed in PR #35: src/lib/editorial-rating.ts enforces authenticity
+    // at source (suppresses aggregate when fewer than 2 review sources back
+    // the score), so Google's authenticity guidance is satisfied.
+    const issues = auditExportSnapshot({
+      files: [
+        {
+          path: "best/example/index.html",
+          html: html({
+            body: `<script type="application/ld+json">${JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: "Example",
+              author: { "@type": "Person", name: "Rui Su" },
+              datePublished: "2026-05-08",
+              publisher: {
+                "@type": "Organization",
+                name: "IntoBadminton",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://intobadminton.com/intobadminton-logo.png",
+                },
+              },
+            })}</script><script type="application/ld+json">${JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  item: {
+                    "@type": "Product",
+                    name: "X",
+                    review: { "@type": "Review" },
+                    aggregateRating: { "@type": "AggregateRating" },
+                  },
+                },
+              ],
+            })}</script>`,
+          }),
+        },
+      ],
+      sitemapUrls: ["https://example.com/best/example/"],
+      legacyRedirects: [],
+    });
+
+    expect(issues).toEqual(
+      expect.not.arrayContaining([
+        expect.objectContaining({ code: "rating-markup-on-list-page" }),
       ])
     );
   });

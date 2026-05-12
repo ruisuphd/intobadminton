@@ -32,7 +32,14 @@ export function SiteHeader() {
       if (e.key === "Escape") setOpen(false);
     };
     document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
+    // Lock body scroll while the mobile menu is open so the page does
+    // not jump on iOS Safari rubber-band scroll.
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handler);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open]);
 
   const close = () => setOpen(false);
