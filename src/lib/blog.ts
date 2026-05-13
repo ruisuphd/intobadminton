@@ -1,4 +1,5 @@
 import type { SiteLocale } from "@/lib/locale";
+import { sourceReviewArticles } from "@/lib/blog-source-reviews";
 
 export type BlogSlug =
   | "racket-balance-vs-swing-speed"
@@ -41,6 +42,23 @@ export type BlogSlug =
   | "victor-tk-f-c-ultra-review"
   | "kawasaki-kace-shoes-review"
   | "kawasaki-star-cross-racket-review"
+  | "yonex-arcsaber-7-pro-review"
+  | "asics-blast-ff-3-badminton-shoes-review"
+  | "yonex-astrox-nextage-review"
+  | "victor-drivex-10-review"
+  | "yonex-nanoflare-1000z-play-review"
+  | "yonex-nanoflare-800-pro-tour-review"
+  | "yonex-nanoflare-nextage-review"
+  | "yonex-power-cushion-88-dial-3-review"
+  | "yonex-grpht-thrttl-training-shoe-review"
+  | "li-ning-bladex-900-new-review"
+  | "victor-auraspeed-hs-plus-attack-review"
+  | "yonex-astrox-88-pro-2024-review"
+  | "victor-auraspeed-90k-ii-review"
+  | "victor-thruster-falcon-review"
+  | "yonex-nanoflare-700-review"
+  | "li-ning-axforce-90-new-review"
+  | "yonex-subaxia-gt-shoes-review"
   | "how-to-choose-a-badminton-racket"
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
@@ -87,6 +105,23 @@ export const blogSlugs: BlogSlug[] = [
   "victor-tk-f-c-ultra-review",
   "kawasaki-kace-shoes-review",
   "kawasaki-star-cross-racket-review",
+  "yonex-arcsaber-7-pro-review",
+  "asics-blast-ff-3-badminton-shoes-review",
+  "yonex-astrox-nextage-review",
+  "victor-drivex-10-review",
+  "yonex-nanoflare-1000z-play-review",
+  "yonex-nanoflare-800-pro-tour-review",
+  "yonex-nanoflare-nextage-review",
+  "yonex-power-cushion-88-dial-3-review",
+  "yonex-grpht-thrttl-training-shoe-review",
+  "li-ning-bladex-900-new-review",
+  "victor-auraspeed-hs-plus-attack-review",
+  "yonex-astrox-88-pro-2024-review",
+  "victor-auraspeed-90k-ii-review",
+  "victor-thruster-falcon-review",
+  "yonex-nanoflare-700-review",
+  "li-ning-axforce-90-new-review",
+  "yonex-subaxia-gt-shoes-review",
   "how-to-choose-a-badminton-racket",
   "badminton-equipment-for-kids",
   "badminton-glossary-terms-every-player-should-know",
@@ -138,6 +173,16 @@ export type BlogStory = {
   blocks: BlogStoryBlock[];
 };
 
+export type BlogFactCheck = {
+  sourceName: string;
+  title: string;
+  section: string;
+  checkedAt: string;
+  href: string;
+  quote?: string;
+  note: string;
+};
+
 export type BlogArticle = {
   slug: BlogSlug;
   /** First-published / last-revised date in ISO format (YYYY-MM-DD). */
@@ -147,6 +192,7 @@ export type BlogArticle = {
   dek: string;
   reviewSummary?: BlogReviewSummary;
   story?: BlogStory;
+  factChecks?: BlogFactCheck[];
   sections: { heading: string; body: string }[];
   cta: string;
 };
@@ -231,7 +277,7 @@ export function relatedArticles(
   ).slice(0, n);
 }
 
-export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
+const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
   en: [
     {
       slug: "racket-balance-vs-swing-speed",
@@ -294,7 +340,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Overvaluing price",
-          body: "The best beginner racket is not the most expensive pro frame. It is the racket that lets you repeat length, recover in defense, and play pain-free.",
+          body: "The best beginner racket is not the most expensive pro frame. It is the racket that lets you repeat length, recover in defence, and play pain-free.",
         },
       ],
       cta: "Start with a profile-based recommendation, then demo if possible.",
@@ -308,7 +354,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Start with what you want to fix",
-          body: "If clears need help and defense feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.",
+          body: "If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.",
         },
         {
           heading: "Match tension to level",
@@ -396,7 +442,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "What changed in the 2024 reset",
-          body: "Yonex retired the camel-gold 88D Pro after three years and replaced both 88 Pros with new colors that share the second-generation Namd Flex Force shaft, a Power Assist Bumper at the top of the frame, and the longer 10mm built-in T-joint. The new shaft snaps back faster than the camel-gold predecessor, the bumper redistributes mass for cleaner contact, and the joint adds a small amount of torsional stability. Both rackets retain the head-heavy attack heritage of the 88 Pro line, but they keep distinct personalities: the D is the back-court hammer, the S is the balanced control frame Yonex aims at front-court doubles and mixed.",
+          body: "Yonex retired the camel-gold 88D Pro after three years and replaced both 88 Pros with new colours that share the second-generation Namd Flex Force shaft, a Power Assist Bumper at the top of the frame, and the longer 10mm built-in T-joint. The new shaft snaps back faster than the camel-gold predecessor, the bumper redistributes mass for cleaner contact, and the joint adds a small amount of torsional stability. Both rackets retain the head-heavy attack heritage of the 88 Pro line, but they keep distinct personalities: the D is the back-court hammer, the S is the balanced control frame Yonex aims at front-court doubles and mixed.",
         },
         {
           heading: "Frame: narrower D, larger S",
@@ -408,15 +454,15 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Smash vs control: pick by role, not by ego",
-          body: "If you are a rear-court doubles player or a singles player whose match-winning shot is the smash, the 88D Pro 2024 is the more direct upgrade. Compared with the camel-gold version, smash power is similar in absolute terms but continuity is better — you fatigue less across long rallies because the new shaft loads and unloads faster. If you play front-court doubles or mixed and your job is to organize the rally with drops, hairpins, pushes, and precise placement, the 88S Pro 2024 is genuinely the best control-balance racket on the market right now (BadmintonCN, January 2026 roundup), beating Halbertec 8000 / 9000 / 9000 Power and Arcsaber 11 Pro on combined control and smash quality.",
+          body: "If you are a rear-court doubles player or a singles player whose match-winning shot is the smash, the 88D Pro 2024 is the more direct upgrade. Compared with the camel-gold version, smash power is similar in absolute terms but continuity is better — you fatigue less across long rallies because the new shaft loads and unloads faster. If you play front-court doubles or mixed and your job is to organise the rally with drops, hairpins, pushes, and precise placement, the source comparison frames the 88S Pro 2024 as one of the strongest control-balance rackets it reviewed, ahead of Halbertec 8000 / 9000 / 9000 Power and Arcsaber 11 Pro for that reviewer's combined control and smash-quality criteria.",
         },
         {
           heading: "Founder firsthand notes",
-          body: "I (Rui Su, Division 4 Ireland) currently play the 88S Pro 2024 as my main racket for front-court doubles. It feels close to the Astrox 77 Pro I used previously but with a stiffer shaft — better when you have the timing to load it, more demanding when you do not. I have also held the 88D Pro 2024 and tested it against the 77 Pro: the 88D is harder to drive on continuous attack, and for most amateur players I would still recommend the 77 Pro over the 88D unless they specifically need rear-court power. The 88S Pro is the more universally enjoyable of the two new colors.",
+          body: "I (Rui Su, Division 4 Ireland) currently play the 88S Pro 2024 as my main racket for front-court doubles. It feels close to the Astrox 77 Pro I used previously but with a stiffer shaft — better when you have the timing to load it, more demanding when you do not. I have also held the 88D Pro 2024 and tested it against the 77 Pro: the 88D is harder to drive on continuous attack, and for most amateur players I would still recommend the 77 Pro over the 88D unless they specifically need rear-court power. The 88S Pro is the more universally enjoyable of the two new colours.",
         },
         {
           heading: "Who should buy which",
-          body: "Buy the 88D Pro 2024 if: you compete in men's doubles back court, you smash often as a primary attack pattern, your shoulder and core are conditioned for stiff-shaft frames, and you have time on court to adapt. Buy the 88S Pro 2024 if: you play mixed doubles or front-court doubles, you organize rallies through placement rather than raw smash, you valued the control feel of the 77 Pro and want a stiffer shaft tier above it, or you need one frame that can do both singles and doubles competently. Either way, plan to spend a few sessions adjusting your timing — both are pro-tier shafts.",
+          body: "Buy the 88D Pro 2024 if: you compete in men's doubles back court, you smash often as a primary attack pattern, your shoulder and core are conditioned for stiff-shaft frames, and you have time on court to adapt. Buy the 88S Pro 2024 if: you play mixed doubles or front-court doubles, you organise rallies through placement rather than raw smash, you valued the control feel of the 77 Pro and want a stiffer shaft tier above it, or you need one frame that can do both singles and doubles competently. Either way, plan to spend a few sessions adjusting your timing — both are pro-tier shafts.",
         },
       ],
       cta: "Run the finder if you are choosing your next 88 Pro — we score it against your level, role, and budget.",
@@ -446,7 +492,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Nanoflare 1000Z: the hexagonal warrior",
-          body: "The 1000Z is the flagship and a different kind of racket. Small frame, hard shaft (around two tiers stiffer than the 700 Pro shaft), DR carbon for a touch of pocketing feel, and the best end-speed and pointing accuracy of the Nanoflare line. BadmintonCN reviewers call it the most balanced of all speed rackets — no clear weakness, T0-tier alongside the Victor Auraspeed 100X SE. Founder firsthand (Rui, Div 4 IE): I currently play the 1000Z as my men's doubles racket. It is extremely fast on drives and defense, but power is harder to generate than from a comparable head-heavy frame. With good timing and strength, it is the doubles weapon. Without those, it can feel lifeless.",
+          body: "The 1000Z is the flagship and a different kind of racket. Small frame, hard shaft (around two tiers stiffer than the 700 Pro shaft), DR carbon for a touch of pocketing feel, and the strongest end-speed and pointing accuracy described in this Nanoflare source set. BadmintonCN reviewers frame it as one of the most complete speed rackets in their comparison, alongside the Victor Auraspeed 100X SE. Founder firsthand (Rui, Div 4 IE): I currently play the 1000Z as my men's doubles racket. It is extremely fast on drives and defence, but power is harder to generate than from a comparable head-heavy frame. With good timing and strength, it can be a doubles weapon. Without those, it can feel lifeless.",
         },
         {
           heading: "Which one is for you",
@@ -472,11 +518,11 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Where the 800 Pro wins and loses",
-          body: "Strengths: drives, flat exchanges, reflex defense, sharp smash placement. The fast snapback turns short power strokes into fast shuttles. Best for fast-pace men's doubles and back-court attack from a speed profile. Weaknesses: control on net play is not its strength — the lack of pocketing means drops can fly slightly higher than intended, and cross-court drops are easier to send long. Rear-court control is also weaker than the 1000Z because the 800 Pro skips the DR carbon used in the flagship. Higher entry threshold than the Nanoflare 700 Pro.",
+          body: "Strengths: drives, flat exchanges, reflex defence, sharp smash placement. The fast snapback turns short power strokes into fast shuttles. Best for fast-pace men's doubles and back-court attack from a speed profile. Weaknesses: control on net play is not its strength — the lack of pocketing means drops can fly slightly higher than intended, and cross-court drops are easier to send long. Rear-court control is also weaker than the 1000Z because the 800 Pro skips the DR carbon used in the flagship. Higher entry threshold than the Nanoflare 700 Pro.",
         },
         {
           heading: "Auraspeed HS Plus: a hardened Hayabusa",
-          body: "Victor's Auraspeed HS Plus uses WES 3.0 shaft tech and Victor's hardest production shaft tier. BadmintonCN reviewers describe it as a hardened version of the Hayabusa SE Black Gold: harder shaft, faster off-string, more rigid feedback. Used by Hendra Setiawan and H.S. Prannoy. A 4U sample measures 88.9g with the underbase removed, balance 304mm — almost identical mass and balance to a 4U Nanoflare 1000Z. But the contact feel is different: more transparent and force-driven where the 1000Z has a slight pocketing pause. Sweet spot is small. Off-sweet-spot defense is weaker than the 100XSE.",
+          body: "Victor's Auraspeed HS Plus uses WES 3.0 shaft tech and Victor's hardest production shaft tier. BadmintonCN reviewers describe it as a hardened version of the Hayabusa SE Black Gold: harder shaft, faster off-string, more rigid feedback. Used by Hendra Setiawan and H.S. Prannoy. A 4U sample measures 88.9g with the underbase removed, balance 304mm — almost identical mass and balance to a 4U Nanoflare 1000Z. But the contact feel is different: more transparent and force-driven where the 1000Z has a slight pocketing pause. Sweet spot is small. Off-sweet-spot defence is weaker than the 100XSE.",
         },
         {
           heading: "Pick by what you actually do",
@@ -533,7 +579,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Buying guidance",
-          body: "Buy the Bladex 800 Speed if: you play organized control rallies and have the swing speed to load a stiff shaft, you want a Li-Ning frame with M46X carbon (which is genuinely a step up in feel), and you are explicitly tired of the crisp-elastic pattern. Skip it if: you want maximum off-string speed (the Yonex 800 Pro is faster), you want pure rear-court attack (the Astrox 88D Pro 2024 is better), or you are not yet driving stiff shafts reliably (the Bladex 800 New is the friendlier sibling). It is genuinely cheaper than the Yonex flagship speed rackets, around 200-240 USD depending on region, which is also a real reason to consider it.",
+          body: "Buy the Bladex 800 Speed if: you play organised control rallies and have the swing speed to load a stiff shaft, you want a Li-Ning frame with M46X carbon (which is described in the source notes as a step up in feel), and you are explicitly tired of the crisp-elastic pattern. Skip it if: you want maximum off-string speed (the Yonex 800 Pro is faster in the source comparison), you want pure rear-court attack (the Astrox 88D Pro 2024 is stronger in the source comparison), or you are not yet driving stiff shafts reliably (the Bladex 800 New is the friendlier sibling). It is usually cheaper than the Yonex flagship speed rackets, around 200-240 USD depending on region, which is also a practical reason to consider it.",
         },
       ],
       cta: "Add the Bladex 800 Speed to compare against your current racket — we surface the trade-offs explicitly.",
@@ -664,11 +710,11 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Why this comparison matters",
-          body: "The Li-Ning AxForce series (formerly known by its Chinese name 雷霆 / Thunder, now consistently labeled AxForce in English markets) and the Yonex Astrox 88D Pro 2024 are the two strongest head-heavy attack racket lines on the market right now. Both lines compete head-to-head for tournament players who want a smash-focused weapon. The AxForce 90 New is the current flagship of the Li-Ning line and uses Li-Ning's Thunder Tech platform with M46 and T1100 carbon. The AxForce 80 is the easier-driving sibling. The Astrox 88D Pro 2024 is the cross-brand benchmark for many serious smash-focused players.",
+          body: "The Li-Ning AxForce series (formerly known by its Chinese name 雷霆 / Thunder, now consistently labelled AxForce in English markets) and the Yonex Astrox 88D Pro 2024 are two prominent head-heavy attack racket lines in the source comparison. Both lines compete head-to-head for tournament players who want a smash-focused weapon. The AxForce 90 New is presented as the flagship of the Li-Ning line and uses Li-Ning's Thunder Tech platform with M46 and T1100 carbon. The AxForce 80 is the easier-driving sibling. The Astrox 88D Pro 2024 is the cross-brand benchmark for many serious smash-focused players.",
         },
         {
           heading: "AxForce 90 New: Li-Ning's strongest shaft to date",
-          body: "BadmintonCN reviewers calls the AxForce 90 New shaft Li-Ning's strongest to date. The shaft is 6.4mm thick — thicker than the 6.2mm of the AxForce 90 Dragon-Tiger predecessor — but the construction balances permeability, full elasticity, and balanced hardness. Surprisingly forgiving sweet spot for a small frame. Anti-torsion is excellent even with the thin shaft. A 4U sample measures 89.5g with the underbase removed, balance 304mm. The Thunder Technology platform is supposed to help players transition from defense to attack quickly, and on court the rapid recovery does seem to support continuous attack.",
+          body: "BadmintonCN reviewers call the AxForce 90 New shaft Li-Ning's strongest in their source comparison. The shaft is 6.4mm thick — thicker than the 6.2mm of the AxForce 90 Dragon-Tiger predecessor — but the construction balances permeability, full elasticity, and balanced hardness. The source review describes a forgiving sweet spot for a small frame and strong anti-torsion behaviour even with the thin shaft. A 4U sample measures 89.5g with the underbase removed, balance 304mm. The Thunder Technology platform is presented as helping players transition from defence to attack quickly, and the source impression says the rapid recovery supports continuous attack.",
         },
         {
           heading: "AxForce 80: the sugar-water sibling",
@@ -800,7 +846,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "On court vs the Astrox 88D Pro 2024",
-          body: "The closer comparison for DriveX 12 buyers, since both are head-heavy stiff-shaft attack rackets in the same price tier. Reviewers' measured 4U DriveX 12: 89.2g unstrung at balance 311mm. 4U Astrox 88D Pro 2024: 89.2g unstrung at balance 308mm. The 88D Pro's shaft is slightly stiffer and crisper off-string, with the Yonex 2nd-gen Namd shaft producing snappier counter-attack on defense; the 88D Pro feels more 'connected' on the contact moment. The DriveX 12 has slightly better pocketing for net play and drops, where the 88D Pro can feel quick-firing. Smashes go to the 88D Pro by a small margin in absolute power; the DriveX 12 is sharper on placement.",
+          body: "The closer comparison for DriveX 12 buyers, since both are head-heavy stiff-shaft attack rackets in the same price tier. Reviewers' measured 4U DriveX 12: 89.2g unstrung at balance 311mm. 4U Astrox 88D Pro 2024: 89.2g unstrung at balance 308mm. The 88D Pro's shaft is slightly stiffer and crisper off-string, with the Yonex 2nd-gen Namd shaft producing snappier counter-attack on defence; the 88D Pro feels more 'connected' on the contact moment. The DriveX 12 has slightly better pocketing for net play and drops, where the 88D Pro can feel quick-firing. Smashes go to the 88D Pro by a small margin in absolute power; the DriveX 12 is sharper on placement.",
         },
         {
           heading: "The price argument",
@@ -999,7 +1045,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Quirks worth knowing",
-          body: "Two notes from extended use. First, the cross-vane outsole pattern is more sensitive to dust and sweat than traditional honeycomb hex patterns. On clean wood or fresh court tape you have full grip; on dusty rec center floors you may slip on aggressive cuts. Second, the stock insole is unimpressive for a flagship shoe — many serious players replace it with a supercritical aftermarket insole, which materially changes the cushioning ceiling and ground-feel balance.",
+          body: "Two notes from extended use. First, the cross-vane outsole pattern is more sensitive to dust and sweat than traditional honeycomb hex patterns. On clean wood or fresh court tape you have full grip; on dusty recreation-centre floors you may slip on aggressive cuts. Second, the stock insole is unimpressive for a flagship shoe — many serious players replace it with a supercritical aftermarket insole, which materially changes the cushioning ceiling and ground-feel balance.",
         },
         {
           heading: "Founder firsthand",
@@ -1128,7 +1174,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "What you feel on court",
-          body: "Even at 4U the head-weight feels heavier than the published 299mm balance suggests — Yonex weighted the handle, so removing the underbase shifts the balance into the 315mm range where the racket really lives. Sweet-spot tolerance is poor for the first dozen sessions. Expect mishits on flat exchanges and front-court reflex shots. Rear-court attack is the reward: when a smash lands in the sweet spot, the directional precision and shuttle speed are top-of-class — sharper than the Astrox 88D Pro 2024 by a notable margin.",
+          body: "Even at 4U the head-weight feels heavier than the published 299mm balance suggests in the source review — Yonex weighted the handle, so removing the underbase shifts the balance into the 315mm range where that tester felt the racket really lives. Sweet-spot tolerance is poor for the first dozen sessions. Expect mishits on flat exchanges and front-court reflex shots. Rear-court attack is the reward: when a smash lands in the sweet spot, the source review describes high directional precision and shuttle speed, sharper than the Astrox 88D Pro 2024 in that comparison.",
         },
         {
           heading: "Doubles vs singles",
@@ -1230,11 +1276,11 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Where it falls short",
-          body: "Two limits worth knowing. First, initiation is good but not class-leading. The forefoot stack is slightly thicker than ultra-light tournament shoes like the Aerus Z2, so the absolute first-step is a half-tick slower. For most amateurs this is invisible; for fast-doubles specialists it might matter. Second, factory outsole grip is excellent on clean wood floors but slips on dusty or older rec-center courts. Reviewers recommend scrubbing the new sole on concrete to remove the factory oxide before competition use — typical Li-Ning behavior.",
+          body: "Two limits worth knowing. First, initiation is good but not class-leading. The forefoot stack is slightly thicker than ultra-light tournament shoes like the Aerus Z2, so the absolute first-step is a half-tick slower. For most amateurs this is invisible; for fast-doubles specialists it might matter. Second, factory outsole grip is excellent on clean wood floors but slips on dusty or older recreation-centre courts. Reviewers recommend scrubbing the new sole on concrete to remove the factory oxide before competition use — behaviour often reported with Li-Ning court-shoe outsoles.",
         },
         {
           heading: "Pick it if",
-          body: "Buy Bladesabre MAX if: you have a normal-to-narrow forefoot, you compete in doubles or singles where landing cushioning matters across long sessions, you want a Li-Ning competition shoe and don't want to pay 65 Z3 / Comfort Z3 pricing, and you have access to a clean-floor practice court for initial sole break-in. Skip it if: you have wide forefoot (look at Comfort Z3 wide or Mizuno Wave Claw wide), you specifically want ultra-light tournament weight, or you primarily play on dusty rec-center floors where the factory outsole will fight you.",
+          body: "Buy Bladesabre MAX if: you have a normal-to-narrow forefoot, you compete in doubles or singles where landing cushioning matters across long sessions, you want a Li-Ning competition shoe and do not want to pay 65 Z3 / Comfort Z3 pricing, and you have access to a clean-floor practice court for initial sole break-in. Skip it if: you have wide forefoot (look at Comfort Z3 wide or Mizuno Wave Claw wide), you specifically want ultra-light tournament weight, or you primarily play on dusty recreation-centre floors where the factory outsole will fight you.",
         },
       ],
       cta: "Compare Bladesabre MAX against Comfort Z3 and Eclipsion Z3 in our finder — we score by foot width and weight class.",
@@ -1254,7 +1300,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Back-court speed attackers",
         ],
         avoidIf: [
-          "You need off-center forgiveness",
+          "You need off-centre forgiveness",
           "You prefer pocketing feel",
         ],
         setupNotes: [
@@ -1403,7 +1449,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Design and construction",
-          body: "The review highlights a calmer version of the Halbertec visual language: asymmetric aurora-style purple and ice-green panels, matte black and ivory shaft blocking, and metallic particles in both main frame colors rather than only one side. Under the paint, the talking points are Stabilized Layout frame reinforcement, SW Balance weight distribution, ACC-RIF composite control, and a 6.8mm medium-flex shaft with high-density vibration damping. The important buyer translation is simple: Li-Ning has tuned this as a balanced control racket first, not as a rear-court hammer.",
+          body: "The review highlights a calmer version of the Halbertec visual language: asymmetric aurora-style purple and ice-green panels, matte black and ivory shaft blocking, and metallic particles in both main frame colours rather than only one side. Under the paint, the talking points are Stabilized Layout frame reinforcement, SW Balance weight distribution, ACC-RIF composite control, and a 6.8mm medium-flex shaft with high-density vibration damping. The important buyer translation is simple: Li-Ning has tuned this as a balanced control racket first, not as a rear-court hammer.",
         },
         {
           heading: "On-court feel",
@@ -1414,8 +1460,8 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           body: "Do not buy this expecting 9000 Power smash behavior. The reviewer still gives the 8000 more weight and pressure on full-power smashes, while the 7000 II wins on comfort and short-stroke response. That makes the 7000 II more useful in ordinary doubles rallies than its spec sheet suggests: point smashes, quick follow-up attacks, and half-court pressure feel crisp, while full rear-court bombing is merely good rather than elite.",
         },
         {
-          heading: "Net and defense",
-          body: "The strongest part of the review is control. Net shots, cross-court touches, and guided placements benefit from a stable face and reduced unwanted vibration. On defense, the moderate balance keeps recovery manageable, and the shaft has enough elasticity to lift or redirect without a large swing. This is the profile many club players actually need: a racket that lets them survive speed, organize the rally, and still finish when the chance is obvious.",
+          heading: "Net and defence",
+          body: "The strongest part of the review is control. Net shots, cross-court touches, and guided placements benefit from a stable face and reduced unwanted vibration. On defence, the moderate balance keeps recovery manageable, and the shaft has enough elasticity to lift or redirect without a large swing. This is the profile many club players actually need: a racket that lets them survive speed, organise the rally, and still finish when the chance is obvious.",
         },
         {
           heading: "Who should buy it",
@@ -1509,11 +1555,11 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "First feel",
-          body: "The reviewer removed the base grip and played with an overgrip, which increases the visible head-weight sensation. Even then, the swing weight is described as manageable. The sweet spot is not huge, but the frame gathers power cleanly when contact is centered. The hit is direct rather than sticky, with little unwanted vibration, which is exactly what you want from a fast attack frame: no dramatic dwell, no vague feedback, no soft delay.",
+          body: "The reviewer removed the base grip and played with an overgrip, which increases the visible head-weight sensation. Even then, the swing weight is described as manageable. The sweet spot is not huge, but the frame gathers power cleanly when contact is centred. The hit is direct rather than sticky, with little unwanted vibration, which is exactly what you want from a fast attack frame: no dramatic dwell, no vague feedback, no soft delay.",
         },
         {
           heading: "Power and control",
-          body: "The standout is power transmission. With JS63 at 28 lb, the source review describes both full smashes and stick smashes as heavy, fast, and easy to repeat for players with good force concentration. The racket's anti-torsion behavior also matters: it does not twist around the shuttle on off-center pressure as much as cheaper speed frames often do. That stability turns into better placement on drives, punch clears, and smash follow-ups.",
+          body: "The standout is power transmission. With JS63 at 28 lb, the source review describes both full smashes and stick smashes as heavy, fast, and easy to repeat for players with good force concentration. The racket's anti-torsion behaviour also matters: it does not twist around the shuttle on off-centre pressure as much as cheaper speed frames often do. That stability turns into better placement on drives, punch clears, and smash follow-ups.",
         },
         {
           heading: "Speed play",
@@ -1598,7 +1644,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Medium-stiff shaft users",
         ],
         avoidIf: [
-          "You need pure speed defense",
+          "You need pure speed defence",
           "You want maximum smash brutality",
         ],
         setupNotes: [
@@ -1855,10 +1901,10 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
             kind: "verdict",
             heading: "Buying call",
             body:
-              "The 65 Z4 is the safest pick on the Yonex roster. If you do not have a strong reason to specialise, this is the shoe.",
+              "The 65 Z4 is the most broadly useful pick in this Yonex shoe source set. If you do not have a strong reason to specialise, this is the shoe to demo first.",
             bullets: [
-              "Default recommendation for first tournament-tier shoe.",
-              "Wide variant fits 90% of wide-footed players who get pinched in Aerus Z2.",
+              "Strong default recommendation for a first tournament-tier shoe.",
+              "Wide variant is aimed at players who get pinched in Aerus Z2.",
               "Better grip than 65 Z3 — noticeable on synthetic and wood courts.",
             ],
           },
@@ -1867,7 +1913,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Why the 65 series stays relevant",
-          body: "Twenty years on, 65 Z4 keeps the same trick that made the original 65 famous — refusing to specialise. Each Z generation has narrowed the gap with the more focused options: faster than Comfort Z3, more cushioned than Aerus Z2, more stable than entry-level shoes. The Z4 is the most evenly tuned of the line. If you cannot decide between Aerus Z2 and Comfort Z3, the 65 Z4 is almost always the answer that prevents future regret.",
+          body: "Twenty years on, 65 Z4 keeps the same trick that made the original 65 famous — refusing to specialise. Each Z generation has narrowed the gap with the more focused options: faster than Comfort Z3, more cushioned than Aerus Z2, more stable than entry-level shoes. The Z4 is the most evenly tuned of the line in this source set. If you cannot decide between Aerus Z2 and Comfort Z3, the 65 Z4 is often the safer demo pair.",
         },
         {
           heading: "What the Radial Blade outsole actually changes",
@@ -1903,8 +1949,8 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Buyers tired of the Yonex / Victor / Li-Ning axis",
         ],
         avoidIf: [
-          "You need fast doubles defense",
-          "You want guaranteed resale liquidity",
+          "You need fast doubles defence",
+          "You want predictable resale liquidity",
         ],
         setupNotes: [
           "Source 4U/G5 sample, BG65Ti at 26 lb, balance ~308mm.",
@@ -1989,7 +2035,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "The flat-frame peg system, explained simply",
-          body: "Most rackets thread strings through grommets that sit slightly proud of the frame surface. Kawasaki's patented system flattens these — peg caps sit nearly flush with the frame inner wall. The practical effect: contact transfers force into the shuttle more directly because the string bed has less slack. On smashes the result is a sharper sound and a meaningfully cleaner pocket. It is a small spec change that produces a real feel change. This kind of detail is normally only seen on Yonex's top-tier frames.",
+          body: "Most rackets thread strings through grommets that sit slightly proud of the frame surface. Kawasaki's patented system flattens these — peg caps sit nearly flush with the frame inner wall. The practical effect described by the source review is more direct force transfer into the shuttle because the string bed has less slack. On smashes the result is a sharper sound and a cleaner pocket. It is a small spec change that produces a real feel change, more commonly associated with higher-tier frames.",
         },
         {
           heading: "Where it competes head-to-head with Yonex 88D Pro",
@@ -2001,7 +2047,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Who should buy it",
-          body: "Buy the Mao 20 if you want a serious head-heavy attack frame at $140-180 and you accept the brand-equity trade-off. It fits intermediate-to-advanced players who already drive a stiff shaft cleanly and want pro-tier smash feel without the Yonex / Victor / Li-Ning premium. Skip if you need fast doubles defense, if you flip rackets every season, or if you want guaranteed strong resale. The 88D Pro 2024 still wins on absolute ceiling — the Mao 20 wins on value-per-dollar at the smash.",
+          body: "Buy the Mao 20 if you want a serious head-heavy attack frame at $140-180 and you accept the brand-equity trade-off. It fits intermediate-to-advanced players who already drive a stiff shaft cleanly and want pro-tier smash feel without the Yonex / Victor / Li-Ning premium. Skip if you need fast doubles defence, if you flip rackets every season, or if you want predictable resale. The 88D Pro 2024 still wins on absolute ceiling in the source comparison — the Mao 20 wins on value-per-dollar at the smash.",
         },
       ],
       cta: "Compare Mao 20 with Astrox 88D Pro 2024 in the finder — we surface the trade-offs explicitly.",
@@ -2021,7 +2067,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Players who specifically want non-mainstream brand identity",
         ],
         avoidIf: [
-          "You play any meaningful doubles defense",
+          "You play any meaningful doubles defence",
           "Your shoulder fatigues on stiff frames",
           "You are still developing power-stroke timing",
         ],
@@ -2214,7 +2260,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
             kind: "verdict",
             heading: "Buying call",
             body:
-              "Buy if your match pattern is build-and-finish singles, mixed doubles organisation, or all-court doubles where you control rather than attack. Skip if you want raw smash power or fast flat-drive defense.",
+              "Buy if your match pattern is build-and-finish singles, mixed doubles organisation, or all-court doubles where you control rather than attack. Skip if you want raw smash power or fast flat-drive defence.",
             bullets: [
               "Best Victor frame for buyers who like Arcsaber 11 Pro behaviour but want more finish.",
               "Pairs well with EXBOLT 63 or AeroBite at 25-27 lb.",
@@ -2242,7 +2288,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Who should buy it",
-          body: "Buy Yu 12 if you play singles built around length, control, and a finishing smash from setup; or mixed doubles where your role is to organize rallies rather than bury smashes. Skip if your match-winners are flat drives or rear-court attack — Auraspeed line frames remain better. The Victor brand finally has a flagship-tier control racket; Yu 12 is it.",
+          body: "Buy Yu 12 if you play singles built around length, control, and a finishing smash from setup; or mixed doubles where your role is to organise rallies rather than bury smashes. Skip if your match-winners are flat drives or rear-court attack — Auraspeed line frames remain better in the source comparison. The Victor brand now has a flagship-tier control racket in this source set; Yu 12 is it.",
         },
       ],
       cta: "Compare Yu 12 with Astrox 88S Pro 2024 and Arcsaber 11 Pro in the finder.",
@@ -2294,7 +2340,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
               },
               {
                 label: "Identity",
-                value: "Speed-with-precision, not speed-with-defense.",
+                value: "Speed-with-precision, not speed-with-defence.",
               },
             ],
           },
@@ -2336,7 +2382,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
             kind: "verdict",
             heading: "Buying call",
             body:
-              "Buy if you specifically want precision-speed for front-court doubles or control-leaning singles. Skip if you need rear-court attack or pure flat-drive defense.",
+              "Buy if you specifically want precision-speed for front-court doubles or control-leaning singles. Skip if you need rear-court attack or pure flat-drive defence.",
             bullets: [
               "Best in class for net play among speed rackets.",
               "Lavender pastel cosmetic is unusual for a flagship — divisive.",
@@ -2385,7 +2431,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         ],
         avoidIf: [
           "Gen 1 already fits your match pattern perfectly",
-          "You need fast doubles defense over rear-court power",
+          "You need fast doubles defence over rear-court power",
         ],
         setupNotes: [
           "Source 4U/G5 samples for both generations.",
@@ -2625,7 +2671,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         ],
         avoidIf: [
           "You want a single uncompromised frame profile",
-          "You need fast doubles defense regardless of variant",
+          "You need fast doubles defence regardless of variant",
         ],
         setupNotes: [
           "Three variants (3U, 4U, 5U) ship with different shaft thickness and tech config.",
@@ -2942,7 +2988,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
             kind: "verdict",
             heading: "Buying call",
             body:
-              "Buy if you want a speed racket that does not feel hollow. Skip if you need rear-court attack or guaranteed resale.",
+              "Buy if you want a speed racket that does not feel hollow. Skip if you need rear-court attack or predictable resale.",
             bullets: [
               "Strong alternative to Nanoflare 1000Z for buyers who find 1000Z too crisp.",
               "Pair with thin elastic strings at 25-27 lb.",
@@ -2988,7 +3034,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "1. Weight class — start with 4U if unsure",
-          body: "3U rackets weigh 85-89 grams unstrung, 4U is 80-84g, 5U is 75-79g, 6U is around 70g. The difference between 3U and 5U is dramatic in your hand — about 10% of the racket's mass. As a rough rule: 5U for new players, casual recreational players, and most women's doubles. 4U for the great majority of intermediate-and-up club players. 3U only if you specifically want a head-heavy attack feel and your shoulder is conditioned for it. Skip 6U entirely as an adult — they are toys.",
+          body: "3U rackets weigh 85-89 grams unstrung, 4U is 80-84g, 5U is 75-79g, 6U is around 70g. The difference between 3U and 5U is dramatic in your hand — about 10% of the racket's mass. As a rough rule: 5U for new players, casual recreational players, and most women's doubles. 4U for the great majority of intermediate-and-up club players. 3U only if you specifically want a head-heavy attack feel and your shoulder is conditioned for it. Treat 6U carefully as an adult; it can help injury-sensitive or very speed-focused players, but many frames feel too light for normal adult match play.",
         },
         {
           heading: "2. Balance — match it to your role, not your idol",
@@ -3012,7 +3058,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "Three honest first-racket recommendations",
-          body: "If you have $80-120 to spend: Yonex Nanoray Light 70i (5U, even-balance, flexible — friendliest possible first racket). If you have $120-180 and play 2+ times per week: Victor DriveX 8S or Yonex Astrox 7 (4U, even-to-slight-head-heavy, medium — handles attack and defense). If you have $180-250 and you are committed to staying with badminton for years: Yonex Astrox 77 Pro or Astrox 7 Pro (4U, slightly head-heavy, medium-stiff — the friendliest pro-tier upgrade Yonex makes). Avoid 100ZZ, 99 Pro, 88D Pro 2024, and 1000Z as a first racket — they are pro flagships that will actively make you worse before you learn to drive them.",
+          body: "If you have $80-120 to spend: Yonex Nanoray Light 70i (5U, even-balance, flexible — friendliest possible first racket). If you have $120-180 and play 2+ times per week: Victor DriveX 8S or Yonex Astrox 7 (4U, even-to-slight-head-heavy, medium — handles attack and defence). If you have $180-250 and you are committed to staying with badminton for years: Yonex Astrox 77 Pro or Astrox 7 Pro (4U, slightly head-heavy, medium-stiff — the friendliest pro-tier upgrade Yonex makes). Avoid 100ZZ, 99 Pro, 88D Pro 2024, and 1000Z as a first racket — they are pro flagships that can slow development before you learn to drive them.",
         },
       ],
       cta: "Run the IntoBadminton finder — five quick questions, ranked picks with reasons.",
@@ -3064,7 +3110,7 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Equipment terms",
-          body: "U-class: weight class for unstrung rackets — lower number means heavier. 3U is ~85-89g, 4U is 80-84g, 5U is 75-79g. F: flyweight, lighter than 6U, almost always junior-only. Head-heavy / head-light / even-balance: where mass concentrates in the racket; measured as the balance point in millimetres from the butt cap (around 280-310mm in normal frames). Shaft flex: how much the shaft bends under load — flexible, medium, stiff, extra-stiff. Sweet spot: the area on the stringbed where contact produces maximum repulsion and minimum vibration. Frame: the head ring of the racket. T-joint: where the shaft meets the frame; modern rackets often use built-in T-joints for stiffness. Grommets: the plastic eyelets through which strings thread — replaceable when worn.",
+          body: "U-class: weight class for unstrung rackets — lower number means heavier. 3U is ~85-89g, 4U is 80-84g, 5U is 75-79g. F: flyweight, lighter than 6U, usually junior-specific. Head-heavy / head-light / even-balance: where mass concentrates in the racket; measured as the balance point in millimetres from the butt cap (around 280-310mm in normal frames). Shaft flex: how much the shaft bends under load — flexible, medium, stiff, extra-stiff. Sweet spot: the area on the stringbed where contact produces maximum repulsion and minimum vibration. Frame: the head ring of the racket. T-joint: where the shaft meets the frame; modern rackets often use built-in T-joints for stiffness. Grommets: the plastic eyelets through which strings thread — replaceable when worn.",
         },
         {
           heading: "String and tension terms",
@@ -3122,12 +3168,109 @@ export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
         {
           heading: "How often to replace grips",
-          body: "Replace overgrips every 4-12 sessions of regular play, or whenever they feel slick. Replace underbase grips every 6-12 months — they degrade slowly and are easy to ignore, but a degraded underbase changes the racket's feel meaningfully. Good rule of thumb: if your grip is darker than the day you put it on, it is probably ready for replacement.",
+          body: "Replace overgrips every 4-12 sessions of regular play, or whenever they feel slick. Replace underbase grips every 6-12 months — they degrade slowly and are easy to ignore, but a degraded underbase changes the racket's feel meaningfully. Good rule of thumb: if your grip is darker than the day you put it on, treat it as ready for replacement.",
         },
       ],
       cta: "Get the racket recommendation right first, then dial in the grip size with one or two overgrips.",
     },
+    ...sourceReviewArticles,
   ],
+};
+
+const sourcePolicyFactCheck: BlogFactCheck = {
+  sourceName: "IntoBadminton source-rights registry",
+  title: "Source rights registry",
+  section: "Platform posture",
+  checkedAt: "2026-05-13",
+  href: "https://intobadminton.com/source-policy/",
+  quote:
+    "use only for source discovery/manual summaries until terms or partnership is clear",
+  note:
+    "Third-party community reviews are source discovery and manually reviewed impressions; they are not treated as official product specifications.",
+};
+
+function defaultReviewStory(article: BlogArticle): BlogStory | undefined {
+  if (article.story || !article.reviewSummary) return article.story;
+
+  return {
+    intro: `The useful question is not whether ${article.title} sounds exciting. The useful question is whether the promise survives an ordinary club night: late lifts, loose blocks, tired legs, and the point where a buyer stops admiring a spec sheet and starts living with the purchase.`,
+    blocks: [
+      {
+        kind: "facts",
+        heading: "How to read this review",
+        items: [
+          {
+            label: "Source posture",
+            value:
+              "Community review impressions are separated from manufacturer-confirmed specifications.",
+          },
+          {
+            label: "Buyer lens",
+            value:
+              "The verdict is framed around fit, risk, and role rather than launch hype.",
+          },
+          {
+            label: "Verification",
+            value:
+              "Official claims are linked in the fact-check notes where a public source is available.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Before buying",
+        title: article.reviewSummary.verdict,
+        body:
+          "Treat the source review as an informed court impression, then ask whether the same strengths matter for your format, timing, budget, and comfort history. A good review is a warning system as much as a sales pitch.",
+      },
+      {
+        kind: "callout",
+        label: "Demo script",
+        title: "Test the bad rally, not the easy rally",
+        body:
+          "Warm-up clears make too many products feel flattering. A serious demo should recreate the moment that normally costs you points: the late lift, the rushed block, the third consecutive lunge, the half-smash you try when your shoulder is already tired. If the product still helps there, the source praise matters. If it only feels impressive when you are fresh, keep reading but do not let the story spend your money. Then repeat the test after switching back to your current setup. The contrast matters more than the first impression, because new gear often feels exciting simply because it is new. A responsible purchase should survive the A/B test: same court, same shuttle speed, same rally pattern, and the same weaknesses you are trying to solve.",
+      },
+      {
+        kind: "callout",
+        label: "Style alignment",
+        title: "A tempting review still needs a sober exit",
+        body:
+          "These revised articles deliberately keep the story alive, but the ending stays practical. The point is to make the reader curious enough to continue, then disciplined enough to choose the right product. If a racket sounds dramatic but only helps a player with cleaner timing than yours, the article should make that gap obvious. If a shoe sounds comfortable but carries a movement-risk tradeoff, the article should make you picture the exact lunge where the tradeoff appears. Addictive writing is useful only when it makes the buying decision clearer.",
+      },
+      {
+        kind: "verdict",
+        heading: "Buyer-first read",
+        body:
+          "The safest decision is the one that matches your role, not the one with the loudest launch story.",
+        bullets: [
+          `Best for: ${article.reviewSummary.bestFor.join(", ")}.`,
+          `Avoid if: ${article.reviewSummary.avoidIf.join(", ")}.`,
+          article.reviewSummary.sourceHook,
+        ],
+      },
+    ],
+  };
+}
+
+function withEditorialSafeguards(article: BlogArticle): BlogArticle {
+  if (article.category !== "reviews") return article;
+
+  const hasPolicyNote = article.factChecks?.some(
+    (note) => note.sourceName === sourcePolicyFactCheck.sourceName
+  );
+
+  return {
+    ...article,
+    story: defaultReviewStory(article),
+    factChecks: [
+      ...(article.factChecks ?? []),
+      ...(hasPolicyNote ? [] : [sourcePolicyFactCheck]),
+    ],
+  };
+}
+
+export const blogArticles: Record<SiteLocale, BlogArticle[]> = {
+  en: rawBlogArticles.en.map(withEditorialSafeguards),
 };
 
 export function getBlogArticle(locale: SiteLocale, slug: string) {

@@ -48,7 +48,8 @@ export const messages = {
       styleTitle: "Pick up to two playing styles",
       styleHelp: "We use this to weight head balance, speed, and power fit.",
       categoryTitle: "What are you shopping for?",
-      categoryHelp: "Rackets, strings, shoes, and bags are live. Grip recommendations need more verified data first.",
+      categoryHelp:
+        "Rackets, strings, shoes, bags, shuttles, and grips are live. Each category now uses its own fit logic.",
       bodyTitle: "Optional body comfort and budget",
       bodyHelp: "Skip anything you prefer not to share. This is not medical advice.",
       continue: "Continue",

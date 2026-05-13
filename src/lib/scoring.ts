@@ -5,11 +5,13 @@ import { sourceAuthorityForProduct } from "@/lib/source-authority";
 import { humanize } from "@/lib/text";
 import type {
   BagProduct,
+  GripProduct,
   ProductRecord,
   RacketProduct,
   ScoredProduct,
   ScoredRacket,
   ShoeProduct,
+  ShuttleProduct,
   SourceChip,
   StringProduct,
 } from "@/lib/types/product";
@@ -49,6 +51,14 @@ function isShoe(p: ProductRecord): p is ShoeProduct {
 
 function isBag(p: ProductRecord): p is BagProduct {
   return p.category === "bag";
+}
+
+function isShuttle(p: ProductRecord): p is ShuttleProduct {
+  return p.category === "shuttle";
+}
+
+function isGrip(p: ProductRecord): p is GripProduct {
+  return p.category === "grip";
 }
 
 function styleHeadPreference(styles: PlayStyle[]): "heavy" | "light" | "even" {
@@ -280,6 +290,20 @@ function buildProsCons(p: ProductRecord): { pros: string[]; cons: string[] } {
     pros.push(
       `${p.hasShoeCompartment ? "Has" : "No"} shoe compartment · ${p.hasWetCompartment ? "has" : "no"} wet compartment.`
     );
+  } else if (isShuttle(p)) {
+    pros.push(
+      `${p.brand} ${p.name}: ${p.material.replace(/_/g, " ")}, ${p.durabilityTier} durability tier.`
+    );
+    pros.push(
+      `${p.unitsPerTube} per tube · ${p.bwfApproved ? "BWF approved" : "not listed as BWF approved"}.`
+    );
+  } else if (isGrip(p)) {
+    pros.push(
+      `${p.brand} ${p.name}: ${humanize(p.gripType)} grip, ${p.feel} feel, ${p.sweatAbsorption} sweat absorption.`
+    );
+    pros.push(
+      `${p.packCount} per pack${p.thicknessMm ? ` · ${p.thicknessMm} mm listed thickness` : ""}.`
+    );
   }
   const cons: string[] = [
     "Fit is personal; verify regional specs, seller authenticity, and current availability before purchase.",
@@ -291,13 +315,19 @@ function buildProsCons(p: ProductRecord): { pros: string[]; cons: string[] } {
     cons.push("Stiff setup demands clean timing; may feel harsh for developing technique.");
   }
   if (isString(p) && p.gaugeMm <= 0.63) {
-    cons.push("Thin strings can feel lively but may punish off-center hits or poor grommet condition.");
+    cons.push("Thin strings can feel lively but may punish off-centre hits or poor grommet condition.");
   }
   if (isShoe(p)) {
     cons.push("Shoes should be tried with badminton socks and lateral movement, not just standing still.");
   }
   if (isBag(p)) {
     cons.push("Capacity depends on towel, shoe size, shuttle tube, and wet-clothes habits.");
+  }
+  if (isShuttle(p)) {
+    cons.push("Match shuttle speed to hall temperature, humidity, and local league rules before bulk buying.");
+  }
+  if (isGrip(p)) {
+    cons.push("Grip feel changes with sweat, towel use, overgrip layering, and replacement frequency.");
   }
   return { pros, cons };
 }
@@ -629,6 +659,104 @@ function scoreBag(p: BagProduct, profile: UserProfile): ScoredProduct {
   return finalizeScore(p, rawFitScore, sub, reasons);
 }
 
+function shuttleTierScore(p: ShuttleProduct, level: SkillLevel): number {
+  if (level === "pro_oriented") {
+    return p.durabilityTier === "pro" || p.durabilityTier === "tournament"
+      ? 0.9
+      : 0.45;
+  }
+  if (level === "competitive") {
+    return p.durabilityTier === "tournament" || p.durabilityTier === "club"
+      ? 0.86
+      : p.durabilityTier === "pro"
+        ? 0.72
+        : 0.45;
+  }
+  if (level === "club") {
+    return p.durabilityTier === "club" || p.durabilityTier === "practice"
+      ? 0.84
+      : 0.58;
+  }
+  return p.durabilityTier === "practice" || !p.feathered ? 0.88 : 0.48;
+}
+
+function scoreShuttle(p: ShuttleProduct, profile: UserProfile): ScoredProduct {
+  const reasons: { code: string; label: string; weight: number }[] = [];
+  const level = profile.level ?? "club";
+  const tier = shuttleTierScore(p, level);
+  if (tier >= 0.8) pushReason(reasons, "SHUTTLE_LEVEL_MATCH", 0.72);
+  const budget = scoreBudget(p, profile.body.budgetMaxUsd, reasons);
+  if (budget >= 0.85) pushReason(reasons, "SHUTTLE_BUDGET_FIT", 0.5);
+  const discipline =
+    profile.discipline === "singles"
+      ? p.durabilityTier === "tournament" || p.durabilityTier === "pro"
+        ? 0.82
+        : 0.64
+      : p.durabilityTier === "club" || p.durabilityTier === "practice"
+        ? 0.8
+        : 0.68;
+  const style =
+    profile.styles.includes("smash_heavy") && p.feathered
+      ? 0.78
+      : !p.feathered && level === "recreational"
+        ? 0.82
+        : 0.64;
+  const body = p.bwfApproved ? 0.72 : 0.58;
+  const sub = {
+    style,
+    discipline,
+    level: tier,
+    budget,
+    body,
+  };
+  const rawFitScore =
+    sub.style * 0.14 +
+    sub.discipline * 0.18 +
+    sub.level * 0.34 +
+    sub.budget * 0.24 +
+    sub.body * 0.1;
+  return finalizeScore(p, rawFitScore, sub, reasons);
+}
+
+function scoreGrip(p: GripProduct, profile: UserProfile): ScoredProduct {
+  const reasons: { code: string; label: string; weight: number }[] = [];
+  const wantsAbsorption =
+    profile.styles.includes("front_court") ||
+    profile.styles.includes("defensive") ||
+    profile.discipline === "doubles" ||
+    profile.discipline === "mixed";
+  const absorption =
+    wantsAbsorption && p.sweatAbsorption === "high"
+      ? 0.9
+      : wantsAbsorption && p.sweatAbsorption === "medium"
+        ? 0.74
+        : 0.6;
+  if (absorption >= 0.74) pushReason(reasons, "GRIP_SWEAT_ABSORPTION", 0.7);
+  const packValue = p.packCount >= 3 ? 0.88 : 0.58;
+  if (packValue >= 0.8) pushReason(reasons, "GRIP_PACK_VALUE", 0.5);
+  const budget = scoreBudget(p, profile.body.budgetMaxUsd, reasons);
+  const style =
+    p.feel === "tacky" && profile.styles.includes("offensive")
+      ? 0.78
+      : p.feel === "towel" && wantsAbsorption
+        ? 0.8
+        : 0.66;
+  const sub = {
+    style,
+    discipline: absorption,
+    level: productAllowedForUserLevel(p, profile.level ?? "club") ? 0.78 : 0.32,
+    budget,
+    body: packValue,
+  };
+  const rawFitScore =
+    sub.style * 0.22 +
+    sub.discipline * 0.24 +
+    sub.level * 0.14 +
+    sub.budget * 0.2 +
+    sub.body * 0.2;
+  return finalizeScore(p, rawFitScore, sub, reasons);
+}
+
 function finalizeScore(
   p: ProductRecord,
   rawFitScore: number,
@@ -683,6 +811,8 @@ export function scoreProductCatalog(profile: UserProfile): ScoredProduct[] {
       if (isString(p)) return scoreString(p, profile);
       if (isShoe(p)) return scoreShoe(p, profile);
       if (isBag(p)) return scoreBag(p, profile);
+      if (isShuttle(p)) return scoreShuttle(p, profile);
+      if (isGrip(p)) return scoreGrip(p, profile);
       return null;
     })
     .filter((r): r is ScoredProduct => r != null)
