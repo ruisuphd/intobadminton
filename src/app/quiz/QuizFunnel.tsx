@@ -24,7 +24,14 @@ import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
 const STEPS = 5;
-const LIVE_CATEGORIES: EquipmentCategory[] = ["racket", "shoes", "string", "bag"];
+const LIVE_CATEGORIES: EquipmentCategory[] = [
+  "racket",
+  "shoes",
+  "string",
+  "grip",
+  "bag",
+  "shuttle",
+];
 
 const levelLabel: Record<SkillLevel, string> = {
   recreational: "Recreational",
@@ -292,8 +299,9 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
               ["racket", "Racket"],
               ["shoes", "Shoes"],
               ["string", "String"],
-              ["grip", "Grip (soon)"],
+              ["grip", "Grip"],
               ["bag", "Bag"],
+              ["shuttle", "Shuttle"],
             ] as [EquipmentCategory, string][]
           ).map(([id, label]) => {
             const live = LIVE_CATEGORIES.includes(id);

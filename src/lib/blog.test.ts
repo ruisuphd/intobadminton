@@ -100,4 +100,48 @@ describe("blog publishing metadata", () => {
     expect(article?.story).toBeDefined();
     expect(readingTimeMinutes(article!)).toBeGreaterThanOrEqual(4);
   });
+
+  test("publishes the latest local source reviews as longer buyer-first articles", () => {
+    const latestSourceSlugs = [
+      "yonex-arcsaber-7-pro-review",
+      "asics-blast-ff-3-badminton-shoes-review",
+      "yonex-astrox-nextage-review",
+      "victor-drivex-10-review",
+      "yonex-nanoflare-1000z-play-review",
+      "li-ning-halbertec-7000-ii-review",
+      "yonex-nanoflare-800-pro-tour-review",
+      "yonex-nanoflare-nextage-review",
+      "yonex-power-cushion-88-dial-3-review",
+      "yonex-grpht-thrttl-training-shoe-review",
+    ];
+
+    expect(blogSlugs).toEqual(expect.arrayContaining(latestSourceSlugs));
+
+    for (const slug of latestSourceSlugs) {
+      const article = blogArticles.en.find((item) => item.slug === slug);
+
+      expect(article, slug).toBeDefined();
+      expect(article?.reviewSummary, slug).toBeDefined();
+      expect(article?.story?.intro.trim(), slug).not.toBe("");
+      expect(readingTimeMinutes(article!), slug).toBeGreaterThanOrEqual(4);
+    }
+  });
+
+  test("keeps published review articles grounded with fact-check source notes", () => {
+    const reviews = blogArticles.en.filter(
+      (article) => article.category === "reviews"
+    );
+
+    for (const article of reviews) {
+      expect(article.factChecks?.length, article.slug).toBeGreaterThanOrEqual(1);
+
+      for (const note of article.factChecks ?? []) {
+        expect(note.sourceName.trim(), article.slug).not.toBe("");
+        expect(note.title.trim(), article.slug).not.toBe("");
+        expect(note.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+        expect(note.href).toMatch(/^https:\/\//);
+        expect(note.note.trim(), article.slug).not.toBe("");
+      }
+    }
+  });
 });

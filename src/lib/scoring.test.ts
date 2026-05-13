@@ -189,6 +189,38 @@ describe("scoreProductCatalog", () => {
     expect(rows[0]?.reasons.some((r) => r.code.includes("BAG"))).toBe(true);
   });
 
+  it("recommends shuttles by level, budget, and use case", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["balanced"],
+        category: "shuttle",
+        body: { budgetMaxUsd: 45, injuryFlags: ["none"] },
+      })
+    );
+
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows[0]?.category).toBe("shuttle");
+    expect(rows[0]?.reasons.some((r) => r.code.includes("SHUTTLE"))).toBe(true);
+  });
+
+  it("recommends grips from sweat absorption and pack value", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["front_court", "defensive"],
+        category: "grip",
+        body: { budgetMaxUsd: 20, injuryFlags: ["none"] },
+      })
+    );
+
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows[0]?.category).toBe("grip");
+    expect(rows[0]?.reasons.some((r) => r.code.includes("GRIP"))).toBe(true);
+  });
+
   it("attaches resale and depreciation estimates to scored gear", () => {
     const rows = scoreProductCatalog(
       profile({

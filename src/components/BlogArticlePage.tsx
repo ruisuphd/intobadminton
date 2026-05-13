@@ -7,6 +7,7 @@ import {
   getBlogArticle,
   readingTimeMinutes,
   relatedArticles,
+  type BlogFactCheck,
   type BlogReviewSummary,
   type BlogStoryBlock,
 } from "@/lib/blog";
@@ -157,6 +158,51 @@ function StoryBlock({ block }: { block: BlogStoryBlock }) {
       <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--text-secondary)]">
         {block.bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function FactCheckNotes({ notes }: { notes: BlogFactCheck[] }) {
+  if (notes.length === 0) return null;
+
+  return (
+    <section className="mt-10 rounded-2xl border border-[color:var(--line)] bg-white p-5">
+      <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">
+        Fact-check notes
+      </h2>
+      <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+        Manufacturer facts are separated from source-review impressions. When a
+        claim could not be verified from an official public source, the article
+        treats it as an impression rather than a specification.
+      </p>
+      <ul className="mt-5 space-y-4">
+        {notes.map((note) => (
+          <li
+            key={`${note.sourceName}-${note.title}-${note.section}`}
+            className="border-t border-[color:var(--line)] pt-4 first:border-t-0 first:pt-0"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+              {note.sourceName} · {note.section} · checked {note.checkedAt}
+            </p>
+            <a
+              href={note.href}
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              className="mt-1 inline-block text-sm font-semibold text-[var(--color-accent)] hover:underline"
+            >
+              {note.title}
+            </a>
+            {note.quote && (
+              <p className="mt-2 text-sm italic leading-relaxed text-[var(--text-secondary)]">
+                &ldquo;{note.quote}&rdquo;
+              </p>
+            )}
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+              {note.note}
+            </p>
+          </li>
         ))}
       </ul>
     </section>
@@ -381,6 +427,8 @@ export function BlogArticlePage({
             Start the finder
           </Link>
         </div>
+
+        <FactCheckNotes notes={article.factChecks ?? []} />
       </article>
 
       {/* Related */}

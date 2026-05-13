@@ -22,6 +22,10 @@ export const REASON_CODES = [
   "SHOE_CUSHION_COMFORT",
   "BAG_CAPACITY_MATCH",
   "BAG_SHOE_WET_COMPARTMENTS",
+  "SHUTTLE_LEVEL_MATCH",
+  "SHUTTLE_BUDGET_FIT",
+  "GRIP_SWEAT_ABSORPTION",
+  "GRIP_PACK_VALUE",
 ] as const;
 
 export type ReasonCode = (typeof REASON_CODES)[number];
@@ -65,4 +69,12 @@ export const REASON_LABELS: Record<ReasonCode, string> = {
     "Bag capacity fits a regular club-session loadout.",
   BAG_SHOE_WET_COMPARTMENTS:
     "Dedicated shoe or wet compartments reduce gear-management friction.",
+  SHUTTLE_LEVEL_MATCH:
+    "Shuttle quality tier matches your playing level and session demands.",
+  SHUTTLE_BUDGET_FIT:
+    "Shuttle cost profile suits your stated budget.",
+  GRIP_SWEAT_ABSORPTION:
+    "Grip absorption suits frequent hand changes and longer rallies.",
+  GRIP_PACK_VALUE:
+    "Pack size gives practical value for regular replacement.",
 };
