@@ -22,6 +22,7 @@ import {
 import { useProfile } from "@/context/ProfileContext";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
+import { profileToSearchParams } from "@/lib/profile-url";
 
 const STEPS = 5;
 const LIVE_CATEGORIES: EquipmentCategory[] = [
@@ -81,7 +82,12 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
         discipline: profile.discipline ?? "unknown",
         category: profile.category ?? "unknown",
       });
-      router.push(buildLocalizedPath(locale, "/results/"));
+      // Append the profile as URL parameters so `/results/` deep-links and
+      // can be bookmarked or shared. `ResultsClient` reads these first and
+      // falls back to localStorage / context if the URL is empty.
+      const params = profileToSearchParams(profile).toString();
+      const target = `/results/${params ? `?${params}` : ""}`;
+      router.push(buildLocalizedPath(locale, target));
     }
   };
 
@@ -340,6 +346,8 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
             <input
               type="number"
               min={0}
+              max={2000}
+              step={5}
               className="mt-1 w-full rounded-xl border border-[color:var(--line-strong)] bg-transparent px-3 py-2"
               value={profile.body.budgetMaxUsd ?? ""}
               onChange={(e) => {
@@ -348,11 +356,18 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   ...p,
                   body: {
                     ...p.body,
-                    budgetMaxUsd: v === "" ? undefined : Number(v),
+                    budgetMaxUsd:
+                      v === ""
+                        ? undefined
+                        : Math.max(0, Math.min(2000, Number(v))),
                   },
                 }));
               }}
             />
+            <span className="mt-1 block text-xs text-[var(--color-subtle)]">
+              Most badminton rackets are $50–$350 street; shoes $80–$200; bags
+              $40–$150. Capped at $2000 to filter outlier values.
+            </span>
           </label>
           {(profile.category === "shoes" || profile.category === "racket") && (
             <label className="block text-sm">

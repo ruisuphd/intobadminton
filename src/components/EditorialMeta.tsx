@@ -31,7 +31,7 @@ export function EditorialMeta({
   const meta = getEditorialMeta(path);
   if (!meta) return null;
 
-  const author = byline ?? companyInfo.authorBylineEn;
+  const author = byline ?? companyInfo.authorByline;
 
   const segments: { key: string; node: React.ReactNode }[] = [
     { key: "by", node: <>By {author}</> },

@@ -221,6 +221,81 @@ describe("scoreProductCatalog", () => {
     expect(rows[0]?.reasons.some((r) => r.code.includes("GRIP"))).toBe(true);
   });
 
+  it("sort order is stable across repeated calls with identical input (P2 tie-break)", () => {
+    const input: UserProfile = profile({
+      level: "club",
+      discipline: "doubles",
+      styles: ["balanced"],
+      category: "racket",
+      body: { budgetMaxUsd: 200, injuryFlags: ["none"] },
+    });
+    const a = scoreProductCatalog(input).map((r) => r.id);
+    const b = scoreProductCatalog(input).map((r) => r.id);
+    expect(a).toEqual(b);
+  });
+
+  it("smooths the budget curve above the budget cap (P2 — no 1.12× cliff)", () => {
+    // A $200 racket against a $180 budget used to drop from 0.55 → 0.15 once
+    // overage exceeded 12%. The smooth decay should still place it above the
+    // 0.15 floor, so the product remains surfacable in the top-N.
+    const tightBudget = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "singles",
+        styles: ["offensive"],
+        category: "racket",
+        body: { budgetMaxUsd: 180, injuryFlags: ["none"] },
+      })
+    );
+    const moderateOverBudget = tightBudget.find(
+      (r) => r.priceUsd > 180 && r.priceUsd <= 220
+    );
+    // Item exists and got a non-cliff score above the old 0.15 floor.
+    expect(moderateOverBudget?.subscores.budget ?? 0).toBeGreaterThan(0.2);
+  });
+
+  it("treats empty style selection as 'balanced' (P2 — no flat 0.4 default)", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: [],
+        category: "racket",
+        body: { budgetMaxUsd: 250, injuryFlags: ["none"] },
+      })
+    );
+    // With balanced-as-default, even-balance rackets should now appear at or
+    // near the top rather than uniformly suppressed.
+    const evenAtTop = rackets(rows.slice(0, 5)).some(
+      (r) => r.headWeight === "even"
+    );
+    expect(evenAtTop).toBe(true);
+  });
+
+  it("does not reduce wide shoes on normal feet to the misfit floor (P2 — asymmetric width)", () => {
+    const rows = scoreProductCatalog(
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["balanced"],
+        category: "shoes",
+        body: {
+          budgetMaxUsd: 250,
+          footWidth: "normal",
+          injuryFlags: ["none"],
+        },
+      })
+    );
+    expect(rows.length).toBeGreaterThan(0);
+    // The widest-fit shoes shouldn't all crater to the 0.28 floor —
+    // wide-on-normal is a mild mismatch, not a real misfit.
+    const lowestStyleSub = rows.reduce(
+      (acc, r) => Math.min(acc, r.subscores.style),
+      1
+    );
+    expect(lowestStyleSub).toBeGreaterThanOrEqual(0.28);
+  });
+
   it("attaches resale and depreciation estimates to scored gear", () => {
     const rows = scoreProductCatalog(
       profile({

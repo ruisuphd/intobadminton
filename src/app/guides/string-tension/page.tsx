@@ -1,16 +1,27 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { GuideStructuredData } from "@/components/GuideStructuredData";
+
+const PATH = "/guides/string-tension/";
+const HEADLINE = "Badminton string tension: a practical guide";
+const DESCRIPTION =
+  "How badminton string tension changes feel, power, and control — recommended pound ranges by skill, restring frequency, and climate effects most players miss.";
 
 export const metadata: Metadata = {
   title: "Badminton string tension guide",
-  description:
-    "How badminton string tension changes feel, power, and control — recommended pound ranges by skill, restring frequency, and climate effects most players miss.",
-  alternates: { canonical: "/guides/string-tension/" },
+  description: DESCRIPTION,
+  alternates: { canonical: PATH },
 };
 
 export default function StringTensionGuide() {
   return (
     <main className="flex-1 py-16">
+      <GuideStructuredData
+        path={PATH}
+        headline={HEADLINE}
+        description={DESCRIPTION}
+        breadcrumbLabel="String tension"
+      />
       <article className="layout-band max-w-3xl space-y-6 text-[var(--text)]">
         <p>
           <Link

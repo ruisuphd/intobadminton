@@ -127,7 +127,7 @@ export default function EquipmentAuthenticityGuide() {
             {authenticityGuide.dek}
           </p>
           <p className="text-sm text-[var(--color-muted)]">
-            By {companyInfo.authorBylineEn}.
+            By {companyInfo.authorByline}.
           </p>
         </header>
 

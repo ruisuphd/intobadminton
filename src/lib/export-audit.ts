@@ -38,7 +38,7 @@ const SITEMAP_EXEMPT_ROUTES = new Set<string>([
   "/setup/",
   "/quiz/",
   "/compare/",
-  "/review/",
+  "/review/submit/",
   "/privacy-choices/",
   "/blogs/", // legacy alias, redirects to /blog/
 ]);

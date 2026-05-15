@@ -21,6 +21,7 @@ const coreRoutes = [
   "/guides/equipment-authenticity/",
   "/compare/",
   "/review/",
+  "/review/submit/",
   "/methodology/",
   "/source-policy/",
   "/sources/",

@@ -68,12 +68,19 @@ describe("sitemapEntries", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
 
     // /results/ and /compare/ are stateful — they read from local storage and
-    // would index as empty pages. /review/ and /setup/ are internal tools.
-    // /privacy-choices/ is a CMP popup endpoint.
+    // would index as empty pages. /review/submit/ is the noindex first-party
+    // submission form. /setup/ is an internal tool. /privacy-choices/ is a CMP
+    // popup endpoint. /review/ is the new public hub (P1) — DO emit it.
     expect(urls).not.toContain("https://example.com/results/");
     expect(urls).not.toContain("https://example.com/compare/");
-    expect(urls).not.toContain("https://example.com/review/");
+    expect(urls).not.toContain("https://example.com/review/submit/");
     expect(urls).not.toContain("https://example.com/setup/");
     expect(urls).not.toContain("https://example.com/privacy-choices/");
+  });
+
+  it("emits the public /review/ hub (P1) but excludes the submission form", () => {
+    const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
+    expect(urls).toContain("https://example.com/review/");
+    expect(urls).not.toContain("https://example.com/review/submit/");
   });
 });

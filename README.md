@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IntoBadminton
 
-## Getting Started
+Evidence-led badminton equipment finder and review site. Live at
+[intobadminton.com](https://intobadminton.com).
 
-First, run the development server:
+## What this is
+
+- **Finder** at `/quiz/` — a five-step funnel that captures skill level,
+  discipline, play style, equipment category, and body/budget signals, then
+  returns a ranked shortlist with transparent fit-score reasoning. Logic in
+  [`src/lib/scoring.ts`](src/lib/scoring.ts); product catalog in
+  [`src/data/products.json`](src/data/products.json).
+- **Reviews and comparisons** at `/blog/`, `/compare-guides/`, `/best/`,
+  `/brands/`, `/review/` — original analysis with explicit source-authority
+  labels (manufacturer official page vs independent measurement vs editor
+  interpretation).
+- **Guides** at `/guides/` — long-form evergreen pieces on tension, balance,
+  shoe fit, doubles roles, equipment authenticity, and so on.
+
+Every product row in the finder carries a `verificationStatus`,
+`lastVerifiedAt`, and `officialSourceUrl`. Rows without a manufacturer
+product-specific URL are downgraded in `confidence` rather than hidden. See
+[`docs/FACT_CHECK_AUDIT.md`](docs/FACT_CHECK_AUDIT.md) for the source-authority
+methodology.
+
+## Stack
+
+- Next.js 16 (App Router, static export — `output: "export"` in
+  [`next.config.ts`](next.config.ts))
+- React 19, TypeScript (strict)
+- Tailwind CSS v4 via `@tailwindcss/postcss`
+- Vitest for unit tests
+- Deployed to GitHub Pages on the apex domain via
+  [`.github/workflows/pages.yml`](.github/workflows/pages.yml). CI gates in
+  [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
+
+**Read this before you edit any Next.js code:** the project's
+[`AGENTS.md`](AGENTS.md) flags that this version has breaking changes.
+Consult `node_modules/next/dist/docs/` for the canonical 16.x API before
+applying training-data Next patterns.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## CI scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint        # eslint
+npm run typecheck   # tsc --noEmit
+npm run test        # vitest run
+npm run build       # next build → static export to out/
+npm run postbuild   # legacy redirects + SEO audit gate (runs after build)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The postbuild SEO audit at
+[`scripts/postbuild-seo-audit.mjs`](scripts/postbuild-seo-audit.mjs) blocks the
+build on broken internal links, missing Article schema on key routes,
+sponsored-without-disclosure, sitemap drift, malformed JSON-LD, and legacy
+redirect mismatches.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin used for metadata and sitemap. Defaults to `https://intobadminton.com`. |
+| `NEXT_PUBLIC_BASE_PATH` | Optional path prefix for non-apex preview deploys (e.g. `/intobadminton`). |
+| `NEXT_PUBLIC_ADSENSE_CLIENT` | Google AdSense client ID. Injected only when set. |
+| `NEXT_PUBLIC_AMAZON_ASSOCIATES_TAG` | Amazon US affiliate tag. Affiliate links emit `rel="sponsored nofollow noopener"`. |
+| `NEXT_PUBLIC_AMAZON_UK_ASSOCIATES_TAG` | Amazon UK affiliate tag. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [`.env.example`](.env.example) for the full list.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Editorial
 
-## Deploy on Vercel
+- [`docs/FACT_CHECK_AUDIT.md`](docs/FACT_CHECK_AUDIT.md) — verified specs with
+  exact source wording.
+- [`docs/SEO_ROI_REVIEW_STRATEGY.md`](docs/SEO_ROI_REVIEW_STRATEGY.md) — SEO
+  clusters, review-reference policy.
+- [`docs/SOURCE_RIGHTS.md`](docs/SOURCE_RIGHTS.md) — what can and cannot be
+  quoted from external review sources.
+- [`docs/baselines/`](docs/baselines/) — GSC and Core Web Vitals baselines
+  captured before structural site changes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`main` is auto-deployed to GitHub Pages via Actions. The workflow runs
+`npm run build && npm run postbuild`, then publishes `out/`. CNAME for the apex
+domain lives in [`public/CNAME`](public/CNAME).

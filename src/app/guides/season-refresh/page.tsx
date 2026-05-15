@@ -1,16 +1,27 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { GuideStructuredData } from "@/components/GuideStructuredData";
+
+const PATH = "/guides/season-refresh/";
+const HEADLINE = "When to refresh your badminton gear";
+const DESCRIPTION =
+  "When to restring, regrip, replace shoes, and re-evaluate your racket — a practical seasonal checklist with the warning signs each item gives off.";
 
 export const metadata: Metadata = {
   title: "Badminton gear refresh checklist",
-  description:
-    "When to restring, regrip, replace shoes, and re-evaluate your racket — a practical seasonal checklist with the warning signs each item gives off.",
-  alternates: { canonical: "/guides/season-refresh/" },
+  description: DESCRIPTION,
+  alternates: { canonical: PATH },
 };
 
 export default function SeasonRefreshGuide() {
   return (
     <main className="flex-1 py-16">
+      <GuideStructuredData
+        path={PATH}
+        headline={HEADLINE}
+        description={DESCRIPTION}
+        breadcrumbLabel="Gear refresh"
+      />
       <article className="layout-band max-w-3xl space-y-6">
         <p>
           <Link

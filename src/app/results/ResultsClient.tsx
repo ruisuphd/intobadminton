@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { Suspense, useEffect, useMemo } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { ResultCard } from "@/components/ResultCard";
@@ -11,7 +12,9 @@ import {
   computeEditorialRating,
   ratingDatePublished,
 } from "@/lib/editorial-rating";
+import { parseTopN, profileFromSearchParams } from "@/lib/profile-url";
 import { scoreProductCatalog } from "@/lib/scoring";
+import type { UserProfile } from "@/lib/taxonomy";
 import type { ScoredProduct } from "@/lib/types/product";
 
 /**
@@ -104,12 +107,32 @@ function buildProductJsonLd(rows: ScoredProduct[]) {
   };
 }
 
-export function ResultsClient() {
-  const { profile, pushHistory } = useProfile();
-  const rows = useMemo(
-    () => scoreProductCatalog(profile).slice(0, 8),
+function ResultsBody() {
+  const { profile: contextProfile, pushHistory } = useProfile();
+  const searchParams = useSearchParams();
+
+  // Deep-linked profile takes precedence over localStorage / context. This
+  // lets users share a `/results/?level=...&disc=...` URL that always
+  // reproduces the same shortlist on the recipient's device — and lets
+  // returning visitors bookmark a query they ran.
+  const urlProfile = useMemo<UserProfile | null>(() => {
+    if (!searchParams) return null;
+    return profileFromSearchParams(searchParams);
+  }, [searchParams]);
+
+  const profile = urlProfile ?? contextProfile;
+
+  const topN = useMemo(
+    () => parseTopN(searchParams?.get("n")),
+    [searchParams]
+  );
+
+  const allScored = useMemo(
+    () => scoreProductCatalog(profile),
     [profile]
   );
+  const rows = useMemo(() => allScored.slice(0, topN), [allScored, topN]);
+  const filteredOutCount = allScored.length - rows.length;
 
   useEffect(() => {
     if (rows.length === 0) return;
@@ -122,8 +145,9 @@ export function ResultsClient() {
       result_count: rows.length,
       category: profile.category ?? "unknown",
       top_product_id: rows[0]?.id,
+      from_url: urlProfile != null,
     });
-  }, [rows, pushHistory, profile.category]);
+  }, [rows, pushHistory, profile.category, urlProfile]);
 
   if (!profile.level || !profile.discipline) {
     return (
@@ -165,6 +189,37 @@ export function ResultsClient() {
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}
+      {filteredOutCount > 0 && (
+        <details className="card p-5 text-sm">
+          <summary
+            className="cursor-pointer list-none font-medium text-[var(--text)]"
+            aria-live="polite"
+          >
+            {filteredOutCount} more {profile.category ?? "product"}
+            {filteredOutCount === 1 ? "" : "s"} matched your profile but
+            didn&apos;t make the top {rows.length} — why?
+          </summary>
+          <p className="mt-3 text-[var(--color-muted)]">
+            Lower-ranked rows either fall outside your skill-band, stretch the
+            budget by enough that the smooth budget decay pulled them below
+            top-{rows.length}, or carry a confidence chip ({"“"}needs
+            verification{"”"}) that reduces their score versus equivalent
+            officially-verified rows. Bump <code>?n=12</code> or
+            <code>?n=20</code> in the URL to see more.
+          </p>
+        </details>
+      )}
     </div>
+  );
+}
+
+export function ResultsClient() {
+  // Wrap in Suspense because `useSearchParams()` requires it in Next 16's
+  // static export when consumed by a client component — Next defers the
+  // search-params read until the client hydrates.
+  return (
+    <Suspense fallback={null}>
+      <ResultsBody />
+    </Suspense>
   );
 }
