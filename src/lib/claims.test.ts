@@ -31,6 +31,24 @@ describe("claims registry", () => {
     }
   });
 
+  it("derived-convention claims (weight bands, grip ladder) are tier 4 with editorialNote", () => {
+    const conventionIds = [
+      "weight-class-3u-g",
+      "weight-class-4u-g",
+      "weight-class-5u-g",
+      "yonex-grip-g4-inches",
+      "yonex-grip-g5-inches",
+    ];
+    for (const id of conventionIds) {
+      const claim = getClaim(id);
+      expect(claim, `${id} should exist`).toBeDefined();
+      expect(claim!.sourceTier).toBe(4);
+      // Verbatim `quote` is required and kept tight; editor synthesis lives
+      // in `editorialNote` so the fact-check gate stays auditable.
+      expect(claim!.source.editorialNote, `${id} should carry editorialNote`).toBeTruthy();
+    }
+  });
+
   it("getClaim resolves by id", () => {
     expect(getClaim("bwf-court-length-m")?.value).toBe("13.4");
     expect(getClaim("does-not-exist")).toBeUndefined();

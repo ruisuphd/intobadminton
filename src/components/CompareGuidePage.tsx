@@ -73,14 +73,9 @@ function sideAnchor(side: CompareSide) {
   );
 }
 
-function winnerChip(value: CompareRow["winner"]) {
-  if (!value) return null;
+function winnerChip(value: NonNullable<CompareRow["winner"]>) {
   const label =
-    value === "a"
-      ? "Edge: A"
-      : value === "b"
-        ? "Edge: B"
-        : "Tie";
+    value === "a" ? "Edge: A" : value === "b" ? "Edge: B" : "Tie";
   return (
     <span className="ml-2 inline-flex items-center rounded-full bg-[var(--color-accent-soft)] px-2 py-0.5 text-[10px] uppercase tracking-wide text-[var(--text)]">
       {label}
@@ -210,6 +205,7 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
                 <tr key={row.factor} className="border-b border-[color:var(--line)] last:border-b-0">
                   <td className="p-4 font-medium text-[var(--text)]">
                     {row.factor}
+                    {row.winner === "tie" && winnerChip("tie")}
                   </td>
                   <td className="p-4">
                     {row.a}

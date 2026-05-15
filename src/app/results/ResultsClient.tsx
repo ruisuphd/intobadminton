@@ -140,7 +140,14 @@ function ResultsBody() {
     const key = `pushed-${ids}`;
     if (sessionStorage.getItem(key)) return;
     sessionStorage.setItem(key, "1");
-    pushHistory(rows.map((r) => r.id));
+    // Only push to history when the active profile came from the user's own
+    // localStorage / context — otherwise `pushHistory` snapshots the context
+    // profile (which differs from the URL-derived one) and a shared
+    // `/results/?...` visit would pollute the recipient's history with their
+    // own profile paired with someone else's top IDs.
+    if (!urlProfile) {
+      pushHistory(rows.map((r) => r.id));
+    }
     trackEvent("recommendations_viewed", {
       result_count: rows.length,
       category: profile.category ?? "unknown",

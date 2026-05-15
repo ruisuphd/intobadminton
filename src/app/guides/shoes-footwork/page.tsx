@@ -20,7 +20,7 @@ export default function ShoesGuide() {
         path={PATH}
         headline={HEADLINE}
         description={DESCRIPTION}
-        breadcrumbLabel="Shoes &amp; footwork"
+        breadcrumbLabel="Shoes & footwork"
       />
       <article className="layout-band max-w-3xl space-y-6">
         <p>

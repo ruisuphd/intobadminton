@@ -1,5 +1,5 @@
 {
-  "$schema": "Each entry: { id, label, value, unit?, sourceTier (1|2|3|4), source: { name, url, accessedAt, quote }, usedOn: [path] }. sourceTier: 1=manufacturer official product page, 2=BWF rule book or standards body, 3=manufacturer support/brand page, 4=independent measurement (BadmintonCN, YuanShi). Fail build if accessedAt older than 365 days; warn at 180.",
+  "$schema": "Each entry: { id, label, value, unit?, sourceTier (1|2|3|4), source: { name, url, accessedAt, quote, editorialNote? }, usedOn: [path] }. sourceTier: 1=manufacturer official product page, 2=BWF rule book or standards body, 3=manufacturer support/brand page, 4=independent measurement (BadmintonCN, YuanShi) or derived industry convention. `quote` MUST be a verbatim excerpt from the cited URL; editor synthesis, cross-page derivation, and interpretation go in `editorialNote`. Fail build if accessedAt older than 365 days; warn at 180.",
   "claims": [
     {
       "id": "bwf-court-length-m",
@@ -171,12 +171,13 @@
       "label": "Industry convention: 3U racket weight band (unstrung)",
       "value": "85-89",
       "unit": "g",
-      "sourceTier": 3,
+      "sourceTier": 4,
       "source": {
-        "name": "Yonex grip & weight chart (manufacturer support pages)",
-        "url": "https://www.yonex.com/badminton/",
-        "accessedAt": "2026-05-15",
-        "quote": "Yonex publishes weight categories per racquet line with averages used here (3U: ~85-89g, 4U: ~80-84g, 5U: ~75-79g)."
+        "name": "Yonex Astrox 99 Pro product page (representative 3U row)",
+        "url": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+        "accessedAt": "2026-05-09",
+        "quote": "3U (Avg. 88g)",
+        "editorialNote": "Industry convention derived by sampling Yonex per-line product pages. Specific 3U averages range from ~85g to ~89g across SKUs; the band 85–89g is the consensus reading. No single Yonex page lists the band itself."
       },
       "usedOn": ["/guides/glossary/", "/faq/", "/guides/racket-balance/"]
     },
@@ -185,12 +186,13 @@
       "label": "Industry convention: 4U racket weight band (unstrung)",
       "value": "80-84",
       "unit": "g",
-      "sourceTier": 3,
+      "sourceTier": 4,
       "source": {
-        "name": "Yonex grip & weight chart (manufacturer support pages)",
-        "url": "https://www.yonex.com/badminton/",
-        "accessedAt": "2026-05-15",
-        "quote": "4U: ~80-84g"
+        "name": "Yonex Astrox 99 Pro product page (representative 4U row)",
+        "url": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+        "accessedAt": "2026-05-09",
+        "quote": "4U (Avg. 83g)",
+        "editorialNote": "Industry convention derived by sampling Yonex per-line product pages. Specific 4U averages range from ~80g to ~84g across SKUs; the band 80–84g is the consensus reading."
       },
       "usedOn": ["/guides/glossary/", "/faq/"]
     },
@@ -199,12 +201,13 @@
       "label": "Industry convention: 5U racket weight band (unstrung)",
       "value": "75-79",
       "unit": "g",
-      "sourceTier": 3,
+      "sourceTier": 4,
       "source": {
-        "name": "Yonex grip & weight chart (manufacturer support pages)",
+        "name": "Yonex Nanoflare 700 Play product page (representative 5U row)",
         "url": "https://www.yonex.com/badminton/",
         "accessedAt": "2026-05-15",
-        "quote": "5U: ~75-79g"
+        "quote": "5U (Avg. 78g)",
+        "editorialNote": "Industry convention derived by sampling Yonex per-line product pages. 5U entries publish averages around 75–79g. Verbatim text varies per SKU; this entry is a placeholder until a single Yonex grip & weight reference page is located."
       },
       "usedOn": ["/guides/glossary/", "/faq/"]
     },
@@ -213,12 +216,13 @@
       "label": "Yonex grip G4 approximate circumference",
       "value": "3 5/8",
       "unit": "in",
-      "sourceTier": 3,
+      "sourceTier": 4,
       "source": {
-        "name": "Yonex grip size convention (smaller number = thicker grip)",
+        "name": "Yonex grip-size ladder (industry convention)",
         "url": "https://www.yonex.com/badminton/",
         "accessedAt": "2026-05-15",
-        "quote": "Yonex grip ladder: G2 ≈ 4\", G3 ≈ 3 3/4\", G4 ≈ 3 5/8\", G5 ≈ 3 1/2\", G6 ≈ 3 3/8\". Smaller number = thicker grip. A G5 grip is the most common adult fit; G4 is for larger hands."
+        "quote": "G4",
+        "editorialNote": "Yonex publishes grip size codes (G2/G3/G4/G5/G6) per product page but does not publish a single grip-size dimension chart at a stable URL. Industry consensus measures G4 at approximately 3 5/8\" circumference, with smaller numbers indicating thicker grips. This row stays at Tier 4 until a Yonex grip-dimension reference page is located."
       },
       "usedOn": ["/blog/yonex-grip-sizes-explained/"]
     },
@@ -227,12 +231,13 @@
       "label": "Yonex grip G5 approximate circumference",
       "value": "3 1/2",
       "unit": "in",
-      "sourceTier": 3,
+      "sourceTier": 4,
       "source": {
-        "name": "Yonex grip size convention (smaller number = thicker grip)",
+        "name": "Yonex grip-size ladder (industry convention)",
         "url": "https://www.yonex.com/badminton/",
         "accessedAt": "2026-05-15",
-        "quote": "G5 ≈ 3 1/2\""
+        "quote": "G5",
+        "editorialNote": "Industry consensus places G5 at approximately 3 1/2\" circumference. Same caveat as `yonex-grip-g4-inches`: Yonex does not publish a single dimension chart, so this is Tier 4 derived."
       },
       "usedOn": ["/blog/yonex-grip-sizes-explained/"]
     }

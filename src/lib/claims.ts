@@ -19,8 +19,21 @@ export type ClaimSource = {
   url: string;
   /** ISO date (YYYY-MM-DD) when the claim was last verified against the source. */
   accessedAt: string;
-  /** Verbatim quote from the source. */
+  /**
+   * Verbatim excerpt from the source. The contract is strict: this string
+   * must be a direct quote the editor could paste back into the cited URL
+   * to verify. Editorial synthesis, interpretation, and cross-page derivation
+   * belong in `editorialNote` instead so the gate-able evidence stays
+   * separable from the editor's voice.
+   */
   quote: string;
+  /**
+   * Optional editor synthesis or framing — anything that is not a verbatim
+   * quote from the source. Use this when the claim is derived from
+   * cross-page conventions or when the published source needs interpretation
+   * to be useful to readers.
+   */
+  editorialNote?: string;
 };
 
 export type Claim = {
