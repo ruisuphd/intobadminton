@@ -1,16 +1,27 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { GuideStructuredData } from "@/components/GuideStructuredData";
+
+const PATH = "/guides/doubles-roles/";
+const HEADLINE = "Doubles court roles";
+const DESCRIPTION =
+  "Front, back, and rotational roles in badminton doubles — what each role does and how role choice affects which racket and shoes you should buy.";
 
 export const metadata: Metadata = {
   title: "Doubles court roles in badminton",
-  description:
-    "Front, back, and rotational roles in badminton doubles — what each role does and how role choice affects which racket and shoes you should buy.",
-  alternates: { canonical: "/guides/doubles-roles/" },
+  description: DESCRIPTION,
+  alternates: { canonical: PATH },
 };
 
 export default function DoublesRolesGuide() {
   return (
     <main className="flex-1 py-16">
+      <GuideStructuredData
+        path={PATH}
+        headline={HEADLINE}
+        description={DESCRIPTION}
+        breadcrumbLabel="Doubles roles"
+      />
       <article className="layout-band max-w-3xl space-y-6">
         <p>
           <Link

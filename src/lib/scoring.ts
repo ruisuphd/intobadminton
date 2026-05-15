@@ -80,8 +80,11 @@ function scoreStyle(
   styles: PlayStyle[],
   reasons: { code: string; label: string; weight: number }[]
 ): number {
-  if (styles.length === 0) return 0.4;
-  const want = styleHeadPreference(styles);
+  // When the user skips style selection, treat them as "balanced" rather than
+  // returning a uniform low score (0.4 previously) that dampened the whole
+  // catalogue. Balanced-by-default surfaces even-balance rackets first, which
+  // is the right neutral pick when intent is missing.
+  const want = styleHeadPreference(styles.length === 0 ? ["balanced"] : styles);
   if (want === "heavy") {
     if (p.headWeight === "head_heavy") {
       if (styles.some((x) => ["offensive", "smash_heavy"].includes(x)))
@@ -158,7 +161,6 @@ function scoreLevel(
   const uMin = SHAFT_I[band.min];
   const uMax = SHAFT_I[band.max];
   const v = SHAFT_I[p.shaftFlex];
-  const inBand = v >= uMin - 0.5 && v <= uMax + 0.5;
   if (v < uMin) {
     pushReason(reasons, "MATCH_LEVEL_FLEX", 0.5);
     return 0.45;
@@ -169,13 +171,10 @@ function scoreLevel(
       ? 0.55
       : 0.25;
   }
-  if (inBand) {
-    if (p.shaftFlex === "stiff" || p.shaftFlex === "extra_stiff")
-      pushReason(reasons, "MATCH_LEVEL_STIFF", 0.6);
-    else pushReason(reasons, "MATCH_LEVEL_FLEX", 0.6);
-    return 0.82;
-  }
-  return 0.55;
+  if (p.shaftFlex === "stiff" || p.shaftFlex === "extra_stiff")
+    pushReason(reasons, "MATCH_LEVEL_STIFF", 0.6);
+  else pushReason(reasons, "MATCH_LEVEL_FLEX", 0.6);
+  return 0.82;
 }
 
 function productAllowedForUserLevel(
@@ -194,16 +193,23 @@ function scoreBudget(
   budgetMax: number | undefined,
   reasons: { code: string; label: string; weight: number }[]
 ): number {
-  if (budgetMax == null || !Number.isFinite(budgetMax)) return 0.5;
+  if (budgetMax == null || !Number.isFinite(budgetMax) || budgetMax <= 0) {
+    return 0.5;
+  }
   if (p.priceUsd <= budgetMax) {
     pushReason(reasons, "BUDGET_FIT", 0.4);
     return 0.9;
   }
-  if (p.priceUsd <= budgetMax * 1.12) {
+  // Smooth exponential decay above budget rather than a step from 0.55 to 0.15
+  // at 1.12×. A $295 racket against a $260 budget used to jump from "stretch
+  // (0.55)" to "over (0.15)" in a single dollar; the curve now degrades
+  // monotonically and keeps the BUDGET_STRETCH reason for moderate overage.
+  const overage = (p.priceUsd - budgetMax) / budgetMax;
+  if (overage <= 0.12) {
     pushReason(reasons, "BUDGET_STRETCH", 0.3);
-    return 0.55;
   }
-  return 0.15;
+  const decayed = Math.max(0.1, Math.min(0.9, 1 - overage ** 1.4));
+  return decayed;
 }
 
 function scoreBody(
@@ -409,6 +415,10 @@ function resaleBonus(p: ProductRecord): number {
 
 function verificationMultiplier(p: RacketProduct, profile: UserProfile): number {
   const budgetMax = profile.body.budgetMaxUsd;
+  // Narrowed band (P2): verified +4% / official_no_page −4% / needs_review −8%
+  // (or −4% for a recreational user whose budget covers it — they're less
+  // sensitive to spec confidence). The previous asymmetric −14% / +4% band
+  // overpunished the catalogue while source-authority work was in progress.
   let base: number;
   if (
     p.verificationStatus === "needs_review" &&
@@ -418,11 +428,11 @@ function verificationMultiplier(p: RacketProduct, profile: UserProfile): number 
   ) {
     base = 0.96;
   } else if (p.verificationStatus === "needs_review") {
-    base = 0.86;
+    base = 0.92;
   } else if (!sourceAuthorityForProduct(p).canVerifySpecs) {
-    base = 0.9;
+    base = 0.96;
   } else if (p.verificationStatus === "official_verified") {
-    base = 1.03;
+    base = 1.04;
   } else {
     base = 1;
   }
@@ -567,16 +577,31 @@ function scoreString(
 function scoreShoe(p: ShoeProduct, profile: UserProfile): ScoredProduct {
   const reasons: { code: string; label: string; weight: number }[] = [];
   const footWidth = profile.body.footWidth;
-  const widthMatch =
-    footWidth == null
-      ? 0.58
-      : p.fitWidth === footWidth ||
-          (footWidth === "wide" &&
-            (p.fitWidth === "wide_available" || p.hasWideOption))
-        ? 0.94
-        : p.fitWidth === "normal" && footWidth !== "wide"
-          ? 0.72
-          : 0.28;
+
+  // Width fit is asymmetric: a wide shoe on a normal foot is "mildly loose"
+  // (still wearable with thicker socks / better lacing); a normal shoe on a
+  // wide foot is a real misfit that hurts. The previous logic collapsed both
+  // to 0.28. Split them so the wide-on-normal case stays surfacable.
+  const widthMatch = (() => {
+    if (footWidth == null) return 0.58;
+    if (p.fitWidth === footWidth) return 0.94;
+    if (
+      footWidth === "wide" &&
+      (p.fitWidth === "wide_available" || p.hasWideOption)
+    ) {
+      return 0.94;
+    }
+    if (p.fitWidth === "normal" && footWidth !== "wide") return 0.72;
+    // Wide shoe on narrow/normal foot: mild looseness, still surfacable.
+    if (
+      (p.fitWidth === "wide" || p.fitWidth === "wide_available") &&
+      footWidth !== "wide"
+    ) {
+      return 0.55;
+    }
+    // Normal shoe on wide foot — real misfit.
+    return 0.28;
+  })();
   if (widthMatch >= 0.72) pushReason(reasons, "SHOE_WIDTH_MATCH", 0.8);
 
   const injuryFlags = profile.body.injuryFlags.filter((x) => x !== "none");
@@ -763,11 +788,13 @@ function finalizeScore(
   sub: ScoredProduct["subscores"],
   reasons: { code: string; label: string; weight: number }[]
 ): ScoredProduct {
+  // Narrowed verification band (P2) to match `verificationMultiplier` above
+  // and stop punishing the catalogue while source-authority work is in flight.
   const verification =
     p.verificationStatus === "needs_review"
-      ? 0.9
+      ? 0.92
       : !sourceAuthorityForProduct(p).canVerifySpecs
-        ? 0.92
+        ? 0.96
       : p.verificationStatus === "official_verified"
         ? 1.04
         : 1;
@@ -817,7 +844,21 @@ export function scoreProductCatalog(profile: UserProfile): ScoredProduct[] {
     })
     .filter((r): r is ScoredProduct => r != null)
     .filter((r) => r.fitScore > 0.1)
-    .sort((a, b) => b.fitScore - a.fitScore);
+    .sort((a, b) => {
+      // Stable, deterministic ordering on ties so the same profile always
+      // produces the same shortlist across builds — important for
+      // sharable URL deep-linking (P2) and for caching/screenshot tests.
+      // Primary: higher fit score.
+      // Secondary: higher confidence (verified rows outrank ambiguous ones).
+      // Tertiary: lower price (better value when fit and confidence tie).
+      // Quaternary: stable lexicographic id.
+      if (b.fitScore !== a.fitScore) return b.fitScore - a.fitScore;
+      if (b.confidence.score !== a.confidence.score) {
+        return b.confidence.score - a.confidence.score;
+      }
+      if (a.priceUsd !== b.priceUsd) return a.priceUsd - b.priceUsd;
+      return a.id.localeCompare(b.id);
+    });
 }
 
 export function byId(id: string): ProductRecord | undefined {

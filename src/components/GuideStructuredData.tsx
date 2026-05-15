@@ -1,0 +1,69 @@
+import { JsonLd } from "@/components/JsonLd";
+import { companyInfo } from "@/lib/company";
+import { articleJsonLd } from "@/lib/structured-data";
+
+type GuideStructuredDataProps = {
+  /** Route path with trailing slash, e.g. "/guides/string-tension/". */
+  path: string;
+  /** Headline used in the Article JSON-LD. Should match the visible H1. */
+  headline: string;
+  /** Short summary used in the Article JSON-LD. Typically the metadata description. */
+  description: string;
+  /** Breadcrumb label for the guide page itself (the third crumb after Home / Guides). */
+  breadcrumbLabel: string;
+};
+
+/**
+ * Emits Article + BreadcrumbList JSON-LD for a `/guides/[slug]/` page.
+ *
+ * Article authority (author + publisher) is built by `articleJsonLd()` from
+ * `companyInfo` and the editorial-meta registry, so dates and bylines can never
+ * drift apart from the visible page. Each guide must have an entry in
+ * `editorialMetaByPath` in `src/lib/editorial-meta.ts`; `articleJsonLd` throws
+ * if the registry is missing the path.
+ */
+export function GuideStructuredData({
+  path,
+  headline,
+  description,
+  breadcrumbLabel,
+}: GuideStructuredDataProps) {
+  const article = articleJsonLd({
+    path,
+    headline,
+    description,
+    section: "Guides",
+  });
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${companyInfo.siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${companyInfo.siteUrl}/guides/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: breadcrumbLabel,
+        item: `${companyInfo.siteUrl}${path}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <JsonLd data={article} />
+      <JsonLd data={breadcrumb} />
+    </>
+  );
+}

@@ -237,7 +237,7 @@ export function BlogArticlePage({
   }
 
   const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
-  const byline = companyInfo.authorBylineEn;
+  const byline = companyInfo.authorByline;
   const minutes = readingTimeMinutes(article);
   const storyWords = article.story
     ? article.story.intro.split(/\s+/).filter((word) => word.length > 0).length

@@ -1,16 +1,27 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { GuideStructuredData } from "@/components/GuideStructuredData";
+
+const PATH = "/guides/shoes-footwork/";
+const HEADLINE = "Badminton shoes and footwork";
+const DESCRIPTION =
+  "Why badminton shoes matter more than the racket for most amateurs — choose by fit width, stability, cushioning, and outsole to support footwork patterns.";
 
 export const metadata: Metadata = {
   title: "Badminton shoes and footwork guide",
-  description:
-    "Why badminton shoes matter more than the racket for most amateurs — choose by fit width, stability, cushioning, and outsole to support footwork patterns.",
-  alternates: { canonical: "/guides/shoes-footwork/" },
+  description: DESCRIPTION,
+  alternates: { canonical: PATH },
 };
 
 export default function ShoesGuide() {
   return (
     <main className="flex-1 py-16">
+      <GuideStructuredData
+        path={PATH}
+        headline={HEADLINE}
+        description={DESCRIPTION}
+        breadcrumbLabel="Shoes & footwork"
+      />
       <article className="layout-band max-w-3xl space-y-6">
         <p>
           <Link

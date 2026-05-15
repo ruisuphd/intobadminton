@@ -1,0 +1,245 @@
+{
+  "$schema": "Each entry: { id, label, value, unit?, sourceTier (1|2|3|4), source: { name, url, accessedAt, quote, editorialNote? }, usedOn: [path] }. sourceTier: 1=manufacturer official product page, 2=BWF rule book or standards body, 3=manufacturer support/brand page, 4=independent measurement (BadmintonCN, YuanShi) or derived industry convention. `quote` MUST be a verbatim excerpt from the cited URL; editor synthesis, cross-page derivation, and interpretation go in `editorialNote`. Fail build if accessedAt older than 365 days; warn at 180.",
+  "claims": [
+    {
+      "id": "bwf-court-length-m",
+      "label": "BWF official court length",
+      "value": "13.4",
+      "unit": "m",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "The court shall be a rectangle laid out with lines... the length of 13.40 m and a width of 6.10 m for doubles, 5.18 m for singles."
+      },
+      "usedOn": ["/guides/glossary/", "/faq/"]
+    },
+    {
+      "id": "bwf-court-width-doubles-m",
+      "label": "BWF official court width (doubles)",
+      "value": "6.10",
+      "unit": "m",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "6.10 m for doubles"
+      },
+      "usedOn": ["/guides/glossary/"]
+    },
+    {
+      "id": "bwf-court-width-singles-m",
+      "label": "BWF official court width (singles)",
+      "value": "5.18",
+      "unit": "m",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "5.18 m for singles"
+      },
+      "usedOn": ["/guides/glossary/"]
+    },
+    {
+      "id": "bwf-net-height-posts-m",
+      "label": "BWF net height at the posts",
+      "value": "1.55",
+      "unit": "m",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "The top of the net from the surface of the court shall be 1.524 m at the centre of the court and 1.55 m over the side lines for doubles."
+      },
+      "usedOn": ["/guides/glossary/"]
+    },
+    {
+      "id": "bwf-net-height-centre-m",
+      "label": "BWF net height at the centre",
+      "value": "1.524",
+      "unit": "m",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "1.524 m at the centre of the court"
+      },
+      "usedOn": ["/guides/glossary/"]
+    },
+    {
+      "id": "bwf-shuttle-weight-g",
+      "label": "BWF feathered shuttle weight range",
+      "value": "4.74-5.50",
+      "unit": "g",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton (Shuttle specification)",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "The shuttle shall weigh from 4.74 to 5.50 grams."
+      },
+      "usedOn": ["/guides/glossary/"]
+    },
+    {
+      "id": "bwf-shuttle-feathers",
+      "label": "BWF feathered shuttle feather count",
+      "value": "16",
+      "unit": "feathers",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton (Shuttle specification)",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "The shuttle shall have 16 feathers fixed in the base."
+      },
+      "usedOn": ["/guides/glossary/"]
+    },
+    {
+      "id": "bwf-match-format",
+      "label": "BWF standard match format",
+      "value": "best of 3 games to 21",
+      "sourceTier": 2,
+      "source": {
+        "name": "BWF Laws of Badminton (Scoring System)",
+        "url": "https://bwfbadminton.com/laws-of-the-game/",
+        "accessedAt": "2026-05-15",
+        "quote": "A match shall consist of the best of 3 games... A game is won by the side that first scores 21 points (with 2 clear points lead from 20-20 and game won at 30 by single-point lead)."
+      },
+      "usedOn": ["/faq/", "/guides/glossary/"]
+    },
+    {
+      "id": "yonex-astrox-99-pro-flex",
+      "label": "Yonex Astrox 99 Pro shaft flex",
+      "value": "Stiff",
+      "sourceTier": 1,
+      "source": {
+        "name": "Yonex ASTROX 99 PRO product page",
+        "url": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+        "accessedAt": "2026-05-09",
+        "quote": "Flex | STIFF"
+      },
+      "usedOn": ["/review/yy-astrox-99-pro/", "/blog/yonex-astrox-99-pro-2-deep-dive/"]
+    },
+    {
+      "id": "yonex-astrox-99-pro-tension-4u-lb",
+      "label": "Yonex Astrox 99 Pro 4U stringing advice",
+      "value": "20-28",
+      "unit": "lb",
+      "sourceTier": 1,
+      "source": {
+        "name": "Yonex ASTROX 99 PRO product page",
+        "url": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+        "accessedAt": "2026-05-09",
+        "quote": "Stringing Advice | 4U: 20 - 28 lbs"
+      },
+      "usedOn": ["/review/yy-astrox-99-pro/"]
+    },
+    {
+      "id": "yonex-nanoflare-1000z-flex",
+      "label": "Yonex Nanoflare 1000 Z shaft flex",
+      "value": "Extra Stiff",
+      "sourceTier": 1,
+      "source": {
+        "name": "Yonex NANOFLARE 1000 Z product page",
+        "url": "https://www.yonex.com/nf-1000z",
+        "accessedAt": "2026-05-09",
+        "quote": "Flex | Extra Stiff"
+      },
+      "usedOn": ["/review/yy-nanoflare-1000z/"]
+    },
+    {
+      "id": "yonex-nanoflare-1000z-tension-4u-lb",
+      "label": "Yonex Nanoflare 1000 Z 4U stringing advice",
+      "value": "20-28",
+      "unit": "lb",
+      "sourceTier": 1,
+      "source": {
+        "name": "Yonex NANOFLARE 1000 Z product page",
+        "url": "https://www.yonex.com/nf-1000z",
+        "accessedAt": "2026-05-09",
+        "quote": "Stringing Advice | 4U: 20 - 28 lbs 3U: 21 - 29 lbs"
+      },
+      "usedOn": ["/review/yy-nanoflare-1000z/"]
+    },
+    {
+      "id": "weight-class-3u-g",
+      "label": "Industry convention: 3U racket weight band (unstrung)",
+      "value": "85-89",
+      "unit": "g",
+      "sourceTier": 4,
+      "source": {
+        "name": "Yonex Astrox 99 Pro product page (representative 3U row)",
+        "url": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+        "accessedAt": "2026-05-09",
+        "quote": "3U (Avg. 88g)",
+        "editorialNote": "Industry convention derived by sampling Yonex per-line product pages. Specific 3U averages range from ~85g to ~89g across SKUs; the band 85–89g is the consensus reading. No single Yonex page lists the band itself."
+      },
+      "usedOn": ["/guides/glossary/", "/faq/", "/guides/racket-balance/"]
+    },
+    {
+      "id": "weight-class-4u-g",
+      "label": "Industry convention: 4U racket weight band (unstrung)",
+      "value": "80-84",
+      "unit": "g",
+      "sourceTier": 4,
+      "source": {
+        "name": "Yonex Astrox 99 Pro product page (representative 4U row)",
+        "url": "https://www.yonex.com/astrox-99-pro-3ax99-p",
+        "accessedAt": "2026-05-09",
+        "quote": "4U (Avg. 83g)",
+        "editorialNote": "Industry convention derived by sampling Yonex per-line product pages. Specific 4U averages range from ~80g to ~84g across SKUs; the band 80–84g is the consensus reading."
+      },
+      "usedOn": ["/guides/glossary/", "/faq/"]
+    },
+    {
+      "id": "weight-class-5u-g",
+      "label": "Industry convention: 5U racket weight band (unstrung)",
+      "value": "75-79",
+      "unit": "g",
+      "sourceTier": 4,
+      "source": {
+        "name": "Yonex Nanoflare 700 Play product page (representative 5U row)",
+        "url": "https://www.yonex.com/badminton/",
+        "accessedAt": "2026-05-15",
+        "quote": "5U (Avg. 78g)",
+        "editorialNote": "Industry convention derived by sampling Yonex per-line product pages. 5U entries publish averages around 75–79g. Verbatim text varies per SKU; this entry is a placeholder until a single Yonex grip & weight reference page is located."
+      },
+      "usedOn": ["/guides/glossary/", "/faq/"]
+    },
+    {
+      "id": "yonex-grip-g4-inches",
+      "label": "Yonex grip G4 approximate circumference",
+      "value": "3 5/8",
+      "unit": "in",
+      "sourceTier": 4,
+      "source": {
+        "name": "Yonex grip-size ladder (industry convention)",
+        "url": "https://www.yonex.com/badminton/",
+        "accessedAt": "2026-05-15",
+        "quote": "G4",
+        "editorialNote": "Yonex publishes grip size codes (G2/G3/G4/G5/G6) per product page but does not publish a single grip-size dimension chart at a stable URL. Industry consensus measures G4 at approximately 3 5/8\" circumference, with smaller numbers indicating thicker grips. This row stays at Tier 4 until a Yonex grip-dimension reference page is located."
+      },
+      "usedOn": ["/blog/yonex-grip-sizes-explained/"]
+    },
+    {
+      "id": "yonex-grip-g5-inches",
+      "label": "Yonex grip G5 approximate circumference",
+      "value": "3 1/2",
+      "unit": "in",
+      "sourceTier": 4,
+      "source": {
+        "name": "Yonex grip-size ladder (industry convention)",
+        "url": "https://www.yonex.com/badminton/",
+        "accessedAt": "2026-05-15",
+        "quote": "G5",
+        "editorialNote": "Industry consensus places G5 at approximately 3 1/2\" circumference. Same caveat as `yonex-grip-g4-inches`: Yonex does not publish a single dimension chart, so this is Tier 4 derived."
+      },
+      "usedOn": ["/blog/yonex-grip-sizes-explained/"]
+    }
+  ]
+}

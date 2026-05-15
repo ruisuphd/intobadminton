@@ -1,4 +1,5 @@
 import { blogArticles } from "@/lib/blog";
+import { reviewProductById } from "@/lib/review-pages";
 
 export type EditorialMeta = {
   /**
@@ -91,6 +92,40 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-05-08",
   },
 
+  // P1 expansion: high-intent product-vs-product comparison pages.
+  "/compare-guides/astrox-99-pro-vs-astrox-100zz/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/astrox-88d-pro-vs-axforce-90-new/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/nanoflare-1000z-vs-auraspeed-99/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/compare-guides/yonex-65z4-vs-eclipsion-z3/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+
   // Long-form guides (concept pieces, no prices).
   "/guides/racket-balance/": {
     publishedAt: "2025-09-01",
@@ -124,6 +159,22 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2025-10-13",
     lastReviewedAt: "2026-05-08",
   },
+
+  // Author pages (E-E-A-T).
+  "/authors/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+  "/authors/rui-su/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
+
+  // Review hub index (lists every per-product /review/[slug]/).
+  "/review/": {
+    publishedAt: "2026-05-15",
+    lastReviewedAt: "2026-05-15",
+  },
 };
 
 const STATIC_PATHS = new Set(Object.keys(editorialMetaByPath));
@@ -147,6 +198,17 @@ export function getEditorialMeta(path: string): EditorialMeta | undefined {
     );
     if (article) {
       return { lastReviewedAt: article.updatedAt };
+    }
+  }
+
+  // Per-product review pages (P1). Dates are derived from `lastVerifiedAt`
+  // on the product itself so the visible "Last reviewed" date can never
+  // drift away from the source-authority verification date.
+  const reviewMatch = path.match(/^\/review\/([^/]+)\/$/);
+  if (reviewMatch) {
+    const product = reviewProductById(reviewMatch[1]);
+    if (product) {
+      return { lastReviewedAt: product.lastVerifiedAt };
     }
   }
 
