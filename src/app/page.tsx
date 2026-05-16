@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LocalizedHome } from "@/components/LocalizedHome";
 import { StructuredData } from "@/components/StructuredData";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Badminton Racket, String & Shoe Finder",
@@ -26,6 +27,16 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "IntoBadminton — Badminton Racket, String & Shoe Finder",
+    description:
+      "Badminton racket, string, shoe, and bag recommendations tuned to your level, style, body, and budget. Transparent fit scoring with source labels.",
+    url: "/",
+    type: "website",
+    siteName: "IntoBadminton",
+    locale: "en_US",
+    images: [...defaultOgImages],
   },
 };
 

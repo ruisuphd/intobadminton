@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AdSenseScript } from "@/components/AdSenseScript";
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/intobadminton-logo.png",
-        width: 1024,
-        height: 1024,
+        url: "/intobadminton-og.png",
+        width: 512,
+        height: 512,
         alt: "IntoBadminton — badminton equipment recommendations",
       },
     ],
@@ -49,17 +49,32 @@ export const metadata: Metadata = {
     title: "IntoBadminton — Badminton Equipment Finder",
     description:
       "Badminton racket, string, shoe, and bag recommendations with transparent scoring and source authority labels.",
-    images: ["/intobadminton-logo.png"],
+    images: ["/intobadminton-og.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   other: process.env.NEXT_PUBLIC_ADSENSE_CLIENT
     ? {
         "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT,
       }
     : undefined,
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+  colorScheme: "light",
 };
 
 export default function RootLayout({

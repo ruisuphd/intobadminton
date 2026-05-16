@@ -90,7 +90,7 @@ describe("auditExportSnapshot", () => {
                 name: "IntoBadminton",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://intobadminton.com/intobadminton-logo.png",
+                  url: "https://intobadminton.com/intobadminton-og.png",
                 },
               },
             })}</script><script type="application/ld+json">${JSON.stringify({
@@ -210,7 +210,7 @@ describe("auditExportSnapshot", () => {
                 name: "IntoBadminton",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://intobadminton.com/intobadminton-logo.png",
+                  url: "https://intobadminton.com/intobadminton-og.png",
                 },
               },
             })}</script>`,
