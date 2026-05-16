@@ -37,9 +37,9 @@ const ARTICLE_PUBLISHER = {
   url: companyInfo.siteUrl,
   logo: {
     "@type": "ImageObject",
-    url: `${companyInfo.siteUrl}/intobadminton-logo.png`,
-    width: 1024,
-    height: 1024,
+    url: `${companyInfo.siteUrl}/intobadminton-og.png`,
+    width: 512,
+    height: 512,
   },
 } as const;
 

@@ -27,6 +27,12 @@ export const organizationJsonLd = {
   alternateName: companyInfo.operatorTradingName,
   url: companyInfo.operatorWebsite,
   email: companyInfo.contactEmail,
+  logo: {
+    "@type": "ImageObject",
+    url: `${companyInfo.siteUrl}/intobadminton-og.png`,
+    width: 512,
+    height: 512,
+  },
   founder: {
     "@type": "Person",
     name: companyInfo.founderName,
