@@ -1451,4 +1451,114 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "yonex-astrox-99-pro-3-deep-dive",
+    title: "Yonex Astrox 99 Pro (3rd gen, 2025) review: power is the answer, not the option",
+    dek: "Yonex's third Astrox 99 Pro returns to a 76-hole frame, adds a Power Assist Bumper at the head, and raises the energy cost of every smash. A flagship singles weapon for players who already create their own pace.",
+    verdict:
+      "An uncompromising rear-court attack racket for advanced singles players with the conditioning to drive it — not a friendlier Gen 2, but a deliberate doubling-down on brute force.",
+    bestFor: [
+      "Advanced singles attackers",
+      "Heavy-smash specialists",
+      "Players with strong wrist and forearm conditioning",
+    ],
+    avoidIf: [
+      "You play fast level doubles",
+      "You tire over the third game",
+      "You already struggle to drive the 99 Pro 2",
+    ],
+    setupNotes: [
+      "Yonex globally announced the 3rd-gen Astrox 99 series on 5 September 2025.",
+      "Local source impressions are treated as court-feel notes, not official specification.",
+    ],
+    sourceHook:
+      "The source review is useful because it reads the 3rd gen not as a refinement of the 2nd, but as a return to the original Astrox 99 identity — heavier head, harder demand, narrower buyer.",
+    facts: [
+      {
+        label: "Official series",
+        value: "Yonex lists ASTROX 99 PRO as part of the 3rd-gen ASTROX 99 series (2025).",
+      },
+      {
+        label: "Official tech",
+        value:
+          "Yonex highlights an enhanced Rotational Generator System and a Power Assist Bumper at the frame top to reduce drag and transfer energy.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a heavier, more demanding 99 Pro — not a kinder one.",
+      },
+    ],
+    calloutTitle: "Power is the answer, not the option",
+    calloutBody:
+      "The Gen 2 widened the sweet spot and lowered the entry threshold. The 3rd gen walks that back. It is built for the player who will use the head weight, not the player who hopes to grow into it.",
+    comparison: {
+      heading: "Astrox 99 Pro lineage",
+      columns: [
+        "99 Pro (3rd gen, 2025)",
+        "99 Pro (2nd gen, 2023)",
+        "99 Pro (1st gen, 2021)",
+      ],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Extreme power, narrower buyer",
+            "Power-control balance, wider buyer",
+            "Original 68-hole demand",
+          ],
+        },
+        {
+          label: "Sweet-spot feel",
+          values: [
+            "Forgiving on contact, brutal on fatigue",
+            "Most accessible of the three",
+            "Smallest, most punishing",
+          ],
+        },
+        {
+          label: "Main risk",
+          values: [
+            "Fast energy burn in long sessions",
+            "Less dramatic for elite attackers",
+            "Highest mishit penalty",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the 3rd gen is not a softer 2nd gen",
+        body: "It is tempting to assume each new generation is a refinement — an easier version of the last. The 3rd-gen Astrox 99 Pro refuses that pattern. Yonex's own September 2025 launch language frames the line around pure power and an enhanced Rotational Generator System, and the source review reads exactly the same way on court: heavier head feel, harder shaft load, more punishment when you stop driving the shuttle. If you bought the Gen 2 because the original was too demanding, the 3rd gen is not your next step. It is the racket Yonex built for the player the Gen 2 was already a compromise for.",
+      },
+      {
+        heading: "What changed at the head and the shaft",
+        body: "Two things matter most for buyers. First, the frame returns to a 76-hole stringbed after the Gen 2's 68. The source review describes that trade as a more forgiving sweet-spot transition on near-misses, with the same precise feedback when you connect cleanly. Second, the new head bumper and frame material upgrade push the balance further forward. Yonex's official narrative talks about reducing air resistance at the top of the frame and improving energy transfer at impact. The plain buyer translation is simpler: it swings heavier, drives the shuttle faster, and asks more from elbow and shoulder than the Gen 2 ever did.",
+      },
+      {
+        heading: "On court: what the smash actually feels like",
+        body: "The smash is the entire reason to buy this racket. The source review describes the first warm-up clears as almost passive — the head weight pulls your arm through the swing before your intent catches up. Then the second clear shows what the frame is really doing. The shuttle leaves like an artillery shell. Direction is precise, exit speed is high, and the racket telegraphs almost none of that effort on the contact. Your forearm will remind you two games later that you were the one paying for it. Half-smashes and slice attacks behave the same way: the head weight does the heavy work, and the only real question is whether your body can keep cashing the cheque.",
+      },
+      {
+        heading: "Defence, drives, and net play — the honest costs",
+        body: "This is where the racket reveals who it is for. Mid-court drives are not slow exactly, but every reset asks for a deliberate input. Backhand lifts from the rear court are demanding; if your backhand is your weakest shot, expect it to feel weaker here. Net play is the least costly area — small wrist actions on pushes, taps, and brushes still feel crisp because the frame is stable. But you will not buy this racket for the net. You will buy it to end rallies before they reach the net, and the frame constantly reminds you that anything else is a waste of the head weight you are carrying.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the 3rd-gen Astrox 99 Pro if you already play strong, attacking singles and your current frame is no longer giving you enough rear-court bite. Skip it if you play fast level doubles, if the Gen 2 already taxed your shoulder, or if you wanted a kinder 99 Pro experience. This racket does not negotiate. It rewards conditioning, clean preparation, and the willingness to use head weight as the main argument. If those three are not your strengths, the 88D Pro 2024 or the Auraspeed 90K II will give you more usable pace per unit of effort. If they are, the 3rd gen is the most decisive Astrox in years.",
+      },
+    ],
+    cta: "Run the finder with smash-heavy style and advanced singles level to compare the 3rd-gen 99 Pro against the Gen 2, the 88D Pro 2024, and the Astrox 100ZZ.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ASTROX 99: PURE POWER",
+        section: "Series launch announcement",
+        checkedAt: "2026-05-17",
+        href: "https://www.yonex.com/news/astrox-99-pure-power/",
+        quote: "global launch",
+        note:
+          "Official Yonex announcement confirms the 3rd-gen ASTROX 99 series launch (September 2025) and positions the line as power-first.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
