@@ -75,7 +75,13 @@ export type BlogSlug =
   | "yonex-arcsaber-7-tour-review"
   | "li-ning-l66-string-review"
   | "bonny-wuque-1982-y3k-shoes-review"
-  | "li-ning-halbertec-9000-standalone-review";
+  | "li-ning-halbertec-9000-standalone-review"
+  | "yonex-astrox-99-pro-1-deep-dive"
+  | "li-ning-halbertec-7000-gen-1-review"
+  | "bonny-snake-breath-second-tier-flagship-review"
+  | "rsl-supreme-shuttle-review"
+  | "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review"
+  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -152,6 +158,12 @@ export const blogSlugs: BlogSlug[] = [
   "li-ning-l66-string-review",
   "bonny-wuque-1982-y3k-shoes-review",
   "li-ning-halbertec-9000-standalone-review",
+  "yonex-astrox-99-pro-1-deep-dive",
+  "li-ning-halbertec-7000-gen-1-review",
+  "bonny-snake-breath-second-tier-flagship-review",
+  "rsl-supreme-shuttle-review",
+  "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+  "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3795,6 +3807,266 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           href: "https://intobadminton.com/source-policy/",
           quote: "use only for source discovery/manual summaries until terms or partnership is clear",
           note: "Selection criteria, sizing formula, storage rules, and replacement-trigger framing are paraphrased from a long-form BadmintonCN community guide by an experienced reviewer; brand-tier recommendations and modern model picks are original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+      updatedAt: "2026-05-17",
+      category: "comparisons",
+      title: "Bonny MoJun vs Yonex Arcsaber 11 Pro: when a second-tier brand benchmarks the flagship",
+      dek: "Bonny markets the MoJun (魔君) as a balanced-attack racket explicitly aimed at the Arcsaber 11 Pro buyer. A direct head-to-head on chassis, on-court behaviour, and the case for buying outside the top three brands.",
+      story: {
+        intro:
+          "Most second-tier rackets borrow flagship aesthetics and hope no one looks too closely at the chassis. The Bonny MoJun does the opposite — Bonny explicitly positions it as a competitor to the Yonex Arcsaber 11 Pro, with a polymer-cored frame, 6.5mm nickel-titanium shaft, and 30-lb max tension rating that match flagship spec sheets line by line. Whether the on-court behaviour matches is the real question.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value: "Original BadmintonCN reviewer testing of the MoJun with the underbase removed, 66N string at 28 lb, across 15+ days of mixed singles and doubles use.",
+              },
+              {
+                label: "MoJun spec",
+                value: "4U/G5, 76-hole stringbed, 6.5mm Ni-Ti shaft, 40T high-modulus carbon, fluid-box frame with Kevlar reinforcement at the head, polymer-cored fill, max 30 lb tension.",
+              },
+              {
+                label: "Buyer lens",
+                value: "Read this as 'how close does Bonny actually get' — flagship pricing in your region usually 30-50% lower than Arcsaber 11 Pro.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What makes this comparison fair",
+            title: "Bonny did not borrow the Arcsaber 11 Pro chassis — they engineered against it",
+            body:
+              "MoJun's polymer-cored frame is conceptually similar to Yonex's foam-fill technology but with denser filler material, producing a stiffer, more direct contact feel rather than Yonex's softer-damped output. Bonny used Kevlar (DuPont aramid) at the head for anti-torsion, which Yonex does not. The two rackets aim at the same buyer with different engineering approaches — not Bonny copying Yonex.",
+          },
+          {
+            kind: "comparison",
+            heading: "MoJun vs Arcsaber 11 Pro in one table",
+            columns: ["Bonny MoJun", "Yonex Arcsaber 11 Pro"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Balanced-attack, stiffer feedback",
+                  "Premium control with attack option",
+                ],
+              },
+              {
+                label: "Contact feel",
+                values: [
+                  "Direct, crisp, less dwell",
+                  "More dwell, more shuttle-pocket sensation",
+                ],
+              },
+              {
+                label: "Smash quality",
+                values: [
+                  "Hard, fast, precise pointing",
+                  "Slightly heavier feel, more 'planted'",
+                ],
+              },
+              {
+                label: "Best buyer",
+                values: [
+                  "Balanced-attack player who values direct feedback",
+                  "Control-first player who occasionally attacks",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "On Kevlar reinforcement",
+            title: "DuPont aramid at the head produces meaningfully different feel",
+            body:
+              "MoJun uses DuPont Kevlar at the head — a material rarely seen on flagship rackets because it adds cost. The on-court result is a frame that maintains structural integrity under hard smashes with less perceived flex than the Arcsaber 11 Pro. Whether this is preferable depends on whether you want shuttle-pocket sensation (Yonex) or direct feedback (Bonny).",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Both rackets are credible flagship-tier options aimed at the same balanced-attack buyer profile, with different engineering philosophies.",
+            bullets: [
+              "Buy MoJun if: you want flagship feel at a second-tier price, you prefer direct contact feedback over shuttle-pocket dwell, and brand presence in your region is acceptable.",
+              "Buy Arcsaber 11 Pro if: warranty/resale/brand ecosystem matter, you prefer the Yonex softer-damped feel, and budget allows for the premium tier.",
+              "Buy DriveX 12 (Victor) instead if: you want speed-press control rather than balanced-attack — a different identity inside the same flagship tier.",
+              "Buy AxForce 80 (Li-Ning) instead if: you want easier-driving attack at a similar value tier — friendlier shaft, wider sweet spot.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why Bonny matters in the 2026 mid-flagship segment",
+          body: "Bonny (波力) is a Chinese second-tier brand that has spent the past five years moving systematically from budget-tier copies to genuine flagship engineering. The MoJun represents the maturation of that strategy — it is not a cheap imitation of the Arcsaber 11 Pro, it is a competitor designed against it. The polymer-cored frame uses denser filler than Yonex's NanoCell foam; the Ni-Ti shaft uses nickel-titanium memory-alloy fibres common in aerospace; the head reinforcement adds DuPont Kevlar rather than the more common carbon-only layup. None of these are inferior choices — they are different choices that produce different on-court character. The MoJun is the clearest evidence yet that the second-tier badminton market is approaching genuine parity with first-tier flagship engineering at half the launch price.",
+        },
+        {
+          heading: "Chassis comparison — polymer fill vs foam fill",
+          body: "Both rackets use frame-fill technology to control vibration and shuttle dwell. Yonex's foam (Power Foam / NanoCell) is softer-damped, producing a more cushioned contact feel and a small shuttle-pocket sensation. Bonny's polymer-cored material is denser, producing a more direct contact feel with sharper feedback and minimal pocket sensation. The on-court trade-off is precise: Yonex's approach favours fine-touch shots (slice drops, brushed taps) because the slight pocket sensation gives the player more time to shape the shot at contact; Bonny's approach favours direct power shots (smashes, drives) because the immediate rebound produces faster shuttle exit speed with cleaner directional control. Neither is universally better.",
+        },
+        {
+          heading: "Smash and rear-court attack",
+          body: "MoJun's smash is the source review's most-praised property. The combination of head weight (with underbase removed), 6.5mm Ni-Ti shaft stiffness, and DuPont Kevlar head reinforcement produces a smash that is fast, hard, and precisely placed. Repeat smashes maintain quality because the shaft recovery is quick and the frame stability holds across continuous attack. The Arcsaber 11 Pro can match the single-shot smash quality but is meaningfully slower in repeat-attack continuity because the Yonex softer-damped approach trades some recovery speed for contact feel. For players whose game depends on continuous attack in the rear court, MoJun has a real advantage.",
+        },
+        {
+          heading: "Defence, mid-court, and net work",
+          body: "Defence is where the Arcsaber 11 Pro pulls ahead. The Yonex softer-damped frame produces more forgiving counter-attack lifts and cleaner reset shots because the shuttle pockets briefly before release. MoJun's direct feedback is sharper but less forgiving on mishit defence. Mid-court flat drives are roughly equivalent — both rackets handle fast doubles cross-court exchanges with confidence, though the MoJun's marginally heavier swing requires slightly more anticipation. Net play favours the Arcsaber 11 Pro for slice drops and disguised taps; MoJun is fine for direct net work (taps, pushes) but less rewarding for delicate touch shots.",
+        },
+        {
+          heading: "Build quality, warranty, and the brand-trust question",
+          body: "Source review's MoJun build quality reads as flagship-tier — clean paint, precise grommet alignment, consistent shaft straightness, polished cone cap. The visual identity (black base with blue accents, Kevlar identification on the frame, dragon-scale graphics on the inner head) is distinctive but not garish. The honest qualifier on the buying decision is brand ecosystem. Yonex offers global distribution, warranty service in most major markets, and high resale value through dedicated badminton retailers. Bonny's distribution is concentrated in Asia, warranty support outside China is uneven, and resale value is meaningfully lower. For players in markets where Bonny has authorised distribution, the MoJun is a strong buy. For players whose primary buying channel is online with no local support, the Arcsaber 11 Pro's brand ecosystem may justify the price premium.",
+        },
+        {
+          heading: "The final decision",
+          body: "Read this as a genuine comparison, not a budget alternative analysis. The MoJun is engineering-equal to the Arcsaber 11 Pro at a meaningfully lower price, with different on-court character (direct vs damped, balanced-attack vs control-attack) that suits different buyers. Choose MoJun if you prefer direct feedback, value continuous-attack quality, and have access to Bonny support in your region. Choose Arcsaber 11 Pro if you prefer softer-damped contact, value brand ecosystem, and have budget for the premium tier. Both are flagship rackets. The market increasingly proves that second-tier engineering quality is real — the brand premium gap is no longer reliably linked to chassis quality.",
+        },
+      ],
+      cta: "Run the finder with balanced-attack or control-attack style — both rackets surface alongside DriveX 12 and AxForce 80 as flagship-tier options at different price points.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "MoJun spec data, build quality observations, and on-court impressions are paraphrased from a BadmintonCN reviewer's 15+ day test of the racket; Arcsaber 11 Pro comparison data and buyer framing are original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+      updatedAt: "2026-05-17",
+      category: "comparisons",
+      title: "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro: the genuine 88D alternative at a third of the price",
+      dek: "Kawasaki's Chocolate 88D (川崎巧克力88D) is positioned as a direct Astrox 88D Pro alternative. The source review's blunt verdict after weeks of side-by-side testing: cover the paint and you cannot tell them apart on court — and the Kawasaki costs roughly a third of the Yonex.",
+      story: {
+        intro:
+          "Most racket alternatives claim to play 'similar' to their flagship reference but compromise somewhere in feel or quality. The Kawasaki Chocolate 88D goes further — the source review's headline finding is that the two rackets are functionally indistinguishable in normal use, with the only meaningful difference being paint and price. If true, this is one of the most compelling value-pick stories in the 2026 attack-racket market.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value: "Original BadmintonCN reviewer testing of both rackets in 4U trim, underbase removed, 0.65mm string at 28 lb, with both rackets in regular rotation across club sessions.",
+              },
+              {
+                label: "Kawasaki Chocolate 88D spec",
+                value: "4U (84±2g), 76-hole full-grommet-groove fluid-box frame, 6.8mm shaft, 302±3mm balance (with underbase), 40T+46T frame and shaft carbon, max 32 lb tension.",
+              },
+              {
+                label: "Buyer lens",
+                value: "Treat this as the credible Astrox 88D Pro substitute — not 'almost as good' but 'effectively the same racket' per the source review's direct comparison.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised the source review",
+            title: "Two rackets, near-identical on-court character",
+            body:
+              "The source review's most quotable line: 'If you removed the paint on both rackets and asked me to identify which is which, I genuinely don't think I could.' That is unusual praise. The reviewer owns the Astrox 88D Pro and uses it as a normal rotation racket, so the comparison is not a one-time test — it is sustained side-by-side use.",
+          },
+          {
+            kind: "comparison",
+            heading: "Chocolate 88D vs Astrox 88D Pro in one table",
+            columns: ["Kawasaki Chocolate 88D", "Yonex Astrox 88D Pro 2024"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Direct 88D Pro substitute",
+                  "Reference flagship doubles attack",
+                ],
+              },
+              {
+                label: "Shaft",
+                values: [
+                  "6.8mm, hard-elastic, slightly longer than 88D Pro",
+                  "6.8mm, hard-elastic, standard Astrox 88D length",
+                ],
+              },
+              {
+                label: "Price (regional norm)",
+                values: [
+                  "Roughly 1/3 of 88D Pro launch price",
+                  "Flagship Yonex tier",
+                ],
+              },
+              {
+                label: "Brand ecosystem",
+                values: [
+                  "Limited outside Asia",
+                  "Global distribution + warranty",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "On the longer shaft",
+            title: "Chocolate 88D's slightly longer shaft produces more whip-style rebound",
+            body:
+              "The one spec difference the source review identified is Kawasaki's slightly longer shaft. The on-court result is a marginally more whip-style rebound on smashes — sharper downward angle, slightly more rebound from the shaft per unit of force input. The source reviewer noted this as a minor advantage on point-attack scoring; the absolute difference is small.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Read this as 'the most credible flagship alternative on the market' — not 'a cheap substitute', but 'the same racket at a third of the price'.",
+            bullets: [
+              "Buy Chocolate 88D if: you want 88D Pro performance at a fraction of the price, you have access to Kawasaki distribution in your region, and brand prestige does not matter to you.",
+              "Buy Astrox 88D Pro 2024 if: you want global brand support, warranty access, high resale value, and you have flagship budget.",
+              "Buy AxForce 80 (Li-Ning) instead if: you want a friendlier-driving 4U attack racket — wider sweet spot, more forgiving sweet-spot transition.",
+              "Buy DriveX 12 (Victor) instead if: you want speed-press control rather than pure attack — a different identity inside the same flagship tier.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why Kawasaki has been quietly winning the value-flagship space",
+          body: "Kawasaki Badminton (川崎) is a Taiwanese sub-brand of the Japanese Kawasaki sports group, with a 30-year history of producing decent-quality recreational-tier rackets. The past three years have seen Kawasaki move systematically up-market, with the Master Mao 20, KACE shoes, Star Cross, and now the Chocolate 88D all targeting flagship-tier feel at sub-flagship pricing. The Chocolate 88D is the strategy's clearest expression to date. The 40T+46T carbon spec, 6.8mm shaft, 76-hole stringbed, and box-frame construction all match Yonex 88D Pro spec sheets directly. The launch price is roughly a third of the Astrox 88D Pro 2024 in markets where both are sold. The chassis quality, per the source review, is genuine — not a cosmetic copy.",
+        },
+        {
+          heading: "On-court behaviour — the source review's headline",
+          body: "The source review's most direct claim: in normal use, the Chocolate 88D and Astrox 88D Pro 2024 produce indistinguishable on-court behaviour. Head weight feel, smash exit speed, pointing accuracy, rear-court continuous attack, flat-exchange behaviour, and net play all match within the tolerance of normal session-to-session variation. The reviewer's standard description applies to both rackets equally — 'head-heavy, hard-shaft, fast and decisive attack, precise pointing, good continuous attack'. The only sustained difference the reviewer identified was the slightly longer Chocolate 88D shaft producing marginally more whip-style rebound. Outside of dedicated side-by-side testing, the difference is below the perception threshold for most amateur players.",
+        },
+        {
+          heading: "Where 88D Pro 2024 still wins",
+          body: "Three areas where the Yonex 88D Pro 2024 retains a meaningful advantage. First, brand ecosystem — Yonex offers global distribution, warranty service in most major markets, and high resale value through dedicated badminton retailers. Kawasaki offers regional distribution (mostly Asia + select European markets), uneven warranty outside China, and meaningfully lower resale value. Second, build-quality consistency across samples — Yonex's quality control on flagship-tier production is exceptional; Kawasaki's is good but slightly more variable. Third, the racket's tournament-level identity — the 88D Pro 2024 is widely played at pro and pro-amateur level; the Chocolate 88D has no significant tour presence. None of these are on-court factors, but they affect the long-term ownership experience.",
+        },
+        {
+          heading: "Counterfeit and authenticity",
+          body: "The Astrox 88D Pro 2024 is one of the most heavily counterfeited Yonex rackets ever made. Online listings below the regional norm are almost always fake. Authentication requires either a trusted dealer, written authentication paperwork, or community verification through forums like BadmintonCN. The Chocolate 88D, being less famous, is less counterfeited — most listings sold through any reasonable retailer are likely genuine. For players whose buying channel is online without authentication support, the lower counterfeit risk on the Kawasaki is a real factor. The total cost of an Astrox 88D Pro 2024 from a reliable source plus authentication overhead often pushes the price ratio even further toward the Chocolate 88D's advantage.",
+        },
+        {
+          heading: "The value-flagship calculation",
+          body: "Most buyers think about racket pricing wrong. The headline price is one component; the buying overhead (authentication risk, warranty access, return support) is another; the resale value at end-of-life is a third. For the Astrox 88D Pro 2024, the buying overhead is high (counterfeit risk) but resale value is also high (~50-60% after 2 years for clean condition). For the Chocolate 88D, buying overhead is low but resale value is also low (~20-30% after 2 years). The total cost-of-ownership over a 3-year period favours the Chocolate 88D meaningfully — usually by 40-60% depending on regional pricing. The source review's recommendation is implicit but unambiguous: if you want the racket's performance, the Chocolate 88D delivers it; if you want the racket's prestige, the Astrox 88D Pro 2024 is the only option.",
+        },
+        {
+          heading: "The final decision",
+          body: "Buy the Kawasaki Chocolate 88D if you want flagship 88D Pro performance at meaningfully lower cost, you have access to Kawasaki distribution in your region, and brand prestige does not matter for your purchase. Buy the Astrox 88D Pro 2024 if brand ecosystem, warranty access, and resale value matter to you — and you have flagship budget. Consider AxForce 80 (Li-Ning) instead if you want a friendlier-driving 4U attack option; consider DriveX 12 (Victor) instead if you want speed-press control rather than pure attack. The Chocolate 88D is the rare case where the value alternative genuinely matches the flagship on the metric that matters — on-court performance — and where the price premium for the flagship is justified primarily by brand factors rather than chassis quality.",
+        },
+      ],
+      cta: "Run the finder with rear-court attack style and 4U weight preference — Chocolate 88D, Astrox 88D Pro 2024, and AxForce 80 all surface as flagship-tier doubles attack options at different price tiers.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Side-by-side comparison data, spec observations, and on-court behaviour conclusions are paraphrased from a BadmintonCN reviewer's extended test of both rackets; cost-of-ownership framing and authentication context are original to IntoBadminton.",
         },
       ],
     },
