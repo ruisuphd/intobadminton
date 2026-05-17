@@ -69,7 +69,13 @@ export type BlogSlug =
   | "li-ning-axforce-100-gen-2-vs-gen-1"
   | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
   | "victor-drivex-12-standalone-review"
-  | "li-ning-halbertec-9000-power-deep-dive";
+  | "li-ning-halbertec-9000-power-deep-dive"
+  | "victor-drivex-12-zsw-vs-original-comparison"
+  | "badminton-shoe-buying-guide-and-replacement"
+  | "yonex-arcsaber-7-tour-review"
+  | "li-ning-l66-string-review"
+  | "bonny-wuque-1982-y3k-shoes-review"
+  | "li-ning-halbertec-9000-standalone-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -140,6 +146,12 @@ export const blogSlugs: BlogSlug[] = [
   "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
   "victor-drivex-12-standalone-review",
   "li-ning-halbertec-9000-power-deep-dive",
+  "victor-drivex-12-zsw-vs-original-comparison",
+  "badminton-shoe-buying-guide-and-replacement",
+  "yonex-arcsaber-7-tour-review",
+  "li-ning-l66-string-review",
+  "bonny-wuque-1982-y3k-shoes-review",
+  "li-ning-halbertec-9000-standalone-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3592,6 +3604,197 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           href: "https://www.yonex.com/nanoflare",
           quote: "NANOFLARE",
           note: "Yonex's current Nanoflare listing confirms the NF700 Pro, NF800 Pro, and NF1000Z as the current production speed-line flagships referenced in this comparison.",
+        },
+      ],
+    },
+    {
+      slug: "victor-drivex-12-zsw-vs-original-comparison",
+      updatedAt: "2026-05-17",
+      category: "comparisons",
+      title: "Victor DriveX 12 ZSW vs original: Lee Zii Jia's signature edition is a different racket",
+      dek: "DriveX 12 ZSW (Lee Zii Jia signature, Nanjing-produced) and DriveX 12 original (Taiwan-produced) share the model name and almost nothing else on court. ZSW is a balanced racket dressed as an attack frame; the original is the attack frame the line was launched around.",
+      story: {
+        intro:
+          "The trap with this pair is the name. DriveX 12 ZSW carries the same model designation as DriveX 12 original, the same Victor positioning, the same speed-press control identity in marketing — and behaves like a fundamentally different racket on court. ZSW is lighter through the head, softer in the shaft, faster in the swing, and friendlier on amateur force input. The original is heavier through the head, harder in the shaft, more decisive on attack, and more demanding on conditioning. Both are correct buying choices, for different players.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value: "Original BadmintonCN comparison review by chengzhen with same-line same-tension testing across DriveX 12 ZSW, DriveX 12 original, AxForce 90 New, and Astrox 88SP New Color.",
+              },
+              {
+                label: "Production origin",
+                value: "DriveX 12 ZSW: Nanjing (China) production. DriveX 12 original: Taiwan production. Both are official China-region (国行) versions, but they use different anti-counterfeit codes and stickers.",
+              },
+              {
+                label: "Sample weights",
+                value: "ZSW: 78.8g unstrung, 88.8g strung+grip at 305mm balance. Original: 79g unstrung, 88.5g strung+grip at 308mm balance.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised the source review",
+            title: "ZSW reads as a balanced racket, not an attack racket",
+            body:
+              "On the spec sheet ZSW looks like a refinement of the original. On court it sits closer to the Astrox 88SP New Color (a balanced racket) than to its own original. Same swing weight class as 88SP, similar default balance with the underbase factored in. If you bought ZSW expecting 'better DriveX 12', you bought a different racket entirely.",
+          },
+          {
+            kind: "comparison",
+            heading: "ZSW vs original in one table",
+            columns: ["DriveX 12 ZSW (Nanjing)", "DriveX 12 original (Taiwan)"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Balanced racket with attack heritage",
+                  "Speed-press control attack frame",
+                ],
+              },
+              {
+                label: "Head weight feel",
+                values: [
+                  "Mild — close to balanced",
+                  "Strong — clear head-heavy carry",
+                ],
+              },
+              {
+                label: "Shaft hardness",
+                values: [
+                  "Softer, easier whip-style force",
+                  "Harder, demands clean force input",
+                ],
+              },
+              {
+                label: "Best buyer",
+                values: [
+                  "Fast-doubles all-rounders, intermediate players",
+                  "Singles attackers, back-court doubles, advanced players",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "On Power Ring Pro and 'rebound style'",
+            title: "ZSW removes Power Ring Pro — and that is part of why it whips differently",
+            body:
+              "Victor's marketing positions ZSW as 'more suited to whip-style force production' than the original. The source review reads this as the natural result of removing the Power Ring Pro junction: less energy lock between handle and shaft, more shaft deformation under whip-style swings, easier rebound on amateur force input. Whether that is a deliberate design move or a cost-driven simplification, the on-court effect is real.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "These are two different rackets sharing a name. Pick by what you actually want from the racket, not by which sounds more flagship.",
+            bullets: [
+              "Buy ZSW if: you play fast doubles primarily, your force input is whip-style rather than direct, and you want a balanced racket that can still attack when needed.",
+              "Buy original if: you play singles or back-court doubles, you can drive a harder shaft cleanly, and you want decisive smash and precise placement from the rear court.",
+              "Buy AxForce 90 New instead if: you want the strongest pure-whip attack racket Li-Ning makes — softer shaft, longer reach, distinctive whip identity.",
+              "Buy Astrox 88SP New Color instead if: you want the most accomplished balanced doubles attack racket Yonex currently ships — sharper feedback, faster shuttle exit than ZSW.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Identity confusion: same name, different rackets",
+          body: "The DriveX 12 line launched with the Taiwan-produced original as Victor's first true speed-press control flagship — head-heavy, hard-shaft, precise placement, decisive attack. The ZSW signature edition (named for Zii Jia Lee, China's Olympic men's singles silver medallist) arrived later as the player's branded version. The buyer expectation is 'same identity with a famous name on it.' The source review explicitly debunks that: the production origin changes (Nanjing vs Taiwan), the anti-counterfeit system changes, the swing weight changes, the head balance changes, the shaft hardness changes. ZSW is closer to the Astrox 88SP New Color in feel than to its own model namesake. If you owned a DriveX 12 original and you are considering ZSW as an upgrade, that is the wrong frame of mind — ZSW is sideways, not upward.",
+        },
+        {
+          heading: "ZSW on court: balanced racket, attack heritage",
+          body: "ZSW's mid-court behaviour is the strongest evidence for its balanced-racket reading. Drives, blocks, and reactive resets feel fast and confident — the lighter head and softer shaft both contribute to faster recovery. Net play is more confident than the original because the lighter swing reduces tap latency. Rear-court attack still produces usable smashes because the carry-over of the DriveX identity remains, but the rear-court ceiling is lower — slow drives carry more easily, but maximum smash exit speed is reduced. The source review's verdict is that ZSW pairs particularly well with fast level doubles where most rallies are decided in the first three shots and most attacks are continuous-pressure rather than single-shot finishing.",
+        },
+        {
+          heading: "Original on court: speed-press control attack frame",
+          body: "The Taiwan-produced original is the flagship Victor wanted to ship when the DriveX 12 launched. Stronger head weight produces more decisive rear-court smashes; the harder shaft transfers force more directly into shuttle exit speed; the sweet spot is sharper and feedback is more precise. Mid-court drives are slightly slower than ZSW because the racket is heavier through the swing, but the placement accuracy and pointing precision compensate when the rally length favours the attacking player. The original is the right pick for singles attackers, back-court doubles, and any player whose game depends on creating openings from the rear court rather than racing to the net.",
+        },
+        {
+          heading: "vs AxForce 90 New: when whip identity matters more than brand",
+          body: "If your priority is whip-style force production, the source review's verdict is direct: AxForce 90 New (the small-frame Li-Ning attack racket with eight-pin head reinforcement) is the strongest pure-whip racket in this comparison set. Its narrower frame, softer-and-medium shaft, and longer effective whip length combine to produce a 'long-rope-flicked' rebound that neither DriveX 12 variant matches. ZSW is closer to 90 New in whip-friendliness than the original is, but 90 New still wins. The trade-off: 90 New has stronger rear-court bursts but weaker mid-court continuity than ZSW; 90 New also has a smaller sweet spot. For pure-whip attack rackets, 90 New is the answer. ZSW is the answer if you want whip identity inside a balanced-racket chassis.",
+        },
+        {
+          heading: "vs Astrox 88SP New Color: the closest direct comparison",
+          body: "Astrox 88SP New Color (the 2024 silver/black refresh of the Astrox 88S Pro) has nearly identical swing weight and balance to ZSW once both are strung. The 88SP's harder shaft produces sharper feedback and faster shuttle exit; the 88SP's pointing accuracy is more decisive; the 88SP defends better on counter-attacks. ZSW's softer shaft produces easier whip-style rebound and friendlier amateur force input. For a player choosing between them: 88SP is the more accomplished racket if you can drive a stiffer shaft and want best-in-class balanced-attack performance. ZSW is the friendlier option if your force production is still developing and you want whip-style rebound without committing to a flagship-tier shaft.",
+        },
+        {
+          heading: "The final decision",
+          body: "Read DriveX 12 ZSW and DriveX 12 original as different rackets sharing a name. Buy ZSW if you want a balanced racket that attacks via whip-style force production, you play fast doubles primarily, and your conditioning prefers softer shafts. Buy the original if you want a flagship speed-press control attack racket with decisive rear-court bite, you play singles or back-court doubles, and you can drive a hard shaft cleanly. Buy AxForce 90 New if pure whip-attack identity matters more than brand or chassis. Buy Astrox 88SP New Color if you want the most accomplished balanced-attack alternative inside the same swing-weight class. Both DriveX 12 variants are correct picks for different players — the marketing's biggest disservice is implying they are the same racket.",
+        },
+      ],
+      cta: "Run the finder with attack or balanced style depending on which DriveX 12 identity you want — the scoring weighs head balance, shaft hardness, and swing weight separately so the right variant surfaces.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Identity differences, swing-weight measurements, and on-court behaviour comparisons are paraphrased from a BadmintonCN reviewer chengzhen's side-by-side test of DriveX 12 ZSW and DriveX 12 original; buyer-framing and cross-line context are original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "badminton-shoe-buying-guide-and-replacement",
+      updatedAt: "2026-05-17",
+      category: "guides",
+      title: "Badminton shoe buying guide: how to pick, use, and replace court shoes properly",
+      dek: "Wrap, sizing formula, anti-torsion myths, sole compound choice, storage, court-only use, and when to actually replace your shoes. The honest guide most pro-shop staff are too rushed to give you.",
+      sections: [
+        {
+          heading: "Why shoes are the highest-priority piece of badminton equipment",
+          body: "Shoes are the only piece of badminton equipment that can directly cause injury. A wrong-fit racket produces frustration; a wrong-fit shoe produces ankle rolls, blisters, plantar fasciitis, and toenail trauma. Treat shoe selection with more care than racket selection — you can swap rackets between rallies, but a bad shoe ruins every step you take until you replace it. This guide covers three things in order: how to actually pick the right shoe, how to use it so it lasts, and when to retire it before it lets you down.",
+        },
+        {
+          heading: "Wrap, last, and sizing — pick this before anything else",
+          body: "Wrap (包裹) is the single most important property of a badminton shoe. If the foot moves inside the shoe during a lunge, no amount of cushioning, anti-torsion, or branded carbon plate will compensate. A shoe with great wrap and average everything else outperforms a shoe with average wrap and best-in-class specs. The next priority is last (楦型) — the foot mould that determines the shoe's internal shape. Asian-last shoes (Yonex, Victor, Mizuno) run narrower in the forefoot than European-or-US-last shoes; a 2E-foot player trying a 3E-last shoe will lose all the wrap benefit even at the correct length. The sizing formula most pro-shop staff will not tell you: measure barefoot length in millimetres, add 10mm, then buy the shoe whose internal length matches that number — wear with badminton-grade socks. If your barefoot length is 260mm, buy a 270mm internal-length shoe regardless of the size number on the box. Brand-specific size charts vary; internal length is the only universal metric.",
+        },
+        {
+          heading: "Cushioning vs start speed vs anti-torsion — the real trade-offs",
+          body: "Cushioning, start speed, and anti-torsion are interrelated and partially opposed. More cushioning usually means thicker midsole, which means slower start (more compression before push-off) and weaker anti-torsion (taller stack height = easier ankle roll). For amateur players, cushioning and anti-torsion should be the higher priorities — they protect against injury and reduce long-term wear on the body. Start speed is more dependent on footwork technique than on shoe spec; a properly-timed split step on a moderately fast shoe will beat a poorly-timed step on a fast shoe every time. The 'carbon plate makes anti-torsion good' claim is largely a myth — badminton-shoe carbon plates are usually 1-2mm thick and easily bent by hand. True anti-torsion comes from the whole platform design (TPU shanks, sidewall reinforcement, heel cradle structure). Mizuno's high-end shoes famously perform without carbon plates and still rank among the best for anti-torsion. Do not pay a premium for the carbon-plate marketing alone.",
+        },
+        {
+          heading: "Sole compound and durability",
+          body: "Gum rubber (生胶) outsoles offer the highest grip on wood courts and the highest durability — but they leave clearer marks and some venues prohibit them. Coloured rubber outsoles are venue-friendlier but wear faster, especially for players whose footwork drags the front foot during lunges. If you wear out shoes at the toe (front-foot drag), look for shoes with reinforced toe-bumpers — a marketing layer like TUFF TIP alone is rarely enough; look for actual structural toe reinforcement. If your wear pattern is on the inside of the non-racket foot, look for shoes with inside-foot wear pads in the sole structure. Match the shoe to your wear pattern, not the wear pattern to whatever shoe you bought.",
+        },
+        {
+          heading: "Storage and care — small details that matter",
+          body: "Store shoes in a cool, dry, dark place. Direct sunlight degrades the midsole and outsole compounds (especially gum rubber) within months. After play, air-dry the shoes — never sun-dry, which accelerates compound breakdown. For long-term storage (off-season, backup pairs), stuff the shoes with paper to maintain shape before placing them in a vacuum bag or sealed plastic — but never compress the stuffed shoe under vacuum, which deforms the upper. Strong-smelling shoes benefit from anti-bacterial sprays; tournament-tier players often rotate two pairs to give each pair 48 hours of airing between sessions.",
+        },
+        {
+          heading: "Court-only use — the rule most amateurs ignore",
+          body: "Wearing badminton shoes outside the court is the single biggest unforced cause of premature shoe wear. The outsole compound is designed for clean wood-court surfaces; concrete, asphalt, and gravel destroy it in a fraction of the expected lifespan. The rule: shoes go on at the court, shoes come off at the court. Carry the shoes to the venue in a bag, wear walking shoes or sport sandals to and from the locker room, and only put the court shoes on after wiping the soles clean. Players who 'one-shoe-it' from home to office to court routinely retire shoes 30-50% earlier than necessary — and pick up shrapnel, dirt, and small stones in the outsole that reduce grip and increase slip risk during play.",
+        },
+        {
+          heading: "Lacing matters — and it is faster than you think",
+          body: "Always lace and tighten the shoe before stepping onto the court. Many players warm up with loose laces and tighten before competitive play; this creates injury risk during the warm-up rally where many ankle rolls happen. Spend the 30-60 seconds to fully lace, tighten, and adjust before the first shuttle is hit. Pay attention to lacing pattern: skipping eyelets is fine if your foot does not need the wrap there; doubling-back through eyelets in the heel region (the 'lock lacing' technique) reduces heel slip noticeably; tightening the forefoot section separately from the ankle section gives independent control over wrap and ankle stability. Lacing technique is free performance — most amateurs ignore it.",
+        },
+        {
+          heading: "When to actually replace your shoes",
+          body: "The three honest replacement triggers, in order of priority: (1) Wrap degradation — when your foot starts moving inside the shoe during lateral lunges that previously felt locked, the shoe's structural integrity is gone regardless of how the outsole looks. (2) Sole hardening — gum rubber and modern compound outsoles soften with use; when the outsole feels noticeably harder than a fresh pair (test against a new shoe at the shop), grip is degraded enough to risk slips. (3) Insole degradation — when the heel cup or arch support flattens out, replace the insole first. If insole replacement does not restore the supportive feel, the whole shoe is done. Calendar-based replacement (every 6 months, every year) is less reliable than wear-based replacement — heavy players may need replacement every 4-6 months; light recreational players may stretch a pair to 18-24 months.",
+        },
+        {
+          heading: "How to try before you buy",
+          body: "If you can try the shoe in person, do five things: (1) Stand on both feet evenly to check forefoot pressure; (2) Walk a few steps to feel heel slip; (3) Perform a side lunge in each direction with the upper body weight forward, checking wrap; (4) Do a controlled jump and landing to feel cushioning response; (5) Drag the front foot in a mock lunge to feel toe-box room. Most shoes feel good standing still — the test is movement. If you cannot try in person, buy from a retailer with free returns, do the same five tests at home on a clean surface (not on the court — you cannot return worn shoes), and ship back any pair that fails any test. Internet-only buying is much higher risk for first-time buyers of a particular brand or last.",
+        },
+        {
+          heading: "Budget recommendations",
+          body: "Entry tier (50-100 USD): Yonex Power Cushion 65 Z3 or Z4, Victor SH-A171, Li-Ning Saga III. All offer reasonable wrap, cushioning, and durability for recreational and club players. Mid tier (100-180 USD): Yonex 65 Z4, Victor P9200 III, Mizuno Wave Claw 2, Asics Court FF Novak. Better materials, better feedback, longer life. Flagship tier (180-300 USD): Yonex Eclipsion Z3, Victor P9200 III Pro, Mizuno Wave Lightning Z6. Worth the spend only if you play 3+ sessions per week and your previous shoes have worn out faster than you'd like. Above 300 USD: rare premium editions and signature models — the technical advantage over flagship-tier shoes is small enough that most amateurs are paying for the colourway and the name.",
+        },
+      ],
+      cta: "Use the shoe finder with your specific wrap needs, foot width, and primary discipline — Yonex, Victor, Mizuno, Li-Ning, Asics, and Kawasaki options surface based on fit, not brand preference.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Selection criteria, sizing formula, storage rules, and replacement-trigger framing are paraphrased from a long-form BadmintonCN community guide by an experienced reviewer; brand-tier recommendations and modern model picks are original to IntoBadminton.",
         },
       ],
     },

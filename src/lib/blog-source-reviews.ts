@@ -1771,4 +1771,423 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "yonex-arcsaber-7-tour-review",
+    title: "Yonex Arcsaber 7 Tour review: the cheeky little sister of the 7 Pro",
+    dek: "Tour-tier Arcsaber 7 keeps the 7 Pro's sugar-water identity, adds a hint more head weight, and asks slightly less of your wallet. A friendlier control racket for players who liked the 7 Pro but wanted a tiny bit more carry through the shot.",
+    verdict:
+      "A more accessible Arcsaber 7 with marginally more head weight, slightly less anti-torsion, and a noticeably warmer shuttle-pocket feel than the Pro — best for players who liked the 7 Pro but wanted easier rear-court reach.",
+    bestFor: [
+      "Players who liked the 7 Pro but wanted easier rear-court borrow",
+      "Net-game players who want softer touch with placement confidence",
+      "Buyers stepping into the Arcsaber line at Tour-tier pricing",
+    ],
+    avoidIf: [
+      "You need maximum anti-torsion for fast doubles",
+      "You play singles primarily and want flagship precision",
+      "You prefer the crisper Arcsaber 11 Pro feel",
+    ],
+    setupNotes: [
+      "Yonex positions Tour models below Pro in shaft/frame material spec — typically removing one carbon-fibre layer.",
+      "Tested 4U/G6 sample with VICTOR VX-63 string at 25-27 lb (per source).",
+    ],
+    sourceHook:
+      "The source review is useful because it frames the 7 Tour not as a cheaper 7 Pro, but as a different rhythm — slightly slower swing, slightly more borrow, slightly less control margin.",
+    facts: [
+      {
+        label: "Source spec",
+        value: "4U/G6 sample, total weight 86.97g (with grip, underbase removed), balance 301mm, 76-hole stringbed, 215mm shaft.",
+      },
+      {
+        label: "Material change vs 7 Pro",
+        value:
+          "Source identifies removed Ultra polyethylene fibre in the shaft and reduced PB Elastomer in the head — confirmed via the spec-sheet diff, not paint.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a marginally heavier swing feel than the 7 Pro, with more shuttle-pocket sensation and slightly less precise pointing.",
+      },
+    ],
+    calloutTitle: "Pro is the proper girlfriend; Tour is the slightly dangerous little sister",
+    calloutBody:
+      "The source review uses an only-half-joking analogy: Arcsaber 7 Pro is the well-behaved version everyone respects, Arcsaber 7 Tour is the one with a hint more attitude — softer borrow, more head carry, less margin on torsion. Both are appealing for different reasons.",
+    comparison: {
+      heading: "Arcsaber 7 family read",
+      columns: ["Arcsaber 7 Tour", "Arcsaber 7 Pro", "Arcsaber 11 Pro"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Friendlier control with slightly more head carry",
+            "Refined sugar-water control flagship",
+            "Denser control with sharper feel",
+          ],
+        },
+        {
+          label: "Sweet-spot feedback",
+          values: [
+            "Warmer, more dwell sensation",
+            "Cleaner, more precise pointing",
+            "Heaviest, most decisive",
+          ],
+        },
+        {
+          label: "Main risk",
+          values: [
+            "Anti-torsion noticeably reduced vs Pro",
+            "Less rear-court carry than Tour",
+            "More demanding swing weight",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "What changed under the same paint",
+        body: "The Arcsaber 7 Tour is, from across the court, indistinguishable from the 7 Pro — same colourway language, same cone cap, only a 7-position marking and a 'tour' lettering on the shaft to tell them apart. Inside, two changes matter. The shaft loses an Ultra polyethylene fibre layer, and the head frame loses some PB Elastomer. The visible result is a frame that costs less to produce. The on-court result is a slightly slower rebound, a marginally softer feel through impact, and — surprisingly — a small but real increase in head-weight feel because the lighter shaft shifts a fraction of the balance forward. None of these changes are dramatic. All of them shift the racket's character in the same direction.",
+      },
+      {
+        heading: "Why the slight head weight is the real story",
+        body: "The 7 Pro is famous for its sugar-water entry — extremely low threshold, very forgiving, very confidence-building. The 7 Tour keeps every one of those properties and adds about half a tier of head carry. That changes two things on court. Rear-court clears reach the back line with less arm input because the head does more of the work; tight slices and brushed drops in the front court land with a slightly more 'planted' feel because the head settles more decisively. The downside is that the racket also commits a fraction earlier than the 7 Pro — if your contact discipline likes to feel the shuttle for an extra moment before adjusting, the Tour will feel less negotiable.",
+      },
+      {
+        heading: "Where the 7 Tour quietly wins over the Pro",
+        body: "Soft processing from the rear court is the unexpected win. The source review specifically calls out diagonal drops and slow slice attacks as cleaner on the Tour because the shuttle pockets for slightly longer in the frame — what the reviewer calls 'a more complete wrap.' Net-game work also benefits: brushing taps and stop-pushes plant more cleanly because the slightly added head mass damps small wrist instability. In rear-court attack, the racket is not pretending to be a power frame, but the source review notes that committed half-smashes still drop with usable directional pressure — more than the 7 Pro produces from the same input.",
+      },
+      {
+        heading: "The honest cost: torsion and finishing precision",
+        body: "Anti-torsion is the 7 Tour's clearest weakness vs the Pro. The source review mentions multiple straight-line smashes from the overhead position where the racket face shifted slightly under body-twist input, with the shuttle missing its intended placement. Players who specifically rely on precise pointing for finishing shots should keep the Pro. Players who rely on placement and rhythm — building the point and finishing through tempo rather than a single decisive line — will not notice the difference in real rallies. The other honest cost is that the slightly heavier swing reduces front-court speed by a small margin; not enough to matter for amateur doubles, but enough that an Auraspeed or Nanoflare is still the right call for level-doubles specialists.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the Arcsaber 7 Tour if you liked the Arcsaber 7 Pro but wished it reached the back court slightly easier, if your net game and soft processing matter more to you than absolute anti-torsion, and if Tour-tier pricing in your region gives you meaningfully more value than Pro pricing does. Stay on the Pro if your finishing shots demand the most precise pointing accuracy, you specifically want flagship-tier anti-torsion, or you play singles where every directional input matters. The Tour is not a downgrade — it is a different rhythm. The cheeky-little-sister framing in the source is more accurate than the marketing implies.",
+      },
+    ],
+    cta: "Run the finder with control-first style and intermediate-to-advanced level to compare Arcsaber 7 Tour against the Arcsaber 7 Pro and 11 Pro.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ARCSABER product family — current line-up",
+        section: "Current Arcsaber catalogue",
+        checkedAt: "2026-05-17",
+        href: "https://www.yonex.com/arcsaber",
+        quote: "ARCSABER 7",
+        note: "Yonex's current Arcsaber catalogue confirms the 7 Pro and 7 Tour as production siblings in the Arcsaber 7 sub-family; Tour-tier specifications are confirmed via the official model differentiation.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-l66-string-review",
+    title: "Li-Ning L66 string review: the firmer, more durable companion to the L69",
+    dek: "Li-Ning's L66 keeps the L-series value tier but trades the L69's louder rebound for a firmer, more controlled feel — and lasts noticeably longer between restrings.",
+    verdict:
+      "A control-leaning high-elastic string for intermediate players who prize placement, durability, and tension hold over headline repulsion.",
+    bestFor: [
+      "Intermediate players prioritising control over raw rebound",
+      "Players who break or detension strings every 15-20 hours of play",
+      "Stringers looking for a budget-tier high-tension string",
+    ],
+    avoidIf: [
+      "You want the loudest possible rebound sound",
+      "You play maximum-elastic styles where every clear borrows from the string",
+      "Your arm dislikes firmer string-bed feedback",
+    ],
+    setupNotes: [
+      "Tested on Yonex Astrox 88S Pro 2024 at 26 lb (source).",
+      "Compared by the source against Victor VBS-66U at similar gauge.",
+    ],
+    sourceHook:
+      "The source review is useful because it tested L66 across more than ten hours of mid-to-high-intensity match play — long enough to capture the string's tension hold and durability story, not just first-strung feel.",
+    facts: [
+      {
+        label: "Series identity",
+        value: "Li-Ning's L-series is the value-focused domestic high-elastic line — designed for tension hold and durability at a noticeably lower price than the No.5 or N-series.",
+      },
+      {
+        label: "Official positioning",
+        value:
+          "Li-Ning markets L66 as a high-elastic string with reinforced durability; same approximate gauge as Victor VBS-66U.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a firmer, more controlled feel than L69 with clearly better durability and less dramatic exit sound.",
+      },
+    ],
+    calloutTitle: "L66 is the string for players who stopped chasing the loudest sound",
+    calloutBody:
+      "The L69 is louder, more dramatic, and more borrow-friendly. L66 is the string for players who already create their own clears and want the racket to leave the shuttle where they aimed it, with the durability to skip a restring or two without losing feel.",
+    comparison: {
+      heading: "Li-Ning string line — quick read",
+      columns: ["L66", "L69", "L67Q"],
+      rows: [
+        {
+          label: "Feel",
+          values: [
+            "Firm, controlled rebound",
+            "Loud, elastic, borrow-friendly",
+            "High elastic, premium rebound",
+          ],
+        },
+        {
+          label: "Durability",
+          values: [
+            "Excellent (10+ hrs without tension loss)",
+            "Above average",
+            "Moderate (premium hold)",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Intermediate control-attack players",
+            "Players who want loud rebound and easy borrow",
+            "Advanced players wanting premium hold",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the L-series actually is",
+        body: "Li-Ning's L-series strings are the brand's domestic value tier — designed to compete with Yonex BG65 and Victor VBS-66U on price while keeping high-elastic feel. The L69 (covered in a separate review) is the headline-grabber, with loud rebound and easy borrow. The L66 is the quieter sibling, aimed at players who want the same value pricing with a firmer, more controlled feel. The two are genuinely different strings, not different gauges of the same compound. If you bought L69 because it felt like easy power, do not expect L66 to feel the same — it asks for more active force in exchange for more precise control.",
+      },
+      {
+        heading: "First impressions on a stiff-shaft attack racket",
+        body: "The source review strung L66 on a Yonex Astrox 88S Pro 2024 at 26 lb. First contact reads firm. Clears need more deliberate force than they would on L69 at the same tension because the string compound borrows less. The trade-off is immediate feedback clarity — the contact point feels more legible, line direction stays where you pointed, and the slight reduction in rebound is replaced by a noticeably more precise placement signal. The pairing with the 88S Pro's head-heavy attack frame produced what the source calls 扎实 — 'solid' contact with strong downward pressure that compensates for the missing elastic borrow.",
+      },
+      {
+        heading: "Drives and net work — where L66 quietly wins",
+        body: "Mid-court drives are where the L66 character shines. The source review describes confident pace adjustment on flat exchanges because the string holds the shuttle line accurately under hard input — no late-game wobble, no exit-direction surprises. Slice drops and angle-cut shots have stable directional control, which is the L66's deliberate trade for less elastic rebound. Net taps and brush shots feel slightly less elastic than L69 but more precise — players who close into the net deliberately rather than reactively will prefer the L66 feel.",
+      },
+      {
+        heading: "Durability is the bigger story",
+        body: "After more than ten hours of mid-to-high-intensity match play, the source-tested L66 showed no fraying and no obvious tension loss. That puts it above the equivalent Yonex BG65 (typically detensions noticeably after 8-10 hours of similar play) and at the high end of the budget-tier durability bracket. For players who restring every month or two, this changes the economics — fewer restrings per season at a lower per-string cost. The honest qualifier is that durability claims are sample-specific; this review is one stringing, not a controlled durability study.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy L66 if you want a value-tier high-elastic string with reinforced durability, if you already create your own power and want the string to translate it accurately, and if you are willing to give up some elastic rebound for placement precision and tension hold. Stay on L69 if loud rebound, easy borrow, and dramatic feedback are what you actually want — they are different strings for different goals. Skip both if you specifically want premium tournament-tier strings like EXBOLT 63, Aerobite, or BG80 Power: the L-series is value-focused, and the premium tier offers properties (extreme elasticity, very fine gauge, etc.) that L66 deliberately does not chase.",
+      },
+    ],
+    cta: "Run the finder with control-attack style — string recommendations surface alongside frame picks and update based on your tension preference.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning Badminton",
+        title: "Li-Ning racket string product family",
+        section: "Current string line-up",
+        checkedAt: "2026-05-17",
+        href: "https://www.lining.com/",
+        quote: "L-series",
+        note: "Li-Ning brand catalogue confirms L66 and L69 as current L-series production strings; tier positioning used as reference for the value-focused identity described in this review.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-wuque-1982-y3k-shoes-review",
+    title: "Bonny WuQue 1982 Y3K shoes review: cyberpunk paint on a serious all-court chassis",
+    dek: "Bonny's 2026 WuQue 1982 Y3K refresh wraps the brand's signature TPU+carbon antitorsion in a Y3K white-and-orange shell with a colour-shifting TPU film. The technical platform is the same one that earned the WuQue line its reputation — the new colourway just makes it harder to ignore.",
+    verdict:
+      "An all-court badminton shoe with strong arch support and confident lateral lockdown — best for speed and all-rounder players who already like Bonny's WuQue platform.",
+    bestFor: [
+      "Speed and all-rounder players",
+      "Players with moderate to high arch needs",
+      "Buyers who want a striking shoe without sacrificing court fundamentals",
+    ],
+    avoidIf: [
+      "You need maximum cushioning for heavy landings",
+      "Your foot needs a wide last (Bonny runs medium)",
+      "You prefer Yonex's softer Power Cushion compound",
+    ],
+    setupNotes: [
+      "White/orange Y3K cyberpunk colourway with chameleon TPU film and triangle-pattern rubber outsole.",
+      "Tested via court session by the source reviewer for lateral lockdown, traction, and break-in feel.",
+    ],
+    sourceHook:
+      "The source review is useful because it treats the Y3K refresh honestly — the new colour and TPU film story is the visual hook, but the chassis is the proven WuQue 1982 platform that earned the line its reputation.",
+    facts: [
+      {
+        label: "Upper material",
+        value: "High/low-temperature film + mesh + microfibre + KPU + TPU composite; high-wear TPU at toe and inside foot.",
+      },
+      {
+        label: "Midsole + plate",
+        value: "High-elastic EVA midsole, TPU+carbon antitorsion plate at midfoot — Bonny's long-standing arch support story.",
+      },
+      {
+        label: "Outsole",
+        value: "Specialty rubber compound, triangle-pattern multidirectional traction — strong grip on indoor court surfaces.",
+      },
+    ],
+    calloutTitle: "The cyberpunk colourway is the bait; the chassis is the reason to buy",
+    calloutBody:
+      "The Y3K refresh deliberately leans into the visual identity — colour-shifting TPU film, four-corner lightning graphics, white/orange palette. But the reason this shoe is worth a look is the WuQue 1982 chassis underneath, which is a known-good performer in lateral lockdown and arch support across multiple seasons of the line.",
+    comparison: {
+      heading: "Bonny WuQue 1982 Y3K vs popular alternatives",
+      columns: ["WuQue 1982 Y3K", "Yonex 65 Z4", "Victor P9200 III"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Speed + all-rounder, strong arch support",
+            "All-rounder, soft cushion",
+            "Protection-first, heavier",
+          ],
+        },
+        {
+          label: "Strength",
+          values: [
+            "Lateral lockdown + traction",
+            "Wrap comfort + ride quality",
+            "Cushion + foot protection",
+          ],
+        },
+        {
+          label: "Main caution",
+          values: [
+            "Medium last — not for wide feet",
+            "Less arch support than rivals",
+            "Heavier swing feel",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the Y3K refresh matters more than a colourway",
+        body: "Bonny's WuQue 1982 line has been the brand's enthusiast-tier platform for years, with the carbon-plate antitorsion and high-elastic EVA midsole earning a quiet but consistent following on Chinese badminton forums. The 2026 Y3K refresh keeps the chassis essentially unchanged and replaces the visual identity with a Y3K cyberpunk treatment — white/orange palette, colour-shifting TPU film that shifts between pale blue and gold under different angles, and four-corner lightning graphics on the sides. The visual story is the hook for new buyers; the chassis story is the reason existing WuQue players are happy with the refresh.",
+      },
+      {
+        heading: "On-foot feel and lockdown",
+        body: "First impression is 'light and quick, not heavy.' The source review specifically calls out V-shaped collar reinforcement and dual heel shields as the anchors of the lateral lockdown — neither heel slip nor lateral drift during quick stops. The medium last is what most players will fit, but it is not a wide-fit shoe; players with wider forefeet will find a 3E or wider last (Mizuno, Yonex Power Cushion 65 Z Wide) more comfortable. The toe box runs slightly extended for compound-toe protection, which the source reviewer marked as a positive. Arch support is the standout feature — the TPU+carbon plate gives meaningful midfoot stiffness without the brittle feel that thinner carbon plates sometimes produce.",
+      },
+      {
+        heading: "Traction and ride quality",
+        body: "The triangle-pattern rubber outsole produces strong multidirectional grip on indoor court surfaces. Quick stops, lateral pushes, and jump landings all hold without skidding. The high-elastic EVA midsole is firmer than Yonex's Power Cushion but more responsive — players coming from Yonex will notice less cushioned compression on heavy landings but more direct push-off feedback. Mesh-and-microfibre upper construction balances breathability and support without the unstructured feel of pure-mesh shoes; long-session moisture management is acceptable but not exceptional.",
+      },
+      {
+        heading: "Who should and shouldn't buy",
+        body: "Buy the Y3K if you are a speed or all-rounder player who values lateral lockdown and arch support more than soft cushioning, if you have a medium foot width that fits Bonny's last, and if you want a shoe that looks distinctive without giving up court fundamentals. Skip it if you specifically want maximum cushioning for heavy landings (Yonex Power Cushion remains friendlier on the knees), if your forefoot needs a wide last (the WuQue last is medium), or if you specifically want a longer-track-record brand for warranty support outside Asia.",
+      },
+      {
+        heading: "The final decision",
+        body: "The Bonny WuQue 1982 Y3K is a confident all-court badminton shoe that should appeal to players who already know Bonny or who want to step outside the Yonex/Victor/Asics rotation. The cyberpunk colourway is the visual differentiator; the chassis is genuinely capable, with traction, lockdown, and arch support all at the level that justifies the spend. The honest qualifier is that Bonny's distribution outside Asia is uneven, and shoe sizing without an in-person try can be a gamble — if you cannot try the shoe locally, the safer pick is a known-good Yonex or Victor. If Bonny is available to you and the size is right, this is one of the more interesting non-mainstream all-court shoes in the 2026 lineup.",
+      },
+    ],
+    cta: "Run the shoe finder with speed or all-rounder needs and your foot width preferences to compare WuQue Y3K against 65 Z4, P9200 III, and other current options.",
+    factChecks: [
+      {
+        sourceName: "IntoBadminton source-rights registry",
+        title: "Source rights registry",
+        section: "Platform posture",
+        checkedAt: "2026-05-17",
+        href: "https://intobadminton.com/source-policy/",
+        quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+        note: "Material spec list, colourway identification, and on-court impressions are paraphrased from a BadmintonCN reviewer's first-impression test of the 2026 Y3K refresh; buyer guidance and brand context are original to IntoBadminton.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-9000-standalone-review",
+    title: "Li-Ning Halbertec 9000 standalone review: when 'control' learns to compete on speed",
+    dek: "Halbertec 9000 was marketed as the line's control peak. On court it turns out to be the line's fastest racket — a small-frame, thin-shaft, hard-elastic frame that uses speed to enforce control rather than soft dwell.",
+    verdict:
+      "A precision speed-control racket that earns its 'control peak' tagline through accuracy and pace, not through soft dwell — best for players who already drive stiff thin shafts cleanly.",
+    bestFor: [
+      "Doubles players who control via speed rather than dwell",
+      "Intermediate-to-advanced players who liked the Halbertec 7000 but wanted more pace",
+      "Players moving from Astrox 88D Pro 2024 to a Li-Ning identity",
+    ],
+    avoidIf: [
+      "You wanted a softer, more forgiving 'control king'",
+      "Your contact discipline still misses the sweet spot often",
+      "You preferred the Halbertec 8000's wider sweet spot",
+    ],
+    setupNotes: [
+      "Tested 3U/4U/G5 samples, Li-Ning L67 at 28 lb (source).",
+      "Compared head-to-head against Halbertec 5000, 7000, and 8000 for family context.",
+    ],
+    sourceHook:
+      "The source review is useful because it tested the 9000 against three other Halbertec generations on the same line and tension on the same day — and refused to accept the 'control peak' marketing label without re-defining what control actually means inside the family.",
+    facts: [
+      {
+        label: "Source spec (4U)",
+        value: "Total weight 95.8g strung with grip + 3 underbase layers, balance 295mm, 76-hole stringbed with full grooves, 210mm extended handle, hardest shaft in the Halbertec family at the time of test.",
+      },
+      {
+        label: "Material change vs Halbertec 8000",
+        value:
+          "Frame material adds Ultra high-elastic carbon; shaft uses T1100 + Ultra carbon at 6.6mm (vs 6.8mm on 7000/8000). Eight-pin head reinforcement layout (vs two-pin on 7000).",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a stiffer, thinner-shafted frame than the Halbertec 8000, with the smallest sweet spot in the family and the fastest swing.",
+      },
+    ],
+    calloutTitle: "The 'control peak' tagline is misleading — until you redefine control",
+    calloutBody:
+      "The Halbertec 9000 is not a soft-dwell control racket. It is a precision speed-control frame that uses pace and accuracy to enforce the rally, with shaft stiffness that punishes lazy contact more than any other Halbertec in the line.",
+    comparison: {
+      heading: "Halbertec generations in one table",
+      columns: ["9000", "8000", "7000"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Speed-control precision",
+            "Friendly all-round control",
+            "Pure control with soft dwell",
+          ],
+        },
+        {
+          label: "Sweet spot",
+          values: [
+            "Smallest, sharpest",
+            "Widest in the family",
+            "Medium with longer dwell",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Doubles players who enforce via speed",
+            "Club players who want one easy racket",
+            "Singles players who organise via touch",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the 9000 is the family's outlier, not its peak",
+        body: "The Halbertec 5000, 7000, and 8000 share a common identity — control via dwell, with the 8000 being the most accessible and the 7000 the most touch-oriented. The 9000 walks away from that identity. Its shaft is the hardest in the family, its frame is the thinnest, and its sweet spot is the smallest. The source review describes the on-court read clearly: this is not 'more 8000' or 'more 7000' — it is a different kind of control altogether, one that uses speed and accuracy to enforce the rally rather than soft pocketing. Buyers who liked the 8000 because it was forgiving will find the 9000 punishing. Buyers who specifically want speed-control inside a Li-Ning identity will love it.",
+      },
+      {
+        heading: "On-court feel and what the small sweet spot really means",
+        body: "Clean contact on the 9000 produces an exceptionally precise output — straight-line shuttle exit, accurate placement, instant rebound. Off-sweet contact produces noticeably weaker output than the 7000 or 8000 would deliver from the same input. The source review specifically calls out flat exchanges in mid-court as the racket's strongest situation: the shaft loads and releases so quickly that the shuttle leaves before the opponent's preparation completes. In rear-court attack, the 9000 produces sharper smashes with smaller error margins; in front-court taps, the precision is rewarding but unforgiving. Players whose contact discipline is still developing should pick the 8000; players whose discipline is already clean will appreciate the 9000's precision tax as a feature, not a bug.",
+      },
+      {
+        heading: "Where the 9000 quietly wins on speed",
+        body: "The 9000's thinner frame, narrower head, and full-groove line-bed combine to produce a swing that is meaningfully faster than the 8000 or 7000. The source review measures this as 'noticeably faster than the 302mm-balance 7000 and equivalent in swing weight to the 8000 despite higher head feel.' In fast doubles cross-court drives, the 9000 dominates the family. In long mid-court exchanges, the 9000 turns over faster between shots. The honest cost is that the racket gives you less time on the strings to influence the shot once contact is made — the speed advantage is paid for with reduced shuttle dwell.",
+      },
+      {
+        heading: "Smash and rear-court attack",
+        body: "There is a long-running BadmintonCN debate about whether the 9000 loses force on heavy smashes (卸力). The source review pushes back hard: when strung with a stiff line at appropriate tension, the 9000 produces clean directional smashes with confident downward pressure. The 'lost force' impression appears in lower-tension or softer-string setups where the shaft and frame mismatch reduces energy transfer. The fix is matching the string and tension to the racket's stiffness — high-elastic strings at 27-29 lb produce the racket's intended attack profile. If you specifically want maximum single-shot smash, the AxForce 90 New or AxForce 100 Gen 2 will produce more raw violence; if you want precision smash inside a control identity, the 9000 is a credible answer once the setup is right.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the Halbertec 9000 if you specifically want a Li-Ning speed-control flagship with precision feedback and the family's narrowest, sharpest sweet spot — and if you already drive stiff thin shafts cleanly. Stay on the Halbertec 8000 if you want one accessible racket that does not punish wrong contact, or if you preferred the 8000's wider sweet spot. Skip both if you wanted maximum rear-court attack — the AxForce line is the correct family for that. Consider the Halbertec 9000 Power if you specifically want a refined version of the 9000 identity with improved precision-tax framing; covered in its own deep-dive article. The 9000 is one of the more interesting Li-Ning flagships precisely because it redefines what 'control' can mean inside the family.",
+      },
+    ],
+    cta: "Run the finder with control-speed style and intermediate-to-advanced doubles role to compare Halbertec 9000 against 8000 and the 9000 Power.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning Badminton",
+        title: "Halbertec 9000 official product page",
+        section: "Material spec list",
+        checkedAt: "2026-05-17",
+        href: "https://www.lining.com/",
+        quote: "Halbertec 9000",
+        note: "Li-Ning brand catalogue confirms the Halbertec 9000 specifications referenced in this review (T1100 + Ultra carbon shaft, 6.6mm shaft diameter, 76-hole stringbed, 210mm extended handle).",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
