@@ -3,9 +3,13 @@ import type { MetadataRoute } from "next";
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://intobadminton.com";
 
+// AdsBot-Google ignores wildcard `User-agent: *` directives by Google's design,
+// so the AdSense landing-page quality crawlers must be listed explicitly.
 const GOOGLE_CRAWLERS = [
   "Mediapartners-Google",
   "Google-Display-Ads-Bot",
+  "AdsBot-Google",
+  "AdsBot-Google-Mobile",
   "Googlebot",
 ] as const;
 

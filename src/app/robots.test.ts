@@ -18,6 +18,14 @@ describe("robots metadata", () => {
           allow: "/",
         }),
         expect.objectContaining({
+          userAgent: "AdsBot-Google",
+          allow: "/",
+        }),
+        expect.objectContaining({
+          userAgent: "AdsBot-Google-Mobile",
+          allow: "/",
+        }),
+        expect.objectContaining({
           userAgent: "Googlebot",
           allow: "/",
         }),
