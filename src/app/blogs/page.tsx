@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Badminton equipment blog",
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
   robots: {
     index: false,
     follow: true,
+  },
+
+  openGraph: {
+    url: "/blog/",
+    images: [...defaultOgImages],
   },
 };
 

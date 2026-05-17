@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { defaultOgImages } from "@/lib/og";
 
 const PATH = "/guides/racket-balance/";
 const HEADLINE = "Racket balance and shaft flex";
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
   title: "Badminton racket balance and shaft flex",
   description: DESCRIPTION,
   alternates: { canonical: PATH },
+
+  openGraph: {
+    url: PATH,
+    images: [...defaultOgImages],
+  },
 };
 
 export default function RacketBalanceGuide() {

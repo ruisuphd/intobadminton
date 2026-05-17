@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Commercial launch setup",
@@ -7,6 +8,11 @@ export const metadata: Metadata = {
     "Operator checklist for AdSense, analytics, privacy, security, and launch readiness.",
   alternates: { canonical: "/setup/" },
   robots: { index: false, follow: true },
+
+  openGraph: {
+    url: "/setup/",
+    images: [...defaultOgImages],
+  },
 };
 
 const setupItems = [

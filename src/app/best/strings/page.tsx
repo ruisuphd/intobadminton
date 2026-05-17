@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Best Badminton Strings 2026 — BG, EXBOLT, L69",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
     "badminton string durability",
   ],
   alternates: { canonical: "/best/strings/" },
+
+  openGraph: {
+    url: "/best/strings/",
+    images: [...defaultOgImages],
+  },
 };
 
 const config: BestPicksConfig = {

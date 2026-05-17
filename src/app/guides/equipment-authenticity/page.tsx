@@ -6,6 +6,7 @@ import {
   authenticityGuide,
 } from "@/lib/authenticity";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Badminton Racket Authenticity Check",
@@ -23,6 +24,11 @@ export const metadata: Metadata = {
     "real or fake Yonex Astrox",
   ],
   alternates: { canonical: "/guides/equipment-authenticity/" },
+
+  openGraph: {
+    url: "/guides/equipment-authenticity/",
+    images: [...defaultOgImages],
+  },
 };
 
 const FAQS: { q: string; a: string }[] = [

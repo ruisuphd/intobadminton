@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Badminton Equipment Glossary — 40+ Terms",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
     "BG65 BG80 explained",
   ],
   alternates: { canonical: "/guides/glossary/" },
+
+  openGraph: {
+    url: "/guides/glossary/",
+    images: [...defaultOgImages],
+  },
 };
 
 type Term = {

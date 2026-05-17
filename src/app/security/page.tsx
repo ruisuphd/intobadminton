@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Security",
   description:
     "Security posture, reporting, and static-hosting controls for IntoBadminton.",
   alternates: { canonical: "/security/" },
+
+  openGraph: {
+    url: "/security/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function SecurityPage() {

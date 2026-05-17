@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Source and copyright policy",
   description:
     "How IntoBadminton handles Reddit, BadmintonCN, forum, and review evidence.",
   alternates: { canonical: "/source-policy/" },
+
+  openGraph: {
+    url: "/source-policy/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function SourcePolicyPage() {

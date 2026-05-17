@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ReviewForm } from "../ReviewForm";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Submit equipment review",
@@ -7,6 +8,11 @@ export const metadata: Metadata = {
     "Submit a structured badminton equipment review to improve future recommendations.",
   alternates: { canonical: "/review/submit/" },
   robots: { index: false, follow: true },
+
+  openGraph: {
+    url: "/review/submit/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function ReviewSubmitPage() {
