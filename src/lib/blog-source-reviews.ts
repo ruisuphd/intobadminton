@@ -2190,4 +2190,448 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "yonex-astrox-99-pro-1-deep-dive",
+    title: "Yonex Astrox 99 Pro (1st gen, 2021) review: the racket that broke club doubles players",
+    dek: "The original Astrox 99 Pro carries head weight, NAMD shaft, and a 68-hole stringbed that adds up to a singles weapon disguised as a flagship attack racket. Read this before you assume the marquee Yonex name means the racket will fit your game.",
+    verdict:
+      "A no-compromise singles attack racket that defeats most doubles players within three games — buy only if singles is your primary format and your shoulder is conditioned for extreme stiffness.",
+    bestFor: [
+      "Advanced singles attackers",
+      "Players with strong shoulder and forearm conditioning",
+      "Buyers specifically chasing the original Kento Momota racket experience",
+    ],
+    avoidIf: [
+      "You play fast doubles primarily",
+      "You have any history of shoulder or elbow strain",
+      "You are not yet driving stiff frames cleanly",
+    ],
+    setupNotes: [
+      "Source-tested 4U/G5 sample at 96.0g strung with heat-shrink and grip, balance 299mm with handle weighting.",
+      "Yonex official spec lists the 1st-gen 99 Pro as extra-stiff with 68-hole stringbed and NAMD shaft.",
+    ],
+    sourceHook:
+      "The source review is the rarer kind: a player who admits the racket beat him, but documents exactly how and why — useful precisely because it is not aspirational marketing.",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "4U/G5, 96g strung with grip, 299mm balance, 210mm NAMD shaft, 5-7 o'clock grommet grooves, box-frame with e.cap, 28 lb tension warranty.",
+      },
+      {
+        label: "Official identity",
+        value:
+          "Yonex shipped the 2021 99 Pro as Kento Momota's signature attack racket — extra-stiff shaft, weighted handle, and a 68-hole stringbed deliberately denser at the sweet spot.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat the 99 Pro as a singles-only commitment, not a flagship-for-everyone — the 68-hole stringbed and head weight punish anything else.",
+      },
+    ],
+    calloutTitle: "The handle is weighted — the real balance is closer to 315mm",
+    calloutBody:
+      "Source-measured 299mm balance is misleading because Yonex weighted the handle to bring the published number down. Remove the underbase grip and the racket's playing balance jumps into the 310-315mm range — closer to a Voltric Z-Force Dragon Teeth than to a normal head-heavy attack frame. That is the playing experience to plan for, not the spec-sheet number.",
+    comparison: {
+      heading: "Astrox 99 Pro lineage",
+      columns: [
+        "99 Pro (1st gen, 2021)",
+        "99 Pro (2nd gen, 2023)",
+        "99 Pro (3rd gen, 2025)",
+      ],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Original demand, narrow buyer",
+            "Most accessible of the three",
+            "Return to extreme power",
+          ],
+        },
+        {
+          label: "Stringbed",
+          values: [
+            "68 holes, sharpest sweet spot",
+            "68 holes, wider tolerance",
+            "76 holes, more forgiving transition",
+          ],
+        },
+        {
+          label: "Main risk",
+          values: [
+            "Hardest to drive in this lineage",
+            "Less dramatic for elite players",
+            "Fast energy burn in long sessions",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the 1st gen is the family's defining racket",
+        body: "The original Astrox 99 Pro is the racket Yonex shipped to define what the 99 line would become. Built around Kento Momota's signature year, it carries the lineage's hardest combination of weighted handle, NAMD shaft, and 68-hole stringbed. The 2nd gen (2023) softens it; the 3rd gen (2025) returns to extreme but with a 76-hole frame and modern damping. The 1st gen is the version that established the family's identity — and the version that has retired more amateurs' shoulders than any other Astrox. The source review's framing is candid: the reviewer borrowed the racket, tested it for weeks, never adapted to it, and returned it. That experience is the most honest data point most buyers will ever get.",
+      },
+      {
+        heading: "The 68-hole stringbed is the central trap",
+        body: "Conventional wisdom says more grommets means a denser stringbed and a stiffer feel. The 99 Pro inverts that intuition. The 68-hole design concentrates the line spacing at the sweet spot — the vertical and horizontal sweet-zone strings sit closer together — which raises perceived stiffness at the centre and reduces forgiveness everywhere else. The source review describes the off-sweet contact as repeatedly producing 'mishit' feedback, and the on-sweet contact as feeling exceptionally direct but unforgiving. Lee Zii Jia and Kento Momota both saw non-forced error rates increase during their early 99 Pro periods. If pros need adjustment time, amateurs need much more.",
+      },
+      {
+        heading: "Doubles is the wrong format — the source review proves it",
+        body: "The source reviewer plays doubles primarily. Through the test period, the 99 Pro consistently produced mistimed flat exchanges, missed net-court reflex shots, and slow turnover on continuous attack — all of which are doubles-defining weaknesses. The head weight pulls the swing through too slowly for fast doubles; the 68-hole sweet spot punishes the rushed contact that doubles produces; the extra-stiff shaft fails to bail out late preparation. By the end of the test the source reviewer abandoned net interception and net pressure entirely, switching to soft blocks and reset lifts — a strategic surrender to the racket's identity. If you play doubles primarily, the 99 Pro will reduce your effective level. The Astrox 88D Pro 2024 is the right Yonex attack option for doubles.",
+      },
+      {
+        heading: "The smash is the only fully-rewarded shot",
+        body: "When the 99 Pro works, the smash is what works. The combination of head weight, weighted handle, and the 68-hole sweet spot produces a smash with exceptional shuttle exit speed and pointing accuracy. The source review describes successful smashes as 'cracker-shell loud' and notes that the racket's directional consistency on hard smashes is meaningfully higher than the 88D Pro family. The qualifier: the smash only works when the entire kinetic chain is clean. Rushed contact, late preparation, or compromised positioning all produce smashes that are weaker than what a softer racket would deliver from the same input. The 99 Pro rewards perfect mechanics and punishes everything else.",
+      },
+      {
+        heading: "The injury question is real",
+        body: "The source review specifically mentions shoulder-strain concern as a reason for not pursuing full adaptation. Multiple BadmintonCN long-form reviews of the 1st-gen 99 Pro flag the same concern. The combination of weighted handle (heavier than published), extra-stiff shaft (transmits force directly to the arm), and 68-hole stringbed (rewards full power) creates a setup that asks more of the elbow and shoulder than any other Astrox. Players with any history of rotator cuff issues, tennis elbow, or wrist strain should specifically avoid this racket. Players without history should still treat it as an injury-risk-elevated purchase rather than a normal flagship.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the 1st-gen Astrox 99 Pro only if you play singles primarily, your shoulder and forearm are conditioned for extreme stiffness, and you specifically want the original Kento Momota racket experience. Buy the 2nd gen instead if you want a more accessible 99 Pro identity — wider sweet spot, friendlier sweet-spot transition. Buy the 3rd gen if you want the modern refined extreme — heavier than the 2nd gen, more forgiving than the 1st on contact, but with the same energy cost concerns across long matches. Buy the 88D Pro 2024 if you play doubles. The 1st-gen 99 Pro is a historical object — a flagship that defined a family — and a current-day pleasure only for the narrow buyer it was designed for.",
+      },
+    ],
+    cta: "Run the finder with smash-heavy style and advanced singles level to compare the 1st-gen 99 Pro against the Gen 2, Gen 3, and the 88D Pro 2024.",
+    factChecks: [
+      {
+        sourceName: "Yonex USA",
+        title: "Astrox 99 Pro (1st gen) — original 2021 product listing",
+        section: "Spec sheet",
+        checkedAt: "2026-05-17",
+        href: "https://us.yonex.com/products/astrox-99-pro",
+        quote: "ASTROX 99 PRO",
+        note: "Yonex's product listing for the Astrox 99 Pro line confirms the model lineage; the 1st gen launched in 2021 with weighted handle and 68-hole stringbed as referenced in this review.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-7000-gen-1-review",
+    title: "Li-Ning Halbertec 7000 (1st gen) review: the control-flagship that asks more than it gives",
+    dek: "The original Halbertec 7000 launched the line's modern identity — 76-hole frame, 6.8mm shaft, sharp control feedback. But the small sweet spot and the demanding shaft mean it is not the friendly entry-level Halbertec the spec sheet suggests.",
+    verdict:
+      "A precision-control flagship for players who already drive stiff shafts cleanly — sharper feel and harder feedback than the friendlier Halbertec 8000, with the narrowest sweet spot of the 7000-tier family.",
+    bestFor: [
+      "Control players who win through placement and slice work",
+      "Singles players who organise rallies before they finish them",
+      "Players upgrading from a softer Li-Ning frame who want more feedback",
+    ],
+    avoidIf: [
+      "You wanted a forgiving sugar-water control racket — the 8000 is the right pick",
+      "Your contact discipline still misses the sweet spot often",
+      "You play fast doubles primarily",
+    ],
+    setupNotes: [
+      "Source-tested 3U and 4U/G5 samples at 28 lb on Li-Ning L67 string.",
+      "Compared head-to-head against Halbertec 8000 for family context.",
+    ],
+    sourceHook:
+      "The source review is useful because it positions the 7000 against the 8000 honestly — the 8000 is the friendly default, the 7000 is the precision specialist that asks for more.",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "3U: 81.8g unstrung, balance 296mm. 4U: 85.3g unstrung, balance 302mm. 76-hole stringbed, 6.8mm shaft, 210mm extended handle.",
+      },
+      {
+        label: "Position in lineage",
+        value:
+          "Halbertec 7000 (1st gen) is the line's original control flagship. The 2nd gen (covered in a separate review) refines the platform; the 8000 widens the access path; the 9000 takes it in a speed-control direction.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a sharper, more demanding control racket than the 8000 — with the narrowest sweet spot of the 7000-tier family.",
+      },
+    ],
+    calloutTitle: "Easy to lift, hard to truly master",
+    calloutBody:
+      "Source review's most useful line: 'Easier to pick up than the 8000, but harder to fully master.' The narrower sweet spot and harder shaft feedback reward clean players generously, and humble players quickly. The 7000 demands more contact discipline than the 8000 — that is its identity, not its flaw.",
+    comparison: {
+      heading: "Halbertec 7000 vs 8000 head-to-head",
+      columns: ["Halbertec 7000 (1st gen)", "Halbertec 8000"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Precision control with sharp feedback",
+            "Forgiving all-round control",
+          ],
+        },
+        {
+          label: "Sweet spot",
+          values: [
+            "Narrower, sharper",
+            "Wider, more forgiving",
+          ],
+        },
+        {
+          label: "Shaft feedback",
+          values: [
+            "Harder, more direct",
+            "Crisp but softer than 7000",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Singles control specialist",
+            "Club all-rounder",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why 7000 reads harder than 8000 despite similar specs",
+        body: "On paper the 7000 and 8000 share much: 76-hole stringbed, 6.8mm shaft, similar weight class, similar balance range. On court they feel meaningfully different. The 7000's shaft has a faster rebound and harder feedback — the source review describes the contact sensation as 'sharper, more direct, more demanding.' The frame has slightly less generous sweet-spot tolerance than the 8000. The result is a racket that rewards precise contact and punishes lazy contact more than the 8000 ever does. If you are choosing between 7000 and 8000 expecting the 7000 to be a friendlier 8000 sibling, you have the family wrong — the 7000 is the more demanding option, not the less.",
+      },
+      {
+        heading: "Net play and slice work — where the 7000 quietly wins",
+        body: "The 7000's strongest situation is delicate net work and slice attacks. The source review specifically calls out 搓放收抹 — the family of soft-touch net actions — as 'a near extension of the arm' on the 7000. Slice drops from the back court, slice attacks at angles, and brushed net taps all produce cleaner directional control than the 8000 can deliver. The shaft's faster rebound translates into a more legible feedback channel for fine-motor control. Players whose game depends on placement and touch will prefer the 7000 over the 8000. Players whose game depends on power and forgiveness will prefer the 8000.",
+      },
+      {
+        heading: "Attack: hard and direct, but demanding",
+        body: "The 7000 attacks with the sharper feedback of a more demanding control racket — clean smashes produce direct, fast shuttle exit with confident pointing accuracy. The trade-off is that the small-sweet-spot tax shows up in attack just as much as in defence. Rushed smashes, off-sweet contact, or compromised swings produce noticeably weaker output than the 8000 would deliver from the same input. The source review describes the attack profile as 'rewarding clean preparation, punishing rushed preparation' — accurate for the family. If you want the easiest attack inside the Li-Ning control line, the 8000 is the answer. If you want the sharpest attack inside the line, the 7000 is the answer, with the precision tax.",
+      },
+      {
+        heading: "Flat exchanges and mid-court speed",
+        body: "Flat drives and mid-court exchanges are where the 7000's demanding identity becomes a strength inside the right player's hands. The full-grommet-groove design plus the slightly head-heavy 4U balance produce a swing that holds up in fast doubles cross-court exchanges. The source review specifically notes that the 7000 in 4U trim handles flat exchanges with confidence — comparable to the 8000 with marginally faster turnover. The honest qualifier is that the wrist load is noticeable: the harder shaft and slightly higher head-heavy feel asks more of the forearm during sustained mid-court rallies. Players with weaker wrist conditioning will fatigue faster on the 7000 than on the 8000.",
+      },
+      {
+        heading: "The L67 string pairing question",
+        body: "The source review tested the 7000 with Li-Ning's L67 string at 28 lb. The combination produced a sharper, more 'metallic' contact sound than the same setup on the 8000 — clear, crisp, and slightly louder. L67 reads as a value-tier high-elastic string with strong tension hold and crisp feel; it pairs well with the 7000's already-firm character, producing what the source describes as 'sharp on sharp.' If you want to soften the 7000's character, pair it with a softer high-elastic string (BG65, BG80) and run lower tension; the 8000-tier feel is the result. If you want to embrace the racket's sharp identity, L67 or similar firm strings keep the character intact.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the Halbertec 7000 (1st gen) if you want a precision-control flagship with sharp feedback, you already drive stiff shafts cleanly, and you specifically value placement and touch over power and forgiveness. Buy the Halbertec 8000 if you want the family's friendly default — a forgiving control racket that does not punish wrong contact. Buy the Halbertec 9000 if you want a speed-control direction inside the line. The 7000 is the family's specialist — not for everyone, but exceptional for the right buyer. If you have been recommended the 8000 as a starting Halbertec, the 7000 is the upgrade path once your contact discipline has caught up; do not buy the 7000 first.",
+      },
+    ],
+    cta: "Run the finder with control-first style and intermediate-to-advanced level to compare Halbertec 7000 (1st gen) against the 8000 and 9000.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning Badminton",
+        title: "Halbertec 7000 official product page",
+        section: "Material spec list",
+        checkedAt: "2026-05-17",
+        href: "https://www.lining.com/",
+        quote: "Halbertec 7000",
+        note: "Li-Ning brand catalogue confirms the original Halbertec 7000 specifications referenced in this review (76-hole stringbed, 6.8mm shaft, 210mm extended handle).",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-snake-breath-second-tier-flagship-review",
+    title: "Bonny Snake Breath review: the second-tier racket that plays in the same league as the top three brands",
+    dek: "Bonny's Snake Breath (蛇之呼吸) drops Demon-Slayer-inspired paint over a serious M46J + Mirochi resin speed-attack chassis. The source review's verdict: cover the Bonny logo and you would not know this is not a Yonex, Victor, or Li-Ning flagship. The most credible second-tier speed-attack racket of 2025.",
+    verdict:
+      "A high-end speed-attack racket from a second-tier brand that genuinely competes with first-tier flagships — best for fast-doubles players who want flagship feel without flagship pricing.",
+    bestFor: [
+      "Fast-doubles players who want continuous-pressure attack",
+      "Players who liked the Li-Ning BladeX 900 New + AxForce 90 New combination feel",
+      "Buyers ready to step outside the Yonex/Victor/Li-Ning rotation",
+    ],
+    avoidIf: [
+      "You need maximum single-shot smash power — Snake Breath is speed-attack, not rear-court ballistic",
+      "Brand presence in your region matters for warranty support",
+      "You play singles primarily and want a singles-first frame",
+    ],
+    setupNotes: [
+      "Tested 4U/G6 sample at 28 lb with Ding string and DJ102 grip, total weight 94.37g, balance 290mm without underbase removal.",
+      "Bonny positions Snake Breath as a 2025 speed-attack flagship within their Breath (呼吸) sub-line.",
+    ],
+    sourceHook:
+      "The source review is useful because the reviewer plays extreme attack rackets (330mm Golden Tofu, 320mm Red Dragon Tooth, 315mm 100ZZ and 99P) and still rated Snake Breath as one of the most credible second-tier flagships of the year.",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "4U/G6, 94.37g total weight strung, 290mm balance (underbase not removed, film not removed), 76-hole stringbed, 6.8mm slightly stiff shaft.",
+      },
+      {
+        label: "Official tech",
+        value:
+          "Bonny lists Toray M46J carbon + NANO Mirochi resin (475 GPa tensile modulus), Spiral-Whip composite frame, Vibranium-shaft tech with claimed 20% elasticity gain and 15% anti-torsion gain.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a six-sided speed-attack racket — speed of BladeX 900 New plus attack identity of AxForce 90 New, missing only the ballistic rear-court smash.",
+      },
+    ],
+    calloutTitle: "Cover the logo and you would not know this is not a top-three brand",
+    calloutBody:
+      "The source review's strongest endorsement: 'I genuinely believe most players, after testing this racket, would not realise it is not from one of the top three brands.' That is unusual praise from a reviewer whose normal collection includes 315mm+ flagships. The Snake Breath earns it through speed, attack continuity, and precision pointing — not through marketing or signature-player association.",
+    comparison: {
+      heading: "Snake Breath vs reference frames",
+      columns: ["Snake Breath", "BladeX 900 New", "AxForce 90 New"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Speed-attack hybrid",
+            "Pure speed",
+            "Whip-attack with continuity",
+          ],
+        },
+        {
+          label: "Strength",
+          values: [
+            "Six-sided balance",
+            "Front-court pressure",
+            "Continuous-pressure smash",
+          ],
+        },
+        {
+          label: "Main caution",
+          values: [
+            "No ballistic rear-court smash",
+            "Lower attack ceiling",
+            "Smaller sweet spot",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why a second-tier brand matters in the 2025 market",
+        body: "The Yonex / Victor / Li-Ning oligopoly increasingly prices flagship rackets above 1500 RMB launch (200+ USD post-discount), with the marquee Astrox 99 Pro 3rd gen, Victor TK-F-C, and AxForce 100 Gen 2 all sitting above that range. Second-tier brands like Kumpoo, Kawasaki, and Bonny have used the gap to ship rackets that match the top-three chassis quality at meaningfully lower prices. The Snake Breath is the latest example. The honest qualifier: second-tier brand pricing comes with second-tier distribution support — warranty, availability, and resale value all lag the top three. The chassis quality is genuine; the brand ecosystem is not yet at top-three levels.",
+      },
+      {
+        heading: "Speed-attack identity, in the BladeX 900 New + AxForce 90 New rhythm",
+        body: "The clearest framing for the Snake Breath is 'BladeX 900 New speed plus AxForce 90 New attack continuity.' The source review uses exactly this comparison and the on-court behaviour supports it. The 6.8mm M46J shaft produces sharp rebound for fast cross-court drives — close to BladeX 900 New in front-court reactivity. The frame's continuous-attack profile, with sharp downward shuttle exit on point-attack smashes, mirrors AxForce 90 New's strength in continuous rear-court pressure. The trade-off the racket consciously makes is no single-shot ballistic smash — players who win by ending rallies with one decisive smash should buy a heavier attack frame instead. Players who win by continuous pressure and front-court compression will find this racket fits the model.",
+      },
+      {
+        heading: "Point-attack and small-force scoring",
+        body: "Point-attack (点杀) is the Snake Breath's highest-scoring shot in the source review's testing. The combination of head weight, M46J shaft sharpness, and Ding string elasticity produces a small-input rebound that lands the shuttle near mid-court at confident exit speed. Net pressure on opponents is meaningfully higher than the source reviewer expected from a 290mm-balance racket. Sneaky half-smashes, slice-drops, and disguised flat attacks all benefit from the racket's compound-aero frame design and the G6 handle (a rarity for a 4U flagship — most second-tier brands skip the small-hand-friendly G6 option).",
+      },
+      {
+        heading: "Defence and net work — where the speed identity pays back",
+        body: "Defence is where the racket's speed-attack identity shows its full value. The compound-aero frame produces noticeably higher swing speed than traditional box-frame attack rackets, which translates directly into faster reaction defence on heavy smashes. The G6 handle plus 76-hole large-sweet-spot frame produces forgiving net play — the source review specifically calls out high tolerance on net taps, brushed drops, and diagonal cross-court drops. Net interception is fast enough that the reviewer felt no compromise vs his AxForce 90 New normal rotation. This is the racket's strongest selling point for fast-doubles specialists.",
+      },
+      {
+        heading: "Visual identity and the colourway honesty",
+        body: "The Snake Breath leans into the Demon Slayer 'Breath of the Serpent' aesthetic — purple-black base with snake-scale embossed texture on the frame and shaft. The visual identity is striking and distinctive. The source review honestly flags that some of the silver-foil decals (model name, tech naming) sit awkwardly against the purple snake-scale graphics and reduce visual contrast; the recommendation is that gold-foil decals would have produced a cleaner result. None of this affects on-court performance. Buyers who prefer understated design should be aware that this is a deliberately bold-paint racket; buyers who specifically want the Demon Slayer aesthetic will find this is one of the better-executed badminton tie-ins on the market.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the Snake Breath if you want a flagship-quality speed-attack racket at second-tier pricing, you play fast doubles primarily, and you are comfortable with Bonny brand presence in your region. Stay with a top-three flagship if warranty, resale, and brand ecosystem matter to you. Buy the BladeX 900 New if you want maximum speed identity inside Li-Ning's first-tier coverage; buy the AxForce 90 New if you want maximum whip-attack identity inside the first-tier. The Snake Breath is the credible alternative to both at a lower price floor, with no compromise in chassis quality — and one of the more interesting non-mainstream attack rackets to surface in 2025.",
+      },
+    ],
+    cta: "Run the finder with speed-attack style and your specific discipline to compare Snake Breath against BladeX 900 New, AxForce 90 New, and the Yonex Nanoflare 1000Z.",
+    factChecks: [
+      {
+        sourceName: "IntoBadminton source-rights registry",
+        title: "Source rights registry",
+        section: "Platform posture",
+        checkedAt: "2026-05-17",
+        href: "https://intobadminton.com/source-policy/",
+        quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+        note: "Spec data, tech naming, and on-court impressions are paraphrased from a TiGe XLab BadmintonCN long-form review of the Bonny Snake Breath; buyer framing and cross-line context are original to IntoBadminton.",
+      },
+    ],
+  }),
+  review({
+    slug: "rsl-supreme-shuttle-review",
+    title: "RSL Supreme shuttle review: the premium goose-feather shuttle worth the per-tube premium",
+    dek: "RSL Supreme (亚S) is the goose-knife-feather (鹅刀翎) upgrade over RSL Classic. Source review's verdict: half-hour mid-intensity doubles per shuttle, premium feel that approaches K+90 territory, and one of the few high-tier shuttles whose price has stayed stable through 2026's feather price spike.",
+    verdict:
+      "A premium recreational and club-tier shuttle that competes with first-tier feathered shuttles on feel and durability — best for serious club play and intermediate-to-advanced amateur sessions.",
+    bestFor: [
+      "Serious club doubles and singles play",
+      "Players upgrading from RSL Classic or Yonex AS-30",
+      "Buyers prioritising tension price stability in 2026's feather-supply market",
+    ],
+    avoidIf: [
+      "You only play casual / family rallies — RSL Tourney or AS-20 is cheaper and fine",
+      "You play BWF-tier tournament matches — AS-50 or Victor Champion No.1 are the right tier",
+      "You need an all-cork base for maximum durability sensitivity",
+    ],
+    setupNotes: [
+      "Source-tested after one year of warehouse storage before opening — durability still excellent.",
+      "Goose knife-feather (鹅刀翎) construction with dual-cork base (not all-cork).",
+    ],
+    sourceHook:
+      "The source review is useful because the reviewer compared Supreme directly against K+90 (one of the most demanding premium shuttles) and rated Supreme's feel as 'approaching that level' — unusual praise for an RSL product.",
+    facts: [
+      {
+        label: "Material",
+        value: "Goose knife-feather (鹅刀翎), the premium goose feather grade RSL uses on S and U series shuttles.",
+      },
+      {
+        label: "Feather quality observation",
+        value:
+          "Source review describes RSL Supreme's feathers as 'consistently full, glossy, single-coloured, undamaged, with thick quill and full glue coverage' — a step up from prior RSL grades.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat Supreme as the credible step up from RSL Classic / Yonex AS-30 — not the BWF-tour tier (that is AS-50, Champion No.1).",
+      },
+    ],
+    calloutTitle: "Half an hour of mid-intensity doubles per shuttle",
+    calloutBody:
+      "The source review's headline durability number: in private mid-intensity doubles sessions, one Supreme shuttle reliably survived 30 minutes of play. The reviewer was surprised enough to count usage explicitly. Per-tube cost-per-hour math meaningfully outperforms most competing premium shuttles.",
+    comparison: {
+      heading: "RSL Supreme vs reference shuttles",
+      columns: ["RSL Supreme (亚S)", "RSL Classic (亚C)", "Yonex AS-30"],
+      rows: [
+        {
+          label: "Feather grade",
+          values: [
+            "Premium goose knife-feather",
+            "Standard goose feather",
+            "Standard goose feather",
+          ],
+        },
+        {
+          label: "Durability",
+          values: [
+            "~30 min mid-intensity doubles",
+            "~15-20 min mid-intensity doubles",
+            "~15-20 min mid-intensity doubles",
+          ],
+        },
+        {
+          label: "Best use",
+          values: [
+            "Serious club play",
+            "Regular practice",
+            "Club training",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why goose knife-feather (鹅刀翎) matters",
+        body: "Premium feathered shuttles use one of two top feather grades: goose knife-feather (鹅刀翎) or goose water-feather (鹅水翎). Knife-feather is shaped from the leading-edge wing feathers — thicker quills, more rigid structure, more consistent flight than the cheaper water-feather option. RSL Supreme uses knife-feather throughout (no mixing with cheaper feather grades), which is what produces the consistent flight and durability the source review highlights. The same construction underpins BWF-tier shuttles like AS-50 and Champion No.1; Supreme delivers it at a meaningfully lower price point because the cork base and overall finish are tuned for premium club play, not tournament certification.",
+      },
+      {
+        heading: "Flight and feel — approaching K+90 territory",
+        body: "The source review's most surprising claim is that Supreme's flight and feel approach K+90 territory — K+90 being one of the highest-feel BWF-tier feathered shuttles on the market. The Supreme produces steady exit speed, linear end-of-flight deceleration, and a crisp contact feedback that the reviewer describes as 'pleasure-inducing' (mirroring K+90's signature feel). If you lift with sufficient arc, the shuttle will not fly out of bounds — speed consistency stays within the expected band across a tube. Premium feathered shuttle players rotating into Supreme should find the transition seamless.",
+      },
+      {
+        heading: "Durability is the standout property",
+        body: "Mid-intensity private doubles produced approximately 30 minutes of usable life per shuttle in the source review. That number puts Supreme at the top of RSL's lineup and competitive with premium-tier feathered shuttles in absolute durability terms. The caveat the source review flags honestly: Supreme is not pure 'feathers shatter but never break off' construction. Individual feathers can detach. When a feather is lost, the flight is meaningfully affected — accuracy drops, exit speed becomes uneven. The lesson is to retire the shuttle when a feather is missing, even if the rest of the shuttle is still flying. Players who routinely play 'feather-eating' (打毛怪 — shots that strike the leading edge) styles will lose Supreme shuttles faster.",
+      },
+      {
+        heading: "Price stability in 2026's feather-supply market",
+        body: "Natural goose-feather supplies have tightened globally through 2025 and 2026, with most feathered-shuttle prices rising 15-30% in the past 18 months. RSL has held Supreme pricing meaningfully stable through that period — a competitive advantage that the source review specifically calls out. For players buying shuttles in volume (3+ tubes per month for regular club play), Supreme's price stability translates into noticeably lower annual shuttle spend vs Yonex Aerosensa upgrades. The durability advantage compounds: more usable hours per shuttle, plus more stable per-tube pricing, equals stronger cost-per-hour math.",
+      },
+      {
+        heading: "Cork base — the one honest weakness",
+        body: "Source review honestly flags that Supreme uses a dual-cork base (双拼) rather than all-cork. Higher-tier shuttles (AS-50, Champion No.1) use all-cork for maximum durability and feedback consistency. Dual-cork construction does affect impact feel marginally — clean smashes produce slightly less 'thwack' than all-cork tournament shuttles. The honest qualifier is that most amateur players will not notice this in normal use because feathers wear out before cork bases matter. Tournament-tier players who play 21-21 deciding games and need maximum impact predictability should still prefer AS-50 or Champion No.1. Club players will find dual-cork acceptable.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy RSL Supreme if you are a serious club player, you want premium feathered-shuttle feel and durability without paying BWF-tour pricing, and you appreciate the price stability through 2026's feather supply tightening. Stay on RSL Classic or Yonex AS-20 if you play casually or are price-sensitive. Move up to Yonex AS-50 or Victor Champion No.1 if you play BWF-tier tournament matches and need certified shuttle feel. Avoid premium plastic shuttles (Mavis 200/300) as a long-term alternative — they last longer but teach different timing. RSL Supreme is the right premium feathered shuttle for the 90% of amateur and serious club players whose game does not need tournament-grade certification.",
+      },
+    ],
+    cta: "Use the shuttle finder with your skill level, primary discipline, and budget — Supreme surfaces alongside RSL Classic, Yonex Aerosensa, and Victor Champion options based on fit.",
+    factChecks: [
+      {
+        sourceName: "RSL",
+        title: "RSL Supreme product range",
+        section: "Premium feathered shuttle line",
+        checkedAt: "2026-05-17",
+        href: "https://rslsports.com/",
+        quote: "Supreme",
+        note: "RSL brand catalogue confirms Supreme as part of the premium feathered shuttle range above Classic in the lineup; goose knife-feather construction is the established RSL Supreme spec.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
