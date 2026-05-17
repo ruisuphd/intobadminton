@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BrandsPage } from "@/components/BrandsPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Badminton Brands — Yonex, Victor, Li-Ning & More",
@@ -17,6 +18,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/brands/",
+  },
+
+  openGraph: {
+    url: "/brands/",
+    images: [...defaultOgImages],
   },
 };
 

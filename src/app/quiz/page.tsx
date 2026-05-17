@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { QuizFunnel } from "./QuizFunnel";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Badminton Equipment Finder — Personalised Picks",
@@ -17,6 +18,11 @@ export const metadata: Metadata = {
     "string recommendation",
   ],
   alternates: { canonical: "/quiz/" },
+
+  openGraph: {
+    url: "/quiz/",
+    images: [...defaultOgImages],
+  },
 };
 
 export function QuizShell() {

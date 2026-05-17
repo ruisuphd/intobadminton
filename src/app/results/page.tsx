@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import { RecentHistory } from "@/components/RecentHistory";
 import { ResultsClient } from "./ResultsClient";
 import { t } from "@/lib/i18n";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Your badminton equipment shortlist",
   description: "Personalised badminton equipment recommendations from your finder profile.",
   alternates: { canonical: "/results/" },
   robots: { index: false, follow: true },
+
+  openGraph: {
+    url: "/results/",
+    images: [...defaultOgImages],
+  },
 };
 
 export function ResultsShell() {

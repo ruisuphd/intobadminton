@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "IntoBadminton Privacy Policy — what personal data we process, your rights, third-party vendors, international transfers, retention, and contact.",
   alternates: { canonical: "/privacy/" },
+
+  openGraph: {
+    url: "/privacy/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function PrivacyPage() {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { defaultOgImages } from "@/lib/og";
 
 const PATH = "/guides/string-tension/";
 const HEADLINE = "Badminton string tension: a practical guide";
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
   title: "Badminton string tension guide",
   description: DESCRIPTION,
   alternates: { canonical: PATH },
+
+  openGraph: {
+    url: PATH,
+    images: [...defaultOgImages],
+  },
 };
 
 export default function StringTensionGuide() {

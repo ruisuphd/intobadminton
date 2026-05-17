@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SourcesPage } from "@/components/SourcesPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Sources & Editorial Process",
@@ -17,6 +18,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/sources/",
+  },
+
+  openGraph: {
+    url: "/sources/",
+    images: [...defaultOgImages],
   },
 };
 

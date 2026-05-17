@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { consentAuditSummary } from "@/lib/consent";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description:
     "IntoBadminton Cookie Policy — cookie and local storage categories, default consent state, third parties, and how to change your choices.",
   alternates: { canonical: "/cookies/" },
+
+  openGraph: {
+    url: "/cookies/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function CookiesPage() {

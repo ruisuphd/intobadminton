@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Best Beginner Badminton Rackets 2026",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
     "badminton racket under $200",
   ],
   alternates: { canonical: "/best/beginner-rackets/" },
+
+  openGraph: {
+    url: "/best/beginner-rackets/",
+    images: [...defaultOgImages],
+  },
 };
 
 const config: BestPicksConfig = {

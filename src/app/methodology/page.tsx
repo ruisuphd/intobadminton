@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Recommendation methodology",
   description:
     "How IntoBadminton combines specs, player inputs, and source references for badminton equipment recommendations.",
   alternates: { canonical: "/methodology/" },
+
+  openGraph: {
+    url: "/methodology/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function MethodologyPage() {

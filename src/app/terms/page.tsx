@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service and Conditions of Use for IntoBadminton: affiliate disclosure, equipment advice disclaimer, content rights, and acceptable use.",
   alternates: { canonical: "/terms/" },
+
+  openGraph: {
+    url: "/terms/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function TermsPage() {

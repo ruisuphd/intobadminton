@@ -336,7 +336,6 @@ const RELATED_BRANDS = [
   "Kumpoo",
   "Mizuno",
   "RSL",
-  "Goosen",
   "Gosen",
   "ASICS",
 ] as const;

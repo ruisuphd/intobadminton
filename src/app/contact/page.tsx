@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { companyInfo } from "@/lib/company";
+import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Contact IntoBadminton. Reach the editorial, support, and privacy teams behind our badminton equipment recommendations.",
   alternates: { canonical: "/contact/" },
+
+  openGraph: {
+    url: "/contact/",
+    images: [...defaultOgImages],
+  },
 };
 
 export default function ContactPage() {
