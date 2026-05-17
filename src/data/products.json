@@ -57,7 +57,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/nf-1000z_yellow.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Nanoflare 1000Z — Lightning Yellow",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-100zz",
@@ -124,7 +133,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/astrox100zz_kurenai.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 100ZZ Kurenai (red)",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-99-pro",
@@ -175,7 +193,16 @@
       "https://www.yonex.com/astrox-99-pro-3ax99-p"
     ],
     "editorNote": "First-generation Kento Momota signature frame (2021). Stiff shaft, head-heavy, classic 99 Pro profile: power-first with demanding sweet spot. The 2nd Gen (2023) keeps the same DNA but lowers the entry threshold; if you can't load the original 99 Pro consistently, the Gen 2 or the 88D Pro is usually the smarter buy.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_3AX99-P_530-1.jpg",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 99 Pro 3rd generation (current production)",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-77-pro",
@@ -774,7 +801,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/3ax88d-p_076-1_02.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 88D Pro 2024 — Black / Silver",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "yy-exbolt-63",
@@ -974,6 +1010,15 @@
       "confidence": "low",
       "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons; estimate assumes lightly used clean pair.",
       "updatedAt": "2026-04-28"
+    },
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_SHBVAZM1_452-1.jpg",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com) — VA Collection",
+      "alt": "Yonex Power Cushion 65 Z 4th gen (Wide) — Grayish Beige",
+      "width": 800,
+      "height": 800,
+      "verified": true
     }
   },
   {
@@ -1823,7 +1868,16 @@
       "https://www.yonex.com/arc7-p"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): very good overall racket, but you need to bring the power yourself — it doesn't give you the head-heavy assist for smashes. Excellent for control players. POCKETING BOOSTER frame extends contact time.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/arc7-p.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Arcsaber 7 Pro — Gray / Yellow",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-700-pro-2024",
@@ -2748,7 +2802,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://triplepointsports.com/cdn/shop/files/axforce90new-1.webp",
+      "source": "lining",
+      "credit": "Image: Li-Ning via Triple Point Sports (authorized distributor)",
+      "alt": "Li-Ning AxForce 90 New (雷霆 90 New)",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "ln-axforce-80",
@@ -3140,7 +3203,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ax99-pro_whitetiger.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 99 Pro 2nd generation — White Tiger colorway",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "vic-auraspeed-99",
@@ -3300,7 +3372,16 @@
       "https://us.yonex.com/products/astrox-99-pro"
     ],
     "editorNote": "Third-generation Astrox 99 Pro launched globally on 5 Sep 2025. Returns to a 76-hole frame after the Gen 2's 68-hole experiment; adds a Power Assist Bumper at the head and an enhanced Rotational Generator System. More demanding than Gen 2, with higher energy cost in long sessions. Singles-only attack frame for advanced players.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_3AX99-P_530-1.jpg",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 99 Pro (3rd gen, 2025) — Sun Orange / Black",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "yy-arcsaber-7-tour",
@@ -3350,7 +3431,16 @@
       "https://www.yonex.com/arcsaber"
     ],
     "editorNote": "Tour-tier sibling of the Arcsaber 7 Pro. Marginally more head weight than the Pro despite same weight class, slightly less anti-torsion, warmer shuttle-pocket feel. Friendlier rear-court borrow than the Pro at lower price; best for control players who want easier carry through soft processing.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/arc7-p.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com) — Tour shares chassis with Pro",
+      "alt": "Yonex Arcsaber 7 Tour",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "bonny-snake-breath",
@@ -3946,5 +4036,715 @@
     ],
     "editorNote": "Premium goose-knife-feather shuttle, RSL's upgrade tier above Classic (亚C). Approximately 30 minutes of usable life per shuttle in mid-intensity doubles. Approaches K+90 territory in feel; price has stayed stable through 2026's feather supply tightening. Dual-cork base (not all-cork) is the honest trade-off.",
     "reviewCount": 0
+  },
+  {
+    "id": "yy-astrox-88-pro-2024",
+    "category": "racket",
+    "name": "Astrox 88 Pro (2024)",
+    "brand": "Yonex",
+    "priceUsd": 270,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/astrox-88-pro",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles",
+      "attack",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/astrox-88-pro"
+    ],
+    "editorNote": "Astrox 88 Pro (2024 refresh, Silver/Black). The general-purpose 88 Pro sibling to the 88S Pro and 88D Pro — splits the difference between front-court 88S handling and rear-court 88D power.",
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/3ax88-p_076-1.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (manufacturer official)",
+      "alt": "Yonex Astrox 88 Pro (2024) — Silver/Black",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
+  },
+  {
+    "id": "yy-nanoflare-700-pro",
+    "category": "racket",
+    "name": "Nanoflare 700 Pro",
+    "brand": "Yonex",
+    "priceUsd": 200,
+    "headWeight": "head_light",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 292,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/nanoflare-700-pro",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/nanoflare-700-pro"
+    ],
+    "editorNote": "2024 refresh of the Nanoflare 700 entry-tier speed racket. Adds the reinforced Sonic Flare system, SF filter layer, and a marginally stiffer shaft over the base NF700. Best balance of accessibility and refinement in the Nanoflare line.",
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/nf-700-pro.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (manufacturer official)",
+      "alt": "Yonex Nanoflare 700 Pro",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
+  },
+  {
+    "id": "yy-nanoflare-800-pro-tour",
+    "category": "racket",
+    "name": "Nanoflare 800 Pro Tour",
+    "brand": "Yonex",
+    "priceUsd": 230,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/nanoflare-800-pro",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "attack"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/nanoflare-800-pro"
+    ],
+    "editorNote": "Tour-tier sibling of the Nanoflare 800 Pro. Slightly thicker shaft and tighter sweet-spot tuning vs the base 800 Pro. Doubles aggressor — fastest shuttle exit in the Nanoflare line after the 1000Z.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-nanoflare-1000z-play",
+    "category": "racket",
+    "name": "Nanoflare 1000 Z Play",
+    "brand": "Yonex",
+    "priceUsd": 110,
+    "headWeight": "head_light",
+    "shaftFlex": "medium",
+    "weightClass": "5U",
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 26
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/nanoflare-1000z-play",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner",
+      "doubles",
+      "fast_drive"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/nanoflare-1000z-play"
+    ],
+    "editorNote": "Entry-tier 1000Z sibling — keeps the yellow paint but softens the shaft, drops to 5U weight class, and trades pro-tier performance for accessibility. Sugar-water speed racket for new players who want the line's identity at a friendlier price.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-drivex-10-metallic",
+    "category": "racket",
+    "name": "DriveX 10 Metallic",
+    "brand": "Victor",
+    "priceUsd": 230,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "cn",
+      "kr"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/drivex-10metallic",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "attack",
+      "control"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/drivex-10metallic"
+    ],
+    "editorNote": "Victor's first alloy-carbon shaft attack racket (2023). Crisp metallic contact feel, head-heavy attack identity. Earlier-batch shaft-rotation issues resolved in second production batch.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-drivex-12-zsw",
+    "category": "racket",
+    "name": "DriveX 12 ZSW (Lee Zii Jia)",
+    "brand": "Victor",
+    "priceUsd": 270,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "cn",
+      "kr",
+      "my"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/victor-x-zsw-collection-rackets-drivex-12-zsw-j",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles",
+      "all_round",
+      "fast_drive"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/victor-x-zsw-collection-rackets-drivex-12-zsw-j"
+    ],
+    "editorNote": "Lee Zii Jia signature edition of the DriveX 12 (Nanjing production). Despite shared model name, plays as a balanced racket rather than the original's speed-press control attack identity — lighter head, softer shaft, faster swing.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-thruster-falcon-tk-f",
+    "category": "racket",
+    "name": "Thruster Falcon Enhanced (TK-F)",
+    "brand": "Victor",
+    "priceUsd": 220,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 304,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "cn",
+      "kr"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/thruster-falcon-enhanced",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles",
+      "attack",
+      "rear_court"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/thruster-falcon-enhanced"
+    ],
+    "editorNote": "Enhanced version of the original Thruster Falcon — sharper attack with cleaner repeat-smash continuity than the base TK-F.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-bladex-900-new",
+    "category": "racket",
+    "name": "BladeX 900 New (锋影 900 New)",
+    "brand": "Li-Ning",
+    "priceUsd": 240,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 302,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 24,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk"
+    ],
+    "officialSourceUrl": "https://lining.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "front_court"
+    ],
+    "sourceUrls": [
+      "https://lining.com/"
+    ],
+    "editorNote": "BladeX line's 2024 speed flagship. 6.8mm shaft, all grommet-grooves, longer 214mm handle for doubles. Front-court pressure specialist; rear-court smash is not the strongest in this category.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-halbertec-7000",
+    "category": "racket",
+    "name": "Halbertec 7000 (1st gen)",
+    "brand": "Li-Ning",
+    "priceUsd": 200,
+    "headWeight": "even",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 23,
+      "max": 31
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk"
+    ],
+    "officialSourceUrl": "https://lining.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "control",
+      "placement"
+    ],
+    "sourceUrls": [
+      "https://lining.com/"
+    ],
+    "editorNote": "Original Halbertec 7000 (2023). Precision control flagship with sharper feedback and harder shaft feel than the Halbertec 8000. Narrower sweet spot — for control players who already drive stiff shafts cleanly.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-65z4",
+    "category": "shoes",
+    "name": "Power Cushion 65 Z (4th gen)",
+    "brand": "Yonex",
+    "priceUsd": 140,
+    "fitWidth": "normal",
+    "cushioning": "high",
+    "stability": "high",
+    "weightFeel": "medium",
+    "hasWideOption": true,
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/mens-power-cushion-65-z-va",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "all_round",
+      "comfort",
+      "agility",
+      "stability"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/mens-power-cushion-65-z-va"
+    ],
+    "editorNote": "Fourth-generation Power Cushion 65 Z (VA Collection / Viktor Axelsen signature). Lightweight upper, Power Cushion+ midsole. The default flagship court shoe for most amateur players.",
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_SHBVAZM1_452-1.jpg",
+      "source": "yonex",
+      "credit": "Image: Yonex (manufacturer official)",
+      "alt": "Yonex Power Cushion 65 Z 4th gen — Grayish Beige (VA Collection)",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    },
+    "resale": {
+      "estimatedUsedUsd": 45,
+      "depreciationPct": 68,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons; estimate assumes lightly used clean pair.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "yy-power-cushion-88-dial-3",
+    "category": "shoes",
+    "name": "Power Cushion 88 Dial 3",
+    "brand": "Yonex",
+    "priceUsd": 200,
+    "fitWidth": "normal",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "medium",
+    "hasWideOption": false,
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "uk"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/power-cushion-88-dial-3",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "all_round",
+      "stability",
+      "comfort"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/power-cushion-88-dial-3"
+    ],
+    "editorNote": "Yonex's BOA-dial premium flagship. Twist-dial closure system, premium Power Cushion+ midsole, designed for serious competitive players.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 65,
+      "depreciationPct": 67,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "yy-subaxia-gt",
+    "category": "shoes",
+    "name": "Subaxia GT",
+    "brand": "Yonex",
+    "priceUsd": 150,
+    "fitWidth": "narrow",
+    "cushioning": "medium",
+    "stability": "high",
+    "weightFeel": "fast",
+    "hasWideOption": false,
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/subaxia-gt-mens",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "speed",
+      "agility",
+      "competitive"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/subaxia-gt-mens"
+    ],
+    "editorNote": "Yonex's Subaxia line debut shoe using GRPHT THRTTL technology in a match-ready package (unlike the training-only GRPHT THRTTL shoe). Fit runs smaller — size up half a size.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 50,
+      "depreciationPct": 67,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "asics-blast-ff-3",
+    "category": "shoes",
+    "name": "Blast FF 3",
+    "brand": "ASICS",
+    "priceUsd": 130,
+    "fitWidth": "normal",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": false,
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "us",
+      "uk"
+    ],
+    "officialSourceUrl": "https://www.asics.com/us/en-us/blast-ff-3/p/ANA_20041038054.html",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "stability",
+      "wide_feet",
+      "indoor_court"
+    ],
+    "sourceUrls": [
+      "https://www.asics.com/us/en-us/blast-ff-3/p/ANA_20041038054.html"
+    ],
+    "editorNote": "ASICS's indoor-court (volleyball-classified) shoe used by serious badminton players who want lateral stability and a non-narrow last. MONO-SOCK upper, FF Blast midsole.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 40,
+      "depreciationPct": 69,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "kw-master-mao-20",
+    "category": "racket",
+    "name": "Master Mao 20 (矛20)",
+    "brand": "Kawasaki",
+    "priceUsd": 80,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 302,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.kawasaki-sports.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "attack",
+      "all_round",
+      "rear_court"
+    ],
+    "sourceUrls": [
+      "https://www.kawasaki-sports.com/"
+    ],
+    "editorNote": "Kawasaki's coach-tuned attack racket (Master Mao = 大师调教). 'Attack horn' positioning — value-tier flagship-feel rear-court attack racket.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-aerus-iii-pro",
+    "category": "shoes",
+    "name": "Aerus III Pro (贴地飞行 III PRO)",
+    "brand": "Li-Ning",
+    "priceUsd": 130,
+    "fitWidth": "normal",
+    "cushioning": "medium",
+    "stability": "high",
+    "weightFeel": "fast",
+    "hasWideOption": false,
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://lining.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "speed",
+      "agility",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://lining.com/"
+    ],
+    "editorNote": "Li-Ning's speed-and-stability shoe. Pro version of the Aerus III, with sharper rebound and refined midsole. Used by several Chinese national-team players.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 40,
+      "depreciationPct": 69,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly.",
+      "updatedAt": "2026-05-17"
+    }
   }
 ]
