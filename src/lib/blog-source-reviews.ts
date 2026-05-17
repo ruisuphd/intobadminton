@@ -3288,4 +3288,222 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "victor-thruster-9900-deep-dive",
+    title: "Victor Thruster 9900 review: the small-frame head-heavy axe before the Ryuga rewrote the line",
+    dek: "TK9900 was Victor's flagship single attack racket before the Ryuga / Dragon Teeth era. Slow swing, heavy head, small frame, 35-lb tension warranty — a pure singles weapon for players who can drive it, and a fitness routine for everyone else.",
+    verdict:
+      "A pure singles attack racket from Victor's pre-Ryuga era — best for advanced singles attackers with the conditioning to drive a slow-swinging, head-heavy small-frame weapon.",
+    bestFor: [
+      "Advanced singles attackers",
+      "Players with strong shoulder and forearm conditioning",
+      "Collectors and players curious about the pre-Ryuga TK flagship feel",
+    ],
+    avoidIf: [
+      "You play doubles primarily — TK9900 is a singles-only racket",
+      "Your contact discipline still misses the sweet spot often",
+      "You have any history of shoulder or elbow strain",
+    ],
+    setupNotes: [
+      "Source-tested 3U/G5 sample at 26-27 lb on VBS-66N string, total weight 92.1g, balance 312mm with underbase removed.",
+      "Released 2014, this is the racket that was Victor's small-frame attack flagship before the Thruster Ryuga / Dragon Teeth / Ryuga II succession.",
+    ],
+    sourceHook:
+      "The source review is useful because it honestly catalogues both the racket's appeal (pure-attack singles weapon) and its limits (slow swing, doubles-unfriendly, demanding on conditioning) — and the reviewer keeps the racket as a 'skill-development' tool rather than a main rotation racket.",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "3U/G5, 92.1g total weight (underbase removed, strung with grip), balance 312mm, 220mm 6.4mm Flash shaft, small box-frame, 8-4 o'clock grommet grooves, 12 o'clock connected-pin construction, 35 lb max tension warranty.",
+      },
+      {
+        label: "Position in lineage",
+        value:
+          "TK9900 was Victor's flagship single attack racket before the Thruster Ryuga / Dragon Teeth (Lee Zii Jia signature) / Ryuga II succession — the pre-Ryuga TK series flagship.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat TK9900 as a singles-only commitment — small frame, slow swing, demanding shaft, doubles-unfriendly identity.",
+      },
+    ],
+    calloutTitle: "Heavier than Astrox 99 Pro — and that comparison is meaningful",
+    calloutBody:
+      "The source review's most useful spec context: TK9900 in 3U trim feels heavier in swing than the Astrox 99 Pro (1st gen), which is itself one of the most demanding mainstream attack rackets ever produced. If the 99 Pro already feels demanding to you, the TK9900 will be incompatible.",
+    comparison: {
+      heading: "TK9900 vs reference singles attack frames",
+      columns: ["TK9900 (2014)", "Astrox 99 Pro (1st gen, 2021)", "Thruster Ryuga II"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Original small-frame TK flagship",
+            "Yonex's most demanding attack flagship",
+            "Lee Zii Jia signature attack frame",
+          ],
+        },
+        {
+          label: "Swing feel",
+          values: [
+            "Slow start, long carry, heaviest",
+            "Heavy with weighted handle",
+            "Lighter and more accessible",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Pre-Ryuga TK collectors + singles purists",
+            "Current Yonex attack-flagship buyers",
+            "Players seeking the modern Victor singles flagship",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the pre-Ryuga TK flagship still matters",
+        body: "Most TK-line discussion in 2026 centres on the Ryuga / Dragon Teeth / Ryuga II succession that defined the modern Victor attack identity. The TK9900 predates all of those. Released in 2014, it was Victor's single small-frame attack flagship for several years — the racket Victor pointed at the same buyer the Astrox 99 Pro would later target. The source review's framing is honest: 'It still belongs to a Victor pre-Ryuga generation that the market and resale value have largely forgotten, but the on-court performance puts it in the same tier as the Astrox 99 Pro.' For players who want to understand where the modern TK line came from, the TK9900 is the historical reference frame.",
+      },
+      {
+        heading: "Build quality and durability across a decade",
+        body: "The source-tested TK9900 sample had been used heavily before reaching the reviewer — visible paint damage, signs of frame contact with court surfaces, and obvious wear on the cone cap. Despite this, the racket continued to perform as designed, with no shaft cracks and no frame deformation. Some early TK9900 production runs (particularly the Taiwan-manufactured batches) had reports of shaft 'rotation' (where the shaft loosens within the cone cap), which the source review acknowledges as a known issue but did not personally experience. Players considering a used TK9900 should specifically check the shaft-cone-cap interface for play before purchase. Build quality at the time of release was generally considered comparable to mid-2010s Yonex Nanoray 7 production tier.",
+      },
+      {
+        heading: "On-court behaviour — slow start, devastating finish",
+        body: "The TK9900's defining characteristic is its swing profile: slow start, moderate mid-swing speed, long carry-through. The source review describes the swing feel as 'genuinely heavier than 3U Astrox ZF2' — which is striking because the ZF2 was Yonex's most extreme attack frame of its era. Loading the racket for a smash requires deliberate, committed force input; rushed swings produce poor output because the shaft does not respond to half-effort preparation. When the swing is fully committed, the smash quality is exceptional: high exit speed, deep landing position, and a metallic 'sonic-boom' contact sound that the source review specifically calls out. The trade-off is universal — every shot requires committed preparation, which limits the racket's continuous-attack viability.",
+      },
+      {
+        heading: "Why doubles is the wrong format",
+        body: "The TK9900 fails in fast doubles for predictable reasons. The slow swing speed cannot keep up with fast cross-court drives; the small frame's narrow sweet spot punishes the rushed contact that doubles produces; the heavy head fails to bail out late preparation. The source review specifically describes flat-exchange failures: 'Even with my racket prepared early, I missed the shuttle entirely in flat drives, and reactive low backhand returns were impossible.' For doubles play, the TK9900 reduces the player's effective level. The racket is honest: it is a singles weapon, not a doubles compromise.",
+      },
+      {
+        heading: "The conditioning question",
+        body: "TK9900 demands conditioning more than almost any other mainstream attack racket. The source review specifically calls out injury concern: 'Players with weaker shoulder, elbow, or wrist conditioning should specifically avoid this racket — the load it places on the joints is meaningfully higher than equivalent attack rackets.' Continuous attack across a 21-21 game requires the player to absorb the racket's energy cost — fatigue accumulates quickly, and rushed swings (the body's natural fatigue response) produce mishits that further punish the player. The TK9900 rewards players who already have flagship-tier conditioning. For everyone else, it is an injury risk waiting to be activated.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the TK9900 (used market only — it has been out of production for years) if you are an advanced singles attacker, you have flagship-tier conditioning, and you specifically want to experience the pre-Ryuga Victor TK identity. Buy the Thruster Falcon Ultra or current TK-F-C Ultra if you want the modern equivalent — same identity, refined chassis, current warranty support. Buy the Astrox 99 Pro 3rd gen if you want the closest Yonex equivalent. Skip the TK9900 entirely if you play doubles primarily, you are still developing your attack technique, or you have any joint vulnerability. The racket is a historical object as much as a current weapon — best appreciated by players who specifically want to feel the racket that defined Victor's pre-modern attack era.",
+      },
+    ],
+    cta: "Run the finder with smash-heavy singles style and advanced level — Thruster Falcon Ultra and current TK-line flagships surface as modern equivalents to TK9900's identity.",
+    factChecks: [
+      {
+        sourceName: "Victor Sport",
+        title: "Victor Thruster line — historical and current racket lineage",
+        section: "Thruster family product history",
+        checkedAt: "2026-05-17",
+        href: "https://www.victorsport.com/",
+        quote: "Thruster",
+        note: "Victor brand catalogue confirms the Thruster line lineage — TK9900 predates the modern Thruster Falcon / Ryuga succession; current Thruster flagships are referenced for buyer-guidance context.",
+      },
+    ],
+  }),
+  review({
+    slug: "gosen-leiming-69-string-review",
+    title: "Gosen Leiming 69 string review: a thick-gauge tension-hold string at 25 RMB per pack",
+    dek: "Gosen's Leiming 69 (高神雷鸣69) is a thick-gauge value-tier string with strong tension hold, decent rebound, and surprisingly good moisture handling. Source review's verdict after testing 9 packs over six months: a credible food-tier string for high-input players who restring frequently.",
+    verdict:
+      "A thick-gauge value-tier high-elastic string with strong tension hold and decent rebound — best for high-input players, training-tier use, and budget-conscious players who restring frequently.",
+    bestFor: [
+      "Players who restring every 30-45 days due to high play volume",
+      "High-input force players who need tension hold under hard impact",
+      "Budget-conscious players wanting a value-tier food string at 25 RMB / pack",
+    ],
+    avoidIf: [
+      "You want maximum durability — Leiming 69 is rebound-leaning, not durability-leaning",
+      "You prefer thin-gauge strings (0.68mm or less) for sharper feel",
+      "You play infrequently — string-life tied to tension drop, not break frequency",
+    ],
+    setupNotes: [
+      "Source-tested at 26.5 lb in the sweet zone, with 10% pre-stretch to reduce post-stringing tension drop.",
+      "Reviewer tested 9 packs over approximately 6 months, with one string typically lasting ~30 sessions of 2-hour play.",
+    ],
+    sourceHook:
+      "The source review is useful because it comes from a Chinese player who has tracked Leiming 69's tension-hold and durability properties over 9 strings across 6 months — uncommon long-form testing for a value-tier string.",
+    facts: [
+      {
+        label: "Gauge and pricing",
+        value: "0.69mm string diameter, approximately 25 RMB per pack (4 USD at 2026 exchange rates) — at the value-tier end of the market.",
+      },
+      {
+        label: "Construction",
+        value:
+          "Thick-gauge nylon core with reinforced outer wrap; designed for tension-hold rather than ultimate rebound.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat Leiming 69 as a food-tier string — affordable per-pack, designed for restring-frequently use, with rebound character that performs above its price point.",
+      },
+    ],
+    calloutTitle: "Strong tension hold, weaker durability — and that's actually the right trade-off",
+    calloutBody:
+      "Source review's key insight: 'After a month of 15 sessions at 2 hours each, the string still maintains 85-90% of its initial feel.' That's exceptional tension hold. The string is not the most durable — strings fray within about a month of regular use — but the tension-hold-to-cost ratio is genuinely impressive for the price tier.",
+    comparison: {
+      heading: "Leiming 69 vs value-tier alternatives",
+      columns: ["Leiming 69", "Li-Ning L66", "Yonex BG65"],
+      rows: [
+        {
+          label: "Gauge",
+          values: [
+            "Thick (0.69mm)",
+            "Standard (0.66mm)",
+            "Standard (0.66mm)",
+          ],
+        },
+        {
+          label: "Tension hold",
+          values: [
+            "Excellent (85-90% at 1 month)",
+            "Excellent",
+            "Excellent",
+          ],
+        },
+        {
+          label: "Rebound character",
+          values: [
+            "Good (~7.5/10 elasticity)",
+            "Firm and controlled",
+            "Soft and forgiving",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the thick gauge matters for high-input players",
+        body: "Leiming 69's 0.69mm gauge sits at the thick end of the badminton-string spectrum. Conventional wisdom says thick strings sacrifice elasticity for durability, but the source review's testing shows the trade-off is more nuanced. Thick gauge provides resistance against the string-clash deformation that high-input players cause frequently — every hard smash, every drive, every flat exchange compresses the string at the contact point. Thicker gauge means more material between the contact face and the racket frame, which translates to more stable tension hold over time. For high-input players, the thick gauge is a feature, not a compromise.",
+      },
+      {
+        heading: "Rebound and contact feel",
+        body: "The source review rates Leiming 69 at approximately 7.5/10 for elasticity — solid but not flagship-tier. Clears require slightly more active force than a thinner premium-tier string would (BG80, EXBOLT 63), but the rebound character produces clean placement signals and decisive shuttle exit. The contact feel is 'firm-elastic' — the string feels solid at impact, with quick rebound and minimal dwell. Players seeking shuttle-pocket sensation (slow rebound with brief shuttle hold) will find Leiming 69 unfamiliar; players seeking direct, immediate rebound will find the character appealing.",
+      },
+      {
+        heading: "Tension hold and the pre-stretch story",
+        body: "Tension hold is Leiming 69's standout property. The source review specifically describes: 'After a month of 15 sessions at 2 hours each, the string still maintains 85-90% of its initial feel.' For comparison, premium-tier strings often lose meaningful tension within 2-3 weeks of similar use. The source review recommends 10% pre-stretch before stringing for tensions under 28 lb to maximize the tension-hold benefit — pre-stretch reduces post-stringing tension drop by working the string's elasticity before the stringing job. For string-pull users, this is a small but meaningful practice optimization.",
+      },
+      {
+        heading: "Durability — the honest performance-tier trade-off",
+        body: "Leiming 69's durability is the property where the source review is most honest about the trade-off. After one month of regular play, the string typically shows fraying that the reviewer described as 'close to breaking' — at which point the reviewer cuts and replaces the string preemptively rather than waiting for the actual break. This pattern is common across rebound-leaning strings — they trade durability for tension hold and feel. For players who restring every month or two as a normal practice (most regular club players), this is acceptable. For players who restring only on string failure, Leiming 69 may feel like premature replacement.",
+      },
+      {
+        heading: "Pairing recommendations and tension guidance",
+        body: "The source review recommends 26 lb as a minimum tension for Leiming 69 to access its character, and notes that 28 lb and above benefit from pre-stretch. The string pairs well with stiff attack rackets where the player wants tension stability under hard force input — TK9900, Astrox 99 Pro family, AxForce 100 line. On softer-shafted rackets, the string's character partially overrides the racket's natural feel; players who prefer the racket's natural softness should use softer-character strings (BG65, L66) instead. Leiming 69 is racket-agnostic to a degree but performs best when paired with rackets whose character benefits from controlled tension hold.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy Leiming 69 if you are a regular high-input player who restrings every month or two, you want excellent tension hold at a value-tier price, and you appreciate firm-elastic feel over shuttle-pocket sensation. Stay with BG65 or L66 if you want maximum durability with softer feel. Move up to BG80 or EXBOLT family if you want premium-tier flagship rebound and feel. Leiming 69 is the rare value-tier string that performs above its price tier — at 25 RMB per pack, it's a strong food-tier and training-tier string for players whose play volume justifies frequent restringing.",
+      },
+    ],
+    cta: "Use the finder with your racket and tension preference — Leiming 69 surfaces alongside BG65, L66, and other value-tier strings based on feel and durability priority.",
+    factChecks: [
+      {
+        sourceName: "Gosen",
+        title: "Gosen string family — current line-up",
+        section: "Leiming series",
+        checkedAt: "2026-05-17",
+        href: "https://www.gosen.com/",
+        quote: "Leiming",
+        note: "Gosen brand catalogue confirms Leiming 69 as part of the value-tier Leiming series; 0.69mm gauge specification matches the source-tested string.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];

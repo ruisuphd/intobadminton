@@ -87,7 +87,11 @@ export type BlogSlug =
   | "bonny-carbon-armour-shoes-review"
   | "bonny-wuque-xuanwu-review"
   | "kumpoo-js-67-string-review"
-  | "victor-sonic-boom-pro-budget-attack-review";
+  | "victor-sonic-boom-pro-budget-attack-review"
+  | "victor-thruster-9900-deep-dive"
+  | "gosen-leiming-69-string-review"
+  | "victor-drivex-12-vs-drivex-10-and-88d-pro-new-color"
+  | "bonny-flagship-racket-buying-guide-2026";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -176,6 +180,10 @@ export const blogSlugs: BlogSlug[] = [
   "bonny-wuque-xuanwu-review",
   "kumpoo-js-67-string-review",
   "victor-sonic-boom-pro-budget-attack-review",
+  "victor-thruster-9900-deep-dive",
+  "gosen-leiming-69-string-review",
+  "victor-drivex-12-vs-drivex-10-and-88d-pro-new-color",
+  "bonny-flagship-racket-buying-guide-2026",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -4079,6 +4087,197 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           href: "https://intobadminton.com/source-policy/",
           quote: "use only for source discovery/manual summaries until terms or partnership is clear",
           note: "Side-by-side comparison data, spec observations, and on-court behaviour conclusions are paraphrased from a BadmintonCN reviewer's extended test of both rackets; cost-of-ownership framing and authentication context are original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "victor-drivex-12-vs-drivex-10-and-88d-pro-new-color",
+      updatedAt: "2026-05-17",
+      category: "comparisons",
+      title: "Victor DriveX 12 vs DriveX 10 and Astrox 88DP New Color: how the speed-press control flagship matured",
+      dek: "Two years separate Victor's DriveX 10 from DriveX 12, with nano-aerogel frame fill, Power Ring Pro junction, and WES 3.0 shaft bridging the gap. A direct head-to-head plus cross-brand comparison against the Yonex 88DP New Color buyer's reference frame.",
+      story: {
+        intro:
+          "Most Victor reviewers compare the DriveX 12 only against the DriveX 10 it succeeds. That misses the more useful question: how does the matured DriveX 12 compare to its real cross-brand competitor, the Yonex Astrox 88DP New Color? The DriveX 10 first introduced alloy-carbon shaft technology and earned reputation for crisp attack with shaft-rotation issues. The DriveX 12 fixes the issues, refines the chassis, and lands close enough to the 88DP New Color that the value-buy math is suddenly serious.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value: "Original BadmintonCN reviewer (chengzhen) with side-by-side testing of DriveX 12, DriveX 10, and Astrox 88DP New Color across multiple sessions.",
+              },
+              {
+                label: "Sample setup",
+                value: "DriveX 12: 89.2g strung, balance 311mm. DriveX 10: ~90g strung, balance 310mm. 88DP New Color: 89.2g strung, balance 308mm.",
+              },
+              {
+                label: "Buyer lens",
+                value: "Read this as 'how close does DriveX 12 get to the 88DP New Color' — for the player who can match the 88DP New Color's performance need but not its price.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised the source review",
+            title: "DriveX 12 swings noticeably lighter than DriveX 10 despite identical balance",
+            body:
+              "Same frame shape, similar balance, similar weight — but the DriveX 12 swings meaningfully lighter than the DriveX 10. The source review attributes this to the nano-aerogel frame fill: the world's lowest-density solid reduces foam volume in the frame, freeing weight for carbon-fibre reinforcement instead. The same physical balance produces a different swing experience.",
+          },
+          {
+            kind: "comparison",
+            heading: "DriveX 12 vs DriveX 10 vs Astrox 88DP New Color",
+            columns: ["DriveX 12 (2025)", "DriveX 10 (2023)", "Astrox 88DP New Color (2024)"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Matured speed-press control",
+                  "Original alloy-carbon attack",
+                  "Reference balanced-attack flagship",
+                ],
+              },
+              {
+                label: "Strength",
+                values: [
+                  "Refined attack with continuity",
+                  "Sharp single-shot smash",
+                  "Best-in-class balanced attack",
+                ],
+              },
+              {
+                label: "Main caution",
+                values: [
+                  "Slightly less rebound than 88DP New Color",
+                  "Slower swing, shaft-rotation history",
+                  "Higher price tier",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "On the 'sugar-water 88DP New Color' framing",
+            title: "DriveX 12 delivers 90% of 88DP New Color performance at 2/3 the price",
+            body:
+              "Source review's most useful value calculation: DriveX 12 offers approximately 90% of the 88DP New Color's performance at roughly 2/3 the price (potentially 500+ RMB savings). For players whose budget makes the 88DP New Color a stretch, DriveX 12 is the credible alternative that does not feel like a compromise.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Three different rackets aimed at slightly different buyers, with the value math clearly favouring DriveX 12 for most amateur players.",
+            bullets: [
+              "Buy DriveX 12 if: you want speed-press control flagship feel at meaningful price savings, you play singles or back-court doubles primarily, and you can drive a moderately stiff shaft cleanly.",
+              "Buy DriveX 10 only if: you have one available used at a deep discount and you want the original alloy-carbon experience.",
+              "Buy 88DP New Color if: you want the best-in-class balanced-attack reference, you have flagship budget, and you specifically value Yonex brand ecosystem.",
+              "Buy AxForce 90 New instead if: you want pure whip-style attack identity — different rebound character that may suit you better.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "The DriveX 10 backstory — alloy-carbon's first try",
+          body: "The DriveX 10 introduced Victor's alloy-carbon shaft technology in 2023 — the first mainstream attack racket to combine alloy-carbon shaft material with traditional carbon-fibre frame construction. The on-court character was striking: crisp attack with a metallic contact sound that was unlike anything else in the Victor line at the time. The downside was a known issue with shaft rotation (where the shaft loosens within the cone cap over time), which several first-batch buyers reported including the source reviewer. Victor warranty-replaced affected units, and second-batch production resolved the issue. By the time the source reviewer used the DriveX 10 normally, the shaft-rotation issue was no longer recurring. The racket itself sat firmly in attack-frame territory — slow swing for the spec sheet, heavy head, demanding shaft — and the reviewer used it mostly for singles and mixed doubles.",
+        },
+        {
+          heading: "DriveX 12 — three meaningful chassis improvements",
+          body: "DriveX 12 introduces three meaningful chassis improvements over DriveX 10. First, nano-aerogel frame fill replaces traditional foam fill, reducing fill weight and freeing space for additional carbon-fibre reinforcement; the on-court result is meaningfully faster swing speed despite identical balance. Second, the elastic-shield frame addition (玻璃碳纤维) adds bay-style glass-carbon fibre to specific frame zones, increasing rebound elasticity for cleaner shuttle exit. Third, Power Ring Pro junction adds physical bayonet connections between the shaft and the floating handle, completely resolving the original DriveX 10 shaft-rotation issue while also improving force transmission and pointing accuracy. Together these changes transform the racket from an alloy-carbon attack frame (DriveX 10) into a refined speed-press control flagship (DriveX 12) with notably better continuous-attack viability.",
+        },
+        {
+          heading: "How DriveX 12 plays vs DriveX 10",
+          body: "Despite similar specs, the two rackets feel different on court. DriveX 12 swings lighter due to nano-aerogel reduction. Net taps, brushed drops, and mid-court flat exchanges are noticeably more responsive — what the source review calls 'meaningfully better mid-court and frontcourt presence.' Rear-court attack maintains the DriveX line's identity, but with cleaner repeat-smash continuity because the Power Ring Pro junction transfers force more efficiently. Smashes themselves are sharper because the elastic-shield frame produces faster rebound. The honest qualifier: in passive defence (last-second backhand lifts, late reactive returns from compromised positions), the DriveX 12's still-stiff shaft asks for clean force input — softer-shafted alternatives bail out the player more.",
+        },
+        {
+          heading: "How DriveX 12 compares to Astrox 88DP New Color",
+          body: "This is the comparison that matters for buyers in the flagship-tier attack market. The Astrox 88DP New Color (2024) is the best-in-class reference flagship for balanced-attack performance — it has the sharpest rebound, fastest shuttle exit, and most precise pointing accuracy in its tier. DriveX 12 lands close enough to be a serious alternative. Source review's specific data points: shaft hardness is slightly less than 88DP New Color, ball-pocketing sensation is slightly more pronounced on DriveX 12, defence on counter-attacks is meaningfully easier on 88DP New Color due to its superior rebound, but for rear-court attack quality the DriveX 12 is within striking distance. Critical buyer takeaway: 88DP New Color is the more refined flagship; DriveX 12 is the value-tier flagship that gets within 90% of the performance at meaningfully lower cost.",
+        },
+        {
+          heading: "How both compare to AxForce 90 New",
+          body: "AxForce 90 New (the small-frame Li-Ning attack flagship) sits in the same tier but with different identity. AxForce 90 New is whip-style attack — narrower frame, softer-and-medium shaft, longer effective whip length, producing a 'long-rope-flicked' rebound. Source review's verdict: 'For rear-court continuous attack and confident, transparent force transmission, AxForce 90 New is the strongest choice.' DriveX 12 and 88DP New Color produce more head-heavy carry; AxForce 90 New produces more whip-style rebound. None of the three is universally best. Buyer choice depends on whether you want head-heavy attack carry (DriveX 12, 88DP New Color) or whip-style attack rebound (AxForce 90 New). Source reviewer keeps all three in rotation for different match types.",
+        },
+        {
+          heading: "The doubles-vs-singles split",
+          body: "All three rackets are flagship-tier attack rackets, but their doubles compatibility differs. DriveX 12 is competitive in fast doubles but not class-leading — its slightly heavier swing means cleanest performance comes in slower-paced doubles or back-court positions. Astrox 88DP New Color excels in fast doubles — the source reviewer specifically rates it as the best of the three for high-pace men's doubles where first-three-shot speed decides the rally. AxForce 90 New balances singles and doubles well, with the whip identity helping continuous attack in either format. For pure singles, the 88DP New Color and DriveX 12 are equally capable; for fast level doubles, the 88DP New Color is the strongest pick.",
+        },
+        {
+          heading: "The final decision",
+          body: "Buy DriveX 12 if you want the strongest cost-effective alternative to the 88DP New Color — 90% performance at 2/3 the price. Buy DriveX 10 only if you find one second-hand at a deep discount and you accept the original alloy-carbon character (and verify the shaft-rotation issue has not recurred on the specific unit). Buy 88DP New Color if you want the best-in-class balanced-attack reference flagship and brand ecosystem matters. Buy AxForce 90 New if you want whip-style attack identity rather than head-heavy attack carry. The DriveX 12 is the rare flagship that does not feel like a compromise compared to its more expensive rival.",
+        },
+      ],
+      cta: "Run the finder with attack-leaning style and your specific discipline (singles, back-court doubles, mixed) to compare DriveX 12 against the 88DP New Color, AxForce 90 New, and other flagship-tier options.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Spec changes, swing-weight observations, on-court behaviour data, and value-tier framing are paraphrased from a BadmintonCN reviewer chengzhen's side-by-side test of DriveX 12 vs DriveX 10 and Astrox 88DP New Color; buyer-segment framing is original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "bonny-flagship-racket-buying-guide-2026",
+      updatedAt: "2026-05-17",
+      category: "guides",
+      title: "Bonny flagship rackets and shoes in 2026: the credible fourth-brand alternative explained",
+      dek: "A buyer's map of Bonny's current flagship lineup — Breath series rackets (Snake Breath, Wind Breath), ZhanGuiDao Demon Slayer Sword line, WuQue Mythical Beast series, and the Carbon Armour + WuQue 1982 Y3K shoe story. Which Bonny model matches your game.",
+      sections: [
+        {
+          heading: "Why Bonny matters in the 2026 market",
+          body: "Bonny (波力) is the most credible fourth-brand contender to the Yonex / Victor / Li-Ning oligopoly in 2026. Five years of progressive flagship engineering have moved the brand from budget-tier copies to genuine flagship competition — with rackets like the Snake Breath, ZhanGuiDao 8888AX Ultra, and WuQue Xuanwu earning praise from BadmintonCN reviewers who normally only play first-tier flagships. The honest qualifier: Bonny's distribution outside Asia is uneven, warranty support varies, and brand-resale value remains meaningfully lower than the top three. For players in markets where Bonny has authorised distribution, the lineup is genuinely worth considering as a flagship alternative.",
+        },
+        {
+          heading: "Three families at a glance",
+          body: "**Breath series** (呼吸系列) is Bonny's self-developed flagship family — modern frame engineering with thematic naming (Snake Breath, Wind Breath). Identity: speed-attack hybrids that compete with first-tier flagships. **ZhanGuiDao series** (斩鬼刀系列 — Demon Slayer Sword) is the brand's attack line with thematic Demon Slayer naming. Identity: pure rear-court attack with progressive boron-fibre shaft adoption. **WuQue Mythical Beast series** (乌缺四神兽) is Bonny's narrative-driven flagship family — each racket represents one of the four mythical beasts (Black Tortoise / Xuanwu, Vermilion Bird, Azure Dragon, White Tiger), with progressive material innovation. Plus shoes: Carbon Armour (soft-palette all-court support shoes) and WuQue 1982 Y3K (cyberpunk-styled speed all-rounders). Each family has clear identity and target buyer.",
+        },
+        {
+          heading: "Breath series — speed-attack hybrid identity",
+          body: "**Snake Breath** is the family's 2025 flagship — 6.8mm M46J + Mirochi resin shaft, 76-hole frame, 290mm balance with G6 handle. Speed-attack hybrid that combines BladeX 900 New speed feel with AxForce 90 New attack continuity. Best for fast-doubles players who want continuous-pressure attack without ballistic rear-court smash demands. **Wind Breath** (predecessor) earlier established the line's reputation. Sold at second-tier flagship pricing — meaningfully below the top three brands. The TiGe XLab review verdict on Snake Breath: 'cover the brand logo and most players would not realise it is not from the top three brands.' That praise is rare and meaningful from an experienced reviewer.",
+        },
+        {
+          heading: "ZhanGuiDao series — pure attack with boron-fibre evolution",
+          body: "**ZhanGuiDao 8888AX Ultra** (紫炎 — Purple Flame Ultra) is the 2025 flagship — the first ZhanGuiDao with boron-fibre shaft reinforcement. Narrow flat-head frame, 76-hole stringbed, 6.8mm boron-fibre shaft, 212mm length. Best for advanced attack players who want decisive rear-court attack with sharper feedback than typical Bonny frames. **ZhanGuiDao 3** (older flagship) provides the line's signature crisp rebound character at lower price tier. The Ultra represents the line's maturation — boron-fibre material gives sharper rebound without sacrificing the line's attack-rebound identity. Best buyer: advanced singles attackers who appreciate the specific boron-fibre rebound character.",
+        },
+        {
+          heading: "WuQue Mythical Beast series — narrative flagship with material innovation",
+          body: "**WuQue Xuanwu** (玄武 — Black Tortoise) is the only Mythical Beast racket with boron-fibre shaft reinforcement, making it the technical flagship of the four. L.C.'s review describes it as 'a harder, more refined ZhanGuiDao 3' — same fundamental character with sharper rebound and faster shuttle exit. Best for advanced attack players who appreciate the boron-fibre rebound character within the WuQue lineage. The Mythical Beast naming honours Chinese cultural tradition, with each beast representing different on-court character — the line is the brand's narrative-driven flagship expression. **WuQue 1982 B149** (older flagship) is the line's heritage racket, providing the established WuQue identity at lower price tier.",
+        },
+        {
+          heading: "Bonny shoes — Carbon Armour and WuQue 1982 Y3K",
+          body: "**Carbon Armour** is the brand's soft-palette all-court support shoe — white-and-pink with mint accents, full toe-steel reinforcement, dual antitorsion plates (carbon + wolf-fang TPU), and dense rubber outsole. Best for players wanting function-with-subtle-aesthetic; serious chassis underneath a gentle visual identity. **WuQue 1982 Y3K** is the cyberpunk-styled all-court shoe — white-and-orange with chameleon TPU film, KPU+TPU composite upper, high-elastic EVA midsole. Best for players wanting bold visual identity with proven chassis underneath. Both shoes match Yonex 65 Z4 / Mizuno Wave Lightning tier in chassis quality at meaningfully lower price. Wide-foot caveat: Bonny's last runs narrow at the heel; wide-foot players should specifically size up or look at Mizuno or Yonex Wide variants instead.",
+        },
+        {
+          heading: "How to pick the right Bonny model",
+          body: "Run this two-question test before choosing. (1) Are you looking for an attack-focused racket or a speed-focused racket? Attack-focused buyers should consider ZhanGuiDao 8888AX Ultra (boron-fibre flagship, decisive rear-court attack), WuQue Xuanwu (Mythical Beast boron-fibre, sharper version of ZhanGuiDao 3), or ZhanGuiDao 3 (lower-tier alternative). Speed-focused buyers should consider Snake Breath (speed-attack hybrid with continuous-attack identity). (2) Do you value brand prestige and ecosystem, or value-for-money? Prestige-prioritised buyers should stay with top-three flagships; value-prioritised buyers should consider Bonny as a credible alternative that does not feel like a compromise. Most amateur buyers fit the second profile, especially in markets where Bonny is available.",
+        },
+        {
+          heading: "Counterfeit and availability",
+          body: "Bonny is meaningfully less counterfeited than top-three brands — the line's lower visibility means less production-tier counterfeiting. Most listings sold through reasonable retailers are likely genuine. The bigger concern is availability outside China and Southeast Asia, where authorised distribution is sparse. Buyers in North America, Europe, and other markets should specifically verify authorised distribution before purchasing — online listings from international sellers may be genuine but lack warranty support. For players in China, Singapore, Malaysia, Indonesia, and Thailand, Bonny is widely available through trusted retailers.",
+        },
+        {
+          heading: "Pricing context",
+          body: "Bonny flagship rackets typically sit at 1200-1500 RMB launch (~170-210 USD), compared to top-three flagship pricing of 1500-2000+ RMB. Post-launch street pricing usually drops to 900-1100 RMB — meaningfully below the top-three's equivalent post-launch street pricing of 1300-1700 RMB. For non-flagship Bonny models (Snake Breath, ZhanGuiDao 3, older flagships), the pricing is even more aggressive — 600-900 RMB for proven flagship chassis. Bonny shoes follow similar patterns: Carbon Armour and WuQue 1982 Y3K at 600-800 RMB compared to Yonex 65 Z4 / Mizuno Wave Lightning at 900-1200 RMB tier. The 30-50% price advantage is consistent across the line.",
+        },
+        {
+          heading: "The final decision",
+          body: "Buy a Bonny flagship if you want genuine flagship-tier performance at meaningful price savings, you have access to Bonny authorised distribution in your region, and brand prestige is not your primary purchase criterion. Stay with top-three flagships if warranty/resale/brand ecosystem matter to you. Each Bonny family targets a clear buyer profile — Breath series for speed-attack hybrids, ZhanGuiDao for pure attack, WuQue for narrative-driven flagship lineage. The brand has proven over five years that its flagship engineering is competitive with first-tier alternatives at meaningfully lower price. For the buyer who values value-for-money over brand prestige, Bonny is one of the most credible alternatives in the 2026 market.",
+        },
+      ],
+      cta: "Run the finder with attack or speed-attack style — Bonny models surface alongside Yonex, Victor, and Li-Ning options based on fit, not brand preference.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Family-level positioning, model identities, pricing tiers, and buyer trade-offs are paraphrased from multiple BadmintonCN reviewer testing of the Bonny flagship line; buyer-segment framing and cross-brand comparison context are original to IntoBadminton.",
         },
       ],
     },
