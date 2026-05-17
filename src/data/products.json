@@ -3250,5 +3250,701 @@
         "confidence": "high"
       }
     ]
+  },
+  {
+    "id": "yy-astrox-99-pro-3",
+    "category": "racket",
+    "name": "Astrox 99 Pro (3rd gen, 2025)",
+    "brand": "Yonex",
+    "priceUsd": 295,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/news/astrox-99-pure-power/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "smash",
+      "attack"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/news/astrox-99-pure-power/",
+      "https://us.yonex.com/products/astrox-99-pro"
+    ],
+    "editorNote": "Third-generation Astrox 99 Pro launched globally on 5 Sep 2025. Returns to a 76-hole frame after the Gen 2's 68-hole experiment; adds a Power Assist Bumper at the head and an enhanced Rotational Generator System. More demanding than Gen 2, with higher energy cost in long sessions. Singles-only attack frame for advanced players.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-arcsaber-7-tour",
+    "category": "racket",
+    "name": "Arcsaber 7 Tour",
+    "brand": "Yonex",
+    "priceUsd": 130,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 301,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 27
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/arcsaber",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "control",
+      "all_round",
+      "net_play"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/arcsaber"
+    ],
+    "editorNote": "Tour-tier sibling of the Arcsaber 7 Pro. Marginally more head weight than the Pro despite same weight class, slightly less anti-torsion, warmer shuttle-pocket feel. Friendlier rear-court borrow than the Pro at lower price; best for control players who want easier carry through soft processing.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-snake-breath",
+    "category": "racket",
+    "name": "Snake Breath (蛇之呼吸)",
+    "brand": "Bonny",
+    "priceUsd": 170,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "attack"
+    ],
+    "sourceUrls": [
+      "https://www.bonny.com.cn/"
+    ],
+    "editorNote": "Bonny's 2025 speed-attack flagship in the Breath self-developed family. Uses Toray M46J carbon + Mirochi resin, 6.8mm Vibranium shaft. Combines BladeX 900 New speed feel with AxForce 90 New attack continuity. The most credible second-tier flagship of 2025 per TiGe XLab; G6 handle is unusual for a 4U flagship.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-zhanguidao-8888ax-ultra",
+    "category": "racket",
+    "name": "ZhanGuiDao 8888AX Ultra (紫炎)",
+    "brand": "Bonny",
+    "priceUsd": 180,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "smash",
+      "attack"
+    ],
+    "sourceUrls": [
+      "https://www.bonny.com.cn/"
+    ],
+    "editorNote": "Closes the Demon Slayer Sword (斩鬼刀) line with the first boron-fibre shaft in the lineage. Narrow flat-head frame, 6.8mm shaft, 212mm length. Sharper rebound than earlier ZhanGuiDao generations; flagship-tier attack racket for advanced rear-court attackers.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-wuque-xuanwu",
+    "category": "racket",
+    "name": "WuQue Xuanwu (玄武)",
+    "brand": "Bonny",
+    "priceUsd": 175,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 298,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "attack",
+      "flat_drive"
+    ],
+    "sourceUrls": [
+      "https://www.bonny.com.cn/"
+    ],
+    "editorNote": "Closes the WuQue Mythical Beast (四神兽) lineage as the only racket in the series with boron-fibre shaft reinforcement. Plays like 'a harder, more refined ZhanGuiDao 3' per L.C.'s review. 220mm shaft (extended), 76-hole stringbed with 9-3 grommet grooves.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-mojun",
+    "category": "racket",
+    "name": "MoJun (魔君)",
+    "brand": "Bonny",
+    "priceUsd": 160,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "all_round",
+      "attack",
+      "control"
+    ],
+    "sourceUrls": [
+      "https://www.bonny.com.cn/"
+    ],
+    "editorNote": "Bonny's balanced-attack flagship explicitly engineered against the Yonex Arcsaber 11 Pro. Polymer-cored frame, 6.5mm nickel-titanium shaft with 40T carbon, DuPont Kevlar head reinforcement. Direct contact feel rather than the Arcsaber's softer-damped output; flagship-tier alternative at meaningful price savings.",
+    "reviewCount": 0
+  },
+  {
+    "id": "kawasaki-chocolate-88d",
+    "category": "racket",
+    "name": "Chocolate 88D (巧克力 88D)",
+    "brand": "Kawasaki",
+    "priceUsd": 90,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 302,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 32
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.kawasaki-sports.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "doubles",
+      "attack",
+      "rear_court"
+    ],
+    "sourceUrls": [
+      "https://www.kawasaki-sports.com/"
+    ],
+    "editorNote": "The credible Yonex Astrox 88D Pro 2024 alternative. 76-hole full-grommet-groove fluid-box frame, 6.8mm shaft (slightly longer than the 88D Pro). Source review's headline: 'cover the paint and you cannot tell them apart on court.' Roughly 1/3 the price of the Yonex flagship at most regional retailers.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-sonic-boom-pro",
+    "category": "racket",
+    "name": "Sonic Boom Pro (音爆 PRO)",
+    "brand": "Victor",
+    "priceUsd": 45,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 32
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner",
+      "all_round",
+      "attack"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
+    "editorNote": "Rare budget-tier attack racket (~300 RMB / 45 USD) with flagship-adjacent floating-handle technology, 76-hole box-frame with POWER BOX reinforcement, Fiber Reinforced System frame layup, 32 lb max tension support. Excellent value for beginners wanting an attack-flavoured first serious racket.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-wuque-1982-y3k-shoes",
+    "category": "shoes",
+    "name": "WuQue 1982 Y3K",
+    "brand": "Bonny",
+    "priceUsd": 95,
+    "fitWidth": "normal",
+    "cushioning": "medium",
+    "stability": "high",
+    "weightFeel": "fast",
+    "hasWideOption": false,
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "speed",
+      "all_round",
+      "agility"
+    ],
+    "sourceUrls": [
+      "https://www.bonny.com.cn/"
+    ],
+    "editorNote": "Cyberpunk-styled 2026 refresh of Bonny's WuQue 1982 shoe chassis. White/orange palette with chameleon TPU film, KPU+TPU composite upper, high-elastic EVA midsole, TPU+carbon antitorsion plate. Strong lateral lockdown and arch support; runs narrow at the heel — wide-foot players should look elsewhere.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 28,
+      "depreciationPct": 70,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons; estimate assumes lightly used clean pair.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "bonny-carbon-armour-shoes",
+    "category": "shoes",
+    "name": "Carbon Armour",
+    "brand": "Bonny",
+    "priceUsd": 85,
+    "fitWidth": "normal",
+    "cushioning": "medium",
+    "stability": "high",
+    "weightFeel": "medium",
+    "hasWideOption": false,
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "all_round",
+      "stability",
+      "arch_support"
+    ],
+    "sourceUrls": [
+      "https://www.bonny.com.cn/"
+    ],
+    "editorNote": "All-court badminton shoe in a soft white/pink palette. Full toe-steel reinforcement, dual antitorsion plates (carbon at the arch + wolf-fang TPU at the midfoot), specialty rubber outsole with multidirectional grip. Best for players wanting function with subtle aesthetic; runs narrow at the heel.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 25,
+      "depreciationPct": 70,
+      "confidence": "low",
+      "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons; estimate assumes lightly used clean pair.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "ln-l66-string",
+    "category": "string",
+    "name": "L66 String",
+    "brand": "Li-Ning",
+    "priceUsd": 8,
+    "gaugeMm": 0.66,
+    "feel": "medium",
+    "repulsion": "medium",
+    "control": "high",
+    "durability": "high",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.lining.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "control",
+      "durability",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.lining.com/"
+    ],
+    "editorNote": "Li-Ning L-series value-tier string. Firmer, more controlled feel than the L69 sibling, with noticeably better durability and tension hold. Best for intermediate players who prize placement and feedback clarity over headline elasticity. Strong control + rebound balance at low per-string cost.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "ln-lt66-power-string",
+    "category": "string",
+    "name": "LT66 Power",
+    "brand": "Li-Ning",
+    "priceUsd": 12,
+    "gaugeMm": 0.66,
+    "feel": "hard",
+    "repulsion": "very_high",
+    "control": "high",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.lining.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "repulsion",
+      "feedback_clarity",
+      "flagship_tier"
+    ],
+    "sourceUrls": [
+      "https://www.lining.com/"
+    ],
+    "editorNote": "Li-Ning's flagship-tier domestic high-elastic string, launched alongside the BladeX 800 Speed flagship racket. Sharp rebound, clear feedback, designed to complement the BladeX 800 Speed's M46X carbon shaft. Performance-tier durability trade-off — restring on schedule, not on failure.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "kumpoo-js-67-string",
+    "category": "string",
+    "name": "JS-67",
+    "brand": "Kumpoo",
+    "priceUsd": 6,
+    "gaugeMm": 0.67,
+    "feel": "medium",
+    "repulsion": "high",
+    "control": "high",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 28
+    },
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.kumpoo.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "control",
+      "feedback_clarity",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
+    "editorNote": "Value-tier high-elastic string with side-silk coating for control feedback and high-strength nylon core for rebound. Strong balance between control and feel; school-team-tested with above-expected durability for the thin gauge. Strong budget alternative to Yonex BG65 / Li-Ning L66.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "gosen-leiming-69-string",
+    "category": "string",
+    "name": "Leiming 69 (雷鸣 69)",
+    "brand": "Goosen",
+    "priceUsd": 4,
+    "gaugeMm": 0.69,
+    "feel": "medium",
+    "repulsion": "high",
+    "control": "high",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.gosen.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "tension_hold",
+      "value",
+      "high_input_force"
+    ],
+    "sourceUrls": [
+      "https://www.gosen.com/"
+    ],
+    "editorNote": "Thick-gauge (0.69mm) value-tier string with strong tension hold. After a month of regular play, maintains 85-90% of initial feel. Pre-stretch recommended for tensions over 28 lb. Best as food-tier or training-tier string for high-input players who restring monthly. ~25 RMB / 4 USD per pack.",
+    "reviewCount": 0,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-05-17"
+    }
+  },
+  {
+    "id": "ln-gp100-pro-grip",
+    "category": "grip",
+    "name": "GP100 Pro Grip",
+    "brand": "Li-Ning",
+    "priceUsd": 5,
+    "gripType": "replacement",
+    "feel": "tacky",
+    "thicknessMm": 0.8,
+    "sweatAbsorption": "medium",
+    "packCount": 1,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.lining.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "replacement_grip",
+      "tacky_feel",
+      "g6_thickening"
+    ],
+    "sourceUrls": [
+      "https://www.lining.com/"
+    ],
+    "editorNote": "Pro variant of Li-Ning's GP100 replacement grip family. Higher tackiness than the base GP100, slightly thicker (~0.8mm). One of the few replacement grips that feels noticeably better than overgrip-and-underbase combinations. Works particularly well on G6 handles needing slight thickening to effective G5.",
+    "reviewCount": 0
+  },
+  {
+    "id": "rsl-supreme-shuttle",
+    "category": "shuttle",
+    "name": "Supreme (亚S)",
+    "brand": "RSL",
+    "priceUsd": 25,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 77,
+    "unitsPerTube": 12,
+    "bwfApproved": false,
+    "durabilityTier": "club",
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk"
+    ],
+    "officialSourceUrl": "https://rslsports.com/",
+    "lastVerifiedAt": "2026-05-17",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "club_play",
+      "premium_feel",
+      "durability"
+    ],
+    "sourceUrls": [
+      "https://rslsports.com/"
+    ],
+    "editorNote": "Premium goose-knife-feather shuttle, RSL's upgrade tier above Classic (亚C). Approximately 30 minutes of usable life per shuttle in mid-intensity doubles. Approaches K+90 territory in feel; price has stayed stable through 2026's feather supply tightening. Dual-cork base (not all-cork) is the honest trade-off.",
+    "reviewCount": 0
   }
 ]
