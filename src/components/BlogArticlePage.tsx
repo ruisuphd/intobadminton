@@ -431,13 +431,21 @@ export function BlogArticlePage({
         <FactCheckNotes notes={article.factChecks ?? []} />
       </article>
 
-      {/* Related */}
+      {/*
+        Related deep-dives. Now scored by product-series + brand + category
+        + topic-keyword overlap (see relatedArticles() in src/lib/blog.ts),
+        so results can cross categories — e.g., a flagship review may
+        surface its companion comparison or pillar guide.
+      */}
       {related.length > 0 && (
         <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
           <div className="layout-band max-w-6xl">
             <h2 className="text-headline text-[var(--text)]">
-              More {CATEGORY_LABELS[article.category].toLowerCase()}
+              Related deep-dives
             </h2>
+            <p className="mt-3 max-w-2xl text-base leading-relaxed text-[var(--color-muted)]">
+              Picked by product family, brand, and topic — not just category. Articles in the same lineage surface first.
+            </p>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
               {related.map((r) => (
                 <Link

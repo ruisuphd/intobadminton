@@ -322,17 +322,211 @@ export function articlesGroupedByCategory(
     .filter((group) => group.articles.length > 0);
 }
 
-/** Find up to `n` related articles in the same category (newest-first), excluding the current. */
+/**
+ * Brands the related-article scorer recognises. Order does not matter; the
+ * scorer only checks whether the brand string appears in both the current
+ * and candidate article titles+deks.
+ */
+const RELATED_BRANDS = [
+  "Yonex",
+  "Victor",
+  "Li-Ning",
+  "Bonny",
+  "Kawasaki",
+  "Kumpoo",
+  "Mizuno",
+  "RSL",
+  "Goosen",
+  "Gosen",
+  "ASICS",
+] as const;
+
+/**
+ * Product family / series names. The scorer awards the highest single bonus
+ * for series overlap because two articles in the same product family
+ * (Halbertec, Astrox, DriveX, etc.) are almost always genuinely related,
+ * even when categorised differently (review vs comparison vs guide).
+ */
+const RELATED_PRODUCT_SERIES = [
+  // Yonex
+  "Astrox",
+  "Nanoflare",
+  "Arcsaber",
+  "Power Cushion",
+  "Eclipsion",
+  "Subaxia",
+  "Grpht",
+  // Victor
+  "DriveX",
+  "Auraspeed",
+  "Thruster",
+  "TK-F",
+  "Carbonsonic",
+  // Li-Ning
+  "AxForce",
+  "Halbertec",
+  "BladeX",
+  "Bladesabre",
+  "Aerus",
+  "L66",
+  "L69",
+  "LT66",
+  "GP100",
+  // Bonny
+  "ZhanGuiDao",
+  "WuQue",
+  "Snake Breath",
+  "Carbon Armour",
+  "MoJun",
+  "Leisu",
+  // Kumpoo
+  "Shura",
+  "Shanhai",
+  "JS-",
+  // Kawasaki
+  "Master Mao",
+  "KACE",
+  "Star Cross",
+  "Chocolate",
+  // Other
+  "Sonic Boom",
+  "Leiming",
+] as const;
+
+/**
+ * Topical keyword groups. The scorer awards one point per overlapping group
+ * (up to a cap), so articles about "smash-heavy attack" surface alongside
+ * other smash-heavy attack content even when brand and series do not match.
+ */
+const RELATED_TOPIC_GROUPS: readonly (readonly string[])[] = [
+  ["smash", "attack", "rear-court", "rear court", "head-heavy", "head heavy"],
+  ["speed", "fast doubles", "drive", "front-court", "front court", "head-light", "head light"],
+  ["control", "placement", "rhythm", "all-round", "all round"],
+  ["beginner", "starter", "first racket", "easy", "recreational"],
+  ["shoe", "shoes", "court shoe", "foot"],
+  ["string", "tension", "gauge", "rebound"],
+  ["shuttle", "shuttlecock", "feathered"],
+  ["grip", "overgrip", "tackiness"],
+] as const;
+
+const MAX_TOPIC_HITS = 2;
+
+/** Score a candidate article's relatedness to the current article. */
+function scoreRelatedArticle(
+  current: BlogArticle,
+  candidate: BlogArticle
+): number {
+  let score = 0;
+  const currentText = `${current.title} ${current.dek}`;
+  const candidateText = `${candidate.title} ${candidate.dek}`;
+  const currentLower = currentText.toLowerCase();
+  const candidateLower = candidateText.toLowerCase();
+
+  // Category overlap: +3. Reviews still tend to surface reviews first, but
+  // strong brand/series matches in other categories can outrank them.
+  if (candidate.category === current.category) {
+    score += 3;
+  }
+
+  // Product-series overlap: +4. Strongest single signal — articles in the
+  // same product family are almost always genuinely related.
+  for (const series of RELATED_PRODUCT_SERIES) {
+    if (currentText.includes(series) && candidateText.includes(series)) {
+      score += 4;
+      break;
+    }
+  }
+
+  // Brand overlap: +2. Weaker than series; same brand without series match
+  // (e.g., a Yonex shoe vs a Yonex racket) is only loosely related.
+  for (const brand of RELATED_BRANDS) {
+    if (currentText.includes(brand) && candidateText.includes(brand)) {
+      score += 2;
+      break;
+    }
+  }
+
+  // Topic-keyword overlap: +1 per group, capped at MAX_TOPIC_HITS. Lets
+  // cross-brand topical content surface (e.g., smash-heavy attack frames
+  // across Yonex / Victor / Li-Ning).
+  let topicHits = 0;
+  for (const group of RELATED_TOPIC_GROUPS) {
+    const currentMatch = group.some((kw) => currentLower.includes(kw));
+    const candidateMatch = group.some((kw) => candidateLower.includes(kw));
+    if (currentMatch && candidateMatch) {
+      topicHits += 1;
+      if (topicHits >= MAX_TOPIC_HITS) break;
+    }
+  }
+  score += topicHits;
+
+  return score;
+}
+
+/**
+ * Find up to `n` related articles. The scorer weights product-series match
+ * highest (+4), then category match (+3), then brand match (+2), then up to
+ * +2 from topic-keyword overlap. Ties break by newest-first via updatedAt.
+ *
+ * After scoring, results are re-ordered to prefer category diversity: the
+ * first n slots are filled by taking the highest-scored article from each
+ * distinct category (review, comparison, guide), then any remaining slots
+ * fall back to the global score-ordered list. This guarantees that a review
+ * surfaces its companion comparison or pillar guide before doubling up on
+ * same-category lineage matches.
+ */
 export function relatedArticles(
   articles: BlogArticle[],
   current: BlogArticle,
   n = 3
 ): BlogArticle[] {
-  return articlesByDateDesc(
-    articles.filter(
-      (a) => a.category === current.category && a.slug !== current.slug
-    )
-  ).slice(0, n);
+  const scored = articles
+    .filter((a) => a.slug !== current.slug)
+    .map((article) => ({
+      article,
+      score: scoreRelatedArticle(current, article),
+    }));
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return a.article.updatedAt < b.article.updatedAt
+      ? 1
+      : a.article.updatedAt > b.article.updatedAt
+      ? -1
+      : 0;
+  });
+
+  // Group by category, preserving the score order inside each group.
+  const byCategory = new Map<BlogCategory, typeof scored>();
+  for (const item of scored) {
+    const list = byCategory.get(item.article.category) ?? [];
+    list.push(item);
+    byCategory.set(item.article.category, list);
+  }
+
+  const picked: typeof scored = [];
+  const usedSlugs = new Set<string>();
+
+  // Round-robin across categories — one per category each round — until we
+  // have n articles or every category is exhausted. This gives the first
+  // three slots maximum category diversity.
+  let round = 0;
+  while (picked.length < n) {
+    let pickedThisRound = false;
+    for (const list of byCategory.values()) {
+      const candidate = list[round];
+      if (!candidate) continue;
+      if (usedSlugs.has(candidate.article.slug)) continue;
+      picked.push(candidate);
+      usedSlugs.add(candidate.article.slug);
+      pickedThisRound = true;
+      if (picked.length >= n) break;
+    }
+    if (!pickedThisRound) break;
+    round += 1;
+  }
+
+  return picked.slice(0, n).map((s) => s.article);
 }
 
 const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {

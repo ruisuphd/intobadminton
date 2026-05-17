@@ -1,5 +1,10 @@
 import { describe, expect, test } from "vitest";
-import { blogArticles, blogSlugs, readingTimeMinutes } from "@/lib/blog";
+import {
+  blogArticles,
+  blogSlugs,
+  readingTimeMinutes,
+  relatedArticles,
+} from "@/lib/blog";
 
 describe("blog publishing metadata", () => {
   test("keeps every English article reachable through static blog routes", () => {
@@ -124,6 +129,58 @@ describe("blog publishing metadata", () => {
       expect(article?.reviewSummary, slug).toBeDefined();
       expect(article?.story?.intro.trim(), slug).not.toBe("");
       expect(readingTimeMinutes(article!), slug).toBeGreaterThanOrEqual(4);
+    }
+  });
+
+  test("relatedArticles surfaces lineage matches even across categories", () => {
+    // The Halbertec 9000 Power deep-dive (review) should surface other
+    // Halbertec articles — including the comparison article in a different
+    // category — before unrelated Yonex or Bonny content. This validates
+    // that product-series matching outranks pure category matching.
+    const current = blogArticles.en.find(
+      (a) => a.slug === "li-ning-halbertec-9000-power-deep-dive"
+    );
+    expect(current, "li-ning-halbertec-9000-power-deep-dive").toBeDefined();
+
+    const related = relatedArticles(blogArticles.en, current!, 5);
+    const relatedSlugs = related.map((a) => a.slug);
+
+    // At least one Halbertec article should appear in the first 5 related.
+    const halbertecMatches = relatedSlugs.filter((s) =>
+      s.includes("halbertec")
+    );
+    expect(halbertecMatches.length).toBeGreaterThanOrEqual(1);
+
+    // The Halbertec 8000-vs-9000-vs-9000-Power comparison (different category
+    // from the 9000 Power deep-dive review) should be among them.
+    expect(relatedSlugs).toContain(
+      "li-ning-halbertec-8000-vs-9000-vs-9000-power"
+    );
+  });
+
+  test("relatedArticles surfaces lineage matches within the Astrox 99 Pro trilogy", () => {
+    // The Astrox 99 Pro Gen 3 review should surface at least one other 99 Pro
+    // generation review ahead of unrelated content.
+    const current = blogArticles.en.find(
+      (a) => a.slug === "yonex-astrox-99-pro-3-deep-dive"
+    );
+    expect(current, "yonex-astrox-99-pro-3-deep-dive").toBeDefined();
+
+    const related = relatedArticles(blogArticles.en, current!, 5);
+    const relatedSlugs = related.map((a) => a.slug);
+
+    const ninetyninePro = relatedSlugs.filter((s) =>
+      s.includes("astrox-99-pro")
+    );
+    expect(ninetyninePro.length).toBeGreaterThanOrEqual(1);
+  });
+
+  test("relatedArticles excludes the current article from results", () => {
+    const current = blogArticles.en[0];
+    const related = relatedArticles(blogArticles.en, current, 5);
+
+    for (const a of related) {
+      expect(a.slug).not.toBe(current.slug);
     }
   });
 
