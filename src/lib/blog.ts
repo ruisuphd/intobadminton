@@ -59,10 +59,12 @@ export type BlogSlug =
   | "yonex-nanoflare-700-review"
   | "li-ning-axforce-90-new-review"
   | "yonex-subaxia-gt-shoes-review"
+  | "yonex-astrox-99-pro-3-deep-dive"
   | "how-to-choose-a-badminton-racket"
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
-  | "yonex-grip-sizes-explained";
+  | "yonex-grip-sizes-explained"
+  | "yonex-arcsaber-10-complete-buying-guide";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -122,10 +124,12 @@ export const blogSlugs: BlogSlug[] = [
   "yonex-nanoflare-700-review",
   "li-ning-axforce-90-new-review",
   "yonex-subaxia-gt-shoes-review",
+  "yonex-astrox-99-pro-3-deep-dive",
   "how-to-choose-a-badminton-racket",
   "badminton-equipment-for-kids",
   "badminton-glossary-terms-every-player-should-know",
   "yonex-grip-sizes-explained",
+  "yonex-arcsaber-10-complete-buying-guide",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3172,6 +3176,71 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
       ],
       cta: "Get the racket recommendation right first, then dial in the grip size with one or two overgrips.",
+    },
+    {
+      slug: "yonex-arcsaber-10-complete-buying-guide",
+      updatedAt: "2026-05-17",
+      category: "guides",
+      title: "Yonex Arcsaber 10: every generation explained — a buyer's guide from the sticker red to the 2019 4U reissue",
+      dek: "The Arcsaber 10 was discontinued in 2019 and never replaced. Here is how to tell the eight commonly-traded generations apart — sticker red, laser-etched basic, Peter Gade white, Taufik black Premium, Taufik signature, Legend's Vision, unsigned white, and the 2019 4U — and which one is still worth buying second-hand today.",
+      sections: [
+        {
+          heading: "Why the Arcsaber 10 still matters in 2026",
+          body: "The Arcsaber 10 launched in 2008, ran for eleven years, and was quietly retired in 2019 without a true successor. Lee Chong Wei used the Voltric Z-Force and 100ZZ in his Yonex peak, but Peter Gade and Taufik Hidayat both played career-defining years on this frame, and a generation of Asian players grew up imitating their footwork with it. Today the racket survives as a second-hand object: a head-light, even-balanced control frame that prizes placement, dwell, and clean wrist work over headline smash power. Most current Yonex control frames (Arcsaber 7 Pro, 11 Pro) trace their identity back to it. The community keeps buying used Arcsaber 10s because nothing in the current line plays quite the same way.",
+        },
+        {
+          heading: "The eight generations at a glance",
+          body: "The lineage, in order: (1) Sticker version (late-2007 to August 2008) — earliest production with adhesive labels rather than laser-etched markings; 2U and 3U, predominantly G4 grip. (2) Laser-etched basic red (August 2008 to 2015) — the high-volume version, often informally called 'red Arcsaber 10'; the easiest to buy used. (3) Peter Gade signature white (2010-2013, with a 2018 re-issue) — 3U only, Peter Gade graphics on the cover. (4) Arcsaber 10 Premium / Taufik black (2012-2013) — 3U only, black-and-gold colourway; produced for the London Olympics; no true reissue afterwards despite occasional confusion with the late-2012 to early-2013 production run. (5) Taufik Hidayat signature (2015 only) — 2U and 3U, multiple Taufik signatures on the frame and a redesigned cover. (6) Legend's Vision (LV) editions (2016 only) — Yonex commemorated four legends with signature frames; the Taufik LV is a red 10, the Gade LV is a white 10, each 3U with all four signatures and a dedicated cover. (7) Unsigned white (2017-2018) — Gade-style white without signatures; produced briefly. (8) 2019 4U reissue (2019 only) — first and only 4U Arcsaber 10, quickly sold out, now rare and priced accordingly.",
+        },
+        {
+          heading: "How to identify each generation in a used listing",
+          body: "Sticker version: peeled or torn label residue near the throat is a strong tell; the basic colour is the same red as the laser-etched version. Laser-etched basic red: the most common find — symmetrical Arcsaber graphics, no signature, no special cover. Peter Gade white: white frame, blue-and-gold Gade graphics on the side, dedicated PG cover. Premium black: black with gold accents, no Taufik signature on the early run, Olympic graphics on later units; the cover is black with gold trim. Taufik signature: multiple Taufik signatures around the frame; redesigned cover with Taufik portrait. Legend's Vision: red (Taufik LV) or white (Gade LV) with four named signatures (Lin Dan, Lee Chong Wei, Taufik, Gade) and a unique LV cover that often outvalues lower-tier covers by itself. Unsigned white: looks like a Gade signature without signatures; lower visual identifier risk. 2019 4U: marked as 4U on the cone cap and shaft; the only 4U production run in the lineage.",
+        },
+        {
+          heading: "Pricing reality (second-hand market, 2026)",
+          body: "Used Arcsaber 10 prices vary widely by region and condition, but the rough hierarchy is consistent. The basic red is the cheapest entry point and the most forgiving for new buyers — well-used copies trade for less than the current cost of a mid-tier new racket, and clean copies sit just above. The unsigned Peter Gade white commands a small premium over the signature white because of its shorter production run. The Premium black sits noticeably above both because it never returned to production. Taufik signature commands a similar premium to the Premium black, with Taufik-fan collector demand pushing condition-rated copies higher than logic suggests. Legend's Vision sits at the top of the regularly-traded tier — the four-signature cover is itself a sought collector item. The 2019 4U is the rarest commonly-listed version; scarcity has pushed prices above several still-in-production flagships. Treat any listing dramatically below the regional norm as a likely fake — Arcsaber 10 is one of the most-counterfeited Yonex rackets ever made.",
+        },
+        {
+          heading: "Which generation should you actually buy",
+          body: "Pick by intent, not nostalgia. If you want to try the Arcsaber 10 feel without committing collector money, buy the basic red in well-loved condition — you will learn whether the head-light, even-balance, medium-flex platform suits your game without overpaying. If you played the racket in 2010-2015 and want one for the cabinet that you still occasionally string, the Peter Gade signature white is the best balance of nostalgia and availability. If you are a Taufik fan with the budget, the Premium black or Taufik signature are the two clearest collector picks. If you specifically want a lighter handling racket and you can find a clean 2019 4U at a fair regional price, it is the only version that brings the frame into a faster modern weight class — but the price floor reflects that. Avoid the Legend's Vision unless you specifically value the four-signature cover and full Yonex collector context; functionally it plays the same as the underlying generation.",
+        },
+        {
+          heading: "Counterfeit and condition risks",
+          body: "The Arcsaber 10 has been counterfeited heavily for over a decade. Common tells include misaligned grommets, wrong shaft length (the genuine 10 is 670mm), incorrect cone cap font, off-spec balance points, and incorrect cover stitching. If you are paying anything above the basic-red floor, get the racket verified by a known community authenticator before transfer — BadmintonCN has dedicated authentication threads, and reputable Asian shops will provide written authentication. Condition matters more than usual because the frame is now 7-18 years old depending on generation: check the T-joint for hairline cracks (especially on early units), inspect the grommets for compression, and ask the seller specifically about whether the racket has ever been off the stringing machine surface with damage. A 12 o'clock crack is often invisibly repaired on second-hand listings — ask, and walk away if the seller refuses to confirm.",
+        },
+        {
+          heading: "How it plays compared to current Yonex control frames",
+          body: "The Arcsaber 10 is closer to the current Arcsaber 11 Pro than to the 7 Pro in identity, but with a less dense feel and a more delicate net touch. Compared to the 11 Pro, the 10 feels lighter through the head, slightly less stable on heavy smash defence, and noticeably more rewarding on slices, drops, and net taps. Compared to the 7 Pro, the 10 feels more demanding on timing — the older frame asks for cleaner contact and gives less help on rushed swings. None of the three is a power-first frame, and the 10 is the most explicitly placement-first of the lot. If you want the closest currently-produced playing feel and do not want to deal with the used market, the 11 Pro is the safest modern substitute; if you want the closest weight-feel for less money, a 4U Arcsaber 7 Pro with a high-tension stringbed gets you most of the way.",
+        },
+        {
+          heading: "The final decision",
+          body: "Buy a used Arcsaber 10 if you want to feel an iconic Asian-tour control frame in your hand, you have a trusted authenticator, and you are not allergic to a 10+ year-old racket needing careful stringing. Skip it if you are looking for a primary match racket today — the modern Arcsaber 11 Pro plays a similar identity with current materials, current grommets, current warranty, and no counterfeit risk. The 10 is a beautiful object and a deeply rewarding racket for the right player, but it is not the right answer for someone who wants their best racket to also be their newest one.",
+        },
+      ],
+      cta: "If you want a current production control racket that plays in this family, run the finder with placement-first or all-round preferences to compare Arcsaber 7 Pro and 11 Pro.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
+          note:
+            "Generation-by-generation chronology, production windows, and naming conventions are paraphrased from a long-form BadmintonCN community buying guide; technical readings and buyer guidance are original to IntoBadminton.",
+        },
+        {
+          sourceName: "Yonex",
+          title: "ARCSABER product family — current line-up",
+          section: "Current racket catalogue",
+          checkedAt: "2026-05-17",
+          href: "https://www.yonex.com/arcsaber",
+          quote: "ARCSABER",
+          note:
+            "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
     },
     ...sourceReviewArticles,
   ],
