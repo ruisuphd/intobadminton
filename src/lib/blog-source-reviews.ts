@@ -1561,4 +1561,214 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "victor-drivex-12-standalone-review",
+    title: "Victor DriveX 12 review: the speed-control hybrid Victor wanted all along",
+    dek: "Two years after DriveX 10 Metallic, Victor's DriveX 12 layers alloy-carbon shaft, WES 3.0 rebound, nano aerogel frame fill, and Power Ring Pro into one frame. The result is a head-heavy 4U control racket that finally punches as hard as it organises.",
+    verdict:
+      "A speed-press control racket that finally turns the DriveX identity into a real attack option — but only if you can drive a stiff alloy-carbon shaft cleanly.",
+    bestFor: [
+      "All-court attacking singles players",
+      "Doubles back-court players who organise before they finish",
+      "Players who liked DriveX 10 but wanted more bite",
+    ],
+    avoidIf: [
+      "You need a soft, forgiving shaft",
+      "Your matches are won at the net, not from the rear court",
+      "You dislike crisp, high-feedback frames",
+    ],
+    setupNotes: [
+      "Victor lists the DriveX 12 as part of the speed-press category, paired with Zheng Si Wei and Mohammad Ahsan.",
+      "Official tech list includes 6.6 alloy-carbon shaft, WES 3.0, nano aerogel frame fill, Power Ring Pro junction, and Free Core handle.",
+    ],
+    sourceHook:
+      "The source review is useful because it tested the DriveX 12 across eight hours of singles, doubles, and mixed — long enough to find both the racket's bite and its honest limits.",
+    facts: [
+      {
+        label: "Official identity",
+        value: "Victor positions DriveX 12 as a speed-press control racket — speed-press meaning attacking through downward pressure rather than raw shaft speed.",
+      },
+      {
+        label: "Official shaft",
+        value:
+          "6.6mm alloy-carbon shaft paired with WES 3.0 (Whip Enhanced System v3) for the rebound profile that debuted on the Auraspeed line.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a 4U racket with 3U-style head weight and a sweet spot wider than an attack frame but narrower than a true all-round control racket.",
+      },
+    ],
+    calloutTitle: "The DriveX line finally produced an attack option, not just a control option that could attack if forced",
+    calloutBody:
+      "DriveX 10 Metallic was a credible control frame with a sharper edge than the DriveX 9. The DriveX 12 is the version that flips the priority: it organises, then it punishes — and the punishing part is genuinely sharp.",
+    comparison: {
+      heading: "DriveX line read",
+      columns: ["DriveX 12", "DriveX 10 Metallic", "Auraspeed 90K II"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "Speed-press control with bite",
+            "Crisp control with edge",
+            "Speed counter-attack",
+          ],
+        },
+        {
+          label: "Best rally",
+          values: [
+            "Organise, then finish hard",
+            "Build then place",
+            "Front-court chaos resolution",
+          ],
+        },
+        {
+          label: "Main caution",
+          values: [
+            "Demands clean whip-style force",
+            "Not a soft frame",
+            "Less patient in rear court",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the marketing really means",
+        body: "Victor calls the DriveX 12 a 速压控制拍 — literally 'speed-press control racket' — which sounds like Chinese marketing fluff until you see it on court. 'Press' here means attacking through downward pressure rather than headline shaft speed. The racket carries 4U on the spec sheet but produces 3U-style head weight in the swing because of how the alloy-carbon shaft and head bumper are tuned. Once it loads cleanly, the shuttle leaves with the kind of decisive drop angle that previously belonged to attack-first rackets like the TK-F or the 88D Pro 2024. The DriveX 12 is a control racket only in the sense that it asks you to set the point up before you cash it in.",
+      },
+      {
+        heading: "Why the alloy-carbon shaft matters more than the marketing list",
+        body: "The bigger headline on the official tech sheet is WES 3.0 + Power Ring Pro + nano aerogel + Free Core handle. None of those tell you what the racket actually does. The alloy-carbon shaft does. It is the first time Victor has combined alloy-carbon with WES 3.0 in the same racket, and the practical effect is a stiffer shaft that still rebounds quickly. The source review describes the contact feel as 'hard-elastic': you feel the shaft resist before it releases, and the release is faster than any DriveX before it. That combination is what produces the speed-press identity. Without the alloy-carbon shaft this would just be DriveX 10 in new paint. With it, the racket changes families.",
+      },
+      {
+        heading: "On court: where the racket lives",
+        body: "The source review tested the DriveX 12 across eight hours of singles, doubles, and mixed doubles. Three patterns emerged. First, rear-court drives and continuous downward pressure in doubles felt frictionless — the head weight and shaft rebound combined to keep the shuttle low and angry through repeated exchanges. Second, slice-smashes and angled finishing shots from the rear court landed unexpectedly close to mid-court despite the visual swing speed feeling moderate, because the shaft transferred force directly into shuttle exit angle. Third, mid-court drives and resets behaved like a slightly heavier all-rounder — not as fast as a true speed frame, but fast enough that the racket did not feel like a drag during reactive exchanges. The racket is at its best when you have the patience to organise the rally and the conditioning to commit to the finishing shot when the opening arrives.",
+      },
+      {
+        heading: "Defence, sweet spot, and the honest cost",
+        body: "Two qualifiers buyers should hear before they spend money. The sweet spot is wider than a pure attack racket but narrower than a true sugar-water control frame — closer to the Auraspeed line in feel than to the DriveX 9. If your contact discipline is inconsistent, you will feel the off-sweet hits as a noticeable drop in feedback quality. Defence is mostly fine on lifts and counter-drives, but rear-court backhand defence specifically asks for clean force input because the shaft does not bail you out the way a softer frame would. The source review uses the phrase 遇强则强 — 'strong against strong, weak against weak' — and it is accurate. This racket rewards good preparation and quietly penalises rushed swings.",
+      },
+      {
+        heading: "Who should buy it, and who should keep their DriveX 10",
+        body: "Buy the DriveX 12 if you already play DriveX 10 Metallic comfortably and want more attack ceiling without leaving the DriveX feel. Also buy it if you have been looking at the Astrox 88D Pro 2024 or Auraspeed 90K II for doubles back-court attack and want a third option with a different swing identity. Skip it if your DriveX 10 still feels like work — the 12 is harder, not easier. Skip it if you primarily play fast front-court doubles where the Auraspeed 100X SE or Nanoflare 1000Z give you faster reactive answers. The DriveX 12 is also a strong singles racket if you fight from the rear court and use placement to set up the smash, but it is not a singles-first design — Victor's own marketing flags Zheng Si Wei and Mohammad Ahsan as the signature players, both doubles specialists.",
+      },
+    ],
+    cta: "Run the finder with control-attack style and singles or rear-court doubles role to compare DriveX 12 against the 88D Pro 2024 and the Auraspeed 90K II.",
+    factChecks: [
+      {
+        sourceName: "Victor",
+        title: "DriveX 12 official product page",
+        section: "Spec & tech list",
+        checkedAt: "2026-05-17",
+        href: "https://www.victorsport.com/product/drivex-12",
+        quote: "Speed Press Control",
+        note: "Official Victor positioning confirms the speed-press control identity used in this review; alloy-carbon shaft + WES 3.0 combination is listed in the official tech sheet.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-9000-power-deep-dive",
+    title: "Li-Ning Halbertec 9000 Power deep-dive: when 'control' learns to bite",
+    dek: "Halbertec 9000 Power layers polyimide and aramid fibre into the 9000's frame, tightens the shaft another step, and produces a control racket that finally pushes back. A consumer-test review of where the racket genuinely wins, and where the family's old precision tax still applies.",
+    verdict:
+      "A control racket that finally has the bite the 9000 was missing — but only for players who already drive stiff frames cleanly and accept a smaller sweet spot for crisper output.",
+    bestFor: [
+      "Advanced doubles players who control before they attack",
+      "Halbertec 9000 owners who wanted more punch",
+      "Players moving from Astrox 88D Pro 2024 to a control frame",
+    ],
+    avoidIf: [
+      "You need maximum sweet-spot forgiveness",
+      "You play front-court singles defence primarily",
+      "You preferred the Halbertec 8000 for its easy feel",
+    ],
+    setupNotes: [
+      "Tested 4U/G5 sample, N66 string at 27 lb, single shop session by a national-tour stringer.",
+      "Compared head-to-head against Halbertec 8000, Halbertec 9000, and the entry Halbertec Mini Motor for context.",
+    ],
+    sourceHook:
+      "The source review is unusually rigorous because it ran the 9000 Power against three other Halbertec generations strung with the same line, same tension, and same stringer on the same day — and treated the 'precision tax' of the family honestly.",
+    facts: [
+      {
+        label: "Source basis",
+        value: "Original Chinese consumer-test (众测) review with same-day same-stringer comparison across four Halbertec rackets.",
+      },
+      {
+        label: "Material change",
+        value:
+          "Li-Ning's source material list adds polyimide fibre and aramid fibre to the 9000 frame layup, plus structural reinforcement at the 3, 9, and T-joint positions.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a stiffer shaft, smaller sweet spot, and faster shuttle release than the standard 9000 — at the cost of more vertical force-input demand.",
+      },
+    ],
+    calloutTitle: "Catapult feedback in a control body",
+    calloutBody:
+      "The headline feel is not raw smash power. It is the way the shuttle leaves the strings instantly on contact — even from compromised positions where the regular 9000 or 8000 would feel underpowered. The source review calls this 'springboard-style' rebound: short dwell, fast launch, surgical placement.",
+    comparison: {
+      heading: "Halbertec generations at a glance",
+      columns: ["9000 Power", "9000", "8000"],
+      rows: [
+        {
+          label: "Sweet spot",
+          values: [
+            "60-70%, sharp",
+            "60-70%, sharp",
+            "~90%, forgiving",
+          ],
+        },
+        {
+          label: "Force / output ratio",
+          values: [
+            "80% force → 90% output",
+            "90% force → 90% output",
+            "90% force → 80% output",
+          ],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Pressure-attack doubles",
+            "Clean-form singles control",
+            "Club all-round, beginner-friendly",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why the 9000 Power is the 9000's mature form",
+        body: "The Halbertec 9000 was always misread. Marketed as a control king, it lived in a narrow space — too stiff for the 8000 buyer, not punishing enough for the dedicated attack-frame buyer. The 9000 Power resolves that ambiguity in one direction. The source review describes the shaft as feeling like the 9000's shaft but with the resonance damped and the rebound sharpened. The frame layup adds polyimide and aramid fibre — both common in high-end aerospace composites — which the source argues explains why the post-contact vibration in the handle is noticeably lower than the 9000's. The practical effect is that the same swing produces a faster, more confident output, even when your contact discipline is not perfect.",
+      },
+      {
+        heading: "What 'catapult feedback' actually means in a rally",
+        body: "The most quoted phrase in the source review is 弹射感 — literally 'springboard rebound feeling'. It refers to a specific quality of contact: the shuttle leaves the strings almost instantly after impact, with minimal dwell. On the rare backhand lift from a deep, awkward position where most rackets in this category would force you to muscle the shuttle out, the 9000 Power releases the shuttle with surprising authority. The trade-off is that the racket gives you very little time on the strings to influence the shot once contact is made — you commit on swing, the racket commits on impact, and the outcome lands wherever your swing pointed. For players who prepare cleanly, this is liberating. For players who like to feel the shuttle and adjust at contact, it can feel curt.",
+      },
+      {
+        heading: "Where it wins — and where the 8000 still wins",
+        body: "The source review's strongest validation comes from the same-day comparison against the Halbertec 8000. The 8000 remains the family's bestseller because its 90% sweet spot is forgiving enough that average club players can play their best badminton without thinking about contact discipline. The 9000 Power's smaller sweet spot is the tax for sharper output. In fast doubles cross-court drives, the 9000 Power dominates: cleaner release, faster shuttle exit, better placement. In long back-court rallies where the player is tired and missing the sweet spot more often, the 8000 produces more usable shots per game. Both are correct buying choices for different buyers. The Power is not strictly better than the 8000 — it is a different identity altogether.",
+      },
+      {
+        heading: "The 'precision tax' on extreme defence",
+        body: "Be honest about the cost. In extreme defensive positions — deep back-hand corners, last-second lunges, ankle-of-shuttle scrambles — the 9000 Power's small sweet spot punishes you more than the 8000 would. The source review specifically notes that the shaft stiffness combined with the smaller sweet spot pushes more of the recovery burden onto footwork. If you arrive at the shuttle in the wrong position, the racket will not bail you out. This is the central trade-off across the 9000 / 9000 Power tier and it is the reason the source review concludes that the racket is not for everyone — it rewards strong footwork as much as strong hands.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the Halbertec 9000 Power if you already drive a stiff shaft well, you play doubles where pressure-attack is your main scoring path, and you want a control identity rather than the speed-frame identity of an Auraspeed HS or Nanoflare 1000Z. Skip it if you preferred the Halbertec 8000 because the 8000's forgiveness is the whole point — the Power is a different racket, not a better one. The deepest endorsement in the source review is that, given a same-stringer same-line comparison against the 8000, 9000, and entry Mini Motor, the 9000 Power was the unanimous choice of the tester's group. That recommendation is conditional on the buyer being honest about their contact discipline and footwork — both of which the racket will quietly audit on every rally.",
+      },
+    ],
+    cta: "Run the finder with control-attack style and intermediate-to-advanced doubles role to compare the Halbertec 9000 Power against the Halbertec 8000, 9000, and the Yonex 88D Pro 2024.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning Badminton",
+        title: "Halbertec 9000 Power official product page",
+        section: "Material spec list",
+        checkedAt: "2026-05-17",
+        href: "https://www.lining.com/",
+        quote: "Halbertec 9000 Power",
+        note: "Li-Ning brand catalogue confirms the Halbertec 9000 Power as a 2025 release with frame material additions over the standard 9000; official tech naming used as reference for the alloy and fibre additions described in this review.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
