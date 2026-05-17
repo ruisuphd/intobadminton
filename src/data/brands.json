@@ -4,259 +4,442 @@
     "name": "Yonex",
     "nameZh": "尤尼克斯",
     "tier": "flagship",
-    "regions": ["global", "jp", "cn", "uk", "us", "sg", "kr"],
+    "regions": [
+      "global",
+      "jp",
+      "cn",
+      "uk",
+      "us",
+      "sg",
+      "kr"
+    ],
     "officialUrl": "https://www.yonex.com/badminton/",
     "founded": 1946,
     "country": "Japan",
     "knownFor": "Largest global badminton brand. Astrox, Nanoflare, Voltric, Arcsaber lines plus Aerosensa shuttles and SHB shoes. Sponsors many top BWF players.",
     "knownForZh": "全球最大羽毛球品牌。代表系列包括 Astrox、Nanoflare、Voltric、Arcsaber，以及 Aerosensa 球与 SHB 系列球鞋。多名 BWF 顶尖球员代言。",
-    "categoriesCovered": ["racket", "shoes", "string", "bag", "shuttle", "grip", "accessory"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "string",
+      "bag",
+      "shuttle",
+      "grip",
+      "accessory"
+    ]
   },
   {
     "id": "victor",
     "name": "Victor",
     "nameZh": "胜利",
     "tier": "flagship",
-    "regions": ["global", "tw", "cn", "kr", "uk"],
+    "regions": [
+      "global",
+      "tw",
+      "cn",
+      "kr",
+      "uk"
+    ],
     "officialUrl": "https://www.victorsport.com/",
     "founded": 1968,
     "country": "Taiwan",
     "knownFor": "Premier Taiwanese brand. Auraspeed, Thruster, Brave Sword, Jetspeed, DriveX racket lines plus Champion shuttles. Sponsor of Korean and Chinese-Taipei national teams.",
     "knownForZh": "台湾顶尖品牌。Auraspeed、Thruster、Brave Sword、Jetspeed、DriveX 球拍系列与 Champion 球。韩国与中华台北国家队赞助。",
-    "categoriesCovered": ["racket", "shoes", "string", "bag", "shuttle", "grip"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "string",
+      "bag",
+      "shuttle",
+      "grip"
+    ]
   },
   {
     "id": "li-ning",
     "name": "Li-Ning",
     "nameZh": "李宁",
     "tier": "flagship",
-    "regions": ["global", "cn", "sg", "uk"],
+    "regions": [
+      "global",
+      "cn",
+      "sg",
+      "uk"
+    ],
     "officialUrl": "https://lining.com/",
     "founded": 1990,
     "country": "China",
     "knownFor": "Chinese flagship; sponsors PRC national team. Axforce, Bladex, Halbertec, Aeronaut, Tectonic racket lines plus A+ shuttles.",
     "knownForZh": "中国旗舰品牌，国家队赞助。Axforce、Bladex、Halbertec、Aeronaut、Tectonic 球拍系列与 A+ 球。",
-    "categoriesCovered": ["racket", "shoes", "string", "bag", "shuttle", "grip"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "string",
+      "bag",
+      "shuttle",
+      "grip"
+    ]
   },
   {
     "id": "kumpoo",
     "name": "Kumpoo",
     "nameZh": "薰风",
     "tier": "tier2",
-    "regions": ["cn", "global"],
+    "regions": [
+      "cn",
+      "global"
+    ],
     "officialUrl": "https://www.kumpoo.com/",
     "founded": 1995,
     "country": "China",
     "knownFor": "Strong value-for-money brand widely used by Chinese club players. Power Cloud, K600, K529, K520 series. Often discussed on badmintoncn.com.",
     "knownForZh": "性价比突出，中羽社区常见品牌。Power Cloud 系列、K600、K529、K520 等型号。",
-    "categoriesCovered": ["racket", "string", "shoes", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "string",
+      "shoes",
+      "bag"
+    ]
   },
   {
     "id": "kawasaki",
     "name": "Kawasaki",
     "nameZh": "川崎",
     "tier": "tier2",
-    "regions": ["cn", "global"],
+    "regions": [
+      "cn",
+      "global"
+    ],
     "officialUrl": "https://kawasaki-sport.com/",
     "founded": 1968,
     "country": "Japan / China-licensed",
     "knownFor": "Entry to mid-tier Japanese-origin brand widely sold in China. King series, Honor, Spider rackets. Common starter brand for new players.",
     "knownForZh": "中国市场常见的中端品牌。King、Honor、Spider 系列。新手起步常见品牌。",
-    "categoriesCovered": ["racket", "string", "shoes", "bag", "shuttle"]
+    "categoriesCovered": [
+      "racket",
+      "string",
+      "shoes",
+      "bag",
+      "shuttle"
+    ]
   },
   {
     "id": "mizuno",
     "name": "Mizuno",
     "nameZh": "美津浓",
     "tier": "tier2",
-    "regions": ["jp", "global", "cn"],
+    "regions": [
+      "jp",
+      "global",
+      "cn"
+    ],
     "officialUrl": "https://www.mizunoshop.net/",
     "founded": 1906,
     "country": "Japan",
     "knownFor": "Strong on shoes and apparel; smaller racket presence. Wave Claw shoe line is popular for stability and wider fit.",
     "knownForZh": "球鞋与服装强势；球拍线偏小。Wave Claw 系列球鞋以稳定与宽楦著称。",
-    "categoriesCovered": ["shoes", "racket", "bag"]
+    "categoriesCovered": [
+      "shoes",
+      "racket",
+      "bag"
+    ]
   },
   {
     "id": "kason",
     "name": "Kason",
     "nameZh": "凯胜",
     "tier": "tier2",
-    "regions": ["cn"],
+    "regions": [
+      "cn"
+    ],
     "officialUrl": "https://kason.li-ning.com/",
     "founded": 1989,
     "country": "China",
     "knownFor": "Chinese brand later acquired by Li-Ning. Heritage in entry-to-mid rackets; strong availability inside China.",
     "knownForZh": "已并入李宁的中国老牌。中低端球拍口碑稳定，中国大陆铺货广泛。",
-    "categoriesCovered": ["racket", "shoes", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "bag"
+    ]
   },
   {
     "id": "apacs",
     "name": "Apacs",
     "nameZh": "阿帕斯",
     "tier": "tier3",
-    "regions": ["my", "sg", "global"],
+    "regions": [
+      "my",
+      "sg",
+      "global"
+    ],
     "officialUrl": "https://www.apacs.my/",
     "founded": 2001,
     "country": "Malaysia",
     "knownFor": "Malaysian brand with strong following in SE Asia. Feather Weight, Z-Series, Edgesaber rackets are popular value picks.",
     "knownForZh": "东南亚口碑较好的马来西亚品牌。Feather Weight、Z 系列、Edgesaber 性价比突出。",
-    "categoriesCovered": ["racket", "string", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "string",
+      "bag"
+    ]
   },
   {
     "id": "fz-forza",
     "name": "FZ Forza",
     "nameZh": "FZ Forza",
     "tier": "tier3",
-    "regions": ["dk", "uk", "global"],
+    "regions": [
+      "dk",
+      "uk",
+      "global"
+    ],
     "officialUrl": "https://www.fz-forza.com/",
     "founded": 1976,
     "country": "Denmark",
     "knownFor": "European mainstay, especially in Denmark and the UK. Power, Aero, Light racket lines plus shoes and apparel.",
     "knownForZh": "欧洲主流品牌，丹麦与英国市场尤为常见。Power、Aero、Light 系列球拍以及球鞋服装。",
-    "categoriesCovered": ["racket", "shoes", "bag", "string"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "bag",
+      "string"
+    ]
   },
   {
     "id": "rsl",
     "name": "RSL",
     "nameZh": "亚狮龙",
     "tier": "tier3",
-    "regions": ["global", "cn", "uk"],
+    "regions": [
+      "global",
+      "cn",
+      "uk"
+    ],
     "officialUrl": "https://www.rsl.com.cn/",
     "founded": 1928,
     "country": "Denmark / China",
     "knownFor": "Long-running shuttle and racket brand. Tournament shuttles widely used in club leagues; rackets also available.",
     "knownForZh": "老牌球与球拍厂商。锦标级球在俱乐部联赛使用广泛，球拍线齐全。",
-    "categoriesCovered": ["shuttle", "racket", "bag"]
+    "categoriesCovered": [
+      "shuttle",
+      "racket",
+      "bag"
+    ]
   },
   {
     "id": "hundred",
     "name": "Hundred",
     "nameZh": "Hundred",
     "tier": "tier3",
-    "regions": ["in", "global"],
+    "regions": [
+      "in",
+      "global"
+    ],
     "officialUrl": "https://hundred.in/",
     "founded": 2018,
     "country": "India",
     "knownFor": "Fast-growing Indian brand. Powertek, Cosmic, Atomic racket lines plus shoes — strong India / SE Asia presence.",
     "knownForZh": "印度增长迅速的新品牌。Powertek、Cosmic、Atomic 系列球拍及球鞋，印度与东南亚市占增长快。",
-    "categoriesCovered": ["racket", "shoes", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "bag"
+    ]
   },
   {
     "id": "babolat",
     "name": "Babolat",
     "nameZh": "百宝力",
     "tier": "tier3",
-    "regions": ["global", "fr", "eu"],
+    "regions": [
+      "global",
+      "fr",
+      "eu"
+    ],
     "officialUrl": "https://www.babolat.com/badminton",
     "founded": 1875,
     "country": "France",
     "knownFor": "Heritage tennis brand with a smaller but premium badminton line. Satelite Power, X-Feel rackets.",
     "knownForZh": "法国百年品牌，羽毛球线虽小但定位高端。Satelite Power、X-Feel 系列。",
-    "categoriesCovered": ["racket", "string"]
+    "categoriesCovered": [
+      "racket",
+      "string"
+    ]
   },
   {
     "id": "carlton",
     "name": "Carlton",
     "nameZh": "卡尔顿",
     "tier": "tier3",
-    "regions": ["uk", "global"],
+    "regions": [
+      "uk",
+      "global"
+    ],
     "officialUrl": "https://www.carltonsports.com/",
     "founded": 1946,
     "country": "United Kingdom",
     "knownFor": "British heritage brand. Vapour, Kinesis, Aerospeed rackets — strong club presence in UK and Commonwealth.",
     "knownForZh": "英国老牌。Vapour、Kinesis、Aerospeed 系列在英国与英联邦国家俱乐部市场常见。",
-    "categoriesCovered": ["racket", "shoes", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "bag"
+    ]
   },
   {
     "id": "wilson",
     "name": "Wilson",
     "nameZh": "威尔胜",
     "tier": "tier3",
-    "regions": ["global", "us"],
+    "regions": [
+      "global",
+      "us"
+    ],
     "officialUrl": "https://www.wilson.com/en-us/sport/badminton",
     "founded": 1913,
     "country": "United States",
     "knownFor": "Tennis-first brand with a smaller badminton line. Recon, Blaze, Fierce racket families.",
     "knownForZh": "网球大牌的羽毛球副线。Recon、Blaze、Fierce 等系列。",
-    "categoriesCovered": ["racket", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "bag"
+    ]
   },
   {
     "id": "ashaway",
     "name": "Ashaway",
     "nameZh": "Ashaway",
     "tier": "tier4",
-    "regions": ["global", "us", "uk"],
+    "regions": [
+      "global",
+      "us",
+      "uk"
+    ],
     "officialUrl": "https://www.ashawayusa.com/",
     "founded": 1824,
     "country": "United States",
     "knownFor": "Specialist string maker. ZyMax, Rally 21, Dynamic 10 are popular for blended setups.",
     "knownForZh": "专业球线品牌。ZyMax、Rally 21、Dynamic 10 在混合穿线中常见。",
-    "categoriesCovered": ["string"]
+    "categoriesCovered": [
+      "string"
+    ]
   },
   {
     "id": "felet",
     "name": "Felet",
     "nameZh": "Felet",
     "tier": "tier4",
-    "regions": ["my", "sg"],
+    "regions": [
+      "my",
+      "sg"
+    ],
     "officialUrl": "https://www.feletmalaysia.com/",
     "founded": 1995,
     "country": "Malaysia",
     "knownFor": "Malaysian rackets and shoes — strong in SE Asia club scene. TJ Power, Champion racket lines.",
     "knownForZh": "马来西亚本土球拍与球鞋品牌，东南亚俱乐部市场常见。TJ Power、Champion 系列。",
-    "categoriesCovered": ["racket", "shoes", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "bag"
+    ]
   },
   {
     "id": "fleet",
     "name": "Fleet",
     "nameZh": "Fleet",
     "tier": "tier4",
-    "regions": ["my", "sg"],
+    "regions": [
+      "my",
+      "sg"
+    ],
     "officialUrl": "http://www.fleet.com.my/",
     "founded": 1980,
     "country": "Malaysia",
     "knownFor": "Long-running Malaysian brand; Power Max, Aerogliss, Nano Carbonex racket lines.",
     "knownForZh": "马来西亚老牌。Power Max、Aerogliss、Nano Carbonex 等型号。",
-    "categoriesCovered": ["racket", "string", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "string",
+      "bag"
+    ]
   },
   {
     "id": "yang-yang",
     "name": "Yang Yang",
     "nameZh": "央央 / 杨阳",
     "tier": "tier4",
-    "regions": ["cn", "global"],
+    "regions": [
+      "cn",
+      "global"
+    ],
     "officialUrl": "https://www.yangyangsport.com/",
     "founded": 1996,
     "country": "China",
     "knownFor": "Chinese brand founded by former player Yang Yang. SSR, Ultra Star racket families.",
     "knownForZh": "由前国手杨阳创立的中国品牌。SSR、Ultra Star 等系列。",
-    "categoriesCovered": ["racket", "shoes", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "shoes",
+      "bag"
+    ]
   },
   {
     "id": "karakal",
     "name": "Karakal",
     "nameZh": "Karakal",
     "tier": "tier4",
-    "regions": ["uk", "eu"],
+    "regions": [
+      "uk",
+      "eu"
+    ],
     "officialUrl": "https://www.karakal.com/",
     "founded": 1981,
     "country": "United Kingdom",
     "knownFor": "British squash-leading brand with a badminton line known for ultra-light frames (sub-65g rackets).",
     "knownForZh": "英国壁球大牌的羽毛球线，以超轻球拍（低于 65 克）见长。",
-    "categoriesCovered": ["racket", "string", "bag"]
+    "categoriesCovered": [
+      "racket",
+      "string",
+      "bag"
+    ]
   },
   {
     "id": "goosen",
     "name": "Goosen",
     "nameZh": "Goosen",
     "tier": "tier4",
-    "regions": ["jp", "global"],
+    "regions": [
+      "jp",
+      "global"
+    ],
     "officialUrl": "https://www.gosen.jp/",
     "founded": 1933,
     "country": "Japan",
     "knownFor": "Japanese string specialist popular in Asia. G-TONE 5, G-TONE 9, Roots ARMOR PRO are common.",
     "knownForZh": "日本球线品牌，亚洲市场常见。G-TONE 5、G-TONE 9、Roots ARMOR PRO 等。",
-    "categoriesCovered": ["string"]
+    "categoriesCovered": [
+      "string"
+    ]
+  },
+  {
+    "id": "bonny",
+    "name": "Bonny",
+    "nameZh": "波力",
+    "tier": "tier2",
+    "regions": [
+      "cn",
+      "sg",
+      "jp"
+    ],
+    "officialUrl": "https://www.bonny.com.cn/",
+    "founded": 1974,
+    "country": "Taiwan",
+    "knownFor": "Taiwanese badminton brand with a Demon-Slayer-themed ZhanGuiDao attack line, Mythical Beast (WuQue) flagship series, and the Breath self-developed speed-attack family. One of the most credible fourth-brand contenders after the Yonex/Victor/Li-Ning oligopoly.",
+    "knownForZh": "台湾羽毛球品牌。斩鬼刀进攻系列、乌缺四神兽旗舰系列与自研呼吸系列均有口碑，是雅尼克斯/胜利/李宁三大厂之外最具竞争力的第四品牌之一。",
+    "categoriesCovered": [
+      "racket",
+      "shoes"
+    ]
   }
 ]
