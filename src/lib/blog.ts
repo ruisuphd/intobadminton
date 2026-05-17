@@ -64,7 +64,12 @@ export type BlogSlug =
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
   | "yonex-grip-sizes-explained"
-  | "yonex-arcsaber-10-complete-buying-guide";
+  | "yonex-arcsaber-10-complete-buying-guide"
+  | "li-ning-flagship-racket-buying-guide-2026"
+  | "li-ning-axforce-100-gen-2-vs-gen-1"
+  | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
+  | "victor-drivex-12-standalone-review"
+  | "li-ning-halbertec-9000-power-deep-dive";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -130,6 +135,11 @@ export const blogSlugs: BlogSlug[] = [
   "badminton-glossary-terms-every-player-should-know",
   "yonex-grip-sizes-explained",
   "yonex-arcsaber-10-complete-buying-guide",
+  "li-ning-flagship-racket-buying-guide-2026",
+  "li-ning-axforce-100-gen-2-vs-gen-1",
+  "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+  "victor-drivex-12-standalone-review",
+  "li-ning-halbertec-9000-power-deep-dive",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3239,6 +3249,349 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "ARCSABER",
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
+    },
+    {
+      slug: "li-ning-flagship-racket-buying-guide-2026",
+      updatedAt: "2026-05-17",
+      category: "guides",
+      title: "Li-Ning flagship rackets in 2026: AxForce, Halbertec, and BladeX explained",
+      dek: "A buyer's map of Li-Ning's three current top families — attack, control, speed — covering the AxForce (Thunder) line, the Halbertec (war-halberd) line, and the BladeX (speed) line. Which series matches your game, and which racket inside it actually fits.",
+      sections: [
+        {
+          heading: "Why Li-Ning deserves a serious look in 2026",
+          body: "Li-Ning is no longer the cheaper alternative — it is the alternative. Chen Long won Olympic gold on a Li-Ning racket; the Thunder line and Halbertec line are widely played at national and pro-amateur level across Asia. Outside Asia, Li-Ning still trails Yonex on retail presence, but the rackets themselves are competitive with anything in the Astrox, Auraspeed, or Arcsaber catalogues — and in several cases they undercut equivalent Yonex flagships by 20-40% at street prices. The honest reason most non-Asian players have not tried a Li-Ning yet is distribution, not performance. If you can buy one, the rest of this guide will help you pick the right family.",
+        },
+        {
+          heading: "The three families at a glance",
+          body: "AxForce (Chinese: 雷霆, 'Thunder') is the attack family — head-heavy frames built around the M46 / M50 carbon shaft, designed for rear-court power and singles dominance. Halbertec (Chinese: 战戟, 'war halberd') is the control family — even-balance frames with sharper feedback and harder shafts, built for players who organise rallies before they finish them. BladeX (Chinese: 锋影, 'blade shadow') is the speed family — head-light, low-drag frames built for fast doubles exchanges and front-court pressure. Each family has a clear identity; the trap is buying the wrong family for your game, then blaming the racket. Pick the family first, then the model.",
+        },
+        {
+          heading: "AxForce / Thunder — for rear-court attackers",
+          body: "The AxForce line covers the widest spread inside Li-Ning. **AxForce 80** is the friendliest entry — 305mm balance, 6.6mm shaft, medium-crisp feel; a balanced attack racket forgiving enough for early-intermediate club players who want a power identity without flagship punishment. **AxForce 90 Dragon Max** is the brute — 311mm balance, 6.2mm stiff shaft, 72-hole frame; the BadmintonCN source review describes it as 'play 3A games on performance mode — your battery drains fast.' For high-level singles attackers only. **AxForce 90 Tiger Max** keeps the 314mm balance but pairs it with a softer shaft and crisper rebound — a connected-attack racket, easier to drive than the Dragon, better at quick continuous downward pressure than at single-shot smashes. **AxForce 90 New** sits between them — 313mm balance, 6.4mm shaft, 76-hole frame; the most refined member of the line, with better forgiveness and stability than either 90 variant. **AxForce 100** (the original 2023 model) was the line's first true flagship — 310mm balance, 6.0mm shaft (still one of the thinnest in any flagship racket), built for one-shot finishing. The Gen 2 (covered in a separate comparison article) widens the access path with a 6.2mm shaft, 76-hole frame, and added damping. If you have to pick one AxForce, the answer depends on your singles vs doubles split: AxForce 90 New for the rounded answer, AxForce 80 for the easy entry, AxForce 90 Dragon Max if you want the most extreme expression of the line.",
+        },
+        {
+          heading: "Halbertec / Thunder-Halberd — for control players",
+          body: "The Halbertec line is misread more often than any other Li-Ning family. The naming reads like a price ladder (8000 < 9000 < 9000 Power), but the rackets are different identities, not a strict upgrade path. **Halbertec 8000** is the bestseller — a control-leaning balance frame with a soft-medium 6.8mm shaft and a large fluid-box frame; about 400-500 USD cheaper than the equivalent Yonex 88S Pro 2024 and broadly competitive on smash and rear-court solidity once you remove the underbase grip. The first serious Halbertec to consider. **Halbertec 9000** has a thinner frame and a stiffer 6.6mm shaft. It is faster at the front court and more precise on placement, but the BadmintonCN community has spent years arguing about whether its smash 'loses force' (卸力) — the source pillar guide pushes back hard on this, framing it as a precision-rewarding speed-control hybrid that just isn't a brute. **Halbertec 9000 Power** (2025) takes the 9000 frame, makes the shaft stiffer still, and lands closer to a stiff speed-control frame than a heavier control upgrade; covered in a separate deep-dive. Pick the 8000 if you want the safest first Halbertec, the 9000 if you specifically prioritise front-court speed inside a control identity, the 9000 Power only if you already drive stiff frames and want the Li-Ning answer to the Auraspeed HS or NF1000Z.",
+        },
+        {
+          heading: "BladeX / Blade Shadow — for fast doubles speed",
+          body: "The BladeX line is Li-Ning's speed answer. **BladeX 800 Speed** (covered in its own article) reads as a stiff, tough-elastic speed frame that organises attack via precise placement rather than raw exit speed — closer to a Nanoflare 800 Pro identity than the 1000Z. **BladeX 900 New** is the line's current flagship: 302mm balance, 6.8mm hard-crisp shaft, full grommet groove, longer 214mm handle for double-handed doubles play. The source review describes the swing speed as 'as if there is lubricating oil in the air' — front-court exchanges and continuous net pressure are where this racket lives. Rear-court rear-heavy smashes are not its strong suit; the buyer who wins by killing every opening shot from the back court should not buy a BladeX. The buyer who wins by being first to every drive in mid-court doubles probably should.",
+        },
+        {
+          heading: "How to pick the right family before you pick the racket",
+          body: "Run this three-question test before you spend money. (1) When you lose points, do you usually lose them late in long rallies because you got tired, or early because you got out-paced at the net? Late losses suggest an AxForce or Halbertec attack-control frame; early losses suggest a BladeX speed frame. (2) Are you mostly a singles player or a doubles player? Singles favours AxForce or Halbertec; doubles favours BladeX or the lighter end of Halbertec (9000). (3) When you watch yourself rally, do you set up the finishing shot deliberately, or do you create it by being faster than the opponent? Deliberate setup = control identity (Halbertec); pace creation = attack identity (AxForce) or speed identity (BladeX). Most players overestimate their attack identity and under-buy on control — if you are unsure, start with Halbertec 8000 or AxForce 80 before committing to a flagship.",
+        },
+        {
+          heading: "Counterfeit risk and where to buy",
+          body: "Li-Ning is heavily counterfeited, especially the higher tiers (AxForce 100, AxForce 90 series, BladeX 900 New). The safest buying paths are: official Li-Ning brand stores (limited outside Asia), authorised regional distributors (Triple Point Sports in North America, Central Sports in some European markets, Li-Ning brand stores across China and SE Asia), and reputable specialty badminton shops with written authentication. Online marketplaces (Taobao, Shopee, eBay) carry both genuine and counterfeit stock — if the price is dramatically below the regional norm, treat it as suspect. Common counterfeit tells include misaligned grommets, wrong shaft diameter (verify with calipers if possible), incorrect cone cap font and material, and missing or wrong anti-counterfeit holograms.",
+        },
+        {
+          heading: "Pricing reality (2026)",
+          body: "Li-Ning's typical flagship racket retails at 1680-1880 RMB in mainland China (roughly 230-260 USD at 2026 exchange rates) but routinely sells for 1000-1300 RMB after launch period. Outside Asia, expect a 15-40% premium for the same SKU through authorised distributors. Used and second-hand markets are active in Asia, less so elsewhere — used Halbertec 8000 and AxForce 80 examples often sit at 60-70% of new street price for clean condition, falling lower for the BladeX line because of the higher injury risk on thin-frame speed rackets. Treat any flagship listing below 60% of new street price as a counterfeit risk worth verifying.",
+        },
+        {
+          heading: "The final decision",
+          body: "Buy a Li-Ning flagship if your current Yonex or Victor racket no longer surprises you, if you specifically want the M46/M50 shaft feel, or if your regional pricing makes Li-Ning genuinely cheaper than the equivalent Yonex tier. Start with Halbertec 8000 if you want one racket to handle everything, AxForce 80 if you want an easy attack racket, BladeX 900 New if you want a fast doubles speed weapon. Skip the line entirely if you cannot buy locally with authentication support — the counterfeit market is too active to risk online speculation. Each individual flagship is covered in its own deep-dive article; this guide exists to help you pick the family before you pick the model.",
+        },
+      ],
+      cta: "Run the finder with attack, control, or speed style and your current discipline split — Li-Ning models surface alongside Yonex and Victor based on fit, not brand preference.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
+          note:
+            "Family-level positioning, model identities, and buyer trade-offs are paraphrased from a long-form BadmintonCN pillar guide covering Li-Ning's three flagship lines; the buyer-first reading is original to IntoBadminton.",
+        },
+        {
+          sourceName: "Triple Point Sports",
+          title: "AxForce 90 New official listing",
+          section: "Product specifications",
+          checkedAt: "2026-05-17",
+          href: "https://triplepointsports.com/products/li-ning-axforce-90-new-badminton-racket-unleash-your-power",
+          quote: "AxForce 90 New",
+          note: "Authorised Li-Ning North America distributor confirms AxForce 90 New specifications and current availability used as reference for the AxForce section.",
+        },
+      ],
+    },
+    {
+      slug: "li-ning-axforce-100-gen-2-vs-gen-1",
+      updatedAt: "2026-05-17",
+      category: "comparisons",
+      title: "Li-Ning AxForce 100 Gen 2 vs Gen 1: the qilin gives way to the hundred beasts",
+      dek: "AxForce 100 Gen 1 (2023, qilin / champagne gold) was Li-Ning's first 6.0mm-shaft flagship attack racket. AxForce 100 Gen 2 (2025, hundred beasts / deep green) widens the access path — thicker shaft, more grommets, redesigned T-joint, added damping. A buyer's read on which one fits which player.",
+      story: {
+        intro:
+          "The trap with this comparison is the spec list. On paper, Gen 2 looks like Li-Ning softened the racket: thicker shaft (6.2mm vs 6.0mm), more grommets (76 vs 72), added damping material in the frame. The instinct is to read 'softer' as 'worse'. On court the story is more interesting. Gen 1 is the more violent, more extreme racket. Gen 2 is the more usable, more refined racket. Neither answer is universally better — it depends on whether you want a racket to define your ceiling or to widen your floor.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value: "Original Chinese review with both 3U and 4U Gen 2 samples strung with Li-Ning N68 attack line at matched tension, compared against Gen 1 samples on the same line.",
+              },
+              {
+                label: "Main spec changes",
+                value: "Gen 2: 6.2mm shaft (up from 6.0mm), 76 holes (up from 72), redesigned flat T-joint (vs Gen 1's curved), added high-polymer damping inside the frame layup, deep-green colourway.",
+              },
+              {
+                label: "Buyer lens",
+                value: "Both rackets are head-heavy attack frames. The difference is access threshold and how the smash is delivered, not whether the racket can attack at all.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What surprised the source review",
+            title: "76 holes did not make the racket feel softer",
+            body:
+              "The expected reading was that more grommets would make Gen 2 less crisp on contact than Gen 1's 72-hole design. The opposite happened. Gen 2 produces a sensation of brief shuttle dwell — like a small loaded launch — that lands as more controlled feedback, not less. The Gen 1's 'crisp then gone' contact stays sharper on contact, but Gen 2's release is more accurate on placement.",
+          },
+          {
+            kind: "comparison",
+            heading: "Gen 1 vs Gen 2 in one table",
+            columns: ["AxForce 100 Gen 2 (2025)", "AxForce 100 Gen 1 (2023)"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Refined attack with wider access",
+                  "Original extreme attack expression",
+                ],
+              },
+              {
+                label: "Smash quality",
+                values: [
+                  "Slightly less raw violence; more usable in continuous attack",
+                  "More raw violence per single shot; harder to repeat at intensity",
+                ],
+              },
+              {
+                label: "Sweet-spot transition",
+                values: [
+                  "More forgiving (76 holes + damping)",
+                  "Sharper but more punishing on miss",
+                ],
+              },
+              {
+                label: "Best buyer",
+                values: [
+                  "Singles attacker who wants refinement and longer match-stamina",
+                  "Singles attacker who prizes maximum per-shot ceiling",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "On the 3U vs 4U split inside Gen 2",
+            title: "3U is the singles weapon, 4U bridges singles and doubles",
+            body:
+              "Gen 2 is sold in both 3U and 4U. The 3U has more head weight, more raw smash, and rewards good force input — best for singles attackers. The 4U is more demanding on force production (the lighter chassis gives less leverage), but its lower swing weight makes it more viable for back-court doubles where rear-court continuous attack and front-court reset both matter. The 4U is not a softer Gen 2 — it asks more of your wrist and forearm. Pick 3U if your main format is singles; pick 4U if you split between singles and back-court doubles.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Read this as two different rackets pointed at slightly different players, not a strict upgrade.",
+            bullets: [
+              "Buy Gen 2 if: you play singles or singles + back-court doubles, you want a flagship attack frame with realistic match stamina, and you prefer placement-accurate smashes over maximum per-shot punishment.",
+              "Buy Gen 1 if: you play primarily singles, you can drive a 6.0mm extra-thin shaft cleanly, and you want the most raw attack expression Li-Ning has shipped in the AxForce line.",
+              "Skip both if you play fast level doubles primarily — the BladeX speed line or Halbertec 9000 Power will give better continuous attack value.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What actually changed under the paint",
+          body: "Li-Ning's official material list flags four changes from Gen 1 to Gen 2: (1) Shaft diameter increased from 6.0mm to 6.2mm, but still inside the 'very thin' category in the flagship attack market; the shaft uses Toray M46+T1100 carbon with a bionic profile. (2) Grommet count moved from 72 to 76, with the line-hole spacing redesigned around the new layup; the source review describes this as adding 'shuttle pocket' feel without losing pointing accuracy. (3) The T-joint changed from a curved transition on Gen 1 to a flatter, more direct transition on Gen 2, paired with a thinner shaft, which the source review credits with the meaningfully better anti-torsion on Gen 2. (4) High-polymer damping was added inside the frame layup, which is what produces the softer contact feel without losing crispness. These changes are small individually. Together they shift the racket's character.",
+        },
+        {
+          heading: "How the smash actually changes between generations",
+          body: "Gen 1's smash is the more emotionally satisfying shot. The 6.0mm shaft, 72-hole frame, and 310mm balance combine to produce a single decisive cracking sound and a near-vertical drop angle when contact is clean. The downside is that the recovery cost — both energy cost and timing cost for the next preparation — is high. Gen 2 trades a little of that single-shot ceiling for a meaningful improvement in continuous attack. The shuttle still leaves at high speed and lands near mid-court on a well-driven smash, but the post-contact reset is smoother and the racket re-prepares more quickly. In a 21-21 game where you need to attack three or four shuttles in a row, Gen 2 gives you more usable attacks per rally. In a single-shot finishing situation where you have already created the opening, Gen 1's per-shot ceiling is slightly higher.",
+        },
+        {
+          heading: "Control, mid-court, and net play",
+          body: "This is where Gen 2 quietly wins. The added damping and 76-hole layup produce a more legible feedback profile on slices, drops, and angle changes. Slice-drops in particular leave the strings with cleaner direction control than they did on Gen 1, which the source review attributes to the better anti-torsion at the new T-joint. Mid-court drives are slightly slower in raw exit speed because the racket is fractionally heavier in the swing, but the placement accuracy improvement compensates. Net play is meaningfully better on Gen 2 because the wider sweet spot makes mishit-recovery cheaper. Across all non-smash situations, Gen 2 is the more confident racket. The honest cost is that Gen 1 still feels more crisp on contact and produces a more distinctive auditory feedback — players who specifically enjoy that 'racket sound' may prefer the older frame even with the trade-offs.",
+        },
+        {
+          heading: "The conditioning question",
+          body: "Both rackets demand strong fundamentals. Gen 1 demands them more harshly. The source review specifically calls out the 4U Gen 2 as the more demanding spec for force production — the lighter chassis combined with the still-stiff shaft means players without a clean whip-style force input will feel the racket as 'inert' (僵硬) within long matches. The 3U Gen 2 is friendlier because the extra mass produces leverage that compensates for moderate force input. If you are an intermediate player whose force input is still developing, the 3U Gen 2 is the safer entry into the AxForce 100 family. If you are an advanced player whose force input is already clean, Gen 1 (or 4U Gen 2 for doubles) will give you the most expressive AxForce 100 experience.",
+        },
+        {
+          heading: "Cross-line context",
+          body: "Within Li-Ning's lineup, AxForce 100 Gen 2 sits between AxForce 90 New (more rounded, easier shaft, no longer purely attack-focused) and AxForce 90 Dragon Max (more extreme, harder shaft, no compromise toward forgiveness). Compared to Yonex flagships, Gen 2 is closer to the Astrox 88D Pro 2024 in attack identity but with a more distinctive shaft feel and a slightly higher demand profile. Compared to the 3rd-gen Astrox 99 Pro, Gen 2 is a more refined and forgiving attack option — the 99 Pro Gen 3 will produce more single-shot ceiling at much higher energy cost. The buyer's question is not 'which is the best racket' but 'which attack ceiling do I actually need at the energy cost I can sustain across a full match'.",
+        },
+        {
+          heading: "The final decision",
+          body: "Buy Gen 2 (3U or 4U) if you want a flagship attack racket that can sustain match-long intensity without burning you out and without needing perfectly clean contact every shot. Stay on Gen 1 (or buy it used) if you specifically value the single-shot smash ceiling, you like the crisper 72-hole contact, and your conditioning supports the more punishing shaft. Either way, AxForce 100 is a singles-leaning flagship — back-court doubles is feasible (especially 4U Gen 2) but level doubles or front-court doubles primarily should look at the BladeX line or the Halbertec 9000 Power instead.",
+        },
+      ],
+      cta: "Run the finder with smash-heavy style and singles or back-court doubles role to compare AxForce 100 Gen 2 against Gen 1, the 88D Pro 2024, and the 3rd-gen Astrox 99 Pro.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Generational spec changes and on-court differences are paraphrased from a BadmintonCN consumer-test review of the AxForce 100 Gen 2; buyer framing and cross-line context are original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+      updatedAt: "2026-05-17",
+      category: "comparisons",
+      title: "Yonex Nanoflare 700 Pro vs NF700, NF800 Pro, and 1000Z: the speed line decoded",
+      dek: "Four Nanoflare speed rackets, ranked by shaft hardness, swing speed, and ease of clear. Includes the 4U vs 5U 700 Pro split, the surprising 700 Pro vs 1000Z handling difference, and which of the four is genuinely the best doubles weapon for most players.",
+      story: {
+        intro:
+          "Yonex's Nanoflare speed line keeps growing, and buyers keep asking the same question: which one is actually right for me. This comparison treats the four most-asked-about variants — NF700 (the sugar-water entry), NF700 Pro 4U and 5U (the 2024 refresh), NF800 Pro (the doubles aggressor), and NF1000Z (the all-round speed king) — as four genuinely different rackets aimed at four different players, not a price ladder. The source review tested them on the same line and tension over multiple sessions with both the reviewer and his wife playing.",
+        blocks: [
+          {
+            kind: "facts",
+            heading: "Tested context",
+            items: [
+              {
+                label: "Source basis",
+                value: "Original BadmintonCN comparison review by chengzhen with same-line same-tension sessions across all four rackets, including 4U vs 5U NF700 Pro inside the family.",
+              },
+              {
+                label: "Sample weights (unstrung)",
+                value: "4U NF700 Pro 83.6g; 5U NF700 Pro 79.6g; 4U NF700 84.7g; 4U NF800 Pro 85.2g; 4U NF1000Z 84g.",
+              },
+              {
+                label: "Buyer lens",
+                value: "Speed rackets are not graded on smash ceiling. They are graded on how quickly you arrive at the next shuttle.",
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "What the rankings actually say",
+            title: "Four properties, four different orderings",
+            body:
+              "Shaft hardness (stiffer first): 1000Z > NF800 Pro > 5U NF700 Pro ≈ 4U NF700 Pro > NF700. Swing speed (faster first): 5U NF700 Pro > 4U NF700 Pro > NF800 Pro > 1000Z > NF700. Ease of clear (easier first): 4U NF700 Pro > NF700 > 5U NF700 Pro > 1000Z > NF800 Pro. Pointing accuracy (sharper first): 1000Z > NF800 Pro > 4U NF700 Pro > 5U NF700 Pro > NF700. The orderings deliberately do not match — each property has its own winner.",
+          },
+          {
+            kind: "comparison",
+            heading: "Identity in one line each",
+            columns: ["NF700", "NF700 Pro (4U)", "NF800 Pro", "NF1000Z"],
+            rows: [
+              {
+                label: "Identity",
+                values: [
+                  "Sugar-water entry speed",
+                  "Refined entry-friendly speed",
+                  "Pure doubles aggressor",
+                  "All-round speed king",
+                ],
+              },
+              {
+                label: "Best buyer",
+                values: [
+                  "Beginners + female club players",
+                  "Most amateur singles + doubles",
+                  "Advanced level-doubles attackers",
+                  "All-round players who want one racket",
+                ],
+              },
+              {
+                label: "Main caution",
+                values: [
+                  "Smash quality is unimpressive",
+                  "Pricing premium over NF700",
+                  "Higher entry threshold",
+                  "Smaller sweet spot than NF700/Pro",
+                ],
+              },
+            ],
+          },
+          {
+            kind: "callout",
+            label: "The 4U vs 5U question",
+            title: "Lighter is not always faster — and not always better",
+            body:
+              "5U NF700 Pro is faster in raw swing speed and more reactive in mid-court doubles, but the source review found the 4U version produces more solid contact, easier clears, and better leverage on counter-attack defence. For most amateur players the 4U is the correct choice. The 5U is right specifically for front-court doubles specialists and female club players who want the maximum swing-speed edge in the first three shots.",
+          },
+          {
+            kind: "verdict",
+            heading: "Final buying call",
+            body:
+              "Choose by where in the rally you score, not by which is most expensive.",
+            bullets: [
+              "Buy NF700 Pro (4U) if you are most amateur players — best balance of ease, speed, and rear-court usability across the family.",
+              "Buy NF1000Z if you want one all-round speed racket — most balanced six-sided answer in the line.",
+              "Buy NF800 Pro if you specifically play fast level doubles and want the highest pressure-attack ceiling.",
+              "Buy NF700 (non-Pro) if you are a beginner, a tournament-light club player, or specifically want the softest sugar-water entry.",
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "NF700: the sugar-water entry",
+          body: "The original Nanoflare 700 is a head-light, fast-swinging, soft-shafted speed racket aimed at the widest possible audience — beginners, female club players, and anyone whose primary win condition is being faster than their opponent at the net rather than hitting harder from the back court. The source review describes it as the racket the reviewer's wife eventually switched to after years on a Nanospeed 9000s. NF700's strengths are obvious: easy to drive, forgiving sweet spot, lightweight head, harmless on the shoulder. Its weaknesses are equally clear: the shaft is too soft for advanced players to feel decisive feedback, the smash quality is mild even with good force input, and the pointing accuracy on placement-critical shots is the weakest of the four rackets here. Buy NF700 if you fit the profile. Skip if you want the racket to participate in your attack.",
+        },
+        {
+          heading: "NF700 Pro: the refined entry, in two weights",
+          body: "NF700 Pro (released as part of the 2024 refresh) keeps the NF700 identity but adds the reinforced Sonic Flare system shared with the 800 Pro and 1000Z, an SF filter layer that removes unwanted vibration, and a marginally stiffer shaft. The result is the most refined entry-level speed racket Yonex has shipped in years. The shaft hardness change versus the base NF700 is small but noticeable — the source review describes it as 'slightly stiffer, but not enough to change who the racket is for'. What does change meaningfully is contact feedback clarity (much improved), defence reach on counter-attacks (cleaner reset on lifts), and rear-court attack confidence. NF700 Pro can be driven into a smash that lands near mid-court when the shuttle is loose; NF700 cannot. The 4U vs 5U choice is real — see the dedicated section below.",
+        },
+        {
+          heading: "NF800 Pro: the doubles aggressor",
+          body: "NF800 Pro is the line's pure aggressor. Stiffer shaft than the 700 Pro by a clear tier, denser 78-hole stringbed (vs 76 on the 700 Pro), and copper foil at the frame base that produces an exceptionally crisp 'shuttle leaves instantly' contact feel. In fast men's doubles where the first-three-shot exchange decides the rally, NF800 Pro wins more rallies than the 1000Z because the shuttle exit speed is faster and the opponent's reaction time is shorter. The trade-off is that NF800 Pro is less forgiving on placement-critical singles rallies and on the long net exchanges where the 700 Pro's softer feel actually gives more control. The source reviewer's win rate with NF800 Pro in doubles exceeded his win rate with the 1000Z in the same setting. For mixed doubles or singles, he picked the 700 Pro instead because the softer touch was more useful than the raw exit speed.",
+        },
+        {
+          heading: "NF1000Z: the six-sided all-rounder",
+          body: "NF1000Z remains the most balanced speed racket in the Nanoflare line. The widened frame reduces air resistance while increasing pointing stability; the DR-carbon layer produces a slight shuttle-pocket sensation that the rest of the line lacks; the 4U weight class with the 6.6mm hard shaft sits in a sweet spot for ambitious amateurs. The source reviewer's verdict after more than a year of use: 'the most all-round speed racket I have used'. Where the 1000Z loses is to specialists — NF800 Pro is faster off the strings in front-court exchanges, the Auraspeed 100X SE produces a slightly cleaner attack, and the 700 Pro is meaningfully easier on the body. But for a player who wants one speed racket that handles every situation competently, the 1000Z is still the right answer.",
+        },
+        {
+          heading: "The 4U vs 5U NF700 Pro split, in detail",
+          body: "Same model, two different weight classes, genuinely different rackets. The source reviewer tested the 4U strung with AB at 26-27 lb and the 5U strung with EXBOLT 80 at the same tension. Headline finding: the 5U has noticeably faster swing speed and better front-court reactivity, but the 4U has better leverage on defence (counter-attack lifts reach the back court more easily), better stability on rear-court attack, and more solid contact feedback across the board. The 5U's advantage in pure swing speed does not translate to better rear-court attack — the lighter weight loses too much leverage for the gain to matter. The 5U is the right choice specifically for front-court doubles specialists who win by being first to every drive, and for female club players who want the maximum swing-speed edge. For everyone else, the 4U is correct.",
+        },
+        {
+          heading: "NF700 Pro vs NF800 Pro: where the family really splits",
+          body: "Both come from the 2024 refresh, both use the Sonic Flare reinforcement, both have SF filter layers. The difference is the entire identity. NF700 Pro is built around long mid-court and rear-court rallies where you want control and reset more than instant shuttle exit. NF800 Pro is built around short attacking exchanges where the first contact decides the point. For singles and mixed doubles, NF700 Pro wins more rallies because softness and control are more useful when rallies are long. For men's doubles, NF800 Pro wins more rallies because raw shuttle exit speed compresses the opponent's reaction time. The source reviewer's wife (a developing club player) preferred NF700 Pro across the board; the reviewer himself (a stronger player) preferred NF800 Pro for doubles and NF700 Pro for singles and mixed. The split is honest — it reflects how the rackets actually work, not marketing differentiation.",
+        },
+        {
+          heading: "NF700 Pro vs NF1000Z: the surprising winner",
+          body: "On paper, NF1000Z is the more flagship racket — stiffer shaft, more pointing accuracy, more direct force transmission, faster mid-court drives. In practice, the 700 Pro is meaningfully easier to use across long matches. The source review measures the gap at 'two shaft hardness tiers' — significant enough that players who like the 700 Pro will dislike the 1000Z's stiffer feel, and vice versa. For high-volume amateurs (3+ sessions per week), the 700 Pro is the friendlier long-term choice because the softer shaft and easier clear reduce shoulder fatigue across the season. For tournament-focused players who want every per-shot advantage, the 1000Z is the more decisive racket. Both are correct picks for different goals.",
+        },
+        {
+          heading: "The final decision",
+          body: "Pick NF700 (non-Pro) only if you are a beginner, a recreational player, or specifically want the softest entry — NF700 Pro is a meaningful upgrade for not much more money. Pick NF700 Pro 4U if you are most amateur players — best across-the-board balance for singles, mixed doubles, and recreational doubles. Pick NF700 Pro 5U specifically if you are a front-court doubles specialist or want maximum swing speed. Pick NF800 Pro if your main format is fast men's doubles and you want the highest pressure-attack ceiling. Pick NF1000Z if you want one speed racket to handle every situation and you can drive a stiffer shaft cleanly. All four rackets are correct for their intended buyers; none is universally best.",
+        },
+      ],
+      cta: "Run the finder with speed style and your specific discipline (singles, mixed, level doubles) — the scoring weighs swing speed and pointing accuracy differently for each.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-17",
+          href: "https://intobadminton.com/source-policy/",
+          quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+          note: "Hardness, swing-speed, clear-ease, and pointing-accuracy rankings are paraphrased from a long-form BadmintonCN four-way comparison review; buyer-segment framing and final picks are original to IntoBadminton.",
+        },
+        {
+          sourceName: "Yonex",
+          title: "NANOFLARE 700 PRO and series listing",
+          section: "Current Nanoflare line-up",
+          checkedAt: "2026-05-17",
+          href: "https://www.yonex.com/nanoflare",
+          quote: "NANOFLARE",
+          note: "Yonex's current Nanoflare listing confirms the NF700 Pro, NF800 Pro, and NF1000Z as the current production speed-line flagships referenced in this comparison.",
         },
       ],
     },
