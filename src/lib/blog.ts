@@ -81,7 +81,13 @@ export type BlogSlug =
   | "bonny-snake-breath-second-tier-flagship-review"
   | "rsl-supreme-shuttle-review"
   | "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review"
-  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro";
+  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro"
+  | "li-ning-lt66-power-string-and-gp100-pro-grip-review"
+  | "bonny-zhanguidao-8888ax-ultra-review"
+  | "bonny-carbon-armour-shoes-review"
+  | "bonny-wuque-xuanwu-review"
+  | "kumpoo-js-67-string-review"
+  | "victor-sonic-boom-pro-budget-attack-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -164,6 +170,12 @@ export const blogSlugs: BlogSlug[] = [
   "rsl-supreme-shuttle-review",
   "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
   "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+  "li-ning-lt66-power-string-and-gp100-pro-grip-review",
+  "bonny-zhanguidao-8888ax-ultra-review",
+  "bonny-carbon-armour-shoes-review",
+  "bonny-wuque-xuanwu-review",
+  "kumpoo-js-67-string-review",
+  "victor-sonic-boom-pro-budget-attack-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";

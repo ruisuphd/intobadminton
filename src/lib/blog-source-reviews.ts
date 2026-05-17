@@ -2634,4 +2634,658 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "li-ning-lt66-power-string-and-gp100-pro-grip-review",
+    title: "Li-Ning LT66 Power string + GP100 Pro grip review: the new flagship-tier domestic line and an undervalued grip",
+    dek: "Li-Ning's LT66 Power launches as the brand's top-tier domestic string, paired with the GP100 Pro grip as a sleeper-hit accessory. A combined first-impression review of the two products that arrived with the BladeX 800 Speed flagship.",
+    verdict:
+      "LT66 Power is a credible flagship-tier domestic high-elastic string with strong rebound and clear feedback; GP100 Pro is a sleeper-tier replacement grip worth specifying as your default.",
+    bestFor: [
+      "Intermediate-to-advanced players upgrading from L66 or L67",
+      "Players seeking the M46X-shaft-matching string Li-Ning designed alongside the BladeX 800 Speed",
+      "Buyers wanting a higher-tackiness replacement grip at sensible pricing",
+    ],
+    avoidIf: [
+      "You need maximum durability — LT66 Power is performance-tier, not value-tier durability",
+      "You prefer softer, more forgiving string feedback (BG65, L66 are friendlier picks)",
+      "Your grip preference is towel-style — GP100 Pro is synthetic-overgrip-style",
+    ],
+    setupNotes: [
+      "Source-tested LT66 Power on the BladeX 800 Speed flagship at 27/29 lb.",
+      "GP100 Pro tested as the underbase grip plus single overgrip combination.",
+    ],
+    sourceHook:
+      "The source review is unusual because it tests the string and grip as a launched-together pair — Li-Ning PR shipped both alongside the new BladeX 800 Speed, which means the LT66 Power was tuned to complement that racket's M46X shaft character.",
+    facts: [
+      {
+        label: "LT66 Power official identity",
+        value: "Li-Ning's flagship-tier domestic high-elastic string, launched alongside LT61 Power as the top of the LT-series above L66 / L67.",
+      },
+      {
+        label: "GP100 Pro identity",
+        value:
+          "Pro variant of the GP100 grip family — higher tackiness, slightly thicker than the base GP100, designed for replacement-grip use.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat LT66 Power as the L-series flagship — performance-first, with reduced durability vs L66 in exchange for better feedback and rebound.",
+      },
+    ],
+    calloutTitle: "The string was tuned for the racket — and it shows",
+    calloutBody:
+      "LT66 Power launched alongside the BladeX 800 Speed flagship, which uses M46X carbon shaft material. Li-Ning's string development clearly tuned the string's rebound profile to complement the BladeX 800 Speed's hard-elastic character. On a different shaft type, LT66 Power still performs, but the launch pairing produces the cleanest character match.",
+    comparison: {
+      heading: "Li-Ning string line — flagship vs value tiers",
+      columns: ["LT66 Power (2025)", "L66 (2024)", "L69 (2024)"],
+      rows: [
+        {
+          label: "Tier",
+          values: [
+            "Flagship-tier domestic",
+            "Value-tier control",
+            "Value-tier rebound",
+          ],
+        },
+        {
+          label: "Feel",
+          values: [
+            "Sharp rebound, clear feedback",
+            "Firm, controlled, durable",
+            "Loud rebound, easy borrow",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Performance-tier intermediate-to-advanced",
+            "Control-leaning intermediate",
+            "Easy-power-loving intermediate",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why LT66 Power matters for Li-Ning's string roadmap",
+        body: "Li-Ning's string lineup has traditionally split into three tiers: imported No.5 series (premium tier, expensive), N-series (mid-tier, balanced), and L-series (value tier, domestic production). LT66 Power introduces a fourth: a flagship-tier domestic string designed to match imported tier performance at meaningfully lower cost. The 'Power' suffix signals the rebound-focused tuning. The string launched alongside the new BladeX 800 Speed flagship racket, which is meaningful — Li-Ning developed the string and the racket as a paired system, with the string's rebound profile complementing the BladeX 800 Speed's M46X carbon shaft. For Chinese players who have been waiting for a credible domestic alternative to BG80 or EXBOLT, LT66 Power is finally that string.",
+      },
+      {
+        heading: "On-court rebound and feedback character",
+        body: "The source review tested LT66 Power at 27 lb on the BladeX 800 Speed. The contact feel reads as 'sharp, clear, and immediate' — closer to BG80's character than to BG65's. Clears require slightly less active force than L66 at the same tension because the string returns more rebound per unit of input. Net taps and brushed shots produce clean directional feedback with minimal dwell. Drives and flat exchanges benefit from the string's quick rebound, with the shuttle leaving the strings at high exit speed. The string's character is closer to a Pro-tier flagship than to the value-tier L66 — buyers should expect performance-tier feel and accept the performance-tier durability trade-off.",
+      },
+      {
+        heading: "Durability — the honest performance-tier trade-off",
+        body: "Performance-tier strings universally trade durability for feel. LT66 Power follows the pattern: tension drop after the first few hours is noticeable, and the string is more likely to show wear at the cross-points than L66 would under the same use. For players who restring every month or two, this is normal flagship-tier behaviour and the rebound benefit justifies the trade-off. For players who restring only when the string breaks, LT66 Power is the wrong choice — L66 or L67 will hold tension and survive longer for the same per-string cost. The source review honestly flags this character: LT66 Power is a string for players who restring on schedule, not players who restring on failure.",
+      },
+      {
+        heading: "GP100 Pro — the grip worth specifying",
+        body: "The GP100 Pro is the high-tackiness Pro variant of Li-Ning's GP100 replacement grip family. The source review's headline finding: it is one of the few replacement grips that feels noticeably better than overgrip-and-underbase combinations, with strong moisture handling and high tackiness that survives long sessions. Texture sits between a synthetic overgrip and a perforated towel — drier than towel, tackier than overgrip. The Pro variant is slightly thicker than the base GP100, which works with G6 handles for players who want effective G5 grip size without changing rackets. Pricing is sensible for the tier. The recommendation: try one as your underbase plus single overgrip, and decide whether to switch your default grip stack.",
+      },
+      {
+        heading: "Pairing recommendations",
+        body: "LT66 Power performs best on hard-elastic shafts (BladeX 800 Speed, Halbertec 9000 Power, Astrox 88D Pro 2024). On softer shafts (NF700, AxForce 80) the string's rebound character partially overrides the racket's natural feel — players seeking a softer hit should stay with L66 or N61. GP100 Pro is racket-agnostic but works particularly well on G6 handles needing slight thickening. The string and grip together are not a 'must-pair' set — they were launched together because the string release timed with the BladeX 800 Speed launch, but each works independently of the other. Buy LT66 Power for the string properties; buy GP100 Pro for the grip properties.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy LT66 Power if you want a flagship-tier domestic string for performance-tier rebound and clarity, you restring on schedule rather than on failure, and you play on a hard-elastic shaft. Stay on L66 or N-series if durability matters more than feel. Buy GP100 Pro as a default replacement grip if you want one of the better synthetic-style grips on the market at sensible pricing — and especially if you currently fit G6 handles and want effective G5 thickness. The pair represents Li-Ning's continued upmarket move in the accessories category, with both products competitive against equivalent imported tiers.",
+      },
+    ],
+    cta: "Run the finder with your racket and use the string-pairing notes — LT66 Power and GP100 Pro surface as flagship-tier options alongside L66, BG80, and EXBOLT family options.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning Badminton",
+        title: "Li-Ning string family — current line-up",
+        section: "LT-series and GP100 grip line",
+        checkedAt: "2026-05-17",
+        href: "https://www.lining.com/",
+        quote: "LT66 Power",
+        note: "Li-Ning brand catalogue confirms LT66 Power as part of the LT-series flagship-tier domestic string range, and GP100 Pro as part of the GP100 replacement grip family.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-zhanguidao-8888ax-ultra-review",
+    title: "Bonny ZhanGuiDao 8888AX Ultra (紫炎) review: the boron-fibre flagship that finally lives up to the line's reputation",
+    dek: "Bonny's ZhanGuiDao 8888AX Ultra closes the demon-slayer-sword series with the lineage's first boron-fibre shaft. The source review's verdict: a flagship-tier attack racket that pushes Bonny into genuine fourth-brand contention.",
+    verdict:
+      "A flagship-tier attack racket from Bonny's ZhanGuiDao line that combines boron-fibre shaft stiffness with crisp rebound — best for advanced attack players willing to test a second-tier brand at flagship pricing.",
+    bestFor: [
+      "Advanced rear-court attackers",
+      "Boron-fibre shaft enthusiasts who liked the BladeX 900 or J20 Steel Wing feel",
+      "Bonny brand loyalists ready to step into the line's flagship tier",
+    ],
+    avoidIf: [
+      "You need maximum sweet-spot forgiveness",
+      "Your contact discipline still misses the sweet spot often",
+      "Bonny distribution is unavailable in your region",
+    ],
+    setupNotes: [
+      "Source-tested 4U/G4 sample at 28 lb on VICTOR VBS-66N string, total weight 92.23g, balance 290mm (film + underbase not removed).",
+      "Compared against Bonny's older 1982 B149 family for swing-weight context.",
+    ],
+    sourceHook:
+      "The source review is useful because the reviewer is a serial Bonny tester who has played multiple generations of the line — the Ultra rates as 'the cleanest expression of the ZhanGuiDao identity to date.'",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "4U/G4, 76-hole narrow flat-head frame, 6.8mm shaft with boron fibre, 212mm shaft length, max 30 lb tension.",
+      },
+      {
+        label: "Material change vs earlier ZhanGuiDao",
+        value:
+          "First ZhanGuiDao to use boron-fibre shaft reinforcement, paired with high-rigidity carbon fibre frame using double-form construction.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a flagship-tier attack racket with sharper rebound than earlier ZhanGuiDao models and a narrower sweet spot than typical Bonny frames.",
+      },
+    ],
+    calloutTitle: "Boron fibre changes the line's character — meaningfully",
+    calloutBody:
+      "The source review is candid: 'Same rebound character as the older ZhanGuiDao 3, but harder and more direct.' Boron-fibre shaft reinforcement is rare in badminton (Bonny J20 Steel Wing being the other notable example), and the Ultra demonstrates why it matters — stiffer compressive resistance produces sharper rebound without losing rebound elasticity.",
+    comparison: {
+      heading: "ZhanGuiDao 8888AX Ultra vs lineage",
+      columns: ["8888AX Ultra (2025)", "ZhanGuiDao 3", "ZhanGuiDao 1"],
+      rows: [
+        {
+          label: "Shaft",
+          values: [
+            "Boron-fibre reinforced",
+            "Standard high-modulus carbon",
+            "Standard carbon",
+          ],
+        },
+        {
+          label: "Feedback",
+          values: [
+            "Sharper, more direct",
+            "Crisp rebound, slightly softer",
+            "Original line character",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Advanced attack players wanting flagship feel",
+            "Mid-tier attack players",
+            "Heritage Bonny ZhanGuiDao players",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why boron fibre matters in a badminton shaft",
+        body: "Boron fibre is unusual in badminton equipment because it is expensive and difficult to process. Its key property — compressive strength meaningfully higher than its tensile strength — is the opposite of standard carbon fibre. In a badminton shaft, this means the shaft resists compression on the back-swing more aggressively than carbon-only shafts, then rebounds faster on the forward swing. The on-court result is a shaft that feels stiffer at preparation but quicker to release on contact. The 8888AX Ultra is the second flagship Bonny racket to use boron-fibre shaft reinforcement after the J20 Steel Wing — and the source review's direct claim is that the Ultra delivers the cleaner expression of the technology, with less rebound stiffness than the J20 but more direct feedback than standard carbon shafts.",
+      },
+      {
+        heading: "On-court behaviour — sharp attack with surprising forgiveness",
+        body: "The source review's most useful framing: 'A harder ZhanGuiDao 3.' For players familiar with the line, this is precise — the Ultra preserves the lineage's identity but raises the feedback sharpness one tier. Flat exchanges feel quicker because the shaft rebound is faster; smashes feel more decisive because the shuttle leaves the strings with less dwell. Pointing accuracy is exceptional — the source review specifically calls out flat clears as 'often unintentionally landing in the deep corner because the rebound is sharper than expected.' Sweet spot tolerance is surprisingly good despite the small flat-head frame, which the source attributes to Li-Ning-style polymer fill in the frame interior plus the boron-fibre shaft's anti-torsion contribution.",
+      },
+      {
+        heading: "Smash quality and the noise the racket makes",
+        body: "The source review explicitly calls out the smash audio: 'The sound of clean contact on the Ultra is identical to the ZhanGuiDao 3 — explosive and confidence-building.' Beyond the auditory feedback, the smash's directional control and exit speed match flagship-tier attack rackets. Repeat-smash continuity is the slight differentiator from the Ultra's competitors: the boron-fibre shaft's fast rebound recovery means the racket re-prepares meaningfully faster than the older ZhanGuiDao 3 or the heavier Bonny attack frames. For continuous rear-court attack, this matters — the player can sustain higher attack intensity across longer rallies.",
+      },
+      {
+        heading: "Defence and mid-court — where the racket asks more",
+        body: "Defence is the racket's honest weak area. The source review notes that the harder rebound and slightly higher swing weight make passive defence (last-second lifts, backhand reaches from compromised positions) more demanding than softer-shafted alternatives. The shaft's quick recovery helps with active defence (counter-attacks, lifts from neutral positions), but the racket gives less help when the player is genuinely out of position. Mid-court flat exchanges are confident — the boron-fibre shaft's stiffness produces faster shuttle exit on drives — but the racket asks for clean preparation. Players who frequently arrive late at the shuttle should consider a softer-shafted frame.",
+      },
+      {
+        heading: "Build quality and the brand-trust question",
+        body: "Source review's Ultra build quality reads as flagship-tier — clean dual-tone purple/black paint with hidden detail (asymmetric face colours, contrasting silver and gold accents that reveal under angled light), precise grommet alignment, smooth shaft finish. The visual identity is restrained for a Demon Slayer tie-in — no garish anime artwork, just thematic colourway and lineage badging. The honest qualifier on the buying decision is brand ecosystem (the same caveat that applies to all Bonny flagships): distribution outside Asia is uneven, warranty access varies, resale value is lower than Yonex/Victor/Li-Ning. For players inside Bonny distribution markets, this is a genuine fourth-brand flagship contender.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the ZhanGuiDao 8888AX Ultra if you want a flagship-tier attack racket from a credible fourth brand, you specifically want to experience boron-fibre shaft character, and Bonny distribution serves your region. Stay with first-tier brand flagships (Astrox 99 Pro Gen 3, AxForce 100 Gen 2, TK-F Ultra) if brand ecosystem matters to you. Buy the Bonny Snake Breath instead if you want Bonny's speed-attack identity rather than the ZhanGuiDao's pure attack identity. The Ultra is the clearest evidence yet that Bonny's flagship engineering has reached genuine top-tier quality — the brand premium gap is no longer reliably linked to chassis quality.",
+      },
+    ],
+    cta: "Run the finder with smash-heavy or rear-court attack style — Bonny ZhanGuiDao 8888AX Ultra surfaces alongside Astrox 99 Pro Gen 3, AxForce 100 Gen 2, and the TK-F Ultra as flagship-tier attack options.",
+    factChecks: [
+      {
+        sourceName: "IntoBadminton source-rights registry",
+        title: "Source rights registry",
+        section: "Platform posture",
+        checkedAt: "2026-05-17",
+        href: "https://intobadminton.com/source-policy/",
+        quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+        note: "Spec data, material identification, and on-court behaviour observations are paraphrased from a TiGe XLab BadmintonCN review of the ZhanGuiDao 8888AX Ultra; buyer-framing and cross-line context are original to IntoBadminton.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-carbon-armour-shoes-review",
+    title: "Bonny Carbon Armour shoes review: support and stability in a soft-colour shell",
+    dek: "Bonny's Carbon Armour shoes wrap the brand's signature TPU+carbon antitorsion under a clean white-and-pink upper. Support, stability, and rebound all hit higher than the colour palette suggests — a serious court shoe for players who want function with subtle aesthetic.",
+    verdict:
+      "An all-court badminton shoe with strong arch support and decisive lateral lockdown — best for players who want function without aggressive visual styling.",
+    bestFor: [
+      "All-rounder players who value arch support",
+      "Heavier players needing stable jump-landing cushioning",
+      "Buyers who want subtle colour palette without sacrificing performance",
+    ],
+    avoidIf: [
+      "You have wide feet (Bonny's last runs narrow at the heel)",
+      "You need maximum lightweight feel for pure-speed play",
+      "Yonex Power Cushion compound is what your knees prefer",
+    ],
+    setupNotes: [
+      "White-and-pink with mint green accents; toe steel frame and lateral wolf-claw TPU.",
+      "Tested across doubles full-court play, including starts, side-to-side movement, jump landings, and continuous rallies.",
+    ],
+    sourceHook:
+      "The source review is useful because it treats Carbon Armour as a complete platform — colour, wrap, support, traction, durability — rather than focusing on one property at the expense of the rest.",
+    facts: [
+      {
+        label: "Upper material",
+        value: "Microfibre leather + breathable mesh, with toe steel frame for impact protection and lateral wolf-claw TPU for side stability.",
+      },
+      {
+        label: "Midsole + plate",
+        value:
+          "Responsive EVA midsole with arch-zone carbon plate and wolf-fang TPU antitorsion plate combination.",
+      },
+      {
+        label: "Outsole",
+        value: "Specialty rubber compound with multidirectional grip — solid traction on indoor court surfaces.",
+      },
+    ],
+    calloutTitle: "Don't let the soft palette mislead you about the chassis",
+    calloutBody:
+      "Carbon Armour's pink-and-mint accents read soft from across the court. The chassis underneath is genuinely robust — full toe-steel reinforcement, dual antitorsion plates, dense rubber outsole. The visual restraint is the feature, not the trade-off.",
+    comparison: {
+      heading: "Bonny Carbon Armour vs popular alternatives",
+      columns: ["Bonny Carbon Armour", "Yonex 65 Z4", "Bonny WuQue 1982 Y3K"],
+      rows: [
+        {
+          label: "Identity",
+          values: [
+            "All-round support with subtle palette",
+            "All-rounder with soft cushion",
+            "Speed + all-rounder with bold styling",
+          ],
+        },
+        {
+          label: "Strength",
+          values: [
+            "Stability + arch support",
+            "Wrap comfort + ride quality",
+            "Lateral lockdown + traction",
+          ],
+        },
+        {
+          label: "Main caution",
+          values: [
+            "Narrow heel — not for wide feet",
+            "Less arch support",
+            "Bold colourway may not suit all",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why a 'soft palette' shoe deserves a serious review",
+        body: "Performance court shoes are typically marketed in bold colours — Yonex's Z4 in dramatic red, Victor's flagships in metallic blue, Li-Ning's in champagne gold. Bonny's Carbon Armour goes the other direction: clean white with subtle pink and mint accents. The risk with soft-palette performance shoes is that brand marketing implies the chassis matches the visual restraint — softer, lighter, less performance-tier. Carbon Armour explicitly inverts that: full toe-steel reinforcement, dual antitorsion plates, and dense EVA cushioning are all present underneath the gentle aesthetic. For players who specifically want a court shoe that does not look aggressive, Carbon Armour is one of the few credible options in 2026's market.",
+      },
+      {
+        heading: "On-foot feel and the heel-fit caveat",
+        body: "First impression is structured-and-stable rather than soft-and-cushioned. The upper construction — microfibre leather plus breathable mesh — produces a snug wrap without excessive give. The heel-fit honesty from the source review: the heel runs slightly narrow, which is excellent for normal-foot players but a problem for wide-foot players. Wide-foot buyers should specifically size up half a size, or consider Mizuno or Yonex Power Cushion 65 Wide alternatives. Normal-foot players will find the wrap on the snug-and-precise end of the comfort spectrum. The toe-steel reinforcement at the front of the shoe adds visible structure without compromising flexibility for forward lunges.",
+      },
+      {
+        heading: "Court traction and lateral movement",
+        body: "Carbon Armour's specialty rubber compound on the outsole produces strong multidirectional grip. Quick sprints, side-to-side movement, and pivot stops all hold without skidding on indoor court surfaces. The lateral wolf-claw TPU on the side of the shoe is the key wear element — it locks the foot in place during hard direction changes and resists ankle-roll on aggressive lunges. The source review specifically calls out the dual antitorsion plates (carbon at the arch, wolf-fang TPU at the midfoot) as 'meaningfully more secure than single-plate alternatives' during continuous mid-court movement.",
+      },
+      {
+        heading: "Cushioning, jump landings, and long-session comfort",
+        body: "EVA midsole cushioning is responsive rather than soft — closer to Mizuno's elastic feedback than to Yonex's softer Power Cushion. Jump landings are well-controlled without harsh impact; long-session knee and ankle fatigue (after 1-2 hours of intensive doubles) is noticeably lower than comparable lower-cushion shoes. The honest qualifier: players who specifically need maximum cushioning for very heavy landings or pre-existing knee issues will find Yonex Power Cushion compound more forgiving. Carbon Armour offers strong-but-not-maximum cushioning paired with strong support — the trade-off pays off in long-term ankle and arch protection.",
+      },
+      {
+        heading: "Build quality, durability, and the wide-foot caveat",
+        body: "Build quality reads as flagship-tier — clean stitching, precise paint placement, robust grommet attachment, intact outsole compound after sustained play. After multiple sessions the outsole pattern shows minimal wear, the upper holds shape, and the lateral support remains intact. The wide-foot caveat is the most important purchase consideration: Bonny's last runs medium-to-narrow at the heel, which means wide-foot players (3E and wider) should specifically size up or look at Mizuno or Yonex's wider lasts. Players with normal-width feet will find the fit excellent and the support genuinely flagship-grade.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy Carbon Armour if you want a court shoe with strong arch support and decisive lateral lockdown in a soft visual palette, you have normal-width feet that fit Bonny's last, and you value function-with-subtle-aesthetic over aggressive styling. Skip it if you have wide feet (look at Mizuno or Yonex Power Cushion Wide variants instead), if you need maximum lightweight feel (the Bonny WuQue 1982 Y3K is lighter for similar all-court use), or if Yonex Power Cushion's softer compound is what your knees prefer. Carbon Armour is a credible mid-tier brand expansion in the badminton shoe market — the chassis is genuine flagship quality, and the colour palette deliberately appeals to the player segment that wants serious shoes without obvious branding.",
+      },
+    ],
+    cta: "Run the shoe finder with your foot width preference and primary discipline — Carbon Armour, Bonny WuQue Y3K, Yonex 65 Z4, and Mizuno Wave Lightning all surface based on fit, not colour preference.",
+    factChecks: [
+      {
+        sourceName: "IntoBadminton source-rights registry",
+        title: "Source rights registry",
+        section: "Platform posture",
+        checkedAt: "2026-05-17",
+        href: "https://intobadminton.com/source-policy/",
+        quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+        note: "Material spec list, fit observations, and on-court behaviour notes are paraphrased from a BadmintonCN reviewer's test of the Carbon Armour; buyer-framing and the wide-foot caveat context are original to IntoBadminton.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-wuque-xuanwu-review",
+    title: "Bonny WuQue Xuanwu review: the boron-fibre Mythical Beast that earns its place",
+    dek: "Bonny's WuQue Xuanwu (玄武 — 'Black Tortoise', one of the four Mythical Beasts) is the line's only racket with boron-fibre shaft reinforcement. The source review's verdict: harder and more refined than ZhanGuiDao 3, with a uniquely satisfying speed-attack character.",
+    verdict:
+      "A harder, more refined version of the ZhanGuiDao 3 — best for advanced players who want boron-fibre shaft character with strong rear-court attack and confident flat exchanges.",
+    bestFor: [
+      "Advanced players who already drive hard-shaft attack rackets cleanly",
+      "Players seeking boron-fibre shaft feel inside the WuQue family",
+      "Bonny fans wanting the most refined Mythical Beast lineage racket",
+    ],
+    avoidIf: [
+      "You preferred ZhanGuiDao 3's slightly softer shaft feel",
+      "Your contact discipline misses the sweet spot often",
+      "You play primarily fast-doubles where speed identity matters more than attack identity",
+    ],
+    setupNotes: [
+      "Source-tested 4U/G5 sample at 25-27 lb on Yonex KT66F string, total weight 97.92g, balance 298mm.",
+      "76-hole stringbed with 9-3 o'clock grommet grooves, 220mm extended shaft, max 30 lb tension.",
+    ],
+    sourceHook:
+      "The source review is from L.C. (the most experienced Bonny reviewer on BadmintonCN), who calls Xuanwu the 'King's Move' (王炸) of the Mythical Beast series — the racket that finally earned the boron-fibre shaft technology.",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "4U/G5, 97.92g total weight with underbase + grip, 298mm balance, 220mm shaft (extended), 76-hole stringbed with 9-3 o'clock grooves, max 30 lb tension.",
+      },
+      {
+        label: "Material change vs ZhanGuiDao 3",
+        value:
+          "First WuQue Mythical Beast racket to use boron-fibre shaft reinforcement, completing the four-beast set (the other three use standard carbon-fibre shafts).",
+      },
+      {
+        label: "Buyer lens",
+        value: "Expect a harder, more refined ZhanGuiDao 3 with stronger feedback clarity and slightly faster shuttle exit.",
+      },
+    ],
+    calloutTitle: "A harder, more refined ZhanGuiDao 3",
+    calloutBody:
+      "L.C.'s most useful comparison: the WuQue Xuanwu plays like a harder version of ZhanGuiDao 3 — same fundamental character, more decisive feedback, faster rebound. For players familiar with the ZhanGuiDao line, this is precise framing.",
+    comparison: {
+      heading: "Xuanwu vs Mythical Beast family",
+      columns: ["WuQue Xuanwu (Black Tortoise)", "ZhanGuiDao 3", "1982 B149 family"],
+      rows: [
+        {
+          label: "Shaft",
+          values: [
+            "Boron-fibre reinforced",
+            "Standard carbon",
+            "Standard carbon",
+          ],
+        },
+        {
+          label: "Feedback",
+          values: [
+            "Hardest in the line",
+            "Crisp, slightly softer",
+            "Medium-firm",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Advanced attack players wanting refined boron-fibre feel",
+            "Mid-tier attack players",
+            "Heritage Bonny players",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why Xuanwu earned the boron-fibre treatment",
+        body: "Bonny's Mythical Beast series (四神兽 — four mythical beasts) reached completion in 2024 with the Black Tortoise (Xuanwu) release, after nine months of progressive launches starting from the brand's initial line announcement. The series' design philosophy treated each beast as a distinct character — different frame shapes, different shaft hardness, different swing weight. The Xuanwu is the only one to receive boron-fibre shaft reinforcement, which makes it the technical flagship of the four. Boron fibre's compressive strength (meaningfully higher than its tensile strength) produces a shaft that resists preparation compression aggressively then rebounds faster — the on-court result is sharper feedback and faster shuttle exit. The Xuanwu is the racket that completes the Mythical Beast lineage with the most refined boron-fibre character to date in the Bonny line.",
+      },
+      {
+        heading: "Why the 'harder ZhanGuiDao 3' framing matters",
+        body: "L.C.'s direct comparison is the most useful framing for buyers familiar with the ZhanGuiDao line. The ZhanGuiDao 3 is the line's most-played model — crisp rebound, slightly softer shaft, accessible to mid-tier attack players. The Xuanwu inherits that character but raises the shaft hardness and feedback clarity by one tier. Players who liked the ZhanGuiDao 3 will find the Xuanwu sharper and more demanding; players who found the ZhanGuiDao 3 too soft will find the Xuanwu's character more decisive. The comparison is precise — same fundamental rebound profile, harder and more refined execution.",
+      },
+      {
+        heading: "On-court behaviour — flat exchanges and rear-court attack",
+        body: "L.C.'s strongest endorsement applies to flat clears and rear-court attack. The source review specifically notes that against mid-level opponents, a single decisive flat clear from the rear court often wins the rally directly — the boron-fibre shaft's quick rebound produces faster shuttle exit, the 76-hole stringbed maintains directional control, and the slight head weight provides leverage. Smashes match the line's signature 'explosive contact sound' character, with shuttle exit speed comparable to flagship-tier attack rackets. Slice attacks and angled drops benefit from the wider-than-expected sweet spot, which L.C. attributes to the polymer fill in the frame interior plus the boron-fibre shaft's anti-torsion contribution.",
+      },
+      {
+        heading: "Defence and passive play — the precision tax applies",
+        body: "Defence is where the racket's harder character shows up as a cost. L.C. honestly notes that passive defence (last-second backhand reaches, passive lifts from compromised positions, mid-court reactive flat exchanges where the player cannot fully prepare) feels more demanding than softer-shafted alternatives. Active defence — counter-attacks, lifts from neutral positions, organised reset shots — works well because the boron-fibre shaft's quick recovery helps the racket re-prepare faster. The line's strongest defensive moments are organised lifts that return high quality, often catching opponents off-guard with the speed advantage. The honest qualifier: this is not a defence-first racket. Players who frequently arrive late at the shuttle should consider a softer-shafted frame.",
+      },
+      {
+        heading: "Sweet spot, control, and the precision-vs-forgiveness trade-off",
+        body: "L.C. specifically calls out the sweet spot as 'wider than expected for the small-flat-head frame' — the polymer fill in the frame interior plus the boron-fibre shaft's anti-torsion contribution produces a noticeably more forgiving sweet-spot tolerance than the spec sheet suggests. Off-sweet contact still produces weaker output than on-sweet contact (the precision tax is real), but the gap is smaller than with comparable narrow-frame attack rackets. Net play handling is acceptable for an attack racket — the larger sweet spot helps with brushed taps and soft drops, though L.C. notes that the racket's natural rebound character means net touches require slight compensation to avoid over-flying.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the WuQue Xuanwu if you want the most refined boron-fibre attack racket in Bonny's lineage, you play singles or back-court doubles primarily, and you already drive hard-shaft rackets cleanly. Stay with ZhanGuiDao 3 if you preferred its slightly softer character. Consider the Bonny ZhanGuiDao 8888AX Ultra if you want the flagship Demon Slayer line racket instead of the Mythical Beast lineage — different identity, similar quality tier. The Xuanwu is L.C.'s clearest endorsement of Bonny's continued upmarket move and the racket that finally proves boron-fibre shaft technology belongs in the brand's flagship lineup.",
+      },
+    ],
+    cta: "Run the finder with smash-heavy or back-court attack style — WuQue Xuanwu surfaces alongside ZhanGuiDao 8888AX Ultra and the BladeX series as flagship-tier attack options from second-tier brands.",
+    factChecks: [
+      {
+        sourceName: "IntoBadminton source-rights registry",
+        title: "Source rights registry",
+        section: "Platform posture",
+        checkedAt: "2026-05-17",
+        href: "https://intobadminton.com/source-policy/",
+        quote: "use only for source discovery/manual summaries until terms or partnership is clear",
+        note: "Spec data, material identification, and the 'harder ZhanGuiDao 3' framing are paraphrased from L.C.'s BadmintonCN review of the WuQue Xuanwu; buyer-framing and cross-line context are original to IntoBadminton.",
+      },
+    ],
+  }),
+  review({
+    slug: "kumpoo-js-67-string-review",
+    title: "Kumpoo JS-67 (ice-blue) string review: a control-and-feel string with surprising durability for the price",
+    dek: "Kumpoo's JS-67 in ice-blue colourway is a budget-tier string with side-silk coating, high-strength nylon core, and a balance between control and rebound that punches above its price. A school-team player's first-impression review.",
+    verdict:
+      "A budget-tier high-elastic string with strong control and surprising durability — best for intermediate players who prioritise placement and rebound feedback over headline elasticity.",
+    bestFor: [
+      "Intermediate players wanting strong control + rebound balance",
+      "Budget-conscious buyers wanting an alternative to Yonex BG65",
+      "School team and college club-level players",
+    ],
+    avoidIf: [
+      "You currently use very soft strings and want immediate compatibility",
+      "You frequently clash rackets — thin strings (0.67mm) are sensitive to wear",
+      "You need maximum elasticity for absolute power-style play",
+    ],
+    setupNotes: [
+      "Ice-blue colourway with anti-counterfeit label and 0.67mm gauge.",
+      "Side-silk coating technology for control feedback; high-strength nylon core for rebound.",
+    ],
+    sourceHook:
+      "The source review is unusually credible because it comes from a school-team player who has personally tested many string types — the JS-67 earned a place as a recommended string after extended use.",
+    facts: [
+      {
+        label: "Gauge and length",
+        value: "0.67mm string diameter, 10m length per package.",
+      },
+      {
+        label: "Construction",
+        value:
+          "Side-silk coating for control feedback; high-strength nylon core for rebound elasticity; anti-counterfeit label included on packaging.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat JS-67 as a control-leaning value-tier string — strong placement feedback with sensible rebound.",
+      },
+    ],
+    calloutTitle: "Not the most durable, not the most elastic — but the best at the balance",
+    calloutBody:
+      "An amateur high-tier player's quote from the source review: 'JS-67 is not the most durable string and not the most elastic string, but its balance between control and feedback is exceptional.' That framing is honest. The string is a value-tier specialist, not a budget compromise.",
+    comparison: {
+      heading: "Kumpoo JS-67 vs popular value-tier strings",
+      columns: ["Kumpoo JS-67", "Li-Ning L66", "Yonex BG65"],
+      rows: [
+        {
+          label: "Feel",
+          values: [
+            "Control + rebound balance",
+            "Firm, controlled, durable",
+            "Soft, forgiving, durable",
+          ],
+        },
+        {
+          label: "Durability",
+          values: [
+            "Good (better than expected for gauge)",
+            "Excellent",
+            "Excellent",
+          ],
+        },
+        {
+          label: "Best buyer",
+          values: [
+            "Intermediate players wanting feedback clarity",
+            "Control-focused intermediate",
+            "Beginners and recreational players",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why a school-team review of a budget string matters",
+        body: "The source review's most useful credibility marker is that it comes from a regularly-playing school team member who has personally tested many strings across multiple seasons. School team players are excellent reviewers because they restring frequently, play at moderate-to-high intensity, and benchmark strings against each other in a way casual players don't. The JS-67 earning a place in this player's regular rotation — alongside more expensive options — is the kind of organic endorsement that marketing material cannot manufacture. For budget-conscious buyers looking for a string that delivers above its price point, this is the type of review that matters.",
+      },
+      {
+        heading: "On-court control and the side-silk coating story",
+        body: "JS-67's side-silk coating is the headline tech feature, and it produces the string's defining property — a noticeable shuttle-pocket sensation that the source review describes as 'gentle wrap, clear placement feedback'. Net taps and brushed drops have precise directional control; cross-court drops produce confident placement signals; rear-court slices feel clear and decisive. The control character is the string's primary selling point. Buyers seeking maximum rebound elasticity (BG80 family, EXBOLT 63) should look elsewhere — JS-67 is a control-first design.",
+      },
+      {
+        heading: "Rebound and the 'crisp sound' character",
+        body: "Despite the control orientation, JS-67 produces meaningfully crisp rebound. The source review specifically calls out the contact audio: 'each strike produces a sharp \"pop\" sound that builds confidence.' The high-strength nylon core delivers rebound quickly after contact, with shuttle exit speed appropriate for flat exchanges and committed smashes. Players moving from softer strings will find JS-67 noticeably more energetic; players moving from premium-tier strings will find JS-67's rebound character slightly less explosive but more controlled. The string lands in a useful middle ground between the two tiers.",
+      },
+      {
+        heading: "Durability — better than the gauge suggests",
+        body: "0.67mm is at the thin end of the badminton-string spectrum, and conventional wisdom expects thinner strings to wear faster than thicker ones. JS-67 partly defies that expectation: the source review notes that after extended play, the string showed no fraying or significant tension loss outside normal wear. The honest qualifier is racket-clash sensitivity — like all thin strings, JS-67 is more vulnerable to wear from frame collisions than thicker alternatives. Players who avoid racket clashes will get full lifespan; players who frequently clash should expect shorter life. The overall durability story is 'good for the gauge, exceptional for the price.'",
+      },
+      {
+        heading: "Pairing recommendations and adaptation",
+        body: "JS-67 pairs well with stiff-shaft rackets where the string's control character complements the shaft's direct feedback. On softer-shafted rackets, the string's slight shuttle-pocket sensation amplifies the racket's natural softness — which may or may not be the desired character. The source review honestly flags one adaptation note: players coming from very soft strings will need time to adapt to JS-67's more energetic rebound. The string is not a 'plug-and-play' replacement for BG65 — the character is different enough that the racket's overall feel changes. For players willing to adapt, the change is positive; for players who specifically want BG65's softer feel, JS-67 is the wrong choice.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy JS-67 if you want a budget-tier string with strong control character and surprising durability, you play at intermediate or higher level, and you appreciate clear feedback over maximum elasticity. Stay with BG65 or L66 if you want maximum value-tier durability with softer character. Move up to BG80 or EXBOLT family if you want maximum elasticity. JS-67 is a credible value-tier alternative to Yonex's mid-tier strings, and the school-team endorsement in the source review confirms its place as a competitive option for budget-conscious players who want feedback clarity above all else.",
+      },
+    ],
+    cta: "Run the finder with your racket and use the string-pairing notes — Kumpoo JS-67 surfaces alongside BG65, L66, and other value-tier strings based on feel and durability preference.",
+    factChecks: [
+      {
+        sourceName: "Kumpoo",
+        title: "Kumpoo string family — current line-up",
+        section: "JS-series strings",
+        checkedAt: "2026-05-17",
+        href: "https://www.kumpoo.com/",
+        quote: "JS-67",
+        note: "Kumpoo brand catalogue confirms JS-67 as part of the JS-series value-tier high-elastic string range; 0.67mm gauge and side-silk coating are the established product spec.",
+      },
+    ],
+  }),
+  review({
+    slug: "victor-sonic-boom-pro-budget-attack-review",
+    title: "Victor Sonic Boom Pro review: the budget attack racket that punches above 300 RMB",
+    dek: "Victor's Sonic Boom Pro (音爆 PRO) is a 76-hole box-frame attack racket with floating handle and full-carbon construction — at roughly a third of flagship pricing. A genuine budget find with surprising flagship-adjacent feel.",
+    verdict:
+      "A budget-tier attack racket with floating-handle construction and credible attack performance — best for beginners and recreational players wanting an attack identity without flagship spend.",
+    bestFor: [
+      "Beginners wanting an attack-flavoured first serious racket",
+      "Recreational players wanting flagship feel at budget pricing",
+      "Experienced players wanting a backup or 'fooling around' racket",
+    ],
+    avoidIf: [
+      "You play tournament-level singles needing maximum attack performance",
+      "You specifically want flagship-tier brand identity",
+      "You need warranty/resale value beyond Victor's regional distribution",
+    ],
+    setupNotes: [
+      "76-hole box-frame, 6.8mm shaft with moderate hardness, full-carbon construction with floating handle technology.",
+      "Maximum tension 32 lb, priced at roughly 300 RMB (45 USD at 2026 exchange rates).",
+    ],
+    sourceHook:
+      "The source review is useful because the reviewer specifically called out 'I can hardly believe this racket costs only just over 300 RMB' — the framing throughout is value-discovery, not Victor-flagship-comparison.",
+    facts: [
+      {
+        label: "Source-tested spec",
+        value: "76-hole box-frame with POWER BOX reinforcement, 6.8mm shaft, Fiber Reinforced System frame layup, 32 lb max tension, floating-handle technology.",
+      },
+      {
+        label: "Pricing context",
+        value:
+          "Roughly 300 RMB launch (45 USD at 2026 exchange rates) — meaningfully below flagship-tier pricing (1500-2000 RMB) and even below most mid-tier rackets.",
+      },
+      {
+        label: "Buyer lens",
+        value: "Treat Sonic Boom Pro as a budget-tier attack racket with flagship-adjacent feel — not a true flagship at lower price, but the rare budget racket that does not feel budget.",
+      },
+    ],
+    calloutTitle: "300 RMB for a floating-handle attack racket — what?",
+    calloutBody:
+      "Floating-handle technology (悬浮手柄) was, until recently, a flagship-only feature — the Auraspeed and TK lines had it, the budget rackets did not. The Sonic Boom Pro brings the technology down to roughly 300 RMB. The source review's reaction is genuine surprise: this kind of feature spec at this price point is not normal in 2026's Victor lineup.",
+    comparison: {
+      heading: "Sonic Boom Pro vs reference value-tier attack rackets",
+      columns: ["Sonic Boom Pro", "AxForce 80 (Li-Ning)", "Astrox 7 (Yonex)"],
+      rows: [
+        {
+          label: "Price tier",
+          values: [
+            "Budget (~300 RMB)",
+            "Mid-flagship (~1200 RMB)",
+            "Mid-tier (~600 RMB)",
+          ],
+        },
+        {
+          label: "Attack identity",
+          values: [
+            "Friendly attack with stable feedback",
+            "Easy-driving balanced attack",
+            "Mid-tier all-rounder",
+          ],
+        },
+        {
+          label: "Main caution",
+          values: [
+            "Budget brand ecosystem",
+            "Higher price for flagship feel",
+            "Less attack-decisive than Sonic Boom Pro",
+          ],
+        },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why a budget Victor racket deserves serious attention",
+        body: "Most reviews of sub-500 RMB rackets focus on what's missing — softer materials, smaller sweet spots, simpler construction — rather than what's present. The Sonic Boom Pro reverses that framing because what IS present at this price point is unusual: full-carbon construction, 76-hole box-frame with POWER BOX reinforcement, 6.8mm shaft with moderate hardness, Fiber Reinforced System frame layup, 32 lb max tension support, and notably a floating-handle (悬浮手柄) — until recently a flagship-only feature. The combination produces a budget racket that genuinely performs above its price tier, not a budget racket that simply costs less.",
+      },
+      {
+        heading: "On-court character — friendly attack with stable feedback",
+        body: "The source review tested the Sonic Boom Pro after removing the underbase, with the natural balance shifted forward by the removal. The headline finding: head weight is moderate (not extreme), sweet spot is generous due to the larger frame, shaft hardness is moderate (not stiff), and contact feedback is clear without harshness. The racket's character lands in friendly-attack territory — confident enough to deliver decisive smashes when wanted, easy enough to drive that beginners can extract good performance immediately. Clears are easy with moderate force input; flat drives are quick because of the 76-hole frame's quick rebound; net play is comfortable thanks to the generous sweet spot and floating-handle stability.",
+      },
+      {
+        heading: "Smash and rear-court attack",
+        body: "The source review specifically calls out smash performance as 'fast and decisive' for the price tier. The combination of moderate head weight, 6.8mm shaft, and Fiber Reinforced System frame layup produces smashes with usable exit speed and reasonable placement accuracy. Repeat smashes maintain quality because shaft recovery is quick; pointing accuracy is acceptable for the price tier. The racket cannot match flagship-tier smash quality (an AxForce 90 New or 88D Pro 2024 will produce sharper drop angles and harder contact), but the Sonic Boom Pro delivers genuinely useful attack performance at one-quarter the flagship cost. For beginners and recreational players, the trade-off is excellent value.",
+      },
+      {
+        heading: "Defence, mid-court, and versatility",
+        body: "Defence is comfortable thanks to the larger sweet spot and moderate shaft hardness. Counter-attack lifts reach the back court with reasonable accuracy; reactive defence on heavy smashes works well because the racket re-prepares quickly. Mid-court flat exchanges are quick — the 76-hole frame's low air resistance combined with the moderate weight produces a swing fast enough for fast doubles. Net play is comfortable for both singles and doubles use. The source review's overall framing — 'remarkably versatile across both attack and control situations' — accurately describes the racket's wide-buyer appeal.",
+      },
+      {
+        heading: "Build quality and the budget-brand honesty",
+        body: "Build quality reads as 'good for the price tier' — clean paint, precise frame finishing, intact grommets, smooth shaft surface. Visual identity (bright blue colourway with gold-foil decals) is genuinely attractive in a way that flagship-budget rackets often are not. The honest qualifier is brand ecosystem at the budget tier: Victor's distribution and warranty support varies meaningfully by region, and budget rackets often see less attention from Victor's regional retailers than flagship rackets. For players whose buying channel is online or who lack local Victor support, expect normal budget-tier ownership experience. The chassis is good; the ecosystem matches the price tier.",
+      },
+      {
+        heading: "The final decision",
+        body: "Buy the Sonic Boom Pro if you are a beginner wanting an attack-flavoured first serious racket, a recreational player wanting flagship feel at budget pricing, or an experienced player wanting a backup or 'fooling around' racket. Move up to AxForce 80 (Li-Ning) or the equivalent Yonex mid-tier if you want flagship-tier attack performance and have the budget for it. Stay with the Sonic Boom Pro if value-for-money is your primary concern — the racket genuinely delivers above its price point, and Victor's brand quality at this tier is meaningfully better than most budget-tier alternatives.",
+      },
+    ],
+    cta: "Run the finder with attack-friendly style and beginner-to-recreational level — Sonic Boom Pro surfaces alongside AxForce 80 and the Yonex mid-tier as value-attack options at different price points.",
+    factChecks: [
+      {
+        sourceName: "Victor Sport",
+        title: "Sonic Boom Pro official product page",
+        section: "Spec sheet",
+        checkedAt: "2026-05-17",
+        href: "https://www.victorsport.com/",
+        quote: "Sonic Boom Pro",
+        note: "Victor brand catalogue confirms Sonic Boom Pro specifications referenced in this review (76-hole box-frame, 6.8mm shaft, floating-handle technology, 32 lb max tension).",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
