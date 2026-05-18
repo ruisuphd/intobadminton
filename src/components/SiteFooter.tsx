@@ -16,6 +16,7 @@ const COLUMNS: FooterColumn[] = [
       { label: "Compare", path: "/compare/" },
       { label: "Compare guides", path: "/compare-guides/" },
       { label: "Brands", path: "/brands/" },
+      { label: "Tools", path: "/tools/" },
     ],
   },
   {

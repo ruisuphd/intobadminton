@@ -4,12 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { SavedHeaderLink } from "@/components/SavedHeaderLink";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const NAV_LINKS = [
   { href: "/quiz/", label: "Finder" },
   { href: "/best/", label: "Best Of" },
+  { href: "/tools/", label: "Tools" },
   { href: "/blog/", label: "Blog" },
   { href: "/guides/", label: "Guides" },
   { href: "/brands/", label: "Brands" },
@@ -81,6 +83,7 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <SavedHeaderLink variant="desktop" />
           <Link
             href="/quiz/"
             className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--color-accent)] px-4 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
@@ -149,6 +152,9 @@ export function SiteHeader() {
                 </li>
               );
             })}
+            <li>
+              <SavedHeaderLink variant="mobile" onNavigate={close} />
+            </li>
             <li>
               <Link
                 href="/quiz/"

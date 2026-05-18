@@ -27,6 +27,7 @@ import {
   clampBudgetUsd,
   profileToSearchParams,
 } from "@/lib/profile-url";
+import { countMatchingProducts } from "@/lib/quiz-preview";
 
 const STEPS = 5;
 const LIVE_CATEGORIES: EquipmentCategory[] = [
@@ -63,6 +64,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   const router = useRouter();
   const { profile, setProfile } = useProfile();
   const [step, setStep] = useState(0);
+  const [completing, setCompleting] = useState(false);
   const copy = t(locale).quiz;
   const levels = levelLabel;
   const disciplines = discLabel;
@@ -71,6 +73,14 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   const progress = useMemo(
     () => Math.round(((step + 1) / STEPS) * 100),
     [step]
+  );
+
+  // Live count of catalogue rows that match the user's partial profile —
+  // gives the funnel a sense of momentum without misrepresenting the final
+  // rank order (which is the scorer's job, run on /results/).
+  const candidateCount = useMemo(
+    () => countMatchingProducts(profile),
+    [profile]
   );
 
   useEffect(() => {
@@ -97,7 +107,14 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
       const localizedPath = buildLocalizedPath(locale, "/results/");
       const params = profileToSearchParams(profile).toString();
       const target = params ? `${localizedPath}?${params}` : localizedPath;
-      router.push(target);
+      // Brief completion celebration before navigation. Pure CSS/SVG; no
+      // confetti library. Respects prefers-reduced-motion via the
+      // `motion-safe:` utilities on the celebration markup.
+      setCompleting(true);
+      const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? 0
+        : 900;
+      window.setTimeout(() => router.push(target), delay);
     }
   };
 
@@ -108,20 +125,87 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   return (
     <div className="mx-auto max-w-lg">
       <div
-        className="mb-8 h-1.5 overflow-hidden rounded-full bg-[color:var(--surface-muted)]"
+        className="mb-3 h-1.5 overflow-hidden rounded-full bg-[color:var(--surface-muted)]"
         role="progressbar"
         aria-valuenow={progress}
         aria-valuemin={0}
         aria-valuemax={100}
       >
         <div
-          className="h-full rounded-full bg-[var(--color-accent)] transition-all duration-300 ease-out"
+          className="h-full rounded-full bg-[var(--color-accent)] motion-safe:transition-all motion-safe:duration-300 ease-out"
           style={{ width: `${progress}%` }}
         />
       </div>
-      <p className="text-sm text-[var(--color-muted)]">
-        {`${copy.step} ${step + 1} ${copy.of} ${STEPS}`}
-      </p>
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-2">
+        <p className="text-sm text-[var(--color-muted)]">
+          {`${copy.step} ${step + 1} ${copy.of} ${STEPS}`}
+        </p>
+        {/*
+         * Live candidate counter. Only meaningful once at least one filter
+         * is applied; before that it just equals the full catalogue and
+         * reads as noise.
+         */}
+        {(profile.level != null || profile.category != null) && (
+          <p
+            className="text-xs text-[var(--color-subtle)]"
+            aria-live="polite"
+          >
+            <span className="font-medium tabular-nums text-[var(--color-accent)]">
+              {candidateCount}
+            </span>{" "}
+            {candidateCount === 1 ? "candidate" : "candidates"} fit so far
+          </p>
+        )}
+      </div>
+
+      {/* Completion celebration overlay. Briefly held before navigating to
+          /results/ to give the funnel an emotional close before the data
+          load. Skipped under prefers-reduced-motion (no delay either). */}
+      {completing && (
+        <div
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-white/95 backdrop-blur-sm"
+          role="status"
+          aria-live="polite"
+        >
+          <svg
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            className="anim-zoom-in"
+            aria-hidden
+          >
+            <circle
+              cx="32"
+              cy="32"
+              r="30"
+              fill="none"
+              stroke="var(--color-accent)"
+              strokeWidth="3"
+            />
+            <path
+              d="M18 33 L28 43 L46 23"
+              fill="none"
+              stroke="var(--color-accent)"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <p className="mt-5 text-base font-medium text-[var(--text)]">
+            Building your shortlist…
+          </p>
+          <p className="mt-1 text-sm text-[var(--color-muted)]">
+            Scoring {candidateCount}{" "}
+            {candidateCount === 1 ? "candidate" : "candidates"} on five fit
+            factors
+          </p>
+        </div>
+      )}
+
+      {/* Step bodies. Keyed by step so React tears down and remounts on
+          step change — the motion-safe utilities give a 200ms fade/slide
+          transition. */}
+      <div key={`step-${step}`} className="anim-step-enter">
 
       {step === 0 && (
         <section className="mt-6 space-y-4">
@@ -578,6 +662,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           ← {copy.back}
         </button>
       )}
+      </div>
     </div>
   );
 }
