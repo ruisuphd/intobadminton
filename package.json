@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-product-images.mjs",
     "build": "next build",
     "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/postbuild-seo-audit.mjs",
     "start": "next start",
     "lint": "eslint",
+    "lint:glossary": "node scripts/check-glossary-links.mjs --warn",
+    "lint:glossary:strict": "node scripts/check-glossary-links.mjs",
+    "lint:lighthouse": "npx -y @lhci/cli@0.14.x autorun",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
