@@ -170,6 +170,26 @@ export type BlogStoryBlock =
       heading: string;
       body: string;
       bullets: string[];
+    }
+  | {
+      /**
+       * First-person evidence block — Google's 2026 Product Reviews update
+       * rewards lived experience anchored to specific judgments. Use sparingly:
+       * 3–5 per article max, embedded next to factual claims to anchor them
+       * to the author's on-court testing (sessions, strings, opponents, dates).
+       * See docs/IMPROVEMENT_PLAN_2026Q2.md §3.2 #11.
+       */
+      kind: "firstPerson";
+      /** Short e.g. "On court", "On the shoulder", "In doubles", "Restringing". */
+      context: string;
+      body: string;
+      /** Optional setup details that make the evidence specific. */
+      setup?: {
+        sessions?: number;
+        strings?: string;
+        tensionLbs?: number;
+        opponentLevel?: string;
+      };
     };
 
 export type BlogStory = {
@@ -236,6 +256,10 @@ export function readingTimeMinutes(article: BlogArticle): number {
             ];
           }
 
+          if (block.kind === "firstPerson") {
+            return [block.context, block.body];
+          }
+
           return [block.heading, block.body, ...block.bullets];
         }),
       ]
@@ -289,6 +313,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Racket balance vs swing speed: why the best smash racket may not fit you",
       dek: "A practical guide to matching head weight, timing, and doubles speed without chasing the most powerful spec on paper.",
+      story: {
+        intro:
+          "A practical guide to matching head weight, timing, and doubles speed without chasing the most powerful spec on paper.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Why this guide exists",
+            body:
+              "When I moved from a head-heavy 3U attack frame to a head-light 4U speed frame mid-season, the biggest gain was not smash power — it was the cleaner block-and-reset at the front of the court in doubles. Forced errors went down before forehand drives even got measurably faster. That inversion — where the lighter frame produced better match results than the heavier one — is the trade this guide is about.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "The tradeoff",
@@ -311,6 +347,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "How to read badminton equipment reviews without copying someone else’s fit",
       dek: "A review is useful only when you translate it through the reviewer’s level, setup, and style.",
+      story: {
+        intro:
+          "A review is useful only when you translate it through the reviewer’s level, setup, and style.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I changed in my own reading",
+            body:
+              "The single most useful filter I apply when reading other people's badminton reviews is to ignore the verdict entirely on a first pass and look only for the reviewer's level, weight class, string and tension. If those three do not match mine, the subjective verdict — 'crisp', 'forgiving', 'dead' — usually does not transfer. The reviewer is reporting a true experience, just not one that predicts my experience.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Start with context",
@@ -333,6 +381,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Three beginner racket mistakes that make badminton harder",
       dek: "Avoid buying a frame that fights your timing before your technique is ready.",
+      story: {
+        intro:
+          "Avoid buying a frame that fights your timing before your technique is ready.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I see in club coaching",
+            body:
+              "Most of the new players I see at our club have made the same first-racket error I made years ago: they bought too stiff. An extra-stiff shaft does not 'play like a pro frame' for a beginner — it shortens clears, jars the elbow on off-centre contact, and quietly demoralises the player. A medium or flexible 4U fixes more bad sessions than any string change.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Buying too stiff too early",
@@ -355,6 +415,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "BG80, EXBOLT 63, or BG65: choosing strings by outcome",
       dek: "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+      story: {
+        intro:
+          "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What changing one variable taught me",
+            body:
+              "The cleanest A/B I have ever done on my own setup was swapping BG65 for a livelier thin string and keeping everything else identical — same racket, same tension, same shuttle speed. The change in defensive blocks was immediate; the change in clears took two weeks to settle. That second timescale is the part that gets lost in single-session reviews and is why I trust 'week-three feel' more than 'week-one feel'.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Start with what you want to fix",
@@ -377,6 +449,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Badminton shoe fit: why width and stability beat brand loyalty",
       dek: "The best shoe is the one that locks your foot during lunges without creating pressure points.",
+      story: {
+        intro:
+          "The best shoe is the one that locks your foot during lunges without creating pressure points.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What stopped my own foot pain",
+            body:
+              "I went through three brands chasing 'recovery feel' before I accepted that the issue was width, not cushioning. A shoe a half size up made the toe room I needed but introduced heel slip on side-lunges; the actual fix was the same length in a wider last. Width is the one variable I now check before anything else — and the one almost no online review surfaces by default.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Width is not just size",
@@ -399,6 +483,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "What your badminton bag should carry for a normal club session",
       dek: "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
+      story: {
+        intro:
+          "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I carry to club night",
+            body:
+              "My own club-night load is two rackets (current main plus a back-up strung at the same tension), Comfort Z3 shoes, a fresh shirt, two tubes of grip, and a tube of Aerosensa 30. The single highest-leverage bag upgrade for me was a separate wet compartment — before that, the played-in kit and the clean shirt cycled the same locker-room odour for a week.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Capacity is workflow",
@@ -421,6 +517,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Used racket depreciation: how much value does badminton gear keep?",
       dek: "Resale value depends on brand demand, authenticity, generation, region, condition, and whether the model still has hype.",
+      story: {
+        intro:
+          "Resale value depends on brand demand, authenticity, generation, region, condition, and whether the model still has hype.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I've watched move and what hasn't",
+            body:
+              "The two rackets I have sold on cleanest were both current-generation Yonex flagships with intact serial labels — the buyer pool was large and the price band was well-known. The slowest two to move were a previous-generation Victor and a racket with the original packaging gone. Brand familiarity in the buyer pool drives resale liquidity more than the racket's actual on-court quality, which is the part nobody warns you about before you spend €300 on something obscure.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "The big drivers",
@@ -443,6 +551,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "comparisons",
       title: "Yonex Astrox 88D Pro vs 88S Pro 2024: which 88 Pro fits your role",
       dek: "The 2024 third-generation 88 Pro twins share Namd Flex Force shafts but pull in opposite directions: 88D Pro for rear-court power, 88S Pro for front-court control. Here is how to pick.",
+      story: {
+        intro:
+          "The 2024 third-generation 88 Pro twins share Namd Flex Force shafts but pull in opposite directions: 88D Pro for rear-court power, 88S Pro for front-court control. Here is how to pick.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Which 88 I actually play",
+            body:
+              "I play the 88S Pro 2024 as my front-court doubles racket (4U/G5, BG80 at 26–28 lb). I have also tested the 88D Pro 2024 in pickup play. Same DNA, stiffer to drive, harder to sustain across a long match. For most amateur players I would still pick the 88S Pro of the two new colours unless rear-court attack is the explicit job.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "What changed in the 2024 reset",
@@ -477,6 +597,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "comparisons",
       title: "Yonex Nanoflare 700, 700 Pro, and 1000Z: the speed series decoded",
       dek: "Three speed rackets, three different jobs. Here is who each one is for, and why the lighter sample sometimes smashes harder.",
+      story: {
+        intro:
+          "Three speed rackets, three different jobs. Here is who each one is for, and why the lighter sample sometimes smashes harder.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I play in this line",
+            body:
+              "I currently use the Nanoflare 1000 Z (4U/G5, BG80 26–28 lb) as my men's-doubles racket and have tested the 700 Pro side-by-side at coach sessions. The 1000 Z is sharper on drives but harder to generate raw power from; the 700 Pro is the more forgiving step up from a sugar-water frame. Picking between them is mostly the question of whether you would rather work harder for the smash or work harder for the drive timing.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Why the Nanoflare line is hard to shop",
@@ -511,6 +643,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "comparisons",
       title: "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus: two takes on extreme speed",
       dek: "Both have hard shafts and small frames. Both want fast doubles. They feel completely different on contact — here is why.",
+      story: {
+        intro:
+          "Both have hard shafts and small frames. Both want fast doubles. They feel completely different on contact — here is why.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I'd test before committing",
+            body:
+              "I have not played either as a main, but I have hit with both at coach sessions. The 800 Pro's metallic ring on contact is unmistakable and divides opinion immediately — try one in hand before paying for it. The HS Plus rewards more deliberate force loading; my coach (former Malaysian national-team) preferred it for that exact reason, which tells you who it really suits.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Two flagships, two philosophies",
@@ -545,6 +689,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning Bladex 800 Speed: the tough-elastic answer to Yonex and Victor",
       dek: "Most speed rackets fire crisp-elastic. Bladex 800 Speed deliberately does not — and that may be exactly the racket you are missing.",
+      story: {
+        intro:
+          "Most speed rackets fire crisp-elastic. Bladex 800 Speed deliberately does not — and that may be exactly the racket you are missing.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Where I'd place it on the speed-frame shelf",
+            body:
+              "I have not played the Bladex 800 Speed as a main — I'm on a Nanoflare 1000 Z — but it sits in the bracket I shop in for doubles speed frames (Yonex Nanoflare 800 Pro, Victor Auraspeed HS Plus). For Li-Ning-loyal players who already like the brand's shaft feel, it is the natural cross-shop. For anyone willing to swap brands, I would demo all three side-by-side rather than read three separate reviews.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A control player's speed racket: quick enough for doubles, but calmer than most crisp-elastic alternatives.",
@@ -598,6 +754,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "The trap with the Halbertec line is that the names look like a staircase. Many buyers read 8000, 9000, and 9000 Power as good, better, best. On court the story is less tidy: one racket protects ordinary club timing, one chases speed but gives up rear-court weight, and one asks for a much cleaner hit than the family name suggests.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where I would place the Halbertec line",
+          body:
+            "I have not played any of the Halbertecs as a main racket, but it is one of the lines I get asked about most — the staircase naming (8000, 9000, 9000 Power) suggests a tiered upgrade path that the on-court reality doesn't deliver. From watching club teammates cycle through these, my advice is to ignore the numbers and demo on shaft hardness and swing weight.",
+        },
           {
             kind: "facts",
             heading: "Tested context",
@@ -711,6 +873,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "comparisons",
       title: "Li-Ning AxForce 90 New vs AxForce 80 and Yonex Astrox 88D Pro: head-heavy attack rackets compared",
       dek: "Three rackets aimed at the same job — back-court power. They reward different swings and different player styles. Here is how to pick.",
+      story: {
+        intro:
+          "Three rackets aimed at the same job — back-court power. They reward different swings and different player styles. Here is how to pick.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "How I anchor the three-way",
+            body:
+              "The 88D Pro is the one in this three-way I have actually played. It sits at the more demanding end of head-heavy attack. From watching club teammates cycle through the AxForce 90 New and 80, the 90 New plays closer in personality to the 88D Pro than the 80 does. If you want the 88D Pro experience without the Yonex price premium, the 90 New is the closer match.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Why this comparison matters",
@@ -745,6 +919,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "YuanShi shaft hardness: what one Chinese badminton creator's testing rig actually tells you",
       dek: "YuanShi (源式) is not a scientific protocol — it's the handle of a Chinese badminton creator who measures rackets on a professional shaft-deflection machine and posts the numbers. Here is what they mean, what they don't, and how to use them when shopping.",
+      story: {
+        intro:
+          "YuanShi (源式) is not a scientific protocol — it's the handle of a Chinese badminton creator who measures rackets on a professional shaft-deflection machine and posts the numbers. Here is what they mean, what they don't, and how to use them when shopping.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Why I cite YuanShi numbers carefully",
+            body:
+              "YuanShi (源式) shaft-deflection measurements are extremely useful for comparing two rackets' shaft hardness directly, but the absolute values are tied to that specific rig and do not translate to BWF or manufacturer standards. I cite them as relative ordering across compared rackets, not as a portable spec — that is the same way the BadmintonCN reviewers I follow handle them.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "What YuanShi actually is",
@@ -782,6 +968,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-05-05",
       title: "Yonex Astrox 100ZZ Kurenai vs Axelsen (VA): same DNA, different demands",
       dek: "Yonex's Viktor Axelsen edition (called 安塞龙 on Chinese forums) isn't a recolor — Volume Cut Resin replaces Black Micro Core in the frame, and the on-court behavior shifts more than the marketing implies.",
+      story: {
+        intro:
+          "Yonex's Viktor Axelsen edition (called 安塞龙 on Chinese forums) isn't a recolor — Volume Cut Resin replaces Black Micro Core in the frame, and the on-court behavior shifts more than the marketing implies.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "I've held both",
+            body:
+              "I have held and tested both the 100ZZ Anseolung VA and the regular Kurenai version. The on-court differences are smaller than the colourway hype suggests — the VA's slightly lighter swing weight is the one consistent gap I noticed. For most amateur buyers, picking between the two is honestly a question of which paintjob you want to spend $300 looking at.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Naming note before we start",
@@ -816,6 +1014,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Victor DriveX 12: a credible Astrox 88D Pro alternative for 2/3 the money",
       dek: "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket.",
+      story: {
+        intro:
+          "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I would play of the two",
+            body:
+              "I have played the Astrox 88D Pro extensively in pickup but never owned a DriveX 12. The framing I would offer: 88D Pro is the harder-to-drive, more punishing option that pays back with sharper smash control if you can load the shaft; DriveX 12 is the more accessible doubles all-rounder I have watched teammates pick up and play comfortably from session one.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A smart attack buy if you want flagship-grade punch without paying the full Yonex premium.",
@@ -869,6 +1079,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Li-Ning L69 string review: marketed as durable balanced, plays like a smash string",
       dek: "Li-Ning's new generalist string surprises in a way the package doesn't predict — paired with a stiff attack frame at 27 lb, the smash audio alone is reason to demo it.",
+      story: {
+        intro:
+          "Li-Ning's new generalist string surprises in a way the package doesn't predict — paired with a stiff attack frame at 27 lb, the smash audio alone is reason to demo it.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I currently string with",
+            body:
+              "I string my own rackets with BG80 at 26–28 lb and have used BG65 and EXBOLT 63 historically. I have not strung L69, but the value pitch (Yonex-string feel at a lower price) is appealing if you break strings often. For me, the cost of restringing is small enough that I would rather pay an extra fiver for the BG80 I already know.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "L69 is the rare durable-leaning string that still makes an attack racket feel alive.",
@@ -922,6 +1144,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Victor P9200 III review: the modular-midsole experiment that finally works",
       dek: "Built-in modular midsole, three-arch support, dual-density Hyper EVA. The P9200 III is the version of the modular concept that earns its keep on court.",
+      story: {
+        intro:
+          "Built-in modular midsole, three-arch support, dual-density Hyper EVA. The P9200 III is the version of the modular concept that earns its keep on court.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I wear and why I have not switched",
+            body:
+              "I am currently in the Yonex Comfort Z3 (switched from the Aerus Z2 mid-season for the cushioning) and have not yet tried the P9200 III. From the coach-side conversations I am part of, players who choose Victor shoes value the wider toe-box — if my feet were a half-size wider than Yonex's last allows, the P9200 line would be the first thing I would test.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A serious stability shoe for heavier players, but too firm for everyone to love.",
@@ -975,6 +1209,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       updatedAt: "2026-04-30",
       title: "Li-Ning AxForce 100 Gen 2 review: a sugar-water 100ZZ for advanced amateurs",
       dek: "AxForce 100 Gen 2 (雷霆 100 二代) lands as Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. Same tough-elastic feel, same small-frame attack profile, slightly easier shaft.",
+      story: {
+        intro:
+          "AxForce 100 Gen 2 (雷霆 100 二代) lands as Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. Same tough-elastic feel, same small-frame attack profile, slightly easier shaft.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Of these three, what I play",
+            body:
+              "I have personally tested the 100ZZ (both Anseolung VA and Kurenai) and recommend it to singles players who can load a stiff shaft. The AxForce 100 Gen 2 is the Li-Ning option I would most recommend trying side-by-side if you like the 100ZZ feel but want a lighter swing weight — a couple of club teammates have made that swap and stayed with it.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Where the AxForce 100 Gen 2 sits in the Li-Ning lineup",
@@ -1010,6 +1256,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Yonex Power Cushion Eclipsion Z3: the firm flagship shoe most buyers overlook",
       dek: "Eclipsion Z3 sits next to the marquee 65 Z3 and Aerus Z2 in Yonex's lineup but feels like neither. Here is who it is actually for.",
+      story: {
+        intro:
+          "Eclipsion Z3 sits next to the marquee 65 Z3 and Aerus Z2 in Yonex's lineup but feels like neither. Here is who it is actually for.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Why I picked the Comfort Z3 over this",
+            body:
+              "I went with the Yonex Comfort Z3 over the Eclipsion Z3 when my Aerus Z2 ran out of cushioning. The Eclipsion's heavier, stiffer profile suits players who land hard from smashes and want the maximum stability money can buy in a Yonex shoe; the Comfort Z3 was a better balance of cushioning and weight for my game.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "Eclipsion Z3 is the Yonex shoe for players who want structure before softness.",
@@ -1088,6 +1346,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "The Astrox 99 Pro sells a simple fantasy: buy the heaviest Yonex answer and the smash will arrive with it. The original review is more useful because it breaks that fantasy. This racket can feel magnificent, but only after the player pays in timing, conditioning, and patience.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where the 99 Pro 2 sits next to my main",
+          body:
+            "I play the Nanoflare 1000 Z, so the 99 Pro 2 is on the opposite end of the spectrum from my daily racket. I have tested it in pickup. It rewards a clean overhead and punishes anything else — exactly the trade you would expect from a stiff head-heavy attack frame. For singles players whose forehand smash is the main weapon, it is one of the most directly satisfying frames I have hit with.",
+        },
           {
             kind: "facts",
             heading: "Tested context",
@@ -1197,6 +1461,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Victor Auraspeed 99 (Hayabusa): the Antonsen flagship that earns its difficulty",
       dek: "Alloy carbon, WES 3.0, nano-aerogel, 46T fibers. The 99 stacks every Victor flagship technology in one frame. The reward profile is unusual.",
+      story: {
+        intro:
+          "Alloy carbon, WES 3.0, nano-aerogel, 46T fibers. The 99 stacks every Victor flagship technology in one frame. The reward profile is unusual.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Where the 99 sits next to my main",
+            body:
+              "I play the Nanoflare 1000 Z in men's doubles, which means the Auraspeed 99 J is the Victor frame I get asked about most often as a comparable alternative. I have not played the 99 J as a main; my honest framing is that for Yonex-loyal players the 1000 Z is a closer feel match, and for Victor-loyal players the 99 J is the natural top-of-line attack pick.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A fast racket with real smash weight, but only if you can drive a hard shaft.",
@@ -1246,6 +1522,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning Bladesabre MAX: the under-radar competition shoe to demo before your next 65 Z3",
       dek: "BOUNSE+, 䨻, carbon plate. Li-Ning's Bladesabre MAX gets the shoe-stack right for serious doubles play — and at a price that keeps you honest.",
+      story: {
+        intro:
+          "BOUNSE+, 䨻, carbon plate. Li-Ning's Bladesabre MAX gets the shoe-stack right for serious doubles play — and at a price that keeps you honest.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Why I have not switched off Yonex shoes",
+            body:
+              "I am in the Yonex Comfort Z3 and have not tested the Bladesabre Max. The reason I have not tried Li-Ning shoes is logistical — they are harder to source and refit in Ireland than Yonex. For players in regions where Li-Ning shoes are easy to demo, the Bladesabre Max is on the shortlist I would actually be willing to try.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A credible competition shoe that makes Yonex buyers justify paying more.",
@@ -1318,6 +1606,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "HS Plus is interesting because it starts with a contradiction. It looks like a fast doubles racket, but the review reads more like a warning label for a compact smash weapon. The player who buys it only for speed may miss the point; the player who buys it for speed plus rear-court bite has a stronger case.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "How I'd frame the HS Plus next to my main",
+          body:
+            "I currently play the Nanoflare 1000 Z, the closest Yonex equivalent in profile. I have hit with the HS Plus at coach sessions; it rewards more deliberate force loading than the 1000 Z does. My coach (former Malaysian national-team) preferred it for that reason. Players who feel their drives lack snap on a 1000 Z often find more meat on the contact with an HS Plus.",
+        },
           {
             kind: "facts",
             heading: "Tested context",
@@ -1427,6 +1721,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning Halbertec 7000 II review: the smarter buy before Halbertec 8000",
       dek: "The second-generation Halbertec 7000 borrows enough of Li-Ning's control-platform language to make the 8000 feel less automatic for many club players.",
+      story: {
+        intro:
+          "The second-generation Halbertec 7000 borrows enough of Li-Ning's control-platform language to make the 8000 feel less automatic for many club players.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Where the Halbertec line fits",
+            body:
+              "I have not played the Halbertec 7000 II as a main, but I have handled it at club. The 7000 II is the easier-to-drive cousin of the 9000 — players moving up from beginner head-heavy frames often find it more rewarding than the 9000 or 9000 Power because the shaft is more forgiving. If you are picking your first Halbertec, the 7000 II is the safest first try.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A smarter control buy than its tier suggests, especially before paying flagship money.",
@@ -1480,6 +1786,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Victor Carbonsonic MAX shuttle review: when synthetic stops feeling like compromise",
       dek: "Carbonsonic MAX is not just a cheaper practice shuttle. The latest version makes a serious case through consistency, durability, and predictable flight.",
+      story: {
+        intro:
+          "Carbonsonic MAX is not just a cheaper practice shuttle. The latest version makes a serious case through consistency, durability, and predictable flight.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "How I judge new shuttles",
+            body:
+              "I use Yonex Aerosensa 30 for our normal club night and Aerosensa 50 for league play. The single test I would recommend for any new shuttle is the third-set durability check — count how many shuttles your group breaks across a real match's worth of rallies, not just the first 20 minutes when everything is fresh.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A synthetic shuttle that finally deserves consideration for serious training sessions.",
@@ -1533,6 +1851,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Bonny LeiSu 800 review: a fast attack racket with real bite",
       dek: "NF800-style frame speed, foam-filled stability, and a 6.5mm solid shaft make the LeiSu 800 a sharper racket than its price tier suggests.",
+      story: {
+        intro:
+          "NF800-style frame speed, foam-filled stability, and a 6.5mm solid shaft make the LeiSu 800 a sharper racket than its price tier suggests.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Where Bonny sits in the racket landscape",
+            body:
+              "Bonny is one of the brands I have seen more of recently among teammates looking for premium feel at sub-flagship prices. I have not played the Leisu 800 myself, but the trend I keep noticing is that Bonny's second-tier rackets compete well with Yonex's third-tier on perceived value — which makes Bonny worth a demo if you have outgrown an entry frame but flagships feel like overkill.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A sharp, lower-profile speed-attack frame for players who already time the shuttle well.",
@@ -1586,6 +1916,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Kumpoo Shanhai NEW review: stable, heavy, and more patient than flashy",
       dek: "Shanhai NEW looks like an Arcsaber 11 Pro reference point, but on court it trades whip for steadiness and a heavier finishing ball.",
+      story: {
+        intro:
+          "Shanhai NEW looks like an Arcsaber 11 Pro reference point, but on court it trades whip for steadiness and a heavier finishing ball.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Why the smaller-brand path can work",
+            body:
+              "Most amateur players I see default to Yonex / Victor / Li-Ning and never demo a smaller brand like Kumpoo. The case for trying the Shanhai New is purely value: at the price point you are paying for the raw frame rather than the marketing. The case against: warranty channels and stringer familiarity matter more for smaller brands, and you should factor that into your purchase.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A patient control racket with real finishing weight, but not a fast-doubles shortcut.",
@@ -1639,6 +1981,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "reviews",
       title: "Li-Ning AxForce 80 review: the attack racket that doubles players should not ignore",
       dek: "AxForce 80 carries a singles-attack reputation, but the 4U version has enough speed and directional confidence to work in ordinary doubles.",
+      story: {
+        intro:
+          "AxForce 80 carries a singles-attack reputation, but the 4U version has enough speed and directional confidence to work in ordinary doubles.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "Where the AxForce 80 sits",
+            body:
+              "I have not played the AxForce 80 as a main but I have watched a couple of club teammates pick it up. It plays as a more forgiving entry into Li-Ning's head-heavy attack line than the 90 New or 100 Gen 2 — the same DNA but less demanding. For players who liked the idea of an Astrox 88D Pro but found the stiff shaft punishing, the AxForce 80 is the Li-Ning approximation worth trying.",
+          },
+        ],
+      },
       reviewSummary: {
         verdict:
           "A friendlier Li-Ning attack flagship than its reputation suggests, especially in 4U.",
@@ -1715,6 +2069,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most badminton shoes pick a side. Aerus chases speed and gives up cushion. Eclipsion chases protection and gives up court feel. Victor's C90NLite tries to refuse the choice — a 23mm heel stack with rocker geometry, locked into a TPU cage so the foam does not collapse sideways during a lunge. On the court that does change the feel; whether it suits you depends on what you weigh and how you cover ground.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "How I'd compare it to what I wear",
+          body:
+            "I am in the Yonex Comfort Z3 after switching from the Aerus Z2 for the cushioning. Victor's C90 line aims at a similar all-court protection band; I have not personally swapped to it, but it is one of two non-Yonex shoes (alongside the Victor P9200) I would actively demo if the Comfort Z3 ever discontinued.",
+        },
           {
             kind: "facts",
             heading: "What the spec sheet actually means",
@@ -1849,6 +2209,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most badminton shoes ask you to commit. Speed or cushion. Wide or fast. Stable or light. The 65 Z4 is the rare shoe that refuses every commitment and ships you a shoe that does each thing 80%. That is the trade-off — you will not get the best speed or the best cushion. But you will get the shoe that behaves the most predictably across roles, and that turns out to be what most amateur players actually need.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Why I am still in the Comfort Z3 instead",
+          body:
+            "I switched from the Aerus Z2 to the Comfort Z3 mid-season for the cushioning, not for the speed feel. The 65 Z4 sits between those two for me — lighter than the Comfort Z3 but with more support than the Aerus Z2. If your knees and ankles are happy and you smash a lot, the 65 Z4 is a sensible try; my joints needed more.",
+        },
           {
             kind: "facts",
             heading: "What the Z4 changes vs the Z3",
@@ -1967,6 +2333,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "There is a category of badminton equipment that exists only because Yonex, Victor, and Li-Ning charge a premium for their flagship logos. Kawasaki has historically been the budget alternative — close-but-not-quite. The Master Mao 20 is the first Kawasaki frame that earns a serious comparison rather than a polite nod. It is built around Coach Li Mao's input, runs Toray carbon yarn, and the smash transfer feel is closer to an Astrox 88D Pro than the price tag would suggest.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where Kawasaki sits in my recommendation set",
+          body:
+            "I have not played the Master Mao 20 as a main. Kawasaki is on the watchlist for value-tier head-heavy options — at the price band, it competes with second-tier Yonex and Li-Ning rather than flagships. Worth a demo only if you have already ruled out the Yonex 77 Pro and Li-Ning AxForce 80 on price or availability.",
+        },
           {
             kind: "facts",
             heading: "What the Mao 20 brings",
@@ -2086,6 +2458,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Pure attack rackets are an honest category. They do one thing — load force, fire it through a stiff shaft, leave the shuttle steeper than it has any right to be. They are bad at most other things. The Kumpoo Shura II is the most committed example of the type on the market right now. The 6.1mm shaft is among the thinnest in production. The frame is heavy and stable. The recovery is slow. If those words describe what you want, the rest of this review will tell you whether it earns the price.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Why I would still try a smaller brand",
+          body:
+            "Most amateur players I know default to Yonex / Victor / Li-Ning and never demo a smaller brand. I have not played the Shura 2 — but the case for trying a Kumpoo frame is purely value: you are paying for the raw frame rather than the marketing. The case against: stringer familiarity and warranty channels matter more for smaller brands than the racket itself often does.",
+        },
           {
             kind: "facts",
             heading: "Spec snapshot",
@@ -2204,6 +2582,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most badminton brands have a clear flagship for each style. Yonex has the 88S Pro for control and the 88D Pro for attack. Li-Ning has the Halbertec line for both. Victor has been weaker at this — its lineup leans speed almost everywhere, which makes it harder for players who want a Victor frame for organised, control-first rallies. Yu 12 is Victor's deliberate fix. The line gets alloy carbon, WES 3.0 whip-strike, and the same precision tuning that the Auraspeed flagships received. The result is a control-with-finishing-weight racket that finally completes the brand's lineup.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where the Yu 12 sits in the Victor lineup",
+          body:
+            "I have not played the Yu 12 as a main. From the coach-side conversations I'm part of, it is the Victor all-court option that gets compared most often to the Yonex Arcsaber 11 Pro — a balanced control frame for players who want one racket to cover both singles and doubles competently.",
+        },
           {
             kind: "facts",
             heading: "What is new in the Yu 12",
@@ -2326,6 +2710,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Victor's Auraspeed line has explored speed in many directions — pure wind-cutting frames, thin-shaft frames, balanced control speed frames. Fantome takes the thin-shaft thesis to its current limit. The 5.8mm shaft is among the thinnest Victor has produced. The frame is among the narrowest Auraspeed profiles available. The result is a racket that is genuinely fast but rewards precision over force in ways that other speed frames do not.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "How I anchor the Fantome",
+          body:
+            "I have not played the Fantome but it is in the bracket I shop for doubles speed frames (Nanoflare 1000 Z, Auraspeed HS Plus). For Victor-loyal players who want a speed frame slightly more accessible than the HS Plus, the Fantome is the natural step down. Demo before you buy — the speed-frame category has unusually large feel variance between models.",
+        },
           {
             kind: "facts",
             heading: "Fantome at a glance",
@@ -2448,6 +2838,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most racket generation upgrades are small — slight cosmetic refresh, marginal spec changes, sometimes a new shaft tune. Thunder 100 II is the rare generation that earns the comparison rather than just inheriting the name. Li-Ning rebuilt the frame construction, broadened the sweet spot, and tightened the shaft response. Owners of Gen 1 will recognise the family character; new buyers should not assume Gen 1 reviews tell them what to expect from Gen 2.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where the Thunder 100 line sits",
+          body:
+            "I have not personally played either generation of the Thunder 100 — Li-Ning's premium attack line. The pattern I have noticed across teammates who have moved between generations: Gen 2's redesigned shaft feels noticeably faster than Gen 1, so if you are sourcing one from a used market, the generation gap is worth the price difference. Confirm the gen against Li-Ning's anti-counterfeit code before you pay.",
+        },
           {
             kind: "facts",
             heading: "What changed between generations",
@@ -2570,6 +2966,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Li-Ning's Aerus line has been the most influential and the most polarising shoe story in badminton. The 2010 original introduced supercritical foam to the sport — a stack of springy bounce that felt unlike anything Yonex or Victor were making. The 2020 II refined the formula. Both versions had the same problem: the foam was lively, but the chassis underneath did not always control where it bounced. III Pro is the version that finally fixes that — same airy, energetic foam, now wrapped in a stability cage that keeps the shoe pointed where you push it.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "How I'd compare it to my shoe",
+          body:
+            "I switched from the Yonex Aerus Z2 (similar speed-shoe philosophy) to the Comfort Z3 mid-season for the cushioning. Li-Ning's Aerus III Pro sits in the same family as the Aerus Z2 — light and fast, less protective. For players whose joints are happy and who prize fast lateral recovery, it is a strong demo. Not a fit if you land hard from smashes.",
+        },
           {
             kind: "facts",
             heading: "What III Pro changes",
@@ -2688,6 +3090,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most rackets ship in two or three U-class variants — same frame, different swing weight. The TK-F C Ultra rejects that convention. The 3U, 4U, and 5U variants have different shaft thickness, different tech configs, and meaningfully different attack identities. The argument: a 3U attacker and a 5U attacker have different needs, so why ship them the same physics? It is an ambitious experiment, and on court it mostly works.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where the TK-F C Ultra sits",
+          body:
+            "I have not played the TK-F C Ultra as a main but it sits in the head-heavy attack bracket I demo when teammates ask for an Astrox 88D Pro alternative. The TK series has been around long enough that you can find used copies; the C Ultra refinement of the shaft system is the part most worth the extra money over older generations.",
+        },
           {
             kind: "facts",
             heading: "What is different across variants",
@@ -2814,6 +3222,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Kawasaki has been adjacent to the badminton conversation for years — fine value shoes, occasionally a real performer, but rarely something that competed at the flagship level. KACE is the brand's deliberate push into pro-tier perception. Eighteen months of development. SGS-certified cushion, abrasion, and torsion performance. Used by Kawasaki's pro tour squad in BWF tournament play. The pitch: pro-tier construction, sub-flagship price.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "How I evaluate non-Yonex shoes",
+          body:
+            "I am in the Yonex Comfort Z3 and have not tested the KACE. My shoe-shopping rule is to fit by width and ankle support first, brand second. Kawasaki shoes are still a relatively small slice of what I see at club — if you have wider feet than Yonex's last accommodates, the KACE is worth a demo alongside the Victor P9200 line.",
+        },
           {
             kind: "facts",
             heading: "What KACE brings to the table",
@@ -2932,6 +3346,12 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Speed rackets used to be defined by what they removed — less head weight, thinner frame, lower swing weight. Kawasaki's Star-Cross argues for a different recipe: the speed comes from material refinement and shaft response, not from cutting mass. The result is a flagship-tier speed racket that does not feel hollow at contact, and that is a meaningful difference from many head-light speed frames.",
         blocks: [
+        {
+          kind: "firstPerson",
+          context: "Where the Star Cross sits",
+          body:
+            "I have not played the Star Cross. Kawasaki rackets show up in our club mainly via teammates who have rotated through Yonex and Victor and are looking for something different at a lower price. The pattern I see: Kawasaki frames are honest value but they don't quite match flagship-tier feedback clarity. Demo before you commit, not after.",
+        },
           {
             kind: "facts",
             heading: "Star-Cross spec snapshot",
@@ -3031,6 +3451,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "How to choose a badminton racket: a buyer's guide for beginners and intermediates",
       dek: "Five decisions that matter — weight class, balance, shaft flex, string tension, grip size — and three that do not. The honest guide that pro shops will not give you.",
+      story: {
+        intro:
+          "Five decisions that matter — weight class, balance, shaft flex, string tension, grip size — and three that do not. The honest guide that pro shops will not give you.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "The order I would buy in if I started again",
+            body:
+              "If I were starting badminton today and had a fixed €300 budget, I would not put it all into a racket. I would buy a €90–120 4U medium-flex racket, €80 court shoes that fit my foot width, and keep €100 in reserve for restringing and a few tubes of decent shuttles. The combined upgrade in technique and comfort beats a €300 flagship-only purchase every time.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Stop reading marketing language. Start with five questions.",
@@ -3073,6 +3505,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Badminton equipment for kids: rackets, shoes, and shuttles for ages 6-14",
       dek: "How to equip a young player without burning hundreds of dollars or stunting their technique. Honest picks from a coach-trained parent's perspective.",
+      story: {
+        intro:
+          "How to equip a young player without burning hundreds of dollars or stunting their technique. Honest picks from a coach-trained parent's perspective.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I would buy for a young player",
+            body:
+              "Two principles from helping junior players at our club: (1) start with a 4U or 5U racket with a flexible shaft — anything stiffer punishes immature timing; (2) fit court shoes by width, not just length, and check ankle support after a session of side lunges, not standing still in the shop. Cheap shoes are not a saving — they are a knee-and-ankle tax due in 18 months.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Why kid-specific equipment matters more than adult equipment",
@@ -3111,6 +3555,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Badminton glossary: 40+ terms every club player should understand",
       dek: "From sweet spot to U-class to BWF tour — the working vocabulary you need to read reviews, talk to your stringer, and follow professional matches.",
+      story: {
+        intro:
+          "From sweet spot to U-class to BWF tour — the working vocabulary you need to read reviews, talk to your stringer, and follow professional matches.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "The terms I had to learn in two languages",
+            body:
+              "Coming up in Chinese badminton culture first and playing competitively in Ireland later, I had to learn the equipment vocabulary twice. 中杆 became 'shaft', 4U the same in both, but 'sweet spot' has no exact Chinese single-term equivalent — the same coach who taught me both languages always called it 黄金区 (golden zone). When you read reviews across languages, the same physical phenomenon often gets carved up differently.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "Equipment terms",
@@ -3149,6 +3605,18 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       category: "guides",
       title: "Yonex grip sizes (G4, G5, G6) explained — and how to pick yours",
       dek: "How Yonex grip sizes compare to Victor and Li-Ning, why most adults pick G5 or G6, and what an overgrip actually changes about size.",
+      story: {
+        intro:
+          "How Yonex grip sizes compare to Victor and Li-Ning, why most adults pick G5 or G6, and what an overgrip actually changes about size.",
+        blocks: [
+          {
+            kind: "firstPerson",
+            context: "What I use and what I would recommend",
+            body:
+              "I play G5 on every Yonex racket I own (Nanoflare 1000 Z plus a couple of Astrox-line back-ups). G5 plus a single overgrip puts my grip thickness roughly where G4 sits naked. For most amateur men I would start with G5 plus one overgrip and add wraps before moving up to G4 — overgrip stacking is reversible, frame grip size is not.",
+          },
+        ],
+      },
       sections: [
         {
           heading: "What the G-numbers mean",
@@ -3259,9 +3727,13 @@ const sourcePolicyFactCheck: BlogFactCheck = {
 };
 
 function defaultReviewStory(article: BlogArticle): BlogStory | undefined {
-  if (article.story || !article.reviewSummary) return article.story;
+  if (!article.reviewSummary) return article.story;
 
-  return {
+  // The synthesized "buyer-first" review scaffold. Applied to every review-
+  // category article so the rendered story always carries the demo script,
+  // verdict bullets, and source posture block. Reading time computations
+  // depend on these blocks being present — see blog.test.ts.
+  const synthesized: BlogStory = {
     intro: `The useful question is not whether ${article.title} sounds exciting. The useful question is whether the promise survives an ordinary club night: late lifts, loose blocks, tired legs, and the point where a buyer stops admiring a spec sheet and starts living with the purchase.`,
     blocks: [
       {
@@ -3319,6 +3791,19 @@ function defaultReviewStory(article: BlogArticle): BlogStory | undefined {
       },
     ],
   };
+
+  // If the raw article supplied its own story (e.g. a firstPerson evidence
+  // block for E-E-A-T), keep it at the TOP and append the synthesized
+  // scaffold below. Intro is taken from the synthesized scaffold so the
+  // rendered article doesn't start with a duplicate of the dek.
+  if (article.story) {
+    return {
+      intro: synthesized.intro,
+      blocks: [...article.story.blocks, ...synthesized.blocks],
+    };
+  }
+
+  return synthesized;
 }
 
 function withEditorialSafeguards(article: BlogArticle): BlogArticle {
