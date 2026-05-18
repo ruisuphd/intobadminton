@@ -6,16 +6,6 @@ export const metadata: Metadata = {
   title: "Badminton Equipment Finder — Personalised Picks",
   description:
     "Answer five questions about your level, style, body, and budget. Get racket, string, shoe, and bag picks with transparent fit scoring. No signup.",
-  keywords: [
-    "badminton equipment finder",
-    "badminton racket finder",
-    "personalized badminton recommendation",
-    "badminton gear quiz",
-    "which badminton racket",
-    "racket selector",
-    "shoe fit quiz",
-    "string recommendation",
-  ],
   alternates: { canonical: "/quiz/" },
 };
 

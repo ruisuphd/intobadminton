@@ -7,7 +7,9 @@ import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import { SaveProductButton } from "@/components/SaveProductButton";
 import { companyInfo } from "@/lib/company";
+import { computeEditorialRating } from "@/lib/editorial-rating";
 import { reviewPath } from "@/lib/review-pages";
 import { sourceAuthorityForProduct } from "@/lib/source-authority";
 import { articleJsonLd } from "@/lib/structured-data";
@@ -184,6 +186,41 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
     product.editorNote ??
     `${product.brand} ${product.name} — verified against ${humanize(product.verificationStatus)} source on ${product.lastVerifiedAt}.`;
 
+  // `computeEditorialRating` is conservative: rating value comes from verified
+  // signals we already store (source authority, founder firsthand testing,
+  // high-confidence market signals, raw reviewCount). We never invent stars.
+  // The `meetsAggregateThreshold` flag gates AggregateRating emission so we
+  // only claim an aggregate when at least 2 distinct review sources back it —
+  // matching Google's structured-data policy that ratings must be visible on
+  // the page and substantiated.
+  const editorialRating = computeEditorialRating(product);
+
+  const reviewNode = {
+    "@type": "Review" as const,
+    author: {
+      "@type": "Person" as const,
+      name: companyInfo.founderName,
+      url: companyInfo.founderWebsite,
+    },
+    publisher: {
+      "@type": "Organization" as const,
+      name: companyInfo.siteName,
+      url: companyInfo.siteUrl,
+    },
+    datePublished: product.lastVerifiedAt,
+    reviewBody,
+    ...(editorialRating
+      ? {
+          reviewRating: {
+            "@type": "Rating" as const,
+            ratingValue: editorialRating.ratingValue,
+            bestRating: editorialRating.bestRating,
+            worstRating: editorialRating.worstRating,
+          },
+        }
+      : {}),
+  };
+
   const productSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -200,21 +237,18 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
       availability: "https://schema.org/InStock",
       url: product.officialSourceUrl,
     },
-    review: {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: companyInfo.founderName,
-        url: companyInfo.founderWebsite,
-      },
-      publisher: {
-        "@type": "Organization",
-        name: companyInfo.siteName,
-        url: companyInfo.siteUrl,
-      },
-      datePublished: product.lastVerifiedAt,
-      reviewBody,
-    },
+    review: reviewNode,
+    ...(editorialRating && editorialRating.meetsAggregateThreshold
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating" as const,
+            ratingValue: editorialRating.ratingValue,
+            reviewCount: editorialRating.reviewCount,
+            bestRating: editorialRating.bestRating,
+            worstRating: editorialRating.worstRating,
+          },
+        }
+      : {}),
   };
   if (product.image?.url) {
     productSchema.image = product.image.url;
@@ -267,8 +301,37 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
             <span className="chip chip-secondary">
               ~${product.priceUsd}
             </span>
+            {editorialRating && (
+              <span
+                className="chip chip-success"
+                aria-label={`Editorial rating ${editorialRating.ratingValue} out of ${editorialRating.bestRating} from ${editorialRating.reviewCount} review ${editorialRating.reviewCount === 1 ? "source" : "sources"}`}
+              >
+                ★ {editorialRating.ratingValue.toFixed(1)} / {editorialRating.bestRating}
+                {editorialRating.meetsAggregateThreshold && (
+                  <span className="ml-1 opacity-75">
+                    · {editorialRating.reviewCount} sources
+                  </span>
+                )}
+              </span>
+            )}
+          </div>
+          {/* Save-for-later button — feeds the 30-day shortlist surfaced at
+              /saved/ and in the header pill. */}
+          <div className="pt-3">
+            <SaveProductButton
+              id={product.id}
+              label={`${product.brand} ${product.name}`}
+            />
           </div>
         </header>
+
+        {/*
+         * Inline (top-of-article) affiliate disclosure. The footer disclosure
+         * still appears site-wide; this surface satisfies the post-2024 FTC
+         * expectation that disclosure precedes the first affiliate link a
+         * reader can encounter on this page.
+         */}
+        <AffiliateDisclosure variant="inline" />
 
         {showImage && (
           <div className="card p-6">

@@ -6,14 +6,6 @@ export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Astrox 100ZZ",
   description:
     "Astrox 99 Pro vs 100ZZ — both Yonex flagship attack frames, very different timing windows. Head balance, shaft hardness, who should buy which.",
-  keywords: [
-    "Astrox 99 Pro vs 100ZZ",
-    "Yonex Astrox 99 Pro",
-    "Yonex Astrox 100ZZ",
-    "Yonex flagship attack racket",
-    "Astrox 100ZZ Kurenai vs Axelsen",
-    "best Yonex attack racket",
-  ],
   alternates: { canonical: "/compare-guides/astrox-99-pro-vs-astrox-100zz/" },
   openGraph: {
     title: "Yonex Astrox 99 Pro vs Astrox 100ZZ — flagship attack compared",

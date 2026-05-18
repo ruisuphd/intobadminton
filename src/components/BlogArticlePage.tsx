@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
+import { ArticleToc, type TocItem } from "@/components/ArticleToc";
+import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { JsonLd } from "@/components/JsonLd";
+import { ReadingProgress } from "@/components/ReadingProgress";
+import { SocialShare } from "@/components/SocialShare";
 import {
   CATEGORY_LABELS,
   blogArticles,
@@ -147,6 +152,45 @@ function StoryBlock({ block }: { block: BlogStoryBlock }) {
     );
   }
 
+  if (block.kind === "firstPerson") {
+    // Visually distinct accent-bordered card. The presence of these blocks is
+    // the on-page signal Google's 2026 Product Reviews update rewards: lived
+    // experience anchored to specific judgments.
+    const setupLine = block.setup
+      ? [
+          block.setup.sessions != null
+            ? `${block.setup.sessions} session${block.setup.sessions === 1 ? "" : "s"}`
+            : null,
+          block.setup.strings ?? null,
+          block.setup.tensionLbs != null ? `${block.setup.tensionLbs} lb` : null,
+          block.setup.opponentLevel
+            ? `vs ${block.setup.opponentLevel}`
+            : null,
+        ]
+          .filter(Boolean)
+          .join(" · ")
+      : null;
+    return (
+      <aside
+        className="rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-accent-soft)] p-5"
+        data-block="first-person"
+      >
+        <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]">
+          On court · {block.context}
+        </p>
+        <p className="mt-2 text-base leading-[1.7] text-[var(--text-secondary)]">
+          {block.body}
+        </p>
+        {setupLine && (
+          <p className="mt-3 text-xs text-[var(--color-muted)]">
+            <span className="font-medium text-[var(--text)]">Setup:</span>{" "}
+            {setupLine}
+          </p>
+        )}
+      </aside>
+    );
+  }
+
   return (
     <section className="rounded-2xl border border-[color:var(--line-strong)] bg-white p-6 shadow-sm">
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
@@ -239,6 +283,15 @@ export function BlogArticlePage({
   const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
   const byline = companyInfo.authorByline;
   const minutes = readingTimeMinutes(article);
+  // Table-of-contents items derived from the article's <h2> headings. The
+  // anchor IDs must match the id="…" we render below, so they share a single
+  // slugifier inline. Skip the ToC entirely if there are 2 or fewer sections
+  // — a 2-item ToC is just noise.
+  const tocItems: TocItem[] = article.sections.map((section) => ({
+    id: section.heading.toLowerCase().replace(/\s+/g, "-"),
+    label: section.heading,
+  }));
+  const showToc = tocItems.length >= 3;
   const storyWords = article.story
     ? article.story.intro.split(/\s+/).filter((word) => word.length > 0).length
     : 0;
@@ -328,6 +381,7 @@ export function BlogArticlePage({
 
   return (
     <main className="flex-1">
+      <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
       {reviewJsonLd && <JsonLd data={reviewJsonLd} />}
       <JsonLd data={breadcrumbJsonLd} />
@@ -370,66 +424,101 @@ export function BlogArticlePage({
       </section>
 
       {/* Body */}
-      <article className="layout-band max-w-3xl py-12 lg:py-16">
-        <p className="mb-8 rounded-2xl bg-[color:var(--surface-muted)] p-4 text-sm text-[var(--color-muted)]">
-          Findings drawn from product-page specs, community sources
-          (BadmintonCN, Reddit r/badminton, BadmintonCentral, video reviewers),
-          and on-court testing. See our{" "}
-          <Link
-            href="/sources/"
-            className="text-[var(--color-accent)] hover:underline"
-          >
-            editorial process
-          </Link>{" "}
-          for the full citation model.
-        </p>
+      <div className="layout-band max-w-6xl py-12 lg:py-16">
+        <div className={showToc ? "lg:grid lg:grid-cols-[1fr_220px] lg:gap-12" : ""}>
+          <article className="max-w-3xl">
+            <p className="mb-6 rounded-2xl bg-[color:var(--surface-muted)] p-4 text-sm text-[var(--color-muted)]">
+              Findings drawn from product-page specs, community sources
+              (BadmintonCN, Reddit r/badminton, BadmintonCentral, video
+              reviewers), and on-court testing. See our{" "}
+              <Link
+                href="/sources/"
+                className="text-[var(--color-accent)] hover:underline"
+              >
+                editorial process
+              </Link>{" "}
+              for the full citation model.
+            </p>
 
-        <div className="space-y-8">
-          {article.story && (
-            <section className="space-y-8">
-              <p className="text-lg leading-[1.75] text-[var(--text-secondary)]">
-                {article.story.intro}
-              </p>
-              {article.story.blocks.map((block, index) => (
-                <StoryBlock key={`${block.kind}-${index}`} block={block} />
+            {/*
+             * Inline affiliate disclosure. Surfaced on every blog article
+             * whose outbound links may include affiliate URLs (reviews,
+             * comparisons). Guides are excluded by default — they rarely
+             * contain product links — but the footer disclosure still
+             * applies site-wide.
+             */}
+            {article.category !== "guides" && (
+              <div className="mb-8">
+                <AffiliateDisclosure variant="inline" />
+              </div>
+            )}
+
+            <div className="space-y-8">
+              {article.story && (
+                <section className="space-y-8">
+                  <p className="text-lg leading-[1.75] text-[var(--text-secondary)]">
+                    {article.story.intro}
+                  </p>
+                  {article.story.blocks.map((block, index) => (
+                    <StoryBlock key={`${block.kind}-${index}`} block={block} />
+                  ))}
+                </section>
+              )}
+
+              {article.sections.map((section, index) => (
+                <section
+                  key={section.heading}
+                  className="space-y-3 scroll-mt-24"
+                  id={section.heading.toLowerCase().replace(/\s+/g, "-")}
+                >
+                  <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+                    {section.heading}
+                  </h2>
+                  <p className="text-base leading-[1.7] text-[var(--text-secondary)]">
+                    {section.body}
+                  </p>
+                  {canShowArticleAd &&
+                    index === Math.floor(article.sections.length / 2) && (
+                      <AdSlot id={`blog-${article.slug}-mid`} />
+                    )}
+                </section>
               ))}
-            </section>
-          )}
+            </div>
 
-          {article.sections.map((section, index) => (
-            <section
-              key={section.heading}
-              className="space-y-3"
-              id={section.heading.toLowerCase().replace(/\s+/g, "-")}
-            >
-              <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-                {section.heading}
-              </h2>
-              <p className="text-base leading-[1.7] text-[var(--text-secondary)]">
-                {section.body}
+            <div className="mt-12 card p-7">
+              <p className="text-lg font-semibold text-[var(--text)]">
+                {article.cta}
               </p>
-              {canShowArticleAd &&
-                index === Math.floor(article.sections.length / 2) && (
-                  <AdSlot id={`blog-${article.slug}-mid`} />
-                )}
-            </section>
-          ))}
-        </div>
+              <Link
+                href={buildLocalizedPath(locale, "/quiz/")}
+                className="btn-primary mt-5"
+              >
+                Start the finder
+              </Link>
+            </div>
 
-        <div className="mt-12 card p-7">
-          <p className="text-lg font-semibold text-[var(--text)]">
-            {article.cta}
-          </p>
-          <Link
-            href={buildLocalizedPath(locale, "/quiz/")}
-            className="btn-primary mt-5"
-          >
-            Start the finder
-          </Link>
-        </div>
+            <FactCheckNotes notes={article.factChecks ?? []} />
 
-        <FactCheckNotes notes={article.factChecks ?? []} />
-      </article>
+            <SocialShare url={canonicalUrl} title={article.title} />
+
+            <HelpfulReaction contentId={`blog:${article.slug}`} />
+          </article>
+
+          {showToc && (
+            <aside className="hidden lg:block">
+              <ArticleToc items={tocItems} />
+            </aside>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile-only ToC sits above the body for narrow viewports. The
+          ArticleToc component itself decides which surface to render on. */}
+      {showToc && (
+        <div className="layout-band max-w-3xl lg:hidden -mt-8">
+          <ArticleToc items={tocItems} />
+        </div>
+      )}
 
       {/* Related */}
       {related.length > 0 && (

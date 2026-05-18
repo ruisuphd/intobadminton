@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: "Badminton Equipment FAQ — Plain-English Answers",
   description:
     "Practical badminton FAQ — racket fit, 3U/4U/5U weight, shaft flex, balance, string tension, shoe fit width, restringing cadence — answered in plain English.",
-  keywords: [
-    "badminton FAQ",
-    "how to choose badminton racket",
-    "badminton string tension",
-    "3U vs 4U badminton",
-    "what is head-heavy badminton racket",
-    "badminton shoes vs running shoes",
-    "how often to restring badminton",
-    "badminton racket shaft flex explained",
-    "Yonex vs Victor vs Li-Ning",
-    "badminton beginner racket guide",
-  ],
   alternates: { canonical: "/faq/" },
   openGraph: {
     title: "Badminton Equipment FAQ — Plain-English Answers",

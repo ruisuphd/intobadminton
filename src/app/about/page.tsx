@@ -6,15 +6,6 @@ export const metadata: Metadata = {
   title: "About — Built by a Div 4 Ireland Player",
   description:
     "Who runs IntoBadminton, how the gear recommendations work, where the data comes from. Built by a Division 4 Ireland player with Malaysia and China coaching.",
-  keywords: [
-    "about IntoBadminton",
-    "Rui Su badminton",
-    "Intonation Labs",
-    "badminton equipment reviewer",
-    "editorial independence",
-    "badminton recommendation methodology",
-    "competitive badminton player",
-  ],
   alternates: {
     canonical: "/about/",
   },

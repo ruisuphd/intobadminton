@@ -5,18 +5,6 @@ export const metadata: Metadata = {
   title: "Best Intermediate Badminton Rackets 2026",
   description:
     "Six intermediate badminton rackets for club players who have outgrown beginner frames — Astrox 77 Pro, 88S Pro, Arcsaber 11 Pro, Halbertec 8000, Auraspeed 90K II.",
-  keywords: [
-    "best intermediate badminton racket",
-    "intermediate badminton racket 2026",
-    "Yonex Astrox 77 Pro",
-    "Yonex Astrox 88S Pro",
-    "Yonex Arcsaber 11 Pro",
-    "Li-Ning Halbertec 8000",
-    "Victor Auraspeed 90K II",
-    "Victor DriveX 12",
-    "club player badminton racket",
-    "step up from beginner racket",
-  ],
   alternates: { canonical: "/best/intermediate-rackets/" },
 };
 

@@ -6,13 +6,6 @@ export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Li-Ning Halbertec 9000 Power",
   description:
     "Yonex Astrox 99 Pro vs Li-Ning Halbertec 9000 Power — two singles attack flagships from rival brands. Which to pick based on shaft tier, build feel, and resale.",
-  keywords: [
-    "Astrox 99 Pro vs Halbertec 9000 Power",
-    "Yonex vs Li-Ning singles racket",
-    "Halbertec 9000 Power review",
-    "Astrox 99 Pro Li-Ning equivalent",
-    "best singles attack racket 2026",
-  ],
   alternates: { canonical: "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/" },
   openGraph: {
     title: "Astrox 99 Pro vs Halbertec 9000 Power — Yonex or Li-Ning for singles attack?",

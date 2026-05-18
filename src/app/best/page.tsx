@@ -8,20 +8,6 @@ export const metadata: Metadata = {
   title: "Best Badminton Rackets, Shoes & Strings (2026)",
   description:
     "Curated 2026 badminton buying guides — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings by feel and durability.",
-  keywords: [
-    "best badminton racket",
-    "best badminton rackets 2026",
-    "best beginner badminton racket",
-    "best intermediate badminton racket",
-    "best doubles badminton racket",
-    "best smash racket",
-    "best badminton shoes",
-    "best badminton strings",
-    "badminton buying guide",
-    "Yonex Astrox best",
-    "Victor Auraspeed best",
-    "Li-Ning AxForce best",
-  ],
   alternates: { canonical: "/best/" },
   openGraph: {
     title: "Best Badminton Rackets, Shoes & Strings (2026)",
