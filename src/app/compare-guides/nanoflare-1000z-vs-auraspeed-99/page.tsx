@@ -6,13 +6,6 @@ export const metadata: Metadata = {
   title: "Yonex Nanoflare 1000Z vs Victor Auraspeed 99",
   description:
     "Nanoflare 1000Z vs Victor Auraspeed 99 — speed series flagships compared. Head-light feel, drive speed, and which fits men's vs women's doubles.",
-  keywords: [
-    "Nanoflare 1000Z vs Auraspeed 99",
-    "Yonex Nanoflare 1000Z review",
-    "Victor Auraspeed 99 Hayabusa review",
-    "best speed badminton racket",
-    "Yonex vs Victor doubles",
-  ],
   alternates: { canonical: "/compare-guides/nanoflare-1000z-vs-auraspeed-99/" },
   openGraph: {
     title: "Nanoflare 1000Z vs Auraspeed 99 — Yonex or Victor for speed?",

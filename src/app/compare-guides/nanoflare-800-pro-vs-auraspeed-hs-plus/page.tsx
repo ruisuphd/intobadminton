@@ -6,13 +6,6 @@ export const metadata: Metadata = {
   title: "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus",
   description:
     "Nanoflare 800 Pro vs Auraspeed HS Plus — mid-flagship speed rackets compared. Drive speed, swing weight, and source-authority confidence.",
-  keywords: [
-    "Nanoflare 800 Pro vs Auraspeed HS Plus",
-    "Yonex Nanoflare 800 Pro review",
-    "Victor Auraspeed HS Plus review",
-    "Yonex vs Victor speed",
-    "best mid-tier doubles racket",
-  ],
   alternates: { canonical: "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/" },
   openGraph: {
     title: "Nanoflare 800 Pro vs Auraspeed HS Plus — mid-flagship speed compared",

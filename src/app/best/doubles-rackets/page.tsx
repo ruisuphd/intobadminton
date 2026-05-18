@@ -5,19 +5,6 @@ export const metadata: Metadata = {
   title: "Best Doubles Badminton Rackets 2026",
   description:
     "Six doubles badminton rackets ranked for front-court speed, defensive recovery, and rear-court continuity — Yonex 88S Pro, Nanoflare 1000Z, Auraspeed HS Plus.",
-  keywords: [
-    "best doubles badminton racket",
-    "badminton racket for doubles",
-    "Yonex Astrox 88S Pro",
-    "Yonex Astrox 88D Pro",
-    "Yonex Nanoflare 1000Z",
-    "Yonex Nanoflare 700 Pro",
-    "Victor Auraspeed HS Plus",
-    "Victor DriveX 8S",
-    "mixed doubles racket",
-    "front-court badminton racket",
-    "rear-court badminton racket",
-  ],
   alternates: { canonical: "/best/doubles-rackets/" },
 };
 

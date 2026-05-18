@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { EvidenceCards } from "@/components/EvidenceCards";
+import { FitScoreBadge } from "@/components/FitScoreBadge";
+import { FitScoreRadar } from "@/components/FitScoreRadar";
+import { SaveProductButton } from "@/components/SaveProductButton";
 import {
   ProductImageView,
   canShowProductImage,
@@ -124,12 +127,9 @@ export function ResultCard({
           </div>
         </div>
         <div className="flex flex-col items-end">
-          <p className="text-3xl font-semibold tabular-nums text-[var(--color-accent)]">
-            {(r.fitScore * 100).toFixed(0)}
-          </p>
-          <p className="text-xs text-[var(--color-subtle)]">
-            {"fit score"}
-          </p>
+          {/* Visual fit-score ring. Same score data as before; the ring makes
+              the magnitude scannable without reading the numeral. */}
+          <FitScoreBadge fitScore={r.fitScore} size={72} showLabel={false} />
           <span
             className={`mt-2 ${fitScoreBand(r.fitScore).chipClass}`}
             aria-label={`${fitScoreBand(r.fitScore).label} for your profile`}
@@ -138,6 +138,17 @@ export function ResultCard({
           </span>
         </div>
       </header>
+
+      {/* Radar chart — collapsed by default to keep card density manageable.
+          Readers who want the 5-factor breakdown open the disclosure. */}
+      <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4">
+        <summary className="cursor-pointer text-xs font-medium text-[var(--text)]">
+          Show 5-factor fit breakdown
+        </summary>
+        <div className="mt-4 flex justify-center">
+          <FitScoreRadar subscores={r.subscores} size={220} />
+        </div>
+      </details>
 
       <p className="mt-3 text-sm text-[var(--color-muted)]">
         ~${r.priceUsd} street-price estimate · {specLine(r)}
@@ -272,6 +283,13 @@ export function ResultCard({
         >
           {"Open compare"}
         </Link>
+        {/*
+         * Save for later — separate from the compare tray. Compare is a
+         * narrow per-session decision tool (max 3). Saved is a persistent
+         * shortlist (30-day TTL) so the reader can come back and revisit
+         * picks without re-running the finder.
+         */}
+        <SaveProductButton id={r.id} label={`${r.brand} ${r.name}`} />
         <Link
           href={`${buildLocalizedPath(locale, "/contact/")}?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
           className="inline-flex h-11 items-center justify-center rounded-full border border-[color:var(--line-strong)] px-4 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--text)]"

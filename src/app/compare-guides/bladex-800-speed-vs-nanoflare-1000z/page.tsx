@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   title: "Li-Ning Bladex 800 Speed vs Yonex Nanoflare 1000Z",
   description:
     "Bladex 800 Speed vs Nanoflare 1000Z — Li-Ning's speed flagship against Yonex's hexagonal speed weapon. Specs, drive feel, source-authority comparison.",
-  keywords: [
-    "Bladex 800 Speed vs Nanoflare 1000Z",
-    "Li-Ning Bladex 800 review",
-    "Yonex Nanoflare 1000Z review",
-    "Li-Ning vs Yonex speed racket",
-  ],
   alternates: { canonical: "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/" },
   openGraph: {
     title: "Bladex 800 Speed vs Nanoflare 1000Z — Li-Ning or Yonex for speed?",

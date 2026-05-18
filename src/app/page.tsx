@@ -1,30 +1,14 @@
 import type { Metadata } from "next";
 import { LocalizedHome } from "@/components/LocalizedHome";
-import { StructuredData } from "@/components/StructuredData";
 import { defaultOgImages } from "@/lib/og";
 
+// Note: `meta keywords` removed (Google has ignored it since 2009; stuffing
+// is a soft negative signal for human reviewers — see IMPROVEMENT_PLAN_2026Q2
+// §3.1 #5).
 export const metadata: Metadata = {
   title: "Badminton Racket, String & Shoe Finder",
   description:
     "Personalised badminton equipment finder — rank rackets, strings, shoes, and bags for your level, style, and budget. Transparent scoring, no signup.",
-  keywords: [
-    "badminton",
-    "badminton racket",
-    "best badminton racket",
-    "badminton equipment",
-    "badminton equipment finder",
-    "badminton racket finder",
-    "badminton shoes",
-    "badminton string",
-    "Yonex Astrox",
-    "Yonex Nanoflare",
-    "Victor Auraspeed",
-    "Li-Ning AxForce",
-    "racket finder",
-    "badminton gear",
-    "best badminton shoes",
-    "best badminton string",
-  ],
   alternates: {
     canonical: "/",
   },
@@ -41,10 +25,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (
-    <>
-      <StructuredData />
-      <LocalizedHome locale="en" />
-    </>
-  );
+  // Organization + WebSite JSON-LD is emitted site-wide from the root layout.
+  return <LocalizedHome locale="en" />;
 }

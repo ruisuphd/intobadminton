@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   title: "Li-Ning Halbertec 9000 Power vs AxForce 100 Gen 2",
   description:
     "Halbertec 9000 Power vs AxForce 100 Gen 2 — two Li-Ning attack flagships compared. Which is the right Li-Ning upgrade for singles smash specialists.",
-  keywords: [
-    "Halbertec 9000 Power vs AxForce 100 Gen 2",
-    "Li-Ning attack racket",
-    "AxForce 100 Gen 2 review",
-    "best Li-Ning singles racket",
-  ],
   alternates: { canonical: "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/" },
   openGraph: {
     title: "Halbertec 9000 Power vs AxForce 100 Gen 2 — Li-Ning attack flagships compared",

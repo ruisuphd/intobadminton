@@ -6,13 +6,6 @@ export const metadata: Metadata = {
   title: "Yonex Astrox 88D Pro vs Li-Ning AxForce 90 New",
   description:
     "Astrox 88D Pro 2024 vs Li-Ning AxForce 90 New — doubles rear-court attack compared. Build, balance, and which fits men's vs mixed doubles.",
-  keywords: [
-    "Astrox 88D Pro vs AxForce 90 New",
-    "Yonex vs Li-Ning doubles racket",
-    "AxForce 90 New review",
-    "Astrox 88D Pro 2024",
-    "best doubles attack racket",
-  ],
   alternates: { canonical: "/compare-guides/astrox-88d-pro-vs-axforce-90-new/" },
   openGraph: {
     title: "Astrox 88D Pro vs AxForce 90 New — doubles attack compared",

@@ -6,16 +6,6 @@ export const metadata: Metadata = {
   title: "Badminton Equipment Blog — Reviews & Guides",
   description:
     "Original badminton writing — racket reviews, comparisons, string deep-dives, shoe-fit guides. Built on official specs and rights-safe review signals.",
-  keywords: [
-    "badminton blog",
-    "badminton racket review",
-    "badminton equipment guide",
-    "badminton string review",
-    "badminton shoe review",
-    "Yonex Astrox review",
-    "Victor Auraspeed review",
-    "Li-Ning AxForce review",
-  ],
   alternates: { canonical: "/blog/" },
   openGraph: {
     title: "Badminton Equipment Blog — Reviews & Guides",

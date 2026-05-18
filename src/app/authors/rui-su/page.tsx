@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { companyInfo, founderSameAs, organizationJsonLd } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
 
 const PATH = "/authors/rui-su/";
@@ -14,13 +14,6 @@ export const metadata: Metadata = {
   title: "Rui Su — Founder & lead reviewer",
   description:
     "Rui Su is the founder of IntoBadminton — a competitive Division 4 Ireland player who has trained under former Malaysia national-team and China provincial-team coaches. Equipment reviews and the finder methodology are signed by Rui.",
-  keywords: [
-    "Rui Su badminton",
-    "IntoBadminton founder",
-    "Rui Su Maynooth University",
-    "Rui Su badminton coach",
-    "IntoBadminton review author",
-  ],
   alternates: { canonical: PATH },
   openGraph: {
     title: "Rui Su — Founder, IntoBadminton",
@@ -46,7 +39,7 @@ export default function RuiSuAuthorPage() {
     "@id": `${URL}#person`,
     name: companyInfo.founderName,
     url: URL,
-    sameAs: [companyInfo.founderWebsite],
+    sameAs: founderSameAs,
     description: companyInfo.founderDescription,
     jobTitle: "Founder, IntoBadminton",
     worksFor: { "@id": organizationJsonLd["@id"] },

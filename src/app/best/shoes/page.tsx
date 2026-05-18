@@ -5,19 +5,6 @@ export const metadata: Metadata = {
   title: "Best Badminton Shoes 2026 — Yonex & Victor Picks",
   description:
     "Six badminton shoes ranked by stability, cushioning, fit width, and weight feel — picks for narrow, regular, and wide feet, and for ankle recovery.",
-  keywords: [
-    "best badminton shoes",
-    "Yonex Power Cushion 65 Z Wide",
-    "Yonex Aerus Z2",
-    "Yonex Comfort Z3",
-    "Yonex Eclipsion Z3",
-    "Victor P9200",
-    "Li-Ning BladeSabre Max",
-    "wide-fit badminton shoes",
-    "badminton shoes for wide feet",
-    "badminton shoes for ankle support",
-    "best badminton shoes for beginners",
-  ],
   alternates: { canonical: "/best/shoes/" },
 };
 

@@ -19,6 +19,27 @@ export const companyInfo = {
     "Rui Su · Founder, IntoBadminton · Div 4 Ireland · trained under former Malaysia national and China provincial-team coaches",
 } as const;
 
+/**
+ * External author profiles surfaced as `Person.sameAs` proofs (E-E-A-T).
+ *
+ * The YouTube entry is a PLACEHOLDER channel handle — claim the handle on
+ * youtube.com and replace before the link is followed by Google. A
+ * profile-only channel (no videos required) is enough for the entity
+ * benefit; the VideoObject rich-result work is gated on the separate
+ * "do we want to commit to video" decision in IMPROVEMENT_PLAN §3.5 #30b.
+ *
+ * Linking to a not-yet-claimed handle returns a YouTube error page — leave
+ * that entry commented out until the channel is created.
+ */
+export const founderSameAs: string[] = [
+  companyInfo.founderWebsite,
+  // TODO: claim and uncomment once the channel handle exists.
+  // "https://www.youtube.com/@intobadminton",
+  // "https://twitter.com/intobadminton",
+  // "https://www.linkedin.com/company/intonationlabs",
+  // "https://www.reddit.com/user/intobadminton",
+];
+
 export const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -29,7 +50,7 @@ export const organizationJsonLd = {
   email: companyInfo.contactEmail,
   logo: {
     "@type": "ImageObject",
-    url: `${companyInfo.siteUrl}/intobadminton-og.png`,
+    url: `${companyInfo.siteUrl}/intobadminton-og.jpg`,
     width: 512,
     height: 512,
   },

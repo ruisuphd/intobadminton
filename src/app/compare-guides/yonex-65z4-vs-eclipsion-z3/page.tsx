@@ -6,13 +6,6 @@ export const metadata: Metadata = {
   title: "Yonex 65 Z4 vs Eclipsion Z3 — Power Cushion shoes compared",
   description:
     "Yonex Power Cushion 65 Z4 vs Eclipsion Z3 — Yonex's speed-oriented Z series against the premium Eclipsion stability shoe. Fit, stability, and who buys which.",
-  keywords: [
-    "Yonex 65 Z4 vs Eclipsion Z3",
-    "Yonex 65Z4 review",
-    "Yonex Eclipsion Z3 review",
-    "best Yonex badminton shoe",
-    "Yonex Power Cushion comparison",
-  ],
   alternates: { canonical: "/compare-guides/yonex-65z4-vs-eclipsion-z3/" },
   openGraph: {
     title: "Yonex 65 Z4 vs Eclipsion Z3 — Power Cushion shoes compared",

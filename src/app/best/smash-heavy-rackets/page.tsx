@@ -5,19 +5,6 @@ export const metadata: Metadata = {
   title: "Best Smash-Heavy Badminton Rackets 2026",
   description:
     "Six head-heavy attack rackets ranked by smash power, rally continuity, and shaft hardness — Astrox 100ZZ, 99 Pro, 88D Pro, Halbertec 9000 Power, Auraspeed 100X SE.",
-  keywords: [
-    "best smash badminton racket",
-    "best attacking badminton racket",
-    "Yonex Astrox 100ZZ",
-    "Yonex Astrox 99 Pro",
-    "Yonex Astrox 88D Pro",
-    "Li-Ning Halbertec 9000 Power",
-    "Victor Auraspeed 100X SE",
-    "Yonex Astrox 100ZZ Viktor Axelsen",
-    "head-heavy badminton racket",
-    "stiff shaft badminton",
-    "singles badminton racket",
-  ],
   alternates: { canonical: "/best/smash-heavy-rackets/" },
 };
 
@@ -120,9 +107,6 @@ const config: BestPicksConfig = {
       why: "Li-Ning's heaviest-feeling pro frame. The 9000 Power genuinely rivals 100ZZ-tier smash mass at a lower price, and the build quality has caught up with Yonex's flagships in recent years.",
       tradeoff: "The frame demands strength. Skip if you have shoulder, elbow, or wrist comfort flags.",
     },
-    // TODO: image — Victor Auraspeed 100X SE (Mohammad Ahsan signature).
-    // Try victorsport.com/product/auraspeed-100x-se-h or au.victorsport.com
-    // (their site is JS-rendered; open in browser and copy image URL).
     {
       rank: 5,
       name: "Auraspeed 100X SE (Mohammad Ahsan)",
@@ -136,6 +120,15 @@ const config: BestPicksConfig = {
       ],
       why: "A speed-leaning attack frame — closer to a hybrid between Astrox and Nanoflare than either. Smash mass is lower than 100ZZ but recovery between shots is meaningfully faster, which is why Ahsan's tour pairing favoured this profile.",
       tradeoff: "Top-end smash is bottleneck for pure singles attackers; choose 100ZZ or 99 Pro if smash is everything.",
+      image: {
+        url: "https://shop.au.victorsport.com/cdn/shop/products/82004_0_20211117175841_1024x1024@2x.jpg?v=1644645156",
+        source: "victor",
+        credit: "Image: Victor (shop.au.victorsport.com)",
+        alt: "Victor Auraspeed 100X SE (Mohammad Ahsan) badminton racket",
+        width: 1024,
+        height: 1024,
+        verified: true,
+      },
     },
     {
       rank: 6,

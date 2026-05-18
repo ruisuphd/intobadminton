@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: "Badminton Equipment Glossary — 40+ Terms",
   description:
     "Plain-English glossary of badminton equipment terms — 3U/4U/5U, shaft flex, balance point, sweet spot, repulsion, control, gauge, T-throat, and more.",
-  keywords: [
-    "badminton glossary",
-    "badminton terms explained",
-    "what is 4U badminton",
-    "what does head-heavy mean",
-    "shaft flex badminton",
-    "badminton balance point",
-    "string gauge badminton",
-    "torsional stability badminton shoe",
-    "T-throat badminton",
-    "BG65 BG80 explained",
-  ],
   alternates: { canonical: "/guides/glossary/" },
 };
 

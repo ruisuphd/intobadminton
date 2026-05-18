@@ -18,18 +18,6 @@ export const metadata: Metadata = {
   title: "Badminton equipment reviews — every racket and shoe, sourced",
   description:
     "Per-product badminton reviews — Yonex Astrox, Nanoflare, Arcsaber; Li-Ning Halbertec, AxForce, Bladex; Victor Auraspeed, DriveX; Kawasaki, Bonny, Kumpoo — with verified specs and source-authority labels.",
-  keywords: [
-    "badminton racket reviews",
-    "badminton shoe reviews",
-    "Yonex Astrox review",
-    "Yonex Nanoflare review",
-    "Li-Ning Halbertec review",
-    "Li-Ning AxForce review",
-    "Victor Auraspeed review",
-    "best Yonex racket",
-    "best Li-Ning racket",
-    "best Victor racket",
-  ],
   alternates: { canonical: PATH },
   openGraph: {
     title: "Badminton equipment reviews — every racket and shoe, sourced",

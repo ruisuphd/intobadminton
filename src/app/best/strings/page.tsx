@@ -5,20 +5,6 @@ export const metadata: Metadata = {
   title: "Best Badminton Strings 2026 — BG, EXBOLT, L69",
   description:
     "Six badminton strings ranked by feel, repulsion, control, and durability — Yonex BG65, BG80, BG80 Power, EXBOLT 63, Aerobite, plus Li-Ning L69.",
-  keywords: [
-    "best badminton string",
-    "Yonex BG65",
-    "Yonex BG80",
-    "Yonex BG80 Power",
-    "Yonex EXBOLT 63",
-    "Yonex Aerobite",
-    "Li-Ning L69",
-    "best badminton string for beginners",
-    "best badminton string for smash",
-    "badminton string tension",
-    "badminton string gauge",
-    "badminton string durability",
-  ],
   alternates: { canonical: "/best/strings/" },
 };
 

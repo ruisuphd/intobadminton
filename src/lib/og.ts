@@ -9,7 +9,7 @@
  */
 export const defaultOgImages = [
   {
-    url: "/intobadminton-og.png",
+    url: "/intobadminton-og.jpg",
     width: 512,
     height: 512,
     alt: "IntoBadminton — badminton equipment recommendations",

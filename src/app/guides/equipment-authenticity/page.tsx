@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AuthenticityChecker } from "@/components/AuthenticityChecker";
 import { JsonLd } from "@/components/JsonLd";
 import {
   authenticityBrands,
@@ -11,17 +12,6 @@ export const metadata: Metadata = {
   title: "Badminton Racket Authenticity Check",
   description:
     "Check whether a Yonex, Victor, or Li-Ning racket is genuine before you buy — per-brand official-source guidance, red flags, and counterfeit-response steps.",
-  keywords: [
-    "badminton racket authenticity",
-    "fake Yonex racket",
-    "fake Victor racket",
-    "fake Li-Ning racket",
-    "Yonex authenticity check",
-    "Victor verify racket",
-    "Li-Ning anti-counterfeit code",
-    "spot counterfeit badminton racket",
-    "real or fake Yonex Astrox",
-  ],
   alternates: { canonical: "/guides/equipment-authenticity/" },
 };
 
@@ -141,6 +131,25 @@ export default function EquipmentAuthenticityGuide() {
           <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
             {authenticityGuide.buyerRule}
           </p>
+        </section>
+
+        {/*
+         * Interactive 5-step authenticity check. The detailed per-brand
+         * checklist below remains the source of truth — this flow is a
+         * triage tool that produces a verdict band and links into the
+         * detailed checklist for the most-flagged signals.
+         */}
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Quick 5-step check
+          </h2>
+          <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+            Answer 5 questions and get a triage verdict. For per-brand
+            specifics — Yonex barcodes, Victor sticker codes, Li-Ning
+            anti-counterfeit codes — see the detailed checklist further down
+            this page.
+          </p>
+          <AuthenticityChecker />
         </section>
 
         <h2 className="pt-2 text-xl font-semibold">Universal red flags</h2>

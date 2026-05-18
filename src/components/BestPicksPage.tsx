@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { EditorialMeta } from "@/components/EditorialMeta";
+import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
+import { BestPicksComparisonTable } from "@/components/BestPicksComparisonTable";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { EvidenceBadge, type EvidenceLevel } from "@/components/EvidenceBadge";
 import { JsonLd } from "@/components/JsonLd";
@@ -189,6 +191,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
         </header>
 
         <EditorialNotice />
+        <AffiliateDisclosure variant="inline" />
 
         <section className="card p-6">
           <h2 className="text-lg font-semibold text-[var(--text)]">
@@ -200,9 +203,22 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
           />
         </section>
 
+        {/*
+         * At-a-glance comparison table. Renders the same picks as the cards
+         * below in a sortable grid, with anchor links pointing to the
+         * detailed write-up for each pick. This is the structural change that
+         * /best/* needed to compete with retailer-style buying guides without
+         * adopting their RPM-first layout.
+         */}
+        <BestPicksComparisonTable picks={config.picks} />
+
         <ol className="space-y-6">
           {config.picks.map((p) => (
-            <li key={p.name} className="card p-7">
+            <li
+              key={p.name}
+              id={p.name.toLowerCase().replace(/\s+/g, "-")}
+              className="card p-7 scroll-mt-24"
+            >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex items-start gap-4">
                   {canShowProductImage(p.image) && (

@@ -5,20 +5,6 @@ export const metadata: Metadata = {
   title: "Best Beginner Badminton Rackets 2026",
   description:
     "Six forgiving badminton rackets for beginners — Nanoflare 700 Play, Astrox 77 Play, Arcsaber 7 Pro, DriveX 8S, Astrox 77 Pro, Mizuno Altius N-Feel.",
-  keywords: [
-    "best beginner badminton racket",
-    "beginner badminton racket",
-    "first badminton racket",
-    "Yonex Nanoflare 700 Play",
-    "Yonex Astrox 77 Play",
-    "Yonex Astrox 77 Pro",
-    "Yonex Arcsaber 7 Pro",
-    "Victor DriveX 8S",
-    "4U badminton racket",
-    "Hi-Flex shaft beginner",
-    "forgiving badminton racket",
-    "badminton racket under $200",
-  ],
   alternates: { canonical: "/best/beginner-rackets/" },
 };
 

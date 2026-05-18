@@ -13,13 +13,24 @@ import { defaultUserProfile, type UserProfile } from "@/lib/taxonomy";
 const STORAGE_KEY = "intobadminton.profile.v1";
 const HISTORY_KEY = "intobadminton.history.v1";
 const COMPARE_KEY = "intobadminton.compare.v1";
+const SAVED_KEY = "intobadminton.saved.v1";
 const MAX_HISTORY = 12;
 const MAX_COMPARE = 3;
+/** Saved-shortlist soft cap. Beyond this we drop the oldest entry. */
+const MAX_SAVED = 25;
+/** 30-day TTL on saved items — keeps the list relevant; matches the plan. */
+const SAVED_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
 type HistoryEntry = {
   at: string;
   profile: UserProfile;
   topIds: string[];
+};
+
+export type SavedEntry = {
+  id: string;
+  /** ISO timestamp. Used for TTL pruning and ordering. */
+  savedAt: string;
 };
 
 type Ctx = {
@@ -30,6 +41,11 @@ type Ctx = {
   compareIds: string[];
   toggleCompare: (id: string) => void;
   clearCompare: () => void;
+  /** Persistent saved-product shortlist (separate from the 3-slot compare). */
+  saved: SavedEntry[];
+  toggleSaved: (id: string) => void;
+  isSaved: (id: string) => boolean;
+  clearSaved: () => void;
 };
 
 const ProfileContext = createContext<Ctx | null>(null);
@@ -45,10 +61,19 @@ function load<T>(key: string, fallback: T): T {
   }
 }
 
+function pruneExpiredSaved(entries: SavedEntry[]): SavedEntry[] {
+  const cutoff = Date.now() - SAVED_TTL_MS;
+  return entries.filter((e) => {
+    const t = Date.parse(e.savedAt);
+    return Number.isFinite(t) && t >= cutoff;
+  });
+}
+
 export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfileState] = useState<UserProfile>(defaultUserProfile);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [saved, setSaved] = useState<SavedEntry[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -56,6 +81,9 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     setProfileState(load(STORAGE_KEY, defaultUserProfile()));
     setHistory(load(HISTORY_KEY, []));
     setCompareIds(load(COMPARE_KEY, []));
+    // Prune TTL-expired saves on hydration; the persisted write below
+    // re-flushes the cleaned list back to disk.
+    setSaved(pruneExpiredSaved(load(SAVED_KEY, [] as SavedEntry[])));
     setHydrated(true);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
@@ -74,6 +102,11 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     if (!hydrated) return;
     localStorage.setItem(COMPARE_KEY, JSON.stringify(compareIds));
   }, [compareIds, hydrated]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    localStorage.setItem(SAVED_KEY, JSON.stringify(saved));
+  }, [saved, hydrated]);
 
   const setProfile = useCallback(
     (p: UserProfile | ((prev: UserProfile) => UserProfile)) => {
@@ -106,6 +139,25 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
 
   const clearCompare = useCallback(() => setCompareIds([]), []);
 
+  const toggleSaved = useCallback((id: string) => {
+    setSaved((s) => {
+      if (s.some((e) => e.id === id)) {
+        return s.filter((e) => e.id !== id);
+      }
+      const next: SavedEntry = { id, savedAt: new Date().toISOString() };
+      // Cap at MAX_SAVED by dropping the oldest entry. New saves go to the top.
+      const trimmed = s.length >= MAX_SAVED ? s.slice(0, MAX_SAVED - 1) : s;
+      return [next, ...trimmed];
+    });
+  }, []);
+
+  const isSaved = useCallback(
+    (id: string) => saved.some((e) => e.id === id),
+    [saved]
+  );
+
+  const clearSaved = useCallback(() => setSaved([]), []);
+
   const value = useMemo(
     () => ({
       profile,
@@ -115,8 +167,24 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       compareIds,
       toggleCompare,
       clearCompare,
+      saved,
+      toggleSaved,
+      isSaved,
+      clearSaved,
     }),
-    [profile, setProfile, history, pushHistory, compareIds, toggleCompare, clearCompare]
+    [
+      profile,
+      setProfile,
+      history,
+      pushHistory,
+      compareIds,
+      toggleCompare,
+      clearCompare,
+      saved,
+      toggleSaved,
+      isSaved,
+      clearSaved,
+    ]
   );
 
   return (
