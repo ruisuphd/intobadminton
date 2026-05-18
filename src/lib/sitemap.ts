@@ -28,6 +28,8 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
   "/review/submit/",
   "/privacy-choices/",
   "/blogs/",
+  // /saved/ is per-device and noindex; no value to a crawler.
+  "/saved/",
 ]);
 
 /**

@@ -27,6 +27,27 @@ export type EditorialMeta = {
  * Paths use trailing slashes to match the static-export route map.
  */
 export const editorialMetaByPath: Record<string, EditorialMeta> = {
+  // Hub / index pages — these list other content; their lastReviewedAt
+  // tracks the most recent editorial sweep across the hub's children, not
+  // a per-pick price check. Without these entries the sitemap emits no
+  // lastmod for the hubs, which weakens freshness signals.
+  "/best/": {
+    publishedAt: "2025-09-12",
+    lastReviewedAt: "2026-05-18",
+  },
+  "/brands/": {
+    publishedAt: "2025-09-26",
+    lastReviewedAt: "2026-05-18",
+  },
+  "/compare-guides/": {
+    publishedAt: "2025-10-21",
+    lastReviewedAt: "2026-05-18",
+  },
+  "/guides/": {
+    publishedAt: "2025-09-01",
+    lastReviewedAt: "2026-05-18",
+  },
+
   // Best-pick roundups (have prices → priceCheckedAt set).
   "/best/beginner-rackets/": {
     publishedAt: "2025-09-12",
@@ -174,6 +195,28 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   "/review/": {
     publishedAt: "2026-05-15",
     lastReviewedAt: "2026-05-15",
+  },
+
+  // Interactive tools (Sprint 4 of IMPROVEMENT_PLAN_2026Q2).
+  "/tools/": {
+    publishedAt: "2026-05-17",
+    lastReviewedAt: "2026-05-17",
+  },
+  "/tools/skill-level-converter/": {
+    publishedAt: "2026-05-17",
+    lastReviewedAt: "2026-05-17",
+  },
+  "/tools/string-tension-calculator/": {
+    publishedAt: "2026-05-17",
+    lastReviewedAt: "2026-05-17",
+  },
+  "/tools/racket-balance-explainer/": {
+    publishedAt: "2026-05-17",
+    lastReviewedAt: "2026-05-17",
+  },
+  "/tools/court-diagram/": {
+    publishedAt: "2026-05-17",
+    lastReviewedAt: "2026-05-17",
   },
 };
 

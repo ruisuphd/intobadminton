@@ -124,6 +124,8 @@ const SITEMAP_EXEMPT_ROUTES = new Set([
   "/review/submit/",
   "/privacy-choices/",
   "/blogs/",
+  // /saved/ is per-device and noindex (mirror of src/lib/sitemap.ts).
+  "/saved/",
 ]);
 
 function isPlainObject(value) {

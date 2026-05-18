@@ -57,7 +57,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/n/a/nanoflare_1000_z.png?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com)",
+      "alt": "Yonex Nanoflare 1000 Z badminton racket",
+      "width": 600,
+      "height": 819,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-100zz",
@@ -124,7 +133,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/astrox100zz_kurenai.png?v=1769128443&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 100ZZ Kurenai badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-99-pro",
@@ -175,7 +193,16 @@
       "https://www.yonex.com/astrox-99-pro-3ax99-p"
     ],
     "editorNote": "First-generation Kento Momota signature frame (2021). Stiff shaft, head-heavy, classic 99 Pro profile: power-first with demanding sweet spot. The 2nd Gen (2023) keeps the same DNA but lowers the entry threshold; if you can't load the original 99 Pro consistently, the Gen 2 or the 88D Pro is usually the smarter buy.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_3AX99-P_530-1.jpg?v=1756957305&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 99 Pro badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-77-pro",
@@ -226,7 +253,16 @@
       "https://www.yonex.com/badminton/racquets/astrox-77-pro"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): very good overall racket and not that demanding — easy power. Recommended over the Astrox 88D Pro for most players who want head-heavy power without the stiffer-shaft penalty. Solid intermediate-to-advanced upgrade.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ax77-p.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 77 Pro badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-arcsaber-11-pro",
@@ -277,7 +313,16 @@
       "https://www.yonex.com/arc11-p"
     ],
     "editorNote": "Control-first all-round frame; strong baseline for advanced club players.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/a/r/arc11-p.png?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com)",
+      "alt": "Yonex Arcsaber 11 Pro badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-800-pro",
@@ -328,7 +373,16 @@
       "https://www.yonex.com/nf-800pr"
     ],
     "editorNote": "First-generation Nanoflare 800 Pro — head-light speed frame designed for fast-flat doubles exchanges and defensive recovery. Stiff shaft rewards clean drives and quick block returns; less forgiving than the Nanoflare 700 line on rear-court power. The 2024 New Color refresh (yy-nanoflare-800-pro-2024) is the better buy for new purchases.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/a/l/all_nf-800p_269-1.png?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com)",
+      "alt": "Yonex Nanoflare 800 Pro badminton racket",
+      "width": 600,
+      "height": 819,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoray-light-70i",
@@ -452,8 +506,8 @@
       "sg",
       "cn"
     ],
-    "officialSourceUrl": "https://shoplining.com/",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-3d-calibar-900b-black-and-red-racket-aypt383-3",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -466,7 +520,16 @@
       "https://shoplining.com/"
     ],
     "editorNote": "Power profile retained pending official page-level verification.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPM428-1-B.jpg?v=1764448209&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — 3D Calibar 900B Black/Red",
+      "alt": "Li-Ning 3D Calibar 900B badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "li-aeronaut-9000c",
@@ -496,8 +559,8 @@
       "global",
       "cn"
     ],
-    "officialSourceUrl": "https://shoplining.com/",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-aeronaut-9000c-twilight-navy-racket-aypt405-4",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -510,7 +573,16 @@
       "https://shoplining.com/"
     ],
     "editorNote": "Advanced power/control profile; confirm exact regional spec before launch.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPT405-4.webp?v=1764695390&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — Aeronaut 9000C Twilight Navy",
+      "alt": "Li-Ning Aeronaut 9000C badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "vic-drivex-8s",
@@ -590,8 +662,8 @@
       "cn",
       "jp"
     ],
-    "officialSourceUrl": "https://ca.victorsport.com/product/89918",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://shop.au.victorsport.com/products/thruster-ryuga-ii-j",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -604,7 +676,16 @@
       "https://ca.victorsport.com/product/89918"
     ],
     "editorNote": "Advanced power frame; strong candidate for smash-heavy profiles.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://shop.au.victorsport.com/cdn/shop/files/TK-RYUGAII_1024x1024@2x.png?v=1687403971",
+      "source": "victor",
+      "credit": "Image: Victor (shop.au.victorsport.com — official AU storefront)",
+      "alt": "Victor Thruster Ryuga II badminton racket",
+      "width": 1024,
+      "height": 1024,
+      "verified": true
+    }
   },
   {
     "id": "vic-auraspeed-90k-ii",
@@ -651,12 +732,21 @@
       "https://ca.victorsport.com/product/95001"
     ],
     "editorNote": "Tai Tzu-ying-era Auraspeed flagship. Head-light, stiff shaft, 4U workhorse for advanced doubles drives and counter-attack. Higher tension ceiling (up to 31 lb) than most head-light Yonex equivalents — players who like a tight bed will find it shows up cleanly here. The newer 100X H / SE editions are the direct upgrade path if you want more rear-court bite.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/victor/en_us/product-101274_0_20230421174403.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com)",
+      "alt": "Victor Auraspeed 90K II badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "mizuno-altius-01-feel",
     "category": "racket",
-    "name": "Altius 01 Feel",
+    "name": "Altius N-Feel",
     "brand": "Mizuno",
     "priceUsd": 169,
     "headWeight": "head_light",
@@ -681,8 +771,8 @@
       "sg",
       "jp"
     ],
-    "officialSourceUrl": "https://www.mizuno.com/",
-    "lastVerifiedAt": "2026-04-27",
+    "officialSourceUrl": "https://mys.mizuno.com/products/altius-n-feel-unstrung",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
@@ -695,7 +785,16 @@
       "https://www.mizuno.com/"
     ],
     "editorNote": "Mid-tier speed reference retained for future official verification.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://jpn.mizuno.com/sites/default/files/2025-10/cs_ba_top_251010_altiusnfeel_1500_480_0.jpg",
+      "source": "mizuno",
+      "credit": "Image: Mizuno Japan (jpn.mizuno.com)",
+      "alt": "Mizuno Altius N-Feel badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-88d-pro-2024",
@@ -774,7 +873,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/3ax88d-p_076-1_02.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 88D Pro 3rd Gen badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-exbolt-63",
@@ -833,7 +941,16 @@
         "href": "https://www.reddit.com/r/badminton/comments/14lqwso",
         "confidence": "medium"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/BGXB63_Light_Pink_1.jpg?v=1774477461&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex EXBOLT 63 badminton string",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-bg80",
@@ -882,6 +999,15 @@
       "confidence": "high",
       "basis": "Strings are consumables; resale value is treated as zero after installation.",
       "updatedAt": "2026-04-28"
+    },
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ABG80NP_Neon_Pink_1.jpg?v=1758748170&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex BG80 badminton string",
+      "width": 480,
+      "height": 480,
+      "verified": true
     }
   },
   {
@@ -930,6 +1056,15 @@
       "confidence": "high",
       "basis": "Strings are consumables; resale value is treated as zero after installation.",
       "updatedAt": "2026-04-28"
+    },
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ABG65L_Lavender_1.jpg?v=1774477422&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex BG65 badminton string",
+      "width": 480,
+      "height": 480,
+      "verified": true
     }
   },
   {
@@ -974,6 +1109,15 @@
       "confidence": "low",
       "basis": "Shoes depreciate quickly for hygiene and outsole-wear reasons; estimate assumes lightly used clean pair.",
       "updatedAt": "2026-04-28"
+    },
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_SHBVAZM1_452-1.jpg?v=1774306789&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Power Cushion 65 Z VA (Wide) badminton shoe",
+      "width": 480,
+      "height": 480,
+      "verified": true
     }
   },
   {
@@ -1026,7 +1170,16 @@
         "href": "https://www.badmintoncn.com/eqm.php?a=eqCommView&cid=482578",
         "confidence": "medium"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/victor/en_us/product-70325_0_20200407103130.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com)",
+      "alt": "Victor SH-P9200 AB badminton shoe",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-pro-racket-bag-92429",
@@ -1048,8 +1201,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/bags",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/pro-tournament-bag",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "pro_oriented",
@@ -1071,6 +1224,15 @@
       "confidence": "low",
       "basis": "Bags retain value only when clean, non-odorous, and visually undamaged.",
       "updatedAt": "2026-04-28"
+    },
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/INT_BA92431W_031-1.jpg?v=1757097764&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — current BA92431W tournament bag",
+      "alt": "Yonex Pro Tournament Racket Bag",
+      "width": 480,
+      "height": 480,
+      "verified": true
     }
   },
   {
@@ -1135,8 +1297,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-50",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/aerosensa-50",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -1149,7 +1311,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/aerosensa-50"
     ],
     "editorNote": "Yonex's top tournament shuttle. BWF-approved and used in pro events. Verify exact SKU/region before affiliate use; speed code varies by climate.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/AS-50_N_A_2.jpg?v=1743102301&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Aerosensa 50 feather shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-as-40",
@@ -1171,8 +1342,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-40",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/aerosensa-40",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
@@ -1185,7 +1356,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/aerosensa-40"
     ],
     "editorNote": "Reliable tournament shuttle one tier below AS-50. Common at national and regional events.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/aerosensa_40.png?v=1738288159&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Aerosensa 40 feather shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-as-30",
@@ -1206,8 +1386,8 @@
       "cn",
       "uk"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-30",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/aerosensa-30",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
@@ -1219,7 +1399,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/aerosensa-30"
     ],
     "editorNote": "Mid-tier feathered shuttle popular for serious club training. Good cost-per-rally compared to AS-40/50.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/aerosensa_30.png?v=1738288155&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Aerosensa 30 feather shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-as-20",
@@ -1239,8 +1428,8 @@
       "sg",
       "cn"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-20",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/aerosensa-20",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
@@ -1252,7 +1441,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/aerosensa-20"
     ],
     "editorNote": "Common practice-grade shuttle for clubs and academies. Slightly less consistent than AS-30 but durable.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/aerosensa_20.png?v=1738288155&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Aerosensa 20 feather shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-as-10",
@@ -1272,8 +1470,8 @@
       "sg",
       "cn"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/aerosensa-10",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/aerosensa-10",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
@@ -1285,7 +1483,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/aerosensa-10"
     ],
     "editorNote": "Entry-level feathered shuttle. Good for newer players who want feather feel without AS-30+ pricing.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/aerosensa_10.png?v=1738288155&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Aerosensa 10 feather shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-mavis-350",
@@ -1307,8 +1514,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/mavis-350",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/mavis-350",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
@@ -1321,7 +1528,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/mavis-350"
     ],
     "editorNote": "Top nylon shuttle. Far longer-lasting than feathered for casual or schools, at the cost of feathered flight feel.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/M350_WHITE_2.jpg?v=1740784133&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Mavis 350 synthetic shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-mavis-300",
@@ -1343,8 +1559,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shuttlecocks/mavis-300",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/mavis-300",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "recreational",
@@ -1357,7 +1573,16 @@
       "https://www.yonex.com/badminton/shuttlecocks/mavis-300"
     ],
     "editorNote": "Yonex's mid-tier nylon shuttle. Lasts dramatically longer than feathered birds at the cost of softer arc and lower spin/sound feedback — the right choice for schools, social play, and casual drilling but not for serious training above club level. Pair with lower racket tension (20-23 lb) since nylon shuttles are heavier on contact than feathered.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/INT_MAVIS300_004-1.jpg?v=1740784828&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Mavis 300 synthetic shuttlecock",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-ac102c",
@@ -1378,8 +1603,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/super-grap-ac102",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/super-grap-3-wraps",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "pro_oriented",
@@ -1392,7 +1617,16 @@
       "https://www.yonex.com/badminton/accessories/super-grap-ac102"
     ],
     "editorNote": "The default overgrip in club bags worldwide. Soft, tacky, balanced thickness. AC102C is the 3-pack consumer SKU.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/AC102_Wine_Red_1.jpg?v=1769142157&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — Wet Super Grap 3-pack",
+      "alt": "Yonex Super Grap AC102 badminton overgrip 3-pack",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-ac102ex",
@@ -1413,8 +1647,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/super-grap-ac102ex",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/super-grap-30-wraps",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -1427,7 +1661,16 @@
       "https://www.yonex.com/badminton/accessories/super-grap-ac102ex"
     ],
     "editorNote": "30-piece bulk version of Super Grap. Per-grip cost drops vs AC102C. Same product as AC102C otherwise.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/INT_AC102-30_Wine_Red_1.jpg?v=1769142203&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — Wet Super Grap 30-wrap reel",
+      "alt": "Yonex Super Grap AC102EX badminton overgrip bulk reel",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-ac108ex",
@@ -1448,8 +1691,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/towel-grip-ac108ex",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/badminton-towel-grip",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -1462,7 +1705,16 @@
       "https://www.yonex.com/badminton/accessories/towel-grip-ac108ex"
     ],
     "editorNote": "Towelling-style grip; high sweat absorption and thicker handle feel. Wears faster than synthetic; replace more often.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/AC402EX_RED_2.jpg?v=1751326222&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — Towel Grip; US SKU AC402EX, product family same as AC108EX",
+      "alt": "Yonex Towel Grip badminton overgrip",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-ac104ex",
@@ -1547,8 +1799,8 @@
       "sg",
       "cn"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/accessories/strong-grap-ac130ex",
-    "lastVerifiedAt": "2026-04-28",
+    "officialSourceUrl": "https://us.yonex.com/products/strong-grap-3-wraps",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -1560,7 +1812,16 @@
       "https://www.yonex.com/badminton/accessories/strong-grap-ac130ex"
     ],
     "editorNote": "Tackier than Super Grap; some players love it, others find it sticks too much in heat. Try a 3-pack before committing.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/AC135_OCEAN-BLUE_2.jpg?v=1751330368&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — Strong Grap; US SKU AC135, product family same as AC130EX",
+      "alt": "Yonex Strong Grap badminton overgrip",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-100zz-va",
@@ -1608,7 +1869,16 @@
       "https://us.yonex.com/products/astrox-100-zz-va"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): easier to play than the regular 100ZZ — clearly preferred for anyone who likes the 100ZZ feel but finds it too demanding. Same head-heavy + extra-stiff DNA, more forgiving load.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_AX100ZVA_452-2.jpg?v=1758753623&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 100ZZ VA Viktor Axelsen badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-100-game",
@@ -1657,7 +1927,16 @@
       "https://us.yonex.com/products/astrox-100-game"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): feels not as stable as the Pro frames — a bit off. At a similar price you might as well buy the Astrox 77 Pro instead.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/Astrox100Game.jpg?v=1759792318&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com)",
+      "alt": "Yonex Astrox 100 Game badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-88s-pro-2024",
@@ -1724,7 +2003,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/3AX88S-T_Silver_Black_1_02.jpg?v=1740597468&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 88S Pro 3rd Gen badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-88d-tour-2024",
@@ -1774,7 +2062,16 @@
       "https://www.yonex.com/3ax88d-t"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): feels heavier than the 88D Pro. For most players, just go for the Pro version — the Tour's added swing weight isn't an upgrade unless you specifically want the heavier feel.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/3/a/3ax88d-t_076-1_02.png?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com)",
+      "alt": "Yonex Astrox 88D Tour 2024 badminton racket",
+      "width": 600,
+      "height": 819,
+      "verified": true
+    }
   },
   {
     "id": "yy-arcsaber-7-pro",
@@ -1823,7 +2120,16 @@
       "https://www.yonex.com/arc7-p"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): very good overall racket, but you need to bring the power yourself — it doesn't give you the head-heavy assist for smashes. Excellent for control players. POCKETING BOOSTER frame extends contact time.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/arc7-p.png?v=1738288168&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Arcsaber 7 Pro badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-700-pro-2024",
@@ -1882,7 +2188,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/NF700P_Midnight_Purple_1.png?v=1740596024&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Nanoflare 700 Pro Midnight Purple badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-700-game",
@@ -1940,7 +2255,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/a/l/all_2nf-700g_343-1.jpg?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com)",
+      "alt": "Yonex Nanoflare 700 Game badminton racket",
+      "width": 600,
+      "height": 819,
+      "verified": true
+    }
   },
   {
     "id": "yy-aerus-z2",
@@ -1977,7 +2301,16 @@
       "https://us.yonex.com/products/power-cushion-aerus-z-2nd-gen-mens"
     ],
     "editorNote": "Founder firsthand (Rui, Div 4 IE): liked the lightness — at 240g per shoe it really is fast — but barely any cushioning. Switched to the Comfort Z3 for joint protection. If your knees and ankles are happy, this is a brilliant tournament shoe.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/SBAZ2M_FLASHGREEN_2.jpg?v=1750207255&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Power Cushion Aerus Z2 badminton shoe",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-comfort-z3",
@@ -2015,7 +2348,16 @@
       "https://www.nydhi.com/blogs/news/precision-underfoot-yonex-power-cushion-aerus-z2-vs-eclipsion-z3-vs-comfort-z3-vs-65-z4"
     ],
     "editorNote": "Founder current shoe (Rui, Div 4 IE): switched from Aerus Z2 and love it. Way better cushioning, especially for landing after smashes. Heavier (370g) but joint comfort is worth it for full-match wear. Stiffer break-in than the Z2.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/SHBCFZ3M_DARKRED_2.jpg?v=1752620369&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Power Cushion Comfort Z3 badminton shoe",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-800-pro-2024",
@@ -2082,7 +2424,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/a/l/all_nf-800p_269-1.png?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com) — current 2024 colourway",
+      "alt": "Yonex Nanoflare 800 Pro 2024 badminton racket",
+      "width": 600,
+      "height": 819,
+      "verified": true
+    }
   },
   {
     "id": "vic-auraspeed-100x-h",
@@ -2173,8 +2524,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.btracketsports.com/products/auraspeed-100x",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://shop.au.victorsport.com/products/auraspeed-100x-se-h",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -2201,7 +2552,16 @@
         "label": "BadmintonCN: the BadmintonCN reviewer's Bladex 800 Speed comparison (Mar 2026)",
         "summary": "Compared with Li-Ning Bladex 800 Speed: 100X SE has thinner frame edge profile (faster swing) but slightly less control precision; both are top-tier speed rackets but with different idioms (100X SE crisp/snap, 800 Speed tough-elastic with longer dwell)."
       }
-    ]
+    ],
+    "image": {
+      "url": "https://shop.au.victorsport.com/cdn/shop/products/82004_0_20211117175841_1024x1024@2x.jpg?v=1644645156",
+      "source": "victor",
+      "credit": "Image: Victor (shop.au.victorsport.com) — Auraspeed 100X SE Mohammad Ahsan",
+      "alt": "Victor Auraspeed 100X SE (Mohammad Ahsan) badminton racket",
+      "width": 1024,
+      "height": 1024,
+      "verified": true
+    }
   },
   {
     "id": "vic-auraspeed-hs-plus",
@@ -2238,8 +2598,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.badmintonwarehouse.com/products/victor-auraspeed-hs-plus-c-badminton-racket",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://ca.victorsport.com/product/132231/auraspeed-hs-plus-hendra-c",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -2260,7 +2620,16 @@
         "label": "BadmintonCN: the BadmintonCN reviewer's Auraspeed HS Plus review (Jul 2024)",
         "summary": "4U: 88.9g w/ underbase removed, balance 304mm — almost identical mass and balance to Yonex 1000Z. 'A hardened Hayabusa SE' — harder shaft, faster off-string, more rigid feedback. Smash quality stronger than Hayabusa SE and Brave Sword 12. Hardest shaft in Victor's lineup. Higher entry threshold than 100XSE: needs more active force. Frame slightly smaller; off-sweet-spot defense weaker. Suited to doubles rear-court or singles/mixed for advanced players."
       }
-    ]
+    ],
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/victor/en_us/product-107409_0_20231128165241.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com)",
+      "alt": "Victor Auraspeed HS Plus C badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "vic-brave-sword-12",
@@ -2297,8 +2666,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.nydhi.com/blogs/news/victor-bravesword-12-comprehensive-review-of-classic-all-round-racket",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://shop.au.victorsport.com/products/brave-sword-12-blue",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
@@ -2311,7 +2680,16 @@
       "https://www.nydhi.com/blogs/news/victor-bravesword-12-comprehensive-review-of-classic-all-round-racket"
     ],
     "editorNote": "Iconic 2011 Victor all-rounder still in print and beloved by club players worldwide. Even balance, medium-stiff 7.0 shaft, 5.0mm aerodynamic frame. The original 'do everything reasonably well' Victor. Reasonable smash, easy clears, forgiving sweet spot. Great choice if you don't yet know your style and want a frame that won't punish wrong choices.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://shop.au.victorsport.com/cdn/shop/products/Victor_Brave_Sword_BRS-12_1-500x500__93824.1510105035.1280.1280_93249af5-23a7-4389-8bba-916823353621_1024x1024@2x.jpg?v=1636517538",
+      "source": "victor",
+      "credit": "Image: Victor (shop.au.victorsport.com) — Brave Sword 12 Blue",
+      "alt": "Victor Brave Sword 12 badminton racket",
+      "width": 1024,
+      "height": 1024,
+      "verified": true
+    }
   },
   {
     "id": "vic-thruster-falcon-enhanced",
@@ -2348,8 +2726,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://badmintondirect.com/products/victor-thruster-falcon-enhanced-badminton-racket",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://shop.au.victorsport.com/products/thruster-k-falcon-enhanced-edition",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
@@ -2362,7 +2740,16 @@
       "https://badmintondirect.com/products/victor-thruster-falcon-enhanced-badminton-racket"
     ],
     "editorNote": "Power-focused head-heavy Victor with 6.5mm shaft and Hard Cored shaft tech. Enhanced revision lowered the swing weight slightly vs first-gen TK-F, making it less punishing in continuous play while keeping the smash bite. A reasonable counterpart to the Yonex Astrox 88D Pro for players who want classic head-heavy power outside the Yonex / Li-Ning ecosystems.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://shop.au.victorsport.com/cdn/shop/products/2019082614493370851_1_1024x1024@2x.jpg?v=1636106287",
+      "source": "victor",
+      "credit": "Image: Victor (shop.au.victorsport.com) — Thruster K Falcon line (Enhanced edition shares the frame)",
+      "alt": "Victor Thruster Falcon Enhanced (TK-F) badminton racket",
+      "width": 1024,
+      "height": 1024,
+      "verified": true
+    }
   },
   {
     "id": "ln-halbertec-8000",
@@ -2396,8 +2783,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://shopbadmintononline.com/halbertec-badminton-rackets-li-ning-c-38_266.html",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-halbertec-8000-capri-breeze-racket",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
@@ -2429,7 +2816,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPT369-4.jpg?v=1764279620&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — Halbertec 8000 Capri Breeze",
+      "alt": "Li-Ning Halbertec 8000 (战戟 8000) badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "ln-halbertec-9000",
@@ -2496,7 +2892,7 @@
     "name": "Halbertec 9000 Power (战戟 9000P)",
     "brand": "Li-Ning",
     "priceUsd": 245,
-    "headWeight": "head_light",
+    "headWeight": "head_heavy",
     "shaftFlex": "extra_stiff",
     "weightClass": "4U",
     "weightVariants": [
@@ -2522,8 +2918,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.ckyew.com/post/li-ning-halbertec-9000-power-badminton-racket-review",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-halbertec-power-9000-racket",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -2553,7 +2949,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/HALBERTEC9000POWER3.jpg?v=1765788726&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk — official UK distributor)",
+      "alt": "Li-Ning Halbertec 9000 Power badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "ln-bladex-800-speed",
@@ -2589,8 +2994,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://triplepointsports.com/products/li-ning-bladex-800-speed-power-badminton-racket-lightweight-high-speed-professional-racquet",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-bladex-800-speed-badminton-racket",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -2621,7 +3026,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/Photoroom_20260310_142614.jpg?v=1773153045&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk)",
+      "alt": "Li-Ning BladeX 800 Speed (锋影 800 Speed) badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "ln-bladex-800-new",
@@ -2657,8 +3071,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.shopnings.com/li-ning-bladex-800-new-badminton-racket/",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-bladex-800-dark-green-racket",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
@@ -2682,7 +3096,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPT331-3.jpg?v=1764273729&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — BladeX 800 Dark Green (current 2025 colourway)",
+      "alt": "Li-Ning BladeX 800 New (锋影 800 New) badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "ln-axforce-90-new",
@@ -2717,8 +3140,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://triplepointsports.com/products/li-ning-axforce-90-new-badminton-racket-unleash-your-power",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-axforce-90-loong-max-storm-blue-racket",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -2748,7 +3171,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPT239-3.webp?v=1763725843&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — AxForce 90 Loong Max (current colourway of AxForce 90 line)",
+      "alt": "Li-Ning AxForce 90 New (雷霆 90 New) badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "ln-axforce-80",
@@ -2783,8 +3215,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.ckyew.com/post/li-ning-tectonic-9-axforce-80-aeronaut-9000c-review",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-axforce-80-black-and-gold-racket",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
@@ -2807,7 +3239,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPT271-5.jpg?v=1763727469&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — AxForce 80 Black & Gold",
+      "alt": "Li-Ning AxForce 80 (雷霆 80) badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "vic-drivex-12",
@@ -2867,7 +3308,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/victor/en_us/product-135144_0_20250508103508.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com via Cloudfront CDN)",
+      "alt": "Victor DriveX 12 O badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "ln-l69-string",
@@ -3000,8 +3450,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://lining.com/",
-    "lastVerifiedAt": "2026-05-09",
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-axforce-100-ii",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "needs_review",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -3032,7 +3482,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYPV039-4.jpg?v=1769013033&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — AxForce 100 II / Gen 2",
+      "alt": "Li-Ning AxForce 100 Gen 2 (雷霆 100 二代) badminton racket",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "yy-eclipsion-z3",
@@ -3054,8 +3513,8 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/footwear/power-cushion-eclipsion-z3",
-    "lastVerifiedAt": "2026-04-30",
+    "officialSourceUrl": "https://us.yonex.com/products/power-cushion-eclipsion-z-3rd-gen",
+    "lastVerifiedAt": "2026-05-17",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
@@ -3080,7 +3539,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_SHBELZ3M_532-1.png?v=1740774141&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — Men's 3rd gen",
+      "alt": "Yonex Power Cushion Eclipsion Z3 badminton shoe",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-astrox-99-pro-2",
@@ -3140,7 +3608,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ax99-pro_whitetiger.png?v=1756957305&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex USA (us.yonex.com) — White Tiger colourway",
+      "alt": "Yonex Astrox 99 Pro (2nd gen) White Tiger badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "vic-auraspeed-99",
