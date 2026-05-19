@@ -64,7 +64,58 @@ export type BlogSlug =
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
   | "yonex-grip-sizes-explained"
-  | "yonex-arcsaber-10-complete-buying-guide";
+  | "yonex-arcsaber-10-complete-buying-guide"
+  | "racket-stringing-hole-patterns-explained"
+  | "yonex-tour-series-buying-guide"
+  | "kumpoo-fourth-major-badminton-brand-profile"
+  | "rsl-aero-u-shuttle-review"
+  | "li-ning-axforce-90-new-5u-deep-dive"
+  | "bonny-future-land-3-polaris-shoes-review"
+  | "li-ning-bladesabre-2-pro-shoes-review"
+  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro"
+  | "jujiang-mzs-66un-string-review"
+  | "kawasaki-twilight-shoes-review"
+  | "li-ning-gp100-pro-overgrip-review"
+  | "li-ning-l66-string-first-look"
+  | "bonny-wuque-flagship-088-shoes-review"
+  | "bonny-wind-shadow-budget-speed-shoes-review"
+  | "jujiang-lbtu-value-racket-review"
+  | "victor-fz-flash-1000-racket-review"
+  | "kumpoo-kh-g805-lite-pro-shoes-review"
+  | "bonny-phantom-100-racket-review"
+  | "li-ning-axforce-10-beginner-attack-review"
+  | "li-ning-bladex-arrow-review"
+  | "victor-thruster-hwql-nuke-review"
+  | "victor-jipo-ls-racket-review"
+  | "victor-thruster-sr-cherry-blossom-review"
+  | "victor-fz-88d-power-purple-review"
+  | "yonex-arcsaber-7-play-review"
+  | "kawasaki-glacier-800-racket-review"
+  | "kawasaki-h2-6u-superlight-racket-review"
+  | "kawasaki-star-cross-second-perspective-review"
+  | "bonny-snake-breath-second-tier-flagship-review"
+  | "li-ning-lt66-power-string-review"
+  | "li-ning-flagship-racket-buying-guide-2026"
+  | "bonny-wuque-1982-y3k-shoes-review"
+  | "li-ning-halbertec-9000-power-deep-dive"
+  | "li-ning-halbertec-9000-standalone-review"
+  | "li-ning-axforce-100-gen-2-vs-gen-1"
+  | "rsl-supreme-shuttle-review"
+  | "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai"
+  | "victor-drivex-12-zsw-vs-original-comparison"
+  | "victor-drivex-12-vs-drivex-10-and-88d-pro-2024"
+  | "bonny-zhangui-dao-8888ax-ultra-review"
+  | "bonny-carbon-armour-shoes-review"
+  | "victor-thruster-9900-curiosity-review"
+  | "yonex-astrox-99-pro-gen-1-review"
+  | "bonny-wuque-xuanwu-review"
+  | "badminton-shoe-buying-guide-and-replacement"
+  | "kumpoo-js-67-string-review"
+  | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
+  | "victor-sonic-boom-pro-budget-attack-review"
+  | "goshen-leiming-69-string-review"
+  | "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review"
+  | "yonex-arcsaber-7-tour-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -130,6 +181,57 @@ export const blogSlugs: BlogSlug[] = [
   "badminton-glossary-terms-every-player-should-know",
   "yonex-grip-sizes-explained",
   "yonex-arcsaber-10-complete-buying-guide",
+  "racket-stringing-hole-patterns-explained",
+  "yonex-tour-series-buying-guide",
+  "kumpoo-fourth-major-badminton-brand-profile",
+  "rsl-aero-u-shuttle-review",
+  "li-ning-axforce-90-new-5u-deep-dive",
+  "bonny-future-land-3-polaris-shoes-review",
+  "li-ning-bladesabre-2-pro-shoes-review",
+  "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+  "jujiang-mzs-66un-string-review",
+  "kawasaki-twilight-shoes-review",
+  "li-ning-gp100-pro-overgrip-review",
+  "li-ning-l66-string-first-look",
+  "bonny-wuque-flagship-088-shoes-review",
+  "bonny-wind-shadow-budget-speed-shoes-review",
+  "jujiang-lbtu-value-racket-review",
+  "victor-fz-flash-1000-racket-review",
+  "kumpoo-kh-g805-lite-pro-shoes-review",
+  "bonny-phantom-100-racket-review",
+  "li-ning-axforce-10-beginner-attack-review",
+  "li-ning-bladex-arrow-review",
+  "victor-thruster-hwql-nuke-review",
+  "victor-jipo-ls-racket-review",
+  "victor-thruster-sr-cherry-blossom-review",
+  "victor-fz-88d-power-purple-review",
+  "yonex-arcsaber-7-play-review",
+  "kawasaki-glacier-800-racket-review",
+  "kawasaki-h2-6u-superlight-racket-review",
+  "kawasaki-star-cross-second-perspective-review",
+  "bonny-snake-breath-second-tier-flagship-review",
+  "li-ning-lt66-power-string-review",
+  "li-ning-flagship-racket-buying-guide-2026",
+  "bonny-wuque-1982-y3k-shoes-review",
+  "li-ning-halbertec-9000-power-deep-dive",
+  "li-ning-halbertec-9000-standalone-review",
+  "li-ning-axforce-100-gen-2-vs-gen-1",
+  "rsl-supreme-shuttle-review",
+  "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+  "victor-drivex-12-zsw-vs-original-comparison",
+  "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+  "bonny-zhangui-dao-8888ax-ultra-review",
+  "bonny-carbon-armour-shoes-review",
+  "victor-thruster-9900-curiosity-review",
+  "yonex-astrox-99-pro-gen-1-review",
+  "bonny-wuque-xuanwu-review",
+  "badminton-shoe-buying-guide-and-replacement",
+  "kumpoo-js-67-string-review",
+  "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+  "victor-sonic-boom-pro-budget-attack-review",
+  "goshen-leiming-69-string-review",
+  "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+  "yonex-arcsaber-7-tour-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3708,6 +3810,216 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
         },
+      ],
+    },
+    {
+      slug: "racket-stringing-hole-patterns-explained",
+      updatedAt: "2026-05-19",
+      category: "guides",
+      title: "68, 72, 76, 78, 80 hole rackets explained: why string-hole count is not the spec the forums claim",
+      dek: "From the aggressive 68-hole AX99 Pro to the dense 80-hole AXNT — what each hole-count actually changes in feel, durability, and stringing strategy, and why most string complaints are really tension complaints.",
+      sections: [
+        {
+          heading: "Why this argument exists at all",
+          body: "Walk into any badminton forum in Asia and someone is angry about a 68-hole racket. The complaint is usually that the sweet spot is harsh, the non-sweet-spot is hard to play, and the racket is generally unforgiving. The complaint is real but the diagnosis is usually wrong — what feels like a hole-count problem is almost always a tension problem combined with a contact-quality problem. This guide walks through what each hole-count category (68, 72, 76, 78, 80) actually changes, who should care, and what your stringer should know.",
+        },
+        {
+          heading: "68-hole rackets: the aggressive design (e.g. AX99 Pro, AX88S Pro old colour)",
+          body: "68-hole patterns concentrate the centre of the bed: wider string spacing in the middle, extremely tight spacing at the frame edges. This creates an unusually large dwell-time advantage in the sweet spot — the strings can flex more on contact, the shuttle stays on the bed longer, and the resulting hit is more powerful and more accurate. The trade-off is that off-centre contact feels strikingly different from sweet-spot contact, which is the source of most 'I hate 68-hole' complaints. The fix is not to abandon 68-hole — it is to learn the sweet spot and to string 10% above your normal tension (e.g. string 33lbs if you normally play 30lbs), because the wider spacing means strung tension feels effectively lower than the rated number.",
+        },
+        {
+          heading: "72-hole rackets: the friendly older standard (e.g. Mini-Cannon, Halbertec 90 Long)",
+          body: "72-hole patterns (16 paired holes) are the legacy standard before 76-hole became dominant. They are easier to play than 68-hole because the bed flexes more uniformly, but the trade-off is that mishits feel mushier and good contact is less crisp. On entry-tier rackets like the Victor Mini-Cannon, this is a feature — the friendlier bed forgives beginner technique. On high-tier rackets like the Halbertec 90 Long, the 72-hole choice is more controversial because advanced players' tighter, more committed swings tend to feel like they 'lose energy' in the looser-feeling bed. 72-hole rackets are best suited to defensive-control players who want a forgiving bed without the harsh sweet-spot transition of 68-hole.",
+        },
+        {
+          heading: "76-hole rackets: the universal standard (e.g. AX88S Pro old colour)",
+          body: "76-hole (10 paired holes) is the most common pattern in modern rackets and is the closest to a universal default. The string bed is uniformly spaced, which means tension applies consistently across the face, sweet-spot transition is smooth, and string flexibility is balanced. 76-hole supports both control-oriented and attack-oriented play styles. The rated tension on a 76-hole racket plays at close to the rated number — 28lbs feels like 28lbs, not 26lbs (as on 68-hole) or 30lbs (as on 80-hole). This is why most amateurs default to 76-hole rackets and find them comfortable.",
+        },
+        {
+          heading: "78-hole rackets: the high-tier convenience design (e.g. NF800)",
+          body: "78-hole patterns split one of the 76-hole paired-grommets into two separate grommets, adding one extra cross-string near the bottom of the head. The practical effect is minimal: bed pressure is slightly increased, the bed feels slightly firmer, and stringing is marginally easier because the extra hole simplifies the bottom-area pattern. Most players cannot reliably distinguish 78-hole from 76-hole in blind testing. When 78-hole rackets feel different, it is almost always because of other simultaneous changes (different frame material, different shaft, different tension) rather than the hole-count itself. Tension recommendation: string 1lb below rated for the slightly firmer feel, or leave at rated for marginal forgiveness.",
+        },
+        {
+          heading: "80-hole rackets: the dense-pattern future (e.g. AXNT)",
+          body: "80-hole patterns convert some of the highly-stressed 4-point and 8-point paired holes into single holes, reducing the per-hole tension stress at the head's highest-pressure areas. The benefit is durability — a documented Yonex Astrox-series weakness has been collapse at those exact 4 and 8 point regions over time, and 80-hole addresses it. The secondary benefit is bed-uniformity: the denser pattern reduces the off-sweet-spot mushiness that 68-hole creates. The trade-off is that 80-hole patterns string effectively higher than rated — 26lbs feels like 28lbs, and players who don't compensate by lowering tension complain about a 'metal/banging' feel on contact. 80-hole rackets are designed for advanced players with good contact mechanics who want maximum durability without sacrificing the bed's uniformity.",
+        },
+        {
+          heading: "What this all means for amateurs",
+          body: "Most amateurs default to 76-hole rackets because they are the most forgiving and the most predictable. 68-hole and 80-hole are specialist patterns that require either tension adjustment (string 10% higher for 68-hole, 1-2lbs lower for 80-hole) or advanced contact quality (consistent sweet-spot striking). 72-hole is the legacy choice for forgiveness. 78-hole is functionally similar to 76-hole. The biggest takeaway: most 'I hate this hole-count' complaints are actually 'I'm stringing at the wrong tension for this hole-count' problems. Talk to your stringer about adjusting tension for non-standard hole-count rackets, and most of the harsh-feel complaints will disappear.",
+        },
+        {
+          heading: "One final note on frame size",
+          body: "Hole-count is not the only factor in bed feel. Frame size matters too: a 26lbs string job on a larger frame is effectively softer than the same 26lbs on a smaller frame, because the strings span a larger area. Rough rule of thumb: large frame at 26lbs ≈ small frame at 24.4lbs. This is why two rackets with identical hole-count, identical string, and identical rated tension can still play differently if their frame sizes differ. Always test the feel before drawing conclusions about the racket.",
+        },
+      ],
+      cta: "Run the racket finder with your tension preference and contact-style flags to find rackets that match your hole-count comfort zone.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-19",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
+          note:
+            "Hole-count nomenclature, tension recommendations, and frame-comparison rules of thumb are paraphrased from BadmintonCN community-knowledge posts; technical readings and buyer guidance are original to IntoBadminton.",
+        },
+      ],
+    },
+    {
+      slug: "yonex-tour-series-buying-guide",
+      updatedAt: "2026-05-19",
+      category: "guides",
+      title: "Yonex Tour-line rackets: which Tour is worth buying and which is a price-cut compromise",
+      dek: "From AX88D Tour to Arcsaber 11 Tour, the Yonex Tour line saves up to 50% off Pro pricing — but the value depends entirely on which Tour you choose. Here is the honest breakdown.",
+      sections: [
+        {
+          heading: "Why the Tour line exists",
+          body: "Yonex's Tour line is the official second-tier above the regional/national sub-brands. Tour rackets traditionally borrow the Pro racket's frame technology and most of the materials, with simplifications to the shaft engineering, head bumper, or T-joint that reduce manufacturing cost and price. The result is a racket that typically delivers 80-90% of the Pro experience at 50-60% of the price — a serious value proposition. The catch: not all Tour rackets are created equal. Some Tour rackets earn the comparison; others are cost-reduced enough that the price gap to Pro becomes worth paying.",
+        },
+        {
+          heading: "Astrox 88D Tour: the strong value case",
+          body: "The Astrox 88D Tour delivers 80-90% of the 88D Pro experience. The frame, the basic shaft material, and most of the playing identity are preserved. What's lost: the very top-end Namd Flex Force shaft tuning, the most refined Power Assist Bumper, and the longer 10mm built-in T-joint refinement. What's gained: a price that is roughly half of the Pro (~700-800 RMB vs 1600-1700 RMB Japan import). For amateur players who want 88D-class doubles attack without flagship spending, the 88D Tour is one of the strongest value propositions in the current Yonex lineup. The honest framing: it's the same chef's soup with one ingredient changed — most players cannot reliably tell the difference in blind play.",
+        },
+        {
+          heading: "Arcsaber 11 Tour: the case is more mixed",
+          body: "The Arcsaber 11 Tour preserves the Arcsaber 11 frame and the platform's control-rack identity. The Tour version specifically sacrifices control fidelity compared to the Pro — players can distinguish Pro from Tour more easily than they can on the 88D, and players who specifically buy the Arcsaber 11 for its denser-feel control are more likely to feel the Tour-vs-Pro gap. That said, the Tour still produces the long-line clear and the gentle-touch net play that defines the 11 family. The price point (700-800 RMB vs 1700-1800 RMB Japan import for Pro) makes the Tour attractive — but the recommendation is contextual: if you specifically value control fidelity, save for the Pro; if you want the family's general identity at lower cost, the Tour delivers. For maximum value, buy a used Tour (400-700 RMB depending on condition) — the savings over a new Pro can fund significant string and accessory upgrades.",
+        },
+        {
+          heading: "What the source review identified as 'worth buying' Tours",
+          body: "The Yonex Tour lineup includes many models, but the source reviewer's specific 'worth buying' shortlist focuses on the rackets where the price-to-performance ratio is genuinely strong. The 88D Tour leads the list. The Arcsaber 11 Tour is qualified-positive (recommend used). Other Tours in the line (some of which were previously priced lower and have since had their prices increased significantly) are categorised as either 'wait for a sale' or 'genuinely overpriced'. The source reviewer is working on follow-up coverage for the rest of the lineup.",
+        },
+        {
+          heading: "How Yonex prices Tour vs Pro across regions",
+          body: "Tour-vs-Pro pricing varies significantly by region. In China, Yonex Tour rackets often sell at 40-50% of the Pro price for the same generation. In Japan, the gap is smaller (Tour rackets are around 50-60% of Pro). In Southeast Asia and Korea, pricing tends to follow the Japan model. In Europe and North America, Tour rackets are often imported at higher markup, narrowing the price gap to Pro further. Buyers should check the local price difference before deciding — a Tour that saves 50% in one region might save only 20% in another, and the 'worth it' calculation changes accordingly.",
+        },
+        {
+          heading: "The verdict for amateur buyers",
+          body: "If you specifically play men's doubles attack, the 88D Tour is one of the best value rackets in the Yonex lineup — buy it confidently. If you specifically value Arcsaber 11's control fidelity, save for the Pro. For most other Tour models, the recommendation depends heavily on your current racket: if you're upgrading from a basic frame, Tour-line rackets give you a meaningful step up; if you're upgrading from a serious mid-tier racket, the gap to Tour is smaller and the price-paid-for-the-step is questionable. The Tour line is not a uniform 'buy' or 'avoid' — it's a per-model evaluation, and the 88D Tour is the standout.",
+        },
+        {
+          heading: "How to choose between Pro and Tour for your purchase",
+          body: "Three questions answer the choice. First: do you specifically need the highest fidelity of contact feedback (Pro), or is general identity sufficient (Tour)? Second: is your local Pro-to-Tour price gap large enough to fund meaningful other upgrades (better strings, better grip, better shoes)? If yes, Tour is the right choice. Third: is your current skill level high enough that you can reliably tell the difference in blind play? If you cannot, paying for the Pro is paying for perceived rather than actual value. The honest amateur recommendation: Tour for value, Pro for skill-development as you grow into the racket's full ceiling.",
+        },
+      ],
+      cta: "Run the racket finder filtered to Yonex Tour and Pro options at your skill level to see how Tours stack against Pros for your playing role.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-19",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
+          note:
+            "Tour-line pricing and value comparisons are paraphrased from a BadmintonCN community post titled 'On the Yonex Tours worth buying'; price ranges are regional estimates and vary by market.",
+        },
+      ],
+    },
+    {
+      slug: "kumpoo-fourth-major-badminton-brand-profile",
+      updatedAt: "2026-05-19",
+      category: "guides",
+      title: "Kumpoo (薰风) brand profile: how the 'fourth major badminton brand' built a credible flagship line",
+      dek: "Founded in Japan in 2000, Kumpoo built its name on full-stack vertical integration — and is now positioning itself as the fourth major brand alongside Yonex, Victor, and Li-Ning.",
+      sections: [
+        {
+          heading: "From Japanese origin to Chinese ownership: the brand's surprising history",
+          body: "Kumpoo (薰风, KUMPOO) was founded in 2000 in Japan by Yuji Omori and Mitsutoshi Satou, who saw the global expansion of badminton as a market opportunity. The brand registered as a Japan corporation in 2001 (Kumpoo Co., Ltd.), launched the now-signature Hexagon six-cone-shaft technology in 2006 — a frame engineering choice designed to reduce torsional twist on impact — and built its own shoe factory in 2008 to escape OEM dependence. The brand's pivot point was 2009: Guangzhou-based Sportsbow Sports acquired Kumpoo entirely, moving R&D and operations to China and re-positioning the brand as a Chinese self-developed sports brand with Japanese DNA. The story is unusual: most Chinese brands are Chinese in origin, while Kumpoo flipped the script.",
+        },
+        {
+          heading: "Full vertical integration: the BYD comparison",
+          body: "Kumpoo's strategic decision after the 2009 Chinese acquisition was full vertical integration. The brand built shoes in-house (2008 onwards), then racket manufacturing (2022 onwards), and most recently a high-end Japan string production facility (2025). This means Kumpoo controls the entire supply chain for its three core product categories — rackets, shoes, and strings — from raw materials to finished products. The industry comparison: BYD in automotive (vertical integration as a competitive moat). The Kumpoo executive team uses similar logic: when the brand controls every component, the margin per unit is higher and quality control is internalised. The result is that Kumpoo can offer competitive pricing without compromising on materials sourcing.",
+        },
+        {
+          heading: "Product line architecture: entry, mid, premium",
+          body: "Kumpoo's racket line is structured as entry-mid-flagship — a recognisable lineage seen across major brands. Entry-tier: K520 Pro series, which has shipped over 3 million units cumulatively. Mid-tier: Guolun II and Houyi II, which combine control and value. Premium-tier: Shura series (修罗), used by 3x Lin Dan Cup champion Zhan Junwei, with M50 high-modulus carbon and solid-shaft construction. The Shura series is performance-comparable to flagship rackets from the three majors at 30-40% of the price. The brand's recent 3D-printed titanium racket experiment is a serious technology bet on next-generation frame manufacturing.",
+        },
+        {
+          heading: "Shoes and the long-term-wear track record",
+          body: "Kumpoo's shoe line emphasises cushioning, anti-slip grip, and lightweight handling. The Houyi (厚羿) and Guolun II shoes are the brand's main long-term-wear options — and the long-term-wear track record is meaningful. Professional players use them in international competition; amateur players testify to multi-year ownership without performance degradation. The Guangdong Greater Bay Area Games saw a Guangzhou-exclusive Houyi colourway last year, demonstrating the brand's regional marketing investment. The new GH-805 shoe is positioned as a direct competitor to the Yonex 65 Z4 — a serious benchmarking choice.",
+        },
+        {
+          heading: "Strings and the JS-67 surprise",
+          body: "Kumpoo's 2025 launch of the Japan-produced JS-series strings is the brand's most aggressive recent move into the premium string market. The JS-series uses Kumpoo's proprietary ultra-fibre composite coating technology, designed to deliver both durability and elasticity. The JS-67 in particular has earned positive amateur reviews; the JS-57S is one of the thinnest commercial strings in the world. This puts Kumpoo's string technology in the same conversation as Yonex's BG-series and Victor's VBS-series — an unusually fast jump for a brand that didn't previously have a serious string presence.",
+        },
+        {
+          heading: "Pricing strategy and the 'technology democratization' positioning",
+          body: "Kumpoo's positioning is 'premium professional product, accessible-friendly price' (技术普惠 — technology democratization). Flagship Kumpoo products price at 30-50% of equivalent flagship products from the three majors. The strategy is intentional: rather than competing on perceived brand prestige, Kumpoo competes on functional value. The result is a brand that attracts a different customer demographic — students, budget-conscious club players, and price-sensitive amateurs who would otherwise either avoid premium rackets or buy used. The reach into student demographics is particularly strong: many Chinese university clubs have adopted Kumpoo as their official kit brand.",
+        },
+        {
+          heading: "Sponsorships, athletes, and the credibility ladder",
+          body: "Kumpoo's athlete sponsorship includes Liu Guolun, Tian Houwei, and Wang Gaolun — three professional players whose results validate the brand's premium racket performance. The brand also sponsors major events: the Sudirman Cup, the Macau Open, and various amateur youth competitions in China. The collaboration with internet badminton personalities (王小羽 Wang Xiaoyu and similar) expands brand visibility into the casual amateur conversation. The combined effect is a credibility ladder where professional results, amateur testimonials, and event sponsorship build confidence across multiple buyer segments simultaneously.",
+        },
+        {
+          heading: "Where Kumpoo sits in the four-major debate",
+          body: "The 'fourth major' positioning is real but qualified. Yonex (1st major) dominates global market share. Victor (2nd major) is dominant in Korea and well-established globally. Li-Ning (3rd major) is dominant in China. Kumpoo is positioning itself as the 4th major — and the case is genuinely credible based on technology, full vertical integration, and growing global presence in Germany, Italy, Korea, Finland, Japan, and Poland. The actual 'major' status will depend on whether Kumpoo can continue building international distribution, professional player adoption, and brand recognition outside the China-Japan corridor. The current trajectory is favourable. The market is watching.",
+        },
+        {
+          heading: "Should you buy a Kumpoo?",
+          body: "Buy Kumpoo if you want premium-tier badminton products at a meaningful price discount to the three majors, if you specifically value the full vertical integration of the brand's product stack, or if you are a student or budget-conscious amateur looking for serious technology at accessible prices. Skip Kumpoo if you specifically value brand prestige (Yonex / Victor / Li-Ning), if you need maximum global resale value, or if you have a brand loyalty that overrides value considerations. For most amateur players, Kumpoo represents an intelligent value proposition — and the brand's trajectory suggests it will only get more competitive in the next few years.",
+        },
+      ],
+      cta: "Run the racket finder with Kumpoo enabled to compare its lineup against Yonex, Victor, and Li-Ning rackets at your price point.",
+      factChecks: [
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-19",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
+          note:
+            "Brand history (founding year, acquisition year, vertical integration milestones) and product lineup descriptions are paraphrased from a BadmintonCN community post; specific market share, athlete sponsorship, and international distribution claims should be verified against current brand sources.",
+        },
+      ],
+    },
+    {
+      slug: "li-ning-flagship-racket-buying-guide-2026",
+      updatedAt: "2026-05-19",
+      category: "guides",
+      title: "Li-Ning flagship racket buying guide 2026: AxForce, Halbertec, and Bladex compared",
+      dek: "Three flagship Li-Ning racket families, three distinct identities — here is how to pick between AxForce (attack), Halbertec (heavy attack), and Bladex (speed) for your game.",
+      sections: [
+        { heading: "The three-family architecture", body: "Li-Ning's current flagship lineup is organised around three distinct families: AxForce (Thunder, 雷霆) for accessible-to-elite attack play, Halbertec (战戟) for heavy attack and rear-court dominance, and Bladex (锋影) for speed-first doubles and front-court play. Each family has multiple tiers (entry, mid, flagship, top-flagship), and the right pick depends entirely on which family character matches your game." },
+        { heading: "AxForce (Thunder) lineup", body: "AxForce 10: entry-tier attack teacher (USD ~70). AxForce 80: mid-tier classic attack (USD ~150). AxForce 90 New: balanced attack flagship in 4U and 5U (USD ~200). AxForce 100 Gen 1 (used) and Gen 2 (current): elite singles attack (USD ~230-280). The family identity is attack-focused with friendlier demand curves than Halbertec — most amateurs find AxForce more playable than Halbertec at the same tier." },
+        { heading: "Halbertec (战戟) lineup", body: "Halbertec 7000: balanced all-rounder entry (USD ~150). Halbertec 7000 II: firmer mid-tier (USD ~170). Halbertec 8000: mid-flagship attack (USD ~200). Halbertec 9000: premium attack (USD ~240). Halbertec 9000 Power: top-flagship attack (USD ~270). The family identity is heavy attack with more demanding character than AxForce. For elite singles attackers who specifically want maximum committed-smash output, the 9000 and 9000 Power are the rackets to consider." },
+        { heading: "Bladex (锋影) lineup", body: "Bladex Arrow: 5U super-light specialist (USD ~32). Bladex 800 New: standard speed (USD ~180). Bladex 800 Speed: faster variant (USD ~200). Bladex 900 New: top-tier speed (USD ~170). The family identity is speed-first — head-light, stiff shaft, fast handling. For doubles speed specialists and front-court attack players, Bladex is the family to use." },
+        { heading: "Cross-family decision framework", body: "Three questions answer the family choice. First: are you primarily attacking from the rear court, or moving fast at the front court? Rear court → AxForce or Halbertec; front court → Bladex. Second: how demanding are you willing to go on shaft stiffness? Friendly → AxForce; demanding → Halbertec; speed-stiff → Bladex. Third: budget? Entry-tier flagship is AxForce 80 or Bladex 800 New; premium flagship is AxForce 100 Gen 2 or Halbertec 9000 Power; speed flagship is Bladex 800 Speed or Bladex 900 New." },
+        { heading: "Common Li-Ning buyer mistakes", body: "Mistake 1: Buying Halbertec 9000 Power when you should buy AxForce 90 New — the Halbertec demand curve is genuinely higher. Mistake 2: Buying Bladex 800 Speed for singles rear-court play — it's a doubles speed racket, wrong family for the use case. Mistake 3: Paying flagship prices for entry-tier characters — AxForce 10 and Bladex Arrow are great for the right buyer but they're not flagship rackets. Match the tier to your skill, not your budget." },
+        { heading: "Where Li-Ning beats Yonex and where it loses", body: "Li-Ning beats Yonex on per-dollar value at flagship tier (Halbertec 9000 vs Astrox 99 Pro is a meaningfully cheaper purchase for similar character). Li-Ning beats Yonex on Halbertec line's heavy-attack character — there's no direct Yonex equivalent. Yonex beats Li-Ning on absolute peak refinement (Astrox 99 Pro Gen 3, 100ZZ Anders Antonsen feel marginally more polished). Yonex beats Li-Ning on global brand prestige and resale value. The right choice depends on which factor matters more for your purchase." },
+        { heading: "The final family-pick guidance", body: "For most amateur singles attackers: AxForce 90 New (4U or 5U). For advanced singles attackers wanting top-tier ceiling: Halbertec 9000 Power. For amateur doubles speed players: Bladex 800 New or Bladex Arrow. For all-round amateurs unsure of identity: Halbertec 7000 II or AxForce 80. For elite doubles speed specialists: Bladex 800 Speed or 900 New. None of these are wrong; the right racket is the one that matches your actual matches, not the racket you wish your matches looked like." },
+      ],
+      cta: "Run the racket finder with Li-Ning preference and your skill/style flags to compare the full flagship lineup against your profile.",
+      factChecks: [
+        { sourceName: "Li-Ning", title: "Li-Ning racket family lineup", section: "Flagship rackets", checkedAt: "2026-05-19", href: "https://en.lining.com/badminton/rackets", quote: "AxForce", note: "Li-Ning's flagship racket families confirmed: AxForce (Thunder), Halbertec (战戟), Bladex (锋影). Specific tier pricing and regional availability vary." },
+        { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-19", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Family-level guidance synthesised from BadmintonCN community posts including a long-form Li-Ning flagship buying guide; technical readings and family architecture are original IntoBadminton interpretation." },
+      ],
+    },
+    {
+      slug: "badminton-shoe-buying-guide-and-replacement",
+      updatedAt: "2026-05-19",
+      category: "guides",
+      title: "Badminton shoe buying guide: how to choose, use, and replace your court shoes",
+      dek: "The complete guide to badminton shoe purchase decisions — fit, last width, cushion vs speed, court surface considerations, and when to actually replace.",
+      sections: [
+        { heading: "Badminton shoes are different from running and tennis shoes", body: "The first decision is to actually buy badminton-specific shoes. Running shoes have forward-only sole patterns that grip badly on lateral cuts. Tennis shoes have outsole compounds tuned for outdoor hard courts that wear quickly on indoor surfaces. Badminton shoes are engineered for the sport's specific movement demands — fast lateral cuts, frequent jump landings, and tight pivots. Save money on rackets if you must; don't save money on shoes." },
+        { heading: "Fit: width, last, and the toe-box test", body: "Foot width is the first fit decision. Most badminton shoes use narrow-to-medium lasts (especially Yonex and Victor). If you have wide feet, look specifically for wide-foot models (Yonex 65 Z Wide, Bonny WuQue Flagship 088, ASICS Blast FF 3) or sizes that accommodate width. The simplest fit test: lunge forward as deeply as you can. Your big toe should not press against the front of the toe-box. If it does, the shoe is too short or too narrow." },
+        { heading: "Cushion vs speed: the real trade-off", body: "Speed shoes (Yonex Aerus, Li-Ning Bladex Arrow, Bonny Wind Shadow) have thin forefoots and minimal cushion — quick ground feel for fast players who play many short reactions. Cushion shoes (Yonex 65 Z Wide, Victor P9200 III, Bonny WuQue 088) have more midsole material and protect joints on jump landings. The trade is real: speed shoes are quicker, cushion shoes are kinder to joints. For most amateurs, cushion shoes are the safer choice; for advanced speed-game players, speed shoes pay off." },
+        { heading: "Stability and lateral support", body: "Stability shoes (Bonny Future Land 3 Polaris, Victor C90NL, Yonex 65 Z series) prioritise the foot staying locked inside the shoe during hard cuts. Look for TPU lateral wrap, secure heel cup, and tight mid-foot lockdown. Players with ankle sprain history should specifically prioritise stability shoes — the difference between a stable shoe and a fast shoe can be the difference between a rolled ankle and a continued match." },
+        { heading: "Body weight and shoe choice", body: "Lighter players (under 140lb / 65kg) can use minimal-cushion speed shoes without joint cost. Heavier players (over 160lb / 75kg) need real cushion to protect knees and ankles from jump landings. Players in between have flexibility but should lean toward cushioned options if matches are long. Speed-shoe minimalism scales with body weight." },
+        { heading: "Court surface considerations", body: "Wooden floors with good condition: any badminton shoe works. Synthetic indoor surfaces: most shoes work; some shoes wear faster. Older or dusty courts: stability shoes with aggressive outsole patterns grip better. Outdoor concrete (rare but happens): expect any shoe to wear 3-5x faster than on indoor surfaces. Avoid using your tournament shoes for outdoor play." },
+        { heading: "When to replace shoes", body: "Three replacement triggers. First: outsole wear — visible flat spots or worn-through patterns mean grip is compromised. Replace before slipping causes injury. Second: midsole compression — when the shoe feels less cushioned than it did at purchase, the midsole has lost its bounce. For heavy players, this happens at 6-12 months of regular play; for light players, 18-24 months. Third: upper failure — torn mesh, separated TPU, or loose lateral wrap means the shoe no longer locks the foot. Any of these three failures should trigger replacement immediately." },
+        { heading: "Replacement timing relative to ankle and knee health", body: "Players with knee or ankle issues should replace shoes more aggressively — every 6-9 months for regular players. The cost of new shoes is far less than the cost of a knee injury. If you notice new joint discomfort after a session, check whether your shoes have lost cushion before assuming the issue is your body. Often the shoes are the cause." },
+        { heading: "Brand families and what they mean", body: "Yonex: industry standard, widest shoe range, narrow-to-medium lasts (65 Z Wide for wide feet). Victor: serious badminton shoes, often more cushioned than Yonex (P9200 III is the protection benchmark). Li-Ning: rising domestic option, sizing differs from Yonex/Victor (try in-store). Bonny: serious second-tier with strong wide-foot options. ASICS: not badminton-branded but credible indoor-court option for wide-foot players. Kawasaki: capable mid-tier with quick-lace innovations." },
+        { heading: "The final shoe-buyer summary", body: "Buy badminton-specific shoes for badminton play. Match width to foot shape — don't fight your last. Choose cushion vs speed based on body weight, joint history, and play style. Prioritise stability if you have any ankle vulnerability. Replace shoes at first sign of wear, midsole compression, or upper failure. Your shoes are the most consequential piece of equipment for your body's long-term health — invest accordingly." },
+      ],
+      cta: "Use the shoe finder with your fit width, cushion preference, and stability needs to get a personalised shortlist.",
+      factChecks: [
+        { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-19", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Shoe selection and replacement guidance synthesised from BadmintonCN community posts and shoe-specific reviews; technical recommendations are original IntoBadminton interpretation grounded in first-party shoe testing across multiple brands." },
       ],
     },
     ...sourceReviewArticles,

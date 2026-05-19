@@ -114,6 +114,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Yonex vs Victor vs Li-Ning", href: "/compare-guides/yonex-victor-li-ning/", tag: "Compare" },
     { label: "Spot fake rackets — authenticity check", href: "/guides/equipment-authenticity/", tag: "Authenticity" },
     { label: "Glossary — 4U, head-heavy, T-throat explained", href: "/guides/glossary/", tag: "Glossary" },
+    { label: "68 / 72 / 76 / 78 / 80 hole rackets explained", href: "/blog/racket-stringing-hole-patterns-explained/", tag: "Stringing" },
+    { label: "Yonex Tour vs Pro: which Tour is worth buying", href: "/blog/yonex-tour-series-buying-guide/", tag: "Value" },
+    { label: "Kumpoo — the fourth major badminton brand", href: "/blog/kumpoo-fourth-major-badminton-brand-profile/", tag: "Brand" },
   ];
 
   return (
