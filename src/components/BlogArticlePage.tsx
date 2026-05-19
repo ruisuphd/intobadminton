@@ -99,12 +99,21 @@ function StoryBlock({ block }: { block: BlogStoryBlock }) {
   }
 
   if (block.kind === "callout") {
+    // "The hook" is the editorial pull point — give it a subtle accent so it
+    // does not visually blend into adjacent informational callouts.
+    const isHook = block.label.toLowerCase() === "the hook";
+    const containerCls = isHook
+      ? "rounded-2xl border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/5 p-5 border-l-4 border-l-[color:var(--color-accent)]"
+      : "rounded-2xl border border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] p-5";
+    const labelCls = isHook
+      ? "text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]"
+      : "text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]";
     return (
-      <aside className="rounded-2xl border border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] p-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+      <aside className={containerCls}>
+        <p className={labelCls}>
           {block.label}
         </p>
-        <h2 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
+        <h2 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)] text-balance">
           {block.title}
         </h2>
         <p className="mt-3 text-base leading-[1.7] text-[var(--text-secondary)]">
@@ -408,10 +417,10 @@ export function BlogArticlePage({
               Updated {article.updatedAt}
             </time>
           </div>
-          <h1 className="text-display mt-5 text-[var(--text)]">
+          <h1 className="text-headline mt-5 text-[var(--text)]">
             {article.title}
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)]">
+          <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)] text-balance">
             {article.dek}
           </p>
           <p className="mt-6 text-sm font-medium text-[var(--text)]">
@@ -427,7 +436,7 @@ export function BlogArticlePage({
       <div className="layout-band max-w-6xl py-12 lg:py-16">
         <div className={showToc ? "lg:grid lg:grid-cols-[1fr_220px] lg:gap-12" : ""}>
           <article className="max-w-3xl">
-            <p className="mb-6 rounded-2xl bg-[color:var(--surface-muted)] p-4 text-sm text-[var(--color-muted)]">
+            <p className="mb-6 border-l-2 border-[color:var(--line-strong)] pl-4 text-xs leading-relaxed text-[var(--color-muted)]">
               Findings drawn from product-page specs, community sources
               (BadmintonCN, Reddit r/badminton, BadmintonCentral, video
               reviewers), and on-court testing. See our{" "}
@@ -465,24 +474,42 @@ export function BlogArticlePage({
                 </section>
               )}
 
-              {article.sections.map((section, index) => (
-                <section
-                  key={section.heading}
-                  className="space-y-3 scroll-mt-24"
-                  id={section.heading.toLowerCase().replace(/\s+/g, "-")}
-                >
-                  <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-                    {section.heading}
-                  </h2>
-                  <p className="text-base leading-[1.7] text-[var(--text-secondary)]">
-                    {section.body}
-                  </p>
-                  {canShowArticleAd &&
-                    index === Math.floor(article.sections.length / 2) && (
-                      <AdSlot id={`blog-${article.slug}-mid`} />
-                    )}
-                </section>
-              ))}
+              {article.sections.map((section, index) => {
+                const anchorId = section.heading
+                  .toLowerCase()
+                  .replace(/[^a-z0-9\s-]/g, "")
+                  .replace(/\s+/g, "-");
+                return (
+                  <section
+                    key={section.heading}
+                    className="space-y-3 scroll-mt-24"
+                    id={anchorId}
+                  >
+                    <h2 className="group text-2xl font-semibold tracking-tight text-[var(--text)] text-balance">
+                      <a
+                        href={`#${anchorId}`}
+                        className="relative inline-block focus-visible:outline-none"
+                        aria-label={`Permalink to: ${section.heading}`}
+                      >
+                        {section.heading}
+                        <span
+                          aria-hidden="true"
+                          className="ml-2 text-[color:var(--color-subtle)] opacity-0 transition-opacity group-hover:opacity-100"
+                        >
+                          #
+                        </span>
+                      </a>
+                    </h2>
+                    <p className="text-base leading-[1.75] text-[var(--text-secondary)]">
+                      {section.body}
+                    </p>
+                    {canShowArticleAd &&
+                      index === Math.floor(article.sections.length / 2) && (
+                        <AdSlot id={`blog-${article.slug}-mid`} />
+                      )}
+                  </section>
+                );
+              })}
             </div>
 
             <div className="mt-12 card p-7">

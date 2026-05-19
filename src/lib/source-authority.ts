@@ -18,6 +18,7 @@ const OFFICIAL_HOSTS_BY_BRAND: Record<string, readonly string[]> = {
   Victor: ["victorsport.com"],
   "Li-Ning": ["lining.com", "li-ning.com", "li-ning.com.cn"],
   Mizuno: ["mizuno.com", "mizunoshop.net"],
+  ASICS: ["asics.com"],
 };
 
 const GENERIC_OFFICIAL_PATHS = new Set([
