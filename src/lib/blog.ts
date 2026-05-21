@@ -84,7 +84,11 @@ export type BlogSlug =
   | "bonny-snake-breath-second-tier-flagship-review"
   | "bonny-zhanguidao-8888ax-ultra-review"
   | "bonny-mojun-vs-arcsaber-11-pro-attack-review"
-  | "kawasaki-glacier-800-review";
+  | "kawasaki-glacier-800-review"
+  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review"
+  | "kawasaki-h2-hydrogen-review"
+  | "kawasaki-twilight-shoes-review"
+  | "mizuno-carbo-pro-823-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -170,6 +174,10 @@ export const blogSlugs: BlogSlug[] = [
   "bonny-zhanguidao-8888ax-ultra-review",
   "bonny-mojun-vs-arcsaber-11-pro-attack-review",
   "kawasaki-glacier-800-review",
+  "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review",
+  "kawasaki-h2-hydrogen-review",
+  "kawasaki-twilight-shoes-review",
+  "mizuno-carbo-pro-823-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3789,6 +3797,97 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "ARCSABER",
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
+    },
+    {
+      slug: "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro 2024: when the budget alternative is genuinely close",
+      dek:
+        "Two BadmintonCN reviewers position the Chocolate 88D as a budget alternative to the Astrox 88D Pro. From the 88D Pro side (founder firsthand), the gap is smaller than the price difference suggests — but not zero.",
+      story: {
+        intro:
+          "The Kawasaki Chocolate 88D is consistently pitched as a budget alternative (平替) to the Yonex Astrox 88D Pro. Most budget alternative claims fail under cross-reference; this one survives it more honestly than expected. From the founder firsthand side of the Astrox 88D Pro (Rui Su's previous attack frame), the Chocolate 88D delivers measurably similar attack identity at a noticeably different price — with predictable trade-offs in refinement and resale.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — two-source merge with founder firsthand cross-reference on Astrox 88D Pro",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+              "Victor DriveX 10 Metallic",
+              "Li-Ning Halbertec 7000 II",
+            ],
+            sourceAttribution:
+              "Two BadmintonCN source reviews of the Kawasaki Chocolate 88D (天斧88D平替川崎巧克力88D + 川崎巧克力88D实战打感); observer commentary by Rui Su drawn from the Astrox 88D Pro 2024 founder firsthand experience.",
+          },
+          {
+            kind: "facts",
+            heading: "Comparison snapshot",
+            items: [
+              { label: "Source positioning", value: "Astrox 88D Pro budget alternative" },
+              { label: "Founder firsthand peer", value: "Yonex Astrox 88D Pro 2024" },
+              { label: "Price gap", value: "Roughly 40-50% lower than current Astrox 88D Pro 2024 retail" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What the Chocolate 88D actually delivers vs the 88D Pro",
+          body: "The Kawasaki Chocolate 88D is a head-heavy controlled-attack racket built around the same buyer profile as the Yonex Astrox 88D Pro: doubles attackers who win points on smash carry from controlled drive setups. Source reviewers consistently report the Chocolate 88D delivers genuine 88D-style attack feel — head weight signature, shaft load, and contact response all land in the same identity range. From the founder firsthand side of the Astrox 88D Pro 2024, the gap is real but smaller than the price difference suggests: the Chocolate 88D delivers maybe 80-85% of the Astrox feel at roughly 50-60% of the price.",
+        },
+        {
+          heading: "Where the Astrox 88D Pro still wins",
+          body: "Three areas where the Astrox 88D Pro 2024 retains a meaningful advantage. First, refinement: Yonex's manufacturing tolerances and finish polish at the flagship tier remain category-leading; the Chocolate 88D's frame finish is honestly second-tier. Second, peak smash carry: when both rackets are swung cleanly, the 88D Pro delivers a noticeably more decisive contact and slightly more carry through the back court. Third, ecosystem: resale liquidity, retail availability, community stringing knowledge, and cross-brand reference points all favour the 88D Pro. For buyers who value any of these, the price premium is justified.",
+        },
+        {
+          heading: "Who should buy the Chocolate 88D",
+          body: "Three buyer profiles win on the Chocolate 88D: first, budget-conscious doubles attackers who want genuine 88D-style attack identity without paying flagship money — the racket delivers honestly at its price tier. Second, players who already own and play the Astrox 88D Pro confidently and want a budget backup frame for travel, practice, or all-weather use. Third, Kawasaki brand-curious buyers ready to step up from the brand's value tier (Glacier 800, KACE) to a more decisive attack platform.",
+        },
+        {
+          heading: "Who should still buy the Astrox 88D Pro 2024",
+          body: "Two scenarios where the 88D Pro 2024 remains the right pick despite the price gap. First, you are a first-time flagship attack frame buyer — the Astrox is the friendlier introduction with broader cross-brand reference points and community support. Second, you specifically value the refinement and ecosystem advantages — competitive tournament players, players who restring frequently and value mainstream stringing guidance, players who anticipate reselling within a season. The Chocolate 88D's value-tier compromise is real but small; whether it matters depends on what you value beyond the playing experience.",
+        },
+        {
+          heading: "Setup recommendations across both rackets",
+          body: "Chocolate 88D: 4U/G5 at 23-24 lb on BG80 or AS-EX for the first ten hours, raising to 25 lb only if the racket asks for more. The frame welcomes the same tension range as the 88D Pro but the shaft feedback is slightly more forgiving on rushed swings. Astrox 88D Pro 2024 (founder firsthand): 4U/G5 at 24-26 lb on BG80; the 88D Pro punishes higher tensions on inconsistent timing in a way the Chocolate 88D forgives. The honest cross-shop: string both at the same tension and play them on the same night. If you cannot tell the difference within two games, the Chocolate 88D is the right buy; if you can, the price gap is honestly earned.",
+        },
+        {
+          heading: "The honest verdict",
+          body: "Buy the Chocolate 88D if you are a budget-conscious doubles attacker who wants real 88D-style attack identity, or if you already own the Astrox 88D Pro and want a budget secondary frame. Buy the Astrox 88D Pro 2024 if you are a first-time flagship buyer, you value mainstream refinement and ecosystem, or you specifically want the 88D Pro's peak smash carry. The Chocolate 88D is one of the more honestly-positioned budget alternatives in the current attack-frame market — most 'budget Astrox alternative' claims fail under scrutiny, this one survives it. The price gap is real and earned, but smaller than budget-tier alternatives typically deliver.",
+        },
+      ],
+      cta:
+        "Run the finder with controlled-attack style, doubles-first format, and intermediate-to-advanced level to compare the Kawasaki Chocolate 88D against the Astrox 88D Pro 2024 and the Halbertec 7000 II.",
+      factChecks: [
+        {
+          sourceName: "Kawasaki Sport",
+          title: "Kawasaki Badminton — Chocolate series",
+          section: "Chocolate 88D product page",
+          checkedAt: "2026-05-21",
+          href: "https://kawasaki-sport.com/",
+          quote: "Chocolate 88D",
+          note:
+            "Kawasaki's catalogue confirms the Chocolate 88D as a value-tier head-heavy attack racket positioned against the Yonex Astrox 88D Pro family.",
+        },
+        {
+          sourceName: "IntoBadminton author profile — Rui Su",
+          title: "Founder firsthand product list",
+          section: "Astrox 88D Pro as previous attack frame",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/authors/rui-su/",
+          quote: "Astrox 88D Pro (founder firsthand)",
+          note:
+            "The Astrox 88D Pro is on Rui Su's founder firsthand list as a previous attack frame, supporting the founder cross-reference on this comparison. The Chocolate 88D is not on the firsthand list; observer voice for the Kawasaki side.",
         },
       ],
     },

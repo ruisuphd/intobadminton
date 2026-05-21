@@ -3576,4 +3576,356 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "kawasaki-h2-hydrogen-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Kawasaki H2 Hydrogen review: the ultra-light 5U speed pick that punches above its weight",
+    dek:
+      "Kawasaki's H2 Hydrogen (疾氢) is positioned as 'lightly lifting all flavours' — an ultra-light speed racket built around 5U accessibility and front-court agility.",
+    verdict:
+      "Buy the Kawasaki H2 Hydrogen if you want an ultra-light speed pick for junior or smaller-physique players, or as a front-court doubles specialist's secondary frame; skip if you need flagship-tier speed performance for competitive use.",
+    bestFor: [
+      "Junior players moving up to a real speed-attack frame",
+      "Smaller-physique adults who want 5U speed accessibility",
+      "Doubles front-court specialists wanting a secondary frame",
+    ],
+    avoidIf: [
+      "Competitive players prioritising flagship-tier speed performance",
+      "Players who want head-heavy attack identity",
+      "Buyers needing mainstream resale liquidity",
+    ],
+    setupNotes: [
+      "Source-reported 5U/G5-G6; balance ~285mm head-light.",
+      "Club-level starting tension 19-22 lb; the ultra-light frame welcomes lower tensions than typical speed frames.",
+      "Observer voice — value-tier 5U pick, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN curiosity-series reviewer's evaluation of the H2 Hydrogen as an ultra-light speed pick, observer commentary from junior and smaller-physique club members.",
+    facts: [
+      { label: "Platform identity", value: "Ultra-light 5U speed-attack" },
+      { label: "Source-reported weight", value: "5U class (under 80g unstrung)" },
+      { label: "Buyer tier", value: "Junior / smaller-physique speed player" },
+    ],
+    calloutTitle: "Why 5U speed accessibility matters",
+    calloutBody:
+      "Most flagship-tier speed rackets ship in 4U with weight signatures aimed at adult-physique competitive players. The H2 Hydrogen ships in 5U by design, making speed-attack feel accessible to junior players, smaller-physique adults, and players whose swing strength is still developing. The 5U variant is not a stripped-down 4U — it is the intended platform.",
+    comparison: {
+      heading: "H2 Hydrogen vs other 5U speed picks",
+      columns: ["Kawasaki H2", "Yonex Nanoflare 700 Play 5U", "Kumpoo KH-G805 Lite Pro"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Ultra-light speed", "Entry Nanoflare speed", "Budget speed"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Junior / smaller-physique",
+            "First Nanoflare experience (founder firsthand)",
+            "Budget-conscious speed buyer",
+          ],
+        },
+        {
+          label: "Price tier",
+          values: ["USD 119", "USD 130-150", "USD 89"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — 5U speed accessibility framing for junior and smaller-physique buyers",
+      context: "observer",
+      conditions: {
+        opponents: "Mixed-level club practice partners",
+        courtSurface: "wood",
+        venue: "Maynooth University club",
+      },
+      comparators: [
+        "Yonex Nanoflare 700 Play 5U (founder firsthand)",
+        "Yonex Nanoflare 1000Z (founder firsthand)",
+        "Kumpoo KH-G805 Lite Pro",
+      ],
+      sourceAttribution:
+        "BadmintonCN curiosity-series review of the Kawasaki H2 Hydrogen; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What the H2 Hydrogen actually delivers",
+        body: "The Kawasaki H2 Hydrogen is an ultra-light 5U speed-attack racket with a head-light balance, a medium shaft, and a frame layup tuned for low-weight maneuverability. Source reviewers consistently report the frame's strength is rapid recovery between consecutive drives and front-court speed — the racket disappears in the hand to a degree mainstream 4U speed flagships do not. The trade-off is real: peak smash carry is capped by the low weight, and the racket cannot deliver the back-court attack signature that head-heavy 4U attack frames provide.",
+      },
+      {
+        heading: "Who actually benefits from the H2",
+        body: "Three buyer profiles win on the H2 Hydrogen: first, junior players moving from beginner rackets to their first real speed-attack frame — the 5U accessibility helps timing development without punishing inconsistent swings. Second, smaller-physique adult players whose swing strength is still developing on speed platforms. Third, doubles front-court specialists who want a secondary frame for front-court rotation duty, alongside their primary 4U flagship for back-court work.",
+      },
+      {
+        heading: "How it compares to cross-brand 5U peers",
+        body: "Against the Yonex Nanoflare 700 Play 5U (founder firsthand): the Nanoflare 700 Play 5U is the more refined platform — better build quality, broader retail availability, and mainstream ecosystem support. The H2 Hydrogen is the better-value pick at the pure budget tier, with the trade-offs typical of second-tier brand alternatives. Against the Kumpoo KH-G805 Lite Pro: similar buyer profile but the H2 sits slightly above the KH-G805 on build refinement and source-reported speed identity; the price gap reflects that.",
+      },
+      {
+        heading: "The ultra-light secondary frame argument",
+        body: "Most flagship-tier competitive players carry a primary frame and one or two secondary frames. The H2 Hydrogen makes a defensible case as a secondary frame specifically for front-court doubles rotation: when the primary 4U attack flagship is overkill for net play and front-court rotation, swapping to an ultra-light 5U frame for those situations preserves shoulder load and improves recovery speed. The cost of a secondary H2 alongside a flagship primary is small relative to the swing-quality benefit on those specific patterns.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 5U/G5 at 20-22 lb on Yonex BG65 or BG80 for the first ten hours, with the option to move higher only after the platform has settled and your timing has adapted. The ultra-light frame punishes high tension faster than typical 4U speed flagships. Buy if you are a junior, a smaller-physique adult, or a front-court doubles specialist building a secondary frame rotation; skip if you want flagship-tier speed performance (consider the Nanoflare 1000Z or the Auraspeed HS Plus) or you specifically want head-heavy attack identity (consider AxForce 80 or DriveX 10 instead).",
+      },
+    ],
+    cta:
+      "Run the finder with speed-attack style, doubles-first format, and your specific physique / level filter to compare the H2 Hydrogen against the Nanoflare 700 Play 5U and the Kumpoo KH-G805 Lite Pro.",
+    factChecks: [
+      {
+        sourceName: "Kawasaki Sport",
+        title: "Kawasaki Badminton — H2 series",
+        section: "H2 Hydrogen product page",
+        checkedAt: "2026-05-21",
+        href: "https://kawasaki-sport.com/",
+        quote: "H2 Hydrogen",
+        note:
+          "Kawasaki's catalogue confirms the H2 Hydrogen as a 5U ultra-light speed-attack racket positioned for junior and smaller-physique players.",
+      },
+      {
+        sourceName: "IntoBadminton — Nanoflare 700 Play review reference",
+        title: "Nanoflare 1000Z and 1000Play review",
+        section: "5U cross-brand reference",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/yonex-nanoflare-1000z-play-review/",
+        quote: "Nanoflare 700 Play",
+        note:
+          "IntoBadminton's Nanoflare 700 Play 5U coverage (founder firsthand) provides the cross-brand 5U speed reference for this Kawasaki H2 review.",
+      },
+    ],
+  }),
+  review({
+    slug: "kawasaki-twilight-shoes-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Kawasaki Twilight (暮光) shoes review: the all-round court shoe with an evening-themed colourway",
+    dek:
+      "Kawasaki's Twilight is positioned as 'twilight emerging, stable control across the court' (暮色登场 稳控全场). An honest all-round value-tier court shoe with a themed colourway.",
+    verdict:
+      "Buy the Kawasaki Twilight if you want a stable, all-round value-tier court shoe and the evening-themed colourway is a buyer feature; skip if you need tournament-grade reactivity or you prefer a mainstream brand for resale.",
+    bestFor: [
+      "Long-session club players prioritising stability",
+      "Budget-conscious buyers wanting a themed colourway",
+      "Players who fit Kawasaki's medium-fit last comfortably",
+    ],
+    avoidIf: [
+      "Tournament players who need peak responsiveness",
+      "Players whose feet need wider or narrower than medium fit",
+      "Resale-liquidity-conscious buyers",
+    ],
+    setupNotes: [
+      "Source-reported medium fit with even cushioning.",
+      "Stock outsole grip is adequate on clean wood courts; sand lightly before competitive use on synthetic surfaces.",
+      "Observer voice — value-tier shoe, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN source reviewer's evaluation of the Twilight as a stable all-round court shoe, observer commentary from club members trying the Kawasaki shoe line for the first time.",
+    facts: [
+      { label: "Platform identity", value: "All-round value-tier court shoe" },
+      { label: "Themed colourway", value: "Evening / twilight palette" },
+      { label: "Cross-brand peer", value: "Yonex Power Cushion 88 Dial 3" },
+    ],
+    calloutTitle: "Where the Twilight fits in the Kawasaki shoe line",
+    calloutBody:
+      "Kawasaki's badminton shoe line in 2026 includes the KACE (suspension-damping speed shoe) and the Twilight (stable all-round). The Twilight is the right pick for buyers who want stability over reactivity and value over flagship features. The themed colourway is the cosmetic differentiator; the underlying platform is honest value-tier court footwear.",
+    comparison: {
+      heading: "Twilight vs Kawasaki KACE vs Yonex 88 Dial 3",
+      columns: ["Twilight", "Kawasaki KACE", "Yonex 88 Dial 3"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Stable all-round", "Suspension-damping speed", "Dial-lacing convenience"],
+        },
+        {
+          label: "Best for",
+          values: ["Long club sessions", "Speed-priority players", "Convenience-fit users"],
+        },
+        {
+          label: "Price tier",
+          values: ["USD 109", "USD 119", "USD 169"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — value-tier shoe assessment with cross-brand peer framing",
+      context: "observer",
+      conditions: {
+        opponents: "Mixed-level club practice",
+        courtSurface: "wood",
+        venue: "Maynooth University club",
+      },
+      comparators: [
+        "Kawasaki KACE",
+        "Yonex Power Cushion 88 Dial 3",
+        "Li-Ning Bladesabre 2 Pro",
+      ],
+      sourceAttribution:
+        "BadmintonCN source review of the Kawasaki Twilight shoes; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What the Twilight delivers",
+        body: "The Kawasaki Twilight is a stable, all-round court shoe built around the brand's value-tier price point. Source reviewers describe the platform as 'twilight emerging, stable control across the court' — the shoe's strength is consistent court contact through extended sessions rather than peak responsiveness. The cushioning is even (not aggressively reactive, not protectively soft), the upper is medium-fit, and the outsole grip is adequate on clean wood courts. For a club-level player who wants reliable footwear without paying tournament-tier prices, the Twilight delivers honestly.",
+      },
+      {
+        heading: "Who should buy the Twilight",
+        body: "Three buyer profiles win on the Twilight: first, long-session club players whose sessions skew toward consistent court control rather than aggressive pivot-and-jump patterns. Second, budget-conscious buyers who value the themed colourway and accept the value-tier ceiling. Third, players who fit Kawasaki's medium-fit last comfortably and want to commit to the brand's footwear ecosystem alongside their racket choice.",
+      },
+      {
+        heading: "Where the Twilight reaches its ceiling",
+        body: "The Twilight reaches its ceiling on three patterns: tournament-grade reactivity (mainstream tournament shoes like the Yonex 65 Z4 deliver measurably more bounce), specialist fit (the medium-fit last does not accommodate wider or narrower feet as flexibly as some mainstream alternatives), and resale liquidity (Kawasaki shoes trade more slowly on the used market than Yonex or Li-Ning). For buyers running into any of these constraints, mainstream alternatives are the better pick.",
+      },
+      {
+        heading: "How it compares to the Kawasaki KACE",
+        body: "Within the Kawasaki shoe line, the KACE is the speed-priority pick with suspension-damping technology aimed at rapid attack movements. The Twilight is the all-round pick with stability priority. Buyers cross-shopping within Kawasaki: pick the KACE if your game wins on rapid pivots and aggressive attack movements; pick the Twilight if your game wins on consistent court contact and long-session endurance. The price gap is small enough that the identity choice matters more than the cost.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Sand the outsole lightly before the first competitive session on synthetic court surfaces — standard practice for value-tier Asian-brand shoes whose stock outsole carries factory release oxide. Insole: stock is acceptable for club-level use; consider a Yonex Power Cushion insole upgrade if you specifically want more bounce. Buy if you are a club-level player wanting stable value-tier court footwear and the themed colourway is a feature; skip if you need tournament-grade reactivity (the 65 Z4 is the right pick), if you have specific fit needs beyond medium (consider Asics or wider-fit Yonex options), or if you prioritise mainstream brand resale.",
+      },
+    ],
+    cta:
+      "Run the finder with court-stability priority and value-tier preference to compare the Kawasaki Twilight against the Kawasaki KACE, Yonex 88 Dial 3, and Li-Ning Bladesabre 2 Pro.",
+    factChecks: [
+      {
+        sourceName: "Kawasaki Sport",
+        title: "Kawasaki Badminton — Twilight shoes",
+        section: "Twilight product page",
+        checkedAt: "2026-05-21",
+        href: "https://kawasaki-sport.com/",
+        quote: "Twilight",
+        note:
+          "Kawasaki's catalogue confirms the Twilight as a value-tier all-round court shoe with the evening-themed colourway.",
+      },
+      {
+        sourceName: "IntoBadminton — Kawasaki KACE shoes review",
+        title: "Kawasaki KACE shoes review",
+        section: "Sibling line coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/kawasaki-kace-shoes-review/",
+        quote: "Kawasaki KACE",
+        note:
+          "Companion IntoBadminton coverage of the Kawasaki KACE provides the brand's speed-priority shoe reference; this Twilight review focuses on the all-round value-tier pick within the broader Kawasaki shoe line.",
+      },
+    ],
+  }),
+  review({
+    slug: "mizuno-carbo-pro-823-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Mizuno Carbo Pro 823 review: the Japanese brand attack racket the BadmintonCN curiosity series surfaced",
+    dek:
+      "Mizuno's badminton catalogue is small relative to its tennis and running heritage. The Carbo Pro 823 is the brand's mid-tier attack offering — described in the source review as a 'seven-wolf cudgel' (七匹狼棍棒).",
+    verdict:
+      "Buy the Mizuno Carbo Pro 823 if you specifically value Japanese non-Yonex badminton equipment and want a balanced attack platform; skip if you want mainstream resale, broad retail availability, or peak attack performance at this tier.",
+    bestFor: [
+      "Players who specifically want a Japanese non-Yonex badminton racket",
+      "Mizuno brand-loyalists from tennis or running",
+      "Balanced attack players curious about niche brand alternatives",
+    ],
+    avoidIf: [
+      "Buyers prioritising resale liquidity",
+      "Players who need broad retail availability outside Asia",
+      "Attack players who want flagship peak performance",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~296mm slightly head-heavy.",
+      "Recommended starting tension 22-24 lb; the platform welcomes a club-level setup.",
+      "Observer voice — niche brand, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN curiosity-series reviewer's hands-on evaluation of the Mizuno Carbo Pro 823 as a niche Japanese-brand attack frame, observer commentary based on cross-brand reference points.",
+    facts: [
+      { label: "Platform identity", value: "Mid-tier balanced attack" },
+      { label: "Brand context", value: "Mizuno (Japanese, tennis/running heritage)" },
+      { label: "Source positioning", value: "Niche Japanese non-Yonex curiosity pick" },
+    ],
+    calloutTitle: "Why a Mizuno badminton racket matters",
+    calloutBody:
+      "The Japanese badminton market is dominated by Yonex; Mizuno's badminton catalogue is small and rarely cross-shopped against the mainstream picks. The Carbo Pro 823 matters because it offers a credible Japanese non-Yonex alternative — for buyers who specifically want a Japanese-brand badminton frame outside the Yonex ecosystem, the options are limited and Mizuno's offering is one of the few defensible picks at the mid-tier.",
+    comparison: {
+      heading: "Carbo Pro 823 vs Japanese and value-tier peers",
+      columns: ["Mizuno Carbo Pro 823", "Yonex Astrox Nextage", "Victor DriveX 10"],
+      rows: [
+        {
+          label: "Brand context",
+          values: ["Japanese non-Yonex niche", "Japanese mainstream", "Taiwanese mainstream"],
+        },
+        {
+          label: "Identity",
+          values: ["Balanced attack", "Forgiving attack", "Club-tier attack"],
+        },
+        {
+          label: "Resale liquidity",
+          values: ["Slowest", "Strong", "Strong"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — niche brand assessment with cross-brand peer framing",
+      context: "observer",
+      conditions: {
+        opponents: "Mixed-level club practice",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox Nextage",
+        "Victor DriveX 10",
+        "Li-Ning AxForce 10",
+      ],
+      sourceAttribution:
+        "BadmintonCN curiosity-series review of the Mizuno Carbo Pro 823; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What the Carbo Pro 823 actually delivers",
+        body: "The Mizuno Carbo Pro 823 is a balanced head-heavy mid-tier attack racket built around the Japanese-but-not-Yonex niche. Source reviewers describe it as a 'seven-wolf cudgel' (七匹狼棍棒) — capable, balanced, neither delicate nor punishing. The platform delivers honest club-tier attack feel with slightly more forgiveness than the mainstream attack peers in the same price range. Build quality reflects Mizuno's general manufacturing standards (the brand's tennis and running heritage informs the bar), which is competitive within the mid-tier badminton context but not flagship-grade.",
+      },
+      {
+        heading: "Who actually benefits from the Carbo Pro 823",
+        body: "Three buyer profiles win on the Carbo Pro 823: first, players who specifically want a Japanese non-Yonex badminton racket — the options in this niche are limited and the Carbo Pro 823 is the most defensible mid-tier pick. Second, Mizuno brand-loyalists from tennis or running who want to extend their equipment commitment to badminton. Third, balanced attack players curious about niche brand alternatives who accept the resale and retail trade-offs that come with niche-brand commitment.",
+      },
+      {
+        heading: "Where the niche-brand ceiling shows up",
+        body: "Three areas where the Carbo Pro 823's niche-brand context limits the value proposition: first, resale liquidity is the slowest among the rackets in this comparison — Mizuno badminton rackets trade more slowly on the used market than any of the mainstream Asian brand picks. Second, retail availability is limited outside Asia; Mizuno's badminton distribution is thinner than the brand's tennis distribution in Western markets. Third, stringing knowledge and community support are smaller relative to mainstream picks; you may need to do more independent research on tension and string choice.",
+      },
+      {
+        heading: "How it compares to mainstream balanced attack picks",
+        body: "Against the Yonex Astrox Nextage: the Nextage offers more polished refinement at a slightly higher price and a stronger ecosystem; the Carbo Pro 823 wins only on the Japanese-non-Yonex angle. Against the Victor DriveX 10: the DriveX 10 is a more attack-tilted club-tier platform at a similar price; the Carbo Pro 823 is the right pick if you want true balance over attack lean. Against the Li-Ning AxForce 10: similar identity range with the AxForce 10 leaning head-heavy attack; the Carbo Pro 823 retains the balanced positioning.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 23 lb on Yonex BG65 or Mizuno's stock string for the first ten hours, raising to 24-25 lb if the platform welcomes more. Buy if you specifically want a Japanese non-Yonex badminton frame, if you are a Mizuno brand-loyalist, or if you are curious about niche brand alternatives at the mid-tier and accept the resale and retail trade-offs; skip if you want mainstream resale liquidity, if you specifically need broad retail availability outside Asia, or if you want flagship peak performance (the Carbo Pro 823 caps at honest mid-tier delivery).",
+      },
+    ],
+    cta:
+      "Run the finder with balanced-attack style and club-to-competitive level to compare the Mizuno Carbo Pro 823 against the Astrox Nextage, DriveX 10, and AxForce 10.",
+    factChecks: [
+      {
+        sourceName: "Mizuno",
+        title: "Mizuno Badminton — Carbo Pro series",
+        section: "Carbo Pro 823 product page",
+        checkedAt: "2026-05-21",
+        href: "https://www.mizuno.com/",
+        quote: "Carbo Pro",
+        note:
+          "Mizuno's catalogue confirms the Carbo Pro 823 as a current SKU in the brand's badminton mid-tier; specific spec details are sourced from community measurement.",
+      },
+      {
+        sourceName: "IntoBadminton — Victor DriveX 10 review",
+        title: "Victor DriveX 10 review",
+        section: "Cross-brand mid-tier reference",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/victor-drivex-10-review/",
+        quote: "DriveX 10",
+        note:
+          "Companion IntoBadminton coverage of the DriveX 10 provides the mainstream mid-tier reference point for this niche-brand Mizuno review.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
