@@ -32,11 +32,31 @@ This is an engineering audit, not legal advice.
 
 ## Dependency audit note
 
-`npm audit --json` currently reports a moderate PostCSS advisory through Next's
-bundled dependency tree. `npm audit` suggests a breaking downgrade to Next 9,
-which is not a safe remediation path for this Next 16 app. Keep Next updated and
-monitor the advisory; the current static app does not accept user-submitted CSS
-or render arbitrary CSS strings, which reduces practical exposure.
+`npm audit --json` currently reports **2 moderate transitive advisories**:
+
+1. **`postcss` < 8.5.10** — bundled via Next.js. The advisory is for a CSS
+   stringification XSS path that affects build-time output when the build
+   ingests untrusted CSS. `npm audit fix --force` suggests a breaking
+   downgrade to Next 9, which is **not** a safe remediation path for this
+   Next 16 app. Keep Next.js updated and monitor the advisory. The current
+   static app does not accept user-submitted CSS or render arbitrary CSS
+   strings at runtime, which reduces practical exposure to near zero.
+
+2. **`brace-expansion`** — bundled via `@typescript-eslint`'s transitive
+   tree, a devDependency only. The advisory is a regex DoS on extremely
+   large numeric ranges; not exploitable in our use, which only runs
+   ESLint at developer/CI time on a fixed code corpus.
+
+**Accepted-risk rationale:** both advisories are transitive moderate-severity
+issues in dependency chains we do not control directly. The available
+`npm audit fix --force` actions would downgrade direct dependencies
+(`next` to 9.x in the first case) past the project's framework version,
+breaking the runtime build. No production exposure has been identified
+for either advisory under the static-export / no-runtime-CSS shape of the
+current site. Re-audit and re-evaluate on every Next.js minor version
+bump and on every quarterly security review.
+
+Last `npm audit` review: 2026-05-21 (Sprint 8).
 
 ## Retention strategy
 

@@ -53,7 +53,7 @@ export function EvidenceCards({ productId }: { productId: string }) {
             <a
               href={row.sourceUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow"
               className="mt-3 inline-block text-xs text-[var(--color-accent)] hover:underline"
             >
               Open source reference
