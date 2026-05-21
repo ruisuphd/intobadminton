@@ -43,10 +43,10 @@ const TOOLS: Tool[] = [
     tag: "Reference",
   },
   {
-    href: "/guides/equipment-authenticity/",
+    href: "/tools/authenticity-checker/",
     title: "Authenticity checker",
-    dek: "Step-by-step walkthrough for verifying a Yonex / Victor / Li-Ning racket is genuine. Decode region codes, serial numbers, and box markings.",
-    tag: "Walkthrough",
+    dek: "Interactive 5-step counterfeit triage for Yonex / Victor / Li-Ning rackets. Score the seller, barcode, cone cap, grommets, and warranty path; get a verdict band.",
+    tag: "Triage",
   },
 ];
 
