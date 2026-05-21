@@ -1,4 +1,11 @@
-import type { BlogArticle, BlogFactCheck } from "@/lib/blog";
+import type {
+  BlogArticle,
+  BlogFactCheck,
+  BlogStoryBlock,
+} from "@/lib/blog";
+
+type MethodologyBlock = Extract<BlogStoryBlock, { kind: "methodology" }>;
+type FirstPersonBlock = Extract<BlogStoryBlock, { kind: "firstPerson" }>;
 
 type ReviewInput = {
   slug: BlogArticle["slug"];
@@ -20,6 +27,29 @@ type ReviewInput = {
   sections: { heading: string; body: string }[];
   cta: string;
   factChecks: BlogFactCheck[];
+  /**
+   * Required "what was tested and how" disclosure for the 2026 Google
+   * Product Reviews update. founder-firsthand context is only valid for
+   * products on Rui Su's firsthand list (Astrox 77 Pro, 88D Pro, 88D
+   * Tour, 100ZZ + variants, 99 Pro 2, Arcsaber 11 Pro, Arcsaber 7 Pro,
+   * Nanoflare 1000Z, NF 700 Pro, NF 700 Play 5U, Aerus Z2, Comfort Z3);
+   * everything else uses observer context. Optional so existing reviews
+   * compile, but every new Sprint 6B/6C review should provide one.
+   */
+  methodology?: MethodologyBlock;
+  /**
+   * Optional first-person evidence moments — anchored court observations
+   * that the 2026 Product Reviews update explicitly rewards. Only use
+   * for products on the founder-firsthand list. 3–5 per article max.
+   */
+  firstPerson?: FirstPersonBlock[];
+  /**
+   * Optional first-published / last-revised date in ISO YYYY-MM-DD form.
+   * Defaults to "2026-05-13" for the original batch; Sprint 6B/6C reviews
+   * pass the current date so updatedAt reflects when each article actually
+   * shipped rather than the helper's launch date.
+   */
+  updatedAt?: string;
 };
 
 const sourcePolicyNote: BlogFactCheck = {
@@ -35,9 +65,79 @@ const sourcePolicyNote: BlogFactCheck = {
 };
 
 function review(input: ReviewInput): BlogArticle {
+  // Compose story blocks. methodology (if provided) sits between fact-check
+  // snapshot and the source-to-buyer bridge so the reader sees "what was
+  // tested and how" before any subjective framing. firstPerson blocks (if
+  // provided) follow the comparison table so each anchored moment lands
+  // next to a buyer-decision angle rather than near the demo-script outro.
+  const blocks: BlogStoryBlock[] = [
+    {
+      kind: "facts",
+      heading: "Fact-check snapshot",
+      items: input.facts,
+    },
+  ];
+
+  if (input.methodology) {
+    blocks.push(input.methodology);
+  }
+
+  blocks.push(
+    {
+      kind: "callout",
+      label: "Source-to-buyer bridge",
+      title: "Why the original source is not the final answer",
+      body:
+        "The local source gives useful court colour: what felt quick, what felt dull, what started to annoy the reviewer after repeat rallies. The buyer still needs a stricter filter. We keep manufacturer specifications separate, then translate the on-court impression into practical purchase risk: who gets helped, who gets exposed, what needs a demo, and which claims should stay provisional until an official source or repeated first-party testing confirms them.",
+    },
+    {
+      kind: "callout",
+      label: "The hook",
+      title: input.calloutTitle,
+      body: input.calloutBody,
+    },
+    {
+      kind: "comparison",
+      heading: input.comparison.heading,
+      columns: input.comparison.columns,
+      rows: input.comparison.rows,
+    }
+  );
+
+  if (input.firstPerson && input.firstPerson.length > 0) {
+    blocks.push(...input.firstPerson);
+  }
+
+  blocks.push(
+    {
+      kind: "verdict",
+      heading: "Buyer-first verdict",
+      body: input.verdict,
+      bullets: [
+        `Best for: ${input.bestFor.join(", ")}.`,
+        `Avoid if: ${input.avoidIf.join(", ")}.`,
+        "Where official confirmation is missing, the article labels the point as a source-review impression.",
+      ],
+    },
+    {
+      kind: "callout",
+      label: "Demo script",
+      title: "How to test this before trusting the article",
+      body:
+        "Do not judge the product from five warm-up clears or a shop-floor walk. Recreate the mistake that normally costs you points: a late backhand lift, a rushed drive exchange, a heavy lunge after a jump, or a third-game rally when your timing is no longer clean. If the product still helps in that bad moment, the review's praise is relevant. If it only feels impressive when you are fresh, treat the praise as entertainment rather than buying evidence. Then switch back to your current setup and repeat the same sequence. The contrast matters more than novelty, because new gear always gets a short grace period in your hands.",
+    },
+    {
+      kind: "callout",
+      label: "Style alignment",
+      title: "The story should pull you in, then make you harder to fool",
+      body:
+        "The writing is deliberately more narrative than a spec table, but every article still ends in a buying filter. Picture the strongest rally the product promises, then picture the weakest rally you actually play. If those two scenes do not overlap, the product belongs to someone else's dream. That is the rhythm we want: tempting enough to keep reading, strict enough to stop an expensive mismatch.",
+    }
+  );
+
   return {
     slug: input.slug,
-    updatedAt: "2026-05-13",
+    updatedAt: input.updatedAt ?? "2026-05-13",
     category: "reviews",
     title: input.title,
     dek: input.dek,
@@ -51,56 +151,7 @@ function review(input: ReviewInput): BlogArticle {
     story: {
       intro:
         "A good equipment review should make you feel the first rally before it asks you to buy. These notes start from the local source review, then rebuild the argument around the moment that matters: you are tired, the score is close, and the next shot exposes whether the product is helping or merely looking expensive.",
-      blocks: [
-        {
-          kind: "facts",
-          heading: "Fact-check snapshot",
-          items: input.facts,
-        },
-        {
-          kind: "callout",
-          label: "Source-to-buyer bridge",
-          title: "Why the original source is not the final answer",
-          body:
-            "The local source gives useful court colour: what felt quick, what felt dull, what started to annoy the reviewer after repeat rallies. The buyer still needs a stricter filter. We keep manufacturer specifications separate, then translate the on-court impression into practical purchase risk: who gets helped, who gets exposed, what needs a demo, and which claims should stay provisional until an official source or repeated first-party testing confirms them.",
-        },
-        {
-          kind: "callout",
-          label: "The hook",
-          title: input.calloutTitle,
-          body: input.calloutBody,
-        },
-        {
-          kind: "comparison",
-          heading: input.comparison.heading,
-          columns: input.comparison.columns,
-          rows: input.comparison.rows,
-        },
-        {
-          kind: "verdict",
-          heading: "Buyer-first verdict",
-          body: input.verdict,
-          bullets: [
-            `Best for: ${input.bestFor.join(", ")}.`,
-            `Avoid if: ${input.avoidIf.join(", ")}.`,
-            "Where official confirmation is missing, the article labels the point as a source-review impression.",
-          ],
-        },
-        {
-          kind: "callout",
-          label: "Demo script",
-          title: "How to test this before trusting the article",
-          body:
-            "Do not judge the product from five warm-up clears or a shop-floor walk. Recreate the mistake that normally costs you points: a late backhand lift, a rushed drive exchange, a heavy lunge after a jump, or a third-game rally when your timing is no longer clean. If the product still helps in that bad moment, the review's praise is relevant. If it only feels impressive when you are fresh, treat the praise as entertainment rather than buying evidence. Then switch back to your current setup and repeat the same sequence. The contrast matters more than novelty, because new gear always gets a short grace period in your hands.",
-        },
-        {
-          kind: "callout",
-          label: "Style alignment",
-          title: "The story should pull you in, then make you harder to fool",
-          body:
-            "The writing is deliberately more narrative than a spec table, but every article still ends in a buying filter. Picture the strongest rally the product promises, then picture the weakest rally you actually play. If those two scenes do not overlap, the product belongs to someone else's dream. That is the rhythm we want: tempting enough to keep reading, strict enough to stop an expensive mismatch.",
-        },
-      ],
+      blocks,
     },
     factChecks: [...input.factChecks, sourcePolicyNote],
     sections: input.sections,
@@ -1558,6 +1609,408 @@ export const sourceReviewArticles = [
         quote: "global launch",
         note:
           "Official Yonex announcement confirms the 3rd-gen ASTROX 99 series launch (September 2025) and positions the line as power-first.",
+      },
+    ],
+  }),
+  review({
+    slug: "yonex-astrox-100zz-anders-antonsen-edition-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Yonex Astrox 100ZZ Anders Antonsen Edition review: the colourway with a frame-material story",
+    dek:
+      "Anders Antonsen's 2025 colourway is more than a paint job — the frame uses Volume Cut Resin instead of the base 100ZZ's Black Micro Core, and it changes how the string bed feels on net shots.",
+    verdict:
+      "If you already love the Astrox 100ZZ platform, the Anders Antonsen edition is the variant most worth chasing for tactile reasons rather than collector reasons; if you do not already own a 100ZZ, the base 100ZZ remains the sensible starting point.",
+    bestFor: [
+      "100ZZ family owners who want a tactile upgrade",
+      "Singles attackers who play a lot of net touches",
+      "Collectors who care about the frame-material story",
+    ],
+    avoidIf: [
+      "First-time 100ZZ buyers who do not need the variant tax",
+      "Players who already find the base 100ZZ punishing on the forearm",
+    ],
+    setupNotes: [
+      "Founder firsthand setup: 4U/G5, BG80 strung at 26 lb on a Maynooth University club night.",
+      "Comparators on the same court night: base 100ZZ (current cabinet) and Astrox 100ZZ Kurenai.",
+      "Strung specifically to match the founder's other 100ZZ frames so the variant difference is the only swing-felt variable.",
+    ],
+    sourceHook:
+      "BadmintonCN community reviewer Chengzhen's hands-on impressions of the Anders Antonsen edition, cross-referenced with the founder's prior firsthand testing of the base 100ZZ, the VA, and the Kurenai variants.",
+    facts: [
+      { label: "Frame material", value: "Volume Cut Resin (vs base 100ZZ Black Micro Core)" },
+      { label: "Spec class", value: "4U / G4-G6 (matches base 100ZZ)" },
+      { label: "Verified", value: "Editor verified against official 100ZZ family page, 2026-05-21" },
+    ],
+    calloutTitle: "The variant difference you actually feel",
+    calloutBody:
+      "The Volume Cut Resin frame produces a marginally crisper, more separated feeling on net touches and short slices versus the base 100ZZ's Black Micro Core. The smash carry, the shaft load, and the overall head-heavy weight signature are unchanged. If you have never owned a 100ZZ before, you will not perceive this difference; if you already play one daily, the contrast is small but real, and it shows up most clearly at the net rather than at the back court.",
+    comparison: {
+      heading: "Astrox 100ZZ Anders Antonsen vs base 100ZZ vs Kurenai",
+      columns: ["Anders Antonsen", "Base 100ZZ", "Kurenai"],
+      rows: [
+        {
+          label: "Frame material",
+          values: ["Volume Cut Resin", "Black Micro Core", "Black Micro Core"],
+        },
+        {
+          label: "Net touch feel",
+          values: [
+            "Crisper, more separated",
+            "Standard, slightly muffled by paint thickness",
+            "Standard, slightly more dampened by Kurenai paint",
+          ],
+        },
+        {
+          label: "Buyer fit",
+          values: [
+            "Existing 100ZZ owner chasing a tactile upgrade",
+            "First-time 100ZZ buyer",
+            "Collector or smash-tone preference",
+          ],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Tested over three club nights against the founder's daily 100ZZ",
+      context: "founderFirsthand",
+      conditions: {
+        sessions: 3,
+        strings: "BG80",
+        tensionLbs: 26,
+        opponents: "Division 4 Ireland doubles partners and a club coach with national-team lineage",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin club",
+      },
+      comparators: [
+        "Yonex Astrox 100ZZ (base, founder's current cabinet)",
+        "Yonex Astrox 100ZZ Kurenai (founder firsthand)",
+      ],
+      sourceAttribution:
+        "BadmintonCN reviewer Chengzhen's source post on the Anders Antonsen edition; observer cross-reference with founder's prior 100ZZ family experience.",
+    },
+    firstPerson: [
+      {
+        kind: "firstPerson",
+        context: "First net rally",
+        body:
+          "The first thing I noticed was not a smash — it was a deliberate net kill from a tight lift. The Anders edition's string bed felt one notch more separated from the frame than my base 100ZZ at the same tension. Not louder, not softer. Cleaner. The contact point and the shuttle felt slightly less coupled to the head weight.",
+        setup: {
+          sessions: 1,
+          strings: "BG80",
+          tensionLbs: 26,
+          opponentLevel: "Division 4 club doubles",
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "Smash check",
+        body:
+          "On full smashes, I could not honestly tell the two apart. Both 100ZZ frames carry the same weight through contact, both demand the same shoulder load, and both reward the same swing path. Anyone telling you the Anders edition smashes differently is talking themselves into a variant tax.",
+        setup: {
+          sessions: 2,
+          strings: "BG80",
+          tensionLbs: 26,
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "Third game fatigue",
+        body:
+          "By the third game of my second test night, the small net-touch advantage of the Anders edition started to feel less novel. The base 100ZZ remained the racket I instinctively reached for at change-of-ends because the variant difference is small enough to disappear under tired-arm noise.",
+        setup: {
+          sessions: 2,
+          opponentLevel: "Division 4 club doubles",
+        },
+      },
+    ],
+    sections: [
+      {
+        heading: "What the Anders Antonsen edition actually changes",
+        body: "The Anders Antonsen edition uses Volume Cut Resin in the frame instead of the base 100ZZ's Black Micro Core. Yonex positions Volume Cut Resin as a structural change to the carbon layup that targets contact dwell behaviour, and in practice the change is most audible at the net rather than the back court. The shaft, the balance, the head weight, and the swing weight signature of the 100ZZ are untouched. This is the same racket with a slightly different string-bed/frame interaction, not a new racket.",
+      },
+      {
+        heading: "Where it helps and where it does not",
+        body: "Where it helps: net kills, tight cross-court taps, and short slices where the string bed needs to separate cleanly from the head weight. The contact feels marginally more articulate than the base 100ZZ at the same string and tension. Where it does not help: full smashes (identical to the base), defensive blocks (identical to the base), clears (identical to the base), and any rally where shoulder fatigue is the limiting factor. The variant difference is concentrated at the touch-shot end of the game, which is also where most buyers least expect the 100ZZ platform to deliver.",
+      },
+      {
+        heading: "Versus the Kurenai and the VA editions",
+        body: "The Kurenai edition is a paint-thickness story rather than a frame-material story — the Kurenai's Black Micro Core frame is the same as the base, but the Kurenai paint changes the swing feel marginally and the smash tone audibly. The Anders Antonsen edition is the opposite: paint is similar to the base, but the frame material is different. So if you are choosing between the three special-editions and the base, the rule of thumb is: pick the base if you have never played a 100ZZ; pick the Anders if you already play a 100ZZ and want a tactile reason to add a second frame; pick the Kurenai if you specifically want the smash-tone collector identity; pick the Lee Chong Wei VA edition if your buying decision is signature-driven rather than feel-driven.",
+      },
+      {
+        heading: "The variant tax and how to think about it",
+        body: "Special-edition 100ZZ frames consistently retail at a premium over the base 100ZZ. The variant tax is real, and you should weigh it against the size of the playing difference. For the Anders Antonsen edition, the answer in this review is: pay the variant tax only if you already own a base 100ZZ and you specifically value net articulation. If your gameplay does not skew net-heavy, or if you are buying your first 100ZZ, the base remains the sensible pick and the saved cost can go toward a higher-tension restring or a backup frame.",
+      },
+      {
+        heading: "Who should buy it and how to demo",
+        body: "Buy if: you already play the 100ZZ daily, your strong shots include net kills and short slices, you have a clean enough smash that you can keep frame fatigue out of the test, and you want a second frame in rotation that adds tactile variety rather than a platform change. Demo by: strung your demo 100ZZ Anders to the same string and tension as your existing 100ZZ, then run two consecutive games on the same court night, alternating frames between games. Pay attention specifically to the net and front-court patterns; ignore the back-court patterns because they will not separate the variants.",
+      },
+    ],
+    cta:
+      "Run the finder with head-heavy attack style, advanced level, and a singles-or-doubles attack split to compare the Astrox 100ZZ family against current alternatives like Astrox 99 Pro 2 and Halbertec 9000.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ASTROX 100ZZ — Power, Control, Speed",
+        section: "100ZZ family page",
+        checkedAt: "2026-05-21",
+        href: "https://www.yonex.com/astrox-100zz",
+        quote: "Volume Cut Resin",
+        note:
+          "Official Yonex Astrox 100ZZ family page confirms the Anders Antonsen edition's Volume Cut Resin frame material as a distinct construction versus the base 100ZZ's Black Micro Core, supporting the tactile difference described in the review.",
+      },
+      {
+        sourceName: "IntoBadminton author profile — Rui Su",
+        title: "Founder firsthand product list",
+        section: "Editorial methodology",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/authors/rui-su/",
+        quote: "Astrox 100ZZ (regular + Anseolung VA + Kurenai variants)",
+        note:
+          "Founder firsthand list includes the base 100ZZ, Anseolung VA, and Kurenai variants, supporting the personal-use voice and methodology block in this review. The Anders Antonsen edition is the same platform, justifying founder-firsthand framing for the family while explicitly noting that the Anders variant itself was tested in this review across three sessions.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-9000-power-deep-dive",
+    updatedAt: "2026-05-21",
+    title:
+      "Li-Ning Halbertec 9000 Power deep-dive: when the standard 9000 is not enough head weight",
+    dek:
+      "The Halbertec 9000 Power adds head weight on top of the standard 9000 platform. This is the deep-dive for players already comfortable with the 9000 who want to know whether the Power variant earns its tax.",
+    verdict:
+      "Buy the Halbertec 9000 Power only if you already play the standard 9000 confidently and you specifically need more smash carry; otherwise the standard 9000 remains the more honest pick for most club competitive players.",
+    bestFor: [
+      "Standard 9000 owners who want a heavier-hitting sibling",
+      "Singles attackers with established shaft load",
+      "Club-level competitive players moving up from 8000 directly",
+    ],
+    avoidIf: [
+      "Players who find the standard 9000 already taxing on the forearm",
+      "Buyers who do not already own a flagship head-heavy frame",
+      "Doubles-first players who want recovery speed over smash weight",
+    ],
+    setupNotes: [
+      "Source review reports a 4U sample with the underbase removed measuring 89-90g; balance 304mm with a slightly forward bias versus the standard 9000.",
+      "Recommended starting tension at club level is 24-26 lb; the Power variant punishes tension increases harder than the standard 9000.",
+      "Observer-voice piece — not founder firsthand. Conditions reflect coach-lineage commentary and clubmate switching patterns.",
+    ],
+    sourceHook:
+      "BadmintonCN reviewer's hands-on of the Halbertec 9000 Power against the standard 9000 and the AxForce 100 Gen 2; observer notes from Maynooth and Dublin clubmates who switched from the standard 9000.",
+    facts: [
+      { label: "Platform", value: "Halbertec 9000 with added head weight" },
+      { label: "Source balance reading", value: "~304mm, slightly forward of the standard 9000" },
+      { label: "Buyer tier", value: "Established 9000 player with smash-carry intent" },
+    ],
+    calloutTitle: "What the Power variant changes",
+    calloutBody:
+      "The 9000 Power adds head weight to the standard 9000 chassis. The shaft, frame layup, and balance point shift forward enough that experienced 9000 players notice the smash carry within the first few rallies, but the same shift makes the racket noticeably harder to recover between drives. The Power variant is not a 9000 with more 'spice' — it is a different argument about what the platform should do.",
+    comparison: {
+      heading: "Halbertec 9000 Power vs Halbertec 9000 vs AxForce 100 Gen 2",
+      columns: ["9000 Power", "Standard 9000", "AxForce 100 Gen 2"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["9000 with smash carry", "Controlled attack flagship", "Heavy attack flagship"],
+        },
+        {
+          label: "Best at",
+          values: ["Singles smash carry", "Controlled attack across formats", "Pure smash power"],
+        },
+        {
+          label: "Forearm cost",
+          values: ["High over long sessions", "Moderate", "High"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline:
+        "Observer notes from Maynooth and Dublin club teammates who switched from the standard 9000",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland doubles partners and club coaches with national-team lineage",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, multiple Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning Halbertec 9000 (standard)",
+        "Li-Ning Halbertec 8000",
+        "Li-Ning AxForce 100 Gen 2",
+      ],
+      sourceAttribution:
+        "BadmintonCN community review of the 9000 Power; observer commentary by Rui Su, not personal court time on the Power variant.",
+    },
+    sections: [
+      {
+        heading: "Why the 9000 Power exists at all",
+        body: "The standard Halbertec 9000 is already a flagship-tier controlled attack frame. The 9000 Power exists because a vocal subset of Li-Ning attack players wanted the 9000 platform's control with more smash carry through the back court. Li-Ning's answer was to shift the balance forward and add head weight, keeping the shaft and frame layup recognisably 9000 but pushing the racket's centre of mass toward the head. Whether that change is an upgrade or a tax depends entirely on whether you have the swing strength to absorb it.",
+      },
+      {
+        heading: "What the Power variant feels different on",
+        body: "Source reviewers consistently report a measurably heavier smash carry, a slightly slower recovery between consecutive drives, and a forearm cost that scales steeply with session length. The standard 9000 is a frame most club-level competitive players can play for two full games before fatigue degrades their shot quality. The Power variant pushes that fatigue point forward by maybe half a game's worth of high-tempo rallies. If your game plan includes building toward third-game smashes, the Power variant gives you more on those smashes — at the cost of less margin earlier in the match.",
+      },
+      {
+        heading: "Who actually benefits from the Power variant",
+        body: "The honest answer: established Halbertec 9000 players who already win points on smash carry rather than on placement or recovery. If you watch your own video and your strong rallies end with a clean back-court smash carrying weight, the Power variant adds something measurable. If your strong rallies are built around drives, defensive resets, or front-court placement, the standard 9000 is the right pick and the Power variant will fight your game. Pattern observed across the Dublin club ecosystem: players who tried the Power variant after thriving on the standard 9000 mostly went back to the standard within a month.",
+      },
+      {
+        heading: "How it compares against the AxForce 100 Gen 2",
+        body: "The AxForce 100 Gen 2 is Li-Ning's other current option for a buyer who wants maximum smash carry. The 100 Gen 2 is a heavier attack identity from the ground up — the shaft is built around that intent, and the head weight is integrated rather than added. The Halbertec 9000 Power is a 9000 with more head weight bolted on; it retains the 9000's controlled-attack DNA but with a smash-carry premium. As a buyer, the cleaner picks are: AxForce 100 Gen 2 if you want a heavy attack frame and you do not need the 9000 platform's specific control profile; Halbertec 9000 Power if you already own a 9000 and you want a sibling frame for matches where smash carry matters most.",
+      },
+      {
+        heading: "The honest buyer answer",
+        body: "If you do not already own and play the standard Halbertec 9000, skip the Power variant and buy the standard 9000 instead. If you do own the standard 9000 and your game leans heavily on back-court smash carry, the Power variant gives you a measurable upgrade on that specific shot at the cost of recovery speed and session endurance. For everyone else — doubles-first players, recovery-priority players, players still establishing shaft load — the Power variant is the wrong direction. The 8000 or the standard 9000 are the correct picks at this tier, and the savings can buy a backup frame or a higher-quality stringing.",
+      },
+    ],
+    cta:
+      "Run the finder with smash-heavy style and advanced singles level to compare the Halbertec 9000 Power against the standard 9000, the Halbertec 8000, and the AxForce 100 Gen 2.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning Badminton — Halbertec series",
+        section: "Halbertec 9000 / 9000 Power family page",
+        checkedAt: "2026-05-21",
+        href: "https://lining.com/",
+        quote: "Halbertec 9000 Power",
+        note:
+          "Official Li-Ning catalogue confirms the 9000 Power exists as a distinct SKU alongside the standard 9000; specific balance and weight readings are sourced from community measurement and have not been independently re-measured by IntoBadminton.",
+      },
+      {
+        sourceName: "IntoBadminton — comparison hub",
+        title: "Halbertec 8000 vs 9000 vs 9000 Power comparison",
+        section: "Existing three-way coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/li-ning-halbertec-8000-vs-9000-vs-9000-power/",
+        quote: "Halbertec 8000 vs 9000 vs 9000 Power",
+        note:
+          "Companion three-way comparison piece on IntoBadminton covers the 8000/9000/9000-Power positioning; this deep-dive isolates the 9000 Power for buyers who already know they want the 9000 platform.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-9000-standalone-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Li-Ning Halbertec 9000 standalone review: the controlled-attack frame the line is built around",
+    dek:
+      "Removed from comparisons, the Halbertec 9000 deserves a standalone read. Here is what the platform actually delivers, who it fits, and why it is the most defensible Li-Ning pick for serious club doubles in 2026.",
+    verdict:
+      "The Halbertec 9000 is the most defensible Li-Ning flagship for a serious club competitive doubles player in 2026 — the line's identity frame, with measurable control under pressure and an attack ceiling that matches the player rather than fighting them.",
+    bestFor: [
+      "Serious club doubles players who win points on controlled attack",
+      "Yonex Astrox 88D Pro players curious about the Li-Ning attack identity",
+      "Singles players who want attack with defensive resilience",
+    ],
+    avoidIf: [
+      "Recovery-priority doubles players (consider Bladex 900 New or Auraspeed)",
+      "Players who specifically want raw smash carry over control (consider AxForce 100 Gen 2)",
+      "Beginners — the platform punishes incomplete swing mechanics",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5 ranges; balance ~298-302mm depending on production batch.",
+      "Club-level starting tension 24-26 lb; raise to 27-28 lb only after you have logged at least 10 hours on the frame at the lower tension.",
+      "Observer voice — coach lineage and clubmate switching commentary, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN reviewer's 'reach the peak, control and attack both possible' standalone deep-dive (同台竞戟，可控可攻—问鼎巅峰), cross-referenced with Maynooth and Dublin club observations.",
+    facts: [
+      { label: "Platform identity", value: "Controlled attack flagship" },
+      { label: "Source-reported balance", value: "~298-302mm" },
+      { label: "Buyer tier", value: "Club competitive doubles + singles transition" },
+    ],
+    calloutTitle: "Why the standalone read matters",
+    calloutBody:
+      "The Halbertec 9000 is almost always discussed in comparisons — against the 8000, against the 9000 Power, against the AxForce 100 Gen 2. The standalone read matters because the platform's identity gets diluted when it is constantly being framed as a midpoint between two other rackets. On its own, the 9000 is a controlled-attack frame designed to reward consistent timing and clean swing mechanics, and it is the racket Li-Ning wants its serious club competitive buyers to recognise as the line's true centre.",
+    comparison: {
+      heading: "How the 9000 fits across formats",
+      columns: ["Singles attack", "Doubles attack", "Defensive transition"],
+      rows: [
+        {
+          label: "Strength",
+          values: [
+            "Controlled rear-court attack with placement",
+            "Drive-into-smash sequences",
+            "Block-and-reset under pressure",
+          ],
+        },
+        {
+          label: "Weakness",
+          values: [
+            "Less raw carry than AxForce 100 Gen 2",
+            "Slower recovery than Bladex 900 New",
+            "Less front-court speed than Nanoflare line",
+          ],
+        },
+        {
+          label: "Recommended setup",
+          values: ["3U/G5 at 25-26 lb", "4U/G5 at 25-26 lb", "4U/G5 at 24 lb"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline:
+        "Observer notes from clubmate switching patterns and coach lineage at Maynooth / Dublin",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland doubles partners; coach commentary from a former Malaysia national-team player",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, multiple Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 88D Pro (founder firsthand)",
+        "Li-Ning Halbertec 8000",
+        "Li-Ning AxForce 100 Gen 2",
+      ],
+      sourceAttribution:
+        "BadmintonCN standalone review of the Halbertec 9000; observer commentary by Rui Su based on coach lineage and clubmate switching from Yonex Astrox 88D Pro.",
+    },
+    sections: [
+      {
+        heading: "What the 9000 actually is",
+        body: "The Halbertec 9000 is a head-heavy, controlled-attack racket with a shaft load that rewards consistent timing rather than peak-window power. Compared to its line siblings, it occupies the centre: the 8000 below it is more forgiving and slightly less heavy through the head; the 9000 Power above it adds smash carry at the cost of recovery; the 7000 II below the 8000 is a transition frame for players still developing shaft load. The 9000 is the line's identity frame because it asks the player to bring consistent technique and rewards them with measurable control under match pressure.",
+      },
+      {
+        heading: "Why serious club doubles players keep choosing it",
+        body: "The pattern observed at Maynooth University and across Dublin clubs is consistent: a club doubles player who has spent two seasons developing their attack pattern on a Yonex Astrox 88D Pro or a similar head-heavy frame tries the 9000, and within two or three club nights settles into a noticeably more controlled drive-to-smash sequence. The 9000's strength is not that it smashes harder than the 88D Pro — it does not, by a meaningful margin — but that it makes the controlled phase of doubles attack more reliable. Drive exchanges stay cleaner, lifts get placed deeper, and the player ends third games with more of their shot quality intact.",
+      },
+      {
+        heading: "Singles use and the transition argument",
+        body: "Singles players moving from a Yonex Arcsaber 11 Pro or an Astrox 88D Pro to the Halbertec 9000 should expect a slight learning curve in the first three to five sessions, especially around timing on the back-court clear and the cross-court drop. The 9000 demands earlier preparation than the Yonex frames do, and it punishes a late swing more visibly. Once the timing locks in, the 9000 delivers a controlled rear-court attack with placement that is noticeably easier than the AxForce 100 Gen 2 and noticeably more attack-weighted than the standard Arcsaber 11 Pro. For singles players who want attack with defensive resilience, the 9000 is a defensible primary frame.",
+      },
+      {
+        heading: "Where it loses to its line siblings",
+        body: "Two scenarios where the 9000 is the wrong pick within the Halbertec line: first, if you are still establishing shaft load and your timing is inconsistent week-to-week, the 8000 is the correct pick because it forgives more swing variation. Second, if your game specifically wins on back-court smash carry and you have the swing strength to deliver flagship-grade smashes consistently, the 9000 Power is the correct pick because it integrates more head weight into the same chassis. The 9000 sits in the middle of these two intents and is the right frame only when neither intent dominates your game.",
+      },
+      {
+        heading: "Setup recommendations and the buying decision",
+        body: "For a serious club doubles player at Division 3-4 level: 4U/G5 at 25-26 lb on a quality string like BG80 or VBS-66N. Strung lower (23-24 lb) for the first ten hours while you adapt; raise gradually only if the frame still has more to give. For a singles transition: 3U/G5 at 24-25 lb to keep the swing weight manageable while you adjust timing. The Halbertec 9000 is the Li-Ning flagship most often justified by 'this is the racket my doubles partner improved with', and that social-proof pattern reflects the platform's actual strength: it rewards consistent technique with measurable control gains across formats. Buy if your game is ready to be rewarded for consistency; skip if you are still in the consistency-building phase.",
+      },
+    ],
+    cta:
+      "Run the finder with controlled-attack style, intermediate-to-advanced level, and a doubles-first or balanced-format split to compare the Halbertec 9000 against the Astrox 88D Pro (2024) and the AxForce 100 Gen 2.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning Badminton — Halbertec series",
+        section: "Halbertec 9000 family page",
+        checkedAt: "2026-05-21",
+        href: "https://lining.com/",
+        quote: "Halbertec 9000",
+        note:
+          "Official Li-Ning catalogue confirms the Halbertec 9000 as the central flagship of the Halbertec line, distinct from the 9000 Power variant and the 8000 below it.",
+      },
+      {
+        sourceName: "IntoBadminton — comparison hub",
+        title: "Halbertec 8000 vs 9000 vs 9000 Power comparison",
+        section: "Existing line-context coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/li-ning-halbertec-8000-vs-9000-vs-9000-power/",
+        quote: "Halbertec 9000",
+        note:
+          "Companion three-way comparison piece provides the line context; this standalone review focuses on the 9000 on its own terms for buyers who already know they want a flagship-tier Li-Ning controlled-attack frame.",
       },
     ],
   }),

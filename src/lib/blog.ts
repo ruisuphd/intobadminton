@@ -65,7 +65,10 @@ export type BlogSlug =
   | "badminton-glossary-terms-every-player-should-know"
   | "yonex-grip-sizes-explained"
   | "yonex-arcsaber-10-complete-buying-guide"
-  | "li-ning-flagship-racket-buying-guide-2026";
+  | "li-ning-flagship-racket-buying-guide-2026"
+  | "yonex-astrox-100zz-anders-antonsen-edition-review"
+  | "li-ning-halbertec-9000-power-deep-dive"
+  | "li-ning-halbertec-9000-standalone-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -132,6 +135,9 @@ export const blogSlugs: BlogSlug[] = [
   "yonex-grip-sizes-explained",
   "yonex-arcsaber-10-complete-buying-guide",
   "li-ning-flagship-racket-buying-guide-2026",
+  "yonex-astrox-100zz-anders-antonsen-edition-review",
+  "li-ning-halbertec-9000-power-deep-dive",
+  "li-ning-halbertec-9000-standalone-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
