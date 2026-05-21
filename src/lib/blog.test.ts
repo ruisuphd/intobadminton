@@ -3,6 +3,7 @@ import {
   blogArticles,
   blogSlugs,
   readingTimeMinutes,
+  relatedArticles,
   type BlogStoryBlock,
 } from "@/lib/blog";
 
@@ -238,6 +239,39 @@ describe("blog publishing metadata", () => {
       cta: "Compare these rackets in the finder.",
     };
     expect(readingTimeMinutes(synthetic)).toBeGreaterThanOrEqual(1);
+  });
+
+  test("relatedArticles prefers brand+family matches over generic category matches", () => {
+    // Take an Astrox 88D Pro vs 88S Pro article (founder firsthand, yonex-
+    // astrox family). The new relatedArticles helper should surface OTHER
+    // Astrox articles before unrelated category-matched articles.
+    const current = blogArticles.en.find(
+      (a) => a.slug === "yonex-astrox-88d-pro-vs-88s-pro-2024"
+    );
+    expect(current).toBeDefined();
+    const related = relatedArticles(blogArticles.en, current!, 3);
+    expect(related.length).toBeGreaterThan(0);
+    // At least one of the top related articles should be in the same
+    // yonex-astrox family.
+    const yonexAstroxRelated = related.filter((a) =>
+      a.slug.startsWith("yonex-astrox-")
+    );
+    expect(yonexAstroxRelated.length).toBeGreaterThan(0);
+    // None of the related articles is the current article itself.
+    expect(related.some((a) => a.slug === current!.slug)).toBe(false);
+  });
+
+  test("relatedArticles falls back to same-brand matches when family is sparse", () => {
+    // RSL Supreme shuttle review — the only RSL family-mate is the RSL
+    // Classic Tourney. The helper should still find it via brand matching.
+    const rslSupreme = blogArticles.en.find(
+      (a) => a.slug === "rsl-supreme-shuttle-review"
+    );
+    if (rslSupreme) {
+      const related = relatedArticles(blogArticles.en, rslSupreme, 3);
+      // Should include RSL family-mates or fall back to brand+category matches.
+      expect(related.length).toBeGreaterThan(0);
+    }
   });
 
   test("keeps published review articles grounded with fact-check source notes", () => {

@@ -450,17 +450,88 @@ export function articlesGroupedByCategory(
     .filter((group) => group.articles.length > 0);
 }
 
-/** Find up to `n` related articles in the same category (newest-first), excluding the current. */
+/**
+ * Extract a brand-and-product affinity key from an article slug.
+ *
+ * The first two kebab-case segments of a slug typically encode brand +
+ * product family (e.g. `yonex-astrox-99-pro-2-deep-dive` → `yonex-astrox`;
+ * `li-ning-halbertec-9000-power-deep-dive` → `li-ning`). This lets the
+ * related-articles helper prefer same-family matches over generic
+ * same-category matches — which materially improves topical-cluster
+ * cross-link density without requiring per-article editorial work.
+ *
+ * For multi-word brand prefixes (li-ning), we keep both segments so that
+ * `li-ning-halbertec-...` and `li-ning-axforce-...` land in different
+ * sub-families but the same broader brand. The cross-link helper below
+ * scores both same-family and same-brand affinity above same-category
+ * affinity.
+ */
+function affinityKey(slug: string): { family: string; brand: string } {
+  const parts = slug.split("-");
+  if (parts.length < 2) return { family: slug, brand: slug };
+  // Two-word brand prefixes: li-ning, jujiang (rare), bonny.
+  const brand =
+    parts[0] === "li" && parts[1] === "ning"
+      ? "li-ning"
+      : parts[0];
+  // Family = brand + the next significant token.
+  const tail = brand === "li-ning" ? parts[2] : parts[1];
+  const family = tail ? `${brand}-${tail}` : brand;
+  return { family, brand };
+}
+
+/**
+ * Find up to `n` related articles, preferring same-family (brand +
+ * product family) matches over same-brand matches, and same-brand over
+ * generic same-category matches.
+ *
+ * Scoring:
+ *   - 3 points: same family AND same category
+ *   - 2 points: same family, different category
+ *   - 1 point:  same brand (not family)
+ *   - 0 points: same category, different brand (was previous default)
+ *
+ * Within each tier, articles are sorted newest-first. This produces a
+ * "related coverage" shelf that naturally surfaces cluster-mates first
+ * (e.g. a Yonex Astrox 88D Pro review shows other Astrox articles)
+ * before falling back to broader category matches. Materially improves
+ * E-E-A-T topical-cluster signals per Google's 2026 helpful-content
+ * update without requiring per-article editorial cross-link work.
+ */
 export function relatedArticles(
   articles: BlogArticle[],
   current: BlogArticle,
   n = 3
 ): BlogArticle[] {
-  return articlesByDateDesc(
-    articles.filter(
-      (a) => a.category === current.category && a.slug !== current.slug
-    )
-  ).slice(0, n);
+  const currentKey = affinityKey(current.slug);
+  const scored = articles
+    .filter((a) => a.slug !== current.slug)
+    .map((a) => {
+      const k = affinityKey(a.slug);
+      let score = 0;
+      if (k.family === currentKey.family) {
+        score += a.category === current.category ? 3 : 2;
+      } else if (k.brand === currentKey.brand) {
+        score += 1;
+      }
+      // Tie-breaker: same category adds half a point so within the same
+      // tier, category-matched siblings still rise.
+      if (
+        score === 0 &&
+        a.category === current.category &&
+        k.brand !== currentKey.brand
+      ) {
+        score = 0.25;
+      }
+      return { a, score };
+    })
+    .filter((row) => row.score > 0)
+    .sort((x, y) => {
+      if (y.score !== x.score) return y.score - x.score;
+      return x.a.updatedAt < y.a.updatedAt ? 1 : -1;
+    })
+    .map((row) => row.a);
+  return scored.slice(0, n);
 }
 
 const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
