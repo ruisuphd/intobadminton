@@ -29,13 +29,13 @@ const config: BrandPageConfig = {
   slug: "kumpoo",
   brandName: "Kumpoo",
   brandNameZh: "薰风",
-  founded: 1995,
-  hqCountry: "China",
+  founded: 2001,
+  hqCountry: "Japan (now China-owned)",
   officialUrl: "https://www.kumpoo.com/",
   title: "Kumpoo badminton: the fourth credible brand, decoded",
   dek: "Kumpoo (薰风) has reached parity with second-tier mainstream brands on build quality and flagship feel — the most credible candidate for the fourth-brand label alongside Yonex / Victor / Li-Ning. Here is how the catalogue maps to player role.",
   intro:
-    "Kumpoo has been making badminton equipment since 1995 in China. The current line has reached flagship-adjacent build quality across attack rackets (Shura II, Shanhai NEW), value-tier shoes (KH-G805 Lite Pro), and premium strings (JS-67 club-durability, JS-63 tournament-repulsion). BadmintonCN community reviewers consistently cover Kumpoo flagships; TiGe XLab has positioned the brand as the credible cross-shop outside the mainstream trio.",
+    "Kumpoo was founded in May 2001 in Japan by Yuji Omori and Mitsutoshi Satou; Guangzhou-based Sobey Sports acquired the brand entirely in 2009 and re-headquartered operations to China. The current line has reached flagship-adjacent build quality across attack rackets (Shura II, Shanhai NEW), value-tier shoes (KH-G805 Lite Pro), and premium strings (JS-67 club-durability, JS-63 tournament-repulsion) — the JS-series is produced at Kumpoo's Japan high-end string facility. BadmintonCN community reviewers consistently cover Kumpoo flagships; TiGe XLab has positioned the brand as the credible cross-shop outside the mainstream trio.",
   positioning:
     "Kumpoo's catalogue splits across rackets (two flagships at overlapping price tiers: Shura II for aggressive attack, Shanhai NEW for controlled attack), strings (JS-67 durability vs JS-63 thin-gauge repulsion), and shoes (KH-G805 Lite Pro for value-priority). Smaller catalogue than the mainstream trio but the build quality is genuinely competitive with mid-flagship Yonex / Victor / Li-Ning rackets at a meaningful price advantage.",
   lines: [
@@ -115,8 +115,8 @@ const config: BrandPageConfig = {
       a: "Concentrated in mainland China; Singapore has authorized resellers. North American and European availability is limited. If you want Kumpoo equipment but cannot find a local stockist, expect to import from a Chinese or SE Asian retailer.",
     },
     {
-      q: "Is Kumpoo a Chinese brand or licensed from elsewhere?",
-      a: "Native Chinese brand founded in 1995. The Chinese name 薰风 (Xūnfēng) translates roughly to 'fragrant breeze' — referencing the brand's positioning of approachable but capable equipment. Not a licensee of a foreign brand.",
+      q: "Is Kumpoo a Chinese brand or Japanese?",
+      a: "Both, in different eras. Kumpoo was founded in May 2001 in Japan by Yuji Omori and Mitsutoshi Satou, registered as Kumpoo Co., Ltd. Guangzhou-based Sobey Sports acquired the brand entirely in 2009, moving R&D and operations to China — the brand is now Chinese-owned but retains the Japanese DNA in product naming and string-manufacturing (the JS-series is still produced at Kumpoo's Japan facility). The Chinese name 薰风 (Xūnfēng) translates roughly to 'fragrant breeze' — referencing the brand's positioning of approachable but capable equipment.",
     },
   ],
   relatedLinks: [

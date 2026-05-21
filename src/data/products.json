@@ -3274,7 +3274,7 @@
       "max": 33
     },
     "shaftFlexSource": "official",
-    "launchYear": 2025,
+    "launchYear": 2024,
     "regionAvailability": [
       "global",
       "tw",
@@ -3285,7 +3285,7 @@
       "us"
     ],
     "officialSourceUrl": "https://www.victorsport.com/product/drivex",
-    "lastVerifiedAt": "2026-05-09",
+    "lastVerifiedAt": "2026-05-21",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",

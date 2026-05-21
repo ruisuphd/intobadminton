@@ -43,12 +43,12 @@
     "name": "Kumpoo",
     "nameZh": "薰风",
     "tier": "tier2",
-    "regions": ["cn", "global"],
+    "regions": ["cn", "jp", "global"],
     "officialUrl": "https://www.kumpoo.com/",
-    "founded": 1995,
-    "country": "China",
-    "knownFor": "Strong value-for-money brand widely used by Chinese club players. Power Cloud, K600, K529, K520 series. Often discussed on badmintoncn.com.",
-    "knownForZh": "性价比突出，中羽社区常见品牌。Power Cloud 系列、K600、K529、K520 等型号。",
+    "founded": 2001,
+    "country": "Japan (now China-owned)",
+    "knownFor": "Founded May 2001 in Japan by Yuji Omori and Mitsutoshi Satou; acquired by Guangzhou Sobey Sports in 2009 and re-headquartered to China. Now a credible candidate for the fourth global brand alongside Yonex / Victor / Li-Ning. Shura II / Asura II and Shanhai NEW attack flagships, JS-series strings from Kumpoo's Japan high-end string facility, KH-G805 Lite Pro shoes. Widely discussed on badmintoncn.com and TiGe XLab.",
+    "knownForZh": "2001 年 5 月由大森雄司与佐藤光俊在日本创立；2009 年被广州索贝体育收购并迁总部至中国。现位列全球第四大羽毛球品牌候选，与 Yonex / Victor / 李宁并提。Shura II/修罗 II 与山海 NEW 进攻旗舰，JS 系列球线（产自日本高端线厂），KH-G805 Lite Pro 球鞋。中羽社区与 TiGe XLab 长期关注。",
     "categoriesCovered": ["racket", "string", "shoes", "bag"]
   },
   {
