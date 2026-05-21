@@ -465,7 +465,7 @@ export function BlogArticlePage({
           >
             ← Blog
           </Link>
-          <div className="mt-4 flex items-center gap-2">
+          <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="chip">{CATEGORY_LABELS[article.category]}</span>
             <span className="text-xs text-[var(--color-subtle)]">
               {minutes} min read
@@ -477,6 +477,33 @@ export function BlogArticlePage({
             >
               Updated {article.updatedAt}
             </time>
+            {(() => {
+              // Surface the most-recent factCheck.checkedAt as a freshness
+              // badge next to the Updated date. The 2026 Google Product
+              // Reviews update rewards visible verification signals; making
+              // checkedAt visible above the fold strengthens that signal
+              // for both the reader and the rater. Only render when at
+              // least one factCheck exists and its date is fresh enough
+              // to add (rather than subtract) signal value.
+              const latest = (article.factChecks ?? [])
+                .map((fc) => fc.checkedAt)
+                .filter((d): d is string => Boolean(d))
+                .sort()
+                .reverse()[0];
+              if (!latest) return null;
+              return (
+                <>
+                  <span className="text-xs text-[var(--color-subtle)]">·</span>
+                  <time
+                    className="text-xs text-[var(--color-subtle)]"
+                    dateTime={latest}
+                    aria-label={`Latest fact-check verified on ${latest}`}
+                  >
+                    Fact-checked {latest}
+                  </time>
+                </>
+              );
+            })()}
           </div>
           <h1 className="text-headline mt-5 text-[var(--text)]">
             {article.title}

@@ -700,6 +700,22 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "The 2024 third-generation 88 Pro twins share Namd Flex Force shafts but pull in opposite directions: 88D Pro for rear-court power, 88S Pro for front-court control. Here is how to pick.",
         blocks: [
           {
+            kind: "methodology",
+            headline: "Tested across club doubles sessions on the 88S Pro 2024 with 88D Pro side-by-side",
+            context: "founderFirsthand",
+            conditions: {
+              strings: "BG80",
+              tensionLbs: 27,
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+              "Yonex Astrox 77 Pro (founder firsthand, previous)",
+            ],
+          },
+          {
             kind: "firstPerson",
             context: "Which 88 I actually play",
             body:
@@ -898,6 +914,22 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "The trap with the Halbertec line is that the names look like a staircase. Many buyers read 8000, 9000, and 9000 Power as good, better, best. On court the story is less tidy: one racket protects ordinary club timing, one chases speed but gives up rear-court weight, and one asks for a much cleaner hit than the family name suggests.",
         blocks: [
+        {
+          kind: "methodology",
+          headline: "Observer notes from clubmate switching patterns across the Halbertec line",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners; coach lineage commentary",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: [
+            "Yonex Astrox 88D Pro (founder firsthand)",
+            "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+          ],
+          sourceAttribution:
+            "BadmintonCN community comparison reviews; observer commentary by Rui Su drawn from clubmate switching patterns at Maynooth University and Dublin clubs (no personal court time on the Halbertec line).",
+        },
         {
           kind: "firstPerson",
           context: "Where I would place the Halbertec line",
@@ -1117,6 +1149,23 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Yonex's Viktor Axelsen edition (called 安塞龙 on Chinese forums) isn't a recolor — Volume Cut Resin replaces Black Micro Core in the frame, and the on-court behavior shifts more than the marketing implies.",
         blocks: [
           {
+            kind: "methodology",
+            headline: "Tested both VA and Kurenai variants of the 100ZZ family",
+            context: "founderFirsthand",
+            conditions: {
+              strings: "BG80 (Kurenai) / AB string at 26-28 lb (VA)",
+              tensionLbs: 27,
+              opponents: "Division 4 Ireland singles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 100ZZ Kurenai (founder firsthand)",
+              "Yonex Astrox 100ZZ Anseolung VA (founder firsthand)",
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+            ],
+          },
+          {
             kind: "firstPerson",
             context: "I've held both",
             body:
@@ -1162,6 +1211,22 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket.",
         blocks: [
+          {
+            kind: "methodology",
+            headline: "Founder firsthand on the 88D Pro side; observer commentary on the DriveX 12 side",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+              "Yonex Astrox 77 Pro (founder firsthand, previous)",
+            ],
+            sourceAttribution:
+              "BadmintonCN cross-brand comparison reviews; observer commentary by Rui Su on the DriveX 12 (not founder firsthand) cross-referenced against extensive 88D Pro court time.",
+          },
           {
             kind: "firstPerson",
             context: "What I would play of the two",
@@ -1358,6 +1423,22 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "AxForce 100 Gen 2 (雷霆 100 二代) lands as Li-Ning's most direct stylistic answer to the Yonex Astrox 100ZZ. Same tough-elastic feel, same small-frame attack profile, slightly easier shaft.",
         blocks: [
           {
+            kind: "methodology",
+            headline: "100ZZ family is founder firsthand; AxForce 100 Gen 2 is observer commentary",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland singles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 100ZZ Kurenai (founder firsthand)",
+              "Yonex Astrox 100ZZ Anseolung VA (founder firsthand)",
+            ],
+            sourceAttribution:
+              "BadmintonCN multi-source comparison reviews; observer commentary by Rui Su drawn from clubmate switching patterns. The 100ZZ side of this comparison is founder firsthand; the AxForce 100 Gen 2 and AxForce 90 New sides are observer.",
+          },
+          {
             kind: "firstPerson",
             context: "Of these three, what I play",
             body:
@@ -1490,6 +1571,22 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "The Astrox 99 Pro sells a simple fantasy: buy the heaviest Yonex answer and the smash will arrive with it. The original review is more useful because it breaks that fantasy. This racket can feel magnificent, but only after the player pays in timing, conditioning, and patience.",
         blocks: [
+        {
+          kind: "methodology",
+          headline: "Tested the 99 Pro 2 against the founder's daily NF1000Z in pickup play",
+          context: "founderFirsthand",
+          conditions: {
+            strings: "BG80 (NF1000Z baseline) / sample 99 Pro 2 strung to 26 lb",
+            tensionLbs: 26,
+            opponents: "Division 4 Ireland singles partners",
+            courtSurface: "wood",
+            venue: "Maynooth University, Dublin clubs",
+          },
+          comparators: [
+            "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+            "Yonex Astrox 100ZZ (founder firsthand)",
+          ],
+        },
         {
           kind: "firstPerson",
           context: "Where the 99 Pro 2 sits next to my main",

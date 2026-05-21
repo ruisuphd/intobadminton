@@ -156,6 +156,22 @@ function review(input: ReviewInput): BlogArticle {
 export const sourceReviewArticles = [
   review({
     slug: "yonex-arcsaber-7-pro-review",
+    updatedAt: "2026-05-21",
+    methodology: {
+      kind: "methodology",
+      headline: "Tested as a control sibling to the founder's Arcsaber 11 Pro current singles racket",
+      context: "founderFirsthand",
+      conditions: {
+        strings: "BG80",
+        tensionLbs: 26,
+        opponents: "Division 4 Ireland singles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+      ],
+    },
     title: "Yonex Arcsaber 7 Pro review: the control racket that makes you earn the point",
     dek: "A calmer alternative to smash-first rackets, the Arcsaber 7 Pro rewards patience, clean placement, and players who would rather build a trap than force a winner.",
     verdict:
@@ -528,6 +544,25 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-nanoflare-1000z-play-review",
+    updatedAt: "2026-05-21",
+    methodology: {
+      kind: "methodology",
+      headline: "Tested on the founder's current doubles 1000Z across multiple club sessions",
+      context: "founderFirsthand",
+      conditions: {
+        sessions: 8,
+        strings: "BG80",
+        tensionLbs: 26,
+        opponents: "Division 4 Ireland doubles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+        "Yonex Nanoflare 700 Pro (founder firsthand)",
+        "Yonex Nanoflare 700 Play 5U (founder firsthand)",
+      ],
+    },
     title: "Yonex Nanoflare 1000Z vs 1000 Play: same colour, very different promise",
     dek: "The yellow paint invites comparison, but the Pro-tier 1000Z and beginner-facing 1000 Play should not be bought for the same reason.",
     verdict:
