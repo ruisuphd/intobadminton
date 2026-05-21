@@ -66,7 +66,7 @@ function inferComparators(slug) {
   return ["Founder firsthand frames as cross-reference baseline"];
 }
 
-function inferSourceAttribution(slug) {
+function inferSourceAttribution() {
   return (
     "BadmintonCN community source reviews; observer commentary by Rui Su drawn from " +
     "Maynooth University and Dublin club ecosystem context."
@@ -90,7 +90,7 @@ function buildMethodologyBlockTs(slug, indent) {
     `${indent}  },`,
     `${indent}  comparators: [${comparatorsLiteral}],`,
     `${indent}  sourceAttribution:`,
-    `${indent}    "${inferSourceAttribution(slug)}",`,
+    `${indent}    "${inferSourceAttribution()}",`,
     `${indent}},`,
   ];
   return lines.join("\n" + indent);

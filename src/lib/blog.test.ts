@@ -157,7 +157,13 @@ describe("blog publishing metadata", () => {
       expect(article, slug).toBeDefined();
       expect(article?.reviewSummary, slug).toBeDefined();
       expect(article?.story?.intro.trim(), slug).not.toBe("");
-      expect(readingTimeMinutes(article!), slug).toBeGreaterThanOrEqual(4);
+      // 3-minute floor: the previous 4-minute floor was tuned when
+      // defaultReviewStory injected ~400 words of verbatim boilerplate
+      // (Demo script / Style alignment callouts) on every review. Those
+      // boilerplate blocks were removed in favor of the article-specific
+      // verdict block only; 3 minutes still asserts substantive
+      // buyer-first content vs. the thin 1-2 min floor used elsewhere.
+      expect(readingTimeMinutes(article!), slug).toBeGreaterThanOrEqual(3);
     }
   });
 

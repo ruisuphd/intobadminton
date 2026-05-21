@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { EditorialMeta } from "@/components/EditorialMeta";
-import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { BestPicksComparisonTable } from "@/components/BestPicksComparisonTable";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { EvidenceBadge, type EvidenceLevel } from "@/components/EvidenceBadge";
@@ -191,7 +190,6 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
         </header>
 
         <EditorialNotice />
-        <AffiliateDisclosure variant="inline" />
 
         <section className="card p-6">
           <h2 className="text-lg font-semibold text-[var(--text)]">

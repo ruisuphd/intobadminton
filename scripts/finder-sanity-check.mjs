@@ -1,10 +1,5 @@
 // Production-readiness QA: probe the finder with realistic profiles to
 // verify that new products integrate cleanly and recommendations are sensible.
-import { register } from "node:module";
-import { pathToFileURL } from "node:url";
-
-// Use ts-node-style resolution via a loader hook if available, else fall back.
-// Simplest path: directly run via tsx if installed.
 
 import products from "../src/data/products.json" with { type: "json" };
 

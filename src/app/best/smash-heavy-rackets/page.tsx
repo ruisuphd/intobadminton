@@ -23,7 +23,7 @@ const config: BestPicksConfig = {
       rank: 1,
       name: "Astrox 100ZZ",
       brand: "Yonex",
-      priceUsd: 320,
+      priceUsd: 295,
       bestFor: "Singles attack with elite timing",
       specs: [
         { label: "Weight", value: "3U / 4U" },
@@ -52,9 +52,9 @@ const config: BestPicksConfig = {
       specs: [
         { label: "Weight", value: "4U" },
         { label: "Balance", value: "Head-heavy" },
-        { label: "Shaft flex", value: "Medium" },
+        { label: "Shaft flex", value: "Stiff" },
       ],
-      why: "The current-spec Astrox 99 Pro is the friendlier path to a Yonex pro-tier smash frame. Yonex publishes its shaft as Medium, not Stiff — meaningfully less brutal than the 100ZZ, with similar real-match power for amateurs. Strong all-rounder if your singles pattern is built around back-court attack.",
+      why: "The 99 Pro is a friendlier path to a Yonex pro-tier smash frame than the 100ZZ. Yonex publishes the shaft as Stiff — one tier softer than the 100ZZ's Extra Stiff — which makes it meaningfully less brutal on imperfect timing while keeping similar real-match power for amateurs. Strong all-rounder if your singles pattern is built around back-court attack.",
       tradeoff: "Still demanding. If you compete in doubles too, the 88S Pro is more flexible.",
       image: {
         url: "https://us.yonex.com/cdn/shop/files/ALL_3AX99-P_530-1.jpg?v=1756957305&width=1946",
@@ -70,7 +70,7 @@ const config: BestPicksConfig = {
       rank: 3,
       name: "Astrox 88D Pro (2024)",
       brand: "Yonex",
-      priceUsd: 240,
+      priceUsd: 290,
       bestFor: "Doubles rear-court attack",
       specs: [
         { label: "Weight", value: "4U" },
@@ -97,7 +97,7 @@ const config: BestPicksConfig = {
       rank: 4,
       name: "Halbertec 9000 Power",
       brand: "Li-Ning",
-      priceUsd: 260,
+      priceUsd: 245,
       bestFor: "Maximum smash mass per dollar",
       specs: [
         { label: "Weight", value: "3U / 4U" },
@@ -111,7 +111,7 @@ const config: BestPicksConfig = {
       rank: 5,
       name: "Auraspeed 100X SE (Mohammad Ahsan)",
       brand: "Victor",
-      priceUsd: 270,
+      priceUsd: 245,
       bestFor: "Singles attacker who values speed too",
       specs: [
         { label: "Weight", value: "3U / 4U" },
@@ -134,7 +134,7 @@ const config: BestPicksConfig = {
       rank: 6,
       name: "Astrox 100ZZ VA (Viktor Axelsen)",
       brand: "Yonex",
-      priceUsd: 340,
+      priceUsd: 320,
       bestFor: "100ZZ feel, less punishment",
       specs: [
         { label: "Weight", value: "3U / 4U" },
