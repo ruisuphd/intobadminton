@@ -65,39 +65,57 @@ export type BlogSlug =
   | "badminton-glossary-terms-every-player-should-know"
   | "yonex-grip-sizes-explained"
   | "yonex-arcsaber-10-complete-buying-guide"
+  | "racket-stringing-hole-patterns-explained"
+  | "yonex-tour-series-buying-guide"
+  | "kumpoo-fourth-major-badminton-brand-profile"
+  | "rsl-aero-u-shuttle-review"
+  | "li-ning-axforce-90-new-5u-deep-dive"
+  | "bonny-future-land-3-polaris-shoes-review"
+  | "li-ning-bladesabre-2-pro-shoes-review"
+  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro"
+  | "jujiang-mzs-66un-string-review"
+  | "kawasaki-twilight-shoes-review"
+  | "li-ning-gp100-pro-overgrip-review"
+  | "li-ning-l66-string-first-look"
+  | "bonny-wuque-flagship-088-shoes-review"
+  | "bonny-wind-shadow-budget-speed-shoes-review"
+  | "jujiang-lbtu-value-racket-review"
+  | "victor-fz-flash-1000-racket-review"
+  | "kumpoo-kh-g805-lite-pro-shoes-review"
+  | "bonny-phantom-100-racket-review"
+  | "li-ning-axforce-10-beginner-attack-review"
+  | "li-ning-bladex-arrow-review"
+  | "victor-thruster-hwql-nuke-review"
+  | "victor-jipo-ls-racket-review"
+  | "victor-thruster-sr-cherry-blossom-review"
+  | "victor-fz-88d-power-purple-review"
+  | "yonex-arcsaber-7-play-review"
+  | "kawasaki-glacier-800-racket-review"
+  | "kawasaki-h2-6u-superlight-racket-review"
+  | "kawasaki-star-cross-second-perspective-review"
+  | "bonny-snake-breath-second-tier-flagship-review"
+  | "li-ning-lt66-power-string-review"
   | "li-ning-flagship-racket-buying-guide-2026"
-  | "yonex-astrox-100zz-anders-antonsen-edition-review"
+  | "bonny-wuque-1982-y3k-shoes-review"
   | "li-ning-halbertec-9000-power-deep-dive"
   | "li-ning-halbertec-9000-standalone-review"
   | "li-ning-axforce-100-gen-2-vs-gen-1"
-  | "victor-drivex-12-standalone-review"
-  | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
-  | "li-ning-halbertec-7000-original-review"
-  | "victor-drivex-12-zsw-vs-original-comparison"
-  | "yonex-astrox-99-pro-gen-1-review"
-  | "yonex-arcsaber-7-tour-review"
-  | "victor-sonic-boom-pro-budget-attack-review"
-  | "victor-auraspeed-99-comprehensive-review"
-  | "li-ning-axforce-90-new-comprehensive-review"
-  | "li-ning-bladesabre-2-pro-review"
-  | "bonny-wuque-flagship-overview"
-  | "bonny-snake-breath-second-tier-flagship-review"
-  | "bonny-zhanguidao-8888ax-ultra-review"
-  | "bonny-mojun-vs-arcsaber-11-pro-attack-review"
-  | "kawasaki-glacier-800-review"
-  | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review"
-  | "kawasaki-h2-hydrogen-review"
-  | "kawasaki-twilight-shoes-review"
-  | "mizuno-carbo-pro-823-review"
-  | "goshen-leiming-69-string-review"
   | "rsl-supreme-shuttle-review"
-  | "kumpoo-shura-2-shanhai-comparison-merge"
-  | "kumpoo-js-67-vs-js-63-strings-comparison"
-  | "li-ning-thunder-90n-multi-author-comprehensive"
-  | "victor-thruster-falcon-family-overview"
-  | "yonex-nanoflare-800-pro-vs-victor-auraspeed-hs-plus-comprehensive"
-  | "kumpoo-fourth-brand-brand-decoded"
-  | "victor-drivex-family-overview";
+  | "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai"
+  | "victor-drivex-12-zsw-vs-original-comparison"
+  | "victor-drivex-12-vs-drivex-10-and-88d-pro-2024"
+  | "bonny-zhangui-dao-8888ax-ultra-review"
+  | "bonny-carbon-armour-shoes-review"
+  | "victor-thruster-9900-curiosity-review"
+  | "yonex-astrox-99-pro-gen-1-review"
+  | "bonny-wuque-xuanwu-review"
+  | "badminton-shoe-buying-guide-and-replacement"
+  | "kumpoo-js-67-string-review"
+  | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
+  | "victor-sonic-boom-pro-budget-attack-review"
+  | "goshen-leiming-69-string-review"
+  | "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review"
+  | "yonex-arcsaber-7-tour-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -163,39 +181,57 @@ export const blogSlugs: BlogSlug[] = [
   "badminton-glossary-terms-every-player-should-know",
   "yonex-grip-sizes-explained",
   "yonex-arcsaber-10-complete-buying-guide",
+  "racket-stringing-hole-patterns-explained",
+  "yonex-tour-series-buying-guide",
+  "kumpoo-fourth-major-badminton-brand-profile",
+  "rsl-aero-u-shuttle-review",
+  "li-ning-axforce-90-new-5u-deep-dive",
+  "bonny-future-land-3-polaris-shoes-review",
+  "li-ning-bladesabre-2-pro-shoes-review",
+  "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+  "jujiang-mzs-66un-string-review",
+  "kawasaki-twilight-shoes-review",
+  "li-ning-gp100-pro-overgrip-review",
+  "li-ning-l66-string-first-look",
+  "bonny-wuque-flagship-088-shoes-review",
+  "bonny-wind-shadow-budget-speed-shoes-review",
+  "jujiang-lbtu-value-racket-review",
+  "victor-fz-flash-1000-racket-review",
+  "kumpoo-kh-g805-lite-pro-shoes-review",
+  "bonny-phantom-100-racket-review",
+  "li-ning-axforce-10-beginner-attack-review",
+  "li-ning-bladex-arrow-review",
+  "victor-thruster-hwql-nuke-review",
+  "victor-jipo-ls-racket-review",
+  "victor-thruster-sr-cherry-blossom-review",
+  "victor-fz-88d-power-purple-review",
+  "yonex-arcsaber-7-play-review",
+  "kawasaki-glacier-800-racket-review",
+  "kawasaki-h2-6u-superlight-racket-review",
+  "kawasaki-star-cross-second-perspective-review",
+  "bonny-snake-breath-second-tier-flagship-review",
+  "li-ning-lt66-power-string-review",
   "li-ning-flagship-racket-buying-guide-2026",
-  "yonex-astrox-100zz-anders-antonsen-edition-review",
+  "bonny-wuque-1982-y3k-shoes-review",
   "li-ning-halbertec-9000-power-deep-dive",
   "li-ning-halbertec-9000-standalone-review",
   "li-ning-axforce-100-gen-2-vs-gen-1",
-  "victor-drivex-12-standalone-review",
-  "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
-  "li-ning-halbertec-7000-original-review",
-  "victor-drivex-12-zsw-vs-original-comparison",
-  "yonex-astrox-99-pro-gen-1-review",
-  "yonex-arcsaber-7-tour-review",
-  "victor-sonic-boom-pro-budget-attack-review",
-  "victor-auraspeed-99-comprehensive-review",
-  "li-ning-axforce-90-new-comprehensive-review",
-  "li-ning-bladesabre-2-pro-review",
-  "bonny-wuque-flagship-overview",
-  "bonny-snake-breath-second-tier-flagship-review",
-  "bonny-zhanguidao-8888ax-ultra-review",
-  "bonny-mojun-vs-arcsaber-11-pro-attack-review",
-  "kawasaki-glacier-800-review",
-  "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review",
-  "kawasaki-h2-hydrogen-review",
-  "kawasaki-twilight-shoes-review",
-  "mizuno-carbo-pro-823-review",
-  "goshen-leiming-69-string-review",
   "rsl-supreme-shuttle-review",
-  "kumpoo-shura-2-shanhai-comparison-merge",
-  "kumpoo-js-67-vs-js-63-strings-comparison",
-  "li-ning-thunder-90n-multi-author-comprehensive",
-  "victor-thruster-falcon-family-overview",
-  "yonex-nanoflare-800-pro-vs-victor-auraspeed-hs-plus-comprehensive",
-  "kumpoo-fourth-brand-brand-decoded",
-  "victor-drivex-family-overview",
+  "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+  "victor-drivex-12-zsw-vs-original-comparison",
+  "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+  "bonny-zhangui-dao-8888ax-ultra-review",
+  "bonny-carbon-armour-shoes-review",
+  "victor-thruster-9900-curiosity-review",
+  "yonex-astrox-99-pro-gen-1-review",
+  "bonny-wuque-xuanwu-review",
+  "badminton-shoe-buying-guide-and-replacement",
+  "kumpoo-js-67-string-review",
+  "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+  "victor-sonic-boom-pro-budget-attack-review",
+  "goshen-leiming-69-string-review",
+  "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+  "yonex-arcsaber-7-tour-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3819,1124 +3855,213 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       ],
     },
     {
-      slug: "li-ning-thunder-90n-multi-author-comprehensive",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Li-Ning AxForce 90 New (Thunder 90N) — multi-author comprehensive: what 4+ source reviews collectively reveal",
-      dek:
-        "The AxForce 90 New is one of the most-reviewed Li-Ning attack frames in 2026. Synthesising four independent BadmintonCN perspectives surfaces patterns no single source review captures.",
-      story: {
-        intro:
-          "Four BadmintonCN reviewers have covered the AxForce 90 New (雷霆 90N) across 4U and 5U variants. Each source review captures one buyer angle; collectively they reveal a more textured platform picture than any single review delivers. This multi-author synthesis is companion to the existing AxForce 90 New standalone review and the 90-vs-80-vs-88dp 3-way comparison.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — four-source synthesis across both 4U and 5U variants",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland practice partners",
-              courtSurface: "wood and synthetic court mat",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Li-Ning AxForce 80",
-              "Li-Ning AxForce 100 Gen 2",
-              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
-            ],
-            sourceAttribution:
-              "Synthesises four independent BadmintonCN source reviews of the AxForce 90 New (雷霆万钧, 雷霆90new脆弹高爆发, 再进一把雷霆5U深度, 中羽评测 雷霆90NEW); observer commentary by Rui Su.",
-          },
-          {
-            kind: "facts",
-            heading: "Multi-author consensus snapshot",
-            items: [
-              { label: "Source consensus", value: "Speed-tilted attack with 5U as the underrated variant" },
-              { label: "Variant emphasis", value: "4U is the mainstream pick; 5U is the standout buyer profile" },
-              { label: "Cross-brand peer", value: "Yonex Astrox 88D Pro 2024 (founder firsthand)" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "What four reviewers collectively reveal",
-          body: "Four independent BadmintonCN reviewers covered the AxForce 90 New from different angles: one focused on the standard 4U experience, one on the 5U deep-dive, one on the cross-line comparison against the AxForce 80 and 100, and one on the platform's identity within Li-Ning's broader attack lineage. The multi-author consensus is clearer than any single source: the AxForce 90 New is a speed-tilted attack frame designed to bridge the AxForce 80's accessibility with the AxForce 100 family's flagship feel, and the 5U variant is the line's underrated buyer profile.",
-        },
-        {
-          heading: "The 4U mainstream perspective",
-          body: "In the 4U variant, the AxForce 90 New delivers a strong drive snap, slightly faster recovery than the AxForce 80, and a forgiving sweet spot suitable for club-level competitive doubles attackers. Source reviewers consistently report the 4U variant as the right pick for the broadest slice of the buyer base. The platform welcomes 24 lb BG80 as a starting setup, with room to raise to 25-26 lb after the racket settles and the player's timing adapts.",
-        },
-        {
-          heading: "The 5U deep-dive perspective",
-          body: "The 5U variant is where the multi-author synthesis surfaces something the standalone reviews undersell. The 5U AxForce 90 New makes the platform's attack identity accessible to smaller-physique players, junior-to-adult transition players, and doubles front-court specialists who want faster recovery between consecutive drives. The head-heavy signature is preserved within the lighter weight class, which means the AxForce 90 New 5U is the only Li-Ning attack flagship that bridges accessibility with flagship-tier attack identity. For the buyer profile that fits, this variant is one of the strongest Li-Ning attack picks in the current catalogue.",
-        },
-        {
-          heading: "Cross-line positioning within the AxForce family",
-          body: "Within the AxForce line, the 90 New sits between the 80 (more balanced, more forgiving) and the 100 Gen 2 (heavier, more demanding). The source consensus across four reviewers is that the 90 New is the right pick for doubles attackers prioritising speed within the AxForce identity, while the 80 remains the right pick for entry-tier attackers and the 100 Gen 2 for established singles attackers with flagship-grade swing strength. The 90 New is the line's most defensible doubles-first flagship.",
-        },
-        {
-          heading: "Cross-brand reference: Astrox 88D Pro 2024",
-          body: "The AxForce 90 New 4U competes most directly with the Yonex Astrox 88D Pro 2024 (founder firsthand) on the doubles-attacker buyer profile. The Astrox 88D Pro 2024 is the more refined platform with stronger mainstream ecosystem; the AxForce 90 New offers the speed-tilted alternative within the same broad identity. For buyers cross-shopping between the two brands: pick the 88D Pro if you value Yonex ecosystem and slightly more controlled attack feel; pick the AxForce 90 New if you want faster recovery between drives and the Li-Ning attack identity. The 5U variant of the AxForce 90 New is the differentiator that has no direct Yonex equivalent.",
-        },
-        {
-          heading: "Setup recommendations and the buying decision",
-          body: "4U setup: G5 at 24 lb on BG80 for the first ten hours, raising to 25 lb if the platform welcomes more. 5U setup: G5 at 22-23 lb on BG80 or VBS-66N — the lighter frame welcomes a slightly softer string-bed. Buy the 4U if you are an established club doubles attacker who wants the AxForce identity with speed priority. Buy the 5U if you are a smaller-physique attacker, a junior-to-adult transition player, or a doubles front-court specialist wanting a faster-recovery frame. The multi-author consensus is that the 5U variant is the line's underrated pick — most reviews undersell it because they assume 4U is the default flagship choice.",
-        },
-      ],
-      cta:
-        "Run the finder with doubles-first format, attack-with-speed style, and your physique / level filter to compare the AxForce 90 New 4U / 5U against the Astrox 88D Pro 2024 and the AxForce 100 Gen 2.",
-      factChecks: [
-        {
-          sourceName: "Li-Ning",
-          title: "Li-Ning Badminton — AxForce 90 New",
-          section: "AxForce family page",
-          checkedAt: "2026-05-21",
-          href: "https://lining.com/",
-          quote: "AxForce 90 New",
-          note:
-            "Li-Ning catalogue confirms the AxForce 90 New ships in both 4U and 5U variants, with the 5U as a meaningful variant rather than a stripped-down 4U.",
-        },
-        {
-          sourceName: "IntoBadminton — AxForce 90 New comprehensive review",
-          title: "AxForce 90 New comprehensive review",
-          section: "Companion three-source merge",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/li-ning-axforce-90-new-comprehensive-review/",
-          quote: "AxForce 90 New",
-          note:
-            "Companion IntoBadminton coverage of the AxForce 90 New (three-source merge) surfaces the 5U-specific buyer profile; this multi-author synthesis extends the coverage to a fourth source review and broader cross-line context.",
-        },
-      ],
-    },
-    {
-      slug: "victor-thruster-falcon-family-overview",
-      updatedAt: "2026-05-21",
+      slug: "racket-stringing-hole-patterns-explained",
+      updatedAt: "2026-05-19",
       category: "guides",
-      title:
-        "Victor Thruster Falcon family overview: TK-F, TK-SR, TK-HWQL and TK-9900 mapped to buyer profiles",
-      dek:
-        "Victor's Thruster Falcon family runs four overlapping SKUs (TK-F Ultra, TK-SR, TK-HWQL, TK-9900). This overview maps each to the right buyer profile and surfaces which variants are worth chasing.",
-      story: {
-        intro:
-          "Victor's Thruster Falcon family is one of the most buyer-confusing flagship lines in the current catalogue. Four overlapping SKUs — TK-F (the flagship Falcon Ultra), TK-SR (warm-feel attack), TK-HWQL (small-caliber lighter variant), and TK-9900 (older heavy attack curiosity) — share the Falcon platform identity but emphasise different attack characteristics. This overview maps each to its right buyer profile.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — Thruster Falcon family mapping across four SKUs",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland practice partners",
-              courtSurface: "wood and synthetic court mat",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Yonex Astrox 99 Pro 2 (founder firsthand)",
-              "Yonex Astrox 100ZZ (founder firsthand)",
-              "Li-Ning AxForce 100 Gen 2",
-            ],
-            sourceAttribution:
-              "Multi-source synthesis of BadmintonCN Thruster Falcon coverage (中羽评测 鹰击长空 THRUSTER F 隼, 猎奇1098 胜利 TK-SR, 猎奇1096 胜利 TK-HWQL, 猎奇144 胜利 TK9900); observer commentary by Rui Su.",
-          },
-          {
-            kind: "facts",
-            heading: "Four-SKU snapshot",
-            items: [
-              { label: "TK-F (Falcon Ultra)", value: "Family flagship — decisive contact" },
-              { label: "TK-SR", value: "Warm-feel attack — forgiving identity" },
-              { label: "TK-HWQL", value: "Small-caliber lighter variant" },
-              { label: "TK-9900", value: "Older heavy attack curiosity pick (used market)" },
-            ],
-          },
-        ],
-      },
+      title: "68, 72, 76, 78, 80 hole rackets explained: why string-hole count is not the spec the forums claim",
+      dek: "From the aggressive 68-hole AX99 Pro to the dense 80-hole AXNT — what each hole-count actually changes in feel, durability, and stringing strategy, and why most string complaints are really tension complaints.",
       sections: [
         {
-          heading: "What the Thruster Falcon family stands for",
-          body: "The Victor Thruster Falcon line is Victor's heavy-attack flagship platform — head-heavy weight signature, stiff to medium-stiff shafts, and a smash carry identity competitive with Yonex's Astrox 99 Pro family. Where Victor differentiates is the variant strategy: instead of running a single flagship at one shaft demand, the Thruster Falcon line offers four SKUs that span demand levels and physique profiles within the same broad identity. The family's strength is that every serious attacker can find a Falcon variant suited to their swing strength; the weakness is that the choice between them confuses most buyers.",
+          heading: "Why this argument exists at all",
+          body: "Walk into any badminton forum in Asia and someone is angry about a 68-hole racket. The complaint is usually that the sweet spot is harsh, the non-sweet-spot is hard to play, and the racket is generally unforgiving. The complaint is real but the diagnosis is usually wrong — what feels like a hole-count problem is almost always a tension problem combined with a contact-quality problem. This guide walks through what each hole-count category (68, 72, 76, 78, 80) actually changes, who should care, and what your stringer should know.",
         },
         {
-          heading: "TK-F Ultra — the family flagship",
-          body: "The TK-F (Falcon Ultra) is the line's true flagship. Source reviewers describe it as 'eagle striking the sky, unstoppably sharp' (鹰击长空 锐不可挡) — a decisive contact, flagship-grade shaft load, and the peak attack carry of the family. The platform demands established swing strength and rewards consistent timing with measurable smash carry. As a buyer profile: TK-F Ultra is the right pick for established Victor heavy-attack players who have the swing strength to deliver flagship-tier swings consistently.",
+          heading: "68-hole rackets: the aggressive design (e.g. AX99 Pro, AX88S Pro old colour)",
+          body: "68-hole patterns concentrate the centre of the bed: wider string spacing in the middle, extremely tight spacing at the frame edges. This creates an unusually large dwell-time advantage in the sweet spot — the strings can flex more on contact, the shuttle stays on the bed longer, and the resulting hit is more powerful and more accurate. The trade-off is that off-centre contact feels strikingly different from sweet-spot contact, which is the source of most 'I hate 68-hole' complaints. The fix is not to abandon 68-hole — it is to learn the sweet spot and to string 10% above your normal tension (e.g. string 33lbs if you normally play 30lbs), because the wider spacing means strung tension feels effectively lower than the rated number.",
         },
         {
-          heading: "TK-SR — the warm-feel variant",
-          body: "The TK-SR is the family's forgiving variant. Source reviewers describe it as 'warm-warm style' (暖暖系玩法) — a more accommodating contact feel, slightly less demanding shaft, and a more forgiving sweet spot than the TK-F Ultra. The TK-SR is the right pick for buyers who want the Falcon identity in a more accessible package, or for established TK-F Ultra players who want a secondary frame in rotation for practice and warm-up.",
+          heading: "72-hole rackets: the friendly older standard (e.g. Mini-Cannon, Halbertec 90 Long)",
+          body: "72-hole patterns (16 paired holes) are the legacy standard before 76-hole became dominant. They are easier to play than 68-hole because the bed flexes more uniformly, but the trade-off is that mishits feel mushier and good contact is less crisp. On entry-tier rackets like the Victor Mini-Cannon, this is a feature — the friendlier bed forgives beginner technique. On high-tier rackets like the Halbertec 90 Long, the 72-hole choice is more controversial because advanced players' tighter, more committed swings tend to feel like they 'lose energy' in the looser-feeling bed. 72-hole rackets are best suited to defensive-control players who want a forgiving bed without the harsh sweet-spot transition of 68-hole.",
         },
         {
-          heading: "TK-HWQL — the small-caliber variant",
-          body: "The TK-HWQL is the family's lighter, smaller-physique variant. Source reviewers describe it as 'small caliber' (小当量) — a 5U-leaning weight class with a smaller frame and the Falcon attack identity preserved within the lighter swing weight. Buyer profile: junior players moving up to a real attack frame, smaller-physique adults who want Falcon identity at an accessible swing weight, or doubles front-court specialists building a secondary rotation with attack identity.",
+          heading: "76-hole rackets: the universal standard (e.g. AX88S Pro old colour)",
+          body: "76-hole (10 paired holes) is the most common pattern in modern rackets and is the closest to a universal default. The string bed is uniformly spaced, which means tension applies consistently across the face, sweet-spot transition is smooth, and string flexibility is balanced. 76-hole supports both control-oriented and attack-oriented play styles. The rated tension on a 76-hole racket plays at close to the rated number — 28lbs feels like 28lbs, not 26lbs (as on 68-hole) or 30lbs (as on 80-hole). This is why most amateurs default to 76-hole rackets and find them comfortable.",
         },
         {
-          heading: "TK-9900 — the used-market curiosity",
-          body: "The TK-9900 is the family's older heavy-attack curiosity pick — discontinued from Victor's current catalogue but consistently surfaced in the BadmintonCN 'curiosity' (猎奇向) series as a used-market pick. Heavier than the current Falcon variants, with an older shaft technology that some source reviewers describe as quirky and others as nostalgic. Buyer profile: collectors of older Victor attack frames, used-market buyers willing to do their own authentication, or experienced attackers curious about the Falcon line's heritage.",
+          heading: "78-hole rackets: the high-tier convenience design (e.g. NF800)",
+          body: "78-hole patterns split one of the 76-hole paired-grommets into two separate grommets, adding one extra cross-string near the bottom of the head. The practical effect is minimal: bed pressure is slightly increased, the bed feels slightly firmer, and stringing is marginally easier because the extra hole simplifies the bottom-area pattern. Most players cannot reliably distinguish 78-hole from 76-hole in blind testing. When 78-hole rackets feel different, it is almost always because of other simultaneous changes (different frame material, different shaft, different tension) rather than the hole-count itself. Tension recommendation: string 1lb below rated for the slightly firmer feel, or leave at rated for marginal forgiveness.",
         },
         {
-          heading: "The buyer-question filter",
-          body: "Question one — what is your swing strength baseline? Flagship-grade consistent → TK-F Ultra. Established but variable → TK-SR. Still building → TK-HWQL. Question two — what is your physique profile? Adult standard → TK-F Ultra or TK-SR. Smaller-physique or junior → TK-HWQL. Question three — do you want a current SKU or accept used-market? Current → TK-F Ultra / TK-SR / TK-HWQL. Used-market with collector intent → TK-9900. The family's strength is that almost every serious attacker fits one of these answers cleanly; the weakness is that without this filter, buyers default to the TK-F Ultra by reputation and end up over-spec'd for their swing.",
+          heading: "80-hole rackets: the dense-pattern future (e.g. AXNT)",
+          body: "80-hole patterns convert some of the highly-stressed 4-point and 8-point paired holes into single holes, reducing the per-hole tension stress at the head's highest-pressure areas. The benefit is durability — a documented Yonex Astrox-series weakness has been collapse at those exact 4 and 8 point regions over time, and 80-hole addresses it. The secondary benefit is bed-uniformity: the denser pattern reduces the off-sweet-spot mushiness that 68-hole creates. The trade-off is that 80-hole patterns string effectively higher than rated — 26lbs feels like 28lbs, and players who don't compensate by lowering tension complain about a 'metal/banging' feel on contact. 80-hole rackets are designed for advanced players with good contact mechanics who want maximum durability without sacrificing the bed's uniformity.",
+        },
+        {
+          heading: "What this all means for amateurs",
+          body: "Most amateurs default to 76-hole rackets because they are the most forgiving and the most predictable. 68-hole and 80-hole are specialist patterns that require either tension adjustment (string 10% higher for 68-hole, 1-2lbs lower for 80-hole) or advanced contact quality (consistent sweet-spot striking). 72-hole is the legacy choice for forgiveness. 78-hole is functionally similar to 76-hole. The biggest takeaway: most 'I hate this hole-count' complaints are actually 'I'm stringing at the wrong tension for this hole-count' problems. Talk to your stringer about adjusting tension for non-standard hole-count rackets, and most of the harsh-feel complaints will disappear.",
+        },
+        {
+          heading: "One final note on frame size",
+          body: "Hole-count is not the only factor in bed feel. Frame size matters too: a 26lbs string job on a larger frame is effectively softer than the same 26lbs on a smaller frame, because the strings span a larger area. Rough rule of thumb: large frame at 26lbs ≈ small frame at 24.4lbs. This is why two rackets with identical hole-count, identical string, and identical rated tension can still play differently if their frame sizes differ. Always test the feel before drawing conclusions about the racket.",
         },
       ],
-      cta:
-        "Run the finder with heavy-attack style and your specific swing-strength / physique filter to compare the Thruster Falcon variants against the Astrox 99 Pro 2 and the AxForce 100 Gen 2.",
+      cta: "Run the racket finder with your tension preference and contact-style flags to find rackets that match your hole-count comfort zone.",
       factChecks: [
         {
-          sourceName: "Victor Badminton",
-          title: "Victor — Thruster Falcon family",
-          section: "Thruster F / SR / HWQL line page",
-          checkedAt: "2026-05-21",
-          href: "https://www.victorsport.com/products/thruster-falcon",
-          quote: "Thruster Falcon",
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-19",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
           note:
-            "Victor catalogue confirms the Thruster Falcon family runs TK-F (Ultra flagship), TK-SR, and TK-HWQL as current SKUs, with TK-9900 as a discontinued predecessor available only on the used market.",
-        },
-        {
-          sourceName: "IntoBadminton — Thruster Falcon review",
-          title: "Victor Thruster Falcon review",
-          section: "Existing TK-F coverage",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/victor-thruster-falcon-review/",
-          quote: "Thruster Falcon",
-          note:
-            "Companion IntoBadminton coverage of the Victor Thruster Falcon (TK-F) provides the flagship-tier reference; this family overview maps each variant within the broader Falcon line.",
+            "Hole-count nomenclature, tension recommendations, and frame-comparison rules of thumb are paraphrased from BadmintonCN community-knowledge posts; technical readings and buyer guidance are original to IntoBadminton.",
         },
       ],
     },
     {
-      slug: "yonex-nanoflare-800-pro-vs-victor-auraspeed-hs-plus-comprehensive",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus comprehensive: the cross-brand speed flagship decision",
-      dek:
-        "Both target the doubles speed flagship buyer with stiff shafts and head-light balances. Source reviewers consistently merge them; the buyer-decision question is whose ecosystem you commit to.",
-      story: {
-        intro:
-          "The Yonex Nanoflare 800 Pro and the Victor Auraspeed HS Plus are the two most commonly cross-shopped speed flagships in 2026. Both target competitive doubles players who win on drive snap and recovery speed; both ship stiff shafts in head-light frames; both compete on price within the same flagship tier. Source reviewers consistently merge them in their evaluations because the platform identities are so closely aligned. This comprehensive piece treats them side-by-side with founder firsthand cross-reference to the Nanoflare 1000Z.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — cross-brand speed flagship merge with NF1000Z founder cross-reference",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland doubles partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
-              "Yonex Nanoflare 700 Pro (founder firsthand)",
-              "Victor Auraspeed 90K II",
-            ],
-            sourceAttribution:
-              "Multi-source synthesis of BadmintonCN Nanoflare 800 Pro and Auraspeed HS Plus reviews; observer commentary by Rui Su with founder firsthand cross-reference to the NF1000Z.",
-          },
-          {
-            kind: "facts",
-            heading: "Cross-brand snapshot",
-            items: [
-              { label: "Yonex NF800 Pro", value: "Yonex speed flagship — broader ecosystem" },
-              { label: "Victor HS Plus", value: "Victor speed flagship — drive-snap identity" },
-              { label: "Founder cross-reference", value: "NF1000Z (founder firsthand, current doubles)" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "Where the two platforms genuinely diverge",
-          body: "The Yonex Nanoflare 800 Pro and the Victor Auraspeed HS Plus look identical on paper — both head-light, both stiff-shafted, both flagship-tier speed-attack frames. They diverge on three real dimensions. First, contact tone: the NF800 Pro carries a slightly warmer, more pocketed feel through contact; the HS Plus is sharper and more linear. Second, drive snap timing: the HS Plus delivers a marginally faster drive snap at the cost of slightly less forgiveness on rushed swings; the NF800 Pro is more forgiving on timing variation. Third, ecosystem: Yonex's broader retail, stringing, and resale ecosystem favours the NF800 Pro for buyers who value mainstream support; Victor's narrower but more focused ecosystem favours the HS Plus for serious speed specialists.",
-        },
-        {
-          heading: "Who should pick the NF800 Pro",
-          body: "Two buyer profiles favour the Yonex Nanoflare 800 Pro: first, players who value mainstream ecosystem support, mainstream resale liquidity, and broader stringing community knowledge — Yonex's surrounding infrastructure remains category-leading. Second, players whose timing varies week-to-week and who benefit from the marginally more forgiving contact tone. For a buyer who values consistency over peak snap response, the NF800 Pro is the safer pick.",
-        },
-        {
-          heading: "Who should pick the HS Plus",
-          body: "Two buyer profiles favour the Victor Auraspeed HS Plus: first, drive specialists whose strongest rally pattern is a fast cross-court drive followed by clean recovery — the HS Plus's sharper drive snap delivers a measurable advantage on this pattern. Second, players who already use Victor frames elsewhere in their rotation and want ecosystem coherence within the brand. The HS Plus is the more decisive pick for the player who wins on drive exchanges.",
-        },
-        {
-          heading: "Founder firsthand cross-reference: NF1000Z",
-          body: "Both the NF800 Pro and the HS Plus sit one tier below the Yonex Nanoflare 1000Z (founder firsthand, current doubles racket). The 1000Z is the line's identity flagship with a Z-axis shaft that delivers cleaner drive snap and slightly more pocketing on defensive resets than either the NF800 Pro or the HS Plus. From the founder cross-reference: buyers who can stretch budget and have established flagship swing strength should consider the 1000Z over either the 800 Pro or the HS Plus; buyers building toward flagship-grade timing are well-served by either the 800 Pro or the HS Plus depending on ecosystem preference.",
-        },
-        {
-          heading: "The cross-brand commitment question",
-          body: "The most overlooked dimension in this comparison is ecosystem commitment. Picking the NF800 Pro versus the HS Plus is partly a frame decision, but mostly a multi-year brand commitment: secondary frames, replacement strings, stringing knowledge, and resale all flow through the brand you choose. Players who already own Yonex frames elsewhere will get smaller incremental value from the NF800 Pro because the brand commitment is already made; players already in the Victor ecosystem will benefit similarly from the HS Plus. Cross-brand jumps (Yonex player picking the HS Plus, Victor player picking the NF800 Pro) make sense only when the contact-tone or drive-snap difference matters more than the ecosystem cost.",
-        },
-        {
-          heading: "Setup and the buying decision",
-          body: "NF800 Pro: 4U/G5 at 26 lb on BG80 — the platform welcomes the same setup as the Astrox attack family. HS Plus: 4U/G5 at 25-26 lb on VBS-66N or BG80 Power — the sharper drive snap pairs slightly better with high-repulsion strings. Buy the NF800 Pro if you are in the Yonex ecosystem, value mainstream support, or want the more forgiving contact tone. Buy the HS Plus if you are in the Victor ecosystem, win on drive snap, or want the sharper linear feel. Skip both and stretch to the NF1000Z if you have flagship-grade swing strength and want the line's true identity flagship — the 1000Z's Z-axis shaft delivers measurably more than either of the tier-two flagships when the player can drive it cleanly.",
-        },
-      ],
-      cta:
-        "Run the finder with doubles-first format, speed-attack style, and competitive level to compare the NF800 Pro and HS Plus against the founder firsthand NF1000Z and Auraspeed 90K II.",
-      factChecks: [
-        {
-          sourceName: "Yonex",
-          title: "NANOFLARE 800 PRO — speed flagship",
-          section: "Nanoflare 800 Pro product page",
-          checkedAt: "2026-05-21",
-          href: "https://www.yonex.com/nf-800-pro",
-          quote: "NANOFLARE 800 PRO",
-          note:
-            "Official Yonex Nanoflare 800 Pro page confirms the platform's positioning as a speed-attack flagship within the Nanoflare line.",
-        },
-        {
-          sourceName: "Victor Badminton",
-          title: "Victor — Auraspeed HS Plus",
-          section: "Auraspeed HS Plus product page",
-          checkedAt: "2026-05-21",
-          href: "https://www.victorsport.com/products/auraspeed-hs-plus",
-          quote: "Auraspeed HS Plus",
-          note:
-            "Official Victor Auraspeed HS Plus page confirms the platform's positioning as a speed flagship competing with the Yonex Nanoflare 800 Pro.",
-        },
-      ],
-    },
-    {
-      slug: "kumpoo-shura-2-shanhai-comparison-merge",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Kumpoo Shura II vs Shanhai NEW: how Kumpoo's two attack flagships actually differ",
-      dek:
-        "Kumpoo's two current attack flagships — Shura II (修罗 II 代) and Shanhai NEW (山海 NEW) — sit at similar price tiers with overlapping marketing. This merge maps which buyer profile each is actually built for.",
-      story: {
-        intro:
-          "Two BadmintonCN reviewers covered the Shura II and the Shanhai NEW independently. Both rackets are flagship-tier Kumpoo attack frames, both ship in similar weight classes, and both target the same broad doubles-attacker buyer profile. The differentiator is identity emphasis: the Shura II leans into aggressive attack with violent-totem styling; the Shanhai NEW leans into controlled attack with mountains-and-seas refinement. The buyer-decision question is which identity emphasis fits your game.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — two-source merge with Kumpoo cross-brand reference",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland practice partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, Dublin clubs",
-            },
-            comparators: [
-              "Li-Ning Halbertec 9000",
-              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
-              "Victor DriveX 12",
-            ],
-            sourceAttribution:
-              "Two BadmintonCN source reviews of Kumpoo flagships (薰风 修罗II 球拍体验测评 + 镇山海 定乾坤 山海 NEW); observer commentary by Rui Su.",
-          },
-          {
-            kind: "facts",
-            heading: "Two-flagship snapshot",
-            items: [
-              { label: "Shura II identity", value: "Aggressive attack (violent-totem theme)" },
-              { label: "Shanhai NEW identity", value: "Controlled attack (mountains-and-seas theme)" },
-              { label: "Price tier", value: "Both flagship-tier; Shanhai NEW slightly higher" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "The two-flagship problem and Kumpoo's solution",
-          body: "Most brands position a single flagship within each playing-style identity. Kumpoo currently runs two attack flagships — the Shura II and the Shanhai NEW — at overlapping price tiers with overlapping marketing. The result is buyer confusion that source reviewers consistently surface but rarely resolve. The honest resolution: the two rackets are not redundant; they emphasise different attack identities within the same broad family. Buyers should pick by which identity emphasis fits their actual game rather than by which is newer or more expensive.",
-        },
-        {
-          heading: "What the Shura II actually plays like",
-          body: "The Shura II is Kumpoo's aggressive-attack flagship — head-heavy, stiff-shaft, with a violent-totem (暴力图腾) styling and identity. Source reviewers consistently report a more decisive contact feel and a slightly more demanding swing profile than the Shanhai NEW. The platform rewards clean preparation with stronger back-court smash carry; it punishes incomplete swings more visibly. As a buyer profile: the Shura II is the right pick for doubles attackers who win points on aggressive back-court smashes and who have the consistent timing to deliver clean swings.",
-        },
-        {
-          heading: "What the Shanhai NEW actually plays like",
-          body: "The Shanhai NEW is Kumpoo's controlled-attack flagship — head-heavy but with a slightly more rounded weight distribution, a less stiff shaft than the Shura II, and a controlled-attack identity matching the mountains-and-seas (山海) thematic. Source reviewers describe a more forgiving sweet spot and a slightly less aggressive contact feel. The platform suits doubles attackers who win points on controlled drive-into-smash sequences and who want flagship feel without the Shura II's swing-demand penalty.",
-        },
-        {
-          heading: "Which to buy — the buyer-question filter",
-          body: "Question one — what does your strongest rally pattern end in? If the answer is a back-court smash, Shura II. If the answer is a controlled smash from a drive setup, Shanhai NEW. Question two — how consistent is your timing? If your timing is consistently clean session-to-session, Shura II rewards it more. If your timing varies week-to-week, Shanhai NEW forgives more. Question three — what is your secondary frame? If you already play a controlled-attack frame (Halbertec 9000, Arcsaber 11 Pro), the Shura II adds something genuinely different. If you already play an aggressive-attack frame (AxForce 100 Gen 2, Astrox 100ZZ), the Shanhai NEW is the more complementary pick.",
-        },
-        {
-          heading: "Cross-brand reference points",
-          body: "For Yonex players: the Shura II plays closer to the Astrox 100ZZ (founder firsthand) than to the Astrox 88D Pro 2024 (founder firsthand) — aggressive attack identity dominates. The Shanhai NEW plays closer to the 88D Pro than to the 100ZZ — controlled attack with placement priority. For Li-Ning players: the Shura II is closer to the AxForce 100 Gen 2 (heavy attack); the Shanhai NEW is closer to the Halbertec 9000 (controlled attack). These cross-brand peer references are the cleanest filter for buyers cross-shopping outside the mainstream trio.",
-        },
-        {
-          heading: "Setup and the buying decision",
-          body: "Shura II: 4U/G5 at 24-25 lb on BG80 or VBS-66N. The platform punishes higher tension faster than the Shanhai NEW. Shanhai NEW: 4U/G5 at 25-26 lb on the same string options; the more forgiving platform welcomes slightly tighter setups. Buy the Shura II if you are an aggressive-attack doubles player with consistent timing and clean back-court swing mechanics; buy the Shanhai NEW if you are a controlled-attack doubles player who values forgiveness and slightly more session-to-session timing variation. Skip both if you are first-time flagship buyer (mainstream brands are the friendlier introduction) or if you specifically need broad retail availability outside Asia.",
-        },
-      ],
-      cta:
-        "Run the finder with attack-style preference and competitive level to compare both Kumpoo flagships against mainstream peers like the Astrox 100ZZ, the Astrox 88D Pro 2024, and the AxForce 100 Gen 2.",
-      factChecks: [
-        {
-          sourceName: "Kumpoo",
-          title: "Kumpoo Badminton — Shura II and Shanhai NEW",
-          section: "Current flagship attack rackets",
-          checkedAt: "2026-05-21",
-          href: "https://www.kumpoo.com.cn/",
-          quote: "修罗 II / 山海 NEW",
-          note:
-            "Kumpoo's catalogue confirms the Shura II and Shanhai NEW as the brand's two current flagship-tier attack rackets, with the identity emphasis difference (aggressive vs controlled) reflected in product positioning.",
-        },
-        {
-          sourceName: "IntoBadminton — Kumpoo Shanhai NEW review",
-          title: "Kumpoo Shanhai NEW racket review",
-          section: "Existing sibling coverage",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/kumpoo-shanhai-new-racket-review/",
-          quote: "Kumpoo Shanhai NEW",
-          note:
-            "Companion IntoBadminton coverage of the Shanhai NEW provides the standalone platform-specific context; this merge focuses on the Shura II vs Shanhai NEW buyer decision within the Kumpoo flagship line.",
-        },
-      ],
-    },
-    {
-      slug: "kumpoo-js-67-vs-js-63-strings-comparison",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Kumpoo JS-67 vs JS-63 strings: thin-gauge tournament repulsion versus club durability",
-      dek:
-        "Kumpoo's two current premium strings target overlapping buyers but solve different problems. The JS-67 is the ice-blue all-round club pick; the JS-63 is the thin-gauge tournament-tier repulsion option.",
-      story: {
-        intro:
-          "Two BadmintonCN reviewers covered the Kumpoo JS-67 and JS-63 strings independently. The two strings target overlapping buyer profiles but solve different problems: the JS-67 prioritises club-durability with a recognisable ice-blue colour signature; the JS-63 prioritises tournament-tier repulsion with a thinner 0.63mm gauge. The buyer-decision question is whether you restring frequently enough to justify the thinner gauge's reduced durability.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — two-source merge on Kumpoo's premium string line",
-            context: "observer",
-            conditions: {
-              strings: "Both JS-67 and JS-63 tested across multiple club partners' rackets",
-              opponents: "Division 4 Ireland club partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, Dublin clubs",
-            },
-            comparators: [
-              "Yonex BG80 (mainstream durability)",
-              "Yonex BG80 Power (high-repulsion)",
-              "Li-Ning L66 string",
-            ],
-            sourceAttribution:
-              "Two BadmintonCN source reviews of Kumpoo's premium strings (薰风 JS-67 球线测评 + 薰风 JS-63 音爆 球线测评); observer commentary by Rui Su from club partner stringing patterns.",
-          },
-          {
-            kind: "facts",
-            heading: "Two-string snapshot",
-            items: [
-              { label: "JS-67", value: "0.67mm gauge, ice-blue colourway, club durability" },
-              { label: "JS-63", value: "0.63mm gauge, thin tournament repulsion" },
-              { label: "Tension range", value: "JS-67: 20-28 lb; JS-63: 22-30 lb" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "Why string gauge dominates the buying decision",
-          body: "String gauge is the dominant variable for badminton strings — far more important than colour, brand identity, or marketing positioning. A 0.67mm string and a 0.63mm string deliver fundamentally different playing characteristics: 0.67mm prioritises durability and consistent feel across long sessions; 0.63mm prioritises peak repulsion at the cost of break frequency. The JS-67 and JS-63 sit on opposite sides of this trade-off within Kumpoo's premium line, and the buyer decision is mostly about which trade-off your game and budget actually want.",
-        },
-        {
-          heading: "What the JS-67 delivers",
-          body: "The Kumpoo JS-67 is a 0.67mm gauge club-durability string with a recognisable ice-blue colour signature. Source reviewers position it as a high-repulsion all-round string for club-level competitive play. Tension range 20-28 lb. The 0.67mm gauge delivers consistent feel session-to-session with reasonable break resistance — club players who restring every 2-3 months get genuine value. As a buyer profile: the JS-67 is the right pick for club competitive players who restring on a moderate schedule and want a distinctive colour signature without paying mainstream tournament-string prices.",
-        },
-        {
-          heading: "What the JS-63 delivers",
-          body: "The Kumpoo JS-63 (subtitled 音爆 — Sonic Boom) is a 0.63mm gauge thin-tournament-tier string. Source reviewers position it as a high-repulsion tournament-grade option for players who can deliver clean swings and accept frequent restringing. Tension range 22-30 lb. The 0.63mm gauge delivers measurably more peak repulsion and a sharper contact feel — competitive tournament players prioritising snap response get genuine value, but the trade-off is a noticeably higher break frequency. As a buyer profile: the JS-63 is the right pick for tournament-tier players who restring weekly or monthly and value peak repulsion over durability.",
-        },
-        {
-          heading: "Tension recommendations by gauge",
-          body: "JS-67: start at 23-24 lb for first stringing on a new racket, raising to 25-26 lb after the platform has settled. The 0.67mm gauge welcomes higher tension on stiffer-shaft frames and rewards a balanced setup on mid-tier frames. JS-63: start at 24-25 lb for first stringing, raising to 26-27 lb if your timing is consistently clean. The thin gauge punishes high tension faster on inconsistent swings; tournament players running flagship-tier shafts can take the JS-63 higher (28-30 lb) at the cost of more frequent restringing.",
-        },
-        {
-          heading: "Cross-brand reference points",
-          body: "For Yonex string players: the JS-67 plays closer to the BG80 in club durability identity (with the ice-blue colour as a Kumpoo differentiator); the JS-63 plays closer to the BG80 Power in tournament-tier repulsion identity (with a sharper contact signature). For Li-Ning string players (e.g., L66 / L69): the JS-67 sits in a similar durability tier with a different feel signature; the JS-63 sits in a tier above the L66/L69 with thinner gauge and higher break frequency.",
-        },
-        {
-          heading: "The honest buyer answer",
-          body: "Buy the JS-67 if you are a club-level competitive player who restrings every 2-3 months and wants a distinctive ice-blue colour signature with all-round playing characteristics. Buy the JS-63 if you are a tournament-tier player who restrings monthly or more frequently and values peak repulsion over durability. Skip both if you want mainstream resale identity (Yonex BG80 family or Li-Ning L66/L69 are the easier resale-context picks) or if you want a string that maximally favours durability over repulsion (consider Yonex BG65 Titanium or similar high-durability options outside the Kumpoo line).",
-        },
-      ],
-      cta:
-        "Open the finder with your stringing-frequency preference filter to compare the Kumpoo JS-67 and JS-63 against mainstream Yonex BG80 family and Li-Ning L66/L69 alternatives.",
-      factChecks: [
-        {
-          sourceName: "Kumpoo",
-          title: "Kumpoo Badminton — JS string series",
-          section: "Premium string line",
-          checkedAt: "2026-05-21",
-          href: "https://www.kumpoo.com.cn/",
-          quote: "JS-67 / JS-63",
-          note:
-            "Kumpoo's catalogue confirms the JS-67 and JS-63 as the brand's two current premium strings, with the gauge difference (0.67mm vs 0.63mm) reflecting the durability-versus-repulsion trade-off positioning.",
-        },
-        {
-          sourceName: "IntoBadminton — Li-Ning L69 string review",
-          title: "Li-Ning L69 string review",
-          section: "Cross-brand string reference",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/li-ning-l69-string-review/",
-          quote: "Li-Ning L69",
-          note:
-            "Companion IntoBadminton coverage of the Li-Ning L69 string provides the mainstream club-durability reference; this Kumpoo string comparison surfaces the two-gauge trade-off Kumpoo runs in their premium line.",
-        },
-      ],
-    },
-    {
-      slug: "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro 2024: when the budget alternative is genuinely close",
-      dek:
-        "Two BadmintonCN reviewers position the Chocolate 88D as a budget alternative to the Astrox 88D Pro. From the 88D Pro side (founder firsthand), the gap is smaller than the price difference suggests — but not zero.",
-      story: {
-        intro:
-          "The Kawasaki Chocolate 88D is consistently pitched as a budget alternative (平替) to the Yonex Astrox 88D Pro. Most budget alternative claims fail under cross-reference; this one survives it more honestly than expected. From the founder firsthand side of the Astrox 88D Pro (Rui Su's previous attack frame), the Chocolate 88D delivers measurably similar attack identity at a noticeably different price — with predictable trade-offs in refinement and resale.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — two-source merge with founder firsthand cross-reference on Astrox 88D Pro",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland doubles partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, Dublin clubs",
-            },
-            comparators: [
-              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
-              "Victor DriveX 10 Metallic",
-              "Li-Ning Halbertec 7000 II",
-            ],
-            sourceAttribution:
-              "Two BadmintonCN source reviews of the Kawasaki Chocolate 88D (天斧88D平替川崎巧克力88D + 川崎巧克力88D实战打感); observer commentary by Rui Su drawn from the Astrox 88D Pro 2024 founder firsthand experience.",
-          },
-          {
-            kind: "facts",
-            heading: "Comparison snapshot",
-            items: [
-              { label: "Source positioning", value: "Astrox 88D Pro budget alternative" },
-              { label: "Founder firsthand peer", value: "Yonex Astrox 88D Pro 2024" },
-              { label: "Price gap", value: "Roughly 40-50% lower than current Astrox 88D Pro 2024 retail" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "What the Chocolate 88D actually delivers vs the 88D Pro",
-          body: "The Kawasaki Chocolate 88D is a head-heavy controlled-attack racket built around the same buyer profile as the Yonex Astrox 88D Pro: doubles attackers who win points on smash carry from controlled drive setups. Source reviewers consistently report the Chocolate 88D delivers genuine 88D-style attack feel — head weight signature, shaft load, and contact response all land in the same identity range. From the founder firsthand side of the Astrox 88D Pro 2024, the gap is real but smaller than the price difference suggests: the Chocolate 88D delivers maybe 80-85% of the Astrox feel at roughly 50-60% of the price.",
-        },
-        {
-          heading: "Where the Astrox 88D Pro still wins",
-          body: "Three areas where the Astrox 88D Pro 2024 retains a meaningful advantage. First, refinement: Yonex's manufacturing tolerances and finish polish at the flagship tier remain category-leading; the Chocolate 88D's frame finish is honestly second-tier. Second, peak smash carry: when both rackets are swung cleanly, the 88D Pro delivers a noticeably more decisive contact and slightly more carry through the back court. Third, ecosystem: resale liquidity, retail availability, community stringing knowledge, and cross-brand reference points all favour the 88D Pro. For buyers who value any of these, the price premium is justified.",
-        },
-        {
-          heading: "Who should buy the Chocolate 88D",
-          body: "Three buyer profiles win on the Chocolate 88D: first, budget-conscious doubles attackers who want genuine 88D-style attack identity without paying flagship money — the racket delivers honestly at its price tier. Second, players who already own and play the Astrox 88D Pro confidently and want a budget backup frame for travel, practice, or all-weather use. Third, Kawasaki brand-curious buyers ready to step up from the brand's value tier (Glacier 800, KACE) to a more decisive attack platform.",
-        },
-        {
-          heading: "Who should still buy the Astrox 88D Pro 2024",
-          body: "Two scenarios where the 88D Pro 2024 remains the right pick despite the price gap. First, you are a first-time flagship attack frame buyer — the Astrox is the friendlier introduction with broader cross-brand reference points and community support. Second, you specifically value the refinement and ecosystem advantages — competitive tournament players, players who restring frequently and value mainstream stringing guidance, players who anticipate reselling within a season. The Chocolate 88D's value-tier compromise is real but small; whether it matters depends on what you value beyond the playing experience.",
-        },
-        {
-          heading: "Setup recommendations across both rackets",
-          body: "Chocolate 88D: 4U/G5 at 23-24 lb on BG80 or AS-EX for the first ten hours, raising to 25 lb only if the racket asks for more. The frame welcomes the same tension range as the 88D Pro but the shaft feedback is slightly more forgiving on rushed swings. Astrox 88D Pro 2024 (founder firsthand): 4U/G5 at 24-26 lb on BG80; the 88D Pro punishes higher tensions on inconsistent timing in a way the Chocolate 88D forgives. The honest cross-shop: string both at the same tension and play them on the same night. If you cannot tell the difference within two games, the Chocolate 88D is the right buy; if you can, the price gap is honestly earned.",
-        },
-        {
-          heading: "The honest verdict",
-          body: "Buy the Chocolate 88D if you are a budget-conscious doubles attacker who wants real 88D-style attack identity, or if you already own the Astrox 88D Pro and want a budget secondary frame. Buy the Astrox 88D Pro 2024 if you are a first-time flagship buyer, you value mainstream refinement and ecosystem, or you specifically want the 88D Pro's peak smash carry. The Chocolate 88D is one of the more honestly-positioned budget alternatives in the current attack-frame market — most 'budget Astrox alternative' claims fail under scrutiny, this one survives it. The price gap is real and earned, but smaller than budget-tier alternatives typically deliver.",
-        },
-      ],
-      cta:
-        "Run the finder with controlled-attack style, doubles-first format, and intermediate-to-advanced level to compare the Kawasaki Chocolate 88D against the Astrox 88D Pro 2024 and the Halbertec 7000 II.",
-      factChecks: [
-        {
-          sourceName: "Kawasaki Sport",
-          title: "Kawasaki Badminton — Chocolate series",
-          section: "Chocolate 88D product page",
-          checkedAt: "2026-05-21",
-          href: "https://kawasaki-sport.com/",
-          quote: "Chocolate 88D",
-          note:
-            "Kawasaki's catalogue confirms the Chocolate 88D as a value-tier head-heavy attack racket positioned against the Yonex Astrox 88D Pro family.",
-        },
-        {
-          sourceName: "IntoBadminton author profile — Rui Su",
-          title: "Founder firsthand product list",
-          section: "Astrox 88D Pro as previous attack frame",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/authors/rui-su/",
-          quote: "Astrox 88D Pro (founder firsthand)",
-          note:
-            "The Astrox 88D Pro is on Rui Su's founder firsthand list as a previous attack frame, supporting the founder cross-reference on this comparison. The Chocolate 88D is not on the firsthand list; observer voice for the Kawasaki side.",
-        },
-      ],
-    },
-    {
-      slug: "victor-drivex-12-zsw-vs-original-comparison",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Victor DriveX 12 ZSW vs DriveX 12 Original: when the Lee Zii Jia signature is worth the variant tax",
-      dek:
-        "The ZSW (Lee Zii Jia signature) variant is more than a colourway change — paint thickness and string-bed coupling shift the racket's contact feel. Here is when the ZSW is the right pick and when the base is the smarter buy.",
-      story: {
-        intro:
-          "The DriveX 12 ZSW is Lee Zii Jia's signature variant of the DriveX 12. Marketing positions it as a colourway change with a small spec tweak; community measurement reveals the paint thickness and string-bed coupling are different enough to feel on contact. The buyer-decision question is whether the variant difference is worth the variant tax.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer notes from clubmates comparing ZSW and original side-by-side",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland doubles partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, Dublin clubs",
-            },
-            comparators: [
-              "Victor DriveX 12 (original)",
-              "Victor DriveX 10 Metallic",
-              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
-            ],
-            sourceAttribution:
-              "BadmintonCN community reviewer Chengzhen's ZSW vs original comparison piece; observer commentary by Rui Su.",
-          },
-          {
-            kind: "facts",
-            heading: "Variant snapshot",
-            items: [
-              { label: "Variant difference", value: "Paint thickness + string-bed coupling" },
-              { label: "Audible on", value: "Contact tone and short-game touch" },
-              { label: "Identical on", value: "Smash carry, defensive blocks, drive snap" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "What the ZSW actually changes",
-          body: "Source measurements consistently report the ZSW carries a marginally thicker paint finish than the original DriveX 12. The paint thickness shifts contact feel toward a slightly more dampened, slightly more controlled signature on short-game and net touches. The shaft load, head weight, and overall swing weight are unchanged within manufacturing tolerance. What you notice first is the contact tone — the ZSW has a slightly more 'plugged' sound and feel on clean smashes versus the original's brighter contact. What you notice over a session is short-game touch — the ZSW's slightly more dampened feel makes drops and slices read a fraction softer.",
-        },
-        {
-          heading: "Where the ZSW helps and where it does not",
-          body: "Helps: short-game touch (drops, slices, deceptive blocks), where the slightly more dampened feel rewards finesse. Helps: players who specifically dislike the brighter contact tone of standard Victor frames and want a softer feel signature. Does not help: smash carry (identical to original), defensive blocks (identical), drive snap (identical), and any rally where contact-tone preference is irrelevant. The variant is concentrated at the touch-shot end of the game — the same pattern that emerges with the Astrox 100ZZ Anders Antonsen Edition's tactile differences. Variant taxes generally pay off only when the playing difference aligns with how you actually win points.",
-        },
-        {
-          heading: "Who should buy the ZSW",
-          body: "Lee Zii Jia fans buying the signature for collector reasons — fair enough, the variant difference is small but real and the signature value is intentional. Players who already own and play the original DriveX 12 and have specifically noticed that the standard contact tone feels too bright for their preference. Players whose game wins on short-game touch (singles deceptive players, doubles front-court specialists). For everyone else — competitive doubles attackers, players new to the DriveX line, players cost-sensitive — the original DriveX 12 is the better-value pick.",
-        },
-        {
-          heading: "Cross-reference: the Astrox 100ZZ Anders pattern",
-          body: "The DriveX 12 ZSW versus original pattern mirrors the Yonex Astrox 100ZZ Anders Antonsen Edition versus base 100ZZ pattern: in both cases, a signature variant offers a small but real tactile difference concentrated at the touch-shot end of the game, with smash and defence unchanged. The same buyer logic applies: pay the variant tax only if you already own the base, your game specifically wins on touch shots, and the contact-tone preference matters to you. If you are buying your first frame from the platform, the base is the right pick.",
-        },
-        {
-          heading: "Setup and the buying decision",
-          body: "Setup recommendations are identical for the ZSW and the original: 4U/G5 at 25 lb on BG80 or VBS-66N, raising to 26 lb after the first ten hours. The variant tax for the ZSW typically lands at roughly 15-20% above the base DriveX 12 retail price. That is a steep premium for a tactile difference that most buyers will not perceive in their first session. The honest answer: if the price gap is closer to 10%, the ZSW becomes defensible for short-game-focused players; if the price gap is at 20% or above, the original is the better-value pick regardless of preference.",
-        },
-        {
-          heading: "The honest buyer answer",
-          body: "Buy the ZSW if you already own the original DriveX 12, your game wins on touch shots, and you specifically prefer a slightly more dampened contact tone. Buy the original if you are new to the DriveX 12 platform, your game is attack-first rather than touch-first, or you are price-sensitive. Skip both if you want flagship-grade smash carry (consider Auraspeed 99 J or AxForce 100 Gen 2) or recovery-priority doubles (consider Auraspeed 90K II or Bladex 900 New). The variant question only matters once the platform question is settled.",
-        },
-      ],
-      cta:
-        "Run the finder with controlled-attack style and intermediate-to-advanced level to compare the DriveX 12 against cross-brand peers like the Astrox 88D Pro 2024 and the Halbertec 9000.",
-      factChecks: [
-        {
-          sourceName: "Victor Badminton",
-          title: "Victor — DriveX series",
-          section: "DriveX 12 ZSW signature variant",
-          checkedAt: "2026-05-21",
-          href: "https://www.victorsport.com/products/dx-12",
-          quote: "DriveX 12",
-          note:
-            "Official Victor catalogue confirms the DriveX 12 ZSW exists as a Lee Zii Jia signature variant; specific paint thickness and contact-tone differences are sourced from community measurement and have not been independently re-measured by IntoBadminton.",
-        },
-        {
-          sourceName: "IntoBadminton — DriveX 12 standalone review",
-          title: "Victor DriveX 12 standalone review",
-          section: "Existing companion coverage",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/victor-drivex-12-standalone-review/",
-          quote: "DriveX 12",
-          note:
-            "Companion standalone review of the base DriveX 12 provides the platform context; this comparison piece focuses on the ZSW variant decision for buyers who already know they want the DriveX 12.",
-        },
-      ],
-    },
-    {
-      slug: "li-ning-axforce-100-gen-2-vs-gen-1",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Li-Ning AxForce 100 Gen 2 vs AxForce 100 Gen 1: the generational reset most buyers are missing",
-      dek:
-        "The AxForce 100 Gen 2 is not a refinement of the Gen 1 — it is a deliberate course-correction back toward the AxForce platform's original heavy-attack identity. Here is what changed and which generation you should actually buy.",
-      story: {
-        intro:
-          "The AxForce 100 has shipped two generations and most buyers treat them as iterative updates. They are not. The Gen 1 drifted toward speed; the Gen 2 pulls the platform firmly back toward heavy attack. Picking between them is a buyer-intent question more than a 'newer is better' question.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer notes from clubmates who switched between generations",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland doubles partners; coach commentary from a former Malaysia national-team player",
-              courtSurface: "wood and synthetic court mat",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Yonex Astrox 100ZZ (founder firsthand)",
-              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
-              "Li-Ning Halbertec 9000",
-            ],
-            sourceAttribution:
-              "BadmintonCN reviewer's generational comparison piece (百兽之力·再铸巅峰), observer commentary by Rui Su.",
-          },
-          {
-            kind: "facts",
-            heading: "Generational snapshot",
-            items: [
-              { label: "Gen 1 identity", value: "Head-heavy attack that drifted toward speed" },
-              { label: "Gen 2 identity", value: "Course-correction back to heavy attack" },
-              { label: "Cross-brand peer", value: "Yonex Astrox 100ZZ (founder firsthand)" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "What actually changed between Gen 1 and Gen 2",
-          body: "The headline change is shaft stiffness: the Gen 2 shaft is measurably stiffer than the Gen 1, with a slightly forward balance point and a more decisive contact feel through the head. The frame layup is updated for higher-tension stringbed compatibility. The Gen 1 platform had a recognisable 'fast-attack' lean that suited intermediate doubles attackers; the Gen 2 strips that lean out and asks the player to commit to a heavy-attack identity. Source reviewers consistently report a more demanding setup-and-prepare phase on the Gen 2, with a noticeably less forgiving sweet spot for half-prepared swings.",
-        },
-        {
-          heading: "Who should buy the Gen 2",
-          body: "Players with established shaft load — typically two or more seasons of regular flagship-frame use, with a smash that already carries genuine weight. The Gen 2 rewards consistent timing and clean preparation; it punishes the same incomplete swing mechanics that the Gen 1 used to forgive. For a competitive singles player who plays at Division 3 or above and whose strongest point pattern ends in a back-court smash, the Gen 2 is the right pick within the AxForce family. For a competitive doubles attacker with strong shaft load and a drive-into-smash rally pattern, it is also defensible.",
-        },
-        {
-          heading: "Who should still buy the Gen 1 (used market)",
-          body: "Two groups should still pick the Gen 1, used: first, players who specifically want the speed-leaning attack identity that the Gen 1 carried. The Gen 1 plays measurably faster between drives, recovers slightly easier between consecutive attacks, and forgives more swing variation. Used Gen 1 frames trade at a substantial discount versus new Gen 2 frames, and the value gap is real. Second, transition players who want the AxForce identity but are not yet ready for the Gen 2's shaft load. A clean used Gen 1 at the right price is a better learning frame than a new Gen 2 swing-mismatched.",
-        },
-        {
-          heading: "Cross-brand reference points",
-          body: "For Yonex players: the Gen 2 plays closer to the Astrox 100ZZ (founder firsthand) than the Gen 1 did. The 100ZZ-versus-Gen-2 comparison is now genuinely competitive on smash carry, with the 100ZZ retaining a marginal edge on placement and the Gen 2 offering a slightly easier swing for the same head weight. For Astrox 88D Pro 2024 (founder firsthand) players: the Gen 2 is heavier through the head and demands more swing strength, but offers more decisive contact when the shoulder is fresh; the Gen 1 plays closer to the 88D Pro's controlled-attack identity. Within Li-Ning: the Gen 2 is more aggressive than the Halbertec 9000 (which retains the controlled-attack flagship role); the Gen 1, on the used market, played in a similar identity range to the Halbertec 8000.",
-        },
-        {
-          heading: "Setup recommendations across generations",
-          body: "Gen 2: 4U/G5 at 25-26 lb to start, raising to 27-28 lb only after at least ten hours on the frame. The shaft punishes high tension on inconsistent swings. Strings: BG80 for durability, VBS-66N for snap, AS-EX for repulsion. Gen 1 (used): 4U/G5 at 24-25 lb is the sweet spot; the more forgiving shaft welcomes a slightly higher tension than its predecessor designs. Strings: same options, with a slight bias toward higher-repulsion picks given the Gen 1's faster-attack character.",
-        },
-        {
-          heading: "The honest buyer answer",
-          body: "Buy the Gen 2 if you already have established shaft load, your game wins on back-court smash carry, and you want the AxForce platform's heavy-attack identity in its most uncompromised current form. Buy a used Gen 1 if you want the AxForce identity in a more forgiving, speed-leaning package, or if you are still establishing the shaft load needed for the Gen 2. Skip both if your game is recovery-priority or front-court speed — the Bladex line is the correct pick there. The Gen 2 is the more decisive racket; whether decisive is a feature or a tax depends entirely on your current swing.",
-        },
-      ],
-      cta:
-        "Open the finder with smash-heavy style and intermediate-to-advanced level to compare the AxForce 100 Gen 2 against the Halbertec 9000, the Astrox 88D Pro 2024, and the Astrox 100ZZ.",
-      factChecks: [
-        {
-          sourceName: "Li-Ning",
-          title: "Li-Ning Badminton — AxForce series",
-          section: "AxForce 100 family page",
-          checkedAt: "2026-05-21",
-          href: "https://lining.com/",
-          quote: "AxForce 100",
-          note:
-            "Official Li-Ning catalogue confirms the AxForce 100 II (Gen 2) replaces the original AxForce 100 in the active line-up; the Gen 1 remains available only on the used market.",
-        },
-        {
-          sourceName: "IntoBadminton — 3-way comparison",
-          title: "AxForce 100 Gen 2 vs 100ZZ vs 90 New",
-          section: "Existing 3-way coverage",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/",
-          quote: "AxForce 100 Gen 2",
-          note:
-            "Companion 3-way comparison piece sets the cross-platform context (Gen 2 vs 100ZZ vs 90 New); this generational head-to-head focuses specifically on the Gen 1 vs Gen 2 buyer decision.",
-        },
-      ],
-    },
-    {
-      slug: "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
-      updatedAt: "2026-05-21",
-      category: "comparisons",
-      title:
-        "Yonex Nanoflare matrix: NF700 vs NF700 Pro vs NF800 Pro vs NF1000Z — which speed flagship fits your game",
-      dek:
-        "Four Nanoflare frames sit in a competitive doubles player's shortlist in 2026. This matrix maps each to the rally type it wins and which to skip when your priorities are clear.",
-      story: {
-        intro:
-          "The Nanoflare line has fragmented into a four-frame matrix that confuses more buyers than it helps. The Nanoflare 1000Z is the line's identity flagship (and the founder's current doubles racket); the 800 Pro is the all-rounder; the 700 Pro is the controlled-speed pick; the original 700 is the entry. Treating them as a hierarchy of 'more expensive equals better' is wrong — they answer different questions.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Tested across multiple club doubles sessions on the founder's current doubles frame",
-            context: "founderFirsthand",
-            conditions: {
-              sessions: 6,
-              strings: "BG80",
-              tensionLbs: 26,
-              opponents: "Division 4 Ireland doubles partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
-              "Yonex Nanoflare 700 Pro (founder firsthand)",
-              "Yonex Nanoflare 700 Play 5U (founder firsthand)",
-              "Yonex Astrox 88D Pro (founder firsthand)",
-            ],
-            sourceAttribution:
-              "BadmintonCN cross-line comparison sources (nf700pro写出来对比nf700, nf800pro横向对比nf1000z); observer cross-reference with founder firsthand testing on the NF1000Z, NF700 Pro, and NF700 Play.",
-          },
-          {
-            kind: "facts",
-            heading: "Matrix snapshot",
-            items: [
-              { label: "Identity flagship", value: "Nanoflare 1000Z (founder firsthand)" },
-              { label: "All-rounder", value: "Nanoflare 800 Pro (Tour and base)" },
-              { label: "Controlled speed", value: "Nanoflare 700 Pro (founder firsthand)" },
-            ],
-          },
-        ],
-      },
-      sections: [
-        {
-          heading: "The four frames in one sentence each",
-          body: "Nanoflare 1000Z (founder firsthand, current doubles): the line's identity flagship — head-light Z-axis design that pays off in fast drives and defensive resets, with a stiff shaft that demands clean timing. Nanoflare 800 Pro: the line's all-rounder — a slightly more forgiving sweet spot than the 1000Z, lower entry threshold, and a strong default pick for a competitive doubles player still building shaft load. Nanoflare 700 Pro (founder firsthand): the controlled-speed pick — a slightly less aggressive speed identity than the 800 Pro, with a more forgiving forearm cost over long sessions. Nanoflare 700 (original): the entry — a value pick that gives access to the Nanoflare identity for new doubles attackers, with a forgiving shaft load.",
-        },
-        {
-          heading: "Which rally type each frame wins",
-          body: "Fast cross-court drives at full pace: NF1000Z first, NF800 Pro second, NF700 Pro third, NF700 fourth. The 1000Z's stiff Z-axis shaft delivers the cleanest drive snap in the line. Defensive resets under sustained pressure: NF1000Z first, NF700 Pro second, NF800 Pro third. The 1000Z's pocketing feel makes the desperate block more controllable than the 800 Pro's stiffer string-bed. Block-to-attack transitions: NF800 Pro first, NF1000Z second. The 800 Pro's slightly more forgiving sweet spot lets you commit to the next shot a fraction earlier. Front-court taps and short flat exchanges: NF700 Pro and NF1000Z are roughly even; the 700 Pro is the easier pick on tired arms.",
-        },
-        {
-          heading: "Personal experience on the NF1000Z",
-          body: "The 1000Z is my current doubles racket and has been for the past two club seasons. Strung at 26 lb BG80, 4U/G5, the racket lives or dies on drive snap. When my timing is on, the drives carry weight that genuinely surprises new opponents; when my timing is off, the racket gives me less help than the 88D Pro would on the same rally. The Z-axis shaft is the design choice that defines the platform — pocketing on defensive blocks beyond what the head-light weight class would suggest, but punishing on rushed shots where my swing path has compromised. After two seasons I would still pick it as the right racket for my doubles game, but I would not recommend it as someone's first head-light speed flagship.",
-        },
-        {
-          heading: "Personal experience on the NF700 Pro and NF700 Play",
-          body: "The 700 Pro is in my rotation as a second frame and the 700 Play (5U) is what I lend to clubmates who want to try the Nanoflare identity without committing. The 700 Pro is the racket I reach for when I am tired or my timing is shaky — it forgives more swing variation than the 1000Z and still delivers the Nanoflare drive identity. The 700 Play is the genuine entry: a player coming from a balanced all-round starter racket will feel the head-light speed character without paying for a flagship-grade shaft.",
-        },
-        {
-          heading: "Which to buy if you are choosing today",
-          body: "If you are a Division 3 or above competitive doubles player with clean timing and you want the line's true flagship identity: NF1000Z. If you are a competitive club doubles player still building toward flagship-grade shaft load: NF800 Pro. If you want the Nanoflare identity but your sessions go long and forearm fatigue is real: NF700 Pro. If you are new to head-light speed flagships and want to try the platform first: NF700 (original) on the used market, or NF700 Play (5U) for an even lighter swing. The mistake to avoid: skipping straight to the NF1000Z without having played a Nanoflare frame before. The 1000Z punishes the same incomplete swing the 800 Pro forgives, and many players' first experience with the platform is the 1000Z punishing them for not having built up to it.",
-        },
-        {
-          heading: "Cross-brand reference",
-          body: "For Victor players: the closest cross-brand peer to the NF1000Z is the Auraspeed HS Plus, with the 1000Z winning on defensive pocketing and the HS Plus winning on raw drive speed. The NF800 Pro plays closest to the Auraspeed 90K II, with both offering forgiving sweet spots in a head-light frame. For Li-Ning players: the NF1000Z plays in a similar speed identity to the Bladex 900 New but with more pocketing dwell; the NF800 Pro plays closer to the Bladex 800 Speed. None of these are perfect equivalencies — material platforms differ — but they are the useful reference points for a buyer cross-shopping the speed-attack tier.",
-        },
-      ],
-      cta:
-        "Run the finder with head-light speed style, doubles-first format, and competitive level to compare the Nanoflare matrix against Victor Auraspeed and Li-Ning Bladex peers.",
-      factChecks: [
-        {
-          sourceName: "Yonex",
-          title: "NANOFLARE 1000Z — Z-axis shaft",
-          section: "Nanoflare 1000Z official page",
-          checkedAt: "2026-05-21",
-          href: "https://www.yonex.com/nf-1000z",
-          quote: "Z-axis",
-          note:
-            "Official Yonex Nanoflare 1000Z page confirms the Z-axis shaft design as the line's identity feature; supports the personal-use voice given the 1000Z is on Rui Su's founder firsthand list as the current doubles racket.",
-        },
-        {
-          sourceName: "IntoBadminton — NF1000Z/Play review",
-          title: "Nanoflare 1000Z and 1000Play review",
-          section: "Existing companion coverage",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/yonex-nanoflare-1000z-play-review/",
-          quote: "Nanoflare 1000Z",
-          note:
-            "Existing IntoBadminton coverage on the NF1000Z and 1000Play pair provides additional setup detail; this matrix article focuses on the four-frame buyer-decision rather than a per-frame deep dive.",
-        },
-      ],
-    },
-    {
-      slug: "kumpoo-fourth-brand-brand-decoded",
-      updatedAt: "2026-05-21",
+      slug: "yonex-tour-series-buying-guide",
+      updatedAt: "2026-05-19",
       category: "guides",
-      title:
-        "Kumpoo decoded: the case for treating Kumpoo as the fourth credible badminton brand in 2026",
-      dek:
-        "Source reviewers have begun positioning Kumpoo (薰风) as the credible fourth brand alongside Yonex, Victor and Li-Ning. This brand-decoded guide tests the claim and maps Kumpoo's current line to mainstream cross-brand peers.",
-      story: {
-        intro:
-          "For two decades, serious badminton equipment buying has effectively meant choosing between three brands: Yonex, Victor, and Li-Ning. Source reviewers in 2026 have begun positioning Kumpoo (薰风) as a credible fourth alternative. This brand-decoded guide tests the claim by mapping Kumpoo's current line — Shura II, Shanhai NEW, KH-G805 Lite Pro, JS-67 / JS-63 strings — against mainstream cross-brand peers and identifying where Kumpoo genuinely competes versus where it remains a tier behind.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — Kumpoo cross-brand assessment with mainstream-trio framing",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland practice partners",
-              courtSurface: "wood",
-              venue: "Maynooth University, Dublin clubs",
-            },
-            comparators: [
-              "Yonex (mainstream trio)",
-              "Victor (mainstream trio)",
-              "Li-Ning (mainstream trio)",
-            ],
-            sourceAttribution:
-              "BadmintonCN source review positioning Kumpoo as the fourth brand (破局者薰风 剑指羽球第四大厂); observer commentary by Rui Su mapping current Kumpoo SKUs to mainstream peers.",
-          },
-          {
-            kind: "facts",
-            heading: "Kumpoo's current top-tier line",
-            items: [
-              { label: "Attack flagships", value: "Shura II + Shanhai NEW" },
-              { label: "Speed accessibility", value: "KH-G805 Lite Pro (5U)" },
-              { label: "Strings", value: "JS-67 (durability) + JS-63 (tournament repulsion)" },
-            ],
-          },
-        ],
-      },
+      title: "Yonex Tour-line rackets: which Tour is worth buying and which is a price-cut compromise",
+      dek: "From AX88D Tour to Arcsaber 11 Tour, the Yonex Tour line saves up to 50% off Pro pricing — but the value depends entirely on which Tour you choose. Here is the honest breakdown.",
       sections: [
         {
-          heading: "What the fourth-brand claim actually requires",
-          body: "A credible fourth-brand claim requires three things: a flagship-tier racket lineup that competes on identity (not just price), a strings and accessories line that supports the racket ecosystem, and enough retail and resale liquidity that buyers can commit without ecosystem regret. Most second-tier brands fail one of these tests. Kumpoo's current line is close enough to passing all three that the fourth-brand claim is worth taking seriously — but with caveats around retail distribution outside China.",
+          heading: "Why the Tour line exists",
+          body: "Yonex's Tour line is the official second-tier above the regional/national sub-brands. Tour rackets traditionally borrow the Pro racket's frame technology and most of the materials, with simplifications to the shaft engineering, head bumper, or T-joint that reduce manufacturing cost and price. The result is a racket that typically delivers 80-90% of the Pro experience at 50-60% of the price — a serious value proposition. The catch: not all Tour rackets are created equal. Some Tour rackets earn the comparison; others are cost-reduced enough that the price gap to Pro becomes worth paying.",
         },
         {
-          heading: "Where Kumpoo genuinely competes",
-          body: "Three areas where Kumpoo's current line is genuinely competitive with the mainstream trio. First, attack flagships: the Shura II and Shanhai NEW deliver flagship-tier feel competitive with mid-flagship Yonex, Victor, and Li-Ning options at meaningfully lower prices. Second, value-tier accessibility: the KH-G805 Lite Pro and similar budget picks offer honest playing experiences at price points the mainstream trio rarely touches. Third, premium strings: the JS-67 and JS-63 cover both club-durability and tournament-repulsion buyer profiles with genuine quality at competitive prices.",
+          heading: "Astrox 88D Tour: the strong value case",
+          body: "The Astrox 88D Tour delivers 80-90% of the 88D Pro experience. The frame, the basic shaft material, and most of the playing identity are preserved. What's lost: the very top-end Namd Flex Force shaft tuning, the most refined Power Assist Bumper, and the longer 10mm built-in T-joint refinement. What's gained: a price that is roughly half of the Pro (~700-800 RMB vs 1600-1700 RMB Japan import). For amateur players who want 88D-class doubles attack without flagship spending, the 88D Tour is one of the strongest value propositions in the current Yonex lineup. The honest framing: it's the same chef's soup with one ingredient changed — most players cannot reliably tell the difference in blind play.",
         },
         {
-          heading: "Where Kumpoo remains a tier behind",
-          body: "Three areas where Kumpoo is honestly behind the mainstream trio. First, retail distribution outside Asia: Kumpoo's presence in European and North American badminton shops is thin, which constrains cross-region resale and ecosystem support. Second, refinement at the absolute peak tier: at the very top of the flagship pyramid (Astrox 100ZZ, Auraspeed 99 J, AxForce 100 Gen 2), Kumpoo does not have a direct equivalent — the brand competes credibly at the mid-flagship tier but not at the peak. Third, community knowledge and stringing guidance: mainstream stringers and coaches have decades more reference points for Yonex / Victor / Li-Ning than for Kumpoo.",
+          heading: "Arcsaber 11 Tour: the case is more mixed",
+          body: "The Arcsaber 11 Tour preserves the Arcsaber 11 frame and the platform's control-rack identity. The Tour version specifically sacrifices control fidelity compared to the Pro — players can distinguish Pro from Tour more easily than they can on the 88D, and players who specifically buy the Arcsaber 11 for its denser-feel control are more likely to feel the Tour-vs-Pro gap. That said, the Tour still produces the long-line clear and the gentle-touch net play that defines the 11 family. The price point (700-800 RMB vs 1700-1800 RMB Japan import for Pro) makes the Tour attractive — but the recommendation is contextual: if you specifically value control fidelity, save for the Pro; if you want the family's general identity at lower cost, the Tour delivers. For maximum value, buy a used Tour (400-700 RMB depending on condition) — the savings over a new Pro can fund significant string and accessory upgrades.",
         },
         {
-          heading: "Mapping Kumpoo SKUs to mainstream peers",
-          body: "Kumpoo Shura II ↔ Yonex Astrox 88D Pro 2024 (Yonex), Victor DriveX 12 (Victor), Li-Ning Halbertec 7000 II (Li-Ning). Kumpoo Shanhai NEW ↔ Yonex Astrox 99 Pro Gen 1 used market, Victor Auraspeed 90K II, Li-Ning AxForce 80. Kumpoo KH-G805 Lite Pro ↔ Yonex Astrox Nextage (5U), Victor Sonic Boom Pro, Li-Ning AxForce 10. Kumpoo JS-67 ↔ Yonex BG80, Li-Ning L66. Kumpoo JS-63 ↔ Yonex BG80 Power, Yonex Aerobite. These mappings are imperfect — material platforms differ — but they are the cleanest cross-brand reference points for buyers cross-shopping the Kumpoo line.",
+          heading: "What the source review identified as 'worth buying' Tours",
+          body: "The Yonex Tour lineup includes many models, but the source reviewer's specific 'worth buying' shortlist focuses on the rackets where the price-to-performance ratio is genuinely strong. The 88D Tour leads the list. The Arcsaber 11 Tour is qualified-positive (recommend used). Other Tours in the line (some of which were previously priced lower and have since had their prices increased significantly) are categorised as either 'wait for a sale' or 'genuinely overpriced'. The source reviewer is working on follow-up coverage for the rest of the lineup.",
         },
         {
-          heading: "Who should commit to Kumpoo",
-          body: "Three buyer profiles favour committing to Kumpoo. First, second-tier brand enthusiasts who specifically value alternatives to the mainstream trio. Second, value-conscious buyers in Asian markets where Kumpoo retail and stringing infrastructure are accessible. Third, players willing to do their own independent research on stringing tensions and care patterns, in exchange for the cost savings and brand-differentiation that Kumpoo offers. For all three, the fourth-brand argument is genuinely sound; for buyers outside these profiles, the mainstream trio remains the friendlier ecosystem.",
+          heading: "How Yonex prices Tour vs Pro across regions",
+          body: "Tour-vs-Pro pricing varies significantly by region. In China, Yonex Tour rackets often sell at 40-50% of the Pro price for the same generation. In Japan, the gap is smaller (Tour rackets are around 50-60% of Pro). In Southeast Asia and Korea, pricing tends to follow the Japan model. In Europe and North America, Tour rackets are often imported at higher markup, narrowing the price gap to Pro further. Buyers should check the local price difference before deciding — a Tour that saves 50% in one region might save only 20% in another, and the 'worth it' calculation changes accordingly.",
         },
         {
-          heading: "The verdict on the fourth-brand claim",
-          body: "Kumpoo is genuinely the most credible candidate for fourth-brand status in 2026. The line covers the major buyer profiles, the build quality has reached flagship-adjacent levels, and the price-to-performance ratio is honestly competitive at the mid-flagship tier. The caveats — peak-tier flagship gap, retail distribution outside Asia, community knowledge — are real but manageable for committed buyers. The brand still requires more retail expansion and a true peak-flagship release before it stands fully alongside the mainstream trio; the current line earns the fourth-brand label as an emerging credible alternative, not yet as a peer.",
+          heading: "The verdict for amateur buyers",
+          body: "If you specifically play men's doubles attack, the 88D Tour is one of the best value rackets in the Yonex lineup — buy it confidently. If you specifically value Arcsaber 11's control fidelity, save for the Pro. For most other Tour models, the recommendation depends heavily on your current racket: if you're upgrading from a basic frame, Tour-line rackets give you a meaningful step up; if you're upgrading from a serious mid-tier racket, the gap to Tour is smaller and the price-paid-for-the-step is questionable. The Tour line is not a uniform 'buy' or 'avoid' — it's a per-model evaluation, and the 88D Tour is the standout.",
+        },
+        {
+          heading: "How to choose between Pro and Tour for your purchase",
+          body: "Three questions answer the choice. First: do you specifically need the highest fidelity of contact feedback (Pro), or is general identity sufficient (Tour)? Second: is your local Pro-to-Tour price gap large enough to fund meaningful other upgrades (better strings, better grip, better shoes)? If yes, Tour is the right choice. Third: is your current skill level high enough that you can reliably tell the difference in blind play? If you cannot, paying for the Pro is paying for perceived rather than actual value. The honest amateur recommendation: Tour for value, Pro for skill-development as you grow into the racket's full ceiling.",
         },
       ],
-      cta:
-        "Open the finder with cross-brand-flexible preference and your specific style / level filter to compare Kumpoo's current line against the Yonex / Victor / Li-Ning mainstream peers.",
+      cta: "Run the racket finder filtered to Yonex Tour and Pro options at your skill level to see how Tours stack against Pros for your playing role.",
       factChecks: [
         {
-          sourceName: "Kumpoo",
-          title: "Kumpoo Badminton — current product line",
-          section: "Brand catalogue 2026",
-          checkedAt: "2026-05-21",
-          href: "https://www.kumpoo.com.cn/",
-          quote: "Kumpoo 薰风",
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-19",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
           note:
-            "Kumpoo's catalogue confirms the current line (Shura II, Shanhai NEW, KH-G805 Lite Pro, JS-67, JS-63) as the basis for the fourth-brand assessment.",
-        },
-        {
-          sourceName: "IntoBadminton — Kumpoo Shanhai NEW review",
-          title: "Kumpoo Shanhai NEW racket review",
-          section: "Existing Kumpoo flagship coverage",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/kumpoo-shanhai-new-racket-review/",
-          quote: "Kumpoo",
-          note:
-            "Companion IntoBadminton coverage of the Shanhai NEW provides the line's flagship-tier reference; this brand-decoded guide places Kumpoo's overall line in cross-brand context.",
+            "Tour-line pricing and value comparisons are paraphrased from a BadmintonCN community post titled 'On the Yonex Tours worth buying'; price ranges are regional estimates and vary by market.",
         },
       ],
     },
     {
-      slug: "victor-drivex-family-overview",
-      updatedAt: "2026-05-21",
+      slug: "kumpoo-fourth-major-badminton-brand-profile",
+      updatedAt: "2026-05-19",
       category: "guides",
-      title:
-        "Victor DriveX family overview: how the 10, 10 Metallic, 12 and 12 ZSW map to buyer profiles",
-      dek:
-        "Victor's DriveX family covers four overlapping SKUs spanning club-tier through flagship-adjacent. This overview maps each to its right buyer profile and surfaces the upgrade-path moments that matter.",
-      story: {
-        intro:
-          "Victor's DriveX line is one of the most accessible flagship-adjacent attack families in 2026. Four current SKUs — DriveX 10, DriveX 10 Metallic, DriveX 12, DriveX 12 ZSW (Lee Zii Jia signature) — cover buyers from first-attack-frame club players through established competitive doubles attackers. This family overview ties together the existing IntoBadminton DriveX 10, DriveX 12 standalone, and DriveX 12 ZSW comparison coverage into a single buyer-profile map.",
-        blocks: [
-          {
-            kind: "methodology",
-            headline: "Observer methodology — DriveX family mapping across four current SKUs",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 Ireland doubles partners",
-              courtSurface: "wood and synthetic court mat",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
-              "Li-Ning Halbertec 7000 II",
-              "Li-Ning Halbertec 9000",
-            ],
-            sourceAttribution:
-              "Multi-source synthesis of BadmintonCN DriveX coverage and IntoBadminton's existing DriveX 10, DriveX 12 standalone, and DriveX 12 ZSW reviews; observer commentary by Rui Su.",
-          },
-          {
-            kind: "facts",
-            heading: "Four-SKU snapshot",
-            items: [
-              { label: "DriveX 10", value: "Club-tier attack — first head-heavy frame" },
-              { label: "DriveX 10 Metallic", value: "Colourway variant — same platform" },
-              { label: "DriveX 12", value: "Flagship-adjacent attack — established attacker" },
-              { label: "DriveX 12 ZSW", value: "Lee Zii Jia signature variant" },
-            ],
-          },
-        ],
-      },
+      title: "Kumpoo (薰风) brand profile: how the 'fourth major badminton brand' built a credible flagship line",
+      dek: "Founded in Japan in 2000, Kumpoo built its name on full-stack vertical integration — and is now positioning itself as the fourth major brand alongside Yonex, Victor, and Li-Ning.",
       sections: [
         {
-          heading: "What the DriveX family stands for",
-          body: "The DriveX line is Victor's accessible head-heavy attack platform — head-heavy weight signatures across the line, medium-stiff shafts, and a forgiving sweet spot family-wide. Where the line differentiates from Victor's other attack frames (Auraspeed for speed-attack, Thruster Falcon for heavy attack) is accessibility: the DriveX family is designed to bridge new attackers into the platform identity without demanding flagship-grade swing strength. Buyers move through the family as their swing strength develops.",
+          heading: "From Japanese origin to Chinese ownership: the brand's surprising history",
+          body: "Kumpoo (薰风, KUMPOO) was founded in 2000 in Japan by Yuji Omori and Mitsutoshi Satou, who saw the global expansion of badminton as a market opportunity. The brand registered as a Japan corporation in 2001 (Kumpoo Co., Ltd.), launched the now-signature Hexagon six-cone-shaft technology in 2006 — a frame engineering choice designed to reduce torsional twist on impact — and built its own shoe factory in 2008 to escape OEM dependence. The brand's pivot point was 2009: Guangzhou-based Sportsbow Sports acquired Kumpoo entirely, moving R&D and operations to China and re-positioning the brand as a Chinese self-developed sports brand with Japanese DNA. The story is unusual: most Chinese brands are Chinese in origin, while Kumpoo flipped the script.",
         },
         {
-          heading: "DriveX 10 — the entry pick",
-          body: "The DriveX 10 is the family's entry-tier attack frame. Source reviewers describe it as 'see-bouncy-see-steady' (铿锵有力 见弹见稳) — a usable head-heavy identity with a forgiving sweet spot suited to club-level swing consistency. Buyer profile: first-year club doubles attackers building shaft load, or value-conscious adults wanting honest attack feel without flagship cost. Setup: 4U/G5 at 24 lb on BG80, the right starting point for the family.",
+          heading: "Full vertical integration: the BYD comparison",
+          body: "Kumpoo's strategic decision after the 2009 Chinese acquisition was full vertical integration. The brand built shoes in-house (2008 onwards), then racket manufacturing (2022 onwards), and most recently a high-end Japan string production facility (2025). This means Kumpoo controls the entire supply chain for its three core product categories — rackets, shoes, and strings — from raw materials to finished products. The industry comparison: BYD in automotive (vertical integration as a competitive moat). The Kumpoo executive team uses similar logic: when the brand controls every component, the margin per unit is higher and quality control is internalised. The result is that Kumpoo can offer competitive pricing without compromising on materials sourcing.",
         },
         {
-          heading: "DriveX 10 Metallic — the colourway variant",
-          body: "The DriveX 10 Metallic is the same platform as the base DriveX 10 with a metallic colourway variant. Playing characteristics are identical to the base. As a buyer: the Metallic variant is worth the small price premium only if you specifically value the metallic colourway; otherwise the base DriveX 10 is the better-value pick. The Metallic variant is mainly a cosmetic upgrade.",
+          heading: "Product line architecture: entry, mid, premium",
+          body: "Kumpoo's racket line is structured as entry-mid-flagship — a recognisable lineage seen across major brands. Entry-tier: K520 Pro series, which has shipped over 3 million units cumulatively. Mid-tier: Guolun II and Houyi II, which combine control and value. Premium-tier: Shura series (修罗), used by 3x Lin Dan Cup champion Zhan Junwei, with M50 high-modulus carbon and solid-shaft construction. The Shura series is performance-comparable to flagship rackets from the three majors at 30-40% of the price. The brand's recent 3D-printed titanium racket experiment is a serious technology bet on next-generation frame manufacturing.",
         },
         {
-          heading: "DriveX 12 — the flagship-adjacent step up",
-          body: "The DriveX 12 is the family's flagship-adjacent attack frame. Source reviewers describe it as 'full evolution, control as you will' (全面进化 随心所驭) — a heavier head signature, a stiffer shaft than the DriveX 10, and a measurably more decisive contact feel. Buyer profile: established club doubles attackers who have spent a season on the DriveX 10 (or similar mid-tier attack frame) and want flagship-feel without paying for the Auraspeed 99 J or AxForce 100 Gen 2. Setup: 4U/G5 at 25 lb on BG80 or VBS-66N.",
+          heading: "Shoes and the long-term-wear track record",
+          body: "Kumpoo's shoe line emphasises cushioning, anti-slip grip, and lightweight handling. The Houyi (厚羿) and Guolun II shoes are the brand's main long-term-wear options — and the long-term-wear track record is meaningful. Professional players use them in international competition; amateur players testify to multi-year ownership without performance degradation. The Guangdong Greater Bay Area Games saw a Guangzhou-exclusive Houyi colourway last year, demonstrating the brand's regional marketing investment. The new GH-805 shoe is positioned as a direct competitor to the Yonex 65 Z4 — a serious benchmarking choice.",
         },
         {
-          heading: "DriveX 12 ZSW — the signature variant",
-          body: "The DriveX 12 ZSW is Lee Zii Jia's signature variant of the DriveX 12. Paint thickness and string-bed coupling shift contact tone slightly toward a more dampened feel; smash carry and drive snap are unchanged from the base 12. Buyer profile: existing DriveX 12 owners who specifically prefer the slightly more dampened contact tone, Lee Zii Jia fans, or short-game touch specialists. Pay the variant tax only if the contact-tone difference matters to your game.",
+          heading: "Strings and the JS-67 surprise",
+          body: "Kumpoo's 2025 launch of the Japan-produced JS-series strings is the brand's most aggressive recent move into the premium string market. The JS-series uses Kumpoo's proprietary ultra-fibre composite coating technology, designed to deliver both durability and elasticity. The JS-67 in particular has earned positive amateur reviews; the JS-57S is one of the thinnest commercial strings in the world. This puts Kumpoo's string technology in the same conversation as Yonex's BG-series and Victor's VBS-series — an unusually fast jump for a brand that didn't previously have a serious string presence.",
         },
         {
-          heading: "The upgrade-path moments",
-          body: "Two natural upgrade-path moments emerge from the family structure. First moment: after a full club season on the DriveX 10, if you find yourself under-resourced on third-game smash quality, the DriveX 12 is the right step up. Second moment: after established play on the DriveX 12, if you specifically want flagship-grade peak performance, the upgrade direction is out of the family — to the Auraspeed 99 J or AxForce 100 Gen 2 for heavier-attack peak, or to the Nanoflare 1000Z / Auraspeed HS Plus for speed-attack peak. The DriveX family is a coherent ladder that ends at flagship-adjacent rather than at peak flagship.",
+          heading: "Pricing strategy and the 'technology democratization' positioning",
+          body: "Kumpoo's positioning is 'premium professional product, accessible-friendly price' (技术普惠 — technology democratization). Flagship Kumpoo products price at 30-50% of equivalent flagship products from the three majors. The strategy is intentional: rather than competing on perceived brand prestige, Kumpoo competes on functional value. The result is a brand that attracts a different customer demographic — students, budget-conscious club players, and price-sensitive amateurs who would otherwise either avoid premium rackets or buy used. The reach into student demographics is particularly strong: many Chinese university clubs have adopted Kumpoo as their official kit brand.",
+        },
+        {
+          heading: "Sponsorships, athletes, and the credibility ladder",
+          body: "Kumpoo's athlete sponsorship includes Liu Guolun, Tian Houwei, and Wang Gaolun — three professional players whose results validate the brand's premium racket performance. The brand also sponsors major events: the Sudirman Cup, the Macau Open, and various amateur youth competitions in China. The collaboration with internet badminton personalities (王小羽 Wang Xiaoyu and similar) expands brand visibility into the casual amateur conversation. The combined effect is a credibility ladder where professional results, amateur testimonials, and event sponsorship build confidence across multiple buyer segments simultaneously.",
+        },
+        {
+          heading: "Where Kumpoo sits in the four-major debate",
+          body: "The 'fourth major' positioning is real but qualified. Yonex (1st major) dominates global market share. Victor (2nd major) is dominant in Korea and well-established globally. Li-Ning (3rd major) is dominant in China. Kumpoo is positioning itself as the 4th major — and the case is genuinely credible based on technology, full vertical integration, and growing global presence in Germany, Italy, Korea, Finland, Japan, and Poland. The actual 'major' status will depend on whether Kumpoo can continue building international distribution, professional player adoption, and brand recognition outside the China-Japan corridor. The current trajectory is favourable. The market is watching.",
+        },
+        {
+          heading: "Should you buy a Kumpoo?",
+          body: "Buy Kumpoo if you want premium-tier badminton products at a meaningful price discount to the three majors, if you specifically value the full vertical integration of the brand's product stack, or if you are a student or budget-conscious amateur looking for serious technology at accessible prices. Skip Kumpoo if you specifically value brand prestige (Yonex / Victor / Li-Ning), if you need maximum global resale value, or if you have a brand loyalty that overrides value considerations. For most amateur players, Kumpoo represents an intelligent value proposition — and the brand's trajectory suggests it will only get more competitive in the next few years.",
         },
       ],
-      cta:
-        "Run the finder with controlled-attack style and your specific skill / level filter to compare the DriveX family against the Yonex Astrox 88D Pro 2024 and the Li-Ning Halbertec line.",
+      cta: "Run the racket finder with Kumpoo enabled to compare its lineup against Yonex, Victor, and Li-Ning rackets at your price point.",
       factChecks: [
         {
-          sourceName: "Victor Badminton",
-          title: "Victor — DriveX family",
-          section: "DriveX product line",
-          checkedAt: "2026-05-21",
-          href: "https://www.victorsport.com/products/drivex",
-          quote: "DriveX",
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-19",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
           note:
-            "Victor catalogue confirms the DriveX family runs four current SKUs (10, 10 Metallic, 12, 12 ZSW) at overlapping but progressing price tiers within the brand's accessible attack platform.",
-        },
-        {
-          sourceName: "IntoBadminton — DriveX 12 standalone review",
-          title: "Victor DriveX 12 standalone review",
-          section: "Family flagship-adjacent reference",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/blog/victor-drivex-12-standalone-review/",
-          quote: "DriveX 12",
-          note:
-            "Companion IntoBadminton coverage of the DriveX 12 (standalone), DriveX 12 ZSW (comparison), and DriveX 10 (review) provides the per-SKU detail; this family overview synthesises them into a single buyer-profile map.",
+            "Brand history (founding year, acquisition year, vertical integration milestones) and product lineup descriptions are paraphrased from a BadmintonCN community post; specific market share, athlete sponsorship, and international distribution claims should be verified against current brand sources.",
         },
       ],
     },
     {
       slug: "li-ning-flagship-racket-buying-guide-2026",
-      updatedAt: "2026-05-21",
+      updatedAt: "2026-05-19",
       category: "guides",
-      title:
-        "Li-Ning flagship rackets in 2026: how the AxForce, Halbertec and Bladex lines actually differ",
-      dek:
-        "A buyer's guide to the three Li-Ning flagship families — AxForce attack, Halbertec attack-control, Bladex speed — and which frame fits which game. Synthesizes a long-form TiGe XLab source review with club-ecosystem observation.",
-      story: {
-        intro:
-          "Li-Ning's three flagship lines have been treated by Western buyers as one undifferentiated 'Chinese attack catalogue' for too long. They are not. The AxForce family is built around heavy smash, the Halbertec family is built around controlled attack with defensive resilience, and the Bladex family is built around drive speed. The differences are real, the price tiers overlap, and the choice between them matters more than the choice within them. This guide synthesizes a long-form TiGe XLab source review of the entire current high-end line with club-ecosystem observation from Rui Su's coaching and clubmate network — none of these are founder firsthand frames except where explicitly noted.",
-        blocks: [
-          {
-            kind: "callout",
-            label: "Source attribution",
-            title: "What this guide is and what it is not",
-            body:
-              "This analysis synthesizes a source review by TiGe XLab covering the AxForce, Halbertec, and Bladex flagship lines, reframed as observer notes by Rui Su from coach lineage commentary and clubmate switching patterns in the Dublin / Maynooth University ecosystem. Personal-use claims are restricted to founder-firsthand frames — none of these Li-Ning flagships are on that list, so all impressions below are observer-voice. Key claims are cross-checked against three independent sources.",
-          },
-          {
-            kind: "methodology",
-            headline: "What was tested and how the evidence is anchored",
-            context: "observer",
-            conditions: {
-              opponents: "Division 4 doubles partners at Maynooth University and Dublin clubs",
-              courtSurface: "wood and synthetic court mat",
-              venue: "Maynooth University, multiple Dublin clubs",
-            },
-            comparators: [
-              "Yonex Astrox 100ZZ (founder firsthand)",
-              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
-              "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
-            ],
-            sourceAttribution:
-              "Source review by TiGe XLab covering all Li-Ning flagship lines; observer commentary by Rui Su.",
-          },
-        ],
-      },
+      title: "Li-Ning flagship racket buying guide 2026: AxForce, Halbertec, and Bladex compared",
+      dek: "Three flagship Li-Ning racket families, three distinct identities — here is how to pick between AxForce (attack), Halbertec (heavy attack), and Bladex (speed) for your game.",
       sections: [
-        {
-          heading: "The three flagship families, in one sentence each",
-          body:
-            "AxForce is Li-Ning's heavy attack platform — head-heavy frames built around smash power, used at the international level by Chen Long (AxForce 80) and the current crop of attack singles players. Halbertec is the controlled-attack platform — head-heavy but more rounded, designed to reward consistent timing rather than peak-window smash power, and it is the line that has produced the most defensible flagships for club-level competitive players in the past three years. Bladex is the speed-attack platform — head-light, fast-recovery frames built around drives and front-court speed, with the 800 Speed and the new 900 New positioning against Yonex Nanoflare 700 Pro and Victor Auraspeed HS Plus. Picking among them starts by picking the platform; specific model within a platform is a smaller decision.",
-        },
-        {
-          heading: "AxForce 80, 90 New, and 100 Gen 2 — the heavy attack ladder",
-          body:
-            "The AxForce ladder runs from the AxForce 80 (Chen Long's Tokyo 2021 frame, the platform's classic 'all-round attack' entry) through the AxForce 90 New (a 5U-compatible speed-tilted variant that drops some swing weight in exchange for faster recovery) up to the AxForce 100 Gen 2 (the current flagship, replacing the original AxForce 100 with a measurably stiffer shaft and a slightly forward balance). The 80 is the safest pick for club-level attackers who want the AxForce identity without paying flagship money; the 90 New is the right pick for doubles-first players who want the AxForce attack feel in a lighter swing weight; the 100 Gen 2 is the right pick only for players who already have flagship-grade swing strength and are looking for the platform's hardest hit. The TiGe source review describes the 100 Gen 2 as 'returning the AxForce series to its original Halbertec-leaning attack character' — a useful signal that the Gen 1 had drifted toward speed and the Gen 2 has been pulled back toward weight.",
-        },
-        {
-          heading: "Halbertec 7000 II, 8000, 9000 and 9000 Power — the controlled attack ladder",
-          body:
-            "The Halbertec family is where Li-Ning's most defensible competitive frames live in 2026. The Halbertec 7000 II is the entry to the line — a measurably stiffer follow-up to the original 7000, suited to club-level attackers stepping up from a balanced all-round frame. The Halbertec 8000 is the family's value flagship: a frame that consistently turns up in Rui Su's clubmate-switching data when a player wants controlled attack without paying 9000 money. The Halbertec 9000 is the line's identity flagship — the 'reach the peak, control and attack both possible' frame that the TiGe source review treats as the family's spine. The Halbertec 9000 Power sits at the top, with an extra dose of head weight aimed at players who want the 9000 platform with more smash carry. As a buyer, the question to ask is not 'which Halbertec is best' but 'how much shaft load can I generate consistently' — pick the model that matches your swing strength rather than the most expensive one available.",
-        },
-        {
-          heading: "Bladex 800 Speed and Bladex 900 New — the speed ladder",
-          body:
-            "The Bladex line is where Li-Ning competes directly with Yonex Nanoflare and Victor Auraspeed. The Bladex 800 Speed is the line's mainstream speed-attack frame — head-light, fast-recovery, with a noticeably tougher-than-Auraspeed-HS-Plus shaft load that rewards players who can deliver a clean drive snap. The Bladex 900 New is the speed flagship — the 'speed wins' positioning, with a stiffer shaft and a faster end-game on drives. The TiGe source review pairs the 900 New against the Nanoflare 700 Pro and the Auraspeed HS Plus and treats it as the most direct cross-brand alternative for a Yonex/Victor speed flagship buyer. Observer commentary from Maynooth clubmates who switched from a Nanoflare 700 Pro: the 900 New trades a touch of front-court block stability for a slightly more punchy drive end-game.",
-        },
-        {
-          heading: "How to decide: a three-question filter",
-          body:
-            "Question one — what do you want to do on your best shot? If the answer is 'smash through the back court', AxForce. If it is 'attack but recover', Halbertec. If it is 'win the drive exchange', Bladex. Question two — what do you do under pressure? If late lifts and tired-legs blocks are your worst points, prefer Halbertec (defensive resilience is the platform's edge); if cross-court drives at full speed are your worst points, prefer Bladex (the platform is designed for that recovery profile); if your worst points are when you get out-paced rather than out-defended, prefer AxForce only if you actually have flagship-grade shaft load. Question three — what is your timing baseline? If your timing is inconsistent week-to-week, lean lower in each ladder (AxForce 80 over 100 Gen 2; Halbertec 7000 II or 8000 over 9000 Power; Bladex 800 Speed over 900 New). The TiGe source review's strongest implicit lesson is that flagship-tier frames punish inconsistent timing harder than they reward consistent timing.",
-        },
-        {
-          heading: "Cross-brand reference points",
-          body:
-            "For Yonex players: AxForce 100 Gen 2 is the closest Li-Ning analogue to the Astrox 100ZZ (founder firsthand), with a slightly more rounded weight distribution; Halbertec 9000 plays closer to the Astrox 88D Pro (founder firsthand) than to the Arcsaber 11 Pro (founder firsthand), and is the right pick for an 88D player who wants more attack weight; Bladex 900 New plays in the same family as the Nanoflare 800 Pro Tour and the Nanoflare 1000Z (founder firsthand) but with a more linear drive snap and less of the Nanoflare 1000Z's pocketing dwell. For Victor players: Halbertec 9000 is the closest Li-Ning analogue to the DriveX 12 attack flagship; Bladex 900 New crosses over with the Auraspeed HS Plus. None of these are perfect equivalencies — the underlying material platforms differ — but they are the useful reference points for a buyer who already knows where they stand on a Yonex or Victor frame.",
-        },
-        {
-          heading: "The honest answers most readers want",
-          body:
-            "Best AxForce for a Division 3-or-4 club player: AxForce 80, used at a club-stringing tension around 24-26 lb. Best Halbertec for a serious club doubles player: Halbertec 8000 (the 9000 is the prestige pick; the 8000 is the consistently-better-fit pick at club level). Best Bladex for a doubles drive specialist: Bladex 800 Speed unless you are confident you can clean-snap the stiffer 900 New shaft. Best Li-Ning flagship for a singles-first player switching from Yonex: Halbertec 9000, strung at the bottom of its range while you adapt. Best Li-Ning flagship to skip: the AxForce 100 Gen 2 if you do not already have a flagship attack frame in your bag — the platform punishes incomplete swing mechanics in a way the 80 does not.",
-        },
+        { heading: "The three-family architecture", body: "Li-Ning's current flagship lineup is organised around three distinct families: AxForce (Thunder, 雷霆) for accessible-to-elite attack play, Halbertec (战戟) for heavy attack and rear-court dominance, and Bladex (锋影) for speed-first doubles and front-court play. Each family has multiple tiers (entry, mid, flagship, top-flagship), and the right pick depends entirely on which family character matches your game." },
+        { heading: "AxForce (Thunder) lineup", body: "AxForce 10: entry-tier attack teacher (USD ~70). AxForce 80: mid-tier classic attack (USD ~150). AxForce 90 New: balanced attack flagship in 4U and 5U (USD ~200). AxForce 100 Gen 1 (used) and Gen 2 (current): elite singles attack (USD ~230-280). The family identity is attack-focused with friendlier demand curves than Halbertec — most amateurs find AxForce more playable than Halbertec at the same tier." },
+        { heading: "Halbertec (战戟) lineup", body: "Halbertec 7000: balanced all-rounder entry (USD ~150). Halbertec 7000 II: firmer mid-tier (USD ~170). Halbertec 8000: mid-flagship attack (USD ~200). Halbertec 9000: premium attack (USD ~240). Halbertec 9000 Power: top-flagship attack (USD ~270). The family identity is heavy attack with more demanding character than AxForce. For elite singles attackers who specifically want maximum committed-smash output, the 9000 and 9000 Power are the rackets to consider." },
+        { heading: "Bladex (锋影) lineup", body: "Bladex Arrow: 5U super-light specialist (USD ~32). Bladex 800 New: standard speed (USD ~180). Bladex 800 Speed: faster variant (USD ~200). Bladex 900 New: top-tier speed (USD ~170). The family identity is speed-first — head-light, stiff shaft, fast handling. For doubles speed specialists and front-court attack players, Bladex is the family to use." },
+        { heading: "Cross-family decision framework", body: "Three questions answer the family choice. First: are you primarily attacking from the rear court, or moving fast at the front court? Rear court → AxForce or Halbertec; front court → Bladex. Second: how demanding are you willing to go on shaft stiffness? Friendly → AxForce; demanding → Halbertec; speed-stiff → Bladex. Third: budget? Entry-tier flagship is AxForce 80 or Bladex 800 New; premium flagship is AxForce 100 Gen 2 or Halbertec 9000 Power; speed flagship is Bladex 800 Speed or Bladex 900 New." },
+        { heading: "Common Li-Ning buyer mistakes", body: "Mistake 1: Buying Halbertec 9000 Power when you should buy AxForce 90 New — the Halbertec demand curve is genuinely higher. Mistake 2: Buying Bladex 800 Speed for singles rear-court play — it's a doubles speed racket, wrong family for the use case. Mistake 3: Paying flagship prices for entry-tier characters — AxForce 10 and Bladex Arrow are great for the right buyer but they're not flagship rackets. Match the tier to your skill, not your budget." },
+        { heading: "Where Li-Ning beats Yonex and where it loses", body: "Li-Ning beats Yonex on per-dollar value at flagship tier (Halbertec 9000 vs Astrox 99 Pro is a meaningfully cheaper purchase for similar character). Li-Ning beats Yonex on Halbertec line's heavy-attack character — there's no direct Yonex equivalent. Yonex beats Li-Ning on absolute peak refinement (Astrox 99 Pro Gen 3, 100ZZ Anders Antonsen feel marginally more polished). Yonex beats Li-Ning on global brand prestige and resale value. The right choice depends on which factor matters more for your purchase." },
+        { heading: "The final family-pick guidance", body: "For most amateur singles attackers: AxForce 90 New (4U or 5U). For advanced singles attackers wanting top-tier ceiling: Halbertec 9000 Power. For amateur doubles speed players: Bladex 800 New or Bladex Arrow. For all-round amateurs unsure of identity: Halbertec 7000 II or AxForce 80. For elite doubles speed specialists: Bladex 800 Speed or 900 New. None of these are wrong; the right racket is the one that matches your actual matches, not the racket you wish your matches looked like." },
       ],
-      cta:
-        "Open the finder and filter by 'head-heavy attack' for the AxForce/Halbertec families or 'head-light speed' for the Bladex family to compare each Li-Ning flagship against Yonex and Victor cross-brand peers.",
+      cta: "Run the racket finder with Li-Ning preference and your skill/style flags to compare the full flagship lineup against your profile.",
       factChecks: [
-        {
-          sourceName: "TiGe XLab",
-          title:
-            "TiGe XLab｜李宁新三大系列全部高端拍横评及选购指南 — Li-Ning's three new flagship lines: complete high-end racket comparison and buyer's guide",
-          section: "Source review attribution",
-          checkedAt: "2026-05-21",
-          href: "https://bbs.badmintoncn.com/",
-          quote:
-            "雷霆系列-全面进攻 ... 战戟系列 ... 锋影系列",
-          note:
-            "Pillar guide synthesises TiGe XLab's long-form comparison of the entire current Li-Ning flagship line — AxForce 80 / 90 New / 100 Gen 2, Halbertec 7000 II / 8000 / 9000 / 9000 Power, Bladex 800 Speed / 900 New. Buyer-decision filters, cross-brand reference points, and final picks are original IntoBadminton observer commentary; spec descriptions and platform identities are paraphrased from the TiGe source. Per IntoBadminton's source policy, original buyer guidance only — not a translation of the source post.",
-        },
-        {
-          sourceName: "IntoBadminton source-rights registry",
-          title: "Source rights registry",
-          section: "Platform posture",
-          checkedAt: "2026-05-21",
-          href: "https://intobadminton.com/source-policy/",
-          quote:
-            "use only for source discovery/manual summaries until terms or partnership is clear",
-          note:
-            "Third-party community reviews are source discovery and manually reviewed impressions; they are not treated as official product specifications.",
-        },
-        {
-          sourceName: "Li-Ning",
-          title: "Li-Ning Badminton — AxForce, Halbertec, Bladex catalogue",
-          section: "Current racket families",
-          checkedAt: "2026-05-21",
-          href: "https://lining.com/",
-          quote: "AxForce / Halbertec / Bladex",
-          note:
-            "Li-Ning's current catalogue confirms the three flagship lines and the current generation of each named frame; specific shaft / balance / weight readings are drawn from the source review and have not been independently re-measured in this guide.",
-        },
+        { sourceName: "Li-Ning", title: "Li-Ning racket family lineup", section: "Flagship rackets", checkedAt: "2026-05-19", href: "https://en.lining.com/badminton/rackets", quote: "AxForce", note: "Li-Ning's flagship racket families confirmed: AxForce (Thunder), Halbertec (战戟), Bladex (锋影). Specific tier pricing and regional availability vary." },
+        { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-19", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Family-level guidance synthesised from BadmintonCN community posts including a long-form Li-Ning flagship buying guide; technical readings and family architecture are original IntoBadminton interpretation." },
+      ],
+    },
+    {
+      slug: "badminton-shoe-buying-guide-and-replacement",
+      updatedAt: "2026-05-19",
+      category: "guides",
+      title: "Badminton shoe buying guide: how to choose, use, and replace your court shoes",
+      dek: "The complete guide to badminton shoe purchase decisions — fit, last width, cushion vs speed, court surface considerations, and when to actually replace.",
+      sections: [
+        { heading: "Badminton shoes are different from running and tennis shoes", body: "The first decision is to actually buy badminton-specific shoes. Running shoes have forward-only sole patterns that grip badly on lateral cuts. Tennis shoes have outsole compounds tuned for outdoor hard courts that wear quickly on indoor surfaces. Badminton shoes are engineered for the sport's specific movement demands — fast lateral cuts, frequent jump landings, and tight pivots. Save money on rackets if you must; don't save money on shoes." },
+        { heading: "Fit: width, last, and the toe-box test", body: "Foot width is the first fit decision. Most badminton shoes use narrow-to-medium lasts (especially Yonex and Victor). If you have wide feet, look specifically for wide-foot models (Yonex 65 Z Wide, Bonny WuQue Flagship 088, ASICS Blast FF 3) or sizes that accommodate width. The simplest fit test: lunge forward as deeply as you can. Your big toe should not press against the front of the toe-box. If it does, the shoe is too short or too narrow." },
+        { heading: "Cushion vs speed: the real trade-off", body: "Speed shoes (Yonex Aerus, Li-Ning Bladex Arrow, Bonny Wind Shadow) have thin forefoots and minimal cushion — quick ground feel for fast players who play many short reactions. Cushion shoes (Yonex 65 Z Wide, Victor P9200 III, Bonny WuQue 088) have more midsole material and protect joints on jump landings. The trade is real: speed shoes are quicker, cushion shoes are kinder to joints. For most amateurs, cushion shoes are the safer choice; for advanced speed-game players, speed shoes pay off." },
+        { heading: "Stability and lateral support", body: "Stability shoes (Bonny Future Land 3 Polaris, Victor C90NL, Yonex 65 Z series) prioritise the foot staying locked inside the shoe during hard cuts. Look for TPU lateral wrap, secure heel cup, and tight mid-foot lockdown. Players with ankle sprain history should specifically prioritise stability shoes — the difference between a stable shoe and a fast shoe can be the difference between a rolled ankle and a continued match." },
+        { heading: "Body weight and shoe choice", body: "Lighter players (under 140lb / 65kg) can use minimal-cushion speed shoes without joint cost. Heavier players (over 160lb / 75kg) need real cushion to protect knees and ankles from jump landings. Players in between have flexibility but should lean toward cushioned options if matches are long. Speed-shoe minimalism scales with body weight." },
+        { heading: "Court surface considerations", body: "Wooden floors with good condition: any badminton shoe works. Synthetic indoor surfaces: most shoes work; some shoes wear faster. Older or dusty courts: stability shoes with aggressive outsole patterns grip better. Outdoor concrete (rare but happens): expect any shoe to wear 3-5x faster than on indoor surfaces. Avoid using your tournament shoes for outdoor play." },
+        { heading: "When to replace shoes", body: "Three replacement triggers. First: outsole wear — visible flat spots or worn-through patterns mean grip is compromised. Replace before slipping causes injury. Second: midsole compression — when the shoe feels less cushioned than it did at purchase, the midsole has lost its bounce. For heavy players, this happens at 6-12 months of regular play; for light players, 18-24 months. Third: upper failure — torn mesh, separated TPU, or loose lateral wrap means the shoe no longer locks the foot. Any of these three failures should trigger replacement immediately." },
+        { heading: "Replacement timing relative to ankle and knee health", body: "Players with knee or ankle issues should replace shoes more aggressively — every 6-9 months for regular players. The cost of new shoes is far less than the cost of a knee injury. If you notice new joint discomfort after a session, check whether your shoes have lost cushion before assuming the issue is your body. Often the shoes are the cause." },
+        { heading: "Brand families and what they mean", body: "Yonex: industry standard, widest shoe range, narrow-to-medium lasts (65 Z Wide for wide feet). Victor: serious badminton shoes, often more cushioned than Yonex (P9200 III is the protection benchmark). Li-Ning: rising domestic option, sizing differs from Yonex/Victor (try in-store). Bonny: serious second-tier with strong wide-foot options. ASICS: not badminton-branded but credible indoor-court option for wide-foot players. Kawasaki: capable mid-tier with quick-lace innovations." },
+        { heading: "The final shoe-buyer summary", body: "Buy badminton-specific shoes for badminton play. Match width to foot shape — don't fight your last. Choose cushion vs speed based on body weight, joint history, and play style. Prioritise stability if you have any ankle vulnerability. Replace shoes at first sign of wear, midsole compression, or upper failure. Your shoes are the most consequential piece of equipment for your body's long-term health — invest accordingly." },
+      ],
+      cta: "Use the shoe finder with your fit width, cushion preference, and stability needs to get a personalised shortlist.",
+      factChecks: [
+        { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-19", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Shoe selection and replacement guidance synthesised from BadmintonCN community posts and shoe-specific reviews; technical recommendations are original IntoBadminton interpretation grounded in first-party shoe testing across multiple brands." },
       ],
     },
     ...sourceReviewArticles,
