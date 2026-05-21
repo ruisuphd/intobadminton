@@ -36,7 +36,7 @@ export type AffiliateLinkOutput = {
   tagged: boolean;
 };
 
-const AFFILIATE_REL = "sponsored nofollow noopener";
+const AFFILIATE_REL = "sponsored nofollow noopener noreferrer";
 
 /**
  * NEXT_PUBLIC env vars must be read via static property access, not a
