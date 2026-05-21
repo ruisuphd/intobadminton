@@ -41,6 +41,12 @@ type Ctx = {
   compareIds: string[];
   toggleCompare: (id: string) => void;
   clearCompare: () => void;
+  /**
+   * Replace the current compare-tray with a curated set (e.g. from a
+   * URL `?p=id1,id2,...` share link). Capped at MAX_COMPARE to match
+   * the per-device tray limit; ignores empty arrays.
+   */
+  hydrateCompareFromIds: (ids: string[]) => void;
   /** Persistent saved-product shortlist (separate from the 3-slot compare). */
   saved: SavedEntry[];
   toggleSaved: (id: string) => void;
@@ -139,6 +145,16 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
 
   const clearCompare = useCallback(() => setCompareIds([]), []);
 
+  const hydrateCompareFromIds = useCallback((ids: string[]) => {
+    if (!Array.isArray(ids) || ids.length === 0) return;
+    const cleaned = ids
+      .map((id) => (typeof id === "string" ? id.trim() : ""))
+      .filter((id) => id.length > 0)
+      .slice(0, MAX_COMPARE);
+    if (cleaned.length === 0) return;
+    setCompareIds(cleaned);
+  }, []);
+
   const toggleSaved = useCallback((id: string) => {
     setSaved((s) => {
       if (s.some((e) => e.id === id)) {
@@ -167,6 +183,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       compareIds,
       toggleCompare,
       clearCompare,
+      hydrateCompareFromIds,
       saved,
       toggleSaved,
       isSaved,
@@ -180,6 +197,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       compareIds,
       toggleCompare,
       clearCompare,
+      hydrateCompareFromIds,
       saved,
       toggleSaved,
       isSaved,
