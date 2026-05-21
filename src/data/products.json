@@ -3823,7 +3823,7 @@
     "swingWeightEstimate": "heavy",
     "commonStringTensionLbs": { "min": 20, "max": 30 },
     "shaftFlexSource": "official",
-    "launchYear": 2022,
+    "launchYear": 2023,
     "regionAvailability": ["global", "cn", "sg", "uk", "us"],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
