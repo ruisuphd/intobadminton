@@ -92,7 +92,12 @@ export type BlogSlug =
   | "goshen-leiming-69-string-review"
   | "rsl-supreme-shuttle-review"
   | "kumpoo-shura-2-shanhai-comparison-merge"
-  | "kumpoo-js-67-vs-js-63-strings-comparison";
+  | "kumpoo-js-67-vs-js-63-strings-comparison"
+  | "li-ning-thunder-90n-multi-author-comprehensive"
+  | "victor-thruster-falcon-family-overview"
+  | "yonex-nanoflare-800-pro-vs-victor-auraspeed-hs-plus-comprehensive"
+  | "kumpoo-fourth-brand-brand-decoded"
+  | "victor-drivex-family-overview";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -186,6 +191,11 @@ export const blogSlugs: BlogSlug[] = [
   "rsl-supreme-shuttle-review",
   "kumpoo-shura-2-shanhai-comparison-merge",
   "kumpoo-js-67-vs-js-63-strings-comparison",
+  "li-ning-thunder-90n-multi-author-comprehensive",
+  "victor-thruster-falcon-family-overview",
+  "yonex-nanoflare-800-pro-vs-victor-auraspeed-hs-plus-comprehensive",
+  "kumpoo-fourth-brand-brand-decoded",
+  "victor-drivex-family-overview",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3809,6 +3819,280 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       ],
     },
     {
+      slug: "li-ning-thunder-90n-multi-author-comprehensive",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Li-Ning AxForce 90 New (Thunder 90N) — multi-author comprehensive: what 4+ source reviews collectively reveal",
+      dek:
+        "The AxForce 90 New is one of the most-reviewed Li-Ning attack frames in 2026. Synthesising four independent BadmintonCN perspectives surfaces patterns no single source review captures.",
+      story: {
+        intro:
+          "Four BadmintonCN reviewers have covered the AxForce 90 New (雷霆 90N) across 4U and 5U variants. Each source review captures one buyer angle; collectively they reveal a more textured platform picture than any single review delivers. This multi-author synthesis is companion to the existing AxForce 90 New standalone review and the 90-vs-80-vs-88dp 3-way comparison.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — four-source synthesis across both 4U and 5U variants",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland practice partners",
+              courtSurface: "wood and synthetic court mat",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Li-Ning AxForce 80",
+              "Li-Ning AxForce 100 Gen 2",
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+            ],
+            sourceAttribution:
+              "Synthesises four independent BadmintonCN source reviews of the AxForce 90 New (雷霆万钧, 雷霆90new脆弹高爆发, 再进一把雷霆5U深度, 中羽评测 雷霆90NEW); observer commentary by Rui Su.",
+          },
+          {
+            kind: "facts",
+            heading: "Multi-author consensus snapshot",
+            items: [
+              { label: "Source consensus", value: "Speed-tilted attack with 5U as the underrated variant" },
+              { label: "Variant emphasis", value: "4U is the mainstream pick; 5U is the standout buyer profile" },
+              { label: "Cross-brand peer", value: "Yonex Astrox 88D Pro 2024 (founder firsthand)" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What four reviewers collectively reveal",
+          body: "Four independent BadmintonCN reviewers covered the AxForce 90 New from different angles: one focused on the standard 4U experience, one on the 5U deep-dive, one on the cross-line comparison against the AxForce 80 and 100, and one on the platform's identity within Li-Ning's broader attack lineage. The multi-author consensus is clearer than any single source: the AxForce 90 New is a speed-tilted attack frame designed to bridge the AxForce 80's accessibility with the AxForce 100 family's flagship feel, and the 5U variant is the line's underrated buyer profile.",
+        },
+        {
+          heading: "The 4U mainstream perspective",
+          body: "In the 4U variant, the AxForce 90 New delivers a strong drive snap, slightly faster recovery than the AxForce 80, and a forgiving sweet spot suitable for club-level competitive doubles attackers. Source reviewers consistently report the 4U variant as the right pick for the broadest slice of the buyer base. The platform welcomes 24 lb BG80 as a starting setup, with room to raise to 25-26 lb after the racket settles and the player's timing adapts.",
+        },
+        {
+          heading: "The 5U deep-dive perspective",
+          body: "The 5U variant is where the multi-author synthesis surfaces something the standalone reviews undersell. The 5U AxForce 90 New makes the platform's attack identity accessible to smaller-physique players, junior-to-adult transition players, and doubles front-court specialists who want faster recovery between consecutive drives. The head-heavy signature is preserved within the lighter weight class, which means the AxForce 90 New 5U is the only Li-Ning attack flagship that bridges accessibility with flagship-tier attack identity. For the buyer profile that fits, this variant is one of the strongest Li-Ning attack picks in the current catalogue.",
+        },
+        {
+          heading: "Cross-line positioning within the AxForce family",
+          body: "Within the AxForce line, the 90 New sits between the 80 (more balanced, more forgiving) and the 100 Gen 2 (heavier, more demanding). The source consensus across four reviewers is that the 90 New is the right pick for doubles attackers prioritising speed within the AxForce identity, while the 80 remains the right pick for entry-tier attackers and the 100 Gen 2 for established singles attackers with flagship-grade swing strength. The 90 New is the line's most defensible doubles-first flagship.",
+        },
+        {
+          heading: "Cross-brand reference: Astrox 88D Pro 2024",
+          body: "The AxForce 90 New 4U competes most directly with the Yonex Astrox 88D Pro 2024 (founder firsthand) on the doubles-attacker buyer profile. The Astrox 88D Pro 2024 is the more refined platform with stronger mainstream ecosystem; the AxForce 90 New offers the speed-tilted alternative within the same broad identity. For buyers cross-shopping between the two brands: pick the 88D Pro if you value Yonex ecosystem and slightly more controlled attack feel; pick the AxForce 90 New if you want faster recovery between drives and the Li-Ning attack identity. The 5U variant of the AxForce 90 New is the differentiator that has no direct Yonex equivalent.",
+        },
+        {
+          heading: "Setup recommendations and the buying decision",
+          body: "4U setup: G5 at 24 lb on BG80 for the first ten hours, raising to 25 lb if the platform welcomes more. 5U setup: G5 at 22-23 lb on BG80 or VBS-66N — the lighter frame welcomes a slightly softer string-bed. Buy the 4U if you are an established club doubles attacker who wants the AxForce identity with speed priority. Buy the 5U if you are a smaller-physique attacker, a junior-to-adult transition player, or a doubles front-court specialist wanting a faster-recovery frame. The multi-author consensus is that the 5U variant is the line's underrated pick — most reviews undersell it because they assume 4U is the default flagship choice.",
+        },
+      ],
+      cta:
+        "Run the finder with doubles-first format, attack-with-speed style, and your physique / level filter to compare the AxForce 90 New 4U / 5U against the Astrox 88D Pro 2024 and the AxForce 100 Gen 2.",
+      factChecks: [
+        {
+          sourceName: "Li-Ning",
+          title: "Li-Ning Badminton — AxForce 90 New",
+          section: "AxForce family page",
+          checkedAt: "2026-05-21",
+          href: "https://lining.com/",
+          quote: "AxForce 90 New",
+          note:
+            "Li-Ning catalogue confirms the AxForce 90 New ships in both 4U and 5U variants, with the 5U as a meaningful variant rather than a stripped-down 4U.",
+        },
+        {
+          sourceName: "IntoBadminton — AxForce 90 New comprehensive review",
+          title: "AxForce 90 New comprehensive review",
+          section: "Companion three-source merge",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/li-ning-axforce-90-new-comprehensive-review/",
+          quote: "AxForce 90 New",
+          note:
+            "Companion IntoBadminton coverage of the AxForce 90 New (three-source merge) surfaces the 5U-specific buyer profile; this multi-author synthesis extends the coverage to a fourth source review and broader cross-line context.",
+        },
+      ],
+    },
+    {
+      slug: "victor-thruster-falcon-family-overview",
+      updatedAt: "2026-05-21",
+      category: "guides",
+      title:
+        "Victor Thruster Falcon family overview: TK-F, TK-SR, TK-HWQL and TK-9900 mapped to buyer profiles",
+      dek:
+        "Victor's Thruster Falcon family runs four overlapping SKUs (TK-F Ultra, TK-SR, TK-HWQL, TK-9900). This overview maps each to the right buyer profile and surfaces which variants are worth chasing.",
+      story: {
+        intro:
+          "Victor's Thruster Falcon family is one of the most buyer-confusing flagship lines in the current catalogue. Four overlapping SKUs — TK-F (the flagship Falcon Ultra), TK-SR (warm-feel attack), TK-HWQL (small-caliber lighter variant), and TK-9900 (older heavy attack curiosity) — share the Falcon platform identity but emphasise different attack characteristics. This overview maps each to its right buyer profile.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — Thruster Falcon family mapping across four SKUs",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland practice partners",
+              courtSurface: "wood and synthetic court mat",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 99 Pro 2 (founder firsthand)",
+              "Yonex Astrox 100ZZ (founder firsthand)",
+              "Li-Ning AxForce 100 Gen 2",
+            ],
+            sourceAttribution:
+              "Multi-source synthesis of BadmintonCN Thruster Falcon coverage (中羽评测 鹰击长空 THRUSTER F 隼, 猎奇1098 胜利 TK-SR, 猎奇1096 胜利 TK-HWQL, 猎奇144 胜利 TK9900); observer commentary by Rui Su.",
+          },
+          {
+            kind: "facts",
+            heading: "Four-SKU snapshot",
+            items: [
+              { label: "TK-F (Falcon Ultra)", value: "Family flagship — decisive contact" },
+              { label: "TK-SR", value: "Warm-feel attack — forgiving identity" },
+              { label: "TK-HWQL", value: "Small-caliber lighter variant" },
+              { label: "TK-9900", value: "Older heavy attack curiosity pick (used market)" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What the Thruster Falcon family stands for",
+          body: "The Victor Thruster Falcon line is Victor's heavy-attack flagship platform — head-heavy weight signature, stiff to medium-stiff shafts, and a smash carry identity competitive with Yonex's Astrox 99 Pro family. Where Victor differentiates is the variant strategy: instead of running a single flagship at one shaft demand, the Thruster Falcon line offers four SKUs that span demand levels and physique profiles within the same broad identity. The family's strength is that every serious attacker can find a Falcon variant suited to their swing strength; the weakness is that the choice between them confuses most buyers.",
+        },
+        {
+          heading: "TK-F Ultra — the family flagship",
+          body: "The TK-F (Falcon Ultra) is the line's true flagship. Source reviewers describe it as 'eagle striking the sky, unstoppably sharp' (鹰击长空 锐不可挡) — a decisive contact, flagship-grade shaft load, and the peak attack carry of the family. The platform demands established swing strength and rewards consistent timing with measurable smash carry. As a buyer profile: TK-F Ultra is the right pick for established Victor heavy-attack players who have the swing strength to deliver flagship-tier swings consistently.",
+        },
+        {
+          heading: "TK-SR — the warm-feel variant",
+          body: "The TK-SR is the family's forgiving variant. Source reviewers describe it as 'warm-warm style' (暖暖系玩法) — a more accommodating contact feel, slightly less demanding shaft, and a more forgiving sweet spot than the TK-F Ultra. The TK-SR is the right pick for buyers who want the Falcon identity in a more accessible package, or for established TK-F Ultra players who want a secondary frame in rotation for practice and warm-up.",
+        },
+        {
+          heading: "TK-HWQL — the small-caliber variant",
+          body: "The TK-HWQL is the family's lighter, smaller-physique variant. Source reviewers describe it as 'small caliber' (小当量) — a 5U-leaning weight class with a smaller frame and the Falcon attack identity preserved within the lighter swing weight. Buyer profile: junior players moving up to a real attack frame, smaller-physique adults who want Falcon identity at an accessible swing weight, or doubles front-court specialists building a secondary rotation with attack identity.",
+        },
+        {
+          heading: "TK-9900 — the used-market curiosity",
+          body: "The TK-9900 is the family's older heavy-attack curiosity pick — discontinued from Victor's current catalogue but consistently surfaced in the BadmintonCN 'curiosity' (猎奇向) series as a used-market pick. Heavier than the current Falcon variants, with an older shaft technology that some source reviewers describe as quirky and others as nostalgic. Buyer profile: collectors of older Victor attack frames, used-market buyers willing to do their own authentication, or experienced attackers curious about the Falcon line's heritage.",
+        },
+        {
+          heading: "The buyer-question filter",
+          body: "Question one — what is your swing strength baseline? Flagship-grade consistent → TK-F Ultra. Established but variable → TK-SR. Still building → TK-HWQL. Question two — what is your physique profile? Adult standard → TK-F Ultra or TK-SR. Smaller-physique or junior → TK-HWQL. Question three — do you want a current SKU or accept used-market? Current → TK-F Ultra / TK-SR / TK-HWQL. Used-market with collector intent → TK-9900. The family's strength is that almost every serious attacker fits one of these answers cleanly; the weakness is that without this filter, buyers default to the TK-F Ultra by reputation and end up over-spec'd for their swing.",
+        },
+      ],
+      cta:
+        "Run the finder with heavy-attack style and your specific swing-strength / physique filter to compare the Thruster Falcon variants against the Astrox 99 Pro 2 and the AxForce 100 Gen 2.",
+      factChecks: [
+        {
+          sourceName: "Victor Badminton",
+          title: "Victor — Thruster Falcon family",
+          section: "Thruster F / SR / HWQL line page",
+          checkedAt: "2026-05-21",
+          href: "https://www.victorsport.com/products/thruster-falcon",
+          quote: "Thruster Falcon",
+          note:
+            "Victor catalogue confirms the Thruster Falcon family runs TK-F (Ultra flagship), TK-SR, and TK-HWQL as current SKUs, with TK-9900 as a discontinued predecessor available only on the used market.",
+        },
+        {
+          sourceName: "IntoBadminton — Thruster Falcon review",
+          title: "Victor Thruster Falcon review",
+          section: "Existing TK-F coverage",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/victor-thruster-falcon-review/",
+          quote: "Thruster Falcon",
+          note:
+            "Companion IntoBadminton coverage of the Victor Thruster Falcon (TK-F) provides the flagship-tier reference; this family overview maps each variant within the broader Falcon line.",
+        },
+      ],
+    },
+    {
+      slug: "yonex-nanoflare-800-pro-vs-victor-auraspeed-hs-plus-comprehensive",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus comprehensive: the cross-brand speed flagship decision",
+      dek:
+        "Both target the doubles speed flagship buyer with stiff shafts and head-light balances. Source reviewers consistently merge them; the buyer-decision question is whose ecosystem you commit to.",
+      story: {
+        intro:
+          "The Yonex Nanoflare 800 Pro and the Victor Auraspeed HS Plus are the two most commonly cross-shopped speed flagships in 2026. Both target competitive doubles players who win on drive snap and recovery speed; both ship stiff shafts in head-light frames; both compete on price within the same flagship tier. Source reviewers consistently merge them in their evaluations because the platform identities are so closely aligned. This comprehensive piece treats them side-by-side with founder firsthand cross-reference to the Nanoflare 1000Z.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — cross-brand speed flagship merge with NF1000Z founder cross-reference",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+              "Yonex Nanoflare 700 Pro (founder firsthand)",
+              "Victor Auraspeed 90K II",
+            ],
+            sourceAttribution:
+              "Multi-source synthesis of BadmintonCN Nanoflare 800 Pro and Auraspeed HS Plus reviews; observer commentary by Rui Su with founder firsthand cross-reference to the NF1000Z.",
+          },
+          {
+            kind: "facts",
+            heading: "Cross-brand snapshot",
+            items: [
+              { label: "Yonex NF800 Pro", value: "Yonex speed flagship — broader ecosystem" },
+              { label: "Victor HS Plus", value: "Victor speed flagship — drive-snap identity" },
+              { label: "Founder cross-reference", value: "NF1000Z (founder firsthand, current doubles)" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Where the two platforms genuinely diverge",
+          body: "The Yonex Nanoflare 800 Pro and the Victor Auraspeed HS Plus look identical on paper — both head-light, both stiff-shafted, both flagship-tier speed-attack frames. They diverge on three real dimensions. First, contact tone: the NF800 Pro carries a slightly warmer, more pocketed feel through contact; the HS Plus is sharper and more linear. Second, drive snap timing: the HS Plus delivers a marginally faster drive snap at the cost of slightly less forgiveness on rushed swings; the NF800 Pro is more forgiving on timing variation. Third, ecosystem: Yonex's broader retail, stringing, and resale ecosystem favours the NF800 Pro for buyers who value mainstream support; Victor's narrower but more focused ecosystem favours the HS Plus for serious speed specialists.",
+        },
+        {
+          heading: "Who should pick the NF800 Pro",
+          body: "Two buyer profiles favour the Yonex Nanoflare 800 Pro: first, players who value mainstream ecosystem support, mainstream resale liquidity, and broader stringing community knowledge — Yonex's surrounding infrastructure remains category-leading. Second, players whose timing varies week-to-week and who benefit from the marginally more forgiving contact tone. For a buyer who values consistency over peak snap response, the NF800 Pro is the safer pick.",
+        },
+        {
+          heading: "Who should pick the HS Plus",
+          body: "Two buyer profiles favour the Victor Auraspeed HS Plus: first, drive specialists whose strongest rally pattern is a fast cross-court drive followed by clean recovery — the HS Plus's sharper drive snap delivers a measurable advantage on this pattern. Second, players who already use Victor frames elsewhere in their rotation and want ecosystem coherence within the brand. The HS Plus is the more decisive pick for the player who wins on drive exchanges.",
+        },
+        {
+          heading: "Founder firsthand cross-reference: NF1000Z",
+          body: "Both the NF800 Pro and the HS Plus sit one tier below the Yonex Nanoflare 1000Z (founder firsthand, current doubles racket). The 1000Z is the line's identity flagship with a Z-axis shaft that delivers cleaner drive snap and slightly more pocketing on defensive resets than either the NF800 Pro or the HS Plus. From the founder cross-reference: buyers who can stretch budget and have established flagship swing strength should consider the 1000Z over either the 800 Pro or the HS Plus; buyers building toward flagship-grade timing are well-served by either the 800 Pro or the HS Plus depending on ecosystem preference.",
+        },
+        {
+          heading: "The cross-brand commitment question",
+          body: "The most overlooked dimension in this comparison is ecosystem commitment. Picking the NF800 Pro versus the HS Plus is partly a frame decision, but mostly a multi-year brand commitment: secondary frames, replacement strings, stringing knowledge, and resale all flow through the brand you choose. Players who already own Yonex frames elsewhere will get smaller incremental value from the NF800 Pro because the brand commitment is already made; players already in the Victor ecosystem will benefit similarly from the HS Plus. Cross-brand jumps (Yonex player picking the HS Plus, Victor player picking the NF800 Pro) make sense only when the contact-tone or drive-snap difference matters more than the ecosystem cost.",
+        },
+        {
+          heading: "Setup and the buying decision",
+          body: "NF800 Pro: 4U/G5 at 26 lb on BG80 — the platform welcomes the same setup as the Astrox attack family. HS Plus: 4U/G5 at 25-26 lb on VBS-66N or BG80 Power — the sharper drive snap pairs slightly better with high-repulsion strings. Buy the NF800 Pro if you are in the Yonex ecosystem, value mainstream support, or want the more forgiving contact tone. Buy the HS Plus if you are in the Victor ecosystem, win on drive snap, or want the sharper linear feel. Skip both and stretch to the NF1000Z if you have flagship-grade swing strength and want the line's true identity flagship — the 1000Z's Z-axis shaft delivers measurably more than either of the tier-two flagships when the player can drive it cleanly.",
+        },
+      ],
+      cta:
+        "Run the finder with doubles-first format, speed-attack style, and competitive level to compare the NF800 Pro and HS Plus against the founder firsthand NF1000Z and Auraspeed 90K II.",
+      factChecks: [
+        {
+          sourceName: "Yonex",
+          title: "NANOFLARE 800 PRO — speed flagship",
+          section: "Nanoflare 800 Pro product page",
+          checkedAt: "2026-05-21",
+          href: "https://www.yonex.com/nf-800-pro",
+          quote: "NANOFLARE 800 PRO",
+          note:
+            "Official Yonex Nanoflare 800 Pro page confirms the platform's positioning as a speed-attack flagship within the Nanoflare line.",
+        },
+        {
+          sourceName: "Victor Badminton",
+          title: "Victor — Auraspeed HS Plus",
+          section: "Auraspeed HS Plus product page",
+          checkedAt: "2026-05-21",
+          href: "https://www.victorsport.com/products/auraspeed-hs-plus",
+          quote: "Auraspeed HS Plus",
+          note:
+            "Official Victor Auraspeed HS Plus page confirms the platform's positioning as a speed flagship competing with the Yonex Nanoflare 800 Pro.",
+        },
+      ],
+    },
+    {
       slug: "kumpoo-shura-2-shanhai-comparison-merge",
       updatedAt: "2026-05-21",
       category: "comparisons",
@@ -4356,6 +4640,189 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "Nanoflare 1000Z",
           note:
             "Existing IntoBadminton coverage on the NF1000Z and 1000Play pair provides additional setup detail; this matrix article focuses on the four-frame buyer-decision rather than a per-frame deep dive.",
+        },
+      ],
+    },
+    {
+      slug: "kumpoo-fourth-brand-brand-decoded",
+      updatedAt: "2026-05-21",
+      category: "guides",
+      title:
+        "Kumpoo decoded: the case for treating Kumpoo as the fourth credible badminton brand in 2026",
+      dek:
+        "Source reviewers have begun positioning Kumpoo (薰风) as the credible fourth brand alongside Yonex, Victor and Li-Ning. This brand-decoded guide tests the claim and maps Kumpoo's current line to mainstream cross-brand peers.",
+      story: {
+        intro:
+          "For two decades, serious badminton equipment buying has effectively meant choosing between three brands: Yonex, Victor, and Li-Ning. Source reviewers in 2026 have begun positioning Kumpoo (薰风) as a credible fourth alternative. This brand-decoded guide tests the claim by mapping Kumpoo's current line — Shura II, Shanhai NEW, KH-G805 Lite Pro, JS-67 / JS-63 strings — against mainstream cross-brand peers and identifying where Kumpoo genuinely competes versus where it remains a tier behind.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — Kumpoo cross-brand assessment with mainstream-trio framing",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland practice partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex (mainstream trio)",
+              "Victor (mainstream trio)",
+              "Li-Ning (mainstream trio)",
+            ],
+            sourceAttribution:
+              "BadmintonCN source review positioning Kumpoo as the fourth brand (破局者薰风 剑指羽球第四大厂); observer commentary by Rui Su mapping current Kumpoo SKUs to mainstream peers.",
+          },
+          {
+            kind: "facts",
+            heading: "Kumpoo's current top-tier line",
+            items: [
+              { label: "Attack flagships", value: "Shura II + Shanhai NEW" },
+              { label: "Speed accessibility", value: "KH-G805 Lite Pro (5U)" },
+              { label: "Strings", value: "JS-67 (durability) + JS-63 (tournament repulsion)" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What the fourth-brand claim actually requires",
+          body: "A credible fourth-brand claim requires three things: a flagship-tier racket lineup that competes on identity (not just price), a strings and accessories line that supports the racket ecosystem, and enough retail and resale liquidity that buyers can commit without ecosystem regret. Most second-tier brands fail one of these tests. Kumpoo's current line is close enough to passing all three that the fourth-brand claim is worth taking seriously — but with caveats around retail distribution outside China.",
+        },
+        {
+          heading: "Where Kumpoo genuinely competes",
+          body: "Three areas where Kumpoo's current line is genuinely competitive with the mainstream trio. First, attack flagships: the Shura II and Shanhai NEW deliver flagship-tier feel competitive with mid-flagship Yonex, Victor, and Li-Ning options at meaningfully lower prices. Second, value-tier accessibility: the KH-G805 Lite Pro and similar budget picks offer honest playing experiences at price points the mainstream trio rarely touches. Third, premium strings: the JS-67 and JS-63 cover both club-durability and tournament-repulsion buyer profiles with genuine quality at competitive prices.",
+        },
+        {
+          heading: "Where Kumpoo remains a tier behind",
+          body: "Three areas where Kumpoo is honestly behind the mainstream trio. First, retail distribution outside Asia: Kumpoo's presence in European and North American badminton shops is thin, which constrains cross-region resale and ecosystem support. Second, refinement at the absolute peak tier: at the very top of the flagship pyramid (Astrox 100ZZ, Auraspeed 99 J, AxForce 100 Gen 2), Kumpoo does not have a direct equivalent — the brand competes credibly at the mid-flagship tier but not at the peak. Third, community knowledge and stringing guidance: mainstream stringers and coaches have decades more reference points for Yonex / Victor / Li-Ning than for Kumpoo.",
+        },
+        {
+          heading: "Mapping Kumpoo SKUs to mainstream peers",
+          body: "Kumpoo Shura II ↔ Yonex Astrox 88D Pro 2024 (Yonex), Victor DriveX 12 (Victor), Li-Ning Halbertec 7000 II (Li-Ning). Kumpoo Shanhai NEW ↔ Yonex Astrox 99 Pro Gen 1 used market, Victor Auraspeed 90K II, Li-Ning AxForce 80. Kumpoo KH-G805 Lite Pro ↔ Yonex Astrox Nextage (5U), Victor Sonic Boom Pro, Li-Ning AxForce 10. Kumpoo JS-67 ↔ Yonex BG80, Li-Ning L66. Kumpoo JS-63 ↔ Yonex BG80 Power, Yonex Aerobite. These mappings are imperfect — material platforms differ — but they are the cleanest cross-brand reference points for buyers cross-shopping the Kumpoo line.",
+        },
+        {
+          heading: "Who should commit to Kumpoo",
+          body: "Three buyer profiles favour committing to Kumpoo. First, second-tier brand enthusiasts who specifically value alternatives to the mainstream trio. Second, value-conscious buyers in Asian markets where Kumpoo retail and stringing infrastructure are accessible. Third, players willing to do their own independent research on stringing tensions and care patterns, in exchange for the cost savings and brand-differentiation that Kumpoo offers. For all three, the fourth-brand argument is genuinely sound; for buyers outside these profiles, the mainstream trio remains the friendlier ecosystem.",
+        },
+        {
+          heading: "The verdict on the fourth-brand claim",
+          body: "Kumpoo is genuinely the most credible candidate for fourth-brand status in 2026. The line covers the major buyer profiles, the build quality has reached flagship-adjacent levels, and the price-to-performance ratio is honestly competitive at the mid-flagship tier. The caveats — peak-tier flagship gap, retail distribution outside Asia, community knowledge — are real but manageable for committed buyers. The brand still requires more retail expansion and a true peak-flagship release before it stands fully alongside the mainstream trio; the current line earns the fourth-brand label as an emerging credible alternative, not yet as a peer.",
+        },
+      ],
+      cta:
+        "Open the finder with cross-brand-flexible preference and your specific style / level filter to compare Kumpoo's current line against the Yonex / Victor / Li-Ning mainstream peers.",
+      factChecks: [
+        {
+          sourceName: "Kumpoo",
+          title: "Kumpoo Badminton — current product line",
+          section: "Brand catalogue 2026",
+          checkedAt: "2026-05-21",
+          href: "https://www.kumpoo.com.cn/",
+          quote: "Kumpoo 薰风",
+          note:
+            "Kumpoo's catalogue confirms the current line (Shura II, Shanhai NEW, KH-G805 Lite Pro, JS-67, JS-63) as the basis for the fourth-brand assessment.",
+        },
+        {
+          sourceName: "IntoBadminton — Kumpoo Shanhai NEW review",
+          title: "Kumpoo Shanhai NEW racket review",
+          section: "Existing Kumpoo flagship coverage",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/kumpoo-shanhai-new-racket-review/",
+          quote: "Kumpoo",
+          note:
+            "Companion IntoBadminton coverage of the Shanhai NEW provides the line's flagship-tier reference; this brand-decoded guide places Kumpoo's overall line in cross-brand context.",
+        },
+      ],
+    },
+    {
+      slug: "victor-drivex-family-overview",
+      updatedAt: "2026-05-21",
+      category: "guides",
+      title:
+        "Victor DriveX family overview: how the 10, 10 Metallic, 12 and 12 ZSW map to buyer profiles",
+      dek:
+        "Victor's DriveX family covers four overlapping SKUs spanning club-tier through flagship-adjacent. This overview maps each to its right buyer profile and surfaces the upgrade-path moments that matter.",
+      story: {
+        intro:
+          "Victor's DriveX line is one of the most accessible flagship-adjacent attack families in 2026. Four current SKUs — DriveX 10, DriveX 10 Metallic, DriveX 12, DriveX 12 ZSW (Lee Zii Jia signature) — cover buyers from first-attack-frame club players through established competitive doubles attackers. This family overview ties together the existing IntoBadminton DriveX 10, DriveX 12 standalone, and DriveX 12 ZSW comparison coverage into a single buyer-profile map.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — DriveX family mapping across four current SKUs",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood and synthetic court mat",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+              "Li-Ning Halbertec 7000 II",
+              "Li-Ning Halbertec 9000",
+            ],
+            sourceAttribution:
+              "Multi-source synthesis of BadmintonCN DriveX coverage and IntoBadminton's existing DriveX 10, DriveX 12 standalone, and DriveX 12 ZSW reviews; observer commentary by Rui Su.",
+          },
+          {
+            kind: "facts",
+            heading: "Four-SKU snapshot",
+            items: [
+              { label: "DriveX 10", value: "Club-tier attack — first head-heavy frame" },
+              { label: "DriveX 10 Metallic", value: "Colourway variant — same platform" },
+              { label: "DriveX 12", value: "Flagship-adjacent attack — established attacker" },
+              { label: "DriveX 12 ZSW", value: "Lee Zii Jia signature variant" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What the DriveX family stands for",
+          body: "The DriveX line is Victor's accessible head-heavy attack platform — head-heavy weight signatures across the line, medium-stiff shafts, and a forgiving sweet spot family-wide. Where the line differentiates from Victor's other attack frames (Auraspeed for speed-attack, Thruster Falcon for heavy attack) is accessibility: the DriveX family is designed to bridge new attackers into the platform identity without demanding flagship-grade swing strength. Buyers move through the family as their swing strength develops.",
+        },
+        {
+          heading: "DriveX 10 — the entry pick",
+          body: "The DriveX 10 is the family's entry-tier attack frame. Source reviewers describe it as 'see-bouncy-see-steady' (铿锵有力 见弹见稳) — a usable head-heavy identity with a forgiving sweet spot suited to club-level swing consistency. Buyer profile: first-year club doubles attackers building shaft load, or value-conscious adults wanting honest attack feel without flagship cost. Setup: 4U/G5 at 24 lb on BG80, the right starting point for the family.",
+        },
+        {
+          heading: "DriveX 10 Metallic — the colourway variant",
+          body: "The DriveX 10 Metallic is the same platform as the base DriveX 10 with a metallic colourway variant. Playing characteristics are identical to the base. As a buyer: the Metallic variant is worth the small price premium only if you specifically value the metallic colourway; otherwise the base DriveX 10 is the better-value pick. The Metallic variant is mainly a cosmetic upgrade.",
+        },
+        {
+          heading: "DriveX 12 — the flagship-adjacent step up",
+          body: "The DriveX 12 is the family's flagship-adjacent attack frame. Source reviewers describe it as 'full evolution, control as you will' (全面进化 随心所驭) — a heavier head signature, a stiffer shaft than the DriveX 10, and a measurably more decisive contact feel. Buyer profile: established club doubles attackers who have spent a season on the DriveX 10 (or similar mid-tier attack frame) and want flagship-feel without paying for the Auraspeed 99 J or AxForce 100 Gen 2. Setup: 4U/G5 at 25 lb on BG80 or VBS-66N.",
+        },
+        {
+          heading: "DriveX 12 ZSW — the signature variant",
+          body: "The DriveX 12 ZSW is Lee Zii Jia's signature variant of the DriveX 12. Paint thickness and string-bed coupling shift contact tone slightly toward a more dampened feel; smash carry and drive snap are unchanged from the base 12. Buyer profile: existing DriveX 12 owners who specifically prefer the slightly more dampened contact tone, Lee Zii Jia fans, or short-game touch specialists. Pay the variant tax only if the contact-tone difference matters to your game.",
+        },
+        {
+          heading: "The upgrade-path moments",
+          body: "Two natural upgrade-path moments emerge from the family structure. First moment: after a full club season on the DriveX 10, if you find yourself under-resourced on third-game smash quality, the DriveX 12 is the right step up. Second moment: after established play on the DriveX 12, if you specifically want flagship-grade peak performance, the upgrade direction is out of the family — to the Auraspeed 99 J or AxForce 100 Gen 2 for heavier-attack peak, or to the Nanoflare 1000Z / Auraspeed HS Plus for speed-attack peak. The DriveX family is a coherent ladder that ends at flagship-adjacent rather than at peak flagship.",
+        },
+      ],
+      cta:
+        "Run the finder with controlled-attack style and your specific skill / level filter to compare the DriveX family against the Yonex Astrox 88D Pro 2024 and the Li-Ning Halbertec line.",
+      factChecks: [
+        {
+          sourceName: "Victor Badminton",
+          title: "Victor — DriveX family",
+          section: "DriveX product line",
+          checkedAt: "2026-05-21",
+          href: "https://www.victorsport.com/products/drivex",
+          quote: "DriveX",
+          note:
+            "Victor catalogue confirms the DriveX family runs four current SKUs (10, 10 Metallic, 12, 12 ZSW) at overlapping but progressing price tiers within the brand's accessible attack platform.",
+        },
+        {
+          sourceName: "IntoBadminton — DriveX 12 standalone review",
+          title: "Victor DriveX 12 standalone review",
+          section: "Family flagship-adjacent reference",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/victor-drivex-12-standalone-review/",
+          quote: "DriveX 12",
+          note:
+            "Companion IntoBadminton coverage of the DriveX 12 (standalone), DriveX 12 ZSW (comparison), and DriveX 10 (review) provides the per-SKU detail; this family overview synthesises them into a single buyer-profile map.",
         },
       ],
     },
