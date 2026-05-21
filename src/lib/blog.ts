@@ -88,7 +88,11 @@ export type BlogSlug =
   | "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro-review"
   | "kawasaki-h2-hydrogen-review"
   | "kawasaki-twilight-shoes-review"
-  | "mizuno-carbo-pro-823-review";
+  | "mizuno-carbo-pro-823-review"
+  | "goshen-leiming-69-string-review"
+  | "rsl-supreme-shuttle-review"
+  | "kumpoo-shura-2-shanhai-comparison-merge"
+  | "kumpoo-js-67-vs-js-63-strings-comparison";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -178,6 +182,10 @@ export const blogSlugs: BlogSlug[] = [
   "kawasaki-h2-hydrogen-review",
   "kawasaki-twilight-shoes-review",
   "mizuno-carbo-pro-823-review",
+  "goshen-leiming-69-string-review",
+  "rsl-supreme-shuttle-review",
+  "kumpoo-shura-2-shanhai-comparison-merge",
+  "kumpoo-js-67-vs-js-63-strings-comparison",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3797,6 +3805,189 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "ARCSABER",
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
+    },
+    {
+      slug: "kumpoo-shura-2-shanhai-comparison-merge",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Kumpoo Shura II vs Shanhai NEW: how Kumpoo's two attack flagships actually differ",
+      dek:
+        "Kumpoo's two current attack flagships — Shura II (修罗 II 代) and Shanhai NEW (山海 NEW) — sit at similar price tiers with overlapping marketing. This merge maps which buyer profile each is actually built for.",
+      story: {
+        intro:
+          "Two BadmintonCN reviewers covered the Shura II and the Shanhai NEW independently. Both rackets are flagship-tier Kumpoo attack frames, both ship in similar weight classes, and both target the same broad doubles-attacker buyer profile. The differentiator is identity emphasis: the Shura II leans into aggressive attack with violent-totem styling; the Shanhai NEW leans into controlled attack with mountains-and-seas refinement. The buyer-decision question is which identity emphasis fits your game.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — two-source merge with Kumpoo cross-brand reference",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland practice partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Li-Ning Halbertec 9000",
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+              "Victor DriveX 12",
+            ],
+            sourceAttribution:
+              "Two BadmintonCN source reviews of Kumpoo flagships (薰风 修罗II 球拍体验测评 + 镇山海 定乾坤 山海 NEW); observer commentary by Rui Su.",
+          },
+          {
+            kind: "facts",
+            heading: "Two-flagship snapshot",
+            items: [
+              { label: "Shura II identity", value: "Aggressive attack (violent-totem theme)" },
+              { label: "Shanhai NEW identity", value: "Controlled attack (mountains-and-seas theme)" },
+              { label: "Price tier", value: "Both flagship-tier; Shanhai NEW slightly higher" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "The two-flagship problem and Kumpoo's solution",
+          body: "Most brands position a single flagship within each playing-style identity. Kumpoo currently runs two attack flagships — the Shura II and the Shanhai NEW — at overlapping price tiers with overlapping marketing. The result is buyer confusion that source reviewers consistently surface but rarely resolve. The honest resolution: the two rackets are not redundant; they emphasise different attack identities within the same broad family. Buyers should pick by which identity emphasis fits their actual game rather than by which is newer or more expensive.",
+        },
+        {
+          heading: "What the Shura II actually plays like",
+          body: "The Shura II is Kumpoo's aggressive-attack flagship — head-heavy, stiff-shaft, with a violent-totem (暴力图腾) styling and identity. Source reviewers consistently report a more decisive contact feel and a slightly more demanding swing profile than the Shanhai NEW. The platform rewards clean preparation with stronger back-court smash carry; it punishes incomplete swings more visibly. As a buyer profile: the Shura II is the right pick for doubles attackers who win points on aggressive back-court smashes and who have the consistent timing to deliver clean swings.",
+        },
+        {
+          heading: "What the Shanhai NEW actually plays like",
+          body: "The Shanhai NEW is Kumpoo's controlled-attack flagship — head-heavy but with a slightly more rounded weight distribution, a less stiff shaft than the Shura II, and a controlled-attack identity matching the mountains-and-seas (山海) thematic. Source reviewers describe a more forgiving sweet spot and a slightly less aggressive contact feel. The platform suits doubles attackers who win points on controlled drive-into-smash sequences and who want flagship feel without the Shura II's swing-demand penalty.",
+        },
+        {
+          heading: "Which to buy — the buyer-question filter",
+          body: "Question one — what does your strongest rally pattern end in? If the answer is a back-court smash, Shura II. If the answer is a controlled smash from a drive setup, Shanhai NEW. Question two — how consistent is your timing? If your timing is consistently clean session-to-session, Shura II rewards it more. If your timing varies week-to-week, Shanhai NEW forgives more. Question three — what is your secondary frame? If you already play a controlled-attack frame (Halbertec 9000, Arcsaber 11 Pro), the Shura II adds something genuinely different. If you already play an aggressive-attack frame (AxForce 100 Gen 2, Astrox 100ZZ), the Shanhai NEW is the more complementary pick.",
+        },
+        {
+          heading: "Cross-brand reference points",
+          body: "For Yonex players: the Shura II plays closer to the Astrox 100ZZ (founder firsthand) than to the Astrox 88D Pro 2024 (founder firsthand) — aggressive attack identity dominates. The Shanhai NEW plays closer to the 88D Pro than to the 100ZZ — controlled attack with placement priority. For Li-Ning players: the Shura II is closer to the AxForce 100 Gen 2 (heavy attack); the Shanhai NEW is closer to the Halbertec 9000 (controlled attack). These cross-brand peer references are the cleanest filter for buyers cross-shopping outside the mainstream trio.",
+        },
+        {
+          heading: "Setup and the buying decision",
+          body: "Shura II: 4U/G5 at 24-25 lb on BG80 or VBS-66N. The platform punishes higher tension faster than the Shanhai NEW. Shanhai NEW: 4U/G5 at 25-26 lb on the same string options; the more forgiving platform welcomes slightly tighter setups. Buy the Shura II if you are an aggressive-attack doubles player with consistent timing and clean back-court swing mechanics; buy the Shanhai NEW if you are a controlled-attack doubles player who values forgiveness and slightly more session-to-session timing variation. Skip both if you are first-time flagship buyer (mainstream brands are the friendlier introduction) or if you specifically need broad retail availability outside Asia.",
+        },
+      ],
+      cta:
+        "Run the finder with attack-style preference and competitive level to compare both Kumpoo flagships against mainstream peers like the Astrox 100ZZ, the Astrox 88D Pro 2024, and the AxForce 100 Gen 2.",
+      factChecks: [
+        {
+          sourceName: "Kumpoo",
+          title: "Kumpoo Badminton — Shura II and Shanhai NEW",
+          section: "Current flagship attack rackets",
+          checkedAt: "2026-05-21",
+          href: "https://www.kumpoo.com.cn/",
+          quote: "修罗 II / 山海 NEW",
+          note:
+            "Kumpoo's catalogue confirms the Shura II and Shanhai NEW as the brand's two current flagship-tier attack rackets, with the identity emphasis difference (aggressive vs controlled) reflected in product positioning.",
+        },
+        {
+          sourceName: "IntoBadminton — Kumpoo Shanhai NEW review",
+          title: "Kumpoo Shanhai NEW racket review",
+          section: "Existing sibling coverage",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/kumpoo-shanhai-new-racket-review/",
+          quote: "Kumpoo Shanhai NEW",
+          note:
+            "Companion IntoBadminton coverage of the Shanhai NEW provides the standalone platform-specific context; this merge focuses on the Shura II vs Shanhai NEW buyer decision within the Kumpoo flagship line.",
+        },
+      ],
+    },
+    {
+      slug: "kumpoo-js-67-vs-js-63-strings-comparison",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Kumpoo JS-67 vs JS-63 strings: thin-gauge tournament repulsion versus club durability",
+      dek:
+        "Kumpoo's two current premium strings target overlapping buyers but solve different problems. The JS-67 is the ice-blue all-round club pick; the JS-63 is the thin-gauge tournament-tier repulsion option.",
+      story: {
+        intro:
+          "Two BadmintonCN reviewers covered the Kumpoo JS-67 and JS-63 strings independently. The two strings target overlapping buyer profiles but solve different problems: the JS-67 prioritises club-durability with a recognisable ice-blue colour signature; the JS-63 prioritises tournament-tier repulsion with a thinner 0.63mm gauge. The buyer-decision question is whether you restring frequently enough to justify the thinner gauge's reduced durability.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer methodology — two-source merge on Kumpoo's premium string line",
+            context: "observer",
+            conditions: {
+              strings: "Both JS-67 and JS-63 tested across multiple club partners' rackets",
+              opponents: "Division 4 Ireland club partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex BG80 (mainstream durability)",
+              "Yonex BG80 Power (high-repulsion)",
+              "Li-Ning L66 string",
+            ],
+            sourceAttribution:
+              "Two BadmintonCN source reviews of Kumpoo's premium strings (薰风 JS-67 球线测评 + 薰风 JS-63 音爆 球线测评); observer commentary by Rui Su from club partner stringing patterns.",
+          },
+          {
+            kind: "facts",
+            heading: "Two-string snapshot",
+            items: [
+              { label: "JS-67", value: "0.67mm gauge, ice-blue colourway, club durability" },
+              { label: "JS-63", value: "0.63mm gauge, thin tournament repulsion" },
+              { label: "Tension range", value: "JS-67: 20-28 lb; JS-63: 22-30 lb" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why string gauge dominates the buying decision",
+          body: "String gauge is the dominant variable for badminton strings — far more important than colour, brand identity, or marketing positioning. A 0.67mm string and a 0.63mm string deliver fundamentally different playing characteristics: 0.67mm prioritises durability and consistent feel across long sessions; 0.63mm prioritises peak repulsion at the cost of break frequency. The JS-67 and JS-63 sit on opposite sides of this trade-off within Kumpoo's premium line, and the buyer decision is mostly about which trade-off your game and budget actually want.",
+        },
+        {
+          heading: "What the JS-67 delivers",
+          body: "The Kumpoo JS-67 is a 0.67mm gauge club-durability string with a recognisable ice-blue colour signature. Source reviewers position it as a high-repulsion all-round string for club-level competitive play. Tension range 20-28 lb. The 0.67mm gauge delivers consistent feel session-to-session with reasonable break resistance — club players who restring every 2-3 months get genuine value. As a buyer profile: the JS-67 is the right pick for club competitive players who restring on a moderate schedule and want a distinctive colour signature without paying mainstream tournament-string prices.",
+        },
+        {
+          heading: "What the JS-63 delivers",
+          body: "The Kumpoo JS-63 (subtitled 音爆 — Sonic Boom) is a 0.63mm gauge thin-tournament-tier string. Source reviewers position it as a high-repulsion tournament-grade option for players who can deliver clean swings and accept frequent restringing. Tension range 22-30 lb. The 0.63mm gauge delivers measurably more peak repulsion and a sharper contact feel — competitive tournament players prioritising snap response get genuine value, but the trade-off is a noticeably higher break frequency. As a buyer profile: the JS-63 is the right pick for tournament-tier players who restring weekly or monthly and value peak repulsion over durability.",
+        },
+        {
+          heading: "Tension recommendations by gauge",
+          body: "JS-67: start at 23-24 lb for first stringing on a new racket, raising to 25-26 lb after the platform has settled. The 0.67mm gauge welcomes higher tension on stiffer-shaft frames and rewards a balanced setup on mid-tier frames. JS-63: start at 24-25 lb for first stringing, raising to 26-27 lb if your timing is consistently clean. The thin gauge punishes high tension faster on inconsistent swings; tournament players running flagship-tier shafts can take the JS-63 higher (28-30 lb) at the cost of more frequent restringing.",
+        },
+        {
+          heading: "Cross-brand reference points",
+          body: "For Yonex string players: the JS-67 plays closer to the BG80 in club durability identity (with the ice-blue colour as a Kumpoo differentiator); the JS-63 plays closer to the BG80 Power in tournament-tier repulsion identity (with a sharper contact signature). For Li-Ning string players (e.g., L66 / L69): the JS-67 sits in a similar durability tier with a different feel signature; the JS-63 sits in a tier above the L66/L69 with thinner gauge and higher break frequency.",
+        },
+        {
+          heading: "The honest buyer answer",
+          body: "Buy the JS-67 if you are a club-level competitive player who restrings every 2-3 months and wants a distinctive ice-blue colour signature with all-round playing characteristics. Buy the JS-63 if you are a tournament-tier player who restrings monthly or more frequently and values peak repulsion over durability. Skip both if you want mainstream resale identity (Yonex BG80 family or Li-Ning L66/L69 are the easier resale-context picks) or if you want a string that maximally favours durability over repulsion (consider Yonex BG65 Titanium or similar high-durability options outside the Kumpoo line).",
+        },
+      ],
+      cta:
+        "Open the finder with your stringing-frequency preference filter to compare the Kumpoo JS-67 and JS-63 against mainstream Yonex BG80 family and Li-Ning L66/L69 alternatives.",
+      factChecks: [
+        {
+          sourceName: "Kumpoo",
+          title: "Kumpoo Badminton — JS string series",
+          section: "Premium string line",
+          checkedAt: "2026-05-21",
+          href: "https://www.kumpoo.com.cn/",
+          quote: "JS-67 / JS-63",
+          note:
+            "Kumpoo's catalogue confirms the JS-67 and JS-63 as the brand's two current premium strings, with the gauge difference (0.67mm vs 0.63mm) reflecting the durability-versus-repulsion trade-off positioning.",
+        },
+        {
+          sourceName: "IntoBadminton — Li-Ning L69 string review",
+          title: "Li-Ning L69 string review",
+          section: "Cross-brand string reference",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/li-ning-l69-string-review/",
+          quote: "Li-Ning L69",
+          note:
+            "Companion IntoBadminton coverage of the Li-Ning L69 string provides the mainstream club-durability reference; this Kumpoo string comparison surfaces the two-gauge trade-off Kumpoo runs in their premium line.",
         },
       ],
     },

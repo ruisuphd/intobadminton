@@ -3928,4 +3928,237 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "goshen-leiming-69-string-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Goshen Leiming 69 (雷鸣 69) string review: durability-first club string for the cost-conscious restringer",
+    dek:
+      "Goshen's Leiming 69 is positioned as a high-modulus club-durability string. Honest pick for cost-conscious club players who restring frequently and prioritise break resistance over peak repulsion.",
+    verdict:
+      "Buy the Goshen Leiming 69 if you want a durable, cost-conscious club string at the value tier; skip if you want tournament-grade repulsion or mainstream resale identity.",
+    bestFor: [
+      "Club players who break strings frequently and want low restringing cost",
+      "Junior players developing technique who go through strings quickly",
+      "Multi-frame owners who restring on rotation",
+    ],
+    avoidIf: [
+      "Tournament players prioritising peak repulsion",
+      "Mainstream-brand-identity buyers",
+      "Players who want sharp contact feel over durability",
+    ],
+    setupNotes: [
+      "Source-reported 0.69mm gauge — thicker than typical premium tournament strings.",
+      "Recommended tension 20-26 lb; the platform welcomes lower tensions than premium tournament strings.",
+      "Observer voice — niche brand string, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN source reviewer's evaluation of the Goshen Leiming 69 as a high-modulus club-durability string, observer commentary from club partners who restring frequently.",
+    facts: [
+      { label: "Gauge", value: "0.69mm (thicker than premium tournament strings)" },
+      { label: "Identity", value: "High-modulus club durability" },
+      { label: "Price tier", value: "Value-tier (~USD 11)" },
+    ],
+    calloutTitle: "Why thicker-gauge strings still have a buyer profile",
+    calloutBody:
+      "Most string marketing in 2026 focuses on thinner-gauge tournament-grade strings with peak repulsion claims. Thicker-gauge strings (0.69mm and above) have a real buyer profile that gets undersold: club players who break strings frequently, junior players developing technique, and multi-frame owners who restring on rotation all benefit from the cost-and-break-rate trade-off that thicker strings deliver.",
+    comparison: {
+      heading: "Goshen Leiming 69 vs mainstream durability and tournament strings",
+      columns: ["Goshen Leiming 69", "Yonex BG65", "Yonex BG80"],
+      rows: [
+        {
+          label: "Gauge",
+          values: ["0.69mm", "0.70mm", "0.68mm"],
+        },
+        {
+          label: "Identity",
+          values: ["High-modulus durability", "Mainstream durability", "All-round mid-tier"],
+        },
+        {
+          label: "Cost tier",
+          values: ["Value (USD 11)", "Mainstream (USD 14)", "Mainstream (USD 16)"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — niche brand string assessment with mainstream cross-reference",
+      context: "observer",
+      conditions: {
+        strings: "Tested on multiple club partner rackets at 22-24 lb",
+        opponents: "Division 4 Ireland practice partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex BG65 (mainstream durability)",
+        "Yonex BG80 (mainstream all-round)",
+        "Li-Ning L66 string",
+      ],
+      sourceAttribution:
+        "BadmintonCN source review of the Goshen Leiming 69; observer commentary by Rui Su from club partner stringing patterns.",
+    },
+    sections: [
+      {
+        heading: "What the Leiming 69 delivers",
+        body: "The Goshen Leiming 69 is a 0.69mm gauge club-durability string with a high-modulus core. Source reviewers position it as a value-tier durability pick — break resistance is the platform's strength, peak repulsion is honestly capped. The string welcomes a slightly lower tension range (20-26 lb) than premium tournament strings, which preserves the durability advantage while keeping the contact feel usable for club-level play. For cost-conscious players who restring frequently, the value math is straightforward: more sessions per restringing, lower cost per stringing.",
+      },
+      {
+        heading: "Who actually benefits from the Leiming 69",
+        body: "Three buyer profiles win on the Leiming 69: first, club players who break strings frequently (typically every 2-4 weeks of regular play) and want to minimise restringing cost without compromising playability. Second, junior players developing technique whose inconsistent contact patterns break premium strings faster than the savings justify. Third, multi-frame owners who restring multiple rackets on rotation and want value-tier strings on practice frames or warm-up rackets.",
+      },
+      {
+        heading: "Where the niche-brand ceiling shows up",
+        body: "Three areas where the Goshen niche-brand context limits the value proposition: first, peak repulsion is honestly capped — tournament players who win on snap response get less from the Leiming 69 than mainstream tournament strings. Second, resale and shop-floor availability outside China is thin compared to Yonex BG-series options. Third, stringing knowledge in non-Asian markets is smaller, which means some stringers may be unfamiliar with the platform's tension-window behaviour.",
+      },
+      {
+        heading: "How it compares to mainstream durability picks",
+        body: "Against the Yonex BG65: the BG65 is the mainstream durability standard with strong resale identity and broad retail availability. The Leiming 69 wins on cost (typically 20-25% cheaper) and matches the BG65 on durability honestly; the BG65 wins on the surrounding ecosystem. Against the Yonex BG80: the BG80 is a mid-tier all-round string that beats the Leiming 69 on contact feel and tension stability; the Leiming 69 wins on cost and slightly on raw durability.",
+      },
+      {
+        heading: "The honest buyer answer",
+        body: "Buy the Goshen Leiming 69 if you are a cost-conscious club player who restrings frequently, a junior player developing technique, or a multi-frame owner who restrings on rotation. Skip if you are a tournament player prioritising peak repulsion (consider Yonex BG80 Power or Kumpoo JS-63 instead), if you specifically want mainstream resale identity (BG65 or BG80 are the safer picks), or if you want sharp contact feel over durability (thinner-gauge tournament strings are the right direction). The Leiming 69 is an honest niche-brand pick for a specific value-conscious buyer profile.",
+      },
+    ],
+    cta:
+      "Open the finder with your stringing-frequency preference to compare the Goshen Leiming 69 against mainstream Yonex BG65 / BG80 and Li-Ning L66 alternatives.",
+    factChecks: [
+      {
+        sourceName: "Goshen Sport",
+        title: "Goshen Badminton — Leiming series",
+        section: "Leiming 69 product page",
+        checkedAt: "2026-05-21",
+        href: "https://www.goshen-sport.com/",
+        quote: "Leiming 69",
+        note:
+          "Goshen's catalogue confirms the Leiming 69 as a 0.69mm gauge club-durability string in the brand's premium line.",
+      },
+      {
+        sourceName: "IntoBadminton — Li-Ning L69 string review",
+        title: "Li-Ning L69 string review",
+        section: "Cross-brand string reference",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/li-ning-l69-string-review/",
+        quote: "L69",
+        note:
+          "Companion IntoBadminton coverage of the Li-Ning L69 provides the mainstream club-tier string reference; this Goshen Leiming 69 review focuses on the niche-brand value pick within the broader string market.",
+      },
+    ],
+  }),
+  review({
+    slug: "rsl-supreme-shuttle-review",
+    updatedAt: "2026-05-21",
+    title:
+      "RSL Supreme shuttle review: premium goose-feather quality at the Aerosensa-comparable tier",
+    dek:
+      "RSL's Supreme is positioned as a premium goose-feather shuttle competitive with Yonex Aerosensa. The honest read on flight quality, durability, and where it fits in serious club competition.",
+    verdict:
+      "Buy the RSL Supreme if you want premium goose-feather quality at a price tier competitive with Yonex Aerosensa; skip if your club specifically standardises on a different shuttle brand or you prioritise tournament-tier breakage resistance.",
+    bestFor: [
+      "Club competition players wanting premium goose-feather quality",
+      "Buyers cross-shopping outside the Yonex Aerosensa default",
+      "Clubs running tournament practice without paying tournament-tier prices",
+    ],
+    avoidIf: [
+      "Pure recreational players who don't need feather shuttle quality",
+      "Clubs standardised on a different shuttle brand for tournament consistency",
+      "Buyers prioritising the absolute best breakage resistance",
+    ],
+    setupNotes: [
+      "Source-reported goose-feather material with stable goose-knife-feather construction.",
+      "Speed code 77 (medium-fast flight) suited to most international club conditions.",
+      "Observer voice — shuttle review, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN source reviewer's evaluation of the RSL Supreme as a stable premium goose-feather shuttle in the Aerosensa-comparable tier, observer commentary from club practice usage.",
+    facts: [
+      { label: "Material", value: "Premium goose-feather" },
+      { label: "Speed code", value: "77 (medium-fast)" },
+      { label: "BWF approval", value: "Approved for tournament use" },
+    ],
+    calloutTitle: "Why shuttle brand choice matters for club competition",
+    calloutBody:
+      "Most badminton equipment buying decisions (rackets, shoes, strings) are deeply personal — each player picks based on their own technique and preferences. Shuttle choice is the opposite: the shuttle is typically chosen by the club or tournament rather than by the individual player, and consistency across sessions matters more than peak individual performance. The RSL Supreme matters because it offers premium goose-feather quality at a price tier competitive with the Yonex Aerosensa default — giving clubs and serious players a genuine cross-shop option.",
+    comparison: {
+      heading: "RSL Supreme vs Yonex Aerosensa vs RSL Classic Tourney",
+      columns: ["RSL Supreme", "Yonex Aerosensa 30", "RSL Classic Tourney"],
+      rows: [
+        {
+          label: "Material",
+          values: ["Premium goose-feather", "Premium goose-feather", "Duck-feather"],
+        },
+        {
+          label: "Tier",
+          values: ["Premium club / tournament", "Premium tournament default", "Club / league"],
+        },
+        {
+          label: "Price tier",
+          values: ["USD 32", "USD 35-40", "USD 24"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — RSL Supreme assessment against Aerosensa default at club competition",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland club competition partners",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Aerosensa 30",
+        "RSL Classic Tourney",
+        "Yonex Aerosensa 50",
+      ],
+      sourceAttribution:
+        "BadmintonCN source review of the RSL Supreme as a stable goose-feather flagship shuttle; observer commentary by Rui Su from club competition usage.",
+    },
+    sections: [
+      {
+        heading: "What the RSL Supreme delivers",
+        body: "The RSL Supreme is a premium goose-feather shuttle in the Aerosensa-comparable tier — BWF-approved for tournament use, speed code 77 (medium-fast flight suited to most international club temperatures), and a stable goose-knife-feather construction that source reviewers describe as 'stable goose-knife-feather flagship' (稳定的鹅刀翎门面). The flight quality is consistent session-to-session within the same batch, and the price tier is competitive with the Yonex Aerosensa 30 default at most retailers.",
+      },
+      {
+        heading: "How it compares to the Yonex Aerosensa default",
+        body: "Against the Yonex Aerosensa 30: the Aerosensa is the mainstream tournament default with category-leading flight consistency and the broadest community familiarity. The RSL Supreme competes credibly on flight quality and goose-feather standard, with the trade-offs being smaller than the brand-recognition gap suggests. As a club buyer: the Aerosensa remains the safer default for tournament-grade consistency; the RSL Supreme is the right cross-shop when regional pricing favours RSL or when the club wants a non-Yonex shuttle identity.",
+      },
+      {
+        heading: "How it compares to the RSL Classic Tourney",
+        body: "Within the RSL line, the Classic Tourney is the league/club-tier duck-feather option, sitting roughly USD 8 below the Supreme. The two shuttles serve different buyer profiles: the Classic Tourney is the right pick for regular club practice and league competition where cost matters more than peak flight quality; the Supreme is the right pick for serious tournament-grade play where flight consistency matters more than cost. Most clubs use both — Classic Tourney for practice, Supreme for ladders and competitions.",
+      },
+      {
+        heading: "Club buying patterns and consistency",
+        body: "Shuttle consistency across a club season is the dominant practical concern. Most clubs settle on one or two shuttle SKUs and stick with them for the full season to preserve flight-quality predictability across sessions. The RSL Supreme fits this pattern for clubs cross-shopping outside the Yonex Aerosensa default — once a club commits to RSL Supreme as the tournament shuttle, the season's flight quality stays consistent within the brand's tolerance. Switching brands mid-season is what destroys consistency, not which brand you start with.",
+      },
+      {
+        heading: "The honest buyer answer",
+        body: "Buy the RSL Supreme if your club is cross-shopping outside the Yonex Aerosensa default for tournament-grade shuttle quality, if regional pricing favours RSL, or if you specifically want a non-Yonex shuttle identity for serious play. Skip if your club is already standardised on Aerosensa (consistency matters more than which brand), if you are a pure recreational player who doesn't need feather shuttle quality (nylon shuttles like the Victor Carbonsonic MAX are the right pick), or if you prioritise the absolute best breakage resistance (consider higher-tier goose-feather options or the Aerosensa 50 instead).",
+      },
+    ],
+    cta:
+      "Open the finder with feather-shuttle preference and tournament-grade quality filter to compare the RSL Supreme against the Yonex Aerosensa family and the RSL Classic Tourney.",
+    factChecks: [
+      {
+        sourceName: "RSL",
+        title: "RSL Badminton — Supreme shuttle",
+        section: "Supreme product page",
+        checkedAt: "2026-05-21",
+        href: "https://www.rsl.dk/",
+        quote: "Supreme",
+        note:
+          "RSL's catalogue confirms the Supreme as a premium goose-feather BWF-approved tournament shuttle.",
+      },
+      {
+        sourceName: "Yonex",
+        title: "Yonex Aerosensa — premium goose-feather shuttle line",
+        section: "Cross-brand shuttle reference",
+        checkedAt: "2026-05-21",
+        href: "https://www.yonex.com/aerosensa",
+        quote: "Aerosensa",
+        note:
+          "Yonex's Aerosensa line is the mainstream premium goose-feather shuttle default; the RSL Supreme positions as a cross-brand alternative in the same tier.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
