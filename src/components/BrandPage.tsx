@@ -16,7 +16,7 @@ export type BrandLine = {
 export type BrandFaqItem = { q: string; a: string };
 
 export type BrandPageConfig = {
-  slug: "yonex" | "victor" | "li-ning";
+  slug: "yonex" | "victor" | "li-ning" | "bonny" | "kawasaki" | "kumpoo";
   brandName: string;
   brandNameZh: string;
   founded: number;
