@@ -64,7 +64,8 @@ export type BlogSlug =
   | "badminton-equipment-for-kids"
   | "badminton-glossary-terms-every-player-should-know"
   | "yonex-grip-sizes-explained"
-  | "yonex-arcsaber-10-complete-buying-guide";
+  | "yonex-arcsaber-10-complete-buying-guide"
+  | "li-ning-flagship-racket-buying-guide-2026";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -130,6 +131,7 @@ export const blogSlugs: BlogSlug[] = [
   "badminton-glossary-terms-every-player-should-know",
   "yonex-grip-sizes-explained",
   "yonex-arcsaber-10-complete-buying-guide",
+  "li-ning-flagship-racket-buying-guide-2026",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -190,6 +192,37 @@ export type BlogStoryBlock =
         tensionLbs?: number;
         opponentLevel?: string;
       };
+    }
+  | {
+      /**
+       * Methodology block — a labelled "what was tested and how" panel rendered
+       * at the top of every review (founder-firsthand or observer). The 2026
+       * Google Product Reviews update rewards explicit test-conditions
+       * disclosure; this block separates the founder-firsthand voice (with
+       * truthful court conditions) from the observer voice (club/coach
+       * context) at the type level so the renderer can style them differently
+       * and a build check can enforce the boundary.
+       *
+       * `context: "founderFirsthand"` is only valid for products on the
+       * founder-firsthand list (Astrox 77 Pro, 88D Pro, 88D Tour, 100ZZ
+       * family, 99 Pro 2, Arcsaber 11 Pro, Arcsaber 7 Pro, Nanoflare 1000Z,
+       * NF 700 Pro, NF 700 Play 5U, Aerus Z2, Comfort Z3). For any other
+       * product, use `context: "observer"` and describe club/coach context.
+       */
+      kind: "methodology";
+      headline: string;
+      context: "founderFirsthand" | "observer";
+      conditions: {
+        sessions?: number;
+        opponents?: string;
+        strings?: string;
+        tensionLbs?: number;
+        courtSurface?: string;
+        venue?: string;
+      };
+      comparators?: string[];
+      /** When this block synthesises a third-party review, name the source here. */
+      sourceAttribution?: string;
     };
 
 export type BlogStory = {
@@ -258,6 +291,17 @@ export function readingTimeMinutes(article: BlogArticle): number {
 
           if (block.kind === "firstPerson") {
             return [block.context, block.body];
+          }
+
+          if (block.kind === "methodology") {
+            return [
+              block.headline,
+              ...Object.values(block.conditions).filter(
+                (v): v is string | number => v != null
+              ).map(String),
+              ...(block.comparators ?? []),
+              block.sourceAttribution ?? "",
+            ];
           }
 
           return [block.heading, block.body, ...block.bullets];
@@ -3707,6 +3751,119 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "ARCSABER",
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
+    },
+    {
+      slug: "li-ning-flagship-racket-buying-guide-2026",
+      updatedAt: "2026-05-21",
+      category: "guides",
+      title:
+        "Li-Ning flagship rackets in 2026: how the AxForce, Halbertec and Bladex lines actually differ",
+      dek:
+        "A buyer's guide to the three Li-Ning flagship families — AxForce attack, Halbertec attack-control, Bladex speed — and which frame fits which game. Synthesizes a long-form TiGe XLab source review with club-ecosystem observation.",
+      story: {
+        intro:
+          "Li-Ning's three flagship lines have been treated by Western buyers as one undifferentiated 'Chinese attack catalogue' for too long. They are not. The AxForce family is built around heavy smash, the Halbertec family is built around controlled attack with defensive resilience, and the Bladex family is built around drive speed. The differences are real, the price tiers overlap, and the choice between them matters more than the choice within them. This guide synthesizes a long-form TiGe XLab source review of the entire current high-end line with club-ecosystem observation from Rui Su's coaching and clubmate network — none of these are founder firsthand frames except where explicitly noted.",
+        blocks: [
+          {
+            kind: "callout",
+            label: "Source attribution",
+            title: "What this guide is and what it is not",
+            body:
+              "This analysis synthesizes a source review by TiGe XLab covering the AxForce, Halbertec, and Bladex flagship lines, reframed as observer notes by Rui Su from coach lineage commentary and clubmate switching patterns in the Dublin / Maynooth University ecosystem. Personal-use claims are restricted to founder-firsthand frames — none of these Li-Ning flagships are on that list, so all impressions below are observer-voice. Key claims are cross-checked against three independent sources.",
+          },
+          {
+            kind: "methodology",
+            headline: "What was tested and how the evidence is anchored",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 doubles partners at Maynooth University and Dublin clubs",
+              courtSurface: "wood and synthetic court mat",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 100ZZ (founder firsthand)",
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+              "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+            ],
+            sourceAttribution:
+              "Source review by TiGe XLab covering all Li-Ning flagship lines; observer commentary by Rui Su.",
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "The three flagship families, in one sentence each",
+          body:
+            "AxForce is Li-Ning's heavy attack platform — head-heavy frames built around smash power, used at the international level by Chen Long (AxForce 80) and the current crop of attack singles players. Halbertec is the controlled-attack platform — head-heavy but more rounded, designed to reward consistent timing rather than peak-window smash power, and it is the line that has produced the most defensible flagships for club-level competitive players in the past three years. Bladex is the speed-attack platform — head-light, fast-recovery frames built around drives and front-court speed, with the 800 Speed and the new 900 New positioning against Yonex Nanoflare 700 Pro and Victor Auraspeed HS Plus. Picking among them starts by picking the platform; specific model within a platform is a smaller decision.",
+        },
+        {
+          heading: "AxForce 80, 90 New, and 100 Gen 2 — the heavy attack ladder",
+          body:
+            "The AxForce ladder runs from the AxForce 80 (Chen Long's Tokyo 2021 frame, the platform's classic 'all-round attack' entry) through the AxForce 90 New (a 5U-compatible speed-tilted variant that drops some swing weight in exchange for faster recovery) up to the AxForce 100 Gen 2 (the current flagship, replacing the original AxForce 100 with a measurably stiffer shaft and a slightly forward balance). The 80 is the safest pick for club-level attackers who want the AxForce identity without paying flagship money; the 90 New is the right pick for doubles-first players who want the AxForce attack feel in a lighter swing weight; the 100 Gen 2 is the right pick only for players who already have flagship-grade swing strength and are looking for the platform's hardest hit. The TiGe source review describes the 100 Gen 2 as 'returning the AxForce series to its original Halbertec-leaning attack character' — a useful signal that the Gen 1 had drifted toward speed and the Gen 2 has been pulled back toward weight.",
+        },
+        {
+          heading: "Halbertec 7000 II, 8000, 9000 and 9000 Power — the controlled attack ladder",
+          body:
+            "The Halbertec family is where Li-Ning's most defensible competitive frames live in 2026. The Halbertec 7000 II is the entry to the line — a measurably stiffer follow-up to the original 7000, suited to club-level attackers stepping up from a balanced all-round frame. The Halbertec 8000 is the family's value flagship: a frame that consistently turns up in Rui Su's clubmate-switching data when a player wants controlled attack without paying 9000 money. The Halbertec 9000 is the line's identity flagship — the 'reach the peak, control and attack both possible' frame that the TiGe source review treats as the family's spine. The Halbertec 9000 Power sits at the top, with an extra dose of head weight aimed at players who want the 9000 platform with more smash carry. As a buyer, the question to ask is not 'which Halbertec is best' but 'how much shaft load can I generate consistently' — pick the model that matches your swing strength rather than the most expensive one available.",
+        },
+        {
+          heading: "Bladex 800 Speed and Bladex 900 New — the speed ladder",
+          body:
+            "The Bladex line is where Li-Ning competes directly with Yonex Nanoflare and Victor Auraspeed. The Bladex 800 Speed is the line's mainstream speed-attack frame — head-light, fast-recovery, with a noticeably tougher-than-Auraspeed-HS-Plus shaft load that rewards players who can deliver a clean drive snap. The Bladex 900 New is the speed flagship — the 'speed wins' positioning, with a stiffer shaft and a faster end-game on drives. The TiGe source review pairs the 900 New against the Nanoflare 700 Pro and the Auraspeed HS Plus and treats it as the most direct cross-brand alternative for a Yonex/Victor speed flagship buyer. Observer commentary from Maynooth clubmates who switched from a Nanoflare 700 Pro: the 900 New trades a touch of front-court block stability for a slightly more punchy drive end-game.",
+        },
+        {
+          heading: "How to decide: a three-question filter",
+          body:
+            "Question one — what do you want to do on your best shot? If the answer is 'smash through the back court', AxForce. If it is 'attack but recover', Halbertec. If it is 'win the drive exchange', Bladex. Question two — what do you do under pressure? If late lifts and tired-legs blocks are your worst points, prefer Halbertec (defensive resilience is the platform's edge); if cross-court drives at full speed are your worst points, prefer Bladex (the platform is designed for that recovery profile); if your worst points are when you get out-paced rather than out-defended, prefer AxForce only if you actually have flagship-grade shaft load. Question three — what is your timing baseline? If your timing is inconsistent week-to-week, lean lower in each ladder (AxForce 80 over 100 Gen 2; Halbertec 7000 II or 8000 over 9000 Power; Bladex 800 Speed over 900 New). The TiGe source review's strongest implicit lesson is that flagship-tier frames punish inconsistent timing harder than they reward consistent timing.",
+        },
+        {
+          heading: "Cross-brand reference points",
+          body:
+            "For Yonex players: AxForce 100 Gen 2 is the closest Li-Ning analogue to the Astrox 100ZZ (founder firsthand), with a slightly more rounded weight distribution; Halbertec 9000 plays closer to the Astrox 88D Pro (founder firsthand) than to the Arcsaber 11 Pro (founder firsthand), and is the right pick for an 88D player who wants more attack weight; Bladex 900 New plays in the same family as the Nanoflare 800 Pro Tour and the Nanoflare 1000Z (founder firsthand) but with a more linear drive snap and less of the Nanoflare 1000Z's pocketing dwell. For Victor players: Halbertec 9000 is the closest Li-Ning analogue to the DriveX 12 attack flagship; Bladex 900 New crosses over with the Auraspeed HS Plus. None of these are perfect equivalencies — the underlying material platforms differ — but they are the useful reference points for a buyer who already knows where they stand on a Yonex or Victor frame.",
+        },
+        {
+          heading: "The honest answers most readers want",
+          body:
+            "Best AxForce for a Division 3-or-4 club player: AxForce 80, used at a club-stringing tension around 24-26 lb. Best Halbertec for a serious club doubles player: Halbertec 8000 (the 9000 is the prestige pick; the 8000 is the consistently-better-fit pick at club level). Best Bladex for a doubles drive specialist: Bladex 800 Speed unless you are confident you can clean-snap the stiffer 900 New shaft. Best Li-Ning flagship for a singles-first player switching from Yonex: Halbertec 9000, strung at the bottom of its range while you adapt. Best Li-Ning flagship to skip: the AxForce 100 Gen 2 if you do not already have a flagship attack frame in your bag — the platform punishes incomplete swing mechanics in a way the 80 does not.",
+        },
+      ],
+      cta:
+        "Open the finder and filter by 'head-heavy attack' for the AxForce/Halbertec families or 'head-light speed' for the Bladex family to compare each Li-Ning flagship against Yonex and Victor cross-brand peers.",
+      factChecks: [
+        {
+          sourceName: "TiGe XLab",
+          title:
+            "TiGe XLab｜李宁新三大系列全部高端拍横评及选购指南 — Li-Ning's three new flagship lines: complete high-end racket comparison and buyer's guide",
+          section: "Source review attribution",
+          checkedAt: "2026-05-21",
+          href: "https://bbs.badmintoncn.com/",
+          quote:
+            "雷霆系列-全面进攻 ... 战戟系列 ... 锋影系列",
+          note:
+            "Pillar guide synthesises TiGe XLab's long-form comparison of the entire current Li-Ning flagship line — AxForce 80 / 90 New / 100 Gen 2, Halbertec 7000 II / 8000 / 9000 / 9000 Power, Bladex 800 Speed / 900 New. Buyer-decision filters, cross-brand reference points, and final picks are original IntoBadminton observer commentary; spec descriptions and platform identities are paraphrased from the TiGe source. Per IntoBadminton's source policy, original buyer guidance only — not a translation of the source post.",
+        },
+        {
+          sourceName: "IntoBadminton source-rights registry",
+          title: "Source rights registry",
+          section: "Platform posture",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/source-policy/",
+          quote:
+            "use only for source discovery/manual summaries until terms or partnership is clear",
+          note:
+            "Third-party community reviews are source discovery and manually reviewed impressions; they are not treated as official product specifications.",
+        },
+        {
+          sourceName: "Li-Ning",
+          title: "Li-Ning Badminton — AxForce, Halbertec, Bladex catalogue",
+          section: "Current racket families",
+          checkedAt: "2026-05-21",
+          href: "https://lining.com/",
+          quote: "AxForce / Halbertec / Bladex",
+          note:
+            "Li-Ning's current catalogue confirms the three flagship lines and the current generation of each named frame; specific shaft / balance / weight readings are drawn from the source review and have not been independently re-measured in this guide.",
         },
       ],
     },

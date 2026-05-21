@@ -1,5 +1,38 @@
 import { describe, expect, test } from "vitest";
-import { blogArticles, blogSlugs, readingTimeMinutes } from "@/lib/blog";
+import {
+  blogArticles,
+  blogSlugs,
+  readingTimeMinutes,
+  type BlogStoryBlock,
+} from "@/lib/blog";
+
+// The founder-firsthand product list is authoritative — first-person voice
+// (and `methodology` blocks with `context: "founderFirsthand"`) may only
+// be used on articles whose primary product appears here. Everything else
+// MUST use `context: "observer"`. Mirrors project_author_voice memory.
+const FOUNDER_FIRSTHAND_SLUG_FRAGMENTS = [
+  "astrox-77-pro",
+  "astrox-88d-pro",
+  "astrox-88d-tour",
+  "astrox-100zz",
+  "astrox-99-pro-2",
+  "arcsaber-11-pro",
+  "arcsaber-7-pro",
+  "nanoflare-1000z",
+  "nanoflare-700-pro",
+  "nanoflare-700-play",
+  "aerus-z2",
+  "comfort-z3",
+];
+
+function slugAllowsFirsthandVoice(slug: string): boolean {
+  return FOUNDER_FIRSTHAND_SLUG_FRAGMENTS.some((fragment) =>
+    slug.includes(fragment)
+  );
+}
+
+const FIRST_PERSON_VERB_PATTERN =
+  /\b(i|i'?m|i'?ve|my|me|mine|we|we'?ve|we'?re|our|ours)\b/i;
 
 describe("blog publishing metadata", () => {
   test("keeps every English article reachable through static blog routes", () => {
@@ -125,6 +158,75 @@ describe("blog publishing metadata", () => {
       expect(article?.story?.intro.trim(), slug).not.toBe("");
       expect(readingTimeMinutes(article!), slug).toBeGreaterThanOrEqual(4);
     }
+  });
+
+  test("methodology blocks respect the founder-firsthand voice boundary", () => {
+    // Walks every published article and asserts:
+    //   1. A methodology block with context: "founderFirsthand" only appears
+    //      on articles whose slug references a founder-firsthand product.
+    //   2. A methodology block with context: "observer" never has a headline
+    //      using first-person verbs (I/we/my/our).
+    // The boundary is documented in project_author_voice memory and
+    // enforced here at the type+content layer.
+    for (const article of blogArticles.en) {
+      const methodologyBlocks = (article.story?.blocks ?? []).filter(
+        (block): block is Extract<BlogStoryBlock, { kind: "methodology" }> =>
+          block.kind === "methodology"
+      );
+
+      for (const block of methodologyBlocks) {
+        if (block.context === "founderFirsthand") {
+          expect(
+            slugAllowsFirsthandVoice(article.slug),
+            `${article.slug} uses founderFirsthand context but product is not on the firsthand list`
+          ).toBe(true);
+        } else {
+          // Observer voice — headline must not be first-person.
+          expect(
+            FIRST_PERSON_VERB_PATTERN.test(block.headline),
+            `${article.slug} observer methodology headline uses first-person verbs: "${block.headline}"`
+          ).toBe(false);
+        }
+      }
+    }
+  });
+
+  test("methodology block factors into reading-time estimate", () => {
+    // A synthetic article with one methodology block must produce a
+    // positive reading-time estimate without throwing on the discriminated
+    // union exhaustiveness.
+    const synthetic = {
+      slug: "racket-balance-vs-swing-speed" as const,
+      updatedAt: "2026-05-21",
+      category: "guides" as const,
+      title: "Methodology block coverage probe",
+      dek: "Synthetic article confirming methodology block reading-time path.",
+      story: {
+        intro: "Probe article body to exercise the methodology branch.",
+        blocks: [
+          {
+            kind: "methodology" as const,
+            headline: "Tested over four club sessions in Dublin",
+            context: "founderFirsthand" as const,
+            conditions: {
+              sessions: 4,
+              strings: "BG80",
+              tensionLbs: 26,
+              opponents: "Division 4 doubles partners",
+            },
+            comparators: ["Nanoflare 1000Z", "Astrox 88D Pro"],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "Why methodology disclosure matters",
+          body: "The 2026 Product Reviews update rewards explicit test-conditions disclosure.",
+        },
+      ],
+      cta: "Compare these rackets in the finder.",
+    };
+    expect(readingTimeMinutes(synthetic)).toBeGreaterThanOrEqual(1);
   });
 
   test("keeps published review articles grounded with fact-check source notes", () => {

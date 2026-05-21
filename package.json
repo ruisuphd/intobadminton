@@ -6,7 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/generate-product-images.mjs",
     "build": "next build",
-    "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/postbuild-seo-audit.mjs",
+    "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/check-source-attribution.mjs && node scripts/postbuild-seo-audit.mjs",
     "start": "next start",
     "lint": "eslint",
     "lint:glossary": "node scripts/check-glossary-links.mjs --warn",
