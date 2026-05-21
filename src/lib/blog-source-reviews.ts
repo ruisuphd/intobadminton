@@ -2014,4 +2014,245 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "victor-drivex-12-standalone-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Victor DriveX 12 standalone review: the Victor attack racket that does not pretend to be a 100ZZ",
+    dek:
+      "Removed from comparison framing, the DriveX 12 is a more honest attack racket than its 'vs Astrox 88D Pro' positioning suggests. Here is what it actually delivers and which player wins points with it.",
+    verdict:
+      "The DriveX 12 is the right pick for a competitive club doubles attacker who wants Victor's heavy-attack identity in a more forgiving package than the Auraspeed 99 line; skip if you want the absolute peak smash carry of the flagship class.",
+    bestFor: [
+      "Club doubles attackers who want a forgiving heavy-attack frame",
+      "Victor players moving up from a balanced all-round starter",
+      "Players who already use the Astrox 88D Pro and want a Victor alternative",
+    ],
+    avoidIf: [
+      "Players who want the absolute peak attack carry of flagship-class frames",
+      "Singles players who need a more demanding control profile",
+      "Recovery-priority doubles players (consider Auraspeed instead)",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~296-298mm.",
+      "Club-level starting tension 24-25 lb; the DriveX 12 welcomes a slightly higher tension than the typical Victor attack frame.",
+      "Observer voice — coach lineage and clubmate switching commentary, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN reviewer's standalone evaluation (全面进化·随心所驭), cross-referenced with Maynooth and Dublin club observations of players who moved from the Astrox 88D Pro to the DriveX 12.",
+    facts: [
+      { label: "Platform identity", value: "Heavy-attack with forgiving sweet spot" },
+      { label: "Source-reported balance", value: "~296-298mm" },
+      { label: "Buyer tier", value: "Competitive club doubles attacker" },
+    ],
+    calloutTitle: "Why the standalone read matters",
+    calloutBody:
+      "The DriveX 12 is almost always discussed as a Victor counterpoint to the Yonex Astrox 88D Pro. The standalone read matters because the DriveX 12's identity is its own — a forgiving heavy-attack frame that wins points by giving the player more usable contact across a wider swing window, not by matching the 88D Pro's smash carry. Treating it as a 'Victor's 88D Pro' undersells what the racket actually does well.",
+    comparison: {
+      heading: "DriveX 12 vs DriveX 10 vs Astrox 88D Pro 2024",
+      columns: ["DriveX 12", "DriveX 10", "Astrox 88D Pro 2024"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Forgiving heavy-attack", "Club-tier attack", "Controlled attack flagship"],
+        },
+        {
+          label: "Best at",
+          values: [
+            "Drive-into-smash sequences with margin",
+            "First head-heavy attack frame",
+            "Controlled attack across formats",
+          ],
+        },
+        {
+          label: "Forearm cost",
+          values: ["Moderate", "Low", "Moderate"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline:
+        "Observer notes from clubmates who moved from Astrox 88D Pro to DriveX 12 over a club season",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland doubles partners and club coaches",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, multiple Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+        "Victor DriveX 10",
+        "Victor Auraspeed 90K II",
+      ],
+      sourceAttribution:
+        "BadmintonCN reviewer's standalone deep-dive of the DriveX 12; observer commentary by Rui Su from club teammates' switching patterns.",
+    },
+    sections: [
+      {
+        heading: "What the DriveX 12 actually is",
+        body: "The DriveX 12 is a head-heavy attack racket that sits a tier above the DriveX 10 and competes directly with the Yonex Astrox 88D Pro 2024 on price and identity. Its differentiator is sweet-spot size: source reviewers consistently report a more usable hitting area than the 88D Pro at the same swing speed, which translates into more consistent contact on rushed or half-prepared shots. The trade-off is a marginally less decisive smash than the 88D Pro can deliver when both shots are clean. The DriveX 12 wins on average, not on peak.",
+      },
+      {
+        heading: "Who actually benefits from it",
+        body: "The pattern observed across the Dublin club ecosystem: a competitive doubles attacker who has spent a season on the DriveX 10 or a comparable mid-tier attack frame, and who wants to step up to a flagship-tier feel without paying the cost of an Auraspeed 99 J or an AxForce 100 Gen 2. The DriveX 12 gives that buyer most of the flagship attack experience while preserving more forearm endurance over long sessions. Less suited: players already at flagship-grade swing strength who would benefit more from the heavier-hitting frames.",
+      },
+      {
+        heading: "How it compares against the DriveX 10",
+        body: "The DriveX 10 is the value-tier sibling. Moving from the 10 to the 12 buys you: a slightly heavier head, a slightly stiffer shaft, and a measurably more decisive contact feel. The 12 punishes a tired swing more visibly than the 10 does. As a buyer, the question is whether you have enough consistent swing strength to make the upgrade worth the cost. If you played the DriveX 10 for a full club season and still felt under-resourced on the third-game smash, the 12 is worth the upgrade; if the 10 already delivered enough, the 12 is overspending.",
+      },
+      {
+        heading: "How it compares against the Astrox 88D Pro 2024",
+        body: "The Astrox 88D Pro 2024 (founder firsthand) is the cross-brand peer. Both racquets target the controlled-attack doubles player. The 88D Pro is slightly more demanding on swing preparation but rewards clean technique with a more decisive smash. The DriveX 12 is more forgiving across the swing window but loses some peak carry. As a Yonex player switching to Victor: the DriveX 12 will feel familiar in identity but more forgiving in execution. As a Victor player avoiding the cross-brand jump: the DriveX 12 is the cleanest 'Victor's answer to the 88D Pro' the line currently offers.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Setup: 4U/G5 at 25 lb on BG80 or VBS-66N as the default. Strung lower (24 lb) for the first few hours while the frame settles; raise gradually if it still has more to give. The DriveX 12 welcomes a higher tension than most Victor attack frames because its sweet spot is more forgiving and benefits from a tighter string-bed. Buy if you are a competitive club doubles attacker stepping up from a mid-tier attack frame and you want flagship feel with forgiveness. Skip if you already have flagship-grade swing strength (consider the Auraspeed 99 J or the AxForce 100 Gen 2) or if you want to stay at the value tier (the DriveX 10 remains a strong pick).",
+      },
+    ],
+    cta:
+      "Run the finder with controlled-attack style and intermediate-to-advanced level to compare the DriveX 12 against the Astrox 88D Pro 2024 and the Halbertec 9000.",
+    factChecks: [
+      {
+        sourceName: "Victor Badminton",
+        title: "Victor — DriveX series",
+        section: "DriveX 12 family page",
+        checkedAt: "2026-05-21",
+        href: "https://www.victorsport.com/products/dx-12",
+        quote: "DriveX 12",
+        note:
+          "Official Victor catalogue confirms the DriveX 12 as a current SKU in the DriveX line, distinct from the DriveX 10 and the ZSW signature variant.",
+      },
+      {
+        sourceName: "IntoBadminton — DriveX 12 vs Astrox 88D Pro",
+        title: "Victor DriveX 12 vs Astrox 88D Pro comparison",
+        section: "Existing cross-brand coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/victor-drivex-12-vs-astrox-88d-pro/",
+        quote: "DriveX 12 vs Astrox 88D Pro",
+        note:
+          "Companion cross-brand comparison piece provides the head-to-head context; this standalone review focuses on the DriveX 12 on its own terms.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-7000-original-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Li-Ning Halbertec 7000 (original) review: the transition frame the Halbertec line was built around",
+    dek:
+      "Before the 7000 II tightened the shaft, the original Halbertec 7000 was the line's accessible entry point — a balanced controlled-attack frame that bridges entry attackers into the AxForce / Halbertec family.",
+    verdict:
+      "Buy the original Halbertec 7000 if you are still building shaft load and you want a forgiving introduction to the Halbertec identity; otherwise the 7000 II is the more current pick at a similar price.",
+    bestFor: [
+      "Entry attackers building shaft load",
+      "Club-level doubles players wanting a forgiving Halbertec identity",
+      "Yonex Astrox Nextage players curious about the Li-Ning attack family",
+    ],
+    avoidIf: [
+      "Players already at flagship-grade swing strength (move up to the 8000 or 9000)",
+      "Buyers who can find a 7000 II at a similar price",
+      "Players who need a recovery-priority doubles frame (consider Bladex line)",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~294-298mm depending on production batch.",
+      "Club-level starting tension 22-24 lb; the original 7000's forgiving shaft welcomes a lower tension than the 8000 or 9000.",
+      "Observer voice — not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN community reviewer's hands-on evaluation of the original Halbertec 7000 (平衡中的操控·进攻与灵动), observer notes from Maynooth University clubmates using the 7000 as their first head-heavy attack frame.",
+    facts: [
+      { label: "Platform identity", value: "Entry Halbertec, forgiving shaft" },
+      { label: "Source-reported balance", value: "~294-298mm" },
+      { label: "Buyer tier", value: "Entry attacker building shaft load" },
+    ],
+    calloutTitle: "What the original 7000 actually delivers",
+    calloutBody:
+      "The original Halbertec 7000 is the line's accessible entry point — a balanced controlled-attack frame with a more forgiving shaft than the 8000 above it. Source reviewers consistently report a frame that rewards consistent technique without punishing swing variation, which makes it a defensible 'first head-heavy attack frame' for players moving up from balanced all-round starters. The 7000 II that followed it tightened the shaft and asks for more consistent swing strength; the original retains the forgiving identity that made the platform popular.",
+    comparison: {
+      heading: "Halbertec 7000 original vs 7000 II vs Halbertec 8000",
+      columns: ["7000 original", "7000 II", "Halbertec 8000"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Forgiving entry attack", "Stiffer follow-up", "Value flagship"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Entry attacker building shaft load",
+            "Club-level attacker stepping up",
+            "Serious club doubles player",
+          ],
+        },
+        {
+          label: "Shaft demand",
+          values: ["Low", "Moderate", "Moderate-to-high"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer notes from clubmates using the 7000 as their first head-heavy attack frame",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland doubles partners and club coaches",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, multiple Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning Halbertec 7000 II",
+        "Li-Ning Halbertec 8000",
+        "Yonex Astrox Nextage",
+      ],
+      sourceAttribution:
+        "BadmintonCN reviewer's standalone deep-dive of the original Halbertec 7000; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "Why the original 7000 still matters",
+        body: "The original Halbertec 7000 is the racket that gave the Halbertec line its initial club-level credibility. Players moving up from generic starter rackets — the Yonex Astrox Nextage tier or the Victor DriveX 10 tier — found in the 7000 a forgiving introduction to head-heavy attack without paying flagship money. The frame's strength is not peak smash carry but accessible attack identity: clean drives, controlled lifts, and a usable smash that does not require flagship-grade shoulder load. Two generations on, the original remains the right pick for the same buyer profile, often at a lower used-market price than the 7000 II.",
+      },
+      {
+        heading: "Where it stands in the line",
+        body: "Within the Halbertec ladder, the original 7000 sits below the 7000 II (which is stiffer and slightly heavier through the head), below the 8000 (the line's value flagship), and well below the 9000 and 9000 Power (the identity flagships). The line is deliberately structured as a progression — a buyer who plays the original 7000 confidently for a season is exactly the buyer the 8000 is designed for. Skipping straight from the 7000 to the 9000 is the most common mistake observed in the club ecosystem; the shaft load gap is too wide and the 9000 punishes the same incomplete swing the 7000 forgave.",
+      },
+      {
+        heading: "Who should buy it (and the used-market reality)",
+        body: "Buy if: you are a club-level player who has spent at least a season on a balanced all-round starter and you want to learn head-heavy attack feel without flagship cost; you have inconsistent week-to-week timing and need a forgiving shaft; you are budget-conscious and can find a clean used original 7000 at a meaningful discount versus a new 7000 II. Skip if: you already play at flagship-grade swing strength (the 8000 or 9000 is the right pick), you can find a 7000 II at a similar price (the II is the more current platform), or you need a recovery-priority doubles frame (the Bladex line is the correct direction).",
+      },
+      {
+        heading: "Setup recommendations",
+        body: "Strung 4U/G5 at 22-23 lb on BG80 or AS-EX for the first ten hours, raising to 24 lb only if the frame still has more to give and your timing is consistently clean. The original 7000 punishes high tension more than the 7000 II does because its shaft is more forgiving — a tighter string-bed transfers more force back to the player on rushed swings, defeating the racket's value. Lower tension preserves the forgiving identity that makes the 7000 the right learning frame.",
+      },
+      {
+        heading: "The honest buyer answer",
+        body: "Buy the original Halbertec 7000 if you find one in clean used condition at a meaningful discount, and your game needs a forgiving introduction to head-heavy attack. The platform has not been displaced by the 7000 II — it has been complemented by it, and both have legitimate buyer profiles. The mistake to avoid: paying close to 7000 II prices for the original. At similar money, the II is the more current platform. The original wins on the used market when its price reflects its age, and it loses when the listing price ignores that fact.",
+      },
+    ],
+    cta:
+      "Run the finder with controlled-attack style and club-level skill to compare the Halbertec 7000 against the 7000 II, the 8000, and the Astrox Nextage.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning Badminton — Halbertec series",
+        section: "Halbertec line catalogue",
+        checkedAt: "2026-05-21",
+        href: "https://lining.com/",
+        quote: "Halbertec 7000",
+        note:
+          "Li-Ning catalogue confirms the Halbertec line's progression structure with the 7000 (original) and 7000 II as the entry SKUs, the 8000 as the value flagship, and the 9000 / 9000 Power as the identity flagships.",
+      },
+      {
+        sourceName: "IntoBadminton — Halbertec 7000 II review",
+        title: "Halbertec 7000 II review",
+        section: "Existing sibling coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/li-ning-halbertec-7000-ii-review/",
+        quote: "Halbertec 7000 II",
+        note:
+          "Companion IntoBadminton review of the 7000 II clarifies the generational distinction; this article covers the original 7000 for buyers comparing the two on the used market.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];

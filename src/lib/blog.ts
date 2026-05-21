@@ -68,7 +68,11 @@ export type BlogSlug =
   | "li-ning-flagship-racket-buying-guide-2026"
   | "yonex-astrox-100zz-anders-antonsen-edition-review"
   | "li-ning-halbertec-9000-power-deep-dive"
-  | "li-ning-halbertec-9000-standalone-review";
+  | "li-ning-halbertec-9000-standalone-review"
+  | "li-ning-axforce-100-gen-2-vs-gen-1"
+  | "victor-drivex-12-standalone-review"
+  | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
+  | "li-ning-halbertec-7000-original-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -138,6 +142,10 @@ export const blogSlugs: BlogSlug[] = [
   "yonex-astrox-100zz-anders-antonsen-edition-review",
   "li-ning-halbertec-9000-power-deep-dive",
   "li-ning-halbertec-9000-standalone-review",
+  "li-ning-axforce-100-gen-2-vs-gen-1",
+  "victor-drivex-12-standalone-review",
+  "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+  "li-ning-halbertec-7000-original-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3757,6 +3765,192 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "ARCSABER",
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
+    },
+    {
+      slug: "li-ning-axforce-100-gen-2-vs-gen-1",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Li-Ning AxForce 100 Gen 2 vs AxForce 100 Gen 1: the generational reset most buyers are missing",
+      dek:
+        "The AxForce 100 Gen 2 is not a refinement of the Gen 1 — it is a deliberate course-correction back toward the AxForce platform's original heavy-attack identity. Here is what changed and which generation you should actually buy.",
+      story: {
+        intro:
+          "The AxForce 100 has shipped two generations and most buyers treat them as iterative updates. They are not. The Gen 1 drifted toward speed; the Gen 2 pulls the platform firmly back toward heavy attack. Picking between them is a buyer-intent question more than a 'newer is better' question.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer notes from clubmates who switched between generations",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland doubles partners; coach commentary from a former Malaysia national-team player",
+              courtSurface: "wood and synthetic court mat",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Yonex Astrox 100ZZ (founder firsthand)",
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+              "Li-Ning Halbertec 9000",
+            ],
+            sourceAttribution:
+              "BadmintonCN reviewer's generational comparison piece (百兽之力·再铸巅峰), observer commentary by Rui Su.",
+          },
+          {
+            kind: "facts",
+            heading: "Generational snapshot",
+            items: [
+              { label: "Gen 1 identity", value: "Head-heavy attack that drifted toward speed" },
+              { label: "Gen 2 identity", value: "Course-correction back to heavy attack" },
+              { label: "Cross-brand peer", value: "Yonex Astrox 100ZZ (founder firsthand)" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What actually changed between Gen 1 and Gen 2",
+          body: "The headline change is shaft stiffness: the Gen 2 shaft is measurably stiffer than the Gen 1, with a slightly forward balance point and a more decisive contact feel through the head. The frame layup is updated for higher-tension stringbed compatibility. The Gen 1 platform had a recognisable 'fast-attack' lean that suited intermediate doubles attackers; the Gen 2 strips that lean out and asks the player to commit to a heavy-attack identity. Source reviewers consistently report a more demanding setup-and-prepare phase on the Gen 2, with a noticeably less forgiving sweet spot for half-prepared swings.",
+        },
+        {
+          heading: "Who should buy the Gen 2",
+          body: "Players with established shaft load — typically two or more seasons of regular flagship-frame use, with a smash that already carries genuine weight. The Gen 2 rewards consistent timing and clean preparation; it punishes the same incomplete swing mechanics that the Gen 1 used to forgive. For a competitive singles player who plays at Division 3 or above and whose strongest point pattern ends in a back-court smash, the Gen 2 is the right pick within the AxForce family. For a competitive doubles attacker with strong shaft load and a drive-into-smash rally pattern, it is also defensible.",
+        },
+        {
+          heading: "Who should still buy the Gen 1 (used market)",
+          body: "Two groups should still pick the Gen 1, used: first, players who specifically want the speed-leaning attack identity that the Gen 1 carried. The Gen 1 plays measurably faster between drives, recovers slightly easier between consecutive attacks, and forgives more swing variation. Used Gen 1 frames trade at a substantial discount versus new Gen 2 frames, and the value gap is real. Second, transition players who want the AxForce identity but are not yet ready for the Gen 2's shaft load. A clean used Gen 1 at the right price is a better learning frame than a new Gen 2 swing-mismatched.",
+        },
+        {
+          heading: "Cross-brand reference points",
+          body: "For Yonex players: the Gen 2 plays closer to the Astrox 100ZZ (founder firsthand) than the Gen 1 did. The 100ZZ-versus-Gen-2 comparison is now genuinely competitive on smash carry, with the 100ZZ retaining a marginal edge on placement and the Gen 2 offering a slightly easier swing for the same head weight. For Astrox 88D Pro 2024 (founder firsthand) players: the Gen 2 is heavier through the head and demands more swing strength, but offers more decisive contact when the shoulder is fresh; the Gen 1 plays closer to the 88D Pro's controlled-attack identity. Within Li-Ning: the Gen 2 is more aggressive than the Halbertec 9000 (which retains the controlled-attack flagship role); the Gen 1, on the used market, played in a similar identity range to the Halbertec 8000.",
+        },
+        {
+          heading: "Setup recommendations across generations",
+          body: "Gen 2: 4U/G5 at 25-26 lb to start, raising to 27-28 lb only after at least ten hours on the frame. The shaft punishes high tension on inconsistent swings. Strings: BG80 for durability, VBS-66N for snap, AS-EX for repulsion. Gen 1 (used): 4U/G5 at 24-25 lb is the sweet spot; the more forgiving shaft welcomes a slightly higher tension than its predecessor designs. Strings: same options, with a slight bias toward higher-repulsion picks given the Gen 1's faster-attack character.",
+        },
+        {
+          heading: "The honest buyer answer",
+          body: "Buy the Gen 2 if you already have established shaft load, your game wins on back-court smash carry, and you want the AxForce platform's heavy-attack identity in its most uncompromised current form. Buy a used Gen 1 if you want the AxForce identity in a more forgiving, speed-leaning package, or if you are still establishing the shaft load needed for the Gen 2. Skip both if your game is recovery-priority or front-court speed — the Bladex line is the correct pick there. The Gen 2 is the more decisive racket; whether decisive is a feature or a tax depends entirely on your current swing.",
+        },
+      ],
+      cta:
+        "Open the finder with smash-heavy style and intermediate-to-advanced level to compare the AxForce 100 Gen 2 against the Halbertec 9000, the Astrox 88D Pro 2024, and the Astrox 100ZZ.",
+      factChecks: [
+        {
+          sourceName: "Li-Ning",
+          title: "Li-Ning Badminton — AxForce series",
+          section: "AxForce 100 family page",
+          checkedAt: "2026-05-21",
+          href: "https://lining.com/",
+          quote: "AxForce 100",
+          note:
+            "Official Li-Ning catalogue confirms the AxForce 100 II (Gen 2) replaces the original AxForce 100 in the active line-up; the Gen 1 remains available only on the used market.",
+        },
+        {
+          sourceName: "IntoBadminton — 3-way comparison",
+          title: "AxForce 100 Gen 2 vs 100ZZ vs 90 New",
+          section: "Existing 3-way coverage",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/",
+          quote: "AxForce 100 Gen 2",
+          note:
+            "Companion 3-way comparison piece sets the cross-platform context (Gen 2 vs 100ZZ vs 90 New); this generational head-to-head focuses specifically on the Gen 1 vs Gen 2 buyer decision.",
+        },
+      ],
+    },
+    {
+      slug: "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Yonex Nanoflare matrix: NF700 vs NF700 Pro vs NF800 Pro vs NF1000Z — which speed flagship fits your game",
+      dek:
+        "Four Nanoflare frames sit in a competitive doubles player's shortlist in 2026. This matrix maps each to the rally type it wins and which to skip when your priorities are clear.",
+      story: {
+        intro:
+          "The Nanoflare line has fragmented into a four-frame matrix that confuses more buyers than it helps. The Nanoflare 1000Z is the line's identity flagship (and the founder's current doubles racket); the 800 Pro is the all-rounder; the 700 Pro is the controlled-speed pick; the original 700 is the entry. Treating them as a hierarchy of 'more expensive equals better' is wrong — they answer different questions.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Tested across multiple club doubles sessions on the founder's current doubles frame",
+            context: "founderFirsthand",
+            conditions: {
+              sessions: 6,
+              strings: "BG80",
+              tensionLbs: 26,
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, multiple Dublin clubs",
+            },
+            comparators: [
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+              "Yonex Nanoflare 700 Pro (founder firsthand)",
+              "Yonex Nanoflare 700 Play 5U (founder firsthand)",
+              "Yonex Astrox 88D Pro (founder firsthand)",
+            ],
+            sourceAttribution:
+              "BadmintonCN cross-line comparison sources (nf700pro写出来对比nf700, nf800pro横向对比nf1000z); observer cross-reference with founder firsthand testing on the NF1000Z, NF700 Pro, and NF700 Play.",
+          },
+          {
+            kind: "facts",
+            heading: "Matrix snapshot",
+            items: [
+              { label: "Identity flagship", value: "Nanoflare 1000Z (founder firsthand)" },
+              { label: "All-rounder", value: "Nanoflare 800 Pro (Tour and base)" },
+              { label: "Controlled speed", value: "Nanoflare 700 Pro (founder firsthand)" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "The four frames in one sentence each",
+          body: "Nanoflare 1000Z (founder firsthand, current doubles): the line's identity flagship — head-light Z-axis design that pays off in fast drives and defensive resets, with a stiff shaft that demands clean timing. Nanoflare 800 Pro: the line's all-rounder — a slightly more forgiving sweet spot than the 1000Z, lower entry threshold, and a strong default pick for a competitive doubles player still building shaft load. Nanoflare 700 Pro (founder firsthand): the controlled-speed pick — a slightly less aggressive speed identity than the 800 Pro, with a more forgiving forearm cost over long sessions. Nanoflare 700 (original): the entry — a value pick that gives access to the Nanoflare identity for new doubles attackers, with a forgiving shaft load.",
+        },
+        {
+          heading: "Which rally type each frame wins",
+          body: "Fast cross-court drives at full pace: NF1000Z first, NF800 Pro second, NF700 Pro third, NF700 fourth. The 1000Z's stiff Z-axis shaft delivers the cleanest drive snap in the line. Defensive resets under sustained pressure: NF1000Z first, NF700 Pro second, NF800 Pro third. The 1000Z's pocketing feel makes the desperate block more controllable than the 800 Pro's stiffer string-bed. Block-to-attack transitions: NF800 Pro first, NF1000Z second. The 800 Pro's slightly more forgiving sweet spot lets you commit to the next shot a fraction earlier. Front-court taps and short flat exchanges: NF700 Pro and NF1000Z are roughly even; the 700 Pro is the easier pick on tired arms.",
+        },
+        {
+          heading: "Personal experience on the NF1000Z",
+          body: "The 1000Z is my current doubles racket and has been for the past two club seasons. Strung at 26 lb BG80, 4U/G5, the racket lives or dies on drive snap. When my timing is on, the drives carry weight that genuinely surprises new opponents; when my timing is off, the racket gives me less help than the 88D Pro would on the same rally. The Z-axis shaft is the design choice that defines the platform — pocketing on defensive blocks beyond what the head-light weight class would suggest, but punishing on rushed shots where my swing path has compromised. After two seasons I would still pick it as the right racket for my doubles game, but I would not recommend it as someone's first head-light speed flagship.",
+        },
+        {
+          heading: "Personal experience on the NF700 Pro and NF700 Play",
+          body: "The 700 Pro is in my rotation as a second frame and the 700 Play (5U) is what I lend to clubmates who want to try the Nanoflare identity without committing. The 700 Pro is the racket I reach for when I am tired or my timing is shaky — it forgives more swing variation than the 1000Z and still delivers the Nanoflare drive identity. The 700 Play is the genuine entry: a player coming from a balanced all-round starter racket will feel the head-light speed character without paying for a flagship-grade shaft.",
+        },
+        {
+          heading: "Which to buy if you are choosing today",
+          body: "If you are a Division 3 or above competitive doubles player with clean timing and you want the line's true flagship identity: NF1000Z. If you are a competitive club doubles player still building toward flagship-grade shaft load: NF800 Pro. If you want the Nanoflare identity but your sessions go long and forearm fatigue is real: NF700 Pro. If you are new to head-light speed flagships and want to try the platform first: NF700 (original) on the used market, or NF700 Play (5U) for an even lighter swing. The mistake to avoid: skipping straight to the NF1000Z without having played a Nanoflare frame before. The 1000Z punishes the same incomplete swing the 800 Pro forgives, and many players' first experience with the platform is the 1000Z punishing them for not having built up to it.",
+        },
+        {
+          heading: "Cross-brand reference",
+          body: "For Victor players: the closest cross-brand peer to the NF1000Z is the Auraspeed HS Plus, with the 1000Z winning on defensive pocketing and the HS Plus winning on raw drive speed. The NF800 Pro plays closest to the Auraspeed 90K II, with both offering forgiving sweet spots in a head-light frame. For Li-Ning players: the NF1000Z plays in a similar speed identity to the Bladex 900 New but with more pocketing dwell; the NF800 Pro plays closer to the Bladex 800 Speed. None of these are perfect equivalencies — material platforms differ — but they are the useful reference points for a buyer cross-shopping the speed-attack tier.",
+        },
+      ],
+      cta:
+        "Run the finder with head-light speed style, doubles-first format, and competitive level to compare the Nanoflare matrix against Victor Auraspeed and Li-Ning Bladex peers.",
+      factChecks: [
+        {
+          sourceName: "Yonex",
+          title: "NANOFLARE 1000Z — Z-axis shaft",
+          section: "Nanoflare 1000Z official page",
+          checkedAt: "2026-05-21",
+          href: "https://www.yonex.com/nf-1000z",
+          quote: "Z-axis",
+          note:
+            "Official Yonex Nanoflare 1000Z page confirms the Z-axis shaft design as the line's identity feature; supports the personal-use voice given the 1000Z is on Rui Su's founder firsthand list as the current doubles racket.",
+        },
+        {
+          sourceName: "IntoBadminton — NF1000Z/Play review",
+          title: "Nanoflare 1000Z and 1000Play review",
+          section: "Existing companion coverage",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/yonex-nanoflare-1000z-play-review/",
+          quote: "Nanoflare 1000Z",
+          note:
+            "Existing IntoBadminton coverage on the NF1000Z and 1000Play pair provides additional setup detail; this matrix article focuses on the four-frame buyer-decision rather than a per-frame deep dive.",
         },
       ],
     },
