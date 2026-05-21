@@ -2255,4 +2255,355 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "yonex-astrox-99-pro-gen-1-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Yonex Astrox 99 Pro Gen 1 review: the original power-singles frame that still has a buyer profile",
+    dek:
+      "Before the Gen 2 stiffened the shaft and the Gen 3 doubled down on heavy attack, the original Astrox 99 Pro was Viktor Axelsen's title-winning frame. Here is what it actually plays like and which buyer should still chase it on the used market.",
+    verdict:
+      "The original Astrox 99 Pro is the right used-market pick for a power-singles player who wants the platform's identity in a more forgiving package than the Gen 2 or Gen 3; skip if you have flagship-grade swing strength and want the line's current peak.",
+    bestFor: [
+      "Power-singles players building toward flagship swing strength",
+      "Used-market buyers who want the 99 Pro identity at a discount",
+      "Astrox 88D Pro players curious about the 99 line",
+    ],
+    avoidIf: [
+      "Players already at flagship-grade swing strength (move up to Gen 2 or Gen 3)",
+      "Doubles-first players (consider the 88D Pro 2024 or Nanoflare 1000Z)",
+      "Buyers who can find a Gen 2 at a similar used-market price",
+    ],
+    setupNotes: [
+      "Source-reported 3U-4U weights; original frame balance ~302mm.",
+      "Recommended starting tension 24-25 lb at the original spec; the Gen 1's shaft welcomes a slightly lower tension than the Gen 2.",
+      "Observer voice — Gen 1 is not on Rui Su's founder firsthand list (Gen 2 is).",
+    ],
+    sourceHook:
+      "BadmintonCN community curiosity-series reviewer's hands-on of the original 99 Pro, observer commentary from Maynooth and Dublin club players who used the original as their first power-singles frame.",
+    facts: [
+      { label: "Generation identity", value: "Original Astrox 99 Pro (pre-Gen 2)" },
+      { label: "Source-reported balance", value: "~302mm" },
+      { label: "Used-market status", value: "Discontinued, used-market only" },
+    ],
+    calloutTitle: "Why the Gen 1 still matters",
+    calloutBody:
+      "The original Astrox 99 Pro is Viktor Axelsen's title-winning frame from the period before the Gen 2 and Gen 3 redesigns. Source reviewers consistently report the original as more forgiving than its successors — slightly less stiff shaft, slightly more usable sweet spot — while retaining the recognisable 99 Pro power-singles identity. For a buyer building toward flagship swing strength on the platform, the Gen 1 used market offers a meaningful price-versus-feel improvement over jumping straight to the current Gen 3.",
+    comparison: {
+      heading: "Astrox 99 Pro across generations",
+      columns: ["Gen 1 (original)", "Gen 2", "Gen 3 (current)"],
+      rows: [
+        {
+          label: "Shaft stiffness",
+          values: ["Most forgiving", "Stiffer than Gen 1", "Stiffest"],
+        },
+        {
+          label: "Buyer fit",
+          values: ["Building flagship swing", "Established singles player", "Peak power player"],
+        },
+        {
+          label: "Market status",
+          values: ["Used market only", "Active (transitioning)", "Current SKU"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer notes from clubmates using the Gen 1 as their first power-singles frame",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland singles partners and club coaches",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 99 Pro 2 (founder firsthand)",
+        "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+      ],
+      sourceAttribution:
+        "BadmintonCN community curiosity-series review of the original 99 Pro; observer commentary by Rui Su (Gen 2 is on firsthand list, Gen 1 is not).",
+    },
+    sections: [
+      {
+        heading: "What the original 99 Pro actually plays like",
+        body: "The original Astrox 99 Pro is a head-heavy power-singles frame with a notably stiff shaft (though less stiff than its successors), a forward balance point around 302mm, and a recognisable smash carry signature. The platform's identity is power on the back-court swing: the racket rewards a clean preparation and a deliberate, weighted swing path through the shuttle. Compared to the Gen 2 (founder firsthand), the original is slightly more forgiving on imperfect timing and slightly less decisive on clean smashes — the trade-off most older flagship frames carry versus their successors.",
+      },
+      {
+        heading: "Who should buy it on the used market",
+        body: "Three buyer profiles win on the original Gen 1 used market: first, power-singles players building toward flagship swing strength who want to learn the 99 Pro identity without paying current-Gen prices. Second, established players who tried the Gen 2 or Gen 3 and found them too punishing — the Gen 1 may suit their swing better. Third, collectors of Axelsen's title-winning equipment from his peak era. For all three, the used market offers genuine value if the racket is in clean condition and the price reflects its age.",
+      },
+      {
+        heading: "What to check when buying used",
+        body: "Frame condition matters more on the Gen 1 than on most flagships because the racket is now 5-7 years old depending on the production batch. Check the T-joint for hairline cracks, inspect the grommets for compression and replacement work, and ask the seller specifically whether the racket has ever been off the stringing machine surface with damage. Counterfeit Astrox 99 Pro frames exist in the used market; pay for community authentication if the price suggests authenticity is worth verifying. A clean original 99 Pro should still string to 26-27 lb without concern; if the listing description hints at any frame damage, walk away.",
+      },
+      {
+        heading: "How it compares to the Gen 2",
+        body: "The Gen 2 (founder firsthand, current Astrox 99 Pro 2 SKU) is the current production version of the platform with a stiffer shaft and a slightly more decisive contact. Players who can deliver clean swings consistently will get more from the Gen 2; players still building toward that consistency will find the Gen 1 more forgiving. Personal experience on the Gen 2 confirms it punishes incomplete swings harder than the original did — exactly the trade-off that makes the Gen 1 a defensible used-market choice for buyers not yet at flagship-grade swing strength.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 24-25 lb on AS-EX or BG80 for the first ten hours, raising to 26 lb only if the racket still has more to give. The original Gen 1 shaft does not punish high tension as visibly as the Gen 2 — the more forgiving stiffness handles a tighter string-bed with less back-pressure to the player. Buy if you find a clean copy at a meaningful discount versus the Gen 2; skip if the used market price is within 15% of a new Gen 2 (the current platform is the better-value pick at that price gap). Skip outright if you want the line's peak — the Gen 3 is the current answer for that profile.",
+      },
+    ],
+    cta:
+      "Run the finder with smash-heavy style and competitive singles level to compare the Astrox 99 Pro family across generations.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ASTROX 99 PRO — power singles platform",
+        section: "Astrox 99 family page",
+        checkedAt: "2026-05-21",
+        href: "https://www.yonex.com/astrox-99-pro",
+        quote: "ASTROX 99 PRO",
+        note:
+          "Official Yonex Astrox 99 Pro family page confirms the platform's evolution across three generations; this article covers the original Gen 1 as a used-market pick distinct from the current Gen 3 SKU.",
+      },
+      {
+        sourceName: "IntoBadminton — 99 Pro 2 deep-dive",
+        title: "Yonex Astrox 99 Pro 2 deep-dive",
+        section: "Existing Gen 2 companion coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/yonex-astrox-99-pro-2-deep-dive/",
+        quote: "Astrox 99 Pro 2",
+        note:
+          "Companion IntoBadminton coverage of the Gen 2 (founder firsthand) provides the current-platform context; this Gen 1 review focuses on the used-market buyer decision.",
+      },
+    ],
+  }),
+  review({
+    slug: "yonex-arcsaber-7-tour-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Yonex Arcsaber 7 Tour review: the middle child that actually fits the most buyers",
+    dek:
+      "The Arcsaber 7 Pro gets the headlines and the 7 Play gets the entry pricing, but the 7 Tour is quietly the right answer for the largest slice of the Arcsaber 7 line's buyer base.",
+    verdict:
+      "The Arcsaber 7 Tour is the most defensible pick within the Arcsaber 7 line for a club-level player who wants the platform's control identity in a softer, easier-to-swing package than the 7 Pro.",
+    bestFor: [
+      "Club-level control players moving up from balanced all-round starters",
+      "Players who tried the 7 Pro and found it too demanding",
+      "Buyers who want the Arcsaber control identity without the 11 Pro tax",
+    ],
+    avoidIf: [
+      "Players who already play the 7 Pro and want a similar feel (stay with the Pro)",
+      "Beginners who would benefit from the more forgiving 7 Play",
+      "Attack-first players (consider Astrox 88D Pro or 99 Pro family)",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~290mm.",
+      "Club-level starting tension 23-24 lb; the Tour welcomes a softer string-bed than the 7 Pro.",
+      "Observer voice — the 7 Tour is not on the founder firsthand list (the 7 Pro and 11 Pro are).",
+    ],
+    sourceHook:
+      "BadmintonCN curiosity-series reviewer's hands-on of the 7 Tour (小恶魔系小姨子), observer commentary from clubmates moving up from balanced all-round starters at Maynooth and Dublin clubs.",
+    facts: [
+      { label: "Line position", value: "Middle of the Arcsaber 7 lineage" },
+      { label: "Source-reported balance", value: "~290mm" },
+      { label: "Buyer tier", value: "Club-level control player" },
+    ],
+    calloutTitle: "Why the Tour deserves its own review",
+    calloutBody:
+      "The Arcsaber 7 Tour is consistently overshadowed by the 7 Pro in the line's own marketing and by the 11 Pro in cross-line buying decisions. That oversight matters because the Tour is genuinely the right pick for the largest slice of the Arcsaber 7 buyer base: club-level players moving up from a balanced all-round starter, who want the platform's control identity but find the 7 Pro too demanding and the 7 Play too entry-level.",
+    comparison: {
+      heading: "Arcsaber 7 lineage at a glance",
+      columns: ["7 Tour", "7 Pro", "7 Play"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Control with forgiveness", "Control flagship", "Entry control"],
+        },
+        {
+          label: "Shaft",
+          values: ["Medium", "Medium-stiff", "Flexible"],
+        },
+        {
+          label: "Buyer fit",
+          values: ["Club-level control player", "Established control player", "New player"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer notes from clubmates moving up from balanced all-round starters",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland mixed-level practice partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Arcsaber 7 Pro (founder firsthand)",
+        "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+        "Yonex Arcsaber 7 Play",
+      ],
+      sourceAttribution:
+        "BadmintonCN community review of the 7 Tour; observer commentary by Rui Su (the 7 Pro and 11 Pro are founder firsthand; the 7 Tour is observer-only).",
+    },
+    sections: [
+      {
+        heading: "What the 7 Tour actually delivers",
+        body: "The Arcsaber 7 Tour is a head-light to even-balance control frame with a medium shaft, a balance point around 290mm, and a forgiving sweet spot suited to club-level swing consistency. Compared to the 7 Pro (founder firsthand), the Tour is noticeably easier to swing, more forgiving on imperfect timing, and slightly less decisive on cross-court clears. Compared to the 7 Play, the Tour delivers a measurably more capable platform — the shaft is stiffer enough to reward clean preparation, and the frame layup is closer to the 7 Pro than to a starter racket.",
+      },
+      {
+        heading: "Who actually benefits from the Tour",
+        body: "The buyer profile is specific: a club-level player who has spent at least one season on a balanced all-round starter, whose game wins on placement and consistency rather than power, and who wants the Arcsaber platform's control identity in a more accessible package than the 7 Pro. The pattern observed at Maynooth University clubmates: a transition from a beginner racket to the 7 Tour is consistently smoother than a transition from the same starter directly to the 7 Pro, with the Tour delivering most of the playing experience without the shaft-load gap.",
+      },
+      {
+        heading: "How it compares to the 7 Pro",
+        body: "The 7 Pro is the line's flagship and the founder's prior singles control frame (now replaced by the 11 Pro). The Pro is more demanding on swing preparation, more decisive on contact, and more rewarding to consistent technique. The Tour is the version of the same platform that does not require flagship-grade timing. As a buyer: pick the Tour if you would value forgiveness over peak performance; pick the Pro if you already have established control-frame swing strength and want the platform's flagship feel. The price gap between the two is meaningful and is the correct lens for the decision.",
+      },
+      {
+        heading: "How it compares to the 11 Pro and cross-platform peers",
+        body: "The Arcsaber 11 Pro (founder firsthand, current singles racket) is the platform's true flagship — head-heavy by Arcsaber standards, slightly more aggressive on attack, and a measurably more capable singles frame. The 11 Pro is the right pick for advanced singles players; the 7 Tour is the right pick for club-level singles or doubles players who want a control identity without the 11 Pro's price or swing demand. Cross-platform peers: the 7 Tour plays in a similar buyer-decision range to the Victor Auraspeed 90K II (with the Auraspeed leaning more toward doubles speed) and the Li-Ning Halbertec 7000 II (with the Halbertec leaning more toward attack).",
+      },
+      {
+        heading: "Setup recommendations and the buying decision",
+        body: "Strung 4U/G5 at 23-24 lb on BG80 or AS-EX for the first ten hours, raising to 25 lb only if the racket asks for more. The 7 Tour benefits from a softer string-bed than the 7 Pro because its forgiving sweet spot welcomes the slight pocketing dwell. Buy if you are a club-level control player moving up from a balanced starter; skip if you would benefit from the 7 Pro's flagship feel (assuming swing strength is there) or the 7 Play's beginner pricing (if budget is the priority). The 7 Tour is the line's underrated middle, and the price-to-performance ratio is the most defensible in the Arcsaber 7 family.",
+      },
+    ],
+    cta:
+      "Run the finder with placement-first or all-round style and club-level skill to compare the Arcsaber 7 Tour against the 7 Pro, 11 Pro, and cross-brand peers.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ARCSABER 7 series — Arcsaber 7 Tour",
+        section: "Arcsaber 7 lineage page",
+        checkedAt: "2026-05-21",
+        href: "https://www.yonex.com/arcsaber-7-tour",
+        quote: "ARCSABER 7 TOUR",
+        note:
+          "Official Yonex Arcsaber 7 family page confirms the 7 Tour as a distinct SKU between the 7 Pro and 7 Play, with its own shaft and balance specification.",
+      },
+      {
+        sourceName: "IntoBadminton — Arcsaber 7 Pro review",
+        title: "Arcsaber 7 Pro review",
+        section: "Sibling line coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/yonex-arcsaber-7-pro-review/",
+        quote: "Arcsaber 7 Pro",
+        note:
+          "Companion IntoBadminton coverage of the 7 Pro (founder firsthand) provides the line context; this 7 Tour review focuses on the middle-child buyer-decision angle.",
+      },
+    ],
+  }),
+  review({
+    slug: "victor-sonic-boom-pro-budget-attack-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Victor Sonic Boom Pro review: the sub-USD-100 attack racket that does not pretend to be a flagship",
+    dek:
+      "Most budget attack rackets cut corners on the shaft or the frame layup. The Sonic Boom Pro keeps the head weight signature, accepts a softer shaft, and delivers an honest first attack frame for under USD 100.",
+    verdict:
+      "The Sonic Boom Pro is the most defensible budget attack pick under USD 100 for a first-year club doubles attacker who wants head-heavy feel without paying flagship money; skip if you have established shaft load and would benefit from a mid-tier frame.",
+    bestFor: [
+      "First-year club doubles attackers building shaft load",
+      "Junior players moving up from beginner rackets",
+      "Budget-conscious players who want a Victor attack identity",
+    ],
+    avoidIf: [
+      "Established attackers with flagship-grade swing strength",
+      "Players who want a balanced or speed identity (this is attack-first)",
+      "Singles-first players (consider the DriveX 12 or Auraspeed line)",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~296mm.",
+      "Club-level starting tension 22-24 lb; the Sonic Boom Pro shaft is softer than mid-tier Victor attack frames.",
+      "Observer voice — value-tier frame, not on the founder firsthand list.",
+    ],
+    sourceHook:
+      "BadmintonCN reviewer's value-attack assessment of the Sonic Boom Pro, observer commentary from new Maynooth University club members who chose it as their first attack frame.",
+    facts: [
+      { label: "Platform identity", value: "Budget head-heavy attack" },
+      { label: "Price tier", value: "~USD 79-99 (RMB 300 range)" },
+      { label: "Buyer tier", value: "First-year club doubles attacker" },
+    ],
+    calloutTitle: "Why a sub-USD-100 attack racket can be honest",
+    calloutBody:
+      "Most budget attack rackets fail by cutting the wrong corners — either the shaft is too soft to deliver the attack identity the marketing promises, or the frame layup is so generic that the head weight signature disappears. The Sonic Boom Pro avoids both failures: the shaft is softer than mid-tier Victor attack frames but firm enough to deliver the platform identity, and the head weight signature is preserved within the budget tier's manufacturing constraints. The racket does not pretend to be a flagship; it just delivers an honest first attack frame at an honest price.",
+    comparison: {
+      heading: "Sonic Boom Pro vs other budget attack picks",
+      columns: ["Sonic Boom Pro", "DriveX 10 (Victor)", "AxForce 10 (Li-Ning)"],
+      rows: [
+        {
+          label: "Price tier",
+          values: ["~USD 79-99", "~USD 119", "~USD 109"],
+        },
+        {
+          label: "Identity",
+          values: ["Budget head-heavy attack", "Club-tier attack", "Entry AxForce identity"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "First-year club attacker",
+            "Second-season attacker",
+            "Li-Ning brand-first buyer",
+          ],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer notes from new Maynooth club members who chose it as their first attack frame",
+      context: "observer",
+      conditions: {
+        opponents: "Mixed-level club practice partners",
+        courtSurface: "wood",
+        venue: "Maynooth University club",
+      },
+      comparators: [
+        "Victor DriveX 10",
+        "Li-Ning AxForce 10",
+        "Yonex Astrox Nextage",
+      ],
+      sourceAttribution:
+        "BadmintonCN community review of the Sonic Boom Pro; observer commentary by Rui Su from new club member purchases.",
+    },
+    sections: [
+      {
+        heading: "What the Sonic Boom Pro actually delivers",
+        body: "The Sonic Boom Pro is a head-heavy attack racket built around the Victor budget-tier price point. The frame layup is recognisably Victor — clean drive snap, a usable smash carry within the budget tier's constraints, and a forgiving sweet spot. The shaft is the value-tier compromise: softer than mid-tier Victor attack frames, which means it forgives more swing variation but caps the smash carry achievable with clean technique. For a first-year club doubles attacker, that compromise is the right side of the trade-off; the racket gives the player room to grow without punishing imperfect swings.",
+      },
+      {
+        heading: "Who should buy it",
+        body: "Three buyer profiles win on the Sonic Boom Pro: first, first-year club doubles attackers building toward an established attack identity. The racket forgives the inconsistent timing typical of newer attackers while delivering enough attack feel to develop the technique. Second, junior players moving up from beginner rackets — the frame is light enough to swing cleanly and the head weight signature teaches the platform identity. Third, budget-conscious adult players who want a Victor attack frame and accept the value-tier ceiling.",
+      },
+      {
+        heading: "How it compares to other budget attack picks",
+        body: "Against the DriveX 10: the DriveX 10 sits a tier above the Sonic Boom Pro at roughly 25% higher price, with a stiffer shaft and a more decisive attack feel. The DriveX 10 is the right pick for a second-season attacker; the Sonic Boom Pro is the right pick for a first-year attacker. Against the Li-Ning AxForce 10: the AxForce 10 plays in a similar buyer-decision range at a slightly higher price, with the Li-Ning brand pulling brand-first buyers and Victor pulling shaft-feel-first buyers. Against the Yonex Astrox Nextage: the Nextage costs more and offers a more polished frame finish; the Sonic Boom Pro is the better-value pick at the budget tier.",
+      },
+      {
+        heading: "Where the value-tier ceiling shows up",
+        body: "The Sonic Boom Pro reaches its ceiling on three patterns: peak smash carry (mid-tier and flagship frames deliver measurably more), high-tension string-bed compatibility (the soft shaft caps the useful tension around 24-25 lb), and long-session forearm endurance (the budget frame finish does not damp vibration as effectively as mid-tier finishes). These limits are honest — the racket does not market itself as flagship-grade — and they define exactly when a buyer should upgrade. After a full club season of consistent attack-frame use, a Sonic Boom Pro player should consider moving up to the DriveX 12 or the AxForce 80.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 23-24 lb on Yonex BG65 or Victor's stock string for the first ten hours, with the option to move to BG80 if budget allows. The Sonic Boom Pro is one of the few budget attack rackets where the manufacturer's stock string is actually defensible for a first-year player — the soft shaft pairs well with mid-tension setups, and budget restringing costs are real for value-tier buyers. Buy if you are a first-year club doubles attacker or a budget-conscious adult player who wants honest attack feel. Skip if you already play at the level where the DriveX 12 or AxForce 80 would be the better pick — the upgrade is real and the Sonic Boom Pro's ceiling will frustrate established attackers.",
+      },
+    ],
+    cta:
+      "Run the finder with attack style and beginner-to-club skill level to compare the Sonic Boom Pro against the DriveX 10, AxForce 10, and Astrox Nextage.",
+    factChecks: [
+      {
+        sourceName: "Victor Badminton",
+        title: "Victor — Sonic Boom series",
+        section: "Sonic Boom Pro page",
+        checkedAt: "2026-05-21",
+        href: "https://www.victorsport.com/",
+        quote: "Sonic Boom",
+        note:
+          "Victor catalogue confirms the Sonic Boom Pro as a budget-tier attack frame; specific shaft and balance readings are sourced from community measurement and have not been independently re-measured by IntoBadminton.",
+      },
+      {
+        sourceName: "IntoBadminton — DriveX 10 review",
+        title: "Victor DriveX 10 review",
+        section: "Cross-tier reference",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/victor-drivex-10-review/",
+        quote: "DriveX 10",
+        note:
+          "Companion IntoBadminton coverage of the DriveX 10 provides the next-tier reference point for buyers considering the upgrade from the Sonic Boom Pro after a full club season.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];

@@ -72,7 +72,11 @@ export type BlogSlug =
   | "li-ning-axforce-100-gen-2-vs-gen-1"
   | "victor-drivex-12-standalone-review"
   | "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z"
-  | "li-ning-halbertec-7000-original-review";
+  | "li-ning-halbertec-7000-original-review"
+  | "victor-drivex-12-zsw-vs-original-comparison"
+  | "yonex-astrox-99-pro-gen-1-review"
+  | "yonex-arcsaber-7-tour-review"
+  | "victor-sonic-boom-pro-budget-attack-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -146,6 +150,10 @@ export const blogSlugs: BlogSlug[] = [
   "victor-drivex-12-standalone-review",
   "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
   "li-ning-halbertec-7000-original-review",
+  "victor-drivex-12-zsw-vs-original-comparison",
+  "yonex-astrox-99-pro-gen-1-review",
+  "yonex-arcsaber-7-tour-review",
+  "victor-sonic-boom-pro-budget-attack-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -3765,6 +3773,97 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           quote: "ARCSABER",
           note:
             "Yonex's current Arcsaber listing confirms the Arcsaber 10 is no longer in the active production catalogue; the Arcsaber 11 Pro is the closest current control-frame analogue.",
+        },
+      ],
+    },
+    {
+      slug: "victor-drivex-12-zsw-vs-original-comparison",
+      updatedAt: "2026-05-21",
+      category: "comparisons",
+      title:
+        "Victor DriveX 12 ZSW vs DriveX 12 Original: when the Lee Zii Jia signature is worth the variant tax",
+      dek:
+        "The ZSW (Lee Zii Jia signature) variant is more than a colourway change — paint thickness and string-bed coupling shift the racket's contact feel. Here is when the ZSW is the right pick and when the base is the smarter buy.",
+      story: {
+        intro:
+          "The DriveX 12 ZSW is Lee Zii Jia's signature variant of the DriveX 12. Marketing positions it as a colourway change with a small spec tweak; community measurement reveals the paint thickness and string-bed coupling are different enough to feel on contact. The buyer-decision question is whether the variant difference is worth the variant tax.",
+        blocks: [
+          {
+            kind: "methodology",
+            headline: "Observer notes from clubmates comparing ZSW and original side-by-side",
+            context: "observer",
+            conditions: {
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Victor DriveX 12 (original)",
+              "Victor DriveX 10 Metallic",
+              "Yonex Astrox 88D Pro 2024 (founder firsthand)",
+            ],
+            sourceAttribution:
+              "BadmintonCN community reviewer Chengzhen's ZSW vs original comparison piece; observer commentary by Rui Su.",
+          },
+          {
+            kind: "facts",
+            heading: "Variant snapshot",
+            items: [
+              { label: "Variant difference", value: "Paint thickness + string-bed coupling" },
+              { label: "Audible on", value: "Contact tone and short-game touch" },
+              { label: "Identical on", value: "Smash carry, defensive blocks, drive snap" },
+            ],
+          },
+        ],
+      },
+      sections: [
+        {
+          heading: "What the ZSW actually changes",
+          body: "Source measurements consistently report the ZSW carries a marginally thicker paint finish than the original DriveX 12. The paint thickness shifts contact feel toward a slightly more dampened, slightly more controlled signature on short-game and net touches. The shaft load, head weight, and overall swing weight are unchanged within manufacturing tolerance. What you notice first is the contact tone — the ZSW has a slightly more 'plugged' sound and feel on clean smashes versus the original's brighter contact. What you notice over a session is short-game touch — the ZSW's slightly more dampened feel makes drops and slices read a fraction softer.",
+        },
+        {
+          heading: "Where the ZSW helps and where it does not",
+          body: "Helps: short-game touch (drops, slices, deceptive blocks), where the slightly more dampened feel rewards finesse. Helps: players who specifically dislike the brighter contact tone of standard Victor frames and want a softer feel signature. Does not help: smash carry (identical to original), defensive blocks (identical), drive snap (identical), and any rally where contact-tone preference is irrelevant. The variant is concentrated at the touch-shot end of the game — the same pattern that emerges with the Astrox 100ZZ Anders Antonsen Edition's tactile differences. Variant taxes generally pay off only when the playing difference aligns with how you actually win points.",
+        },
+        {
+          heading: "Who should buy the ZSW",
+          body: "Lee Zii Jia fans buying the signature for collector reasons — fair enough, the variant difference is small but real and the signature value is intentional. Players who already own and play the original DriveX 12 and have specifically noticed that the standard contact tone feels too bright for their preference. Players whose game wins on short-game touch (singles deceptive players, doubles front-court specialists). For everyone else — competitive doubles attackers, players new to the DriveX line, players cost-sensitive — the original DriveX 12 is the better-value pick.",
+        },
+        {
+          heading: "Cross-reference: the Astrox 100ZZ Anders pattern",
+          body: "The DriveX 12 ZSW versus original pattern mirrors the Yonex Astrox 100ZZ Anders Antonsen Edition versus base 100ZZ pattern: in both cases, a signature variant offers a small but real tactile difference concentrated at the touch-shot end of the game, with smash and defence unchanged. The same buyer logic applies: pay the variant tax only if you already own the base, your game specifically wins on touch shots, and the contact-tone preference matters to you. If you are buying your first frame from the platform, the base is the right pick.",
+        },
+        {
+          heading: "Setup and the buying decision",
+          body: "Setup recommendations are identical for the ZSW and the original: 4U/G5 at 25 lb on BG80 or VBS-66N, raising to 26 lb after the first ten hours. The variant tax for the ZSW typically lands at roughly 15-20% above the base DriveX 12 retail price. That is a steep premium for a tactile difference that most buyers will not perceive in their first session. The honest answer: if the price gap is closer to 10%, the ZSW becomes defensible for short-game-focused players; if the price gap is at 20% or above, the original is the better-value pick regardless of preference.",
+        },
+        {
+          heading: "The honest buyer answer",
+          body: "Buy the ZSW if you already own the original DriveX 12, your game wins on touch shots, and you specifically prefer a slightly more dampened contact tone. Buy the original if you are new to the DriveX 12 platform, your game is attack-first rather than touch-first, or you are price-sensitive. Skip both if you want flagship-grade smash carry (consider Auraspeed 99 J or AxForce 100 Gen 2) or recovery-priority doubles (consider Auraspeed 90K II or Bladex 900 New). The variant question only matters once the platform question is settled.",
+        },
+      ],
+      cta:
+        "Run the finder with controlled-attack style and intermediate-to-advanced level to compare the DriveX 12 against cross-brand peers like the Astrox 88D Pro 2024 and the Halbertec 9000.",
+      factChecks: [
+        {
+          sourceName: "Victor Badminton",
+          title: "Victor — DriveX series",
+          section: "DriveX 12 ZSW signature variant",
+          checkedAt: "2026-05-21",
+          href: "https://www.victorsport.com/products/dx-12",
+          quote: "DriveX 12",
+          note:
+            "Official Victor catalogue confirms the DriveX 12 ZSW exists as a Lee Zii Jia signature variant; specific paint thickness and contact-tone differences are sourced from community measurement and have not been independently re-measured by IntoBadminton.",
+        },
+        {
+          sourceName: "IntoBadminton — DriveX 12 standalone review",
+          title: "Victor DriveX 12 standalone review",
+          section: "Existing companion coverage",
+          checkedAt: "2026-05-21",
+          href: "https://intobadminton.com/blog/victor-drivex-12-standalone-review/",
+          quote: "DriveX 12",
+          note:
+            "Companion standalone review of the base DriveX 12 provides the platform context; this comparison piece focuses on the ZSW variant decision for buyers who already know they want the DriveX 12.",
         },
       ],
     },
