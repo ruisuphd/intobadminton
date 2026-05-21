@@ -87,4 +87,80 @@ describe("editorial rating", () => {
       expect(rating.rationale.length).toBeGreaterThan(0);
     }
   });
+
+  // Observer-voice phrasings used in Sprint 6 paraphrased reviews (for
+  // products NOT on the founder-firsthand list) must NOT trip the founder
+  // firsthand rating boost. The regex at editorial-rating.ts:34 deliberately
+  // looks for the literal phrases "founder firsthand" or "founder current";
+  // observer phrasings use coach/club ecosystem framing instead, and a
+  // build-time mistake here would be silently confer +0.3 stars onto
+  // products Rui Su has not personally played.
+  describe("observer voice does not trip the founder firsthand boost", () => {
+    const observerPhrasings = [
+      "the pattern I see most at our club when teammates switch to this frame",
+      "from coach conversations and a few teammates at the Maynooth club",
+      "a teammate switched to this racket mid-season and the doubles drives stayed cleaner",
+      "club ecosystem observation rather than personal court time",
+      "noticed across two coaching lineages at the Dublin clubs",
+      "based on observer notes and source-review fact-checks, not personal testing",
+      "Rui's observer notes from the coach lineage; no personal session log on this frame",
+      "Editor reviewed source coverage from TiGe XLab and badmintoncn.com",
+    ];
+
+    for (const editorNote of observerPhrasings) {
+      it(`does NOT boost on phrasing: "${editorNote.slice(0, 48)}…"`, () => {
+        // Build a minimal mock racket product carrying only the editor note
+        // we want to probe. Other rating signals (verification, market
+        // signals, reviewCount) deliberately neutral so we can isolate the
+        // founder-firsthand branch.
+        const mockProduct = {
+          id: "mock-observer",
+          category: "racket" as const,
+          brand: "Test",
+          name: "Mock Observer Product",
+          priceUsd: 200,
+          verificationStatus: "editor_verified" as const,
+          shaftFlexSource: "official" as const,
+          editorNote,
+          marketSignals: [],
+          reviewCount: 0,
+          lastVerifiedAt: "2026-05-21",
+        } as unknown as ProductRecord;
+
+        const rating = computeEditorialRating(mockProduct);
+        expect(rating).not.toBeNull();
+        // None of the rationale lines should claim founder personal testing.
+        const claimsFirsthand = rating!.rationale.some((line) =>
+          line.toLowerCase().includes("founder personally tested")
+        );
+        expect(claimsFirsthand).toBe(false);
+      });
+    }
+
+    it("DOES boost on the canonical 'founder firsthand' phrasing", () => {
+      // Positive control — make sure the regex still fires on the actual
+      // pattern, so the suite would catch a regression that drops the
+      // boost entirely.
+      const mockProduct = {
+        id: "mock-firsthand",
+        category: "racket" as const,
+        brand: "Test",
+        name: "Mock Firsthand Product",
+        priceUsd: 200,
+        verificationStatus: "official_verified" as const,
+        shaftFlexSource: "official" as const,
+        editorNote:
+          "Founder firsthand — Rui Su's current doubles frame across two club seasons.",
+        marketSignals: [],
+        reviewCount: 0,
+        lastVerifiedAt: "2026-05-21",
+      } as unknown as ProductRecord;
+
+      const rating = computeEditorialRating(mockProduct);
+      const claimsFirsthand = (rating?.rationale ?? []).some((line) =>
+        line.toLowerCase().includes("founder personally tested")
+      );
+      expect(claimsFirsthand).toBe(true);
+    });
+  });
 });

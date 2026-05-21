@@ -200,6 +200,67 @@ function StoryBlock({ block }: { block: BlogStoryBlock }) {
     );
   }
 
+  if (block.kind === "methodology") {
+    // Distinguish founder-firsthand (accent border) from observer (muted
+    // border) at the visual layer so a reader can tell at a glance whether
+    // the test conditions reflect personal court time or club/coach context.
+    const isFirsthand = block.context === "founderFirsthand";
+    const conditionParts = [
+      block.conditions.sessions != null
+        ? `${block.conditions.sessions} session${block.conditions.sessions === 1 ? "" : "s"}`
+        : null,
+      block.conditions.strings ?? null,
+      block.conditions.tensionLbs != null
+        ? `${block.conditions.tensionLbs} lb`
+        : null,
+      block.conditions.opponents ?? null,
+      block.conditions.courtSurface ?? null,
+      block.conditions.venue ?? null,
+    ].filter(Boolean);
+    return (
+      <section
+        className={
+          isFirsthand
+            ? "rounded-2xl border-l-4 border-[var(--color-accent)] bg-white p-5 shadow-sm"
+            : "rounded-2xl border-l-4 border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] p-5"
+        }
+        data-block="methodology"
+        data-context={block.context}
+      >
+        <p
+          className={
+            isFirsthand
+              ? "text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]"
+              : "text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]"
+          }
+        >
+          {isFirsthand ? "Tested on court" : "Observer methodology"}
+        </p>
+        <h2 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
+          {block.headline}
+        </h2>
+        {conditionParts.length > 0 && (
+          <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
+            <span className="font-medium text-[var(--text)]">Conditions:</span>{" "}
+            {conditionParts.join(" · ")}
+          </p>
+        )}
+        {block.comparators && block.comparators.length > 0 && (
+          <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+            <span className="font-medium text-[var(--text)]">Comparators:</span>{" "}
+            {block.comparators.join(", ")}
+          </p>
+        )}
+        {block.sourceAttribution && (
+          <p className="mt-3 border-t border-[color:var(--line)] pt-3 text-xs text-[var(--color-muted)]">
+            <span className="font-medium text-[var(--text)]">Source:</span>{" "}
+            {block.sourceAttribution}
+          </p>
+        )}
+      </section>
+    );
+  }
+
   return (
     <section className="rounded-2xl border border-[color:var(--line-strong)] bg-white p-6 shadow-sm">
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">

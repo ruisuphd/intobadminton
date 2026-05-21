@@ -292,6 +292,37 @@ export type BlogStoryBlock =
         tensionLbs?: number;
         opponentLevel?: string;
       };
+    }
+  | {
+      /**
+       * Methodology block — a labelled "what was tested and how" panel rendered
+       * at the top of every review (founder-firsthand or observer). The 2026
+       * Google Product Reviews update rewards explicit test-conditions
+       * disclosure; this block separates the founder-firsthand voice (with
+       * truthful court conditions) from the observer voice (club/coach
+       * context) at the type level so the renderer can style them differently
+       * and a build check can enforce the boundary.
+       *
+       * `context: "founderFirsthand"` is only valid for products on the
+       * founder-firsthand list (Astrox 77 Pro, 88D Pro, 88D Tour, 100ZZ
+       * family, 99 Pro 2, Arcsaber 11 Pro, Arcsaber 7 Pro, Nanoflare 1000Z,
+       * NF 700 Pro, NF 700 Play 5U, Aerus Z2, Comfort Z3). For any other
+       * product, use `context: "observer"` and describe club/coach context.
+       */
+      kind: "methodology";
+      headline: string;
+      context: "founderFirsthand" | "observer";
+      conditions: {
+        sessions?: number;
+        opponents?: string;
+        strings?: string;
+        tensionLbs?: number;
+        courtSurface?: string;
+        venue?: string;
+      };
+      comparators?: string[];
+      /** When this block synthesises a third-party review, name the source here. */
+      sourceAttribution?: string;
     };
 
 export type BlogStory = {
@@ -360,6 +391,17 @@ export function readingTimeMinutes(article: BlogArticle): number {
 
           if (block.kind === "firstPerson") {
             return [block.context, block.body];
+          }
+
+          if (block.kind === "methodology") {
+            return [
+              block.headline,
+              ...Object.values(block.conditions).filter(
+                (v): v is string | number => v != null
+              ).map(String),
+              ...(block.comparators ?? []),
+              block.sourceAttribution ?? "",
+            ];
           }
 
           return [block.heading, block.body, ...block.bullets];

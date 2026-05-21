@@ -1,4 +1,11 @@
-import type { BlogArticle, BlogFactCheck } from "@/lib/blog";
+import type {
+  BlogArticle,
+  BlogFactCheck,
+  BlogStoryBlock,
+} from "@/lib/blog";
+
+type MethodologyBlock = Extract<BlogStoryBlock, { kind: "methodology" }>;
+type FirstPersonBlock = Extract<BlogStoryBlock, { kind: "firstPerson" }>;
 
 type ReviewInput = {
   slug: BlogArticle["slug"];
@@ -20,6 +27,23 @@ type ReviewInput = {
   sections: { heading: string; body: string }[];
   cta: string;
   factChecks: BlogFactCheck[];
+  /**
+   * Required "what was tested and how" disclosure for the 2026 Google
+   * Product Reviews update. founder-firsthand context is only valid for
+   * products on Rui Su's firsthand list. Optional so existing reviews
+   * compile; new Sprint 6B+ reviews should provide one.
+   */
+  methodology?: MethodologyBlock;
+  /**
+   * Optional first-person evidence moments. Only use for products on the
+   * founder-firsthand list. 3–5 per article max.
+   */
+  firstPerson?: FirstPersonBlock[];
+  /**
+   * Optional first-published / last-revised date. Defaults to 2026-05-13
+   * for the original batch; Sprint 6+ reviews pass the current date.
+   */
+  updatedAt?: string;
 };
 
 const sourcePolicyNote: BlogFactCheck = {
@@ -35,9 +59,79 @@ const sourcePolicyNote: BlogFactCheck = {
 };
 
 function review(input: ReviewInput): BlogArticle {
+  // Compose story blocks. methodology (if provided) sits between fact-check
+  // snapshot and the source-to-buyer bridge so the reader sees "what was
+  // tested and how" before any subjective framing. firstPerson blocks (if
+  // provided) follow the comparison table so each anchored moment lands
+  // next to a buyer-decision angle rather than near the demo-script outro.
+  const blocks: BlogStoryBlock[] = [
+    {
+      kind: "facts",
+      heading: "Fact-check snapshot",
+      items: input.facts,
+    },
+  ];
+
+  if (input.methodology) {
+    blocks.push(input.methodology);
+  }
+
+  blocks.push(
+    {
+      kind: "callout",
+      label: "Source-to-buyer bridge",
+      title: "Why the original source is not the final answer",
+      body:
+        "The local source gives useful court colour: what felt quick, what felt dull, what started to annoy the reviewer after repeat rallies. The buyer still needs a stricter filter. We keep manufacturer specifications separate, then translate the on-court impression into practical purchase risk: who gets helped, who gets exposed, what needs a demo, and which claims should stay provisional until an official source or repeated first-party testing confirms them.",
+    },
+    {
+      kind: "callout",
+      label: "The hook",
+      title: input.calloutTitle,
+      body: input.calloutBody,
+    },
+    {
+      kind: "comparison",
+      heading: input.comparison.heading,
+      columns: input.comparison.columns,
+      rows: input.comparison.rows,
+    }
+  );
+
+  if (input.firstPerson && input.firstPerson.length > 0) {
+    blocks.push(...input.firstPerson);
+  }
+
+  blocks.push(
+    {
+      kind: "verdict",
+      heading: "Buyer-first verdict",
+      body: input.verdict,
+      bullets: [
+        `Best for: ${input.bestFor.join(", ")}.`,
+        `Avoid if: ${input.avoidIf.join(", ")}.`,
+        "Where official confirmation is missing, the article labels the point as a source-review impression.",
+      ],
+    },
+    {
+      kind: "callout",
+      label: "Demo script",
+      title: "How to test this before trusting the article",
+      body:
+        "Do not judge the product from five warm-up clears or a shop-floor walk. Recreate the mistake that normally costs you points: a late backhand lift, a rushed drive exchange, a heavy lunge after a jump, or a third-game rally when your timing is no longer clean. If the product still helps in that bad moment, the review's praise is relevant. If it only feels impressive when you are fresh, treat the praise as entertainment rather than buying evidence. Then switch back to your current setup and repeat the same sequence. The contrast matters more than novelty, because new gear always gets a short grace period in your hands.",
+    },
+    {
+      kind: "callout",
+      label: "Style alignment",
+      title: "The story should pull you in, then make you harder to fool",
+      body:
+        "The writing is deliberately more narrative than a spec table, but every article still ends in a buying filter. Picture the strongest rally the product promises, then picture the weakest rally you actually play. If those two scenes do not overlap, the product belongs to someone else's dream. That is the rhythm we want: tempting enough to keep reading, strict enough to stop an expensive mismatch.",
+    }
+  );
+
   return {
     slug: input.slug,
-    updatedAt: "2026-05-13",
+    updatedAt: input.updatedAt ?? "2026-05-13",
     category: "reviews",
     title: input.title,
     dek: input.dek,
@@ -51,56 +145,7 @@ function review(input: ReviewInput): BlogArticle {
     story: {
       intro:
         "A good equipment review should make you feel the first rally before it asks you to buy. These notes start from the local source review, then rebuild the argument around the moment that matters: you are tired, the score is close, and the next shot exposes whether the product is helping or merely looking expensive.",
-      blocks: [
-        {
-          kind: "facts",
-          heading: "Fact-check snapshot",
-          items: input.facts,
-        },
-        {
-          kind: "callout",
-          label: "Source-to-buyer bridge",
-          title: "Why the original source is not the final answer",
-          body:
-            "The local source gives useful court colour: what felt quick, what felt dull, what started to annoy the reviewer after repeat rallies. The buyer still needs a stricter filter. We keep manufacturer specifications separate, then translate the on-court impression into practical purchase risk: who gets helped, who gets exposed, what needs a demo, and which claims should stay provisional until an official source or repeated first-party testing confirms them.",
-        },
-        {
-          kind: "callout",
-          label: "The hook",
-          title: input.calloutTitle,
-          body: input.calloutBody,
-        },
-        {
-          kind: "comparison",
-          heading: input.comparison.heading,
-          columns: input.comparison.columns,
-          rows: input.comparison.rows,
-        },
-        {
-          kind: "verdict",
-          heading: "Buyer-first verdict",
-          body: input.verdict,
-          bullets: [
-            `Best for: ${input.bestFor.join(", ")}.`,
-            `Avoid if: ${input.avoidIf.join(", ")}.`,
-            "Where official confirmation is missing, the article labels the point as a source-review impression.",
-          ],
-        },
-        {
-          kind: "callout",
-          label: "Demo script",
-          title: "How to test this before trusting the article",
-          body:
-            "Do not judge the product from five warm-up clears or a shop-floor walk. Recreate the mistake that normally costs you points: a late backhand lift, a rushed drive exchange, a heavy lunge after a jump, or a third-game rally when your timing is no longer clean. If the product still helps in that bad moment, the review's praise is relevant. If it only feels impressive when you are fresh, treat the praise as entertainment rather than buying evidence. Then switch back to your current setup and repeat the same sequence. The contrast matters more than novelty, because new gear always gets a short grace period in your hands.",
-        },
-        {
-          kind: "callout",
-          label: "Style alignment",
-          title: "The story should pull you in, then make you harder to fool",
-          body:
-            "The writing is deliberately more narrative than a spec table, but every article still ends in a buying filter. Picture the strongest rally the product promises, then picture the weakest rally you actually play. If those two scenes do not overlap, the product belongs to someone else's dream. That is the rhythm we want: tempting enough to keep reading, strict enough to stop an expensive mismatch.",
-        },
-      ],
+      blocks,
     },
     factChecks: [...input.factChecks, sourcePolicyNote],
     sections: input.sections,
@@ -3987,6 +4032,7 @@ export const sourceReviewArticles = [
     cta: "Use the finder with hybrid/all-round preferences and G6 grip to compare Snake Breath against alternatives.",
     factChecks: [
       { sourceName: "Bonny", title: "Bonny Snake Breath racket", section: "Product specifications", checkedAt: "2026-05-19", href: "https://www.bonny-sports.com/", quote: "Snake Breath", note: "Bonny's OuJi Snake Breath specs should be verified against retail packaging for the G6 handle availability and weight options." },
+      { sourceName: "TiGe XLab", title: "TiGe XLab｜欧击蛇之呼吸 — Bonny Snake Breath source review", section: "Source review attribution", checkedAt: "2026-05-21", href: "https://bbs.badmintoncn.com/", quote: "年度最佳二线高端", note: "TiGe XLab's source review positions the Snake Breath as the year's best second-tier flagship. This IntoBadminton article paraphrases the analysis into observer voice; specific contact-feel and G6 handle commentary are drawn from the TiGe source. Per IntoBadminton's source policy, original buyer guidance only — not a translation." },
     ],
   }),
   review({
