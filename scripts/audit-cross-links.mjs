@@ -25,7 +25,6 @@ const TARGET_FILES = [
   "src/lib/blog-source-reviews.ts",
 ];
 
-const SLUG_REGEX = /slug:\s*["']([a-z0-9-]+)["']/g;
 // Match either /blog/<slug>/ paths (in factCheck hrefs or cta strings)
 // or bare slug references inside body text where another article is named.
 const BLOG_PATH_REGEX = /\/blog\/([a-z0-9-]+)\//g;

@@ -591,6 +591,25 @@ export function BlogArticlePage({
                     <p className="text-base leading-[1.75] text-[var(--text-secondary)]">
                       {section.body}
                     </p>
+                    {section.glossaryLinks && section.glossaryLinks.length > 0 && (
+                      <p className="mt-4 flex flex-wrap items-center gap-2 text-xs text-[var(--color-subtle)]">
+                        <span className="font-semibold uppercase tracking-wide">
+                          See in glossary:
+                        </span>
+                        {section.glossaryLinks.map((g, i) => (
+                          <a
+                            key={`${g.id}-${i}`}
+                            href={buildLocalizedPath(
+                              locale,
+                              `/guides/glossary/#${g.id}`
+                            )}
+                            className="rounded-full border border-[color:var(--line)] px-2.5 py-0.5 text-[color:var(--color-accent)] hover:bg-[var(--color-accent-soft)]"
+                          >
+                            {g.term}
+                          </a>
+                        ))}
+                      </p>
+                    )}
                     {canShowArticleAd &&
                       index === Math.floor(article.sections.length / 2) && (
                         <AdSlot id={`blog-${article.slug}-mid`} />

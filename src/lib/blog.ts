@@ -350,7 +350,21 @@ export type BlogArticle = {
   reviewSummary?: BlogReviewSummary;
   story?: BlogStory;
   factChecks?: BlogFactCheck[];
-  sections: { heading: string; body: string }[];
+  sections: {
+    heading: string;
+    body: string;
+    /**
+     * Optional inline glossary references shown as small chip-row links
+     * beneath the section body. Required when the body uses any glossary
+     * term 3+ times — the `lint:glossary:strict` gate (see
+     * scripts/check-glossary-links.mjs) enforces this for E-E-A-T
+     * topical-cluster density. Each entry takes the term display label
+     * and the glossary anchor id, e.g.
+     * `{ term: "Head-heavy", id: "head-heavy" }` renders as a chip
+     * linking to `/guides/glossary/#head-heavy`.
+     */
+    glossaryLinks?: { term: string; id: string }[];
+  }[];
   cta: string;
 };
 
@@ -727,6 +741,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What changed in the 2024 reset",
           body: "Yonex retired the camel-gold 88D Pro after three years and replaced both 88 Pros with new colours that share the second-generation Namd Flex Force shaft, a Power Assist Bumper at the top of the frame, and the longer 10mm built-in T-joint. The new shaft snaps back faster than the camel-gold predecessor, the bumper redistributes mass for cleaner contact, and the joint adds a small amount of torsional stability. Both rackets retain the head-heavy attack heritage of the 88 Pro line, but they keep distinct personalities: the D is the back-court hammer, the S is the balanced control frame Yonex aims at front-court doubles and mixed.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }, { term: "Head-heavy", id: "head-heavy" }],
         },
         {
           heading: "Frame: narrower D, larger S",
@@ -773,6 +788,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why the Nanoflare line is hard to shop",
           body: "Yonex has packed the Nanoflare line with so many SKUs that buyers commonly mix up the entry-level 700, the 700 Pro, the 800 Pro, and the flagship 1000Z. They share head-light balance and aerodynamic frame design, but the shaft hardness, frame edge profile, and bend-point location differ enough that one of these rackets will feel completely different from the next on court. This piece walks through the three you are most likely to consider — 700, 700 Pro, and 1000Z — and frames each in terms of who it actually serves.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }, { term: "Drive", id: "drive" }, { term: "Head-light", id: "head-light" }],
         },
         {
           heading: "Nanoflare 700: the sugar-water front-court racket",
@@ -819,6 +835,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Two flagships, two philosophies",
           body: "The 2024 Yonex Nanoflare 800 Pro and the Victor Auraspeed HS Plus are both built for fast-pace men's doubles. They sit close on paper: head-light or even balance, hard shafts, compact frames, similar weights. They are also both used by world-tour players. But step on court with both and the contact feel diverges immediately — one is crisp-elastic with an audible metallic ring, the other is a denser hardened-shaft profile that asks for more active force. Picking the wrong one wastes a serious chunk of money.",
+          glossaryLinks: [{ term: "Drive", id: "drive" }],
         },
         {
           heading: "Nanoflare 800 Pro: crisp-elastic by design",
@@ -1019,6 +1036,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "The Halbertec line is not a smooth upgrade path",
           body: "Many buyers assume the Halbertec 9000 is a strict upgrade over the 8000, and the 9000 Power is another tier above that. This is wrong. The 8000 is a control-leaning balance racket with a soft-medium shaft and a large fluid-box frame. The 9000 is a speed-leaning racket with a thinner frame and stiffer shaft. The 9000 Power, despite the name, is not a Halbertec 8000 successor — it is a refined version of the 9000 with even more shaft stiffness, marginally more head weight, and more crisp/snap. Picking by name alone leads to disappointment.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "Halbertec 8000: the amateur all-rounder",
@@ -1065,6 +1083,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why this comparison matters",
           body: "The Li-Ning AxForce series (formerly known by its Chinese name 雷霆 / Thunder, now consistently labelled AxForce in English markets) and the Yonex Astrox 88D Pro 2024 are two prominent head-heavy attack racket lines in the source comparison. Both lines compete head-to-head for tournament players who want a smash-focused weapon. The AxForce 90 New is presented as the flagship of the Li-Ning line and uses Li-Ning's Thunder Tech platform with M46 and T1100 carbon. The AxForce 80 is the easier-driving sibling. The Astrox 88D Pro 2024 is the cross-brand benchmark for many serious smash-focused players.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "AxForce 90 New: Li-Ning's strongest shaft to date",
@@ -1177,6 +1196,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Naming note before we start",
           body: "On Chinese badminton forums the Viktor Axelsen 100ZZ edition is referred to as 100ZZ 安塞龙 — 安塞龙 is the standard Chinese transliteration of Viktor Axelsen, NOT Anders Antonsen. Antonsen is sponsored by Victor (his signature racket is the Auraspeed 99). So when you see Chinese reviewers compare 100ZZ 安塞龙 vs 100ZZ 古红色 (Kurenai), they are comparing the Viktor Axelsen (VA) edition to the original red Kurenai. We previously got this wrong on this page and have corrected it.",
+          glossaryLinks: [{ term: "Swing weight", id: "swing-weight" }],
         },
         {
           heading: "What actually changed in the VA edition",
@@ -1323,6 +1343,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What L69 actually is",
           body: "Li-Ning's L69 is a 0.69mm gauge multi-filament string positioned as durable balanced — Li-Ning's marketing frames it as a daily-use option for players who restring less often and want consistent performance across the gauge's life. On paper that sounds unexciting next to the high-repulsion specialty strings most attack-racket players reach for (Yonex BG80, BG66 Ultimax, Ashaway ZyMax, Li-Ning No.5). But specs only tell part of the story — string feel depends heavily on tension, pattern, knot count, and the racket frame.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "Test setup",
@@ -1450,6 +1471,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Where the AxForce 100 Gen 2 sits in the Li-Ning lineup",
           body: "Li-Ning's AxForce line (formerly published in Chinese markets as 雷霆 / Thunder) has an identifiable progression: AxForce 80 (sugar-water entry attack), AxForce 90 New (Li-Ning's strongest shaft to date, balanced attack), AxForce 100 Gen 2 (small-frame singles attack). They are not a strict ladder — each lives in a different style. The 100 Gen 2 is the most stylistically distinct: a small fluid box-frame square head with a thin 6.2mm shaft, designed for players who want pure tough-elastic attack feel rather than the AxForce 90 New's more crisp profile.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "Specs and sample variance",
@@ -1676,6 +1698,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Pedigree and design intent",
           body: "Astrox 99 Pro is built for one thing: rear-court attack at the highest level. Kento Momota played its predecessor (Astrox 99) for years and his feedback shaped multiple shaft and grommet revisions; Lee Zii Jia used the Yonex 100ZZ and 99 Pro during his Yonex era before switching to Victor in 2022 (he now plays the Thruster Ryuga / Ryuga II). Yonex did not engineer this frame as a do-everything pro racket — they engineered it as a head-heavy, extra-stiff statement, with no compromises toward forgiveness or front-court speed. The 100ZZ is its sibling in spirit but with a softer overall profile; the 99 Pro doubles down on demand.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "Specs that matter",
@@ -1936,6 +1959,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "From Hayabusa to HS Plus — what's new",
           body: "Victor's Hayabusa lineup has long been the speed-attack hybrid for players who want frame-feedback closer to a head-heavy frame than a pure speed racket. The HS Plus inherits the visual identity of the line but commits harder. Power Ring junction (also seen on the 90KM) replaces the standard cone-cap interface for stiffer power transmission. WES 3.0 is added to the shaft. The frame moves to a smaller head than the previous HS — closer to the Auraspeed 100X SE size — with a more aggressive break-line.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "What you measure",
@@ -2127,6 +2151,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What it is",
           body: "Bonny's LeiSu 800 sits in the speed-attack lane. The source review describes a 4U/G5 racket with a narrow NF800-style low-drag frame, 76-hole pattern, foam-filled frame construction, 40T carbon plus nickel-titanium shaft material, a 6.5mm solid shaft, and a 30 lb warranty tension. In plain terms: this is built to swing quickly, stay stable at contact, and reward players who can actually load a stiffer shaft.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }],
         },
         {
           heading: "First feel",
@@ -2257,6 +2282,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why it aged well",
           body: "AxForce 80 arrived with athlete-signature energy and the usual premium-racket hype, but the source review strips that away and lands on a more useful conclusion: it is a credible first-tier Li-Ning attack racket with a friendlier doubles profile than many expected. That matters because many players now compare it against newer AxForce and Astrox frames rather than buying it in a vacuum.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "Measured setup",
@@ -2649,6 +2675,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why the Master Mao 20 actually exists",
           body: "Kawasaki has been adjacent to the badminton conversation for years — fine value rackets, occasionally a real performer, but rarely something that competed at the flagship level. The Mao series is the brand's deliberate push into pro-tier perception, signed off by Coach Li Mao who has worked with multiple national programs. Mao 20 is the line's flagship attack frame. The pitch: pro-tier feel and build, sub-flagship price.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "The flat-frame peg system, explained simply",
@@ -2902,6 +2929,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why Yu 12 finally feels like a Victor flagship",
           body: "Yu series rackets have historically been honest mid-tier control frames — fine for the price, never the conversation. Yu 12 changes that by inheriting Victor's full top-tier tech stack: alloy carbon, WES 3.0, Force Ring Pro, and the precision tuning the Auraspeed line received. The result is a frame that competes against Astrox 88S Pro and Arcsaber 11 Pro on substance, not just price.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "What WES 3.0 changes in practice",
@@ -3158,6 +3186,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What the composite frame actually changes",
           body: "Li-Ning's composite威力 (Power) frame design adds internal reinforcement layers that change how energy travels through the head. On Gen 1 the frame transmitted force fairly cleanly but had a smaller forgiveness window on off-centre hits — late or early contact felt lifeless. Gen 2 spreads contact response more evenly across the string bed, which translates to a noticeably broader sweet spot. On smashes the result is denser sound and more consistent power across the head. On clears the result is more forgiving length on imperfect timing.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "Where Gen 2 wins on hit feel",
@@ -3666,6 +3695,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why material refinement beats mass cutting",
           body: "Two ways to make a racket faster. Cut mass (lighter head, thinner frame, head-light balance), or refine the material (higher-modulus carbon, denser weave, optimised resin). Most speed flagships use the first approach because it shows up clearly on a spec sheet. Star-Cross uses the second — the swing is fast not because the head is light but because the material transmits force faster. The trade-off: spec-sheet readers may find Star-Cross less obviously a speed racket; on court the speed is there.",
+          glossaryLinks: [{ term: "Head-light", id: "head-light" }],
         },
         {
           heading: "Where the substantial feel pays off",
@@ -3708,6 +3738,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Stop reading marketing language. Start with five questions.",
           body: "Brand catalogues are written to make every racket sound special. Yours is not. The five decisions that actually determine whether a racket fits you are: (1) Weight class — 3U, 4U, or 5U. (2) Balance — head-light, even, or head-heavy. (3) Shaft flex — flexible, medium, stiff, or extra-stiff. (4) Common string tension range. (5) Grip size — G4, G5, G6. Every other spec on the box (frame width, grommet count, branded carbon names) is downstream of these five.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Head-light", id: "head-light" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "1. Weight class — start with 4U if unsure",
@@ -3812,6 +3843,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Equipment terms",
           body: "U-class: weight class for unstrung rackets — lower number means heavier. 3U is ~85-89g, 4U is 80-84g, 5U is 75-79g. F: flyweight, lighter than 6U, usually junior-specific. Head-heavy / head-light / even-balance: where mass concentrates in the racket; measured as the balance point in millimetres from the butt cap (around 280-310mm in normal frames). Shaft flex: how much the shaft bends under load — flexible, medium, stiff, extra-stiff. Sweet spot: the area on the stringbed where contact produces maximum repulsion and minimum vibration. Frame: the head ring of the racket. T-joint: where the shaft meets the frame; modern rackets often use built-in T-joints for stiffness. Grommets: the plastic eyelets through which strings thread — replaceable when worn.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }],
         },
         {
           heading: "String and tension terms",
@@ -3961,6 +3993,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why this argument exists at all",
           body: "Walk into any badminton forum in Asia and someone is angry about a 68-hole racket. The complaint is usually that the sweet spot is harsh, the non-sweet-spot is hard to play, and the racket is generally unforgiving. The complaint is real but the diagnosis is usually wrong — what feels like a hole-count problem is almost always a tension problem combined with a contact-quality problem. This guide walks through what each hole-count category (68, 72, 76, 78, 80) actually changes, who should care, and what your stringer should know.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }],
         },
         {
           heading: "68-hole rackets: the aggressive design (e.g. AX99 Pro, AX88S Pro old colour)",

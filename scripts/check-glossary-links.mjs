@@ -49,9 +49,16 @@ async function loadArticles() {
   // the nearest preceding `slug:`. That over-approximates (story.intro is
   // not a `body:`), but it covers the worst-case "this term appears 3 times
   // in section bodies" pattern accurately.
+  //
+  // Also collects `glossaryLinks` arrays on each section so a section that
+  // explicitly registers a glossary link counts as "linked" for that term,
+  // even if the body string itself does not contain the path.
   const articles = [];
   const bodyRe = /body:\s*"((?:[^"\\]|\\.)*)"/g;
   const sliceRe = /\{\s*slug:\s*"([^"]+)"[\s\S]*?(?=\{\s*slug:\s*"|\]\s*,\s*zh:|\]\s*,?\s*\}\s*;)/g;
+  const glossaryLinksRe =
+    /glossaryLinks:\s*\[\s*((?:\{[^}]*\}\s*,?\s*)+)\]/g;
+  const glossaryIdRe = /id:\s*"([^"]+)"/g;
   let m;
   while ((m = sliceRe.exec(src)) != null) {
     const slug = m[1];
@@ -65,7 +72,25 @@ async function loadArticles() {
     const introRe = /intro:\s*"((?:[^"\\]|\\.)*)"/;
     const intro = slice.match(introRe);
     if (intro) bodies.push(intro[1]);
-    articles.push({ slug, text: bodies.join("\n") });
+
+    // Collect glossaryLinks ids declared anywhere within this slug slice.
+    const linkedIds = new Set();
+    let gl;
+    glossaryLinksRe.lastIndex = 0;
+    while ((gl = glossaryLinksRe.exec(slice)) != null) {
+      const arr = gl[1];
+      let id;
+      glossaryIdRe.lastIndex = 0;
+      while ((id = glossaryIdRe.exec(arr)) != null) {
+        linkedIds.add(id[1]);
+      }
+    }
+
+    articles.push({
+      slug,
+      text: bodies.join("\n"),
+      glossaryLinkedIds: linkedIds,
+    });
   }
   // Defensive fallback: if nothing matched (file shape changed), bail loud.
   if (articles.length === 0) {
@@ -109,6 +134,9 @@ async function main() {
       const count = countOccurrences(article.text, term);
       if (count < MIN_OCCURRENCES) continue;
       if (hasLinkToGlossary(article.text, id)) continue;
+      if (article.glossaryLinkedIds && article.glossaryLinkedIds.has(id)) {
+        continue;
+      }
       findings.push({ slug: article.slug, term, id, count });
     }
   }
