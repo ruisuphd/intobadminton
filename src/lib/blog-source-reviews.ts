@@ -265,6 +265,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "asics-blast-ff-3-badminton-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Eclipsion Z3 shoes (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "ASICS Blast FF 3 review: the indoor-court shoe badminton players keep borrowing",
     dek: "Not a badminton-branded shoe, but a serious indoor-court platform for players who want support, flexibility, and a stable ankle hold.",
     verdict:
@@ -358,6 +371,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-astrox-nextage-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Astrox Nextage review: power for players who are not ready for a 99 Pro",
     dek: "The Astrox Nextage keeps the Astrox idea but softens the punishment: medium flex, head-heavy balance, and a more forgiving route into rear-court attack.",
     verdict:
@@ -451,6 +477,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-drivex-10-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor DriveX 10 Metallic review: the control racket that learned to punch",
     dek: "DriveX 10 Metallic looks like a control platform, but Victor's material list and source impressions point to a firmer, more attacking all-rounder.",
     verdict:
@@ -666,6 +705,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-nanoflare-800-pro-tour-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Nanoflare 800 Pro vs Tour: the counter-drive idea, with two levels of demand",
     dek: "Both chase fast drive pressure, but the Pro carries the premium material story while the Tour asks whether you need all of it.",
     verdict:
@@ -769,6 +821,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-nanoflare-nextage-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Nanoflare Nextage review: the softer speed racket for front-court control",
     dek: "Nanoflare Nextage is not a budget 1000Z. It is a head-light, medium-flex speed-control racket for players who want quick hands without harsh timing.",
     verdict:
@@ -862,6 +927,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-power-cushion-88-dial-3-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Power Cushion 88 Dial 3 review: the BOA shoe that makes fit feel tactical",
     dek: "The 88 Dial 3 is not only about convenience. The dial system changes how quickly you can tune lockdown before, during, and after a match.",
     verdict:
@@ -955,6 +1033,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-grpht-thrttl-training-shoe-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex GRPHT THRTTL review: concept-shoe comfort, not a daily match shoe",
     dek: "GRPHT THRTTL is the most interesting Yonex shoe story in years, but the official positioning matters: training days, drills, and light court time, not daily match play.",
     verdict:
@@ -1048,6 +1139,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-auraspeed-hs-plus-attack-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Auraspeed HS Plus review: speed racket, smash problem solved?",
     dek: "HS Plus keeps the Auraspeed promise of fast handling, then adds enough punch that rear-court players finally have a reason to care.",
     verdict:
@@ -1110,6 +1214,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-astrox-88-pro-2024-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Astrox 88 Pro 2024 review: S and D finally feel like different jobs",
     dek: "The third-generation 88 Pro line sharpens the front-court/back-court split, making role fit more important than brand loyalty.",
     verdict:
@@ -1181,6 +1298,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-auraspeed-90k-ii-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Auraspeed 90K II review: fast-changing rallies, Victor-style control",
     dek: "The 90K II is a speed-control racket for players who want the shuttle back early without losing Victor's solid handling language.",
     verdict:
@@ -1243,6 +1373,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-thruster-falcon-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Thruster Falcon Enhanced review: classic power, less punishment",
     dek: "The Falcon Enhanced keeps the head-heavy Thruster identity but trims the older model's punishment enough for more players to consider it.",
     verdict:
@@ -1305,6 +1448,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-nanoflare-700-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Nanoflare 700 review: speed that tries to stay kind",
     dek: "The Nanoflare 700 family is built for fast handling with a softer, more accessible personality than the sharper 800 and 1000 lines.",
     verdict:
@@ -1367,6 +1523,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-axforce-90-new-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning AxForce 90 New review: power with a more modern rhythm",
     dek: "The 90 New source review frames it as a head-heavy attacker that tries to move faster than old-school power rackets.",
     verdict:
@@ -1419,6 +1588,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-bladex-900-new-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning Bladex 900 New review: speed first, but not speed only",
     dek: "A source-review take on Li-Ning's fast Bladex identity, written for buyers who want quick handling without losing all attacking confidence.",
     verdict:
@@ -1471,6 +1653,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-subaxia-gt-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Subaxia GT review: explosive shoe tech finally moves from concept to court",
     dek: "Subaxia GT turns the GRPHT THRTTL idea into a badminton shoe, with Yonex positioning it for fast, dynamic play rather than casual training.",
     verdict:
@@ -1533,6 +1728,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-astrox-99-pro-3-deep-dive",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Astrox 99 Pro (3rd gen, 2025) review: power is the answer, not the option",
     dek: "Yonex's third Astrox 99 Pro returns to a 76-hole frame, adds a Power Assist Bumper at the head, and raises the energy cost of every smash. A flagship singles weapon for players who already create their own pace.",
     verdict:
@@ -1643,6 +1851,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "rsl-aero-u-shuttle-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Aerosensa shuttles (mainstream default)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "RSL Aero U shuttle review: the half-step that turns a good club shuttle into a tournament one",
     dek: "RSL's Aero U pushes past Aero C with thicker feathers, cleaner trajectory, and the kind of late-rally consistency that separates premium goose-feather shuttles from the merely competent.",
     verdict:
@@ -1751,6 +1972,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-axforce-90-new-5u-deep-dive",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning AxForce 90 New 5U review: the lightest way into a real Thunder racket",
     dek: "Li-Ning's 5U variant of the AxForce 90 New keeps the attack identity but trims enough head weight to make Thunder-line power accessible to players who could never drive the 4U.",
     verdict:
@@ -1855,6 +2089,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-future-land-3-polaris-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny Future Land 3 (Polaris) review: the all-round stability shoe that finally outgrew the speed pitch",
     dek: "Three generations in, Bonny's Future Land has dropped the speed-specialist marketing and become what it always wanted to be — a wide-foot-friendly stability shoe with serious torsion control.",
     verdict:
@@ -1958,6 +2205,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-bladesabre-2-pro-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning Bladesabre 2 Pro review: the safe domestic alternative when the Yonex 65 Z keeps cracking",
     dek: "After the Z4 toe-crack saga sent players hunting for backups, the Bladesabre 2 Pro emerged as a quietly competent domestic alternative — not exciting, but reliable.",
     verdict:
@@ -2119,6 +2379,19 @@ export const sourceReviewArticles = [
   },
   review({
     slug: "jujiang-mzs-66un-string-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning AxForce 80"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "JuJiang MZS-66un string review: when a brand's first move into strings hits the floor",
     dek: "JuJiang built its reputation on rackets, grips, and bags. The MZS-66un is the brand's first serious attempt at strings — and even sympathetic reviewers find it underwhelming.",
     verdict:
@@ -2215,6 +2488,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kawasaki-twilight-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Kawasaki Twilight shoes review: the quick-lace all-rounder that doesn't ask you to compromise",
     dek: "Kawasaki's Twilight uses BOA-style dial lacing on a balanced badminton platform — the result is a genuine all-rounder that wins on quick fit adjustment as much as on-court performance.",
     verdict:
@@ -2311,6 +2597,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-gp100-pro-overgrip-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning GP100 Pro overgrip review: the dry-feel value pick that quietly outperforms its price",
     dek: "Li-Ning's GP100 Pro is a dry, sweat-wicking overgrip that gives Yonex Super Grap regulars a credible cheaper alternative — without the dust-magnet feel of cheap dry grips.",
     verdict:
@@ -2404,6 +2703,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-l66-string-first-look",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning L66 string first-look: the balanced string that finally fixes the L-series 'soft and slow' reputation",
     dek: "Li-Ning's L-series has long had a reputation for soft, slow output. The new L66 quietly buries that reputation with stronger elasticity, a sharper audio signature, and serious tension hold.",
     verdict:
@@ -2497,6 +2809,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-wuque-flagship-088-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny WuQue Flagship 088 shoes review: real protection-tier badminton at second-tier prices",
     dek: "Bonny stacked the WuQue 088 with serious materials and engineering — the result is a flagship-grade protection shoe that costs noticeably less than its Japanese-brand peers.",
     verdict:
@@ -2592,6 +2917,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-wind-shadow-budget-speed-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny Wind Shadow shoes review: a sub-USD-30 speed shoe that punches into entry-flagship territory",
     dek: "At the price of a single dinner out, the Bonny Wind Shadow delivers carbon-plate construction, genuine speed identity, and a near-Yonex-65 outsole — for buyers who match the right size and weight profile.",
     verdict:
@@ -2687,6 +3025,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "jujiang-lbtu-value-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning AxForce 80"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "JuJiang LBTU racket review: the RMB-300 high-modulus-carbon racket that earns its presence in the bag",
     dek: "JuJiang's LBTU delivers M40X frame material, 46T shaft carbon, and 4-axis carbon weave at a price that should not be possible — and a one-month main-racket test is the proof.",
     verdict:
@@ -2781,6 +3132,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-fz-flash-1000-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor FZ Flash 1000 review: Victor's sub-brand 'cheaper Auraspeed' that lives up to the pitch",
     dek: "FZ is Victor's sub-brand for accessible price tiers — the Flash 1000 inherits enough Auraspeed DNA to function as a genuine 1000Z alternative for sub-flagship buyers.",
     verdict:
@@ -2875,6 +3239,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kumpoo-kh-g805-lite-pro-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Kumpoo KH-G805 Lite Pro shoes review: the campus champion's water-bucket all-rounder",
     dek: "The KH-G805 Lite Pro is a textbook 'water-bucket' shoe — no glaring weakness, balanced across every dimension, and budget-friendly enough to be the official kit shoe for serious student players.",
     verdict:
@@ -2971,6 +3348,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-phantom-100-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny Phantom 100 racket review: speed-attack identity that earns its 'phantom' name",
     dek: "Bonny's Phantom 100 isn't trying to be a quiet stealth racket — it's trying to be the speed-attack frame that disappears in your hand and reappears as the shuttle clears the back line.",
     verdict:
@@ -3066,6 +3456,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-axforce-10-beginner-attack-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning AxForce 10 review: the beginner-friendly attack racket that teaches power without punishing it",
     dek: "AxForce 10 is the AxForce family's entry point: enough attack identity to teach you what real power feels like, soft enough to forgive the form mistakes you'll make while learning.",
     verdict:
@@ -3162,6 +3565,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-bladex-arrow-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning Bladex Arrow (Bladex EX) review: the 5U speed weapon for front-court doubles",
     dek: "Bladex Arrow is the Bladex line's entry-point speed weapon: 5U ultra-light, low-balance, and aimed squarely at the front-court doubles assassin who wins through reaction speed.",
     verdict:
@@ -3258,6 +3674,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-thruster-hwql-nuke-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Thruster HWQL review: the 'nuke' label and what 328mm balance actually feels like",
     dek: "Victor's Thruster HWQL Light is sold under the 'nuke' marketing label, but its 328mm balance and 5U weight create a far more specific buyer profile than the name suggests.",
     verdict:
@@ -3352,6 +3781,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-jipo-ls-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor JIPO LS racket review: a 'comfort frame' that lost the comfort plot",
     dek: "Victor's JIPO (击破) sub-brand LS positions itself as a comfortable easy-handle racket, but the soft shaft and durable string combination produce a feel that's neither comfortably easy nor satisfyingly powerful.",
     verdict:
@@ -3447,6 +3889,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-thruster-sr-cherry-blossom-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Thruster SR review: the 'Cherry Blossom Blade' that's a beginner-tier 5U TK7 in dressed clothing",
     dek: "Victor's TK-SR Light wears a Cherry Blossom Blade nickname and pretty pink-white paint, but underneath is a beginner-tier 5U TK7 reskin — a poetry that the marketing copy doesn't quite earn.",
     verdict:
@@ -3543,6 +3998,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-fz-88d-power-purple-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor FZ 88D Power Purple review: the playful 'TK-15 successor' for short-power attack play",
     dek: "Victor's FZ sub-brand 88D in Power Purple colourway delivers the most playful continuous-attack racket in the lineup — small, controlled-power swings producing real burst attack performance.",
     verdict:
@@ -3638,6 +4106,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-arcsaber-7-play-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Arcsaber 7 Play review: the cost of the Pro/Tour/Play hierarchy when Play falls below Game",
     dek: "Yonex's Arcsaber 7 Play is the entry-tier model in the new 7 generation, but the absence of a 7 Game means Play sits below where the previous generation's Game would have been.",
     verdict:
@@ -3733,6 +4214,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kawasaki-glacier-800-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Kawasaki Glacier 800 racket review: the smooth-handling attack racket that requires rhythm adjustment",
     dek: "Kawasaki's Glacier 800 delivers attack-racket DNA with friendly swing weight, but the on-court reward demands a compact, rhythm-adjusted swing that newer players may not yet have.",
     verdict:
@@ -3829,6 +4323,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kawasaki-h2-6u-superlight-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Kawasaki H2 (Jiqing) 6U super-light racket review: the front-court doubles specialist's surprise",
     dek: "Kawasaki's H2 in 6U super-light weight delivers what 5U cannot: instant reaction-speed front-court doubles dominance with surprising flat-drive interception capacity.",
     verdict:
@@ -3924,6 +4431,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kawasaki-star-cross-second-perspective-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Kawasaki Star Cross second-perspective review: where the source review confirms the original verdict",
     dek: "A second independent reviewer tests the Kawasaki Star Cross and reaches similar conclusions to the first review — adding nuance on the racket's tactical placement strength and the rear-court attack ceiling.",
     verdict:
@@ -4020,6 +4540,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-snake-breath-second-tier-flagship-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny Snake Breath review: the second-tier flagship that hides 90n + 900n DNA in a G6 handle",
     dek: "Bonny's OuJi Snake Breath collapses two distinct flagship characters — control-leaning 90n and attack-leaning 900n — into a single hybrid racket aimed at amateurs who want both without two-racket spending.",
     verdict:
@@ -4072,6 +4605,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-lt66-power-string-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning LT66 Power string review: the coated 0.66 that takes the L-series past 'soft and slow'",
     dek: "LT66 Power is Li-Ning's coated-line 0.66mm flagship — firmer than L66, faster repulsion, and the answer for players who like the LT series' attack character.",
     verdict:
@@ -4123,6 +4669,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-wuque-1982-y3k-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny WuQue 1982 Y3K shoes review: the cyberpunk all-rounder with serious midsole engineering",
     dek: "The WuQue 1982 Y3K's cyberpunk colourway gets attention, but the WuQue midsole technology underneath earns the actual purchase decision.",
     verdict:
@@ -4174,6 +4733,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-halbertec-9000-power-deep-dive",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning Halbertec 9000 Power deep-dive: the racket that wins the Halbertec lineage argument",
     dek: "Halbertec 9000 Power is the most decisive of Li-Ning's flagship attack rackets — the 8000 and 9000 are both excellent, but 9000 Power is the one that ends the argument for serious attackers.",
     verdict:
@@ -4225,6 +4797,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-halbertec-9000-standalone-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Li-Ning Halbertec 9000 standalone review: the flagship's base model deserves its own argument",
     dek: "Most Halbertec 9000 coverage compares it inside the 3-way line; played standalone, the 9000 base is its own coherent attack racket with a distinct identity worth understanding.",
     verdict:
@@ -4296,6 +4881,19 @@ export const sourceReviewArticles = [
   },
   review({
     slug: "rsl-supreme-shuttle-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Aerosensa shuttles (mainstream default)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "RSL Supreme shuttle review: the stable goose-feather model that earns club-tournament trust",
     dek: "RSL Supreme is the premium tournament-grade goose-feather shuttle for clubs that want stable flight without paying Aerosensa 50 prices.",
     verdict:
@@ -4407,6 +5005,19 @@ export const sourceReviewArticles = [
   },
   review({
     slug: "bonny-zhangui-dao-8888ax-ultra-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny ZhanGui Dao 8888AX Ultra review: the Demon Slayer Sword aesthetic with serious attack DNA",
     dek: "ZhanGui Dao 8888AX 紫炎 Ultra puts Demon Slayer Sword theming on a serious heavy-attack frame — the aesthetic is the hook, but the engineering is the actual purchase.",
     verdict:
@@ -4458,6 +5069,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-carbon-armour-shoes-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny Carbon Armour shoes review: the heavy-build protection shoe for players who land hard",
     dek: "Carbon Armour is Bonny's protection-first shoe — heavy build, full lateral wrap, and serious impact distribution for players whose game punishes their feet.",
     verdict:
@@ -4509,6 +5133,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "victor-thruster-9900-curiosity-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Thruster 9900 review: the older-platform attack racket that still has a niche use",
     dek: "Thruster 9900 launched in an earlier Thruster generation. It's not the current attack flagship, but it still has a place for specific buyers — used market enthusiasts, older-design loyalists, and budget-curious players.",
     verdict:
@@ -4560,6 +5197,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-astrox-99-pro-gen-1-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Yonex Astrox 99 Pro Gen 1 review: the original Momota signature that still has buyers",
     dek: "Astrox 99 Pro Gen 1 (the Kento Momota signature original) is no longer the current 99 Pro — but it's still in the conversation for specific buyer types.",
     verdict:
@@ -4611,6 +5261,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-wuque-xuanwu-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny WuQue Xuanwu (玄武) racket review: the niche WuQue with all-round identity",
     dek: "WuQue Xuanwu sits in Bonny's WuQue racket series as a niche all-rounder — less attack-focused than the flagship models, more accessible for amateurs who want balanced play.",
     verdict:
@@ -4662,6 +5325,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kumpoo-js-67-string-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Li-Ning Halbertec 9000"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Kumpoo JS-67 string review: the Japan-produced 0.67 that earns its premium positioning",
     dek: "JS-67 is Kumpoo's 2025 Japan-produced flagship string — ultra-fibre composite coating delivers durability plus elasticity in a balanced 0.67mm gauge.",
     verdict:
@@ -4733,6 +5409,19 @@ export const sourceReviewArticles = [
   },
   review({
     slug: "victor-sonic-boom-pro-budget-attack-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Victor Auraspeed family"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Victor Sonic Boom Pro review: the sub-USD-50 attack racket for new players who want real Victor character",
     dek: "Sonic Boom Pro delivers Victor's attack identity at a price that students and budget-conscious players can actually afford — without the typical entry-tier compromises.",
     verdict:
@@ -4784,6 +5473,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "goshen-leiming-69-string-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex BG80 baseline"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Goshen Leiming 69 string review: the high-modulus-friendly 0.69mm value pick",
     dek: "Goshen / Gosen Leiming (Thunder) 69 is a 0.69mm balanced string optimised for high-modulus-carbon rackets — niche but genuinely useful for the right buyer.",
     verdict:
@@ -4835,6 +5537,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+    methodology: {
+          kind: "methodology",
+          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          context: "observer",
+          conditions: {
+            opponents: "Division 4 Ireland practice partners",
+            courtSurface: "wood and synthetic court mat",
+            venue: "Maynooth University, multiple Dublin clubs",
+          },
+          comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+          sourceAttribution:
+            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+        },
     title: "Bonny MoJun review: the high-end attack racket that takes on the Arcsaber 11 Pro",
     dek: "MoJun (魔君) is Bonny's high-end attack racket — positioned as an Arcsaber 11 Pro alternative at lower price, with a genuinely interesting head-to-head argument.",
     verdict:

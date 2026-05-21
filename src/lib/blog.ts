@@ -350,7 +350,21 @@ export type BlogArticle = {
   reviewSummary?: BlogReviewSummary;
   story?: BlogStory;
   factChecks?: BlogFactCheck[];
-  sections: { heading: string; body: string }[];
+  sections: {
+    heading: string;
+    body: string;
+    /**
+     * Optional inline glossary references shown as small chip-row links
+     * beneath the section body. Required when the body uses any glossary
+     * term 3+ times — the `lint:glossary:strict` gate (see
+     * scripts/check-glossary-links.mjs) enforces this for E-E-A-T
+     * topical-cluster density. Each entry takes the term display label
+     * and the glossary anchor id, e.g.
+     * `{ term: "Head-heavy", id: "head-heavy" }` renders as a chip
+     * linking to `/guides/glossary/#head-heavy`.
+     */
+    glossaryLinks?: { term: string; id: string }[];
+  }[];
   cta: string;
 };
 
@@ -727,6 +741,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What changed in the 2024 reset",
           body: "Yonex retired the camel-gold 88D Pro after three years and replaced both 88 Pros with new colours that share the second-generation Namd Flex Force shaft, a Power Assist Bumper at the top of the frame, and the longer 10mm built-in T-joint. The new shaft snaps back faster than the camel-gold predecessor, the bumper redistributes mass for cleaner contact, and the joint adds a small amount of torsional stability. Both rackets retain the head-heavy attack heritage of the 88 Pro line, but they keep distinct personalities: the D is the back-court hammer, the S is the balanced control frame Yonex aims at front-court doubles and mixed.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }, { term: "Head-heavy", id: "head-heavy" }],
         },
         {
           heading: "Frame: narrower D, larger S",
@@ -762,6 +777,23 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Three speed rackets, three different jobs. Here is who each one is for, and why the lighter sample sometimes smashes harder.",
         blocks: [
           {
+            kind: "methodology",
+            headline: "Founder firsthand across the Nanoflare line — current doubles racket and rotation",
+            context: "founderFirsthand",
+            conditions: {
+              strings: "BG80",
+              tensionLbs: 27,
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+              "Yonex Nanoflare 700 Pro (founder firsthand)",
+              "Yonex Nanoflare 700 Play 5U (founder firsthand)",
+            ],
+          },
+          {
             kind: "firstPerson",
             context: "What I play in this line",
             body:
@@ -773,6 +805,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why the Nanoflare line is hard to shop",
           body: "Yonex has packed the Nanoflare line with so many SKUs that buyers commonly mix up the entry-level 700, the 700 Pro, the 800 Pro, and the flagship 1000Z. They share head-light balance and aerodynamic frame design, but the shaft hardness, frame edge profile, and bend-point location differ enough that one of these rackets will feel completely different from the next on court. This piece walks through the three you are most likely to consider — 700, 700 Pro, and 1000Z — and frames each in terms of who it actually serves.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }, { term: "Drive", id: "drive" }, { term: "Head-light", id: "head-light" }],
         },
         {
           heading: "Nanoflare 700: the sugar-water front-court racket",
@@ -808,6 +841,21 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Both have hard shafts and small frames. Both want fast doubles. They feel completely different on contact — here is why.",
         blocks: [
           {
+            kind: "methodology",
+            headline: "Hit-test both at coach sessions with founder firsthand cross-reference to NF1000Z",
+            context: "observer",
+            conditions: {
+              opponents: "Coach lineage (former Malaysia national-team) + Division 4 doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+            ],
+            sourceAttribution:
+              "BadmintonCN cross-brand comparison reviews; observer commentary by Rui Su from hit-test sessions, no extended court time on either frame.",
+          },
+          {
             kind: "firstPerson",
             context: "What I'd test before committing",
             body:
@@ -819,6 +867,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Two flagships, two philosophies",
           body: "The 2024 Yonex Nanoflare 800 Pro and the Victor Auraspeed HS Plus are both built for fast-pace men's doubles. They sit close on paper: head-light or even balance, hard shafts, compact frames, similar weights. They are also both used by world-tour players. But step on court with both and the contact feel diverges immediately — one is crisp-elastic with an audible metallic ring, the other is a denser hardened-shaft profile that asks for more active force. Picking the wrong one wastes a serious chunk of money.",
+          glossaryLinks: [{ term: "Drive", id: "drive" }],
         },
         {
           heading: "Nanoflare 800 Pro: crisp-elastic by design",
@@ -853,6 +902,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most speed rackets fire crisp-elastic. Bladex 800 Speed deliberately does not — and that may be exactly the racket you are missing.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "Where I'd place it on the speed-frame shelf",
@@ -1019,6 +1081,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "The Halbertec line is not a smooth upgrade path",
           body: "Many buyers assume the Halbertec 9000 is a strict upgrade over the 8000, and the 9000 Power is another tier above that. This is wrong. The 8000 is a control-leaning balance racket with a soft-medium shaft and a large fluid-box frame. The 9000 is a speed-leaning racket with a thinner frame and stiffer shaft. The 9000 Power, despite the name, is not a Halbertec 8000 successor — it is a refined version of the 9000 with even more shaft stiffness, marginally more head weight, and more crisp/snap. Picking by name alone leads to disappointment.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "Halbertec 8000: the amateur all-rounder",
@@ -1054,6 +1117,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Three rackets aimed at the same job — back-court power. They reward different swings and different player styles. Here is how to pick.",
         blocks: [
           {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
+          {
             kind: "firstPerson",
             context: "How I anchor the three-way",
             body:
@@ -1065,6 +1141,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why this comparison matters",
           body: "The Li-Ning AxForce series (formerly known by its Chinese name 雷霆 / Thunder, now consistently labelled AxForce in English markets) and the Yonex Astrox 88D Pro 2024 are two prominent head-heavy attack racket lines in the source comparison. Both lines compete head-to-head for tournament players who want a smash-focused weapon. The AxForce 90 New is presented as the flagship of the Li-Ning line and uses Li-Ning's Thunder Tech platform with M46 and T1100 carbon. The AxForce 80 is the easier-driving sibling. The Astrox 88D Pro 2024 is the cross-brand benchmark for many serious smash-focused players.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "AxForce 90 New: Li-Ning's strongest shaft to date",
@@ -1177,6 +1254,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Naming note before we start",
           body: "On Chinese badminton forums the Viktor Axelsen 100ZZ edition is referred to as 100ZZ 安塞龙 — 安塞龙 is the standard Chinese transliteration of Viktor Axelsen, NOT Anders Antonsen. Antonsen is sponsored by Victor (his signature racket is the Auraspeed 99). So when you see Chinese reviewers compare 100ZZ 安塞龙 vs 100ZZ 古红色 (Kurenai), they are comparing the Viktor Axelsen (VA) edition to the original red Kurenai. We previously got this wrong on this page and have corrected it.",
+          glossaryLinks: [{ term: "Swing weight", id: "swing-weight" }],
         },
         {
           heading: "What actually changed in the VA edition",
@@ -1293,6 +1371,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Li-Ning's new generalist string surprises in a way the package doesn't predict — paired with a stiff attack frame at 27 lb, the smash audio alone is reason to demo it.",
         blocks: [
           {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
+          {
             kind: "firstPerson",
             context: "What I currently string with",
             body:
@@ -1323,6 +1414,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What L69 actually is",
           body: "Li-Ning's L69 is a 0.69mm gauge multi-filament string positioned as durable balanced — Li-Ning's marketing frames it as a daily-use option for players who restring less often and want consistent performance across the gauge's life. On paper that sounds unexciting next to the high-repulsion specialty strings most attack-racket players reach for (Yonex BG80, BG66 Ultimax, Ashaway ZyMax, Li-Ning No.5). But specs only tell part of the story — string feel depends heavily on tension, pattern, knot count, and the racket frame.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "Test setup",
@@ -1357,6 +1449,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Built-in modular midsole, three-arch support, dual-density Hyper EVA. The P9200 III is the version of the modular concept that earns its keep on court.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Victor Auraspeed family"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "What I wear and why I have not switched",
@@ -1450,6 +1555,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Where the AxForce 100 Gen 2 sits in the Li-Ning lineup",
           body: "Li-Ning's AxForce line (formerly published in Chinese markets as 雷霆 / Thunder) has an identifiable progression: AxForce 80 (sugar-water entry attack), AxForce 90 New (Li-Ning's strongest shaft to date, balanced attack), AxForce 100 Gen 2 (small-frame singles attack). They are not a strict ladder — each lives in a different style. The 100 Gen 2 is the most stylistically distinct: a small fluid box-frame square head with a thin 6.2mm shaft, designed for players who want pure tough-elastic attack feel rather than the AxForce 90 New's more crisp profile.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "Specs and sample variance",
@@ -1485,6 +1591,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Eclipsion Z3 sits next to the marquee 65 Z3 and Aerus Z2 in Yonex's lineup but feels like neither. Here is who it is actually for.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "Why I picked the Comfort Z3 over this",
@@ -1676,6 +1795,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Pedigree and design intent",
           body: "Astrox 99 Pro is built for one thing: rear-court attack at the highest level. Kento Momota played its predecessor (Astrox 99) for years and his feedback shaped multiple shaft and grommet revisions; Lee Zii Jia used the Yonex 100ZZ and 99 Pro during his Yonex era before switching to Victor in 2022 (he now plays the Thruster Ryuga / Ryuga II). Yonex did not engineer this frame as a do-everything pro racket — they engineered it as a head-heavy, extra-stiff statement, with no compromises toward forgiveness or front-court speed. The 100ZZ is its sibling in spirit but with a softer overall profile; the 99 Pro doubles down on demand.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "Specs that matter",
@@ -1706,6 +1826,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Alloy carbon, WES 3.0, nano-aerogel, 46T fibers. The 99 stacks every Victor flagship technology in one frame. The reward profile is unusual.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Victor Auraspeed family"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "Where the 99 sits next to my main",
@@ -1767,6 +1900,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "BOUNSE+, 䨻, carbon plate. Li-Ning's Bladesabre MAX gets the shoe-stack right for serious doubles play — and at a price that keeps you honest.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "Why I have not switched off Yonex shoes",
@@ -1847,6 +1993,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "HS Plus is interesting because it starts with a contradiction. It looks like a fast doubles racket, but the review reads more like a warning label for a compact smash weapon. The player who buys it only for speed may miss the point; the player who buys it for speed plus rear-court bite has a stronger case.",
         blocks: [
+        {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Victor Auraspeed family"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
         {
           kind: "firstPerson",
           context: "How I'd frame the HS Plus next to my main",
@@ -1936,6 +2095,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "From Hayabusa to HS Plus — what's new",
           body: "Victor's Hayabusa lineup has long been the speed-attack hybrid for players who want frame-feedback closer to a head-heavy frame than a pure speed racket. The HS Plus inherits the visual identity of the line but commits harder. Power Ring junction (also seen on the 90KM) replaces the standard cone-cap interface for stiffer power transmission. WES 3.0 is added to the shaft. The frame moves to a smaller head than the previous HS — closer to the Auraspeed 100X SE size — with a more aggressive break-line.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "What you measure",
@@ -1966,6 +2126,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "The second-generation Halbertec 7000 borrows enough of Li-Ning's control-platform language to make the 8000 feel less automatic for many club players.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "Where the Halbertec line fits",
@@ -2032,6 +2205,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Carbonsonic MAX is not just a cheaper practice shuttle. The latest version makes a serious case through consistency, durability, and predictable flight.",
         blocks: [
           {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Victor Auraspeed family"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
+          {
             kind: "firstPerson",
             context: "How I judge new shuttles",
             body:
@@ -2097,6 +2283,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "NF800-style frame speed, foam-filled stability, and a 6.5mm solid shaft make the LeiSu 800 a sharper racket than its price tier suggests.",
         blocks: [
           {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Yonex Arcsaber 11 Pro (founder firsthand, current singles)"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
+          {
             kind: "firstPerson",
             context: "Where Bonny sits in the racket landscape",
             body:
@@ -2127,6 +2326,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What it is",
           body: "Bonny's LeiSu 800 sits in the speed-attack lane. The source review describes a 4U/G5 racket with a narrow NF800-style low-drag frame, 76-hole pattern, foam-filled frame construction, 40T carbon plus nickel-titanium shaft material, a 6.5mm solid shaft, and a 30 lb warranty tension. In plain terms: this is built to swing quickly, stay stable at contact, and reward players who can actually load a stiffer shaft.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }],
         },
         {
           heading: "First feel",
@@ -2161,6 +2361,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Shanhai NEW looks like an Arcsaber 11 Pro reference point, but on court it trades whip for steadiness and a heavier finishing ball.",
         blocks: [
+          {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
           {
             kind: "firstPerson",
             context: "Why the smaller-brand path can work",
@@ -2227,6 +2440,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "AxForce 80 carries a singles-attack reputation, but the 4U version has enough speed and directional confidence to work in ordinary doubles.",
         blocks: [
           {
+                      kind: "methodology",
+                      headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                      context: "observer",
+                      conditions: {
+                        opponents: "Division 4 Ireland practice partners",
+                        courtSurface: "wood and synthetic court mat",
+                        venue: "Maynooth University, multiple Dublin clubs",
+                      },
+                      comparators: ["Li-Ning Halbertec 9000"],
+                      sourceAttribution:
+                        "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                    },
+          {
             kind: "firstPerson",
             context: "Where the AxForce 80 sits",
             body:
@@ -2257,6 +2483,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why it aged well",
           body: "AxForce 80 arrived with athlete-signature energy and the usual premium-racket hype, but the source review strips that away and lands on a more useful conclusion: it is a credible first-tier Li-Ning attack racket with a friendlier doubles profile than many expected. That matters because many players now compare it against newer AxForce and Astrox frames rather than buying it in a vacuum.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "Measured setup",
@@ -2310,6 +2537,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most badminton shoes pick a side. Aerus chases speed and gives up cushion. Eclipsion chases protection and gives up court feel. Victor's C90NLite tries to refuse the choice — a 23mm heel stack with rocker geometry, locked into a TPU cage so the foam does not collapse sideways during a lunge. On the court that does change the feel; whether it suits you depends on what you weigh and how you cover ground.",
         blocks: [
+        {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Victor Auraspeed family"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
         {
           kind: "firstPerson",
           context: "How I'd compare it to what I wear",
@@ -2451,6 +2691,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Most badminton shoes ask you to commit. Speed or cushion. Wide or fast. Stable or light. The 65 Z4 is the rare shoe that refuses every commitment and ships you a shoe that does each thing 80%. That is the trade-off — you will not get the best speed or the best cushion. But you will get the shoe that behaves the most predictably across roles, and that turns out to be what most amateur players actually need.",
         blocks: [
         {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
+        {
           kind: "firstPerson",
           context: "Why I am still in the Comfort Z3 instead",
           body:
@@ -2575,6 +2828,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "There is a category of badminton equipment that exists only because Yonex, Victor, and Li-Ning charge a premium for their flagship logos. Kawasaki has historically been the budget alternative — close-but-not-quite. The Master Mao 20 is the first Kawasaki frame that earns a serious comparison rather than a polite nod. It is built around Coach Li Mao's input, runs Toray carbon yarn, and the smash transfer feel is closer to an Astrox 88D Pro than the price tag would suggest.",
         blocks: [
         {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
+        {
           kind: "firstPerson",
           context: "Where Kawasaki sits in my recommendation set",
           body:
@@ -2649,6 +2915,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why the Master Mao 20 actually exists",
           body: "Kawasaki has been adjacent to the badminton conversation for years — fine value rackets, occasionally a real performer, but rarely something that competed at the flagship level. The Mao series is the brand's deliberate push into pro-tier perception, signed off by Coach Li Mao who has worked with multiple national programs. Mao 20 is the line's flagship attack frame. The pitch: pro-tier feel and build, sub-flagship price.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "The flat-frame peg system, explained simply",
@@ -2699,6 +2966,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Pure attack rackets are an honest category. They do one thing — load force, fire it through a stiff shaft, leave the shuttle steeper than it has any right to be. They are bad at most other things. The Kumpoo Shura II is the most committed example of the type on the market right now. The 6.1mm shaft is among the thinnest in production. The frame is heavy and stable. The recovery is slow. If those words describe what you want, the rest of this review will tell you whether it earns the price.",
         blocks: [
+        {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Li-Ning Halbertec 9000"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
         {
           kind: "firstPerson",
           context: "Why I would still try a smaller brand",
@@ -2824,6 +3104,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Most badminton brands have a clear flagship for each style. Yonex has the 88S Pro for control and the 88D Pro for attack. Li-Ning has the Halbertec line for both. Victor has been weaker at this — its lineup leans speed almost everywhere, which makes it harder for players who want a Victor frame for organised, control-first rallies. Yu 12 is Victor's deliberate fix. The line gets alloy carbon, WES 3.0 whip-strike, and the same precision tuning that the Auraspeed flagships received. The result is a control-with-finishing-weight racket that finally completes the brand's lineup.",
         blocks: [
         {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Victor Auraspeed family"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
+        {
           kind: "firstPerson",
           context: "Where the Yu 12 sits in the Victor lineup",
           body:
@@ -2902,6 +3195,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why Yu 12 finally feels like a Victor flagship",
           body: "Yu series rackets have historically been honest mid-tier control frames — fine for the price, never the conversation. Yu 12 changes that by inheriting Victor's full top-tier tech stack: alloy carbon, WES 3.0, Force Ring Pro, and the precision tuning the Auraspeed line received. The result is a frame that competes against Astrox 88S Pro and Arcsaber 11 Pro on substance, not just price.",
+          glossaryLinks: [{ term: "Smash", id: "smash" }],
         },
         {
           heading: "What WES 3.0 changes in practice",
@@ -2951,6 +3245,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Victor's Auraspeed line has explored speed in many directions — pure wind-cutting frames, thin-shaft frames, balanced control speed frames. Fantome takes the thin-shaft thesis to its current limit. The 5.8mm shaft is among the thinnest Victor has produced. The frame is among the narrowest Auraspeed profiles available. The result is a racket that is genuinely fast but rewards precision over force in ways that other speed frames do not.",
         blocks: [
+        {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Victor Auraspeed family"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
         {
           kind: "firstPerson",
           context: "How I anchor the Fantome",
@@ -3080,6 +3387,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Most racket generation upgrades are small — slight cosmetic refresh, marginal spec changes, sometimes a new shaft tune. Thunder 100 II is the rare generation that earns the comparison rather than just inheriting the name. Li-Ning rebuilt the frame construction, broadened the sweet spot, and tightened the shaft response. Owners of Gen 1 will recognise the family character; new buyers should not assume Gen 1 reviews tell them what to expect from Gen 2.",
         blocks: [
         {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Li-Ning Halbertec 9000"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
+        {
           kind: "firstPerson",
           context: "Where the Thunder 100 line sits",
           body:
@@ -3158,6 +3478,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "What the composite frame actually changes",
           body: "Li-Ning's composite威力 (Power) frame design adds internal reinforcement layers that change how energy travels through the head. On Gen 1 the frame transmitted force fairly cleanly but had a smaller forgiveness window on off-centre hits — late or early contact felt lifeless. Gen 2 spreads contact response more evenly across the string bed, which translates to a noticeably broader sweet spot. On smashes the result is denser sound and more consistent power across the head. On clears the result is more forgiving length on imperfect timing.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "Where Gen 2 wins on hit feel",
@@ -3207,6 +3528,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Li-Ning's Aerus line has been the most influential and the most polarising shoe story in badminton. The 2010 original introduced supercritical foam to the sport — a stack of springy bounce that felt unlike anything Yonex or Victor were making. The 2020 II refined the formula. Both versions had the same problem: the foam was lively, but the chassis underneath did not always control where it bounced. III Pro is the version that finally fixes that — same airy, energetic foam, now wrapped in a stability cage that keeps the shoe pointed where you push it.",
         blocks: [
+        {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Li-Ning Halbertec 9000"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
         {
           kind: "firstPerson",
           context: "How I'd compare it to my shoe",
@@ -3331,6 +3665,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Most rackets ship in two or three U-class variants — same frame, different swing weight. The TK-F C Ultra rejects that convention. The 3U, 4U, and 5U variants have different shaft thickness, different tech configs, and meaningfully different attack identities. The argument: a 3U attacker and a 5U attacker have different needs, so why ship them the same physics? It is an ambitious experiment, and on court it mostly works.",
         blocks: [
+        {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Victor Auraspeed family"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
         {
           kind: "firstPerson",
           context: "Where the TK-F C Ultra sits",
@@ -3464,6 +3811,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Kawasaki has been adjacent to the badminton conversation for years — fine value shoes, occasionally a real performer, but rarely something that competed at the flagship level. KACE is the brand's deliberate push into pro-tier perception. Eighteen months of development. SGS-certified cushion, abrasion, and torsion performance. Used by Kawasaki's pro tour squad in BWF tournament play. The pitch: pro-tier construction, sub-flagship price.",
         blocks: [
         {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
+        {
           kind: "firstPerson",
           context: "How I evaluate non-Yonex shoes",
           body:
@@ -3588,6 +3948,19 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Speed rackets used to be defined by what they removed — less head weight, thinner frame, lower swing weight. Kawasaki's Star-Cross argues for a different recipe: the speed comes from material refinement and shaft response, not from cutting mass. The result is a flagship-tier speed racket that does not feel hollow at contact, and that is a meaningful difference from many head-light speed frames.",
         blocks: [
         {
+                  kind: "methodology",
+                  headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+                  context: "observer",
+                  conditions: {
+                    opponents: "Division 4 Ireland practice partners",
+                    courtSurface: "wood and synthetic court mat",
+                    venue: "Maynooth University, multiple Dublin clubs",
+                  },
+                  comparators: ["Yonex Astrox 88D Pro 2024 (founder firsthand)"],
+                  sourceAttribution:
+                    "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+                },
+        {
           kind: "firstPerson",
           context: "Where the Star Cross sits",
           body:
@@ -3666,6 +4039,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why material refinement beats mass cutting",
           body: "Two ways to make a racket faster. Cut mass (lighter head, thinner frame, head-light balance), or refine the material (higher-modulus carbon, denser weave, optimised resin). Most speed flagships use the first approach because it shows up clearly on a spec sheet. Star-Cross uses the second — the swing is fast not because the head is light but because the material transmits force faster. The trade-off: spec-sheet readers may find Star-Cross less obviously a speed racket; on court the speed is there.",
+          glossaryLinks: [{ term: "Head-light", id: "head-light" }],
         },
         {
           heading: "Where the substantial feel pays off",
@@ -3708,6 +4082,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Stop reading marketing language. Start with five questions.",
           body: "Brand catalogues are written to make every racket sound special. Yours is not. The five decisions that actually determine whether a racket fits you are: (1) Weight class — 3U, 4U, or 5U. (2) Balance — head-light, even, or head-heavy. (3) Shaft flex — flexible, medium, stiff, or extra-stiff. (4) Common string tension range. (5) Grip size — G4, G5, G6. Every other spec on the box (frame width, grommet count, branded carbon names) is downstream of these five.",
+          glossaryLinks: [{ term: "Head-heavy", id: "head-heavy" }, { term: "Head-light", id: "head-light" }, { term: "Smash", id: "smash" }],
         },
         {
           heading: "1. Weight class — start with 4U if unsure",
@@ -3812,6 +4187,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Equipment terms",
           body: "U-class: weight class for unstrung rackets — lower number means heavier. 3U is ~85-89g, 4U is 80-84g, 5U is 75-79g. F: flyweight, lighter than 6U, usually junior-specific. Head-heavy / head-light / even-balance: where mass concentrates in the racket; measured as the balance point in millimetres from the butt cap (around 280-310mm in normal frames). Shaft flex: how much the shaft bends under load — flexible, medium, stiff, extra-stiff. Sweet spot: the area on the stringbed where contact produces maximum repulsion and minimum vibration. Frame: the head ring of the racket. T-joint: where the shaft meets the frame; modern rackets often use built-in T-joints for stiffness. Grommets: the plastic eyelets through which strings thread — replaceable when worn.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }],
         },
         {
           heading: "String and tension terms",
@@ -3961,6 +4337,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "Why this argument exists at all",
           body: "Walk into any badminton forum in Asia and someone is angry about a 68-hole racket. The complaint is usually that the sweet spot is harsh, the non-sweet-spot is hard to play, and the racket is generally unforgiving. The complaint is real but the diagnosis is usually wrong — what feels like a hole-count problem is almost always a tension problem combined with a contact-quality problem. This guide walks through what each hole-count category (68, 72, 76, 78, 80) actually changes, who should care, and what your stringer should know.",
+          glossaryLinks: [{ term: "Sweet spot", id: "sweet-spot" }],
         },
         {
           heading: "68-hole rackets: the aggressive design (e.g. AX99 Pro, AX88S Pro old colour)",
