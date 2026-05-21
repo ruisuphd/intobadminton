@@ -101,6 +101,7 @@ export type BlogSlug =
   | "li-ning-halbertec-9000-standalone-review"
   | "li-ning-axforce-100-gen-2-vs-gen-1"
   | "rsl-supreme-shuttle-review"
+  | "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai"
   | "victor-drivex-12-zsw-vs-original-comparison"
   | "victor-drivex-12-vs-drivex-10-and-88d-pro-2024"
   | "bonny-zhangui-dao-8888ax-ultra-review"
@@ -216,6 +217,7 @@ export const blogSlugs: BlogSlug[] = [
   "li-ning-halbertec-9000-standalone-review",
   "li-ning-axforce-100-gen-2-vs-gen-1",
   "rsl-supreme-shuttle-review",
+  "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
   "victor-drivex-12-zsw-vs-original-comparison",
   "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
   "bonny-zhangui-dao-8888ax-ultra-review",
@@ -4512,7 +4514,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "From Japanese origin to Chinese ownership: the brand's surprising history",
-          body: "Kumpoo (薰风, KUMPOO) was founded in 2000 in Japan by Yuji Omori and Mitsutoshi Satou, who saw the global expansion of badminton as a market opportunity. The brand registered as a Japan corporation in 2001 (Kumpoo Co., Ltd.), launched the now-signature Hexagon six-cone-shaft technology in 2006 — a frame engineering choice designed to reduce torsional twist on impact — and built its own shoe factory in 2008 to escape OEM dependence. The brand's pivot point was 2009: Guangzhou-based Sportsbow Sports acquired Kumpoo entirely, moving R&D and operations to China and re-positioning the brand as a Chinese self-developed sports brand with Japanese DNA. The story is unusual: most Chinese brands are Chinese in origin, while Kumpoo flipped the script.",
+          body: "Kumpoo (薰风, KUMPOO) was founded in May 2001 in Japan by Yuji Omori and Mitsutoshi Satou, who saw the global expansion of badminton as a market opportunity (per Kumpoo's official Japanese company history). The brand registered as Kumpoo Co., Ltd. in Japan and launched the now-signature Hexagon six-cone-shaft technology in 2006 — a frame engineering choice designed to reduce torsional twist on impact — then built its own shoe factory in 2008 to escape OEM dependence. The brand's pivot point was 2009: Guangzhou-based Sobey Sports acquired Kumpoo entirely, moving R&D and operations to China and re-positioning the brand as a Chinese-owned sports brand with Japanese DNA. The story is unusual: most Chinese brands are Chinese in origin, while Kumpoo flipped the script.",
         },
         {
           heading: "Full vertical integration: the BYD comparison",

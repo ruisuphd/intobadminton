@@ -93,6 +93,18 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2025-09-26",
     lastReviewedAt: "2026-05-08",
   },
+  "/brands/bonny/": {
+    publishedAt: "2026-05-21",
+    lastReviewedAt: "2026-05-21",
+  },
+  "/brands/kawasaki/": {
+    publishedAt: "2026-05-21",
+    lastReviewedAt: "2026-05-21",
+  },
+  "/brands/kumpoo/": {
+    publishedAt: "2026-05-21",
+    lastReviewedAt: "2026-05-21",
+  },
 
   // Comparison guides (mix of price-bearing and pure spec/decision guides).
   "/compare-guides/astrox-77-pro-vs-88s-pro/": {
