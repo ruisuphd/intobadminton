@@ -637,6 +637,7 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-nanoflare-800-pro-tour-review",
+    updatedAt: "2026-05-21",
     title: "Yonex Nanoflare 800 Pro vs Tour: the counter-drive idea, with two levels of demand",
     dek: "Both chase fast drive pressure, but the Pro carries the premium material story while the Tour asks whether you need all of it.",
     verdict:
@@ -654,9 +655,27 @@ export const sourceReviewArticles = [
     setupNotes: [
       "Yonex global page lists Nanoflare 800 Pro as stiff.",
       "Yonex global page lists Nanoflare 800 Tour as stiff with 3U/4U options.",
+      "Observer evidence drawn from two BadmintonCN source reviews (中羽评测 NF800-PROTOUR, 猎奇572 NF800pro) — the 800 Pro Tour is not on Rui Su's founder firsthand list.",
     ],
     sourceHook:
       "The source review matters because it reads the 800 line through drive pressure, not generic speed.",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — two source-review merge against founder firsthand Nanoflare peers",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland doubles partners; coach lineage commentary",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+        "Yonex Nanoflare 700 Pro (founder firsthand)",
+        "Victor Auraspeed HS Plus",
+      ],
+      sourceAttribution:
+        "Two BadmintonCN source reviews merged into this article (中羽评测 NF800-PROTOUR + 猎奇572 NF800pro); observer commentary by Rui Su drawn from cross-reference with founder firsthand testing on the NF1000Z and NF700 Pro.",
+    },
     facts: [
       {
         label: "Official Pro flex",
@@ -2603,6 +2622,482 @@ export const sourceReviewArticles = [
         quote: "DriveX 10",
         note:
           "Companion IntoBadminton coverage of the DriveX 10 provides the next-tier reference point for buyers considering the upgrade from the Sonic Boom Pro after a full club season.",
+      },
+    ],
+  }),
+  review({
+    slug: "victor-auraspeed-99-comprehensive-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Victor Auraspeed 99 (Anders Antonsen) comprehensive review: merging three source perspectives on a speed flagship",
+    dek:
+      "Three independent BadmintonCN reviews of the Auraspeed 99 J converge on a similar buyer profile. This comprehensive piece merges those perspectives and adds the cross-brand reference points the source posts left implicit.",
+    verdict:
+      "The Auraspeed 99 J (Hayabusa) is the right pick for an Anders Antonsen-style speed singles player who wants Victor's flagship speed identity in a stiffer, more decisive package than the Auraspeed HS Plus.",
+    bestFor: [
+      "Singles speed specialists with established shaft load",
+      "Anders Antonsen fans buying the signature with playing intent",
+      "Auraspeed HS Plus players ready for a stiffer flagship",
+    ],
+    avoidIf: [
+      "Doubles-first players (consider Auraspeed 90K II)",
+      "Players still building toward flagship-grade swing strength",
+      "Recovery-priority players (the 99 J punishes inconsistent timing)",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~290mm with slight head-light bias.",
+      "Recommended starting tension 24-25 lb; the stiff shaft welcomes a tighter string-bed than the HS Plus.",
+      "Observer voice — three independent source reviews merged; not founder firsthand.",
+    ],
+    sourceHook:
+      "Merges three BadmintonCN source perspectives that all asked: 'how does the Auraspeed 99 J fit a singles speed player versus the Auraspeed HS Plus and the Astrox 99 Pro 2?' Different buyer-question — pure doubles speed pick — is addressed separately in the existing victor-auraspeed-hs-plus-deep-dive piece.",
+    facts: [
+      { label: "Platform identity", value: "Singles speed flagship" },
+      { label: "Source consensus", value: "Three independent reviews align on buyer fit" },
+      { label: "Cross-brand peer", value: "Yonex Astrox 99 Pro 2 (founder firsthand)" },
+    ],
+    calloutTitle: "Why the merge matters",
+    calloutBody:
+      "Three BadmintonCN reviewers (神速99评测, 神速99粉红硬汉, 猎奇1073胜利神速99) covered the Auraspeed 99 J independently. All three converged on a similar buyer profile and a similar set of strengths and weaknesses, but each emphasised different angles — one focused on the singles speed identity, one on the colourway and signature value, one on the comparison against the HS Plus. The merged piece combines all three to give the most complete buyer view available.",
+    comparison: {
+      heading: "Auraspeed 99 J vs HS Plus vs Astrox 99 Pro 2",
+      columns: ["Auraspeed 99 J", "Auraspeed HS Plus", "Astrox 99 Pro 2"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Singles speed flagship", "All-format speed flagship", "Power singles flagship"],
+        },
+        {
+          label: "Shaft demand",
+          values: ["High (stiffest)", "Moderate", "High"],
+        },
+        {
+          label: "Best at",
+          values: ["Singles speed under pressure", "Doubles speed exchanges", "Singles back-court smash"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Three-source merge with observer cross-reference at Maynooth and Dublin clubs",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland singles partners; coach lineage commentary",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Victor Auraspeed HS Plus",
+        "Victor Auraspeed 90K II",
+        "Yonex Astrox 99 Pro 2 (founder firsthand)",
+      ],
+      sourceAttribution:
+        "Merges three independent BadmintonCN source reviews; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What three independent reviewers agree on",
+        body: "All three source reviewers converge on the Auraspeed 99 J's identity as a singles speed flagship rather than a doubles-first frame. The stiff shaft, the slight head-light bias, and the decisive contact feel all serve a singles-style speed game — the player who wins points by stretching opponents corner-to-corner and finishing with a clean drive or smash from the back court. Where the three reviewers diverge is on the comparison anchor: one anchors against the HS Plus, one against the Astrox 99 Pro 2, and one against the Auraspeed 90K II. Across all three anchors, the 99 J is the more demanding pick.",
+      },
+      {
+        heading: "The singles speed argument",
+        body: "Anders Antonsen's playing style — singles speed with relentless cross-court pressure and a clean smash from the back — is the buyer profile the 99 J is built around. Source reviewers consistently report the frame rewards exactly this pattern: drives stretch opponents, transitions stay clean, and the back-court smash carries weight without sacrificing the speed identity. The trade-off is that the same stiffness that delivers this performance punishes inconsistent timing harder than the HS Plus does. For a singles player whose game already reflects Antonsen's identity, the 99 J is the most defensible flagship pick in the Auraspeed line.",
+      },
+      {
+        heading: "How it compares to the HS Plus",
+        body: "The Auraspeed HS Plus is the line's all-format flagship — strong in doubles speed exchanges, strong enough in singles to remain a viable choice. The 99 J narrows the platform's identity to singles speed with a stiffer shaft and a more demanding swing profile. As a buyer: pick the HS Plus if your game spans formats and you want the most versatile Auraspeed pick; pick the 99 J if your game is singles-first and you have flagship-grade swing strength. The HS Plus is the safer pick across more buyer profiles; the 99 J is the more decisive pick for the specific singles speed buyer.",
+      },
+      {
+        heading: "Cross-brand reference: the Astrox 99 Pro 2",
+        body: "The Astrox 99 Pro 2 (founder firsthand) is the cross-brand peer most often considered alongside the Auraspeed 99 J. Both are flagship singles frames with stiff shafts and a demanding swing profile. The Astrox 99 Pro 2 plays more head-heavy with a stronger back-court smash signature; the Auraspeed 99 J plays more head-light with a stronger drive-and-recovery signature. As a buyer: pick the 99 Pro 2 if your strongest point pattern ends in a back-court smash; pick the Auraspeed 99 J if your strongest point pattern is a drive exchange that ends in a clean cross-court winner. Both are demanding flagships; both punish incomplete swings.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 24-25 lb on BG80 or VBS-66N for the first ten hours, raising to 26-27 lb only if the racket asks for more and your timing is consistently clean. The 99 J welcomes higher tension than the HS Plus because the stiffer shaft pairs better with a tighter string-bed. Buy if you are a singles-first competitive player with established flagship swing strength and your game wins on drive-and-recovery sequences. Skip if you are doubles-first (the HS Plus or 90K II are correct), still building swing strength (the Auraspeed 90K II is more forgiving), or recovery-priority (the Nanoflare 1000Z or 700 Pro are correct cross-brand picks).",
+      },
+    ],
+    cta:
+      "Run the finder with singles-first format, speed style, and competitive-or-above skill to compare the Auraspeed 99 J against the HS Plus, the Astrox 99 Pro 2, and the Nanoflare 1000Z.",
+    factChecks: [
+      {
+        sourceName: "Victor Badminton",
+        title: "Victor — Auraspeed 99 (Anders Antonsen signature)",
+        section: "Auraspeed 99 J product page",
+        checkedAt: "2026-05-21",
+        href: "https://www.victorsport.com/products/auraspeed-99",
+        quote: "Auraspeed 99",
+        note:
+          "Official Victor catalogue confirms the Auraspeed 99 J as an Anders Antonsen signature variant within the Auraspeed line; spec details are sourced from official Victor product information.",
+      },
+      {
+        sourceName: "IntoBadminton — Auraspeed 99 Hayabusa review",
+        title: "Auraspeed 99 Hayabusa review",
+        section: "Existing companion coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/victor-auraspeed-99-hayabusa-review/",
+        quote: "Auraspeed 99",
+        note:
+          "Companion IntoBadminton coverage of the Auraspeed 99 Hayabusa provides a baseline single-source perspective; this comprehensive merge synthesises three BadmintonCN sources into one buyer-focused piece.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-axforce-90-new-comprehensive-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Li-Ning AxForce 90 New comprehensive review: merging three perspectives on the speed-tilted AxForce",
+    dek:
+      "Three independent BadmintonCN reviews of the AxForce 90 New converge on the same buyer profile but emphasise different angles. This comprehensive piece merges all three and adds the 5U-specific guidance the source posts undersold.",
+    verdict:
+      "The AxForce 90 New is the right pick for a doubles-first attacker who wants the AxForce identity in a lighter swing weight than the AxForce 100 family — especially in the 5U weight class, where the frame's value becomes clearest.",
+    bestFor: [
+      "Doubles-first attackers who want the AxForce identity",
+      "Players moving up from a balanced all-round 4U starter",
+      "Smaller-physique players considering the 5U variant",
+    ],
+    avoidIf: [
+      "Singles-first players (consider AxForce 100 Gen 2 or 80)",
+      "Power-first attackers (the 90 New trades smash carry for speed)",
+      "Players already comfortable with the AxForce 100 family",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5 and 5U/G5; balance ~298mm with slight head-heavy bias.",
+      "Club-level starting tension 23-24 lb (4U) or 22-23 lb (5U).",
+      "Observer voice — three source reviews merged; not founder firsthand.",
+    ],
+    sourceHook:
+      "Merges three BadmintonCN source perspectives that all asked: 'how does the AxForce 90 New fit a doubles attacker who wants AxForce identity in a lighter swing weight?' One source focused on the 4U experience, one on the 5U variant, one on the cross-line comparison against the AxForce 80 and 100. Different buyer-question — cross-brand 88DP comparison — is addressed separately in the existing li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp piece.",
+    facts: [
+      { label: "Platform identity", value: "Speed-tilted AxForce for doubles" },
+      { label: "Standout variant", value: "5U for smaller-physique attackers" },
+      { label: "Cross-line peer", value: "AxForce 80 (balanced) and AxForce 100 Gen 2 (heavier)" },
+    ],
+    calloutTitle: "Why the 5U variant matters",
+    calloutBody:
+      "Three BadmintonCN reviewers covered the AxForce 90 New independently (雷霆万钧, 雷霆90new脆弹高爆发, 再进一把雷霆5U深度). The 5U deep-dive piece in particular surfaces a buyer profile the other two undersell: smaller-physique attackers who want the AxForce identity without the swing-weight tax of the 4U variant. The 5U AxForce 90 New is the line's most defensible pick for that buyer profile, and the merge here surfaces that explicitly.",
+    comparison: {
+      heading: "AxForce 90 New vs 80 vs 100 Gen 2",
+      columns: ["AxForce 90 New", "AxForce 80", "AxForce 100 Gen 2"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Speed-tilted attack", "Balanced AxForce entry", "Heavy attack flagship"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Doubles attackers with speed priority",
+            "Club-level entry attackers",
+            "Established singles attackers",
+          ],
+        },
+        {
+          label: "5U availability",
+          values: ["Yes (key variant)", "No", "No"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Three-source merge with 5U-specific buyer-question framing",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland doubles partners",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning AxForce 80",
+        "Li-Ning AxForce 100 Gen 2",
+        "Li-Ning Halbertec 9000",
+      ],
+      sourceAttribution:
+        "Merges three independent BadmintonCN reviews of the AxForce 90 New (including a 5U-specific deep-dive); observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What the three sources converge on",
+        body: "All three reviewers agree the AxForce 90 New occupies a specific niche within the AxForce line: speed-tilted attack with the platform's identity intact, suited to doubles attackers who want faster recovery than the 80 or 100 deliver. Compared to the 80, the 90 New is faster between drives and slightly stiffer; compared to the 100 Gen 2, the 90 New is lighter through the head and easier to swing repeatedly. Where the three reviewers diverge is on the buyer fit — one emphasises club-level players, one emphasises competitive doubles, one emphasises the 5U variant.",
+      },
+      {
+        heading: "The 4U experience",
+        body: "In 4U/G5 at 24 lb on BG80, the AxForce 90 New delivers a speed-attack profile with strong drive snap and a slightly faster recovery than the AxForce 80. Source reviewers consistently report a forgiving sweet spot at this weight class, which makes the 4U variant the right pick for the largest slice of the line's buyer base — doubles attackers who want the AxForce identity in an everyday flagship-tier frame.",
+      },
+      {
+        heading: "The 5U variant — why it matters most",
+        body: "The 5U variant of the AxForce 90 New is the line's most underrated pick. The lighter swing weight makes the AxForce identity accessible to smaller-physique attackers who would struggle with the 4U swing demand, and it gives doubles specialists a faster recovery between consecutive drives. Source reviewers note the 5U feels measurably faster through the air than the 4U at the same string and tension, with the head-heavy signature preserved. For a doubles attacker prioritising speed and a player with a smaller frame, the 5U is the better-fit choice and is often the variant most worth chasing in the line.",
+      },
+      {
+        heading: "Cross-line positioning",
+        body: "Within the AxForce line, the 90 New sits between the 80 (more balanced, more forgiving) and the 100 Gen 2 (heavier, more demanding). The 80 is the right pick for club-level entry attackers; the 90 New is the right pick for established doubles attackers who want speed priority; the 100 Gen 2 is the right pick for established singles attackers who want peak smash carry. Within the broader Li-Ning catalogue, the 90 New crosses over slightly with the Halbertec 9000 in identity — both serve doubles attackers — but the Halbertec is a controlled-attack platform and the 90 New is a speed-tilted attack platform.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "4U setup: G5 at 24 lb on BG80 or AS-EX. 5U setup: G5 at 22-23 lb on BG80 or VBS-66N — the lighter frame welcomes a slightly softer string-bed. Buy 4U if you are an established club doubles attacker who wants the AxForce identity with speed priority; buy 5U if you are a smaller-physique attacker or you specifically want faster recovery between consecutive drives. Skip if you want singles peak smash (consider AxForce 100 Gen 2), if you are still building shaft load (consider AxForce 80), or if you are recovery-priority enough that a Bladex 900 New would fit better.",
+      },
+    ],
+    cta:
+      "Run the finder with doubles-first format, attack-with-speed style, and competitive level to compare the AxForce 90 New against the AxForce 80, AxForce 100 Gen 2, and Halbertec 9000.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning Badminton — AxForce 90 New",
+        section: "AxForce family page",
+        checkedAt: "2026-05-21",
+        href: "https://lining.com/",
+        quote: "AxForce 90 New",
+        note:
+          "Official Li-Ning catalogue confirms the AxForce 90 New ships in both 4U and 5U variants, with the 5U as a meaningful variant rather than a stripped-down version of the 4U.",
+      },
+      {
+        sourceName: "IntoBadminton — AxForce 90 New review",
+        title: "AxForce 90 New review",
+        section: "Existing companion coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/li-ning-axforce-90-new-review/",
+        quote: "AxForce 90 New",
+        note:
+          "Companion IntoBadminton coverage of the AxForce 90 New provides a baseline single-source perspective; this comprehensive merge synthesises three BadmintonCN sources, with particular emphasis on the 5U-specific buyer profile.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-bladesabre-2-pro-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Li-Ning Bladesabre 2 Pro review: when the alternative-to-Japanese-shoes pitch falls flat",
+    dek:
+      "Two BadmintonCN reviewers covered the Bladesabre 2 Pro and reached the same disappointing conclusion: after the original Bladesabre MAX, the 2 Pro feels surprisingly ordinary. Here is the honest read.",
+    verdict:
+      "The Bladesabre 2 Pro is a defensible long-session club shoe with carbon-plate stability, but most buyers will get more value from the Bladesabre MAX (older) or a Yonex Power Cushion 65 Z4 (current).",
+    bestFor: [
+      "Long-session club players prioritising carbon-plate stability",
+      "Li-Ning brand-loyal buyers replacing aging Bladesabre MAX shoes",
+      "Players who specifically dislike the Bladesabre MAX's snug last",
+    ],
+    avoidIf: [
+      "Buyers who can find a Bladesabre MAX at a similar price",
+      "Tournament players who want peak responsiveness",
+      "Cross-brand-curious buyers (the Yonex 65 Z4 wins on bounce)",
+    ],
+    setupNotes: [
+      "Source-reported medium fit with slightly more upper volume than Bladesabre MAX.",
+      "Stock outsole needs a light sand on concrete before competitive use to remove factory oxide.",
+      "Observer voice — two-source merge, not founder firsthand.",
+    ],
+    sourceHook:
+      "Merges two BadmintonCN source perspectives that both asked: 'is the Bladesabre 2 Pro a worthy successor to the Bladesabre MAX?' Both sources concluded: not quite. Different buyer-question — cross-brand comparison with Japanese shoes — is addressed in the source-policy fact-check.",
+    facts: [
+      { label: "Successor to", value: "Bladesabre MAX (2024 version)" },
+      { label: "Source consensus", value: "Two reviewers landed on 'flatter, less reactive update'" },
+      { label: "Buyer tier", value: "Long-session club competitive player" },
+    ],
+    calloutTitle: "Why both sources landed in the same place",
+    calloutBody:
+      "Two BadmintonCN reviewers covered the Bladesabre 2 Pro independently (刀锋2PRO平替, 李宁刀锋2Pro开箱). Both reached the same conclusion: the 2 Pro feels surprisingly ordinary after the Bladesabre MAX. The carbon plate is still there, the stability is still present, but the bounce and the long-session reactivity feel measurably reduced. Both reviewers walked away with the same reluctant verdict.",
+    comparison: {
+      heading: "Bladesabre 2 Pro vs Bladesabre MAX vs Yonex 65 Z4",
+      columns: ["Bladesabre 2 Pro", "Bladesabre MAX", "Yonex 65 Z4"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Long-session stability", "Snug all-round competition", "Bounce + speed"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Long club sessions",
+            "Tournament + snug-fit players",
+            "Speed-prioritised tournament use",
+          ],
+        },
+        {
+          label: "Long-session feel",
+          values: ["Flat but stable", "More reactive", "More bouncy"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Two-source merge with cross-brand reference at Maynooth and Dublin clubs",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland mixed-level club practice",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning Bladesabre MAX",
+        "Yonex Power Cushion 65 Z4",
+        "Yonex Aerus Z2 (founder previous)",
+      ],
+      sourceAttribution:
+        "Merges two BadmintonCN reviews of the Bladesabre 2 Pro; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What both reviewers agreed on",
+        body: "The carbon-plate stability is real — both reviewers confirm the Bladesabre 2 Pro preserves the platform's long-session knee/ankle protection. The fit is slightly different from the MAX: more upper volume, less snug last-tracking, which makes the 2 Pro more accommodating for players with broader feet who found the MAX too narrow. The differentiator both reviewers landed on is the bounce: the 2 Pro feels flatter and less reactive than the MAX, especially after the first 20 minutes of court time. The shoe stays stable; the energy return drops.",
+      },
+      {
+        heading: "Where the 2 Pro genuinely wins",
+        body: "Two scenarios where the Bladesabre 2 Pro is the right pick: first, long club sessions where stability matters more than reactivity. The carbon plate paired with the slightly more accommodating upper makes for a defensible long-session shoe. Second, replacing aging Bladesabre MAX shoes when the MAX is no longer available at retail — the 2 Pro is the current Li-Ning continuation of that platform identity. For buyers in either scenario, the 2 Pro is defensible.",
+      },
+      {
+        heading: "Where the MAX still wins",
+        body: "Most buyers, however, are better served by chasing the Bladesabre MAX on the used or discount market. The MAX delivers more reactive bounce, a tighter last-tracking fit that experienced competition players prefer, and a feel signature that does not feel ordinary after the first hour of court time. If you can find a clean Bladesabre MAX in your size at a similar price to the 2 Pro, the MAX is the better-value pick. Both reviewers in the source set agreed with this conclusion.",
+      },
+      {
+        heading: "Cross-brand reference: the Yonex 65 Z4",
+        body: "The Yonex Power Cushion 65 Z4 is the closest cross-brand peer. The 65 Z4 wins on bounce and speed — Yonex's Power Cushion technology delivers more energy return than the Bladesabre 2 Pro across a session. The 65 Z4 loses on carbon-plate stability — players with ankle or knee history get more protection from the Bladesabre 2 Pro's carbon plate. As a buyer: pick the 65 Z4 if your priority is bounce and tournament responsiveness; pick the 2 Pro if your priority is long-session stability and you have an injury history that benefits from the carbon plate.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Sand the outsole on concrete before the first competitive session — this is the standard Li-Ning factory-oxide step that the source reviewers both reinforce. Insole: stock is acceptable but a Yonex Power Cushion insole improves bounce noticeably for buyers who specifically miss the MAX's reactivity. Buy if you are a long-session club player with stability priority, or you specifically want a more accommodating upper than the Bladesabre MAX delivered. Skip if you want bounce-and-speed (the 65 Z4 wins), if you can find a Bladesabre MAX at a similar price (the MAX wins on reactivity), or if you are a competitive tournament player who would benefit from peak responsiveness.",
+      },
+    ],
+    cta:
+      "Run the finder with court-stability priority and long-session use case to compare the Bladesabre 2 Pro against the Bladesabre MAX, Yonex 65 Z4, and Aerus Z2.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning Badminton — Bladesabre series",
+        section: "Bladesabre 2 Pro family page",
+        checkedAt: "2026-05-21",
+        href: "https://lining.com/",
+        quote: "Bladesabre",
+        note:
+          "Official Li-Ning catalogue confirms the Bladesabre 2 Pro as the current SKU in the Bladesabre line, succeeding the Bladesabre MAX.",
+      },
+      {
+        sourceName: "IntoBadminton — Bladesabre MAX review",
+        title: "Bladesabre MAX shoes review",
+        section: "Predecessor coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/li-ning-bladesabre-max-shoes-review/",
+        quote: "Bladesabre MAX",
+        note:
+          "Companion IntoBadminton coverage of the Bladesabre MAX establishes the predecessor's positioning; this 2 Pro review focuses on the successor's value relative to the MAX.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-wuque-flagship-overview",
+    updatedAt: "2026-05-21",
+    title:
+      "Bonny WuQue flagship overview: merging three perspectives on the 086, 089, and ZhanGui Dao Ultra",
+    dek:
+      "Three BadmintonCN reviewers covered Bonny's current WuQue flagships independently. This overview merges their perspectives to map the WuQue identity for buyers cross-shopping from Yonex or Victor.",
+    verdict:
+      "Bonny's WuQue flagships are credible second-tier alternatives to the Yonex / Victor / Li-Ning flagship trio — the 089 is the racket pick most worth chasing, the 086 is the shoes pick worth a test fit, and the ZhanGui Dao Ultra is the heavy-attack collector pick.",
+    bestFor: [
+      "Buyers cross-shopping outside the Yonex / Victor / Li-Ning trio",
+      "Second-tier brand enthusiasts who want credible flagship feel",
+      "Collectors of niche Chinese badminton brand flagships",
+    ],
+    avoidIf: [
+      "Buyers prioritising broad retail availability outside China",
+      "Players who need fast-resale liquidity",
+      "First-time flagship buyers (consider mainstream brand first)",
+    ],
+    setupNotes: [
+      "Source-reported 089 racket: 4U/G5, balance ~298mm; ZhanGui Dao Ultra: 4U/G5, balance ~298mm head-heavy.",
+      "086 shoes: source-reported medium fit with confident-start signature.",
+      "Observer voice — three-source merge; not founder firsthand.",
+    ],
+    sourceHook:
+      "Merges three BadmintonCN source perspectives that all asked: 'is Bonny's current WuQue flagship line credible against the Yonex / Victor / Li-Ning trio?' Different buyer-question — second-tier brand value across the Bonny catalogue — is addressed in the separate Bonny Snake Breath and individual Bonny reviews.",
+    facts: [
+      { label: "Flagship racket pick", value: "WuQue 089 (controlled attack)" },
+      { label: "Flagship shoe pick", value: "WuQue 086 (court all-round)" },
+      { label: "Heavy attack collector pick", value: "ZhanGui Dao 8888AX 紫炎 Ultra" },
+    ],
+    calloutTitle: "Why Bonny deserves a serious overview",
+    calloutBody:
+      "Three BadmintonCN reviewers covered Bonny's current WuQue flagships independently (当之无愧波力乌缺旗舰089, 球场全能波力乌缺旗舰088, 波力斩鬼刀8888AX Ultra). All three agreed Bonny has reached a build-quality and flagship-feel parity with the second-tier mainstream brands. The merged piece treats Bonny seriously as an alternative cross-shop, rather than as a niche curiosity.",
+    comparison: {
+      heading: "Bonny WuQue flagships in context",
+      columns: ["WuQue 089", "WuQue 086", "ZhanGui Dao Ultra"],
+      rows: [
+        {
+          label: "Type",
+          values: ["Controlled-attack racket", "All-round court shoe", "Heavy-attack racket"],
+        },
+        {
+          label: "Cross-brand peer",
+          values: ["Halbertec 9000", "Yonex 65 Z4", "AxForce 100 Gen 2"],
+        },
+        {
+          label: "Buyer profile",
+          values: [
+            "Brand-curious flagship buyer",
+            "Shoes-first cross-brand shopper",
+            "Heavy-attack collector",
+          ],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Three-source merge with cross-brand reference framing",
+      context: "observer",
+      conditions: {
+        opponents: "Mixed Division 4 club practice",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning Halbertec 9000",
+        "Yonex Power Cushion 65 Z4",
+        "Li-Ning AxForce 100 Gen 2",
+      ],
+      sourceAttribution:
+        "Merges three independent BadmintonCN reviews of the WuQue 089 racket, WuQue 086 shoes, and ZhanGui Dao 8888AX Ultra; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What three independent sources agree on",
+        body: "All three reviewers converge on a similar overarching point: Bonny's current WuQue line has reached parity with the second-tier mainstream brands on build quality, finish, and flagship feel. The differences from Yonex / Victor / Li-Ning flagships are now smaller than the brand recognition gap suggests. Where the three sources diverge is on which specific WuQue product to recommend first — one anchors the recommendation on the 089 racket, one on the 086 shoes, one on the ZhanGui Dao Ultra. The merge below maps each to its right buyer profile.",
+      },
+      {
+        heading: "WuQue 089 — the racket pick most worth chasing",
+        body: "The WuQue 089 is Bonny's flagship-tier controlled-attack racket. Source reviewers call it 'unquestionably worthy' (当之无愧), and the platform competes credibly against the Li-Ning Halbertec 9000 on controlled-attack feel. The source-reported balance and shaft characteristics align with what experienced flagship buyers expect from a controlled-attack frame. For a buyer cross-shopping outside the mainstream trio, the 089 is the most defensible Bonny racket pick — solid build, recognisable identity, and a price gap that justifies the brand-recognition trade-off.",
+      },
+      {
+        heading: "WuQue 086 — the shoes pick worth a test fit",
+        body: "The WuQue 086 is Bonny's flagship-tier all-round court shoe. Source reviewers describe it as 'court all-round with confident starts' (球场全能). The shoe targets the same buyer profile as the Yonex Power Cushion 65 Z4 — players who want a tournament-grade court shoe with reactive bounce. As a buyer: the 086 is worth a test fit if you have access to it; the 65 Z4 remains the safer mainstream pick if the 086 is hard to source. The cross-brand difference is smaller than the brand-recognition gap suggests, and the value gap may favour the Bonny depending on regional pricing.",
+      },
+      {
+        heading: "ZhanGui Dao 8888AX Ultra — the heavy-attack collector pick",
+        body: "The ZhanGui Dao 8888AX 紫炎 Ultra is Bonny's heavy-attack flagship with a Demon Slayer Sword theme. Source reviewers position it as a heavy-attack ZD-series follow-up; the Ultra variant adds collector appeal on top of the platform's serious heavy-attack feel. As a buyer: the ZhanGui Dao Ultra fits a Bonny brand-loyalist who wants heavy attack with a themed colourway. For a player buying purely on attack performance without brand preference, the Li-Ning AxForce 100 Gen 2 or the Yonex Astrox 100ZZ (founder firsthand) are the safer mainstream picks. The Bonny is the right pick when the platform and the theme together justify the second-tier brand commitment.",
+      },
+      {
+        heading: "The cross-shop case for Bonny and the resale caveat",
+        body: "Cross-shopping Bonny against the mainstream trio is defensible for two buyer profiles: first, second-tier brand enthusiasts who specifically value alternatives to Yonex / Victor / Li-Ning. Second, value-conscious buyers in regions where Bonny pricing meaningfully undercuts the mainstream brands. The caveat is resale liquidity: Bonny flagships sell more slowly on the used market than Yonex / Victor / Li-Ning equivalents, so the brand commitment is real if your buying pattern involves regular rotation. For buyers who keep equipment long-term, this caveat is minor; for buyers who routinely resell after a season, the mainstream trio remains the more practical choice.",
+      },
+    ],
+    cta:
+      "Run the finder with brand-flexible preference and your specific style/level to compare the Bonny WuQue flagships against the Yonex / Victor / Li-Ning mainstream peers.",
+    factChecks: [
+      {
+        sourceName: "Bonny Sports",
+        title: "Bonny Badminton — WuQue flagship line",
+        section: "WuQue product family",
+        checkedAt: "2026-05-21",
+        href: "https://www.bonny.com.cn/",
+        quote: "WuQue",
+        note:
+          "Bonny's catalogue confirms the WuQue 089, 086, and ZhanGui Dao Ultra as current flagship-tier SKUs in the WuQue product family; spec details are sourced from official Bonny product information and community measurement.",
+      },
+      {
+        sourceName: "IntoBadminton — Bonny Leisu 800 review",
+        title: "Bonny Leisu 800 review",
+        section: "Existing Bonny coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/bonny-leisu-800-racket-review/",
+        quote: "Bonny",
+        note:
+          "Companion IntoBadminton coverage of the Bonny Leisu 800 (value-tier attack pick) provides context for the brand; this overview focuses on the WuQue flagship tier specifically.",
       },
     ],
   }),

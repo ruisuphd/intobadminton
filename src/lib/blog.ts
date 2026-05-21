@@ -76,7 +76,11 @@ export type BlogSlug =
   | "victor-drivex-12-zsw-vs-original-comparison"
   | "yonex-astrox-99-pro-gen-1-review"
   | "yonex-arcsaber-7-tour-review"
-  | "victor-sonic-boom-pro-budget-attack-review";
+  | "victor-sonic-boom-pro-budget-attack-review"
+  | "victor-auraspeed-99-comprehensive-review"
+  | "li-ning-axforce-90-new-comprehensive-review"
+  | "li-ning-bladesabre-2-pro-review"
+  | "bonny-wuque-flagship-overview";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -154,6 +158,10 @@ export const blogSlugs: BlogSlug[] = [
   "yonex-astrox-99-pro-gen-1-review",
   "yonex-arcsaber-7-tour-review",
   "victor-sonic-boom-pro-budget-attack-review",
+  "victor-auraspeed-99-comprehensive-review",
+  "li-ning-axforce-90-new-comprehensive-review",
+  "li-ning-bladesabre-2-pro-review",
+  "bonny-wuque-flagship-overview",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
