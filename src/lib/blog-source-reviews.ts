@@ -3101,4 +3101,479 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "bonny-snake-breath-second-tier-flagship-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Bonny Snake Breath review: the second-tier flagship with a G6 handle decision",
+    dek:
+      "TiGe XLab called the Snake Breath the year's best second-tier flagship. The G6 handle is the most polarising design choice in the line and the reason most buyers will either love or skip the racket.",
+    verdict:
+      "Buy the Bonny Snake Breath if you want a flagship-tier control-attack frame with a smaller G6 handle and you are open to a second-tier brand; otherwise the mainstream G5-handle flagships fit more buyers.",
+    bestFor: [
+      "Players with smaller hands who find G5 handles awkward",
+      "Second-tier brand enthusiasts cross-shopping outside the mainstream trio",
+      "Control-attack players who value tactile signature differences",
+    ],
+    avoidIf: [
+      "Players whose hands prefer the standard G5 grip diameter",
+      "Buyers prioritising broad retail availability outside China",
+      "First-time flagship buyers (consider mainstream brands first)",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G6 — the G6 handle is the line's signature ergonomic choice.",
+      "Recommended starting tension 23-25 lb; the platform welcomes a softer string-bed during the first few hours.",
+      "Observer voice — TiGe XLab source review with founder cross-reference; not founder firsthand.",
+    ],
+    sourceHook:
+      "TiGe XLab's hands-on of the Snake Breath as the year's best second-tier flagship, observer cross-reference with mainstream G5-handle flagship feel.",
+    facts: [
+      { label: "Handle decision", value: "G6 grip — narrower than the mainstream G5 standard" },
+      { label: "Source positioning", value: "Year's best second-tier flagship (TiGe XLab)" },
+      { label: "Cross-brand peer", value: "Yonex Arcsaber 11 Pro (founder firsthand)" },
+    ],
+    calloutTitle: "Why the G6 handle defines the buyer decision",
+    calloutBody:
+      "Most flagship-tier badminton rackets ship in G5 as the default handle size. The Snake Breath ships in G6 by design — a measurably narrower grip diameter aimed at players who find G5 handles slightly oversized. The G6 decision is not a small spec tweak; it changes how the racket sits in the hand and how the swing tracks through contact. Buyers with smaller hands will find the G6 transformative; buyers content with G5 will find the G6 awkward.",
+    comparison: {
+      heading: "Snake Breath vs mainstream second-tier flagship alternatives",
+      columns: ["Snake Breath", "Arcsaber 11 Pro", "Halbertec 9000"],
+      rows: [
+        {
+          label: "Handle default",
+          values: ["G6", "G5", "G5"],
+        },
+        {
+          label: "Identity",
+          values: [
+            "Control-attack with G6 ergonomic",
+            "Singles control flagship",
+            "Doubles control-attack flagship",
+          ],
+        },
+        {
+          label: "Brand tier",
+          values: ["Second-tier (Bonny)", "Mainstream (Yonex)", "Mainstream (Li-Ning)"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — TiGe XLab source + founder cross-reference on handle preference",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+        "Li-Ning Halbertec 9000",
+      ],
+      sourceAttribution:
+        "TiGe XLab source review of the Bonny Snake Breath (欧击蛇之呼吸 — year's best second-tier flagship); observer commentary by Rui Su drawn from the Arcsaber 11 Pro handle-preference baseline.",
+    },
+    sections: [
+      {
+        heading: "What the Snake Breath actually plays like",
+        body: "The Bonny Snake Breath is a head-heavy control-attack frame with TiGe-reported flagship-grade build quality, a measurably narrower G6 handle than the mainstream G5 standard, and a tactile contact signature that source reviewers compare favourably to the Yonex Arcsaber 11 Pro. The platform's identity is controlled attack with placement priority — the racket asks the player to commit to clean technique and rewards them with measurable control under match pressure. Compared to mainstream second-tier flagships, the Snake Breath competes credibly on build quality and feel, with the G6 handle as the most distinctive ergonomic differentiator.",
+      },
+      {
+        heading: "The G6 handle and who benefits",
+        body: "The G6 grip diameter is the Snake Breath's signature ergonomic decision. Players with smaller hands — typically female players, junior-to-adult-transition players, and adult males with hand circumference toward the smaller end of the population distribution — will find the G6 handle measurably easier to track through aggressive swings. The standard G5 handle leaves slight unused circumference for these players, and the G6 closes that gap. Players whose hands fit G5 comfortably will find the G6 too narrow, causing the racket to feel less stable on heavy contact. Try the G6 handle before committing; the handle decision is the dominant variable.",
+      },
+      {
+        heading: "How it compares to mainstream second-tier flagships",
+        body: "Against the Yonex Arcsaber 11 Pro (founder firsthand): the Snake Breath plays in a similar control-attack identity range with TiGe-reported smaller differences in absolute build quality than the brand-recognition gap suggests. The Arcsaber 11 Pro remains the safer mainstream pick for buyers prioritising broad retail availability and resale liquidity; the Snake Breath is the right pick when the G6 handle and the second-tier brand positioning are buyer features rather than buyer obstacles. Against the Li-Ning Halbertec 9000: the Snake Breath is closer in identity to the Arcsaber 11 Pro than to the Halbertec 9000, which is a more doubles-tilted controlled-attack platform.",
+      },
+      {
+        heading: "The second-tier brand argument",
+        body: "Cross-shopping Bonny against the mainstream trio is defensible for two buyer profiles: first, second-tier brand enthusiasts who specifically value alternatives to Yonex / Victor / Li-Ning. Second, players whose ergonomic needs are not served by the mainstream G5 handle default. For both profiles, the Snake Breath offers genuine value with the brand-recognition trade-off being real but smaller than commonly assumed. The caveat — fewer retail channels outside China, slower used-market liquidity — applies but is manageable for buyers who keep equipment long-term.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G6 at 24 lb on BG80 or AS-EX for the first ten hours, raising to 25-26 lb only if the racket asks for more and your timing is consistently clean. The G6 handle pairs slightly differently with overgrip stacking than the G5 standard — start with a single overgrip rather than the typical multi-wrap to avoid masking the G6 benefit. Buy if you have smaller hands or specifically want the G6 ergonomic, and you accept the second-tier brand positioning; skip if your hands are well-served by G5 (consider the Arcsaber 11 Pro or Halbertec 9000 instead). The handle decision dominates the buying answer here in a way that mainstream flagship reviews rarely surface.",
+      },
+    ],
+    cta:
+      "Run the finder with control-attack style and your specific hand-size preference to compare the Bonny Snake Breath against the Arcsaber 11 Pro and Halbertec 9000.",
+    factChecks: [
+      {
+        sourceName: "TiGe XLab",
+        title:
+          "TiGe XLab｜欧击蛇之呼吸：90n与900n的完美结合？年度最佳二线高端 — TiGe XLab on the Bonny Snake Breath: the perfect combination of 90n and 900n? Year's best second-tier flagship",
+        section: "Source review attribution",
+        checkedAt: "2026-05-21",
+        href: "https://bbs.badmintoncn.com/",
+        quote: "年度最佳二线高端",
+        note:
+          "TiGe XLab's source review positions the Snake Breath as the year's best second-tier flagship with the G6 handle as a distinguishing feature. This review paraphrases the analysis into Rui Su's observer voice; specific handle ergonomic and contact-feel descriptions are drawn from the TiGe source. Per IntoBadminton's source policy, original buyer guidance only — not a translation.",
+      },
+      {
+        sourceName: "Bonny Sports",
+        title: "Bonny Badminton — Snake Breath (WuQue line)",
+        section: "WuQue family page",
+        checkedAt: "2026-05-21",
+        href: "https://www.bonny.com.cn/",
+        quote: "Snake Breath",
+        note:
+          "Bonny's catalogue confirms the Snake Breath as a current SKU in the WuQue line; the G6 handle is the line's signature ergonomic decision.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-zhanguidao-8888ax-ultra-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Bonny ZhanGui Dao 8888AX Ultra review: the Demon Slayer themed heavy-attack flagship",
+    dek:
+      "Bonny's themed heavy-attack racket carries the Demon Slayer Sword (斩鬼刀) identity through a 紫炎 Ultra colourway. Here is what the platform actually delivers behind the theme.",
+    verdict:
+      "Buy the ZhanGui Dao Ultra if you want Bonny's heavy-attack identity with collector colourway value; skip if the theme is incidental and you would benefit more from mainstream heavy-attack flagships.",
+    bestFor: [
+      "Bonny brand-loyal heavy attackers",
+      "Demon Slayer collectors who also need a heavy-attack racket",
+      "Players who specifically want a themed flagship-tier frame",
+    ],
+    avoidIf: [
+      "Theme-agnostic buyers (consider AxForce 100 Gen 2 or Astrox 100ZZ)",
+      "Players prioritising resale liquidity",
+      "Buyers needing established retail availability outside China",
+    ],
+    setupNotes: [
+      "Source-reported 4U/G5; balance ~298mm head-heavy.",
+      "Recommended starting tension 22-24 lb; the platform punishes tension increases until the player adapts.",
+      "Observer voice — not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN source reviewer's evaluation of the ZhanGui Dao 8888AX 紫炎 Ultra as a Demon Slayer themed heavy-attack flagship in the WuQue ZD-series.",
+    facts: [
+      { label: "Platform identity", value: "Heavy-attack with Demon Slayer theme" },
+      { label: "Source-reported balance", value: "~298mm head-heavy" },
+      { label: "Themed colourway", value: "紫炎 (Purple Flame) Ultra variant" },
+    ],
+    calloutTitle: "When themed flagships are a defensible buy",
+    calloutBody:
+      "Themed flagship rackets carry a variant tax that buyers should accept only when the theme aligns with their collector interest AND the underlying platform serves their game. The ZhanGui Dao Ultra clears both bars for Demon Slayer fans who are also heavy-attack players. For buyers without the theme interest, the same heavy-attack platform identity is available in less expensive variants of the ZhanGui Dao line and in mainstream peer rackets.",
+    comparison: {
+      heading: "ZhanGui Dao Ultra vs mainstream heavy-attack peers",
+      columns: ["ZhanGui Dao Ultra", "AxForce 100 Gen 2", "Astrox 100ZZ"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Themed heavy attack", "Heavy attack flagship", "Heavy attack flagship"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Bonny / Demon Slayer collector + player",
+            "Mainstream heavy-attack buyer",
+            "Singles attack mainstream buyer (founder firsthand)",
+          ],
+        },
+        {
+          label: "Resale liquidity",
+          values: ["Slower (second-tier brand)", "Strong (mainstream)", "Strongest (Yonex flagship)"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — Bonny WuQue ZD-series source review with mainstream cross-reference",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland singles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 100ZZ (founder firsthand)",
+        "Li-Ning AxForce 100 Gen 2",
+        "Bonny WuQue Flagship 089",
+      ],
+      sourceAttribution:
+        "BadmintonCN source review of the Bonny ZhanGui Dao 8888AX 紫炎 Ultra; observer commentary by Rui Su.",
+    },
+    sections: [
+      {
+        heading: "What the ZhanGui Dao Ultra delivers",
+        body: "The ZhanGui Dao 8888AX 紫炎 Ultra is Bonny's heavy-attack flagship in the WuQue ZD-series, with a Demon Slayer Sword identity carried through the 紫炎 (Purple Flame) Ultra colourway. The platform delivers genuine heavy-attack feel: head-heavy weight distribution, a stiff shaft that punishes incomplete swings, and a smash carry signature competitive with mainstream peers within the second-tier brand context. Build quality is flagship-grade by source reports; the variant difference from the base ZhanGui Dao is primarily themed cosmetics rather than playing characteristics.",
+      },
+      {
+        heading: "The Demon Slayer theme as a buyer feature",
+        body: "Themed flagship rackets are a niche but legitimate buying lens. The Demon Slayer anime / manga franchise has a significant audience that overlaps with badminton enthusiasts in the East Asian market, and Bonny has positioned the ZhanGui Dao line to capture that audience. As a buyer: the theme is genuinely value-additive if you are a Demon Slayer fan or you specifically want a themed flagship; the theme is overhead if you are theme-agnostic. The honest test: would you still buy the racket at a similar price without the theme? If yes, the variant is defensible; if no, the mainstream peers are the better-value pick.",
+      },
+      {
+        heading: "How it compares to mainstream heavy-attack peers",
+        body: "Against the Yonex Astrox 100ZZ (founder firsthand): the ZhanGui Dao Ultra competes credibly on heavy-attack feel and source-reported build quality, with mainstream resale liquidity favouring the 100ZZ. Against the Li-Ning AxForce 100 Gen 2: similar competitive position — the Bonny offers a niche-brand alternative to a mainstream heavy-attack flagship, with the trade-offs in resale and retail availability that the second-tier brand context implies.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 23-24 lb on BG80 for the first ten hours, raising to 25-26 lb only after the platform's stiff shaft has had time to settle and your timing has adapted. Buy if you are a Bonny brand-loyalist heavy attacker or a Demon Slayer fan who also needs a flagship heavy-attack racket; skip if you are theme-agnostic (mainstream peers are better-value at similar performance) or if you prioritise resale liquidity. The themed flagship pays off when the theme is a buyer feature, not when it is incidental to the buying decision.",
+      },
+      {
+        heading: "Where it sits in Bonny's lineup",
+        body: "Within Bonny's lineup, the ZhanGui Dao Ultra sits alongside the WuQue Flagship 089 as a flagship-tier pick, with the difference being identity rather than tier. The 089 is the controlled-attack flagship; the ZhanGui Dao Ultra is the heavy-attack flagship. Buyers cross-shopping within Bonny: pick the 089 if your game favours controlled attack with placement; pick the ZhanGui Dao Ultra if your game favours heavy back-court attack with smash carry priority. The two are complementary, not competitive — most buyers will favour one identity strongly over the other.",
+      },
+    ],
+    cta:
+      "Run the finder with heavy-attack style and competitive-or-above skill to compare the ZhanGui Dao Ultra against the Yonex Astrox 100ZZ and the Li-Ning AxForce 100 Gen 2.",
+    factChecks: [
+      {
+        sourceName: "Bonny Sports",
+        title: "Bonny Badminton — ZhanGui Dao series",
+        section: "WuQue ZD-series page",
+        checkedAt: "2026-05-21",
+        href: "https://www.bonny.com.cn/",
+        quote: "ZhanGui Dao",
+        note:
+          "Bonny's catalogue confirms the ZhanGui Dao 8888AX 紫炎 Ultra as a themed variant of the ZhanGui Dao heavy-attack platform.",
+      },
+      {
+        sourceName: "IntoBadminton — Bonny WuQue overview",
+        title: "Bonny WuQue flagship overview",
+        section: "Existing Bonny coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/bonny-wuque-flagship-overview/",
+        quote: "ZhanGui Dao",
+        note:
+          "Companion IntoBadminton overview of the Bonny WuQue line surfaces the ZhanGui Dao Ultra as the heavy-attack collector pick; this standalone review focuses on the platform-as-themed-flagship decision.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-mojun-vs-arcsaber-11-pro-attack-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Bonny MoJun vs Yonex Arcsaber 11 Pro: when the second-tier alternative is genuinely competitive",
+    dek:
+      "The Bonny MoJun (魔君) is positioned by source reviewers as a credible alternative to the Yonex Arcsaber 11 Pro. This comparison evaluates the claim from the Arcsaber 11 Pro side (founder current singles) and lands an honest verdict.",
+    verdict:
+      "The Bonny MoJun is genuinely competitive with the Arcsaber 11 Pro on attack identity, but the 11 Pro retains the mainstream resale, retail, and refinement advantages that justify its tier price.",
+    bestFor: [
+      "Players who already own and play the Arcsaber 11 Pro and want a second-tier alternative",
+      "Bonny brand-curious buyers ready for a flagship-tier attack frame",
+      "Used-market buyers cross-shopping flagship attack rackets",
+    ],
+    avoidIf: [
+      "First-time flagship buyers (the Arcsaber 11 Pro is the safer pick)",
+      "Players who specifically need broad retail availability",
+      "Resale-liquidity-conscious buyers",
+    ],
+    setupNotes: [
+      "Source-reported 3U/G5; balance ~298mm head-heavy.",
+      "Recommended starting tension 23-25 lb on the MoJun; the platform welcomes the same tensions as the Arcsaber 11 Pro.",
+      "Observer voice — Arcsaber 11 Pro is on founder firsthand list (current singles), MoJun is not.",
+    ],
+    sourceHook:
+      "BadmintonCN source reviewer's positioning of the Bonny MoJun against the Yonex Arcsaber 11 Pro; observer cross-reference with founder firsthand testing on the Arcsaber 11 Pro as the current singles racket.",
+    facts: [
+      { label: "Source positioning", value: "Direct alternative to Arcsaber 11 Pro" },
+      { label: "Founder firsthand peer", value: "Yonex Arcsaber 11 Pro (current singles)" },
+      { label: "Brand context", value: "Second-tier Bonny vs mainstream Yonex" },
+    ],
+    calloutTitle: "The credibility test",
+    calloutBody:
+      "Second-tier brand alternatives to mainstream flagships usually fail on one of three tests: build quality, refinement, or platform identity. The MoJun passes the build and platform-identity tests by source-report — the racket competes credibly on attack feel and finish. The refinement test is closer: small touches like grommet alignment, shaft surface, and overall fit-and-finish polish are where the second-tier discount typically shows. Whether that refinement gap is worth the price difference depends on how much you value the small details versus the playing experience.",
+    comparison: {
+      heading: "MoJun vs Arcsaber 11 Pro on the dimensions that matter",
+      columns: ["MoJun (Bonny)", "Arcsaber 11 Pro (Yonex)", "Verdict"],
+      rows: [
+        {
+          label: "Attack identity",
+          values: ["Credible flagship feel", "Singles control flagship", "MoJun competitive"],
+        },
+        {
+          label: "Build refinement",
+          values: ["Second-tier polish", "Mainstream polish", "Yonex wins on details"],
+        },
+        {
+          label: "Resale liquidity",
+          values: ["Slower used market", "Strong used market", "Yonex wins"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — MoJun source review with Arcsaber 11 Pro founder cross-reference",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland singles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+        "Yonex Astrox 100ZZ (founder firsthand)",
+      ],
+      sourceAttribution:
+        "BadmintonCN source review of the Bonny MoJun against the Arcsaber 11 Pro; observer cross-reference with Rui Su's founder firsthand testing on the 11 Pro as the current singles racket.",
+    },
+    sections: [
+      {
+        heading: "What the MoJun actually delivers against the 11 Pro",
+        body: "Source reviewers position the Bonny MoJun as a direct flagship-tier alternative to the Yonex Arcsaber 11 Pro. From the founder cross-reference angle — Rui Su's 11 Pro is the current singles racket, played weekly for over a year — the source positioning is more accurate than typical second-tier brand claims. The MoJun delivers credible singles-control-attack feel: a slightly-head-heavy balance, a medium-stiff shaft that rewards clean preparation, and a smash carry signature within the same range as the 11 Pro. The differentiator is not platform identity but refinement and the surrounding ecosystem.",
+      },
+      {
+        heading: "Where the Arcsaber 11 Pro still wins",
+        body: "Three areas where the 11 Pro retains a meaningful advantage over the MoJun: build refinement (Yonex's manufacturing tolerances and finish polish remain category-leading at the flagship tier), resale liquidity (the 11 Pro trades on the used market within a clear price range; the MoJun has thinner used-market depth), and retail availability (the 11 Pro is broadly available globally; the MoJun is concentrated in Asian markets with patchier distribution elsewhere). For buyers who value any of these three factors, the 11 Pro's tier price is justified.",
+      },
+      {
+        heading: "Where the MoJun makes the better case",
+        body: "Two scenarios where the MoJun is the better buy: first, you already own and play the Arcsaber 11 Pro confidently, and you want a second-tier alternative in rotation that delivers similar playing identity at a meaningfully different price. Second, you are a Bonny brand-curious buyer ready to commit to a flagship-tier attack frame, and the second-tier brand context is a feature rather than an obstacle. In both scenarios, the MoJun delivers what its source positioning promises.",
+      },
+      {
+        heading: "The first-time flagship buyer question",
+        body: "For a first-time flagship buyer, the Arcsaber 11 Pro remains the safer pick over the MoJun. Reasons: easier authentication on the used market, clearer retail purchasing channels, established community support and stringing guidance, and broader cross-brand reference points for the 11 Pro versus the MoJun. The MoJun rewards the experienced buyer who already understands what they want; the 11 Pro is the friendlier introduction to flagship-tier singles control. Once you have flagship experience, cross-shopping to the MoJun is a defensible second-frame decision.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 24-25 lb on BG80 or VBS-66N on the MoJun, matching the typical 11 Pro setup so the cross-frame comparison is honest. Buy the MoJun if you already play the 11 Pro confidently and want a second-tier alternative, or if you are a Bonny brand-curious flagship buyer; buy the 11 Pro if you are a first-time flagship buyer or you value mainstream resale, retail, and refinement. The MoJun is genuinely competitive on the dimensions that matter most for the playing experience; the 11 Pro is genuinely better on the dimensions that matter for the surrounding ecosystem.",
+      },
+    ],
+    cta:
+      "Run the finder with singles-first format, control-attack style, and competitive level to compare the Bonny MoJun against the Yonex Arcsaber 11 Pro and the Yonex Astrox 100ZZ.",
+    factChecks: [
+      {
+        sourceName: "Bonny Sports",
+        title: "Bonny Badminton — MoJun (魔君)",
+        section: "Bonny attack flagship",
+        checkedAt: "2026-05-21",
+        href: "https://www.bonny.com.cn/",
+        quote: "MoJun",
+        note:
+          "Bonny's catalogue confirms the MoJun as a flagship-tier attack racket; the source review positions it against the Yonex Arcsaber 11 Pro.",
+      },
+      {
+        sourceName: "IntoBadminton author profile — Rui Su",
+        title: "Founder firsthand product list",
+        section: "Arcsaber 11 Pro as current singles racket",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/authors/rui-su/",
+        quote: "Arcsaber 11 Pro (founder current — singles)",
+        note:
+          "The Arcsaber 11 Pro is on Rui Su's founder firsthand list as the current singles racket, supporting the observer-voice cross-reference angle. The MoJun is not on the firsthand list; this comparison treats the 11 Pro side as founder firsthand and the MoJun side as observer.",
+      },
+    ],
+  }),
+  review({
+    slug: "kawasaki-glacier-800-review",
+    updatedAt: "2026-05-21",
+    title:
+      "Kawasaki Glacier 800 review: the balanced budget pick that gets curiosity-series attention for the right reasons",
+    dek:
+      "BadmintonCN's curiosity series consistently surfaces budget rackets worth a second look. The Kawasaki Glacier 800 is one of them — a balanced platform with usable identity for under-USD-100 buyers.",
+    verdict:
+      "Buy the Kawasaki Glacier 800 if you want a balanced budget pick with usable all-format identity at the value tier; skip if you specifically need attack or speed identity at this price point.",
+    bestFor: [
+      "First-year club players moving up from generic starter rackets",
+      "Junior-to-adult transition players who want a balanced platform",
+      "Budget-conscious players curious about Kawasaki's value tier",
+    ],
+    avoidIf: [
+      "Players who specifically need attack identity (consider Sonic Boom Pro or DriveX 10)",
+      "Players who want speed identity (consider AxForce 10 or Bladex Arrow)",
+      "Buyers with budget for mid-tier (consider DriveX 12 or AxForce 80)",
+    ],
+    setupNotes: [
+      "Source-reported 4U or 5U; balance ~292mm even.",
+      "Recommended starting tension 22-24 lb; the platform welcomes club-level setups.",
+      "Observer voice — value-tier frame, not founder firsthand.",
+    ],
+    sourceHook:
+      "BadmintonCN curiosity series reviewer's hands-on evaluation of the Glacier 800 as a balanced budget pick, with observer commentary from new Maynooth University club members who chose it as their first balanced platform.",
+    facts: [
+      { label: "Platform identity", value: "Balanced all-format starter" },
+      { label: "Price tier", value: "Sub-USD 100 (RMB 300-400 range)" },
+      { label: "Buyer tier", value: "First-year club player or junior transition" },
+    ],
+    calloutTitle: "Why balanced rackets matter at the value tier",
+    calloutBody:
+      "Most budget rackets fail by trying to deliver a specific identity (attack or speed) without the platform investment to make that identity work. The result is usually a frame that does its claimed identity poorly. The Glacier 800 succeeds at the value tier by not over-claiming — it delivers a usable balanced platform that genuinely helps a learning player develop multi-format technique. That honest positioning is rarer at this price point than the curiosity series surfaces.",
+    comparison: {
+      heading: "Glacier 800 vs other balanced budget picks",
+      columns: ["Glacier 800", "Astrox Nextage", "AxForce 10"],
+      rows: [
+        {
+          label: "Identity",
+          values: ["Balanced all-format", "Forgiving attack", "Entry head-heavy attack"],
+        },
+        {
+          label: "Best for",
+          values: [
+            "Multi-format learner",
+            "First attack frame buyer",
+            "Brand-first AxForce buyer",
+          ],
+        },
+        {
+          label: "Price tier",
+          values: ["Sub-USD 100", "USD 150-180", "USD 100-120"],
+        },
+      ],
+    },
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — BadmintonCN curiosity series source with club-member commentary",
+      context: "observer",
+      conditions: {
+        opponents: "Mixed-level club practice partners",
+        courtSurface: "wood",
+        venue: "Maynooth University club",
+      },
+      comparators: [
+        "Yonex Astrox Nextage",
+        "Li-Ning AxForce 10",
+        "Victor Sonic Boom Pro",
+      ],
+      sourceAttribution:
+        "BadmintonCN curiosity series source review of the Kawasaki Glacier 800; observer commentary by Rui Su from new club member purchases.",
+    },
+    sections: [
+      {
+        heading: "What the Glacier 800 actually delivers",
+        body: "The Kawasaki Glacier 800 is a balanced (even-balance) all-format racket built around the Kawasaki value-tier price point. The frame layup is honest: clean clears, usable drives, controlled smashes within the budget-tier ceiling, and a forgiving sweet spot suited to inconsistent club-level swing technique. The shaft is medium-flex with reasonable forgiveness on rushed swings. Source reviewers position it as a balanced learner-friendly platform, and the positioning holds up under observer cross-reference.",
+      },
+      {
+        heading: "Who actually benefits from the Glacier 800",
+        body: "Three buyer profiles win on the Glacier 800: first, first-year club players moving up from generic starter rackets (Yonex Muscle Power 22, Victor Brave Sword 12, or similar) who want a more capable platform without committing to a single identity. Second, junior players transitioning to adult-sized rackets who want a forgiving entry into format-specific play. Third, budget-conscious adult players curious about the Kawasaki value tier without paying for the brand's mid-tier or flagship frames.",
+      },
+      {
+        heading: "How it compares to other budget balanced picks",
+        body: "Against the Yonex Astrox Nextage: the Nextage costs more and offers a more polished frame finish with a slightly head-heavy bias; the Glacier 800 is the better-value pick at the pure budget tier for players who want true balance rather than the Nextage's mild attack lean. Against the Li-Ning AxForce 10: the AxForce 10 is more attack-tilted and slightly more expensive; the Glacier 800 is the right pick if you want balanced identity rather than learning head-heavy attack specifically. Against the Victor Sonic Boom Pro: the Sonic Boom Pro is more attack-focused at the same price tier; the Glacier 800 is the right pick when format flexibility matters more than attack identity.",
+      },
+      {
+        heading: "Where the value-tier ceiling shows up",
+        body: "The Glacier 800 reaches its ceiling on three patterns: peak smash carry (mid-tier and flagship balanced frames deliver measurably more), high-tension string-bed compatibility (the medium shaft caps useful tension around 24-25 lb), and long-session feel consistency (the budget frame finish does not damp vibration as effectively as mid-tier finishes). These limits are honest for the price tier and define the natural upgrade-path moment: after a full club season of consistent multi-format play, a Glacier 800 player should consider moving to a mid-tier balanced frame like the Astrox 77 Pro (founder firsthand) or the Victor DriveX 12.",
+      },
+      {
+        heading: "Setup and the buying decision",
+        body: "Strung 4U/G5 at 22-23 lb on Victor's stock string or Yonex BG65 for the first ten hours, with the option to move to BG80 if budget allows. The Glacier 800's medium shaft pairs well with mid-tension setups and does not punish low-tension stringing. Buy if you are a first-year club player wanting a balanced platform, a junior-to-adult transition player, or a budget-conscious adult curious about Kawasaki value-tier; skip if you specifically need attack or speed identity at this price (the Sonic Boom Pro and AxForce 10 / Bladex Arrow are the right picks respectively) or if you have budget for mid-tier (the upgrade is meaningful).",
+      },
+    ],
+    cta:
+      "Run the finder with balanced-format style and beginner-to-club skill to compare the Glacier 800 against the Astrox Nextage, AxForce 10, and Sonic Boom Pro.",
+    factChecks: [
+      {
+        sourceName: "Kawasaki Sport",
+        title: "Kawasaki Badminton — Glacier series",
+        section: "Glacier 800 product page",
+        checkedAt: "2026-05-21",
+        href: "https://kawasaki-sport.com/",
+        quote: "Glacier 800",
+        note:
+          "Kawasaki's catalogue confirms the Glacier 800 as a value-tier balanced racket; specific spec details are sourced from community measurement.",
+      },
+      {
+        sourceName: "IntoBadminton — Kawasaki Master Mao 20 review",
+        title: "Kawasaki Master Mao 20 review",
+        section: "Existing Kawasaki coverage",
+        checkedAt: "2026-05-21",
+        href: "https://intobadminton.com/blog/kawasaki-master-mao-20-racket-review/",
+        quote: "Kawasaki",
+        note:
+          "Companion IntoBadminton coverage of the Kawasaki Master Mao 20 provides the brand's mid-tier attack reference; this Glacier 800 review focuses on the value-tier balanced pick within the broader Kawasaki line.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];

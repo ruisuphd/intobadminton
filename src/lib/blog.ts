@@ -80,7 +80,11 @@ export type BlogSlug =
   | "victor-auraspeed-99-comprehensive-review"
   | "li-ning-axforce-90-new-comprehensive-review"
   | "li-ning-bladesabre-2-pro-review"
-  | "bonny-wuque-flagship-overview";
+  | "bonny-wuque-flagship-overview"
+  | "bonny-snake-breath-second-tier-flagship-review"
+  | "bonny-zhanguidao-8888ax-ultra-review"
+  | "bonny-mojun-vs-arcsaber-11-pro-attack-review"
+  | "kawasaki-glacier-800-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -162,6 +166,10 @@ export const blogSlugs: BlogSlug[] = [
   "li-ning-axforce-90-new-comprehensive-review",
   "li-ning-bladesabre-2-pro-review",
   "bonny-wuque-flagship-overview",
+  "bonny-snake-breath-second-tier-flagship-review",
+  "bonny-zhanguidao-8888ax-ultra-review",
+  "bonny-mojun-vs-arcsaber-11-pro-attack-review",
+  "kawasaki-glacier-800-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
