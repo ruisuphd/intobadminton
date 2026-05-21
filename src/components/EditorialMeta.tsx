@@ -33,35 +33,6 @@ export function EditorialMeta({
 
   const author = byline ?? companyInfo.authorByline;
 
-  const segments: { key: string; node: React.ReactNode }[] = [
-    { key: "by", node: <>By {author}</> },
-    {
-      key: "reviewed",
-      node: (
-        <>
-          Last reviewed{" "}
-          <time dateTime={meta.lastReviewedAt}>
-            {formatDate(meta.lastReviewedAt)}
-          </time>
-        </>
-      ),
-    },
-  ];
-
-  if (meta.priceCheckedAt) {
-    segments.push({
-      key: "prices",
-      node: (
-        <>
-          Prices verified{" "}
-          <time dateTime={meta.priceCheckedAt}>
-            {formatDate(meta.priceCheckedAt)}
-          </time>
-        </>
-      ),
-    });
-  }
-
   const className =
     variant === "subhead"
       ? "text-sm leading-relaxed text-[var(--color-muted)]"
@@ -69,16 +40,16 @@ export function EditorialMeta({
 
   return (
     <p className={className}>
-      {segments.map((segment, index) => (
-        <span key={segment.key}>
-          {index > 0 && (
-            <span aria-hidden="true" className="px-1.5">
-              ·
-            </span>
-          )}
-          {segment.node}
-        </span>
-      ))}
+      <span>By {author}</span>
+      <span aria-hidden="true" className="px-1.5">
+        ·
+      </span>
+      <span>
+        Updated{" "}
+        <time dateTime={meta.lastReviewedAt}>
+          {formatDate(meta.lastReviewedAt)}
+        </time>
+      </span>
     </p>
   );
 }

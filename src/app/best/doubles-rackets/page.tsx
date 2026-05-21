@@ -23,7 +23,7 @@ const config: BestPicksConfig = {
       rank: 1,
       name: "Astrox 88S Pro (2024)",
       brand: "Yonex",
-      priceUsd: 240,
+      priceUsd: 260,
       bestFor: "Front-court / mixed doubles control",
       specs: [
         { label: "Weight", value: "4U (~84g)" },
@@ -93,7 +93,7 @@ const config: BestPicksConfig = {
       rank: 4,
       name: "Nanoflare 700 Pro (2024)",
       brand: "Yonex",
-      priceUsd: 220,
+      priceUsd: 240,
       bestFor: "Club doubles, women's doubles speed",
       specs: [
         { label: "Weight", value: "4U / 5U" },
@@ -116,7 +116,7 @@ const config: BestPicksConfig = {
       rank: 5,
       name: "Astrox 88D Pro (2024)",
       brand: "Yonex",
-      priceUsd: 240,
+      priceUsd: 290,
       bestFor: "Rear-court men's doubles attack",
       specs: [
         { label: "Weight", value: "4U" },
@@ -139,7 +139,7 @@ const config: BestPicksConfig = {
       rank: 6,
       name: "DriveX 8S",
       brand: "Victor",
-      priceUsd: 110,
+      priceUsd: 189,
       bestFor: "Budget-conscious club doubles",
       specs: [
         { label: "Weight", value: "4U" },

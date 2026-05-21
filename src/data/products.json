@@ -3716,7 +3716,7 @@
       "https://lining.com/",
       "https://bbs.badmintoncn.com/"
     ],
-    "editorNote": "Li-Ning's 2025 mid-flagship competition shoe. Snug last-tracking fit with low-stretch microfiber upper and TPU heel cup. BOUNSE+ forefoot for ground feedback paired with 䨻 (Li-Ning's bounce foam) heel for impact absorption — and a carbon-fiber + TPU torsion plate that meaningfully reduces knee/ankle fatigue over long sessions. Slightly slower initiation than ultra-light speed shoes due to thicker forefoot stack. Outsole is best on clean wood courts; sand the sole on concrete to remove factory release oxide before competitive use.",
+    "editorNote": "Li-Ning's 2025 mid-flagship competition shoe. Snug last-tracking fit with low-stretch microfiber upper and TPU heel cup. BOUNSE+ forefoot for ground feedback paired with Li-Ning's bounce foam heel for impact absorption — and a carbon-fiber + TPU torsion plate that meaningfully reduces knee/ankle fatigue over long sessions. Slightly slower initiation than ultra-light speed shoes due to thicker forefoot stack. Outsole is best on clean wood courts; sand the sole on concrete to remove factory release oxide before competitive use.",
     "reviewCount": 0,
     "marketSignals": [
       {
@@ -4179,34 +4179,6 @@
     "bestFor": ["doubles_speed", "fast_drive", "counterattack"],
     "sourceUrls": ["https://www.yonex.com/nanoflare"],
     "editorNote": "Tour-tier of the Nanoflare 800 Pro family. Inherits 800 Pro DNA at lower price; strong speed-attack value for doubles.",
-    "reviewCount": 0
-  },
-  {
-    "id": "yy-astrox-100zz-anders-antonsen",
-    "category": "racket",
-    "name": "Astrox 100ZZ Anders Antonsen Edition",
-    "brand": "Yonex",
-    "priceUsd": 310,
-    "headWeight": "head_heavy",
-    "shaftFlex": "extra_stiff",
-    "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
-    "balanceMm": 301,
-    "balanceCategory": "head_heavy",
-    "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 29 },
-    "shaftFlexSource": "official",
-    "launchYear": 2025,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
-    "officialSourceUrl": "https://www.yonex.com/badminton/astrox-100zz",
-    "lastVerifiedAt": "2026-05-19",
-    "verificationStatus": "editor_verified",
-    "minRecommendedLevel": "competitive",
-    "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles_attack", "rear_court_pressure", "advanced_smash"],
-    "sourceUrls": ["https://www.yonex.com/badminton/astrox-100zz"],
-    "editorNote": "Anders Antonsen signature Astrox 100ZZ. Uses Volume Cut Resin frame material (distinct from Kurenai's Black Micro Core and VA edition).",
     "reviewCount": 0
   },
   {

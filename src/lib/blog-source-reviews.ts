@@ -4944,27 +4944,6 @@ export const sourceReviewArticles = [
     ],
   }),
   {
-    slug: "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
-    updatedAt: "2026-05-19",
-    category: "comparisons",
-    title: "Yonex Astrox 100ZZ Anders Antonsen vs VA vs Kurenai: the three Z-frame identities decoded",
-    dek: "Three 100ZZ editions, three distinct frame materials, three different player profiles — here is how to choose between Kurenai, VA (Viktor Axelsen), and Anders Antonsen.",
-    sections: [
-      { heading: "Why the 100ZZ editions are genuinely different", body: "Many 'signature edition' rackets are paint-job variations on the same chassis. The 100ZZ family is the unusual case where the editions use different frame materials and have measurably different on-court character. The reviewer (chengzhen, individual-unit measured-data discipline) treats all three as distinct rackets — and the buyer should too." },
-      { heading: "Kurenai (original red): Black Micro Core character", body: "The original 100ZZ Kurenai uses Black Micro Core frame material — denser, stiffer, more demanding. This is the marquee 100ZZ feel: extreme power on perfect contact, harsh punishment on mishits, fastest possible exit speed for advanced attackers who can drive the shaft cleanly. Reviewer-measured weight: 4U Kurenai at 89.7g w/ underbase removed, 309mm balance." },
-      { heading: "VA (Viktor Axelsen): Volume Cut Resin character", body: "The VA edition swaps Black Micro Core for Volume Cut Resin. The result: lighter swing weight, slightly softer shaft (shaft hardness 8.23 vs 8.09 per measured testing), faster swing speed at the cost of marginally less crisp contact. For most amateurs, VA is the easier 100ZZ to drive consistently. Reviewer-measured: 4U VA at 88.7g w/ underbase removed, 309mm balance." },
-      { heading: "Anders Antonsen edition: the third identity", body: "The Anders Antonsen edition uses Yonex's latest frame material refinements (verify against current packaging; specific compound varies by release year). The on-court character sits between Kurenai and VA — slightly more refined feel than VA, slightly more accessible than Kurenai. Aesthetically distinct (Antonsen's colourway and graphics) for fans of the player." },
-      { heading: "On-court differentiation summary", body: "Kurenai: most demanding, most rewarding peak, hardest to drive. VA: easiest to drive, fastest swing, slight crispness loss. Antonsen: balanced between the two, refined feel, premium pricing. The buyer's question isn't 'which is best' — it's 'which trade-off matches your timing and strength'." },
-      { heading: "The pricing reality and used market", body: "All three editions command flagship pricing new. Used Kurenai in good condition is often the cheapest of the three because supply is highest (longest production run). Used VA is mid-priced. Used Antonsen is rarest and commands premium. For new buyers, the Antonsen edition is the most recent and most available; the VA is the most consistently in-stock; Kurenai requires waiting for restocks in some regions." },
-      { heading: "Which to actually buy", body: "Buy Kurenai if you can drive stiff Z-class shafts cleanly and want the marquee 100ZZ feel. Buy VA if you want easier swing speed and accept slightly less peak crispness. Buy Antonsen if you want the most refined balance, or if you specifically want the Antonsen aesthetic. Skip all three if you cannot drive 4U head-heavy attack frames cleanly — the 100 Game or Astrox 88D Pro is friendlier." },
-    ],
-    cta: "Compare all three 100ZZ editions in the finder with advanced attack flags set.",
-    factChecks: [
-      { sourceName: "Yonex", title: "ASTROX 100ZZ product family", section: "Edition variants", checkedAt: "2026-05-19", href: "https://www.yonex.com/badminton/astrox-100zz", quote: "ASTROX 100ZZ", note: "Yonex's 100ZZ family confirms Kurenai (original), VA (Viktor Axelsen), and Anders Antonsen editions; specific frame material claims should be verified against current packaging because edition specs evolve year-to-year." },
-      { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-19", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Individual-unit measured weights and shaft hardness values from BadmintonCN community testing." },
-    ],
-  },
-  {
     slug: "victor-drivex-12-zsw-vs-original-comparison",
     updatedAt: "2026-05-19",
     category: "comparisons",

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { ArticleToc, type TocItem } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { JsonLd } from "@/components/JsonLd";
@@ -12,7 +11,6 @@ import {
   getBlogArticle,
   readingTimeMinutes,
   relatedArticles,
-  type BlogFactCheck,
   type BlogReviewSummary,
   type BlogStoryBlock,
 } from "@/lib/blog";
@@ -278,51 +276,6 @@ function StoryBlock({ block }: { block: BlogStoryBlock }) {
   );
 }
 
-function FactCheckNotes({ notes }: { notes: BlogFactCheck[] }) {
-  if (notes.length === 0) return null;
-
-  return (
-    <section className="mt-10 rounded-2xl border border-[color:var(--line)] bg-white p-5">
-      <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">
-        Fact-check notes
-      </h2>
-      <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
-        Manufacturer facts are separated from source-review impressions. When a
-        claim could not be verified from an official public source, the article
-        treats it as an impression rather than a specification.
-      </p>
-      <ul className="mt-5 space-y-4">
-        {notes.map((note) => (
-          <li
-            key={`${note.sourceName}-${note.title}-${note.section}`}
-            className="border-t border-[color:var(--line)] pt-4 first:border-t-0 first:pt-0"
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-              {note.sourceName} · {note.section} · checked {note.checkedAt}
-            </p>
-            <a
-              href={note.href}
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-              className="mt-1 inline-block text-sm font-semibold text-[var(--color-accent)] hover:underline"
-            >
-              {note.title}
-            </a>
-            {note.quote && (
-              <p className="mt-2 text-sm italic leading-relaxed text-[var(--text-secondary)]">
-                &ldquo;{note.quote}&rdquo;
-              </p>
-            )}
-            <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
-              {note.note}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 export function BlogArticlePage({
   locale,
   slug,
@@ -477,33 +430,6 @@ export function BlogArticlePage({
             >
               Updated {article.updatedAt}
             </time>
-            {(() => {
-              // Surface the most-recent factCheck.checkedAt as a freshness
-              // badge next to the Updated date. The 2026 Google Product
-              // Reviews update rewards visible verification signals; making
-              // checkedAt visible above the fold strengthens that signal
-              // for both the reader and the rater. Only render when at
-              // least one factCheck exists and its date is fresh enough
-              // to add (rather than subtract) signal value.
-              const latest = (article.factChecks ?? [])
-                .map((fc) => fc.checkedAt)
-                .filter((d): d is string => Boolean(d))
-                .sort()
-                .reverse()[0];
-              if (!latest) return null;
-              return (
-                <>
-                  <span className="text-xs text-[var(--color-subtle)]">·</span>
-                  <time
-                    className="text-xs text-[var(--color-subtle)]"
-                    dateTime={latest}
-                    aria-label={`Latest fact-check verified on ${latest}`}
-                  >
-                    Fact-checked {latest}
-                  </time>
-                </>
-              );
-            })()}
           </div>
           <h1 className="text-headline mt-5 text-[var(--text)]">
             {article.title}
@@ -524,32 +450,6 @@ export function BlogArticlePage({
       <div className="layout-band max-w-6xl py-12 lg:py-16">
         <div className={showToc ? "lg:grid lg:grid-cols-[1fr_220px] lg:gap-12" : ""}>
           <article className="max-w-3xl">
-            <p className="mb-6 border-l-2 border-[color:var(--line-strong)] pl-4 text-xs leading-relaxed text-[var(--color-muted)]">
-              Findings drawn from product-page specs, community sources
-              (BadmintonCN, Reddit r/badminton, BadmintonCentral, video
-              reviewers), and on-court testing. See our{" "}
-              <Link
-                href="/sources/"
-                className="text-[var(--color-accent)] hover:underline"
-              >
-                editorial process
-              </Link>{" "}
-              for the full citation model.
-            </p>
-
-            {/*
-             * Inline affiliate disclosure. Surfaced on every blog article
-             * whose outbound links may include affiliate URLs (reviews,
-             * comparisons). Guides are excluded by default — they rarely
-             * contain product links — but the footer disclosure still
-             * applies site-wide.
-             */}
-            {article.category !== "guides" && (
-              <div className="mb-8">
-                <AffiliateDisclosure variant="inline" />
-              </div>
-            )}
-
             <div className="space-y-8">
               {article.story && (
                 <section className="space-y-8">
@@ -631,8 +531,6 @@ export function BlogArticlePage({
               </Link>
             </div>
 
-            <FactCheckNotes notes={article.factChecks ?? []} />
-
             <SocialShare url={canonicalUrl} title={article.title} />
 
             <HelpfulReaction contentId={`blog:${article.slug}`} />
@@ -659,7 +557,7 @@ export function BlogArticlePage({
         <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
           <div className="layout-band max-w-6xl">
             <h2 className="text-headline text-[var(--text)]">
-              More {CATEGORY_LABELS[article.category].toLowerCase()}
+              Related reading
             </h2>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
               {related.map((r) => (

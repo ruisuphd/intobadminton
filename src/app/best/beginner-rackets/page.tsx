@@ -69,7 +69,7 @@ const config: BestPicksConfig = {
       rank: 3,
       name: "Arcsaber 7 Pro",
       brand: "Yonex",
-      priceUsd: 195,
+      priceUsd: 220,
       bestFor: "Beginner planning to stay 2-3 years",
       specs: [
         { label: "Weight", value: "4U" },
@@ -92,7 +92,7 @@ const config: BestPicksConfig = {
       rank: 4,
       name: "DriveX 8S",
       brand: "Victor",
-      priceUsd: 110,
+      priceUsd: 189,
       bestFor: "Beginner who likes flat doubles drives",
       specs: [
         { label: "Weight", value: "4U" },
@@ -108,7 +108,7 @@ const config: BestPicksConfig = {
       rank: 5,
       name: "Astrox 77 Pro",
       brand: "Yonex",
-      priceUsd: 220,
+      priceUsd: 219,
       bestFor: "Ambitious club player",
       specs: [
         { label: "Weight", value: "4U" },
@@ -135,7 +135,7 @@ const config: BestPicksConfig = {
       rank: 6,
       name: "Altius N-Feel",
       brand: "Mizuno",
-      priceUsd: 145,
+      priceUsd: 169,
       bestFor: "Beginner who wants something different",
       specs: [
         { label: "Weight", value: "4U" },

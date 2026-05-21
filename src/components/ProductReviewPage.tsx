@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { JsonLd } from "@/components/JsonLd";
 import {
@@ -325,14 +324,6 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
           </div>
         </header>
 
-        {/*
-         * Inline (top-of-article) affiliate disclosure. The footer disclosure
-         * still appears site-wide; this surface satisfies the post-2024 FTC
-         * expectation that disclosure precedes the first affiliate link a
-         * reader can encounter on this page.
-         */}
-        <AffiliateDisclosure variant="inline" />
-
         {showImage && (
           <div className="card p-6">
             <ProductImageView image={product.image} size={320} />
@@ -504,8 +495,6 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
             </Link>
           </div>
         </section>
-
-        <AffiliateDisclosure />
       </article>
     </main>
   );

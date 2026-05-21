@@ -69,10 +69,24 @@ business days.
 - 100ZZ success partly attributed to Yonex brand strength + national-team endorsement.
 - Many amateur buyers struggle to drive it.
 
-### Yonex Astrox 100 ZZ VA
-- Not directly reviewed by chengzhen, but he references the Victor Auraspeed
-  100X SE as a high-end speed-racket benchmark; if 100ZZ feels punishing,
-  the 100X SE sits a tier easier.
+### Yonex Astrox 100 ZZ VA (Viktor Axelsen edition)
+- Source file: `blogs/中羽球友-chengzhen-对「ASTROX-100ZZ.md` (added after
+  this doc's original draft — the line "not directly reviewed by chengzhen"
+  was true at that earlier snapshot but is no longer accurate).
+- 4U/VA, underbase removed + strung + grip: 88.7g; balance 309mm.
+- 4U/Kurenai, underbase removed + strung + grip: 89.7g; balance 309mm.
+- Unstrung VA samples typically 84.6-85.7g (consistent with Kurenai and
+  Navy Blue 100ZZ unstrung range).
+- YuanShi-rig shaft hardness: VA 8.23, Kurenai 8.09 (higher = softer on
+  YuanShi's rig, so VA is marginally easier to drive than Kurenai).
+- Frame material: VA uses Volume Cut Resin; Kurenai uses Black Micro Core.
+  Frame footprint, grommet pattern, shaft diameter, and shaft length are
+  otherwise identical between the two editions per the BadmintonCN review.
+- chengzhen's verdict: VA is lighter and faster swinging; on-court
+  differences are smaller than the colourway marketing implies, mostly
+  surfacing on continuous attack across a full match.
+- The 100X SE benchmark still applies separately: if a player finds either
+  100ZZ edition punishing, the Victor 100X SE sits a tier easier.
 
 ### Yonex Nanoflare 700 Pro (2024)
 - 4U/G5: 83.6g unstrung, 88.7g w/ underbase removed, balance 299mm.

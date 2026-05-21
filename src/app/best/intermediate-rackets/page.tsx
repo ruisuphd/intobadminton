@@ -23,7 +23,7 @@ const config: BestPicksConfig = {
       rank: 1,
       name: "Astrox 77 Pro",
       brand: "Yonex",
-      priceUsd: 220,
+      priceUsd: 219,
       bestFor: "All-court intermediate (most players)",
       specs: [
         { label: "Weight", value: "4U" },
@@ -47,7 +47,7 @@ const config: BestPicksConfig = {
       rank: 2,
       name: "Astrox 88S Pro (2024)",
       brand: "Yonex",
-      priceUsd: 240,
+      priceUsd: 260,
       bestFor: "Front-court doubles / mixed doubles",
       specs: [
         { label: "Weight", value: "4U (~84g)" },
@@ -71,7 +71,7 @@ const config: BestPicksConfig = {
       rank: 3,
       name: "Arcsaber 11 Pro",
       brand: "Yonex",
-      priceUsd: 235,
+      priceUsd: 285,
       bestFor: "Control players who hate stiff frames",
       specs: [
         { label: "Weight", value: "4U" },
@@ -94,7 +94,7 @@ const config: BestPicksConfig = {
       rank: 4,
       name: "Halbertec 8000",
       brand: "Li-Ning",
-      priceUsd: 215,
+      priceUsd: 165,
       bestFor: "Intermediate doubles attack",
       specs: [
         { label: "Weight", value: "4U" },
@@ -117,7 +117,7 @@ const config: BestPicksConfig = {
       rank: 5,
       name: "Auraspeed 90K II",
       brand: "Victor",
-      priceUsd: 200,
+      priceUsd: 219,
       bestFor: "Speed-leaning intermediate doubles",
       specs: [
         { label: "Weight", value: "4U" },
@@ -138,9 +138,9 @@ const config: BestPicksConfig = {
     },
     {
       rank: 6,
-      name: "DriveX 12 Metallic",
+      name: "DriveX 12",
       brand: "Victor",
-      priceUsd: 175,
+      priceUsd: 230,
       bestFor: "Intermediate flat-drive doubles",
       specs: [
         { label: "Weight", value: "4U" },
