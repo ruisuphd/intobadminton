@@ -777,6 +777,23 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           "Three speed rackets, three different jobs. Here is who each one is for, and why the lighter sample sometimes smashes harder.",
         blocks: [
           {
+            kind: "methodology",
+            headline: "Founder firsthand across the Nanoflare line — current doubles racket and rotation",
+            context: "founderFirsthand",
+            conditions: {
+              strings: "BG80",
+              tensionLbs: 27,
+              opponents: "Division 4 Ireland doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+              "Yonex Nanoflare 700 Pro (founder firsthand)",
+              "Yonex Nanoflare 700 Play 5U (founder firsthand)",
+            ],
+          },
+          {
             kind: "firstPerson",
             context: "What I play in this line",
             body:
@@ -823,6 +840,21 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         intro:
           "Both have hard shafts and small frames. Both want fast doubles. They feel completely different on contact — here is why.",
         blocks: [
+          {
+            kind: "methodology",
+            headline: "Hit-test both at coach sessions with founder firsthand cross-reference to NF1000Z",
+            context: "observer",
+            conditions: {
+              opponents: "Coach lineage (former Malaysia national-team) + Division 4 doubles partners",
+              courtSurface: "wood",
+              venue: "Maynooth University, Dublin clubs",
+            },
+            comparators: [
+              "Yonex Nanoflare 1000Z (founder firsthand, current doubles)",
+            ],
+            sourceAttribution:
+              "BadmintonCN cross-brand comparison reviews; observer commentary by Rui Su from hit-test sessions, no extended court time on either frame.",
+          },
           {
             kind: "firstPerson",
             context: "What I'd test before committing",

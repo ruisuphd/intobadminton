@@ -176,9 +176,20 @@ describe("blog publishing metadata", () => {
 
       for (const block of methodologyBlocks) {
         if (block.context === "founderFirsthand") {
+          // founderFirsthand context is valid when EITHER:
+          //   (a) the article slug references a firsthand product directly
+          //       (single-product reviews like yonex-arcsaber-7-pro-review), OR
+          //   (b) the methodology comparators include a founder-firsthand
+          //       product (multi-product comparisons like
+          //       yonex-nanoflare-speed-series-explained that cross-reference
+          //       the NF1000Z founder current doubles racket).
+          const comparatorMentionsFirsthand = (block.comparators ?? []).some(
+            (c) => /founder firsthand/i.test(c)
+          );
+          const slugMentionsFirsthand = slugAllowsFirsthandVoice(article.slug);
           expect(
-            slugAllowsFirsthandVoice(article.slug),
-            `${article.slug} uses founderFirsthand context but product is not on the firsthand list`
+            slugMentionsFirsthand || comparatorMentionsFirsthand,
+            `${article.slug} uses founderFirsthand context but neither the slug nor any comparator references a founder-firsthand product`
           ).toBe(true);
         } else {
           // Observer voice — headline must not be first-person.
