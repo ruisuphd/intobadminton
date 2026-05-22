@@ -17,7 +17,7 @@ const OFFICIAL_HOSTS_BY_BRAND: Record<string, readonly string[]> = {
   Yonex: ["yonex.com"],
   Victor: ["victorsport.com"],
   "Li-Ning": ["lining.com", "li-ning.com", "li-ning.com.cn"],
-  Mizuno: ["mizuno.com", "mizunoshop.net"],
+  Mizuno: ["mizuno.com", "mizunoshop.net", "mizunobadminton-asia.com", "mizunobadminton.com"],
   ASICS: ["asics.com"],
 };
 

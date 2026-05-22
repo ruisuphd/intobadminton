@@ -1523,18 +1523,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-axforce-90-new-review",
+    updatedAt: "2026-05-22",
     methodology: {
           kind: "methodology",
-          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          headline: "Observer methodology — five BadmintonCN community sources cross-referenced",
           context: "observer",
           conditions: {
             opponents: "Division 4 Ireland practice partners",
             courtSurface: "wood and synthetic court mat",
             venue: "Maynooth University, multiple Dublin clubs",
           },
-          comparators: ["Li-Ning Halbertec 9000"],
+          comparators: ["Li-Ning Halbertec 9000", "Li-Ning Halbertec 8000", "Li-Ning Thunder 80", "Yonex Astrox 88D Pro 2024 new colourway", "Victor TTY Ultima"],
           sourceAttribution:
-            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+            "Five BadmintonCN community sources (Jan 2025 - May 2026) cross-referenced; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
         },
     title: "Li-Ning AxForce 90 New review: power with a more modern rhythm",
     dek: "The 90 New source review frames it as a head-heavy attacker that tries to move faster than old-school power rackets.",
@@ -1581,6 +1582,10 @@ export const sourceReviewArticles = [
       {
         heading: "The final decision",
         body: "Buy AxForce 90 New only after confirming the exact regional spec and sample feel. If it swings fast enough for your second shot, it could be a strong attack choice. If it only impresses on one clean smash, the cheaper or friendlier alternatives may be smarter.",
+      },
+      {
+        heading: "What five independent reviewers all conclude",
+        body: "Cross-referenced findings from five separate BadmintonCN community sources (Jan 2025 - May 2026): (1) The shaft diameter was tuned from 6.2mm on the prior AxForce 90 Tiger-Dragon to 6.4mm — slightly softer, slightly more forgiving, easier to drive than the 100ZZ-influenced 90 Tiger-Dragon. (2) Reviewer-measured 4U sample: 89.5g playing weight, 304mm balance, N65 string at 26-28 lbs — almost identical mass and balance to Thunder 80, but with smaller swing weight and crisper shaft snap. (3) Compared to Halbertec 8000, the 90 New gives up sweet-spot size but wins on attack character; compared to Astrox 88D Pro 2024 new colourway, the 90 New is meaningfully softer in the shaft (one tier easier to drive); compared to Victor TTY Ultima, the 90 New is faster on swing speed and more forgiving on contact placement. The consensus framing: Li-Ning's most balanced AxForce attack racket, suitable for amateurs who want power without the punishment of the 100ZZ-class shafts.",
       },
     ],
     cta: "Run the finder with smash-heavy style and compare AxForce 90 New against AxForce 80 and 88D Pro.",
@@ -4945,13 +4950,14 @@ export const sourceReviewArticles = [
   }),
   {
     slug: "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
-    updatedAt: "2026-05-21",
+    updatedAt: "2026-05-22",
     category: "comparisons",
     title: "Yonex Astrox 100ZZ Kurenai vs VA (Viktor Axelsen): choosing the Z-frame that matches your swing",
     dek: "Yonex's two 100ZZ Z-frame editions — the original Kurenai (Black Micro Core, March 2020) and the Viktor Axelsen VA (Volume Cut Resin, September 2025) — play differently enough on court that the buying decision is real.",
     sections: [
       { heading: "Naming note: 安塞龙 transliterates Viktor Axelsen", body: "On Chinese forums the VA edition is referred to as 100ZZ 安塞龙. 安塞龙 is the standard Chinese transliteration of Viktor Axelsen — the Danish Yonex-sponsored singles player — not Anders Antonsen. Antonsen plays for Victor (his signature racket is the Auraspeed 99 J / Hayabusa). The 100ZZ family on Yonex's catalogue includes the Kurenai and the Viktor Axelsen VA edition; no Anders Antonsen 100ZZ exists." },
       { heading: "Kurenai (original red): Black Micro Core character", body: "The original 100ZZ Kurenai uses Black Micro Core frame material — denser, stiffer, more demanding. This is the marquee 100ZZ feel: extreme power on perfect contact, harsh punishment on mishits, fastest possible exit speed for advanced attackers who can drive the shaft cleanly. BadmintonCN reviewer-measured weight (chengzhen, individual-unit data): 4U Kurenai at 89.7g w/ underbase removed, 309mm balance." },
+      { heading: "The 3U Kurenai trap many amateurs walk into", body: "An additional BadmintonCN community reviewer specifically tested the 3U Kurenai after only knowing the 4U variant. The takeaway: the 3U is meaningfully harder to drive than the 4U, not because of the swing weight (which is closer to a balanced racket than people expect) but because the shaft's snap requires committed short-stroke force. Defensive lifts, backhand high-clears, and tired-arm rear-court rallies all expose the limit. The reviewer's framing: 'the 100ZZ Kurenai's difficulty is not in carrying it, it is in driving the shaft cleanly with concentrated short-power swings'. For most amateurs the 4U is the right starting variant; the 3U is for committed advanced players who have already proven they can drive 4U 100ZZ-class rackets without fatigue or technique breakdown." },
       { heading: "VA (Viktor Axelsen): Volume Cut Resin character", body: "The VA edition swaps Black Micro Core for Volume Cut Resin. The result: lighter swing weight, slightly softer shaft (shaft hardness 8.23 vs 8.09 per BadmintonCN measured testing), faster swing speed at the cost of marginally less crisp contact. For most amateurs, VA is the easier 100ZZ to drive consistently. Reviewer-measured: 4U VA at 88.7g w/ underbase removed, 309mm balance. Viktor Axelsen unveiled it himself at the YONEX All England Open 2025, with the global rollout from September 26, 2025." },
       { heading: "On-court differentiation summary", body: "Kurenai: most demanding, most rewarding peak, hardest to drive. VA: easier swing, faster recovery, slight crispness loss versus Kurenai. The buyer's question isn't 'which is best' — it's 'which trade-off matches your timing and strength'." },
       { heading: "Which to actually buy", body: "Buy Kurenai if you can drive stiff Z-class shafts cleanly and want the marquee 100ZZ feel. Buy VA if you want easier swing speed and accept slightly less peak crispness. Skip both if you cannot drive 4U head-heavy attack frames cleanly — the Astrox 88D Pro 2024 or the Astrox 100 Game is friendlier, and the 99 Pro 3rd gen is the back-court attacker's modern alternative." },
@@ -6369,6 +6375,561 @@ export const sourceReviewArticles = [
         href: "https://www.victorsport.com/product/A970NitroLite",
         quote: "NITROLITE MIDSOLE + E-TPU + TPU + Carbon Power + Solid EVA",
         note: "Victor's official product pages confirm the midsole, last, and athlete endorsements for both flagship shoes — Mohammad Ahsan on P8500 II, Lee Zii Jia + Anders Antonsen + Kodai Naraoka + Kenta Nishimoto + Wang Tzu Wei on A970 Nitro Lite.",
+      },
+    ],
+  }),
+  review({
+    slug: "fz-forza-odin-8800-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source cross-referenced with FZ Forza retailer copy",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "FZ Forza Aero Power series mid-tier reference",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (March 2026) cross-referenced with FZ Forza global brand pages and retailer specifications from Chian Shiang Sports (Taiwan). Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+    },
+    title: "FZ Forza Aero Power Odin 8800 review: an honest entry-to-mid-tier all-rounder",
+    dek: "FZ Forza's Odin 8800 is the Danish brand's entry-tier offering in the Aero Power line — competent, forgiving, and limited in the same way most entry-tier rackets are limited.",
+    verdict: "A sensible first FZ Forza for amateur buyers, with the trade-off that it lacks the standout character of higher-tier flagships.",
+    bestFor: [
+      "Players wanting an entry-to-mid attack racket from a non-mainstream brand",
+      "Intermediate amateurs who prefer easy shaft loading over crisp ejection",
+      "Buyers who like a wide sweet spot more than a punishing one",
+    ],
+    avoidIf: [
+      "You're an advanced player who needs high information density from the shaft",
+      "You want a 'must-have' flagship-tier character",
+      "You play primarily fast doubles drives",
+    ],
+    setupNotes: [
+      "FZ Forza retailer copy (Chian Shiang Sports, Taiwan) lists Aero Power Odin 8800 as 83±2g, 76 holes, head-heavy balance, slightly soft flex, max tension 30 lbs.",
+      "Community-measured 4U/G5 sample (with handle): 92.81g playing weight, 300mm balance, 6.8mm × 213mm shaft, box frame, 76-hole bed, 9-3 line slot.",
+      "FZ Forza adopted the Chinese trademark name 佛斩 (Fo Zhan) for their China-market expansion; the Odin 8800 was the first racket marketed under the new Chinese name.",
+    ],
+    sourceHook:
+      "The source review is useful precisely because it doesn't oversell the racket: the reviewer admits the Odin 8800 is competent but lacks a 'non-negotiable' angle — that honest framing is what amateur buyers need from a brand they don't know well.",
+    facts: [
+      { label: "Retailer-listed specs", value: "FZ Forza retailer lists 83±2g unstrung, 76 holes, head-heavy, slightly soft flex, max 30 lbs." },
+      { label: "Community measurement", value: "Reviewer measured 4U/G5 sample at 92.81g playing weight, 300mm balance, 6.8mm × 213mm shaft." },
+      { label: "Buyer lens", value: "Entry-to-mid tier; easy to drive; lacks standout character." },
+    ],
+    calloutTitle: "A racket designed not to upset you, but also not to thrill you",
+    calloutBody:
+      "Most entry-to-mid attack rackets share a profile: low driving difficulty, forgiving sweet spot, suppressed shaft vibration, decent enough power for amateur back-court rallies. The Odin 8800 fits the type exactly. The honest question for a buyer is whether you want a racket that won't fight you, or one that will reward you for fighting back.",
+    comparison: {
+      heading: "Where the Odin 8800 sits",
+      columns: ["FZ Forza Odin 8800", "Bonny Mojun (peer)", "FZ Forza 88D (Danish national team LE)"],
+      rows: [
+        { label: "Identity", values: ["Entry-mid all-rounder", "Mid-tier attack alternative", "Premium balanced-attack"] },
+        { label: "Main reward", values: ["Easy loading", "Better attack character", "Refined feel + control"] },
+        { label: "Main risk", values: ["Lacks standout angle", "Less brand presence", "Premium pricing"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What FZ Forza is and isn't",
+        body: "FZ Forza is a Danish badminton brand established in the early 1990s. Sponsorship and visibility focus heavily on Danish national team players. In the Chinese market, the brand adopted the trademark 佛斩 (Fo Zhan) for marketing visibility, and the Odin 8800 was the first racket released under that branding. For amateur buyers outside Europe and outside the Chinese-speaking community, FZ Forza is a 'second-tier visible' brand — present at major retailers, less likely to be your friend's recommendation, lower used-market liquidity than Yonex or Victor. None of those points say anything about the racket; they say something about the buying context.",
+      },
+      {
+        heading: "What the reviewer measured",
+        body: "The community reviewer's 4U/G5 sample weighed 92.81g playing weight (with handle), balance point 300mm, 6.8mm × 213mm shaft, box-frame construction with 76-hole stringbed and 9-3 line slot. Max stringing tension is the rare-in-class 30 lbs. Strung at a conservative 24-26 lbs Jiyi PA-2055 string for the test. The reviewer notes a suspended-core handle design and references WES 2.0 application — both technologies are conventionally associated with Victor's badminton catalogue, suggesting either OEM-shared technology or a borrowed-naming convention. We've flagged this as a source-review observation rather than a verified manufacturing claim.",
+      },
+      {
+        heading: "How the shaft actually plays",
+        body: "Mid-low shaft stiffness translates to low driving effort — you don't need to load the shaft hard to get power out the back of the court. The frame's head-leaning balance gives modest borrowing, so warm-up clears go where you aim them with minimal accuracy work. The shaft also suppresses vibration noticeably, which the reviewer correctly notes as a double-edged effect: pleasant for amateurs who don't want every micro-mishit to register through the grip, frustrating for advanced players who use vibration as information about contact quality. For the entry-to-mid tier this is the right tuning; for higher tiers it would be a limitation.",
+      },
+      {
+        heading: "Where the Odin 8800 actually wins",
+        body: "Three honest strengths. (1) Drop-shots are unusually clean for the price tier — box-frame stability plus the head-heavy balance means light-pressure drops land where you point them. (2) Net work is steady — the head weight gives stability for prods and slow pushes despite the shaft being relatively soft. (3) Defence and multi-rally durability — the 4U weight grade plus broad sweet spot mean badly-timed contacts still produce playable returns, which matters for amateur points that get scrappy fast. None of these are flagship-level wins, but they're enough to make the racket trustworthy for full match use.",
+      },
+      {
+        heading: "The honest limitations",
+        body: "Two real costs. First, full-power smashes show a 'power-loss' feel — the sweet spot doesn't concentrate force, so a clean heavy swing produces a smash that's fine but not threatening. The reviewer specifically calls this out: 'for players who want to hammer down on any opening, this racket isn't satisfying'. Second, mid-court flat-block exchanges feel sticky — the controlled-release character that helps in drops works against you in fast drives. Net result: the Odin 8800 isn't a doubles back-court hammer, isn't a singles speed weapon, but is a decent all-court 'first non-Yonex non-Victor racket' for amateur buyers who already know they don't need a flagship.",
+      },
+    ],
+    cta: "Use the racket finder with entry-tier or mid-tier balanced-attack flags to compare the Odin 8800 against Bonny Mojun and Kumpoo Shura 2.",
+    factChecks: [
+      {
+        sourceName: "FZ Forza retailer (Chian Shiang Sports, Taiwan)",
+        title: "AERO POWER ODIN 8800 product page",
+        section: "Retailer-published specs",
+        checkedAt: "2026-05-22",
+        href: "https://www.chianshiangsports.com.tw/en/products/fz-aero-power-odin-8800",
+        quote: "83±2g, 76 holes, HH balance, slightly soft flex, max tension 30 lbs",
+        note: "Independent retailer with FZ Forza distribution partnership confirms basic spec sheet for the Odin 8800.",
+      },
+      {
+        sourceName: "FZ Forza",
+        title: "FZ FORZA Rackets 2026 official catalogue",
+        section: "Brand and series",
+        checkedAt: "2026-05-22",
+        href: "https://fz-forza.com/badminton/rackets/",
+        quote: "Aero Power",
+        note: "FZ Forza's official brand site confirms the Aero Power line as one of the brand's primary racket series. The specific 'Odin 8800' SKU should be verified against the buyer's regional FZ Forza distributor; FZ Forza maintains separate product catalogues by region.",
+      },
+    ],
+  }),
+  review({
+    slug: "fz-forza-88d-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source, source-review impressions on a limited-edition variant",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 88D Pro 2024 (reference for balanced-attack tier)",
+        "FZ Forza Odin 8800 (entry-tier stablemate)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) cross-referenced with FZ Forza global brand pages. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context. The limited-edition status means full official spec sheets may not be globally published.",
+    },
+    title: "FZ Forza Aero Power 88D review: the Danish-national-team limited edition with real all-court ability",
+    dek: "FZ Forza's Aero Power 88D is the Danish national team limited edition — a balanced-attack racket with whip-snap shaft and a tournament-grade purple cosmetic.",
+    verdict: "A well-rounded balanced-attack racket with no major weakness; the Danish-national-team limited-edition status drives a premium that not every buyer needs to pay.",
+    bestFor: [
+      "Amateurs wanting a balanced-attack racket with Danish-national-team branding",
+      "Players who like FZ Forza's house feel and want their flagship variant",
+      "Buyers who value the limited-edition cosmetic as part of the purchase",
+    ],
+    avoidIf: [
+      "You want a pure attack hammer (not this racket's identity)",
+      "You can get the standard 88D in your region at lower price",
+      "You're shopping primarily on spec-per-dollar",
+    ],
+    setupNotes: [
+      "Per Victor / FZ Forza naming on the shaft itself: 'FZ FORZA AERO POWER 88D' with Danish national team limited edition badge.",
+      "Source-review impressions only — official FZ Forza global page for the 88D limited edition not consistently published; treat all spec claims as community-reviewed unless confirmed against your regional FZ Forza distributor.",
+      "Reviewer's account references Whip-Assist 3.0 (鞭击增益3.0) and a Victor toughness-elastic shaft material — these are technology names normally associated with Victor's catalogue. Either the reviewer is using cross-brand terminology, or the FZ Forza and Victor brands share OEM manufacturing. Flag for buyer verification.",
+    ],
+    sourceHook:
+      "The source reviewer's strongest point is that the 88D doesn't feel like an extreme attack racket — it plays as a tempo-and-control balanced frame that can also smash. That framing is honest and useful.",
+    facts: [
+      { label: "Reviewer-listed materials", value: "Super-high-modulus graphite + nano-resin frame; fluid box frame with nano-carbon-tube structure; Whip-Assist 3.0-named shaft (Victor-licensed terminology per source)." },
+      { label: "Cosmetic and edition", value: "Lapis Lazuli (琉璃紫) purple gradient + black-gold accents, F1 Mercedes-inspired colour story; Danish national team limited edition badge." },
+      { label: "Buyer lens", value: "Balanced all-court racket; not a pure smash hammer." },
+    ],
+    calloutTitle: "Tempo-and-rhythm, not thunder",
+    calloutBody:
+      "Marketing a limited-edition racket with the Danish national team brand and a striking purple finish creates an expectation of attack-tier output. The Aero Power 88D doesn't try to be that. It's tuned for players who build points through deep clears, decisive drops, and a smash that finishes when the opening is real — not a smash that creates openings.",
+    comparison: {
+      heading: "Where the 88D sits",
+      columns: ["FZ Forza 88D LE", "FZ Forza Odin 8800", "Yonex Astrox 88D Pro 2024 (peer)"],
+      rows: [
+        { label: "Identity", values: ["Balanced-attack premium", "Entry-mid all-rounder", "Doubles attack-control flagship"] },
+        { label: "Main reward", values: ["No weakness, tempo + finish", "Easy loading", "Marquee crispness + smash"] },
+        { label: "Main risk", values: ["LE premium pricing", "Lacks standout angle", "Demanding shaft"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the limited edition is signalling",
+        body: "The Aero Power 88D, in its purple gradient with Danish national team branding, is a marketing artifact as much as a piece of equipment. Denmark has a multi-decade sponsorship relationship with FZ Forza, and limited-edition co-branded rackets serve to anchor the brand in the elite-tier mindshare even where Denmark doesn't dominate (which is now, with Viktor Axelsen winning singles and Kim Astrup / Anders Skaarup Rasmussen in doubles). The cosmetic is genuinely striking. The honest question for an amateur buyer: if the standard 88D is available in your region at lower price, does the limited edition add enough to justify the premium? For collectors, yes. For everyone else, the standard is the better-value pick.",
+      },
+      {
+        heading: "What the reviewer measured (with caveats)",
+        body: "The community reviewer didn't publish hard measured numbers (weight in g, balance in mm, shaft hardness on a rig) the way the Bladex 800 Speed vs Halbertec 9000 Power comparison did. Instead, the reader gets a 7-8 session experiential account at amateur level. Within that account: the racket is described as light at 4U/G5 spec, supports up to 28 lbs stringing, with frame stability and shaft snap-response standing out. The lack of measured numbers is a real gap — readers wanting numeric comparison should triangulate against the standard Aero Power 88D or against the Astrox 88D Pro 2024 (well-measured peer).",
+      },
+      {
+        heading: "On-court character: drop and smash done well",
+        body: "Two strong points emerge from the source. (1) Drop-shots and slice-drops land cleanly — the box-frame stability lets you commit to the angle without the racket wobbling, and the head weight gives just enough downward pressure to make the trajectory land sharply rather than float. (2) Smashes are crisp without being harsh — the Whip-Assist 3.0 shaft (Victor-licensed terminology per source) snaps back fast enough that continuous attack chains stay coherent rather than degrading into 'one heavy smash followed by recovery'. Net play is solid because the suspended-core handle gives clean strike feedback without numbness.",
+      },
+      {
+        heading: "The Victor-technology question",
+        body: "The source reviewer's most distinctive observation: the shaft is described as using 'Victor toughness-elastic material' and the 'Whip-Assist 3.0' system — both well-known Victor catalogue technologies (Victor's WES 3.0 shaft tech and toughness-elastic material identity). This is genuinely unusual: FZ Forza and Victor are separate brands with separate distribution. Two honest readings: (a) the OEM manufacturing for the limited edition is shared between Victor and FZ Forza, so the same shaft technology ends up in both brands' rackets; (b) the reviewer is using cross-brand vocabulary to describe a shaft that simply behaves similarly. Without official FZ Forza confirmation, we flag this as a source-review claim, not a verified manufacturing fact.",
+      },
+      {
+        heading: "Buying advice",
+        body: "Honest read for amateur buyers. (1) If you like the Astrox 88D Pro 2024 character but want a different brand identity, and the Danish national team branding speaks to you, the FZ Forza Aero Power 88D is a credible alternative. (2) If you're an FZ Forza fan and want the brand's most refined balanced-attack racket, this is the current top-tier pick. (3) If you want maximum value-per-dollar in the balanced-attack tier, the standard Aero Power 88D (when available) or the Astrox 88D Pro 2024 in your region delivers more verified spec confirmation. For everyone else: this is a premium racket that earns its place on the rack but doesn't justify chasing — especially given the spec-verification gaps for the limited edition.",
+      },
+    ],
+    cta: "Compare the FZ Forza Aero Power 88D against the Astrox 88D Pro 2024 and the Halbertec 9000 in the finder for balanced-attack tier decisions.",
+    factChecks: [
+      {
+        sourceName: "FZ Forza",
+        title: "FZ FORZA Rackets 2026 official catalogue",
+        section: "Aero Power line",
+        checkedAt: "2026-05-22",
+        href: "https://fz-forza.com/badminton/rackets/",
+        quote: "Aero Power",
+        note: "FZ Forza's official catalogue confirms Aero Power as a primary line; the Danish national team limited edition '88D' SKU is not consistently published in global English copy and should be verified against regional distributors.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-golden-dragon-roar-pro-racket-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source, source-review impressions only for an obscure brand SKU",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Bonny Mojun (catalogue reference)",
+        "Bonny WuQue line (catalogue reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) on a Bonny SKU not consistently published on Bonny's English-language pages. All spec and material claims are source-review impressions until confirmed against Bonny's official Chinese-language site or a regional distributor.",
+    },
+    title: "Bonny Golden Dragon Roar Pro review: a refined evolution of an obscure flagship",
+    dek: "Bonny's Jin Long Yin (Golden Dragon Roar) Pro upgrades the predecessor with a nickel-titanium alloy shaft and refined frame geometry — but you'll need to buy via Chinese distribution.",
+    verdict: "A well-engineered refinement for Bonny fans, with the caveat that English-market availability and official documentation are inconsistent.",
+    bestFor: [
+      "Bonny fans wanting the brand's current refined flagship",
+      "Players who already own the predecessor and want an upgrade",
+      "Buyers willing to navigate Chinese-market distribution",
+    ],
+    avoidIf: [
+      "You need a racket from a well-documented global catalogue",
+      "You don't have a path to Chinese-market purchasing",
+      "You want manufacturer-verified spec confirmation",
+    ],
+    setupNotes: [
+      "Source-review impressions only — Bonny's English-language site does not consistently list this SKU as of 2026-05-22.",
+      "Community-measured 4U/G5 sample: 91.94g playing weight (with handle), 300mm balance, 6.5mm × 222mm shaft, mid stiffness, fluid box frame, 76-hole bed, 9-3 line slot, max 30 lbs, strung 26-28 lbs BN-66A.",
+      "Predecessor (non-Pro) is referenced as 'Golden Dragon Roar' (金龙呤); the Pro variant features a nickel-titanium alloy shaft (上一代为硼纤维 / boron fiber in the predecessor).",
+    ],
+    sourceHook:
+      "The community reviewer's most useful observation is that the Pro variant is a genuine refinement — not just a colour-update — but the trade-off (slightly softer mid-court flat-drive) means existing predecessor owners need to decide based on their priorities.",
+    facts: [
+      { label: "Community-measured specs", value: "4U/G5 sample at 91.94g playing weight, 300mm balance, 6.5mm × 222mm shaft, 76-hole bed." },
+      { label: "Material change vs predecessor", value: "Nickel-titanium alloy shaft replaces boron fiber; frame thinner and rounder but rigidity preserved." },
+      { label: "Buyer lens", value: "Obscure-brand flagship; source-only verification; existing Bonny fans only." },
+    ],
+    calloutTitle: "An honest refinement, but not a discovery",
+    calloutBody:
+      "The Pro variant of an existing well-regarded racket should refine what worked and rethink what didn't. The Golden Dragon Roar Pro does both: hold-on-ball improves materially, drop precision sharpens, and the kill chain stays coherent. The trade is a small dulling of the original's bright flat-drive crispness — fine if you weren't married to that exact feel.",
+    comparison: {
+      heading: "Where the Pro sits",
+      columns: ["Golden Dragon Roar Pro", "Predecessor (non-Pro)", "Bonny Mojun"],
+      rows: [
+        { label: "Shaft material", values: ["Nickel-titanium alloy", "Boron fibre", "Mainstream carbon"] },
+        { label: "Main reward", values: ["Better control + hold", "Brighter flat-drive feel", "Attack-control alternative"] },
+        { label: "Main risk", values: ["Loses some flat-drive snap", "Lacks Pro refinement", "Less premium positioning"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What changed and why it matters",
+        body: "Most Pro variants of existing rackets refine materials without rethinking the design language. The Golden Dragon Roar Pro is more ambitious: the predecessor's boron-fibre shaft is replaced with a nickel-titanium alloy (an unusual choice in mainstream badminton, where carbon-composite is standard), and the frame is restyled with a thinner, rounder geometry. The reviewer's claim is that the rigidity is preserved despite the slimmer frame, which would mean Bonny found a way to redistribute structural mass. We've flagged this as a source-review impression because nickel-titanium alloy is not the standard badminton-shaft material and the manufacturer's English-language site doesn't publish detailed engineering claims for this SKU.",
+      },
+      {
+        heading: "On-court: where the refinement shows",
+        body: "The community reviewer reports clear gains in three areas. (1) Hold-on-ball (持球感) — the shaft holds the shuttle slightly longer before release, which translates to more disguise on drop-shots and better control on slow exchanges. (2) Drop precision — the thinner frame increases sweet-spot tolerance, and the head weight gives committed downward pressure for slice-drops. (3) Net work — the larger effective stringbed area makes prods and pushes more forgiving. These aren't headline-grabbing claims, but they're the kind of refinements amateur buyers actually feel during full match play.",
+      },
+      {
+        heading: "Where the predecessor still wins",
+        body: "Two honest losses in the Pro variant. (1) Mid-court flat-drive (中前场抽挡) is slightly less snappy than the predecessor — the increased hold-on-ball means the shuttle leaves the strings a fraction of a second later, which costs you in fast flat-drive exchanges. (2) The original's distinctive 'bright instant rebound' character is dulled. If you bought the predecessor specifically for that flat-drive snap, the Pro is a step sideways rather than forward. The reviewer is candid about this — 'from bright snap to held release is a style change, not a strict improvement'.",
+      },
+      {
+        heading: "Build quality and the durability check",
+        body: "The reviewer specifically notes a durability stress event: a string snapped mid-rally, the racket sat in a bag for 5 hours unstrung (which is normally bad for frame health), and on re-stringing showed no measurable frame deformation. That's a strong durability signal for an obscure-brand racket where amateurs often worry about quality control. The 30 lb max stringing tension also signals that Bonny is confident in the frame's hoop strength. None of this is a guarantee for buyers in other regions or batches, but it's a useful single-sample data point.",
+      },
+      {
+        heading: "Should you actually buy this",
+        body: "Three honest paths. (1) If you already own the predecessor Golden Dragon Roar and have a path to Chinese-market distribution, the Pro is a credible side-grade for players who prioritise control over instant snap. (2) If you're a Bonny brand fan exploring the line, this is the current refined flagship — but the WuQue Xuanwu or Phantom 100 may better suit specific playstyle needs. (3) If you're a non-Bonny player curious about cross-brand alternatives, this is not the racket to start with — try the Bonny Mojun first (more available in English markets, more documented). The Pro rewards existing brand familiarity more than it invites new buyers in.",
+      },
+    ],
+    cta: "Use the finder with balanced-attack flags to compare the Golden Dragon Roar Pro against Bonny Mojun and WuQue Xuanwu.",
+    factChecks: [
+      {
+        sourceName: "Bonny Tongxiang Jianyou",
+        title: "Bonny Sports official brand page",
+        section: "Brand identity",
+        checkedAt: "2026-05-22",
+        href: "https://bonnysports1982.com/",
+        quote: "Bonny",
+        note: "Bonny's official brand site confirms the manufacturer; the specific 'Golden Dragon Roar Pro' (金龙呤 Pro) SKU is not consistently listed on the English-facing brand site as of 2026-05-22. Buyers should verify against Chinese-market distributors before committing.",
+      },
+    ],
+  }),
+  review({
+    slug: "mizuno-carbo-pro-823-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source, harsh-but-honest reviewer perspective",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Mizuno Carbo Pro 829 (sibling)",
+        "Mizuno Altius 01 Feel (catalogue reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) cross-referenced with Mizuno Badminton Asia's official product page. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+    },
+    title: "Mizuno Carbo Pro 823 review: a head-heavy entry-tier with limitations the cosmetics hide",
+    dek: "Mizuno's Carbo Pro 823 looks like a mid-tier flagship and prices like one, but the on-court reality is closer to an entry-level head-heavy frame in an attractive paint job.",
+    verdict: "An entry-tier head-heavy frame for buyers who value the Mizuno brand badge; cross-shop carefully before paying mid-tier prices.",
+    bestFor: [
+      "Mizuno brand fans wanting the badge with reliable build",
+      "Entry-level amateurs who want a head-heavy frame in their first non-Yonex purchase",
+      "Buyers who like the magenta/cyan cosmetic",
+    ],
+    avoidIf: [
+      "You want a verified mid-tier attack racket (spec doesn't match marketing tier)",
+      "You play fast doubles primarily (the heavy head + low elasticity penalises continuous play)",
+      "You're paying full retail in a price-sensitive market",
+    ],
+    setupNotes: [
+      "Mizuno Badminton Asia official page lists CARBO PRO 823 as MZ-BF2228 model code, 675mm length, 4U5 weight, medium flex, head-heavy balance, max 30 lbs, Japan HM Graphite + Inner Wave + Aerobox.",
+      "Community-measured sample: 4U/G5, 94.5g playing weight (with handle), 305mm balance, 220mm shaft, mid stiffness, box frame, 72-hole bed (less than the 76-hole standard), 9-3 line slot.",
+      "Strung at 24 lbs MT70 in the test (a notably low tension for a max-30 lb-rated racket).",
+    ],
+    sourceHook:
+      "The reviewer's strongest critique — that the Carbo Pro line may be Chinese OEM training rackets given premium cosmetics — is a source-review opinion. The official Mizuno Asia page is real and the manufacturer chain is legitimate; the reviewer's concern is about product-tier mismatch, not authenticity.",
+    facts: [
+      { label: "Mizuno official", value: "MZ-BF2228 / 4U5 / 675mm / medium flex / head heavy / max 30 lbs / Japan HM Graphite + Inner Wave + Aerobox." },
+      { label: "Community measurement", value: "Reviewer 4U/G5 sample at 94.5g playing weight, 305mm balance, 220mm shaft, 72-hole bed." },
+      { label: "Buyer caution", value: "72-hole stringbed unusual at this tier; sweet-spot power not concentrated per reviewer." },
+    ],
+    calloutTitle: "Cosmetic tier and performance tier are not the same thing",
+    calloutBody:
+      "Marketing photos sell the Carbo Pro 823 as a serious player's racket. The community reviewer's frustration was that real on-court performance is closer to an entry-level training frame than to a competition flagship. That isn't dishonest marketing — it's the gap between visual identity and on-court delivery that amateur buyers regularly mis-price.",
+    comparison: {
+      heading: "Where the Carbo Pro 823 sits",
+      columns: ["Mizuno Carbo Pro 823", "Mizuno Carbo Pro 829", "Yonex Astrox Smash (entry head-heavy peer)"],
+      rows: [
+        { label: "Identity", values: ["Entry head-heavy + Mizuno badge", "Lighter sibling", "Verified entry attack"] },
+        { label: "Main reward", values: ["Distinctive cosmetic + net steady", "Slightly more elastic", "Better value-per-dollar"] },
+        { label: "Main risk", values: ["Heavy head + flat elasticity", "Similar limitations", "Less premium feel"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What Mizuno officially says",
+        body: "Mizuno Badminton Asia's official product page confirms the Carbo Pro 823 with model code MZ-BF2228, length 675mm, 4U5 weight grade, medium flex, head-heavy balance, max stringing tension 30 lbs, construction in Japan HM Graphite featuring Inner Wave and Aerobox frame technology. The colourway is Neon Pink/Black/Cyan. None of this is disputed — Mizuno is a legitimate manufacturer with a long Asian-market presence and the Carbo Pro line is a real catalogue series. The dispute, per the community reviewer, is whether the official spec sheet maps to what amateurs actually receive on court.",
+      },
+      {
+        heading: "What the reviewer felt that the spec sheet doesn't show",
+        body: "Three on-court observations from the community source. (1) Despite the 'HM Graphite' (high-modulus carbon) listed in the spec, the shaft and frame don't feel meaningfully more elastic than low-modulus entry-tier rackets — the reviewer notes that warm-up clears require more effort than the spec sheet predicts. (2) The 72-hole stringbed (versus the standard 76-hole used by most current flagships) leaves sweet-spot energy less concentrated — heavy smashes show a 'power-loss' feel even on clean contact. (3) Mid-court flat-drive recovery is slow because the high head weight plus low elasticity means continuous attack chains stall. Net effect: the racket plays like an entry-tier head-heavy trainer, not like a mid-tier attack frame.",
+      },
+      {
+        heading: "Where the racket actually wins",
+        body: "Two honest strengths. (1) Net work is steady — the head weight stabilises prods, slow pushes, and slice-drops at the net, and the box-frame keeps the face calm on touch shots. (2) Returning down-pressure shots is forgiving — the racket's high weight gives stability even on rushed defensive lifts, and the wide hoop tolerates off-centre contact more than tighter speed frames. For an amateur who plays defensive doubles or whose main court role is net-front receiving, these are real wins. For an amateur looking for a back-court attack weapon, these are insufficient.",
+      },
+      {
+        heading: "The OEM-trainer suspicion",
+        body: "The community reviewer's most pointed claim: the Carbo Pro line may be Chinese OEM training rackets given Mizuno's premium cosmetic treatment. This is opinion, not a verified manufacturing fact. What can be verified: the Carbo Pro series sits in Mizuno's entry-to-mid catalogue rather than their flagship Altius line, the official spec sheet (72-hole bed, medium flex) is more typical of entry-tier rackets than flagships, and price-per-feature comparison against mainstream entry rackets (Yonex Astrox 1DG, Victor Brave Sword 12, even Bonny Mojun) shows the Carbo Pro 823 isn't unusually capable. We treat the OEM-trainer claim as source-review impression; what's not in dispute is the entry-tier on-court character.",
+      },
+      {
+        heading: "Buying advice",
+        body: "Two honest reads. (1) If you're a Mizuno brand fan and want a head-heavy attack frame with the badge in your bag, the Carbo Pro 823 delivers what it promises within the entry tier — just buy it at entry-tier pricing, not at mid-tier pricing. (2) If you're cross-shopping head-heavy attack rackets and don't have brand loyalty, the value-per-dollar comparison points elsewhere — Yonex Astrox Smash, Victor Brave Sword 12, or even an Astrox 88D non-Pro for slightly more money will give you more verified attack performance. The Carbo Pro 823 is genuine, but its real tier is entry-level, and the buying decision should be priced accordingly.",
+      },
+    ],
+    cta: "Use the finder with entry-attack or value flags to compare the Carbo Pro 823 against Astrox Smash and Brave Sword 12.",
+    factChecks: [
+      {
+        sourceName: "Mizuno Badminton Asia",
+        title: "CARBO PRO 823 official product page",
+        section: "Spec sheet",
+        checkedAt: "2026-05-22",
+        href: "https://www.mizunobadminton-asia.com/product-page/carbo-pro-823",
+        quote: "MZ-BF2228 / 4U5 / 675mm / Medium / Head Heavy / 30 lbs / Japan HM Graphite + Inner Wave + Aerobox",
+        note: "Mizuno's official Asia-region page confirms the model code, weight grade, flex, balance, max tension, and frame technology. Real product, legitimate manufacturer; the tier mismatch flagged by the community reviewer is a buyer-positioning observation, not an authenticity question.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-phantom-88-racket-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source on a niche Bonny variant",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Bonny Phantom 100 (sibling)",
+        "Bonny MoJun (catalogue reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) on a Bonny SKU not consistently published on Bonny's English-language pages. All spec claims are source-review impressions; the product name 'Phantom 88' is the community translation of 幻影88. Confirm exact model name with Bonny's regional distributor.",
+    },
+    title: "Bonny Phantom 88 review: a 210mm-handle yellow attack rod for committed power players",
+    dek: "Bonny's yellow Phantom 88 (幻影88) uses a 210mm-extended handle, 6.8mm boron-fibre shaft, and an aero frame with sword-channels — the result is a fast, crisp attack racket with a clear playing identity.",
+    verdict: "A committed attack frame with a deliberate long-handle design; rewards players who like crisp contact and continuous flat-drive exchanges.",
+    bestFor: [
+      "Doubles back-court attack players who like crisp, fast release",
+      "Players who specifically want a longer (210mm) handle for flat-drive leverage",
+      "Bonny fans seeking the brand's attack identity",
+    ],
+    avoidIf: [
+      "You prefer hold-on-ball control over crisp ejection",
+      "You don't like a heavy 310mm balance",
+      "You need official manufacturer documentation for warranty",
+    ],
+    setupNotes: [
+      "Source-review impressions only; 'Phantom 88' is the community translation of 幻影88. Bonny's English site does not consistently list this SKU as of 2026-05-22.",
+      "Community-measured 4U/G5 sample: 91g playing weight (with handle), 310mm balance, 6.8mm boron-fibre shaft, 210mm extended handle (vs standard 200mm), aero frame with sword-channels on both sides.",
+      "Strung at 28 lbs Kumpoo JS-67 in the test (high-tension setup matches the racket's stiff-rod identity).",
+    ],
+    sourceHook:
+      "The reviewer's 'very yellow and very violent' framing captures what the racket actually is — a committed attack rod with clear strengths and clear limits.",
+    facts: [
+      { label: "Community-measured specs", value: "4U/G5 sample at 91g playing weight, 310mm balance, 6.8mm boron-fibre shaft, 210mm extended handle, max-tension stringing." },
+      { label: "Frame design", value: "Aero (break-wind) frame with sword-channel (剑樋) line slots on both sides — Bonny's distinct frame architecture." },
+      { label: "Buyer lens", value: "Crisp-attack identity, not control-leaning; long-handle suits flat-drive players." },
+    ],
+    calloutTitle: "A rod that hits, with a long handle that helps",
+    calloutBody:
+      "The Phantom 88's character isn't subtle: an aero frame plus a stiff boron-fibre shaft plus an extended 210mm handle produces a racket that feels like a fast, crisp rod. The reward is direct power transfer and snappy flat-drive leverage. The trade is that this isn't a control-leaning racket — it ejects shuttles fast and that costs you some shot-by-shot disguise.",
+    comparison: {
+      heading: "Where the Phantom 88 sits",
+      columns: ["Bonny Phantom 88", "Bonny Phantom 100 (sibling)", "Bonny MoJun (control-attack reference)"],
+      rows: [
+        { label: "Identity", values: ["Crisp attack rod, long handle", "Bigger frame, control-leaning", "Mojun-class control-attack"] },
+        { label: "Main reward", values: ["Fast snap + flat-drive leverage", "More forgiving, broader play", "Refined hold + control"] },
+        { label: "Main risk", values: ["Less control disguise", "Less crisp than 88", "Less brand premium"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "The 210mm handle is the design decision worth understanding",
+        body: "Most modern attack rackets use a 200mm handle (the post-2020 standard). The Phantom 88 extends to 210mm — a deliberate revival of a longer-handle architecture that was more common in early-2010s attack rackets (Yonex Voltric 80, Astrox 100ZZ in some early colourways). The on-court effect is real: when you choke down to the butt-cap on a flat-drive, the longer lever arm gives you a fraction more swing speed. For continuous flat-drive exchanges, this is a measurable advantage. For singles back-court loading swings, the longer handle changes the lever balance — you'll need to recalibrate your point of contact.",
+      },
+      {
+        heading: "The shaft and frame: crisp by design",
+        body: "Boron-fibre is a structural-reinforcement material that adds stiffness without significant mass — it's been used in flagship attack shafts since the early 2010s. Paired with the aero frame and sword-channel line slots (a Bonny-specific frame architecture), the Phantom 88's shaft snaps back fast and ejects shuttles cleanly. The reviewer's specific note: 'smashes don't feel heavy, they feel fast'. That's the right framing — the racket converts your swing speed into shuttle speed efficiently rather than amplifying your swing weight into mass-based smash.",
+      },
+      {
+        heading: "Where the racket struggles",
+        body: "Three honest limitations. (1) Net work — the racket's crisp ejection makes slow control shots (slice-drops, prods, holds) harder to execute with precision; you'll over-hit more often than with a held-contact racket. (2) Backhand high clears — the reviewer specifically notes that backhand high-clears require committed wrist force; the long handle plus stiff shaft don't help if your backhand technique isn't already crisp. (3) Defensive lifts — the heavy 310mm balance means tired-arm defensive lifts will be more demanding than on a balanced racket. None of these are deal-breakers; all of them are the trade you make for the attack-rod identity.",
+      },
+      {
+        heading: "Who actually plays well with this",
+        body: "Three player profiles. (1) Doubles back-court attackers who like crisp ejection and don't need wraparound control — the Phantom 88 is a strong pick. (2) Singles players whose game is built on fast flat-drive transitions and quick directional changes — the long handle's leverage is real. (3) Players moving up from a softer mid-tier attack racket and ready for a stiffer, faster frame — the Phantom 88 is a reasonable next step. Players outside these profiles (control-first singles, defensive doubles, beginners) should look at the Phantom 100 (more forgiving sibling) or the MoJun (control-attack alternative).",
+      },
+      {
+        heading: "The Bonny brand context",
+        body: "Bonny is a legitimate Chinese badminton manufacturer with a long catalogue history; the brand has steady distribution in Asia and growing presence in Europe via specialist retailers. The Phantom 88 SKU isn't consistently listed on Bonny's English-language pages as of 2026-05-22 — buyers in non-Chinese markets should verify availability with a regional Bonny distributor before committing. None of this is a reason to skip the racket; it's a reason to time your purchase against actual stock availability and to keep the receipt for warranty purposes.",
+      },
+    ],
+    cta: "Use the finder with crisp-attack or flat-drive flags to compare the Phantom 88 against Phantom 100 and Bonny MoJun.",
+    factChecks: [
+      {
+        sourceName: "Bonny Tongxiang Jianyou",
+        title: "Bonny Sports official brand site",
+        section: "Brand identity and catalogue",
+        checkedAt: "2026-05-22",
+        href: "https://bonnysports1982.com/p6978.html",
+        quote: "Rackets",
+        note: "Bonny's official rackets catalogue page confirms the manufacturer. The specific 'Phantom 88' (幻影88) SKU is not consistently published on the English-facing brand site; verify availability with a regional Bonny distributor before purchase.",
+      },
+    ],
+  }),
+  review({
+    slug: "bonny-wuque-flagship-089-shoes-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source on a Bonny shoe SKU",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Bonny WuQue Flagship 088 shoes (sibling SKU)",
+        "Bonny WuQue 1982 Y3K shoes (catalogue reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) on a Bonny shoe SKU. All claims about fit, materials, and on-court performance are source-review impressions until confirmed against Bonny's regional distributor.",
+    },
+    title: "Bonny WuQue Flagship 089 shoes review: stability protection in a wide-last package",
+    dek: "Bonny's WuQue Flagship 089 is the rackets-named shoe in the WuQue line — a wide-last (3.0E) stability shoe with carbon plate, arch support, and toe reinforcement aimed at heavier players.",
+    verdict: "An honest stability-protection shoe with broad foot-shape adaptation, sitting in the same tier as the WuQue 088 sibling.",
+    bestFor: [
+      "Heavier players needing stability + arch support",
+      "Wide-foot or thin-foot buyers (3.0E last has unusual adaptive range)",
+      "Players who like the WuQue line's design language",
+    ],
+    avoidIf: [
+      "You want the absolute lightest speed shoe",
+      "You need a strict mass-market global brand for warranty path",
+      "You haven't decided between the 088 and 089 in the WuQue line",
+    ],
+    setupNotes: [
+      "Source-review impressions only — Bonny's English-language site does not consistently list this SKU as of 2026-05-22.",
+      "Community-measured last: 3.0E wide last; per reviewer, fits both thin and wide feet thanks to the wide design and bulky upper.",
+      "Materials: carbon plate + TPU dual anti-twist, arch stability device, tongue cushion pad, thick reinforced toe + inner-side abrasion zone.",
+      "Colourway: pure white base + black-gold accent, minimal design language.",
+    ],
+    sourceHook:
+      "The reviewer's most useful framing: this is a 'stability all-around protection shoe' that delivers consistent fit across foot shapes — a quality not common in this tier.",
+    facts: [
+      { label: "Last spec", value: "3.0E wide last with arch support stability device; reviewer reports broad foot-shape adaptation." },
+      { label: "Anti-twist stack", value: "Carbon plate + TPU dual anti-twist + arch support + tongue cushion pad + toe/inner-side reinforcement." },
+      { label: "Buyer lens", value: "Stability-protection-first; not a pure speed shoe." },
+    ],
+    calloutTitle: "Foot-shape adaptation is a real-world win",
+    calloutBody:
+      "Most stability shoes are tuned for one foot shape (usually wider) and feel sub-optimal on narrower feet, or vice versa. The WuQue Flagship 089's 3.0E wide last with a structured upper manages both — thin-foot players get the wrap; wide-foot players get the room. That's a meaningful real-world buying win.",
+    comparison: {
+      heading: "Where the 089 sits",
+      columns: ["Bonny WuQue 089 shoes", "Bonny WuQue 088 shoes (sibling)", "Bonny WuQue 1982 Y3K"],
+      rows: [
+        { label: "Identity", values: ["Stability + wide adaptation", "Stability sibling", "Cyberpunk cosmetic + structure"] },
+        { label: "Main reward", values: ["Foot-shape range, ankle wrap", "Sibling protection", "Visual identity + stability"] },
+        { label: "Main risk", values: ["Less lively than speed shoes", "Similar weaknesses", "Niche styling"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What makes the WuQue 089 specifically",
+        body: "Bonny's WuQue (乌缺) line is the brand's flagship-tier identity, with both rackets and shoes carrying the WuQue badge. The Flagship 089 is the shoe model — not a racket. The 089 number distinguishes it from the 088 (an earlier sibling shoe in the same family). Both shoes share the protection-tier identity but the 089 is the newer model with refined materials. For amateur buyers looking at the WuQue line for the first time: the rackets and shoes share branding but don't share design DNA — choose by function, not by family number.",
+      },
+      {
+        heading: "The materials stack and what it actually delivers",
+        body: "The reviewer's specific notes on materials: a structured tongue with a 3D air-cushion pad reduces lace pressure on the instep; arch-support stability device + carbon plate + TPU give dual-layer anti-twist (the reviewer specifically reports the shoe is 'hard to twist by hand'); the toe and inner-side wear-zone are reinforced with thicker materials to target the toe-drag and inner-cut abrasion patterns that wear shoes down fastest. None of these are unique technologies — Yonex Power Cushion 88 Dial 3, Victor P9200 III, and Asics Blast FF 3 all have comparable stacks. What's notable is that Bonny includes all of them at this tier.",
+      },
+      {
+        heading: "On-court: fit, stability, and the actual landing feel",
+        body: "Three reported on-court qualities. (1) Wrap and lock-down — the reviewer reports the shoe wraps the foot from instep to ankle without choke points; thin-foot players still get adequate hold despite the wide last. (2) Anti-twist on cuts — the reviewer specifically tests by trying to twist the shoe by hand and reports failure (a good signal); on-court second-start direction changes feel locked. (3) Cushioning on landings — the cushion pad does its job; jump landings and rear-court strides don't transmit hard impact to knee or heel. Initial out-of-the-box stiffness yields after break-in (standard for stability shoes).",
+      },
+      {
+        heading: "Where the shoe doesn't go",
+        body: "Two honest limitations. (1) Weight feel — the shoe is described as 'medium weight' (not specified in grams in the source). It's not a pure speed shoe; players prioritising start-speed should look at Victor A970 ACE / NitroLite or Yonex 65 Z4 instead. (2) Outsole liveliness — the reviewer doesn't praise the outsole pattern strongly; it's adequate but not standout. For very fast direction-change games, the outsole pattern may matter more than the overall stability stack.",
+      },
+      {
+        heading: "How to decide between the 088 and 089",
+        body: "Per the reviewer, both shoes are in the same WuQue family and share the protection-first identity. The 088 was earlier; the 089 is the refined sibling. If both are available in your region at similar pricing, the 089 is the more sensible pick because Bonny has had time to refine the design. If the 088 is meaningfully cheaper or available used in good condition, it's an acceptable substitute. Buyers cross-shopping outside the Bonny line should triangulate against the Victor P9200 III (wider availability, more documented), Yonex 65 Z4 (mainstream all-rounder), or Yonex Eclipsion Z3 (stronger cushion) before committing to a Bonny shoe.",
+      },
+    ],
+    cta: "Use the shoe finder with stability or wide-last flags to compare the WuQue 089 against the 088 sibling and the Victor P9200 III.",
+    factChecks: [
+      {
+        sourceName: "Bonny Tongxiang Jianyou",
+        title: "Bonny Sports official brand site",
+        section: "Brand identity and catalogue",
+        checkedAt: "2026-05-22",
+        href: "https://bonnysports1982.com/",
+        quote: "Bonny",
+        note: "Bonny's official brand site confirms the manufacturer. The specific 'WuQue Flagship 089' shoe SKU is not consistently published on the English-facing brand site; verify availability with a regional Bonny distributor before purchase.",
       },
     ],
   }),

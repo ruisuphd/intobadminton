@@ -122,7 +122,13 @@ export type BlogSlug =
   | "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison"
   | "li-ning-bladex-800-speed-vs-halbertec-9000-power"
   | "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro"
-  | "victor-p8500-ii-vs-a970-nitro-lite";
+  | "victor-p8500-ii-vs-a970-nitro-lite"
+  | "fz-forza-odin-8800-review"
+  | "fz-forza-88d-review"
+  | "bonny-golden-dragon-roar-pro-racket-review"
+  | "mizuno-carbo-pro-823-review"
+  | "bonny-phantom-88-racket-review"
+  | "bonny-wuque-flagship-089-shoes-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -246,6 +252,12 @@ export const blogSlugs: BlogSlug[] = [
   "li-ning-bladex-800-speed-vs-halbertec-9000-power",
   "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
   "victor-p8500-ii-vs-a970-nitro-lite",
+  "fz-forza-odin-8800-review",
+  "fz-forza-88d-review",
+  "bonny-golden-dragon-roar-pro-racket-review",
+  "mizuno-carbo-pro-823-review",
+  "bonny-phantom-88-racket-review",
+  "bonny-wuque-flagship-089-shoes-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
