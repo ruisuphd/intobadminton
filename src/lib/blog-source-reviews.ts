@@ -5653,4 +5653,723 @@ export const sourceReviewArticles = [
       { sourceName: "Yonex", title: "ARCSABER 7 Tour product page", section: "Family lineup", checkedAt: "2026-05-19", href: "https://www.yonex.com/arcsaber", quote: "Arcsaber 7 Tour", note: "Yonex's Arcsaber 7 lineup confirms the Tour tier; specific spec details should be verified against retail packaging for the current generation." },
     ],
   }),
+  review({
+    slug: "victor-p8500-ii-shoes-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — Maynooth/Dublin club-ecosystem cross-reference",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Power Cushion Eclipsion Z3 (founder firsthand)",
+        "Victor P9200 III",
+      ],
+      sourceAttribution:
+        "Two BadmintonCN community sources (one detailed 3-month durability review, one Mohammad Ahsan-framed perspective) cross-referenced with the official Victor product copy. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+    },
+    title: "Victor P8500 II review: a stability shoe with one weak link buyers should price in",
+    dek: "Victor's P-series flagship adds HyperEVA cushioning and an enlarged eagle-claw anti-roll plate. The protection is real — the included insole is the trade-off.",
+    verdict: "A stability-class shoe that hits Victor's protection benchmark, with one consumable weakness players should plan around from day one.",
+    bestFor: [
+      "Heavier players who land hard on lunges",
+      "Players who roll ankles on lateral cuts",
+      "Buyers who want a U2.5/U2.5E wide last",
+    ],
+    avoidIf: [
+      "You play exclusively in hot, humid venues",
+      "You want featherweight speed first",
+      "You aren't willing to budget for aftermarket insoles",
+    ],
+    setupNotes: [
+      "Victor's official copy lists HYPEREVA + ENERGYMAX 3.0 + TPU + Carbon Power + Solid EVA midsole.",
+      "Outsole is VSR rubber; upper is microfibre PU leather + V-Tough + double mesh.",
+      "Mohammad Ahsan is quoted by Victor as endorsing the shoe; he wore the red colourway at the 2023 All England.",
+      "Two BadmintonCN reviewers note the included insole wears through faster than the rest of the shoe — plan to buy aftermarket replacements.",
+    ],
+    sourceHook:
+      "The two source reviews agree on protection and structure; they also agree the included insole is undersized for the shoe's protection tier, which is the buyer's most actionable insight.",
+    facts: [
+      { label: "Official last", value: "Victor lists the P8500 II on the U2.5 last; one source reviewer measured 314g per shoe in size 41 (4U/265mm internal length)." },
+      { label: "Official midsole", value: "Victor lists HYPEREVA + ENERGYMAX 3.0 + TPU + Carbon Power + Solid EVA." },
+      { label: "Buyer lens", value: "Protection-first; budget for aftermarket insoles." },
+    ],
+    calloutTitle: "Protection is the headline; the insole is the asterisk",
+    calloutBody:
+      "Buyers who line up for the P-series usually want the shoe to absorb the worst moment in their game: a heavy landing, a rolled ankle, a sudden direction change. The P8500 II delivers that. The trick is to accept up front that the shoe protects your foot well but does not protect itself from your insole budget — one source reviewer wore through two XD11 replacement insoles inside three months.",
+    comparison: {
+      heading: "Where the P8500 II sits",
+      columns: ["Victor P8500 II", "Victor A970 Nitro Lite", "Yonex Power Cushion 65 Z4"],
+      rows: [
+        { label: "Identity", values: ["Stability + protection", "All-around with cushion", "Speed-leaning all-rounder"] },
+        { label: "Main reward", values: ["Ankle confidence on lunges", "Cushioned landings + foot wrap", "Quick start and direction change"] },
+        { label: "Main risk", values: ["Stock insole consumes fast", "Heavier than a pure speed shoe", "Less landing protection"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the two source reviewers agree on",
+        body: "Both Chinese reviewers landed in the same place on the structural points. The enlarged 'eagle-claw' lateral plate (a TPU film that flares from the medial side) and the LS-S support structure together make the shoe markedly hard to roll over on a sharp cut. The HyperEVA midsole, first used on Victor's A970 line, is soft enough to feel forgiving on landings but firm enough that players didn't report the heel collapsing under repeated jumps. Where they also agreed: the V-TOUGH abrasion patch at the toe-drag zone barely showed wear after several months of three-to-four weekly sessions. The shoe is built to last; the insole was the only consumable that didn't keep up.",
+      },
+      {
+        heading: "The Mohammad Ahsan colourway and what it actually means",
+        body: "Victor's official copy quotes Mohammad Ahsan calling the P8500 II 'light, elastic, and provides a great fit and excellent support'. He chose the red colourway for the 2023 All England, then switched to black later in the season. For an amateur buyer, the takeaway is not 'Ahsan plays it so it must suit you' — he is an Indonesian men's-doubles legend with footwork patterns very few amateurs replicate — but rather 'this shoe is engineered for the high-intensity multi-shuttle defence-to-attack transitions a doubles court rewards'. If you play singles primarily, the case is weaker and a speed-leaning shoe may suit better.",
+      },
+      {
+        heading: "U2.5 / U2.5E last: who actually benefits",
+        body: "Both reviewers explicitly call out the U2.5 (one frames it as U2.5E — Victor's wide variant). They each describe arriving at this shoe via the standard pattern of trying narrow lasts and getting frustrated, then finding the P-series last lets the forefoot sit naturally without compression. For Egyptian, Roman, or Greek foot shapes — i.e. most non-elite Asian foot moulds — this is a meaningful upgrade in comfort. If you are already happy in Yonex's standard last, the gain from switching is smaller; if Yonex feels tight at the toe-box, the P8500 II is one of the most direct fits.",
+      },
+      {
+        heading: "What changed in the eagle-claw evolution",
+        body: "The original P8500 used a three-claw lateral TPU plate; the P8500 II evolved that into a longer, wave-shaped plate covering more of the mid-foot. One reviewer was sceptical that the TPU itself is the protection — he noted that the plate feels softer than expected and bends under pressure if you flex it directly with your hand. His conclusion was that the lateral protection comes from the upper plate combined with the higher-strength PU-leather ankle wrap, not the plate alone. Either way, the system held: neither reviewer rolled an ankle across multi-month use.",
+      },
+      {
+        heading: "The honest weaknesses",
+        body: "Two real costs to plan for. First, the insole: as already covered, expect to budget for aftermarket. Second, hot-weather breathability: the shoe vents reasonably in cool clubs, but in humid summer venues both reviewers reported the breathability falls short of the protection brief — your feet will be wetter inside this shoe than inside a vented speed shoe. If your local hall is in a sweaty climate and you can only own one pair, the trade may not be worth it. Lastly, the VSR outsole grips well on most indoor surfaces, but one reviewer reported a single false-start slip on a fast direction reversal — VSR grip is good, not exceptional.",
+      },
+    ],
+    cta: "Use the shoe finder with wide-last + stability flags, then compare against the A970 Nitro Lite (the lighter modern stablemate) before committing.",
+    factChecks: [
+      {
+        sourceName: "Victor Badminton",
+        title: "Victor SH-P8500 II official spec",
+        section: "Materials & athlete",
+        checkedAt: "2026-05-22",
+        href: "https://www.victorsport.com/product/shp8500ii",
+        quote: "HYPEREVA + ENERGYMAX 3.0 + TPU + Carbon Power + Solid EVA",
+        note: "Victor's official product copy lists the midsole stack and quotes Mohammad Ahsan as the endorsing athlete (\"P8500II is light, elastic, and provides a great fit and excellent support\").",
+      },
+      {
+        sourceName: "Badminton Direct",
+        title: "Victor P8500 II A Performance Badminton Shoes (Pearly White)",
+        section: "Retail product copy",
+        checkedAt: "2026-05-22",
+        href: "https://badmintondirect.com/products/2022-victor-sh8500-ii-performance-badminton-shoes",
+        quote: "Victor P8500 II A",
+        note: "Independent retailer confirms the SH-P8500 II model code, multiple colourway codes (A pearly white, C black, D red/flame red), and the 2023 launch year.",
+      },
+    ],
+  }),
+  review({
+    slug: "victor-a970-nitro-lite-shoes-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — Maynooth/Dublin club-ecosystem cross-reference",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Victor A970 ACE (predecessor)",
+        "Victor P8500 II (stablemate)",
+      ],
+      sourceAttribution:
+        "Three BadmintonCN community sources cross-referenced with official Victor copy and the allrackets.com 2025 review. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+    },
+    title: "Victor A970 Nitro Lite review: the all-around shoe that traded grams for cushioning",
+    dek: "Victor replaced the A970 ACE's HyperEVA midsole with a nitrogen supercritical foam (NitroLite) and added thicker upper material. The result is more cushioned and slightly heavier than the original.",
+    verdict: "A more cushioned, more wrapped, slightly heavier evolution of the A970 ACE — the right pick for buyers who land hard and want a wrap-around fit.",
+    bestFor: [
+      "Players who land hard on jump smashes",
+      "Buyers wanting an all-around (not pure speed, not pure stability) shoe",
+      "Players who liked the A970 ACE but wanted more landing protection",
+    ],
+    avoidIf: [
+      "You want the absolute lightest shoe",
+      "You play in hot, humid venues (breathability is the weakness)",
+      "You prioritise raw start-speed over landing comfort",
+    ],
+    setupNotes: [
+      "Victor's official copy lists NITROLITE MIDSOLE + E-TPU + TPU + Carbon Power + Solid EVA.",
+      "V-SHAPE 2.5 last (V2.5 standard); sizing runs small — half-size up is a frequent recommendation.",
+      "Released November 20, 2023; endorsed by Lee Zii Jia (李梓嘉) on the Hawaii Blue / Black colourway, plus Anders Antonsen / Kenta Nishimoto / Kodai Naraoka / Wang Tzu Wei / H. S. Prannoy on the pearl white.",
+    ],
+    sourceHook:
+      "The community source review specifically tested the A970 Nitro Lite against the prior A970 ACE and against the brand-stablemate P8500 II — it's a useful triangulation, not a one-shoe puff piece.",
+    facts: [
+      { label: "Official midsole", value: "Victor lists NitroLite (nitrogen supercritical foam) + E-TPU + TPU + Carbon Power + Solid EVA." },
+      { label: "Last & sizing", value: "V-SHAPE 2.5 standard last; sizing runs small — half-size up is widely recommended." },
+      { label: "Buyer lens", value: "More cushion and wrap than A970 ACE; slightly heavier; small start-speed cost." },
+    ],
+    calloutTitle: "An evolution, not a revolution — and that's the right framing",
+    calloutBody:
+      "If you came to this shoe expecting NitroLite to be a leap, the source reviewer measured otherwise: the foam is light, but Victor also thickened the upper material, so the size 43 sample actually gained about 6g per shoe versus the A970 ACE. The net effect is more cushion, more wrap, almost identical start-speed. Whether that's an upgrade depends on whether you needed cushion or speed.",
+    comparison: {
+      heading: "Where the A970 Nitro Lite sits",
+      columns: ["Victor A970 Nitro Lite", "Victor A970 ACE", "Victor P8500 II"],
+      rows: [
+        { label: "Identity", values: ["All-around + cushion", "All-around, lighter", "Stability + protection"] },
+        { label: "Main reward", values: ["Landing comfort + foot wrap", "Faster off the line", "Ankle confidence on cuts"] },
+        { label: "Main risk", values: ["Slightly slower start", "Less landing absorption", "Insole wears fast"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What NitroLite actually changes on court",
+        body: "NitroLite is Victor's nitrogen supercritical-foamed EVA midsole, first used on the S99 Elite in February 2022 and applied to the all-around A970 platform in November 2023. The official pitch is light weight with improved bounce and durability versus straight HyperEVA. The community source confirmed the cushion improvement — forecourt jumps and rear-court landings absorb noticeably more shock — but also flagged a small trade: the forefoot cushion is now slightly thicker, so the ground-feedback time is a touch slower. In a fast doubles drive exchange the A970 ACE was marginally faster to recover; in heavier singles rear-court play the Nitro Lite feels more stable.",
+      },
+      {
+        heading: "The lateral plate didn't change — and that's the point",
+        body: "Victor kept the LS-S lateral stability TPU plate identical to the A970 ACE. That continuity matters because the LS-S system is what makes the A970 line trustworthy in lateral cuts, not the midsole. Players moving from the ACE will recognise the same anti-roll feel; players moving from a Yonex or Asics platform should expect a noticeable upgrade in lateral support but a small foreign-body sensation under the mid-foot for the first few sessions while the plate breaks in.",
+      },
+      {
+        heading: "Lee Zii Jia, Anders Antonsen, and what athlete endorsements actually tell you",
+        body: "The marketing centres on Lee Zii Jia (李梓嘉), with Anders Antonsen and Kenta Nishimoto / Kodai Naraoka / Wang Tzu Wei in the pearl-white colourway. The honest reading is: these are men's-singles specialists doing a lot of explosive jump-smashing and rear-court covering, and they need landing protection more than featherweight start-speed. If your game looks like theirs — singles with hard landings — the endorsement matters. If your game is fast doubles, the A970 ACE or the lighter speed-class shoes from Victor's line (S99 Elite, A970 NF) are honest alternatives.",
+      },
+      {
+        heading: "Sizing and breathability — the two real costs",
+        body: "Two specific cautions from the source review and from independent retailers: sizing runs small, with multiple sellers recommending half a size up; and breathability is mediocre. The upper uses microfibre PU leather plus a double mesh, but the mesh pattern is conservative compared to dedicated speed shoes, and the cushioning that helps your landings also traps more heat. In a cool club these are non-issues. In a humid hall the shoe is wetter inside than a vented speed shoe — plan accordingly.",
+      },
+      {
+        heading: "Should you upgrade from the A970 ACE",
+        body: "Honest answer: only if you want the cushion. The source reviewer's measured 6g-per-shoe weight gain isn't large in absolute terms, but it's gain not loss, and the lateral plate, last, outsole, and overall shape are identical to the ACE. If your ACE is still in good condition and you don't feel the need for more landing protection, the Nitro Lite is a sidegrade, not an upgrade. If your ACE is at end-of-life and you want the same shoe with better cushion, the Nitro Lite is the natural replacement. The biggest case for the Nitro Lite is when you're new to Victor's all-around platform and choosing between this and the P8500 II — the Nitro Lite gives you the all-around character, the P8500 II prioritises protection.",
+      },
+    ],
+    cta: "Use the shoe finder with all-around / cushioned-landing flags, then triangulate against the A970 ACE and P8500 II before deciding.",
+    factChecks: [
+      {
+        sourceName: "Victor Badminton",
+        title: "Victor A970 NitroLite official spec",
+        section: "Materials, last, athlete endorsements",
+        checkedAt: "2026-05-22",
+        href: "https://www.victorsport.com/product/A970NitroLite",
+        quote: "NITROLITE MIDSOLE + E-TPU + TPU + Carbon Power + Solid EVA",
+        note: "Victor's official copy confirms the NitroLite (nitrogen supercritical foam) midsole, V-SHAPE 2.5 last, and the athlete roster (Lee Zii Jia + Anders Antonsen + Kodai Naraoka + Kenta Nishimoto + Wang Tzu Wei).",
+      },
+      {
+        sourceName: "AllRackets",
+        title: "The top shoe of 2025 — Victor A970 NitroLite review",
+        section: "Independent review",
+        checkedAt: "2026-05-22",
+        href: "https://www.allrackets.com/en/webshop/blog/2025/07/23/de-topschoen-van-2025-onze-review-van-de-victor-a970-nitrolite/",
+        quote: "A970 NitroLite",
+        note: "Independent European specialist confirms 2023 release, current 2025 market status, and the sizing-runs-small caveat across multiple retail listings.",
+      },
+    ],
+  }),
+  review({
+    slug: "yonex-astrox-77-pro-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Founder firsthand — Astrox 77 Pro is on the firsthand-tested list",
+      context: "founderFirsthand",
+      conditions: {
+        strings: "BG80",
+        tensionLbs: 26,
+        opponents: "Division 4 Ireland men's doubles and singles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 88S Pro (founder firsthand)",
+        "Yonex Arcsaber 11 Pro (founder firsthand, current singles)",
+      ],
+    },
+    title: "Yonex Astrox 77 Pro review: the Astrox that prefers patience over thunder",
+    dek: "The 77 Pro is sold as the balanced entry to the Astrox line, but on court it plays softer and more control-leaning than the rest of the family. That trade-off is intentional and worth understanding before you buy.",
+    verdict: "A balanced Astrox for players who win through placement rather than smash, with a softer feel than the family branding suggests.",
+    bestFor: [
+      "All-court players upgrading from a flexible mid-tier racket",
+      "Doubles players who attack through angle, not power",
+      "Players who like the Astrox 88S character but want easier loading",
+    ],
+    avoidIf: [
+      "You need the marquee Astrox smash feeling",
+      "You want a crisp, repulsive contact",
+      "You mainly win points through raw rear-court force",
+    ],
+    setupNotes: [
+      "Yonex official page lists ASTROX 77 PRO as medium flex, 4U (Avg. 83g) and 3U (Avg. 88g).",
+      "Frame tech listed: HM Graphite, Flex Fuse, Tungsten.",
+      "Endorsed in marketing materials by women's national-team players; widely positioned as the 'first Astrox' for intermediate buyers.",
+    ],
+    sourceHook:
+      "The community source reviewer was honest that the 77 Pro's softer hold-on-ball broke his expectations — that's the most useful framing for a buyer because the 77 Pro does not play like the rest of the Astrox family.",
+    facts: [
+      { label: "Official flex", value: "Yonex lists ASTROX 77 PRO as medium flex." },
+      { label: "Official weight & grip", value: "4U (Avg. 83g) G5/G6 and 3U (Avg. 88g) G4/G5/G6." },
+      { label: "Buyer lens", value: "Control-leaning balanced racket; do not expect classic Astrox crispness." },
+    ],
+    calloutTitle: "It feels softer than the box implies",
+    calloutBody:
+      "The 77 Pro carries the Astrox name and asymmetric Astrox cosmetics, but the first contact is closer to the Arcsaber family in hold-on-ball than to the 88 / 99 / 100 attack siblings. If you arrived expecting thunder, you will be confused for a few clears. If you arrived expecting placement, you will land your first long-court drop neatly and stop arguing with the racket.",
+    comparison: {
+      heading: "Where the 77 Pro sits in the Astrox family",
+      columns: ["Astrox 77 Pro", "Astrox 88S Pro", "Astrox 99 Pro 2"],
+      rows: [
+        { label: "Identity", values: ["Balanced control", "Doubles attack-control", "Singles attack"] },
+        { label: "Best reward", values: ["Placement chains", "Faster pressure", "Heavy smash"] },
+        { label: "Main risk", values: ["Feels under-powered", "Less patient feel", "Demanding shaft"] },
+      ],
+    },
+    firstPerson: [
+      {
+        kind: "firstPerson",
+        context: "First-hit dissonance",
+        body: "When I first tried the 77 Pro at our Dublin club a teammate let me warm up with, the first clear sailed long because I was expecting the racket to argue with the shuttle and add bite to my swing the way the 88D Tour or 100ZZ do. It didn't. The 77 Pro absorbs the shuttle on a longer hold and asks you to swing it cleanly rather than punch it. By the fifth clear I had recalibrated; by rally three I was hitting the back tramline more reliably than I do with my own 4U setup. That is the Astrox 77 Pro's actual personality.",
+        setup: {
+          sessions: 1,
+          strings: "BG80",
+          tensionLbs: 26,
+          opponentLevel: "Division 4 Ireland men's doubles partner",
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "On the front court in doubles",
+        body: "Where the 77 Pro genuinely shines for me is at the net in doubles — push-blocks land flat, the hold-on-ball helps disguise a slow lift before it leaves the strings, and the smaller swing weight makes the third tap on a fast exchange easier to execute than with the 88D Pro. The trade is real on the back court: I had to commit to a longer windup to clear deep, and my smash placement was sharp but never threatening.",
+        setup: {
+          strings: "BG80",
+          tensionLbs: 26,
+          opponentLevel: "Division 4 Ireland men's doubles",
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "Why I do not own one",
+        body: "I respect the 77 Pro. I will not buy it. My current setup pairs the Arcsaber 11 Pro for singles control with the Nanoflare 1000 Z for doubles speed, and the 77 Pro does not displace either. For a club teammate who recently moved off a flexible mid-tier racket and was getting bullied at the back court of doubles, however, the 77 Pro is exactly the racket I would put in his bag — it gives him control he understands without asking him to hit through a stiff shaft.",
+        setup: { strings: "BG80", tensionLbs: 26 },
+      },
+    ],
+    sections: [
+      {
+        heading: "Why Yonex calls it an Astrox even though it plays soft",
+        body: "Yonex's family logic is about head-down asymmetric weighting, not about repulsive contact. The 77 Pro shares the family's signature off-set head profile but pairs it with a medium-flex shaft and a softer contact zone. The result is a head-leaning racket that still drives shuttles with low effort, but releases them with hold-on-ball rather than crisp ejection. For Yonex's lineup logic, this slots correctly as a control-balanced Astrox. For amateur buyers who learned 'Astrox = attack', the marketing can mislead — the 77 Pro is the friendliest Astrox to drive, and the easiest Astrox to mistake for a control racket.",
+      },
+      {
+        heading: "Who actually plays the 77 Pro at high level",
+        body: "Multiple women's national-team players have used the 77 Pro in tournament play. The marketing leans on that endorsement. The amateur takeaway is not that the racket is gender-specific — it isn't — but that its profile suits players whose match strategy depends on placement, multi-shot construction, and short-burst aggression rather than single-shot finishing power. If your highlight reel is built from disguised drops and tight third-shot kills, the 77 Pro is honest. If your highlight reel is built from rear-court thunder, the 88D Pro or 99 Pro is honest.",
+      },
+      {
+        heading: "Build quality and torsion: the quiet positives",
+        body: "What the community source reviewer (and my own hits) confirmed: the anti-twist performance of the 77 Pro frame is excellent. Long-court clears land where you aim them, even on slightly off-centre contacts. The 76-hole stringbed gives a generous sweet spot for the frame size, and the box-shape frame keeps the shuttle on the strings just long enough for slice and prod shots to land with intent. For amateurs whose contact accuracy is still developing, this matters more than any spec line — a forgiving frame that still does what you ask is a better teacher than a punishing frame that demands perfect technique.",
+      },
+      {
+        heading: "The honest weak spots",
+        body: "Two real costs. First, the back-court power is meaningfully softer than the 88 or 99 series. If you're being held in the rear corner by an aggressive opponent, the 77 Pro will let you stay alive but won't generate the threat to free yourself. Second, the placement-first character means you have to commit to building a point — there's no rescue smash in this racket. A player who relies on bailing themselves out with a heavy winner under pressure will not find that escape hatch here. Those aren't bugs; they're the trade you signed up for.",
+      },
+      {
+        heading: "Where the 77 Pro belongs in a buying decision",
+        body: "Three honest paths. If you're upgrading from a flexible amateur racket and want something faster but still friendly, the 77 Pro is a strong recommendation — better than chasing the 88D Pro before you can drive it. If you already own a stiff attack racket and want a calmer secondary frame for doubles or for tired-arm days, the 77 Pro is a useful complement. If you mainly want to feel the marquee Astrox punch, skip the 77 Pro and go straight to the 88S Pro (doubles) or 99 Pro 2 (singles). The 77 Pro is patient and rewards patient play; it's not the racket that will rewrite a power-hungry game.",
+      },
+    ],
+    cta: "Use the racket finder with balanced or control-first preferences to compare Astrox 77 Pro against Astrox 88S Pro and Arcsaber 11 Pro.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ASTROX 77 PRO product page",
+        section: "Spec sheet",
+        checkedAt: "2026-05-22",
+        href: "https://www.yonex.com/astrox-77-pro",
+        quote: "Flex Medium / 4U (Avg. 83g) / 3U (Avg. 88g) / HM Graphite, Flex Fuse, Tungsten",
+        note: "Official Yonex page confirms medium flex, 4U/3U weights, G4/G5/G6 grip sizes, and frame technology listing.",
+      },
+    ],
+  }),
+  review({
+    slug: "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — legacy product comparison cross-referenced with Yonex archives and Guinness World Records",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Nanoflare 1000 Z (founder firsthand, current smash-record holder context)",
+      ],
+      sourceAttribution:
+        "BadmintonCN community source review ('Ancient Artifacts II — Speed & Attack synthesis: NR-ZSP vs DZS') cross-referenced with Yonex archive material and the Guinness World Records entry for the fastest badminton hit.",
+    },
+    title: "Yonex Nanoray Z-Speed vs Duora Z-Strike: a legacy speed-attack comparison worth understanding",
+    dek: "Two of Yonex's most distinctive small-frame attack rackets — the 2013 NR-ZSP that set a 493 km/h smash record, and the 2017 DZS that paired a box-aero asymmetric frame. Both legendary, both out of production.",
+    verdict: "Two legacy rackets whose engineering choices still inform Yonex's modern attack rackets — useful for collectors and for understanding where Astrox 99 Pro and Nanoflare 1000 Z came from.",
+    bestFor: [
+      "Yonex collectors comparing legacy attack flagships",
+      "Players curious about the lineage behind current 100ZZ / NF1000Z designs",
+      "Used-market buyers triangulating value",
+    ],
+    avoidIf: [
+      "You need a current-production racket with warranty",
+      "You aren't already comfortable on small-sweet-spot attack frames",
+      "You want a single rec for first-racket buying",
+    ],
+    setupNotes: [
+      "Nanoray Z-Speed (NR-ZSP / NRZS): 3U (Avg 86g), balance ~290mm, max tension 27 lbs; H.M. Graphite + Sonic Metal + EX-HMG + Nanometric materials. Launched 2013.",
+      "Duora Z-Strike (DUO-ZS): 3U (Avg 88g) G5; Dual Optimum System with Box Frame (forehand side) + Aero Frame (backhand side); even balance; H.M. Graphite, Nanometric DR, Hyper-MG.",
+      "Both are out of production; current values driven by collector and resale demand.",
+    ],
+    sourceHook:
+      "The source reviewer's value here is the lineage perspective: how each racket's engineering trade-offs informed Yonex's current attack lineup. The smash-record claim he cites needs official correction (it's Tan Boon Heong / Malaysia, written 陳文宏 in Chinese — same player, different transliteration).",
+    facts: [
+      { label: "Smash record context", value: "Tan Boon Heong (Malaysia) set the men's fastest-hit record at 493 km/h with the Nanoray Z-Speed on 28 July 2013 (Guinness-recognised)." },
+      { label: "DZS frame architecture", value: "Yonex official confirms Box Frame on forehand side + Aero Frame on backhand side via Dual Optimum System." },
+      { label: "Buyer lens", value: "Collector / lineage interest; not a first-racket recommendation." },
+    ],
+    calloutTitle: "These rackets matter because they show how Yonex thinks",
+    calloutBody:
+      "The NR-ZSP is the answer to 'how do you make a small-frame speed racket that still smashes?' (cut wind drag, accept small sweet spot). The DZS is the answer to 'how do you make a small-frame racket that punishes on both wings?' (box on forehand, aero on backhand). Modern Astrox 100ZZ and Nanoflare 1000 Z inherit pieces of both philosophies.",
+    comparison: {
+      heading: "Z-frame attack lineage",
+      columns: ["Nanoray Z-Speed (2013)", "Duora Z-Strike (2017)", "Nanoflare 1000 Z (current)"],
+      rows: [
+        { label: "Identity", values: ["Small-frame speed-attack", "Asymmetric box+aero", "Current speed flagship"] },
+        { label: "Smash record", values: ["493 km/h (Tan Boon Heong, 2013)", "n/a", "565 km/h (Rankireddy, 2025)"] },
+        { label: "Buy in 2026?", values: ["Used-market only", "Used-market only", "Current production"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the NR-ZSP actually did differently",
+        body: "Yonex marketed the Nanoray Z-Speed as the most aerodynamic racket they had ever produced. The frame cross-section was narrower than the standard isometric, the shaft was 'ultra slim long' (a designation that became standard on later attack rackets), and the frame materials added Sonic Metal and EX-HMG. The result, in 2013, was a small-frame attack racket that swung as fast as a speed racket and still hit hard enough that Tan Boon Heong (陳文宏 in Mandarin transliteration) could set a 493 km/h Guinness-certified record with it on 28 July 2013. The trade-off was the sweet spot: even by 2013 small-frame standards, the NR-ZSP's tolerance for off-centre hits was unforgiving.",
+      },
+      {
+        heading: "What the DZS asked instead",
+        body: "Where the NR-ZSP optimised for speed in one direction, the Duora Z-Strike asked whether you could optimise for two different things on the two sides of the frame. Yonex's Dual Optimum System gave the forehand side a Box Frame profile (more stable, more powerful smash) and the backhand side an Aero Frame profile (less drag, faster recovery on backhand exchanges). The execution required players to register which side of the frame faced the shuttle on each shot — a learning curve that some players never finished. Reviewers who did finish the curve described the DZS as one of the most rewarding attack rackets Yonex made; reviewers who didn't described it as a confused frame.",
+      },
+      {
+        heading: "Where the smash-record narrative actually starts and stops",
+        body: "The NR-ZSP held the men's smash speed record at 493 km/h from 2013 until 2025, when Indian doubles player Satwiksairaj Rankireddy clocked 565 km/h with the Nanoflare 1000 Z. The lineage from NR-ZSP to NF1000Z is direct: same small-frame-low-drag philosophy, refined with twelve years of carbon fibre, shaft engineering, and stringbed evolution. If you want to play the racket that set the original record, source a clean NR-ZSP on the used market. If you want the racket that broke it, the Nanoflare 1000 Z is current-production and easier to find.",
+      },
+      {
+        heading: "Used-market reality check",
+        body: "Neither racket is in current production. The NR-ZSP appears on used markets with some frequency, with both authentic and reissue variants — the source reviewer specifically notes that newer reissues of the NR-ZSP feel softer in the shaft than the original 2013 stock, so collectors should ask about provenance. The DZS appears less often and tends to attract higher prices for clean copies due to its lower production volume. Reasonable budget: expect to pay roughly the price of a current mid-tier flagship for either racket in good used condition, and more for stickered-original samples.",
+      },
+      {
+        heading: "Buying advice for 2026",
+        body: "If you are an amateur looking for your next attack racket, skip both legacy rackets and look at current production — the Nanoflare 1000 Z, Astrox 99 Pro 2, or Astrox 100ZZ Viktor Axelsen edition each cover one of the lanes these two rackets pioneered. If you are a collector or a player specifically curious about the lineage, the NR-ZSP is the more historically significant pick and the easier of the two to source. The DZS rewards a longer learning investment but is the more distinctive design statement. Either way, treat the purchase as a project, not a daily-use racket — string demand for them on the used market also pushes vintage tensions you may not want to run for long.",
+      },
+    ],
+    cta: "For modern equivalents in current production, compare Nanoflare 1000 Z (speed-attack), Astrox 99 Pro 2 (singles attack), and Astrox 100ZZ Viktor Axelsen (singles attack) in the finder.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "World Record Breaking NANORAY Z-SPEED announcement",
+        section: "Smash speed record",
+        checkedAt: "2026-05-22",
+        href: "https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/",
+        quote: "493km/h by Tan Boon Heong (Malaysia)",
+        note: "Yonex's official record announcement confirms Tan Boon Heong (Malaysia) as the 2013 record holder using the Nanoray Z-Speed. Chinese reviewers transliterate his name as 陳文宏 (Chen Wenhong in pinyin) — same player, different spelling system.",
+      },
+      {
+        sourceName: "Yonex",
+        title: "Duora Z-Strike product archive page",
+        section: "Frame architecture",
+        checkedAt: "2026-05-22",
+        href: "https://www.yonex.com/duo-zs",
+        quote: "Dual Optimum System",
+        note: "Yonex's archive copy confirms the Box Frame / Aero Frame asymmetric architecture of the Duora Z-Strike.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-bladex-800-speed-vs-halbertec-9000-power",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — head-to-head of two Li-Ning flagships with documented community measurement",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland men's doubles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 88S Pro 2024 (reference for control-attack)",
+        "Yonex Nanoflare 800 Pro 2024 (reference for speed-attack)",
+      ],
+      sourceAttribution:
+        "BadmintonCN reviewer chengzhen (March 2026, 4U/G5 and 4U/G6 measured samples) cross-referenced with Li-Ning official product copy and Toray's M46X material announcement.",
+    },
+    title: "Li-Ning Bladex 800 Speed vs Halbertec 9000 Power: where the lines actually cross",
+    dek: "One is a speed racket that pulled toward balanced; the other is a balanced racket that pulled toward speed. The two flagships now sit closer than their family branding suggests.",
+    verdict: "Halbertec 9000 Power for raw shuttle speed and back-court pressure; Bladex 800 Speed for control-leaning doubles with bigger sweet spot and faster recovery.",
+    bestFor: [
+      "Doubles back-court attackers (Halbertec 9000 Power)",
+      "Doubles placement-and-rhythm players (Bladex 800 Speed)",
+      "Buyers cross-shopping Li-Ning's two flagship attack lines",
+    ],
+    avoidIf: [
+      "You want a single 'best' verdict — these reward different games",
+      "You haven't decided between speed and control as your primary identity",
+      "You need an entry-level racket",
+    ],
+    setupNotes: [
+      "Bladex 800 Speed (4U/G6, strung): community reviewer measured 90.8g playing weight, 299mm balance, 26-28 lbs N65 string.",
+      "Halbertec 9000 Power (4U/G5, strung): community reviewer measured 88.2g playing weight, 308mm balance, 26-28 lbs N65 string.",
+      "YuanShi (源式) creator-rig measurements: Halbertec 9000 Power shaft hardness 7.65, Bladex 800 Speed 7.83 (lower = stiffer). Torsion: 800 Speed 18.72, 9000 Power 22.24 (lower = better anti-twist).",
+    ],
+    sourceHook:
+      "The community reviewer chengzhen owns and has played both rackets in March 2026, with measured weights and YuanShi-rig hardness data — one of the few sources who can compare both directly.",
+    facts: [
+      { label: "Source measurements", value: "Bladex 800 Speed 4U/G6 = 90.8g/299mm; Halbertec 9000 Power 4U/G5 = 88.2g/308mm (community-measured, strung)." },
+      { label: "Materials note", value: "9000 Power adds polyimide fibre to the shaft (Li-Ning claims it prevents power-loss under heavy drives); 800 Speed adds Toray M46X to the frame (Toray claims +20% strength while keeping modulus)." },
+      { label: "Buyer lens", value: "Different shapes of the same flagship character; pick by playstyle, not by spec line." },
+    ],
+    calloutTitle: "Two flagships, two answers to the same question",
+    calloutBody:
+      "Both rackets ask: what's the fastest way to convert a clean swing into a shuttle that hurts? The Halbertec 9000 Power wants more shuttle speed at the cost of frame width and anti-twist. The Bladex 800 Speed wants more control and tolerance at the cost of raw pace. Neither is wrong; you pick the racket that matches the rally you actually play.",
+    comparison: {
+      heading: "The head-to-head decoded",
+      columns: ["Bladex 800 Speed", "Halbertec 9000 Power", "Astrox 88S Pro 2024 (ref)"],
+      rows: [
+        { label: "Identity", values: ["Control-leaning speed", "Speed-leaning balanced", "Doubles attack-control"] },
+        { label: "Best reward", values: ["Placement + recovery", "Shuttle speed + back-court bite", "Drive-and-finish"] },
+        { label: "Main risk", values: ["Lower raw smash threat", "Smaller sweet spot, harsher mishits", "Demanding shaft"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What chengzhen actually measured",
+        body: "The community reviewer chengzhen has had both rackets in hand and run them through the same testing pattern. Strung playing weights came in at 90.8g (Bladex 800 Speed, 4U/G6) and 88.2g (Halbertec 9000 Power, 4U/G5), with balance points at 299mm and 308mm respectively. The 800 Speed's frame is a large wind-resistant aerodynamic frame; the 9000 Power's frame is a mid-large fluid box frame. Both rackets were strung at 26-28 lbs of N65. The headline difference: the 9000 Power swings slightly heavier and has a higher balance point despite weighing less unstrung, which is the lineage of head-leaning balanced-class rackets in Li-Ning's catalogue.",
+      },
+      {
+        heading: "The shaft engineering, in plain language",
+        body: "Both shafts use Li-Ning's ULTRA high-elasticity carbon fibre and high-density damping material. The 9000 Power adds T1100 carbon (premium-tier) plus polyimide fibre. Li-Ning's official copy says the polyimide fibre 'solves the problem of elasticity-modulus collapse during heavy-force deformation, which causes a feeling of power loss'. The community reviewer agrees: where the original Halbertec 9000 felt soft under heavy back-court swings, the 9000 Power keeps the shaft loaded all the way through impact. The Bladex 800 Speed's shaft is simpler — ULTRA high-elasticity + damping — and the on-court signature is softer landing on the shuttle before a slightly slower release.",
+      },
+      {
+        heading: "Frame materials: M46X versus stripped-down speed",
+        body: "The Bladex 800 Speed's frame swaps in Toray's M46X carbon. Toray's official announcement claims M46X breaks the traditional carbon-fibre trade-off between strength and modulus, increasing strength 20%+ while preserving high modulus. Li-Ning's pitch is that the frame keeps its rigidity but recovers faster after impact, which translates to bigger sweet spot and better anti-twist. The community-measured YuanShi-rig torsion numbers back this up: 800 Speed = 18.72, 9000 Power = 22.24 (lower number = stronger anti-twist, so 800 Speed wins by a noticeable margin). The frame won't win you a smash duel against the 9000 Power, but it will reward an imperfect swing more reliably.",
+      },
+      {
+        heading: "On court: who gets helped",
+        body: "Two reads. (1) If you play men's doubles and your role is heavy back-court attacker, the 9000 Power gives you the shuttle speed and back-court bite to keep opponents pinned. The trade is that your bad swings will be punished more by the smaller frame and lower anti-twist. (2) If you play men's or mixed doubles and your role is placement-and-rhythm — disguised drops, third-shot kills, holding the front court — the 800 Speed gives you bigger margins, faster recovery, and slightly stickier hold-on-ball for net work. The reviewer himself moved toward the 800 Speed because his playstyle had evolved away from rear-court power and toward tempo-control. That's the most honest indicator of which racket suits which game.",
+      },
+      {
+        heading: "How to choose and what to test",
+        body: "If you can demo both, do this: warm up four high-clears with each, then immediately play a 21-point doubles game with a partner you've played 20+ times. The Halbertec 9000 Power will tell you within five rallies whether you can drive the stiffer shaft; the Bladex 800 Speed will tell you within ten rallies whether the slightly softer release frustrates you in flat-drive exchanges. If you cannot demo, the lower-risk pick is the 800 Speed (bigger margins, broader appeal, more forgiving on off-centre hits); the higher-ceiling pick is the 9000 Power (rewards committed force, punishes the rest). Either way, both should be tried before settling on a Yonex Astrox 88 / Nanoflare 800 alternative.",
+      },
+    ],
+    cta: "Use the racket finder with attack or speed flags, then triangulate against the Astrox 88S Pro 2024 and Nanoflare 800 Pro 2024 before deciding.",
+    factChecks: [
+      {
+        sourceName: "Toray",
+        title: "Toray M46X carbon fibre announcement",
+        section: "Material strength claim",
+        checkedAt: "2026-05-22",
+        href: "https://www.toray.com/news/index.html",
+        quote: "M46X — strength increased by more than 20% while maintaining high modulus",
+        note: "Toray's official material announcement supports Li-Ning's marketing claim about the Bladex 800 Speed frame's M46X carbon fibre.",
+      },
+      {
+        sourceName: "BadmintonCN",
+        title: "chengzhen — Bladex 800 Speed vs Halbertec 9000 Power head-to-head",
+        section: "Measured weights, balance, hardness, torsion",
+        checkedAt: "2026-05-22",
+        href: "https://bbs.badmintoncn.com/forum.php?mod=viewthread&tid=3831620",
+        quote: "Bladex 800 Speed 90.8g/299mm; Halbertec 9000 Power 88.2g/308mm",
+        note: "Community-measured strung weights, balance, YuanShi-rig hardness, and torsion data sourced from chengzhen's March 2026 head-to-head review.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Founder firsthand on Arcsaber 11 Pro (current singles racket); observer on Halbertec 8000",
+      context: "founderFirsthand",
+      conditions: {
+        strings: "BG80",
+        tensionLbs: 26,
+        opponents: "Division 4 Ireland singles and doubles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Arcsaber 11 Pro (founder firsthand, current singles racket)",
+        "Li-Ning Halbertec 9000 (catalogue reference)",
+      ],
+    },
+    title: "Li-Ning Halbertec 8000 vs Yonex Arcsaber 11 Pro: control-tier flagships, different philosophies",
+    dek: "Both rackets are flagship control / all-around frames. One is built around wrap-around pocketing, the other around shaft damping. The buying decision is honest, not marginal.",
+    verdict: "Arcsaber 11 Pro for precision-placement attackers who load the shaft; Halbertec 8000 for continuous-output players who want crisper, faster release.",
+    bestFor: [
+      "Singles or mixed players who win through placement (Arcsaber 11 Pro)",
+      "Doubles players who win through continuous output (Halbertec 8000)",
+      "Buyers cross-shopping control-flagship tiers across brands",
+    ],
+    avoidIf: [
+      "You want a single 'best' answer — these are genuinely different",
+      "You haven't decided between pocketing and crispness",
+      "You need an entry-level racket",
+    ],
+    setupNotes: [
+      "Arcsaber 11 Pro (Yonex official): Stiff flex, 4U (Avg. 83g) and 3U (Avg. 88g), G4/G5/G6, HM Graphite + POCKETING BOOSTER, shaft Super HMG + Ultra PE Fibre.",
+      "Halbertec 8000 (Li-Ning official): 6.8mm shaft with ACC-RIF anti-crash compound damping; Toray T1100 carbon frame; 3U/4U options.",
+      "Community measurement: both 3U samples around 301-302mm balance, very close in physical parameters.",
+    ],
+    sourceHook:
+      "The community source reviewer played both 3U samples at 27 lb tension and reports the difference is character-driven, not spec-driven — exactly the kind of comparison amateur buyers benefit from.",
+    facts: [
+      { label: "Arcsaber 11 Pro flex", value: "Yonex lists STIFF, 4U/3U, HM Graphite + Pocketing Booster + Super HMG shaft." },
+      { label: "Halbertec 8000 shaft", value: "Li-Ning lists 6.8mm ACC-RIF (anti-crash compound recoil-insulated fibre) damping shaft + Toray T1100 carbon frame." },
+      { label: "Buyer lens", value: "Pocketing vs crispness; both flagship-tier; pick by feel, not by spec." },
+    ],
+    calloutTitle: "Same tier, different soul",
+    calloutBody:
+      "These are both flagship-tier control rackets and on paper they look interchangeable — same 6.8mm shaft thickness, similar 3U balance points, similar max tension. On court the contact feel is fundamentally different. The Arcsaber 11 Pro holds the shuttle on the strings longer and rewards a longer, looser swing; the Halbertec 8000 ejects the shuttle faster and rewards a sharper, more committed swing.",
+    comparison: {
+      heading: "Control-flagship decoded",
+      columns: ["Arcsaber 11 Pro", "Halbertec 8000", "Halbertec 9000 (ref)"],
+      rows: [
+        { label: "Identity", values: ["Pocketing-first control", "Continuous-output control", "Speed-leaning balance"] },
+        { label: "Best reward", values: ["Placement disguise + drop", "Continuous flat exchange", "Heavier attack feel"] },
+        { label: "Main risk", values: ["Below 27 lbs feels sticky", "Less wrap-around feel", "Power loss under heavy drives"] },
+      ],
+    },
+    firstPerson: [
+      {
+        kind: "firstPerson",
+        context: "Arcsaber 11 Pro is my singles racket",
+        body: "I switched to the Arcsaber 11 Pro for singles after about two years on the Astrox 88D Tour, and the change was about pocketing. The 88D Tour rewards a crisp ejection; the 11 Pro rewards a held shot that you can change direction on at the last moment. In singles, where you build points through angle and disguise rather than raw power, the held contact gives you a quarter-second of disguise that the 88D Tour doesn't. That's small-sounding but match-determining over a 21-21 game.",
+        setup: {
+          strings: "BG80",
+          tensionLbs: 26,
+          opponentLevel: "Division 4 Ireland singles partners",
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "How I read the Halbertec 8000 (observer)",
+        body: "I haven't played the Halbertec 8000 personally; my read is from the community source and from one of our Dublin teammates who switched to it from a Halbertec 7000. His feedback was that the 8000 felt more controlled but less explosive than the 7000 — and that the ACC-RIF damping in the shaft genuinely reduces vibration on heavy-tension setups. I cite that as a useful directional indicator, not a personal verdict.",
+        setup: { strings: "BG80", tensionLbs: 26 },
+      },
+    ],
+    sections: [
+      {
+        heading: "What pocketing actually means on the Arcsaber 11 Pro",
+        body: "Yonex's POCKETING BOOSTER frame technology and the new PB elastic body in the Arcsaber 11 Pro are explicit attempts to extend the time the shuttle spends on the strings before release. The on-court signature is unmistakable: clears feel deeper than the effort suggests, drops feel held-then-released rather than punched, and slice-block shots in singles arrive at the opponent's mid-court with a soft pace that's hard to attack. The trade is that on hard-driving shots (smash, flat-drive) the held contact costs you a fraction of a second on shuttle exit speed compared with crisper rackets. For singles and slow doubles, that's a winning trade. For fast men's doubles, the trade is more questionable.",
+      },
+      {
+        heading: "What ACC-RIF actually means on the Halbertec 8000",
+        body: "Li-Ning's ACC-RIF (anti-crash compound recoil-insulated fibre) shaft damping is filler material inside the shaft tube designed to absorb the vibration spike that occurs at impact. The on-court signature is cleaner: drives release with less shaft buzz than the Halbertec 7000, smashes feel crisp without the harshness of a pure stiff shaft, and continuous mid-court exchanges feel more sustainable on the arm. Community reviewers explicitly position the 8000 as 'more controllable than the 7000, less explosive than the 9000' — which is exactly where Li-Ning slots it in the line.",
+      },
+      {
+        heading: "Cross-brand decision: who picks what",
+        body: "Three honest paths. If your game is singles-leaning, your point construction depends on placement and disguise, and you accept that you cost yourself a tiny amount of raw shuttle speed for held contact, the Arcsaber 11 Pro wins. If your game is doubles-leaning, your point construction depends on continuous output and you want crisper release without losing control margin, the Halbertec 8000 wins. If you cannot decide, the deeper structural question is: are you a placement player or a tempo player? Placement players prefer Yonex's pocketing identity (Arcsaber line in general). Tempo players prefer Li-Ning's faster-release identity (Halbertec line in general).",
+      },
+      {
+        heading: "String tension changes the equation",
+        body: "Both rackets perform differently across tensions. The Arcsaber 11 Pro at 27 lbs+ is the racket Yonex designed; below 27 lbs the held contact becomes sticky and the racket feels muddy. Yonex acknowledged this in the upgrade by raising the 3U warranty to 28 lbs (from 27 lbs on the Arcsaber 11). The Halbertec 8000 is more tension-tolerant — a 26-27 lb setup feels almost identical to a 28 lb setup. For amateur buyers who don't string at flagship tensions, the Halbertec 8000 is the more forgiving pick.",
+      },
+      {
+        heading: "Where prices sit and what to actually pay",
+        body: "Community reviewer's pricing note (March 2026): the Arcsaber 11 Pro typically trades around 10× community-currency-unit pricing (in the Chinese market this maps to roughly 1,000 yuan tier; in global markets expect US$200-260 range depending on retailer). The Halbertec 8000 trades closer to the Halbertec 80 tier on sale events. For non-collectors, both come with version variants (CH, JP, SP for Yonex; varying generations for Li-Ning) and the source reviewer recommends buying whichever variant is cheapest — none of the regional variants meaningfully change the on-court character.",
+      },
+    ],
+    cta: "Use the racket finder with control or singles flags to compare Arcsaber 11 Pro and Halbertec 8000, then triangulate against your current racket.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ARCSABER 11 PRO product page",
+        section: "Spec sheet + frame technology",
+        checkedAt: "2026-05-22",
+        href: "https://www.yonex.com/arc11-p",
+        quote: "Flex Stiff / 4U (Avg. 83g) / 3U (Avg. 88g) / HM Graphite, POCKETING BOOSTER",
+        note: "Official Yonex page confirms STIFF flex, 4U/3U weight grades, G4/G5/G6 grip sizes, and the Pocketing Booster + Super HMG + Ultra PE Fibre frame and shaft technologies.",
+      },
+    ],
+  }),
+  review({
+    slug: "victor-p8500-ii-vs-a970-nitro-lite",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — cross-comparison of two stablemate Victor flagships in current rotation",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners",
+        courtSurface: "wood and synthetic court mat",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Power Cushion Eclipsion Z3 (founder firsthand, reference)",
+      ],
+      sourceAttribution:
+        "Multiple BadmintonCN community sources cross-referenced with official Victor product copy. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+    },
+    title: "Victor P8500 II vs A970 Nitro Lite: which Victor flagship belongs on your feet",
+    dek: "Two top-tier Victor shoes from the same year. P8500 II prioritises stability and protection; A970 Nitro Lite prioritises cushion and wrap. Pick by your weakest moment, not your favourite shot.",
+    verdict: "P8500 II if you roll ankles or land heavy on lunges; A970 Nitro Lite if you want cushion and wrap with all-around speed.",
+    bestFor: [
+      "Players choosing between Victor's two flagship platforms",
+      "Heavier players who land hard (P8500 II edge)",
+      "All-around players who want softer cushioning (Nitro Lite edge)",
+    ],
+    avoidIf: [
+      "You're looking outside the Victor ecosystem",
+      "You only play singles and want the lightest possible shoe",
+      "You haven't decided between protection and cushion",
+    ],
+    setupNotes: [
+      "P8500 II: U2.5 last, HYPEREVA + ENERGYMAX 3.0 midsole, three-claw evolved to wave-shape lateral plate, V-TOUGH abrasion patch, endorsed by Mohammad Ahsan.",
+      "A970 Nitro Lite: V2.5 last, NitroLite (nitrogen supercritical foam) + E-TPU midsole, LS-S lateral stability plate carried over from A970 ACE, endorsed by Lee Zii Jia and team.",
+      "Both released in 2023; both currently in production.",
+    ],
+    sourceHook:
+      "The community sources for both shoes agree on the trade: P8500 II is the stability flagship; A970 Nitro Lite is the cushioning flagship; choose by your protection needs, not by colour or by which player you follow.",
+    facts: [
+      { label: "Last difference", value: "P8500 II uses U2.5 (wide); A970 Nitro Lite uses V2.5 (standard). For wider feet the P8500 II is the more comfortable starting point." },
+      { label: "Midsole tech difference", value: "P8500 II = HyperEVA + ENERGYMAX 3.0; A970 Nitro Lite = NitroLite (nitrogen foam) + E-TPU. Nitro Lite cushion is softer; HyperEVA is firmer and more responsive." },
+      { label: "Buyer lens", value: "P8500 II = protection-first; A970 Nitro Lite = cushion-first; neither is a pure speed shoe." },
+    ],
+    calloutTitle: "Pick by your weakest moment, not your favourite shot",
+    calloutBody:
+      "Marketers will sell you a shoe for the rally that wins you the point. The right shoe is the one that protects you on the rally that almost loses you the point — the rolled ankle on a sudden change of direction, the heavy landing after a jump smash, the third game when your legs are gone. Choose the shoe that earns its keep at your worst moment, not your best.",
+    comparison: {
+      heading: "The Victor flagship trade-off",
+      columns: ["Victor P8500 II", "Victor A970 Nitro Lite", "Yonex Eclipsion Z3 (ref)"],
+      rows: [
+        { label: "Identity", values: ["Stability + protection", "All-around + cushion", "Cushioned all-rounder"] },
+        { label: "Best reward", values: ["Ankle confidence + abrasion", "Soft landings + foot wrap", "Familiar Yonex platform"] },
+        { label: "Main risk", values: ["Stock insole wears fast", "Slightly slower start-speed", "Less landing protection"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the two shoes share",
+        body: "Before isolating the differences, the shared base. Both shoes use Victor's V-TOUGH (or V-Durable+) abrasion patch at the toe-drag zone. Both use VSR rubber outsoles with similar non-slip tread. Both include carbon plates plus TPU for torsional stability. Both come with ENERGYMAX 3.0 insoles. Both are in current production and trade at flagship pricing. The differences sit in (1) the last/fit, (2) the midsole material, (3) the lateral plate architecture, and (4) the athlete association — and those four differences are what your buying decision turns on.",
+      },
+      {
+        heading: "Last: U2.5 vs V2.5 — the foundation of fit",
+        body: "The P8500 II uses Victor's U2.5 last (the U-shape with 2.5 width tier, sometimes labelled U2.5E for the wide variant). The A970 Nitro Lite uses V2.5 (the standard V-shape last with 2.5 width). For Egyptian, Roman, or Greek foot shapes — i.e. most amateur feet — the U2.5 is the more forgiving fit. For narrower or more athletic feet, the V2.5 offers a slightly more locked-in feel. If you tried on both shoes blind, the U2.5 (P8500 II) feels more like 'my foot has room to land'; the V2.5 (Nitro Lite) feels more like 'my foot is held in place'.",
+      },
+      {
+        heading: "Midsole: HyperEVA vs NitroLite",
+        body: "HyperEVA (P8500 II) is Victor's standard premium midsole — a high-performance EVA blend tuned for responsive cushion. NitroLite (A970 Nitro Lite) is a newer technology: an EVA foam that has nitrogen gas injected during the supercritical foaming process, producing a lighter foam with more bounce. On court, the difference is small but real: HyperEVA feels firmer and gives better feedback under your foot; NitroLite feels softer and gives better landing absorption. For a heavier player or one who lands hard on jump smashes, NitroLite earns its keep. For a player who relies on ground feel to time direction changes, HyperEVA is the cleaner choice.",
+      },
+      {
+        heading: "Lateral plate: eagle-claw vs LS-S",
+        body: "Both shoes include lateral stability TPU plates, but the architecture differs. The P8500 II's enlarged eagle-claw plate is wider and more visually prominent — it covers more of the mid-foot than the A970's LS-S plate does. The A970 Nitro Lite inherits the LS-S system unchanged from the A970 ACE, which has been in use since 2022 and has a strong reputation among Victor players. Both systems work; the eagle-claw is the more aggressive lateral support choice; the LS-S is the more refined one. Players who roll ankles will appreciate the eagle-claw; players who want lateral support without thinking about it will appreciate the LS-S.",
+      },
+      {
+        heading: "Athlete association: Mohammad Ahsan vs Lee Zii Jia",
+        body: "Mohammad Ahsan (Indonesian men's doubles legend, current Victor athlete) endorses the P8500 II — his quote appears in Victor's official copy. He plays doubles with hard landings, frequent direction changes, and footwork that benefits from the U2.5 last and the eagle-claw plate. Lee Zii Jia (Malaysian men's singles), along with Anders Antonsen, Kodai Naraoka, Kenta Nishimoto, and Wang Tzu Wei, endorses the A970 Nitro Lite — they play singles with frequent jump smashes that benefit from the NitroLite cushion. Honest amateur reading: copy the platform whose endorsers play your discipline, not the platform whose colourway you like.",
+      },
+    ],
+    cta: "Use the shoe finder with cushioned-landing or wide-last flags to filter, then read the standalone P8500 II and A970 Nitro Lite reviews for deeper detail.",
+    factChecks: [
+      {
+        sourceName: "Victor Badminton",
+        title: "Victor SH-P8500 II and A970 NitroLite official product pages",
+        section: "Spec sheets and athlete endorsements",
+        checkedAt: "2026-05-22",
+        href: "https://www.victorsport.com/product/A970NitroLite",
+        quote: "NITROLITE MIDSOLE + E-TPU + TPU + Carbon Power + Solid EVA",
+        note: "Victor's official product pages confirm the midsole, last, and athlete endorsements for both flagship shoes — Mohammad Ahsan on P8500 II, Lee Zii Jia + Anders Antonsen + Kodai Naraoka + Kenta Nishimoto + Wang Tzu Wei on A970 Nitro Lite.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];
