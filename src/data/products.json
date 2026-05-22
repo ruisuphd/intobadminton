@@ -5344,5 +5344,143 @@
     "sourceUrls": ["https://www.bonny-sports.com/"],
     "editorNote": "Bonny Leisu (Thunder Speed) 800 — fast-paced attack racket. Value tier with credible attack identity.",
     "reviewCount": 0
+  },
+  {
+    "id": "vic-p8500-ii",
+    "category": "shoes",
+    "name": "P8500 II",
+    "brand": "Victor",
+    "priceUsd": 165,
+    "fitWidth": "wide_available",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": true,
+    "launchYear": 2023,
+    "regionAvailability": ["global", "tw", "kr", "sg", "cn", "uk", "us"],
+    "officialSourceUrl": "https://www.victorsport.com/product/shp8500ii",
+    "lastVerifiedAt": "2026-05-22",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["heavy_player_cushioning", "lateral_stability", "ankle_protection", "wide_foot"],
+    "sourceUrls": ["https://www.victorsport.com/product/shp8500ii", "https://badmintondirect.com/products/2022-victor-sh8500-ii-performance-badminton-shoes"],
+    "editorNote": "Victor's P-series stability flagship (2023). Per Victor official: HYPEREVA + ENERGYMAX 3.0 + TPU + Carbon Power + Solid EVA midsole, VSR rubber outsole, V-Tough abrasion patch, U2.5 last (wide variant U2.5E). Enlarged wave-shaped eagle-claw lateral plate with LS-S support. Mohammad Ahsan endorses (Victor official copy quotes him directly); he wore the red colourway at 2023 All England. Two BadmintonCN community sources both flag that the stock insole wears markedly faster than the rest of the shoe — plan to buy aftermarket replacements. Best for heavier players, players who roll ankles on cuts, and wide-foot buyers. Note: breathability is mediocre in hot/humid venues.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: P8500 II detailed 3-month durability review",
+        "summary": "Reviewer-measured 314g per shoe in size 41 (4U / 265mm internal). HyperEVA midsole genuinely improves cushion vs predecessor; V-Tough abrasion patch shows almost no wear after 3+ months at 3-4 sessions/week. Lateral 'eagle-claw' TPU plate is softer than expected when flex-tested by hand, but system-level lateral stability (claw + LS-S + ankle wrap) prevented all rolls in test period. Stock insole wore through fast — author consumed two XD11 replacements. Breathability inadequate for hot summer venues.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "vic-a970-nitro-lite",
+    "category": "shoes",
+    "name": "A970 Nitro Lite",
+    "brand": "Victor",
+    "priceUsd": 195,
+    "fitWidth": "standard",
+    "cushioning": "very_high",
+    "stability": "high",
+    "weightFeel": "cushioned",
+    "hasWideOption": false,
+    "launchYear": 2023,
+    "regionAvailability": ["global", "tw", "kr", "sg", "cn", "uk", "us", "jp", "my"],
+    "officialSourceUrl": "https://www.victorsport.com/product/A970NitroLite",
+    "lastVerifiedAt": "2026-05-22",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["all_around", "cushioned_landing", "singles_jumps"],
+    "sourceUrls": ["https://www.victorsport.com/product/A970NitroLite", "https://www.allrackets.com/en/webshop/blog/2025/07/23/de-topschoen-van-2025-onze-review-van-de-victor-a970-nitrolite/"],
+    "editorNote": "Victor's A970 platform evolved with NitroLite (nitrogen supercritical foam) midsole, replacing the A970 ACE's HyperEVA. Released 20 Nov 2023. Per Victor official: NITROLITE MIDSOLE + E-TPU + TPU + Carbon Power + Solid EVA, VSR rubber outsole, V-Durable+ + double mesh + microfibre PU leather upper, V-SHAPE 2.5 (V2.5) standard last. Lee Zii Jia (李梓嘉) endorses the Hawaii Blue/Black colourway; Anders Antonsen, Kodai Naraoka, Kenta Nishimoto, Wang Tzu Wei, and H.S. Prannoy use the pearl white. Community-measured weight (43 size, 275mm internal): ~344g per shoe — about 6g heavier than A970 ACE due to thicker upper materials. Sizing runs small; half-size up recommended. Breathability is the weakness vs vented speed shoes.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: A970 Nitro Lite comprehensive review (Jan 2024)",
+        "summary": "Inherits LS-S lateral stability TPU plate unchanged from A970 ACE — continuity is intentional. NitroLite midsole is lighter than HyperEVA but Victor thickened the upper materials, so overall shoe weight increased ~6g per shoe vs A970 ACE in 43 size. Cushioning markedly improved on jump landings; start-speed slightly slower than A970 ACE due to thicker forefoot. Breathability mediocre — fewer ventilation perforations than dedicated speed shoes, plus thicker upper traps more heat.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "yy-nanoray-zspeed",
+    "category": "racket",
+    "name": "Nanoray Z-Speed",
+    "brand": "Yonex",
+    "priceUsd": 220,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "3U",
+    "weightVariants": ["3U"],
+    "gripSizes": ["G4", "G5"],
+    "balanceMm": 290,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": { "min": 18, "max": 27 },
+    "shaftFlexSource": "official",
+    "launchYear": 2013,
+    "regionAvailability": ["used_market_only"],
+    "officialSourceUrl": "https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/",
+    "lastVerifiedAt": "2026-05-22",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "advanced",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["doubles", "fast_drive", "small_frame_attack"],
+    "sourceUrls": ["https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/"],
+    "editorNote": "Legacy Yonex small-frame speed-attack racket (NR-ZSP / NRZS). Out of production; used-market only. Per Yonex official: 3U/86g average, balance ~290mm ±3mm, max tension 27 lbs, H.M. Graphite + Sonic Metal + EX-HMG + Nanometric + X-Fullerene. Notable for setting the men's fastest-hit Guinness record at 493 km/h on 28 July 2013 (player: Tan Boon Heong / Malaysia; transliterated 陳文宏 in Chinese pinyin — same player, different spelling system). Held the record until 2025 when Satwiksairaj Rankireddy clocked 565 km/h with the Nanoflare 1000 Z. Buyer caution: newer reissues reportedly feel softer in the shaft than 2013 originals; check provenance.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: 'Ancient Artifacts II — NR-ZSP vs DZS' lineage review",
+        "summary": "Author treats NR-ZSP as a benchmark for small-frame speed-attack lineage. Reviewer's nostalgia note: old-color (2013-era) NR-ZSP mid-core feels noticeably harder + progressive 'open-shaft' break-in phenomenon; new-color reissues feel softer by approximately one tier with diminished eruption character. Used-market vintage prices for clean originals: roughly 1,000-1,500 CNY.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "yy-duora-zstrike",
+    "category": "racket",
+    "name": "Duora Z-Strike",
+    "brand": "Yonex",
+    "priceUsd": 230,
+    "headWeight": "even",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "3U",
+    "weightVariants": ["3U"],
+    "gripSizes": ["G5"],
+    "balanceMm": 295,
+    "balanceCategory": "even_balance",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": { "min": 19, "max": 27 },
+    "shaftFlexSource": "official",
+    "launchYear": 2017,
+    "regionAvailability": ["used_market_only"],
+    "officialSourceUrl": "https://www.yonex.com/duo-zs",
+    "lastVerifiedAt": "2026-05-22",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "advanced",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": ["doubles", "small_frame_attack", "advanced_technique"],
+    "sourceUrls": ["https://www.yonex.com/duo-zs"],
+    "editorNote": "Legacy Yonex small-frame asymmetric attack racket. Out of production; used-market only. Per Yonex official: 3U/88g average, G5, even balance, extra-slim shaft, Dual Optimum System (Box Frame on forehand side for stability/smash + Aero Frame on backhand side for reduced drag/faster swing). Materials: H.M. Graphite, Nanometric DR, Hyper-MG, Duora Grommet System, Solid Feel Core. Horizontal-A Concept grommet pattern enlarges sweet spot at top of frame. Requires player to register which side of the frame faces shuttle each shot — learning curve some players never complete. Reviewers who completed the curve rate it among Yonex's most rewarding attack rackets; reviewers who didn't found it confused.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: NR-ZSP vs DZS legacy lineage comparison",
+        "summary": "Community reviewer rates DZS swing speed slightly slower than NR-ZSP due to asymmetric frame perception management. Mid-core hardness measures higher than NR-ZSP when accounting for added handle length (effective shaft tension higher). Offensive output equally forceful to NR-ZSP; differential primarily in off-form handling (asymmetric frame learning curve) plus mid-shortening (lower mechanical arm advantage). Used-market clean copies attract premium pricing due to low production volume.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "medium"
+      }
+    ]
   }
 ]

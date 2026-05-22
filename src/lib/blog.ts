@@ -115,7 +115,14 @@ export type BlogSlug =
   | "victor-sonic-boom-pro-budget-attack-review"
   | "goshen-leiming-69-string-review"
   | "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review"
-  | "yonex-arcsaber-7-tour-review";
+  | "yonex-arcsaber-7-tour-review"
+  | "victor-p8500-ii-shoes-review"
+  | "victor-a970-nitro-lite-shoes-review"
+  | "yonex-astrox-77-pro-review"
+  | "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison"
+  | "li-ning-bladex-800-speed-vs-halbertec-9000-power"
+  | "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro"
+  | "victor-p8500-ii-vs-a970-nitro-lite";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -232,6 +239,13 @@ export const blogSlugs: BlogSlug[] = [
   "goshen-leiming-69-string-review",
   "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
   "yonex-arcsaber-7-tour-review",
+  "victor-p8500-ii-shoes-review",
+  "victor-a970-nitro-lite-shoes-review",
+  "yonex-astrox-77-pro-review",
+  "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
+  "li-ning-bladex-800-speed-vs-halbertec-9000-power",
+  "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+  "victor-p8500-ii-vs-a970-nitro-lite",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -1889,7 +1903,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
     },
     {
       slug: "victor-auraspeed-99-hayabusa-review",
-      updatedAt: "2026-04-30",
+      updatedAt: "2026-05-22",
       category: "reviews",
       title: "Victor Auraspeed 99 (Hayabusa): the Antonsen flagship that earns its difficulty",
       dek: "Alloy carbon, WES 3.0, nano-aerogel, 46T fibers. The 99 stacks every Victor flagship technology in one frame. The reward profile is unusual.",
@@ -1949,6 +1963,10 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         {
           heading: "On-court character",
           body: "First sessions are humbling. Without short, concentrated power strokes, the shaft does not flex, the racket feels lifeless on rear-court clears, and even retrieval pops feel under-loaded. Once you commit to short sharp swings, the WES 3.0 inflection system rewards you with a snap-and-recover that does not exist on simpler shafts. Smashes get a downward bite that the 90KM does not produce; flat-exchange drives are crisp but deep — a rare combination for an attack racket.",
+        },
+        {
+          heading: "What four independent reviewers all confirm",
+          body: "Five separate BadmintonCN community reviewers tested the Auraspeed 99 between 2024 and early 2026 (the model designation ARS-99 J for the Anders Antonsen signature edition). Their reads converge on three points. First: the shaft punishes soft swings — every reviewer who came from a softer Yonex Astrox 88D-class frame reported their first warm-up clears felt lifeless until they committed to harder, shorter swings. Second: the sweet spot is larger than the wing-frame visual implies — multiple reviewers explicitly note this surprise. Third: the racket peaks for advanced players who already have a smash they can finish points with — it does not create a smash, it amplifies an existing one. The pink colourway has also become tournament-iconic via Anders Antonsen's actual usage (Victor's officially-confirmed signature edition).",
         },
         {
           heading: "Vs Auraspeed 90KM and 100X SE",
