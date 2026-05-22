@@ -7436,4 +7436,96 @@ export const sourceReviewArticles = [
       },
     ],
   }),
+  review({
+    slug: "huayu-slayer-racket-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source on a small Chinese-brand racket",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Bonny MoJun (mid-tier control-attack reference)",
+        "Yonex Astrox 88D Pro 2024 (mainstream flagship reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (February 2026) on the Huayu (华羽) Slayer (屠夫). Cross-referenced with Huayu's BadmintonCN product page (view_25450) and the brand's social-media presence (Huayu Badminton Belgium, TikTok Shop listings).",
+    },
+    title: "Huayu Slayer (Tufu) review: a well-templated 4U racket from a small Chinese self-owned brand",
+    dek: "Huayu's Slayer (屠夫) is the brand's signature 4U/G5 racket — competently made with OEM-template tuning, two colourways with different character, and 32-lb max tension warranty.",
+    verdict: "A genuinely competent 4U all-rounder for amateur buyers willing to trade brand prestige for value; not a discovery, but not a disappointment either.",
+    bestFor: [
+      "Amateur buyers cross-shopping small Chinese-brand options",
+      "Players who want a 4U mid-stiffness frame with high max tension (32 lbs)",
+      "Buyers comfortable with OEM-template-tuned rackets at amateur-tier pricing",
+    ],
+    avoidIf: [
+      "You need flagship-tier brand prestige",
+      "You want a distinctive playing character rather than templated competence",
+      "You play primarily at competitive-tier intensity",
+    ],
+    setupNotes: [
+      "Huayu (华羽) is a small Chinese self-owned badminton brand run by 'Coach Liu' (刘教练).",
+      "Community-measured 4U/G5 sample: 92.34g playing weight, 297mm balance, 218mm shaft, mid stiffness, box frame, 76-hole bed, 9-3 line slot, max 32 lbs (high warranty), strung 25-27 lbs Li-Ning L64.",
+      "Two colourway variants with different tuning: white-gold leans control, black-pink leans attack (per Huayu's official copy).",
+      "46T carbon material on the frame.",
+    ],
+    sourceHook:
+      "The community reviewer's honest framing — that the Slayer is a well-templated OEM racket without a distinctive 'must-have' character — is the most useful insight for amateur buyers cross-shopping small-brand options.",
+    facts: [
+      { label: "Brand identity", value: "Huayu (华羽) — small Chinese self-owned brand; sells via Chinese e-commerce + selective international presence (Belgium-based Huayu Badminton, TikTok Shop listings)." },
+      { label: "Community-measured specs", value: "4U/G5 sample at 92.34g playing weight, 297mm balance, 218mm shaft, mid stiffness, 76-hole bed, max 32 lbs." },
+      { label: "Buyer lens", value: "Templated competence, not distinctive character; amateur-tier value." },
+    ],
+    calloutTitle: "Competent without being memorable — and that's the honest pitch",
+    calloutBody:
+      "Most small-brand rackets sit in one of two buckets: trying too hard to mimic a flagship and falling short, or finding a distinctive identity that earns dedicated fans. The Slayer is in a third bucket: well-templated all-rounder with no glaring weakness and no marquee strength. For amateurs who want a working racket at lower brand-prestige pricing, that's a real win.",
+    comparison: {
+      heading: "Where the Slayer sits",
+      columns: ["Huayu Slayer", "Bonny MoJun (peer)", "Yonex Astrox 88D Pro 2024 (mainstream peer)"],
+      rows: [
+        { label: "Identity", values: ["Templated competence", "Refined control-attack", "Marquee doubles attack-control"] },
+        { label: "Main reward", values: ["Reliable + cheap", "Better attack character", "Verified flagship performance"] },
+        { label: "Main risk", values: ["Lacks distinctive feel", "Less brand presence", "Premium pricing + demanding shaft"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What Huayu actually is",
+        body: "Huayu (华羽) is a small Chinese self-owned badminton brand operated by a figure the source reviewer refers to as 'Coach Liu' (刘教练). The brand sells primarily through Chinese e-commerce channels, with some international distribution via Belgium-based Huayu Badminton and TikTok Shop listings. Like most small Chinese badminton brands established in the past few years, Huayu doesn't manufacture rackets in-house — frames are sourced from OEM factories that also produce for other brands. None of this is unique to Huayu; it's the standard small-brand model in the post-2020 Chinese badminton-equipment market, where brand identity is built around a coach personality or influencer rather than in-house engineering.",
+      },
+      {
+        heading: "The Slayer's actual specs and what they signal",
+        body: "Community-measured 4U/G5 specs: 92.34g playing weight, 297mm balance, 218mm shaft, mid stiffness, box frame, 76-hole stringbed, 9-3 line slot, max 32 lbs warranty (notably high for amateur-tier pricing). The frame uses 46T carbon material — a modulus tier consistent with current-generation mid-to-upper amateur rackets. The shaft thickness and stiffness suggest the racket is templated against the well-established 6.8mm mid-stiff balanced category. Two colourway variants exist with different shaft tuning: white-gold leans control, black-pink leans attack. The split-tuning approach is unusual for amateur-tier rackets and worth flagging for buyers who care about the difference.",
+      },
+      {
+        heading: "On-court character",
+        body: "The community reviewer's read across first sessions: low driving difficulty, predictable sweet-spot, clean shaft response. Net play is the standout — the box-frame's rigidity and the head's modest weight let slow-pressure net shots land with predictable precision. Long-court placement is similarly well-controlled, with anti-twist behaviour above expected for the price tier. Where the Slayer doesn't shine: rear-court attack power isn't concentrated, and continuous flat-drive exchanges feel competent rather than crisp. The reviewer specifically notes that with about 70% of full force, the shaft loads enough to produce good speed, which makes the racket forgiving of imperfect technique. For amateur match play, that's a real benefit.",
+      },
+      {
+        heading: "The OEM-template caveat",
+        body: "The community reviewer's most pointed observation: after a few rallies, the Slayer's tuning felt 'familiar' — to the point where the reviewer claimed to know which factories likely produced the frame. This is a recurring pattern with small-brand rackets sourced from established OEMs: the playing character feels like a well-executed template rather than a distinctive design. Amateur buyers should price the Slayer accordingly — it competes on price and competence, not on engineering originality. The brand's value proposition is real (lower price than mainstream alternatives, comparable build quality, decent warranty) but it isn't a 'discovery' in the sense that a more distinctive small-brand racket might be.",
+      },
+      {
+        heading: "Buying advice",
+        body: "Three honest paths. (1) If you're cross-shopping small-Chinese-brand options at amateur-tier pricing and value reliable competence over distinctive character, the Slayer is a credible pick — particularly if you can buy from Huayu's official channels and have a path to warranty service. (2) If you've already decided on Bonny or Kumpoo for your small-brand exposure, the Slayer doesn't offer enough differentiation to justify a switch. (3) If you have the budget for mainstream-flagship pricing (Astrox 88D Pro, Halbertec 9000, AxForce 90 New), the Slayer doesn't compete on performance — buy the verified flagship instead. The Slayer's sweet spot is the buyer who wants a working amateur racket at a meaningful price discount from the mainstream and doesn't need their racket to define their identity.",
+      },
+    ],
+    cta: "Use the racket finder with value or balanced-control flags to compare the Huayu Slayer against Bonny MoJun and Kumpoo Shanhai New.",
+    factChecks: [
+      {
+        sourceName: "BadmintonCN",
+        title: "Huayu (华羽) Slayer (屠夫) product page",
+        section: "Community-curated product entry",
+        checkedAt: "2026-05-22",
+        href: "https://www.badmintoncn.com/cbo_eq/view_25450.html",
+        quote: "华羽屠夫",
+        note: "BadmintonCN's community product registry confirms the Huayu Slayer (屠夫) as a documented product entry. Huayu Badminton maintains social-media presence on Instagram (huayubc.belgium) and YouTube; TikTok Shop lists Huayu carbon rackets for international distribution. Detailed spec confirmation should be verified against Huayu's direct distributor for the buyer's region.",
+      },
+    ],
+  }),
 ] satisfies BlogArticle[];

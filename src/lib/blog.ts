@@ -133,7 +133,9 @@ export type BlogSlug =
   | "kumpoo-js-63-string-review"
   | "rsl-aero-classic-tourney-shuttle-review"
   | "li-ning-axforce-80-jr-junior-review"
-  | "yonex-arcsaber-11-pro-review";
+  | "yonex-arcsaber-11-pro-review"
+  | "huayu-slayer-racket-review"
+  | "victor-replacement-insoles-buyer-guide";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -268,6 +270,8 @@ export const blogSlugs: BlogSlug[] = [
   "rsl-aero-classic-tourney-shuttle-review",
   "li-ning-axforce-80-jr-junior-review",
   "yonex-arcsaber-11-pro-review",
+  "huayu-slayer-racket-review",
+  "victor-replacement-insoles-buyer-guide",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -2369,6 +2373,10 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
           body: "The most persuasive part of the source review is the weighing comparison. A 12-shuttle Carbonsonic MAX tube measured almost exactly around 5.0g with a very narrow spread, while several premium feather tubes showed wider shuttle-to-shuttle variance. Weight alone does not prove flight quality, but it explains why the reviewer keeps returning to consistency: players are less likely to open a tube and discover one shuttle that flies fast, another that floats, and another that feels dead.",
         },
         {
+          heading: "The 102-ball QC dataset that backs the consistency claim",
+          body: "A separate BadmintonCN reviewer (TiGe XLab) measured a substantially larger sample — 102 shuttles across the new Carbonsonic family and reference premium feather tubes — and published the gram-level numbers. Carbonsonic MAX (12 shuttles): mean 4.9967g, range 0.04g, max deviation 0.0033g, variance 0.0001. Carbonsonic PRO (12 shuttles): mean 5.0058g, range 0.07g, variance 0.0003. Carbonsonic PRO Horse Year Limited (6 shuttles): mean 5.0000g, range 0.00g, variance 0.0000 — every single shuttle landed on exactly 5g. By comparison the premium feather tubes showed wider variance: Yonex AS50 mean 5.3158g with 0.21g range and variance 0.0045; Yonex AS30 mean 5.2683g with 0.43g range; Yonex AS05 mean 5.1783g with 0.34g range; RSL Aero U mean 4.8925g with 0.20g range; RSL No.1 (6 shuttles) mean 4.8117g with 0.22g range. Notably tight: RSL No.2 at 0.07g range (matching Carbonsonic PRO) and AC50 in the middle at 0.20g range. The honest reading: premium feather shuttles cluster around their target weight, but tube-to-tube and shuttle-to-shuttle variance is real even at flagship pricing. Carbonsonic MAX's synthetic manufacturing produces meaningfully tighter weight tolerance than any feather shuttle in the comparison — at amateur and even mid-pro pricing, that's a genuine quality-control advantage.",
+        },
+        {
           heading: "On-court flight",
           body: "The review's practical claim is that MAX now flies close enough to high-grade feather shuttles to be useful for serious training. Clears follow a stable arc, the shuttle holds shape after harder contacts better than previous generations, and speed changes are less erratic as the rally extends. The feel is still not identical to feather, especially for players who live on slice, deception, and tight net tumble, but the gap is narrow enough that the cost argument finally becomes serious.",
         },
@@ -2382,6 +2390,9 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
         },
       ],
       cta: "Use the finder when shuttle recommendations launch; for now, treat Carbonsonic MAX as the serious synthetic benchmark.",
+      factChecks: [
+        { sourceName: "TiGe XLab", title: "BWF tournament shuttle — Victor Carbonsonic MAX: 102-shuttle QC dataset", section: "Manufacturing tolerance comparison", checkedAt: "2026-05-22", href: "https://bbs.badmintoncn.com/forum.php?mod=viewthread&tid=3835188", note: "TiGe XLab BadmintonCN community post weighed 102 shuttles across the Carbonsonic family (MAX, PRO, PRO Horse Year LE) and reference premium feather tubes (Yonex AS50, AS30, AS05; RSL Aero U, No.1, No.2; AC50). The gram-level dataset is the source for the consistency comparison enriched into this article in Sprint 12." },
+      ],
     },
     {
       slug: "bonny-leisu-800-racket-review",
@@ -4647,6 +4658,28 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       cta: "Use the shoe finder with your fit width, cushion preference, and stability needs to get a personalised shortlist.",
       factChecks: [
         { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-19", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Shoe selection and replacement guidance synthesised from BadmintonCN community posts and shoe-specific reviews; technical recommendations are original IntoBadminton interpretation grounded in first-party shoe testing across multiple brands." },
+      ],
+    },
+    {
+      slug: "victor-replacement-insoles-buyer-guide",
+      updatedAt: "2026-05-22",
+      category: "guides",
+      title: "Victor replacement insoles buyer guide: XD12, XD11, XDNL, and the 7mm option compared",
+      dek: "A practical guide to Victor's replacement insole lineup — which insole comes with which shoe, which to keep, which to swap, and which to budget for.",
+      sections: [
+        { heading: "Why this guide exists", body: "Victor's flagship shoes (P9200 III, P8500 II, A970 NitroLite, S99 Elite) all ship with a stock insole. For some shoes the stock insole is genuinely useful; for others it's the conspicuous weak link — the P8500 II review in our archive specifically flagged the stock insole as wearing through fast enough to require aftermarket replacement within months. This guide covers Victor's main aftermarket insole options so you know what to buy, what to skip, and what to look for during e-commerce flash sales." },
+        { heading: "New XD12 — the current standard on new shoes", body: "The new XD12 is the insole that ships with most recent Victor flagship shoes. It combines the old Energy 3.0 cushioning material with the XDNL design philosophy — extra reinforcement at the heel, forefoot, and big-toe contact zones — while keeping the original anti-slip ridge pattern on the topsheet. Heel U-groove support is adequate; torsional resistance is decent; the underfoot pressure feel runs slightly firm; topsheet grip is good. Honest verdict: usable as-is, but if your shoe came with an older XD12 (pre-redesign), swap it on day one. The older XD12 is less durable, and replacing it with a newer-tier option both improves comfort and increases resale value." },
+        { heading: "XD11 — the classic recommendation", body: "The XD11 is Victor's legacy aftermarket insole and the one most experienced players default to. Strengths: strong heel U-groove support, firm torsional stiffness, balanced underfoot pressure feedback, good topsheet grip, mild arch support. Weakness: the forefoot cushion and torsion plate can't both be maxed at once (you choose which side of the trade you want), and the heel cushion has a small risk of bottoming-out under heavy heel-strikers. Best value when bought on Tmall or Pinduoduo flash-sale at around ~30 RMB; less compelling at full retail. Note that the market has plenty of XD11 lookalikes — quality varies significantly. Buy from authorised channels." },
+        { heading: "XDNL — the upgrade that under-delivered", body: "The XDNL is Victor's attempt to evolve the XD11 with refreshed materials. Honest assessment: it's an incremental refresh that ended up less useful than the XD11 it tried to replace. The classic anti-slip topsheet ridge is removed, heel U-groove support is weaker, torsional stiffness is average, and underfoot pressure runs firm. Inspection also shows the forefoot lacks the natural curvature that makes the XD11 comfortable for long sessions. At a 35 RMB flash-sale price the XDNL is OK; at full retail it's a hard sell. The short verdict: don't pay a premium for the XDNL." },
+        { heading: "7mm simple (extracted from CHP) — the cushion specialist", body: "The 7mm-simple insole, sold separately from the high-end CHP kit it normally comes with, is the cushion-first option in Victor's lineup. It loses several features the full-fat 7mm (which retails at 118 RMB, often 88 RMB on sale) has: the dedicated torsion plate is gone, the anti-roll material is downgraded, and the arch support is removed. What it keeps: the actual 7mm cushion thickness. In practice that's the most important thing. The CHP-extracted simple version often has better build quality than the standalone 7mm — the standalone version is hit-or-miss on edge-finishing around the big-toe area, which can cause measurable thickness loss. The cushion is the softest in Victor's lineup, but it isn't durable — expect noticeable heel cushion compression at around 30 hours of play. Caveat: at 7mm thickness, fit in the shoe matters — check that the shoe's volume allows the thicker insole without making the upper feel tight." },
+        { heading: "How to decide between them", body: "Three honest paths. (1) If you mostly want a working replacement to swap out a worn-through stock insole, the new XD12 is the safe pick — it's the current standard and easy to source. (2) If you want the most-recommended all-purpose aftermarket option and can wait for a sale, the XD11 at ~30 RMB is the best value. (3) If you specifically need maximum cushion (heavy player, long matches, joint-sensitive), the 7mm-simple is the cushion specialist — but plan for relatively short replacement intervals. Skip the XDNL unless it's on deep discount." },
+        { heading: "What about non-Victor insoles", body: "Aftermarket non-Victor insoles (Sidas, Superfeet, Currex, custom orthotics) are legitimate options if you have foot-specific needs that Victor's stock options don't address. Custom orthotics from a podiatrist are the gold standard for problem feet. For general-purpose use, Victor's house options work well enough that exploring third-party insoles isn't necessary — focus on identifying the right Victor option for your priority (cushion / stability / value)." },
+        { heading: "Common pitfalls to avoid", body: "Three pitfalls. (1) Don't cut up Poron foam pads as DIY insole repair. EVA insoles have a finite life-cycle — patching extends it briefly but compromises pressure distribution. Replace the whole insole instead. (2) Don't pair an aftermarket insole with a worn-out shoe; the insole won't fix the midsole compression underneath. Replace the shoe when the shoe needs replacing. (3) Don't assume a thicker insole is always better — at 7mm thickness, fit issues are real for shoes with snug volumes." },
+        { heading: "The final summary", body: "Stock insoles vary in quality. The current XD12 is acceptable but worth swapping if you got an older one. The XD11 is the smart all-around aftermarket pick when on sale. The XDNL is skippable. The 7mm simple is the cushion specialist with real trade-offs. Buy from authorised channels, watch for fakes, and replace insoles when the cushion is gone — not when the shoe wears out." },
+      ],
+      cta: "Find your next Victor shoe with the shoe finder, then revisit this guide once you know which model you'll receive a stock insole for.",
+      factChecks: [
+        { sourceName: "IntoBadminton source-rights registry", title: "Source rights registry", section: "Platform posture", checkedAt: "2026-05-22", href: "https://intobadminton.com/source-policy/", quote: "use only for source discovery/manual summaries until terms or partnership is clear", note: "Insole-specific impressions are paraphrased from a BadmintonCN community piece comparing Victor's XD12, XD11, XDNL, and 7mm options; technical guidance is original IntoBadminton interpretation. Pricing is approximate and varies by region; verify with Victor's authorised distributor." },
       ],
     },
     ...sourceReviewArticles,

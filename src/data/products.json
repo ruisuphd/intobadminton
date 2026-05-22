@@ -5745,5 +5745,33 @@
     "sourceUrls": ["https://lining.com/badminton", "https://bbs.badmintoncn.com/"],
     "editorNote": "Li-Ning AxForce/Thunder 80 JR — despite the JR suffix, NOT a kids' racket. Standard 675mm length. 5U lightweight class. Community-measured 5U/G6: 81.65g playing weight, 309mm balance, 218mm shaft, mid stiffness (Li-Ning lists 'soft'), 76-hole box frame, max 27 lbs (vs standard 80's 28-29 lbs). Pricing on used market typically ~200 RMB / US$30-40. Sensible entry-tier AxForce or fatigue-day 5U backup. Source-only verification.",
     "reviewCount": 0
+  },
+  {
+    "id": "huayu-slayer",
+    "category": "racket",
+    "name": "Slayer (Tufu)",
+    "brand": "Huayu",
+    "priceUsd": 75,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": ["4U"],
+    "gripSizes": ["G5"],
+    "balanceMm": 297,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": { "min": 22, "max": 32 },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": ["cn", "be"],
+    "officialSourceUrl": "https://www.badmintoncn.com/cbo_eq/view_25450.html",
+    "lastVerifiedAt": "2026-05-22",
+    "verificationStatus": "source_only",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": ["balanced", "value", "small_brand_alternative"],
+    "sourceUrls": ["https://www.badmintoncn.com/cbo_eq/view_25450.html", "https://www.instagram.com/huayubc.belgium/"],
+    "editorNote": "Huayu (华羽) Slayer (屠夫) — small Chinese self-owned brand racket run by 'Coach Liu' (刘教练). Community-measured 4U/G5: 92.34g playing weight, 297mm balance, 218mm shaft, mid stiffness, box frame, 76-hole bed, max 32 lbs (high warranty for amateur tier), 46T carbon material. Two colourway variants with different tuning: white-gold leans control, black-pink leans attack. OEM-templated tuning per source-reviewer. Source-only verification.",
+    "reviewCount": 0
   }
 ]
