@@ -2708,18 +2708,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "li-ning-l66-string-first-look",
+    updatedAt: "2026-05-22",
     methodology: {
           kind: "methodology",
-          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          headline: "Observer methodology — three BadmintonCN community sources consolidated",
           context: "observer",
           conditions: {
             opponents: "Division 4 Ireland practice partners",
             courtSurface: "wood and synthetic court mat",
             venue: "Maynooth University, multiple Dublin clubs",
           },
-          comparators: ["Li-Ning Halbertec 9000"],
+          comparators: ["Li-Ning L69 string (sibling)", "Li-Ning L64 string (thinner sibling)", "Yonex BG80 / BG80 Power"],
           sourceAttribution:
-            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+            "Three BadmintonCN community sources (consolidated): a balanced-string evaluation, a high-elasticity comparative test, and a 'new release first-look' perspective. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
         },
     title: "Li-Ning L66 string first-look: the balanced string that finally fixes the L-series 'soft and slow' reputation",
     dek: "Li-Ning's L-series has long had a reputation for soft, slow output. The new L66 quietly buries that reputation with stronger elasticity, a sharper audio signature, and serious tension hold.",
@@ -5334,18 +5335,19 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "kumpoo-js-67-string-review",
+    updatedAt: "2026-05-22",
     methodology: {
           kind: "methodology",
-          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          headline: "Observer methodology — cross-referenced with JS-63 sibling review",
           context: "observer",
           conditions: {
             opponents: "Division 4 Ireland practice partners",
             courtSurface: "wood and synthetic court mat",
             venue: "Maynooth University, multiple Dublin clubs",
           },
-          comparators: ["Li-Ning Halbertec 9000"],
+          comparators: ["Kumpoo JS-63 (thinner sibling, sound-effect-focused)", "Yonex XB63 (sound-effect peer)"],
           sourceAttribution:
-            "BadmintonCN community source reviews; observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
+            "BadmintonCN community source reviews; cross-referenced against the JS-63 sibling review for thin-vs-medium gauge positioning. Observer commentary by Rui Su drawn from Maynooth University and Dublin club ecosystem context.",
         },
     title: "Kumpoo JS-67 string review: the Japan-produced 0.67 that earns its premium positioning",
     dek: "JS-67 is Kumpoo's 2025 Japan-produced flagship string — ultra-fibre composite coating delivers durability plus elasticity in a balanced 0.67mm gauge.",
@@ -6930,6 +6932,384 @@ export const sourceReviewArticles = [
         href: "https://bonnysports1982.com/",
         quote: "Bonny",
         note: "Bonny's official brand site confirms the manufacturer. The specific 'WuQue Flagship 089' shoe SKU is not consistently published on the English-facing brand site; verify availability with a regional Bonny distributor before purchase.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-l64-string-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source on a high-elasticity sound-effect string",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning L66 string (catalogue reference)",
+        "Li-Ning L69 string (catalogue reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) on Li-Ning's L64 string. Cross-checked with Li-Ning's AP64 Rainbow product page as the closest 0.64mm Li-Ning string with verified specs.",
+    },
+    title: "Li-Ning L64 string review: a sound-effect-first 0.64mm high-elasticity option",
+    dek: "Li-Ning's L64 is a thin (0.64mm) high-elasticity string that emphasises crisp hit sound and easy power — at the cost of durability for heavy-attack players.",
+    verdict: "A value-tier high-elasticity string with strong sound feedback and friendly power assist; not for players who break strings often.",
+    bestFor: [
+      "Amateurs who play 2-3 sessions per week",
+      "Players who value crisp hit sound and easy power",
+      "Buyers wanting a Li-Ning string sound character without flagship pricing",
+    ],
+    avoidIf: [
+      "You smash hard and break strings often (0.64mm is thin)",
+      "You prioritise durability over sound feedback",
+      "You need maximum tension stability over months",
+    ],
+    setupNotes: [
+      "Source-review impressions only — 'L64' is the source-reviewer's name for the string; Li-Ning's nearest officially-documented 0.64mm string is AP64 Rainbow (multifilament core + nylon monofilament outer + Nano-Tec coating).",
+      "Community-reviewed setup: 0.64mm diameter, woven outer + nylon core, made in China.",
+      "Reviewer played at 26-28 lb tension range; durability described as moderate — visible fraying after a week of 2-3 sessions/week.",
+    ],
+    sourceHook:
+      "The reviewer's framing as an honest 'amateur play impressions report' is the strongest part — they're explicit that this is a value-tier string for amateur play patterns, not a flagship-tier durability claim.",
+    facts: [
+      { label: "String diameter", value: "0.64mm (thin gauge; on Li-Ning's value-string side of the catalogue)." },
+      { label: "Build", value: "Woven outer + nylon core; Made in China; high-elasticity tuning." },
+      { label: "Buyer lens", value: "Sound + elasticity first; durability second; pricing is value-tier." },
+    ],
+    calloutTitle: "A string that sells through your ear, not your arm",
+    calloutBody:
+      "The L64's loudest selling point — literally — is the crisp 'bang' sound on clean contact. For amateur players whose enjoyment of badminton is partly about feedback satisfaction, that's a real benefit. The honest trade is that the 0.64mm gauge means the string breaks faster than thicker options under heavy attack.",
+    comparison: {
+      heading: "Where the L64 sits",
+      columns: ["Li-Ning L64", "Li-Ning L66", "Li-Ning L69"],
+      rows: [
+        { label: "Diameter", values: ["0.64mm (thin)", "0.66mm (medium-thin)", "0.69mm (medium)"] },
+        { label: "Main reward", values: ["Sound + easy power", "Durability + control", "Premium feel + tension stability"] },
+        { label: "Main risk", values: ["Breaks faster under heavy attack", "Less crisp than L64", "Higher price tier"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What 'high-elasticity' actually means on this string",
+        body: "Li-Ning's L64 sits in the brand's high-elasticity category, which on amateur strings translates to two practical effects: lower effort required for the same shuttle speed (easier power), and a more dramatic post-contact spring-back that produces both more rebound and more crisp sound feedback. The source reviewer specifically notes that even a light swing produces a deep clear, sometimes flying past the back line — a clear win for amateurs whose smash power is still developing. For comparison: medium-elasticity strings like BG65 take more effort but reward more controlled contact; high-elasticity strings like L64 reward less-clean contact more generously.",
+      },
+      {
+        heading: "Sound feedback as a real buying factor",
+        body: "Most string reviewers describe sound as an aesthetic flourish; the L64 source reviewer treats it as a primary selling point. The 'bang-bang-bang' crisp hit sound is loud enough that a teammate asked the reviewer if he'd changed something. For amateur players who enjoy badminton partly through feedback satisfaction — the snap of the string, the click of clean contact — the L64 delivers what flagship strings often don't bother to optimise for. This is real, not marketing. It's also taste-dependent: some players find loud strings distracting in tournament settings.",
+      },
+      {
+        heading: "Durability — the honest weakness",
+        body: "The reviewer is upfront: after a week of 2-3 sessions per week at moderate intensity, the L64 showed visible surface fraying despite not yet breaking. At a 0.64mm gauge with woven outer, that's expected — thinner strings always have shorter durability windows than thicker counterparts. For players who play 4-5 times per week at high intensity, the L64 is the wrong string; for players who play 2-3 times per week at amateur intensity, the durability profile is acceptable for the price. Hard smashers should consider thicker options (Li-Ning No.1 0.65mm, BG65 0.70mm, or thicker) instead.",
+      },
+      {
+        heading: "Tension stability and the line-movement question",
+        body: "The reviewer reports normal line movement (line displacement after impacts) — comparable to other high-elasticity strings, requiring occasional realignment. Tension drop over the first month is mentioned but not flagged as severe. For amateur players who restring every 2-3 months anyway, the tension stability is acceptable. For competitive players who care about tension consistency across a tournament weekend, this isn't the right string — flagship tension-stable strings (Yonex BG80 Power, Aerobite Boost) hold tension better.",
+      },
+      {
+        heading: "Who actually buys this",
+        body: "Three honest profiles. (1) Amateur players who play 2-3 times per week, enjoy the satisfaction of crisp hit sound, and want easy power without flagship pricing. (2) Buyers exploring the Li-Ning string lineup who want to start at the value tier before committing to L66 or L69. (3) Casual recreational players whose primary feedback from the game is the sound and feel rather than competitive performance. Players outside these profiles — heavy smashers, tournament players, or those prioritising durability — should look at L66 (medium-thin sibling), L69 (flagship), or non-Li-Ning options.",
+      },
+    ],
+    cta: "Use the string finder with high-elasticity or value flags to compare the L64 against the L66 and L69.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning AP64 Rainbow 0.64mm string product page",
+        section: "Closest verified 0.64mm Li-Ning string",
+        checkedAt: "2026-05-22",
+        href: "https://prokicksports.com/en-us/products/li-ning-ap64-rainbow-badminton-string-0-64mm-ultra-thin-high-repulsion-power-string-for-fast-rallies-and-spin-control-in-vibrant-multi-color",
+        quote: "Thickness 0.64mm / Core: multifilament / Outer: nylon monofilament",
+        note: "The community source reviewer's 'L64' name does not appear consistently on Li-Ning's English-facing pages. The AP64 Rainbow is the closest officially-documented Li-Ning 0.64mm string; buyers should verify the exact SKU name with their regional distributor.",
+      },
+    ],
+  }),
+  review({
+    slug: "kumpoo-js-63-string-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source on a Japan-made Kumpoo string",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Kumpoo JS-67 (sibling, slightly thicker)",
+        "Yonex XB63 (sound-effect peer)",
+        "Yonex BG80 (durability comparison)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (May 2026) on Kumpoo JS-63 'Sound Boom' string. Kumpoo is a Chinese brand; this string is made in Japan (rare for a Chinese badminton brand).",
+    },
+    title: "Kumpoo JS-63 Sound Boom string review: thin, loud, and surprisingly durable",
+    dek: "Kumpoo's JS-63 (0.63mm) is one of the few Chinese-brand badminton strings made in Japan — sound-effect tuning that competes with Yonex XB63 at lower price.",
+    verdict: "A value-priced sound-effect string with better durability than expected for the 0.63mm gauge; a worthwhile XB63 alternative for cost-conscious amateurs.",
+    bestFor: [
+      "Amateurs wanting a Yonex XB63-like sound feel at lower price",
+      "Players who like thin, loud strings",
+      "Buyers exploring Kumpoo's accessory range",
+    ],
+    avoidIf: [
+      "You prioritise tension stability over months",
+      "You play at very high tensions (28+ lbs)",
+      "You need a thicker string for hard-smash durability",
+    ],
+    setupNotes: [
+      "Kumpoo brand confirmed; string Made in Japan (rare for a Chinese brand).",
+      "0.63mm diameter; build: multifilament strands + woven processing + core coating + side-filament coating.",
+      "Source reviewer tested at 25/27 lb tension on a 4 dozen-rally test cycle.",
+    ],
+    sourceHook:
+      "The reviewer's strongest single observation: the JS-63 holds up better than expected vs BG80 (which the reviewer reports breaking fast in one match), making it a credible durability-conscious alternative to Yonex's premium-priced sound strings.",
+    facts: [
+      { label: "Diameter & origin", value: "0.63mm, Made in Japan (rare for a Chinese-brand string)." },
+      { label: "Build", value: "Multifilament strands + woven processing + core coating + side-filament coating." },
+      { label: "Buyer lens", value: "Sound + value first; thin-gauge durability surprisingly competitive." },
+    ],
+    calloutTitle: "A thin string that doesn't snap on you the first time you smash hard",
+    calloutBody:
+      "Thin sound-effect strings have a reputation for breaking fast under heavy attack. The JS-63 source reviewer specifically tested durability — four full matches in, no fraying or break. Combined with the lower price vs Yonex XB63, this is a competitive value pick.",
+    comparison: {
+      heading: "Where the JS-63 sits",
+      columns: ["Kumpoo JS-63", "Kumpoo JS-67 (sibling)", "Yonex XB63 (peer)"],
+      rows: [
+        { label: "Diameter", values: ["0.63mm", "0.67mm (slightly thicker)", "0.63mm"] },
+        { label: "Main reward", values: ["Sound + thin-gauge durability", "Better tension stability", "Yonex sound benchmark"] },
+        { label: "Main risk", values: ["Less premium than XB63", "Less crisp than JS-63", "Higher price"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why Kumpoo making strings in Japan matters",
+        body: "Kumpoo is a Chinese-origin badminton brand. Most Chinese-brand strings are made in China. The JS-63 being explicitly marked as Made in Japan is a marketing positioning — it signals that Kumpoo is investing in the higher manufacturing tier where Yonex's strings come from. Whether this translates to meaningfully better string is partly an objective question (manufacturing tolerances, coating quality) and partly a perception question (Japan-made badminton strings command premium pricing). The community reviewer reports that the build feels comparable to Yonex strings at the same gauge; we treat that as useful directional information rather than verified manufacturing equivalence.",
+      },
+      {
+        heading: "Sound profile and how it compares to XB63",
+        body: "The reviewer specifically compares the JS-63 sound to Yonex XB63 — both 0.63mm, both sound-effect-tuned strings. At 25-27 lb tension the JS-63 produces what the reviewer calls 'crackling' / 'explosive' sound, similar in character to XB63. The reviewer speculates that higher tension (28+ lbs) might amplify the effect further but didn't test. For Yonex XB63 fans cross-shopping for a cost-saving alternative, the JS-63 delivers the same sound character at lower price; for non-XB63 fans, this is a strong sound-effect string in its own right.",
+      },
+      {
+        heading: "Durability — the surprise",
+        body: "The reviewer explicitly contrasts the JS-63 to BG80: 'I once had BG80 break in one match'. After four matches at 25-27 lbs on a thin 0.63mm gauge, the JS-63 showed no fraying. This is materially better than expected for thin sound strings, which typically have shorter durability windows. The reviewer credits the side-filament coating layer; we treat the durability claim as a single-reviewer data point that's directionally encouraging but not statistically robust. For heavy hitters, the JS-63 is still a thin string and will break faster than thicker alternatives under sustained heavy attack.",
+      },
+      {
+        heading: "Tension stability and line movement",
+        body: "The reviewer reports moderate tension drop over a month — better than Victor VBS63 but not as stable as the Yonex flagship strings. Tension drops noticeably enough that the sound effect diminishes after a month; the reviewer plans to restring at one tension higher next time to compensate. Line movement (string displacement after impacts) is reported as comparable to XB63 — minimal, doesn't require constant realignment. For amateur players restring every 2-3 months, the tension stability is acceptable; for competitive players the JS-63 may need slight over-tensioning at install to compensate for the drop.",
+      },
+      {
+        heading: "Buying advice",
+        body: "Three honest paths. (1) If you currently use Yonex XB63 and want a cost-saving alternative without losing the sound character, the JS-63 is a credible direct swap. (2) If you're exploring sound-effect strings for the first time and don't have brand loyalty, the JS-63 is a low-risk entry point — affordable, durable enough for amateur play, and Made-in-Japan badging. (3) If you prioritise tension stability over sound, look at L66 (thicker sibling-tier alternative) or Yonex flagship strings like BG80 Power. The JS-63 wins on the value-per-sound-quality axis specifically.",
+      },
+    ],
+    cta: "Use the string finder with sound or value flags to compare the JS-63 against the JS-67 sibling and Yonex XB63.",
+    factChecks: [
+      {
+        sourceName: "Kumpoo",
+        title: "Kumpoo brand and JS string series",
+        section: "Brand-level catalogue context",
+        checkedAt: "2026-05-22",
+        href: "https://www.kumpoo.com/",
+        quote: "Kumpoo",
+        note: "Kumpoo is a Chinese-origin badminton manufacturer with growing global distribution. The JS-63 'Sound Boom' specific SKU and Made-in-Japan claim should be verified against the buyer's regional Kumpoo distributor.",
+      },
+    ],
+  }),
+  review({
+    slug: "rsl-aero-classic-tourney-shuttle-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source cross-referenced with retailer-published specs",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "RSL No.1 (RSL's premium numbered series, sibling line)",
+        "RSL Aero U shuttlecock (catalogue reference)",
+        "RSL Supreme (catalogue reference)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (April 2026) on the RSL Classic Tourney goose-feather shuttle, cross-referenced with RSL retailer product pages (Badminton Bay, NYDHI, SMASH, Toby's Sports) for BWF approval and speed code confirmation.",
+    },
+    title: "RSL Classic Tourney shuttlecock review: a value-tier goose-feather that competes with No.1",
+    dek: "RSL's Classic Tourney is the brand's value-priced premium goose-feather shuttle — BWF-approved, durable, and price-competitive against the marquee No.1 line.",
+    verdict: "A genuine premium goose-feather shuttle at a meaningfully lower price than RSL No.1; the better value-per-shuttle pick for amateur tournament-quality play.",
+    bestFor: [
+      "Amateur players wanting premium goose-feather feel at lower cost than RSL No.1",
+      "Clubs sourcing tournament-grade shuttles in bulk",
+      "Players cross-shopping RSL vs Yonex for goose-feather options",
+    ],
+    avoidIf: [
+      "You play at national-level competition (consider RSL No.1 or other premium specifics)",
+      "You don't need natural goose-feather and a duck-feather is sufficient",
+      "Your club has a strict tournament-specific shuttle requirement",
+    ],
+    setupNotes: [
+      "BWF approved for tournament use per RSL retailer copy.",
+      "Premium natural goose feathers with natural cork base + synthetic-leather coating.",
+      "Weight 4.9-5.1g (within BWF 4.74-5.50g tolerance); ~68mm spread diameter.",
+      "Speed options: 77 and 78; 12 shuttlecocks per tube.",
+    ],
+    sourceHook:
+      "The reviewer's framing — that the Classic Tourney delivers genuinely better value-per-shuttle than RSL No.1 — is the most actionable insight for amateur buyers cross-shopping the RSL lineup.",
+    facts: [
+      { label: "BWF approval & speeds", value: "BWF approved tournament shuttle; speeds 77 and 78 available; 12 per tube." },
+      { label: "Build", value: "Natural goose feathers (left-wing selected, 16 feathers per shuttle) on natural cork base with synthetic-leather wrap." },
+      { label: "Buyer lens", value: "Value-tier goose feather; comparable durability to No.1 at lower price." },
+    ],
+    calloutTitle: "Value isn't always cheap — sometimes it's expensive done well",
+    calloutBody:
+      "RSL has marketed the No.1 numbered series as their premium pick for years. The Classic Tourney, in the community reviewer's framing, achieves comparable durability and flight quality at meaningfully lower price — making it the smarter buy for amateur and club use where premium-tier feel matters but absolute flagship pricing isn't justified.",
+    comparison: {
+      heading: "Where the Classic Tourney sits",
+      columns: ["RSL Classic Tourney", "RSL No.1 (sibling)", "RSL Aero U (catalogue)"],
+      rows: [
+        { label: "Tier", values: ["Premium value", "Premium flagship", "Mid-tier"] },
+        { label: "Material", values: ["Premium goose feather", "Premium goose feather (top-tier)", "Duck feather"] },
+        { label: "Main reward", values: ["Durability + value", "Marquee flagship feel", "Lower cost"] },
+        { label: "Main risk", values: ["Below No.1 prestige", "Higher pricing", "Less premium feel"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What 'Classic' actually signals in RSL's lineup",
+        body: "RSL's shuttle lineup includes numbered tiers (No.1, No.2, etc.) and named tiers (Classic, Aero, Supreme). The numbered tiers tend to anchor the flagship-tier identity; the named tiers fill the value-and-specialist niches. 'Classic' is positioned as the value-tier premium-feel shuttle — same goose-feather construction as the numbered tier, with cost-savings primarily in the marketing and packaging tier rather than the actual feather quality. The community reviewer's read: 'Classic earns its place not by being cheaper than premium, but by delivering premium-level feather quality at a lower price.'",
+      },
+      {
+        heading: "Why goose feathers matter and what makes them durable",
+        body: "Goose feathers have a denser, sturdier feather shaft than duck feathers, which translates to longer durability per shuttle and more consistent flight characteristics. The Classic Tourney uses left-wing-selected goose feathers (a consistency move — left-wing feathers create predictable rotation direction). The community reviewer specifically notes that the feathers wear down gradually rather than suddenly, with the feather tips fraying first but the feather shafts remaining sturdy for many more rallies — a hallmark of quality goose-feather shuttles. Compare with cheaper duck-feather shuttles where the feather shaft can fail abruptly.",
+      },
+      {
+        heading: "Flight characteristics and the predictability advantage",
+        body: "The reviewer's strongest comment on flight: 'the deceleration is the most natural I've experienced from an RSL shuttle.' Natural deceleration means high-clears and lifts land within expected boundaries rather than carrying past the back line. The reviewer also notes the absence of 'cannon-ball' outliers — shuttles in the same tube don't surprise with unusually fast flight. For tournament-style play where shuttle predictability affects shot selection, this is a significant quality marker. RSL's manufacturing tolerance for the Classic Tourney is tighter than for the lower-tier shuttles.",
+      },
+      {
+        heading: "How the Classic Tourney mixes left-wing and right-wing feathers",
+        body: "Unusual detail from the source review: the Classic Tourney sometimes mixes left-wing and right-wing feathers within the same shuttle. This is not standard practice — flagship shuttles typically use all-left-wing or all-right-wing for spin consistency. The reviewer's interpretation is that this is a cost-management decision: using both wings reduces feather waste at the manufacturing tier. The practical effect is that spin behaviour can vary slightly across shuttles in the same tube, which is real but minor for amateur play. Competitive players who depend on consistent spin might prefer No.1 (more rigorous left-wing-only selection) for tournament play.",
+      },
+      {
+        heading: "Buying advice and the value calculus",
+        body: "Three honest paths. (1) If you're a club buyer sourcing shuttles in bulk for league play, the Classic Tourney is the better value-per-shuttle pick over No.1 — comparable durability, BWF approval, lower price. (2) If you're a competitive amateur player whose tournament play justifies premium-tier shuttles, choose between Classic Tourney (better value) and No.1 (slightly more polished feel) — both are credible. (3) If you're a recreational player whose primary game doesn't need goose-feather durability, RSL's lower tiers (Aero U, mid-tier numbered) or duck-feather shuttles from other brands deliver acceptable play at meaningfully lower per-tube cost. The Classic Tourney's sweet spot is amateur-competitive play where premium-feel matters but pricing discipline does too.",
+      },
+    ],
+    cta: "Use the shuttle finder with tournament-grade or goose-feather flags to compare the Classic Tourney against RSL No.1 and Aero U.",
+    factChecks: [
+      {
+        sourceName: "Badminton Bay",
+        title: "RSL Classic Tourney Badminton Feather Shuttlecock (Speed 3 / 77)",
+        section: "Retailer-published spec sheet",
+        checkedAt: "2026-05-22",
+        href: "https://www.badmintonbay.com/RSL-Classic-Tourney-Shuttlecock.html",
+        quote: "RSL Classic Tourney / BWF approved / Speed 77, 78",
+        note: "Independent specialist retailer confirms BWF approval, available speeds (77 and 78), 12 shuttlecocks per tube, and goose-feather construction.",
+      },
+      {
+        sourceName: "NYDHI",
+        title: "RSL Classic Tourney Feather Badminton Shuttlecock",
+        section: "Premium goose-feather construction",
+        checkedAt: "2026-05-22",
+        href: "https://www.nydhi.com/products/rsl-classic-tourney-feather-badminton-shuttlecock",
+        quote: "RSL Classic Tourney",
+        note: "Second independent retailer confirms premium goose-feather construction with natural cork base.",
+      },
+    ],
+  }),
+  review({
+    slug: "li-ning-axforce-80-jr-junior-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Observer methodology — single BadmintonCN community source on a budget-tier 5U racket",
+      context: "observer",
+      conditions: {
+        opponents: "Division 4 Ireland practice partners (modern reference)",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Li-Ning AxForce 80 (the standard adult sibling)",
+        "Li-Ning AxForce 10 (beginner attack)",
+      ],
+      sourceAttribution:
+        "One BadmintonCN community source (April 2026) on Li-Ning's AxForce/Thunder 80 JR — explicitly noting it is NOT a kids' racket despite the JR suffix.",
+    },
+    title: "Li-Ning AxForce 80 JR review: an affordable 5U entry into the AxForce family",
+    dek: "Despite the 'JR' suffix, the AxForce 80 JR is a standard-length 5U racket — Li-Ning's lightweight, friendly entry into the AxForce identity at amateur-tier pricing.",
+    verdict: "A genuinely friendly 5U entry-tier racket with AxForce 80 character; a sensible first AxForce or a fatigue-day backup for advanced players.",
+    bestFor: [
+      "Amateurs entering the AxForce family for the first time",
+      "Players who want a 5U lightweight racket as a doubles secondary",
+      "Buyers looking at the used market for value-tier AxForce options",
+    ],
+    avoidIf: [
+      "You want flagship-tier attack character",
+      "You play singles and need substantial back-court power",
+      "You assume JR means a kid's racket (it doesn't — full standard length)",
+    ],
+    setupNotes: [
+      "Confirmed by source reviewer: AxForce 80 JR is standard length, NOT a junior/kids racket despite the JR naming.",
+      "Community-measured 5U/G6 sample: 81.65g playing weight (with handle), 309mm balance, 218mm shaft, mid stiffness (Li-Ning lists 'soft' on box), 76-hole bed, max 27 lbs, strung 26-28 lbs GP-3.",
+      "Pricing on used market typically ~200 RMB (roughly US$30-40 in 2026).",
+    ],
+    sourceHook:
+      "The reviewer's confirmation that the JR suffix doesn't mean 'children's racket' is the most important practical insight — many amateur buyers skip the JR variant assuming it's a kids' product.",
+    facts: [
+      { label: "Weight class", value: "5U (light) — but with standard 675mm length, NOT a kids' racket." },
+      { label: "Frame & shaft", value: "76-hole box frame, 218mm shaft, mid stiffness (Li-Ning lists 'soft'), max 27 lbs." },
+      { label: "Buyer lens", value: "Entry-tier AxForce; friendly enough for early amateurs; cheap on used market." },
+    ],
+    calloutTitle: "JR doesn't mean junior — it means budget",
+    calloutBody:
+      "The 'JR' suffix is one of the most consistently confusing parts of Li-Ning's naming. The AxForce 80 JR is a full-standard-length 5U racket, not a children's racket. For amateur buyers who otherwise skip the JR variant on the assumption it's for kids, this is one of the smartest budget picks in Li-Ning's catalogue.",
+    comparison: {
+      heading: "Where the 80 JR sits",
+      columns: ["AxForce 80 JR", "AxForce 80 (standard)", "AxForce 10 (beginner)"],
+      rows: [
+        { label: "Identity", values: ["Light entry to AxForce", "Standard adult attack", "Beginner attack"] },
+        { label: "Weight class", values: ["5U", "4U", "5U/4U"] },
+        { label: "Main reward", values: ["Cheap + friendly", "Standard AxForce character", "Easier beginner ramp"] },
+        { label: "Main risk", values: ["Less attack ceiling than 80", "Higher driving threshold", "Less premium feel"] },
+      ],
+    },
+    sections: [
+      {
+        heading: "What the 80 JR actually inherits from the 80",
+        body: "The 80 JR shares the AxForce family's identity markers: box-frame stability, 76-hole stringbed (the modern Li-Ning standard), and the green-and-black colourway language of the AxForce line. What it doesn't share: the standard 80's weight grade (4U vs 5U), the shaft hardness (mid vs the standard 80's slightly stiffer), and the max-tension warranty (27 lbs vs the standard's 28 lbs). For amateur players wanting the AxForce visual identity and frame character at a lower entry price, the 80 JR is a real route in. For advanced players wanting the actual standard-tier driving threshold, the standard 80 (or 90 New) is the better pick.",
+      },
+      {
+        heading: "5U weight and what it changes on court",
+        body: "5U rackets weigh about 75-80g unstrung; with strings and grip, the playing weight comes in around 80-85g — meaningfully lighter than the 85-90g range of 4U setups. The on-court effect: faster swing speed, easier handling for tired arms, and slightly less head-weight bite on smashes. For amateur doubles players, this trade is often a win — flat-drive recovery improves more than smash bite degrades. For singles players who depend on rear-court attack, the 5U weight class costs you noticeable power. The 80 JR's 309mm balance is high for a 5U (which would normally have a lower balance), suggesting Li-Ning intentionally tuned it to maintain a touch of head-weight bite despite the light total weight.",
+      },
+      {
+        heading: "Shaft character and the warranty caveat",
+        body: "Li-Ning's box copy lists the 80 JR shaft as 'soft' — but the community reviewer's on-court read is that the actual feel is closer to mid-stiffness. A soft shaft labelled is a buyer-safety signal (don't string at flagship tensions); a mid-stiff shaft is what amateurs actually want. The 27 lb max-tension warranty (vs the standard AxForce 80's 28-29 lbs) confirms Li-Ning is conservative on this frame. Practical recommendation: string at 24-26 lbs to balance comfort and durability; avoid stringing at the warranty maximum unless you specifically need the higher tension's response.",
+      },
+      {
+        heading: "On-court value at the used-market price",
+        body: "The reviewer specifically calls out that on the used market, the 80 JR trades around ~200 RMB (roughly US$30-40 in 2026 exchange rates). At that price, it's one of the better value-per-feature picks in Li-Ning's catalogue — you get a real AxForce frame character, 5U handling, and Li-Ning's standard modern QC. Compare: AxForce 10 (beginner-tier) trades at similar pricing but has a less attack-leaning identity; non-Li-Ning entry rackets at similar price tier vary widely in quality. For amateurs cross-shopping budget options, the 80 JR is a smarter pick than the budget-tier alternatives most retailers default to.",
+      },
+      {
+        heading: "Who actually buys this",
+        body: "Three honest profiles. (1) Amateurs new to the AxForce family who want a friendly entry rather than committing to flagship-tier pricing — the 80 JR teaches you the family character without the driving threshold of the 90 New or 100 Gen 2. (2) Advanced players wanting a 5U fatigue-day backup racket — same brand language as their main, lighter for tired arms. (3) Used-market buyers who routinely source value-tier rackets at price thresholds — the 80 JR's combination of friendliness, build quality, and AxForce identity makes it a smart pick at typical used pricing. The JR suffix being misread as 'children's racket' helps push the used pricing down, which works in your favour as the informed buyer.",
+      },
+    ],
+    cta: "Use the racket finder with 5U or value-tier attack flags to compare the AxForce 80 JR against the standard 80 and AxForce 10.",
+    factChecks: [
+      {
+        sourceName: "Li-Ning",
+        title: "Li-Ning AxForce series catalogue",
+        section: "AxForce family identity",
+        checkedAt: "2026-05-22",
+        href: "https://lining.com/badminton",
+        quote: "AxForce",
+        note: "Li-Ning's official catalogue confirms the AxForce series identity. The specific JR sub-variant naming is consistent with Li-Ning's pattern of producing standard-length lower-tier variants of flagship rackets.",
       },
     ],
   }),
