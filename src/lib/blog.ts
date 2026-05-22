@@ -128,7 +128,11 @@ export type BlogSlug =
   | "bonny-golden-dragon-roar-pro-racket-review"
   | "mizuno-carbo-pro-823-review"
   | "bonny-phantom-88-racket-review"
-  | "bonny-wuque-flagship-089-shoes-review";
+  | "bonny-wuque-flagship-089-shoes-review"
+  | "li-ning-l64-string-review"
+  | "kumpoo-js-63-string-review"
+  | "rsl-aero-classic-tourney-shuttle-review"
+  | "li-ning-axforce-80-jr-junior-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -258,6 +262,10 @@ export const blogSlugs: BlogSlug[] = [
   "mizuno-carbo-pro-823-review",
   "bonny-phantom-88-racket-review",
   "bonny-wuque-flagship-089-shoes-review",
+  "li-ning-l64-string-review",
+  "kumpoo-js-63-string-review",
+  "rsl-aero-classic-tourney-shuttle-review",
+  "li-ning-axforce-80-jr-junior-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
