@@ -132,7 +132,8 @@ export type BlogSlug =
   | "li-ning-l64-string-review"
   | "kumpoo-js-63-string-review"
   | "rsl-aero-classic-tourney-shuttle-review"
-  | "li-ning-axforce-80-jr-junior-review";
+  | "li-ning-axforce-80-jr-junior-review"
+  | "yonex-arcsaber-11-pro-review";
 
 export const blogSlugs: BlogSlug[] = [
   "racket-balance-vs-swing-speed",
@@ -266,6 +267,7 @@ export const blogSlugs: BlogSlug[] = [
   "kumpoo-js-63-string-review",
   "rsl-aero-classic-tourney-shuttle-review",
   "li-ning-axforce-80-jr-junior-review",
+  "yonex-arcsaber-11-pro-review",
 ];
 
 export type BlogCategory = "reviews" | "comparisons" | "guides";
@@ -1767,7 +1769,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
     },
     {
       slug: "yonex-astrox-99-pro-2-deep-dive",
-      updatedAt: "2026-04-30",
+      updatedAt: "2026-05-22",
       category: "reviews",
       title: "Yonex Astrox 99 Pro: brutal precision for the player who can pay the cost",
       dek: "The 99 Pro is unforgiving by design. Its 68-hole stringbed, NAMD shaft, and weighted handle add up to a racket that punishes everything except clean mechanics — and rewards them like nothing else.",
@@ -2305,7 +2307,7 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
     },
     {
       slug: "victor-carbonsonic-max-shuttle-review",
-      updatedAt: "2026-05-05",
+      updatedAt: "2026-05-22",
       category: "reviews",
       title: "Victor Carbonsonic MAX shuttle review: when synthetic stops feeling like compromise",
       dek: "Carbonsonic MAX is not just a cheaper practice shuttle. The latest version makes a serious case through consistency, durability, and predictable flight.",

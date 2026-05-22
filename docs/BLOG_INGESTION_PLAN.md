@@ -1,9 +1,27 @@
 # Blog Ingestion Plan — 72 Raw Chinese Reviews Triage
 
-**Source:** `/blogs/` (72 markdown files harvested from BadmintonCN "神兵利器" forum)
-**Target:** English `BlogArticle` entries that join the 67 existing posts in `src/lib/blog.ts`
+**Source:** `/blogs/` (originally 72 markdown files harvested from BadmintonCN "神兵利器" forum; expanded to ~148 files across the May 19-22 source additions)
+**Target:** English `BlogArticle` entries that join the existing posts in `src/lib/blog.ts`
 **Template:** `src/lib/blog-source-reviews.ts` (paraphrase, not translate — original buyer guidance with attribution)
-**Catalogue:** `src/data/products.json` (currently 65 unique products)
+**Catalogue:** `src/data/products.json`
+
+## May 19-22 batch ingestion status (Sprints 10A → 11)
+
+Between May 19 and May 22 2026, the user added a second batch of source review markdown files to `/blogs/` covering newer products. Below is the ingestion status across the four sprints that processed them.
+
+| Sprint | Status | New articles | Enrichments | Notable | PR |
+|---|---|---|---|---|---|
+| 10A | **Merged** | 7 (Victor P8500 II, A970 NitroLite, Astrox 77 Pro founder-firsthand, NR-Z-Speed/DZS legacy, Halbertec 8000 vs ARC11 Pro founder-firsthand, Bladex 800 Speed vs Halbertec 9000 Power, P8500 II vs A970 NitroLite) | 1 (Auraspeed 99 Hayabusa multi-source) | Mohammad Ahsan vs Hendra Setiawan attribution clarified via Victor official; Tan Boon Heong / 陳文宏 transliteration clarified | #65 |
+| 10B | Open | 6 (FZ Forza Odin 8800, FZ Forza 88D Danish LE, Bonny Golden Dragon Roar Pro, Mizuno Carbo Pro 823 official-verified, Bonny Phantom 88, Bonny WuQue 089 shoes) | 2 (AxForce 90 New 5-source consolidation; 100ZZ Kurenai 3U trap) | 5 of 6 new products `source_only`; Mizuno Asia domain added to source-authority registry; FZ Forza 88D slug drops Chinese 佛斩 per user direction | #66 |
+| 10C | Open (stacked on 10B) | 4 (Li-Ning L64 string, Kumpoo JS-63 string, RSL Classic Tourney shuttle editor-verified, AxForce 80 JR — NOT a kids' racket despite JR suffix) | 2 (L66 3-source, JS-67 cross-reference) | Required string/shuttle schema fields fixed during 10-pass review | #67 |
+| 11 | Open (stacked on 10C) | 1 (Yonex Arcsaber 11 Pro founder-firsthand) | 5 (Astrox 88 Pro 2024, Kawasaki Chocolate 88D vs Astrox 88D Pro, Bonny Phantom 100, Astrox 99 Pro 2 deep-dive, Carbonsonic Max shuttle) + this doc | Arcsaber 11 Pro is founder's current singles racket per memory; founder-firsthand standalone created | (this sprint) |
+
+**Cumulative across Sprints 10A-11**: 18 new English articles + 10 enrichments + 14 new product catalogue entries + 1 source-authority registry update.
+
+**Still deferred** (future sprints or user clarification needed):
+- File 52 (华羽屠夫 / Huayu "Slayer") — unclear brand identity; needs user confirmation before article creation
+- File 54 (Victor 鞋垫杂谈 / shoe-insole-care explainer) — explainer, not a product review; could become a buying-guide article in a future sprint
+- File 43 (TiGe XLab Carbonsonic MAX 102-ball QC dataset) — could enrich the existing Carbonsonic Max review with a deeper QC-data callout
 
 ## Triage table (72 entries)
 

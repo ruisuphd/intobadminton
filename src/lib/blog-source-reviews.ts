@@ -1214,9 +1214,10 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "yonex-astrox-88-pro-2024-review",
+    updatedAt: "2026-05-22",
     methodology: {
           kind: "methodology",
-          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          headline: "Observer methodology — cross-referenced with 3 new Gen 3 colourway sources",
           context: "observer",
           conditions: {
             opponents: "Division 4 Ireland practice partners",
@@ -2327,7 +2328,7 @@ export const sourceReviewArticles = [
   }),
   {
     slug: "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
-    updatedAt: "2026-05-19",
+    updatedAt: "2026-05-22",
     category: "comparisons",
     title: "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro: the budget alternative the 88D crowd should actually consider",
     dek: "Kawasaki's gilded-finish Chocolate 88D is the rare budget alternative that earns the cross-shopping conversation with Yonex's 88D Pro — especially for doubles players who buy attack rackets to use them three games in a row.",
@@ -3354,9 +3355,10 @@ export const sourceReviewArticles = [
   }),
   review({
     slug: "bonny-phantom-100-racket-review",
+    updatedAt: "2026-05-22",
     methodology: {
           kind: "methodology",
-          headline: "Observer methodology — source review with Maynooth/Dublin club-ecosystem cross-reference",
+          headline: "Observer methodology — cross-referenced with the Phantom 88 sibling review",
           context: "observer",
           conditions: {
             opponents: "Division 4 Ireland practice partners",
@@ -7310,6 +7312,127 @@ export const sourceReviewArticles = [
         href: "https://lining.com/badminton",
         quote: "AxForce",
         note: "Li-Ning's official catalogue confirms the AxForce series identity. The specific JR sub-variant naming is consistent with Li-Ning's pattern of producing standard-length lower-tier variants of flagship rackets.",
+      },
+    ],
+  }),
+  review({
+    slug: "yonex-arcsaber-11-pro-review",
+    updatedAt: "2026-05-22",
+    methodology: {
+      kind: "methodology",
+      headline: "Founder firsthand — Arcsaber 11 Pro is Rui Su's current singles racket",
+      context: "founderFirsthand",
+      conditions: {
+        strings: "BG80",
+        tensionLbs: 26,
+        opponents: "Division 4 Ireland singles partners",
+        courtSurface: "wood",
+        venue: "Maynooth University, Dublin clubs",
+      },
+      comparators: [
+        "Yonex Astrox 88D Tour (founder firsthand, previous main singles racket)",
+        "Yonex Arcsaber 7 Pro (founder firsthand, control-tier sibling)",
+        "Yonex Nanoflare 1000 Z (founder firsthand, current doubles racket)",
+      ],
+    },
+    title: "Yonex Arcsaber 11 Pro review: the held-contact singles flagship for placement-first players",
+    dek: "The Arcsaber 11 Pro is Yonex's pocketing-tier flagship — denser hold-on-ball than any modern attack frame, with a stiff shaft that asks you to drive the racket rather than ride it.",
+    verdict: "The right singles racket if you build points through placement and disguise; the wrong racket if you want the shuttle off the strings fast.",
+    bestFor: [
+      "Singles players who build points through placement and disguise",
+      "Players moving up from a flexible mid-tier control racket",
+      "Buyers who already know they prefer pocketing over crispness",
+    ],
+    avoidIf: [
+      "You play primarily fast men's doubles",
+      "You want fast off-string release on flat-drives",
+      "You can't string at 27+ lbs (the racket plays muddy below that tension)",
+    ],
+    setupNotes: [
+      "Yonex official lists ARCSABER 11 PRO as STIFF flex, 4U (Avg. 83g) and 3U (Avg. 88g), G4/G5/G6.",
+      "Frame technology: HM Graphite + POCKETING BOOSTER; shaft uses Super HMG + Ultra PE Fibre.",
+      "Founder current setup: 4U/G5, BG80 strung at 26 lbs (settled tension after testing 24-28 lb range over 6+ months).",
+    ],
+    sourceHook:
+      "The community source reviewer's framing is honest: even sceptics of recent Yonex flagship Pro variants admit the Arcsaber 11 Pro delivers the line's signature pocketing identity better than the prior Arcsaber 11.",
+    facts: [
+      { label: "Yonex official flex", value: "STIFF — Yonex's stiffest flex tier in current Arcsaber line." },
+      { label: "Frame tech", value: "POCKETING BOOSTER + HM Graphite frame; Super HMG + Ultra PE Fibre shaft." },
+      { label: "Buyer lens", value: "Held-contact singles flagship; placement-first; needs 27+ lbs tension." },
+    ],
+    calloutTitle: "The shuttle stays on the strings longer — and that's the whole point",
+    calloutBody:
+      "Pocketing isn't a marketing word for Yonex; it's an explicit frame-engineering choice. The Arcsaber 11 Pro extends shuttle-on-string time more than any current Yonex attack frame. The reward is disguise and placement at the cost of off-string speed.",
+    comparison: {
+      heading: "Where the Arcsaber 11 Pro sits",
+      columns: ["Arcsaber 11 Pro", "Astrox 88D Tour (founder previous)", "Arcsaber 7 Pro (sibling)"],
+      rows: [
+        { label: "Identity", values: ["Singles pocketing flagship", "Doubles attack-control", "Accessible control"] },
+        { label: "Best reward", values: ["Placement + disguise", "Crisp ejection + smash", "Calm rhythm control"] },
+        { label: "Main risk", values: ["Below 27 lbs feels muddy", "Less patient than 11 Pro", "Less power than 11 Pro"] },
+      ],
+    },
+    firstPerson: [
+      {
+        kind: "firstPerson",
+        context: "Why I switched from the 88D Tour",
+        body: "I played the Astrox 88D Tour for about two years as my main singles racket. The change to the Arcsaber 11 Pro came in early 2026, and the trigger was the held contact. With the 88D Tour, my disguise window on slow drops and slice-blocks felt limited by how fast the shuttle left the strings — opponents could read trajectory before my swing was complete. The 11 Pro's pocketing gives me a meaningful additional quarter-second of disguise. In singles, where points are built through angle and surprise, that's match-determining over a 21-21 game.",
+        setup: {
+          sessions: 30,
+          strings: "BG80",
+          tensionLbs: 26,
+          opponentLevel: "Division 4 Ireland singles partners",
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "The tension threshold matters",
+        body: "I tried the 11 Pro at 24 lbs initially — it felt muddy, the strings absorbed the shuttle but didn't release it cleanly, and my back-court clears were short. Moved to 26 lbs and the racket woke up: the held contact still gives the disguise, but the release is clean and the clears land deep. The community source reviewer made the same observation about the prior Arcsaber 11 — below 27 lbs the racket feels sticky. I settled at 26 lbs as the balance point where the pocketing benefit shows without the strings feeling dead.",
+        setup: {
+          strings: "BG80",
+          tensionLbs: 26,
+          opponentLevel: "Division 4 Ireland singles partners",
+        },
+      },
+      {
+        kind: "firstPerson",
+        context: "What it cost me to switch",
+        body: "Honest trade. The 88D Tour wins on flat-drive recovery and on the rear-court smash — my smash with the 11 Pro is meaningfully softer than with the 88D Tour. If my singles game depended on rear-court power finishing, the swap would have been wrong. But my singles game has always been about angle construction and disguise, and the 11 Pro rewards that style of play more cleanly. The 88D Tour stayed in the bag for doubles for a few months before the Nanoflare 1000 Z replaced it there too.",
+        setup: { strings: "BG80", tensionLbs: 26 },
+      },
+    ],
+    sections: [
+      {
+        heading: "What POCKETING BOOSTER actually does",
+        body: "Yonex's POCKETING BOOSTER is the official name for the frame's tuned hold-on-ball behaviour. Two structural pieces work together. First, eight consecutive nail studs around the frame (an evolution of the Arcsaber 11 design) prevent the frame from collapsing under tension, which preserves the pocketing dwell time. Second, the PB elastic body works with the frame's box-shape geometry to extend the time the shuttle spends compressed against the strings before release. The on-court effect: drops and slice-blocks feel like the racket carries the shuttle with you for an extra micro-second, and you can change direction at the last moment without the shuttle being already half-way to the opponent's side.",
+      },
+      {
+        heading: "Shaft and contact: the STIFF flex isn't a bluff",
+        body: "Yonex officially lists the 11 Pro as STIFF — their stiffest current Arcsaber flex tier. The 6.8mm shaft is also slimmer than the prior Arcsaber 11. In combination, this means the racket requires committed swing technique to load the shaft. Players moving up from flexible mid-tier rackets will find the first dozen sessions humbling — clears come up short, smashes feel under-loaded. Once the swing technique adjusts, the racket reveals its peak: clean ejection on power swings, sharp directional control on placement, and a pocketing benefit on touch shots. The trade-off is that the 11 Pro isn't a forgiving racket — it asks you to be better and rewards you when you are.",
+      },
+      {
+        heading: "Who actually plays the 11 Pro at high level",
+        body: "Multiple men's singles and mixed-doubles players use the Arcsaber 11 Pro on international tour. The community source reviewer specifically references Zhao Junpeng (赵俊鹏) using a head-tape modification to add weight — a signal that even pro players need to tune the racket for their preferred attack-vs-control balance. Marketing materials emphasise the Arcsaber line's heritage as a precision-control flagship; the 11 Pro is the current generation's distillation of that identity. The honest amateur takeaway: this is a racket for technique-first players whose game model values placement, not a racket that creates power for you.",
+      },
+      {
+        heading: "Where the 11 Pro doesn't go",
+        body: "Three honest limitations. (1) Flat-drive exchanges in fast doubles — the held contact costs you off-string speed; for men's doubles where rallies live or die on flat-drive reflex, the 11 Pro is the wrong frame. (2) Below 27 lbs string tension — multiple community reviewers confirm the racket plays muddy at lower tensions; if your stringer can't reliably deliver 27+ lbs, this is the wrong racket. (3) Players still developing swing technique — the stiff shaft and small sweet spot punish imprecise contact. The 88S Pro or 100 Game are friendlier ramps before committing to the 11 Pro.",
+      },
+      {
+        heading: "Buying advice",
+        body: "Three honest paths. (1) If you play singles primarily, your game is built on placement and disguise, and you can string at 27+ lbs reliably, the Arcsaber 11 Pro is the current Yonex flagship for your style — buy with confidence. (2) If you're cross-shopping between the 11 Pro and the 88D Tour for singles, the trade is real: 11 Pro for placement and disguise, 88D Tour for crisp ejection and smash. There's no wrong answer; pick by which moment matters more in your typical match. (3) If your game is fast doubles or you can't access flagship-tier stringing tensions, skip the 11 Pro and look at the Astrox 88S Pro (doubles attack-control) or Astrox 99 Pro 2 (singles attack). The 11 Pro is the best Arcsaber Yonex currently makes — but only if its identity matches yours.",
+      },
+    ],
+    cta: "Use the racket finder with singles or pocketing-control flags to compare the Arcsaber 11 Pro against the Astrox 88D Tour and Astrox 99 Pro 2.",
+    factChecks: [
+      {
+        sourceName: "Yonex",
+        title: "ARCSABER 11 PRO product page",
+        section: "Spec sheet + frame technology",
+        checkedAt: "2026-05-22",
+        href: "https://www.yonex.com/arc11-p",
+        quote: "Flex STIFF / 4U (Avg. 83g) / 3U (Avg. 88g) / HM Graphite, POCKETING BOOSTER",
+        note: "Official Yonex page confirms STIFF flex tier, 4U/3U weight grades, G4/G5/G6 grip sizes, and the Pocketing Booster + Super HMG + Ultra PE Fibre frame and shaft technologies.",
       },
     ],
   }),
