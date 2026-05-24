@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main, master]
 
+permissions:
+  contents: read
+
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
@@ -68,6 +71,10 @@ jobs:
           cache: npm
       - name: Install
         run: npm ci
+      - name: Build static export
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ""
       - name: Install Playwright Chromium
         run: npx playwright install chromium --with-deps
       - name: Quiz smoke test
