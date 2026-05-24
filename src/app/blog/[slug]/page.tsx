@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { BlogArticlePage } from "@/components/BlogArticlePage";
 import { blogSlugs, getBlogArticle } from "@/lib/blog";
 
@@ -52,5 +53,8 @@ export default async function BlogArticleRoute({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (!getBlogArticle("en", slug)) {
+    notFound();
+  }
   return <BlogArticlePage locale="en" slug={slug} />;
 }

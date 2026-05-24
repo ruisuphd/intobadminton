@@ -3118,7 +3118,8 @@
     "weightClass": "4U",
     "weightVariants": [
       "3U",
-      "4U"
+      "4U",
+      "5U"
     ],
     "gripSizes": [
       "G4",
@@ -3920,9 +3921,9 @@
     "reviewCount": 0
   },
   {
-    "id": "ln-aerus-iii-pro",
+    "id": "ln-saga-iii-pro",
     "category": "shoes",
-    "name": "Aerus III Pro / Ranger III Pro (贴地飞行 III Pro)",
+    "name": "Saga III Pro (贴地飞行 III Pro / Ground Flying III Pro)",
     "brand": "Li-Ning",
     "priceUsd": 130,
     "fitWidth": "normal",

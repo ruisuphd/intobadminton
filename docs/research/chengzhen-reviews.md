@@ -70,7 +70,8 @@ business days.
 - Many amateur buyers struggle to drive it.
 
 ### Yonex Astrox 100 ZZ VA (Viktor Axelsen edition)
-- Source file: `blogs/中羽球友-chengzhen-对「ASTROX-100ZZ.md` (added after
+- Source file: `blogs/reviews-yonex-astrox-100zz-and-100zx.md` (chengzhen VA
+  section; formerly `中羽球友-chengzhen-对「ASTROX-100ZZ.md`; added after
   this doc's original draft — the line "not directly reviewed by chengzhen"
   was true at that earlier snapshot but is no longer accurate).
 - 4U/VA, underbase removed + strung + grip: 88.7g; balance 309mm.

@@ -1,13 +1,20 @@
-# Blog Ingestion Plan — 72 Raw Chinese Reviews Triage
+# Blog Ingestion Plan — Historical Chinese Reviews Triage
 
-**Source:** `/blogs/` (originally 72 markdown files harvested from BadmintonCN "神兵利器" forum; expanded to ~148 files across the May 19-22 source additions)
-**Target:** English `BlogArticle` entries that join the existing posts in `src/lib/blog.ts`
-**Template:** `src/lib/blog-source-reviews.ts` (paraphrase, not translate — original buyer guidance with attribution)
+> Status (2026-05-24): this document is historical. The live blog pipeline now
+> uses `blogs/*.md` English sections as editorial source and imports them into
+> `src/data/blog-articles.json` with `scripts/blog-import-option-b.py`.
+> Current scale: 124+ local source files mapped onto 134 preserved public blog
+> URLs. Run `npm run blog:import && npm run blog:validate` after editing blog
+> English sections.
+
+**Historical source:** `/blogs/` (originally 72 harvested forum markdown files; expanded to ~148 files across May 19–22 source additions)
+**Current target:** generated English blog JSON in `src/data/blog-articles.json`
+**Historical template:** `src/lib/blog-source-reviews.ts` (superseded by the Option B import pipeline)
 **Catalogue:** `src/data/products.json`
 
 ## May 19-22 batch ingestion status (Sprints 10A → 11)
 
-Between May 19 and May 22 2026, the user added a second batch of source review markdown files to `/blogs/` covering newer products. Below is the ingestion status across the four sprints that processed them.
+Between May 19 and May 22 2026, the user added a second batch of source review markdown files to `/blogs/` covering newer products. Sprint articles from `main` are folded into the JSON pipeline via `scripts/blog-main-sprint-articles.json` when no markdown source exists.
 
 | Sprint | Status | New articles | Enrichments | Notable | PR |
 |---|---|---|---|---|---|

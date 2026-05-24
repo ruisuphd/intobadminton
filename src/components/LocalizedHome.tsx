@@ -5,7 +5,6 @@ import products from "@/data/products.json";
 import {
   articlesByDateDesc,
   blogArticles,
-  CATEGORY_LABELS,
   readingTimeMinutes,
 } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
@@ -296,9 +295,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                   className="card card-interactive p-6 block"
                 >
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="chip">
-                      {CATEGORY_LABELS[article.category]}
-                    </span>
+                    <span className="chip">Blog</span>
                     <span className="text-xs text-[var(--color-subtle)]">
                       {readingTimeMinutes(article)} min read
                     </span>

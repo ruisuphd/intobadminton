@@ -9,18 +9,6 @@ export function generateStaticParams() {
   return blogSlugs.map((slug) => ({ slug }));
 }
 
-const CATEGORY_LABEL: Record<"reviews" | "comparisons" | "guides", string> = {
-  reviews: "Review",
-  comparisons: "Comparison",
-  guides: "Guide",
-};
-
-const CATEGORY_TINT: Record<"reviews" | "comparisons" | "guides", string> = {
-  reviews: "#1f513d",
-  comparisons: "#2c4377",
-  guides: "#7a3b14",
-};
-
 export default async function Image({
   params,
 }: {
@@ -33,9 +21,8 @@ export default async function Image({
   const dek =
     article?.dek ??
     "Evidence-led badminton racket, string, shoe, and bag recommendations.";
-  const category = article?.category ?? "guides";
-  const tint = CATEGORY_TINT[category];
-  const label = CATEGORY_LABEL[category];
+  const tint = "#1f513d";
+  const label = "Blog";
   const updatedAt = article?.updatedAt;
 
   return new ImageResponse(
