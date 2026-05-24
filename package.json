@@ -9,8 +9,9 @@
     "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/check-source-attribution.mjs && node scripts/postbuild-seo-audit.mjs",
     "start": "npx -y serve@latest out",
     "lint": "eslint && node scripts/check-glossary-links.mjs --warn",
-    "blog:import": "python3 scripts/blog-import-option-b.py",
+    "blog:import": "python3 scripts/blog-en-persona-normalize.py 2>/dev/null || true && python3 scripts/blog-import-option-b.py",
     "blog:validate": "node scripts/blog-validate-20pass.mjs",
+    "test:e2e": "playwright test",
     "lint:eslint": "eslint",
     "lint:glossary": "node scripts/check-glossary-links.mjs --warn",
     "lint:glossary:strict": "node scripts/check-glossary-links.mjs",
@@ -25,12 +26,14 @@
     "react-dom": "19.2.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.52.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "sharp": "^0.34.2",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.5"

@@ -30,5 +30,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "src/lib/blog.legacy.ts", "src/lib/blog-source-reviews.ts"]
+  "exclude": ["node_modules", "scripts/archive/blog.legacy.ts", "scripts/archive/blog-source-reviews.ts"]
 }

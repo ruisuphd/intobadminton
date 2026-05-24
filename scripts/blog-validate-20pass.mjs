@@ -39,6 +39,8 @@ function auditPass(articles, slugs) {
     if ((a.dek?.trim().length ?? 0) < 50) issues.push(`${a.slug}: dek too short`);
     if (/source-to-buyer|fact-check snapshot/i.test(blob))
       issues.push(`${a.slug}: editorial scaffold`);
+    if (/\bI's specific\b/i.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/\bWhat makes I more\b/i.test(blob)) issues.push(`${a.slug}: persona corruption`);
     if (!slugSet.has(a.slug)) issues.push(`${a.slug}: orphan slug not in blogSlugs`);
   }
   return issues;

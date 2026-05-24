@@ -1,5 +1,5 @@
 import type { SiteLocale } from "@/lib/locale";
-import { sourceReviewArticles } from "@/lib/blog-source-reviews";
+import { sourceReviewArticles } from "./blog-source-reviews";
 
 export type BlogSlug =
   | "racket-balance-vs-swing-speed"

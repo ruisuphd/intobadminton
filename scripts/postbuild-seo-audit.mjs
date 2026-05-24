@@ -111,7 +111,14 @@ function walkJsonLd(value, visit) {
   }
 }
 
-const ARTICLE_SCHEMA_REQUIRED = /^\/(?:best|brands|compare-guides)\/[^/]+\/$/;
+const ARTICLE_SCHEMA_REQUIRED =
+  /^\/(?:best|brands|compare-guides|guides|review)\/[^/]+\/$/;
+const ARTICLE_SCHEMA_EXEMPT = new Set(["/guides/glossary/"]);
+
+function requiresArticleSchema(routePath) {
+  if (ARTICLE_SCHEMA_EXEMPT.has(routePath)) return false;
+  return ARTICLE_SCHEMA_REQUIRED.test(routePath) && routePath !== "/guides/";
+}
 const SPONSORED_REL = /\brel=["'][^"']*\bsponsored\b[^"']*["']/i;
 const AFFILIATE_DISCLOSURE_MARKER = /\bdata-affiliate-disclosure=["']/i;
 const META_REFRESH = /<meta[^>]+http-equiv=["']refresh["']/i;
@@ -346,7 +353,7 @@ for (const file of files) {
 
   const routePath = routePathForFile(file.path);
   const noindex = hasNoindex(file.html);
-  const requiresArticle = ARTICLE_SCHEMA_REQUIRED.test(routePath) && !noindex;
+  const requiresArticle = requiresArticleSchema(routePath) && !noindex;
   let hasArticle = false;
 
   // Relaxed in PR #35: rating-markup-on-list-page, invalid-review-item-

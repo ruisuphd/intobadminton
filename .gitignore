@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
 
 # next.js
 /.next/
@@ -43,6 +45,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+
+# Local-only migration scratch (batch rewrite artifacts)
+scripts/batch*/
+scripts/__pycache__/
+scripts/merged-en/
+scripts/comparison-rewrites/
+scripts/review-batch43-*/
 
 # Local-only research material — third-party content kept out of the repo.
 # See docs/research/ for the legal cited extracts we publish from.
