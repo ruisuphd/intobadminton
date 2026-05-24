@@ -1,8 +1,15 @@
-# Blog Ingestion Plan — 72 Raw Chinese Reviews Triage
+# Blog Ingestion Plan — Historical Chinese Reviews Triage
 
-**Source:** `/blogs/` (72 markdown files harvested from BadmintonCN "神兵利器" forum)
-**Target:** English `BlogArticle` entries that join the 67 existing posts in `src/lib/blog.ts`
-**Template:** `src/lib/blog-source-reviews.ts` (paraphrase, not translate — original buyer guidance with attribution)
+> Status (2026-05-24): this document is historical. The live blog pipeline now
+> uses `blogs/*.md` English sections as editorial source and imports them into
+> `src/data/blog-articles.json` with `scripts/blog-import-option-b.py`.
+> Current scale: 124 local source files mapped onto 114 preserved public blog
+> URLs. Run `npm run blog:import && npm run blog:validate` after editing blog
+> English sections.
+
+**Historical source:** `/blogs/` (originally 72 harvested forum markdown files; now 124 local English-reviewed source files)
+**Current target:** generated English blog JSON in `src/data/blog-articles.json`
+**Historical template:** `src/lib/blog-source-reviews.ts` (superseded by the Option B import pipeline)
 **Catalogue:** `src/data/products.json` (currently 65 unique products)
 
 ## Triage table (72 entries)

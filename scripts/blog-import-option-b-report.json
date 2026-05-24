@@ -1,0 +1,127 @@
+{
+  "date": "2026-05-24",
+  "passes": [
+    {
+      "pass": 1,
+      "fixes": 15,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 2,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 3,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 4,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 5,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 6,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 7,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 8,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 9,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 10,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 11,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 12,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 13,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 14,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 15,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 16,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 17,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 18,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 19,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    },
+    {
+      "pass": 20,
+      "fixes": 0,
+      "issues": 0,
+      "samples": []
+    }
+  ],
+  "articles": 114,
+  "final_issue_count": 0
+}

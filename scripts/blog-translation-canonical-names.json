@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "verifiedAt": "2026-05-22",
+    "sources": [
+      "https://us.yonex.com/products/power-cushion-eclipsion-z-3rd-gen",
+      "https://yumo.ca/collections/high-end-badminton-shoes/products/li-ning-saga-iii-pro-badminton-shoe-unisex",
+      "https://shopbadmintononline.com/unisex-ground-control-iii-pro-white-p-4109.html",
+      "https://www.victorsport.com/product/drivex-12",
+      "src/data/products.json"
+    ]
+  },
+  "brandLines": {
+    "Yonex": {
+      "shoes": ["Power Cushion Aerus Z2", "Power Cushion Comfort Z3", "Power Cushion Eclipsion Z3", "Power Cushion 65 Z4", "Power Cushion 65Z3", "SUBAXIA GT", "GRpht Thrttl"],
+      "forbiddenOnBrand": ["Aerus III Pro", "Saga III Pro", "Ground Flying", "Halbertec", "AxForce", "Bladex", "DriveX"]
+    },
+    "Li-Ning": {
+      "shoes": ["Saga III Pro", "Ground Flying III Pro", "Bladesabre MAX", "Bladesabre 2 Pro"],
+      "series": ["Halbertec", "AxForce", "Bladex"],
+      "forbiddenOnBrand": ["Power Cushion Aerus", "Aerus Z2", "Aerus III Pro", "Nanoflare", "Astrox", "DriveX", "Ranger III Pro"]
+    },
+    "Victor": {
+      "series": ["DriveX", "Auraspeed", "Thruster", "Carbonsonic"],
+      "forbiddenOnBrand": ["Astrox", "Nanoflare", "Halbertec", "AxForce"]
+    }
+  },
+  "chineseToEnglish": {
+    "贴地飞行 III Pro": "Li-Ning Saga III Pro (Ground Flying III Pro)",
+    "贴地飞行ⅢPRO": "Li-Ning Saga III Pro (Ground Flying III Pro)",
+    "贴地飞行 II Pro": "Li-Ning Saga II Pro (Ground Flying II Pro)",
+    "贴地飞行": "Ground Flying (Li-Ning Saga line)",
+    "雷霆": "AxForce",
+    "战戟": "Halbertec",
+    "锋影": "Bladex",
+    "驭": "DriveX",
+    "神速": "Auraspeed",
+    "疾光": "Nanoflare",
+    "天斧": "Astrox",
+    "弓剑": "Arcsaber",
+    "穿越·星河": "Star Cross",
+    "碳音": "Carbonsonic",
+    "贴地飞行3PRO": "Saga III Pro"
+  },
+  "replacementsInTranslationOnly": [
+    ["\\bAerus III Pro\\b", "Li-Ning Saga III Pro"],
+    ["\\bAerus II PRO\\b", "Li-Ning Saga II Pro"],
+    ["\\bAerus II Pro\\b", "Li-Ning Saga II Pro"],
+    ["\\bGround Contact Flight III PRO\\b", "Li-Ning Saga III Pro"],
+    ["\\bGround Contact Flight III Pro\\b", "Li-Ning Saga III Pro"],
+    ["\\bGround Contact Flight\\b", "Li-Ning Ground Flying"],
+    ["\\bRanger III Pro\\b", "Li-Ning Saga III Pro"],
+    ["\\bHalberd 9000 Power\\b", "Halbertec 9000 Power"],
+    ["\\bHalberd 9000\\b", "Halbertec 9000"],
+    ["\\bHalberd 8000\\b", "Halbertec 8000"],
+    ["\\bHalberd 7000 II\\b", "Halbertec 7000 II"],
+    ["\\bHalberd 7000\\b", "Halbertec 7000"],
+    ["\\bHalberd series\\b", "Halbertec series"],
+    ["\\bHalberd\\b", "Halbertec"],
+    ["\\bThunder 100 Gen II\\b", "AxForce 100 Gen 2"],
+    ["\\bThunder 100 Gen 2\\b", "AxForce 100 Gen 2"],
+    ["\\bThunder 100 Gen 1\\b", "AxForce 100 Gen 1"],
+    ["\\bThunder 100\\b", "AxForce 100"],
+    ["\\bThunder 90 New\\b", "AxForce 90 New"],
+    ["\\bThunder 90N\\b", "AxForce 90N"],
+    ["\\bThunder 90\\b", "AxForce 90"],
+    ["\\bThunder 80\\b", "AxForce 80"],
+    ["\\bThunder 10\\b", "AxForce 10"],
+    ["\\bThunder series\\b", "AxForce series"],
+    ["\\bThunder line\\b", "AxForce line"],
+    ["\\bThunder rackets\\b", "AxForce rackets"],
+    ["\\bNANoflare\\b", "Nanoflare"],
+    ["\\bDrive 12\\b", "DriveX 12"],
+    ["\\bDrive 10\\b", "DriveX 10"],
+    ["\\bWhite Cut\\b", "Nanoflare Nextage"],
+    ["\\bCrossing·Galaxy\\b", "Star Cross"],
+    ["\\bCrossing Star River\\b", "Star Cross"],
+    ["\\bFalcon U\\b", "Thruster F Falcon Ultra"],
+    ["\\bCFZ\\b", "Power Cushion Comfort Z3"],
+    ["(?<!Power Cushion )Eclipsion Z3\\b", "Power Cushion Eclipsion Z3"],
+    ["(?<!Power Cushion )65Z3\\b", "Power Cushion 65Z3"],
+    ["\\bCarbon Sonic\\b", "Carbonsonic"],
+    ["\\bgreen factory\\b", "Yonex"],
+    ["\\bGreen factory\\b", "Yonex"],
+    ["\\bblue factory\\b", "Victor"],
+    ["\\bBlue factory\\b", "Victor"],
+    ["\\bred factory\\b", "Li-Ning"],
+    ["\\bRed factory\\b", "Li-Ning"],
+    ["\\bBlade 900 NEW\\b", "Bladex 900 New"],
+    ["\\bBlade 900 New\\b", "Bladex 900 New"],
+    ["\\bBlade 800 Speed\\b", "Bladex 800 Speed"],
+    ["\\bBlade 800 New\\b", "Bladex 800 New"],
+    ["\\bBlade 800\\b", "Bladex 800"],
+    ["\\bBlade series\\b", "Bladex series"],
+    ["\\bYinbao Pro\\b", "Sonic Boom Pro"],
+    ["\\bYinbao\\b", "Sonic Boom"],
+    ["\\bOuJi\\b", "Bonny (OuJi)"]
+  ],
+  "preservePatterns": [
+    "Thunder 65",
+    "Thunder 01CL",
+    "Thunder Roar 69",
+    "halberd pattern",
+    "ancient halberd",
+    "halberd form",
+    "halberd Taiji",
+    "ground contact feel",
+    "TB-NANO",
+    "NANOMESH"
+  ]
+}

@@ -3,14 +3,14 @@ import { BlogIndex } from "@/components/BlogIndex";
 import { defaultOgImages } from "@/lib/og";
 
 export const metadata: Metadata = {
-  title: "Badminton Equipment Blog — Reviews & Guides",
+  title: "Badminton Equipment Blog",
   description:
-    "Original badminton writing — racket reviews, comparisons, string deep-dives, shoe-fit guides. Built on official specs and rights-safe review signals.",
+    "First-person badminton gear writing — racket, shoe, string, shuttle, comparison, and buying-guide notes from club play.",
   alternates: { canonical: "/blog/" },
   openGraph: {
-    title: "Badminton Equipment Blog — Reviews & Guides",
+    title: "Badminton Equipment Blog",
     description:
-      "Racket reviews, comparisons, string deep-dives, shoe-fit guides — built on official specs.",
+      "First-person badminton gear writing from club play.",
     url: "/blog/",
     type: "website",
     siteName: "IntoBadminton",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Badminton Equipment Blog — Reviews & Guides",
+    title: "Badminton Equipment Blog",
     description:
-      "Racket reviews, comparisons, string deep-dives, shoe-fit guides — based on official specs and rights-safe review signals.",
+      "First-person badminton gear writing from club play.",
   },
 };
 

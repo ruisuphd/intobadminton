@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
 import { ArticleToc, type TocItem } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
@@ -6,273 +7,25 @@ import { JsonLd } from "@/components/JsonLd";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { SocialShare } from "@/components/SocialShare";
 import {
-  CATEGORY_LABELS,
   blogArticles,
   getBlogArticle,
   readingTimeMinutes,
   relatedArticles,
-  type BlogReviewSummary,
-  type BlogStoryBlock,
+  sectionAnchorId,
 } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 
-function ReviewSummaryPanel({ summary }: { summary: BlogReviewSummary }) {
+function VerdictPanel({ verdict }: { verdict: string }) {
   return (
     <div className="mt-8 rounded-2xl border border-[color:var(--line-strong)] bg-white/80 p-5 shadow-sm">
       <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-        Bottom line
+        Verdict
       </p>
       <p className="mt-2 text-lg font-semibold leading-snug text-[var(--text)]">
-        {summary.verdict}
-      </p>
-
-      <div className="mt-5 grid gap-5 md:grid-cols-2">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-            Best for
-          </p>
-          <ul className="mt-2 list-disc space-y-2 pl-4 text-sm leading-relaxed text-[var(--text-secondary)]">
-            {summary.bestFor.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-            Avoid if
-          </p>
-          <ul className="mt-2 list-disc space-y-2 pl-4 text-sm leading-relaxed text-[var(--text-secondary)]">
-            {summary.avoidIf.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {summary.setupNotes && summary.setupNotes.length > 0 && (
-        <div className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4">
-          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-            Setup notes
-          </p>
-          <ul className="mt-2 list-disc space-y-1 pl-4 text-sm leading-relaxed text-[var(--color-muted)]">
-            {summary.setupNotes.map((note) => (
-              <li key={note}>{note}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      <p className="mt-5 border-t border-[color:var(--line)] pt-4 text-sm leading-relaxed text-[var(--color-muted)]">
-        <span className="font-medium text-[var(--text)]">
-          Why this source mattered:
-        </span>{" "}
-        {summary.sourceHook}
+        {verdict}
       </p>
     </div>
-  );
-}
-
-function StoryBlock({ block }: { block: BlogStoryBlock }) {
-  if (block.kind === "facts") {
-    return (
-      <section className="rounded-2xl border border-[color:var(--line)] bg-white p-5">
-        <h2 className="text-xl font-semibold tracking-tight text-[var(--text)]">
-          {block.heading}
-        </h2>
-        <dl className="mt-4 grid gap-4 sm:grid-cols-3">
-          {block.items.map((item) => (
-            <div key={item.label}>
-              <dt className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-                {item.label}
-              </dt>
-              <dd className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
-                {item.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-    );
-  }
-
-  if (block.kind === "callout") {
-    // "The hook" is the editorial pull point — give it a subtle accent so it
-    // does not visually blend into adjacent informational callouts.
-    const isHook = block.label.toLowerCase() === "the hook";
-    const containerCls = isHook
-      ? "rounded-2xl border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/5 p-5 border-l-4 border-l-[color:var(--color-accent)]"
-      : "rounded-2xl border border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] p-5";
-    const labelCls = isHook
-      ? "text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]"
-      : "text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]";
-    return (
-      <aside className={containerCls}>
-        <p className={labelCls}>
-          {block.label}
-        </p>
-        <h2 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)] text-balance">
-          {block.title}
-        </h2>
-        <p className="mt-3 text-base leading-[1.7] text-[var(--text-secondary)]">
-          {block.body}
-        </p>
-      </aside>
-    );
-  }
-
-  if (block.kind === "comparison") {
-    return (
-      <section>
-        <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-          {block.heading}
-        </h2>
-        <div className="mt-4 overflow-x-auto rounded-2xl border border-[color:var(--line)]">
-          <table className="min-w-full border-collapse bg-white text-left text-sm">
-            <thead className="bg-[color:var(--surface-muted)] text-[var(--text)]">
-              <tr>
-                <th className="w-36 px-4 py-3 font-semibold">Decision point</th>
-                {block.columns.map((column) => (
-                  <th key={column} className="px-4 py-3 font-semibold">
-                    {column}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[color:var(--line)] text-[var(--text-secondary)]">
-              {block.rows.map((row) => (
-                <tr key={row.label}>
-                  <th className="px-4 py-3 align-top font-semibold text-[var(--text)]">
-                    {row.label}
-                  </th>
-                  {row.values.map((value, index) => (
-                    <td key={`${row.label}-${index}`} className="px-4 py-3 align-top">
-                      {value}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-    );
-  }
-
-  if (block.kind === "firstPerson") {
-    // Visually distinct accent-bordered card. The presence of these blocks is
-    // the on-page signal Google's 2026 Product Reviews update rewards: lived
-    // experience anchored to specific judgments.
-    const setupLine = block.setup
-      ? [
-          block.setup.sessions != null
-            ? `${block.setup.sessions} session${block.setup.sessions === 1 ? "" : "s"}`
-            : null,
-          block.setup.strings ?? null,
-          block.setup.tensionLbs != null ? `${block.setup.tensionLbs} lb` : null,
-          block.setup.opponentLevel
-            ? `vs ${block.setup.opponentLevel}`
-            : null,
-        ]
-          .filter(Boolean)
-          .join(" · ")
-      : null;
-    return (
-      <aside
-        className="rounded-2xl border-l-4 border-[var(--color-accent)] bg-[var(--color-accent-soft)] p-5"
-        data-block="first-person"
-      >
-        <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]">
-          On court · {block.context}
-        </p>
-        <p className="mt-2 text-base leading-[1.7] text-[var(--text-secondary)]">
-          {block.body}
-        </p>
-        {setupLine && (
-          <p className="mt-3 text-xs text-[var(--color-muted)]">
-            <span className="font-medium text-[var(--text)]">Setup:</span>{" "}
-            {setupLine}
-          </p>
-        )}
-      </aside>
-    );
-  }
-
-  if (block.kind === "methodology") {
-    // Distinguish founder-firsthand (accent border) from observer (muted
-    // border) at the visual layer so a reader can tell at a glance whether
-    // the test conditions reflect personal court time or club/coach context.
-    const isFirsthand = block.context === "founderFirsthand";
-    const conditionParts = [
-      block.conditions.sessions != null
-        ? `${block.conditions.sessions} session${block.conditions.sessions === 1 ? "" : "s"}`
-        : null,
-      block.conditions.strings ?? null,
-      block.conditions.tensionLbs != null
-        ? `${block.conditions.tensionLbs} lb`
-        : null,
-      block.conditions.opponents ?? null,
-      block.conditions.courtSurface ?? null,
-      block.conditions.venue ?? null,
-    ].filter(Boolean);
-    return (
-      <section
-        className={
-          isFirsthand
-            ? "rounded-2xl border-l-4 border-[var(--color-accent)] bg-white p-5 shadow-sm"
-            : "rounded-2xl border-l-4 border-[color:var(--line-strong)] bg-[color:var(--surface-muted)] p-5"
-        }
-        data-block="methodology"
-        data-context={block.context}
-      >
-        <p
-          className={
-            isFirsthand
-              ? "text-xs font-semibold uppercase tracking-wide text-[var(--color-accent)]"
-              : "text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]"
-          }
-        >
-          {isFirsthand ? "Tested on court" : "Observer methodology"}
-        </p>
-        <h2 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
-          {block.headline}
-        </h2>
-        {conditionParts.length > 0 && (
-          <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-            <span className="font-medium text-[var(--text)]">Conditions:</span>{" "}
-            {conditionParts.join(" · ")}
-          </p>
-        )}
-        {block.comparators && block.comparators.length > 0 && (
-          <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-            <span className="font-medium text-[var(--text)]">Comparators:</span>{" "}
-            {block.comparators.join(", ")}
-          </p>
-        )}
-        {block.sourceAttribution && (
-          <p className="mt-3 border-t border-[color:var(--line)] pt-3 text-xs text-[var(--color-muted)]">
-            <span className="font-medium text-[var(--text)]">Source:</span>{" "}
-            {block.sourceAttribution}
-          </p>
-        )}
-      </section>
-    );
-  }
-
-  return (
-    <section className="rounded-2xl border border-[color:var(--line-strong)] bg-white p-6 shadow-sm">
-      <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-        {block.heading}
-      </h2>
-      <p className="mt-3 text-base leading-[1.7] text-[var(--text-secondary)]">
-        {block.body}
-      </p>
-      <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-        {block.bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
-    </section>
   );
 }
 
@@ -286,96 +39,42 @@ export function BlogArticlePage({
   const article = getBlogArticle(locale, slug);
 
   if (!article) {
-    return (
-      <main className="flex-1 py-16">
-        <div className="layout-band max-w-3xl">
-          <h1 className="text-3xl font-semibold text-[var(--text)]">
-            Article not found
-          </h1>
-          <Link
-            href={buildLocalizedPath(locale, "/blog/")}
-            className="mt-4 inline-block text-[var(--color-accent)] underline"
-          >
-            Back to blog
-          </Link>
-        </div>
-      </main>
-    );
+    notFound();
   }
 
   const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
   const byline = companyInfo.authorByline;
   const minutes = readingTimeMinutes(article);
-  // Table-of-contents items derived from the article's <h2> headings. The
-  // anchor IDs must match the id="…" we render below, so they share a single
-  // slugifier inline. Skip the ToC entirely if there are 2 or fewer sections
-  // — a 2-item ToC is just noise.
-  const tocItems: TocItem[] = article.sections.map((section) => ({
-    id: section.heading.toLowerCase().replace(/\s+/g, "-"),
+  const anchorSeen = new Map<string, number>();
+  const tocItems: TocItem[] = article.sections.map((section, index) => ({
+    id: sectionAnchorId(section.heading, index, anchorSeen),
     label: section.heading,
   }));
   const showToc = tocItems.length >= 3;
-  const storyWords = article.story
-    ? article.story.intro.split(/\s+/).filter((word) => word.length > 0).length
-    : 0;
-  const sectionWords = article.sections.reduce(
+  const articleWordCount = article.sections.reduce(
     (sum, section) =>
-      sum + section.body.split(/\s+/).filter((word) => word.length > 0).length,
+      sum +
+      section.body.split(/\s+/).filter((word) => word.length > 0).length,
     0
   );
-  const articleWordCount = storyWords + sectionWords;
   const canShowArticleAd = articleWordCount >= 600;
   const related = relatedArticles(blogArticles[locale], article, 3);
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "@id": `${canonicalUrl}#article`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
     headline: article.title,
     description: article.dek,
-    inLanguage: "en",
     datePublished: article.updatedAt,
     dateModified: article.updatedAt,
-    timeRequired: `PT${minutes}M`,
     author: {
       "@type": "Person",
-      name: companyInfo.founderName,
-      url: companyInfo.founderWebsite,
-      description: companyInfo.founderDescription,
+      name: "Rui Su",
     },
     publisher: organizationJsonLd,
-    articleSection: CATEGORY_LABELS[article.category],
+    mainEntityOfPage: canonicalUrl,
+    inLanguage: "en",
   };
-
-  // Emit a Review entity ONLY when the article is explicitly a review and
-  // has a reviewSummary verdict. The itemReviewed is the article topic
-  // (Thing), not a Product, because the review may cover multiple
-  // products (head-to-heads) and we do not want to overclaim.
-  const reviewJsonLd =
-    article.category === "reviews" && article.reviewSummary
-      ? {
-          "@context": "https://schema.org",
-          "@type": "Review",
-          "@id": `${canonicalUrl}#review`,
-          name: `${article.title} — IntoBadminton review`,
-          itemReviewed: {
-            "@type": "Thing",
-            name: article.title.replace(/[—:]\s.+$/, "").trim(),
-            description: article.dek,
-          },
-          author: {
-            "@type": "Person",
-            name: companyInfo.founderName,
-            url: companyInfo.founderWebsite,
-          },
-          publisher: organizationJsonLd,
-          datePublished: article.updatedAt,
-          dateModified: article.updatedAt,
-          reviewBody: article.reviewSummary.verdict,
-          inLanguage: "en",
-        }
-      : null;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -384,8 +83,8 @@ export function BlogArticlePage({
       {
         "@type": "ListItem",
         position: 1,
-        name: companyInfo.siteName,
-        item: `${companyInfo.siteUrl}/`,
+        name: "Home",
+        item: companyInfo.siteUrl,
       },
       {
         "@type": "ListItem",
@@ -406,10 +105,8 @@ export function BlogArticlePage({
     <main className="flex-1">
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
-      {reviewJsonLd && <JsonLd data={reviewJsonLd} />}
       <JsonLd data={breadcrumbJsonLd} />
 
-      {/* Hero band — slightly tinted */}
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface-muted)] py-12 lg:py-16">
         <div className="layout-band max-w-3xl">
           <Link
@@ -419,7 +116,7 @@ export function BlogArticlePage({
             ← Blog
           </Link>
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="chip">{CATEGORY_LABELS[article.category]}</span>
+            <span className="chip">Blog</span>
             <span className="text-xs text-[var(--color-subtle)]">
               {minutes} min read
             </span>
@@ -440,36 +137,21 @@ export function BlogArticlePage({
           <p className="mt-6 text-sm font-medium text-[var(--text)]">
             {byline}
           </p>
-          {article.reviewSummary && (
-            <ReviewSummaryPanel summary={article.reviewSummary} />
-          )}
+          {article.verdict && <VerdictPanel verdict={article.verdict} />}
         </div>
       </section>
 
-      {/* Body */}
       <div className="layout-band max-w-6xl py-12 lg:py-16">
-        <div className={showToc ? "lg:grid lg:grid-cols-[1fr_220px] lg:gap-12" : ""}>
+        <div
+          className={showToc ? "lg:grid lg:grid-cols-[1fr_220px] lg:gap-12" : ""}
+        >
           <article className="max-w-3xl">
             <div className="space-y-8">
-              {article.story && (
-                <section className="space-y-8">
-                  <p className="text-lg leading-[1.75] text-[var(--text-secondary)]">
-                    {article.story.intro}
-                  </p>
-                  {article.story.blocks.map((block, index) => (
-                    <StoryBlock key={`${block.kind}-${index}`} block={block} />
-                  ))}
-                </section>
-              )}
-
               {article.sections.map((section, index) => {
-                const anchorId = section.heading
-                  .toLowerCase()
-                  .replace(/[^a-z0-9\s-]/g, "")
-                  .replace(/\s+/g, "-");
+                const anchorId = tocItems[index]?.id ?? sectionAnchorId(section.heading, index, new Map());
                 return (
                   <section
-                    key={section.heading}
+                    key={`${section.heading}-${index}`}
                     className="space-y-3 scroll-mt-24"
                     id={anchorId}
                   >
@@ -488,28 +170,29 @@ export function BlogArticlePage({
                         </span>
                       </a>
                     </h2>
-                    <p className="text-base leading-[1.75] text-[var(--text-secondary)]">
+                    <p className="whitespace-pre-line text-base leading-[1.75] text-[var(--text-secondary)]">
                       {section.body}
                     </p>
-                    {section.glossaryLinks && section.glossaryLinks.length > 0 && (
-                      <p className="mt-4 flex flex-wrap items-center gap-2 text-xs text-[var(--color-subtle)]">
-                        <span className="font-semibold uppercase tracking-wide">
-                          See in glossary:
-                        </span>
-                        {section.glossaryLinks.map((g, i) => (
-                          <a
-                            key={`${g.id}-${i}`}
-                            href={buildLocalizedPath(
-                              locale,
-                              `/guides/glossary/#${g.id}`
-                            )}
-                            className="rounded-full border border-[color:var(--line)] px-2.5 py-0.5 text-[color:var(--color-accent)] hover:bg-[var(--color-accent-soft)]"
-                          >
-                            {g.term}
-                          </a>
-                        ))}
-                      </p>
-                    )}
+                    {section.glossaryLinks &&
+                      section.glossaryLinks.length > 0 && (
+                        <p className="mt-4 flex flex-wrap items-center gap-2 text-xs text-[var(--color-subtle)]">
+                          <span className="font-semibold uppercase tracking-wide">
+                            See in glossary:
+                          </span>
+                          {section.glossaryLinks.map((g, i) => (
+                            <a
+                              key={`${g.id}-${i}`}
+                              href={buildLocalizedPath(
+                                locale,
+                                `/guides/glossary/#${g.id}`
+                              )}
+                              className="rounded-full border border-[color:var(--line)] px-2.5 py-0.5 text-[color:var(--color-accent)] hover:bg-[var(--color-accent-soft)]"
+                            >
+                              {g.term}
+                            </a>
+                          ))}
+                        </p>
+                      )}
                     {canShowArticleAd &&
                       index === Math.floor(article.sections.length / 2) && (
                         <AdSlot id={`blog-${article.slug}-mid`} />
@@ -544,19 +227,16 @@ export function BlogArticlePage({
         </div>
       </div>
 
-      {/* Mobile-only ToC sits above the body for narrow viewports. The
-          ArticleToc component itself decides which surface to render on. */}
       {showToc && (
-        <div className="layout-band max-w-3xl lg:hidden -mt-8">
+        <div className="layout-band max-w-3xl pb-8 lg:hidden">
           <ArticleToc items={tocItems} />
         </div>
       )}
 
-      {/* Related */}
       {related.length > 0 && (
-        <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
+        <section className="border-t border-[color:var(--line)] bg-[color:var(--surface-muted)] py-12">
           <div className="layout-band max-w-6xl">
-            <h2 className="text-headline text-[var(--text)]">
+            <h2 className="text-xl font-semibold text-[var(--text)]">
               Related reading
             </h2>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
@@ -564,17 +244,14 @@ export function BlogArticlePage({
                 <Link
                   key={r.slug}
                   href={buildLocalizedPath(locale, `/blog/${r.slug}/`)}
-                  className="card card-interactive p-6 block"
+                  className="card card-interactive block p-6"
                 >
-                  <span className="chip">{CATEGORY_LABELS[r.category]}</span>
+                  <span className="chip">Blog</span>
                   <h3 className="mt-3 text-lg font-semibold text-[var(--text)]">
                     {r.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
                     {r.dek}
-                  </p>
-                  <p className="mt-3 text-xs text-[var(--color-subtle)]">
-                    {readingTimeMinutes(r)} min · {r.updatedAt}
                   </p>
                 </Link>
               ))}
