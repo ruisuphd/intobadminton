@@ -3,7 +3,7 @@
   "passes": [
     {
       "pass": 1,
-      "fixes": 15,
+      "fixes": 17,
       "issues": 0,
       "samples": []
     },
@@ -122,6 +122,6 @@
       "samples": []
     }
   ],
-  "articles": 114,
+  "articles": 134,
   "final_issue_count": 0
 }

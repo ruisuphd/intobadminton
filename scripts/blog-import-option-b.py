@@ -364,43 +364,68 @@ def main() -> None:
     for s in LEGACY_ONLY:
         slug_map[s] = None
 
+    slugs = json.loads((ROOT / "scripts/blog-slugs-list.json").read_text(encoding="utf-8"))
+    sprint_path = ROOT / "scripts/blog-main-sprint-articles.json"
+    sprint_by_slug: dict[str, dict] = {}
+    if sprint_path.exists():
+        for art in json.loads(sprint_path.read_text(encoding="utf-8")):
+            sprint_by_slug[art["slug"]] = art
+
     legacy = parse_legacy_articles()
-    slugs = re.findall(
-        r'"([a-z0-9-]+)"',
-        LEGACY_TS.read_text(encoding="utf-8").split("export const blogSlugs")[1].split("];")[0],
-    )
     glossary = load_glossary()
     articles = []
     report = {"date": str(date.today()), "passes": [], "articles": len(slugs)}
 
     for slug in slugs:
         meta = legacy.get(slug, {})
+        sprint_meta = sprint_by_slug.get(slug, {})
         source_file = slug_map.get(slug)
         sections: list[dict] = []
         use_legacy = slug in LEGACY_ONLY or slug in LEGACY_PREFERRED
         if source_file and not use_legacy and (BLOGS / source_file).exists():
             en = extract_english(BLOGS / source_file)
             sections = split_sections(en)
+        if not sections and sprint_meta.get("sections"):
+            sections = [
+                {"heading": clean_prose(s["heading"]), "body": clean_prose(s["body"])}
+                for s in sprint_meta["sections"]
+            ]
         if not sections:
             sections = [
                 {"heading": s["heading"], "body": clean_prose(s["body"])}
                 for s in meta.get("sections", [])
             ]
-        title = TITLE_OVERRIDES.get(slug) or meta.get("title") or slug.replace("-", " ").title()
-        raw_dek = DEK_OVERRIDES.get(slug) or meta.get("dek") or (sections[0]["body"][:160] + "…" if sections else "")
+        title = (
+            TITLE_OVERRIDES.get(slug)
+            or sprint_meta.get("title")
+            or meta.get("title")
+            or slug.replace("-", " ").title()
+        )
+        raw_dek = (
+            DEK_OVERRIDES.get(slug)
+            or sprint_meta.get("dek")
+            or meta.get("dek")
+            or (sections[0]["body"][:160] + "…" if sections else "")
+        )
         dek = ensure_dek(raw_dek, sections, title)
-        verdict = meta.get("verdict") or extract_verdict(sections, dek)
+        verdict = (
+            sprint_meta.get("verdict")
+            or meta.get("verdict")
+            or extract_verdict(sections, dek)
+        )
         verdict = clean_prose(verdict)
         attach_glossary(sections, glossary)
         articles.append(
             {
                 "slug": slug,
-                "updatedAt": meta.get("updatedAt", "2026-05-24"),
+                "updatedAt": sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
                 "title": clean_prose(title),
                 "dek": clean_prose(dek),
                 "verdict": verdict,
                 "sections": sections,
-                "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+                "cta": sprint_meta.get("cta")
+                or meta.get("cta")
+                or "Not sure which racket or shoe fits your game? Try the finder quiz.",
             }
         )
 
