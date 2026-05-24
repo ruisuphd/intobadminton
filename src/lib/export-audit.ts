@@ -22,7 +22,15 @@ export type ExportAuditIssue = {
   detail: string;
 };
 
-const ARTICLE_SCHEMA_REQUIRED = /^\/(?:best|brands|compare-guides)\/[^/]+\/$/;
+const ARTICLE_SCHEMA_REQUIRED =
+  /^\/(?:best|brands|compare-guides|guides|review)\/[^/]+\/$/;
+const ARTICLE_SCHEMA_EXEMPT = new Set(["/guides/glossary/"]);
+
+function requiresArticleSchema(routePath: string): boolean {
+  if (ARTICLE_SCHEMA_EXEMPT.has(routePath)) return false;
+  if (routePath === "/guides/") return false;
+  return ARTICLE_SCHEMA_REQUIRED.test(routePath);
+}
 const SPONSORED_REL = /\brel=["'][^"']*\bsponsored\b[^"']*["']/i;
 const AFFILIATE_DISCLOSURE_MARKER = /\bdata-affiliate-disclosure=["']/i;
 const META_REFRESH = /<meta[^>]+http-equiv=["']refresh["']/i;
@@ -41,6 +49,7 @@ const SITEMAP_EXEMPT_ROUTES = new Set<string>([
   "/review/submit/",
   "/privacy-choices/",
   "/blogs/", // legacy alias, redirects to /blog/
+  "/saved/",
 ]);
 
 const PAGE_EXTENSIONS = new Set(["", ".html"]);
@@ -173,7 +182,7 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
   const scripts = jsonLdScripts(file.html);
   const routePath = routePathForFile(file.path);
   const noindex = hasNoindex(file.html);
-  const requiresArticle = ARTICLE_SCHEMA_REQUIRED.test(routePath) && !noindex;
+  const requiresArticle = requiresArticleSchema(routePath) && !noindex;
   let hasArticle = false;
 
   // Three previously-strict rules were intentionally relaxed in #35:

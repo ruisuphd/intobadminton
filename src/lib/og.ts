@@ -15,3 +15,16 @@ export const defaultOgImages = [
     alt: "IntoBadminton — badminton equipment recommendations",
   },
 ] as const;
+
+/** Dynamic OG image emitted by `opengraph-image.tsx` on blog/review routes. */
+export function routeOgImages(routePath: string) {
+  const base = routePath.endsWith("/") ? routePath : `${routePath}/`;
+  return [
+    {
+      url: `${base}opengraph-image`,
+      width: 1200,
+      height: 630,
+      alt: "IntoBadminton — badminton equipment recommendations",
+    },
+  ] as const;
+}

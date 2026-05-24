@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductReviewPage } from "@/components/ProductReviewPage";
+import { routeOgImages } from "@/lib/og";
 import { reviewPath, reviewProductById, reviewSlugs } from "@/lib/review-pages";
 
 export function generateStaticParams() {
@@ -26,6 +27,7 @@ export async function generateMetadata({
     product.editorNote ??
     `Verified specs, source authority, and on-court behaviour for the ${product.brand} ${product.name}.`;
   const path = reviewPath(product.id);
+  const images = [...routeOgImages(path)];
   return {
     title,
     description,
@@ -39,11 +41,13 @@ export async function generateMetadata({
       publishedTime: product.lastVerifiedAt,
       modifiedTime: product.lastVerifiedAt,
       authors: ["Rui Su"],
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: images.map((img) => img.url),
     },
   };
 }

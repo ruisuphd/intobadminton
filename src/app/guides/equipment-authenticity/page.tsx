@@ -58,6 +58,12 @@ export default function EquipmentAuthenticityGuide() {
       "@type": "Organization",
       name: companyInfo.siteName,
       url: companyInfo.siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${companyInfo.siteUrl}/intobadminton-og.jpg`,
+        width: 512,
+        height: 512,
+      },
     },
     datePublished: "2026-05-07",
     dateModified: "2026-05-07",

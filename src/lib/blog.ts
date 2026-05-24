@@ -140,6 +140,17 @@ export const blogSlugs = [
 
 export type BlogSlug = (typeof blogSlugs)[number];
 
+export type BlogComparison = {
+  caption?: string;
+  columns: string[];
+  rows: { label: string; values: string[] }[];
+};
+
+export type BlogFactCheck = {
+  claim: string;
+  source: string;
+};
+
 export type BlogArticle = {
   slug: BlogSlug;
   updatedAt: string;
@@ -152,6 +163,10 @@ export type BlogArticle = {
     glossaryLinks?: { term: string; id: string }[];
   }[];
   cta: string;
+  methodology?: string;
+  factChecks?: BlogFactCheck[];
+  comparison?: BlogComparison;
+  relatedReviewProductId?: string;
 };
 
 export const blogArticles: Record<SiteLocale, BlogArticle[]> = {

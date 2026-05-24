@@ -126,27 +126,53 @@ async function generateOne(file) {
   }
 }
 
+async function generateOneWithSharp(file, sharp) {
+  const dir = dirname(file.sourcePath);
+  for (const width of WIDTHS) {
+    const out = join(dir, `${file.baseName}-${width}.webp`);
+    if (!(await needsRegen(file.sourcePath, out))) continue;
+    await sharp(file.sourcePath)
+      .resize({ width, withoutEnlargement: true })
+      .webp({ quality: 82 })
+      .toFile(out);
+    console.log(`  wrote ${out.replace(ROOT + "/", "")}`);
+  }
+  const fallback = join(dir, `${file.baseName}-fallback.jpg`);
+  if (await needsRegen(file.sourcePath, fallback)) {
+    await sharp(file.sourcePath)
+      .resize({ width: 1200, withoutEnlargement: true })
+      .jpeg({ quality: 85 })
+      .toFile(fallback);
+    console.log(`  wrote ${fallback.replace(ROOT + "/", "")}`);
+  }
+}
+
 async function main() {
-  if (!hasSips()) {
+  let sharp;
+  try {
+    sharp = (await import("sharp")).default;
+  } catch {
+    sharp = null;
+  }
+
+  if (!hasSips() && !sharp) {
     console.warn(
-      "[generate-product-images] `sips` not found — skipping image generation. " +
-        "On Linux CI, run a `sharp`-based step instead, or commit the generated " +
-        "variants from a macOS developer machine."
+      "[generate-product-images] Neither `sips` nor `sharp` available — skipping image generation."
     );
     return;
   }
   const files = await listSourceFiles();
   if (files.length === 0) {
-    console.log(
-      "[generate-product-images] no source images found under public/products/<slug>/. " +
-        "Drop a hero.png or hero.jpg into a per-product folder to start generating variants."
-    );
+    console.log("[generate-product-images] no source images found under public/products/");
     return;
   }
-  console.log(`[generate-product-images] processing ${files.length} source(s)...`);
+  console.log(`[generate-product-images] processing ${files.length} source file(s)…`);
   for (const file of files) {
-    console.log(`- ${file.slug}/${basename(file.sourcePath)}`);
-    await generateOne(file);
+    if (sharp) {
+      await generateOneWithSharp(file, sharp);
+    } else {
+      await generateOne(file);
+    }
   }
   console.log("[generate-product-images] done.");
 }

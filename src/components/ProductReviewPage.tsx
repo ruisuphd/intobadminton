@@ -9,6 +9,7 @@ import {
 import { SaveProductButton } from "@/components/SaveProductButton";
 import { companyInfo } from "@/lib/company";
 import { computeEditorialRating } from "@/lib/editorial-rating";
+import { blogSlugForReview } from "@/lib/content-links";
 import { reviewPath } from "@/lib/review-pages";
 import { sourceAuthorityForProduct } from "@/lib/source-authority";
 import { articleJsonLd } from "@/lib/structured-data";
@@ -254,6 +255,7 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
   }
 
   const showImage = canShowProductImage(product.image);
+  const handsOnBlogSlug = blogSlugForReview(product.id);
 
   return (
     <main className="flex-1 py-16">
@@ -322,6 +324,16 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
               label={`${product.brand} ${product.name}`}
             />
           </div>
+          {handsOnBlogSlug && (
+            <p className="pt-4 text-sm">
+              <Link
+                href={`/blog/${handsOnBlogSlug}/`}
+                className="font-medium text-[var(--color-accent)] hover:underline"
+              >
+                Read the full hands-on write-up →
+              </Link>
+            </p>
+          )}
         </header>
 
         {showImage && (

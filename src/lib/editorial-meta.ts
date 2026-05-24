@@ -27,6 +27,26 @@ export type EditorialMeta = {
  * Paths use trailing slashes to match the static-export route map.
  */
 export const editorialMetaByPath: Record<string, EditorialMeta> = {
+  "/": {
+    publishedAt: "2025-08-01",
+    lastReviewedAt: "2026-05-24",
+  },
+  "/quiz/": {
+    publishedAt: "2025-08-15",
+    lastReviewedAt: "2026-05-24",
+  },
+  "/blog/": {
+    publishedAt: "2025-09-01",
+    lastReviewedAt: "2026-05-24",
+  },
+  "/faq/": {
+    publishedAt: "2025-09-01",
+    lastReviewedAt: "2026-05-24",
+  },
+  "/about/": {
+    publishedAt: "2025-08-01",
+    lastReviewedAt: "2026-05-24",
+  },
   // Hub / index pages — these list other content; their lastReviewedAt
   // tracks the most recent editorial sweep across the hub's children, not
   // a per-pick price check. Without these entries the sitemap emits no

@@ -14,8 +14,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BLOGS = ROOT / "blogs"
-LEGACY_TS = ROOT / "src/lib/blog.legacy.ts"
+LEGACY_TS = ROOT / "scripts/archive/blog.legacy.ts"
 SLUG_MAP = ROOT / "scripts/blog-slug-source-map.json"
+REVIEW_MAP = ROOT / "scripts/blog-review-product-map.json"
 CANONICAL = ROOT / "scripts/blog-translation-canonical-names.json"
 GLOSSARY_PAGE = ROOT / "src/app/guides/glossary/page.tsx"
 OUT_JSON = ROOT / "src/data/blog-articles.json"
@@ -56,6 +57,17 @@ DEK_OVERRIDES = {
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ VA and Kurenai comparison, with the old Antonsen naming mistake corrected while keeping the URL for continuity.",
 }
 
+# Prepended to the overview when two slugs would otherwise share identical JSON bodies.
+SLUG_DISAMBIGUATION: dict[str, str] = {
+    "li-ning-axforce-90-new-5u-deep-dive": "This article focuses on the 5U AxForce 90 New weight class — not the broader AxForce 90 vs 80 vs Yonex 88D Pro comparison.",
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps the legacy Anders Antonsen slug for continuity; the comparison covers VA and Kurenai colourways only.",
+    "yonex-astrox-99-pro-gen-1-review": "Gen-1 Astrox 99 Pro notes — see the gen-2 deep dive for the current frame revision.",
+    "victor-auraspeed-hs-plus-attack-review": "Attack-biased HS Plus tuning — distinct from the neutral deep-dive on the same frame.",
+    "rsl-aero-classic-tourney-shuttle-review": "Classic Tourney tier — not the Aero U shuttle review on the sibling URL.",
+    "fz-forza-88d-review": "Forza 88D under the FZ brand line — separate from Victor's FZ 88D Power Purple variant review.",
+    "li-ning-bladex-800-speed-vs-halbertec-9000-power": "Head-to-head Bladex 800 Speed vs Halbertec 9000 Power — not the standalone 9000 Power deep dive.",
+}
+
 VOICE_FIXES = [
     (r"\bTiGe XLab\b", ""),
     (r"\bTiGe\b(?!\s)", ""),
@@ -66,6 +78,10 @@ VOICE_FIXES = [
     (r"\btesters?\b", "I"),
     (r"\breviewers?\b", "I"),
     (r"\bFor I\b", "For me"),
+    (r"\bWhat makes I more\b", "What makes me more"),
+    (r"\bI's specific notes\b", "My specific notes"),
+    (r"\bI specifically reports\b", "I specifically report"),
+    (r"\bFor me's\b", "For my"),
     (r"\bEven I who\b", "Even I, who"),
     (r"\bsurprised I\b(?![a-z])", "surprised me"),
     (r"\bHalberd\b", "Halbertec"),
@@ -216,9 +232,52 @@ def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
     return f"{title}. {candidate}".strip()[:240]
 
 
-def split_sections(en: str) -> list[dict[str, str]]:
+def parse_md_table(body: str) -> tuple[str, dict | None]:
+    if "|" not in body:
+        return body, None
+    lines = [
+        line.strip()
+        for line in body.split("\n")
+        if line.strip() and not re.match(r"^\|?\s*-+", line)
+    ]
+    if len(lines) < 2:
+        return body, None
+    rows_raw: list[list[str]] = []
+    for line in lines:
+        cells = [cell.strip() for cell in line.strip("|").split("|")]
+        if any(cells):
+            rows_raw.append(cells)
+    if len(rows_raw) < 2 or len(rows_raw[0]) < 2:
+        return body, None
+    header = rows_raw[0]
+    data_rows = []
+    for row in rows_raw[1:]:
+        if len(row) < len(header):
+            continue
+        data_rows.append({"label": row[0], "values": row[1:]})
+    if not data_rows:
+        return body, None
+    comparison = {
+        "caption": header[0] or "Comparison",
+        "columns": header[1:],
+        "rows": data_rows,
+    }
+    summary = f"Compared {len(data_rows)} rows across {', '.join(header[1:])}."
+    return summary, comparison
+
+
+def apply_disambiguation(slug: str, sections: list[dict[str, str]]) -> None:
+    intro = SLUG_DISAMBIGUATION.get(slug)
+    if not intro or not sections:
+        return
+    if intro in sections[0]["body"]:
+        return
+    sections[0]["body"] = f"{intro}\n\n{sections[0]['body']}"
+
+
+def split_sections(en: str) -> tuple[list[dict[str, str]], dict | None]:
     if not en:
-        return []
+        return [], None
     # Markdown headings
     if re.search(r"\n#{1,3}\s+", en):
         parts = re.split(r"\n(?=#{1,3}\s+)", en)
@@ -243,6 +302,7 @@ def split_sections(en: str) -> list[dict[str, str]]:
             parts.append(block)
             i += 1
     sections = []
+    comparison: dict | None = None
     for part in parts:
         part = part.strip()
         if not part:
@@ -263,12 +323,10 @@ def split_sections(en: str) -> list[dict[str, str]]:
         if not body:
             continue
         if "|" in body:
-            rows = [
-                r.strip()
-                for r in body.split("\n")
-                if r.strip() and not re.match(r"^\|?\s*-+", r)
-            ]
-            body = " ".join(r.replace("|", " — ").strip(" |") for r in rows)
+            parsed_body, table = parse_md_table(body)
+            body = parsed_body
+            if table and comparison is None:
+                comparison = table
         sections.append({"heading": heading or "Overview", "body": body})
     sections = merge_overview_sections(sections)
     merged: list[dict[str, str]] = []
@@ -281,7 +339,7 @@ def split_sections(en: str) -> list[dict[str, str]]:
             merged[-1]["body"] = merged[-1]["body"] + "\n\n" + sec["body"]
         else:
             merged.append(sec)
-    return merged
+    return merged, comparison
 
 
 def extract_verdict(sections: list[dict[str, str]], dek: str) -> str:
@@ -336,6 +394,10 @@ def audit_article(slug: str, article: dict) -> list[str]:
     for pat in (r"source-to-buyer", r"fact-check snapshot", r"why this source"):
         if pat in blob:
             issues.append(f"editorial scaffold: {pat}")
+    if re.search(r"\bI's specific\b", blob):
+        issues.append("persona corruption: I's")
+    if re.search(r"\bWhat makes I more\b", blob):
+        issues.append("persona corruption: What makes I")
     return [f"{slug}: {i}" for i in issues]
 
 
@@ -373,6 +435,13 @@ def main() -> None:
 
     legacy = parse_legacy_articles()
     glossary = load_glossary()
+    review_map: dict[str, str] = {}
+    if REVIEW_MAP.exists():
+        review_map = {
+            k: v
+            for k, v in json.loads(REVIEW_MAP.read_text(encoding="utf-8")).items()
+            if isinstance(v, str)
+        }
     articles = []
     report = {"date": str(date.today()), "passes": [], "articles": len(slugs)}
 
@@ -381,10 +450,11 @@ def main() -> None:
         sprint_meta = sprint_by_slug.get(slug, {})
         source_file = slug_map.get(slug)
         sections: list[dict] = []
+        comparison: dict | None = None
         use_legacy = slug in LEGACY_ONLY or slug in LEGACY_PREFERRED
         if source_file and not use_legacy and (BLOGS / source_file).exists():
             en = extract_english(BLOGS / source_file)
-            sections = split_sections(en)
+            sections, comparison = split_sections(en)
         if not sections and sprint_meta.get("sections"):
             sections = [
                 {"heading": clean_prose(s["heading"]), "body": clean_prose(s["body"])}
@@ -414,20 +484,28 @@ def main() -> None:
             or extract_verdict(sections, dek)
         )
         verdict = clean_prose(verdict)
+        apply_disambiguation(slug, sections)
         attach_glossary(sections, glossary)
-        articles.append(
-            {
-                "slug": slug,
-                "updatedAt": sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
-                "title": clean_prose(title),
-                "dek": clean_prose(dek),
-                "verdict": verdict,
-                "sections": sections,
-                "cta": sprint_meta.get("cta")
-                or meta.get("cta")
-                or "Not sure which racket or shoe fits your game? Try the finder quiz.",
-            }
-        )
+        article: dict = {
+            "slug": slug,
+            "updatedAt": sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
+            "title": clean_prose(title),
+            "dek": clean_prose(dek),
+            "verdict": verdict,
+            "sections": sections,
+            "cta": sprint_meta.get("cta")
+            or meta.get("cta")
+            or "Not sure which racket or shoe fits your game? Try the finder quiz.",
+        }
+        if comparison:
+            article["comparison"] = comparison
+        if review_map.get(slug):
+            article["relatedReviewProductId"] = review_map[slug]
+        if sprint_meta.get("methodology"):
+            article["methodology"] = clean_prose(sprint_meta["methodology"])
+        if sprint_meta.get("factChecks"):
+            article["factChecks"] = sprint_meta["factChecks"]
+        articles.append(article)
 
     for pass_num in range(1, PASSES + 1):
         fixes = 0

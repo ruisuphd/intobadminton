@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogArticlePage } from "@/components/BlogArticlePage";
 import { blogSlugs, getBlogArticle } from "@/lib/blog";
+import { routeOgImages } from "@/lib/og";
 
 export function generateStaticParams() {
   return blogSlugs.map((slug) => ({ slug }));
@@ -22,6 +23,7 @@ export async function generateMetadata({
     };
   }
   const url = `/blog/${slug}/`;
+  const images = [...routeOgImages(url)];
   return {
     // Let the root layout template add " | IntoBadminton" — avoid embedding
     // the brand here, otherwise we'd hit the audit gate's
@@ -38,11 +40,13 @@ export async function generateMetadata({
       publishedTime: article.updatedAt,
       modifiedTime: article.updatedAt,
       authors: ["Rui Su"],
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.dek,
+      images: images.map((img) => img.url),
     },
   };
 }

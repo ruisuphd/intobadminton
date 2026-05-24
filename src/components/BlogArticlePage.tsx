@@ -13,7 +13,9 @@ import {
   relatedArticles,
   sectionAnchorId,
 } from "@/lib/blog";
+import { relatedContentForBlog } from "@/lib/content-links";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { reviewPath } from "@/lib/review-pages";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 
 function VerdictPanel({ verdict }: { verdict: string }) {
@@ -43,7 +45,6 @@ export function BlogArticlePage({
   }
 
   const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
-  const byline = companyInfo.authorByline;
   const minutes = readingTimeMinutes(article);
   const anchorSeen = new Map<string, number>();
   const tocItems: TocItem[] = article.sections.map((section, index) => ({
@@ -59,6 +60,7 @@ export function BlogArticlePage({
   );
   const canShowArticleAd = articleWordCount >= 600;
   const related = relatedArticles(blogArticles[locale], article, 3);
+  const { reviewId, compareGuides } = relatedContentForBlog(article);
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
@@ -134,10 +136,28 @@ export function BlogArticlePage({
           <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)] text-balance">
             {article.dek}
           </p>
-          <p className="mt-6 text-sm font-medium text-[var(--text)]">
-            {byline}
-          </p>
           {article.verdict && <VerdictPanel verdict={article.verdict} />}
+          {(reviewId || compareGuides.length > 0) && (
+            <div className="mt-6 flex flex-wrap gap-3">
+              {reviewId && (
+                <Link
+                  href={buildLocalizedPath(locale, reviewPath(reviewId))}
+                  className="chip chip-secondary hover:underline"
+                >
+                  See specs &amp; fit score →
+                </Link>
+              )}
+              {compareGuides.map((href) => (
+                <Link
+                  key={href}
+                  href={buildLocalizedPath(locale, href)}
+                  className="chip chip-secondary hover:underline"
+                >
+                  Compare guide →
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -146,6 +166,53 @@ export function BlogArticlePage({
           className={showToc ? "lg:grid lg:grid-cols-[1fr_220px] lg:gap-12" : ""}
         >
           <article className="max-w-3xl">
+            {article.comparison && article.comparison.rows.length > 0 && (
+              <div className="mb-10 overflow-x-auto rounded-2xl border border-[color:var(--line)]">
+                {article.comparison.caption && (
+                  <p className="border-b border-[color:var(--line)] bg-[color:var(--surface-muted)] px-4 py-3 text-sm font-medium text-[var(--text)]">
+                    {article.comparison.caption}
+                  </p>
+                )}
+                <table className="min-w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-[color:var(--line)] bg-[color:var(--surface-muted)]">
+                      {article.comparison.columns.map((col) => (
+                        <th
+                          key={col}
+                          scope="col"
+                          className="px-4 py-3 text-left font-semibold text-[var(--text)]"
+                        >
+                          {col}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {article.comparison.rows.map((row, rowIndex) => (
+                      <tr
+                        key={`${row.label}-${rowIndex}`}
+                        className="border-b border-[color:var(--line)] last:border-0"
+                      >
+                        <th
+                          scope="row"
+                          className="px-4 py-3 font-medium text-[var(--text)]"
+                        >
+                          {row.label}
+                        </th>
+                        {row.values.map((value, colIndex) => (
+                          <td
+                            key={`${rowIndex}-${colIndex}`}
+                            className="px-4 py-3 text-[var(--color-muted)]"
+                          >
+                            {value}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
             <div className="space-y-8">
               {article.sections.map((section, index) => {
                 const anchorId = tocItems[index]?.id ?? sectionAnchorId(section.heading, index, new Map());
@@ -201,6 +268,28 @@ export function BlogArticlePage({
                 );
               })}
             </div>
+
+            {article.methodology && (
+              <aside className="mt-10 rounded-xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] p-5 text-sm leading-relaxed text-[var(--color-muted)]">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+                  How I tested
+                </p>
+                <p className="mt-2 whitespace-pre-line">{article.methodology}</p>
+              </aside>
+            )}
+
+            {article.factChecks && article.factChecks.length > 0 && (
+              <aside className="mt-6 text-xs text-[var(--color-subtle)]">
+                <p className="font-semibold uppercase tracking-wide">Fact checks</p>
+                <ul className="mt-2 space-y-1">
+                  {article.factChecks.map((row) => (
+                    <li key={`${row.claim}-${row.source}`}>
+                      {row.claim} — {row.source}
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )}
 
             <div className="mt-12 card p-7">
               <p className="text-lg font-semibold text-[var(--text)]">

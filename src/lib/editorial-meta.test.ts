@@ -106,6 +106,11 @@ describe("lastModifiedForRoute", () => {
   });
 
   it("returns undefined for routes without metadata", () => {
-    expect(lastModifiedForRoute("/quiz/")).toBeUndefined();
+    expect(lastModifiedForRoute("/totally-not-a-page/")).toBeUndefined();
+  });
+
+  it("returns hub freshness for primary navigation routes", () => {
+    expect(lastModifiedForRoute("/quiz/")).toBe("2026-05-24");
+    expect(lastModifiedForRoute("/blog/")).toBe("2026-05-24");
   });
 });
