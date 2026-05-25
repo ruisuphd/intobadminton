@@ -12,15 +12,15 @@ const NAV_LINKS = [
   { href: "/quiz/", label: "Finder" },
   { href: "/best/", label: "Best Of" },
   { href: "/review/", label: "Reviews" },
+  { href: "/comparisons/", label: "Comparisons" },
   { href: "/tools/", label: "Tools" },
-  { href: "/blog/", label: "Blog" },
   { href: "/guides/", label: "Guides" },
   { href: "/brands/", label: "Brands" },
   { href: "/faq/", label: "FAQ" },
 ] as const;
 
 function isActive(pathname: string, href: string): boolean {
-  // Treat "/blog/" as active for "/blog/some-article/" too.
+  // Treat section hubs as active for their nested pages too.
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(href);
 }

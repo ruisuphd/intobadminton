@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Racket balance explainer — head-light, even, head-heavy bands",
   description:
     "Drag the badminton racket balance-point slider and see which playing style each band suits, with example frames at each balance number.",
-  alternates: { canonical: "/tools/racket-balance-explainer/" },
+  alternates: pageAlternates("/tools/racket-balance-explainer/"),
 };
 
 export default function RacketBalanceExplainerPage() {

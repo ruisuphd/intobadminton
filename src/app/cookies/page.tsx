@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { consentAuditSummary } from "@/lib/consent";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description:
     "IntoBadminton Cookie Policy — cookie and local storage categories, default consent state, third parties, and how to change your choices.",
-  alternates: { canonical: "/cookies/" },
+  alternates: pageAlternates("/cookies/"),
 };
 
 export default function CookiesPage() {

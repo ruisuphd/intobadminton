@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
-import { EditorialMeta } from "@/components/EditorialMeta";
 import { JsonLd } from "@/components/JsonLd";
+import {
+  articlesByDateDesc,
+  blogArticles,
+  editorialContentLabel,
+  readingTimeMinutes,
+} from "@/lib/blog";
+import { articlePathForSlug, editorialSlugs } from "@/lib/blog-migrations";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
 import {
@@ -15,14 +22,14 @@ const PATH = "/review/";
 const URL = `${companyInfo.siteUrl}${PATH}`;
 
 export const metadata: Metadata = {
-  title: "Badminton equipment reviews — every racket and shoe, sourced",
+  title: "Badminton equipment reviews — rackets, shoes, and shuttles",
   description:
-    "Per-product badminton reviews — Yonex Astrox, Nanoflare, Arcsaber; Li-Ning Halbertec, AxForce, Bladex; Victor Auraspeed, DriveX; Kawasaki, Bonny, Kumpoo — with verified specs and source-authority labels.",
-  alternates: { canonical: PATH },
+    "Per-product badminton reviews — Yonex Astrox, Nanoflare, Arcsaber; Li-Ning Halbertec, AxForce, Bladex; Victor Auraspeed, DriveX; Kawasaki, Bonny, Kumpoo — plus shuttle reviews, with specs and hands-on notes.",
+  alternates: pageAlternates(PATH),
   openGraph: {
-    title: "Badminton equipment reviews — every racket and shoe, sourced",
+    title: "Badminton equipment reviews — rackets, shoes, and shuttles",
     description:
-      "Per-product badminton reviews with verified manufacturer specs, source-authority labels, and editor notes.",
+      "Per-product badminton reviews with manufacturer specs and hands-on English review notes.",
     url: PATH,
     type: "article",
     siteName: "IntoBadminton",
@@ -30,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Badminton Equipment Reviews — Sourced & Verified",
+    title: "Badminton Equipment Reviews",
     description:
-      "Per-product badminton reviews with verified specs and editor notes.",
+      "Per-product badminton reviews with specs and hands-on notes.",
   },
 };
 
@@ -40,24 +47,27 @@ export default function ReviewIndexPage() {
   const products = reviewableProducts();
   const racketCount = products.filter((p) => p.category === "racket").length;
   const shoeCount = products.filter((p) => p.category === "shoes").length;
+  const shuttleCount = products.filter((p) => p.category === "shuttle").length;
+  const editorialSet = new Set(editorialSlugs());
+  const comparisonArticles = articlesByDateDesc(
+    blogArticles.en.filter((article) => editorialSet.has(article.slug))
+  ).slice(0, 6);
 
-  // Group by brand for readable presentation.
   const grouped = new Map<string, typeof products>();
   for (const product of products) {
     const list = grouped.get(product.brand) ?? [];
     list.push(product);
     grouped.set(product.brand, list);
   }
-  // Sort brands by descending count so headline brands appear first.
   const brandGroups = Array.from(grouped.entries()).sort(
     (a, b) => b[1].length - a[1].length
   );
 
   const article = articleJsonLd({
     path: PATH,
-    headline: "Badminton equipment reviews — every racket and shoe, sourced",
+    headline: "Badminton equipment reviews — rackets, shoes, and shuttles",
     description:
-      "Per-product badminton reviews with verified manufacturer specs and source-authority labels.",
+      "Per-product badminton reviews with manufacturer specs and hands-on English review notes.",
     section: "Reviews",
   });
 
@@ -114,42 +124,55 @@ export default function ReviewIndexPage() {
 
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-            {racketCount} rackets · {shoeCount} shoes · sourced & verified
+            {racketCount} rackets · {shoeCount} shoes
+            {shuttleCount > 0 ? ` · ${shuttleCount} shuttles` : ""}
           </p>
           <h1 className="text-display text-[var(--text)]">
             Badminton equipment reviews
           </h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             Every per-product review on IntoBadminton, grouped by brand. Each
-            page lists manufacturer-verified specifications where available,
-            independent measurements where they aren&apos;t, and a clear
-            source-authority label so you can judge the confidence yourself.
+            page includes manufacturer specs, product photos, and English
+            hands-on review notes where available.
           </p>
-          <EditorialMeta path={PATH} />
         </header>
 
-        <section className="card p-6 text-sm leading-relaxed text-[var(--color-muted)]">
-          <h2 className="text-lg font-semibold text-[var(--text)]">
-            How we source reviews
-          </h2>
-          <p className="mt-3">
-            We prefer manufacturer product-specific pages (Tier 1) for racket
-            specs. Where a brand publishes only a generic landing page, the row
-            is downgraded to {"“"}needs verification{"”"} until a Tier-1
-            source is located. Independent measurements (BadmintonCN,
-            YuanShi) are surfaced with explicit attribution — never repackaged
-            as official spec.
-          </p>
-          <p className="mt-3">
-            Want to contribute your own first-party review?{" "}
-            <Link
-              href="/review/submit/"
-              className="text-[var(--color-accent)] underline"
-            >
-              Submit a structured review →
-            </Link>
-          </p>
-        </section>
+        {comparisonArticles.length > 0 && (
+          <section className="space-y-4">
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <h2 className="text-headline text-[var(--text)]">
+                Comparisons &amp; buying guides
+              </h2>
+              <Link
+                href="/comparisons/"
+                className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+              >
+                View all →
+              </Link>
+            </div>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {comparisonArticles.map((article) => (
+                <li key={article.slug}>
+                  <Link
+                    href={articlePathForSlug(article.slug)}
+                    className="card card-interactive flex h-full flex-col gap-2 p-5"
+                  >
+                    <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
+                      {editorialContentLabel(article.slug)} ·{" "}
+                      {readingTimeMinutes(article)} min read
+                    </p>
+                    <p className="text-base font-semibold text-[var(--text)]">
+                      {article.title}
+                    </p>
+                    <p className="text-xs text-[var(--color-muted)]">
+                      {article.dek}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {brandGroups.map(([brand, items]) => (
           <section key={brand} className="space-y-4">
@@ -172,13 +195,11 @@ export default function ReviewIndexPage() {
                     <p className="text-base font-semibold text-[var(--text)]">
                       {p.brand} {p.name}
                     </p>
-                    <p className="text-xs text-[var(--color-muted)]">
-                      {p.verificationStatus === "official_verified"
-                        ? "Spec verified against manufacturer page"
-                        : p.verificationStatus === "editor_verified"
-                          ? "Editor-verified"
-                          : "Needs official verification"}
-                    </p>
+                    {p.editorNote && (
+                      <p className="text-xs text-[var(--color-muted)] line-clamp-2">
+                        {p.editorNote}
+                      </p>
+                    )}
                   </Link>
                 </li>
               ))}

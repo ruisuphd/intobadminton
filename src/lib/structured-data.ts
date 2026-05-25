@@ -1,5 +1,11 @@
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import {
+  computeEditorialRating,
+  ratingDatePublished,
+  type EditorialRating,
+} from "@/lib/editorial-rating";
 import { getEditorialMeta } from "@/lib/editorial-meta";
+import type { ProductRecord } from "@/lib/types/product";
 
 type ArticleSection = "Reviews" | "Guides" | "Brand Profile" | "Comparison";
 
@@ -19,6 +25,8 @@ export type ArticleJsonLdInput = {
   datePublished?: string;
   /** Optional dateModified override. Defaults to `lastReviewedAt`. */
   dateModified?: string;
+  /** Optional `@id` for the primary subject (e.g. Product on review pages). */
+  aboutId?: string;
 };
 
 const PERSON_ID = `${companyInfo.siteUrl}/about/#person`;
@@ -108,5 +116,82 @@ export function articleJsonLd(input: ArticleJsonLdInput) {
     articleSection: input.section,
     author: ARTICLE_AUTHOR,
     publisher: ARTICLE_PUBLISHER,
+    ...(input.aboutId ? { about: { "@id": input.aboutId } } : {}),
   };
+}
+
+export type ProductReviewJsonLdInput = {
+  product: ProductRecord;
+  /** Route path with trailing slash, e.g. "/review/yy-as-50/". */
+  path: string;
+  description: string;
+  reviewBody: string;
+  rating?: EditorialRating | null;
+};
+
+/**
+ * Product + nested Review JSON-LD for `/review/[slug]/` pages.
+ * Optionally includes editorial reviewRating and aggregateRating when backed
+ * by at least two distinct review sources.
+ */
+export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
+  const url = `${companyInfo.siteUrl}${input.path}`;
+  const productId = `${url}#product`;
+  const datePublished =
+    input.product.lastVerifiedAt ?? ratingDatePublished(input.product);
+
+  const review: Record<string, unknown> = {
+    "@type": "Review",
+    "@id": `${url}#review`,
+    name: `${input.product.brand} ${input.product.name} — IntoBadminton review`,
+    author: ARTICLE_AUTHOR,
+    publisher: ARTICLE_PUBLISHER,
+    datePublished,
+    reviewBody: input.reviewBody,
+    itemReviewed: { "@id": productId },
+  };
+
+  if (input.rating) {
+    review.reviewRating = {
+      "@type": "Rating",
+      ratingValue: input.rating.ratingValue,
+      bestRating: input.rating.bestRating,
+      worstRating: input.rating.worstRating,
+    };
+  }
+
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": productId,
+    name: `${input.product.brand} ${input.product.name}`,
+    brand: { "@type": "Brand", name: input.product.brand },
+    category: input.product.category,
+    description: input.description,
+    url,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      price: input.product.priceUsd,
+      availability: "https://schema.org/InStock",
+      url: input.product.officialSourceUrl,
+    },
+    review,
+  };
+
+  if (input.product.image?.url) {
+    schema.image = input.product.image.url;
+  }
+
+  if (input.rating?.meetsAggregateThreshold) {
+    schema.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: input.rating.ratingValue,
+      reviewCount: input.rating.reviewCount,
+      bestRating: input.rating.bestRating,
+      worstRating: input.rating.worstRating,
+    };
+  }
+
+  return schema;
 }

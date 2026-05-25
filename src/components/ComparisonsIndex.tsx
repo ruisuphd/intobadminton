@@ -3,11 +3,13 @@ import { JsonLd } from "@/components/JsonLd";
 import {
   articlesByDateDesc,
   blogArticles,
+  editorialContentLabel,
   readingTimeMinutes,
   type BlogArticle,
 } from "@/lib/blog";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { articlePathForSlug, editorialSlugs } from "@/lib/blog-migrations";
 
 function ArticleCard({
   article,
@@ -21,11 +23,11 @@ function ArticleCard({
   const minutes = readingTimeMinutes(article);
   return (
     <Link
-      href={buildLocalizedPath(locale, `/blog/${article.slug}/`)}
+      href={buildLocalizedPath(locale, articlePathForSlug(article.slug))}
       className={`card card-interactive block ${featured ? "p-8" : "p-6"}`}
     >
       <div className="flex items-center gap-2">
-        <span className="chip">Blog</span>
+        <span className="chip">{editorialContentLabel(article.slug)}</span>
         <span className="text-xs text-[var(--color-subtle)]">
           {minutes} min read
         </span>
@@ -60,33 +62,44 @@ function ArticleCard({
   );
 }
 
-export function BlogIndex({ locale }: { locale: SiteLocale }) {
-  const articles = articlesByDateDesc(blogArticles[locale]);
+export function ComparisonsIndex({ locale }: { locale: SiteLocale }) {
+  const editorialSet = new Set(editorialSlugs());
+  const articles = articlesByDateDesc(
+    blogArticles[locale].filter((article) => editorialSet.has(article.slug))
+  );
   const featured = articles[0];
   const rest = articles.slice(1);
 
-  const blogJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "@id": `${companyInfo.siteUrl}/blog/#blog`,
-    name: "Badminton equipment blog",
+    "@type": "CollectionPage",
+    "@id": `${companyInfo.siteUrl}/comparisons/#comparisons`,
+    name: "Badminton comparisons and buying guides",
     description:
-      "First-person badminton gear reviews, comparisons, and guides from club play in Ireland, Singapore, and China.",
+      "Head-to-head comparisons, buying guides, and editorial notes from club play.",
     inLanguage: "en",
     publisher: organizationJsonLd,
-    url: `${companyInfo.siteUrl}/blog/`,
+    url: `${companyInfo.siteUrl}/comparisons/`,
   };
 
   return (
     <main className="flex-1">
-      <JsonLd data={blogJsonLd} />
+      <JsonLd data={jsonLd} />
 
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface-muted)] py-12 lg:py-16">
         <div className="layout-band max-w-3xl">
-          <h1 className="text-headline text-[var(--text)]">Blog</h1>
+          <Link
+            href={buildLocalizedPath(locale, "/review/")}
+            className="text-sm text-[var(--color-accent)] hover:underline"
+          >
+            ← Reviews
+          </Link>
+          <h1 className="text-headline mt-4 text-[var(--text)]">
+            Comparisons &amp; buying guides
+          </h1>
           <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)]">
-            Racket, shoe, string, and shuttle reviews plus comparisons and
-            buying notes — written in my own voice from real club sessions.
+            Head-to-head racket and shoe comparisons, buying guides, and
+            editorial notes — linked from the main review catalogue.
           </p>
         </div>
       </section>

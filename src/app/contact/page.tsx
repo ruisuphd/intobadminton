@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Contact IntoBadminton. Reach the editorial, support, and privacy teams behind our badminton equipment recommendations.",
-  alternates: { canonical: "/contact/" },
+  alternates: pageAlternates("/contact/"),
 };
 
 export default function ContactPage() {

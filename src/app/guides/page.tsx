@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: "Badminton equipment guides",
   description:
     "Practical badminton guides — string tension, racket balance, shoes and footwork, doubles roles, season refresh, authenticity checks, plus a 40-term glossary.",
-  alternates: { canonical: "/guides/" },
+  alternates: pageAlternates("/guides/"),
 };
 
 const guides = [

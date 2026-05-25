@@ -1,18 +1,21 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { EditorialMeta } from "@/components/EditorialMeta";
 import { JsonLd } from "@/components/JsonLd";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import { ReviewProseSections } from "@/components/ReviewProseSections";
 import { SaveProductButton } from "@/components/SaveProductButton";
 import { companyInfo } from "@/lib/company";
+import {
+  blogArticlesForReview,
+  editorialComparisonsForReview,
+  reviewDescriptionFromArticles,
+} from "@/lib/content-links";
 import { computeEditorialRating } from "@/lib/editorial-rating";
-import { blogSlugForReview } from "@/lib/content-links";
 import { reviewPath } from "@/lib/review-pages";
-import { sourceAuthorityForProduct } from "@/lib/source-authority";
-import { articleJsonLd } from "@/lib/structured-data";
+import { articleJsonLd, productReviewJsonLd } from "@/lib/structured-data";
 import { humanize } from "@/lib/text";
 import type {
   BagProduct,
@@ -125,29 +128,16 @@ function specRows(p: ProductRecord): { label: string; value: string }[] {
   return rows;
 }
 
-function verificationChipClass(p: ProductRecord): string {
-  if (p.verificationStatus === "official_verified") return "chip-success";
-  if (p.verificationStatus === "editor_verified") return "chip";
-  return "chip-warning";
-}
-
-function verificationChipLabel(p: ProductRecord): string {
-  if (p.verificationStatus === "official_verified")
-    return "Spec verified against manufacturer page";
-  if (p.verificationStatus === "editor_verified")
-    return "Editor-verified — manufacturer page not located";
-  return "Needs official verification";
-}
-
 export function ProductReviewPage({ product }: { product: ProductRecord }) {
   const path = reviewPath(product.id);
   const url = `${companyInfo.siteUrl}${path}`;
   const title = `${product.brand} ${product.name} review`;
+  const reviewArticles = blogArticlesForReview(product.id);
+  const editorialComparisons = editorialComparisonsForReview(product.id);
   const description =
-    product.editorNote ??
-    `Specs, source authority, and on-court behaviour for the ${product.brand} ${product.name}.`;
+    reviewDescriptionFromArticles(product.editorNote, reviewArticles) ||
+    `Hands-on review and specifications for the ${product.brand} ${product.name}.`;
 
-  const sourceAuthority = sourceAuthorityForProduct(product);
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -173,6 +163,13 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
     ],
   };
 
+  const reviewBody =
+    product.editorNote ??
+    reviewArticles[0]?.sections[0]?.body ??
+    `${product.brand} ${product.name} review.`;
+
+  const editorialRating = computeEditorialRating(product);
+
   const article = articleJsonLd({
     path,
     headline: title,
@@ -180,82 +177,18 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
     section: "Reviews",
     datePublished: product.lastVerifiedAt,
     dateModified: product.lastVerifiedAt,
+    aboutId: `${url}#product`,
   });
 
-  const reviewBody =
-    product.editorNote ??
-    `${product.brand} ${product.name} — verified against ${humanize(product.verificationStatus)} source on ${product.lastVerifiedAt}.`;
-
-  // `computeEditorialRating` is conservative: rating value comes from verified
-  // signals we already store (source authority, founder firsthand testing,
-  // high-confidence market signals, raw reviewCount). We never invent stars.
-  // The `meetsAggregateThreshold` flag gates AggregateRating emission so we
-  // only claim an aggregate when at least 2 distinct review sources back it —
-  // matching Google's structured-data policy that ratings must be visible on
-  // the page and substantiated.
-  const editorialRating = computeEditorialRating(product);
-
-  const reviewNode = {
-    "@type": "Review" as const,
-    author: {
-      "@type": "Person" as const,
-      name: companyInfo.founderName,
-      url: companyInfo.founderWebsite,
-    },
-    publisher: {
-      "@type": "Organization" as const,
-      name: companyInfo.siteName,
-      url: companyInfo.siteUrl,
-    },
-    datePublished: product.lastVerifiedAt,
-    reviewBody,
-    ...(editorialRating
-      ? {
-          reviewRating: {
-            "@type": "Rating" as const,
-            ratingValue: editorialRating.ratingValue,
-            bestRating: editorialRating.bestRating,
-            worstRating: editorialRating.worstRating,
-          },
-        }
-      : {}),
-  };
-
-  const productSchema: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${url}#product`,
-    name: `${product.brand} ${product.name}`,
-    brand: { "@type": "Brand", name: product.brand },
-    category: humanize(product.category),
+  const productSchema = productReviewJsonLd({
+    product,
+    path,
     description,
-    url,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      price: product.priceUsd,
-      availability: "https://schema.org/InStock",
-      url: product.officialSourceUrl,
-    },
-    review: reviewNode,
-    ...(editorialRating && editorialRating.meetsAggregateThreshold
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating" as const,
-            ratingValue: editorialRating.ratingValue,
-            reviewCount: editorialRating.reviewCount,
-            bestRating: editorialRating.bestRating,
-            worstRating: editorialRating.worstRating,
-          },
-        }
-      : {}),
-  };
-  if (product.image?.url) {
-    productSchema.image = product.image.url;
-  }
+    reviewBody,
+    rating: editorialRating,
+  });
 
   const showImage = canShowProductImage(product.image);
-  const handsOnBlogSlug = blogSlugForReview(product.id);
 
   return (
     <main className="flex-1 py-16">
@@ -291,49 +224,12 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
             {description}
           </p>
-          <EditorialMeta path={path} />
-          <div className="flex flex-wrap items-center gap-2 pt-2">
-            <span className={verificationChipClass(product)}>
-              {verificationChipLabel(product)}
-            </span>
-            <span className="chip chip-secondary">
-              {sourceAuthority.label}
-            </span>
-            <span className="chip chip-secondary">
-              ~${product.priceUsd}
-            </span>
-            {editorialRating && (
-              <span
-                className="chip chip-success"
-                aria-label={`Editorial rating ${editorialRating.ratingValue} out of ${editorialRating.bestRating} from ${editorialRating.reviewCount} review ${editorialRating.reviewCount === 1 ? "source" : "sources"}`}
-              >
-                ★ {editorialRating.ratingValue.toFixed(1)} / {editorialRating.bestRating}
-                {editorialRating.meetsAggregateThreshold && (
-                  <span className="ml-1 opacity-75">
-                    · {editorialRating.reviewCount} sources
-                  </span>
-                )}
-              </span>
-            )}
-          </div>
-          {/* Save-for-later button — feeds the 30-day shortlist surfaced at
-              /saved/ and in the header pill. */}
           <div className="pt-3">
             <SaveProductButton
               id={product.id}
               label={`${product.brand} ${product.name}`}
             />
           </div>
-          {handsOnBlogSlug && (
-            <p className="pt-4 text-sm">
-              <Link
-                href={`/blog/${handsOnBlogSlug}/`}
-                className="font-medium text-[var(--color-accent)] hover:underline"
-              >
-                Read the full hands-on write-up →
-              </Link>
-            </p>
-          )}
         </header>
 
         {showImage && (
@@ -346,10 +242,6 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
           <h2 className="text-lg font-semibold text-[var(--text)]">
             Specifications
           </h2>
-          <p className="mt-1 text-xs text-[var(--color-subtle)]">
-            Sourced from {sourceAuthority.label.toLowerCase()} · last verified{" "}
-            {product.lastVerifiedAt}
-          </p>
           <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
             {specRows(product).map((row) => (
               <div
@@ -365,112 +257,38 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
           </dl>
         </section>
 
-        {product.editorNote && (
-          <section className="card p-6">
-            <h2 className="text-lg font-semibold text-[var(--text)]">
-              Editor&apos;s take
-            </h2>
-            <blockquote className="mt-3 border-l-2 border-[var(--color-accent)] pl-4 text-base italic leading-relaxed text-[var(--color-muted)]">
-              {product.editorNote}
-            </blockquote>
-            <p className="mt-3 text-xs text-[var(--color-subtle)]">
-              — {companyInfo.authorByline}.
-            </p>
-          </section>
+        {reviewArticles.length > 0 && (
+          <div className="card p-6">
+            <ReviewProseSections
+              articles={reviewArticles}
+              adSlotId={`review-${product.id}-mid`}
+            />
+          </div>
         )}
 
-        <AdSlot id={`review-${product.id}-mid`} />
-
-        {product.marketSignals && product.marketSignals.length > 0 && (
+        {editorialComparisons.length > 0 && (
           <section className="card p-6">
             <h2 className="text-lg font-semibold text-[var(--text)]">
-              Independent measurements & community signals
+              Related comparisons
             </h2>
-            <p className="mt-1 text-xs text-[var(--color-subtle)]">
-              These are third-party reviews and measurements summarised with
-              source attribution. Treat them as supplementary evidence — they
-              are not manufacturer specifications.
-            </p>
-            <ul className="mt-4 space-y-4 text-sm">
-              {product.marketSignals.map((signal, idx) => (
-                <li
-                  key={`${signal.source}-${idx}`}
-                  className="border-l-2 border-[color:var(--line-strong)] pl-4"
-                >
-                  <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-                    {humanize(signal.source)} · {signal.confidence} confidence
-                  </p>
-                  <p className="mt-1 font-medium text-[var(--text)]">
-                    {signal.label}
-                  </p>
-                  <p className="mt-2 leading-relaxed text-[var(--color-muted)]">
-                    {signal.summary}
-                  </p>
-                  {signal.href && (
-                    <a
-                      href={signal.href}
-                      target="_blank"
-                      rel="noreferrer noopener nofollow"
-                      className="mt-2 inline-block text-xs text-[var(--color-accent)] hover:underline"
-                    >
-                      View source →
-                    </a>
-                  )}
+            <ul className="mt-3 space-y-2 text-sm">
+              {editorialComparisons.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-[color:var(--color-accent)] hover:underline"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </section>
         )}
 
-        <section className="card p-6">
-          <h2 className="text-lg font-semibold text-[var(--text)]">
-            Source &amp; verification
-          </h2>
-          <dl className="mt-4 space-y-3 text-sm">
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-                Verification status
-              </dt>
-              <dd className="mt-1 text-[var(--text)]">
-                {humanize(product.verificationStatus)}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-                Last verified
-              </dt>
-              <dd className="mt-1 text-[var(--text)]">
-                {product.lastVerifiedAt}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-                Cited official source
-              </dt>
-              <dd className="mt-1 break-all text-[var(--text)]">
-                <a
-                  href={product.officialSourceUrl}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                  className="text-[var(--color-accent)] hover:underline"
-                >
-                  {product.officialSourceUrl}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-                Source authority tier
-              </dt>
-              <dd className="mt-1 text-[var(--text)]">
-                {sourceAuthority.label} —{" "}
-                {sourceAuthority.canVerifySpecs
-                  ? "specs treated as manufacturer-verified."
-                  : "specs marked as needing manufacturer product-page verification."}
-              </dd>
-            </div>
-          </dl>
-        </section>
+        {reviewArticles.length === 0 && (
+          <AdSlot id={`review-${product.id}-mid`} />
+        )}
 
         {product.resale && (
           <section className="card p-6">
@@ -491,9 +309,9 @@ export function ProductReviewPage({ product }: { product: ProductRecord }) {
             How IntoBadminton uses this
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
-            The finder weighs official specs first, then editor interpretation,
-            then community evidence. To see the {product.brand} {product.name}{" "}
-            scored against your level, role, body, and budget, run the finder.
+            The finder weighs official specs first, then hands-on review notes.
+            To see the {product.brand} {product.name} scored against your level,
+            role, body, and budget, run the finder.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Link href="/quiz/" className="btn-primary">

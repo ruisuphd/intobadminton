@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LocalizedHome } from "@/components/LocalizedHome";
+import { pageAlternates } from "@/lib/metadata";
 import { defaultOgImages } from "@/lib/og";
 
 // Note: `meta keywords` removed (Google has ignored it since 2009; stuffing
@@ -9,9 +10,7 @@ export const metadata: Metadata = {
   title: "Badminton Racket, String & Shoe Finder",
   description:
     "Personalised badminton equipment finder — rank rackets, strings, shoes, and bags for your level, style, and budget. Transparent scoring, no signup.",
-  alternates: {
-    canonical: "/",
-  },
+  alternates: pageAlternates("/"),
   openGraph: {
     title: "IntoBadminton — Badminton Racket, String & Shoe Finder",
     description:

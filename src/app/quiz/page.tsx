@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { QuizFunnel } from "./QuizFunnel";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Badminton Equipment Finder — Personalised Picks",
   description:
     "Answer five questions about your level, style, body, and budget. Get racket, string, shoe, and bag picks with transparent fit scoring. No signup.",
-  alternates: { canonical: "/quiz/" },
+  alternates: pageAlternates("/quiz/"),
 };
 
 export function QuizShell() {
@@ -124,7 +125,7 @@ export function QuizShell() {
               smash-heavy rackets
             </Link>{" "}
             lists, or read full deep-dives on the{" "}
-            <Link href="/blog/" className="text-[var(--color-accent)] underline">
+            <Link href="/comparisons/" className="text-[var(--color-accent)] underline">
               blog
             </Link>
             .

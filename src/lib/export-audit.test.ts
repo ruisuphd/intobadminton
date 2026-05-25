@@ -70,6 +70,37 @@ describe("auditExportSnapshot", () => {
     );
   });
 
+  it("requires Product+Review JSON-LD on review product pages", () => {
+    const issues = auditExportSnapshot({
+      files: [
+        {
+          path: "review/yy-as-50/index.html",
+          html: html({
+            body: `<script type="application/ld+json">${JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              author: { "@type": "Person", name: "Rui Su" },
+              datePublished: "2026-05-01",
+              publisher: {
+                "@type": "Organization",
+                name: "IntoBadminton",
+                logo: { "@type": "ImageObject", url: "https://intobadminton.com/intobadminton-og.jpg" },
+              },
+            })}</script>`,
+          }),
+        },
+      ],
+      sitemapUrls: ["https://example.com/review/yy-as-50/"],
+      legacyRedirects: [],
+    });
+
+    expect(issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ code: "missing-product-review-schema" }),
+      ])
+    );
+  });
+
   it("permits Review and aggregateRating on /best/ list pages when authentic", () => {
     // Relaxed in PR #35: src/lib/editorial-rating.ts enforces authenticity
     // at source (suppresses aggregate when fewer than 2 review sources back

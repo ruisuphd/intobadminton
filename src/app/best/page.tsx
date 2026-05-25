@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Best Badminton Rackets, Shoes & Strings (2026)",
   description:
     "Curated 2026 badminton buying guides — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings by feel and durability.",
-  alternates: { canonical: "/best/" },
+  alternates: pageAlternates("/best/"),
   openGraph: {
     title: "Best Badminton Rackets, Shoes & Strings (2026)",
     description:

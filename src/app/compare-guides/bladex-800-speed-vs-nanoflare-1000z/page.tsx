@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Li-Ning Bladex 800 Speed vs Yonex Nanoflare 1000Z",
   description:
     "Bladex 800 Speed vs Nanoflare 1000Z — Li-Ning's speed flagship against Yonex's hexagonal speed weapon. Specs, drive feel, source-authority comparison.",
-  alternates: { canonical: "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/" },
+  alternates: pageAlternates("/compare-guides/bladex-800-speed-vs-nanoflare-1000z/"),
   openGraph: {
     title: "Bladex 800 Speed vs Nanoflare 1000Z — Li-Ning or Yonex for speed?",
     description:
@@ -74,8 +75,8 @@ const config: CompareGuideConfig = {
   relatedLinks: [
     { label: "Read the full Bladex 800 Speed review", href: "/review/ln-bladex-800-speed/" },
     { label: "Read the full Nanoflare 1000Z review", href: "/review/yy-nanoflare-1000z/" },
-    { label: "Li-Ning Bladex 800 Speed deep dive", href: "/blog/li-ning-bladex-800-speed-tough-elastic/" },
-    { label: "Yonex Nanoflare speed series explained", href: "/blog/yonex-nanoflare-speed-series-explained/" },
+    { label: "Li-Ning Bladex 800 Speed deep dive", href: "/comparisons/li-ning-bladex-800-speed-tough-elastic/" },
+    { label: "Yonex Nanoflare speed series explained", href: "/comparisons/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
   ],

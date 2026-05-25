@@ -35,7 +35,7 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2025-08-15",
     lastReviewedAt: "2026-05-24",
   },
-  "/blog/": {
+  "/comparisons/": {
     publishedAt: "2025-09-01",
     lastReviewedAt: "2026-05-24",
   },
@@ -264,6 +264,16 @@ const STATIC_PATHS = new Set(Object.keys(editorialMetaByPath));
 export function getEditorialMeta(path: string): EditorialMeta | undefined {
   if (STATIC_PATHS.has(path)) {
     return editorialMetaByPath[path];
+  }
+
+  const comparisonsMatch = path.match(/^\/comparisons\/([^/]+)\/$/);
+  if (comparisonsMatch) {
+    const article = blogArticles.en.find(
+      (entry) => entry.slug === comparisonsMatch[1]
+    );
+    if (article) {
+      return { lastReviewedAt: article.updatedAt };
+    }
   }
 
   const blogMatch = path.match(/^\/blog\/([^/]+)\/$/);

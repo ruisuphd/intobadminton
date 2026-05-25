@@ -47,6 +47,14 @@ LEGACY_PREFERRED = {
 }
 
 TITLE_OVERRIDES = {
+    "yonex-nanoflare-1000z-review": "Yonex Nanoflare 1000 Z review: speed flagship with real control",
+    "yonex-nanoflare-1000z-play-review": "Nanoflare 1000 Z vs 1000 Play: speed flagship vs entry tier",
+    "rsl-no4-plus-shuttle-review": "RSL No.4 Plus shuttle: mixed-feather upgrade that misses",
+    "li-ning-halbertec-7000-review": "Li-Ning Halbertec 7000 review: balanced control with a stiff edge",
+    "li-ning-halbertec-flagship-lineup-review": "Li-Ning Halbertec 5000–9000 lineup: where control peaks",
+    "yonex-nanoflare-800-pro-vs-nf700": "Nanoflare 800 Pro vs Nanoflare 700: speed upgrade or lost sweetness?",
+    "yonex-aerosensa-50-shuttle-review": "Yonex Aerosensa 50 shuttle: premium flight half a step beyond AS-40",
+    "yonex-comfort-z3-shoes-review": "Yonex Power Cushion Comfort Z3: cushion-first match shoe",
     "li-ning-halbertec-8000-vs-9000-vs-9000-power": "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which one fits your game",
     "victor-yu-12-racket-review": "Victor DriveX 12 review: control players finally have a Victor flagship",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ VA vs Kurenai: not an Anders Antonsen racket",
@@ -61,9 +69,12 @@ DEK_OVERRIDES = {
 SLUG_DISAMBIGUATION: dict[str, str] = {
     "li-ning-axforce-90-new-5u-deep-dive": "This article focuses on the 5U AxForce 90 New weight class — not the broader AxForce 90 vs 80 vs Yonex 88D Pro comparison.",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps the legacy Anders Antonsen slug for continuity; the comparison covers VA and Kurenai colourways only.",
-    "yonex-astrox-99-pro-gen-1-review": "Gen-1 Astrox 99 Pro notes — see the gen-2 deep dive for the current frame revision.",
+    "yonex-astrox-99-pro-gen-1-review": "First-gen Astrox 99 Pro (second Astrox 99-family generation) — includes Sun Orange colourway notes. See gen-2 and gen-3 deep dives for later Pro revisions.",
     "victor-auraspeed-hs-plus-attack-review": "Attack-biased HS Plus tuning — distinct from the neutral deep-dive on the same frame.",
     "rsl-aero-classic-tourney-shuttle-review": "Classic Tourney tier — not the Aero U shuttle review on the sibling URL.",
+    "li-ning-halbertec-7000-review": "Original Halbertec 7000 (2023) — not the Halbertec 7000 II refresh review.",
+    "li-ning-halbertec-flagship-lineup-review": "Halbertec 5000 through 9000 lineup compare — not the standalone Halbertec 9000 product review.",
+    "yonex-nanoflare-800-pro-vs-nf700": "Head-to-head Nanoflare 800 Pro vs Nanoflare 700 — not the multi-model 800 Pro/Tour/Game review.",
     "fz-forza-88d-review": "Forza 88D under the FZ brand line — separate from Victor's FZ 88D Power Purple variant review.",
     "li-ning-bladex-800-speed-vs-halbertec-9000-power": "Head-to-head Bladex 800 Speed vs Halbertec 9000 Power — not the standalone 9000 Power deep dive.",
 }

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Commercial launch setup",
   description:
     "Operator checklist for AdSense, analytics, privacy, security, and launch readiness.",
-  alternates: { canonical: "/setup/" },
+  alternates: pageAlternates("/setup/"),
   robots: { index: false, follow: true },
 };
 

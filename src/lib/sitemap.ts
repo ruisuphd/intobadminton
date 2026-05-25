@@ -1,6 +1,6 @@
 import { readdirSync, type Dirent } from "node:fs";
 import { join } from "node:path";
-import { blogSlugs } from "@/lib/blog";
+import { editorialSlugs } from "@/lib/blog-migrations";
 import { lastModifiedForRoute } from "@/lib/editorial-meta";
 import { reviewSlugs } from "@/lib/review-pages";
 
@@ -28,7 +28,7 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
   "/review/submit/",
   "/privacy-choices/",
   "/blogs/",
-  // /saved/ is per-device and noindex; no value to a crawler.
+  "/blog/",
   "/saved/",
 ]);
 
@@ -38,9 +38,7 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
  * the dynamic segment path to the list of slugs to expand it into.
  */
 const DYNAMIC_ROUTE_EXPANSIONS: Record<string, readonly string[]> = {
-  "/blog/[slug]/": blogSlugs,
-  // `reviewSlugs()` is a function so the catalog can change without a build
-  // restart; evaluate it lazily inside the walker rather than at import time.
+  "/comparisons/[slug]/": editorialSlugs(),
   get "/review/[slug]/"() {
     return reviewSlugs();
   },
@@ -122,8 +120,8 @@ function routePriority(path: string): number {
   if (path.startsWith("/review/") && path !== "/review/") return 0.8;
   if (path.startsWith("/brands/") && path !== "/brands/") return 0.8;
   if (path === "/brands/") return 0.7;
-  if (path.startsWith("/blog/") && path !== "/blog/") return 0.7;
-  if (path === "/blog/" || path === "/guides/" || path.startsWith("/guides/"))
+  if (path.startsWith("/comparisons/") && path !== "/comparisons/") return 0.7;
+  if (path === "/comparisons/" || path === "/guides/" || path.startsWith("/guides/"))
     return 0.7;
   if (path === "/faq/") return 0.7;
   if (path === "/privacy/" || path === "/terms/" || path === "/cookies/")
@@ -133,7 +131,7 @@ function routePriority(path: string): number {
 
 function routeFrequency(path: string): "weekly" | "monthly" {
   if (path === "/") return "weekly";
-  if (path.startsWith("/blog/") && path !== "/blog/") return "monthly";
+  if (path.startsWith("/comparisons/") && path !== "/comparisons/") return "monthly";
   if (path.startsWith("/best/") || path.startsWith("/guides/")) return "weekly";
   if (path.startsWith("/compare-guides/")) return "monthly";
   if (path.startsWith("/review/") && path !== "/review/") return "monthly";

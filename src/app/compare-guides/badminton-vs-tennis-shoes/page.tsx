@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Badminton Shoes vs Tennis Shoes — Compared",
   description:
     "Honest comparison of badminton shoes vs tennis shoes — outsole, stability, cushioning, and why mixing them causes ankle injuries on a wood court.",
-  alternates: { canonical: "/compare-guides/badminton-vs-tennis-shoes/" },
+  alternates: pageAlternates("/compare-guides/badminton-vs-tennis-shoes/"),
   openGraph: {
     title: "Badminton Shoes vs Tennis Shoes — Compared",
     description:

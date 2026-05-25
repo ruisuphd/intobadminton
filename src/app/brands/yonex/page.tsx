@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex Badminton — Astrox, Nanoflare, Arcsaber",
   description:
     "Yonex's racket lines decoded: Astrox (power), Nanoflare (speed), Arcsaber (control) — plus Power Cushion shoes and BG / Exbolt strings.",
-  alternates: { canonical: "/brands/yonex/" },
+  alternates: pageAlternates("/brands/yonex/"),
   openGraph: {
     title: "Yonex Badminton Rackets, Shoes & Strings Decoded — Astrox, Nanoflare, Arcsaber",
     description:
@@ -88,7 +89,14 @@ const config: BrandPageConfig = {
       bestFor: "Court footwork from beginner to elite",
       description:
         "Yonex's badminton shoe range covers Power Cushion (entry to mid), SHB-Aerus (lightweight speed), and SHB-Eclipsion (premium stability for heavy footwork). Standard fit is medium-narrow; players with wide feet often size up half a US/UK size or look at Mizuno Wave Claw instead.",
-      signatureModels: ["SHB-Eclipsion Z3", "SHB-Aerus Z2", "Power Cushion 65Z3"],
+      signatureModels: ["SHB-Eclipsion Z3", "SHB-Aerus Z2", "Power Cushion 65Z3", "Power Cushion Comfort Z3"],
+    },
+    {
+      name: "Shuttles — Aerosensa, Mavis",
+      bestFor: "Tournament and club nylon/feather",
+      description:
+        "Aerosensa is Yonex's tournament feather line — AS-50 for top-tier play, AS-30 and AS-20 for club sessions. Mavis covers durable nylon for training. Speed code (76 slow / 77 medium / 78 fast) should match your venue temperature and altitude.",
+      signatureModels: ["Aerosensa 50", "Aerosensa 30", "Mavis 350"],
     },
     {
       name: "Strings — BG65, BG80, Aerobite, Exbolt",
@@ -151,6 +159,18 @@ const config: BrandPageConfig = {
     },
   ],
   relatedLinks: [
+    {
+      label: "Nanoflare 1000 Z review",
+      href: "/review/yy-nanoflare-1000z/",
+    },
+    {
+      label: "Power Cushion Comfort Z3 shoe review",
+      href: "/review/yy-comfort-z3/",
+    },
+    {
+      label: "Yonex Aerosensa 50 shuttle review",
+      href: "/review/yy-as-50/",
+    },
     {
       label: "Spot fake Yonex rackets — authenticity check",
       href: "/guides/equipment-authenticity/",

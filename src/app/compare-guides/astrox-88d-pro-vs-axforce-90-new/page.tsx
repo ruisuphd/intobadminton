@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex Astrox 88D Pro vs Li-Ning AxForce 90 New",
   description:
     "Astrox 88D Pro 2024 vs Li-Ning AxForce 90 New — doubles rear-court attack compared. Build, balance, and which fits men's vs mixed doubles.",
-  alternates: { canonical: "/compare-guides/astrox-88d-pro-vs-axforce-90-new/" },
+  alternates: pageAlternates("/compare-guides/astrox-88d-pro-vs-axforce-90-new/"),
   openGraph: {
     title: "Astrox 88D Pro vs AxForce 90 New — doubles attack compared",
     description:
@@ -73,8 +74,8 @@ const config: CompareGuideConfig = {
     "I've hit with both at club level. The 88D Pro 2024 is the more amateur-friendly of the two — its shaft unloads faster, which protects you over long rallies. The AxForce 90 New rewards conditioned timing on first attack but punishes mid-rally fatigue harder. For most Division 3–4 amateur players I would lean 88D Pro; for league players with conditioned smash mechanics, either works.",
   relatedLinks: [
     { label: "Read the full Astrox 88D Pro 2024 review", href: "/review/yy-astrox-88d-pro-2024/" },
-    { label: "Li-Ning AxForce 90 New vs AxForce 80 vs Yonex 88DP — three-way", href: "/blog/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/" },
-    { label: "Astrox 88D Pro vs Astrox 88S Pro 2024", href: "/blog/yonex-astrox-88d-pro-vs-88s-pro-2024/" },
+    { label: "Li-Ning AxForce 90 New vs AxForce 80 vs Yonex 88DP — three-way", href: "/comparisons/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/" },
+    { label: "Astrox 88D Pro vs Astrox 88S Pro 2024", href: "/comparisons/yonex-astrox-88d-pro-vs-88s-pro-2024/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
     { label: "Source-authority methodology", href: "/methodology/" },

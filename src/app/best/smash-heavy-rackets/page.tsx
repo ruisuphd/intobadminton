@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
   title: "Best Smash-Heavy Badminton Rackets 2026",
   description:
     "Six head-heavy attack rackets ranked by smash power, rally continuity, and shaft hardness — Astrox 100ZZ, 99 Pro, 88D Pro, Halbertec 9000 Power, Auraspeed 100X SE.",
-  alternates: { canonical: "/best/smash-heavy-rackets/" },
+  alternates: pageAlternates("/best/smash-heavy-rackets/"),
 };
 
 const config: BestPicksConfig = {

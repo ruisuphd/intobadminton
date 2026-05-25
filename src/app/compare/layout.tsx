@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Compare badminton gear",
   description:
     "Compare badminton rackets, strings, shoes, and bags side by side on the specs that matter — price, balance, flex, fit width, capacity, gauge.",
-  alternates: { canonical: "/compare/" },
+  alternates: pageAlternates("/compare/"),
   robots: { index: false, follow: true },
 };
 

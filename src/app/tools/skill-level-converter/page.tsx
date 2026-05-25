@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Badminton skill-level converter — China 中羽, England, USA, BAM, SBA",
   description:
     "Convert your badminton level between China 中羽 1–10, BadmintonEngland tiers, USA Badminton, BAM (Malaysia), SBA (Singapore), and IntoBadminton's 4-tier scale.",
-  alternates: { canonical: "/tools/skill-level-converter/" },
+  alternates: pageAlternates("/tools/skill-level-converter/"),
 };
 
 export default function SkillLevelConverterPage() {

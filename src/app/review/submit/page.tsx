@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { ReviewForm } from "../ReviewForm";
 
 export const metadata: Metadata = {
   title: "Submit equipment review",
   description:
     "Submit a structured badminton equipment review to improve future recommendations.",
-  alternates: { canonical: "/review/submit/" },
+  alternates: pageAlternates("/review/submit/"),
   robots: { index: false, follow: true },
 };
 

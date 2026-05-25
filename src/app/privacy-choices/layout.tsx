@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Privacy choices",
   description: "Manage privacy and tracking choices for IntoBadminton.",
-  alternates: { canonical: "/privacy-choices/" },
+  alternates: pageAlternates("/privacy-choices/"),
   robots: { index: false, follow: true },
 };
 

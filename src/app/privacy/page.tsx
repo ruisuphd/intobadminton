@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "IntoBadminton Privacy Policy — what personal data we process, your rights, third-party vendors, international transfers, retention, and contact.",
-  alternates: { canonical: "/privacy/" },
+  alternates: pageAlternates("/privacy/"),
 };
 
 export default function PrivacyPage() {

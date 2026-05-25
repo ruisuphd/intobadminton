@@ -21,8 +21,8 @@ describe("blog publishing metadata", () => {
     }
   });
 
-  test("publishes 134 blog articles with required fields", () => {
-    expect(blogArticles.en).toHaveLength(134);
+  test("publishes 146 blog articles with required fields", () => {
+    expect(blogArticles.en).toHaveLength(146);
     for (const article of blogArticles.en) {
       expect(article.title.trim(), article.slug).not.toBe("");
       expect(article.dek.trim(), article.slug).not.toBe("");

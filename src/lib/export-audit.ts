@@ -1,4 +1,5 @@
 import type { LegacyRedirect } from "@/lib/legacy-redirects";
+import { blogRedirects } from "@/lib/blog-migrations";
 
 export type ExportFile = {
   path: string;
@@ -17,19 +18,25 @@ export type ExportAuditIssue = {
     | "legacy-url-in-sitemap"
     | "missing-affiliate-disclosure"
     | "missing-article-schema"
+    | "missing-product-review-schema"
     | "sitemap-target-missing";
   path: string;
   detail: string;
 };
 
 const ARTICLE_SCHEMA_REQUIRED =
-  /^\/(?:best|brands|compare-guides|guides|review)\/[^/]+\/$/;
+  /^\/(?:best|brands|compare-guides|comparisons|guides|review)\/[^/]+\/$/;
+const PRODUCT_REVIEW_SCHEMA_REQUIRED = /^\/review\/[^/]+\/$/;
 const ARTICLE_SCHEMA_EXEMPT = new Set(["/guides/glossary/"]);
 
 function requiresArticleSchema(routePath: string): boolean {
   if (ARTICLE_SCHEMA_EXEMPT.has(routePath)) return false;
   if (routePath === "/guides/") return false;
   return ARTICLE_SCHEMA_REQUIRED.test(routePath);
+}
+
+function requiresProductReviewSchema(routePath: string): boolean {
+  return PRODUCT_REVIEW_SCHEMA_REQUIRED.test(routePath);
 }
 const SPONSORED_REL = /\brel=["'][^"']*\bsponsored\b[^"']*["']/i;
 const AFFILIATE_DISCLOSURE_MARKER = /\bdata-affiliate-disclosure=["']/i;
@@ -48,7 +55,8 @@ const SITEMAP_EXEMPT_ROUTES = new Set<string>([
   "/compare/",
   "/review/submit/",
   "/privacy-choices/",
-  "/blogs/", // legacy alias, redirects to /blog/
+  "/blogs/", // legacy alias, redirects to /comparisons/
+  "/blog/",
   "/saved/",
 ]);
 
@@ -149,7 +157,7 @@ function hasValidArticleSchema(parsed: unknown) {
   walkJsonLd(parsed, (node) => {
     if (found) return;
     const types = valuesForType(node["@type"]);
-    if (!types.includes("Article")) return;
+    if (!types.includes("Article") && !types.includes("BlogPosting")) return;
     const author = node.author;
     const datePublished = node.datePublished;
     const publisher = node.publisher;
@@ -178,12 +186,33 @@ function hasValidArticleSchema(parsed: unknown) {
   return found;
 }
 
+function hasValidProductReviewSchema(parsed: unknown) {
+  let found = false;
+  walkJsonLd(parsed, (node) => {
+    if (found) return;
+    const types = valuesForType(node["@type"]);
+    if (!types.includes("Product")) return;
+    const review = node.review;
+    if (!isObject(review)) return;
+    const reviewTypes = valuesForType(review["@type"]);
+    if (!reviewTypes.includes("Review")) return;
+    if (typeof review.reviewBody !== "string" || review.reviewBody.length === 0) {
+      return;
+    }
+    found = true;
+  });
+  return found;
+}
+
 function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
   const scripts = jsonLdScripts(file.html);
   const routePath = routePathForFile(file.path);
   const noindex = hasNoindex(file.html);
   const requiresArticle = requiresArticleSchema(routePath) && !noindex;
+  const requiresProductReview =
+    requiresProductReviewSchema(routePath) && !noindex;
   let hasArticle = false;
+  let hasProductReview = false;
 
   // Three previously-strict rules were intentionally relaxed in #35:
   //   - `rating-markup-on-list-page`: Google does support Review +
@@ -217,6 +246,9 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
     if (!hasArticle && hasValidArticleSchema(parsed)) {
       hasArticle = true;
     }
+    if (!hasProductReview && hasValidProductReviewSchema(parsed)) {
+      hasProductReview = true;
+    }
   }
 
   if (requiresArticle && !hasArticle) {
@@ -224,6 +256,14 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
       code: "missing-article-schema",
       path: file.path,
       detail: `${routePath} must emit Article JSON-LD with author and datePublished.`,
+    });
+  }
+
+  if (requiresProductReview && !hasProductReview) {
+    issues.push({
+      code: "missing-product-review-schema",
+      path: file.path,
+      detail: `${routePath} must emit Product JSON-LD with a nested Review and reviewBody.`,
     });
   }
 }
@@ -275,16 +315,19 @@ export function auditExportSnapshot({
   legacyRedirects,
   sitemapUrls,
   siteOrigin = "https://example.com",
+  blogRedirectEntries = blogRedirects(),
 }: {
   files: ExportFile[];
   legacyRedirects: LegacyRedirect[];
   sitemapUrls: string[];
   siteOrigin?: string;
+  blogRedirectEntries?: { source: string; destination: string }[];
 }) {
   const issues: ExportAuditIssue[] = [];
   const filePaths = new Set(files.map((file) => file.path.replace(/^\/+/, "")));
   const exportedRoutes = new Set(files.map((file) => routePathForFile(file.path)));
-  const legacySources = new Set(legacyRedirects.map((entry) => entry.source));
+  const redirectEntries = [...legacyRedirects, ...blogRedirectEntries];
+  const legacySources = new Set(redirectEntries.map((entry) => entry.source));
   const sitemapRoutes = new Set(
     sitemapUrls.map((url) => normaliseUrlPath(new URL(url).pathname))
   );
@@ -367,7 +410,7 @@ export function auditExportSnapshot({
     }
   }
 
-  for (const redirect of legacyRedirects) {
+  for (const redirect of redirectEntries) {
     const expectedFile = exportFileForRoute(redirect.source);
     const file = files.find((entry) => entry.path === expectedFile);
     if (!file) {

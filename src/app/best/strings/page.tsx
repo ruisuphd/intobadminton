@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
   title: "Best Badminton Strings 2026 — BG, EXBOLT, L69",
   description:
     "Six badminton strings ranked by feel, repulsion, control, and durability — Yonex BG65, BG80, BG80 Power, EXBOLT 63, Aerobite, plus Li-Ning L69.",
-  alternates: { canonical: "/best/strings/" },
+  alternates: pageAlternates("/best/strings/"),
 };
 
 const config: BestPicksConfig = {

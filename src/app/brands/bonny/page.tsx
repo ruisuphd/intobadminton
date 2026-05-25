@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Bonny Badminton (波力) — WuQue, ZhanGui Dao, MoJun decoded",
   description:
     "Bonny's (波力) second-tier-flagship racket lines: WuQue (乌缺) family — Snake Breath, ZhanGui Dao, Xuanwu, Flagship 088 / 089 — plus MoJun, Phantom, Leisu, and Bonny shoes. Honest cross-shop against Yonex / Victor / Li-Ning.",
-  alternates: { canonical: "/brands/bonny/" },
+  alternates: pageAlternates("/brands/bonny/"),
   openGraph: {
     title:
       "Bonny Badminton Rackets, Shoes & WuQue Family Decoded — Snake Breath, ZhanGui Dao, MoJun",
@@ -89,28 +90,28 @@ const config: BrandPageConfig = {
       line: "WuQue (lower-flagship)",
       bestFor: "Year's-best second-tier flagship pick; smaller-hand G6 handle",
       priceUsd: 145,
-      href: "/blog/bonny-snake-breath-second-tier-flagship-review/",
+      href: "/review/bonny-snake-breath/",
     },
     {
       name: "Bonny WuQue Flagship 088",
       line: "WuQue (flagship tier shoes)",
       bestFor: "Court shoe in the WuQue flagship line",
       priceUsd: 110,
-      href: "/blog/bonny-wuque-flagship-088-shoes-review/",
+      href: "/review/bonny-wuque-flagship-088/",
     },
     {
       name: "Bonny MoJun",
       line: "MoJun",
       bestFor: "Arcsaber 11 Pro alternative",
       priceUsd: 155,
-      href: "/blog/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
+      href: "/review/yy-arcsaber-11-pro/",
     },
     {
       name: "Bonny Leisu 800",
       line: "Leisu",
       bestFor: "Doubles speed value pick",
       priceUsd: 95,
-      href: "/blog/bonny-leisu-800-racket-review/",
+      href: "/review/bonny-leisu-800/",
     },
   ],
   faqs: [
@@ -138,19 +139,19 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Bonny Snake Breath review (TiGe XLab attributed)",
-      href: "/blog/bonny-snake-breath-second-tier-flagship-review/",
+      href: "/review/bonny-snake-breath/",
     },
     {
       label: "Bonny ZhanGui Dao 8888AX Ultra review",
-      href: "/blog/bonny-zhangui-dao-8888ax-ultra-review/",
+      href: "/review/bonny-zhangui-dao-8888ax/",
     },
     {
       label: "Bonny MoJun vs Arcsaber 11 Pro attack review",
-      href: "/blog/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
+      href: "/review/yy-arcsaber-11-pro/",
     },
     {
       label: "Bonny Leisu 800 review",
-      href: "/blog/bonny-leisu-800-racket-review/",
+      href: "/review/bonny-leisu-800/",
     },
     {
       label: "Best beginner badminton rackets",

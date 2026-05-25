@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex Nanoflare 1000Z vs Victor Auraspeed 99",
   description:
     "Nanoflare 1000Z vs Victor Auraspeed 99 — speed series flagships compared. Head-light feel, drive speed, and which fits men's vs women's doubles.",
-  alternates: { canonical: "/compare-guides/nanoflare-1000z-vs-auraspeed-99/" },
+  alternates: pageAlternates("/compare-guides/nanoflare-1000z-vs-auraspeed-99/"),
   openGraph: {
     title: "Nanoflare 1000Z vs Auraspeed 99 — Yonex or Victor for speed?",
     description:
@@ -74,7 +75,7 @@ const config: CompareGuideConfig = {
   relatedLinks: [
     { label: "Read the full Nanoflare 1000Z review", href: "/review/yy-nanoflare-1000z/" },
     { label: "Read the full Auraspeed 99 Hayabusa review", href: "/review/vic-auraspeed-99/" },
-    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series explained", href: "/blog/yonex-nanoflare-speed-series-explained/" },
+    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series explained", href: "/comparisons/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Yonex Astrox vs Nanoflare", href: "/compare-guides/yonex-astrox-vs-nanoflare/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },

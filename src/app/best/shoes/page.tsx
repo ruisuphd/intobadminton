@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
   title: "Best Badminton Shoes 2026 — Yonex & Victor Picks",
   description:
     "Six badminton shoes ranked by stability, cushioning, fit width, and weight feel — picks for narrow, regular, and wide feet, and for ankle recovery.",
-  alternates: { canonical: "/best/shoes/" },
+  alternates: pageAlternates("/best/shoes/"),
 };
 
 const config: BestPicksConfig = {
@@ -69,6 +70,7 @@ const config: BestPicksConfig = {
       rank: 3,
       name: "Power Cushion Comfort Z3",
       brand: "Yonex",
+      productId: "yy-comfort-z3",
       priceUsd: 145,
       bestFor: "Joint-comfort priority",
       specs: [

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import productsCatalog from "@/data/products.json";
 import {
@@ -8,6 +9,7 @@ import {
 } from "@/lib/editorial-rating";
 import type { ProductRecord } from "@/lib/types/product";
 import type { Pick } from "@/components/BestPicksPage";
+import { reviewPath } from "@/lib/review-pages";
 
 const CATALOG = productsCatalog as ProductRecord[];
 
@@ -188,12 +190,21 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
                 #{row.pick.rank}
               </th>
               <td className="px-4 py-3 align-top">
-                <a
-                  href={`#${row.pick.name.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="font-medium text-[var(--text)] hover:text-[var(--color-accent)]"
-                >
-                  {row.pick.brand} {row.pick.name}
-                </a>
+                {row.pick.productId ? (
+                  <Link
+                    href={reviewPath(row.pick.productId)}
+                    className="font-medium text-[var(--text)] hover:text-[var(--color-accent)]"
+                  >
+                    {row.pick.brand} {row.pick.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={`#${row.pick.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="font-medium text-[var(--text)] hover:text-[var(--color-accent)]"
+                  >
+                    {row.pick.brand} {row.pick.name}
+                  </a>
+                )}
               </td>
               <td className="px-4 py-3 align-top tabular-nums">
                 ~${row.pick.priceUsd}

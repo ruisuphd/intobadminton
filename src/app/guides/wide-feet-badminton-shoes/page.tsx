@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/wide-feet-badminton-shoes/";
@@ -10,7 +11,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: HEADLINE,
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
+  alternates: pageAlternates(PATH),
 };
 
 export default function WideFeetShoesGuide() {
@@ -174,7 +175,7 @@ export default function WideFeetShoesGuide() {
             shoes and footwork
           </Link>
           , and{" "}
-          <Link href="/blog/badminton-shoe-fit-stability/" className="text-[var(--color-accent)] underline">
+          <Link href="/comparisons/badminton-shoe-fit-stability/" className="text-[var(--color-accent)] underline">
             badminton shoe fit explained
           </Link>
           .

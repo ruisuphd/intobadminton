@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
 export const metadata: Metadata = {
   title: "Best Intermediate Badminton Rackets 2026",
   description:
     "Six intermediate badminton rackets for club players who have outgrown beginner frames — Astrox 77 Pro, 88S Pro, Arcsaber 11 Pro, Halbertec 8000, Auraspeed 90K II.",
-  alternates: { canonical: "/best/intermediate-rackets/" },
+  alternates: pageAlternates("/best/intermediate-rackets/"),
 };
 
 const config: BestPicksConfig = {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Victor Badminton — Auraspeed, Thruster, DriveX",
   description:
     "Victor's racket lines decoded: Auraspeed (speed), Thruster (power), Brave Sword (control), DriveX (doubles) — plus P9200 shoes. Korean-tour proven.",
-  alternates: { canonical: "/brands/victor/" },
+  alternates: pageAlternates("/brands/victor/"),
   openGraph: {
     title: "Victor Badminton — Auraspeed, Thruster, Brave Sword & DriveX Decoded",
     description:

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/doubles-roles/";
@@ -10,7 +11,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Doubles court roles in badminton",
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
+  alternates: pageAlternates(PATH),
 };
 
 export default function DoublesRolesGuide() {

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Security",
   description:
     "Security posture, reporting, and static-hosting controls for IntoBadminton.",
-  alternates: { canonical: "/security/" },
+  alternates: pageAlternates("/security/"),
 };
 
 export default function SecurityPage() {

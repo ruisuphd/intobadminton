@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 import { ProductReviewPage } from "@/components/ProductReviewPage";
 import { routeOgImages } from "@/lib/og";
@@ -18,7 +19,7 @@ export async function generateMetadata({
   if (!product) {
     return {
       title: "Review — IntoBadminton",
-      alternates: { canonical: reviewPath(slug) },
+      alternates: pageAlternates(reviewPath(slug)),
       robots: { index: false, follow: true },
     };
   }
@@ -31,7 +32,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: pageAlternates(path),
     openGraph: {
       title,
       description,

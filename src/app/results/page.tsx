@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { RecentHistory } from "@/components/RecentHistory";
 import { ResultsClient } from "./ResultsClient";
 import { t } from "@/lib/i18n";
@@ -6,7 +7,7 @@ import { t } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Your badminton equipment shortlist",
   description: "Personalised badminton equipment recommendations from your finder profile.",
-  alternates: { canonical: "/results/" },
+  alternates: pageAlternates("/results/"),
   robots: { index: false, follow: true },
 };
 

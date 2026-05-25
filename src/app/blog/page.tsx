@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
-import { BlogIndex } from "@/components/BlogIndex";
-import { defaultOgImages } from "@/lib/og";
+import { pageAlternates } from "@/lib/metadata";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Badminton Equipment Blog",
-  description:
-    "First-person badminton gear writing — racket, shoe, string, shuttle, comparison, and buying-guide notes from club play.",
-  alternates: { canonical: "/blog/" },
-  openGraph: {
-    title: "Badminton Equipment Blog",
-    description:
-      "First-person badminton gear writing from club play.",
-    url: "/blog/",
-    type: "website",
-    siteName: "IntoBadminton",
-    images: [...defaultOgImages],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Badminton Equipment Blog",
-    description:
-      "First-person badminton gear writing from club play.",
-  },
+  title: "Blog moved — IntoBadminton",
+  alternates: pageAlternates("/comparisons/"),
+  robots: { index: false, follow: true },
 };
 
 export default function BlogPage() {
-  return <BlogIndex locale="en" />;
+  return (
+    <main className="flex-1 py-16">
+      <div className="layout-band max-w-3xl">
+        <p className="text-sm text-[var(--color-muted)]">
+          The blog has moved. Browse{" "}
+          <Link href="/comparisons/" className="text-[var(--color-accent)] underline">
+            comparisons and buying guides
+          </Link>{" "}
+          or the{" "}
+          <Link href="/review/" className="text-[var(--color-accent)] underline">
+            review catalogue
+          </Link>
+          .
+        </p>
+      </div>
+    </main>
+  );
 }

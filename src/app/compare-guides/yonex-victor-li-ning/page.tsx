@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Yonex vs Victor vs Li-Ning — Best Brand?",
   description:
     "Comparison of Yonex, Victor, and Li-Ning badminton gear by model fit, source status, region, role, and budget — pick by your game, not by the badge.",
-  alternates: { canonical: "/compare-guides/yonex-victor-li-ning/" },
+  alternates: pageAlternates("/compare-guides/yonex-victor-li-ning/"),
   openGraph: {
     title: "Yonex vs Victor vs Li-Ning — Best Brand?",
     description:
