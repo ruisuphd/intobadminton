@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Li-Ning Badminton — AxForce, BladeX, Halbertec",
@@ -152,7 +153,7 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Li-Ning Halbertec 7000 review",
-      href: "/review/ln-halbertec-7000/",
+      href: reviewPath("ln-halbertec-7000"),
     },
     {
       label: "Spot fake Li-Ning rackets — authenticity check",

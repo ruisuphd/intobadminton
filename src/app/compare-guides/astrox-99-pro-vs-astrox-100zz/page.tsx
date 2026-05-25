@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Astrox 100ZZ",
@@ -73,9 +74,9 @@ const config: CompareGuideConfig = {
   founderNote:
     "I've held both. The 99 Pro feels closer to the rest of the Astrox line — it still flatters a strong rotational pattern. The 100ZZ feels like an instrument: pristine when you hit clean, brittle when you don't. For most amateurs at my division and below (Div 4 IE and equivalents), the 99 Pro is more racket than they will fully use; 100ZZ is more racket than is honest to recommend.",
   relatedLinks: [
-    { label: "Read the full Astrox 99 Pro review", href: "/review/yy-astrox-99-pro/" },
-    { label: "Read the full Astrox 100ZZ review", href: "/review/yy-astrox-100zz/" },
-    { label: "Astrox 100ZZ Axelsen VA vs Kurenai — generation breakdown", href: "/review/yy-astrox-100zz/" },
+    { label: "Read the full Astrox 99 Pro review", href: reviewPath("yy-astrox-99-pro") },
+    { label: "Read the full Astrox 100ZZ review", href: reviewPath("yy-astrox-100zz") },
+    { label: "Astrox 100ZZ Axelsen VA vs Kurenai — generation breakdown", href: reviewPath("yy-astrox-100zz") },
     { label: "Astrox 77 Pro vs Astrox 88S Pro — friendlier alternatives", href: "/compare-guides/astrox-77-pro-vs-88s-pro/" },
     { label: "Yonex brand overview", href: "/brands/yonex/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },

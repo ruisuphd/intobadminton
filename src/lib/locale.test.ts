@@ -5,6 +5,7 @@ import {
   localizedRoutesFor,
   siteLocales,
 } from "@/lib/locale";
+import { blogSlugs } from "@/lib/blog";
 import { sitemapEntries } from "@/lib/sitemap";
 
 describe("locale routing", () => {
@@ -25,7 +26,7 @@ describe("locale routing", () => {
     const routes = localizedRoutesFor("en");
     expect(routes).toContain("/");
     expect(routes).toContain("/quiz/");
-    expect(routes).toContain("/comparisons/");
+    expect(routes).toContain("/review/");
     expect(routes).toContain("/about/");
     expect(routes).toContain("/brands/");
     expect(routes).toContain("/sources/");
@@ -39,9 +40,9 @@ describe("sitemapEntries", () => {
     expect(urls).toContain("https://example.com/");
     expect(urls).toContain("https://example.com/guides/");
     expect(urls).toContain("https://example.com/security/");
-    expect(urls).toContain("https://example.com/comparisons/");
+    expect(urls).toContain("https://example.com/review/");
     expect(urls).toContain(
-      "https://example.com/comparisons/used-racket-depreciation/"
+      "https://example.com/review/used-racket-depreciation/"
     );
     expect(urls).toContain("https://example.com/research/");
     expect(urls).toContain("https://example.com/sources/");
@@ -82,5 +83,16 @@ describe("sitemapEntries", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
     expect(urls).toContain("https://example.com/review/");
     expect(urls).not.toContain("https://example.com/review/submit/");
+  });
+
+  it("emits every blog article under /review/ and excludes legacy hubs", () => {
+    const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
+
+    for (const slug of blogSlugs) {
+      expect(urls).toContain(`https://example.com/review/${slug}/`);
+    }
+    expect(urls).not.toContain("https://example.com/blog/");
+    expect(urls).not.toContain("https://example.com/blogs/");
+    expect(urls).not.toContain("https://example.com/comparisons/");
   });
 });

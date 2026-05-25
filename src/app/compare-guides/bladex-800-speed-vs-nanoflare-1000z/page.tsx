@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Li-Ning Bladex 800 Speed vs Yonex Nanoflare 1000Z",
@@ -73,10 +74,10 @@ const config: CompareGuideConfig = {
   founderNote:
     "Bladex 800 Speed feels heavier through contact than the 1000Z despite similar listed weight — that's the tough-elastic design at work. It's a real racket and a fair-value pick at $200. The 1000Z is sharper on the drives I most often need to win points; that's why it's my doubles main.",
   relatedLinks: [
-    { label: "Read the full Bladex 800 Speed review", href: "/review/ln-bladex-800-speed/" },
-    { label: "Read the full Nanoflare 1000Z review", href: "/review/yy-nanoflare-1000z/" },
-    { label: "Li-Ning Bladex 800 Speed deep dive", href: "/comparisons/li-ning-bladex-800-speed-tough-elastic/" },
-    { label: "Yonex Nanoflare speed series explained", href: "/comparisons/yonex-nanoflare-speed-series-explained/" },
+    { label: "Read the full Bladex 800 Speed review", href: reviewPath("ln-bladex-800-speed") },
+    { label: "Read the full Nanoflare 1000Z review", href: reviewPath("yy-nanoflare-1000z") },
+    { label: "Li-Ning Bladex 800 Speed deep dive", href: "/review/li-ning-bladex-800-speed-tough-elastic/" },
+    { label: "Yonex Nanoflare speed series explained", href: "/review/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
   ],

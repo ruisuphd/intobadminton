@@ -13,7 +13,7 @@ describe("productReviewJsonLd", () => {
 
     const schema = productReviewJsonLd({
       product: product!,
-      path: "/review/yy-as-50/",
+      path: "/review/yonex-aerosensa-50-shuttle-review/",
       description: "Tournament feather shuttle review.",
       reviewBody: "Hands-on AS-50 notes.",
       rating: computeEditorialRating(product),

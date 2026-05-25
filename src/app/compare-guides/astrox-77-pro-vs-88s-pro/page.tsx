@@ -168,7 +168,7 @@ export default function Astrox77vs88SProPage() {
         </div>
 
         <p className="text-sm text-[var(--color-muted)]">
-          Related: <Link href="/comparisons/yonex-astrox-88d-pro-vs-88s-pro-2024/" className="text-[var(--color-accent)] underline">Astrox 88D Pro vs 88S Pro 2024 deep-dive</Link>.
+          Related: <Link href="/review/yonex-astrox-88d-pro-vs-88s-pro-2024/" className="text-[var(--color-accent)] underline">Astrox 88D Pro vs 88S Pro 2024 deep-dive</Link>.
         </p>
       </article>
     </main>

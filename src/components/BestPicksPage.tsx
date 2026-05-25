@@ -31,7 +31,7 @@ export type Pick = {
   specs: { label: string; value: string }[];
   why: string;
   tradeoff: string;
-  /** When set, links to the per-product review at `/review/[id]/`. */
+  /** When set, links to the canonical blog review for this product. */
   productId?: string;
   image?: ProductImage;
   /**
@@ -291,7 +291,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     href={reviewPath(p.productId)}
                     className="text-sm font-medium text-[var(--color-accent)] hover:underline"
                   >
-                    Read full review with specs →
+                    Read full review →
                   </Link>
                 </p>
               )}

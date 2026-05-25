@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { notFound } from "next/navigation";
-import { ProductReviewPage } from "@/components/ProductReviewPage";
+import { EditorialArticlePage } from "@/components/EditorialArticlePage";
+import { blogSlugs, getBlogArticle } from "@/lib/blog";
+import { articlePathForSlug } from "@/lib/blog-migrations";
 import { routeOgImages } from "@/lib/og";
-import { reviewPath, reviewProductById, reviewSlugs } from "@/lib/review-pages";
 
 export function generateStaticParams() {
-  return reviewSlugs().map((slug) => ({ slug }));
+  return blogSlugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -15,51 +16,48 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const product = reviewProductById(slug);
-  if (!product) {
+  const article = getBlogArticle("en", slug);
+  if (!article) {
     return {
-      title: "Review — IntoBadminton",
-      alternates: pageAlternates(reviewPath(slug)),
+      title: "Reviews — IntoBadminton",
+      alternates: pageAlternates(articlePathForSlug(slug)),
       robots: { index: false, follow: true },
     };
   }
-  const title = `${product.brand} ${product.name} review`;
-  const description =
-    product.editorNote ??
-    `Verified specs, source authority, and on-court behaviour for the ${product.brand} ${product.name}.`;
-  const path = reviewPath(product.id);
+  const path = articlePathForSlug(slug);
   const images = [...routeOgImages(path)];
   return {
-    title,
-    description,
+    title: article.title,
+    description: article.dek,
     alternates: pageAlternates(path),
     openGraph: {
-      title,
-      description,
+      title: article.title,
+      description: article.dek,
       url: path,
       type: "article",
       siteName: "IntoBadminton",
-      publishedTime: product.lastVerifiedAt,
-      modifiedTime: product.lastVerifiedAt,
+      publishedTime: article.updatedAt,
+      modifiedTime: article.updatedAt,
       authors: ["Rui Su"],
       images,
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: article.title,
+      description: article.dek,
       images: images.map((img) => img.url),
     },
   };
 }
 
-export default async function ProductReviewRoute({
+export default async function ReviewArticleRoute({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = reviewProductById(slug);
-  if (!product) notFound();
-  return <ProductReviewPage product={product} />;
+  if (!getBlogArticle("en", slug)) {
+    notFound();
+  }
+  return <EditorialArticlePage locale="en" slug={slug} />;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex 65 Z4 vs Eclipsion Z3 — Power Cushion shoes compared",
@@ -29,9 +30,7 @@ const config: CompareGuideConfig = {
   productA: {
     name: "65 Z4",
     brand: "Yonex",
-    // 65 Z4 is not yet in the products catalog; the blog deep-dive lives at
-    // /review/yy-power-cushion-65-z4/. Re-add `productId` once the catalog
-    // entry ships.
+    // 65 Z4 is not yet in the products catalog; link to the blog review below.
     bestFor: "Speed-leaning club play, lateral quickness",
     pricePoint: "~$130",
     specBullets: [
@@ -75,8 +74,8 @@ const config: CompareGuideConfig = {
   founderNote:
     "I've worn both extensively. The 65 Z4 is great when I'm light on my feet and the court is dry; the Eclipsion Z3 is the shoe I reach for on consecutive-game tournament days. They're not interchangeable — buying the wrong one because of price or fashion has cost amateur players I've coached a real number of session-time missed to ankle and knee soreness.",
   relatedLinks: [
-    { label: "Read the full 65 Z4 review", href: "/review/yy-power-cushion-65-z4/" },
-    { label: "Read the full Eclipsion Z3 review", href: "/review/yy-eclipsion-z3/" },
+    { label: "Read the full 65 Z4 review", href: reviewPath("yy-power-cushion-65-z4") },
+    { label: "Read the full Eclipsion Z3 review", href: reviewPath("yy-eclipsion-z3") },
     { label: "Yonex shoes overview", href: "/brands/yonex/" },
     { label: "Badminton shoe fit and stability guide", href: "/guides/shoes-footwork/" },
     { label: "Badminton vs tennis shoes — court shoe explainer", href: "/compare-guides/badminton-vs-tennis-shoes/" },

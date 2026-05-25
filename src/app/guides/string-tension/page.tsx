@@ -200,7 +200,7 @@ export default function StringTensionGuide() {
             racket balance and flex
           </Link>
           , and{" "}
-          <Link href="/comparisons/badminton-string-selector/" className="text-[var(--color-accent)] underline">
+          <Link href="/review/badminton-string-selector/" className="text-[var(--color-accent)] underline">
             choosing strings by outcome
           </Link>
           .

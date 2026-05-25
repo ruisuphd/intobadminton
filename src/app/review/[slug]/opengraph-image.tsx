@@ -1,22 +1,13 @@
 import { ImageResponse } from "next/og";
-import { reviewProductById, reviewSlugs } from "@/lib/review-pages";
+import { blogSlugs, getBlogArticle } from "@/lib/blog";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "IntoBadminton — badminton equipment review";
 
 export function generateStaticParams() {
-  return reviewSlugs().map((slug) => ({ slug }));
+  return blogSlugs.map((slug) => ({ slug }));
 }
-
-const CATEGORY_TINT: Record<string, string> = {
-  racket: "#7a3b14",
-  shoes: "#1f513d",
-  string: "#2c4377",
-  bag: "#5b3a8a",
-  shuttle: "#a85a1e",
-  grip: "#5c6470",
-};
 
 export default async function Image({
   params,
@@ -24,14 +15,14 @@ export default async function Image({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = reviewProductById(slug);
-  const heading = product
-    ? `${product.brand} ${product.name}`
-    : "IntoBadminton — review";
-  const dek = product?.editorNote
-    ? product.editorNote.slice(0, 220)
-    : "Verified specs, source authority, and on-court behaviour.";
-  const tint = product ? CATEGORY_TINT[product.category] ?? "#0f1115" : "#0f1115";
+  const article = getBlogArticle("en", slug);
+  const title =
+    article?.title ?? "IntoBadminton — badminton equipment review";
+  const dek =
+    article?.dek ??
+    "Equipment notes from club play.";
+  const tint = "#7a3b14";
+  const updatedAt = article?.updatedAt;
 
   return new ImageResponse(
     (
@@ -80,14 +71,14 @@ export default async function Image({
           >
             <div
               style={{
-                fontSize: heading.length > 40 ? 64 : 76,
+                fontSize: title.length > 40 ? 64 : 76,
                 lineHeight: 1.05,
                 color: "#0f1115",
                 fontWeight: 700,
                 letterSpacing: "-0.01em",
               }}
             >
-              {heading}
+              {title}
             </div>
             <div
               style={{
@@ -110,11 +101,7 @@ export default async function Image({
             }}
           >
             <span>intobadminton.com</span>
-            {product ? (
-              <span>Verified {product.lastVerifiedAt}</span>
-            ) : (
-              <span />
-            )}
+            {updatedAt ? <span>{updatedAt}</span> : <span />}
           </div>
         </div>
       </div>

@@ -184,7 +184,7 @@ export default function SeasonRefreshGuide() {
             best strings
           </Link>
           , and{" "}
-          <Link href="/comparisons/badminton-bag-loadout/" className="text-[var(--color-accent)] underline">
+          <Link href="/review/badminton-bag-loadout/" className="text-[var(--color-accent)] underline">
             what your badminton bag should carry
           </Link>
           .

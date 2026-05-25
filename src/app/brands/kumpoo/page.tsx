@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Kumpoo Badminton (薰风) — Shura II, Shanhai NEW, JS strings decoded",
@@ -74,28 +75,28 @@ const config: BrandPageConfig = {
       line: "Shura II",
       bestFor: "Aggressive-attack flagship outside mainstream trio",
       priceUsd: 145,
-      href: "/review/kumpoo-shura-2/",
+      href: reviewPath("kumpoo-shura-2"),
     },
     {
       name: "Kumpoo Shanhai NEW",
       line: "Shanhai NEW",
       bestFor: "Controlled-attack flagship at value pricing",
       priceUsd: 155,
-      href: "/review/kumpoo-shanhai-new/",
+      href: reviewPath("kumpoo-shanhai-new"),
     },
     {
       name: "Kumpoo JS-67 string",
       line: "Strings",
       bestFor: "Club durability with ice-blue colour signature",
       priceUsd: 12,
-      href: "/comparisons/kumpoo-js-67-string-review/",
+      href: "/review/kumpoo-js-67-string-review/",
     },
     {
       name: "Kumpoo KH-G805 Lite Pro shoes",
       line: "Shoes",
       bestFor: "Value-tier court shoes from the Kumpoo line",
       priceUsd: 70,
-      href: "/review/kumpoo-kh-g805-lite-pro/",
+      href: reviewPath("kumpoo-kh-g805-lite-pro"),
     },
   ],
   faqs: [
@@ -123,23 +124,23 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Kumpoo Shanhai NEW racket review",
-      href: "/review/kumpoo-shanhai-new/",
+      href: reviewPath("kumpoo-shanhai-new"),
     },
     {
       label: "Kumpoo Shura II racket review",
-      href: "/review/kumpoo-shura-2/",
+      href: reviewPath("kumpoo-shura-2"),
     },
     {
       label: "Kumpoo JS-67 string review",
-      href: "/comparisons/kumpoo-js-67-string-review/",
+      href: "/review/kumpoo-js-67-string-review/",
     },
     {
       label: "Kumpoo KH-G805 Lite Pro shoes review",
-      href: "/review/kumpoo-kh-g805-lite-pro/",
+      href: reviewPath("kumpoo-kh-g805-lite-pro"),
     },
     {
       label: "Kumpoo — the fourth credible badminton brand decoded",
-      href: "/comparisons/kumpoo-fourth-major-badminton-brand-profile/",
+      href: "/review/kumpoo-fourth-major-badminton-brand-profile/",
     },
     {
       label: "Best beginner badminton rackets",

@@ -1,8 +1,7 @@
 import { readdirSync, type Dirent } from "node:fs";
 import { join } from "node:path";
-import { editorialSlugs } from "@/lib/blog-migrations";
+import { blogSlugs } from "@/lib/blog";
 import { lastModifiedForRoute } from "@/lib/editorial-meta";
-import { reviewSlugs } from "@/lib/review-pages";
 
 export type SitemapEntry = {
   url: string;
@@ -29,6 +28,7 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
   "/privacy-choices/",
   "/blogs/",
   "/blog/",
+  "/comparisons/",
   "/saved/",
 ]);
 
@@ -38,9 +38,8 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
  * the dynamic segment path to the list of slugs to expand it into.
  */
 const DYNAMIC_ROUTE_EXPANSIONS: Record<string, readonly string[]> = {
-  "/comparisons/[slug]/": editorialSlugs(),
   get "/review/[slug]/"() {
-    return reviewSlugs();
+    return blogSlugs;
   },
 };
 
@@ -120,8 +119,7 @@ function routePriority(path: string): number {
   if (path.startsWith("/review/") && path !== "/review/") return 0.8;
   if (path.startsWith("/brands/") && path !== "/brands/") return 0.8;
   if (path === "/brands/") return 0.7;
-  if (path.startsWith("/comparisons/") && path !== "/comparisons/") return 0.7;
-  if (path === "/comparisons/" || path === "/guides/" || path.startsWith("/guides/"))
+  if (path === "/guides/" || path.startsWith("/guides/"))
     return 0.7;
   if (path === "/faq/") return 0.7;
   if (path === "/privacy/" || path === "/terms/" || path === "/cookies/")
@@ -131,7 +129,6 @@ function routePriority(path: string): number {
 
 function routeFrequency(path: string): "weekly" | "monthly" {
   if (path === "/") return "weekly";
-  if (path.startsWith("/comparisons/") && path !== "/comparisons/") return "monthly";
   if (path.startsWith("/best/") || path.startsWith("/guides/")) return "weekly";
   if (path.startsWith("/compare-guides/")) return "monthly";
   if (path.startsWith("/review/") && path !== "/review/") return "monthly";

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus",
@@ -73,10 +74,10 @@ const config: CompareGuideConfig = {
   founderNote:
     "I've hit with the 800 Pro at club level (4U/G5, BG80 at 26 lb). It feels exactly like a Nanoflare should — fast, light, sharp on drives, demanding on smash. The HS Plus is in the same ballpark with a slightly more flickable shaft. For a club player picking their first mid-flagship speed racket, the 800 Pro's spec confidence makes it the lower-risk default.",
   relatedLinks: [
-    { label: "Read the full Nanoflare 800 Pro review", href: "/review/yy-nanoflare-800-pro-2024/" },
-    { label: "Read the full Auraspeed HS Plus review", href: "/review/vic-auraspeed-hs-plus/" },
-    { label: "Nanoflare 800 Pro and Victor HS Plus — extended notes", href: "/comparisons/yonex-nanoflare-800-pro-and-victor-hs-plus/" },
-    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series", href: "/comparisons/yonex-nanoflare-speed-series-explained/" },
+    { label: "Read the full Nanoflare 800 Pro review", href: reviewPath("yy-nanoflare-800-pro-2024") },
+    { label: "Read the full Auraspeed HS Plus review", href: reviewPath("vic-auraspeed-hs-plus") },
+    { label: "Nanoflare 800 Pro and Victor HS Plus — extended notes", href: "/review/yonex-nanoflare-800-pro-and-victor-hs-plus/" },
+    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series", href: "/review/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
   ],

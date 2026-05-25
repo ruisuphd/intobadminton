@@ -1,5 +1,6 @@
 import blogUrlMigrations from "@/data/blog-url-migrations.json";
 import type { BlogSlug } from "@/lib/blog";
+import { reviewPath } from "@/lib/review-pages";
 
 export type BlogMigrationType = "product" | "editorial";
 
@@ -39,20 +40,46 @@ export function mappedProductBlogSlugs(): BlogSlug[] {
 }
 
 export function articlePathForSlug(slug: string): string {
-  const migration = migrationBySlug.get(slug);
-  if (migration) return migration.destination;
-  return `/comparisons/${slug}/`;
+  return `/review/${slug}/`;
 }
 
 export function blogRedirects(): { source: string; destination: string }[] {
   const entries: { source: string; destination: string }[] = [
-    { source: "/blog/", destination: "/comparisons/" },
+    { source: "/blog/", destination: "/review/" },
+    { source: "/comparisons/", destination: "/review/" },
+    { source: "/blogs/", destination: "/review/" },
   ];
+
   for (const entry of migrations) {
+    const destination = `/review/${entry.slug}/`;
     entries.push({
       source: `/blog/${entry.slug}/`,
-      destination: entry.destination,
+      destination,
     });
+    if (entry.destination !== destination) {
+      const productMatch = entry.destination.match(/^\/review\/([^/]+)\/$/);
+      const legacyDestination = productMatch
+        ? reviewPath(productMatch[1])
+        : destination;
+      entries.push({
+        source: entry.destination,
+        destination: legacyDestination,
+      });
+    }
   }
-  return entries;
+
+  return dedupeRedirects(entries);
+}
+
+function dedupeRedirects(
+  entries: { source: string; destination: string }[]
+): { source: string; destination: string }[] {
+  const bySource = new Map<string, string>();
+  for (const entry of entries) {
+    bySource.set(entry.source, entry.destination);
+  }
+  return Array.from(bySource, ([source, destination]) => ({
+    source,
+    destination,
+  }));
 }

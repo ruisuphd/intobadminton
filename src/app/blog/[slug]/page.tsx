@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { blogSlugs } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
+import { pageAlternates } from "@/lib/metadata";
 
 export function generateStaticParams() {
   return blogSlugs.map((slug) => ({ slug }));
@@ -22,7 +22,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ComparisonsSlugRedirect({
+export default async function BlogSlugRedirect({
   params,
 }: {
   params: Promise<{ slug: string }>;

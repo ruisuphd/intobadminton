@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Bonny Badminton (波力) — WuQue, ZhanGui Dao, MoJun decoded",
@@ -90,28 +91,28 @@ const config: BrandPageConfig = {
       line: "WuQue (lower-flagship)",
       bestFor: "Year's-best second-tier flagship pick; smaller-hand G6 handle",
       priceUsd: 145,
-      href: "/review/bonny-snake-breath/",
+      href: reviewPath("bonny-snake-breath"),
     },
     {
       name: "Bonny WuQue Flagship 088",
       line: "WuQue (flagship tier shoes)",
       bestFor: "Court shoe in the WuQue flagship line",
       priceUsd: 110,
-      href: "/review/bonny-wuque-flagship-088/",
+      href: reviewPath("bonny-wuque-flagship-088"),
     },
     {
       name: "Bonny MoJun",
       line: "MoJun",
       bestFor: "Arcsaber 11 Pro alternative",
       priceUsd: 155,
-      href: "/review/yy-arcsaber-11-pro/",
+      href: "/review/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
     },
     {
       name: "Bonny Leisu 800",
       line: "Leisu",
       bestFor: "Doubles speed value pick",
       priceUsd: 95,
-      href: "/review/bonny-leisu-800/",
+      href: reviewPath("bonny-leisu-800"),
     },
   ],
   faqs: [
@@ -139,19 +140,19 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Bonny Snake Breath review (TiGe XLab attributed)",
-      href: "/review/bonny-snake-breath/",
+      href: reviewPath("bonny-snake-breath"),
     },
     {
       label: "Bonny ZhanGui Dao 8888AX Ultra review",
-      href: "/review/bonny-zhangui-dao-8888ax/",
+      href: "/review/bonny-zhangui-dao-8888ax-ultra-review/",
     },
     {
       label: "Bonny MoJun vs Arcsaber 11 Pro attack review",
-      href: "/review/yy-arcsaber-11-pro/",
+      href: "/review/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
     },
     {
       label: "Bonny Leisu 800 review",
-      href: "/review/bonny-leisu-800/",
+      href: reviewPath("bonny-leisu-800"),
     },
     {
       label: "Best beginner badminton rackets",

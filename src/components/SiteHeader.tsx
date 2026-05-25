@@ -12,7 +12,6 @@ const NAV_LINKS = [
   { href: "/quiz/", label: "Finder" },
   { href: "/best/", label: "Best Of" },
   { href: "/review/", label: "Reviews" },
-  { href: "/comparisons/", label: "Comparisons" },
   { href: "/tools/", label: "Tools" },
   { href: "/guides/", label: "Guides" },
   { href: "/brands/", label: "Brands" },

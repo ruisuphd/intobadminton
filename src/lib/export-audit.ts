@@ -18,25 +18,19 @@ export type ExportAuditIssue = {
     | "legacy-url-in-sitemap"
     | "missing-affiliate-disclosure"
     | "missing-article-schema"
-    | "missing-product-review-schema"
     | "sitemap-target-missing";
   path: string;
   detail: string;
 };
 
 const ARTICLE_SCHEMA_REQUIRED =
-  /^\/(?:best|brands|compare-guides|comparisons|guides|review)\/[^/]+\/$/;
-const PRODUCT_REVIEW_SCHEMA_REQUIRED = /^\/review\/[^/]+\/$/;
+  /^\/(?:best|brands|compare-guides|guides|review)\/[^/]+\/$/;
 const ARTICLE_SCHEMA_EXEMPT = new Set(["/guides/glossary/"]);
 
 function requiresArticleSchema(routePath: string): boolean {
   if (ARTICLE_SCHEMA_EXEMPT.has(routePath)) return false;
   if (routePath === "/guides/") return false;
   return ARTICLE_SCHEMA_REQUIRED.test(routePath);
-}
-
-function requiresProductReviewSchema(routePath: string): boolean {
-  return PRODUCT_REVIEW_SCHEMA_REQUIRED.test(routePath);
 }
 const SPONSORED_REL = /\brel=["'][^"']*\bsponsored\b[^"']*["']/i;
 const AFFILIATE_DISCLOSURE_MARKER = /\bdata-affiliate-disclosure=["']/i;
@@ -55,8 +49,9 @@ const SITEMAP_EXEMPT_ROUTES = new Set<string>([
   "/compare/",
   "/review/submit/",
   "/privacy-choices/",
-  "/blogs/", // legacy alias, redirects to /comparisons/
+  "/blogs/", // legacy alias, redirects to /review/
   "/blog/",
+  "/comparisons/",
   "/saved/",
 ]);
 
@@ -186,33 +181,12 @@ function hasValidArticleSchema(parsed: unknown) {
   return found;
 }
 
-function hasValidProductReviewSchema(parsed: unknown) {
-  let found = false;
-  walkJsonLd(parsed, (node) => {
-    if (found) return;
-    const types = valuesForType(node["@type"]);
-    if (!types.includes("Product")) return;
-    const review = node.review;
-    if (!isObject(review)) return;
-    const reviewTypes = valuesForType(review["@type"]);
-    if (!reviewTypes.includes("Review")) return;
-    if (typeof review.reviewBody !== "string" || review.reviewBody.length === 0) {
-      return;
-    }
-    found = true;
-  });
-  return found;
-}
-
 function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
   const scripts = jsonLdScripts(file.html);
   const routePath = routePathForFile(file.path);
   const noindex = hasNoindex(file.html);
   const requiresArticle = requiresArticleSchema(routePath) && !noindex;
-  const requiresProductReview =
-    requiresProductReviewSchema(routePath) && !noindex;
   let hasArticle = false;
-  let hasProductReview = false;
 
   // Three previously-strict rules were intentionally relaxed in #35:
   //   - `rating-markup-on-list-page`: Google does support Review +
@@ -246,9 +220,6 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
     if (!hasArticle && hasValidArticleSchema(parsed)) {
       hasArticle = true;
     }
-    if (!hasProductReview && hasValidProductReviewSchema(parsed)) {
-      hasProductReview = true;
-    }
   }
 
   if (requiresArticle && !hasArticle) {
@@ -256,14 +227,6 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
       code: "missing-article-schema",
       path: file.path,
       detail: `${routePath} must emit Article JSON-LD with author and datePublished.`,
-    });
-  }
-
-  if (requiresProductReview && !hasProductReview) {
-    issues.push({
-      code: "missing-product-review-schema",
-      path: file.path,
-      detail: `${routePath} must emit Product JSON-LD with a nested Review and reviewBody.`,
     });
   }
 }

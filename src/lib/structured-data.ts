@@ -122,7 +122,7 @@ export function articleJsonLd(input: ArticleJsonLdInput) {
 
 export type ProductReviewJsonLdInput = {
   product: ProductRecord;
-  /** Route path with trailing slash, e.g. "/review/yy-as-50/". */
+  /** Route path with trailing slash, e.g. "/review/yonex-aerosensa-50-shuttle-review/". */
   path: string;
   description: string;
   reviewBody: string;

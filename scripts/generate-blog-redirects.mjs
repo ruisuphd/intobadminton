@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import blogUrlMigrations from "../src/data/blog-url-migrations.json" with { type: "json" };
+import { blogRedirectsForStaticExport } from "./blog-redirect-helpers.mjs";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -57,13 +57,7 @@ function exportFileForRoute(route) {
   return path.join(outDir, normalised.slice(1), "index.html");
 }
 
-const redirects = [
-  { source: "/blog/", destination: "/comparisons/" },
-  ...blogUrlMigrations.migrations.map((entry) => ({
-    source: `/blog/${entry.slug}/`,
-    destination: entry.destination,
-  })),
-];
+const redirects = blogRedirectsForStaticExport();
 
 let written = 0;
 
