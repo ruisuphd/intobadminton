@@ -107,18 +107,12 @@ export function EditorialArticlePage({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Reviews",
-        item: `${companyInfo.siteUrl}/review/`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
         name: "Comparisons",
         item: `${companyInfo.siteUrl}/comparisons/`,
       },
       {
         "@type": "ListItem",
-        position: 4,
+        position: 3,
         name: article.title,
         item: canonicalUrl,
       },

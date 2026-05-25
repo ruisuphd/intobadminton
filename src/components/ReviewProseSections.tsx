@@ -70,10 +70,6 @@ function ComparisonTable({
   );
 }
 
-function renderedArticlesSectionCount(articles: BlogArticle[]): number {
-  return articles.reduce((sum, article) => sum + article.sections.length, 0);
-}
-
 export function ReviewProseSections({
   articles,
   locale = "en",
@@ -87,6 +83,7 @@ export function ReviewProseSections({
 
   const seenBodies = new Set<string>();
   const anchorSeen = new Map<string, number>();
+  let globalSectionIndex = 0;
   const renderedArticles = articles.map((article, articleIndex) => {
     const sections = article.sections.flatMap((section) => {
       const bodyKey = section.body.trim().toLowerCase();
@@ -96,10 +93,7 @@ export function ReviewProseSections({
       if (isDuplicate) return [];
       seenBodies.add(bodyKey);
 
-      const currentIndex =
-        articleIndex +
-        renderedArticlesSectionCount(articles.slice(0, articleIndex)) +
-        article.sections.indexOf(section);
+      const currentIndex = globalSectionIndex++;
       const anchorId = sectionAnchorId(
         section.heading,
         currentIndex,
@@ -111,6 +105,8 @@ export function ReviewProseSections({
 
     return { article, articleIndex, sections };
   });
+
+  const renderedSectionCount = globalSectionIndex;
 
   const totalWords = articles.reduce(
     (sum, article) =>
@@ -124,10 +120,7 @@ export function ReviewProseSections({
     0
   );
   const canShowAd = totalWords >= 600;
-  const adIndex = Math.max(
-    0,
-    articles.reduce((sum, article) => sum + article.sections.length, 0) - 1
-  );
+  const adIndex = Math.max(0, renderedSectionCount - 1);
 
   return (
     <section className="space-y-10">

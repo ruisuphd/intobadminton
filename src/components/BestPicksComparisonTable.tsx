@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import productsCatalog from "@/data/products.json";
 import {
@@ -190,12 +191,12 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
               </th>
               <td className="px-4 py-3 align-top">
                 {row.pick.productId ? (
-                  <a
+                  <Link
                     href={reviewPath(row.pick.productId)}
                     className="font-medium text-[var(--text)] hover:text-[var(--color-accent)]"
                   >
                     {row.pick.brand} {row.pick.name}
-                  </a>
+                  </Link>
                 ) : (
                   <a
                     href={`#${row.pick.name.toLowerCase().replace(/\s+/g, "-")}`}
