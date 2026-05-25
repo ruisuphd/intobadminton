@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Li-Ning Halbertec 9000 Power",
@@ -73,9 +74,9 @@ const config: CompareGuideConfig = {
   founderNote:
     "I've hit with both in club sessions. On a clean smash they trade blows; the Halbertec feels marginally heavier through contact, which some players prefer. The decision rarely turns on the racket — it turns on what your local stringer is familiar with and whether you can get the right grommets when you need them.",
   relatedLinks: [
-    { label: "Read the full Astrox 99 Pro review", href: "/review/yy-astrox-99-pro/" },
-    { label: "Read the full Halbertec 9000 Power review", href: "/review/ln-halbertec-9000-power/" },
-    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power — full Halbertec line", href: "/comparisons/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
+    { label: "Read the full Astrox 99 Pro review", href: reviewPath("yy-astrox-99-pro") },
+    { label: "Read the full Halbertec 9000 Power review", href: reviewPath("ln-halbertec-9000-power") },
+    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power — full Halbertec line", href: "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },
     { label: "Source-authority methodology", href: "/methodology/" },

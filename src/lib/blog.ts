@@ -192,18 +192,6 @@ export function readingTimeMinutes(article: BlogArticle): number {
   return Math.max(1, Math.round(words / 225));
 }
 
-/** Chip label for editorial URLs on /comparisons/ (not per-product /review/). */
-export function editorialContentLabel(slug: string): "Guide" | "Comparison" {
-  if (
-    /guide|how-to|explained|glossary|loadout|mistakes|selector|fit-stability|depreciation|kids|terms|insoles|methodology|profile|overview/.test(
-      slug
-    )
-  ) {
-    return "Guide";
-  }
-  return "Comparison";
-}
-
 export function articlesByDateDesc(articles: BlogArticle[]): BlogArticle[] {
   return [...articles].sort((a, b) =>
     a.updatedAt < b.updatedAt ? 1 : a.updatedAt > b.updatedAt ? -1 : 0

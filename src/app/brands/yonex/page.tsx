@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Badminton — Astrox, Nanoflare, Arcsaber",
@@ -161,15 +162,15 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Nanoflare 1000 Z review",
-      href: "/review/yy-nanoflare-1000z/",
+      href: reviewPath("yy-nanoflare-1000z"),
     },
     {
       label: "Power Cushion Comfort Z3 shoe review",
-      href: "/review/yy-comfort-z3/",
+      href: reviewPath("yy-comfort-z3"),
     },
     {
       label: "Yonex Aerosensa 50 shuttle review",
-      href: "/review/yy-as-50/",
+      href: reviewPath("yy-as-50"),
     },
     {
       label: "Spot fake Yonex rackets — authenticity check",

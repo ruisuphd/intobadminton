@@ -1,0 +1,66 @@
+import blogArticles from "../src/data/blog-articles.json" with { type: "json" };
+import blogReviewMap from "../src/data/blog-review-product-map.json" with { type: "json" };
+import blogUrlMigrations from "../src/data/blog-url-migrations.json" with { type: "json" };
+
+function blogSlugForProduct(productId) {
+  const candidates = Object.entries(blogReviewMap)
+    .filter(([, id]) => id === productId)
+    .map(([slug]) => slug);
+  if (!candidates.length) return undefined;
+
+  return candidates
+    .map((slug) => {
+      const article = blogArticles.find((entry) => entry.slug === slug);
+      let score = 0;
+      if (slug.includes("review") || slug.includes("deep-dive")) score += 2;
+      if (article && article.sections.length >= 3) score += 1;
+      return { slug, score, updatedAt: article?.updatedAt ?? "" };
+    })
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.updatedAt < b.updatedAt ? 1 : -1;
+    })[0]?.slug;
+}
+
+function reviewPath(productId) {
+  const slug = blogSlugForProduct(productId);
+  if (slug) return `/review/${slug}/`;
+  return `/review/${productId}/`;
+}
+
+function dedupeRedirects(entries) {
+  const bySource = new Map();
+  for (const entry of entries) {
+    bySource.set(entry.source, entry.destination);
+  }
+  return Array.from(bySource, ([source, destination]) => ({
+    source,
+    destination,
+  }));
+}
+
+export function blogRedirectsForStaticExport() {
+  const entries = [
+    { source: "/blog/", destination: "/review/" },
+    { source: "/comparisons/", destination: "/review/" },
+    { source: "/blogs/", destination: "/review/" },
+  ];
+
+  for (const entry of blogUrlMigrations.migrations) {
+    const destination = `/review/${entry.slug}/`;
+    entries.push({
+      source: `/blog/${entry.slug}/`,
+      destination,
+    });
+
+    if (entry.destination !== destination) {
+      const productMatch = entry.destination.match(/^\/review\/([^/]+)\/$/);
+      entries.push({
+        source: entry.destination,
+        destination: productMatch ? reviewPath(productMatch[1]) : destination,
+      });
+    }
+  }
+
+  return dedupeRedirects(entries);
+}

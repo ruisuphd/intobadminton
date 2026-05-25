@@ -23,7 +23,6 @@ const COLUMNS: FooterColumn[] = [
     heading: "Read",
     links: [
       { label: "Reviews", path: "/review/" },
-      { label: "Comparisons", path: "/comparisons/" },
       { label: "Guides", path: "/guides/" },
       { label: "FAQ", path: "/faq/" },
       { label: "Methodology", path: "/methodology/" },

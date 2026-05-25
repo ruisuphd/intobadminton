@@ -175,7 +175,7 @@ export default function WideFeetShoesGuide() {
             shoes and footwork
           </Link>
           , and{" "}
-          <Link href="/comparisons/badminton-shoe-fit-stability/" className="text-[var(--color-accent)] underline">
+          <Link href="/review/badminton-shoe-fit-stability/" className="text-[var(--color-accent)] underline">
             badminton shoe fit explained
           </Link>
           .

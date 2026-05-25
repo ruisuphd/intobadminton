@@ -125,7 +125,7 @@ export function QuizShell() {
               smash-heavy rackets
             </Link>{" "}
             lists, or read full deep-dives on the{" "}
-            <Link href="/comparisons/" className="text-[var(--color-accent)] underline">
+            <Link href="/review/" className="text-[var(--color-accent)] underline">
               blog
             </Link>
             .

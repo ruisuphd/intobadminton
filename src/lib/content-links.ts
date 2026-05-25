@@ -1,7 +1,7 @@
 import blogReviewMap from "@/data/blog-review-product-map.json";
 import { blogArticles, type BlogArticle, type BlogSlug } from "@/lib/blog";
 import { articlePathForSlug, editorialSlugs } from "@/lib/blog-migrations";
-import { reviewPath, reviewProductById } from "@/lib/review-pages";
+import { reviewProductById } from "@/lib/review-pages";
 
 const blogToProduct = blogReviewMap as Record<string, string>;
 
@@ -119,13 +119,13 @@ const REVIEW_EDITORIAL_LINKS: Record<string, { href: string; label: string }[]> 
   {
     "yy-nanoflare-1000z": [
       {
-        href: "/comparisons/yonex-nanoflare-1000z-play-review/",
+        href: "/review/yonex-nanoflare-1000z-play-review/",
         label: "Nanoflare 1000 Z vs 1000 Play",
       },
     ],
     "yy-nanoflare-1000-play": [
       {
-        href: "/comparisons/yonex-nanoflare-1000z-play-review/",
+        href: "/review/yonex-nanoflare-1000z-play-review/",
         label: "Nanoflare 1000 Z vs 1000 Play",
       },
     ],
@@ -150,9 +150,7 @@ export function editorialComparisonsForReview(productId: string) {
 }
 
 export function reviewPageLinkForBlog(slug: string): string | undefined {
-  const productId = reviewProductIdForBlog(slug);
-  if (!productId) return undefined;
-  return reviewPath(productId);
+  return articlePathForSlug(slug);
 }
 
 export function relatedContentForBlog(article: BlogArticle) {

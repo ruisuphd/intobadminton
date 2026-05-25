@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Li-Ning Halbertec 9000 Power vs AxForce 100 Gen 2",
@@ -73,10 +74,10 @@ const config: CompareGuideConfig = {
   founderNote:
     "I've held both at club level. Halbertec 9000 Power and AxForce 100 Gen 2 are within a hair of each other on absolute smash; the difference is character. If you've previously played a Halbertec, you'll prefer the 9000 Power; if you've previously played AxForce, the 100 Gen 2 will feel like home. Cross-line switches inside Li-Ning are real and worth a demo before buying.",
   relatedLinks: [
-    { label: "Read the full Halbertec 9000 Power review", href: "/review/ln-halbertec-9000-power/" },
-    { label: "Read the full AxForce 100 Gen 2 review", href: "/review/ln-axforce-100-gen-2/" },
-    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power", href: "/comparisons/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
-    { label: "Li-Ning AxForce 100 Gen 2 vs 100ZZ vs 90 New", href: "/comparisons/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/" },
+    { label: "Read the full Halbertec 9000 Power review", href: reviewPath("ln-halbertec-9000-power") },
+    { label: "Read the full AxForce 100 Gen 2 review", href: reviewPath("ln-axforce-100-gen-2") },
+    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power", href: "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
+    { label: "Li-Ning AxForce 100 Gen 2 vs 100ZZ vs 90 New", href: "/review/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },
   ],

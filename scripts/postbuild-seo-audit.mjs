@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
-import blogUrlMigrations from "../src/data/blog-url-migrations.json" with { type: "json" };
 import legacyDestinations from "../src/data/legacy-redirect-destinations.json" with { type: "json" };
 import claimsRegistry from "../content/claims.json" with { type: "json" };
+import { blogRedirectsForStaticExport } from "./blog-redirect-helpers.mjs";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -113,7 +113,7 @@ function walkJsonLd(value, visit) {
 }
 
 const ARTICLE_SCHEMA_REQUIRED =
-  /^\/(?:best|brands|compare-guides|comparisons|guides|review)\/[^/]+\/$/;
+  /^\/(?:best|brands|compare-guides|guides|review)\/[^/]+\/$/;
 const ARTICLE_SCHEMA_EXEMPT = new Set(["/guides/glossary/"]);
 
 function requiresArticleSchema(routePath) {
@@ -133,6 +133,7 @@ const SITEMAP_EXEMPT_ROUTES = new Set([
   "/privacy-choices/",
   "/blogs/",
   "/blog/",
+  "/comparisons/",
   "/saved/",
 ]);
 
@@ -318,13 +319,7 @@ function readSitemapUrls() {
 }
 
 function blogRedirectsFromMigrations() {
-  return [
-    { source: "/blog/", destination: "/comparisons/" },
-    ...blogUrlMigrations.migrations.map((entry) => ({
-      source: `/blog/${entry.slug}/`,
-      destination: entry.destination,
-    })),
-  ];
+  return blogRedirectsForStaticExport();
 }
 
 function legacyRedirects() {

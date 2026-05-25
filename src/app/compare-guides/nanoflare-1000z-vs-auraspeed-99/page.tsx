@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Nanoflare 1000Z vs Victor Auraspeed 99",
@@ -73,9 +74,9 @@ const config: CompareGuideConfig = {
   founderNote:
     "I currently play the Nanoflare 1000Z as my doubles racket (4U/G5). It's extremely fast on drives, especially in defense; the timing is sharp on continuation attack. Power has to come from your swing, not from the frame — but with conditioned mechanics, this is the doubles weapon. I've held the Auraspeed 99 only briefly; the thinner shaft is noticeable and would be my pick if I played more front-court.",
   relatedLinks: [
-    { label: "Read the full Nanoflare 1000Z review", href: "/review/yy-nanoflare-1000z/" },
-    { label: "Read the full Auraspeed 99 Hayabusa review", href: "/review/vic-auraspeed-99/" },
-    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series explained", href: "/comparisons/yonex-nanoflare-speed-series-explained/" },
+    { label: "Read the full Nanoflare 1000Z review", href: reviewPath("yy-nanoflare-1000z") },
+    { label: "Read the full Auraspeed 99 Hayabusa review", href: reviewPath("vic-auraspeed-99") },
+    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series explained", href: "/review/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Yonex Astrox vs Nanoflare", href: "/compare-guides/yonex-astrox-vs-nanoflare/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },

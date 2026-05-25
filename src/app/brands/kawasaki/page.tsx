@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Kawasaki Badminton (川崎) — Master Mao, Star Cross, KACE decoded",
@@ -87,28 +88,28 @@ const config: BrandPageConfig = {
       line: "Chocolate 88D",
       bestFor: "Astrox 88D Pro budget alternative",
       priceUsd: 75,
-      href: "/review/kawasaki-chocolate-88d/",
+      href: reviewPath("kawasaki-chocolate-88d"),
     },
     {
       name: "Kawasaki Master Mao 20",
       line: "Master Mao",
       bestFor: "Value-tier attack racket",
       priceUsd: 85,
-      href: "/review/kawasaki-master-mao-20/",
+      href: reviewPath("kawasaki-master-mao-20"),
     },
     {
       name: "Kawasaki Star Cross",
       line: "Star Cross",
       bestFor: "Value-tier speed racket",
       priceUsd: 90,
-      href: "/review/kawasaki-star-cross/",
+      href: reviewPath("kawasaki-star-cross"),
     },
     {
       name: "Kawasaki KACE",
       line: "Shoes",
       bestFor: "Speed-priority court shoe",
       priceUsd: 75,
-      href: "/review/kawasaki-kace/",
+      href: reviewPath("kawasaki-kace"),
     },
   ],
   faqs: [
@@ -136,19 +137,19 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro",
-      href: "/review/kawasaki-chocolate-88d/",
+      href: reviewPath("kawasaki-chocolate-88d"),
     },
     {
       label: "Kawasaki Master Mao 20 racket review",
-      href: "/review/kawasaki-master-mao-20/",
+      href: reviewPath("kawasaki-master-mao-20"),
     },
     {
       label: "Kawasaki Star Cross review",
-      href: "/review/kawasaki-star-cross/",
+      href: reviewPath("kawasaki-star-cross"),
     },
     {
       label: "Kawasaki KACE shoes review",
-      href: "/review/kawasaki-kace/",
+      href: reviewPath("kawasaki-kace"),
     },
     {
       label: "Best beginner badminton rackets",

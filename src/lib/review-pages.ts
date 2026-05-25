@@ -1,4 +1,6 @@
 import productsCatalog from "@/data/products.json";
+import blogReviewMap from "@/data/blog-review-product-map.json";
+import { blogArticles, type BlogSlug } from "@/lib/blog";
 import { companyInfo } from "@/lib/company";
 import type { ProductRecord } from "@/lib/types/product";
 
@@ -27,7 +29,29 @@ export function reviewProductById(id: string): ProductRecord | undefined {
   return reviewableProducts().find((p) => p.id === id);
 }
 
+function blogSlugForProduct(productId: string): BlogSlug | undefined {
+  const candidates = (Object.entries(blogReviewMap) as [BlogSlug, string][])
+    .filter(([, id]) => id === productId)
+    .map(([slug]) => slug);
+  if (!candidates.length) return undefined;
+
+  return candidates
+    .map((slug) => {
+      const article = blogArticles.en.find((entry) => entry.slug === slug);
+      let score = 0;
+      if (slug.includes("review") || slug.includes("deep-dive")) score += 2;
+      if (article && article.sections.length >= 3) score += 1;
+      return { slug, score, updatedAt: article?.updatedAt ?? "" };
+    })
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.updatedAt < b.updatedAt ? 1 : -1;
+    })[0]?.slug;
+}
+
 export function reviewPath(id: string): string {
+  const slug = blogSlugForProduct(id);
+  if (slug) return `/review/${slug}/`;
   return `/review/${id}/`;
 }
 

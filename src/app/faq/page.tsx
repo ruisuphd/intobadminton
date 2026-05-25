@@ -92,7 +92,7 @@ const FAQS: { category: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Do I need to pay or create an account to use IntoBadminton?",
-        a: "No. There is no paywall, no subscription, no required signup, and no email gate to use the finder, comparisons, blog, or guides. The site is supported by display ads (clearly labelled and only after you opt in via the cookie banner) and may add affiliate retailer links in the future. Recommendations are editorially independent — ads and any future affiliate links never change the fit-score order.",
+        a: "No. There is no paywall, no subscription, no required signup, and no email gate to use the finder, reviews, or guides. The site is supported by display ads (clearly labelled and only after you opt in via the cookie banner) and may add affiliate retailer links in the future. Recommendations are editorially independent — ads and any future affiliate links never change the fit-score order.",
       },
       {
         q: "Are the recommendations sponsored?",

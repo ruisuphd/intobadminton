@@ -85,9 +85,9 @@ describe("getEditorialMeta", () => {
     });
   });
 
-  it("resolves comparisons routes by article updatedAt", () => {
+  it("resolves review routes by article updatedAt", () => {
     const sample = blogArticles.en[0];
-    expect(getEditorialMeta(`/comparisons/${sample.slug}/`)).toEqual({
+    expect(getEditorialMeta(`/review/${sample.slug}/`)).toEqual({
       lastReviewedAt: sample.updatedAt,
     });
   });
@@ -111,6 +111,6 @@ describe("lastModifiedForRoute", () => {
 
   it("returns hub freshness for primary navigation routes", () => {
     expect(lastModifiedForRoute("/quiz/")).toBe("2026-05-24");
-    expect(lastModifiedForRoute("/comparisons/")).toBe("2026-05-24");
+    expect(lastModifiedForRoute("/review/")).toBe("2026-05-24");
   });
 });

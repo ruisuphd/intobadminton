@@ -1,5 +1,4 @@
 import { blogArticles } from "@/lib/blog";
-import { reviewProductById } from "@/lib/review-pages";
 
 export type EditorialMeta = {
   /**
@@ -35,7 +34,7 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2025-08-15",
     lastReviewedAt: "2026-05-24",
   },
-  "/comparisons/": {
+  "/review/": {
     publishedAt: "2025-09-01",
     lastReviewedAt: "2026-05-24",
   },
@@ -223,12 +222,6 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-05-15",
   },
 
-  // Review hub index (lists every per-product /review/[slug]/).
-  "/review/": {
-    publishedAt: "2026-05-15",
-    lastReviewedAt: "2026-05-15",
-  },
-
   // Interactive tools (Sprint 4 of IMPROVEMENT_PLAN_2026Q2).
   "/tools/": {
     publishedAt: "2026-05-17",
@@ -286,14 +279,13 @@ export function getEditorialMeta(path: string): EditorialMeta | undefined {
     }
   }
 
-  // Per-product review pages (P1). Dates are derived from `lastVerifiedAt`
-  // on the product itself so the visible "Last reviewed" date can never
-  // drift away from the source-authority verification date.
   const reviewMatch = path.match(/^\/review\/([^/]+)\/$/);
   if (reviewMatch) {
-    const product = reviewProductById(reviewMatch[1]);
-    if (product) {
-      return { lastReviewedAt: product.lastVerifiedAt };
+    const article = blogArticles.en.find(
+      (entry) => entry.slug === reviewMatch[1]
+    );
+    if (article) {
+      return { lastReviewedAt: article.updatedAt };
     }
   }
 

@@ -4,6 +4,7 @@ import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { reviewPath } from "@/lib/review-pages";
 import { articleJsonLd } from "@/lib/structured-data";
 
 export type CompareSide = {
@@ -11,7 +12,7 @@ export type CompareSide = {
   name: string;
   /** Brand, e.g. "Yonex". */
   brand: string;
-  /** Optional `products.json` id; if set, name links to `/review/[id]/`. */
+  /** Optional `products.json` id; if set, name links to the blog review. */
   productId?: string;
   /** One-line description of who the racket is built for. */
   bestFor: string;
@@ -65,7 +66,7 @@ function sideAnchor(side: CompareSide) {
   if (!side.productId) return null;
   return (
     <Link
-      href={`/review/${side.productId}/`}
+      href={reviewPath(side.productId)}
       className="text-[var(--color-accent)] hover:underline"
     >
       Read the full {side.brand} {side.name} review →

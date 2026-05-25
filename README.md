@@ -10,10 +10,11 @@ Evidence-led badminton equipment finder and review site. Live at
   returns a ranked shortlist with transparent fit-score reasoning. Logic in
   [`src/lib/scoring.ts`](src/lib/scoring.ts); product catalog in
   [`src/data/products.json`](src/data/products.json).
-- **Reviews and comparisons** at `/blog/`, `/compare-guides/`, `/best/`,
-  `/brands/`, `/review/` — original analysis with explicit source-authority
-  labels (manufacturer official page vs independent measurement vs editor
-  interpretation).
+- **Reviews** at `/review/` — a flat personal-blog style archive of equipment
+  notes. Legacy `/blog/` and `/comparisons/` URLs redirect here.
+- **Decision pages** at `/compare-guides/`, `/best/`, and `/brands/` — structured
+  finder support with explicit source-authority labels (manufacturer official
+  page vs independent measurement vs editor interpretation).
 - **Guides** at `/guides/` — long-form evergreen pieces on tension, balance,
   shoe fit, doubles roles, equipment authenticity, and so on.
 
