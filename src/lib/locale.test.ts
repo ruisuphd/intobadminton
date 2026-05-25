@@ -25,7 +25,7 @@ describe("locale routing", () => {
     const routes = localizedRoutesFor("en");
     expect(routes).toContain("/");
     expect(routes).toContain("/quiz/");
-    expect(routes).toContain("/blog/");
+    expect(routes).toContain("/comparisons/");
     expect(routes).toContain("/about/");
     expect(routes).toContain("/brands/");
     expect(routes).toContain("/sources/");
@@ -39,9 +39,9 @@ describe("sitemapEntries", () => {
     expect(urls).toContain("https://example.com/");
     expect(urls).toContain("https://example.com/guides/");
     expect(urls).toContain("https://example.com/security/");
-    expect(urls).toContain("https://example.com/blog/");
+    expect(urls).toContain("https://example.com/comparisons/");
     expect(urls).toContain(
-      "https://example.com/blog/used-racket-depreciation/"
+      "https://example.com/comparisons/used-racket-depreciation/"
     );
     expect(urls).toContain("https://example.com/research/");
     expect(urls).toContain("https://example.com/sources/");

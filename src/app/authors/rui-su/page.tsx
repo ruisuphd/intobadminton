@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo, founderSameAs, organizationJsonLd } from "@/lib/company";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title: "Rui Su — Founder & lead reviewer",
   description:
     "Rui Su is the founder of IntoBadminton — a competitive Division 4 Ireland player who has trained under former Malaysia national-team and China provincial-team coaches. Equipment reviews and the finder methodology are signed by Rui.",
-  alternates: { canonical: PATH },
+  alternates: pageAlternates(PATH),
   openGraph: {
     title: "Rui Su — Founder, IntoBadminton",
     description:

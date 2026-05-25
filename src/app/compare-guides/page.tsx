@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Badminton equipment comparison guides",
   description:
     "Side-by-side badminton comparisons — Astrox vs Nanoflare, Yonex vs Victor vs Li-Ning, Astrox 77 Pro vs 88S Pro, and more. Picks framed by player role.",
-  alternates: { canonical: "/compare-guides/" },
+  alternates: pageAlternates("/compare-guides/"),
   openGraph: {
     title: "Badminton equipment comparison guides",
     description:

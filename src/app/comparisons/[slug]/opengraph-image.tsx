@@ -1,12 +1,13 @@
 import { ImageResponse } from "next/og";
-import { blogSlugs, getBlogArticle } from "@/lib/blog";
+import { getBlogArticle } from "@/lib/blog";
+import { editorialSlugs } from "@/lib/blog-migrations";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "IntoBadminton — badminton equipment review";
+export const alt = "IntoBadminton — badminton equipment comparison";
 
 export function generateStaticParams() {
-  return blogSlugs.map((slug) => ({ slug }));
+  return editorialSlugs().map((slug) => ({ slug }));
 }
 
 export default async function Image({
@@ -22,7 +23,7 @@ export default async function Image({
     article?.dek ??
     "Evidence-led badminton racket, string, shoe, and bag recommendations.";
   const tint = "#1f513d";
-  const label = "Blog";
+  const label = "Comparison";
   const updatedAt = article?.updatedAt;
 
   return new ImageResponse(

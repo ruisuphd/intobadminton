@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Li-Ning Badminton — AxForce, BladeX, Halbertec",
   description:
     "Li-Ning's racket lines decoded: AxForce (attack), BladeX (speed), Halbertec (technical), Aeronaut (control) — plus shoes and L-series strings.",
-  alternates: { canonical: "/brands/li-ning/" },
+  alternates: pageAlternates("/brands/li-ning/"),
   openGraph: {
     title: "Li-Ning Badminton — AxForce, BladeX, Halbertec & Aeronaut Decoded",
     description:
@@ -149,6 +150,10 @@ const config: BrandPageConfig = {
     },
   ],
   relatedLinks: [
+    {
+      label: "Li-Ning Halbertec 7000 review",
+      href: "/review/ln-halbertec-7000/",
+    },
     {
       label: "Spot fake Li-Ning rackets — authenticity check",
       href: "/guides/equipment-authenticity/",

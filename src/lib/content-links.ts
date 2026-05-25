@@ -1,6 +1,7 @@
 import blogReviewMap from "@/data/blog-review-product-map.json";
 import { blogArticles, type BlogArticle, type BlogSlug } from "@/lib/blog";
-import { reviewProductById } from "@/lib/review-pages";
+import { articlePathForSlug, editorialSlugs } from "@/lib/blog-migrations";
+import { reviewPath, reviewProductById } from "@/lib/review-pages";
 
 const blogToProduct = blogReviewMap as Record<string, string>;
 
@@ -61,13 +62,8 @@ export function reviewProductIdForBlog(slug: string): string | undefined {
   return id;
 }
 
-export function blogSlugForReview(productId: string): BlogSlug | undefined {
-  const candidates = (Object.entries(blogToProduct) as [BlogSlug, string][])
-    .filter(([, id]) => id === productId)
-    .map(([slug]) => slug);
-  if (!candidates.length) return undefined;
-
-  const ranked = candidates
+function rankBlogSlugsForProduct(slugs: BlogSlug[]) {
+  return slugs
     .map((slug) => {
       const article = blogArticles.en.find((a) => a.slug === slug);
       let score = 0;
@@ -79,8 +75,35 @@ export function blogSlugForReview(productId: string): BlogSlug | undefined {
       if (b.score !== a.score) return b.score - a.score;
       return a.updatedAt < b.updatedAt ? 1 : -1;
     });
+}
 
-  return ranked[0]?.slug;
+export function blogSlugsForReview(productId: string): BlogSlug[] {
+  const candidates = (Object.entries(blogToProduct) as [BlogSlug, string][])
+    .filter(([, id]) => id === productId)
+    .map(([slug]) => slug);
+  if (!candidates.length) return [];
+  return rankBlogSlugsForProduct(candidates).map((entry) => entry.slug);
+}
+
+export function blogArticlesForReview(productId: string): BlogArticle[] {
+  return blogSlugsForReview(productId)
+    .map((slug) => blogArticles.en.find((article) => article.slug === slug))
+    .filter((article): article is BlogArticle => Boolean(article));
+}
+
+export function blogSlugForReview(productId: string): BlogSlug | undefined {
+  return blogSlugsForReview(productId)[0];
+}
+
+export function reviewDescriptionFromArticles(
+  editorNote: string | undefined,
+  articles: BlogArticle[]
+): string {
+  if (editorNote) return editorNote;
+  const firstBody = articles[0]?.sections[0]?.body;
+  if (!firstBody) return "";
+  const trimmed = firstBody.replace(/\s+/g, " ").trim();
+  return trimmed.length <= 155 ? trimmed : `${trimmed.slice(0, 152)}…`;
 }
 
 export function compareGuidesForBlog(slug: string, limit = 2): string[] {
@@ -90,6 +113,46 @@ export function compareGuidesForBlog(slug: string, limit = 2): string[] {
   )
     .slice(0, limit)
     .map((g) => g.href);
+}
+
+const REVIEW_EDITORIAL_LINKS: Record<string, { href: string; label: string }[]> =
+  {
+    "yy-nanoflare-1000z": [
+      {
+        href: "/comparisons/yonex-nanoflare-1000z-play-review/",
+        label: "Nanoflare 1000 Z vs 1000 Play",
+      },
+    ],
+    "yy-nanoflare-1000-play": [
+      {
+        href: "/comparisons/yonex-nanoflare-1000z-play-review/",
+        label: "Nanoflare 1000 Z vs 1000 Play",
+      },
+    ],
+  };
+
+export function editorialComparisonsForReview(productId: string) {
+  const manual = REVIEW_EDITORIAL_LINKS[productId] ?? [];
+  const seen = new Set(manual.map((link) => link.href));
+  const editorialSet = new Set(editorialSlugs());
+  const auto: { href: string; label: string }[] = [];
+
+  for (const article of blogArticles.en) {
+    if (!editorialSet.has(article.slug)) continue;
+    if (article.relatedReviewProductId !== productId) continue;
+    const href = articlePathForSlug(article.slug);
+    if (seen.has(href)) continue;
+    seen.add(href);
+    auto.push({ href, label: article.title });
+  }
+
+  return [...manual, ...auto].slice(0, 6);
+}
+
+export function reviewPageLinkForBlog(slug: string): string | undefined {
+  const productId = reviewProductIdForBlog(slug);
+  if (!productId) return undefined;
+  return reviewPath(productId);
 }
 
 export function relatedContentForBlog(article: BlogArticle) {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus",
   description:
     "Nanoflare 800 Pro vs Auraspeed HS Plus — mid-flagship speed rackets compared. Drive speed, swing weight, and source-authority confidence.",
-  alternates: { canonical: "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/" },
+  alternates: pageAlternates("/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/"),
   openGraph: {
     title: "Nanoflare 800 Pro vs Auraspeed HS Plus — mid-flagship speed compared",
     description:
@@ -74,8 +75,8 @@ const config: CompareGuideConfig = {
   relatedLinks: [
     { label: "Read the full Nanoflare 800 Pro review", href: "/review/yy-nanoflare-800-pro-2024/" },
     { label: "Read the full Auraspeed HS Plus review", href: "/review/vic-auraspeed-hs-plus/" },
-    { label: "Nanoflare 800 Pro and Victor HS Plus — extended notes", href: "/blog/yonex-nanoflare-800-pro-and-victor-hs-plus/" },
-    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series", href: "/blog/yonex-nanoflare-speed-series-explained/" },
+    { label: "Nanoflare 800 Pro and Victor HS Plus — extended notes", href: "/comparisons/yonex-nanoflare-800-pro-and-victor-hs-plus/" },
+    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series", href: "/comparisons/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
   ],

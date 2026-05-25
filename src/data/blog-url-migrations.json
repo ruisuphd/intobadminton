@@ -1,0 +1,768 @@
+{
+  "migrations": [
+    {
+      "slug": "racket-balance-vs-swing-speed",
+      "type": "editorial",
+      "destination": "/comparisons/racket-balance-vs-swing-speed/"
+    },
+    {
+      "slug": "how-to-read-badminton-reviews",
+      "type": "editorial",
+      "destination": "/comparisons/how-to-read-badminton-reviews/"
+    },
+    {
+      "slug": "beginner-racket-mistakes",
+      "type": "editorial",
+      "destination": "/comparisons/beginner-racket-mistakes/"
+    },
+    {
+      "slug": "badminton-string-selector",
+      "type": "editorial",
+      "destination": "/comparisons/badminton-string-selector/"
+    },
+    {
+      "slug": "badminton-shoe-fit-stability",
+      "type": "editorial",
+      "destination": "/comparisons/badminton-shoe-fit-stability/"
+    },
+    {
+      "slug": "badminton-bag-loadout",
+      "type": "editorial",
+      "destination": "/comparisons/badminton-bag-loadout/"
+    },
+    {
+      "slug": "used-racket-depreciation",
+      "type": "editorial",
+      "destination": "/comparisons/used-racket-depreciation/"
+    },
+    {
+      "slug": "yonex-astrox-88d-pro-vs-88s-pro-2024",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-astrox-88d-pro-vs-88s-pro-2024/"
+    },
+    {
+      "slug": "yonex-nanoflare-speed-series-explained",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoflare-speed-series-explained/"
+    },
+    {
+      "slug": "yonex-nanoflare-800-pro-and-victor-hs-plus",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoflare-800-pro-and-victor-hs-plus/"
+    },
+    {
+      "slug": "li-ning-bladex-800-speed-tough-elastic",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-bladex-800-speed-tough-elastic/"
+    },
+    {
+      "slug": "li-ning-halbertec-8000-vs-9000-vs-9000-power",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-halbertec-8000-vs-9000-vs-9000-power/"
+    },
+    {
+      "slug": "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/"
+    },
+    {
+      "slug": "yuan-style-shaft-hardness-explained",
+      "type": "editorial",
+      "destination": "/comparisons/yuan-style-shaft-hardness-explained/"
+    },
+    {
+      "slug": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      "type": "product",
+      "destination": "/review/yy-astrox-100zz/"
+    },
+    {
+      "slug": "victor-drivex-12-vs-astrox-88d-pro",
+      "type": "product",
+      "destination": "/review/vic-yu-12/"
+    },
+    {
+      "slug": "li-ning-l69-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-l69-string-review/"
+    },
+    {
+      "slug": "victor-p9200-iii-shoes-review",
+      "type": "product",
+      "destination": "/review/vic-p9200-iii/"
+    },
+    {
+      "slug": "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/"
+    },
+    {
+      "slug": "yonex-eclipsion-z3-shoes-review",
+      "type": "product",
+      "destination": "/review/yy-eclipsion-z3/"
+    },
+    {
+      "slug": "yonex-astrox-99-pro-2-deep-dive",
+      "type": "product",
+      "destination": "/review/yy-astrox-99-pro/"
+    },
+    {
+      "slug": "victor-auraspeed-99-hayabusa-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-auraspeed-99-hayabusa-review/"
+    },
+    {
+      "slug": "li-ning-bladesabre-max-shoes-review",
+      "type": "product",
+      "destination": "/review/ln-bladesabre-max/"
+    },
+    {
+      "slug": "victor-auraspeed-hs-plus-deep-dive",
+      "type": "product",
+      "destination": "/review/vic-auraspeed-hs-plus/"
+    },
+    {
+      "slug": "li-ning-halbertec-7000-ii-review",
+      "type": "product",
+      "destination": "/review/ln-halbertec-7000-ii/"
+    },
+    {
+      "slug": "li-ning-halbertec-7000-review",
+      "type": "product",
+      "destination": "/review/ln-halbertec-7000/"
+    },
+    {
+      "slug": "victor-carbonsonic-max-shuttle-review",
+      "type": "product",
+      "destination": "/review/vic-carbonsonic-max-shuttle/"
+    },
+    {
+      "slug": "bonny-leisu-800-racket-review",
+      "type": "product",
+      "destination": "/review/bonny-leisu-800/"
+    },
+    {
+      "slug": "kumpoo-shanhai-new-racket-review",
+      "type": "product",
+      "destination": "/review/kumpoo-shanhai-new/"
+    },
+    {
+      "slug": "li-ning-axforce-80-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-80-review/"
+    },
+    {
+      "slug": "victor-c90nl-shoes-review",
+      "type": "product",
+      "destination": "/review/vic-c90nl/"
+    },
+    {
+      "slug": "yonex-65z4-shoes-review",
+      "type": "product",
+      "destination": "/review/yy-power-cushion-65-z4/"
+    },
+    {
+      "slug": "kawasaki-master-mao-20-racket-review",
+      "type": "product",
+      "destination": "/review/kawasaki-master-mao-20/"
+    },
+    {
+      "slug": "kumpoo-shura-2-racket-review",
+      "type": "product",
+      "destination": "/review/kumpoo-shura-2/"
+    },
+    {
+      "slug": "victor-yu-12-racket-review",
+      "type": "product",
+      "destination": "/review/vic-yu-12/"
+    },
+    {
+      "slug": "victor-auraspeed-fantome-review",
+      "type": "product",
+      "destination": "/review/vic-auraspeed-fantome/"
+    },
+    {
+      "slug": "li-ning-thunder-100-gen-2-vs-gen-1",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-thunder-100-gen-2-vs-gen-1/"
+    },
+    {
+      "slug": "li-ning-aerus-iii-pro-shoes-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-aerus-iii-pro-shoes-review/"
+    },
+    {
+      "slug": "victor-tk-f-c-ultra-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-tk-f-c-ultra-review/"
+    },
+    {
+      "slug": "kawasaki-kace-shoes-review",
+      "type": "product",
+      "destination": "/review/kawasaki-kace/"
+    },
+    {
+      "slug": "kawasaki-star-cross-racket-review",
+      "type": "product",
+      "destination": "/review/kawasaki-star-cross/"
+    },
+    {
+      "slug": "yonex-arcsaber-7-pro-review",
+      "type": "product",
+      "destination": "/review/yy-arcsaber-7-pro/"
+    },
+    {
+      "slug": "asics-blast-ff-3-badminton-shoes-review",
+      "type": "product",
+      "destination": "/review/asics-blast-ff-3/"
+    },
+    {
+      "slug": "yonex-astrox-nextage-review",
+      "type": "product",
+      "destination": "/review/yy-astrox-nextage/"
+    },
+    {
+      "slug": "victor-drivex-10-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-drivex-10-review/"
+    },
+    {
+      "slug": "yonex-nanoflare-1000z-play-review",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoflare-1000z-play-review/"
+    },
+    {
+      "slug": "yonex-nanoflare-1000z-review",
+      "type": "product",
+      "destination": "/review/yy-nanoflare-1000z/"
+    },
+    {
+      "slug": "yonex-nanoflare-800-pro-tour-review",
+      "type": "product",
+      "destination": "/review/yy-nanoflare-800-pro-tour/"
+    },
+    {
+      "slug": "yonex-nanoflare-nextage-review",
+      "type": "product",
+      "destination": "/review/yy-nanoflare-nextage/"
+    },
+    {
+      "slug": "yonex-power-cushion-88-dial-3-review",
+      "type": "product",
+      "destination": "/review/yy-power-cushion-88-dial-3/"
+    },
+    {
+      "slug": "yonex-grpht-thrttl-training-shoe-review",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-grpht-thrttl-training-shoe-review/"
+    },
+    {
+      "slug": "li-ning-bladex-900-new-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-bladex-900-new-review/"
+    },
+    {
+      "slug": "victor-auraspeed-hs-plus-attack-review",
+      "type": "product",
+      "destination": "/review/vic-auraspeed-hs-plus/"
+    },
+    {
+      "slug": "yonex-astrox-88-pro-2024-review",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-astrox-88-pro-2024-review/"
+    },
+    {
+      "slug": "victor-auraspeed-90k-ii-review",
+      "type": "product",
+      "destination": "/review/vic-auraspeed-90k-ii/"
+    },
+    {
+      "slug": "victor-thruster-falcon-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-thruster-falcon-review/"
+    },
+    {
+      "slug": "yonex-nanoflare-700-review",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoflare-700-review/"
+    },
+    {
+      "slug": "li-ning-axforce-90-new-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-90-new-review/"
+    },
+    {
+      "slug": "yonex-subaxia-gt-shoes-review",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-subaxia-gt-shoes-review/"
+    },
+    {
+      "slug": "yonex-astrox-99-pro-3-deep-dive",
+      "type": "product",
+      "destination": "/review/yy-astrox-99-pro/"
+    },
+    {
+      "slug": "how-to-choose-a-badminton-racket",
+      "type": "editorial",
+      "destination": "/comparisons/how-to-choose-a-badminton-racket/"
+    },
+    {
+      "slug": "badminton-equipment-for-kids",
+      "type": "editorial",
+      "destination": "/comparisons/badminton-equipment-for-kids/"
+    },
+    {
+      "slug": "badminton-glossary-terms-every-player-should-know",
+      "type": "editorial",
+      "destination": "/comparisons/badminton-glossary-terms-every-player-should-know/"
+    },
+    {
+      "slug": "yonex-grip-sizes-explained",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-grip-sizes-explained/"
+    },
+    {
+      "slug": "yonex-arcsaber-10-complete-buying-guide",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-arcsaber-10-complete-buying-guide/"
+    },
+    {
+      "slug": "racket-stringing-hole-patterns-explained",
+      "type": "editorial",
+      "destination": "/comparisons/racket-stringing-hole-patterns-explained/"
+    },
+    {
+      "slug": "yonex-tour-series-buying-guide",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-tour-series-buying-guide/"
+    },
+    {
+      "slug": "kumpoo-fourth-major-badminton-brand-profile",
+      "type": "editorial",
+      "destination": "/comparisons/kumpoo-fourth-major-badminton-brand-profile/"
+    },
+    {
+      "slug": "rsl-aero-u-shuttle-review",
+      "type": "product",
+      "destination": "/review/rsl-aero-u-shuttle/"
+    },
+    {
+      "slug": "li-ning-axforce-90-new-5u-deep-dive",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-90-new-5u-deep-dive/"
+    },
+    {
+      "slug": "bonny-future-land-3-polaris-shoes-review",
+      "type": "product",
+      "destination": "/review/bonny-future-land-3/"
+    },
+    {
+      "slug": "li-ning-bladesabre-2-pro-shoes-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-bladesabre-2-pro-shoes-review/"
+    },
+    {
+      "slug": "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+      "type": "product",
+      "destination": "/review/kawasaki-chocolate-88d/"
+    },
+    {
+      "slug": "jujiang-mzs-66un-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/jujiang-mzs-66un-string-review/"
+    },
+    {
+      "slug": "kawasaki-twilight-shoes-review",
+      "type": "product",
+      "destination": "/review/kawasaki-twilight/"
+    },
+    {
+      "slug": "li-ning-gp100-pro-overgrip-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-gp100-pro-overgrip-review/"
+    },
+    {
+      "slug": "li-ning-l66-string-first-look",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-l66-string-first-look/"
+    },
+    {
+      "slug": "bonny-wuque-flagship-088-shoes-review",
+      "type": "product",
+      "destination": "/review/bonny-wuque-flagship-088/"
+    },
+    {
+      "slug": "bonny-wind-shadow-budget-speed-shoes-review",
+      "type": "product",
+      "destination": "/review/bonny-wind-shadow/"
+    },
+    {
+      "slug": "jujiang-lbtu-value-racket-review",
+      "type": "product",
+      "destination": "/review/jujiang-lbtu/"
+    },
+    {
+      "slug": "victor-fz-flash-1000-racket-review",
+      "type": "product",
+      "destination": "/review/vic-fz-flash-1000/"
+    },
+    {
+      "slug": "kumpoo-kh-g805-lite-pro-shoes-review",
+      "type": "product",
+      "destination": "/review/kumpoo-kh-g805-lite-pro/"
+    },
+    {
+      "slug": "bonny-phantom-100-racket-review",
+      "type": "product",
+      "destination": "/review/bonny-phantom-100/"
+    },
+    {
+      "slug": "li-ning-axforce-10-beginner-attack-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-10-beginner-attack-review/"
+    },
+    {
+      "slug": "li-ning-bladex-arrow-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-bladex-arrow-review/"
+    },
+    {
+      "slug": "victor-thruster-hwql-nuke-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-thruster-hwql-nuke-review/"
+    },
+    {
+      "slug": "victor-jipo-ls-racket-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-jipo-ls-racket-review/"
+    },
+    {
+      "slug": "victor-thruster-sr-cherry-blossom-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-thruster-sr-cherry-blossom-review/"
+    },
+    {
+      "slug": "victor-fz-88d-power-purple-review",
+      "type": "product",
+      "destination": "/review/vic-fz-88d-power-purple/"
+    },
+    {
+      "slug": "yonex-arcsaber-7-play-review",
+      "type": "product",
+      "destination": "/review/yy-arcsaber-7-play/"
+    },
+    {
+      "slug": "kawasaki-glacier-800-racket-review",
+      "type": "product",
+      "destination": "/review/kawasaki-glacier-800/"
+    },
+    {
+      "slug": "kawasaki-h2-6u-superlight-racket-review",
+      "type": "product",
+      "destination": "/review/kawasaki-h2/"
+    },
+    {
+      "slug": "kawasaki-star-cross-second-perspective-review",
+      "type": "product",
+      "destination": "/review/kawasaki-star-cross/"
+    },
+    {
+      "slug": "bonny-snake-breath-second-tier-flagship-review",
+      "type": "product",
+      "destination": "/review/bonny-snake-breath/"
+    },
+    {
+      "slug": "li-ning-lt66-power-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-lt66-power-string-review/"
+    },
+    {
+      "slug": "li-ning-flagship-racket-buying-guide-2026",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-flagship-racket-buying-guide-2026/"
+    },
+    {
+      "slug": "bonny-wuque-1982-y3k-shoes-review",
+      "type": "product",
+      "destination": "/review/bonny-wuque-1982-y3k/"
+    },
+    {
+      "slug": "li-ning-halbertec-9000-power-deep-dive",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-halbertec-9000-power-deep-dive/"
+    },
+    {
+      "slug": "li-ning-halbertec-9000-standalone-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-halbertec-9000-standalone-review/"
+    },
+    {
+      "slug": "li-ning-axforce-100-gen-2-vs-gen-1",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-axforce-100-gen-2-vs-gen-1/"
+    },
+    {
+      "slug": "rsl-supreme-shuttle-review",
+      "type": "product",
+      "destination": "/review/rsl-supreme-shuttle/"
+    },
+    {
+      "slug": "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+      "type": "product",
+      "destination": "/review/yy-astrox-100zz/"
+    },
+    {
+      "slug": "victor-drivex-12-zsw-vs-original-comparison",
+      "type": "product",
+      "destination": "/review/vic-yu-12/"
+    },
+    {
+      "slug": "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+      "type": "product",
+      "destination": "/review/vic-yu-12/"
+    },
+    {
+      "slug": "bonny-zhangui-dao-8888ax-ultra-review",
+      "type": "product",
+      "destination": "/review/bonny-zhangui-dao-8888ax/"
+    },
+    {
+      "slug": "bonny-carbon-armour-shoes-review",
+      "type": "product",
+      "destination": "/review/bonny-carbon-armour/"
+    },
+    {
+      "slug": "victor-thruster-9900-curiosity-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-thruster-9900-curiosity-review/"
+    },
+    {
+      "slug": "yonex-astrox-99-pro-gen-1-review",
+      "type": "product",
+      "destination": "/review/yy-astrox-99-pro/"
+    },
+    {
+      "slug": "bonny-wuque-xuanwu-review",
+      "type": "product",
+      "destination": "/review/bonny-wuque-xuanwu/"
+    },
+    {
+      "slug": "badminton-shoe-buying-guide-and-replacement",
+      "type": "editorial",
+      "destination": "/comparisons/badminton-shoe-buying-guide-and-replacement/"
+    },
+    {
+      "slug": "kumpoo-js-67-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/kumpoo-js-67-string-review/"
+    },
+    {
+      "slug": "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z/"
+    },
+    {
+      "slug": "victor-sonic-boom-pro-budget-attack-review",
+      "type": "editorial",
+      "destination": "/comparisons/victor-sonic-boom-pro-budget-attack-review/"
+    },
+    {
+      "slug": "goshen-leiming-69-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/goshen-leiming-69-string-review/"
+    },
+    {
+      "slug": "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+      "type": "product",
+      "destination": "/review/yy-arcsaber-11-pro/"
+    },
+    {
+      "slug": "yonex-arcsaber-7-tour-review",
+      "type": "product",
+      "destination": "/review/yy-arcsaber-7-tour/"
+    },
+    {
+      "slug": "victor-p8500-ii-shoes-review",
+      "type": "product",
+      "destination": "/review/vic-p8500-ii/"
+    },
+    {
+      "slug": "victor-a970-nitro-lite-shoes-review",
+      "type": "product",
+      "destination": "/review/vic-a970-nitro-lite/"
+    },
+    {
+      "slug": "yonex-astrox-77-pro-review",
+      "type": "product",
+      "destination": "/review/yy-astrox-77-pro/"
+    },
+    {
+      "slug": "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoray-zspeed-duora-zstrike-legacy-comparison/"
+    },
+    {
+      "slug": "li-ning-bladex-800-speed-vs-halbertec-9000-power",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-bladex-800-speed-vs-halbertec-9000-power/"
+    },
+    {
+      "slug": "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+      "type": "product",
+      "destination": "/review/yy-arcsaber-11-pro/"
+    },
+    {
+      "slug": "victor-p8500-ii-vs-a970-nitro-lite",
+      "type": "product",
+      "destination": "/review/vic-p8500-ii/"
+    },
+    {
+      "slug": "fz-forza-odin-8800-review",
+      "type": "product",
+      "destination": "/review/fz-forza-odin-8800/"
+    },
+    {
+      "slug": "fz-forza-88d-review",
+      "type": "product",
+      "destination": "/review/fz-forza-88d/"
+    },
+    {
+      "slug": "bonny-golden-dragon-roar-pro-racket-review",
+      "type": "product",
+      "destination": "/review/bonny-golden-dragon-roar-pro/"
+    },
+    {
+      "slug": "mizuno-carbo-pro-823-review",
+      "type": "product",
+      "destination": "/review/mizuno-carbo-pro-823/"
+    },
+    {
+      "slug": "bonny-phantom-88-racket-review",
+      "type": "product",
+      "destination": "/review/bonny-phantom-88/"
+    },
+    {
+      "slug": "bonny-wuque-flagship-089-shoes-review",
+      "type": "product",
+      "destination": "/review/bonny-wuque-089-shoes/"
+    },
+    {
+      "slug": "li-ning-l64-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-l64-string-review/"
+    },
+    {
+      "slug": "kumpoo-js-63-string-review",
+      "type": "editorial",
+      "destination": "/comparisons/kumpoo-js-63-string-review/"
+    },
+    {
+      "slug": "rsl-aero-classic-tourney-shuttle-review",
+      "type": "product",
+      "destination": "/review/rsl-aero-classic-tourney-shuttle/"
+    },
+    {
+      "slug": "li-ning-axforce-80-jr-junior-review",
+      "type": "product",
+      "destination": "/review/ln-axforce-80-jr/"
+    },
+    {
+      "slug": "yonex-arcsaber-11-pro-review",
+      "type": "product",
+      "destination": "/review/yy-arcsaber-11-pro/"
+    },
+    {
+      "slug": "huayu-slayer-racket-review",
+      "type": "product",
+      "destination": "/review/huayu-slayer/"
+    },
+    {
+      "slug": "victor-replacement-insoles-buyer-guide",
+      "type": "editorial",
+      "destination": "/comparisons/victor-replacement-insoles-buyer-guide/"
+    },
+    {
+      "slug": "yonex-astrox-88s-tour-curious-review",
+      "type": "product",
+      "destination": "/review/yy-astrox-88s-tour/"
+    },
+    {
+      "slug": "rsl-at70-racket-review",
+      "type": "product",
+      "destination": "/review/rsl-at70/"
+    },
+    {
+      "slug": "victor-jetspeed-12-curious-review",
+      "type": "product",
+      "destination": "/review/vic-jetspeed-12/"
+    },
+    {
+      "slug": "li-ning-bladex-500-pro-curious-review",
+      "type": "product",
+      "destination": "/review/ln-blade-500-pro/"
+    },
+    {
+      "slug": "kawasaki-crimson-blade-racket-review",
+      "type": "product",
+      "destination": "/review/kawasaki-crimson-blade/"
+    },
+    {
+      "slug": "rsl-no4-plus-shuttle-review",
+      "type": "product",
+      "destination": "/review/rsl-no4-plus-shuttle/"
+    },
+    {
+      "slug": "li-ning-halbertec-flagship-lineup-review",
+      "type": "editorial",
+      "destination": "/comparisons/li-ning-halbertec-flagship-lineup-review/"
+    },
+    {
+      "slug": "yonex-nanoflare-800-pro-vs-nf700",
+      "type": "editorial",
+      "destination": "/comparisons/yonex-nanoflare-800-pro-vs-nf700/"
+    },
+    {
+      "slug": "yonex-aerosensa-50-shuttle-review",
+      "type": "product",
+      "destination": "/review/yy-as-50/"
+    },
+    {
+      "slug": "yonex-comfort-z3-shoes-review",
+      "type": "product",
+      "destination": "/review/yy-comfort-z3/"
+    }
+  ],
+  "multiBlogProducts": {
+    "yy-arcsaber-11-pro": [
+      "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+      "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+      "yonex-arcsaber-11-pro-review"
+    ],
+    "kawasaki-star-cross": [
+      "kawasaki-star-cross-racket-review",
+      "kawasaki-star-cross-second-perspective-review"
+    ],
+    "vic-auraspeed-hs-plus": [
+      "victor-auraspeed-hs-plus-attack-review",
+      "victor-auraspeed-hs-plus-deep-dive"
+    ],
+    "vic-yu-12": [
+      "victor-drivex-12-vs-astrox-88d-pro",
+      "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+      "victor-drivex-12-zsw-vs-original-comparison",
+      "victor-yu-12-racket-review"
+    ],
+    "vic-p8500-ii": [
+      "victor-p8500-ii-shoes-review",
+      "victor-p8500-ii-vs-a970-nitro-lite"
+    ],
+    "yy-astrox-100zz": [
+      "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+      "yonex-astrox-100zz-axelsen-va-vs-kurenai"
+    ],
+    "yy-astrox-99-pro": [
+      "yonex-astrox-99-pro-2-deep-dive",
+      "yonex-astrox-99-pro-3-deep-dive",
+      "yonex-astrox-99-pro-gen-1-review"
+    ]
+  }
+}

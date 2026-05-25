@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/season-refresh/";
@@ -10,7 +11,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Badminton gear refresh checklist",
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
+  alternates: pageAlternates(PATH),
 };
 
 export default function SeasonRefreshGuide() {
@@ -183,7 +184,7 @@ export default function SeasonRefreshGuide() {
             best strings
           </Link>
           , and{" "}
-          <Link href="/blog/badminton-bag-loadout/" className="text-[var(--color-accent)] underline">
+          <Link href="/comparisons/badminton-bag-loadout/" className="text-[var(--color-accent)] underline">
             what your badminton bag should carry
           </Link>
           .

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Badminton Equipment FAQ — Plain-English Answers",
   description:
     "Practical badminton FAQ — racket fit, 3U/4U/5U weight, shaft flex, balance, string tension, shoe fit width, restringing cadence — answered in plain English.",
-  alternates: { canonical: "/faq/" },
+  alternates: pageAlternates("/faq/"),
   openGraph: {
     title: "Badminton Equipment FAQ — Plain-English Answers",
     description:

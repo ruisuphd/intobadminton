@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Badminton court dimensions diagram — singles vs doubles (BWF)",
   description:
     "Interactive BWF-sourced badminton court diagram with hover hotspots for singles vs doubles widths, service lines, and net heights.",
-  alternates: { canonical: "/tools/court-diagram/" },
+  alternates: pageAlternates("/tools/court-diagram/"),
 };
 
 export default function CourtDiagramPage() {

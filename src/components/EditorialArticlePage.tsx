@@ -8,14 +8,19 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 import { SocialShare } from "@/components/SocialShare";
 import {
   blogArticles,
+  editorialContentLabel,
   getBlogArticle,
   readingTimeMinutes,
   relatedArticles,
   sectionAnchorId,
 } from "@/lib/blog";
-import { relatedContentForBlog } from "@/lib/content-links";
+import { articlePathForSlug } from "@/lib/blog-migrations";
+import {
+  compareGuidesForBlog,
+  reviewProductIdForBlog,
+} from "@/lib/content-links";
+import { reviewPath, reviewProductById } from "@/lib/review-pages";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
-import { reviewPath } from "@/lib/review-pages";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 
 function VerdictPanel({ verdict }: { verdict: string }) {
@@ -31,7 +36,7 @@ function VerdictPanel({ verdict }: { verdict: string }) {
   );
 }
 
-export function BlogArticlePage({
+export function EditorialArticlePage({
   locale,
   slug,
 }: {
@@ -44,7 +49,7 @@ export function BlogArticlePage({
     notFound();
   }
 
-  const canonicalUrl = `${companyInfo.siteUrl}/blog/${article.slug}/`;
+  const canonicalUrl = `${companyInfo.siteUrl}/comparisons/${article.slug}/`;
   const minutes = readingTimeMinutes(article);
   const anchorSeen = new Map<string, number>();
   const tocItems: TocItem[] = article.sections.map((section, index) => ({
@@ -59,8 +64,19 @@ export function BlogArticlePage({
     0
   );
   const canShowArticleAd = articleWordCount >= 600;
-  const related = relatedArticles(blogArticles[locale], article, 3);
-  const { reviewId, compareGuides } = relatedContentForBlog(article);
+  const related = relatedArticles(blogArticles[locale], article, 3).filter(
+    (candidate) => articlePathForSlug(candidate.slug).startsWith("/comparisons/")
+  );
+  const compareGuides = compareGuidesForBlog(article.slug);
+  const linkedProductId =
+    reviewProductIdForBlog(article.slug) ?? article.relatedReviewProductId;
+  const linkedProduct = linkedProductId
+    ? reviewProductById(linkedProductId)
+    : undefined;
+  const linkedReviewHref = linkedProductId
+    ? reviewPath(linkedProductId)
+    : undefined;
+  const contentLabel = editorialContentLabel(article.slug);
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
@@ -91,12 +107,18 @@ export function BlogArticlePage({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Blog",
-        item: `${companyInfo.siteUrl}/blog/`,
+        name: "Reviews",
+        item: `${companyInfo.siteUrl}/review/`,
       },
       {
         "@type": "ListItem",
         position: 3,
+        name: "Comparisons",
+        item: `${companyInfo.siteUrl}/comparisons/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
         name: article.title,
         item: canonicalUrl,
       },
@@ -112,13 +134,13 @@ export function BlogArticlePage({
       <section className="border-b border-[color:var(--line)] bg-[color:var(--surface-muted)] py-12 lg:py-16">
         <div className="layout-band max-w-3xl">
           <Link
-            href={buildLocalizedPath(locale, "/blog/")}
+            href={buildLocalizedPath(locale, "/comparisons/")}
             className="text-sm text-[var(--color-accent)] hover:underline"
           >
-            ← Blog
+            ← Comparisons
           </Link>
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="chip">Blog</span>
+            <span className="chip">{contentLabel}</span>
             <span className="text-xs text-[var(--color-subtle)]">
               {minutes} min read
             </span>
@@ -137,16 +159,29 @@ export function BlogArticlePage({
             {article.dek}
           </p>
           {article.verdict && <VerdictPanel verdict={article.verdict} />}
-          {(reviewId || compareGuides.length > 0) && (
-            <div className="mt-6 flex flex-wrap gap-3">
-              {reviewId && (
-                <Link
-                  href={buildLocalizedPath(locale, reviewPath(reviewId))}
-                  className="chip chip-secondary hover:underline"
-                >
-                  See specs &amp; fit score →
-                </Link>
+          {linkedProduct && linkedReviewHref && (
+            <div className="mt-6 rounded-2xl border border-[color:var(--line-strong)] bg-white/80 p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
+                Product review
+              </p>
+              <p className="mt-2 text-base font-semibold text-[var(--text)]">
+                {linkedProduct.brand} {linkedProduct.name}
+              </p>
+              {linkedProduct.editorNote && (
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+                  {linkedProduct.editorNote}
+                </p>
               )}
+              <Link
+                href={buildLocalizedPath(locale, linkedReviewHref)}
+                className="mt-4 inline-flex text-sm font-medium text-[var(--color-accent)] hover:underline"
+              >
+                Read full review with specs →
+              </Link>
+            </div>
+          )}
+          {compareGuides.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-3">
               {compareGuides.map((href) => (
                 <Link
                   key={href}
@@ -215,11 +250,13 @@ export function BlogArticlePage({
             )}
             <div className="space-y-8">
               {article.sections.map((section, index) => {
-                const anchorId = tocItems[index]?.id ?? sectionAnchorId(section.heading, index, new Map());
+                const anchorId =
+                  tocItems[index]?.id ??
+                  sectionAnchorId(section.heading, index, new Map());
                 return (
                   <section
                     key={`${section.heading}-${index}`}
-                    className="space-y-3 scroll-mt-24"
+                    className="scroll-mt-24 space-y-3"
                     id={anchorId}
                   >
                     <h2 className="group text-2xl font-semibold tracking-tight text-[var(--text)] text-balance">
@@ -262,7 +299,7 @@ export function BlogArticlePage({
                       )}
                     {canShowArticleAd &&
                       index === Math.floor(article.sections.length / 2) && (
-                        <AdSlot id={`blog-${article.slug}-mid`} />
+                        <AdSlot id={`comparisons-${article.slug}-mid`} />
                       )}
                   </section>
                 );
@@ -280,7 +317,9 @@ export function BlogArticlePage({
 
             {article.factChecks && article.factChecks.length > 0 && (
               <aside className="mt-6 text-xs text-[var(--color-subtle)]">
-                <p className="font-semibold uppercase tracking-wide">Fact checks</p>
+                <p className="font-semibold uppercase tracking-wide">
+                  Fact checks
+                </p>
                 <ul className="mt-2 space-y-1">
                   {article.factChecks.map((row) => (
                     <li key={`${row.claim}-${row.source}`}>
@@ -305,7 +344,7 @@ export function BlogArticlePage({
 
             <SocialShare url={canonicalUrl} title={article.title} />
 
-            <HelpfulReaction contentId={`blog:${article.slug}`} />
+            <HelpfulReaction contentId={`comparisons:${article.slug}`} />
           </article>
 
           {showToc && (
@@ -332,10 +371,15 @@ export function BlogArticlePage({
               {related.map((r) => (
                 <Link
                   key={r.slug}
-                  href={buildLocalizedPath(locale, `/blog/${r.slug}/`)}
+                  href={buildLocalizedPath(
+                    locale,
+                    articlePathForSlug(r.slug)
+                  )}
                   className="card card-interactive block p-6"
                 >
-                  <span className="chip">Blog</span>
+                  <span className="chip">
+                    {editorialContentLabel(r.slug)}
+                  </span>
                   <h3 className="mt-3 text-lg font-semibold text-[var(--text)]">
                     {r.title}
                   </h3>

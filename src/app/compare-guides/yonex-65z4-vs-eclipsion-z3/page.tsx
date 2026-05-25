@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex 65 Z4 vs Eclipsion Z3 — Power Cushion shoes compared",
   description:
     "Yonex Power Cushion 65 Z4 vs Eclipsion Z3 — Yonex's speed-oriented Z series against the premium Eclipsion stability shoe. Fit, stability, and who buys which.",
-  alternates: { canonical: "/compare-guides/yonex-65z4-vs-eclipsion-z3/" },
+  alternates: pageAlternates("/compare-guides/yonex-65z4-vs-eclipsion-z3/"),
   openGraph: {
     title: "Yonex 65 Z4 vs Eclipsion Z3 — Power Cushion shoes compared",
     description:
@@ -29,7 +30,7 @@ const config: CompareGuideConfig = {
     name: "65 Z4",
     brand: "Yonex",
     // 65 Z4 is not yet in the products catalog; the blog deep-dive lives at
-    // /blog/yonex-65z4-shoes-review/. Re-add `productId` once the catalog
+    // /review/yy-power-cushion-65-z4/. Re-add `productId` once the catalog
     // entry ships.
     bestFor: "Speed-leaning club play, lateral quickness",
     pricePoint: "~$130",
@@ -74,7 +75,7 @@ const config: CompareGuideConfig = {
   founderNote:
     "I've worn both extensively. The 65 Z4 is great when I'm light on my feet and the court is dry; the Eclipsion Z3 is the shoe I reach for on consecutive-game tournament days. They're not interchangeable — buying the wrong one because of price or fashion has cost amateur players I've coached a real number of session-time missed to ankle and knee soreness.",
   relatedLinks: [
-    { label: "Read the full 65 Z4 review", href: "/blog/yonex-65z4-shoes-review/" },
+    { label: "Read the full 65 Z4 review", href: "/review/yy-power-cushion-65-z4/" },
     { label: "Read the full Eclipsion Z3 review", href: "/review/yy-eclipsion-z3/" },
     { label: "Yonex shoes overview", href: "/brands/yonex/" },
     { label: "Badminton shoe fit and stability guide", href: "/guides/shoes-footwork/" },

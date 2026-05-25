@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { JsonLd } from "@/components/JsonLd";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   title: "Authors — who writes for the site",
   description:
     "Editorial bylines on IntoBadminton. Every review, comparison, and guide is signed by a named author with disclosed playing background and coach lineage.",
-  alternates: { canonical: PATH },
+  alternates: pageAlternates(PATH),
   openGraph: {
     title: "Authors — who writes for IntoBadminton",
     description:

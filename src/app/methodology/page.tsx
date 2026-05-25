@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Recommendation methodology",
   description:
     "How IntoBadminton combines specs, player inputs, and source references for badminton equipment recommendations.",
-  alternates: { canonical: "/methodology/" },
+  alternates: pageAlternates("/methodology/"),
 };
 
 export default function MethodologyPage() {

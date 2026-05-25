@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { AboutPage } from "@/components/AboutPage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,9 +7,7 @@ export const metadata: Metadata = {
   title: "About — Built by a Div 4 Ireland Player",
   description:
     "Who runs IntoBadminton, how the gear recommendations work, where the data comes from. Built by a Division 4 Ireland player with Malaysia and China coaching.",
-  alternates: {
-    canonical: "/about/",
-  },
+  alternates: pageAlternates("/about/"),
   openGraph: {
     title: "About IntoBadminton — Built by a Div 4 Player",
     description:

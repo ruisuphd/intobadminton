@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { notFound } from "next/navigation";
-import { BlogArticlePage } from "@/components/BlogArticlePage";
-import { blogSlugs, getBlogArticle } from "@/lib/blog";
+import { EditorialArticlePage } from "@/components/EditorialArticlePage";
+import { editorialSlugs } from "@/lib/blog-migrations";
+import { getBlogArticle } from "@/lib/blog";
 import { routeOgImages } from "@/lib/og";
 
 export function generateStaticParams() {
-  return blogSlugs.map((slug) => ({ slug }));
+  return editorialSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -17,20 +19,17 @@ export async function generateMetadata({
   const article = getBlogArticle("en", slug);
   if (!article) {
     return {
-      title: "Blog — IntoBadminton",
-      alternates: { canonical: `/blog/${slug}/` },
+      title: "Comparisons — IntoBadminton",
+      alternates: pageAlternates(`/comparisons/${slug}/`),
       robots: { index: false, follow: true },
     };
   }
-  const url = `/blog/${slug}/`;
+  const url = `/comparisons/${slug}/`;
   const images = [...routeOgImages(url)];
   return {
-    // Let the root layout template add " | IntoBadminton" — avoid embedding
-    // the brand here, otherwise we'd hit the audit gate's
-    // `duplicate-title-brand` rule.
     title: article.title,
     description: article.dek,
-    alternates: { canonical: url },
+    alternates: pageAlternates(url),
     openGraph: {
       title: article.title,
       description: article.dek,
@@ -51,7 +50,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogArticleRoute({
+export default async function ComparisonArticleRoute({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -60,5 +59,5 @@ export default async function BlogArticleRoute({
   if (!getBlogArticle("en", slug)) {
     notFound();
   }
-  return <BlogArticlePage locale="en" slug={slug} />;
+  return <EditorialArticlePage locale="en" slug={slug} />;
 }

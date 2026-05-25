@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Yonex Astrox vs Nanoflare — Which Fits You?",
   description:
     "Astrox is the power line, Nanoflare is the speed line. Comparison of head balance, swing speed, and which family fits singles, doubles, and front-court players.",
-  alternates: { canonical: "/compare-guides/yonex-astrox-vs-nanoflare/" },
+  alternates: pageAlternates("/compare-guides/yonex-astrox-vs-nanoflare/"),
   openGraph: {
     title: "Yonex Astrox vs Nanoflare — Which Fits You?",
     description:

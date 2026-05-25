@@ -27,6 +27,7 @@ export const blogSlugs = [
   "li-ning-bladesabre-max-shoes-review",
   "victor-auraspeed-hs-plus-deep-dive",
   "li-ning-halbertec-7000-ii-review",
+  "li-ning-halbertec-7000-review",
   "victor-carbonsonic-max-shuttle-review",
   "bonny-leisu-800-racket-review",
   "kumpoo-shanhai-new-racket-review",
@@ -136,6 +137,17 @@ export const blogSlugs = [
   "yonex-arcsaber-11-pro-review",
   "huayu-slayer-racket-review",
   "victor-replacement-insoles-buyer-guide",
+  "yonex-nanoflare-1000z-review",
+  "yonex-astrox-88s-tour-curious-review",
+  "rsl-at70-racket-review",
+  "victor-jetspeed-12-curious-review",
+  "li-ning-bladex-500-pro-curious-review",
+  "kawasaki-crimson-blade-racket-review",
+  "rsl-no4-plus-shuttle-review",
+  "li-ning-halbertec-flagship-lineup-review",
+  "yonex-nanoflare-800-pro-vs-nf700",
+  "yonex-aerosensa-50-shuttle-review",
+  "yonex-comfort-z3-shoes-review",
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
@@ -178,6 +190,18 @@ export function readingTimeMinutes(article: BlogArticle): number {
     .flatMap((s) => `${s.heading} ${s.body}`.split(/\s+/))
     .filter(Boolean).length;
   return Math.max(1, Math.round(words / 225));
+}
+
+/** Chip label for editorial URLs on /comparisons/ (not per-product /review/). */
+export function editorialContentLabel(slug: string): "Guide" | "Comparison" {
+  if (
+    /guide|how-to|explained|glossary|loadout|mistakes|selector|fit-stability|depreciation|kids|terms|insoles|methodology|profile|overview/.test(
+      slug
+    )
+  ) {
+    return "Guide";
+  }
+  return "Comparison";
 }
 
 export function articlesByDateDesc(articles: BlogArticle[]): BlogArticle[] {

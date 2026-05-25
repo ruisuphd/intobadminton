@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/racket-balance/";
@@ -10,7 +11,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Badminton racket balance and shaft flex",
   description: DESCRIPTION,
-  alternates: { canonical: PATH },
+  alternates: pageAlternates(PATH),
 };
 
 export default function RacketBalanceGuide() {
@@ -205,7 +206,7 @@ export default function RacketBalanceGuide() {
             best intermediate rackets
           </Link>
           , and{" "}
-          <Link href="/blog/yuan-style-shaft-hardness-explained/" className="text-[var(--color-accent)] underline">
+          <Link href="/comparisons/yuan-style-shaft-hardness-explained/" className="text-[var(--color-accent)] underline">
             YuanShi shaft hardness measurements explained
           </Link>
           .

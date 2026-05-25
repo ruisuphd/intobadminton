@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Badminton string tension calculator — starting point by level + arm",
   description:
     "Pick a starting string tension based on your level, racket frame, and arm-comfort signals. Anchored to BWF and manufacturer stringing-advice ranges.",
-  alternates: { canonical: "/tools/string-tension-calculator/" },
+  alternates: pageAlternates("/tools/string-tension-calculator/"),
 };
 
 export default function StringTensionCalculatorPage() {

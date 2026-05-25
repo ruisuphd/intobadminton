@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: "Badminton tools — calculators, converters, diagrams",
   description:
     "Free badminton toolkit — skill-level converter, string-tension calculator, racket-balance explainer, court diagram, authenticity checker. No signup.",
-  alternates: { canonical: "/tools/" },
+  alternates: pageAlternates("/tools/"),
 };
 
 type Tool = {

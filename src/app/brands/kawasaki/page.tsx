@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Kawasaki Badminton (川崎) — Master Mao, Star Cross, KACE decoded",
   description:
     "Kawasaki's Chinese-market badminton catalogue: Master Mao 20, Star Cross, Chocolate 88D, Glacier 800, H2 Hydrogen rackets plus KACE and Twilight shoes. Value-tier brand widely available in China.",
-  alternates: { canonical: "/brands/kawasaki/" },
+  alternates: pageAlternates("/brands/kawasaki/"),
   openGraph: {
     title: "Kawasaki Badminton Rackets and Shoes Decoded — Master Mao, Star Cross, KACE",
     description:
@@ -86,28 +87,28 @@ const config: BrandPageConfig = {
       line: "Chocolate 88D",
       bestFor: "Astrox 88D Pro budget alternative",
       priceUsd: 75,
-      href: "/blog/kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro/",
+      href: "/review/kawasaki-chocolate-88d/",
     },
     {
       name: "Kawasaki Master Mao 20",
       line: "Master Mao",
       bestFor: "Value-tier attack racket",
       priceUsd: 85,
-      href: "/blog/kawasaki-master-mao-20-racket-review/",
+      href: "/review/kawasaki-master-mao-20/",
     },
     {
       name: "Kawasaki Star Cross",
       line: "Star Cross",
       bestFor: "Value-tier speed racket",
       priceUsd: 90,
-      href: "/blog/kawasaki-star-cross-racket-review/",
+      href: "/review/kawasaki-star-cross/",
     },
     {
       name: "Kawasaki KACE",
       line: "Shoes",
       bestFor: "Speed-priority court shoe",
       priceUsd: 75,
-      href: "/blog/kawasaki-kace-shoes-review/",
+      href: "/review/kawasaki-kace/",
     },
   ],
   faqs: [
@@ -135,19 +136,19 @@ const config: BrandPageConfig = {
   relatedLinks: [
     {
       label: "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro",
-      href: "/blog/kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro/",
+      href: "/review/kawasaki-chocolate-88d/",
     },
     {
       label: "Kawasaki Master Mao 20 racket review",
-      href: "/blog/kawasaki-master-mao-20-racket-review/",
+      href: "/review/kawasaki-master-mao-20/",
     },
     {
       label: "Kawasaki Star Cross review",
-      href: "/blog/kawasaki-star-cross-racket-review/",
+      href: "/review/kawasaki-star-cross/",
     },
     {
       label: "Kawasaki KACE shoes review",
-      href: "/blog/kawasaki-kace-shoes-review/",
+      href: "/review/kawasaki-kace/",
     },
     {
       label: "Best beginner badminton rackets",

@@ -32,7 +32,7 @@ const coreRoutes = [
   "/cookies/",
   "/terms/",
   "/contact/",
-  "/blog/",
+  "/comparisons/",
   "/research/",
 ] as const;
 

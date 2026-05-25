@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Source and copyright policy",
   description:
     "How IntoBadminton handles Reddit, BadmintonCN, forum, and review evidence.",
-  alternates: { canonical: "/source-policy/" },
+  alternates: pageAlternates("/source-policy/"),
 };
 
 export default function SourcePolicyPage() {

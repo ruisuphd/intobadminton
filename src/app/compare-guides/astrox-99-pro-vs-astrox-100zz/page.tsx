@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Astrox 100ZZ",
   description:
     "Astrox 99 Pro vs 100ZZ — both Yonex flagship attack frames, very different timing windows. Head balance, shaft hardness, who should buy which.",
-  alternates: { canonical: "/compare-guides/astrox-99-pro-vs-astrox-100zz/" },
+  alternates: pageAlternates("/compare-guides/astrox-99-pro-vs-astrox-100zz/"),
   openGraph: {
     title: "Yonex Astrox 99 Pro vs Astrox 100ZZ — flagship attack compared",
     description:
@@ -74,7 +75,7 @@ const config: CompareGuideConfig = {
   relatedLinks: [
     { label: "Read the full Astrox 99 Pro review", href: "/review/yy-astrox-99-pro/" },
     { label: "Read the full Astrox 100ZZ review", href: "/review/yy-astrox-100zz/" },
-    { label: "Astrox 100ZZ Axelsen VA vs Kurenai — generation breakdown", href: "/blog/yonex-astrox-100zz-axelsen-va-vs-kurenai/" },
+    { label: "Astrox 100ZZ Axelsen VA vs Kurenai — generation breakdown", href: "/review/yy-astrox-100zz/" },
     { label: "Astrox 77 Pro vs Astrox 88S Pro — friendlier alternatives", href: "/compare-guides/astrox-77-pro-vs-88s-pro/" },
     { label: "Yonex brand overview", href: "/brands/yonex/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },

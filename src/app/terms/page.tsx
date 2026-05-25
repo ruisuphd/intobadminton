@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service and Conditions of Use for IntoBadminton: affiliate disclosure, equipment advice disclaimer, content rights, and acceptable use.",
-  alternates: { canonical: "/terms/" },
+  alternates: pageAlternates("/terms/"),
 };
 
 export default function TermsPage() {

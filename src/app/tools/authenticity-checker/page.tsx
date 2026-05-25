@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { AuthenticityChecker } from "@/components/AuthenticityChecker";
 import { JsonLd } from "@/components/JsonLd";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     "Badminton racket authenticity checker — 5-step counterfeit triage tool",
   description:
     "Free interactive 5-step authenticity check for Yonex, Victor, Li-Ning and other premium badminton rackets. Score the seller, the barcode, the cone cap, the grommets, and the warranty path to spot a counterfeit before you buy.",
-  alternates: { canonical: "/tools/authenticity-checker/" },
+  alternates: pageAlternates("/tools/authenticity-checker/"),
 };
 
 export default function AuthenticityCheckerToolPage() {

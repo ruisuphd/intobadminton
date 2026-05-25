@@ -5,11 +5,15 @@ import products from "@/data/products.json";
 import {
   articlesByDateDesc,
   blogArticles,
+  editorialContentLabel,
   readingTimeMinutes,
 } from "@/lib/blog";
+import { articlePathForSlug, editorialSlugs } from "@/lib/blog-migrations";
+import { reviewProductIdForBlog } from "@/lib/content-links";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { reviewableProducts, reviewPath } from "@/lib/review-pages";
 import type { ProductRecord } from "@/lib/types/product";
 
 const PRODUCT_CATALOGUE = products as ProductRecord[];
@@ -42,9 +46,19 @@ const HOME_FAQ: { q: string; a: string }[] = [
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = t(locale);
   const localized = (path: string) => buildLocalizedPath(locale, path);
-  // Take the 3 newest articles by updatedAt for the home "Latest deep-dives" strip.
-  const featured = articlesByDateDesc(blogArticles[locale]).slice(0, 3);
-  const articleCount = blogArticles[locale].length;
+  const editorialSet = new Set(editorialSlugs());
+  const editorialArticles = blogArticles[locale].filter((article) =>
+    editorialSet.has(article.slug)
+  );
+  const reviewProductIds = new Set(reviewableProducts().map((p) => p.id));
+  const reviewArticles = blogArticles[locale].filter((article) => {
+    const productId = reviewProductIdForBlog(article.slug);
+    return productId !== undefined && reviewProductIds.has(productId);
+  });
+  const featuredEditorial = articlesByDateDesc(editorialArticles).slice(0, 3);
+  const featuredReviews = articlesByDateDesc(reviewArticles).slice(0, 3);
+  const editorialCount = editorialArticles.length;
+  const reviewCount = reviewProductIds.size;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -113,9 +127,11 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Yonex vs Victor vs Li-Ning", href: "/compare-guides/yonex-victor-li-ning/", tag: "Compare" },
     { label: "Spot fake rackets — authenticity check", href: "/guides/equipment-authenticity/", tag: "Authenticity" },
     { label: "Glossary — 4U, head-heavy, T-throat explained", href: "/guides/glossary/", tag: "Glossary" },
-    { label: "68 / 72 / 76 / 78 / 80 hole rackets explained", href: "/blog/racket-stringing-hole-patterns-explained/", tag: "Stringing" },
-    { label: "Yonex Tour vs Pro: which Tour is worth buying", href: "/blog/yonex-tour-series-buying-guide/", tag: "Value" },
-    { label: "Kumpoo — the fourth major badminton brand", href: "/blog/kumpoo-fourth-major-badminton-brand-profile/", tag: "Brand" },
+    { label: "68 / 72 / 76 / 78 / 80 hole rackets explained", href: "/comparisons/racket-stringing-hole-patterns-explained/", tag: "Stringing" },
+    { label: "Product reviews hub", href: "/review/", tag: "Reviews" },
+    { label: "Nanoflare 1000 Z review", href: "/review/yy-nanoflare-1000z/", tag: "Reviews" },
+    { label: "Yonex Tour vs Pro: which Tour is worth buying", href: "/comparisons/yonex-tour-series-buying-guide/", tag: "Value" },
+    { label: "Kumpoo — the fourth major badminton brand", href: "/comparisons/kumpoo-fourth-major-badminton-brand-profile/", tag: "Brand" },
   ];
 
   return (
@@ -139,8 +155,11 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
               <Link href={localized("/quiz/")} className="btn-primary">
                 {copy.home.start}
               </Link>
-              <Link href={localized("/blog/")} className="btn-secondary">
-                Read {articleCount} equipment deep-dives
+              <Link href={localized("/review/")} className="btn-secondary">
+                Browse {reviewCount} product reviews
+              </Link>
+              <Link href={localized("/comparisons/")} className="btn-secondary">
+                Read {editorialCount} comparisons &amp; guides
               </Link>
             </div>
             <p className="mt-6 text-xs text-[var(--color-subtle)]">
@@ -148,11 +167,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-3 sm:grid-cols-3">
+          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { num: `${PRODUCT_CATALOGUE.length}`, label: "catalogue rows scored with source status" },
+              { num: String(reviewCount), label: "per-product reviews with specs" },
+              { num: String(editorialCount), label: "comparisons & buying guides" },
               { num: "5", label: "transparent fit factors per result" },
-              { num: String(articleCount), label: "original deep-dive articles" },
             ].map((s) => (
               <div
                 key={s.label}
@@ -268,34 +288,92 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         </div>
       </section>
 
-      {featured.length > 0 && (
+      {featuredReviews.length > 0 && (
         <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
           <div className="layout-band max-w-6xl">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div className="max-w-2xl">
                 <h2 className="text-headline text-[var(--text)]">
-                  Latest deep-dives
+                  Latest product reviews
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-                  Original badminton equipment writing with source links, editor notes, and explicit confidence limits.
+                  Specs, photos, and hands-on notes for individual rackets, shoes, and shuttles.
                 </p>
               </div>
               <Link
-                href={localized("/blog/")}
+                href={localized("/review/")}
                 className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
               >
                 {"View all →"}
               </Link>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {featured.map((article) => (
+              {featuredReviews.map((article) => {
+                const productId = reviewProductIdForBlog(article.slug);
+                const href = productId ? reviewPath(productId) : "/review/";
+                return (
+                  <Link
+                    key={article.slug}
+                    href={localized(href)}
+                    className="card card-interactive p-6 block"
+                  >
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="chip">Review</span>
+                      <span className="text-xs text-[var(--color-subtle)]">
+                        {readingTimeMinutes(article)} min read
+                      </span>
+                      <span className="text-xs text-[var(--color-subtle)]">·</span>
+                      <time
+                        className="text-xs text-[var(--color-subtle)]"
+                        dateTime={article.updatedAt}
+                      >
+                        {article.updatedAt}
+                      </time>
+                    </div>
+                    <h3 className="mt-3 text-lg font-semibold text-[var(--text)]">
+                      {article.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+                      {article.dek}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {featuredEditorial.length > 0 && (
+        <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
+          <div className="layout-band max-w-6xl">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <h2 className="text-headline text-[var(--text)]">
+                  Latest comparisons &amp; guides
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
+                  Original badminton equipment writing with source links, editor notes, and explicit confidence limits.
+                </p>
+              </div>
+              <Link
+                href={localized("/comparisons/")}
+                className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+              >
+                {"View all →"}
+              </Link>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {featuredEditorial.map((article) => (
                 <Link
                   key={article.slug}
-                  href={localized(`/blog/${article.slug}/`)}
+                  href={localized(articlePathForSlug(article.slug))}
                   className="card card-interactive p-6 block"
                 >
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="chip">Blog</span>
+                    <span className="chip">
+                      {editorialContentLabel(article.slug)}
+                    </span>
                     <span className="text-xs text-[var(--color-subtle)]">
                       {readingTimeMinutes(article)} min read
                     </span>

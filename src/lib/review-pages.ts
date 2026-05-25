@@ -5,14 +5,14 @@ import type { ProductRecord } from "@/lib/types/product";
 const CATALOG = productsCatalog as ProductRecord[];
 
 /**
- * Categories that get a dedicated `/review/[slug]/` page. Strings, shuttles,
- * grips, and bags are intentionally excluded for now — their per-product
- * content is thinner and the SEO upside per page is lower than rackets and
- * shoes. Re-add a category here once it has comparable editorial depth.
+ * Categories that get a dedicated `/review/[slug]/` page. Strings and grips
+ * are intentionally excluded for now — their per-product content is thinner.
+ * Shuttles join rackets and shoes once standalone editorial depth exists.
  */
 const REVIEW_ELIGIBLE_CATEGORIES = new Set<ProductRecord["category"]>([
   "racket",
   "shoes",
+  "shuttle",
 ]);
 
 export function reviewableProducts(): ProductRecord[] {

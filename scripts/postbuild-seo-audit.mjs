@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import blogUrlMigrations from "../src/data/blog-url-migrations.json" with { type: "json" };
 import legacyDestinations from "../src/data/legacy-redirect-destinations.json" with { type: "json" };
 import claimsRegistry from "../content/claims.json" with { type: "json" };
 
@@ -112,7 +113,7 @@ function walkJsonLd(value, visit) {
 }
 
 const ARTICLE_SCHEMA_REQUIRED =
-  /^\/(?:best|brands|compare-guides|guides|review)\/[^/]+\/$/;
+  /^\/(?:best|brands|compare-guides|comparisons|guides|review)\/[^/]+\/$/;
 const ARTICLE_SCHEMA_EXEMPT = new Set(["/guides/glossary/"]);
 
 function requiresArticleSchema(routePath) {
@@ -131,7 +132,7 @@ const SITEMAP_EXEMPT_ROUTES = new Set([
   "/review/submit/",
   "/privacy-choices/",
   "/blogs/",
-  // /saved/ is per-device and noindex (mirror of src/lib/sitemap.ts).
+  "/blog/",
   "/saved/",
 ]);
 
@@ -144,7 +145,7 @@ function hasValidArticleSchema(value) {
   walkJsonLd(value, (node) => {
     if (found) return;
     const types = valuesForType(node["@type"]);
-    if (!types.includes("Article")) return;
+    if (!types.includes("Article") && !types.includes("BlogPosting")) return;
     if (
       !node.author ||
       typeof node.datePublished !== "string" ||
@@ -316,6 +317,16 @@ function readSitemapUrls() {
   return Array.from(xml.matchAll(/<loc>(.*?)<\/loc>/g), (match) => match[1]);
 }
 
+function blogRedirectsFromMigrations() {
+  return [
+    { source: "/blog/", destination: "/comparisons/" },
+    ...blogUrlMigrations.migrations.map((entry) => ({
+      source: `/blog/${entry.slug}/`,
+      destination: entry.destination,
+    })),
+  ];
+}
+
 function legacyRedirects() {
   return locales.flatMap((locale) =>
     legacyDestinations.map((rawDestination) => {
@@ -330,7 +341,7 @@ function legacyRedirects() {
 
 const files = readHtmlFiles();
 const sitemapUrls = readSitemapUrls();
-const redirects = legacyRedirects();
+const redirects = [...legacyRedirects(), ...blogRedirectsFromMigrations()];
 const issues = [];
 const filePaths = new Set(files.map((file) => file.path));
 const exportedRoutes = new Set(files.map((file) => routePathForFile(file.path)));

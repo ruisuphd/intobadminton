@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Li-Ning Halbertec 9000 Power vs AxForce 100 Gen 2",
   description:
     "Halbertec 9000 Power vs AxForce 100 Gen 2 — two Li-Ning attack flagships compared. Which is the right Li-Ning upgrade for singles smash specialists.",
-  alternates: { canonical: "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/" },
+  alternates: pageAlternates("/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/"),
   openGraph: {
     title: "Halbertec 9000 Power vs AxForce 100 Gen 2 — Li-Ning attack flagships compared",
     description:
@@ -74,8 +75,8 @@ const config: CompareGuideConfig = {
   relatedLinks: [
     { label: "Read the full Halbertec 9000 Power review", href: "/review/ln-halbertec-9000-power/" },
     { label: "Read the full AxForce 100 Gen 2 review", href: "/review/ln-axforce-100-gen-2/" },
-    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power", href: "/blog/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
-    { label: "Li-Ning AxForce 100 Gen 2 vs 100ZZ vs 90 New", href: "/blog/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/" },
+    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power", href: "/comparisons/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
+    { label: "Li-Ning AxForce 100 Gen 2 vs 100ZZ vs 90 New", href: "/comparisons/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },
   ],

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Page not found",
   description:
-    "The requested IntoBadminton page could not be found. Continue to the equipment finder, blog, best picks, or contact page.",
+    "The requested IntoBadminton page could not be found. Continue to the equipment finder, reviews, comparisons, best picks, or contact page.",
   robots: {
     index: false,
     follow: true,
@@ -18,9 +18,14 @@ const RECOVERY_LINKS = [
     description: "Get racket, string, shoe, and setup suggestions.",
   },
   {
-    href: "/blog/",
-    label: "Equipment blog",
-    description: "Read reviews, comparisons, and setup guides.",
+    href: "/review/",
+    label: "Product reviews",
+    description: "Per-product reviews with specs and hands-on notes.",
+  },
+  {
+    href: "/comparisons/",
+    label: "Comparisons",
+    description: "Read comparisons, buying guides, and editorial notes.",
   },
   {
     href: "/best/",
@@ -49,8 +54,8 @@ export default function NotFound() {
               slash. Continue from the main equipment paths below.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/blog/" className="btn-primary">
-                Read the blog
+              <Link href="/comparisons/" className="btn-primary">
+                Browse comparisons
               </Link>
               <Link href="/" className="btn-secondary">
                 Go home

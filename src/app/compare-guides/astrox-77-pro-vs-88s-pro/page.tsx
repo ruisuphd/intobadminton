@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   title: "Astrox 77 Pro vs 88S Pro 2024 — Which Fits You?",
   description:
     "Both 4U Yonex Astrox frames with slight head-heavy balance. Honest comparison of shaft hardness, swing feel, and which player each suits — by an owner of both.",
-  alternates: { canonical: "/compare-guides/astrox-77-pro-vs-88s-pro/" },
+  alternates: pageAlternates("/compare-guides/astrox-77-pro-vs-88s-pro/"),
   openGraph: {
     title: "Astrox 77 Pro vs 88S Pro 2024 — Which Fits You?",
     description:
@@ -167,7 +168,7 @@ export default function Astrox77vs88SProPage() {
         </div>
 
         <p className="text-sm text-[var(--color-muted)]">
-          Related: <Link href="/blog/yonex-astrox-88d-pro-vs-88s-pro-2024/" className="text-[var(--color-accent)] underline">Astrox 88D Pro vs 88S Pro 2024 deep-dive</Link>.
+          Related: <Link href="/comparisons/yonex-astrox-88d-pro-vs-88s-pro-2024/" className="text-[var(--color-accent)] underline">Astrox 88D Pro vs 88S Pro 2024 deep-dive</Link>.
         </p>
       </article>
     </main>

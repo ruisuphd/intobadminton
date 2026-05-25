@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Li-Ning Halbertec 9000 Power",
   description:
     "Yonex Astrox 99 Pro vs Li-Ning Halbertec 9000 Power — two singles attack flagships from rival brands. Which to pick based on shaft tier, build feel, and resale.",
-  alternates: { canonical: "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/" },
+  alternates: pageAlternates("/compare-guides/astrox-99-pro-vs-halbertec-9000-power/"),
   openGraph: {
     title: "Astrox 99 Pro vs Halbertec 9000 Power — Yonex or Li-Ning for singles attack?",
     description:
@@ -74,7 +75,7 @@ const config: CompareGuideConfig = {
   relatedLinks: [
     { label: "Read the full Astrox 99 Pro review", href: "/review/yy-astrox-99-pro/" },
     { label: "Read the full Halbertec 9000 Power review", href: "/review/ln-halbertec-9000-power/" },
-    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power — full Halbertec line", href: "/blog/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
+    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power — full Halbertec line", href: "/comparisons/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },
     { label: "Source-authority methodology", href: "/methodology/" },

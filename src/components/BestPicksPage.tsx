@@ -17,6 +17,7 @@ import {
   ratingDatePublished,
 } from "@/lib/editorial-rating";
 import { articleJsonLd } from "@/lib/structured-data";
+import { reviewPath } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];
@@ -30,6 +31,8 @@ export type Pick = {
   specs: { label: string; value: string }[];
   why: string;
   tradeoff: string;
+  /** When set, links to the per-product review at `/review/[id]/`. */
+  productId?: string;
   image?: ProductImage;
   /**
    * Editorial signal of how this pick was vetted. Omit to skip the badge.
@@ -231,7 +234,16 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                       #{p.rank} · {p.brand}
                     </p>
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
-                      {p.name}
+                      {p.productId ? (
+                        <Link
+                          href={reviewPath(p.productId)}
+                          className="hover:text-[var(--color-accent)]"
+                        >
+                          {p.name}
+                        </Link>
+                      ) : (
+                        p.name
+                      )}
                     </h3>
                     {p.evidenceLevel && (
                       <div className="mt-2">
@@ -273,6 +285,16 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                 <strong className="text-[var(--text)]">Tradeoff:</strong>{" "}
                 {p.tradeoff}
               </p>
+              {p.productId && (
+                <p className="mt-4">
+                  <Link
+                    href={reviewPath(p.productId)}
+                    className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+                  >
+                    Read full review with specs →
+                  </Link>
+                </p>
+              )}
             </li>
           ))}
         </ol>
