@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArticleToc, type TocItem } from "@/components/ArticleToc";
 
@@ -20,8 +20,17 @@ export function GuideInPageToc() {
   const [items, setItems] = useState<TocItem[]>([]);
   const [mountNode, setMountNode] = useState<HTMLElement | null>(null);
 
-  useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect -- DOM scan after guide paint */
+  useLayoutEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- DOM scan before paint */
+    if (
+      typeof window !== "undefined" &&
+      window.location.pathname.replace(/\/$/, "") === "/guides/glossary"
+    ) {
+      setItems([]);
+      setMountNode(null);
+      return;
+    }
+
     const article = document.querySelector("main article");
     if (!article) {
       setItems([]);
