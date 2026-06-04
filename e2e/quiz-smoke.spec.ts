@@ -10,7 +10,7 @@ test("finder quiz reaches results page", async ({ page }) => {
 
   await funnel.getByRole("button", { name: /^Club$/i }).click();
   await expect(
-    page.getByRole("heading", { name: /What do you mostly play/i })
+    funnel.getByRole("heading", { name: /What do you mostly play/i })
   ).toBeVisible();
 
   await funnel.getByRole("button", { name: /^Doubles$/i }).click();
