@@ -86,6 +86,8 @@ export function GuideInPageToc() {
       host.id = "guide-toc-anchor";
       host.className = "mb-8 min-h-28";
       h1.insertAdjacentElement("afterend", host);
+    } else if (!host.classList.contains("min-h-28")) {
+      host.classList.add("mb-8", "min-h-28");
     }
 
     setItems(next);
