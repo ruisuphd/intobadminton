@@ -210,6 +210,13 @@ export default function StringTensionGuide() {
 
         <p className="text-[var(--color-muted)] leading-relaxed">
           Related reading:{" "}
+          <Link
+            href="/tools/string-tension-calculator/"
+            className="text-[var(--color-accent)] underline"
+          >
+            string tension calculator
+          </Link>
+          ,{" "}
           <Link href="/best/strings/" className="text-[var(--color-accent)] underline">
             best badminton strings
           </Link>

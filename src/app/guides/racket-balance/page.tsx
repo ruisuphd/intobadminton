@@ -216,6 +216,13 @@ export default function RacketBalanceGuide() {
 
         <p className="text-[var(--color-muted)] leading-relaxed">
           Related reading:{" "}
+          <Link
+            href="/tools/racket-balance-explainer/"
+            className="text-[var(--color-accent)] underline"
+          >
+            racket balance explainer
+          </Link>
+          ,{" "}
           <Link href="/guides/string-tension/" className="text-[var(--color-accent)] underline">
             string tension guide
           </Link>

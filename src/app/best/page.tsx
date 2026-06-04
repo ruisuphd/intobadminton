@@ -51,6 +51,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         title: "Best smash rackets",
         dek: "Head-heavy attack frames ranked by smash mass, continuity, and the shaft hardness you can actually drive.",
       },
+      {
+        href: "/best/rackets-under-100/",
+        title: "Best rackets under $100",
+        dek: "Six budget frames with original trade-off analysis — Play tiers and entry Victor/Li-Ning, not marketplace price sorts.",
+      },
     ],
   },
   {

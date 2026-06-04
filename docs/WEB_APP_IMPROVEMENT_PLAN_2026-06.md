@@ -51,7 +51,7 @@
 - Engagement UX on `/best/*` and all `/guides/*` routes
 - All 11 `/compare-guides/*` URLs in site search + Playwright smoke (`e2e/search-smoke.spec.ts`)
 
-### Phase C — Shipped (`cursor/web-app-improvement-plan-f404`)
+### Phase C — Shipped (PR #101 / `cursor/web-app-improvement-plan-f404`)
 
 - Compare-guides layout: reading progress, affiliate disclosure, engagement footer
 - All 12 compare guides in site search (`src/lib/compare-guides.ts`)
@@ -61,12 +61,24 @@
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
 
-### Phase D — Next
+### Phase C — Sprint 3 (main, `cursor/web-app-improvement-plan-c920`)
 
-- GSC/CrUX baseline CSV capture (owner session)
-- Original photos on top commercial URLs
-- HelpfulReaction aggregate backend (Workers/KV)
-- Expand `blog-review-product-map.json` toward full review coverage
+- Glossary autolinks in review body (`glossary-autolink.ts`)
+- Guide ToC via `GuideInPageToc` (portal after h1)
+- Quiz step hints + option glyphs
+- Notify-me intent in localStorage (Buttondown when configured)
+- Sharp-preferred product image pipeline
+- Catalog products in site search (`product` kind)
+
+### Phase D — In progress (`cursor/web-app-improvement-plan-11b6`)
+
+- Expand `blog-review-product-map.json` (+29 high-confidence slug→product mappings)
+- `scripts/suggest-review-product-map.mjs` for editorial map expansion
+- `docs/baselines/README.md` — GSC/CrUX CSV capture runbook (owner session)
+- HelpfulReaction Workers/KV aggregates — still deferred
+- Original photography — editorial pipeline
+
+See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
 
 ---
 

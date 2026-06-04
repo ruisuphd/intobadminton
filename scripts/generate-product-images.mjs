@@ -166,9 +166,16 @@ async function main() {
     console.log("[generate-product-images] no source images found under public/products/");
     return;
   }
+  const useSharp = Boolean(sharp);
+  if (useSharp) {
+    console.log("[generate-product-images] using sharp");
+  } else if (hasSips()) {
+    console.log("[generate-product-images] using sips (macOS)");
+  }
+
   console.log(`[generate-product-images] processing ${files.length} source file(s)…`);
   for (const file of files) {
-    if (sharp) {
+    if (useSharp) {
       await generateOneWithSharp(file, sharp);
     } else {
       await generateOne(file);

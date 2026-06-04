@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ArticleEngagementFooter } from "@/components/ArticleEngagementFooter";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { EditorialMeta } from "@/components/EditorialMeta";
+import { ReadingProgress } from "@/components/ReadingProgress";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -122,6 +125,7 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
 
   return (
     <main className="flex-1 py-16">
+      <ReadingProgress />
       <JsonLd data={article} />
       <JsonLd data={breadcrumb} />
 
@@ -153,6 +157,7 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
         </header>
 
         <EditorialNotice />
+        <InArticleAffiliateDisclosure />
 
         {config.intro && (
           <p className="text-base leading-relaxed text-[var(--color-muted)]">
@@ -291,6 +296,12 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
             Start the finder
           </Link>
         </section>
+
+        <ArticleEngagementFooter
+          url={url}
+          title={config.title}
+          contentId={`compare:${config.slug}`}
+        />
       </article>
     </main>
   );

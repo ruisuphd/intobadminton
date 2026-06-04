@@ -15,6 +15,7 @@ describe("editorialMetaByPath registry", () => {
       "/best/intermediate-rackets/",
       "/best/doubles-rackets/",
       "/best/smash-heavy-rackets/",
+      "/best/rackets-under-100/",
       "/best/shoes/",
       "/best/strings/",
     ];
