@@ -169,6 +169,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
   const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- single-shot hydration */
     if (!live) {
       const existing = getNotifyMeEntry(productId);
       if (existing) {
@@ -177,6 +178,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
       }
     }
     setHydrated(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [productId, live]);
 
   if (!hydrated) {
