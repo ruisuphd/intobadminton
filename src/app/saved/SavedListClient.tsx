@@ -1,14 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import productsCatalog from "@/data/products.json";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
 import { SaveProductButton } from "@/components/SaveProductButton";
+import { trackEvent } from "@/components/Analytics";
 import { useProfile } from "@/context/ProfileContext";
+import {
+  buttondownConfigured,
+  notifyTagForProduct,
+  subscribeViaButtondown,
+} from "@/lib/buttondown";
 import { humanize } from "@/lib/text";
 import { reviewPath } from "@/lib/review-pages";
 import type { ProductRecord } from "@/lib/types/product";
@@ -155,41 +161,85 @@ export function SavedListClient() {
 }
 
 function NotifyMeRow({ productId }: { productId: string }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
+    "idle"
+  );
+  const [message, setMessage] = useState<string | null>(null);
+  const live = buttondownConfigured();
+
   return (
     <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4">
       <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
         Notify me when this is re-tested or drops in price
       </summary>
       <p className="mt-3 text-xs leading-relaxed text-[var(--color-muted)]">
-        Per-product notifications are scaffolded but not yet live — Buttondown
-        integration is in flight. When ready, this will email you only when
-        the spec is re-verified or when a tracked retailer crosses your set
-        price. No general newsletter; no other emails.
+        {live
+          ? "One email when this product is re-verified or when we publish a tracked price drop. No general newsletter — unsubscribe any time."
+          : "Per-product notifications launch with the next deploy. Leave your email and we will wire you up when Buttondown is live."}
       </p>
       <form
         className="mt-3 flex flex-wrap gap-2"
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          alert(
-            "Notifications launch when the per-product backend is live. We saved your interest locally."
-          );
+          setStatus("loading");
+          setMessage(null);
+
+          const result = await subscribeViaButtondown({
+            email,
+            tag: notifyTagForProduct(productId),
+          });
+
+          trackEvent("notify_me_submit", {
+            product_id: productId,
+            configured: live,
+            ok: result.ok,
+          });
+
+          if (result.ok) {
+            setStatus("done");
+            setMessage(
+              "Check your inbox to confirm — Buttondown sends a double opt-in link."
+            );
+            setEmail("");
+            return;
+          }
+
+          setStatus("error");
+          setMessage(result.message);
         }}
       >
         <input
           type="email"
           name="email"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={status === "loading" || status === "done"}
           placeholder="you@example.com"
           aria-label={`Notify email for ${productId}`}
-          className="flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-4 text-sm h-10"
+          className="flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-4 text-sm h-10 disabled:opacity-60"
         />
         <button
           type="submit"
-          className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
+          disabled={status === "loading" || status === "done"}
+          className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)] disabled:opacity-60"
         >
-          Notify me
+          {status === "loading" ? "Sending…" : status === "done" ? "Sent" : "Notify me"}
         </button>
       </form>
+      {message && (
+        <p
+          className={`mt-3 text-xs ${
+            status === "error"
+              ? "text-[var(--color-warning)]"
+              : "text-[var(--color-muted)]"
+          }`}
+          role={status === "error" ? "alert" : "status"}
+        >
+          {message}
+        </p>
+      )}
     </details>
   );
 }

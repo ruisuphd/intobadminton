@@ -3,10 +3,11 @@ import { notFound } from "next/navigation";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
-import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { JsonLd } from "@/components/JsonLd";
 import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
+import { ReviewProductFitPanel } from "@/components/ReviewProductFitPanel";
 import { SocialShare } from "@/components/SocialShare";
 import {
   blogArticles,
@@ -18,6 +19,7 @@ import {
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
 
 function isSpecLikeHeading(heading: string) {
   return /\bspec(?:s|ifications?)?\b/i.test(heading);
@@ -47,6 +49,7 @@ export function EditorialArticlePage({
     sectionAnchorId(section.heading, index, anchorSeen)
   );
   const related = relatedArticles(blogArticles[locale], article, 3);
+  const enrichment = enrichmentForReviewArticle(slug, article);
   const tocItems = sections.map((section, index) => ({
     id: sectionIds[index] ?? sectionAnchorId(section.heading, index, new Map()),
     label: section.heading,
@@ -98,6 +101,7 @@ export function EditorialArticlePage({
       <LastArticleTracker href={path} title={article.title} />
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
+      {enrichment && <JsonLd data={enrichment.productSchema} />}
       <JsonLd data={breadcrumbJsonLd} />
 
       <article className="layout-band max-w-3xl py-16">
@@ -127,6 +131,12 @@ export function EditorialArticlePage({
 
         <div className="mt-10 space-y-8">
             <ReviewMethodologyBox updatedAt={article.updatedAt} />
+            {enrichment?.scored && (
+              <ReviewProductFitPanel
+                scored={enrichment.scored}
+                quizHref={buildLocalizedPath(locale, "/quiz/")}
+              />
+            )}
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
               <div className="overflow-x-auto rounded-2xl border border-[color:var(--line)]">

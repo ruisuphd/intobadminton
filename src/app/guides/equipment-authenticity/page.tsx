@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { AuthenticityChecker } from "@/components/AuthenticityChecker";
+import { GuideEngagement } from "@/components/GuideEngagement";
 import { JsonLd } from "@/components/JsonLd";
 import {
   authenticityBrands,
@@ -381,6 +382,10 @@ export default function EquipmentAuthenticityGuide() {
             Start the finder
           </Link>
         </section>
+        <GuideEngagement
+          path="/guides/equipment-authenticity/"
+          title="Badminton Racket Authenticity Check"
+        />
       </article>
     </main>
   );

@@ -47,7 +47,7 @@
 ### Phase B — Next
 
 - HelpfulReaction Workers/KV
-- Per-product notify-me (Buttondown)
+- Per-product notify-me (Buttondown) — **see [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md)**
 - GSC/CrUX baselines in `docs/baselines/`
 
 ### Phase C — Content moat
