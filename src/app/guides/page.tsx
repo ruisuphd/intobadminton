@@ -7,7 +7,7 @@ import { t } from "@/lib/i18n";
 export const metadata: Metadata = {
   title: "Badminton equipment guides",
   description:
-    "Practical badminton guides — string tension, racket balance, shoes and footwork, doubles roles, season refresh, authenticity checks, plus a 40-term glossary.",
+    "Practical badminton guides — string tension, racket balance, shoes, doubles positioning, season refresh, authenticity checks, plus a 40-term glossary.",
   alternates: pageAlternates("/guides/"),
 };
 
@@ -41,6 +41,13 @@ const guides = [
       "Why badminton shoes use gum rubber outsoles and low-profile midsoles, how lateral reinforcement protects your ankles on split steps, and how to test fit width and stability in store before committing.",
   },
   {
+    href: "/guides/badminton-shoes-vs-running-shoes/",
+    title: "Badminton shoes vs running shoes",
+    desc: "Why road trainers fail on wood courts — grip, heel drop, and lateral support.",
+    long:
+      "A practical comparison of running-shoe design vs court-shoe design: outsole compounds, heel-to-toe drop, lateral cage, and when it is safe to wear runners at all. Links into the shoe-fit cluster and best-shoes hub.",
+  },
+  {
     href: "/guides/racket-balance/",
     title: "Racket balance and flex",
     desc: "Head weight, shaft stiffness, and how they show up in play.",
@@ -60,6 +67,13 @@ const guides = [
     desc: "How front vs back can influence what you optimize for in doubles.",
     long:
       "What front-court, rear-court, and defensive roles actually demand from your gear — including the differences in mixed doubles and how rotation changes what you optimise for in each rally.",
+  },
+  {
+    href: "/guides/doubles-positioning-and-rackets/",
+    title: "Doubles positioning and rackets",
+    desc: "Court zones, attack vs defence shape, and racket specs per zone.",
+    long:
+      "Maps the T-shaped court zones to balance, shaft flex, and shoe traits — front attack, rear attack, side-by-side defence, and rotation triggers. Pairs with the doubles roles guide and best-doubles hub.",
   },
   {
     href: "/guides/wide-feet-badminton-shoes/",
