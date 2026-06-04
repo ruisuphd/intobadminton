@@ -51,11 +51,22 @@
 - Engagement UX on `/best/*` and all `/guides/*` routes
 - All 11 `/compare-guides/*` URLs in site search + Playwright smoke (`e2e/search-smoke.spec.ts`)
 
-### Phase C — Next
+### Phase C — Shipped (`cursor/web-app-improvement-plan-f404`)
+
+- Compare-guides layout: reading progress, affiliate disclosure, engagement footer
+- All 12 compare guides in site search (`src/lib/compare-guides.ts`)
+- Guide engagement deduplication (layout-only chrome)
+- Larger `ProductCardImage` on result cards
+- `scripts/audit-review-product-map.mjs` for map coverage reporting
+
+See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
+
+### Phase D — Next
 
 - GSC/CrUX baseline CSV capture (owner session)
 - Original photos on top commercial URLs
 - HelpfulReaction aggregate backend (Workers/KV)
+- Expand `blog-review-product-map.json` toward full review coverage
 
 ---
 
