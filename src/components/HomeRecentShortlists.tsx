@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useProfile } from "@/context/ProfileContext";
 import { productDisplayName } from "@/lib/product-display-names";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { profileToResultsPath } from "@/lib/profile-url";
+import { byId } from "@/lib/scoring";
 
 /** Surfaces the last finder shortlists on the homepage for return visits. */
 export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {
@@ -37,20 +39,23 @@ export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {
             const names = entry.topIds
               .map((id) => productDisplayName(id) ?? id)
               .join(" · ");
+            const href = localized(profileToResultsPath(entry.profile));
             return (
-              <li
-                key={entry.at}
-                className="card p-4"
-              >
-                <time
-                  className="text-xs text-[var(--color-subtle)]"
-                  dateTime={entry.at}
-                >
-                  {new Date(entry.at).toLocaleString()}
-                </time>
-                <p className="mt-2 text-sm font-medium text-[var(--text)] line-clamp-3">
-                  {names}
-                </p>
+              <li key={entry.at}>
+                <Link href={href} className="card card-interactive block p-4">
+                  <time
+                    className="text-xs text-[var(--color-subtle)]"
+                    dateTime={entry.at}
+                  >
+                    {new Date(entry.at).toLocaleString()}
+                  </time>
+                  <p className="mt-2 text-sm font-medium text-[var(--text)] line-clamp-3">
+                    {names}
+                  </p>
+                  <p className="mt-2 text-xs text-[var(--color-accent)]">
+                    Reopen results →
+                  </p>
+                </Link>
               </li>
             );
           })}
