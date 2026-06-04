@@ -2,6 +2,7 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+
 ## 2026-06-04 — Sprint 4 web app (branch `cursor/web-app-improvement-plan-3a42`, PR #115)
 
 **Trigger:** Cloud agent — audit → plan → execute (commerce CTAs, OG metadata, RSS, compare parity).
@@ -16,6 +17,23 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 ### Verification
 
 - `npm test` — 204 passed
+- `npm run build` + postbuild SEO audit — pass
+
+---
+
+## 2026-06-04 — Web app Sprint 4 (branch `cursor/web-app-improvement-plan-f5af`, PR #113)
+
+**Trigger:** Cloud agent — audit → plan → execute (10-pass verification).
+
+### Shipped (PR #113, atop main catalog work)
+
+- `profileToResultsPath` + linked shortlist cards on homepage and `/results/`
+- Buttondown migrate CTA for device-only notify-me intents on `/saved/`
+- Lighthouse: cluster guides, flagship tools, `/saved/`
+
+### Verification
+
+- `npm test` — 193 passed (after merge with main)
 - `npm run build` + postbuild SEO audit — pass
 
 ---
@@ -90,21 +108,13 @@ CURSOR_AGENT=1 npm run blog:check
 
 **Trigger:** Cloud agent — full audit → plan → execute workflow (PR #85 `ready_for_review`).
 
-### Outcome
-
-Sprint 3 shipped on `main` via PR #95 before PR #99 merged: `/best/rackets-under-100/`, homepage hero search, catalog search, Buttondown notify-me, `HomeRecentShortlists`, e2e header-search locator fix. PR #99 carries runlog only.
-
-### Verification (this run)
-
-- `npm test` — 187 passed
-- `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
-- `npm run test:e2e` — 13 passed
+Sprint 3 shipped on `main` via PR #95: `/best/rackets-under-100/`, homepage hero search, catalog search, Buttondown notify-me, `HomeRecentShortlists`, e2e header-search locator fix.
 
 ---
 
-## 2026-06-04 — PR #95 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-218b`)
+## 2026-06-04 — PR #94 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-38f1`)
 
-**Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). **Sprint 3 merged to `main`** (squash). Translation workflow ran in parallel on this branch.
+**Trigger:** GitHub pull request #94 (`ready_for_review`) — Sprint 3 web app PR **already merged** to `main` as `b593899`. Chinese review translation workflow (steps 1–7).
 
 ### Blog source check
 
@@ -116,21 +126,6 @@ Sprint 3 shipped on `main` via PR #95 before PR #99 merged: `/best/rackets-under
 | `blog-articles.json` imported articles | **146** — no import drift |
 | New translations this run | **None** |
 
-### PR #95 fix (Sprint 3)
-
-- **CI failure:** `react-hooks/set-state-in-effect` in `SavedListClient.tsx` (`setLocalIntent` inside `useEffect`).
-- **Fix pushed** to `cursor/web-app-improvement-plan-22e9` (`210b2ff`): `useSyncExternalStore` + `subscribeNotifyMe` in `notify-me.ts`.
-- **Local verify (PR head):** lint, typecheck, blog:validate 20/20, 187 tests, build + SEO audit pass.
-
-### Translation / import
-
-Not performed — no `blogs/` drop. Steps 1–5 and web-app review import deferred until:
-
-### PR #95 (Sprint 3 — merged)
-
-- Catalog products in site search + kind filter chips; affiliate disclosure on commercial pages; engagement chrome on best-of/compare guides; brand filter on `/results/`.
-- Notify-me lint: resolved on PR branch via `eslint-disable` for localStorage hydrate (main after merge).
-
 ### Translation / import
 
 Not performed — no `blogs/` drop. Re-run after syncing:
@@ -138,12 +133,11 @@ Not performed — no `blogs/` drop. Re-run after syncing:
 ```bash
 npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
 CURSOR_AGENT=1 npm run blog:check
-# translate → rename → npm run blog:import && npm run blog:validate
+# translate (Chinese above, ## English Translation below), rename to English, map slug, then:
+npm run blog:import && npm run blog:validate && npm test && npm run build
 ```
 
 ---
-
-
 
 ## 2026-06-04 — Web app Sprint 3 PR #94 (branch `cursor/web-app-improvement-plan-0fb2`)
 
