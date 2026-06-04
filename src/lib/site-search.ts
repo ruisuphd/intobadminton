@@ -37,6 +37,13 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["beginner", "starter", "first racket"],
   },
   {
+    title: "Best rackets under $100",
+    href: "/best/rackets-under-100/",
+    kind: "best",
+    summary: "Budget shortlist — Yonex Play, Victor value, Li-Ning entry lines under a hundred dollars.",
+    keywords: ["budget", "cheap", "under 100", "affordable", "value"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",

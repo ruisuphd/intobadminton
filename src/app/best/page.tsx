@@ -37,6 +37,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Six forgiving frames for new and recreational players, picked by shaft flex and balance.",
       },
       {
+        href: "/best/rackets-under-100/",
+        title: "Best rackets under $100",
+        dek: "Hard budget cap — six verified frames from Yonex Play, Victor, and Li-Ning with trade-offs named.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",

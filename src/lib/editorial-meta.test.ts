@@ -15,6 +15,7 @@ describe("editorialMetaByPath registry", () => {
       "/best/intermediate-rackets/",
       "/best/doubles-rackets/",
       "/best/smash-heavy-rackets/",
+      "/best/rackets-under-100/",
       "/best/shoes/",
       "/best/strings/",
     ];
@@ -51,6 +52,8 @@ describe("editorialMetaByPath registry", () => {
       "/guides/shoes-footwork/",
       "/guides/wide-feet-badminton-shoes/",
       "/guides/doubles-roles/",
+      "/guides/badminton-shoes-vs-running-shoes/",
+      "/guides/doubles-positioning-and-rackets/",
       "/guides/equipment-authenticity/",
       "/guides/glossary/",
       "/guides/season-refresh/",

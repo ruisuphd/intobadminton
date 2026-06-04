@@ -37,6 +37,11 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds budget best-of page", () => {
+    const hits = searchSite("rackets under 100");
+    expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
+  });
+
   it("returns empty for nonsense query", () => {
     expect(searchSite("xyzzyplughnotreal")).toEqual([]);
   });
