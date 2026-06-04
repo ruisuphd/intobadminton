@@ -1,12 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { trackEvent } from "@/components/Analytics";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import {
+  catalogSearchParamsFromState,
+  parseCatalogSearchParams,
+  type CatalogSort,
+  type CatalogUrlState,
+} from "@/lib/catalog-url";
 import {
   BALANCE_OPTIONS,
   CATEGORY_OPTIONS,
@@ -26,6 +34,12 @@ import { humanize } from "@/lib/text";
 import type { BalanceCategory, ProductRecord, WeightClass } from "@/lib/types/product";
 import type { EquipmentCategory } from "@/lib/taxonomy";
 
+const SORT_OPTIONS: { value: CatalogSort; label: string }[] = [
+  { value: "price-asc", label: "Price: low to high" },
+  { value: "price-desc", label: "Price: high to low" },
+  { value: "name", label: "Name A–Z" },
+];
+
 function specLine(p: ProductRecord): string {
   if (p.category === "racket") {
     return `${p.weightClass} · ${humanize(p.balanceCategory)} · ${humanize(p.shaftFlex)} shaft`;
@@ -39,16 +53,63 @@ function specLine(p: ProductRecord): string {
   return humanize(p.category);
 }
 
-export function CatalogClient() {
-  const catalog = useMemo(() => allCatalogProducts(), []);
+function sortProducts(rows: ProductRecord[], sort: CatalogSort): ProductRecord[] {
+  const next = [...rows];
+  switch (sort) {
+    case "price-desc":
+      return next.sort((a, b) => b.priceUsd - a.priceUsd || a.name.localeCompare(b.name));
+    case "name":
+      return next.sort(
+        (a, b) =>
+          a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name)
+      );
+    case "price-asc":
+    default:
+      return next.sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
+  }
+}
 
-  const [filters, setFilters] = useState<ProductFilterState>({
-    category: null,
-    brand: null,
-    weightClass: null,
-    balance: null,
-    priceBand: null,
-  });
+function filtersFromState(state: CatalogUrlState): ProductFilterState {
+  return {
+    category: state.category,
+    brand: state.brand,
+    weightClass: state.weightClass,
+    balance: state.balance,
+    priceBand: state.priceBand,
+  };
+}
+
+export function CatalogClient() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const catalog = useMemo(() => allCatalogProducts(), []);
+  const skipUrlSync = useRef(false);
+
+  const [state, setState] = useState<CatalogUrlState>(() =>
+    parseCatalogSearchParams(searchParams)
+  );
+
+  useEffect(() => {
+    if (skipUrlSync.current) {
+      skipUrlSync.current = false;
+      return;
+    }
+    setState(parseCatalogSearchParams(searchParams));
+  }, [searchParams]);
+
+  useEffect(() => {
+    const params = catalogSearchParamsFromState(state);
+    const query = params.toString();
+    const nextUrl = query ? `${pathname}?${query}` : pathname;
+    const currentQuery = searchParams.toString();
+    const currentUrl = currentQuery ? `${pathname}?${currentQuery}` : pathname;
+    if (nextUrl === currentUrl) return;
+    skipUrlSync.current = true;
+    router.replace(nextUrl, { scroll: false });
+  }, [state, pathname, router, searchParams]);
+
+  const filters = filtersFromState(state);
 
   const baseRows = useMemo(
     () =>
@@ -63,8 +124,8 @@ export function CatalogClient() {
   );
 
   const filtered = useMemo(
-    () => filterProducts(catalog, filters),
-    [catalog, filters]
+    () => sortProducts(filterProducts(catalog, filters), state.sort),
+    [catalog, filters, state.sort]
   );
 
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
@@ -80,8 +141,28 @@ export function CatalogClient() {
     (filters.category === "racket" || filters.category === null) &&
     (weightClasses.length > 0 || balances.length > 0);
 
-  const patch = (next: Partial<ProductFilterState>) =>
-    setFilters((prev) => ({ ...prev, ...next }));
+  const patch = (next: Partial<CatalogUrlState>) => {
+    setState((prev) => {
+      const merged = { ...prev, ...next };
+      trackEvent("catalog_filter", {
+        category: merged.category ?? "all",
+        brand: merged.brand ?? "all",
+        price_band: merged.priceBand ?? "all",
+        weight: merged.weightClass ?? "all",
+        balance: merged.balance ?? "all",
+        sort: merged.sort,
+      });
+      return merged;
+    });
+  };
+
+  const onFinderCta = () => {
+    trackEvent("catalog_finder_cta", {
+      result_count: filtered.length,
+      category: filters.category ?? "all",
+      price_band: filters.priceBand ?? "all",
+    });
+  };
 
   return (
     <div className="space-y-6">
@@ -159,16 +240,31 @@ export function CatalogClient() {
             />
           </>
         )}
+
+        <FilterChipGroup
+          label="Sort"
+          chips={SORT_OPTIONS.map((option) => ({
+            value: option.value,
+            label: option.label,
+          }))}
+          active={state.sort}
+          onChange={(v) => patch({ sort: (v ?? "price-asc") as CatalogSort })}
+        />
       </div>
 
-      <p className="text-sm text-[var(--color-muted)]">
-        {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
-        filters. Run the{" "}
-        <Link href="/quiz/" className="text-[var(--color-accent)] underline">
-          finder
-        </Link>{" "}
-        for a profile-scored shortlist.
-      </p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-[var(--color-muted)]">
+          {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
+          filters.
+        </p>
+        <Link
+          href="/quiz/"
+          onClick={onFinderCta}
+          className="btn-primary text-sm"
+        >
+          Score these with the finder
+        </Link>
+      </div>
 
       <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
         {filtered.map((p) => (

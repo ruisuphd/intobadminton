@@ -47,10 +47,14 @@
 
 - Notify-me intent, homepage recall, catalog search, `/catalog/`, results facets, price-band pages
 
-### Sprint 5 — PR #92
+### Sprint 5 — PR #92 + PR #122
 
+- `/best/rackets-under-200/` programmatic price-band page
+- Catalog shareable URL filters + sort + GA4 funnel events
+- Lighthouse CI coverage for catalog and price-band routes
 - Homepage bundle slimming: `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json`
-- `HomeContinueReading` dynamic import; rebased on Sprint 4 `main`
+- `HomeContinueReading` dynamic import
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
 ### Phase C — Next (Sprint 6+)
 
