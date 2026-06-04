@@ -40,6 +40,13 @@
 | 3 | Toolkit under-surfaced on homepage | ✅ 5-tool `HomeToolkitStrip` |
 | 4 | `/saved/` missing from search + Lighthouse | ✅ site-search + `lighthouserc.json` |
 
+### Follow-up (PR #98 / `cursor/web-app-improvement-plan-e4a1`)
+
+| Item | Status |
+|------|--------|
+| Editorial `/best/rackets-under-100/` (Q2 §3.5 programmatic landing) | ✅ Shipped |
+| Blog map links for AxForce 10 + Thruster SR/9900 reviews | ✅ |
+
 ### Deferred (Sprint 4+)
 
 - Original `public/products/` photography

@@ -25,7 +25,7 @@
 |---|-----|--------|----------|
 | 1 | **No filter-first product catalog** | Discovery vs Tennis Warehouse browse | ✅ `/catalog/` with category/brand/price/weight/balance chips |
 | 2 | **Results shortlist lacks spec facets** | Retention after quiz — brand-only filter | ✅ price, weight, balance chips on `/results/` |
-| 3 | **No budget landing pages** | Long-tail SEO (`rackets under $100`) | ✅ `/best/rackets-under-100/` + `/best/rackets-under-150/` |
+| 3 | **No budget landing pages** | Long-tail SEO (`rackets under $100`) | ✅ `/best/rackets-under-100/` (editorial, main) + `/best/rackets-under-150/` (catalogue) |
 | 4 | **Product search missing brand facet** | Scan speed when searching SKUs | ✅ brand chips when kind = Products |
 | 5 | **Shared filter logic duplicated** | Maintainability + test coverage | ✅ `src/lib/product-filters.ts` + unit tests |
 

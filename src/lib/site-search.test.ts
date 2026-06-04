@@ -53,6 +53,11 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);
   });
 
+  it("finds budget best-of guide", () => {
+    const hits = searchSite("rackets under 100");
+    expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
+  });
+
   it("finds compare guides by model pair", () => {
     const hits = searchSite("astrox 99 pro 100zz");
     expect(
