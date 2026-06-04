@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useProfile } from "@/context/ProfileContext";
-import { byId } from "@/lib/scoring";
+import { productDisplayName } from "@/lib/product-display-names";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 
 /** Surfaces the last finder shortlists on the homepage for return visits. */
@@ -35,7 +35,7 @@ export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {
         <ul className="mt-6 grid gap-3 md:grid-cols-3">
           {recent.map((entry) => {
             const names = entry.topIds
-              .map((id) => byId(id)?.name ?? id)
+              .map((id) => productDisplayName(id) ?? id)
               .join(" · ");
             return (
               <li

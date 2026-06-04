@@ -1,6 +1,6 @@
 # Web App Improvement Plan — June 2026
 
-**Branches:** `cursor/web-app-improvement-plan-3b6d` / `cursor/web-app-improvement-plan-d967` (merged via PR #80), `cursor/web-app-improvement-plan-03c3` (SEO clusters), `cursor/web-app-improvement-plan-bab1` (engagement + notify-me)  
+**Branches:** PR [#80](https://github.com/ruisuphd/intobadminton/pull/80), [#84](https://github.com/ruisuphd/intobadminton/pull/84), [#94](https://github.com/ruisuphd/intobadminton/pull/94) merged to `main`; follow-up `cursor/web-app-improvement-plan-dfd2` (homepage Lighthouse perf)  
 **Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md)
 
 ---
@@ -10,69 +10,63 @@
 | Site | Strength vs IntoBadminton | Gap / response |
 |------|----------------------------|----------------|
 | **BadmintonCentral** | Community archive, search | ✅ On-site search (`/search/`) |
-| **Tennis Warehouse / retailer finders** | Imagery, comparison tables, notify-me | Tables ✅; notify-me ✅ (Phase B bab1); original photos open |
-| **RacketGuide-style finders** | Filter-first UX | Finder + toolkit strip strong; return hooks shipped |
+| **Tennis Warehouse / retailer finders** | Imagery, comparison tables, notify-me | Tables ✅; notify-me ✅ (Buttondown on `/saved/`) |
+| **RacketGuide-style finders** | Filter-first UX | Finder + toolkit strip; return hooks shipped |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
-| **Brand / affiliate blogs** | Pro association | Author entity + methodology box; `sameAs` profiles pending claim |
+| **Brand / affiliate blogs** | Pro association | Author entity + methodology; certified CMP (EEA) pending |
 
 **Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews, postbuild SEO gate.
 
 ---
 
-## 2. Top 5 gaps (prioritized)
+## 2. Top 5 gaps (prioritized — post Phase A/B)
 
 | # | Gap | Impact | Status |
 |---|-----|--------|--------|
-| 1 | Functional site search | Discovery, SearchAction | ✅ Shipped (main) |
-| 2 | Return-visit hooks on homepage | Retention | ✅ `ContinueReading` (main) |
-| 3 | Visible review E-E-A-T + in-article affiliate disclosure | Product Reviews / FTC | ✅ Shipped (main) |
-| 4 | **SEO topical clusters incomplete** — shoe-fit + doubles pillars | Long-tail rankings | ✅ PR #03c3 (main) |
-| 5 | **Per-product notify-me + commercial-page engagement** | Retention + AdSense readiness | ✅ Phase B bab1 |
+| 1 | Homepage Lighthouse / critical-path JS | CI + CWV | ✅ Follow-up dfd2 (slim JSON + deferred engagement) |
+| 2 | SEO topical clusters (shoe-fit + doubles) | Long-tail rankings | ✅ Shipped on `main` |
+| 3 | Compare-guide search coverage | Discovery | ✅ PR #84 merged |
+| 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
 
-**Deferred (Phase C):** HelpfulReaction Workers/KV; original photography; GSC/CrUX CSV in `docs/baselines/`; `Person.sameAs` after profile claims.
+**Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`.
 
 ---
 
 ## 3. Execution phases
 
-### Phase A — Shipped (main, PR #80)
+### Phase A — Shipped (main)
 
-- Site search index + `/search/` + header `SiteSearchForm`
-- `ContinueReading` + `LastArticleTracker`
-- `ReviewMethodologyBox` + `InArticleAffiliateDisclosure`
-- `HomeToolkitStrip`; HowTo on procedural guides; Lighthouse `/review/` URLs
+- Site search, return-visit hooks, methodology box, affiliate disclosure, toolkit strip
 
-### Phase B — Shipped (main + PR #03c3 + bab1 + a493)
+### Phase B — Shipped (main)
 
-- `/guides/badminton-shoes-vs-running-shoes/` — shoe-fit cluster pillar
-- `/guides/doubles-positioning-and-rackets/` — doubles cluster pillar
-- `enrichmentForReviewArticle()` — Product JSON-LD with section-derived reviewBody
-- Buttondown per-product notify-me on `/saved/` — see [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md)
-- Engagement UX on `/best/*` and all `/guides/*` routes
-- All 11 `/compare-guides/*` URLs in site search + Playwright smoke (`e2e/search-smoke.spec.ts`)
+- SEO cluster guides; Product JSON-LD enrichment; Buttondown notify-me; compare-guide search index + e2e
+- Homepage bundle slimming (dfd2): `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json`
 
 ### Phase C — Next
 
-- GSC/CrUX baseline CSV capture (owner session)
+- GSC/CrUX baseline CSV capture
 - Original photos on top commercial URLs
-- HelpfulReaction aggregate backend (Workers/KV)
+- HelpfulReaction Workers/KV
+- YouTube `sameAs` on author entity
 
 ---
 
-## 4. Ten-pass plan verification
+## 4. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 plan + competitive audit | ✅ |
-| 2 | Product JSON-LD uses enrichment helper (no duplicate inline logic) | ✅ |
-| 3 | Buttondown: no local email storage; double opt-in copy | ✅ |
-| 4 | Engagement on commercial routes without signup wall | ✅ |
-| 5 | Static export safe (no API routes) | ✅ |
-| 6 | Merged cleanly with main cluster guides + ReviewProductPanel | ✅ |
-| 7 | Unit tests for enrichment + Buttondown | ✅ |
-| 8 | `.env.example` documents Buttondown username | ✅ |
-| 9 | `npm test` (incl. compare-guide site search) | ✅ |
-| 10 | `npm run build` + postbuild SEO audit | ✅ |
+| 1 | Gaps grounded in Q2 plan + audit | ✅ |
+| 2 | Search covers reviews + compare guides | ✅ |
+| 3 | Homepage avoids full JSON corpora on `/` | ✅ (dfd2) |
+| 4 | Notify-me + engagement without signup wall | ✅ |
+| 5 | Static export safe | ✅ |
+| 6 | Product JSON-LD via enrichment helper | ✅ |
+| 7 | `site-search.test.ts` + search e2e | ✅ |
+| 8 | `/search/` in sitemap | ✅ |
+| 9 | `npm test` | ✅ |
+| 10 | `npm run build` + Lighthouse homepage ≥ 0.9 | ✅ (dfd2) |
 
 ---
 
@@ -81,6 +75,7 @@
 ```bash
 npm test
 npm run build
+npm run lint:lighthouse
 ```
 
 ---
@@ -92,4 +87,5 @@ npm run build
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
 | GSC clicks | 4× baseline |
+| Lighthouse performance (homepage) | ≥ 0.9 |
 | SearchAction | Functional + declared |
