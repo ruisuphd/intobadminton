@@ -2,9 +2,94 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #85 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-8af0`)
+
+**Trigger:** GitHub pull request #85 (`ready_for_review`) — Chinese review translation workflow re-run. Steps 1–5 blocked: private `blogs/` markdown drop is not mounted in the cloud VM (Desktop path absent; `npm run blog:sync` exit 1).
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **126** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). **Do not merge** until source files are synced. Re-run after:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check && npm run blog:import && npm run blog:validate
+```
+
+---
+
+## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
+
+**Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). PR #84 itself is web-app Phase B (`cursor/web-app-improvement-plan-a493`); translation remains blocked without the private `blogs/` drop.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **126** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation; re-run after syncing the private drop.
+
+---
+
+## 2026-06-04 — PR #83 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-f3aa`)
+
+**Trigger:** GitHub pull request #83 (`ready_for_review`) — Sprint 2 web-app PR **already merged** to `main` as `15eba41` before this run completed.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs imported articles | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 176 passed
+- `npm run build` + postbuild SEO audit — pass (644 HTML, 205 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation.
+
+---
+
 ## 2026-06-04 — PR #81 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-8af0`)
 
-**Trigger:** GitHub pull request #81 (`ready_for_review`) — prior runlog landed on `main` as `fb788c9`; this re-trigger confirms the same blocked state (no private `blogs/` drop in the cloud VM).
+**Trigger:** GitHub pull request #81 (`ready_for_review`) — prior runlog landed on `main` as `fb788c9`; re-trigger confirms the same blocked state (no private `blogs/` drop in the cloud VM). Documented again on PR #85.
 
 ### Blog source check
 
@@ -24,7 +109,7 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ### Merge status
 
-Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Follow-up runlog PR #85. Re-run after `npm run blog:sync` with the Desktop path or `BLOGS_DIR`.
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Follow-up runlog PR #85.
 
 ---
 
