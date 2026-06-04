@@ -29,6 +29,13 @@
 | 4 | Quiz missing per-step visual cues | ✅ `QuizStepDecor` (this PR) |
 | 5 | Homepage recall + toolkit discovery | ✅ `HomeRecentShortlists` + 5-tool strip (`main`) |
 
+### Follow-up (PR #98 / `cursor/web-app-improvement-plan-e4a1`)
+
+| Item | Status |
+|------|--------|
+| Editorial `/best/rackets-under-100/` (Q2 §3.5 programmatic landing) | ✅ Shipped |
+| Blog map links for AxForce 10 + Thruster SR/9900 reviews | ✅ |
+
 ### Deferred (Sprint 4+)
 
 - HelpfulReaction Workers/KV aggregates
