@@ -2,6 +2,40 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #100 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-e771`)
+
+**Trigger:** GitHub pull request #100 (`ready_for_review`) — Sprint 3–4 web app (`cursor/web-app-improvement-plan-a58e`). Full Chinese-review translation workflow (check → translate → 10-pass verify → rename → import → web-app update) re-ran in parallel on branch `cursor/new-chinese-reviews-translation-e771`.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **133** (146 slugs; 13 editorial-only with `null` source) |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 198 passed
+- `npm run build` + postbuild SEO audit — pass (649 HTML, 210 sitemap URLs)
+
+### Translation / import
+
+Not performed — private `blogs/` drop is gitignored and not mounted in the cloud workspace. Steps 1–5 blocked until the local folder is synced:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate (Chinese above, ## English Translation below) → rename to English
+# update scripts/blog-slug-source-map.json → npm run blog:import && npm run blog:validate
+```
+
+---
+
 ## 2026-06-04 — PR #97 `ready_for_review` (branch `cursor/web-app-improvement-plan-c920`)
 
 **Trigger:** GitHub pull request #97 (`ready_for_review`) — Chinese review translation workflow re-ran on a Sprint 3 web-app PR. **PR #97 merged to `main`** (glossary autolinks, guide ToC, quiz UX). Translation steps 1–5 still require the private `blogs/` drop.
