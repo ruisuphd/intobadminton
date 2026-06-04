@@ -40,7 +40,6 @@ export default async function ComparisonsSlugRedirect({
         <noscript>
           <p>
             This page moved to{" "}
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a href={destination}>{destination}</a>.
           </p>
         </noscript>

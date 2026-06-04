@@ -24,6 +24,8 @@ jobs:
         run: npm run lint
       - name: Type-check
         run: npx tsc --noEmit
+      - name: Blog source check
+        run: npm run blog:check
       - name: Blog validate
         run: npm run blog:validate
       - name: Glossary strict

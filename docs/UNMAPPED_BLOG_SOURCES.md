@@ -37,7 +37,7 @@ all_md = {p.name for p in Path("blogs").glob("*.md")}
 print("\n".join(sorted(all_md - mapped)) or "(none)")
 PY
 
-npm run blog:import && npm run blog:validate && npm test && npm run build
+npm run blog:check && npm run blog:import && npm run blog:validate && npm test && npm run build
 ```
 
 ---
