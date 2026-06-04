@@ -53,7 +53,7 @@ export default function StringTensionGuide() {
         <h1 className="text-3xl font-semibold tracking-tight">
           Badminton string tension: a practical guide
         </h1>
-        <div id="guide-toc-anchor" className="mb-8 min-h-28" />
+        <div id="guide-toc-anchor" className="mb-8 min-h-48" />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Tension is the single setting that changes how a racket feels more
           than any spec on the box. The same frame at 22 lb and at 28 lb plays

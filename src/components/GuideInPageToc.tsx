@@ -84,10 +84,10 @@ export function GuideInPageToc() {
     if (!host) {
       host = document.createElement("div");
       host.id = "guide-toc-anchor";
-      host.className = "mb-8 min-h-28";
+      host.className = "mb-8 min-h-48";
       h1.insertAdjacentElement("afterend", host);
-    } else if (!host.classList.contains("min-h-28")) {
-      host.classList.add("mb-8", "min-h-28");
+    } else if (!host.classList.contains("min-h-48")) {
+      host.classList.add("mb-8", "min-h-48");
     }
 
     setItems(next);
