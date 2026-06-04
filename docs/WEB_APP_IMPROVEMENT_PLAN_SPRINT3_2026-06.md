@@ -30,7 +30,7 @@
 | 5 | Homepage shortlist recall | ✅ `HomeRecentShortlists` (#94) |
 | 6 | Mobile nav a11y | ✅ focus trap (#104) |
 | 7 | Author JSON-LD `url` | ✅ `/authors/rui-su/` (#104) |
-| 8 | `/saved/` + `/compare/` in Lighthouse | ✅ (#94 + #104) |
+| 8 | Lighthouse: noindex `/compare/` + `/saved/` excluded from SEO gate | ✅ (#104) |
 
 ### Deferred (Sprint 4+)
 

@@ -130,7 +130,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
   };
 
   return (
-    <div className="mx-auto max-w-lg">
+    <div id="quiz-funnel" className="mx-auto max-w-lg">
       <div
         className="mb-3 h-1.5 overflow-hidden rounded-full bg-[color:var(--surface-muted)]"
         role="progressbar"
