@@ -7,13 +7,17 @@ Preserves existing blogSlugs / URLs. Strips URLs, images, Chinese. 20-pass QA.
 from __future__ import annotations
 
 import json
+import os
 import re
 import textwrap
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BLOGS = ROOT / "blogs"
+_blogs_raw = os.environ.get("BLOGS_DIR", "").strip()
+BLOGS = Path(_blogs_raw) if _blogs_raw else ROOT / "blogs"
+if not BLOGS.is_absolute():
+    BLOGS = ROOT / BLOGS
 LEGACY_TS = ROOT / "scripts/archive/blog.legacy.ts"
 SLUG_MAP = ROOT / "scripts/blog-slug-source-map.json"
 REVIEW_MAP = ROOT / "scripts/blog-review-product-map.json"

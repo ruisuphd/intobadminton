@@ -3,11 +3,15 @@
 
 from __future__ import annotations
 
+import os
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BLOGS = ROOT / "blogs"
+_blogs_raw = os.environ.get("BLOGS_DIR", "").strip()
+BLOGS = Path(_blogs_raw) if _blogs_raw else ROOT / "blogs"
+if not BLOGS.is_absolute():
+    BLOGS = ROOT / BLOGS
 MARKER = "## English Translation"
 
 FLATTEN: dict[str, tuple[str, str]] = {
