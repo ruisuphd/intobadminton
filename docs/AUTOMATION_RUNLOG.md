@@ -2,6 +2,25 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+
+## 2026-06-04 — Sprint 4 web app (branch `cursor/web-app-improvement-plan-3a42`, PR #115)
+
+**Trigger:** Cloud agent — audit → plan → execute (commerce CTAs, OG metadata, RSS, compare parity).
+
+### Shipped
+
+- `ProductBuyLink` on results, review panels, best-of picks
+- `editorialPageMetadata()` on guides and best-of leaves
+- `out/feed.xml` via postbuild; `/feed.xml` footer link
+- `CompareConceptChrome` + Astrox 77 vs 88S `CompareGuidePage` migration
+
+### Verification
+
+- `npm test` — 204 passed
+- `npm run build` + postbuild SEO audit — pass
+
+---
+
 ## 2026-06-04 — Web app Sprint 4 (branch `cursor/web-app-improvement-plan-f5af`, PR #113)
 
 **Trigger:** Cloud agent — audit → plan → execute (10-pass verification).
