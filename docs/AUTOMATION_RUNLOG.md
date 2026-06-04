@@ -2,6 +2,22 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — Web app improvement automation (branch `cursor/web-app-improvement-plan-9035`, PR #99)
+
+**Trigger:** Cloud agent — full audit → plan → execute workflow (PR #85 `ready_for_review`).
+
+### Outcome
+
+Sprint 3 shipped on `main` via PR #95 before PR #99 merged: `/best/rackets-under-100/`, homepage hero search, catalog search, Buttondown notify-me, `HomeRecentShortlists`, e2e header-search locator fix. PR #99 carries runlog only.
+
+### Verification (this run)
+
+- `npm test` — 187 passed
+- `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
+- `npm run test:e2e` — 13 passed
+
+---
+
 ## 2026-06-04 — PR #95 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-218b`)
 
 **Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). **Sprint 3 merged to `main`** (squash). Translation workflow ran in parallel on this branch.
