@@ -5,6 +5,7 @@ import { trackEvent } from "@/components/Analytics";
 import { EvidenceCards } from "@/components/EvidenceCards";
 import { FitScoreBadge } from "@/components/FitScoreBadge";
 import { FitScoreRadar } from "@/components/FitScoreRadar";
+import { ProductBuyLink } from "@/components/ProductBuyLink";
 import { SaveProductButton } from "@/components/SaveProductButton";
 import {
   ProductImageView,
@@ -290,6 +291,12 @@ export function ResultCard({
          * picks without re-running the finder.
          */}
         <SaveProductButton id={r.id} label={`${r.brand} ${r.name}`} />
+        <ProductBuyLink
+          id={r.id}
+          brand={r.brand}
+          name={r.name}
+          officialSourceUrl={r.officialSourceUrl}
+        />
         <Link
           href={`${buildLocalizedPath(locale, "/contact/")}?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
           className="inline-flex h-11 items-center justify-center rounded-full border border-[color:var(--line-strong)] px-4 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--text)]"

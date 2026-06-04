@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  segmentGlossaryLinks,
+  segmentArticleGlossary,
   type GlossaryLink,
 } from "@/lib/glossary-autolink";
 
@@ -11,7 +11,7 @@ export function GlossaryLinkedText({
   body: string;
   glossaryLinks?: GlossaryLink[];
 }) {
-  const segments = segmentGlossaryLinks(body, glossaryLinks);
+  const segments = segmentArticleGlossary(body, glossaryLinks);
 
   return (
     <>
