@@ -12,6 +12,7 @@ describe("companyInfo", () => {
   it("generates SEO structured data for the live site", () => {
     expect(websiteJsonLd.url).toBe("https://intobadminton.com");
     expect(websiteJsonLd.publisher).toBe(organizationJsonLd["@id"]);
+    expect(websiteJsonLd.potentialAction?.["@type"]).toBe("SearchAction");
     expect(organizationJsonLd.email).toBe("info@intonationlabs.com");
     expect(organizationJsonLd.founder.url).toBe("https://ruisuphd.com");
   });

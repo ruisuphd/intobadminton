@@ -2,10 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
+import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { JsonLd } from "@/components/JsonLd";
 import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
-import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { SocialShare } from "@/components/SocialShare";
 import {
   blogArticles,
@@ -119,6 +120,9 @@ export function EditorialArticlePage({
               {article.dek}
             </p>
           )}
+          <div className="mt-6">
+            <InArticleAffiliateDisclosure />
+          </div>
         </header>
 
         <div className="mt-10 space-y-8">
