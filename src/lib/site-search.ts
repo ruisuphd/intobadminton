@@ -30,6 +30,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["finder", "quiz", "recommendation", "fit score"],
   },
   {
+    title: "Your saved shelf",
+    href: "/saved/",
+    kind: "tool",
+    summary:
+      "30-day local shortlist of saved rackets, shoes, and strings with optional per-product notify-me.",
+    keywords: ["saved", "shortlist", "favorites", "bookmark"],
+  },
+  {
     title: "Best beginner rackets",
     href: "/best/beginner-rackets/",
     kind: "best",

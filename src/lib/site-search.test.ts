@@ -37,6 +37,11 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds saved shelf", () => {
+    const hits = searchSite("saved shortlist");
+    expect(hits.some((h) => h.href === "/saved/")).toBe(true);
+  });
+
   it("returns empty for nonsense query", () => {
     expect(searchSite("xyzzyplughnotreal")).toEqual([]);
   });

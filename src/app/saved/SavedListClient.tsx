@@ -1,14 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import productsCatalog from "@/data/products.json";
+import { trackEvent } from "@/components/Analytics";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
 import { SaveProductButton } from "@/components/SaveProductButton";
 import { useProfile } from "@/context/ProfileContext";
+import {
+  clearNotifyMeIntent,
+  getNotifyMeIntent,
+  setNotifyMeIntent,
+} from "@/lib/notify-me";
 import { humanize } from "@/lib/text";
 import { reviewPath } from "@/lib/review-pages";
 import type { ProductRecord } from "@/lib/types/product";
@@ -155,24 +161,70 @@ export function SavedListClient() {
 }
 
 function NotifyMeRow({ productId }: { productId: string }) {
+  const [intent, setIntent] = useState<ReturnType<typeof getNotifyMeIntent>>(null);
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setIntent(getNotifyMeIntent(productId));
+    setHydrated(true);
+  }, [productId]);
+
+  if (!hydrated) {
+    return (
+      <div className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4 text-xs text-[var(--color-subtle)]">
+        Loading notification preference…
+      </div>
+    );
+  }
+
+  if (intent) {
+    return (
+      <div className="mt-5 rounded-xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] p-4">
+        <p className="text-sm font-medium text-[var(--text)]">
+          We will email you when this is re-tested or drops in price
+        </p>
+        <p className="mt-2 text-xs text-[var(--color-muted)]">
+          Interest saved for <span className="font-medium">{intent.email}</span>{" "}
+          on this device. Delivery starts when the per-product backend is live —
+          no general newsletter.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            clearNotifyMeIntent(productId);
+            setIntent(null);
+            trackEvent("notify_me_clear", { product_id: productId });
+          }}
+          className="mt-3 text-xs text-[var(--color-accent)] underline"
+        >
+          Remove notification
+        </button>
+      </div>
+    );
+  }
+
   return (
     <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4">
       <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
         Notify me when this is re-tested or drops in price
       </summary>
       <p className="mt-3 text-xs leading-relaxed text-[var(--color-muted)]">
-        Per-product notifications are scaffolded but not yet live — Buttondown
-        integration is in flight. When ready, this will email you only when
-        the spec is re-verified or when a tracked retailer crosses your set
-        price. No general newsletter; no other emails.
+        Per-product only — we email when the spec is re-verified or a tracked
+        retailer crosses your price. Stored locally until Buttondown wiring
+        ships; no other emails.
       </p>
       <form
         className="mt-3 flex flex-wrap gap-2"
         onSubmit={(e) => {
           e.preventDefault();
-          alert(
-            "Notifications launch when the per-product backend is live. We saved your interest locally."
-          );
+          const form = e.currentTarget;
+          const email = new FormData(form).get("email");
+          if (typeof email !== "string" || !email.trim()) return;
+          const row = setNotifyMeIntent(productId, email);
+          setIntent(row);
+          trackEvent("notify_me_opt_in", {
+            product_id: productId,
+          });
         }}
       >
         <input
@@ -187,7 +239,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
           type="submit"
           className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
         >
-          Notify me
+          Save interest
         </button>
       </form>
     </details>
