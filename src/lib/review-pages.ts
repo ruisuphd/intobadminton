@@ -1,6 +1,7 @@
 import productsCatalog from "@/data/products.json";
 import blogReviewMap from "@/data/blog-review-product-map.json";
 import { blogArticles, type BlogSlug } from "@/lib/blog";
+import { brands } from "@/lib/brands";
 import { companyInfo } from "@/lib/company";
 import type { ProductRecord } from "@/lib/types/product";
 
@@ -15,6 +16,16 @@ const REVIEW_ELIGIBLE_CATEGORIES = new Set<ProductRecord["category"]>([
   "racket",
   "shoes",
   "shuttle",
+]);
+
+/** Brand hubs with dedicated static pages under `/brands/[id]/`. */
+const BRAND_PAGE_IDS = new Set([
+  "yonex",
+  "victor",
+  "li-ning",
+  "kumpoo",
+  "bonny",
+  "kawasaki",
 ]);
 
 export function reviewableProducts(): ProductRecord[] {
@@ -53,6 +64,25 @@ export function reviewPath(id: string): string {
   const slug = blogSlugForProduct(id);
   if (slug) return `/review/${slug}/`;
   return `/review/${id}/`;
+}
+
+/** Link target for catalog rows — only emits URLs that exist in the static export. */
+export function catalogProductHref(product: ProductRecord): string {
+  const slug = blogSlugForProduct(product.id);
+  if (slug) return `/review/${slug}/`;
+
+  const brand = brands.find(
+    (b) => b.name.toLowerCase() === product.brand.toLowerCase()
+  );
+  if (brand && BRAND_PAGE_IDS.has(brand.id)) return `/brands/${brand.id}/`;
+
+  return "/brands/";
+}
+
+export function productHref(productId: string): string {
+  const product = CATALOG.find((p) => p.id === productId);
+  if (!product) return "/quiz/";
+  return catalogProductHref(product);
 }
 
 export function reviewUrl(id: string): string {

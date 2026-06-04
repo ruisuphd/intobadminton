@@ -51,6 +51,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         title: "Best smash rackets",
         dek: "Head-heavy attack frames ranked by smash mass, continuity, and the shaft hardness you can actually drive.",
       },
+      {
+        href: "/best/rackets-under-100/",
+        title: "Rackets under $100",
+        dek: "Every verified budget racket in the catalogue — sorted by price with spec tables.",
+      },
+      {
+        href: "/best/rackets-under-150/",
+        title: "Rackets under $150",
+        dek: "Club-budget frames at $150 or less — discovery page with comparison table.",
+      },
     ],
   },
   {
