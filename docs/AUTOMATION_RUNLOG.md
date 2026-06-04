@@ -36,6 +36,23 @@ CURSOR_AGENT=1 npm run blog:check
 
 ---
 
+## 2026-06-04 — Web app Sprint 4 (branch `cursor/web-app-improvement-plan-f5af`, PR #113)
+
+**Trigger:** Cloud agent — audit → plan → execute (10-pass verification).
+
+### Shipped (PR #113, atop main catalog work)
+
+- `profileToResultsPath` + linked shortlist cards on homepage and `/results/`
+- Buttondown migrate CTA for device-only notify-me intents on `/saved/`
+- Lighthouse: cluster guides, flagship tools, `/saved/`
+
+### Verification
+
+- `npm test` — 193 passed (after merge with main)
+- `npm run build` + postbuild SEO audit — pass
+
+---
+
 ## 2026-06-04 — PR #97 `ready_for_review` (branch `cursor/web-app-improvement-plan-c920`)
 
 **Trigger:** GitHub pull request #97 (`ready_for_review`) — Chinese review translation workflow re-ran on a Sprint 3 web-app PR. **PR #97 merged to `main`** (glossary autolinks, guide ToC, quiz UX). Translation steps 1–5 still require the private `blogs/` drop.
@@ -106,21 +123,13 @@ CURSOR_AGENT=1 npm run blog:check
 
 **Trigger:** Cloud agent — full audit → plan → execute workflow (PR #85 `ready_for_review`).
 
-### Outcome
-
-Sprint 3 shipped on `main` via PR #95 before PR #99 merged: `/best/rackets-under-100/`, homepage hero search, catalog search, Buttondown notify-me, `HomeRecentShortlists`, e2e header-search locator fix. PR #99 carries runlog only.
-
-### Verification (this run)
-
-- `npm test` — 187 passed
-- `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
-- `npm run test:e2e` — 13 passed
+Sprint 3 shipped on `main` via PR #95: `/best/rackets-under-100/`, homepage hero search, catalog search, Buttondown notify-me, `HomeRecentShortlists`, e2e header-search locator fix.
 
 ---
 
-## 2026-06-04 — PR #95 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-218b`)
+## 2026-06-04 — PR #94 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-38f1`)
 
-**Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). **Sprint 3 merged to `main`** (squash). Translation workflow ran in parallel on this branch.
+**Trigger:** GitHub pull request #94 (`ready_for_review`) — Sprint 3 web app PR **already merged** to `main` as `b593899`. Chinese review translation workflow (steps 1–7).
 
 ### Blog source check
 
@@ -132,11 +141,6 @@ Sprint 3 shipped on `main` via PR #95 before PR #99 merged: `/best/rackets-under
 | `blog-articles.json` imported articles | **146** — no import drift |
 | New translations this run | **None** |
 
-### PR #95 (Sprint 3 — merged)
-
-- Catalog products in site search + kind filter chips; affiliate disclosure on commercial pages; engagement chrome on best-of/compare guides; brand filter on `/results/`.
-- Notify-me lint: resolved on PR branch via `eslint-disable` for localStorage hydrate (main after merge).
-
 ### Translation / import
 
 Not performed — no `blogs/` drop. Re-run after syncing:
@@ -144,7 +148,8 @@ Not performed — no `blogs/` drop. Re-run after syncing:
 ```bash
 npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
 CURSOR_AGENT=1 npm run blog:check
-# translate → rename → npm run blog:import && npm run blog:validate
+# translate (Chinese above, ## English Translation below), rename to English, map slug, then:
+npm run blog:import && npm run blog:validate && npm test && npm run build
 ```
 
 ---
