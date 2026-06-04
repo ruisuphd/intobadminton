@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: "/best/beginner-rackets/",
   title: "Best Beginner Badminton Rackets 2026",
   description:
     "Six forgiving badminton rackets for beginners — Nanoflare 700 Play, Astrox 77 Play, Arcsaber 7 Pro, DriveX 8S, Astrox 77 Pro, Mizuno Altius N-Feel.",
-  alternates: pageAlternates("/best/beginner-rackets/"),
-};
+});
 
 const config: BestPicksConfig = {
   slug: "beginner-rackets",

@@ -15,6 +15,8 @@ const GUIDE_HEADLINES: Record<string, string> = {
   "/guides/equipment-authenticity/": "Equipment authenticity guide",
   "/guides/glossary/": "Badminton equipment glossary",
   "/guides/season-refresh/": "Season equipment refresh",
+  "/guides/doubles-positioning-and-rackets/": "Doubles positioning and rackets",
+  "/guides/badminton-shoes-vs-running-shoes/": "Badminton shoes vs running shoes",
 };
 
 export function GuideReadingChrome() {

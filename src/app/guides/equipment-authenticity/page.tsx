@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { AuthenticityChecker } from "@/components/AuthenticityChecker";
-import { GuideEngagement } from "@/components/GuideEngagement";
 import { JsonLd } from "@/components/JsonLd";
 import {
   authenticityBrands,
@@ -10,12 +9,12 @@ import {
 } from "@/lib/authenticity";
 import { companyInfo } from "@/lib/company";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: "/guides/equipment-authenticity/",
   title: "Badminton Racket Authenticity Check",
   description:
     "Check whether a Yonex, Victor, or Li-Ning racket is genuine before you buy — per-brand official-source guidance, red flags, and counterfeit-response steps.",
-  alternates: pageAlternates("/guides/equipment-authenticity/"),
-};
+});
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -382,10 +381,6 @@ export default function EquipmentAuthenticityGuide() {
             Start the finder
           </Link>
         </section>
-        <GuideEngagement
-          path="/guides/equipment-authenticity/"
-          title="Badminton Racket Authenticity Check"
-        />
       </article>
     </main>
   );

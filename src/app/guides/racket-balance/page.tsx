@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
-import { GuideEngagement } from "@/components/GuideEngagement";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/racket-balance/";
@@ -9,11 +8,11 @@ const HEADLINE = "Racket balance and shaft flex";
 const DESCRIPTION =
   "How head weight and shaft stiffness interact on court — reading balance points in millimetres, choosing flex by skill level, and the shaft hardness scale.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton racket balance and shaft flex",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function RacketBalanceGuide() {
   return (
@@ -230,7 +229,6 @@ export default function RacketBalanceGuide() {
           </Link>
           .
         </p>
-        <GuideEngagement path={PATH} title={HEADLINE} />
       </article>
     </main>
   );
