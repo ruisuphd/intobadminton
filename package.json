@@ -10,6 +10,7 @@
     "start": "npx -y serve@latest out",
     "lint": "eslint && node scripts/check-glossary-links.mjs --warn",
     "blog:import": "python3 scripts/blog-en-persona-normalize.py 2>/dev/null || true && python3 scripts/blog-import-option-b.py",
+    "blog:check": "node scripts/check-new-blog-sources.mjs",
     "blog:validate": "node scripts/blog-validate-20pass.mjs",
     "test:e2e": "playwright test",
     "lint:eslint": "eslint",
