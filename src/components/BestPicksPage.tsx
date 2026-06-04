@@ -21,7 +21,7 @@ import {
   ratingDatePublished,
 } from "@/lib/editorial-rating";
 import { articleJsonLd } from "@/lib/structured-data";
-import { reviewPath } from "@/lib/review-pages";
+import { productHref } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];
@@ -242,7 +242,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
                       {p.productId ? (
                         <Link
-                          href={reviewPath(p.productId)}
+                          href={productHref(p.productId)}
                           className="hover:text-[var(--color-accent)]"
                         >
                           {p.name}
@@ -294,7 +294,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
               {p.productId && (
                 <div className="mt-4 flex flex-wrap items-center gap-3">
                   <Link
-                    href={reviewPath(p.productId)}
+                    href={productHref(p.productId)}
                     className="text-sm font-medium text-[var(--color-accent)] hover:underline"
                   >
                     Read full review →

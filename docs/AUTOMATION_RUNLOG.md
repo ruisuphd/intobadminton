@@ -6,6 +6,38 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 **Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). Translation workflow ran in parallel on this branch.
 
+## 2026-06-04 — PR #98 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-408c`)
+
+**Trigger:** GitHub pull request #98 (`ready_for_review`) — Sprint 3 web app PR (`cursor/web-app-improvement-plan-e4a1`). PR #98 **merged** to `main` as `6b34d6c`. Translation workflow ran in parallel; no review content changes.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **146** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 187 passed
+
+### Translation / import
+
+Not performed — no `blogs/` drop. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate → rename → npm run blog:import && npm run blog:validate
+```
+
+---
+
 ## 2026-06-04 — Web app improvement automation (branch `cursor/web-app-improvement-plan-9035`, PR #99)
 
 **Trigger:** Cloud agent — full audit → plan → execute workflow (PR #85 `ready_for_review`).

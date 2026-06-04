@@ -1,6 +1,6 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-3a42`  
+**Branch:** `cursor/web-app-improvement-plan-3a42` → PR #115  
 **Baseline:** Sprint 3 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)); Q2 toolkit items in [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6.
 
 ---
@@ -29,26 +29,25 @@
 | 4 | `/best/*` and `/guides/*` missing OG/Twitter | ✅ `editorialPageMetadata()` |
 | 5 | No RSS for reviews | ✅ `scripts/generate-feed.mjs` → `out/feed.xml` |
 
-**Also shipped on `main` (merged):** guide ↔ tool cross-links, `GuideInPageToc`, cluster pillar headlines, Lighthouse `/tools/` URL.
+**Also on `main` (merged):** guide ↔ tool links, `GuideInPageToc`, programmatic `/best/rackets-under-100/`, search index expansions.
 
 ### Deferred (Sprint 5+)
 
 - HelpfulReaction Workers/KV public counts
-- Faceted catalog browse (weight, balance, price)
-- Original `public/products/` photography
+- Faceted catalog browse
+- Original product photography
 - `Person.sameAs` after profile claims
-- GSC/CrUX CSV in `docs/baselines/`
 
 ---
 
 ## 3. Execution summary
 
-1. `src/lib/product-retail.ts` + `ProductBuyLink` on `ResultCard`, `ReviewProductPanel`, `BestPicksPage`.
-2. Removed duplicate `GuideEngagement` from eight guides; extended `GUIDE_HEADLINES`.
-3. `CompareConceptChrome` on three concept compares; migrated `astrox-77-pro-vs-88s-pro` to `CompareGuidePage`.
-4. `articleSocialMetadata()` + `editorialPageMetadata()` on guides and best-of leaves.
-5. RSS feed in postbuild; footer link to `/feed.xml`.
-6. Merged `main`: guide tool links, in-page ToC, additional search index tests.
+1. `src/lib/product-retail.ts` + `ProductBuyLink` on commercial surfaces.
+2. Removed duplicate `GuideEngagement`; extended `GUIDE_HEADLINES`.
+3. `CompareConceptChrome` + `CompareGuidePage` migration for 77 vs 88S.
+4. `editorialPageMetadata()` for guides and best-of.
+5. RSS feed postbuild + footer link.
+6. Merged latest `main` (tools, ToC, runlog).
 
 ---
 
@@ -57,15 +56,15 @@
 | Pass | Check | Result |
 |------|-------|--------|
 | 1 | Gaps grounded in competitive audit + Q2 plan | ✅ |
-| 2 | Buy links use official URLs when catalog has them | ✅ |
-| 3 | Sponsored `rel` + export-audit disclosure markers | ✅ |
-| 4 | Single guide engagement footer (layout only) | ✅ |
-| 5 | Legacy compares have disclosure + engagement | ✅ |
-| 6 | Best-of + guides include OG + Twitter images | ✅ |
-| 7 | RSS absolute URLs + `feed.xml` in `out/` | ✅ |
-| 8 | `npm test` (190+) | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | PR mergeable with `main` | ✅ |
+| 2 | Buy links use official URLs when available | ✅ |
+| 3 | Export-audit disclosure markers intact | ✅ |
+| 4 | Single guide engagement footer | ✅ |
+| 5 | Legacy compares have FTC + engagement | ✅ |
+| 6 | OG + Twitter on guides and best-of | ✅ |
+| 7 | `feed.xml` in `out/` after build | ✅ |
+| 8 | `npm test` (198 tests) | ✅ |
+| 9 | `npm run build` + SEO audit | ✅ |
+| 10 | Mergeable with `main` | ✅ |
 
 ---
 
@@ -79,12 +78,12 @@ npm run build
 
 ---
 
-## 6. Metrics (unchanged)
+## 6. Metrics
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Affiliate CTR | GA4 `affiliate_click` on commercial pages |
-| Tool → finder CTR | GA4 tool / quiz outbound events |
-| Social referral CTR | Lift on best-of / guides after OG fix |
+| Affiliate CTR | GA4 `affiliate_click` |
+| Tool → finder CTR | GA4 tool / quiz events |
+| Social referral CTR | Lift after OG metadata |
