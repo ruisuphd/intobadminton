@@ -29,6 +29,13 @@
 | 4 | **`/saved/` missing from search + Lighthouse** | Discovery + CI regression blind spot | ✅ site-search + `lighthouserc.json` |
 | 5 | **Merge drift vs `main` (cluster guides)** | Broken internal links if guides dropped | ✅ merged `origin/main`, kept pillars |
 
+### Follow-up (PR #98 / `cursor/web-app-improvement-plan-e4a1`)
+
+| Item | Status |
+|------|--------|
+| Editorial `/best/rackets-under-100/` (Q2 §3.5 programmatic landing) | ✅ Shipped |
+| Blog map links for AxForce 10 + Thruster SR/9900 reviews | ✅ |
+
 ### Deferred (Sprint 4+)
 
 - Migrate offline notify-me intents when Buttondown username is set in production
