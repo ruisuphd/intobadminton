@@ -93,6 +93,13 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["footwork", "lateral", "stability"],
   },
   {
+    title: "Badminton shoes vs running shoes",
+    href: "/guides/badminton-shoes-vs-running-shoes/",
+    kind: "guide",
+    summary: "Heel drop, grip, and lateral support — why runners fail indoors.",
+    keywords: ["running shoes", "trainers", "heel drop", "grip"],
+  },
+  {
     title: "Wide feet badminton shoes",
     href: "/guides/wide-feet-badminton-shoes/",
     kind: "guide",
@@ -105,6 +112,13 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "guide",
     summary: "Front vs back court roles and how they map to racket choice.",
     keywords: ["doubles", "front court", "back court"],
+  },
+  {
+    title: "Doubles positioning and racket choice",
+    href: "/guides/doubles-positioning-and-rackets/",
+    kind: "guide",
+    summary: "Court zones and attack vs defence shape mapped to gear.",
+    keywords: ["positioning", "rotation", "doubles", "zones"],
   },
   {
     title: "Season equipment refresh",

@@ -6,8 +6,9 @@ import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDis
 import { JsonLd } from "@/components/JsonLd";
 import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { RelatedPostsGrid } from "@/components/RelatedPostsGrid";
 import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
-import { ReviewProductFitPanel } from "@/components/ReviewProductFitPanel";
+import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { SocialShare } from "@/components/SocialShare";
 import {
   blogArticles,
@@ -130,13 +131,13 @@ export function EditorialArticlePage({
         </header>
 
         <div className="mt-10 space-y-8">
-            <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {enrichment?.scored && (
-              <ReviewProductFitPanel
+              <ReviewProductPanel
                 scored={enrichment.scored}
-                quizHref={buildLocalizedPath(locale, "/quiz/")}
+                quizPath={buildLocalizedPath(locale, "/quiz/")}
               />
             )}
+            <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
               <div className="overflow-x-auto rounded-2xl border border-[color:var(--line)]">
@@ -210,28 +211,7 @@ export function EditorialArticlePage({
             <HelpfulReaction contentId={`review:${article.slug}`} />
         </div>
 
-        {related.length > 0 && (
-          <section className="mt-16 border-t border-[color:var(--line)] pt-10">
-            <h2 className="text-lg font-semibold text-[var(--text)]">
-              More reading
-            </h2>
-            <ul className="mt-4 space-y-3">
-              {related.map((entry) => (
-                <li key={entry.slug}>
-                  <Link
-                    href={buildLocalizedPath(
-                      locale,
-                      articlePathForSlug(entry.slug)
-                    )}
-                    className="text-sm font-medium text-[var(--color-accent)] hover:underline"
-                  >
-                    {entry.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        <RelatedPostsGrid locale={locale} articles={related} />
       </article>
     </main>
   );

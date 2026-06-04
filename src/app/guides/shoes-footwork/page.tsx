@@ -178,6 +178,13 @@ export default function ShoesGuide() {
           <Link href="/guides/wide-feet-badminton-shoes/" className="text-[var(--color-accent)] underline">
             shoes for wide feet
           </Link>
+          ,{" "}
+          <Link
+            href="/guides/badminton-shoes-vs-running-shoes/"
+            className="text-[var(--color-accent)] underline"
+          >
+            badminton vs running shoes
+          </Link>
           , and{" "}
           <Link href="/compare-guides/badminton-vs-tennis-shoes/" className="text-[var(--color-accent)] underline">
             badminton vs tennis shoes

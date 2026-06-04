@@ -108,6 +108,11 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Singles" },
     { label: "Best intermediate rackets", href: "/best/intermediate-rackets/", tag: "Intermediate" },
     { label: "Best badminton shoes", href: "/best/shoes/", tag: "Shoes" },
+    {
+      label: "Badminton shoes vs running shoes",
+      href: "/guides/badminton-shoes-vs-running-shoes/",
+      tag: "Shoes",
+    },
     { label: "Best badminton strings", href: "/best/strings/", tag: "Strings" },
     { label: "Yonex rackets decoded", href: "/brands/yonex/", tag: "Yonex" },
     { label: "Victor rackets decoded", href: "/brands/victor/", tag: "Victor" },

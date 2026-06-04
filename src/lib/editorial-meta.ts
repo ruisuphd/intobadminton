@@ -195,6 +195,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2025-09-08",
     lastReviewedAt: "2026-05-08",
   },
+  "/guides/badminton-shoes-vs-running-shoes/": {
+    publishedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-04",
+  },
   "/guides/wide-feet-badminton-shoes/": {
     publishedAt: "2025-09-15",
     lastReviewedAt: "2026-05-08",
@@ -202,6 +206,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   "/guides/doubles-roles/": {
     publishedAt: "2025-09-22",
     lastReviewedAt: "2026-05-08",
+  },
+  "/guides/doubles-positioning-and-rackets/": {
+    publishedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-04",
   },
   "/guides/equipment-authenticity/": {
     publishedAt: "2025-09-29",

@@ -52,7 +52,7 @@
 | Deliverable | Files |
 |-------------|-------|
 | Product JSON-LD on mapped review articles | `src/lib/review-article-enrichment.ts`, `EditorialArticlePage.tsx` |
-| Fit-score panel on mapped reviews | `ReviewProductFitPanel.tsx` |
+| Fit-score panel on mapped reviews | Reuses `ReviewProductPanel` (main) via `enrichmentForReviewArticle()` |
 | Buttondown notify-me | `src/lib/buttondown.ts`, `SavedListClient.tsx`, `.env.example` |
 | Engagement on `/best/*` | `BestPicksPage.tsx` — `ReadingProgress`, `InArticleAffiliateDisclosure`, `ArticleEngagementFooter` |
 | Engagement on `/guides/*` | `GuideEngagement.tsx` on all 8 guide routes |
