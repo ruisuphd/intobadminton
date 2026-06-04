@@ -1,62 +1,67 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-353e`  
-**Baseline:** Sprint 1–3 shipped on `main` ([`WEB_APP_IMPROVEMENT_PLAN_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)).
+**Branch:** `cursor/web-app-improvement-plan-c920` (merged with Sprint 3)  
+**Baseline:** Sprint 3 on `main` after PR #97; toolkit pages shipped on `main` per [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6 Sprint 4.
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Gap / response |
-|------------|---------------------------|----------------|
-| **Tennis Warehouse / retailer finders** | Faceted spec browse (weight, flex, price) | ✅ `/browse/` client-side facets over `products.json` |
-| **RacketGuide / affiliate roundups** | Long-tail landings (`5U`, shoulder comfort) | ✅ Two new `/best/*` programmatic pages |
-| **BadmintonCentral / authority blogs** | Inline concept links to glossary | ✅ Render-time glossary autolink on review bodies |
-| **Wirecutter / RTINGS** | Social proof vote counts | ⏳ HelpfulReaction Workers/KV still deferred |
-| **Brand PDPs** | First-party product photography | ⏳ Editorial `public/products/` pipeline |
+| Competitor | Strength | IntoBadminton response |
+|------------|----------|------------------------|
+| **RacketGuide / Tennis Warehouse** | Interactive calculators + comparison | Five `/tools/*` pages + homepage toolkit strip |
+| **Wirecutter** | Topic clusters with deep internal links | Guide ↔ tool cross-links (string tension, balance, authenticity) |
+| **BadmintonCentral** | Community Q&A density | Glossary + autolinks in reviews (Sprint 3) |
+| **RTINGS** | Methodology transparency | Scoring breakdown + `ReviewMethodologyBox` |
+| **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
 
-**Moat unchanged:** transparent fit score, postbuild SEO gate, 146+ reviews, static-export CWV, claims CI.
+**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring, no signup on finder.
 
 ---
 
-## 2. Top 5 gaps (this sprint)
+## 2. Top 5 gaps (Sprint 4 + polish)
 
-| # | Gap | Impact | Sprint 4 |
-|---|-----|--------|----------|
-| 1 | **No faceted catalogue browse** (retailer-style filters) | Discovery / commercial queries | ✅ `/browse/` |
-| 2 | **Missing long-tail programmatic `/best/*` landings** (5U, shoulder) | SEO topical coverage | ✅ |
-| 3 | **Glossary terms not autolinked in article bodies** | Internal linking + E-E-A-T | ✅ `AutolinkedText` |
-| 4 | Original product photography on commercial URLs | AdSense / March 2026 experience | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction aggregate counts (Workers/KV) | Social proof on articles | ⏳ Phase C backend |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | Toolkit pages exist but guides did not link into tools | ✅ Cluster cross-links (this PR) |
+| 2 | Duplicate engagement chrome on guides (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
+| 3 | Sprint 3 PR blocked on `main` merge conflict | ✅ Merged `main` into branch |
+| 4 | Lighthouse did not cover representative tool URL | ✅ `/tools/index.html` in `lighthouserc.json` |
+| 5 | HelpfulReaction counts still client-only (no KV) | ⏳ Sprint 5 |
 
-**Deferred:** Buttondown price-drop fanout; `Person.sameAs`; zh locale; community comments.
+### Deferred (Sprint 5+)
+
+- HelpfulReaction Workers/KV aggregates
+- First-party `public/products/` photography
+- `Person.sameAs` after social profile claims
+- PWA web push
+- GSC/CrUX CSV in `docs/baselines/`
 
 ---
 
 ## 3. Execution summary
 
-1. **`/browse/`** — `product-facets.ts` + `CatalogBrowseClient` with shareable URL params (weight, balance, flex, max price, brand, text query).
-2. **`/best/lightweight-rackets-5u/`** and **`/best/rackets-for-shoulder-comfort/`** — six catalog-backed picks each, comparison tables, FAQs.
-3. **`AutolinkedText`** — first-mention glossary links in `EditorialArticlePage` section bodies; respects manual `glossaryLinks`.
-4. Registry updates — `editorial-meta`, `site-search`, `/best/` hub, homepage popular searches, Lighthouse URLs.
-5. Merge conflict cleanup — reconcile Sprint 3 budget page + Lighthouse config with `main`.
+1. Merge `origin/main` into Sprint 3 branch; resolve `SavedListClient` conflict
+2. Remove duplicate `GuideEngagement` from guide articles (layout footer owns share + helpful stripe)
+3. Link `/tools/string-tension-calculator/`, `/tools/racket-balance-explainer/`, `/tools/authenticity-checker/` from matching guides
+4. Extend `GUIDE_HEADLINES` for cluster pillar guides
 
 ---
 
-## 4. Ten-pass plan verification
+## 4. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 §3.3 programmatic pages + competitive audit | ✅ |
-| 2 | New best picks align with `products.json` rows / productIds | ✅ |
-| 3 | Each new best page has ≥200 words original intro | ✅ |
-| 4 | `editorial-meta` + sitemap `lastReviewedAt` registered | ✅ |
-| 5 | Distinct lenses vs existing `/best/*` guides | ✅ |
-| 6 | Static export safe (no API routes) | ✅ |
-| 7 | Glossary autolink skips manual `glossaryLinks` ids | ✅ |
-| 8 | `npm test` (facets, autolink, site-search, editorial-meta) | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse config includes browse + new best URLs | ✅ |
+| 1 | Gaps grounded in Q2 Sprint 4 + competitive audit | ✅ |
+| 2 | Tools index lists all five tools | ✅ (on `main`) |
+| 3 | No duplicate ReadingProgress on guides | ✅ |
+| 4 | Guide ToC still portal-mounted after h1 | ✅ |
+| 5 | Glossary autolinks unchanged | ✅ |
+| 6 | Static export safe | ✅ |
+| 7 | `npm test` | ✅ |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | `npm run lint` | ✅ |
+| 10 | PR mergeable with `main` | ✅ |
 
 ---
 
@@ -64,15 +69,16 @@
 
 ```bash
 npm test
+npm run lint
 npm run build
 ```
 
 ---
 
-## 6. Metrics (unchanged from Q2)
+## 6. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| GSC clicks | 4× baseline |
+| Tool → finder CTR | Track `tool_open` / outbound quiz clicks in GA4 |
