@@ -1,74 +1,75 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branches:** `cursor/web-app-improvement-plan-f0ec` (PR #104 follow-up), `cursor/web-app-improvement-plan-c4a6`  
-**Baseline:** Sprint 3 merged items on `main` + PR #104 (compare UX, quick filters, quiz delight, a11y).
+**Branch:** `cursor/web-app-improvement-plan-f5af` → PR #113  
+**Baseline:** Sprint 3 on `main` (PRs #94–#98, #105 catalog/facets).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength | IntoBadminton status | Gap |
-|------------|----------|----------------------|-----|
-| **Tennis Warehouse / RacketGuide** | Filter-first finder, spec compare tables | ✅ Quick filters + `CompareTable` | Original hero photography |
-| **Wirecutter / RTINGS** | Product rich results, author entity | ✅ Product JSON-LD + `/authors/rui-su/` | `Person.sameAs` after channel claim |
-| **BadmintonCentral** | Community archive, long threads | ✅ 146+ reviews + on-site search | User comments / UGC pipeline |
-| **Retailer finders** | Notify-me, saved lists | ✅ Buttondown + `/saved/` | Cross-device notify sync |
-| **Interactive reference sites** | Calculators, diagrams | ✅ `/tools/*` toolkit (5 tools) | HelpfulReaction public counts |
+| Competitor pattern | IntoBadminton response |
+|--------------------|------------------------|
+| **Tennis Warehouse browse** | `/catalog/` + spec facets on `/results/` (PR #105 on `main`) |
+| **Tennis Warehouse saved lists** | `profileToResultsPath` + linked shortlist cards (PR #113) |
+| **Wirecutter price-band pages** | `/best/rackets-under-100/`, `/best/rackets-under-150/` |
+| **RacketGuide calculators** | Five `/tools/*` + guide cross-links (PR #97) |
+| **YouTube reviewers** | `VideoObject` deferred |
 
-**Moat retained:** transparent fit scoring, claims CI, static export, postbuild SEO gate, consent-first ads.
-
----
-
-## 2. Top 5 gaps (prioritized — Sprint 4+)
-
-| # | Gap | Impact | Sprint 4 action |
-|---|-----|--------|-----------------|
-| 1 | **HelpfulReaction aggregate counts** | Social proof on commercial URLs | ⏳ Workers/KV backend (deferred); GA4 + local vote only |
-| 2 | **Original product photography** | CTR + AdSense quality on `/best/*` | ⏳ Editorial; `ProductImageSet` ready |
-| 3 | **GSC / CrUX baseline CSVs** | Measurable SEO guardrails | ⏳ Owner export → `docs/baselines/` |
-| 4 | **Lighthouse CI vs stored baselines** | Regression gate on `main` | ⏳ Extend `lint:lighthouse` with baseline diff |
-| 5 | **Cross-device notify-me** | Retention when Buttondown live | ⏳ Migrate offline queue when `NEXT_PUBLIC_BUTTONDOWN_USERNAME` set in prod |
-
-**Shipped in Sprint 4 CI pass (this branch):**
-
-- E2E: quiz funnel scoped to `aria-label="Equipment finder quiz"` (glyph help text broke `/^Doubles$/` matchers)
-- E2E: `quick-filters-smoke`, `tools-smoke`
-- Lighthouse URLs: `/tools/authenticity-checker/`, `/tools/skill-level-converter/`
+**Moat:** transparent fit score, postbuild SEO gate, claims CI, static export.
 
 ---
 
-## 3. Ten-pass verification
+## 2. Top 5 gaps (Sprint 4, combined)
+
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | No filter-first product catalog | ✅ `/catalog/` (main, PR #105) |
+| 2 | Recent shortlists not reopenable | ✅ `profileToResultsPath` (PR #113) |
+| 3 | Offline notify-me stranded at Buttondown cutover | ✅ migrate CTA (PR #113) |
+| 4 | Lighthouse blind to cluster guides + tools | ✅ `lighthouserc.json` (PR #113) |
+| 5 | HelpfulReaction aggregate counts | ⏳ Sprint 5 |
+
+### Deferred (Sprint 5+)
+
+- HelpfulReaction Workers/KV
+- First-party `public/products/` photography
+- VideoObject + YouTube `sameAs`
+- GSC/CrUX baseline CSV
+
+---
+
+## 3. Execution summary
+
+**On `main` (PRs #97, #105):** catalog, results facets, `/best/rackets-under-150/`, guide ↔ tool links.
+
+**PR #113:**
+
+1. `profileToResultsPath()` + linked `HomeRecentShortlists` / `RecentHistory`
+2. Buttondown migrate for device-only notify-me on `/saved/`
+3. Lighthouse URLs for cluster guides, tools, `/saved/`
+
+---
+
+## 4. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 4 + Sprint 3 deferred list | ✅ |
-| 2 | No signup wall on tools or finder | ✅ |
-| 3 | Quick filters + full quiz both reach `/results/` | ✅ e2e |
-| 4 | Quiz option accessible names match glyph+help pattern | ✅ e2e `\b` word boundaries |
-| 5 | Tools index + skill converter render | ✅ e2e |
-| 6 | Static export safe | ✅ |
-| 7 | `npm test` (190 tests) | ✅ |
-| 8 | `npm run test:e2e` (16 tests) | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse config includes high-traffic tools | ✅ |
+| 1 | Gaps grounded in audit + Sprint 3 deferred list | ✅ |
+| 2 | Results deep links match quiz param shape | ✅ |
+| 3 | Catalog + shortlist flows static-export safe | ✅ |
+| 4 | Migrate clears local intent after Buttondown OK | ✅ |
+| 5 | No homepage signup wall | ✅ |
+| 6 | Lighthouse URLs in `out/` after build | ✅ |
+| 7 | Unit tests (`profile-url`, `product-filters`, search) | ✅ |
+| 8 | `npm test && npm run lint && npm run build` | ✅ |
+| 9 | postbuild SEO audit | ✅ |
+| 10 | Mergeable with latest `main` | ✅ |
 
 ---
 
-## 4. Verification
-
-```bash
-npm test
-npm run test:e2e
-npm run build
-```
-
----
-
-## 5. Metrics (unchanged from Q2)
+## 5. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| GSC clicks | 4× baseline |
-| Quiz completion | 60%+ (`quiz_complete` / `quiz_start`) |

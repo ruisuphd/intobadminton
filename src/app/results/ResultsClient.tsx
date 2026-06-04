@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useMemo } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/components/Analytics";
@@ -14,9 +14,24 @@ import {
   ratingDatePublished,
 } from "@/lib/editorial-rating";
 import { parseTopN, profileFromSearchParams } from "@/lib/profile-url";
+import {
+  BALANCE_OPTIONS,
+  PRICE_BANDS,
+  filterProducts,
+  priceBandOptionsFor,
+  type PriceBand,
+  type ProductFilterState,
+} from "@/lib/product-filters";
 import { scoreProductCatalog } from "@/lib/scoring";
+import { humanize } from "@/lib/text";
 import type { UserProfile } from "@/lib/taxonomy";
-import type { ScoredProduct } from "@/lib/types/product";
+import type {
+  BalanceCategory,
+  ProductRecord,
+  ScoredProduct,
+  WeightClass,
+} from "@/lib/types/product";
+import { FilterChipGroup } from "@/components/FilterChipGroup";
 
 /**
  * /results/ is `noindex` so the structured data won't appear in SERPs, but
@@ -132,8 +147,61 @@ function ResultsBody() {
     () => scoreProductCatalog(profile),
     [profile]
   );
-  const rows = useMemo(() => allScored.slice(0, topN), [allScored, topN]);
-  const filteredOutCount = allScored.length - rows.length;
+
+  const brandOptions = useMemo(() => {
+    const brands = new Set(allScored.map((r) => r.brand));
+    return [...brands].sort((a, b) => a.localeCompare(b));
+  }, [allScored]);
+
+  const priceBandOptions = useMemo(
+    () => priceBandOptionsFor(allScored),
+    [allScored]
+  );
+
+  const weightOptions = useMemo(() => {
+    const set = new Set<WeightClass>();
+    for (const r of allScored) {
+      if (r.category === "racket") set.add(r.weightClass);
+    }
+    return [...set].sort();
+  }, [allScored]);
+
+  const balanceOptions = useMemo(() => {
+    const set = new Set<BalanceCategory>();
+    for (const r of allScored) {
+      if (r.category === "racket") set.add(r.balanceCategory);
+    }
+    return [...set];
+  }, [allScored]);
+
+  const [brandFilter, setBrandFilter] = useState<string | null>(null);
+  const [priceBandFilter, setPriceBandFilter] = useState<PriceBand | null>(
+    null
+  );
+  const [weightFilter, setWeightFilter] = useState<WeightClass | null>(null);
+  const [balanceFilter, setBalanceFilter] = useState<BalanceCategory | null>(
+    null
+  );
+
+  const filteredScored = useMemo(() => {
+    const specFiltered = filterProducts(
+      allScored as ProductRecord[],
+      {
+        category: null,
+        brand: brandFilter,
+        weightClass: weightFilter,
+        balance: balanceFilter,
+        priceBand: priceBandFilter,
+      } satisfies ProductFilterState
+    );
+    return specFiltered as ScoredProduct[];
+  }, [allScored, brandFilter, priceBandFilter, weightFilter, balanceFilter]);
+
+  const rows = useMemo(
+    () => filteredScored.slice(0, topN),
+    [filteredScored, topN]
+  );
+  const filteredOutCount = filteredScored.length - rows.length;
 
   useEffect(() => {
     if (rows.length === 0) return;
@@ -194,6 +262,59 @@ function ResultsBody() {
   return (
     <div className="space-y-6">
       <ResultsFilterSummary profile={profile} />
+      <div className="space-y-3">
+        {brandOptions.length > 1 && (
+          <FilterChipGroup
+            label="Brand"
+            chips={[
+              { value: null, label: "All" },
+              ...brandOptions.map((b) => ({ value: b, label: b })),
+            ]}
+            active={brandFilter}
+            onChange={setBrandFilter}
+          />
+        )}
+        {priceBandOptions.length > 1 && (
+          <FilterChipGroup
+            label="Price"
+            chips={[
+              { value: null, label: "All" },
+              ...PRICE_BANDS.filter((b) =>
+                priceBandOptions.includes(b.value)
+              ).map((b) => ({ value: b.value, label: b.label })),
+            ]}
+            active={priceBandFilter}
+            onChange={(v) => setPriceBandFilter(v as PriceBand | null)}
+          />
+        )}
+        {weightOptions.length > 1 && (
+          <FilterChipGroup
+            label="Weight"
+            chips={[
+              { value: null, label: "All" },
+              ...weightOptions.map((w) => ({ value: w, label: w })),
+            ]}
+            active={weightFilter}
+            onChange={(v) => setWeightFilter(v as WeightClass | null)}
+          />
+        )}
+        {balanceOptions.length > 1 && (
+          <FilterChipGroup
+            label="Balance"
+            chips={[
+              { value: null, label: "All" },
+              ...balanceOptions.map((b) => ({
+                value: b,
+                label:
+                  BALANCE_OPTIONS.find((o) => o.value === b)?.label ??
+                  humanize(b),
+              })),
+            ]}
+            active={balanceFilter}
+            onChange={(v) => setBalanceFilter(v as BalanceCategory | null)}
+          />
+        )}
+      </div>
       <JsonLd data={buildProductJsonLd(rows)} />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />

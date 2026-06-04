@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleToc } from "@/components/ArticleToc";
+import { GlossaryLinkedText } from "@/components/GlossaryLinkedText";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
@@ -202,7 +203,10 @@ export function EditorialArticlePage({
                     {section.heading}
                   </h2>
                   <p className="whitespace-pre-line text-base leading-[1.75] text-[var(--text-secondary)]">
-                    {section.body}
+                    <GlossaryLinkedText
+                      body={section.body}
+                      glossaryLinks={section.glossaryLinks}
+                    />
                   </p>
                 </section>
               );

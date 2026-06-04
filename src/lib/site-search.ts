@@ -1,6 +1,7 @@
 import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
+import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 
 export type SearchEntryKind =
   | "review"
@@ -8,7 +9,8 @@ export type SearchEntryKind =
   | "best"
   | "tool"
   | "brand"
-  | "compare";
+  | "compare"
+  | "product";
 
 export type SearchEntry = {
   title: string;
@@ -21,6 +23,14 @@ export type SearchEntry = {
 };
 
 const STATIC_ENTRIES: SearchEntry[] = [
+  {
+    title: "Equipment catalog",
+    href: "/catalog/",
+    kind: "tool",
+    summary:
+      "Browse and filter the full product catalogue by brand, weight, balance, and price.",
+    keywords: ["catalog", "browse", "filter", "specs", "products"],
+  },
   {
     title: "Equipment finder quiz",
     href: "/quiz/",
@@ -64,6 +74,13 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-heavy attack frames for singles power players.",
     keywords: ["smash", "attack", "singles", "power"],
+  },
+  {
+    title: "Best rackets under $100",
+    href: "/best/rackets-under-100/",
+    kind: "best",
+    summary: "Budget badminton rackets under $100 with editorial trade-offs.",
+    keywords: ["budget", "cheap", "under 100", "affordable", "beginner"],
   },
   {
     title: "Best badminton shoes",
@@ -297,9 +314,32 @@ function reviewEntries(): SearchEntry[] {
   }));
 }
 
+function productEntries(): SearchEntry[] {
+  return reviewableProducts().map((product) => ({
+    title: `${product.brand} ${product.name}`,
+    href: catalogProductHref(product),
+    kind: "product" as const,
+    summary:
+      product.editorNote?.slice(0, 160) ??
+      `Catalog ${product.category}: ${product.bestFor.slice(0, 3).join(", ")}.`,
+    keywords: [
+      product.brand,
+      product.name,
+      product.category,
+      product.id.replace(/-/g, " "),
+      ...product.bestFor,
+    ],
+  }));
+}
+
 /** Build-time search catalogue — static export friendly. */
 export function buildSearchIndex(): SearchEntry[] {
-  return [...STATIC_ENTRIES, ...brandEntries(), ...reviewEntries()];
+  return [
+    ...STATIC_ENTRIES,
+    ...brandEntries(),
+    ...reviewEntries(),
+    ...productEntries(),
+  ];
 }
 
 const SEARCH_INDEX = buildSearchIndex();
@@ -332,7 +372,11 @@ function scoreEntry(entry: SearchEntry, query: string): number {
   return 40 + (tokenHits / tokens.length) * 30;
 }
 
-export function searchSite(query: string, limit = 20): SearchEntry[] {
+export function searchSite(
+  query: string,
+  limit = 20,
+  kind?: SearchEntryKind
+): SearchEntry[] {
   const trimmed = query.trim();
   if (!trimmed) return [];
 
@@ -340,7 +384,7 @@ export function searchSite(query: string, limit = 20): SearchEntry[] {
     entry,
     score: scoreEntry(entry, trimmed),
   }))
-    .filter((row) => row.score > 0)
+    .filter((row) => row.score > 0 && (!kind || row.entry.kind === kind))
     .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title))
     .slice(0, limit)
     .map((row) => row.entry);

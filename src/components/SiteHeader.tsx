@@ -11,6 +11,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const NAV_LINKS = [
   { href: "/quiz/", label: "Finder" },
+  { href: "/catalog/", label: "Catalog" },
   { href: "/best/", label: "Best Of" },
   { href: "/review/", label: "Reviews" },
   { href: "/tools/", label: "Tools" },

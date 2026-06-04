@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
-import { GuideEngagement } from "@/components/GuideEngagement";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/racket-balance/";
@@ -217,6 +216,13 @@ export default function RacketBalanceGuide() {
 
         <p className="text-[var(--color-muted)] leading-relaxed">
           Related reading:{" "}
+          <Link
+            href="/tools/racket-balance-explainer/"
+            className="text-[var(--color-accent)] underline"
+          >
+            racket balance explainer
+          </Link>
+          ,{" "}
           <Link href="/guides/string-tension/" className="text-[var(--color-accent)] underline">
             string tension guide
           </Link>
@@ -230,7 +236,6 @@ export default function RacketBalanceGuide() {
           </Link>
           .
         </p>
-        <GuideEngagement path={PATH} title={HEADLINE} />
       </article>
     </main>
   );

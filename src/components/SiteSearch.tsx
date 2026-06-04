@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { FilterChipGroup } from "@/components/FilterChipGroup";
+import { brandOptionsFor } from "@/lib/product-filters";
+import { reviewableProducts } from "@/lib/review-pages";
 import { searchSite, type SearchEntryKind } from "@/lib/site-search";
 
 const KIND_LABEL: Record<SearchEntryKind, string> = {
@@ -11,12 +14,42 @@ const KIND_LABEL: Record<SearchEntryKind, string> = {
   tool: "Tool",
   brand: "Brand",
   compare: "Compare",
+  product: "Product",
 };
+
+const KIND_FILTERS: { value: SearchEntryKind | "all"; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "product", label: "Products" },
+  { value: "review", label: "Reviews" },
+  { value: "guide", label: "Guides" },
+  { value: "best", label: "Best of" },
+  { value: "compare", label: "Compare" },
+];
 
 export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
   const [query, setQuery] = useState(initialQuery);
+  const [kindFilter, setKindFilter] = useState<SearchEntryKind | "all">("all");
+  const [brandFilter, setBrandFilter] = useState<string | null>(null);
 
-  const results = useMemo(() => searchSite(query), [query]);
+  const results = useMemo(
+    () =>
+      searchSite(
+        query,
+        20,
+        kindFilter === "all" ? undefined : kindFilter
+      ),
+    [query, kindFilter]
+  );
+
+  const productBrandOptions = useMemo(() => {
+    if (kindFilter !== "product") return [];
+    return brandOptionsFor(reviewableProducts());
+  }, [kindFilter]);
+
+  const brandFilteredResults = useMemo(() => {
+    if (!brandFilter || kindFilter !== "product") return results;
+    return results.filter((e) => e.keywords.includes(brandFilter));
+  }, [results, brandFilter, kindFilter]);
 
   return (
     <div className="space-y-6">
@@ -34,12 +67,45 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
         />
       </label>
 
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by content type">
+        {KIND_FILTERS.map((chip) => (
+          <button
+            key={chip.value}
+            type="button"
+            onClick={() => {
+              setKindFilter(chip.value);
+              setBrandFilter(null);
+            }}
+            className={
+              kindFilter === chip.value
+                ? "chip chip-primary"
+                : "chip chip-secondary"
+            }
+            aria-pressed={kindFilter === chip.value}
+          >
+            {chip.label}
+          </button>
+        ))}
+      </div>
+
+      {kindFilter === "product" && productBrandOptions.length > 1 && (
+        <FilterChipGroup
+          label="Brand"
+          chips={[
+            { value: null, label: "All brands" },
+            ...productBrandOptions.map((b) => ({ value: b, label: b })),
+          ]}
+          active={brandFilter}
+          onChange={setBrandFilter}
+        />
+      )}
+
       {query.trim().length === 0 ? (
         <p className="text-sm text-[var(--color-muted)]">
           Try &ldquo;astrox&rdquo;, &ldquo;wide feet shoes&rdquo;, or
           &ldquo;string tension&rdquo;.
         </p>
-      ) : results.length === 0 ? (
+      ) : brandFilteredResults.length === 0 ? (
         <p className="text-sm text-[var(--color-muted)]">
           No matches for &ldquo;{query.trim()}&rdquo;. Browse the{" "}
           <Link href="/review/" className="text-[var(--color-accent)] underline">
@@ -53,7 +119,7 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
         </p>
       ) : (
         <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
-          {results.map((entry) => (
+          {brandFilteredResults.map((entry) => (
             <li key={entry.href}>
               <Link
                 href={entry.href}
