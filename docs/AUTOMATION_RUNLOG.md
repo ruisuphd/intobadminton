@@ -2,31 +2,46 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-04 — Sprint 3 web app PR #99 (branch `cursor/web-app-improvement-plan-9035`)
+## 2026-06-04 — PR #95 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-218b`)
 
-**Trigger:** Cloud agent — web app improvement plan (audit, Sprint 3 gaps, execution).
+**Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). **Sprint 3 merged to `main`** (squash). Translation workflow ran in parallel on this branch.
 
-### Shipped (this PR, atop `main` Sprint 3 #94)
+### Blog source check
 
-- `/best/rackets-under-100/` — budget best-of with editorial intro + comparison table
-- Homepage hero `SiteSearchForm`
-- Lighthouse URLs for budget page + cluster guides
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **146** |
+| `blog-articles.json` imported articles | **146** — no import drift |
+| New translations this run | **None** |
 
-### Already on `main` (PR #94)
+### PR #95 (Sprint 3 — merged)
 
-- Notify-me: Buttondown when configured; else `notify-me.ts` local intent
-- `HomeRecentShortlists`, expanded `HomeToolkitStrip`, `/saved/` in search
+- Catalog products in site search + kind filter chips; affiliate disclosure on commercial pages; engagement chrome on best-of/compare guides; brand filter on `/results/`.
+- Notify-me lint: resolved on PR branch via `eslint-disable` for localStorage hydrate (main after merge).
 
-### Verification
+### Translation / import
 
-- `npm test` — 185+ passed
-- `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
+Not performed — no `blogs/` drop. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate → rename → npm run blog:import && npm run blog:validate
+```
 
 ---
 
-## 2026-06-04 — PR #87 `ready_for_review` re-trigger (branch `cursor/new-chinese-reviews-translation-d088`)
+## 2026-06-04 — Web app Sprint 3 PR #94 (branch `cursor/web-app-improvement-plan-0fb2`)
 
-**Trigger:** GitHub pull request #87 (`ready_for_review`) — run-log PR **already merged** to `main` as `9d5b349`.
+**Trigger:** Cloud agent — Sprint 3 engagement loops merged with `main` Buttondown notify-me.
+
+### Shipped
+
+- Notify-me: Buttondown when `NEXT_PUBLIC_BUTTONDOWN_USERNAME` set; else `notify-me.ts` local intent
+- `HomeRecentShortlists`, expanded `HomeToolkitStrip`, `/saved/` in search + Lighthouse
 
 ### Blog source check
 
@@ -36,9 +51,9 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ---
 
-## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
+## 2026-06-04 — PR #87 `ready_for_review` re-trigger (branch `cursor/new-chinese-reviews-translation-d088`)
 
-**Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). Translation remains blocked without the private `blogs/` drop.
+**Trigger:** GitHub pull request #87 (`ready_for_review`) — run-log PR **already merged** to `main` as `9d5b349`; this automation re-ran the full translate → import → web-app update workflow.
 
 ### Blog source check
 
@@ -59,7 +74,39 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ### Merge status
 
-Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Re-run after syncing:
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merge this runlog PR only; re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+```
+
+---
+
+## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
+
+**Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). PR #84 itself is web-app Phase B (`cursor/web-app-improvement-plan-a493`); translation remains blocked without the private `blogs/` drop.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **126** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation (`e423c0d`); re-run after syncing:
 
 ```bash
 npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"

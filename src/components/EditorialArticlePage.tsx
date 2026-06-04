@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AutolinkedText } from "@/components/AutolinkedText";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
@@ -191,6 +192,9 @@ export function EditorialArticlePage({
               const anchorId =
                 sectionIds[index] ??
                 sectionAnchorId(section.heading, index, new Map());
+              const skipTermIds = new Set(
+                (section.glossaryLinks ?? []).map((link) => link.id)
+              );
               return (
                 <section
                   key={`${section.heading}-${index}`}
@@ -200,9 +204,11 @@ export function EditorialArticlePage({
                   <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)] text-balance">
                     {section.heading}
                   </h2>
-                  <p className="whitespace-pre-line text-base leading-[1.75] text-[var(--text-secondary)]">
-                    {section.body}
-                  </p>
+                  <AutolinkedText
+                    text={section.body}
+                    skipTermIds={skipTermIds}
+                    className="whitespace-pre-line text-base leading-[1.75] text-[var(--text-secondary)]"
+                  />
                 </section>
               );
             })}

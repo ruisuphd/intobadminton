@@ -106,6 +106,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
 
   const popularSearches: { label: string; href: string; tag: string }[] = [
     { label: "Best rackets under $100", href: "/best/rackets-under-100/", tag: "Budget" },
+    { label: "Best lightweight 5U rackets", href: "/best/lightweight-rackets-5u/", tag: "5U" },
+    { label: "Best rackets for shoulder comfort", href: "/best/rackets-for-shoulder-comfort/", tag: "Comfort" },
+    { label: "Browse rackets by spec", href: "/browse/", tag: "Catalog" },
     { label: "Best beginner rackets", href: "/best/beginner-rackets/", tag: "Beginner" },
     { label: "Best doubles rackets", href: "/best/doubles-rackets/", tag: "Doubles" },
     { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Singles" },

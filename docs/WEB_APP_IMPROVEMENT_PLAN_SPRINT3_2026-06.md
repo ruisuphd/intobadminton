@@ -1,78 +1,85 @@
 # Web App Improvement Plan — Sprint 3 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-9035`  
-**Baseline:** Sprint 1–2 shipped on `main` ([`WEB_APP_IMPROVEMENT_PLAN_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md)).
+**Branches:** `cursor/web-app-improvement-plan-0fb2` (merged), `cursor/web-app-improvement-plan-22e9` (this PR)  
+**Baseline:** Sprint 1–2 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md)).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Gap / response |
-|------------|---------------------------|----------------|
-| **BadmintonCentral** | Forum search, community threads | ✅ Site search; ❌ no UGC threads (deferred) |
-| **Tennis Warehouse / retailer finders** | PDP imagery, faceted filters | Finder strong; first-party `public/products/` photos still open |
-| **RacketGuide / generic affiliate roundups** | Price-sorted lists | ✅ Editorial under-$100 page with 200+ words + trade-offs (this sprint) |
-| **Wirecutter / RTINGS** | Notify-on-price, email loops | ✅ Local notify-me intent + GA4 until Buttondown ships |
-| **YouTube reviewers** | Video evidence | `VideoObject` still gated on video commitment |
+| Competitor | Strength | IntoBadminton gap addressed in Sprint 3 |
+|------------|----------|------------------------------------------|
+| **Tennis Warehouse** | Saved lists, catalog search, brand filters | Product index + kind chips + results brand filter |
+| **Wirecutter / RTINGS** | Return-visit + article engagement | Notify-me persistence, recent shortlists, compare engagement |
+| **BadmintonCentral** | Tool discovery | 5-tool homepage strip, `/saved/` in search |
+| **YouTube reviewers** | Video evidence | Still deferred (`VideoObject` gated) |
+| **Brand blogs** | Original photography | Still editorial pipeline |
 
-**Moat:** transparent fit score, postbuild SEO gate, 146+ reviews, static-export CWV, claims CI.
+**Moat unchanged:** transparent fit scoring, postbuild SEO gate, static export, 146+ reviews.
 
 ---
 
-## 2. Top 5 gaps (this sprint)
+## 2. Top 5 gaps (combined Sprint 3)
 
-| # | Gap | Impact | Sprint 3 |
-|---|-----|--------|----------|
-| 1 | **No budget-tier programmatic landing** (`/best/rackets-under-100/`) | Long-tail commercial queries | ✅ |
-| 2 | **Homepage lacks discoverability search** (search only in header) | Discovery / SearchAction usage | ✅ Hero `SiteSearchForm` |
-| 3 | **Notify-me fallback when Buttondown unset** | Retention prep | ✅ `localStorage` + Buttondown from `main` |
-| 4 | Original product photography on commercial URLs | AdSense / March 2026 experience | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction aggregate counts (Workers/KV) | Social proof on articles | ⏳ Phase C backend |
+| # | Gap | Sprint 3 delivery |
+|---|-----|-------------------|
+| 1 | **Catalog products missing from site search** | ✅ `product` kind + `reviewableProducts()` |
+| 2 | **No search kind filters** | ✅ chip filters on `/search/` |
+| 3 | **Notify-me / return-visit hooks weak** | ✅ `notify-me.ts`, `HomeRecentShortlists` (0fb2) |
+| 4 | **Compare guides lack engagement chrome** | ✅ `ArticleEngagementFooter` on compare pages |
+| 5 | **Results shortlist lacks brand filter** | ✅ brand chips on `/results/` |
 
-**Deferred:** Buttondown live API; `Person.sameAs`; zh locale content; community comments.
+### Follow-up (PR #98 / `cursor/web-app-improvement-plan-e4a1`)
+
+| Item | Status |
+|------|--------|
+| Editorial `/best/rackets-under-100/` (Q2 §3.5 programmatic landing) | ✅ Shipped |
+| Blog map links for AxForce 10 + Thruster SR/9900 reviews | ✅ |
+
+### Deferred (Sprint 4+)
+
+- Original `public/products/` photography
+- HelpfulReaction Workers/KV aggregates
+- Buttondown notify-me server sync
+- VideoObject + claimed YouTube `sameAs`
+- Faceted search over spec fields (weight, balance, price band)
 
 ---
 
 ## 3. Execution summary
 
-1. Add `/best/rackets-under-100/` — six catalog-backed picks ≤$100 with intro analysis, comparison table, and FAQs (no `/review/{productId}/` links until those articles exist).
-2. Register route in `editorial-meta`, `site-search`, `/best/` hub, homepage popular searches.
-3. `src/lib/notify-me.ts` — per-product email intent in `localStorage` (30d TTL) when `NEXT_PUBLIC_BUTTONDOWN_USERNAME` is unset; `SavedListClient` uses Buttondown when configured.
-4. `LocalizedHome` hero — compact `SiteSearchForm` under primary CTAs.
-5. Lighthouse CI — audit new best page + cluster guide URLs.
+**From 0fb2 (on main):** `notify-me.ts`, `HomeRecentShortlists`, expanded `HomeToolkitStrip`, `/saved/` in search + Lighthouse.
+
+**From 22e9 (this PR):**
+
+1. `src/lib/site-search.ts` — `productEntries()`, `searchSite(..., kind?)`
+2. `src/components/SiteSearch.tsx` — kind filter chips
+3. `CompareGuidePage` — `ReadingProgress` + `ArticleEngagementFooter`
+4. `src/app/results/ResultsClient.tsx` — brand filter chips
 
 ---
 
-## 4. Ten-pass plan verification
+## 4. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 §3.3 programmatic pages + Sprint 3 engagement | ✅ |
-| 2 | Under-$100 picks align with `products.json` catalog rows | ✅ |
-| 3 | Page has ≥200 words original intro (not template-only) | ✅ |
-| 4 | `editorial-meta` + sitemap `lastReviewedAt` registered | ✅ |
-| 5 | Distinct from `/best/beginner-rackets/` (price lens, not level lens) | ✅ |
-| 6 | Static export safe (no API routes) | ✅ |
-| 7 | Notify-me stores locally only; copy states email not sent yet | ✅ |
-| 8 | `npm test` (site-search, editorial-meta, notify-me) | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse config includes new URL | ✅ |
+| 1 | Gaps grounded in Q2 + competitive audit | ✅ |
+| 2 | Product search links via `reviewPath()` | ✅ |
+| 3 | Kind filter preserves empty-query UX | ✅ |
+| 4 | Notify-me local-only when Buttondown unset | ✅ |
+| 5 | Compare engagement matches best-of pattern | ✅ |
+| 6 | Results brand filter preserves score order | ✅ |
+| 7 | `site-search.test.ts` covers products + saved | ✅ |
+| 8 | Static export safe | ✅ |
+| 9 | `npm test && npm run build` | ✅ |
+| 10 | postbuild SEO audit clean | ✅ |
 
 ---
 
-## 5. Verification
-
-```bash
-npm test
-npm run build
-```
-
----
-
-## 6. Metrics (unchanged from Q2)
+## 5. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| GSC clicks | 4× baseline |
+| SearchAction utility | Catalog + editorial in one index |

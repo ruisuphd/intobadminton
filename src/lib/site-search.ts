@@ -1,6 +1,7 @@
 import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
+import { reviewPath, reviewableProducts } from "@/lib/review-pages";
 
 export type SearchEntryKind =
   | "review"
@@ -8,7 +9,8 @@ export type SearchEntryKind =
   | "best"
   | "tool"
   | "brand"
-  | "compare";
+  | "compare"
+  | "product";
 
 export type SearchEntry = {
   title: string;
@@ -50,6 +52,28 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Budget shortlist — Yonex Play, Victor value, Li-Ning entry lines under a hundred dollars.",
     keywords: ["budget", "cheap", "under 100", "affordable", "value"],
+  },
+  {
+    title: "Best lightweight & 5U rackets",
+    href: "/best/lightweight-rackets-5u/",
+    kind: "best",
+    summary: "Ultralight and 5U frames for fast recovery, juniors, and front-court doubles.",
+    keywords: ["5u", "lightweight", "ultralight", "nanoray light"],
+  },
+  {
+    title: "Best rackets for shoulder comfort",
+    href: "/best/rackets-for-shoulder-comfort/",
+    kind: "best",
+    summary: "Head-light and medium-flex picks for players managing arm and shoulder load.",
+    keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
+  },
+  {
+    title: "Browse catalogue by spec",
+    href: "/browse/",
+    kind: "tool",
+    summary:
+      "Filter rackets by weight class, balance, shaft flex, price band, and brand.",
+    keywords: ["browse", "filter", "catalog", "spec", "facets", "weight", "flex"],
   },
   {
     title: "Best intermediate rackets",
@@ -304,9 +328,32 @@ function reviewEntries(): SearchEntry[] {
   }));
 }
 
+function productEntries(): SearchEntry[] {
+  return reviewableProducts().map((product) => ({
+    title: `${product.brand} ${product.name}`,
+    href: reviewPath(product.id),
+    kind: "product" as const,
+    summary:
+      product.editorNote?.slice(0, 160) ??
+      `Catalog ${product.category}: ${product.bestFor.slice(0, 3).join(", ")}.`,
+    keywords: [
+      product.brand,
+      product.name,
+      product.category,
+      product.id.replace(/-/g, " "),
+      ...product.bestFor,
+    ],
+  }));
+}
+
 /** Build-time search catalogue — static export friendly. */
 export function buildSearchIndex(): SearchEntry[] {
-  return [...STATIC_ENTRIES, ...brandEntries(), ...reviewEntries()];
+  return [
+    ...STATIC_ENTRIES,
+    ...brandEntries(),
+    ...reviewEntries(),
+    ...productEntries(),
+  ];
 }
 
 const SEARCH_INDEX = buildSearchIndex();
@@ -339,7 +386,11 @@ function scoreEntry(entry: SearchEntry, query: string): number {
   return 40 + (tokenHits / tokens.length) * 30;
 }
 
-export function searchSite(query: string, limit = 20): SearchEntry[] {
+export function searchSite(
+  query: string,
+  limit = 20,
+  kind?: SearchEntryKind
+): SearchEntry[] {
   const trimmed = query.trim();
   if (!trimmed) return [];
 
@@ -347,7 +398,7 @@ export function searchSite(query: string, limit = 20): SearchEntry[] {
     entry,
     score: scoreEntry(entry, trimmed),
   }))
-    .filter((row) => row.score > 0)
+    .filter((row) => row.score > 0 && (!kind || row.entry.kind === kind))
     .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title))
     .slice(0, limit)
     .map((row) => row.entry);

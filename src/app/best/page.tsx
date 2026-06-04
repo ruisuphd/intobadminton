@@ -42,6 +42,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Hard budget cap — six verified frames from Yonex Play, Victor, and Li-Ning with trade-offs named.",
       },
       {
+        href: "/best/lightweight-rackets-5u/",
+        title: "Best lightweight & 5U rackets",
+        dek: "Ultralight and 5U frames for fast recovery, juniors, and front-court doubles.",
+      },
+      {
+        href: "/best/rackets-for-shoulder-comfort/",
+        title: "Best rackets for shoulder comfort",
+        dek: "Head-light and medium-flex picks for players managing arm load.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
