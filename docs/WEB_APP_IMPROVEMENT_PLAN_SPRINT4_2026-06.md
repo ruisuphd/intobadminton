@@ -1,33 +1,33 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-c920` (merged with Sprint 3)  
-**Baseline:** Sprint 3 on `main` after PR #97; toolkit pages shipped on `main` per [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6 Sprint 4.
+**Branch:** `cursor/web-app-improvement-plan-f5af` → PR #113  
+**Baseline:** Sprint 3 on `main` (PRs #94–#98, #105 catalog/facets).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength | IntoBadminton response |
-|------------|----------|------------------------|
-| **RacketGuide / Tennis Warehouse** | Interactive calculators + comparison | Five `/tools/*` pages + homepage toolkit strip |
-| **Wirecutter** | Topic clusters with deep internal links | Guide ↔ tool cross-links (string tension, balance, authenticity) |
-| **BadmintonCentral** | Community Q&A density | Glossary + autolinks in reviews (Sprint 3) |
-| **RTINGS** | Methodology transparency | Scoring breakdown + `ReviewMethodologyBox` |
-| **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
+| Competitor pattern | IntoBadminton response |
+|--------------------|------------------------|
+| **Tennis Warehouse browse** | `/catalog/` + spec facets on `/results/` (PR #105 on `main`) |
+| **Tennis Warehouse saved lists** | `profileToResultsPath` + linked shortlist cards (PR #113) |
+| **Wirecutter price-band pages** | `/best/rackets-under-100/`, `/best/rackets-under-150/` |
+| **RacketGuide calculators** | Five `/tools/*` + guide cross-links (PR #97) |
+| **YouTube reviewers** | `VideoObject` deferred |
 
-**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring, no signup on finder.
+**Moat:** transparent fit score, postbuild SEO gate, claims CI, static export.
 
 ---
 
-## 2. Top 5 gaps (Sprint 4 + polish)
+## 2. Top 5 gaps (Sprint 4, combined)
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | Toolkit pages exist but guides did not link into tools | ✅ Cluster cross-links (this PR) |
-| 2 | Duplicate engagement chrome on guides (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
-| 3 | Sprint 3 PR blocked on `main` merge conflict | ✅ Merged `main` into branch |
-| 4 | Lighthouse did not cover representative tool URL | ✅ `/tools/index.html` in `lighthouserc.json` |
-| 5 | HelpfulReaction counts still client-only (no KV) | ⏳ Sprint 5 |
+| 1 | No filter-first product catalog | ✅ `/catalog/` (main, PR #105) |
+| 2 | Recent shortlists not reopenable | ✅ `profileToResultsPath` (PR #113) |
+| 3 | Offline notify-me stranded at Buttondown cutover | ✅ migrate CTA (PR #113) |
+| 4 | Lighthouse blind to cluster guides + tools | ✅ `lighthouserc.json` (PR #113) |
+| 5 | HelpfulReaction aggregate counts | ⏳ Sprint 5 |
 
 ### Sprint 4b — Return-path polish (PR #100)
 
@@ -40,20 +40,22 @@
 
 ### Deferred (Sprint 5+)
 
-- HelpfulReaction Workers/KV aggregates
+- HelpfulReaction Workers/KV
 - First-party `public/products/` photography
-- `Person.sameAs` after social profile claims
-- PWA web push
-- GSC/CrUX CSV in `docs/baselines/`
+- VideoObject + YouTube `sameAs`
+- GSC/CrUX baseline CSV
 
 ---
 
 ## 3. Execution summary
 
-1. Merge `origin/main` into Sprint 3 branch; resolve `SavedListClient` conflict
-2. Remove duplicate `GuideEngagement` from guide articles (layout footer owns share + helpful stripe)
-3. Link `/tools/string-tension-calculator/`, `/tools/racket-balance-explainer/`, `/tools/authenticity-checker/` from matching guides
-4. Extend `GUIDE_HEADLINES` for cluster pillar guides
+**On `main` (PRs #97, #105):** catalog, results facets, `/best/rackets-under-150/`, guide ↔ tool links.
+
+**PR #113:**
+
+1. `profileToResultsPath()` + linked `HomeRecentShortlists` / `RecentHistory`
+2. Buttondown migrate for device-only notify-me on `/saved/`
+3. Lighthouse URLs for cluster guides, tools, `/saved/`
 
 ---
 
@@ -61,33 +63,22 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 4 + competitive audit | ✅ |
-| 2 | Tools index lists all five tools | ✅ (on `main`) |
-| 3 | No duplicate ReadingProgress on guides | ✅ |
-| 4 | Guide ToC still portal-mounted after h1 | ✅ |
-| 5 | Glossary autolinks unchanged | ✅ |
-| 6 | Static export safe | ✅ |
-| 7 | `npm test` | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | `npm run lint` | ✅ |
-| 10 | PR mergeable with `main` | ✅ |
+| 1 | Gaps grounded in audit + Sprint 3 deferred list | ✅ |
+| 2 | Results deep links match quiz param shape | ✅ |
+| 3 | Catalog + shortlist flows static-export safe | ✅ |
+| 4 | Migrate clears local intent after Buttondown OK | ✅ |
+| 5 | No homepage signup wall | ✅ |
+| 6 | Lighthouse URLs in `out/` after build | ✅ |
+| 7 | Unit tests (`profile-url`, `product-filters`, search) | ✅ |
+| 8 | `npm test && npm run lint && npm run build` | ✅ |
+| 9 | postbuild SEO audit | ✅ |
+| 10 | Mergeable with latest `main` | ✅ |
 
 ---
 
-## 5. Verification
-
-```bash
-npm test
-npm run lint
-npm run build
-```
-
----
-
-## 6. Metrics (unchanged)
+## 5. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Tool → finder CTR | Track `tool_open` / outbound quiz clicks in GA4 |

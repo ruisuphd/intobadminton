@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ContinueReading } from "@/components/ContinueReading";
+import { HomeCatalogStrip } from "@/components/HomeCatalogStrip";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { JsonLd } from "@/components/JsonLd";
@@ -283,6 +284,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         </div>
       </section>
 
+      <HomeCatalogStrip locale={locale} />
       <HomeToolkitStrip locale={locale} />
 
       {featuredReviews.length > 0 && (

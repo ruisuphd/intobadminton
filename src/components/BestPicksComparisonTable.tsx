@@ -9,7 +9,7 @@ import {
 } from "@/lib/editorial-rating";
 import type { ProductRecord } from "@/lib/types/product";
 import type { Pick } from "@/components/BestPicksPage";
-import { reviewPath } from "@/lib/review-pages";
+import { productHref } from "@/lib/review-pages";
 
 const CATALOG = productsCatalog as ProductRecord[];
 
@@ -192,7 +192,7 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
               <td className="px-4 py-3 align-top">
                 {row.pick.productId ? (
                   <Link
-                    href={reviewPath(row.pick.productId)}
+                    href={productHref(row.pick.productId)}
                     className="font-medium text-[var(--text)] hover:text-[var(--color-accent)]"
                   >
                     {row.pick.brand} {row.pick.name}

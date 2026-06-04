@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useProfile } from "@/context/ProfileContext";
+import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { resultsPathForProfile } from "@/lib/profile-url";
 import { byId } from "@/lib/scoring";
-import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 
 /** Surfaces the last finder shortlists on the homepage for return visits. */
 export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {

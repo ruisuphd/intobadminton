@@ -56,6 +56,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         title: "Best rackets under $100",
         dek: "Six budget frames with original trade-off analysis — Play tiers and entry Victor/Li-Ning, not marketplace price sorts.",
       },
+      {
+        href: "/best/rackets-under-150/",
+        title: "Rackets under $150",
+        dek: "Club-budget frames at $150 or less — catalogue discovery with comparison table.",
+      },
     ],
   },
   {

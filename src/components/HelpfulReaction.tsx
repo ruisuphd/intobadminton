@@ -2,25 +2,24 @@
 
 import { useEffect, useState } from "react";
 import { trackEvent } from "@/components/Analytics";
+import {
+  fetchReactionCounts,
+  formatReactionSummary,
+  shouldShowReactionCounts,
+  submitReactionVote,
+  type Reaction,
+  type ReactionCounts,
+} from "@/lib/reactions";
 
 const STORAGE_PREFIX = "intobadminton.reaction.v1.";
 
 /**
  * "Was this helpful?" reaction stripe.
  *
- * Initially ships with a local-only persistence model: the user's
- * up / down / "needs more detail" vote is stored in localStorage per article
- * id so the same user does not re-vote on a return visit. An Analytics event
- * is fired on each vote so we can aggregate at the GA4 level until the
- * Workers/KV backend lands (then this component flips to that endpoint
- * without changing its public surface).
- *
- * The displayed counts are intentionally NOT shown until the backend lands —
- * faking counts (or anchoring on a small local-only sample) is worse than
- * showing none.
+ * Persists the user's vote in localStorage and fires a GA4 event. When
+ * `NEXT_PUBLIC_REACTIONS_URL` is configured, also loads aggregate counts
+ * from the optional Workers/KV backend and submits votes there.
  */
-
-type Reaction = "up" | "down" | "more";
 
 export function HelpfulReaction({
   /** Unique article id, e.g. `blog:racket-balance-vs-swing-speed`. */
@@ -30,6 +29,7 @@ export function HelpfulReaction({
 }) {
   const [vote, setVote] = useState<Reaction | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  const [counts, setCounts] = useState<ReactionCounts | null>(null);
 
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- single-shot hydration */
@@ -43,6 +43,16 @@ export function HelpfulReaction({
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [contentId]);
 
+  useEffect(() => {
+    let cancelled = false;
+    void fetchReactionCounts(contentId).then((next) => {
+      if (!cancelled && next) setCounts(next);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [contentId]);
+
   const submit = (next: Reaction) => {
     setVote(next);
     try {
@@ -54,11 +64,19 @@ export function HelpfulReaction({
       content_id: contentId,
       reaction: next,
     });
+    void submitReactionVote(contentId, next);
+    setCounts((prev) => {
+      if (!prev) return prev;
+      return { ...prev, [next]: prev[next] + 1 };
+    });
   };
 
+  const summary =
+    counts && shouldShowReactionCounts(counts)
+      ? formatReactionSummary(counts)
+      : null;
+
   if (!hydrated) {
-    // Avoid hydration mismatch: render the placeholder structure with no
-    // active state until we have read localStorage.
     return (
       <section
         aria-label="Was this helpful?"
@@ -103,6 +121,9 @@ export function HelpfulReaction({
             Change my vote
           </button>
         </p>
+        {summary ? (
+          <p className="mt-3 text-xs text-[var(--color-subtle)]">{summary}</p>
+        ) : null}
       </section>
     );
   }
@@ -115,6 +136,9 @@ export function HelpfulReaction({
       <p className="text-sm font-medium text-[var(--text)]">
         Was this article helpful?
       </p>
+      {summary ? (
+        <p className="mt-2 text-xs text-[var(--color-subtle)]">{summary}</p>
+      ) : null}
       <div className="mt-3 flex flex-wrap gap-2">
         <ReactionButton glyph="👍" label="Yes" onClick={() => submit("up")} />
         <ReactionButton
