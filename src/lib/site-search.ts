@@ -1,7 +1,7 @@
 import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
-import { reviewPath, reviewableProducts, catalogProductHref } from "@/lib/review-pages";
+import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 
 export type SearchEntryKind =
   | "review"

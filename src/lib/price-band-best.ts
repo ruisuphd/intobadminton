@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
-import { BestPicksPage, type BestPicksConfig, type Pick } from "@/components/BestPicksPage";
+import type { BestPicksConfig, Pick } from "@/components/BestPicksPage";
 import { racketsUnderPrice } from "@/lib/product-filters";
 import { humanize } from "@/lib/text";
 import type { RacketProduct } from "@/lib/types/product";

@@ -53,9 +53,11 @@ export function CatalogClient() {
   const baseRows = useMemo(
     () =>
       filterProducts(catalog, {
-        ...filters,
+        category: filters.category,
+        brand: filters.brand,
         weightClass: null,
         balance: null,
+        priceBand: filters.priceBand,
       }),
     [catalog, filters.category, filters.brand, filters.priceBand]
   );
