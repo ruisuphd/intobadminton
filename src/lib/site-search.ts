@@ -1,6 +1,7 @@
 import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
+import { reviewPath, reviewableProducts } from "@/lib/review-pages";
 
 export type SearchEntryKind =
   | "review"
@@ -8,7 +9,8 @@ export type SearchEntryKind =
   | "best"
   | "tool"
   | "brand"
-  | "compare";
+  | "compare"
+  | "product";
 
 export type SearchEntry = {
   title: string;
@@ -212,9 +214,32 @@ function reviewEntries(): SearchEntry[] {
   }));
 }
 
+function productEntries(): SearchEntry[] {
+  return reviewableProducts().map((product) => ({
+    title: `${product.brand} ${product.name}`,
+    href: reviewPath(product.id),
+    kind: "product" as const,
+    summary:
+      product.editorNote?.slice(0, 160) ??
+      `Catalog ${product.category}: ${product.bestFor.slice(0, 3).join(", ")}.`,
+    keywords: [
+      product.brand,
+      product.name,
+      product.category,
+      product.id.replace(/-/g, " "),
+      ...product.bestFor,
+    ],
+  }));
+}
+
 /** Build-time search catalogue — static export friendly. */
 export function buildSearchIndex(): SearchEntry[] {
-  return [...STATIC_ENTRIES, ...brandEntries(), ...reviewEntries()];
+  return [
+    ...STATIC_ENTRIES,
+    ...brandEntries(),
+    ...reviewEntries(),
+    ...productEntries(),
+  ];
 }
 
 const SEARCH_INDEX = buildSearchIndex();
@@ -247,7 +272,11 @@ function scoreEntry(entry: SearchEntry, query: string): number {
   return 40 + (tokenHits / tokens.length) * 30;
 }
 
-export function searchSite(query: string, limit = 20): SearchEntry[] {
+export function searchSite(
+  query: string,
+  limit = 20,
+  kind?: SearchEntryKind
+): SearchEntry[] {
   const trimmed = query.trim();
   if (!trimmed) return [];
 
@@ -255,7 +284,7 @@ export function searchSite(query: string, limit = 20): SearchEntry[] {
     entry,
     score: scoreEntry(entry, trimmed),
   }))
-    .filter((row) => row.score > 0)
+    .filter((row) => row.score > 0 && (!kind || row.entry.kind === kind))
     .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title))
     .slice(0, limit)
     .map((row) => row.entry);
