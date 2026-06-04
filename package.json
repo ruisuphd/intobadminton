@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "prebuild": "node scripts/generate-product-images.mjs",
+    "dev": "node scripts/generate-search-index.mjs && next dev",
+    "prebuild": "node scripts/generate-product-images.mjs && node scripts/generate-search-index.mjs",
     "build": "next build",
     "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/generate-blog-redirects.mjs && node scripts/check-source-attribution.mjs && node scripts/postbuild-seo-audit.mjs",
     "start": "npx -y serve@latest out",

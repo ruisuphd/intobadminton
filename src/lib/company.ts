@@ -66,11 +66,6 @@ export const organizationJsonLd = {
   },
 } as const;
 
-// `potentialAction.SearchAction` is intentionally omitted: until `/research/`
-// is a functional search results page (not the current static placeholder),
-// declaring the SearchAction tells Google we have a site search that does
-// nothing — Google can demote rich-result eligibility for broken claims. See
-// the audit plan P5 note; restore once a real search lands.
 export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -81,4 +76,12 @@ export const websiteJsonLd = {
   inLanguage: "en",
   description:
     "Badminton equipment recommendations for rackets, strings, shoes, and bags.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${companyInfo.siteUrl}/search/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 } as const;

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
+import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { JsonLd } from "@/components/JsonLd";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { SocialShare } from "@/components/SocialShare";
@@ -116,6 +118,13 @@ export function EditorialArticlePage({
               {article.dek}
             </p>
           )}
+          <div className="mt-6 space-y-4">
+            <InArticleAffiliateDisclosure />
+            <ReviewMethodologyBox
+              note={article.methodology}
+              updatedAt={article.updatedAt}
+            />
+          </div>
         </header>
 
         <div className="mt-10 space-y-8">

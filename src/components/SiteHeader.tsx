@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SavedHeaderLink } from "@/components/SavedHeaderLink";
+import { SiteSearchForm } from "@/components/SiteSearchForm";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -65,7 +66,10 @@ export function SiteHeader() {
           <span>IntoBadminton</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm sm:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-4 text-sm sm:flex" aria-label="Primary">
+          <div className="mr-1 hidden min-[1200px]:block">
+            <SiteSearchForm compact />
+          </div>
           {NAV_LINKS.map((l) => {
             const active = isActive(pathname, l.href);
             return (
@@ -154,6 +158,9 @@ export function SiteHeader() {
             })}
             <li>
               <SavedHeaderLink variant="mobile" onNavigate={close} />
+            </li>
+            <li className="py-2">
+              <SiteSearchForm compact />
             </li>
             <li>
               <Link

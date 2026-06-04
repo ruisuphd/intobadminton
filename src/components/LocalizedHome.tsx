@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { HomeEngagementStrip } from "@/components/HomeEngagementStrip";
+import { SiteSearchForm } from "@/components/SiteSearchForm";
 import { JsonLd } from "@/components/JsonLd";
 import products from "@/data/products.json";
 import {
@@ -149,6 +151,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <p className="mt-6 text-xs text-[var(--color-subtle)]">
               {"No signup · No email gate · Profiles stay on device"}
             </p>
+            <div className="mt-8 max-w-xl">
+              <SiteSearchForm />
+            </div>
           </div>
 
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -271,6 +276,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           </div>
         </div>
       </section>
+
+      <HomeEngagementStrip />
 
       {featuredReviews.length > 0 && (
         <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
