@@ -1,51 +1,51 @@
 # Web App Improvement Plan — Sprint 3 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-0fb2`  
+**Branch:** `cursor/web-app-improvement-plan-c920`  
 **Baseline:** Sprint 1–2 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md)).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength | IntoBadminton gap (Sprint 3) |
-|------------|----------|------------------------------|
-| **Tennis Warehouse / retailer PDPs** | Saved lists, email alerts on price | Notify-me was alert-only; now local intent + analytics |
-| **Wirecutter / RTINGS** | Return-visit modules | Homepage lacked recent shortlist recall |
-| **BadmintonCentral** | Tool discovery via forums | Toolkit existed but homepage strip showed 3/5 tools |
-| **YouTube reviewers** | Video evidence | Still deferred (`VideoObject` gated) |
-| **Brand blogs** | Original product photography | Still editorial pipeline |
+| Competitor | Strength | IntoBadminton response (Sprint 3) |
+|------------|----------|----------------------------------|
+| **Tennis Warehouse / retailer PDPs** | Saved lists, email alerts | `notify-me.ts` + Buttondown when configured; local intent fallback |
+| **Wirecutter / RTINGS** | Return-visit + article ToC | `HomeRecentShortlists`; `GuideInPageToc` on guides |
+| **BadmintonCentral** | Dense internal linking | Glossary autolinks in review body from `glossaryLinks` |
+| **RacketGuide finders** | Visual quiz UX | Per-step hints + SVG glyphs in `QuizFunnel` |
+| **YouTube reviewers** | Video evidence | Deferred (`VideoObject` gated) |
 
-**Moat unchanged:** transparent fit scoring, postbuild SEO gate, static export, 146+ reviews, cluster guides restored on this branch.
+**Moat:** transparent fit scoring, postbuild SEO gate, static export, 146+ reviews, cluster guides on `main`.
 
 ---
 
-## 2. Top 5 gaps (this sprint)
+## 2. Top 5 gaps (combined Sprint 3)
 
-| # | Gap | Impact | Sprint 3 |
-|---|-----|--------|----------|
-| 1 | **Notify-me used `alert()` with no persistence** | Broken engagement loop on `/saved/` | ✅ Buttondown when configured; else `notify-me.ts` local intent |
-| 2 | **No homepage recall of finder shortlists** | Weak 7-day return signal | ✅ `HomeRecentShortlists` |
-| 3 | **Toolkit under-surfaced on homepage** | Lower pages/session to `/tools/*` | ✅ 5-tool `HomeToolkitStrip` |
-| 4 | **`/saved/` missing from search + Lighthouse** | Discovery + CI regression blind spot | ✅ site-search + `lighthouserc.json` |
-| 5 | **Merge drift vs `main` (cluster guides)** | Broken internal links if guides dropped | ✅ merged `origin/main`, kept pillars |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | Notify-me was alert-only / no persistence | ✅ `notify-me.ts` + Buttondown (`main`) |
+| 2 | Glossary terms not linked in rendered prose | ✅ `glossary-autolink` (this PR) |
+| 3 | Guides lack jump/sticky ToC | ✅ `GuideInPageToc` (this PR) |
+| 4 | Quiz missing per-step visual cues | ✅ `QuizStepDecor` (this PR) |
+| 5 | Homepage recall + toolkit discovery | ✅ `HomeRecentShortlists` + 5-tool strip (`main`) |
 
 ### Deferred (Sprint 4+)
 
-- Migrate offline notify-me intents when Buttondown username is set in production
-- HelpfulReaction Workers/KV aggregate counts
+- HelpfulReaction Workers/KV aggregates
 - First-party `public/products/` photography
-- `Person.sameAs` after YouTube channel claim
-- zh locale content
+- `Person.sameAs` after social profile claims
+- PWA web push
 
 ---
 
-## 3. Execution summary
+## 3. Execution summary (this PR)
 
-1. `src/lib/notify-me.ts` — per-product email intent in `localStorage`; `notify_me_opt_in` / `notify_me_clear` analytics.
-2. `HomeRecentShortlists` — last 3 finder runs on homepage (device-local).
-3. `HomeToolkitStrip` — court diagram + balance explainer cards added.
-4. Site search + Lighthouse URL for `/saved/`.
-5. Merged `origin/main` with SEO cluster guides retained.
+1. `src/lib/glossary-autolink.ts` + `GlossaryLinkedText` on review sections
+2. `src/components/GuideInPageToc.tsx` — portal ToC after guide `<h1>`
+3. `src/app/quiz/QuizFunnel.tsx` — step hints + option glyphs
+4. `scripts/generate-product-images.mjs` — prefer `sharp` on Linux CI
+
+(Notify-me, recent shortlists, toolkit strip, `/saved/` search + Lighthouse shipped on `main`.)
 
 ---
 
@@ -53,23 +53,32 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 3 + competitive audit | ✅ |
-| 2 | Notify-me stores only on device; no server POST yet | ✅ |
-| 3 | No homepage signup wall added | ✅ |
-| 4 | Recent shortlists hidden when history empty | ✅ |
-| 5 | Toolkit links match live `/tools/*` routes | ✅ |
-| 6 | `/saved/` in `buildSearchIndex()` | ✅ |
-| 7 | `notify-me.test.ts` + `site-search` tests | ✅ |
-| 8 | Static export safe (client-only modules) | ✅ |
-| 9 | `npm test && npm run build` | ✅ (CI) |
-| 10 | postbuild SEO audit clean | ✅ (CI) |
+| 1 | Gaps grounded in Q2 plan + competitive audit | ✅ |
+| 2 | Glossary links only for declared `glossaryLinks` | ✅ |
+| 3 | Guide ToC skips `/guides/` index; 3+ sections only | ✅ |
+| 4 | Quiz glyphs decorative; hints non-blocking | ✅ |
+| 5 | Notify-me unchanged from `main` (no regression) | ✅ |
+| 6 | Static export safe | ✅ |
+| 7 | `npm test` (180 tests) | ✅ |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | No duplicate notify-me implementations | ✅ |
+| 10 | Plan doc reflects `main` + branch delta | ✅ |
 
 ---
 
-## 5. Metrics (unchanged)
+## 5. Verification
+
+```bash
+npm test
+npm run build
+```
+
+---
+
+## 6. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Notify-me opt-ins (GA4) | Track `notify_me_opt_in` weekly |
+| Notify-me opt-ins | Track `notify_me_opt_in` / `notify_me_submit` in GA4 |

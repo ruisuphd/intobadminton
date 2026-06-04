@@ -50,7 +50,15 @@
 - Buttondown per-product notify-me on `/saved/` — see [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md)
 - Engagement UX on `/best/*` and all `/guides/*` routes
 
-### Phase C — Next
+### Phase C — Sprint 3 (branch `cursor/web-app-improvement-plan-c920`)
+
+- Glossary autolinks in review body (`glossary-autolink.ts`)
+- Guide ToC via `GuideInPageToc` (portal after h1)
+- Quiz step hints + option glyphs
+- Notify-me intent in localStorage (Buttondown API deferred)
+- Sharp-preferred product image pipeline
+
+### Phase D — Next
 
 - GSC/CrUX baseline CSV capture (owner session)
 - Original photos on top commercial URLs

@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { GuideInPageToc } from "@/components/GuideInPageToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { SocialShare } from "@/components/SocialShare";
@@ -21,6 +22,12 @@ export function GuideReadingChrome() {
   const pathname = usePathname();
   if (pathname === "/guides/" || pathname === "/guides") return null;
   return <ReadingProgress />;
+}
+
+export function GuideInPageNavigation() {
+  const pathname = usePathname();
+  if (pathname === "/guides/" || pathname === "/guides") return null;
+  return <GuideInPageToc />;
 }
 
 export function GuideEngagementFooter() {
