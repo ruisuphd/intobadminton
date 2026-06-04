@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { trackEvent } from "@/components/Analytics";
 import productsCatalog from "@/data/products.json";
 import {
   ProductImageView,
@@ -10,6 +11,11 @@ import {
 import { SaveProductButton } from "@/components/SaveProductButton";
 import { useProfile } from "@/context/ProfileContext";
 import { humanize } from "@/lib/text";
+import {
+  clearNotifyMeIntent,
+  getNotifyMeEntry,
+  saveNotifyMeIntent,
+} from "@/lib/notify-me";
 import { reviewPath } from "@/lib/review-pages";
 import type { ProductRecord } from "@/lib/types/product";
 
@@ -155,41 +161,90 @@ export function SavedListClient() {
 }
 
 function NotifyMeRow({ productId }: { productId: string }) {
+  const [email, setEmail] = useState("");
+  const [saved, setSaved] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    const existing = getNotifyMeEntry(productId);
+    if (existing) {
+      setEmail(existing.email);
+      setSaved(true);
+    }
+    setHydrated(true);
+  }, [productId]);
+
+  if (!hydrated) {
+    return (
+      <div
+        className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4 text-xs text-[var(--color-muted)]"
+        aria-hidden
+      >
+        Loading notification preferences…
+      </div>
+    );
+  }
+
   return (
-    <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4">
+    <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4" open={saved}>
       <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
         Notify me when this is re-tested or drops in price
       </summary>
       <p className="mt-3 text-xs leading-relaxed text-[var(--color-muted)]">
-        Per-product notifications are scaffolded but not yet live — Buttondown
-        integration is in flight. When ready, this will email you only when
-        the spec is re-verified or when a tracked retailer crosses your set
-        price. No general newsletter; no other emails.
+        {saved
+          ? "Your interest is saved on this device. We will email you only when Buttondown goes live — re-test or price-drop signals, never a general newsletter."
+          : "Per-product notifications are not emailed yet. Submitting stores your address locally and logs interest for launch — nothing leaves this browser until the backend ships."}
       </p>
-      <form
-        className="mt-3 flex flex-wrap gap-2"
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert(
-            "Notifications launch when the per-product backend is live. We saved your interest locally."
-          );
-        }}
-      >
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="you@example.com"
-          aria-label={`Notify email for ${productId}`}
-          className="flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-4 text-sm h-10"
-        />
-        <button
-          type="submit"
-          className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
+      {saved ? (
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <p className="text-sm text-[var(--text)]">
+            Saved for <span className="font-medium">{email}</span>
+          </p>
+          <button
+            type="button"
+            className="text-sm text-[var(--color-muted)] underline hover:text-[var(--text)]"
+            onClick={() => {
+              clearNotifyMeIntent(productId);
+              setSaved(false);
+              setEmail("");
+              trackEvent("notify_me_clear", { product_id: productId });
+            }}
+          >
+            Remove
+          </button>
+        </div>
+      ) : (
+        <form
+          className="mt-3 flex flex-wrap gap-2"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const form = e.currentTarget;
+            const value = new FormData(form).get("email");
+            if (typeof value !== "string" || !value.trim()) return;
+            saveNotifyMeIntent(productId, value);
+            setEmail(value.trim().toLowerCase());
+            setSaved(true);
+            trackEvent("notify_me_intent", { product_id: productId });
+          }}
         >
-          Notify me
-        </button>
-      </form>
+          <input
+            type="email"
+            name="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            aria-label={`Notify email for ${productId}`}
+            className="flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-4 text-sm h-10"
+          />
+          <button
+            type="submit"
+            className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
+          >
+            Save interest
+          </button>
+        </form>
+      )}
     </details>
   );
 }
