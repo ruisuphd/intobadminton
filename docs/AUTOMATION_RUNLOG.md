@@ -2,6 +2,27 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #86 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-c252`)
+
+**Trigger:** GitHub pull request #86 (`ready_for_review`) — Phase B SEO guides **merged** to `main` as `1e416cd`. Translation workflow blocked: no `blogs/` drop in cloud VM.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Desktop `.../intobadminton/blogs` | **Not found** |
+| Repo `blogs/` | **Absent** |
+| New translations | **None** |
+
+### Verification
+
+- `npm run blog:validate` — 20/20 passes
+- `npm test` — 204 passed
+- `npm run build` — pass
+
+Re-run after `npm run blog:sync` with the Desktop path or `BLOGS_DIR`.
+
+---
 
 ## 2026-06-04 — Sprint 4 web app (branch `cursor/web-app-improvement-plan-3a42`, PR #115)
 
