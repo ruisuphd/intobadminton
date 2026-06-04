@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArticleToc, type TocItem } from "@/components/ArticleToc";
@@ -11,21 +12,29 @@ function slugifyHeading(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+function normalizePathname(pathname: string | null): string {
+  if (!pathname) return "";
+  return pathname.replace(/\/index\.html$/i, "").replace(/\/$/, "") || "/";
+}
+
+const SKIP_TOC_PATHS = new Set(["/guides", "/guides/glossary"]);
+
 /**
  * Builds a table of contents from `<article> h2` headings on guide pages.
  * Portals the ToC immediately after the article `<h1>` once headings are
  * indexed. Assigns `id` attributes when missing.
  */
 export function GuideInPageToc() {
+  const pathname = usePathname();
+  const guidePath = normalizePathname(pathname);
+  const skipToc = SKIP_TOC_PATHS.has(guidePath);
+
   const [items, setItems] = useState<TocItem[]>([]);
   const [mountNode, setMountNode] = useState<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- DOM scan before paint */
-    if (
-      typeof window !== "undefined" &&
-      window.location.pathname.replace(/\/$/, "") === "/guides/glossary"
-    ) {
+    if (skipToc) {
       setItems([]);
       setMountNode(null);
       return;
@@ -58,15 +67,15 @@ export function GuideInPageToc() {
       next.push({ id, label });
     }
 
-    setItems(next);
-
     if (next.length < 3) {
+      setItems([]);
       setMountNode(null);
       return;
     }
 
     const h1 = article.querySelector("h1");
     if (!h1) {
+      setItems([]);
       setMountNode(null);
       return;
     }
@@ -75,14 +84,16 @@ export function GuideInPageToc() {
     if (!host) {
       host = document.createElement("div");
       host.id = "guide-toc-anchor";
-      host.className = "mb-8";
+      host.className = "mb-8 min-h-28";
       h1.insertAdjacentElement("afterend", host);
     }
+
+    setItems(next);
     setMountNode(host);
     /* eslint-enable react-hooks/set-state-in-effect */
-  }, []);
+  }, [skipToc]);
 
-  if (!mountNode || items.length < 3) return null;
+  if (skipToc || !mountNode || items.length < 3) return null;
 
   return createPortal(<ArticleToc items={items} />, mountNode);
 }

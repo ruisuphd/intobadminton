@@ -14,8 +14,7 @@
         "http://localhost/compare-guides/yonex-astrox-vs-nanoflare/index.html",
         "http://localhost/guides/string-tension/index.html",
         "http://localhost/guides/glossary/index.html",
-        "http://localhost/tools/index.html",
-        "http://localhost/tools/string-tension-calculator/index.html"
+        "http://localhost/tools/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {
