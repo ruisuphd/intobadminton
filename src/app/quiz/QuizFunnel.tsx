@@ -316,6 +316,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
               <button
                 type="button"
                 key={d}
+                aria-label={disciplines[d]}
                 onClick={() => {
                   setProfile((p) => ({ ...p, discipline: d }));
                   next();
@@ -428,6 +429,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                 type="button"
                 key={id}
                 disabled={!live}
+                aria-label={label}
                 onClick={() => {
                   setProfile((p) => ({ ...p, category: id }));
                   next();
