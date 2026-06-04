@@ -19,7 +19,7 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 ### Verification (no review content changes)
 
 - `npm run blog:validate` — 20/20 structural passes, 0 issues
-- `npm test` — pass after `npm install`
+- `npm test` — 185 passed
 - `npm run build` + postbuild SEO audit — pass
 
 ### Merge status
