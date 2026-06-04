@@ -2,6 +2,39 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #95 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-218b`)
+
+**Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). Translation workflow ran in parallel on this branch.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **146** |
+| `blog-articles.json` imported articles | **146** — no import drift |
+| New translations this run | **None** |
+
+### PR #95 fix (Sprint 3)
+
+- **CI failure:** `react-hooks/set-state-in-effect` in `SavedListClient.tsx` (`setLocalIntent` inside `useEffect`).
+- **Fix pushed** to `cursor/web-app-improvement-plan-22e9` (`210b2ff`): `useSyncExternalStore` + `subscribeNotifyMe` in `notify-me.ts`.
+- **Local verify (PR head):** lint, typecheck, blog:validate 20/20, 187 tests, build + SEO audit pass.
+
+### Translation / import
+
+Not performed — no `blogs/` drop. Steps 1–5 and web-app review import deferred until:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate → rename → npm run blog:import && npm run blog:validate
+```
+
+---
+
 ## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
 
 **Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). PR #84 itself is web-app Phase B (`cursor/web-app-improvement-plan-a493`); translation remains blocked without the private `blogs/` drop.
