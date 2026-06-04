@@ -2,9 +2,26 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-04 — PR #81 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-8af0`)
+## 2026-06-04 — Sprint 3 web app (branch `cursor/web-app-improvement-plan-9035`, PR #99)
 
-**Trigger:** GitHub pull request #81 (`ready_for_review`) — prior runlog landed on `main` as `fb788c9`; this re-trigger confirms the same blocked state (no private `blogs/` drop in the cloud VM).
+**Trigger:** Cloud agent — web app improvement plan execution (audit, Sprint 3 gaps, implementation).
+
+### Shipped
+
+- `/best/rackets-under-100/` — budget best-of with editorial intro + comparison table
+- Homepage hero `SiteSearchForm`
+- `notify-me` local fallback when `NEXT_PUBLIC_BUTTONDOWN_USERNAME` is unset (Buttondown path from `main` preserved)
+
+### Verification
+
+- `npm test` — 180 passed
+- `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
+
+---
+
+## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
+
+**Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). Translation remains blocked without the private `blogs/` drop.
 
 ### Blog source check
 
@@ -13,18 +30,24 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 | Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
 | Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
 | Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
-| `blog-articles.json` vs slug map | **146 / 146** — no drift on `main` |
+| `blog-slug-source-map.json` mapped sources | **126** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
 | New translations this run | **None** |
 
 ### Verification (no review content changes)
 
-- `npm test` — 173 passed
 - `npm run blog:validate` — 20/20 passes, 0 issues
-- `npm run build` + postbuild SEO audit — pass (644 HTML, 205 sitemap URLs)
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
 
 ### Merge status
 
-Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Follow-up runlog PR #85. Re-run after `npm run blog:sync` with the Desktop path or `BLOGS_DIR`.
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+```
 
 ---
 

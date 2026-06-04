@@ -2,14 +2,19 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { trackEvent } from "@/components/Analytics";
 import productsCatalog from "@/data/products.json";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
 import { SaveProductButton } from "@/components/SaveProductButton";
+import { trackEvent } from "@/components/Analytics";
 import { useProfile } from "@/context/ProfileContext";
+import {
+  buttondownConfigured,
+  notifyTagForProduct,
+  subscribeViaButtondown,
+} from "@/lib/buttondown";
 import { humanize } from "@/lib/text";
 import {
   clearNotifyMeIntent,
@@ -143,13 +148,6 @@ export function SavedListClient() {
                   </div>
                 </div>
 
-                {/*
-                 * Per-product "notify me" opt-in (UI scaffold). Live email
-                 * delivery requires Buttondown wiring; this checkbox surfaces
-                 * the intent so we can capture interest the moment the user
-                 * saves a product. Until the backend lands, the click only
-                 * records the intent in localStorage via Analytics events.
-                 */}
                 <NotifyMeRow productId={product.id} />
               </li>
             );
@@ -161,18 +159,25 @@ export function SavedListClient() {
 }
 
 function NotifyMeRow({ productId }: { productId: string }) {
+  const live = buttondownConfigured();
   const [email, setEmail] = useState("");
-  const [saved, setSaved] = useState(false);
+  const [localSaved, setLocalSaved] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">(
+    "idle"
+  );
+  const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    const existing = getNotifyMeEntry(productId);
-    if (existing) {
-      setEmail(existing.email);
-      setSaved(true);
+    if (!live) {
+      const existing = getNotifyMeEntry(productId);
+      if (existing) {
+        setEmail(existing.email);
+        setLocalSaved(true);
+      }
     }
     setHydrated(true);
-  }, [productId]);
+  }, [productId, live]);
 
   if (!hydrated) {
     return (
@@ -185,17 +190,21 @@ function NotifyMeRow({ productId }: { productId: string }) {
     );
   }
 
+  const done = live ? status === "done" : localSaved;
+
   return (
-    <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4" open={saved}>
+    <details className="mt-5 rounded-xl bg-[color:var(--surface-muted)] p-4" open={done}>
       <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
         Notify me when this is re-tested or drops in price
       </summary>
       <p className="mt-3 text-xs leading-relaxed text-[var(--color-muted)]">
-        {saved
-          ? "Your interest is saved on this device. We will email you only when Buttondown goes live — re-test or price-drop signals, never a general newsletter."
-          : "Per-product notifications are not emailed yet. Submitting stores your address locally and logs interest for launch — nothing leaves this browser until the backend ships."}
+        {live
+          ? "One email when this product is re-verified or when we publish a tracked price drop. No general newsletter — unsubscribe any time."
+          : localSaved
+            ? "Your interest is saved on this device until Buttondown is configured. We will not email until the backend ships."
+            : "Per-product notifications are not emailed yet. Submitting stores your address locally and logs interest for launch."}
       </p>
-      {saved ? (
+      {done && !live ? (
         <div className="mt-3 flex flex-wrap items-center gap-3">
           <p className="text-sm text-[var(--text)]">
             Saved for <span className="font-medium">{email}</span>
@@ -205,7 +214,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
             className="text-sm text-[var(--color-muted)] underline hover:text-[var(--text)]"
             onClick={() => {
               clearNotifyMeIntent(productId);
-              setSaved(false);
+              setLocalSaved(false);
               setEmail("");
               trackEvent("notify_me_clear", { product_id: productId });
             }}
@@ -213,18 +222,50 @@ function NotifyMeRow({ productId }: { productId: string }) {
             Remove
           </button>
         </div>
+      ) : done && live ? (
+        message && (
+          <p className="mt-3 text-xs text-[var(--color-muted)]" role="status">
+            {message}
+          </p>
+        )
       ) : (
         <form
           className="mt-3 flex flex-wrap gap-2"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            const form = e.currentTarget;
-            const value = new FormData(form).get("email");
-            if (typeof value !== "string" || !value.trim()) return;
-            saveNotifyMeIntent(productId, value);
-            setEmail(value.trim().toLowerCase());
-            setSaved(true);
-            trackEvent("notify_me_intent", { product_id: productId });
+            setStatus("loading");
+            setMessage(null);
+
+            if (!live) {
+              saveNotifyMeIntent(productId, email);
+              setLocalSaved(true);
+              setStatus("done");
+              trackEvent("notify_me_intent", { product_id: productId });
+              return;
+            }
+
+            const result = await subscribeViaButtondown({
+              email,
+              tag: notifyTagForProduct(productId),
+            });
+
+            trackEvent("notify_me_submit", {
+              product_id: productId,
+              configured: live,
+              ok: result.ok,
+            });
+
+            if (result.ok) {
+              setStatus("done");
+              setMessage(
+                "Check your inbox to confirm — Buttondown sends a double opt-in link."
+              );
+              setEmail("");
+              return;
+            }
+
+            setStatus("error");
+            setMessage(result.message);
           }}
         >
           <input
@@ -233,17 +274,24 @@ function NotifyMeRow({ productId }: { productId: string }) {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            disabled={status === "loading"}
             placeholder="you@example.com"
             aria-label={`Notify email for ${productId}`}
-            className="flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-4 text-sm h-10"
+            className="flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-4 text-sm h-10 disabled:opacity-60"
           />
           <button
             type="submit"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
+            disabled={status === "loading"}
+            className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)] disabled:opacity-60"
           >
-            Save interest
+            {status === "loading" ? "Sending…" : live ? "Notify me" : "Save interest"}
           </button>
         </form>
+      )}
+      {message && status === "error" && (
+        <p className="mt-3 text-xs text-[var(--color-warning)]" role="alert">
+          {message}
+        </p>
       )}
     </details>
   );

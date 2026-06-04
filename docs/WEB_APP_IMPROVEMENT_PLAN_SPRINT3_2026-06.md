@@ -25,7 +25,7 @@
 |---|-----|--------|----------|
 | 1 | **No budget-tier programmatic landing** (`/best/rackets-under-100/`) | Long-tail commercial queries | ✅ |
 | 2 | **Homepage lacks discoverability search** (search only in header) | Discovery / SearchAction usage | ✅ Hero `SiteSearchForm` |
-| 3 | **Notify-me is alert-only** — no intent capture | Retention prep for Buttondown | ✅ `localStorage` + analytics |
+| 3 | **Notify-me fallback when Buttondown unset** | Retention prep | ✅ `localStorage` + Buttondown from `main` |
 | 4 | Original product photography on commercial URLs | AdSense / March 2026 experience | ⏳ Editorial pipeline |
 | 5 | HelpfulReaction aggregate counts (Workers/KV) | Social proof on articles | ⏳ Phase C backend |
 
@@ -37,7 +37,7 @@
 
 1. Add `/best/rackets-under-100/` — six catalog-backed picks ≤$100 with intro analysis, comparison table, and FAQs (no `/review/{productId}/` links until those articles exist).
 2. Register route in `editorial-meta`, `site-search`, `/best/` hub, homepage popular searches.
-3. `src/lib/notify-me.ts` — per-product email intent in `localStorage` (30d TTL); `SavedListClient` uses it instead of `alert()`.
+3. `src/lib/notify-me.ts` — per-product email intent in `localStorage` (30d TTL) when `NEXT_PUBLIC_BUTTONDOWN_USERNAME` is unset; `SavedListClient` uses Buttondown when configured.
 4. `LocalizedHome` hero — compact `SiteSearchForm` under primary CTAs.
 5. Lighthouse CI — audit new best page + cluster guide URLs.
 
