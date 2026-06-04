@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useMemo } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/components/Analytics";
@@ -131,8 +131,24 @@ function ResultsBody() {
     () => scoreProductCatalog(profile),
     [profile]
   );
-  const rows = useMemo(() => allScored.slice(0, topN), [allScored, topN]);
-  const filteredOutCount = allScored.length - rows.length;
+
+  const brandOptions = useMemo(() => {
+    const brands = new Set(allScored.map((r) => r.brand));
+    return [...brands].sort((a, b) => a.localeCompare(b));
+  }, [allScored]);
+
+  const [brandFilter, setBrandFilter] = useState<string | null>(null);
+
+  const filteredScored = useMemo(() => {
+    if (!brandFilter) return allScored;
+    return allScored.filter((r) => r.brand === brandFilter);
+  }, [allScored, brandFilter]);
+
+  const rows = useMemo(
+    () => filteredScored.slice(0, topN),
+    [filteredScored, topN]
+  );
+  const filteredOutCount = filteredScored.length - rows.length;
 
   useEffect(() => {
     if (rows.length === 0) return;
@@ -192,6 +208,42 @@ function ResultsBody() {
 
   return (
     <div className="space-y-6">
+      {brandOptions.length > 1 && (
+        <div
+          className="flex flex-wrap items-center gap-2"
+          role="group"
+          aria-label="Filter by brand"
+        >
+          <span className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
+            Brand
+          </span>
+          <button
+            type="button"
+            onClick={() => setBrandFilter(null)}
+            className={
+              brandFilter === null ? "chip chip-primary" : "chip chip-secondary"
+            }
+            aria-pressed={brandFilter === null}
+          >
+            All
+          </button>
+          {brandOptions.map((brand) => (
+            <button
+              key={brand}
+              type="button"
+              onClick={() => setBrandFilter(brand)}
+              className={
+                brandFilter === brand
+                  ? "chip chip-primary"
+                  : "chip chip-secondary"
+              }
+              aria-pressed={brandFilter === brand}
+            >
+              {brand}
+            </button>
+          ))}
+        </div>
+      )}
       <JsonLd data={buildProductJsonLd(rows)} />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
