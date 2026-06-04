@@ -31,7 +31,7 @@
 
 ### Deferred (Sprint 4+)
 
-- Buttondown delivery for notify-me intents
+- Migrate offline notify-me intents when Buttondown username is set in production
 - HelpfulReaction Workers/KV aggregate counts
 - First-party `public/products/` photography
 - `Person.sameAs` after YouTube channel claim
