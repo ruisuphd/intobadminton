@@ -864,3 +864,20 @@ export function scoreProductCatalog(profile: UserProfile): ScoredProduct[] {
 export function byId(id: string): ProductRecord | undefined {
   return PRODUCT_CATALOG.find((p) => p.id === id);
 }
+
+/** Score a single catalog row for a completed profile (e.g. review-page preview). */
+export function scoreOneProduct(
+  product: ProductRecord,
+  profile: UserProfile
+): ScoredProduct | null {
+  if (!profile.level || !profile.discipline || profile.category !== product.category) {
+    return null;
+  }
+  if (isRacket(product)) return scoreRacket(product, profile);
+  if (isString(product)) return scoreString(product, profile);
+  if (isShoe(product)) return scoreShoe(product, profile);
+  if (isBag(product)) return scoreBag(product, profile);
+  if (isShuttle(product)) return scoreShuttle(product, profile);
+  if (isGrip(product)) return scoreGrip(product, profile);
+  return null;
+}
