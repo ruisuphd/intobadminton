@@ -37,6 +37,11 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds tools hub", () => {
+    const hits = searchSite("badminton toolkit");
+    expect(hits.some((h) => h.href === "/tools/")).toBe(true);
+  });
+
   it("finds saved shelf", () => {
     const hits = searchSite("saved shortlist");
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);

@@ -165,3 +165,18 @@ export function clampBudgetUsd(value: number): number {
 export const BUDGET_HARD_CAP_USD = BUDGET_MAX_HARD_CAP_USD;
 export const TOP_N_OPTIONS = [4, 8, 12, 20] as const;
 export const DEFAULT_TOP_N_VALUE = DEFAULT_TOP_N;
+
+/**
+ * Sharable `/results/` URL for a stored finder profile. Used by homepage
+ * shortlist recall and any future history surfaces.
+ */
+export function resultsPathForProfile(
+  profile: UserProfile,
+  topN: number = DEFAULT_TOP_N
+): string {
+  const params = profileToSearchParams(profile);
+  const n = ALLOWED_TOP_N.has(topN) ? topN : DEFAULT_TOP_N;
+  params.set("n", String(n));
+  const qs = params.toString();
+  return qs ? `/results/?${qs}` : "/results/";
+}

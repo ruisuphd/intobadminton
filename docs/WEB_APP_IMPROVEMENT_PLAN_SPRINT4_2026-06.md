@@ -29,6 +29,15 @@
 | 4 | Lighthouse did not cover representative tool URL | ✅ `/tools/index.html` in `lighthouserc.json` |
 | 5 | HelpfulReaction counts still client-only (no KV) | ⏳ Sprint 5 |
 
+### Sprint 4b — Return-path polish (PR #100)
+
+| # | Gap | Status |
+|---|-----|--------|
+| 6 | Homepage shortlists showed names only (no `/results/` reopen) | ✅ `resultsPathForProfile` + linked cards |
+| 7 | Toolkit pages lacked share / helpful feedback | ✅ `ToolEngagement` on `/tools` layout |
+| 8 | `/tools/` hub missing from site search | ✅ `buildSearchIndex()` entry |
+| 9 | Lighthouse skipped authenticity-checker | ✅ URL added (`/saved/` omitted — `noindex`) |
+
 ### Deferred (Sprint 5+)
 
 - HelpfulReaction Workers/KV aggregates
