@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { JsonLd } from "@/components/JsonLd";
+import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { SocialShare } from "@/components/SocialShare";
 import {
   blogArticles,
@@ -92,6 +94,7 @@ export function EditorialArticlePage({
 
   return (
     <main className="flex-1">
+      <LastArticleTracker href={path} title={article.title} />
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
@@ -119,6 +122,7 @@ export function EditorialArticlePage({
         </header>
 
         <div className="mt-10 space-y-8">
+            <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
               <div className="overflow-x-auto rounded-2xl border border-[color:var(--line)]">

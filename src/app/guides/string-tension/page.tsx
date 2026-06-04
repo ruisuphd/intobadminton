@@ -22,6 +22,24 @@ export default function StringTensionGuide() {
         headline={HEADLINE}
         description={DESCRIPTION}
         breadcrumbLabel="String tension"
+        howToSteps={[
+          {
+            name: "Check your frame's tension range",
+            text: "Read the manufacturer's recommended lb window on the frame or cone cap. Never exceed the printed maximum.",
+          },
+          {
+            name: "Pick a starting tension for your level",
+            text: "Beginners: 18–22 lb. Club players: 22–26 lb. Competitive: 24–28 lb. Adjust down if you have arm discomfort.",
+          },
+          {
+            name: "Choose a string type",
+            text: "Thinner gauges (0.65–0.69 mm) add repulsion but wear faster. Thicker gauges (0.70+ mm) last longer with a firmer feel.",
+          },
+          {
+            name: "Restring on a schedule",
+            text: "Restring at least as often as you play hours per week. A dead stringbed hides tension mistakes until your clears start dying.",
+          },
+        ]}
       />
       <article className="layout-band max-w-3xl space-y-6 text-[var(--text)]">
         <p>
