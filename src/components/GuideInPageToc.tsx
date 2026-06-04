@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
-import { createPortal } from "react-dom";
 import { ArticleToc, type TocItem } from "@/components/ArticleToc";
 
 function slugifyHeading(text: string): string {
@@ -21,8 +20,8 @@ const SKIP_TOC_PATHS = new Set(["/guides", "/guides/glossary"]);
 
 /**
  * Builds a table of contents from `<article> h2` headings on guide pages.
- * Portals the ToC immediately after the article `<h1>` once headings are
- * indexed. Assigns `id` attributes when missing.
+ * Assigns `id` attributes when missing, then renders a fixed desktop sidebar
+ * so the ToC does not shift page layout (Lighthouse CLS).
  */
 export function GuideInPageToc() {
   const pathname = usePathname();
@@ -30,20 +29,17 @@ export function GuideInPageToc() {
   const skipToc = SKIP_TOC_PATHS.has(guidePath);
 
   const [items, setItems] = useState<TocItem[]>([]);
-  const [mountNode, setMountNode] = useState<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- DOM scan before paint */
     if (skipToc) {
       setItems([]);
-      setMountNode(null);
       return;
     }
 
     const article = document.querySelector("main article");
     if (!article) {
       setItems([]);
-      setMountNode(null);
       return;
     }
 
@@ -67,33 +63,17 @@ export function GuideInPageToc() {
       next.push({ id, label });
     }
 
-    if (next.length < 3) {
-      setItems([]);
-      setMountNode(null);
-      return;
-    }
-
-    const h1 = article.querySelector("h1");
-    if (!h1) {
-      setItems([]);
-      setMountNode(null);
-      return;
-    }
-
-    let host = article.querySelector<HTMLElement>("#guide-toc-anchor");
-    if (!host) {
-      host = document.createElement("div");
-      host.id = "guide-toc-anchor";
-      host.className = "mb-8 min-h-28";
-      h1.insertAdjacentElement("afterend", host);
-    }
-
     setItems(next);
-    setMountNode(host);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [skipToc]);
 
-  if (skipToc || !mountNode || items.length < 3) return null;
+  if (skipToc || items.length < 3) return null;
 
-  return createPortal(<ArticleToc items={items} />, mountNode);
+  return (
+    <div className="pointer-events-none fixed inset-y-0 right-0 z-20 hidden w-56 lg:block">
+      <div className="pointer-events-auto sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-auto px-4 py-16">
+        <ArticleToc items={items} desktopOnly />
+      </div>
+    </div>
+  );
 }

@@ -12,7 +12,14 @@ export type TocItem = { id: string; label: string };
  *
  * Mobile: collapses to a "Jump to" disclosure to preserve vertical space.
  */
-export function ArticleToc({ items }: { items: TocItem[] }) {
+export function ArticleToc({
+  items,
+  desktopOnly = false,
+}: {
+  items: TocItem[];
+  /** When true, skip the mobile disclosure (guide overlay uses desktop nav only). */
+  desktopOnly?: boolean;
+}) {
   const [activeId, setActiveId] = useState<string | null>(
     items[0]?.id ?? null
   );
@@ -61,6 +68,7 @@ export function ArticleToc({ items }: { items: TocItem[] }) {
   return (
     <>
       {/* Mobile / narrow viewports: collapsible disclosure. */}
+      {!desktopOnly && (
       <details className="lg:hidden mb-6 rounded-2xl border border-[color:var(--line)] bg-white p-4">
         <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
           Jump to section ({items.length})
@@ -82,6 +90,7 @@ export function ArticleToc({ items }: { items: TocItem[] }) {
           ))}
         </ol>
       </details>
+      )}
 
       {/* Desktop: sticky sidebar. The parent layout decides where to mount
           this and gives it the necessary width — we just paint the list. */}
