@@ -27,7 +27,16 @@ import {
   clampBudgetUsd,
   profileToSearchParams,
 } from "@/lib/profile-url";
+import { QuizOptionGlyph, QuizStepHint } from "@/components/QuizStepDecor";
 import { countMatchingProducts } from "@/lib/quiz-preview";
+
+const STEP_HINTS = [
+  "Your level sets how forgiving we are on stiff shafts, high tension, and narrow sweet spots.",
+  "Singles rewards reach and recovery; doubles rewards fast flat exchanges and front-court touch.",
+  "Style tags steer balance and stiffness — you can pick two if you genuinely mix roles.",
+  "Category switches the whole catalogue — shoes need foot width; rackets need swing weight context.",
+  "Budget and body signals stop us recommending gear that is technically fine but wrong for you.",
+] as const;
 
 const STEPS = 5;
 const LIVE_CATEGORIES: EquipmentCategory[] = [
@@ -206,12 +215,16 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           step change — the motion-safe utilities give a 200ms fade/slide
           transition. */}
       <div key={`step-${step}`} className="anim-step-enter">
+      <QuizStepHint>{STEP_HINTS[step]}</QuizStepHint>
 
       {step === 0 && (
         <section className="mt-6 space-y-4">
-          <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            {copy.levelTitle}
-          </h1>
+          <div className="flex items-center gap-3">
+            <QuizOptionGlyph kind="level" />
+            <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+              {copy.levelTitle}
+            </h1>
+          </div>
           <p className="text-[var(--color-muted)]">{copy.levelHelp}</p>
 
           <label className="block text-sm">
@@ -312,12 +325,21 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   setProfile((p) => ({ ...p, discipline: d }));
                   next();
                 }}
-                className={`rounded-2xl px-5 py-4 text-left text-sm transition-all ${
+                className={`flex items-center gap-3 rounded-2xl px-5 py-4 text-left text-sm transition-all ${
                   profile.discipline === d
                     ? "bg-[var(--color-accent-soft)] ring-2 ring-[var(--color-accent)]"
                     : "card card-interactive"
                 }`}
               >
+                <QuizOptionGlyph
+                  kind={
+                    d === "singles"
+                      ? "singles"
+                      : d === "doubles"
+                        ? "doubles"
+                        : "mixed"
+                  }
+                />
                 {disciplines[d]}
               </button>
             ))}
@@ -327,9 +349,12 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
 
       {step === 2 && (
         <section className="mt-6 space-y-4">
-          <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            {copy.styleTitle}
-          </h1>
+          <div className="flex items-center gap-3">
+            <QuizOptionGlyph kind="style" />
+            <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+              {copy.styleTitle}
+            </h1>
+          </div>
           <p className="text-sm text-[var(--color-muted)]">
             {copy.styleHelp}
           </p>
@@ -405,6 +430,18 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
             ] as [EquipmentCategory, string][]
           ).map(([id, label]) => {
             const live = LIVE_CATEGORIES.includes(id);
+            const glyph =
+              id === "racket"
+                ? "racket"
+                : id === "shoes"
+                  ? "shoes"
+                  : id === "string"
+                    ? "string"
+                    : id === "grip"
+                      ? "grip"
+                      : id === "bag"
+                        ? "bag"
+                        : "shuttle";
             return (
               <button
                 type="button"
@@ -414,12 +451,13 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   setProfile((p) => ({ ...p, category: id }));
                   next();
                 }}
-                className={`flex w-full rounded-2xl px-5 py-4 text-left text-sm transition-all ${
+                className={`flex w-full items-center gap-3 rounded-2xl px-5 py-4 text-left text-sm transition-all ${
                   live
                     ? "card card-interactive"
                     : "cursor-not-allowed opacity-50 bg-[color:var(--surface-muted)]"
                 }`}
               >
+                <QuizOptionGlyph kind={glyph} />
                 {label}
               </button>
             );
@@ -429,9 +467,12 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
 
       {step === 4 && (
         <section className="mt-6 space-y-4">
-          <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
-            {copy.bodyTitle}
-          </h1>
+          <div className="flex items-center gap-3">
+            <QuizOptionGlyph kind="body" />
+            <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
+              {copy.bodyTitle}
+            </h1>
+          </div>
           <p className="text-sm text-[var(--color-muted)]">
             {copy.bodyHelp}
           </p>

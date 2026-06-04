@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
-import { GuideEngagement } from "@/components/GuideEngagement";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/shoes-footwork/";
@@ -9,11 +8,11 @@ const HEADLINE = "Badminton shoes and footwork";
 const DESCRIPTION =
   "Why badminton shoes matter more than the racket for most amateurs — choose by fit width, stability, cushioning, and outsole to support footwork patterns.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton shoes and footwork guide",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function ShoesGuide() {
   return (
@@ -191,7 +190,6 @@ export default function ShoesGuide() {
           </Link>
           .
         </p>
-        <GuideEngagement path={PATH} title={HEADLINE} />
       </article>
     </main>
   );

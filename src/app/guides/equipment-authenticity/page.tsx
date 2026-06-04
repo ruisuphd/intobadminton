@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { AuthenticityChecker } from "@/components/AuthenticityChecker";
-import { GuideEngagement } from "@/components/GuideEngagement";
 import { JsonLd } from "@/components/JsonLd";
 import {
   authenticityBrands,
@@ -10,12 +9,12 @@ import {
 } from "@/lib/authenticity";
 import { companyInfo } from "@/lib/company";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: "/guides/equipment-authenticity/",
   title: "Badminton Racket Authenticity Check",
   description:
     "Check whether a Yonex, Victor, or Li-Ning racket is genuine before you buy — per-brand official-source guidance, red flags, and counterfeit-response steps.",
-  alternates: pageAlternates("/guides/equipment-authenticity/"),
-};
+});
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -378,14 +377,15 @@ export default function EquipmentAuthenticityGuide() {
             Run our finder to land on the right model for your game, then
             use this guide to make sure the unit you buy is authentic.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
+            <Link href="/tools/authenticity-checker/" className="btn-primary">
+              Run authenticity checker
+            </Link>
+            <Link href="/quiz/" className="btn-secondary">
+              Start the finder
+            </Link>
+          </div>
         </section>
-        <GuideEngagement
-          path="/guides/equipment-authenticity/"
-          title="Badminton Racket Authenticity Check"
-        />
       </article>
     </main>
   );

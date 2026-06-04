@@ -1,5 +1,6 @@
 import {
   GuideEngagementFooter,
+  GuideInPageNavigation,
   GuideReadingChrome,
 } from "@/components/GuidePageChrome";
 
@@ -12,6 +13,7 @@ export default function GuidesLayout({
     <>
       <GuideReadingChrome />
       {children}
+      <GuideInPageNavigation />
       <GuideEngagementFooter />
     </>
   );

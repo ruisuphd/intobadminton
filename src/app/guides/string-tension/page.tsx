@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
-import { GuideEngagement } from "@/components/GuideEngagement";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/string-tension/";
@@ -9,11 +8,11 @@ const HEADLINE = "Badminton string tension: a practical guide";
 const DESCRIPTION =
   "How badminton string tension changes feel, power, and control — recommended pound ranges by skill, restring frequency, and climate effects most players miss.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton string tension guide",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function StringTensionGuide() {
   return (
@@ -211,6 +210,13 @@ export default function StringTensionGuide() {
 
         <p className="text-[var(--color-muted)] leading-relaxed">
           Related reading:{" "}
+          <Link
+            href="/tools/string-tension-calculator/"
+            className="text-[var(--color-accent)] underline"
+          >
+            string tension calculator
+          </Link>
+          ,{" "}
           <Link href="/best/strings/" className="text-[var(--color-accent)] underline">
             best badminton strings
           </Link>
@@ -224,7 +230,6 @@ export default function StringTensionGuide() {
           </Link>
           .
         </p>
-        <GuideEngagement path={PATH} title={HEADLINE} />
       </article>
     </main>
   );
