@@ -42,13 +42,14 @@
 - `ReviewMethodologyBox` + `InArticleAffiliateDisclosure`
 - `HomeToolkitStrip`; HowTo on procedural guides; Lighthouse `/review/` URLs
 
-### Phase B — Shipped (main + PR #03c3 + bab1)
+### Phase B — Shipped (main + PR #03c3 + bab1 + a493)
 
 - `/guides/badminton-shoes-vs-running-shoes/` — shoe-fit cluster pillar
 - `/guides/doubles-positioning-and-rackets/` — doubles cluster pillar
 - `enrichmentForReviewArticle()` — Product JSON-LD with section-derived reviewBody
 - Buttondown per-product notify-me on `/saved/` — see [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md)
 - Engagement UX on `/best/*` and all `/guides/*` routes
+- All 11 `/compare-guides/*` URLs in site search + Playwright smoke (`e2e/search-smoke.spec.ts`)
 
 ### Phase C — Next
 
@@ -70,7 +71,7 @@
 | 6 | Merged cleanly with main cluster guides + ReviewProductPanel | ✅ |
 | 7 | Unit tests for enrichment + Buttondown | ✅ |
 | 8 | `.env.example` documents Buttondown username | ✅ |
-| 9 | `npm test` | ✅ |
+| 9 | `npm test` (incl. compare-guide site search) | ✅ |
 | 10 | `npm run build` + postbuild SEO audit | ✅ |
 
 ---
