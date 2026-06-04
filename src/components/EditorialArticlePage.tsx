@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArticleToc } from "@/components/ArticleToc";
 import { GlossaryLinkedText } from "@/components/GlossaryLinkedText";
+import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
