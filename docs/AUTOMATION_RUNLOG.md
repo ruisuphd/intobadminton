@@ -2,20 +2,37 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-04 — Sprint 3 web app (branch `cursor/web-app-improvement-plan-9035`, PR #99)
+## 2026-06-04 — Sprint 3 web app PR #99 (branch `cursor/web-app-improvement-plan-9035`)
 
-**Trigger:** Cloud agent — web app improvement plan execution (audit, Sprint 3 gaps, implementation).
+**Trigger:** Cloud agent — web app improvement plan (audit, Sprint 3 gaps, execution).
 
-### Shipped
+### Shipped (this PR, atop `main` Sprint 3 #94)
 
 - `/best/rackets-under-100/` — budget best-of with editorial intro + comparison table
 - Homepage hero `SiteSearchForm`
-- `notify-me` local fallback when `NEXT_PUBLIC_BUTTONDOWN_USERNAME` is unset (Buttondown path from `main` preserved)
+- Lighthouse URLs for budget page + cluster guides
+
+### Already on `main` (PR #94)
+
+- Notify-me: Buttondown when configured; else `notify-me.ts` local intent
+- `HomeRecentShortlists`, expanded `HomeToolkitStrip`, `/saved/` in search
 
 ### Verification
 
-- `npm test` — 180 passed
+- `npm test` — 185+ passed
 - `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
+
+---
+
+## 2026-06-04 — PR #87 `ready_for_review` re-trigger (branch `cursor/new-chinese-reviews-translation-d088`)
+
+**Trigger:** GitHub pull request #87 (`ready_for_review`) — run-log PR **already merged** to `main` as `9d5b349`.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Repo `blogs/` | **Absent** — no translation/import this run |
 
 ---
 
@@ -47,6 +64,68 @@ Translation, rename, import, and web-app review updates **not performed** (no `b
 ```bash
 npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
 CURSOR_AGENT=1 npm run blog:check
+```
+
+---
+
+## 2026-06-04 — PR #83 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-f3aa`)
+
+**Trigger:** GitHub pull request #83 (`ready_for_review`) — Sprint 2 web-app PR **already merged** to `main` as `15eba41` before this run completed.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs imported articles | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 176 passed
+- `npm run build` + postbuild SEO audit — pass (644 HTML, 205 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation; re-run after syncing the private drop:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+# or: BLOGS_DIR=/path/to/mounted/blogs npm run blog:check
+```
+
+---
+
+## 2026-06-04 — PR #82 `ready_for_review` re-run (branch `cursor/new-chinese-reviews-translation-3c08`)
+
+**Trigger:** GitHub pull request #82 (`ready_for_review`) — runlog PR **already merged** to `main` as `8300bed` before this cloud run completed.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs imported articles | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 176 passed
+- `npm run build` + postbuild SEO audit — pass (644 HTML, 205 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). PR #82 already on `main`; no follow-up merge required for this run unless a new runlog-only PR is opened. Re-run after syncing the private drop:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+# or: BLOGS_DIR=/path/to/mounted/blogs npm run blog:check
 ```
 
 ---

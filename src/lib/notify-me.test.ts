@@ -1,47 +1,44 @@
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import {
   clearNotifyMeIntent,
-  getNotifyMeEntry,
-  saveNotifyMeIntent,
+  getNotifyMeIntent,
+  setNotifyMeIntent,
 } from "./notify-me";
 
-function mockLocalStorage() {
+function installLocalStorageMock() {
   const store = new Map<string, string>();
-  const ls = {
-    getItem: (k: string) => store.get(k) ?? null,
-    setItem: (k: string, v: string) => {
-      store.set(k, v);
+  const mock = {
+    getItem: (key: string) => store.get(key) ?? null,
+    setItem: (key: string, value: string) => {
+      store.set(key, value);
     },
-    removeItem: (k: string) => {
-      store.delete(k);
+    removeItem: (key: string) => {
+      store.delete(key);
     },
     clear: () => store.clear(),
   };
-  Object.defineProperty(globalThis, "localStorage", {
-    value: ls,
-    configurable: true,
-  });
+  vi.stubGlobal("localStorage", mock);
 }
 
 describe("notify-me", () => {
-  beforeEach(() => {
-    mockLocalStorage();
+  beforeAll(() => {
+    installLocalStorageMock();
   });
 
   afterEach(() => {
     localStorage.clear();
   });
 
-  it("persists and retrieves an intent by product id", () => {
-    saveNotifyMeIntent("yy-arcsaber-7-play", "Player@Example.com");
-    const entry = getNotifyMeEntry("yy-arcsaber-7-play");
-    expect(entry?.email).toBe("player@example.com");
-    expect(entry?.productId).toBe("yy-arcsaber-7-play");
+  it("stores and retrieves intent per product", () => {
+    setNotifyMeIntent("yonex-arcsaber-11-pro", "Player@Example.com");
+    const row = getNotifyMeIntent("yonex-arcsaber-11-pro");
+    expect(row?.email).toBe("player@example.com");
+    expect(row?.productId).toBe("yonex-arcsaber-11-pro");
   });
 
-  it("clears a stored intent", () => {
-    saveNotifyMeIntent("vic-sonic-boom-pro", "a@b.co");
-    clearNotifyMeIntent("vic-sonic-boom-pro");
-    expect(getNotifyMeEntry("vic-sonic-boom-pro")).toBeNull();
+  it("clears intent", () => {
+    setNotifyMeIntent("victor-aurora", "a@b.co");
+    clearNotifyMeIntent("victor-aurora");
+    expect(getNotifyMeIntent("victor-aurora")).toBeNull();
   });
 });

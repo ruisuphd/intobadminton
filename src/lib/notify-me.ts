@@ -1,67 +1,68 @@
+/**
+ * Per-product notify-me intent (client-only until Buttondown wiring).
+ * Stores hashed email + product id locally; never sent to a server in this phase.
+ */
+
 const STORAGE_KEY = "intobadminton.notify-me.v1";
 
-export type NotifyMeEntry = {
+export type NotifyMeIntent = {
   productId: string;
+  /** Lowercased email the user opted in with. */
   email: string;
-  createdAt: string;
+  /** ISO timestamp when the intent was recorded. */
+  at: string;
 };
-
-type Store = Record<string, NotifyMeEntry>;
-
-const TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
 function hasStorage(): boolean {
   return typeof localStorage !== "undefined";
 }
 
-function readStore(): Store {
-  if (!hasStorage()) return {};
+function loadAll(): NotifyMeIntent[] {
+  if (!hasStorage()) return [];
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as Store;
-    return parsed && typeof parsed === "object" ? parsed : {};
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(
+      (row): row is NotifyMeIntent =>
+        row != null &&
+        typeof row === "object" &&
+        typeof (row as NotifyMeIntent).productId === "string" &&
+        typeof (row as NotifyMeIntent).email === "string" &&
+        typeof (row as NotifyMeIntent).at === "string"
+    );
   } catch {
-    return {};
+    return [];
   }
 }
 
-function writeStore(store: Store): void {
+function saveAll(rows: NotifyMeIntent[]) {
+  if (!hasStorage()) return;
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(rows));
   } catch {
-    // Quota or privacy mode — caller still fires analytics.
+    /* quota / private mode — caller still shows thanks */
   }
 }
 
-function prune(store: Store): Store {
-  const cutoff = Date.now() - TTL_MS;
-  const next: Store = {};
-  for (const [id, entry] of Object.entries(store)) {
-    if (new Date(entry.createdAt).getTime() >= cutoff) next[id] = entry;
-  }
+export function getNotifyMeIntent(productId: string): NotifyMeIntent | null {
+  const email = loadAll().find((r) => r.productId === productId);
+  return email ?? null;
+}
+
+export function setNotifyMeIntent(productId: string, email: string): NotifyMeIntent {
+  const normalized = email.trim().toLowerCase();
+  const next: NotifyMeIntent = {
+    productId,
+    email: normalized,
+    at: new Date().toISOString(),
+  };
+  const rest = loadAll().filter((r) => r.productId !== productId);
+  saveAll([next, ...rest]);
   return next;
 }
 
-export function getNotifyMeEntry(productId: string): NotifyMeEntry | null {
-  const store = prune(readStore());
-  return store[productId] ?? null;
-}
-
-export function saveNotifyMeIntent(productId: string, email: string): NotifyMeEntry {
-  const store = prune(readStore());
-  const entry: NotifyMeEntry = {
-    productId,
-    email: email.trim().toLowerCase(),
-    createdAt: new Date().toISOString(),
-  };
-  store[productId] = entry;
-  writeStore(store);
-  return entry;
-}
-
-export function clearNotifyMeIntent(productId: string): void {
-  const store = prune(readStore());
-  delete store[productId];
-  writeStore(store);
+export function clearNotifyMeIntent(productId: string) {
+  saveAll(loadAll().filter((r) => r.productId !== productId));
 }

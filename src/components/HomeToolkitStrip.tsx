@@ -13,6 +13,16 @@ const TOOL_LINKS = [
     tag: "Calculator",
   },
   {
+    href: "/tools/racket-balance-explainer/",
+    title: "Racket balance explainer",
+    tag: "Explainer",
+  },
+  {
+    href: "/tools/court-diagram/",
+    title: "Court dimensions",
+    tag: "Reference",
+  },
+  {
     href: "/tools/authenticity-checker/",
     title: "Authenticity checker",
     tag: "Triage",
@@ -43,7 +53,7 @@ export function HomeToolkitStrip({ locale }: { locale: SiteLocale }) {
             All tools →
           </Link>
         </div>
-        <ul className="mt-8 grid gap-4 md:grid-cols-3">
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TOOL_LINKS.map((tool) => (
             <li key={tool.href}>
               <Link
