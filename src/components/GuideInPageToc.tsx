@@ -21,6 +21,7 @@ export function GuideInPageToc() {
   const [mountNode, setMountNode] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- DOM scan after guide paint */
     const article = document.querySelector("main article");
     if (!article) {
       setItems([]);
@@ -69,6 +70,7 @@ export function GuideInPageToc() {
       h1.insertAdjacentElement("afterend", host);
     }
     setMountNode(host);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   if (!mountNode || items.length < 3) return null;
