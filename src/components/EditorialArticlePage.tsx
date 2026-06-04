@@ -5,6 +5,7 @@ import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { JsonLd } from "@/components/JsonLd";
+import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { SocialShare } from "@/components/SocialShare";
 import {
@@ -94,6 +95,7 @@ export function EditorialArticlePage({
 
   return (
     <main className="flex-1">
+      <LastArticleTracker href={path} title={article.title} />
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
@@ -118,16 +120,13 @@ export function EditorialArticlePage({
               {article.dek}
             </p>
           )}
-          <div className="mt-6 space-y-4">
+          <div className="mt-6">
             <InArticleAffiliateDisclosure />
-            <ReviewMethodologyBox
-              note={article.methodology}
-              updatedAt={article.updatedAt}
-            />
           </div>
         </header>
 
         <div className="mt-10 space-y-8">
+            <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
               <div className="overflow-x-auto rounded-2xl border border-[color:var(--line)]">

@@ -11,6 +11,8 @@ type GuideStructuredDataProps = {
   description: string;
   /** Breadcrumb label for the guide page itself (the third crumb after Home / Guides). */
   breadcrumbLabel: string;
+  /** Optional HowTo steps for procedural guides. */
+  howToSteps?: { name: string; text: string }[];
 };
 
 /**
@@ -27,6 +29,7 @@ export function GuideStructuredData({
   headline,
   description,
   breadcrumbLabel,
+  howToSteps,
 }: GuideStructuredDataProps) {
   const article = articleJsonLd({
     path,
@@ -64,6 +67,22 @@ export function GuideStructuredData({
     <>
       <JsonLd data={article} />
       <JsonLd data={breadcrumb} />
+      {howToSteps && howToSteps.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: headline,
+            description,
+            step: howToSteps.map((step, index) => ({
+              "@type": "HowToStep",
+              position: index + 1,
+              name: step.name,
+              text: step.text,
+            })),
+          }}
+        />
+      )}
     </>
   );
 }

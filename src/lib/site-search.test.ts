@@ -1,38 +1,30 @@
 import { describe, expect, it } from "vitest";
-import { searchRecords, type SearchRecord } from "@/lib/site-search";
+import { buildSearchIndex, searchSite, searchIndexSize } from "./site-search";
 
-const FIXTURE: SearchRecord[] = [
-  {
-    id: "review:yonex-astrox-99-pro",
-    title: "Yonex Astrox 99 Pro review",
-    href: "/review/yonex-astrox-99-pro/",
-    kind: "Review",
-    excerpt: "Head-heavy smash frame",
-    tokens: "yonex astrox 99 pro review head-heavy smash frame",
-  },
-  {
-    id: "product:yonex-nf1000z",
-    title: "Yonex Nanoflare 1000 Z",
-    href: "/review/yonex-nf1000z/",
-    kind: "Product",
-    excerpt: "Speed doubles frame",
-    tokens: "yonex nanoflare 1000 z speed doubles",
-  },
-];
-
-describe("searchRecords", () => {
-  it("returns empty for blank query", () => {
-    expect(searchRecords(FIXTURE, "")).toEqual([]);
-    expect(searchRecords(FIXTURE, "  ")).toEqual([]);
+describe("site-search", () => {
+  it("builds a non-empty index", () => {
+    const index = buildSearchIndex();
+    expect(index.length).toBeGreaterThan(100);
+    expect(searchIndexSize).toBe(index.length);
   });
 
-  it("ranks title matches above body-only matches", () => {
-    const hits = searchRecords(FIXTURE, "yonex astrox");
-    expect(hits[0]?.id).toBe("review:yonex-astrox-99-pro");
+  it("finds reviews by product name", () => {
+    const hits = searchSite("nanoflare 1000");
+    expect(hits.length).toBeGreaterThan(0);
+    expect(hits.some((h) => h.href.includes("nanoflare"))).toBe(true);
   });
 
-  it("respects limit", () => {
-    const hits = searchRecords(FIXTURE, "yonex", 1);
-    expect(hits).toHaveLength(1);
+  it("finds guides by topic", () => {
+    const hits = searchSite("string tension");
+    expect(hits.some((h) => h.href.includes("string-tension"))).toBe(true);
+  });
+
+  it("finds tools", () => {
+    const hits = searchSite("authenticity checker");
+    expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
+  });
+
+  it("returns empty for nonsense query", () => {
+    expect(searchSite("xyzzyplughnotreal")).toEqual([]);
   });
 });

@@ -2,21 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { JsonLd } from "@/components/JsonLd";
+import { SiteSearch } from "@/components/SiteSearch";
 import { companyInfo } from "@/lib/company";
 import { pageAlternates } from "@/lib/metadata";
-import { SearchResultsClient } from "./SearchResultsClient";
+import { searchIndexSize } from "@/lib/site-search";
+import { SearchPageClient } from "./SearchPageClient";
 
 export const metadata: Metadata = {
-  title: "Search",
+  title: "Search reviews, guides, and tools",
   description:
-    "Search IntoBadminton reviews, product notes, best-of guides, and toolkit pages.",
+    "Search IntoBadminton reviews, best-of guides, brand decoders, and interactive badminton tools. No signup.",
   alternates: pageAlternates("/search/"),
-  robots: { index: true, follow: true },
 };
-
-function SearchResultsFallback() {
-  return <p className="mt-8 text-sm text-[var(--color-muted)]">Loading search…</p>;
-}
 
 export default function SearchPage() {
   const breadcrumbJsonLd = {
@@ -56,14 +53,19 @@ export default function SearchPage() {
         <header className="mt-6">
           <h1 className="text-display text-[var(--text)]">Search</h1>
           <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-            Find reviews, catalogue rows, and key landing pages. Search runs on
-            your device — nothing is sent to a server.
+            {searchIndexSize} indexed pages — reviews, guides, best-of lists,
+            brand decoders, and tools. Results are computed in your browser; no
+            query is sent to a server.
           </p>
         </header>
 
-        <div className="mt-8">
-          <Suspense fallback={<SearchResultsFallback />}>
-            <SearchResultsClient />
+        <div className="mt-10">
+          <Suspense
+            fallback={
+              <SiteSearch initialQuery="" />
+            }
+          >
+            <SearchPageClient />
           </Suspense>
         </div>
       </div>

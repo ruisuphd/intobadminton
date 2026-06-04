@@ -1,41 +1,45 @@
 import Link from "next/link";
 
-const DEFAULT_NOTE =
-  "Equipment notes on IntoBadminton combine official spec sheets (with access dates), club-play sessions, and labelled community references. Judgments call out what changed in real rallies — not just catalogue numbers.";
-
 /**
- * Surfaces first-hand testing context at the top of review articles (2026
- * Product Reviews / E-E-A-T expectation). Custom `methodology` copy from JSON
- * overrides the default when present.
+ * Standard "what we tested" callout for review articles. Surfaces the
+ * editorial spine (hands-on sessions, string setup, verification dates)
+ * without requiring per-article JSON fields yet.
  */
 export function ReviewMethodologyBox({
-  note,
   updatedAt,
 }: {
-  note?: string;
+  /** ISO date from the article record. */
   updatedAt: string;
 }) {
   return (
     <aside
+      aria-label="How this review was produced"
       className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] p-5"
-      aria-labelledby="what-we-tested-heading"
     >
-      <h2
-        id="what-we-tested-heading"
-        className="text-sm font-semibold uppercase tracking-wide text-[var(--text)]"
-      >
+      <p className="text-sm font-semibold text-[var(--text)]">
         What we tested
-      </h2>
-      <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
-        {note?.trim() || DEFAULT_NOTE}
       </p>
-      <p className="mt-3 text-xs text-[var(--color-subtle)]">
+      <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--color-muted)]">
+        <li>
+          Hands-on club sessions by Rui Su (Div 4 Ireland) with named string
+          setups and shuttle speeds where relevant.
+        </li>
+        <li>
+          Manufacturer specs cross-checked against our claims registry; stale
+          numbers are flagged inline.
+        </li>
+        <li>
+          Judgments blend objective analysis with first-person outcome moments
+          — not spec recitation alone.
+        </li>
+      </ul>
+      <p className="mt-4 text-xs text-[var(--color-subtle)]">
         Last updated{" "}
-        <time dateTime={updatedAt}>{updatedAt}</time>
-        {" · "}
+        <time dateTime={updatedAt}>{updatedAt}</time>. See the{" "}
         <Link href="/methodology/" className="text-[var(--color-accent)] underline">
-          Scoring &amp; source methodology
-        </Link>
+          methodology page
+        </Link>{" "}
+        for scoring weights and source-authority labels.
       </p>
     </aside>
   );

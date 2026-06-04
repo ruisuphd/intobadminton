@@ -1,104 +1,93 @@
-# IntoBadminton — Web App Improvement Plan (June 2026)
+# Web App Improvement Plan — June 2026
 
-**Branch:** `cursor/web-app-improvement-plan-d967`  
-**Supersedes (extends):** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md)  
-**Audit date:** 2026-06-04
-
----
-
-## 1. Competitive audit (summary)
-
-Compared against leading badminton commerce/editorial surfaces (Bash Badminton guides, retailer “best of” roundups, BadmintonCentral forum depth, Yonex selector flows) and general affiliate review patterns (comparison tables, spec grids, search, author E-E-A-T).
-
-| Dimension | IntoBadminton (Jun 2026) | Typical strong competitor |
-|-----------|---------------------------|---------------------------|
-| Personalised finder | **Strong** — 5-factor scoring, no signup | Weak or absent |
-| Review depth | **Strong** — 146 English reviews, evidence labels | Medium — often thin affiliate copy |
-| Comparison tables | **Strong** on `/best/*` and in-article | Strong |
-| Site search | **Was missing** → shipped `/search/` | Universal |
-| Return visits | **Partial** — saved shelf; history only on results | Wishlists, email, apps |
-| Interactive tools | **Strong** — 5 tools under `/tools/` | Rare |
-| First-hand methodology UI | **Partial** → `ReviewMethodologyBox` | Variable |
-| Video / original photo moat | **Weak** (content pipeline) | Mixed |
-| zh locale content | **Infrastructure only** | N/A for EN competitors |
-
-**IntoBadminton moat:** transparent scoring + claims CI + static performance + honest editorial voice.  
-**Biggest remaining gaps:** discoverability (search), return-visit surfacing on home, AdSense/CMP/content moat (photos, video), notify-me backend.
+**Branches:** `cursor/web-app-improvement-plan-3b6d` (merged to main), `cursor/web-app-improvement-plan-d967` (incremental)  
+**Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md)
 
 ---
 
-## 2. Top 5 gaps (prioritised)
+## 1. Competitive audit
 
-| # | Gap | Impact | This PR |
-|---|-----|--------|---------|
-| 1 | **No functional site search** — readers rely on scroll/Google | SEO sitelinks, UX | ✅ `/search/` + index + `SearchAction` |
-| 2 | **“What we tested” not visible on review pages** | E-E-A-T / Product Reviews update | ✅ `ReviewMethodologyBox` |
-| 3 | **Return-visit hooks buried** — history only on `/results/` | Engagement / pages per session | ✅ Home `RecentHistory` + toolkit strip |
-| 4 | **In-article affiliate disclosure** before monetization scales | AdSense / FTC | ✅ `InArticleAffiliateDisclosure` |
-| 5 | **Original photography + video evidence** on commercial URLs | Ranking + AdSense “low value” risk | ⏳ Content/editorial (not code-only) |
+| Site | Strength vs IntoBadminton | Gap addressed |
+|------|----------------------------|---------------|
+| **BadmintonCentral** | Deep community archive | On-site search across reviews/guides |
+| **Retailer finders** (Tennis Warehouse pattern) | Imagery, comparison tables | Largely closed in Q2 sprints |
+| **YouTube-first reviewers** | Video evidence | Still open (VideoObject gated) |
+| **Brand / affiliate blogs** | Pro association, tables | Author entity strong; original photos open |
 
----
-
-## 3. Execution roadmap (mature plan)
-
-### Phase A — Discoverability & trust (this PR)
-
-- Client-side search index (`scripts/generate-search-index.mjs`, `public/search-index.json`)
-- `/search/` results page; hero + header search forms
-- `WebSite` `SearchAction` JSON-LD restored in `src/lib/company.ts`
-- `ReviewMethodologyBox` + in-article affiliate disclosure on `EditorialArticlePage`
-- Homepage engagement strip (recent shortlists + toolkit cards)
-- Lighthouse CI URLs updated for `/review/` canonical paths
-
-### Phase B — Engagement backends (next)
-
-- HelpfulReaction → Workers/KV aggregate counts
-- Per-product notify-me → Buttondown double opt-in
-- GSC/CrUX baseline capture in `docs/baselines/`
-
-### Phase C — Content moat (editorial)
-
-- Top-10 commercial pages: ≥1 original photo each
-- 3–5 first-person evidence moments per high-traffic review (see Q2 plan §3.2)
-- Optional `methodology` field population in `blog-articles.json`
-
-### Phase D — Monetization readiness
-
-- Google-certified CMP for EEA (`cmp_tcf`)
-- AdSense application after Phase C visual proof
-- Slot taxonomy per page type (existing strategy doc)
+**Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews.
 
 ---
 
-## 4. Ten-pass plan verification
+## 2. Top 5 gaps (prioritized)
 
-| Pass | Question | Verdict |
-|------|----------|---------|
-| 1 | Does scope match user request (audit → plan → execute → PR)? | ✅ |
-| 2 | Are gaps grounded in competitor + internal audit? | ✅ |
-| 3 | Is static `output: "export"` preserved? | ✅ — search is client JSON |
-| 4 | Any false `SearchAction` before search worked? | ✅ — search ships same PR |
-| 5 | Privacy / no-signup promise intact? | ✅ — search is local-only |
-| 6 | Export-audit affiliate rules satisfied? | ✅ — `data-affiliate-disclosure="article"` |
-| 7 | Tests + build gates defined? | ✅ — vitest + postbuild SEO |
-| 8 | Lighthouse URLs reflect `/review/` migration? | ✅ |
-| 9 | Remaining gap #5 explicitly content-owned? | ✅ |
-| 10 | No scope creep (video, CMS, dark mode)? | ✅ |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | Functional site search | ✅ `/search/` + `buildSearchIndex()` + `SearchAction` |
+| 2 | Return-visit hooks on homepage | ✅ `ContinueReading` |
+| 3 | Visible “What we tested” on reviews | ✅ `ReviewMethodologyBox` |
+| 4 | In-article affiliate disclosure (AdSense/FTC) | ✅ `InArticleAffiliateDisclosure` (this branch) |
+| 5 | Original photography / video on commercial URLs | ⏳ Editorial pipeline |
+
+**Also shipped on main:** HowTo schema on procedural guides; Lighthouse `/review/` URLs; homepage toolkit strip (`HomeToolkitStrip`).
 
 ---
 
-## 5. Verification commands
+## 3. Execution phases
+
+### Phase A — Shipped (main + PR #80)
+
+- `src/lib/site-search.ts` — client index (~170+ entries)
+- `/search/` with `?q=` deep links
+- `ContinueReading` + `LastArticleTracker`
+- `ReviewMethodologyBox` on review articles
+- `InArticleAffiliateDisclosure` on review articles
+- `HomeToolkitStrip` on homepage
+- Header `SiteSearchForm` (compact) + Search nav link
+
+### Phase B — Next
+
+- HelpfulReaction Workers/KV
+- Per-product notify-me (Buttondown)
+- GSC/CrUX baselines in `docs/baselines/`
+
+### Phase C — Content moat
+
+- Original photos on top commercial URLs
+- First-person evidence sweep on top-10 traffic pages
+
+---
+
+## 4. Ten-pass verification
+
+| Pass | Check | Result |
+|------|-------|--------|
+| 1 | Gaps grounded in audit + Q2 plan | ✅ |
+| 2 | Search covers reviews + hubs | ✅ |
+| 3 | SearchAction matches `/search/?q=` | ✅ |
+| 4 | Static export safe (no server) | ✅ |
+| 5 | No signup wall on search/home hooks | ✅ |
+| 6 | Affiliate disclosure on review pages | ✅ |
+| 7 | Methodology box links `/methodology/` | ✅ |
+| 8 | `/search/` in sitemap | ✅ |
+| 9 | `site-search.test.ts` | ✅ |
+| 10 | `npm test && npm run build` | ✅ |
+
+---
+
+## 5. Verification
 
 ```bash
 npm test
 npm run build
-npm run test:e2e   # optional
 ```
-
-Expected: search index generated in prebuild; SEO audit pass; new tests in `site-search.test.ts`.
 
 ---
 
-## 6. Metrics (unchanged from Q2 plan)
+## 6. Metrics (Q2 plan)
 
-Track weekly: GSC clicks, pages/session, quiz completion, 7-day return rate, CWV p75, AdSense status.
+| Goal | Target |
+|------|--------|
+| Pages per session | 2.5+ |
+| 7-day return rate | 15%+ |
+| GSC clicks | 4× baseline |
+| SearchAction | Functional + declared |
