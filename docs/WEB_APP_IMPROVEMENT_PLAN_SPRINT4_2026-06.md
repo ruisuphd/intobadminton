@@ -1,57 +1,52 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-f5af` (rebased on `main` after PR #97 / #99)  
-**Baseline:** Sprint 3 on `main`; toolkit pages per [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6 Sprint 4.
+**Branch:** `cursor/web-app-improvement-plan-f5af` → PR #113  
+**Baseline:** Sprint 3 on `main` (PRs #94–#98, #105 catalog/facets).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength | IntoBadminton response |
-|------------|----------|------------------------|
-| **Tennis Warehouse** | Saved lists reopen to filtered grids | `profileToResultsPath` + linked shortlist cards |
-| **RacketGuide / Tennis Warehouse** | Interactive calculators | Five `/tools/*` pages + guide ↔ tool cross-links |
-| **Wirecutter / RTINGS** | Return-visit modules + topic clusters | Homepage shortlist reopen; cluster pillar guides |
-| **BadmintonCentral** | Forum search density | Site search + glossary autolinks (Sprint 3) |
-| **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
+| Competitor pattern | IntoBadminton response |
+|--------------------|------------------------|
+| **Tennis Warehouse browse** | `/catalog/` + spec facets on `/results/` (PR #105 on `main`) |
+| **Tennis Warehouse saved lists** | `profileToResultsPath` + linked shortlist cards (PR #113) |
+| **Wirecutter price-band pages** | `/best/rackets-under-100/`, `/best/rackets-under-150/` |
+| **RacketGuide calculators** | Five `/tools/*` + guide cross-links (PR #97) |
+| **YouTube reviewers** | `VideoObject` deferred |
 
-**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring, no signup on finder.
+**Moat:** transparent fit score, postbuild SEO gate, claims CI, static export.
 
 ---
 
-## 2. Top 5 gaps (Sprint 4)
+## 2. Top 5 gaps (Sprint 4, combined)
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | Toolkit pages not linked from matching guides | ✅ Guide ↔ tool cross-links (PR #97) |
-| 2 | Recent shortlists not reopenable to `/results/` | ✅ `profileToResultsPath` + linked cards (this PR) |
-| 3 | Offline notify-me intents stranded at Buttondown cutover | ✅ One-tap migrate on `/saved/` (this PR) |
-| 4 | Lighthouse blind to cluster guides + flagship tools | ✅ Extended `lighthouserc.json` (this PR) |
-| 5 | HelpfulReaction aggregate counts (Workers/KV) | ⏳ Sprint 5 |
+| 1 | No filter-first product catalog | ✅ `/catalog/` (main, PR #105) |
+| 2 | Recent shortlists not reopenable | ✅ `profileToResultsPath` (PR #113) |
+| 3 | Offline notify-me stranded at Buttondown cutover | ✅ migrate CTA (PR #113) |
+| 4 | Lighthouse blind to cluster guides + tools | ✅ `lighthouserc.json` (PR #113) |
+| 5 | HelpfulReaction aggregate counts | ⏳ Sprint 5 |
 
 ### Deferred (Sprint 5+)
 
-- HelpfulReaction Workers/KV aggregates
+- HelpfulReaction Workers/KV
 - First-party `public/products/` photography
-- `Person.sameAs` after social profile claims
-- PWA web push
-- GSC/CrUX CSV in `docs/baselines/`
+- VideoObject + YouTube `sameAs`
+- GSC/CrUX baseline CSV
 
 ---
 
 ## 3. Execution summary
 
-**On `main` (prior Sprint 4 PRs):**
+**On `main` (PRs #97, #105):** catalog, results facets, `/best/rackets-under-150/`, guide ↔ tool links.
 
-- Guide ↔ tool cross-links; duplicate `GuideEngagement` removed from articles
-- `/best/rackets-under-100/`; homepage hero search; catalog search
+**PR #113:**
 
-**This PR:**
-
-1. `profileToResultsPath()` — serialise stored profiles to `/results/?…`
-2. `HomeRecentShortlists` + `RecentHistory` — cards link to reopened rankings
-3. `SavedListClient` — migrate device-only notify-me when Buttondown is configured
-4. Lighthouse: cluster guides, string-tension calculator, authenticity checker, `/saved/`
+1. `profileToResultsPath()` + linked `HomeRecentShortlists` / `RecentHistory`
+2. Buttondown migrate for device-only notify-me on `/saved/`
+3. Lighthouse URLs for cluster guides, tools, `/saved/`
 
 ---
 
@@ -59,34 +54,22 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 4 + competitive audit | ✅ |
-| 2 | Results deep links match quiz → results param shape | ✅ |
-| 3 | No PII leaves device except explicit Buttondown POST | ✅ |
-| 4 | Migrate clears local intent only after successful subscribe | ✅ |
+| 1 | Gaps grounded in audit + Sprint 3 deferred list | ✅ |
+| 2 | Results deep links match quiz param shape | ✅ |
+| 3 | Catalog + shortlist flows static-export safe | ✅ |
+| 4 | Migrate clears local intent after Buttondown OK | ✅ |
 | 5 | No homepage signup wall | ✅ |
-| 6 | Lighthouse URLs exist in static `out/` after build | ✅ |
-| 7 | `profile-url.test.ts` covers `profileToResultsPath` | ✅ |
-| 8 | Static export safe | ✅ |
-| 9 | `npm test && npm run build` | ✅ |
-| 10 | postbuild SEO audit clean | ✅ |
+| 6 | Lighthouse URLs in `out/` after build | ✅ |
+| 7 | Unit tests (`profile-url`, `product-filters`, search) | ✅ |
+| 8 | `npm test && npm run lint && npm run build` | ✅ |
+| 9 | postbuild SEO audit | ✅ |
+| 10 | Mergeable with latest `main` | ✅ |
 
 ---
 
-## 5. Verification
-
-```bash
-npm test
-npm run lint
-npm run build
-```
-
----
-
-## 6. Metrics (unchanged)
+## 5. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Tool → finder CTR | Track in GA4 |
-| Shortlist reopen | Navigation to `/results/?…` from homepage |

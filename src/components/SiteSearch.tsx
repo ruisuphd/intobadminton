@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { FilterChipGroup } from "@/components/FilterChipGroup";
+import { brandOptionsFor } from "@/lib/product-filters";
+import { reviewableProducts } from "@/lib/review-pages";
 import { searchSite, type SearchEntryKind } from "@/lib/site-search";
 
 const KIND_LABEL: Record<SearchEntryKind, string> = {
@@ -26,6 +29,7 @@ const KIND_FILTERS: { value: SearchEntryKind | "all"; label: string }[] = [
 export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
   const [query, setQuery] = useState(initialQuery);
   const [kindFilter, setKindFilter] = useState<SearchEntryKind | "all">("all");
+  const [brandFilter, setBrandFilter] = useState<string | null>(null);
 
   const results = useMemo(
     () =>
@@ -36,6 +40,16 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
       ),
     [query, kindFilter]
   );
+
+  const productBrandOptions = useMemo(() => {
+    if (kindFilter !== "product") return [];
+    return brandOptionsFor(reviewableProducts());
+  }, [kindFilter]);
+
+  const brandFilteredResults = useMemo(() => {
+    if (!brandFilter || kindFilter !== "product") return results;
+    return results.filter((e) => e.keywords.includes(brandFilter));
+  }, [results, brandFilter, kindFilter]);
 
   return (
     <div className="space-y-6">
@@ -58,7 +72,10 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
           <button
             key={chip.value}
             type="button"
-            onClick={() => setKindFilter(chip.value)}
+            onClick={() => {
+              setKindFilter(chip.value);
+              setBrandFilter(null);
+            }}
             className={
               kindFilter === chip.value
                 ? "chip chip-primary"
@@ -71,12 +88,24 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
         ))}
       </div>
 
+      {kindFilter === "product" && productBrandOptions.length > 1 && (
+        <FilterChipGroup
+          label="Brand"
+          chips={[
+            { value: null, label: "All brands" },
+            ...productBrandOptions.map((b) => ({ value: b, label: b })),
+          ]}
+          active={brandFilter}
+          onChange={setBrandFilter}
+        />
+      )}
+
       {query.trim().length === 0 ? (
         <p className="text-sm text-[var(--color-muted)]">
           Try &ldquo;astrox&rdquo;, &ldquo;wide feet shoes&rdquo;, or
           &ldquo;string tension&rdquo;.
         </p>
-      ) : results.length === 0 ? (
+      ) : brandFilteredResults.length === 0 ? (
         <p className="text-sm text-[var(--color-muted)]">
           No matches for &ldquo;{query.trim()}&rdquo;. Browse the{" "}
           <Link href="/review/" className="text-[var(--color-accent)] underline">
@@ -90,7 +119,7 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
         </p>
       ) : (
         <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
-          {results.map((entry) => (
+          {brandFilteredResults.map((entry) => (
             <li key={entry.href}>
               <Link
                 href={entry.href}
