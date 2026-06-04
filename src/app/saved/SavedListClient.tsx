@@ -176,8 +176,60 @@ function NotifyMeRow({ productId }: { productId: string }) {
 
   const localIntent = useMemo(() => {
     void intentVersion;
-    return hydrated && !live ? getNotifyMeIntent(productId) : null;
-  }, [hydrated, live, productId, intentVersion]);
+    return hydrated ? getNotifyMeIntent(productId) : null;
+  }, [hydrated, productId, intentVersion]);
+
+  if (live && hydrated && localIntent) {
+    return (
+      <div className="mt-5 rounded-xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] p-4">
+        <p className="text-sm font-medium text-[var(--text)]">
+          Finish setting up notifications
+        </p>
+        <p className="mt-2 text-xs text-[var(--color-muted)]">
+          We saved <span className="font-medium">{localIntent.email}</span> on
+          this device before live delivery. Confirm once to move it to Buttondown
+          (double opt-in email).
+        </p>
+        <button
+          type="button"
+          disabled={status === "loading"}
+          onClick={async () => {
+            setStatus("loading");
+            setMessage(null);
+            const result = await subscribeViaButtondown({
+              email: localIntent.email,
+              tag: notifyTagForProduct(productId),
+            });
+            trackEvent("notify_me_migrate", {
+              product_id: productId,
+              ok: result.ok,
+            });
+            if (result.ok) {
+              clearNotifyMeIntent(productId);
+              setIntentVersion((v) => v + 1);
+              setStatus("done");
+              setMessage(
+                "Check your inbox to confirm — Buttondown sends a double opt-in link."
+              );
+              return;
+            }
+            setStatus("error");
+            setMessage(result.message);
+          }}
+          className="mt-3 rounded-full bg-[var(--color-accent)] px-4 py-2 text-xs font-medium text-white disabled:opacity-60"
+        >
+          {status === "loading" ? "Sending…" : "Confirm via email"}
+        </button>
+        {message ? (
+          <p
+            className={`mt-3 text-xs ${status === "error" ? "text-red-700" : "text-[var(--color-muted)]"}`}
+          >
+            {message}
+          </p>
+        ) : null}
+      </div>
+    );
+  }
 
   if (!live && hydrated && localIntent) {
     return (

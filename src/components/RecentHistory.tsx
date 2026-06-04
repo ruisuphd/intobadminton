@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useProfile } from "@/context/ProfileContext";
+import { profileToResultsPath } from "@/lib/profile-url";
 import { byId } from "@/lib/scoring";
 
 export function RecentHistory() {
@@ -20,15 +22,21 @@ export function RecentHistory() {
           const names = h.topIds
             .map((id) => byId(id)?.name ?? id)
             .join(" · ");
+          const href = profileToResultsPath(h.profile);
           return (
-            <li
-              key={h.at + names}
-              className="rounded-2xl border border-[color:var(--line)] bg-[var(--surface)] px-4 py-3 text-sm"
-            >
-              <p className="text-xs text-[var(--color-muted)]">
-                {new Date(h.at).toLocaleString()}
-              </p>
-              <p className="text-[var(--text)]">{names}</p>
+            <li key={h.at + names}>
+              <Link
+                href={href}
+                className="block rounded-2xl border border-[color:var(--line)] bg-[var(--surface)] px-4 py-3 text-sm hover:border-[color:var(--line-strong)]"
+              >
+                <p className="text-xs text-[var(--color-muted)]">
+                  {new Date(h.at).toLocaleString()}
+                </p>
+                <p className="text-[var(--text)]">{names}</p>
+                <p className="mt-2 text-xs text-[var(--color-accent)]">
+                  Reopen results →
+                </p>
+              </Link>
             </li>
           );
         })}
