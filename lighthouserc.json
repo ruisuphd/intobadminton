@@ -18,8 +18,7 @@
         "http://localhost/guides/glossary/index.html",
         "http://localhost/tools/index.html",
         "http://localhost/tools/string-tension-calculator/index.html",
-        "http://localhost/tools/authenticity-checker/index.html",
-        "http://localhost/saved/index.html"
+        "http://localhost/tools/authenticity-checker/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {
