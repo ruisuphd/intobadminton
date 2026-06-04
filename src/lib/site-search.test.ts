@@ -48,6 +48,23 @@ describe("site-search", () => {
     expect(hits.every((h) => h.kind === "product")).toBe(true);
   });
 
+  it("finds saved shelf", () => {
+    const hits = searchSite("saved shortlist");
+    expect(hits.some((h) => h.href === "/saved/")).toBe(true);
+  });
+
+  it("finds compare guides by model pair", () => {
+    const hits = searchSite("astrox 99 pro 100zz");
+    expect(
+      hits.some((h) => h.href.includes("astrox-99-pro-vs-astrox-100zz"))
+    ).toBe(true);
+  });
+
+  it("finds equipment catalog", () => {
+    const hits = searchSite("equipment catalog");
+    expect(hits.some((h) => h.href === "/catalog/")).toBe(true);
+  });
+
   it("returns empty for nonsense query", () => {
     expect(searchSite("xyzzyplughnotreal")).toEqual([]);
   });

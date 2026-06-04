@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ContinueReading } from "@/components/ContinueReading";
+import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { JsonLd } from "@/components/JsonLd";
 import products from "@/data/products.json";
@@ -180,6 +181,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       </section>
 
       <ContinueReading locale={locale} />
+      <HomeRecentShortlists locale={locale} />
 
       {/* Popular searches */}
       <section className="border-t border-[color:var(--line)] py-16 lg:py-20">
