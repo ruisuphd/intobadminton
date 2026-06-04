@@ -23,7 +23,7 @@
 
 | # | Gap | Impact | Sprint 3 |
 |---|-----|--------|----------|
-| 1 | **Notify-me used `alert()` with no persistence** | Broken engagement loop on `/saved/` | ✅ `notify-me.ts` + GA events |
+| 1 | **Notify-me used `alert()` with no persistence** | Broken engagement loop on `/saved/` | ✅ Buttondown when configured; else `notify-me.ts` local intent |
 | 2 | **No homepage recall of finder shortlists** | Weak 7-day return signal | ✅ `HomeRecentShortlists` |
 | 3 | **Toolkit under-surfaced on homepage** | Lower pages/session to `/tools/*` | ✅ 5-tool `HomeToolkitStrip` |
 | 4 | **`/saved/` missing from search + Lighthouse** | Discovery + CI regression blind spot | ✅ site-search + `lighthouserc.json` |

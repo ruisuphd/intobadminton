@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
+import { GuideEngagement } from "@/components/GuideEngagement";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 
@@ -487,6 +488,10 @@ export default function GlossaryPage() {
           </Link>{" "}
           and we&apos;ll add it.
         </p>
+        <GuideEngagement
+          path="/guides/glossary/"
+          title="Badminton equipment glossary"
+        />
       </article>
     </main>
   );
