@@ -19,6 +19,19 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("string-tension"))).toBe(true);
   });
 
+  it("finds cluster pillar guides", () => {
+    expect(
+      searchSite("running shoes").some((h) =>
+        h.href.includes("badminton-shoes-vs-running")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("doubles positioning").some((h) =>
+        h.href.includes("doubles-positioning")
+      )
+    ).toBe(true);
+  });
+
   it("finds tools", () => {
     const hits = searchSite("authenticity checker");
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
