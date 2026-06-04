@@ -2,6 +2,39 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #90 `ready_for_review` re-trigger (branch `cursor/new-chinese-reviews-translation-8322`)
+
+**Trigger:** GitHub pull request #90 (`ready_for_review`) — documents the blocked translation run for PR #86 (`ready_for_review`). No new `blogs/` drop was mounted in the cloud workspace.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs imported articles | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). **Do not merge** until the private drop is synced and translated content is imported. Re-run after:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate (Chinese above, ## English Translation below), rename to English, then:
+npm run blog:import && npm run blog:validate && npm test && npm run build
+```
+
+---
+
 ## 2026-06-04 — PR #86 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-c252`)
 
 **Trigger:** GitHub pull request #86 (`ready_for_review`) — Phase B SEO guides PR **already merged** to `main` as `1e416cd` before this translation run completed. No new `blogs/` drop was mounted in the cloud workspace.
@@ -24,12 +57,60 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ### Merge status
 
-Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merge this PR only to land run-log documentation; re-run after syncing the private drop:
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Superseded by PR #90 runlog on branch `cursor/new-chinese-reviews-translation-8322`.
 
-```bash
-npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
-# or: BLOGS_DIR=/path/to/mounted/blogs npm run blog:check
-```
+---
+
+## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
+
+**Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). PR #84 itself is web-app Phase B (`cursor/web-app-improvement-plan-a493`); translation remains blocked without the private `blogs/` drop.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **126** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation (#89).
+
+---
+
+## 2026-06-04 — PR #83 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-f3aa`)
+
+**Trigger:** GitHub pull request #83 (`ready_for_review`) — Sprint 2 web-app PR **already merged** to `main` as `15eba41` before this run completed.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs imported articles | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 176 passed
+- `npm run build` + postbuild SEO audit — pass (644 HTML, 205 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation (#87).
 
 ---
 
