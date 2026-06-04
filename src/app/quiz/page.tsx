@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
+import { FinderQuickFilters } from "@/components/FinderQuickFilters";
 import { QuizFunnel } from "./QuizFunnel";
 
 export const metadata: Metadata = {
@@ -57,7 +58,9 @@ export function QuizShell() {
           ))}
         </section>
 
-        <div className="mt-12">
+        <FinderQuickFilters className="mt-10" />
+
+        <div className="mt-10">
           <QuizFunnel />
         </div>
 

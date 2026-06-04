@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { ResultCard } from "@/components/ResultCard";
+import { ResultsFilterSummary } from "@/components/ResultsFilterSummary";
 import { useProfile } from "@/context/ProfileContext";
 import { companyInfo } from "@/lib/company";
 import {
@@ -192,6 +193,7 @@ function ResultsBody() {
 
   return (
     <div className="space-y-6">
+      <ResultsFilterSummary profile={profile} />
       <JsonLd data={buildProductJsonLd(rows)} />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />

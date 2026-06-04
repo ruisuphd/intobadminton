@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ContinueReading } from "@/components/ContinueReading";
+import { FinderQuickFilters } from "@/components/FinderQuickFilters";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { JsonLd } from "@/components/JsonLd";
 import products from "@/data/products.json";
@@ -180,6 +181,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       </section>
 
       <ContinueReading locale={locale} />
+
+      <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
+        <div className="layout-band max-w-6xl">
+          <FinderQuickFilters />
+        </div>
+      </section>
 
       {/* Popular searches */}
       <section className="border-t border-[color:var(--line)] py-16 lg:py-20">

@@ -27,7 +27,14 @@ import {
   clampBudgetUsd,
   profileToSearchParams,
 } from "@/lib/profile-url";
+import { QuizOptionGlyph } from "@/components/QuizOptionGlyph";
 import { countMatchingProducts } from "@/lib/quiz-preview";
+import {
+  CATEGORY_HELP,
+  DISCIPLINE_HELP,
+  QUIZ_STEP_HELP,
+  STYLE_HELP,
+} from "@/lib/quiz-help";
 
 const STEPS = 5;
 const LIVE_CATEGORIES: EquipmentCategory[] = [
@@ -303,6 +310,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text)]">
             {copy.disciplineTitle}
           </h1>
+          <p className="text-xs text-[var(--color-subtle)]">{QUIZ_STEP_HELP[1]}</p>
           <div className="flex flex-col gap-2">
             {DISCIPLINES.map((d) => (
               <button
@@ -312,13 +320,19 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   setProfile((p) => ({ ...p, discipline: d }));
                   next();
                 }}
-                className={`rounded-2xl px-5 py-4 text-left text-sm transition-all ${
+                className={`flex items-start gap-3 rounded-2xl px-5 py-4 text-left text-sm transition-all ${
                   profile.discipline === d
                     ? "bg-[var(--color-accent-soft)] ring-2 ring-[var(--color-accent)]"
                     : "card card-interactive"
                 }`}
               >
-                {disciplines[d]}
+                <QuizOptionGlyph kind={d} className="mt-0.5" />
+                <span>
+                  <span className="block font-medium">{disciplines[d]}</span>
+                  <span className="mt-1 block text-xs text-[var(--color-muted)]">
+                    {DISCIPLINE_HELP[d]}
+                  </span>
+                </span>
               </button>
             ))}
           </div>
@@ -333,6 +347,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           <p className="text-sm text-[var(--color-muted)]">
             {copy.styleHelp}
           </p>
+          <p className="text-xs text-[var(--color-subtle)]">{QUIZ_STEP_HELP[2]}</p>
           <p
             className="text-xs text-[var(--color-subtle)]"
             aria-live="polite"
@@ -365,12 +380,14 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                       return { ...p, styles: [...p.styles, s] };
                     });
                   }}
-                  className={`rounded-full px-4 py-2 text-sm transition ${
+                  className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm transition ${
                     on
                       ? "bg-[var(--color-accent)] text-white"
                       : "border border-[color:var(--line-strong)] hover:border-[var(--text)]"
                   }`}
+                  title={STYLE_HELP[s]}
                 >
+                  <QuizOptionGlyph kind={s} className="h-5 w-5" />
                   {styles[s]}
                 </button>
               );
@@ -394,6 +411,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           <p className="text-sm text-[var(--color-muted)]">
             {copy.categoryHelp}
           </p>
+          <p className="text-xs text-[var(--color-subtle)]">{QUIZ_STEP_HELP[3]}</p>
           {(
             [
               ["racket", "Racket"],
@@ -414,13 +432,21 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                   setProfile((p) => ({ ...p, category: id }));
                   next();
                 }}
-                className={`flex w-full rounded-2xl px-5 py-4 text-left text-sm transition-all ${
+                className={`flex w-full items-start gap-3 rounded-2xl px-5 py-4 text-left text-sm transition-all ${
                   live
                     ? "card card-interactive"
                     : "cursor-not-allowed opacity-50 bg-[color:var(--surface-muted)]"
                 }`}
               >
-                {label}
+                <QuizOptionGlyph kind={id} className="mt-0.5" />
+                <span>
+                  <span className="block font-medium">{label}</span>
+                  {live && (
+                    <span className="mt-1 block text-xs text-[var(--color-muted)]">
+                      {CATEGORY_HELP[id]}
+                    </span>
+                  )}
+                </span>
               </button>
             );
           })}

@@ -58,7 +58,7 @@ const ARTICLE_PUBLISHER = {
 const ARTICLE_AUTHOR = {
   "@type": "Person",
   name: companyInfo.founderName,
-  url: companyInfo.founderWebsite,
+  url: `${companyInfo.siteUrl}${companyInfo.authorPagePath}`,
   description: companyInfo.founderDescription,
   jobTitle: "Founder, IntoBadminton",
 } as const;
