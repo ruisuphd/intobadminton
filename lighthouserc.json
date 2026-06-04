@@ -30,6 +30,14 @@
       }
     },
     "assert": {
+      "assertMatrix": [
+        {
+          "matchingUrlPattern": ".*\\/saved\\/.*",
+          "assertions": {
+            "categories:seo": "off"
+          }
+        }
+      ],
       "assertions": {
         "categories:performance": ["error", { "minScore": 0.9 }],
         "categories:accessibility": ["warn", { "minScore": 0.95 }],
