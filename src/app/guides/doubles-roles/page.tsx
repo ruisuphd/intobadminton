@@ -155,6 +155,13 @@ export default function DoublesRolesGuide() {
 
         <p className="text-[var(--color-muted)] leading-relaxed">
           Related reading:{" "}
+          <Link
+            href="/guides/doubles-positioning-and-rackets/"
+            className="text-[var(--color-accent)] underline"
+          >
+            doubles positioning and rackets
+          </Link>
+          ,{" "}
           <Link href="/best/doubles-rackets/" className="text-[var(--color-accent)] underline">
             best doubles rackets
           </Link>
