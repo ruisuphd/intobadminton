@@ -53,7 +53,10 @@ export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
         <header className="space-y-3">
           <h1 className="text-display text-[var(--text)]">Reviews</h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            Equipment notes from club play.
+            Equipment notes from club play.{" "}
+            <span className="text-[var(--color-subtle)]">
+              {articles.length} articles, newest first.
+            </span>
           </p>
         </header>
 

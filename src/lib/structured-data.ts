@@ -1,6 +1,5 @@
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 import {
-  computeEditorialRating,
   ratingDatePublished,
   type EditorialRating,
 } from "@/lib/editorial-rating";

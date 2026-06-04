@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleToc } from "@/components/ArticleToc";
+import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { JsonLd } from "@/components/JsonLd";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { SocialShare } from "@/components/SocialShare";
 import {
   blogArticles,
   getBlogArticle,
@@ -41,6 +44,10 @@ export function EditorialArticlePage({
     sectionAnchorId(section.heading, index, anchorSeen)
   );
   const related = relatedArticles(blogArticles[locale], article, 3);
+  const tocItems = sections.map((section, index) => ({
+    id: sectionIds[index] ?? sectionAnchorId(section.heading, index, new Map()),
+    label: section.heading,
+  }));
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
@@ -111,8 +118,8 @@ export function EditorialArticlePage({
           )}
         </header>
 
-        <div className="mt-10">
-          <div className="space-y-8">
+        <div className="mt-10 space-y-8">
+            {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
               <div className="overflow-x-auto rounded-2xl border border-[color:var(--line)]">
                 {article.comparison.caption && (
@@ -180,7 +187,9 @@ export function EditorialArticlePage({
                 </section>
               );
             })}
-          </div>
+
+            <SocialShare url={canonicalUrl} title={article.title} />
+            <HelpfulReaction contentId={`review:${article.slug}`} />
         </div>
 
         {related.length > 0 && (
