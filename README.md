@@ -60,10 +60,17 @@ npm run postbuild   # legacy redirects + SEO audit gate (runs after build)
 ### Review ingestion (private `blogs/` drop)
 
 Source markdown lives in a **gitignored** `blogs/` folder on the editor machine (not committed).
-After adding or updating `## English Translation` sections:
+Cloud cron agents cannot read `~/Desktop/.../blogs` until you sync a copy into the repo:
 
 ```bash
-npm run blog:check    # fail if unmapped *.md exist
+npm run blog:sync -- "/path/to/intobadminton/blogs"
+# or: BLOGS_DROP_PATH="/path/to/blogs" npm run blog:sync
+```
+
+After adding or updating `## English Translation` sections (Chinese stays above the marker):
+
+```bash
+npm run blog:check    # fail if unmapped *.md or untranslated Chinese filenames
 npm run blog:import   # merge into src/data/blog-articles.json
 npm run blog:validate # 20-pass structural/voice gate
 ```
