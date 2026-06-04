@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocSlot } from "@/components/GuideTocSlot";
 
 const PATH = "/guides/string-tension/";
 const HEADLINE = "Badminton string tension: a practical guide";
@@ -53,6 +54,7 @@ export default function StringTensionGuide() {
         <h1 className="text-3xl font-semibold tracking-tight">
           Badminton string tension: a practical guide
         </h1>
+        <GuideTocSlot />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Tension is the single setting that changes how a racket feels more
           than any spec on the box. The same frame at 22 lb and at 28 lb plays

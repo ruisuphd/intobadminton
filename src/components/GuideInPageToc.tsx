@@ -75,8 +75,11 @@ export function GuideInPageToc() {
     if (!host) {
       host = document.createElement("div");
       host.id = "guide-toc-anchor";
-      host.className = "mb-8";
+      host.className = "mb-8 min-h-[11rem]";
       h1.insertAdjacentElement("afterend", host);
+    } else {
+      host.classList.add("min-h-[11rem]");
+      host.removeAttribute("aria-hidden");
     }
     setMountNode(host);
     /* eslint-enable react-hooks/set-state-in-effect */
