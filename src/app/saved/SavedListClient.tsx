@@ -165,17 +165,19 @@ function NotifyMeRow({ productId }: { productId: string }) {
     "idle"
   );
   const [message, setMessage] = useState<string | null>(null);
-  const [localIntent, setLocalIntent] = useState<
-    ReturnType<typeof getNotifyMeIntent>
-  >(null);
   const [hydrated, setHydrated] = useState(false);
+  const [intentVersion, setIntentVersion] = useState(0);
 
   useEffect(() => {
-    if (!live) {
-      setLocalIntent(getNotifyMeIntent(productId));
-    }
+    /* eslint-disable react-hooks/set-state-in-effect -- client-only notify-me read */
     setHydrated(true);
-  }, [productId, live]);
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, []);
+
+  const localIntent = useMemo(() => {
+    void intentVersion;
+    return hydrated && !live ? getNotifyMeIntent(productId) : null;
+  }, [hydrated, live, productId, intentVersion]);
 
   if (!live && hydrated && localIntent) {
     return (
@@ -192,7 +194,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
           type="button"
           onClick={() => {
             clearNotifyMeIntent(productId);
-            setLocalIntent(null);
+            setIntentVersion((v) => v + 1);
             trackEvent("notify_me_clear", { product_id: productId });
           }}
           className="mt-3 text-xs text-[var(--color-accent)] underline"
@@ -246,8 +248,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
             return;
           }
 
-          const row = setNotifyMeIntent(productId, email);
-          setLocalIntent(row);
+          setNotifyMeIntent(productId, email);
           setStatus("done");
           setMessage("Saved on this device — we will wire delivery when Buttondown is live.");
           setEmail("");
