@@ -2,6 +2,28 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #106 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-6049`)
+
+**Trigger:** GitHub pull request #106 (`ready_for_review`). PR #106 had **already merged** to `main` (`6f58011`) when this automation ran.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-articles.json` on `main` | **146** — no import drift |
+| New translations this run | **None** |
+
+### Verification
+
+- `npm test` — 184 passed
+- `npm run blog:validate` — 20/20 passes, 0 issues
+
+Steps 1–5 not performed (no private `blogs/` drop in cloud VM).
+
+---
 
 ## 2026-06-04 — Sprint 4 web app (branch `cursor/web-app-improvement-plan-3a42`, PR #115)
 
