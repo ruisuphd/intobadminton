@@ -57,6 +57,20 @@ npm run build       # next build → static export to out/
 npm run postbuild   # legacy redirects + SEO audit gate (runs after build)
 ```
 
+### Review ingestion (private `blogs/` drop)
+
+Source markdown lives in a **gitignored** `blogs/` folder on the editor machine (not committed).
+After adding or updating `## English Translation` sections:
+
+```bash
+npm run blog:check    # fail if unmapped *.md exist
+npm run blog:import   # merge into src/data/blog-articles.json
+npm run blog:validate # 20-pass structural/voice gate
+```
+
+See [`docs/BLOG_INGESTION_PLAN.md`](docs/BLOG_INGESTION_PLAN.md) and
+[`docs/AUTOMATION_RUNLOG.md`](docs/AUTOMATION_RUNLOG.md).
+
 The postbuild SEO audit at
 [`scripts/postbuild-seo-audit.mjs`](scripts/postbuild-seo-audit.mjs) blocks the
 build on broken internal links, missing Article schema on key routes,
