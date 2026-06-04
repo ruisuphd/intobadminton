@@ -2,6 +2,38 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #87 `ready_for_review` re-trigger (branch `cursor/new-chinese-reviews-translation-d088`)
+
+**Trigger:** GitHub pull request #87 (`ready_for_review`) — run-log PR **already merged** to `main` as `9d5b349`; this automation re-ran the full translate → import → web-app update workflow.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **126** |
+| `blog-articles.json` imported articles | **146** — no import drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 177 passed
+- `npm run build` + postbuild SEO audit — pass (646 HTML, 207 sitemap URLs)
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merge this runlog PR only; re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+```
+
+---
+
 ## 2026-06-04 — PR #84 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-dbb4`)
 
 **Trigger:** GitHub pull request #84 (`ready_for_review`) — Chinese review translation workflow (cron template). PR #84 itself is web-app Phase B (`cursor/web-app-improvement-plan-a493`); translation remains blocked without the private `blogs/` drop.
@@ -25,7 +57,7 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ### Merge status
 
-Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merge this runlog PR only; re-run after syncing:
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Merged to `main` as runlog documentation (`e423c0d`); re-run after syncing:
 
 ```bash
 npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
