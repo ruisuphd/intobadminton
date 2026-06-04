@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: "/best/doubles-rackets/",
   title: "Best Doubles Badminton Rackets 2026",
   description:
     "Six doubles badminton rackets ranked for front-court speed, defensive recovery, and rear-court continuity — Yonex 88S Pro, Nanoflare 1000Z, Auraspeed HS Plus.",
-  alternates: pageAlternates("/best/doubles-rackets/"),
-};
+});
 
 const config: BestPicksConfig = {
   slug: "doubles-rackets",

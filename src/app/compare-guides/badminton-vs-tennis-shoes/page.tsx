@@ -4,6 +4,8 @@ import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { CompareConceptChrome } from "@/components/CompareConceptChrome";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
@@ -46,7 +48,11 @@ export default function BadmintonVsTennisShoesPage() {
   };
 
   return (
-    <main className="flex-1 py-16">
+    <CompareConceptChrome
+      contentId="compare:badminton-vs-tennis-shoes"
+      url={`${companyInfo.siteUrl}/compare-guides/badminton-vs-tennis-shoes/`}
+      title="Badminton vs tennis shoes"
+    >
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
@@ -69,6 +75,7 @@ export default function BadmintonVsTennisShoesPage() {
         </header>
 
         <EditorialNotice />
+        <InArticleAffiliateDisclosure />
 
         <h2 className="text-headline text-[var(--text)]">
           The four real differences
@@ -142,6 +149,6 @@ export default function BadmintonVsTennisShoesPage() {
           .
         </p>
       </article>
-    </main>
+    </CompareConceptChrome>
   );
 }

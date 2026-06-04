@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/doubles-roles/";
@@ -8,11 +8,11 @@ const HEADLINE = "Doubles court roles";
 const DESCRIPTION =
   "Front, back, and rotational roles in badminton doubles — what each role does and how role choice affects which racket and shoes you should buy.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Doubles court roles in badminton",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function DoublesRolesGuide() {
   return (
