@@ -2,33 +2,24 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-<<<<<<< HEAD
-## 2026-06-04 — Web app Sprint 3 PR #94 (branch `cursor/web-app-improvement-plan-0fb2`)
-=======
-## 2026-06-04 — PR #84 `ready_for_review` (Phase B + homepage perf)
+## 2026-06-04 — Homepage perf follow-up (`cursor/web-app-improvement-plan-dfd2`)
 
-**Trigger:** GitHub pull request #84 (`ready_for_review`) — compare-guide search index, search e2e, homepage bundle slimming.
+**Trigger:** PR #84 merged without homepage bundle slimming; follow-up on `main`.
 
 ### Changes
 
-- Index all `/compare-guides/*` in `buildSearchIndex()` + Playwright search smoke
-- Homepage: `home-featured-reviews.json`, `catalog-stats.json`, deferred `ContinueReading`, `product-display-names.json` (drops full `blog-articles.json` / `products.json` from `/` critical path)
-- Prebuild generators: `home:featured`, `generate-catalog-stats.mjs`, `generate-product-display-names.mjs`
+- `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json` + prebuild generators
+- `HomeContinueReading` dynamic import; lightweight product names on homepage engagement rows
+- ESLint: `SavedListClient` notify-me hydration
 
 ### Verification
 
-- `npm test` — 174 passed
-- `npm run build` + postbuild SEO audit — pass
-- Local Lighthouse homepage performance — 1.0 (CI threshold 0.9)
-
-### Merge status
-
-Pending CI green on PR #84.
+- `npm test` — 186 passed
+- Local Lighthouse `/` performance — 1.0
 
 ---
 
-## 2026-06-04 — PR #80 `ready_for_review` (web app maturity audit)
->>>>>>> 921bf6b (perf: slim homepage bundle for Lighthouse CI)
+## 2026-06-04 — Web app Sprint 3 PR #94 (branch `cursor/web-app-improvement-plan-0fb2`)
 
 **Trigger:** Cloud agent — Sprint 3 engagement loops merged with `main` Buttondown notify-me.
 
