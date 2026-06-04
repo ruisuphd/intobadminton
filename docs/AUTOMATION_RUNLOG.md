@@ -2,20 +2,68 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-04 — Homepage perf follow-up (`cursor/web-app-improvement-plan-dfd2`)
+## 2026-06-04 — Homepage perf follow-up (`cursor/web-app-improvement-plan-dfd2`, PR #92)
 
-**Trigger:** PR #84 merged without homepage bundle slimming; follow-up on `main`.
+**Trigger:** PR #84 merged without homepage bundle slimming; follow-up rebased on Sprint 3–4 `main`.
 
 ### Changes
 
 - `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json` + prebuild generators
 - `HomeContinueReading` dynamic import; lightweight product names on homepage engagement rows
-- ESLint: `SavedListClient` notify-me hydration
+- Merged `origin/main` (catalog, spec filters, `/best/rackets-under-150/`); Lighthouse URLs include string-tension calculator
 
 ### Verification
 
-- `npm test` — 186 passed
-- Local Lighthouse `/` performance — 1.0
+- `npm test` — pending this run
+- Lighthouse homepage performance target ≥ 0.9 (CI gate)
+
+---
+
+## 2026-06-04 — Web app improvement automation (branch `cursor/web-app-improvement-plan-9035`, PR #99)
+
+**Trigger:** Cloud agent — full audit → plan → execute workflow (PR #85 `ready_for_review`).
+
+### Outcome
+
+Sprint 3 shipped on `main` via PR #95 before PR #99 merged: `/best/rackets-under-100/`, homepage hero search, catalog search, Buttondown notify-me, `HomeRecentShortlists`, e2e header-search locator fix. PR #99 carries runlog only.
+
+### Verification (this run)
+
+- `npm test` — 187 passed
+- `npm run build` + postbuild SEO audit — pass (647 HTML, 208 sitemap URLs)
+- `npm run test:e2e` — 13 passed
+
+---
+
+## 2026-06-04 — PR #95 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-218b`)
+
+**Trigger:** GitHub pull request #95 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-22e9`). **Sprint 3 merged to `main`** (squash). Translation workflow ran in parallel on this branch.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **146** |
+| `blog-articles.json` imported articles | **146** — no import drift |
+| New translations this run | **None** |
+
+### PR #95 (Sprint 3 — merged)
+
+- Catalog products in site search + kind filter chips; affiliate disclosure on commercial pages; engagement chrome on best-of/compare guides; brand filter on `/results/`.
+- Notify-me lint: resolved on PR branch via `eslint-disable` for localStorage hydrate (main after merge).
+
+### Translation / import
+
+Not performed — no `blogs/` drop. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate → rename → npm run blog:import && npm run blog:validate
+```
 
 ---
 

@@ -171,7 +171,7 @@ function NotifyMeRow({ productId }: { productId: string }) {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect -- single-shot hydration from localStorage */
+    /* eslint-disable react-hooks/set-state-in-effect -- single-shot localStorage hydrate */
     if (!live) {
       setLocalIntent(getNotifyMeIntent(productId));
     }
