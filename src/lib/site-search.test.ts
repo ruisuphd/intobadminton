@@ -37,6 +37,17 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds catalog products by brand and model", () => {
+    const hits = searchSite("yonex nanoflare 1000");
+    expect(hits.some((h) => h.kind === "product")).toBe(true);
+  });
+
+  it("filters by kind when requested", () => {
+    const hits = searchSite("yonex", 50, "product");
+    expect(hits.length).toBeGreaterThan(0);
+    expect(hits.every((h) => h.kind === "product")).toBe(true);
+  });
+
   it("finds saved shelf", () => {
     const hits = searchSite("saved shortlist");
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);
@@ -54,15 +65,9 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
-  it("finds catalog products by brand and model", () => {
-    const hits = searchSite("yonex nanoflare 1000");
-    expect(hits.some((h) => h.kind === "product")).toBe(true);
-  });
-
-  it("filters by kind when requested", () => {
-    const hits = searchSite("yonex", 50, "product");
-    expect(hits.length).toBeGreaterThan(0);
-    expect(hits.every((h) => h.kind === "product")).toBe(true);
+  it("finds equipment catalog", () => {
+    const hits = searchSite("equipment catalog");
+    expect(hits.some((h) => h.href === "/catalog/")).toBe(true);
   });
 
   it("returns empty for nonsense query", () => {

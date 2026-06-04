@@ -1,50 +1,51 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-c920` (merged with Sprint 3)  
-**Baseline:** Sprint 3 on `main` after PR #97; toolkit pages shipped on `main` per [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6 Sprint 4.
+**Branch:** `cursor/web-app-improvement-plan-f8ee` → PR #105  
+**Baseline:** Sprint 3 on `main` (PRs #94–#97, #98).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength | IntoBadminton response |
-|------------|----------|------------------------|
-| **RacketGuide / Tennis Warehouse** | Interactive calculators + comparison | Five `/tools/*` pages + homepage toolkit strip |
-| **Wirecutter** | Topic clusters with deep internal links | Guide ↔ tool cross-links (string tension, balance, authenticity) |
-| **BadmintonCentral** | Community Q&A density | Glossary + autolinks in reviews (Sprint 3) |
-| **RTINGS** | Methodology transparency | Scoring breakdown + `ReviewMethodologyBox` |
-| **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
+| Competitor pattern | IntoBadminton (post–Sprint 3) | Sprint 4 response |
+|--------------------|-------------------------------|-------------------|
+| **Tennis Warehouse browse** | Finder + brand filter on `/results/` | `/catalog/` + spec facets on results |
+| **Wirecutter price-band pages** | Editorial `/best/rackets-under-100/` (#98) | `/best/rackets-under-150/` catalogue page |
+| **Retailer search facets** | Product kind chips | Brand facet when kind = Products |
+| **RacketGuide calculators** | Five `/tools/*` + guide cross-links (#97) | Unchanged — toolkit mature on `main` |
+| **Original photography** | Manufacturer images on some picks | Still editorial pipeline (deferred) |
 
-**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring, no signup on finder.
+**Moat unchanged:** transparent fit score, postbuild SEO gate, claims CI, static export.
 
 ---
 
-## 2. Top 5 gaps (Sprint 4 + polish)
+## 2. Top 5 gaps (this sprint)
 
-| # | Gap | Status |
-|---|-----|--------|
-| 1 | Toolkit pages exist but guides did not link into tools | ✅ Cluster cross-links (this PR) |
-| 2 | Duplicate engagement chrome on guides (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
-| 3 | Sprint 3 PR blocked on `main` merge conflict | ✅ Merged `main` into branch |
-| 4 | Lighthouse did not cover representative tool URL | ✅ `/tools/index.html` in `lighthouserc.json` |
-| 5 | HelpfulReaction counts still client-only (no KV) | ⏳ Sprint 5 |
+| # | Gap | Impact | Sprint 4 |
+|---|-----|--------|----------|
+| 1 | **No filter-first product catalog** | Discovery vs Tennis Warehouse | ✅ `/catalog/` with facets |
+| 2 | **Results shortlist lacks spec facets** | Post-quiz retention | ✅ price, weight, balance chips |
+| 3 | **No $150 budget landing page** | Long-tail SEO | ✅ `/best/rackets-under-150/` |
+| 4 | **Product search missing brand facet** | SKU scan speed | ✅ brand chips on Products kind |
+| 5 | **Broken product deep-links** | SEO audit failures | ✅ `catalogProductHref()` |
 
 ### Deferred (Sprint 5+)
 
 - HelpfulReaction Workers/KV aggregates
-- First-party `public/products/` photography
-- `Person.sameAs` after social profile claims
-- PWA web push
-- GSC/CrUX CSV in `docs/baselines/`
+- First-party `public/products/` hero photography
+- VideoObject + claimed YouTube `sameAs`
+- GSC/CrUX baseline CSV capture
 
 ---
 
 ## 3. Execution summary
 
-1. Merge `origin/main` into Sprint 3 branch; resolve `SavedListClient` conflict
-2. Remove duplicate `GuideEngagement` from guide articles (layout footer owns share + helpful stripe)
-3. Link `/tools/string-tension-calculator/`, `/tools/racket-balance-explainer/`, `/tools/authenticity-checker/` from matching guides
-4. Extend `GUIDE_HEADLINES` for cluster pillar guides
+1. `src/lib/product-filters.ts` — shared filter state + tests
+2. `src/app/catalog/` — browse page with client-side facets
+3. `src/app/results/ResultsClient.tsx` — price / weight / balance chips
+4. `src/app/best/rackets-under-150/` — programmatic price-band guide
+5. `src/lib/review-pages.ts` — `catalogProductHref`, `productHref`
+6. `src/components/SiteSearch.tsx` — brand facet for product search
 
 ---
 
@@ -52,33 +53,23 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 4 + competitive audit | ✅ |
-| 2 | Tools index lists all five tools | ✅ (on `main`) |
-| 3 | No duplicate ReadingProgress on guides | ✅ |
-| 4 | Guide ToC still portal-mounted after h1 | ✅ |
-| 5 | Glossary autolinks unchanged | ✅ |
-| 6 | Static export safe | ✅ |
-| 7 | `npm test` | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | `npm run lint` | ✅ |
-| 10 | PR mergeable with `main` | ✅ |
+| 1 | Gaps grounded in Sprint 3 deferred list + audit | ✅ |
+| 2 | Catalog links resolve to existing static routes | ✅ |
+| 3 | Results filters preserve scorer rank order | ✅ |
+| 4 | Price-band page uses BestPicks schema | ✅ |
+| 5 | Static export safe | ✅ |
+| 6 | Sitemap includes `/catalog/` + new `/best/*` | ✅ |
+| 7 | `product-filters.test.ts` + `site-search.test.ts` | ✅ |
+| 8 | Header nav includes Catalog | ✅ |
+| 9 | `npm test && npm run lint && npm run build` | ✅ |
+| 10 | postbuild SEO audit clean | ✅ |
 
 ---
 
-## 5. Verification
-
-```bash
-npm test
-npm run lint
-npm run build
-```
-
----
-
-## 6. Metrics (unchanged)
+## 5. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Tool → finder CTR | Track `tool_open` / outbound quiz clicks in GA4 |
+| Catalog → quiz conversion | GA4 event (future) |
