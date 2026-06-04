@@ -3,11 +3,19 @@ import { notFound } from "next/navigation";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
-import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { JsonLd } from "@/components/JsonLd";
 import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { RelatedPostsGrid } from "@/components/RelatedPostsGrid";
+import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
+import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { SocialShare } from "@/components/SocialShare";
+import { reviewProductIdForBlog } from "@/lib/content-links";
+import { computeEditorialRating } from "@/lib/editorial-rating";
+import { referenceClubDoublesProfile } from "@/lib/reference-profile";
+import { reviewProductById } from "@/lib/review-pages";
+import { scoreOneProduct } from "@/lib/scoring";
+import { productReviewJsonLd } from "@/lib/structured-data";
 import {
   blogArticles,
   getBlogArticle,
@@ -47,6 +55,30 @@ export function EditorialArticlePage({
     sectionAnchorId(section.heading, index, anchorSeen)
   );
   const related = relatedArticles(blogArticles[locale], article, 3);
+  const mappedProductId = reviewProductIdForBlog(article.slug);
+  const catalogProduct = mappedProductId
+    ? reviewProductById(mappedProductId)
+    : undefined;
+  const referenceProfile = catalogProduct
+    ? referenceClubDoublesProfile(catalogProduct.category)
+    : null;
+  const scoredPreview =
+    catalogProduct && referenceProfile
+      ? scoreOneProduct(catalogProduct, referenceProfile)
+      : null;
+  const editorialRating = catalogProduct
+    ? computeEditorialRating(catalogProduct)
+    : null;
+  const productJsonLd =
+    catalogProduct && editorialRating
+      ? productReviewJsonLd({
+          product: catalogProduct,
+          path,
+          description: article.dek,
+          reviewBody: article.dek,
+          rating: editorialRating,
+        })
+      : null;
   const tocItems = sections.map((section, index) => ({
     id: sectionIds[index] ?? sectionAnchorId(section.heading, index, new Map()),
     label: section.heading,
@@ -99,6 +131,7 @@ export function EditorialArticlePage({
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
+      {productJsonLd && <JsonLd data={productJsonLd} />}
 
       <article className="layout-band max-w-3xl py-16">
         <Link
@@ -126,6 +159,7 @@ export function EditorialArticlePage({
         </header>
 
         <div className="mt-10 space-y-8">
+            {scoredPreview && <ReviewProductPanel scored={scoredPreview} />}
             <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
@@ -200,28 +234,7 @@ export function EditorialArticlePage({
             <HelpfulReaction contentId={`review:${article.slug}`} />
         </div>
 
-        {related.length > 0 && (
-          <section className="mt-16 border-t border-[color:var(--line)] pt-10">
-            <h2 className="text-lg font-semibold text-[var(--text)]">
-              More reading
-            </h2>
-            <ul className="mt-4 space-y-3">
-              {related.map((entry) => (
-                <li key={entry.slug}>
-                  <Link
-                    href={buildLocalizedPath(
-                      locale,
-                      articlePathForSlug(entry.slug)
-                    )}
-                    className="text-sm font-medium text-[var(--color-accent)] hover:underline"
-                  >
-                    {entry.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        <RelatedPostsGrid locale={locale} articles={related} />
       </article>
     </main>
   );
