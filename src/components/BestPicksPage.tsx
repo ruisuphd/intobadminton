@@ -12,6 +12,7 @@ import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import { ProductBuyLink } from "@/components/ProductBuyLink";
 import { companyInfo } from "@/lib/company";
 import productsCatalog from "@/data/products.json";
 import {
@@ -291,14 +292,30 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                 {p.tradeoff}
               </p>
               {p.productId && (
-                <p className="mt-4">
+                <div className="mt-4 flex flex-wrap items-center gap-3">
                   <Link
                     href={reviewPath(p.productId)}
                     className="text-sm font-medium text-[var(--color-accent)] hover:underline"
                   >
                     Read full review →
                   </Link>
-                </p>
+                  {(() => {
+                    const catalogMatch = lookupCatalogProduct(
+                      CATALOG,
+                      p.brand,
+                      p.name
+                    );
+                    if (!catalogMatch) return null;
+                    return (
+                      <ProductBuyLink
+                        id={catalogMatch.id}
+                        brand={catalogMatch.brand}
+                        name={catalogMatch.name}
+                        officialSourceUrl={catalogMatch.officialSourceUrl}
+                      />
+                    );
+                  })()}
+                </div>
               )}
             </li>
           ))}
