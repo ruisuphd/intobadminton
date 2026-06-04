@@ -1,51 +1,63 @@
 # Web App Improvement Plan — Sprint 3 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-22e9`  
-**Baseline:** Sprint 2 in [`WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md).
+**Branches:** `cursor/web-app-improvement-plan-0fb2` + `22e9` + `e4a1` (merged to `main`), `cursor/web-app-improvement-plan-c920` (PR #97 — glossary autolinks, guide ToC, quiz UX)  
+**Baseline:** Sprint 1–2 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT2_2026-06.md)).
 
 ---
 
-## 1. Competitive audit (fresh pass)
+## 1. Competitive audit (June 2026)
 
-| Competitor pattern | IntoBadminton (post–Sprint 2) | Remaining gap |
-|--------------------|-------------------------------|---------------|
-| Tennis Warehouse catalog search | Editorial search + finder | Catalog SKUs not in search index |
-| Wirecutter commercial pages | Disclosure on `/review/*` only | `/best/*` and compare guides lack in-article FTC block |
-| RTINGS article UX | Share + reactions on reviews + guides | Best-of and compare guides missing engagement footer |
-| Retailer PDP filters | Profile-scored `/results/` | No brand filter on shortlist |
-| YouTube / original photos | — | Still editorial pipeline (deferred) |
+| Competitor | Strength | IntoBadminton response (Sprint 3) |
+|------------|----------|----------------------------------|
+| **Tennis Warehouse / retailer PDPs** | Saved lists, catalog search, email alerts | Product index + kind chips; `notify-me.ts` + Buttondown when configured |
+| **Wirecutter / RTINGS** | Return-visit + article ToC | `HomeRecentShortlists`; `GuideInPageToc` on guides (PR #97) |
+| **BadmintonCentral** | Dense internal linking | Glossary autolinks in review body from `glossaryLinks` (PR #97) |
+| **RacketGuide finders** | Visual quiz UX | Per-step hints + SVG glyphs in `QuizFunnel` (PR #97) |
+| **YouTube reviewers** | Video evidence | Deferred (`VideoObject` gated) |
 
-**Moat unchanged:** fit-score transparency, postbuild SEO gate, claims CI, static export.
+**Moat:** transparent fit scoring, postbuild SEO gate, static export, 146+ reviews, cluster guides on `main`.
 
 ---
 
-## 2. Top 5 gaps (this sprint)
+## 2. Top 5 gaps (combined Sprint 3)
 
-| # | Gap | Impact | Sprint 3 |
-|---|-----|--------|----------|
-| 1 | **Catalog products missing from site search** | Discovery, SearchAction depth | ✅ `product` kind + `products.json` rows |
-| 2 | **No kind filter on search results** | Scan speed vs Tennis Warehouse facets | ✅ chip filters on `/search/` |
-| 3 | **Affiliate disclosure absent on `/best/*` and compare** | AdSense / FTC on commercial URLs | ✅ `InArticleAffiliateDisclosure` |
-| 4 | **Engagement chrome uneven on commercial long-form** | Pages per session | ✅ compare guides + `ArticleEngagementFooter` |
-| 5 | **Results shortlist lacks brand filter** | Retention after quiz | ✅ brand chips on `/results/` |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | Catalog products missing from site search | ✅ `product` kind + `reviewableProducts()` (`main` #95) |
+| 2 | No search kind filters | ✅ chip filters on `/search/` (`main` #95) |
+| 3 | Notify-me / return-visit hooks weak | ✅ `notify-me.ts`, `HomeRecentShortlists` (`main` #94) |
+| 4 | Glossary terms not linked in rendered prose | ✅ `glossary-autolink` (PR #97) |
+| 5 | Guides lack jump/sticky ToC; quiz lacks visual cues | ✅ `GuideInPageToc` + `QuizStepDecor` (PR #97) |
+
+Also shipped on `main` (#95): compare `ArticleEngagementFooter`, results brand filter chips.
+
+### Follow-up (PR #98 / `cursor/web-app-improvement-plan-e4a1`)
+
+| Item | Status |
+|------|--------|
+| Editorial `/best/rackets-under-100/` (Q2 §3.5 programmatic landing) | ✅ Shipped |
+| Blog map links for AxForce 10 + Thruster SR/9900 reviews | ✅ |
 
 ### Deferred (Sprint 4+)
 
-- Original `public/products/` photography
 - HelpfulReaction Workers/KV aggregates
-- Buttondown notify-me backend
-- VideoObject + claimed YouTube `sameAs`
+- First-party `public/products/` photography
+- `Person.sameAs` after social profile claims
+- PWA web push
 - Faceted search over spec fields (weight, balance, price band)
 
 ---
 
 ## 3. Execution summary
 
-1. `src/lib/site-search.ts` — `productEntries()` from `reviewableProducts()`, kind `product`.
-2. `src/components/SiteSearch.tsx` — optional kind filter chips.
-3. `InArticleAffiliateDisclosure` on `BestPicksPage` and `CompareGuidePage` after `EditorialNotice`.
-4. `ArticleEngagementFooter` on `CompareGuidePage` (best-of already had it on main).
-5. `src/app/results/ResultsClient.tsx` — brand filter chips (client-side, static-export safe).
+**On `main` (PRs #94–#95, #98):** notify-me, recent shortlists, toolkit strip, `/saved/` in search, catalog search + kind filters, compare engagement, results brand filter, `/best/rackets-under-100/`.
+
+**PR #97 (`cursor/web-app-improvement-plan-c920`):**
+
+1. `src/lib/glossary-autolink.ts` + `GlossaryLinkedText` on review sections
+2. `src/components/GuideInPageToc.tsx` — portal ToC after guide `<h1>`
+3. `src/app/quiz/QuizFunnel.tsx` — step hints + option glyphs
+4. `scripts/generate-product-images.mjs` — prefer `sharp` on Linux CI
 
 ---
 
@@ -53,23 +65,33 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in code audit vs Q2 + Sprint 1–2 | ✅ |
-| 2 | Product search links resolve (`reviewPath` or product id path) | ✅ |
-| 3 | Search index size grows without duplicate hrefs | ✅ |
-| 4 | Kind filter does not break empty-query UX | ✅ |
-| 5 | Affiliate marker present on best + compare HTML | ✅ |
-| 6 | Engagement footer skips hub index pages only | ✅ |
-| 7 | Results brand filter preserves profile scoring order | ✅ |
-| 8 | `site-search.test.ts` covers catalog lookup | ✅ |
-| 9 | `npm test && npm run build` | ✅ |
-| 10 | postbuild SEO audit clean | ✅ |
+| 1 | Gaps grounded in Q2 plan + competitive audit | ✅ |
+| 2 | Glossary links only for declared `glossaryLinks` | ✅ |
+| 3 | Guide ToC skips `/guides/` index; 3+ sections only | ✅ |
+| 4 | Quiz glyphs decorative; hints non-blocking | ✅ |
+| 5 | Product search + notify-me unchanged from `main` | ✅ |
+| 6 | Static export safe | ✅ |
+| 7 | `npm test` | ✅ |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | No duplicate notify-me implementations | ✅ |
+| 10 | Plan doc reflects `main` + PR #97 delta | ✅ |
 
 ---
 
-## 5. Metrics (unchanged)
+## 5. Verification
+
+```bash
+npm test
+npm run build
+```
+
+---
+
+## 6. Metrics (unchanged)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
+| Notify-me opt-ins | Track `notify_me_opt_in` / `notify_me_submit` in GA4 |
 | SearchAction utility | Catalog + editorial in one index |

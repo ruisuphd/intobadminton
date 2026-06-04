@@ -377,9 +377,14 @@ export default function EquipmentAuthenticityGuide() {
             Run our finder to land on the right model for your game, then
             use this guide to make sure the unit you buy is authentic.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
+            <Link href="/tools/authenticity-checker/" className="btn-primary">
+              Run authenticity checker
+            </Link>
+            <Link href="/quiz/" className="btn-secondary">
+              Start the finder
+            </Link>
+          </div>
         </section>
       </article>
     </main>

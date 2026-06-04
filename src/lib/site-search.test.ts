@@ -37,6 +37,23 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds saved shelf", () => {
+    const hits = searchSite("saved shortlist");
+    expect(hits.some((h) => h.href === "/saved/")).toBe(true);
+  });
+
+  it("finds budget best-of guide", () => {
+    const hits = searchSite("rackets under 100");
+    expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
+  });
+
+  it("finds compare guides by model pair", () => {
+    const hits = searchSite("astrox 99 pro 100zz");
+    expect(
+      hits.some((h) => h.href.includes("astrox-99-pro-vs-astrox-100zz"))
+    ).toBe(true);
+  });
+
   it("finds catalog products by brand and model", () => {
     const hits = searchSite("yonex nanoflare 1000");
     expect(hits.some((h) => h.kind === "product")).toBe(true);
