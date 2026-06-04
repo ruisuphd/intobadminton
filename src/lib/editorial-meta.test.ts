@@ -16,6 +16,7 @@ describe("editorialMetaByPath registry", () => {
       "/best/doubles-rackets/",
       "/best/smash-heavy-rackets/",
       "/best/rackets-under-100/",
+      "/best/rackets-under-150/",
       "/best/lightweight-rackets-5u/",
       "/best/rackets-for-shoulder-comfort/",
       "/best/shoes/",

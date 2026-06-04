@@ -1,7 +1,7 @@
 import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
-import { reviewPath, reviewableProducts } from "@/lib/review-pages";
+import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 
 export type SearchEntryKind =
   | "review"
@@ -23,6 +23,14 @@ export type SearchEntry = {
 };
 
 const STATIC_ENTRIES: SearchEntry[] = [
+  {
+    title: "Equipment catalog",
+    href: "/catalog/",
+    kind: "tool",
+    summary:
+      "Browse and filter the full product catalogue by brand, weight, balance, and price.",
+    keywords: ["catalog", "browse", "filter", "specs", "products"],
+  },
   {
     title: "Equipment finder quiz",
     href: "/quiz/",
@@ -66,14 +74,6 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-light and medium-flex picks for players managing arm and shoulder load.",
     keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
-  },
-  {
-    title: "Browse catalogue by spec",
-    href: "/browse/",
-    kind: "tool",
-    summary:
-      "Filter rackets by weight class, balance, shaft flex, price band, and brand.",
-    keywords: ["browse", "filter", "catalog", "spec", "facets", "weight", "flex"],
   },
   {
     title: "Best intermediate rackets",
@@ -331,7 +331,7 @@ function reviewEntries(): SearchEntry[] {
 function productEntries(): SearchEntry[] {
   return reviewableProducts().map((product) => ({
     title: `${product.brand} ${product.name}`,
-    href: reviewPath(product.id),
+    href: catalogProductHref(product),
     kind: "product" as const,
     summary:
       product.editorNote?.slice(0, 160) ??

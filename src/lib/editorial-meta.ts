@@ -70,9 +70,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-04",
     lastReviewedAt: "2026-06-04",
   },
-  "/browse/": {
+  "/catalog/": {
     publishedAt: "2026-06-04",
     lastReviewedAt: "2026-06-04",
+    priceCheckedAt: "2026-06-04",
   },
 
   // Best-pick roundups (have prices → priceCheckedAt set).
@@ -120,6 +121,11 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2025-10-18",
     lastReviewedAt: "2026-05-08",
     priceCheckedAt: "2026-05-08",
+  },
+  "/best/rackets-under-150/": {
+    publishedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-04",
+    priceCheckedAt: "2026-06-04",
   },
 
   // Brand pages (no prices → no priceCheckedAt).
