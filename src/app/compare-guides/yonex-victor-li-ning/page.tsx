@@ -4,6 +4,8 @@ import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { CompareConceptChrome } from "@/components/CompareConceptChrome";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
@@ -45,7 +47,11 @@ export default function YonexVictorLiningPage() {
   };
 
   return (
-    <main className="flex-1 py-16">
+    <CompareConceptChrome
+      contentId="compare:yonex-victor-li-ning"
+      url={`${companyInfo.siteUrl}/compare-guides/yonex-victor-li-ning/`}
+      title="Yonex vs Victor vs Li-Ning: which is best?"
+    >
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
@@ -68,6 +74,7 @@ export default function YonexVictorLiningPage() {
         </header>
 
         <EditorialNotice />
+        <InArticleAffiliateDisclosure />
 
         <h2 className="text-headline text-[var(--text)]">
           The one-line summary
@@ -153,6 +160,6 @@ export default function YonexVictorLiningPage() {
           </Link>
         </div>
       </article>
-    </main>
+    </CompareConceptChrome>
   );
 }

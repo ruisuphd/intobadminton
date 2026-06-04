@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/season-refresh/";
@@ -8,11 +8,11 @@ const HEADLINE = "When to refresh your badminton gear";
 const DESCRIPTION =
   "When to restring, regrip, replace shoes, and re-evaluate your racket — a practical seasonal checklist with the warning signs each item gives off.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton gear refresh checklist",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function SeasonRefreshGuide() {
   return (

@@ -4,6 +4,8 @@ import { pageAlternates } from "@/lib/metadata";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { AdSlot } from "@/components/AdSlot";
+import { CompareConceptChrome } from "@/components/CompareConceptChrome";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
@@ -45,7 +47,11 @@ export default function AstroxVsNanoflarePage() {
   };
 
   return (
-    <main className="flex-1 py-16">
+    <CompareConceptChrome
+      contentId="compare:yonex-astrox-vs-nanoflare"
+      url={`${companyInfo.siteUrl}/compare-guides/yonex-astrox-vs-nanoflare/`}
+      title="Yonex Astrox vs Nanoflare: which family fits?"
+    >
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbJsonLd} />
       <article className="layout-band max-w-3xl space-y-6">
@@ -68,6 +74,7 @@ export default function AstroxVsNanoflarePage() {
         </header>
 
         <EditorialNotice />
+        <InArticleAffiliateDisclosure />
 
         <p className="text-base leading-relaxed text-[var(--color-muted)]">
           The right answer is not brand hierarchy — it is whether your matches are won by first attack from the rear court or by speed through defense and mid-court exchanges. Most players guess wrong because they buy the racket their favourite pro uses, instead of the racket that matches their actual style.
@@ -145,6 +152,6 @@ export default function AstroxVsNanoflarePage() {
           </Link>
         </div>
       </article>
-    </main>
+    </CompareConceptChrome>
   );
 }

@@ -37,20 +37,21 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
-  it("finds saved shelf", () => {
-    const hits = searchSite("saved shortlist");
-    expect(hits.some((h) => h.href === "/saved/")).toBe(true);
-  });
-
-  it("finds budget best-of guide", () => {
+  it("finds budget best-of page", () => {
     const hits = searchSite("rackets under 100");
     expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
   });
 
-  it("finds compare guides by model pair", () => {
-    const hits = searchSite("astrox 99 pro 100zz");
+  it("finds lightweight and shoulder-comfort best pages", () => {
     expect(
-      hits.some((h) => h.href.includes("astrox-99-pro-vs-astrox-100zz"))
+      searchSite("5u lightweight").some((h) =>
+        h.href.includes("lightweight-rackets-5u")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("shoulder comfort").some((h) =>
+        h.href.includes("rackets-for-shoulder-comfort")
+      )
     ).toBe(true);
   });
 
@@ -63,6 +64,23 @@ describe("site-search", () => {
     const hits = searchSite("yonex", 50, "product");
     expect(hits.length).toBeGreaterThan(0);
     expect(hits.every((h) => h.kind === "product")).toBe(true);
+  });
+
+  it("finds saved shelf", () => {
+    const hits = searchSite("saved shortlist");
+    expect(hits.some((h) => h.href === "/saved/")).toBe(true);
+  });
+
+  it("finds compare guides by model pair", () => {
+    const hits = searchSite("astrox 99 pro 100zz");
+    expect(
+      hits.some((h) => h.href.includes("astrox-99-pro-vs-astrox-100zz"))
+    ).toBe(true);
+  });
+
+  it("finds equipment catalog", () => {
+    const hits = searchSite("equipment catalog");
+    expect(hits.some((h) => h.href === "/catalog/")).toBe(true);
   });
 
   it("returns empty for nonsense query", () => {

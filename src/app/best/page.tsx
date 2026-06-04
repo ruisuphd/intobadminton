@@ -37,6 +37,21 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Six forgiving frames for new and recreational players, picked by shaft flex and balance.",
       },
       {
+        href: "/best/rackets-under-100/",
+        title: "Best rackets under $100",
+        dek: "Hard budget cap — six verified frames from Yonex Play, Victor, and Li-Ning with trade-offs named.",
+      },
+      {
+        href: "/best/lightweight-rackets-5u/",
+        title: "Best lightweight & 5U rackets",
+        dek: "Ultralight and 5U frames for fast recovery, juniors, and front-court doubles.",
+      },
+      {
+        href: "/best/rackets-for-shoulder-comfort/",
+        title: "Best rackets for shoulder comfort",
+        dek: "Head-light and medium-flex picks for players managing arm load.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
@@ -52,9 +67,9 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Head-heavy attack frames ranked by smash mass, continuity, and the shaft hardness you can actually drive.",
       },
       {
-        href: "/best/rackets-under-100/",
-        title: "Best rackets under $100",
-        dek: "Six budget frames with original trade-off analysis — Play tiers and entry Victor/Li-Ning, not marketplace price sorts.",
+        href: "/best/rackets-under-150/",
+        title: "Rackets under $150",
+        dek: "Club-budget frames at $150 or less — catalogue discovery with comparison table.",
       },
     ],
   },
