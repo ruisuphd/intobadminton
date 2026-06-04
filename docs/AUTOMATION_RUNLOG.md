@@ -2,6 +2,39 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #94 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-38f1`)
+
+**Trigger:** GitHub pull request #94 (`ready_for_review`) — Sprint 3 web app PR **already merged** to `main` as `b593899`. This automation ran the Chinese review translation workflow (steps 1–7).
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** in cloud VM (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146** articles on `main` — no import drift |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 structural passes, 0 issues
+- `npm test` — pass after `npm install`
+- `npm run build` + postbuild SEO audit — pass
+
+### Merge status
+
+Translation, English rename, `blog:import`, and web-app review updates **not performed** (no `blogs/` drop). **Do not merge** until sources are synced:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate (Chinese above, ## English Translation below), rename to English, map slug, then:
+npm run blog:import && npm run blog:validate && npm test && npm run build
+```
+
+---
+
 ## 2026-06-04 — Web app Sprint 3 PR #94 (branch `cursor/web-app-improvement-plan-0fb2`)
 
 **Trigger:** Cloud agent — Sprint 3 engagement loops merged with `main` Buttondown notify-me.
