@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { ContinueReading } from "@/components/ContinueReading";
+import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { JsonLd } from "@/components/JsonLd";
 import products from "@/data/products.json";
 import {
@@ -274,6 +275,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           </div>
         </div>
       </section>
+
+      <HomeToolkitStrip locale={locale} />
 
       {featuredReviews.length > 0 && (
         <section className="border-t border-[color:var(--line)] py-20 lg:py-24">

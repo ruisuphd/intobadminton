@@ -1,93 +1,93 @@
 # Web App Improvement Plan — June 2026
 
-**Branch:** `cursor/web-app-improvement-plan-3b6d`  
-**Scope:** Maturity gaps vs leading badminton equipment sites after Sprint 1–4 delivery.  
-**Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md).
+**Branches:** `cursor/web-app-improvement-plan-3b6d` (merged to main), `cursor/web-app-improvement-plan-d967` (incremental)  
+**Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md)
 
 ---
 
-## 1. Competitive audit (June 2026)
+## 1. Competitive audit
 
-### Comparable sites
+| Site | Strength vs IntoBadminton | Gap addressed |
+|------|----------------------------|---------------|
+| **BadmintonCentral** | Deep community archive | On-site search across reviews/guides |
+| **Retailer finders** (Tennis Warehouse pattern) | Imagery, comparison tables | Largely closed in Q2 sprints |
+| **YouTube-first reviewers** | Video evidence | Still open (VideoObject gated) |
+| **Brand / affiliate blogs** | Pro association, tables | Author entity strong; original photos open |
 
-| Site | Strength vs IntoBadminton | Gap IntoBadminton had |
-|------|----------------------------|------------------------|
-| **BadmintonCentral** forums + reviews | Deep community threads, long archive | No on-site search across 146+ reviews |
-| **Tennis Warehouse–style retailers** | Rich product imagery, comparison tables | Partially closed (comparison tables, fit badges shipped) |
-| **RacketGuide / retailer finders** | Filter-first UX, instant spec scan | Finder strong; return-visit hooks weak |
-| **YouTube-first reviewers** | Video evidence, personality | Still open (VideoObject gated on video commitment) |
-| **AllAboutBadminton / brand blogs** | Pro player association | Author entity strong; `sameAs` profiles still TODO |
-
-### IntoBadminton moat (keep)
-
-- Transparent 5-factor fit score with named reason codes
-- Postbuild SEO gate + claims registry freshness in CI
-- Consent Mode v2 + AdSense scaffolding
-- 146 review articles with first-person English voice
-- Static export performance (462+ routes, sub-3s LCP on key pages)
+**Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews.
 
 ---
 
-## 2. Top 5 remaining gaps (prioritized)
+## 2. Top 5 gaps (prioritized)
 
-| # | Gap | Impact | This PR |
-|---|-----|--------|---------|
-| 1 | **No functional site search** — readers cannot query reviews/guides/tools | SEO (SearchAction), UX discovery | ✅ `/search/` + index |
-| 2 | **No return-visit surface on homepage** — history only on `/results/` | Retention, pages/session | ✅ `ContinueReading` |
-| 3 | **Review E-E-A-T box missing on article pages** — methodology exists but not visible | Product Reviews update signal | ✅ `ReviewMethodologyBox` |
-| 4 | **HowTo schema thin on procedural guides** — only authenticity tool had it | Rich results on how-to queries | ✅ string-tension + racket-balance |
-| 5 | **Lighthouse CI drift** — audited stale `/blog/` URLs post-migration | CI signal integrity | ✅ updated `lighthouserc.json` |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | Functional site search | ✅ `/search/` + `buildSearchIndex()` + `SearchAction` |
+| 2 | Return-visit hooks on homepage | ✅ `ContinueReading` |
+| 3 | Visible “What we tested” on reviews | ✅ `ReviewMethodologyBox` |
+| 4 | In-article affiliate disclosure (AdSense/FTC) | ✅ `InArticleAffiliateDisclosure` (this branch) |
+| 5 | Original photography / video on commercial URLs | ⏳ Editorial pipeline |
 
-### Deferred (next sprint)
-
-- Per-product notify-me backend (Buttondown)
-- HelpfulReaction Workers/KV aggregate counts
-- Original product photography on commercial pages
-- `Person.sameAs` external profile claims
-- zh locale content expansion
+**Also shipped on main:** HowTo schema on procedural guides; Lighthouse `/review/` URLs; homepage toolkit strip (`HomeToolkitStrip`).
 
 ---
 
-## 3. Execution summary (this PR)
+## 3. Execution phases
 
-1. **`src/lib/site-search.ts`** — build-time index over reviews, guides, best-of, tools, brands (~170+ entries).
-2. **`/search/`** — client-side search with `?q=` deep links; enables `WebSite` `SearchAction` JSON-LD.
-3. **`ContinueReading`** — homepage card for last-read article + latest finder shortlist (localStorage).
-4. **`ReviewMethodologyBox`** — visible “What we tested” block on every review article.
-5. **`GuideStructuredData` HowTo** — optional steps on string-tension and racket-balance guides.
-6. **Lighthouse URLs** — replaced legacy `/blog/` paths with current `/review/` and `/search/`.
+### Phase A — Shipped (main + PR #80)
+
+- `src/lib/site-search.ts` — client index (~170+ entries)
+- `/search/` with `?q=` deep links
+- `ContinueReading` + `LastArticleTracker`
+- `ReviewMethodologyBox` on review articles
+- `InArticleAffiliateDisclosure` on review articles
+- `HomeToolkitStrip` on homepage
+- Header `SiteSearchForm` (compact) + Search nav link
+
+### Phase B — Next
+
+- HelpfulReaction Workers/KV
+- Per-product notify-me (Buttondown)
+- GSC/CrUX baselines in `docs/baselines/`
+
+### Phase C — Content moat
+
+- Original photos on top commercial URLs
+- First-person evidence sweep on top-10 traffic pages
 
 ---
 
-## 4. Ten-pass plan verification
+## 4. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gap list grounded in code audit + Q2 plan | ✅ |
-| 2 | Search index covers reviews + static hubs | ✅ `buildSearchIndex()` |
-| 3 | SearchAction URL template matches `/search/?q=` | ✅ `company.ts` |
-| 4 | No server/API required (static export safe) | ✅ client-only search |
-| 5 | ContinueReading respects no-signup promise | ✅ localStorage only |
-| 6 | ReviewMethodologyBox links to `/methodology/` | ✅ |
-| 7 | HowTo steps match visible guide content | ✅ editorial review |
-| 8 | `/search/` in sitemap + editorial-meta | ✅ |
-| 9 | Unit tests for search scoring | ✅ `site-search.test.ts` |
-| 10 | `npm test && npm run build` + postbuild SEO audit | ✅ CI gate |
+| 1 | Gaps grounded in audit + Q2 plan | ✅ |
+| 2 | Search covers reviews + hubs | ✅ |
+| 3 | SearchAction matches `/search/?q=` | ✅ |
+| 4 | Static export safe (no server) | ✅ |
+| 5 | No signup wall on search/home hooks | ✅ |
+| 6 | Affiliate disclosure on review pages | ✅ |
+| 7 | Methodology box links `/methodology/` | ✅ |
+| 8 | `/search/` in sitemap | ✅ |
+| 9 | `site-search.test.ts` | ✅ |
+| 10 | `npm test && npm run build` | ✅ |
 
 ---
 
-## 5. Metrics (unchanged from Q2 plan)
+## 5. Verification
+
+```bash
+npm test
+npm run build
+```
+
+---
+
+## 6. Metrics (Q2 plan)
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
 | GSC clicks | 4× baseline |
-| SearchAction eligibility | Declared + functional |
-
----
-
-## 6. Sources
-
-- Internal: [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`DESIGN.md`](DESIGN.md)
-- Competitive: BadmintonCentral, Tennis Warehouse UX patterns, Google Product Reviews Update guidance (March 2026)
+| SearchAction | Functional + declared |
