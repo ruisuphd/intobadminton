@@ -51,19 +51,20 @@
 - Engagement UX on `/best/*` and all `/guides/*` routes
 - All 11 `/compare-guides/*` URLs in site search + Playwright smoke (`e2e/search-smoke.spec.ts`)
 
-### Phase C — Sprint 3 (branch `cursor/web-app-improvement-plan-c920`)
+### Phase C — Shipped (main: Sprint 3 + PR #101)
 
-- Glossary autolinks in review body (`glossary-autolink.ts`)
-- Guide ToC via `GuideInPageToc` (portal after h1)
-- Quiz step hints + option glyphs
-- Notify-me intent in localStorage (Buttondown API deferred)
-- Sharp-preferred product image pipeline
+**Sprint 3 (`cursor/web-app-improvement-plan-c920`):** glossary autolinks, `GuideInPageToc`, quiz step hints, notify-me local intent, Sharp-preferred product images.
+
+**Engagement parity (`cursor/web-app-improvement-plan-f404`, PR #101):** compare-guides layout chrome, `compare-guides.ts` search manifest, guide engagement deduplication, `ProductCardImage` on results, `audit-review-product-map.mjs`.
+
+See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
 
 ### Phase D — Next
 
 - GSC/CrUX baseline CSV capture (owner session)
 - Original photos on top commercial URLs
 - HelpfulReaction aggregate backend (Workers/KV)
+- Expand `blog-review-product-map.json` toward full review coverage
 
 ---
 
