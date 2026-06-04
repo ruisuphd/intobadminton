@@ -164,6 +164,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["yonex", "victor", "li-ning", "brand"],
   },
   {
+    title: "Badminton toolkit",
+    href: "/tools/",
+    kind: "tool",
+    summary:
+      "Calculators and references — skill converter, tension calculator, balance explainer, court diagram, authenticity checker.",
+    keywords: ["tools", "calculator", "toolkit", "interactive"],
+  },
+  {
     title: "Skill-level converter",
     href: "/tools/skill-level-converter/",
     kind: "tool",

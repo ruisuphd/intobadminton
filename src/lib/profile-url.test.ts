@@ -5,6 +5,7 @@ import {
   parseTopN,
   profileFromSearchParams,
   profileToSearchParams,
+  resultsPathForProfile,
 } from "@/lib/profile-url";
 import { defaultUserProfile } from "@/lib/taxonomy";
 
@@ -94,5 +95,20 @@ describe("profile-url round trip", () => {
     expect(clampBudgetUsd(50)).toBe(50);
     expect(clampBudgetUsd(-5)).toBe(0);
     expect(clampBudgetUsd(BUDGET_HARD_CAP_USD + 1000)).toBe(BUDGET_HARD_CAP_USD);
+  });
+
+  it("resultsPathForProfile builds a sharable results URL", () => {
+    const profile = {
+      ...defaultUserProfile(),
+      level: "club" as const,
+      discipline: "doubles" as const,
+    };
+    const path = resultsPathForProfile(profile, 4);
+    expect(path.startsWith("/results/?")).toBe(true);
+    const params = new URLSearchParams(path.slice("/results/?".length));
+    expect(params.get("level")).toBe("club");
+    expect(params.get("disc")).toBe("doubles");
+    expect(params.get("n")).toBe("4");
+    expect(resultsPathForProfile(profile, 99)).toContain("n=8");
   });
 });
