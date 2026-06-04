@@ -2,6 +2,31 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-04 — PR #75 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-6a07`)
+
+**Trigger:** GitHub pull request #75 (`ready_for_review`) — tooling PR already **merged** to `main` as `b206650`.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** in cloud VM (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-articles.json` vs slug list | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no content changes)
+
+- `npm test` — 168 passed
+- `npm run blog:validate` — 20/20 passes, 0 issues
+
+### Merge status
+
+PR #75 merged with sync/check tooling only. No follow-up PR opened (nothing to import). Re-run after syncing `blogs/` into the workspace.
+
+---
+
 ## 2026-06-04 — Chinese reviews translation cron (`0 22 * * *`)
 
 **Trigger:** scheduled automation (`0 22 * * *`) — branch `cursor/new-chinese-reviews-translation-5143`
