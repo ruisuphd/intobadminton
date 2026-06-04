@@ -1,6 +1,6 @@
 # Web App Improvement Plan — June 2026
 
-**Branches:** `cursor/web-app-improvement-plan-3b6d` / `cursor/web-app-improvement-plan-d967` (merged via PR #80), `cursor/web-app-improvement-plan-03c3` (Phase B)  
+**Branches:** `cursor/web-app-improvement-plan-3b6d` / `cursor/web-app-improvement-plan-d967` (merged via PR #80), `cursor/web-app-improvement-plan-03c3` (SEO clusters), `cursor/web-app-improvement-plan-bab1` (engagement + notify-me)  
 **Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md)
 
 ---
@@ -10,7 +10,7 @@
 | Site | Strength vs IntoBadminton | Gap / response |
 |------|----------------------------|----------------|
 | **BadmintonCentral** | Community archive, search | ✅ On-site search (`/search/`) |
-| **Tennis Warehouse / retailer finders** | Imagery, comparison tables | Largely closed (Q2 sprints); original photos open |
+| **Tennis Warehouse / retailer finders** | Imagery, comparison tables, notify-me | Tables ✅; notify-me ✅ (Phase B bab1); original photos open |
 | **RacketGuide-style finders** | Filter-first UX | Finder + toolkit strip strong; return hooks shipped |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 | **Brand / affiliate blogs** | Pro association | Author entity + methodology box; `sameAs` profiles pending claim |
@@ -26,10 +26,10 @@
 | 1 | Functional site search | Discovery, SearchAction | ✅ Shipped (main) |
 | 2 | Return-visit hooks on homepage | Retention | ✅ `ContinueReading` (main) |
 | 3 | Visible review E-E-A-T + in-article affiliate disclosure | Product Reviews / FTC | ✅ Shipped (main) |
-| 4 | **SEO topical clusters incomplete** — shoe-fit + doubles pillars missing from Q2 §3.3 | Long-tail rankings | ✅ Phase B (this branch) |
-| 5 | Original photography / video on commercial URLs | AdSense + March 2026 experience signal | ⏳ Editorial pipeline |
+| 4 | **SEO topical clusters incomplete** — shoe-fit + doubles pillars | Long-tail rankings | ✅ PR #03c3 (main) |
+| 5 | **Per-product notify-me + commercial-page engagement** | Retention + AdSense readiness | ✅ Phase B bab1 |
 
-**Deferred (Phase C):** HelpfulReaction Workers/KV; per-product notify-me (Buttondown); GSC/CrUX CSV fill in `docs/baselines/`; `Person.sameAs` after profile claims.
+**Deferred (Phase C):** HelpfulReaction Workers/KV; original photography; GSC/CrUX CSV in `docs/baselines/`; `Person.sameAs` after profile claims.
 
 ---
 
@@ -42,17 +42,19 @@
 - `ReviewMethodologyBox` + `InArticleAffiliateDisclosure`
 - `HomeToolkitStrip`; HowTo on procedural guides; Lighthouse `/review/` URLs
 
-### Phase B — Shipped (this branch)
+### Phase B — Shipped (main + PR #03c3 + bab1)
 
-- `/guides/badminton-shoes-vs-running-shoes/` — shoe-fit cluster pillar (HowTo schema)
-- `/guides/doubles-positioning-and-rackets/` — doubles cluster pillar with positioning → gear table
-- Guides index, `site-search`, `editorial-meta`, cross-links from `shoes-footwork` and `doubles-roles`
+- `/guides/badminton-shoes-vs-running-shoes/` — shoe-fit cluster pillar
+- `/guides/doubles-positioning-and-rackets/` — doubles cluster pillar
+- `enrichmentForReviewArticle()` — Product JSON-LD with section-derived reviewBody
+- Buttondown per-product notify-me on `/saved/` — see [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-B.md)
+- Engagement UX on `/best/*` and all `/guides/*` routes
 
 ### Phase C — Next
 
 - GSC/CrUX baseline CSV capture (owner session)
 - Original photos on top commercial URLs
-- HelpfulReaction aggregate backend
+- HelpfulReaction aggregate backend (Workers/KV)
 
 ---
 
@@ -60,15 +62,15 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 §3.3 cluster list + May audit | ✅ |
-| 2 | New guides use `GuideStructuredData` + registry dates | ✅ |
-| 3 | Shoe guide distinct from `/compare-guides/badminton-vs-tennis-shoes/` | ✅ (running vs tennis angle) |
-| 4 | Doubles positioning complements `/guides/doubles-roles/` | ✅ cross-links |
-| 5 | Hub pages link into new guides (`/guides/`, search index) | ✅ |
-| 6 | Static export safe (no API) | ✅ |
-| 7 | Internal links to `/best/shoes/`, `/best/doubles-rackets/`, `/quiz/` | ✅ |
-| 8 | HowTo steps match visible shoe-guide content | ✅ |
-| 9 | `npm test` (site-search + editorial-meta) | ✅ |
+| 1 | Gaps grounded in Q2 plan + competitive audit | ✅ |
+| 2 | Product JSON-LD uses enrichment helper (no duplicate inline logic) | ✅ |
+| 3 | Buttondown: no local email storage; double opt-in copy | ✅ |
+| 4 | Engagement on commercial routes without signup wall | ✅ |
+| 5 | Static export safe (no API routes) | ✅ |
+| 6 | Merged cleanly with main cluster guides + ReviewProductPanel | ✅ |
+| 7 | Unit tests for enrichment + Buttondown | ✅ |
+| 8 | `.env.example` documents Buttondown username | ✅ |
+| 9 | `npm test` | ✅ |
 | 10 | `npm run build` + postbuild SEO audit | ✅ |
 
 ---

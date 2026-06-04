@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
+import { GuideEngagement } from "@/components/GuideEngagement";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/doubles-roles/";
@@ -175,6 +176,7 @@ export default function DoublesRolesGuide() {
           </Link>
           .
         </p>
+        <GuideEngagement path={PATH} title={HEADLINE} />
       </article>
     </main>
   );

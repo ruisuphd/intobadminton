@@ -10,12 +10,6 @@ import { RelatedPostsGrid } from "@/components/RelatedPostsGrid";
 import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { SocialShare } from "@/components/SocialShare";
-import { reviewProductIdForBlog } from "@/lib/content-links";
-import { computeEditorialRating } from "@/lib/editorial-rating";
-import { referenceClubDoublesProfile } from "@/lib/reference-profile";
-import { reviewProductById } from "@/lib/review-pages";
-import { scoreOneProduct } from "@/lib/scoring";
-import { productReviewJsonLd } from "@/lib/structured-data";
 import {
   blogArticles,
   getBlogArticle,
@@ -26,6 +20,7 @@ import {
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
 
 function isSpecLikeHeading(heading: string) {
   return /\bspec(?:s|ifications?)?\b/i.test(heading);
@@ -55,30 +50,7 @@ export function EditorialArticlePage({
     sectionAnchorId(section.heading, index, anchorSeen)
   );
   const related = relatedArticles(blogArticles[locale], article, 3);
-  const mappedProductId = reviewProductIdForBlog(article.slug);
-  const catalogProduct = mappedProductId
-    ? reviewProductById(mappedProductId)
-    : undefined;
-  const referenceProfile = catalogProduct
-    ? referenceClubDoublesProfile(catalogProduct.category)
-    : null;
-  const scoredPreview =
-    catalogProduct && referenceProfile
-      ? scoreOneProduct(catalogProduct, referenceProfile)
-      : null;
-  const editorialRating = catalogProduct
-    ? computeEditorialRating(catalogProduct)
-    : null;
-  const productJsonLd =
-    catalogProduct && editorialRating
-      ? productReviewJsonLd({
-          product: catalogProduct,
-          path,
-          description: article.dek,
-          reviewBody: article.dek,
-          rating: editorialRating,
-        })
-      : null;
+  const enrichment = enrichmentForReviewArticle(slug, article);
   const tocItems = sections.map((section, index) => ({
     id: sectionIds[index] ?? sectionAnchorId(section.heading, index, new Map()),
     label: section.heading,
@@ -130,8 +102,8 @@ export function EditorialArticlePage({
       <LastArticleTracker href={path} title={article.title} />
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
+      {enrichment && <JsonLd data={enrichment.productSchema} />}
       <JsonLd data={breadcrumbJsonLd} />
-      {productJsonLd && <JsonLd data={productJsonLd} />}
 
       <article className="layout-band max-w-3xl py-16">
         <Link
@@ -159,7 +131,12 @@ export function EditorialArticlePage({
         </header>
 
         <div className="mt-10 space-y-8">
-            {scoredPreview && <ReviewProductPanel scored={scoredPreview} />}
+            {enrichment?.scored && (
+              <ReviewProductPanel
+                scored={enrichment.scored}
+                quizPath={buildLocalizedPath(locale, "/quiz/")}
+              />
+            )}
             <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (

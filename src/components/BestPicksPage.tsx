@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ArticleEngagementFooter } from "@/components/ArticleEngagementFooter";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { BestPicksComparisonTable } from "@/components/BestPicksComparisonTable";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { EvidenceBadge, type EvidenceLevel } from "@/components/EvidenceBadge";
+import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
+import { ReadingProgress } from "@/components/ReadingProgress";
 import {
   ProductImageView,
   canShowProductImage,
@@ -170,6 +173,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
 
   return (
     <main className="flex-1 py-16">
+      <ReadingProgress />
       <JsonLd data={articleSchema} />
       <JsonLd data={itemListJsonLd} />
       <JsonLd data={faqJsonLd} />
@@ -193,6 +197,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
         </header>
 
         <EditorialNotice />
+        <InArticleAffiliateDisclosure />
 
         <section className="card p-6">
           <h2 className="text-lg font-semibold text-[var(--text)]">
@@ -333,6 +338,12 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             Start the finder
           </Link>
         </section>
+
+        <ArticleEngagementFooter
+          url={`${companyInfo.siteUrl}${path}`}
+          title={config.title}
+          contentId={`best:${config.slug}`}
+        />
       </article>
     </main>
   );
