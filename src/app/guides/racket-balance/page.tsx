@@ -22,6 +22,24 @@ export default function RacketBalanceGuide() {
         headline={HEADLINE}
         description={DESCRIPTION}
         breadcrumbLabel="Racket balance"
+        howToSteps={[
+          {
+            name: "Read the balance point in millimetres",
+            text: "Measure from the butt cap. Below ~285 mm is head-light; ~285–295 mm is even; above ~295 mm is head-heavy.",
+          },
+          {
+            name: "Match balance to your role",
+            text: "Rear-court doubles and smash-heavy singles often suit head-heavy frames. Front-court and drive-heavy play often suits head-light or even balance.",
+          },
+          {
+            name: "Cross-check shaft flex",
+            text: "Stiff shafts reward clean timing; flexible shafts forgive off-centre hits. Pair a stiff shaft with head-heavy only if your shoulder can load it consistently.",
+          },
+          {
+            name: "Test with your string setup",
+            text: "Balance feel shifts with string gauge and tension. Compare frames at the tension you actually play, not the shop default.",
+          },
+        ]}
       />
       <article className="layout-band max-w-3xl space-y-6">
         <p>

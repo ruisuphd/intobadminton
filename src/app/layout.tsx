@@ -103,8 +103,8 @@ export default function RootLayout({
            * Site-wide Organization + WebSite JSON-LD. Emitting these from the
            * root layout means every page (not just the homepage) advertises the
            * organization entity Google uses for E-E-A-T / knowledge-graph
-           * resolution. SearchAction is intentionally NOT included until the
-           * site search is functional — see `websiteJsonLd` in lib/company.ts.
+           * resolution. SearchAction is declared on WebSite JSON-LD and
+           * backed by the client-side `/search/` page.
            */}
           <StructuredData />
           <SiteHeader />
