@@ -2,6 +2,22 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #128 `ready_for_review` (merged #128)
+
+**Trigger:** GitHub pull request #128 (`ready_for_review`) — Chinese review translation automation. **Merged** to `main` as `1d7585f` (runlog only). Translation blocked: no `blogs/` drop in cloud VM.
+
+| Check | Result |
+| --- | --- |
+| Desktop `blogs/` path | **Not found** |
+| `CURSOR_AGENT=1 npm run blog:check` | exit 1 (no drop) |
+| New translations | **None** |
+| `blog-slug-source-map` vs `blog-articles.json` | **146 / 146** |
+| `npm test` / `build` (post-merge `main`) | 212 passed; SEO audit pass |
+
+Re-run translation after `npm run blog:sync` with the Desktop drop or `BLOGS_DIR`.
+
+---
+
 ## 2026-06-05 — PR #116 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-7bc3`)
 
 **Trigger:** GitHub pull request #116 (`ready_for_review`) — Sprint 5 web app (`cursor/web-app-improvement-plan-353e`: catalogue browse, programmatic best pages, glossary autolink). PR #116 **merged** to `main` as `a131ca5`. Translation workflow blocked: no private `blogs/` drop in cloud VM.
