@@ -100,3 +100,10 @@ export function catalogUrlFromState(state: CatalogUrlState): string {
   const query = params.toString();
   return query ? `/catalog/?${query}` : "/catalog/";
 }
+
+/** Shareable catalog URL with keyword prefill — used from site search. */
+export function catalogHrefFromKeywordQuery(raw: string): string {
+  const q = raw.trim();
+  if (!q) return "/catalog/";
+  return catalogUrlFromState({ ...DEFAULT_CATALOG_URL_STATE, q });
+}

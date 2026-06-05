@@ -138,13 +138,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/compare-guides/` index; e2e hub-shelf + PWA smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md)
 
-### Sprint 16 — PR (`cursor/web-app-improvement-plan-01ae`)
+### Sprint 16 — Shipped (PR #163)
 
 - **Catalog keyword search** via shareable `?q=` on `/catalog/`
 - **`/review/` index** Keep reading shelf via `reviews-hub` cluster
 - Fuzzy token match on brand, model, and spec fields
 - E2e catalog-keyword + review shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md)
+
+### Sprint 17 — This branch (`cursor/web-app-improvement-plan-9f3b`)
+
+- **Site search → catalog deep-link** with `?q=` prefill and match count CTA
+- Empty editorial results surface catalog when catalogue rows match
+- E2e search-catalog-deeplink smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT17_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT17_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
@@ -167,13 +174,13 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 17+)
+### Next (Sprint 18+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
-- Site search → catalog deep-link with `q` prefill
 - Intentional explainer slugs without single catalogue SKU (no forced product map)
+- Header search optional catalog-first affordance
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
