@@ -82,13 +82,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
-### Sprint 10 — This PR (`cursor/web-app-improvement-plan-0d45`)
+### Sprint 10 — Shipped (#153)
 
 - PWA **`ib-v4`** precaches `/search/` and `/saved/`; Saved manifest shortcut
-- Review→product map **83%** (121/146); improved `suggest-review-product-map.mjs`
+- Review→product map **86%**; improved `suggest-review-product-map.mjs`
 - **HowTo** JSON-LD on four procedural guides in the Lighthouse URL set
 - Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
+
+### Sprint 11 — This branch (`cursor/web-app-improvement-plan-a612`)
+
+- Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
+- PWA **`ib-v5`** precaches `/compare/` and `/updates/`
+- Pages build reads optional **`REACTIONS_API_URL`** secret for HelpfulReaction counts
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
@@ -111,12 +118,12 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 9+)
+### Next (Sprint 12+)
 
-- GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
+- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
-- Deploy HelpfulReaction Worker + `NEXT_PUBLIC_REACTIONS_API_URL`
 - YouTube `sameAs` on author entity (after channel claim)
+- Editorial pairing for explainer-only review slugs (map ceiling ~87%)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
