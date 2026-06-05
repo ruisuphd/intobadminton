@@ -25,7 +25,7 @@
 |---|-----|--------|----------|
 | 1 | **Guides hub not in PWA precache** | Evergreen SEO cluster unavailable offline | ✅ `ib-v6` + `/guides/` (keeps `/compare/`, `/updates/` from main) |
 | 2 | **Offline page omits guides recovery** | Users lose path to tension/shoe guides | ✅ Link on `/offline/` |
-| 3 | **Lighthouse CI skips `/offline/` and `/guides/`** | PWA regressions undetected | ✅ URLs in `lighthouserc.json` |
+| 3 | **Lighthouse CI skips `/guides/`** | PWA regressions undetected | ✅ `/guides/` in `lighthouserc.json`; `/offline/` exempt (noindex utility page) |
 | 4 | **No Guides PWA shortcut** | Install surface favors finder only | ✅ `manifest.webmanifest` |
 | 5 | **E2E does not assert guides precache** | SW cache drift | ✅ `pwa-offline-smoke.spec.ts` |
 

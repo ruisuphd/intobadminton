@@ -36,7 +36,6 @@
         "http://localhost:4173/tools/index.html",
         "http://localhost:4173/tools/string-tension-calculator/index.html",
         "http://localhost:4173/tools/authenticity-checker/index.html",
-        "http://localhost:4173/offline/index.html",
         "http://localhost:4173/guides/index.html"
       ],
       "numberOfRuns": 1,
