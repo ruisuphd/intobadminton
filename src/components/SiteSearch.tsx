@@ -1,11 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
+import { SearchAutocompleteList } from "@/components/SearchAutocompleteList";
 import { brandOptionsFor } from "@/lib/product-filters";
 import { reviewableProducts } from "@/lib/review-pages";
 import { catalogHrefFromKeywordQuery } from "@/lib/catalog-url";
+import {
+  MIN_SUGGESTION_QUERY_LEN,
+  searchSuggestions,
+} from "@/lib/search-suggestions";
 import {
   searchResultSummary,
   searchSite,
@@ -33,9 +39,14 @@ const KIND_FILTERS: { value: SearchEntryKind | "all"; label: string }[] = [
 ];
 
 export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
+  const router = useRouter();
+  const listId = useId();
+  const wrapRef = useRef<HTMLDivElement>(null);
   const [query, setQuery] = useState(initialQuery);
   const [kindFilter, setKindFilter] = useState<SearchEntryKind | "all">("all");
   const [brandFilter, setBrandFilter] = useState<string | null>(null);
+  const [suggestOpen, setSuggestOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   const results = useMemo(
     () =>
@@ -67,21 +78,90 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
     [query]
   );
 
+  const suggestions = useMemo(
+    () => (suggestOpen ? searchSuggestions(query, 8) : []),
+    [suggestOpen, query]
+  );
+
+  useEffect(() => {
+    if (!suggestOpen) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!wrapRef.current?.contains(e.target as Node)) setSuggestOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [suggestOpen]);
+
+  const pickSuggestion = (index: number) => {
+    const row = suggestions[index];
+    if (!row) return;
+    setSuggestOpen(false);
+    if (row.kind === "catalog") {
+      router.push(row.href);
+      return;
+    }
+    router.push(row.entry.href);
+  };
+
+  const onSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!suggestOpen || suggestions.length === 0) {
+      if (e.key === "ArrowDown" && query.trim().length >= MIN_SUGGESTION_QUERY_LEN) {
+        setSuggestOpen(true);
+      }
+      return;
+    }
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActiveIndex((i) => (i + 1) % suggestions.length);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActiveIndex((i) => (i <= 0 ? suggestions.length - 1 : i - 1));
+    } else if (e.key === "Enter" && activeIndex >= 0) {
+      e.preventDefault();
+      pickSuggestion(activeIndex);
+    } else if (e.key === "Escape") {
+      setSuggestOpen(false);
+      setActiveIndex(-1);
+    }
+  };
+
   return (
     <div className="space-y-6">
-      <label className="block">
-        <span className="sr-only">Search IntoBadminton</span>
-        <input
-          type="search"
-          name="q"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search reviews, guides, tools…"
-          autoComplete="off"
-          autoFocus={initialQuery.length === 0}
-          className="w-full rounded-2xl border border-[color:var(--line-strong)] bg-white px-5 py-4 text-base text-[var(--text)] placeholder:text-[var(--color-subtle)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
-        />
-      </label>
+      <div ref={wrapRef} className="relative">
+        <label className="block">
+          <span className="sr-only">Search IntoBadminton</span>
+          <input
+            type="search"
+            name="q"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setSuggestOpen(true);
+              setActiveIndex(-1);
+            }}
+            onFocus={() => {
+              if (query.trim().length >= MIN_SUGGESTION_QUERY_LEN) setSuggestOpen(true);
+            }}
+            onKeyDown={onSearchKeyDown}
+            placeholder="Search reviews, guides, tools…"
+            autoComplete="off"
+            autoFocus={initialQuery.length === 0}
+            role="combobox"
+            aria-expanded={suggestOpen && suggestions.length > 0}
+            aria-controls={listId}
+            aria-autocomplete="list"
+            className="w-full rounded-2xl border border-[color:var(--line-strong)] bg-white px-5 py-4 text-base text-[var(--text)] placeholder:text-[var(--color-subtle)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
+          />
+        </label>
+        {suggestOpen && suggestions.length > 0 && (
+          <SearchAutocompleteList
+            listId={listId}
+            suggestions={suggestions}
+            activeIndex={activeIndex}
+            onPick={() => setSuggestOpen(false)}
+          />
+        )}
+      </div>
 
       <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by content type">
         {KIND_FILTERS.map((chip) => (
