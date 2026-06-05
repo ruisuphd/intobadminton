@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/doubles-positioning-and-rackets/";
@@ -8,11 +8,11 @@ const HEADLINE = "Doubles positioning and racket choice";
 const DESCRIPTION =
   "Court zones, attack vs defence shape, and how front vs rear positioning should map to racket balance, shaft flex, and shoes in badminton doubles.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Doubles positioning and racket choice",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function DoublesPositioningGuide() {
   return (

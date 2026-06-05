@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FitScoreBadge } from "@/components/FitScoreBadge";
 import { ProductFitScoreRadar } from "@/components/FitScoreRadar";
+import { ProductBuyLink } from "@/components/ProductBuyLink";
 import { SaveProductButton } from "@/components/SaveProductButton";
 import { profileToSearchParams } from "@/lib/profile-url";
 import type { ScoredProduct } from "@/lib/types/product";
@@ -44,7 +45,15 @@ export function ReviewProductPanel({
             for your shortlist.
           </p>
         </div>
-        <SaveProductButton id={scored.id} label={label} />
+        <div className="flex flex-col items-end gap-2">
+          <SaveProductButton id={scored.id} label={label} />
+          <ProductBuyLink
+            id={scored.id}
+            brand={scored.brand}
+            name={scored.name}
+            officialSourceUrl={scored.officialSourceUrl}
+          />
+        </div>
       </div>
 
       <details className="mt-4">
