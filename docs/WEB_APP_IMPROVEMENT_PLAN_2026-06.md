@@ -323,16 +323,23 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Reactions worker scaffold tests; `founderPersonJsonLd` conditional `sameAs`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md)
 
-### Sprint 38 — This branch
+### Sprint 38 — Shipped (PR #186)
 
 - **CrUX field-data validator** — `src/lib/crux-baseline.ts` + `npm run lint:crux-baseline`
 - **GSC template** — `docs/baselines/gsc-template.csv` for owner exports
 - CI CrUX guard after Lighthouse baseline compare (structure always; CWV thresholds when filled)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT38_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT38_2026-06.md)
 
-### Next (Sprint 39+)
+### Sprint 39 — This branch
 
-- Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` LCP/INP/CLS from PageSpeed Insights
+- **GSC performance validator** — `src/lib/gsc-baseline.ts` + `npm run lint:gsc-baseline`
+- **GSC regression guard** — `lint:gsc-baseline:compare` + `gsc-performance-baseline.json`
+- CI GSC guard after CrUX guard (structure always; sanity + regression when filled)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT39_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT39_2026-06.md)
+
+### Next (Sprint 40+)
+
+- Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
 

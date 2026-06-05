@@ -65,6 +65,8 @@ jobs:
         run: npm run lint:lighthouse:baseline
       - name: CrUX field-data baseline guard
         run: npm run lint:crux-baseline
+      - name: GSC performance baseline guard
+        run: npm run lint:gsc-baseline
 
   e2e-quiz:
     runs-on: ubuntu-latest

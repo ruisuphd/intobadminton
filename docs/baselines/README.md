@@ -32,6 +32,15 @@ Validate CrUX CSV structure and thresholds (when metrics are filled):
 npm run lint:crux-baseline
 ```
 
+Validate GSC CSV structure and metric sanity (when metrics are filled):
+
+```bash
+npm run lint:gsc-baseline
+npm run lint:gsc-baseline:compare   # optional >10% clicks/impressions regression guard
+```
+
+Committed GSC snapshot (empty until owner fills): [`gsc-performance-baseline.json`](gsc-performance-baseline.json).
+
 ## CI Lighthouse
 
 Local parity with GitHub Actions:
