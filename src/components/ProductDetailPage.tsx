@@ -6,7 +6,9 @@ import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { ReviewProductPanel } from "@/components/ReviewProductPanel";
+import { relatedReadingForProductCategory } from "@/lib/related-content";
 import { companyInfo } from "@/lib/company";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
 import { reviewPath } from "@/lib/review-pages";
@@ -30,6 +32,10 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
   const referenceProfile = referenceClubDoublesProfile(product.category);
   const scored = scoreProductCatalog(referenceProfile).find(
     (row) => row.id === product.id
+  );
+  const related = relatedReadingForProductCategory(
+    product.category,
+    product.id
   );
 
   const productJsonLd = {
@@ -150,6 +156,8 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
             for verification tiers.
           </p>
         </section>
+
+        <RelatedReadingShelf items={related} />
 
         <ArticleEngagementFooter
           url={path}

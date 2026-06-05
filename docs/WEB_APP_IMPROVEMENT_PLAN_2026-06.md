@@ -99,7 +99,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - PWA offline e2e smoke (`pwa-offline-smoke.spec.ts`)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
 
-### Sprint 12 — This branch (`cursor/web-app-improvement-plan-4f36`)
+### Sprint 12 — Shipped (PR #158)
 
 - Extended **Keep reading** clusters on commercial `/best/*` landings
 - **`/methodology/`** in editorial freshness feed + human labels on updates
@@ -107,6 +107,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - PWA **`ib-v7`** precaches `/data/` and `/methodology/` (plus guides/offline from #154)
 - E2e smoke for `/data/`, `/updates/`, review decision shelf
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
+
+### Sprint 13 — This branch (`cursor/web-app-improvement-plan-3ef7`)
+
+- **PDP related reading** shelf on `/product/[id]/`
+- Explainer review slugs (13) map to editorial clusters via pattern expansion
+- `PATH_CLUSTER` for `/best/strings/`, `/best/doubles-rackets/`, `/best/rackets-under-200/`
+- PWA **`ib-v8`** precaches `/tools/` and `/faq/`; Tools manifest shortcut
+- Lighthouse CI includes `/faq/`; e2e PDP + explainer shelf smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
@@ -129,12 +138,12 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 13+)
+### Next (Sprint 14+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
-- Editorial pairing for explainer-only review slugs (map ceiling ~87%)
+- Intentional explainer slugs without single catalogue SKU (no forced product map)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
