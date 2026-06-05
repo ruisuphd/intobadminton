@@ -28,6 +28,7 @@
 | 3 | **HelpfulReaction empty shell when API off** | Poor UX on every editorial page | ✅ `helpful-reaction-ui.ts` |
 | 4 | **PWA omits guides + claims shells** | Offline users miss key flows | ✅ `ib-v7` precaches `/guides/`, `/data/`, `/methodology/`, `/offline/` |
 | 5 | **No e2e for moat pages + PWA drift** | Regressions undetected | ✅ `data-updates-smoke`, `review-shelf-smoke`, `pwa-offline-smoke` |
+| — | **Guides hub + Lighthouse (from main #154)** | Evergreen cluster offline + CI gate | ✅ `ib-v6`/`ib-v7` guides precache, `/guides/` in Lighthouse |
 
 ---
 

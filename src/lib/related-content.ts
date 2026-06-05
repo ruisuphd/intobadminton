@@ -248,6 +248,7 @@ const PATH_CLUSTER: Record<string, string> = {
   "/guides/season-refresh/": "freshness",
 
   "/best/smash-heavy-rackets/": "all-round-rackets",
+  "/best/rackets-under-200/": "budget",
 };
 
 function normalizePath(path: string): string {
@@ -278,19 +279,67 @@ export function relatedReadingForPath(
 
 const REVIEW_CLUSTER_PATTERNS: { pattern: RegExp; cluster: string }[] = [
   { pattern: /\b(shoe|shoes|footwear|eclipsion|65z|aerus|bladesabre)\b/i, cluster: "shoe-fit" },
-  { pattern: /\b(string|gauge|repulsion|lbs|tension)\b/i, cluster: "strings" },
-  { pattern: /\b(shuttle|feather|nylon)\b/i, cluster: "compare" },
-  { pattern: /\b(grip|overgrip)\b/i, cluster: "strings" },
   {
-    pattern: /\b(racket|astrox|nanoflare|arcsaber|halbertec|axforce|drivex|thruster|bladex)\b/i,
+    pattern:
+      /\b(string|gauge|repulsion|lbs|tension|bg80|exbolt|hole-pattern|stringing)\b/i,
+    cluster: "strings",
+  },
+  { pattern: /\b(shuttle|feather|nylon)\b/i, cluster: "compare" },
+  { pattern: /\b(grip|overgrip|grip-size)\b/i, cluster: "strings" },
+  {
+    pattern: /\b(bag|loadout|backpack)\b/i,
+    cluster: "compare",
+  },
+  {
+    pattern:
+      /\b(depreciation|resale|used-racket|season-refresh|methodology|how-to-read)\b/i,
+    cluster: "freshness",
+  },
+  {
+    pattern:
+      /\b(beginner|kids|mistake|choose-a-badminton|buying-guide|glossary|balance-vs-swing)\b/i,
+    cluster: "all-round-rackets",
+  },
+  {
+    pattern: /\b(authentic|counterfeit|fake)\b/i,
+    cluster: "authenticity",
+  },
+  {
+    pattern: /\b(racket|astrox|nanoflare|arcsaber|halbertec|axforce|drivex|thruster|bladex|shaft-hardness|yuanshi)\b/i,
     cluster: "all-round-rackets",
   },
 ];
+
+const PRODUCT_CATEGORY_CLUSTER: Record<string, string> = {
+  racket: "all-round-rackets",
+  string: "strings",
+  shoe: "shoe-fit",
+  bag: "compare",
+  shuttle: "compare",
+  grip: "strings",
+};
 
 /**
  * Decision-path shelf for `/review/[slug]/` articles — maps slug keywords to
  * the same editorial clusters used on guides and best-of pages.
  */
+/**
+ * Related reading for catalogue PDP routes — category maps to the same
+ * editorial clusters used on guides and best-of pages.
+ */
+export function relatedReadingForProductCategory(
+  category: string,
+  productId: string,
+  limit = 3
+): RelatedReadingItem[] {
+  const clusterKey = PRODUCT_CATEGORY_CLUSTER[category];
+  if (!clusterKey) return [];
+
+  const productPath = normalizePath(`/product/${productId}/`);
+  const items = CLUSTER_ITEMS[clusterKey] ?? [];
+  return items.filter((item) => item.href !== productPath).slice(0, limit);
+}
+
 export function relatedReadingForReviewSlug(
   slug: string,
   limit = 3

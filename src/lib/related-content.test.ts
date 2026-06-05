@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   relatedReadingForPath,
+  relatedReadingForProductCategory,
   relatedReadingForReviewSlug,
 } from "./related-content";
 
@@ -75,5 +76,47 @@ describe("relatedReadingForPath", () => {
     expect(
       items.some((i) => i.href.includes("string-feel-vs-durability"))
     ).toBe(true);
+  });
+
+  it("maps explainer how-to slug to all-round cluster", () => {
+    const items = relatedReadingForReviewSlug("how-to-choose-a-badminton-racket");
+    expect(items.length).toBe(3);
+    expect(items.some((i) => i.href.includes("all-round-rackets"))).toBe(true);
+  });
+
+  it("maps depreciation explainer to freshness cluster", () => {
+    const items = relatedReadingForReviewSlug("used-racket-depreciation");
+    expect(items.some((i) => i.href === "/data/")).toBe(true);
+  });
+});
+
+describe("relatedReadingForProductCategory", () => {
+  it("returns racket cluster for catalogue PDP", () => {
+    const items = relatedReadingForProductCategory("racket", "yy-arcsaber-7-pro");
+    expect(items.length).toBe(3);
+    expect(items.some((i) => i.href.includes("all-round-rackets"))).toBe(true);
+    expect(items.every((i) => !i.href.includes("yy-arcsaber-7-pro"))).toBe(true);
+  });
+
+  it("returns strings cluster for string PDP", () => {
+    const items = relatedReadingForProductCategory("string", "yy-bg80");
+    expect(items.some((i) => i.href.includes("string-tension"))).toBe(true);
+  });
+});
+
+describe("relatedReadingForPath extended clusters", () => {
+  it("returns strings cluster for best strings hub", () => {
+    const items = relatedReadingForPath("/best/strings/");
+    expect(items.some((i) => i.href.includes("string-tension"))).toBe(true);
+  });
+
+  it("returns doubles cluster for doubles rackets best page", () => {
+    const items = relatedReadingForPath("/best/doubles-rackets/");
+    expect(items.some((i) => i.href.includes("doubles-roles"))).toBe(true);
+  });
+
+  it("returns budget cluster for rackets under 200", () => {
+    const items = relatedReadingForPath("/best/rackets-under-200/");
+    expect(items.some((i) => i.href.includes("rackets-under-100"))).toBe(true);
   });
 });

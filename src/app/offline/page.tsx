@@ -43,6 +43,16 @@ const OFFLINE_LINKS = [
     label: "Guides",
     description: "Precached hub — open guides you visited before.",
   },
+  {
+    href: "/tools/",
+    label: "Tools",
+    description: "Precached calculators — tension, skill level, authenticity.",
+  },
+  {
+    href: "/faq/",
+    label: "FAQ",
+    description: "Precached — common finder and methodology questions.",
+  },
 ] as const;
 
 export default function OfflinePage() {
