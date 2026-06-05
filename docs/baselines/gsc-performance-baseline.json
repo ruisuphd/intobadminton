@@ -1,0 +1,6 @@
+{
+  "capturedAt": null,
+  "metrics": null,
+  "source": "gsc-template.csv",
+  "note": "Owner fills from Search Console 28-day export. When metrics are present, npm run lint:gsc-baseline:compare guards >10% clicks/impressions drops."
+}

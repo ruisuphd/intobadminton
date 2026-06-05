@@ -22,6 +22,8 @@
     "lint:lighthouse:baseline": "node scripts/lighthouse-baseline.mjs compare",
     "capture:lighthouse:baseline": "node scripts/lighthouse-baseline.mjs capture",
     "lint:crux-baseline": "node --experimental-strip-types scripts/crux-baseline.mjs validate",
+    "lint:gsc-baseline": "node --experimental-strip-types scripts/gsc-baseline.mjs validate",
+    "lint:gsc-baseline:compare": "node --experimental-strip-types scripts/gsc-baseline.mjs compare",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
