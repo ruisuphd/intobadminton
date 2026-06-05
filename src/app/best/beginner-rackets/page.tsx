@@ -71,6 +71,7 @@ const config: BestPicksConfig = {
       name: "Arcsaber 7 Pro",
       brand: "Yonex",
       priceUsd: 220,
+      productId: "yy-arcsaber-7-pro",
       bestFor: "Beginner planning to stay 2-3 years",
       specs: [
         { label: "Weight", value: "4U" },
@@ -94,6 +95,7 @@ const config: BestPicksConfig = {
       name: "DriveX 8S",
       brand: "Victor",
       priceUsd: 189,
+      productId: "vic-drivex-8s",
       bestFor: "Beginner who likes flat doubles drives",
       specs: [
         { label: "Weight", value: "4U" },
@@ -110,6 +112,7 @@ const config: BestPicksConfig = {
       name: "Astrox 77 Pro",
       brand: "Yonex",
       priceUsd: 219,
+      productId: "yy-astrox-77-pro",
       bestFor: "Ambitious club player",
       specs: [
         { label: "Weight", value: "4U" },
