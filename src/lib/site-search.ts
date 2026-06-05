@@ -2,6 +2,7 @@ import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
 import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
+import { tokenMatchesBlob } from "@/lib/search-fuzzy";
 
 export type SearchEntryKind =
   | "review"
@@ -74,6 +75,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-light and medium-flex picks for players managing arm and shoulder load.",
     keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
+  },
+  {
+    title: "Best control rackets",
+    href: "/best/control-rackets/",
+    kind: "best",
+    summary:
+      "Control-first frames for placement, doubles net play, and rally craft — Astrox 88S Pro, Arcsaber 11 Pro, Halbertec.",
+    keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
   },
   {
     title: "Best intermediate rackets",
@@ -388,7 +397,11 @@ function scoreEntry(entry: SearchEntry, query: string): number {
   const tokens = q.split(" ").filter(Boolean);
   let tokenHits = 0;
   for (const token of tokens) {
-    if (blob.includes(token)) tokenHits += 1;
+    if (blob.includes(token)) {
+      tokenHits += 1;
+    } else if (tokenMatchesBlob(token, blob)) {
+      tokenHits += 0.85;
+    }
   }
   if (tokenHits === 0) return 0;
   return 40 + (tokenHits / tokens.length) * 30;

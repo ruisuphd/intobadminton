@@ -91,4 +91,17 @@ describe("site-search", () => {
   it("returns empty for nonsense query", () => {
     expect(searchSite("xyzzyplughnotreal")).toEqual([]);
   });
+
+  it("tolerates common typos in guide queries", () => {
+    const hits = searchSite("badmintn string tenson");
+    expect(hits.some((h) => h.href.includes("string-tension"))).toBe(true);
+  });
+
+  it("finds control rackets best page", () => {
+    expect(
+      searchSite("control rackets placement").some((h) =>
+        h.href.includes("control-rackets")
+      )
+    ).toBe(true);
+  });
 });

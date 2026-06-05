@@ -52,6 +52,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Head-light and medium-flex picks for players managing arm load.",
       },
       {
+        href: "/best/control-rackets/",
+        title: "Best control rackets",
+        dek: "Placement-first frames for doubles net play and singles rally craft.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
