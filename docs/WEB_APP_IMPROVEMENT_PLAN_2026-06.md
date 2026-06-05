@@ -315,7 +315,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2E offline navigation for remaining CrUX field-data URLs
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT36_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT36_2026-06.md)
 
-### Sprint 37 — This branch
+### Sprint 37 — Shipped (PR #185)
 
 - **Lighthouse baseline** — captured CrUX-priority scores in `docs/baselines/lighthouse-scores.json`
 - **`lighthouserc-baseline.json`** — 11-url subset aligned with `crux-template.csv`
@@ -323,7 +323,14 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Reactions worker scaffold tests; `founderPersonJsonLd` conditional `sameAs`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md)
 
-### Next (Sprint 38+)
+### Sprint 38 — This branch
+
+- **CrUX field-data validator** — `src/lib/crux-baseline.ts` + `npm run lint:crux-baseline`
+- **GSC template** — `docs/baselines/gsc-template.csv` for owner exports
+- CI CrUX guard after Lighthouse baseline compare (structure always; CWV thresholds when filled)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT38_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT38_2026-06.md)
+
+### Next (Sprint 39+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` LCP/INP/CLS from PageSpeed Insights
 - Original photos on top commercial URLs

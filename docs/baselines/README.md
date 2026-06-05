@@ -23,8 +23,14 @@ Priority URLs:
 ## Google Search Console
 
 1. Search Console → Performance → Export last 28 days.
-2. Save as `docs/baselines/gsc-performance-YYYY-MM-DD.csv`.
+2. Save as `docs/baselines/gsc-performance-YYYY-MM-DD.csv` (or copy [`gsc-template.csv`](gsc-template.csv) for column layout).
 3. Note total clicks, impressions, and average position in the commit message or `AUTOMATION_RUNLOG.md`.
+
+Validate CrUX CSV structure and thresholds (when metrics are filled):
+
+```bash
+npm run lint:crux-baseline
+```
 
 ## CI Lighthouse
 
