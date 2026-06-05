@@ -60,12 +60,14 @@ function main() {
     if (i === 20 && issues.length) passes[i - 1].all = issues;
   }
 
-  // Final integration checks once
+  // Final integration checks once (CI runs `npm test` in a dedicated step)
   let buildOk = true;
-  try {
-    execSync("npm test", { cwd: ROOT, stdio: "pipe" });
-  } catch {
-    buildOk = false;
+  if (!process.env.GITHUB_ACTIONS) {
+    try {
+      execSync("npm test", { cwd: ROOT, stdio: "pipe" });
+    } catch {
+      buildOk = false;
+    }
   }
 
   const out = {
