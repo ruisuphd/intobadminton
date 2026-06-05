@@ -1,7 +1,6 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Branches:** #130 claims registry, #141 map 86% + canonical ranking, #146 PDP e2e + mobile static search  
-**Baseline:** Sprint 7 on `main` (PR #138 PDP-lite; PR #135 search excerpts).
+**Baseline:** Sprint 7 on `main` (PR #135). Parallel tracks merged via PRs #141, #144, and Phase D on `main`.
 
 ---
 
@@ -9,35 +8,32 @@
 
 | Competitor | Strength vs IntoBadminton | Sprint 8 response |
 |------------|---------------------------|-------------------|
-| **Wirecutter / RTINGS** | Product schema + methodology | ✅ Map **86%** (#141); ✅ `/data/` claims (#130) |
-| **Tennis Warehouse** | PDP per SKU | ✅ PDP-lite (#138); ✅ PDP e2e (#146) |
-| **RacketGuide** | Long-tail landings | ✅ “Balanced” → all-round hub keywords (#141) |
-| **Retailer finders** | Mobile search | ✅ Static search in mobile nav (#146) |
-| **YouTube reviewers** | Video evidence | ⏳ `VideoObject` deferred |
-
-**Moat:** transparent fit score, claims CI, static export, postbuild SEO gate.
+| **Wirecutter / RTINGS** | Public methodology + claim sourcing | ✅ `/data/` claims registry |
+| **Wirecutter / RTINGS** | Product + Review schema | ✅ Review→product map **86%** |
+| **Tennis Warehouse** | Search snippets + PDP | ✅ `searchResultSummary()`; `/product/[id]/` |
+| **RacketGuide** | “Balanced” keyword landings | ✅ Search alias → `/best/all-round-rackets/` |
+| **BadmintonCentral** | RSS discovery | ✅ `application/rss+xml` alternate |
 
 ---
 
-## 2. Top 5 gaps (Sprint 8 — closed)
+## 2. Top 5 gaps (Sprint 8)
 
-| # | Gap | Delivery |
-|---|-----|----------|
-| 1 | Product map below 85% | ✅ #141 → 86% (126/146) |
-| 2 | No PDP/catalog e2e | ✅ #146 `e2e/pdp-smoke.spec.ts` |
-| 3 | Mobile nav search needs hydration | ✅ #146 `SiteSearchFormStatic` |
-| 4 | Claims transparency | ✅ #130 `/data/` registry |
-| 5 | HelpfulReaction public counts | ⏳ Workers/KV deploy |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | No public claims transparency | ✅ `/data/` |
+| 2 | Product map below 85% | ✅ 86% + audit gate |
+| 3 | Search cards hide body-match context | ✅ Snippets (PR #144) |
+| 4 | No PDP-lite | ✅ `/product/[id]/` |
+| 5 | HelpfulReaction KV live | ⏳ Deploy + env URL |
 
 ---
 
 ## 3. Execution summary
 
-| Item | PR |
-|------|-----|
-| Map +9, canonical ranking, audit `--min-coverage=85` | #141 |
-| Claims registry | #130 |
-| PDP e2e, mobile static search | #146 |
+- Claims registry, PDP-lite, map +9, canonical slug ranking
+- `searchResultSummary()`, RSS alternate, catalog list CLS fix
+- Balanced-racket search keywords; BG80 body search test
+- `audit-review-product-map.mjs --min-coverage=85`
 
 ---
 
@@ -45,14 +41,16 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 7 deferrals | ✅ |
-| 2 | PDP e2e (`yy-nanoray-light-70i`) | ✅ #146 |
-| 3 | Map ids valid; coverage ≥85% | ✅ #141 |
-| 4 | Mobile search native submit | ✅ #146 |
+| 1 | Gaps grounded in Sprint 7 deferrals + audit | ✅ |
+| 2 | Map entries reference valid catalogue IDs | ✅ |
+| 3 | Search snippets complement excerpt indexing (Sprint 7) | ✅ |
+| 4 | No duplicate `/best/balanced-rackets/` URL | ✅ |
 | 5 | Static export safe | ✅ |
-| 6–8 | `npm test`, `lint`, `build` | ✅ CI |
-| 9 | `audit-review-product-map.mjs --min-coverage=85` | ✅ |
-| 10 | Lighthouse PDP URL | ✅ |
+| 6 | Body-only search e2e | ✅ |
+| 7 | `npm test` (256+) | ✅ |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | Catalog list CLS fix | ✅ |
+| 10 | Lighthouse CI | ✅ PR #144 run 26990611633 |
 
 ---
 
@@ -60,8 +58,8 @@
 
 ```bash
 npm test
+npm run lint
 npm run build
-npm run test:e2e
 node scripts/audit-review-product-map.mjs --min-coverage=85
 ```
 
@@ -69,7 +67,7 @@ node scripts/audit-review-product-map.mjs --min-coverage=85
 
 ## 6. Deferred (Sprint 9+)
 
-- HelpfulReaction Workers/KV + `NEXT_PUBLIC_REACTIONS_API_URL`
-- Original `public/products/` photography
-- GSC/CrUX CSV baselines
-- E2E for `/saved/`, `/compare/`
+- HelpfulReaction Workers/KV production deploy
+- GSC/CrUX baseline CSV
+- Original product photography
+- YouTube `sameAs` / `VideoObject`

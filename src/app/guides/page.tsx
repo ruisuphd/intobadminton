@@ -34,6 +34,13 @@ const guides = [
       "A practical primer on choosing badminton string tension by skill level, climate, and gauge. Covers when 22 lb feels powerful and when 26 lb starts to feel dead, how strings lose tension over weeks even without breaking, and how to read your own contact quality before chasing higher numbers.",
   },
   {
+    href: "/guides/string-feel-vs-durability/",
+    title: "String feel vs durability",
+    desc: "Gauge, coating, and when to pick a workhorse over a performance string.",
+    long:
+      "How thinner gauges add repulsion but break faster, which players should stay on BG65-class strings, and a simple A/B protocol to learn your preference without wasting restrings.",
+  },
+  {
     href: "/guides/shoes-footwork/",
     title: "Shoes and footwork",
     desc: "Cushioning, fit width, and what matters on court.",

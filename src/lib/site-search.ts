@@ -22,6 +22,17 @@ export function reviewSearchExcerpt(
   return plain.slice(0, maxLen);
 }
 
+/** Short per-section samples so mid-article terms (e.g. string codes) stay searchable. */
+function reviewSectionSnippets(article: BlogArticle): string {
+  return article.sections
+    .map((section) => {
+      const heading = section.heading ?? "";
+      const body = stripHtml(section.body).slice(0, 120);
+      return `${heading} ${body}`.trim();
+    })
+    .join(" ");
+}
+
 export type SearchEntryKind =
   | "review"
   | "guide"
@@ -109,6 +120,29 @@ const STATIC_ENTRIES: SearchEntry[] = [
     summary:
       "Control-first frames for placement, doubles net play, and rally craft — Astrox 88S Pro, Arcsaber 11 Pro, Halbertec.",
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
+  },
+  {
+    title: "Rackets under $200",
+    href: "/best/rackets-under-200/",
+    kind: "best",
+    summary: "Mid-range catalogue discovery — verified frames at $200 or below with comparison table.",
+    keywords: ["under 200", "mid budget", "club", "price band"],
+  },
+  {
+    title: "Verified claims registry",
+    href: "/data/",
+    kind: "tool",
+    summary:
+      "Public table of cited facts with source quotes, verification dates, and authority tiers.",
+    keywords: ["claims", "data", "sources", "fact check", "registry"],
+  },
+  {
+    title: "Editorial updates",
+    href: "/updates/",
+    kind: "tool",
+    summary:
+      "Chronological feed of recently reviewed guides, best-of pages, tools, and equipment reviews.",
+    keywords: ["updates", "freshness", "recent", "changelog"],
   },
   {
     title: "Best singles rackets",
@@ -215,6 +249,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "guide",
     summary: "How tension changes feel, power, and control by skill level.",
     keywords: ["tension", "lbs", "pound", "restring"],
+  },
+  {
+    title: "String feel vs durability",
+    href: "/guides/string-feel-vs-durability/",
+    kind: "guide",
+    summary:
+      "Gauge trade-offs — when to pick BG65-class durability vs thin repulsion strings.",
+    keywords: ["gauge", "bg65", "bg80", "durability", "repulsion", "feel"],
   },
   {
     title: "Racket balance vs swing speed",
@@ -360,7 +402,11 @@ function reviewEntries(): SearchEntry[] {
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
     summary: article.dek ?? "",
-    keywords: [article.slug.replace(/-/g, " "), reviewSearchExcerpt(article)],
+    keywords: [
+      article.slug.replace(/-/g, " "),
+      reviewSearchExcerpt(article),
+      reviewSectionSnippets(article),
+    ],
   }));
 }
 
@@ -446,3 +492,76 @@ export function searchSite(
 }
 
 export const searchIndexSize = SEARCH_INDEX.length;
+
+const SEARCH_SNIPPET_MAX = 140;
+
+/** Review-body excerpt token attached in `reviewEntries()` (may be multiple). */
+function reviewBodyExcerpt(entry: SearchEntry, query?: string): string | null {
+  const candidates = entry.keywords.filter((k) => k.length >= 60);
+  if (candidates.length === 0) return null;
+
+  if (query) {
+    const tokens = normalize(query).split(" ").filter(Boolean);
+    const withHit = candidates.find((text) => {
+      const norm = text.toLowerCase();
+      return tokens.some((token) => norm.includes(token));
+    });
+    if (withHit) return withHit;
+  }
+
+  return candidates.sort((a, b) => b.length - a.length)[0] ?? null;
+}
+
+function trimSnippetAround(
+  text: string,
+  matchStart: number,
+  matchLen: number,
+  maxLen = SEARCH_SNIPPET_MAX
+): string {
+  const room = Math.max(0, maxLen - matchLen);
+  const before = Math.floor(room / 2);
+  const start = Math.max(0, matchStart - before);
+  const end = Math.min(text.length, matchStart + matchLen + (room - before));
+  let out = text.slice(start, end).trim();
+  if (start > 0) out = `…${out}`;
+  if (end < text.length) out = `${out}…`;
+  return out;
+}
+
+/**
+ * User-visible summary for a search hit. When the query matched review body
+ * tokens but not the title or dek, show a short excerpt around the match.
+ */
+export function searchResultSummary(entry: SearchEntry, query: string): string {
+  const trimmed = query.trim();
+  if (!trimmed) return entry.summary;
+
+  const tokens = normalize(trimmed).split(" ").filter(Boolean);
+  if (tokens.length === 0) return entry.summary;
+
+  const titleNorm = normalize(entry.title);
+  const summaryNorm = normalize(entry.summary);
+  const titleOrDekHit = tokens.some(
+    (token) => titleNorm.includes(token) || summaryNorm.includes(token)
+  );
+  if (titleOrDekHit) return entry.summary;
+
+  const excerpt = reviewBodyExcerpt(entry, trimmed);
+  if (!excerpt) return entry.summary;
+
+  const excerptNorm = excerpt.toLowerCase();
+  for (const token of tokens) {
+    const idx = excerptNorm.indexOf(token);
+    if (idx >= 0) {
+      return trimSnippetAround(excerpt, idx, token.length);
+    }
+  }
+
+  for (const token of tokens) {
+    if (tokenMatchesBlob(token, excerptNorm)) {
+      return trimSnippetAround(excerpt, 0, Math.min(token.length, excerpt.length));
+    }
+  }
+
+  return entry.summary;
+}

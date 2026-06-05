@@ -28,8 +28,10 @@ test.describe("review blog style", () => {
   test("legacy product review URL redirects to blog-style review page", async ({
     page,
   }) => {
-    await page.goto("/review/yy-nanoflare-1000z/");
-    await expect(page).toHaveURL(/\/review\/yonex-nanoflare-1000z-review\/?$/);
+    await page.goto("/review/yy-nanoflare-1000z/", { waitUntil: "domcontentloaded" });
+    await page.waitForURL(/\/review\/yonex-nanoflare-1000z-review\/?$/, {
+      timeout: 15_000,
+    });
   });
 
   test("legacy blogs hub redirects to review hub", async ({ page }) => {

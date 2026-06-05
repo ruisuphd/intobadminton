@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { buildSearchIndex, searchSite, searchIndexSize } from "./site-search";
+import {
+  buildSearchIndex,
+  searchResultSummary,
+  searchSite,
+  searchIndexSize,
+} from "./site-search";
 
 describe("site-search", () => {
   it("builds a non-empty index", () => {
@@ -150,6 +155,29 @@ describe("site-search", () => {
         h.href.includes("racket-balance-vs-swing-speed")
       )
     ).toBe(true);
+  });
+
+  it("shows body excerpt snippet when query matches index text only", () => {
+    const hits = searchSite("interceptions");
+    const match = hits.find((h) =>
+      h.href.includes("racket-balance-vs-swing-speed")
+    );
+    expect(match).toBeDefined();
+    const snippet = searchResultSummary(match!, "interceptions");
+    expect(snippet.toLowerCase()).toContain("interception");
+    expect(snippet).not.toBe(match!.summary);
+  });
+
+  it("keeps dek summary when query matches title", () => {
+    const hits = searchSite("string tension");
+    const guide = hits.find((h) => h.href.includes("string-tension"));
+    expect(guide).toBeDefined();
+    expect(searchResultSummary(guide!, "string tension")).toBe(guide!.summary);
+  });
+
+  it("finds string reviews by model code in body", () => {
+    const hits = searchSite("BG80");
+    expect(hits.some((h) => h.href.includes("l69-string"))).toBe(true);
   });
 
   it("finds all compare guides by brand matchup", () => {
