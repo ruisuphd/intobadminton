@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageAlternates } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -49,6 +50,24 @@ export default function SourcePolicyPage() {
           permitted, and any row without an official product-page source is
           marked for review.
         </p>
+
+        <section className="mt-10 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            See how sources shape recommendations
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Browse the equipment catalog with transparent source labels on every
+            product card, or read the full methodology.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/catalog/" className="btn-primary">
+              Browse full catalog
+            </Link>
+            <Link href="/methodology/" className="btn-secondary">
+              Read methodology
+            </Link>
+          </div>
+        </section>
       </article>
     </main>
   );

@@ -251,6 +251,14 @@ export default function RuiSuAuthorPage() {
             . Include the product, the page URL, and the field you think needs
             review.
           </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/catalog/" className="btn-primary">
+              Browse full catalog
+            </Link>
+            <Link href="/quiz/" className="btn-secondary">
+              Run the finder
+            </Link>
+          </div>
         </section>
       </article>
     </main>

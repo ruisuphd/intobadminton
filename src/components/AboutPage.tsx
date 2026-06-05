@@ -165,14 +165,29 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
           </p>
         </section>
 
-        <div className="card p-6">
-          <Link
-            href={buildLocalizedPath(locale, c.ctaLink)}
-            className="inline-flex h-11 items-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white"
-          >
-            {c.cta}
-          </Link>
-        </div>
+        <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Ready to find your fit?
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Run the five-minute finder or browse the full equipment catalog with
+            filters for brand, weight, balance, and price.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href={buildLocalizedPath(locale, c.ctaLink)}
+              className="btn-primary"
+            >
+              {c.cta}
+            </Link>
+            <Link
+              href={buildLocalizedPath(locale, "/catalog/")}
+              className="btn-secondary"
+            >
+              Browse full catalog
+            </Link>
+          </div>
+        </section>
       </article>
     </main>
   );

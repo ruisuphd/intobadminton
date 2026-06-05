@@ -122,6 +122,24 @@ export default function AuthorsIndexPage() {
             </li>
           ))}
         </ul>
+
+        <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Explore the equipment we review
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Every review ties back to a catalog row with source labels and fit
+            scoring. Browse the full index or run the finder.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/catalog/" className="btn-primary">
+              Browse full catalog
+            </Link>
+            <Link href="/quiz/" className="btn-secondary">
+              Run the finder
+            </Link>
+          </div>
+        </section>
       </article>
     </main>
   );

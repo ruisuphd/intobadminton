@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v17";
+const CACHE_VERSION = "ib-v18";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -62,6 +62,20 @@ const PRECACHE_URLS = [
   "/brands/kumpoo/",
   "/compare-guides/",
   "/compare-guides/yonex-astrox-vs-nanoflare/",
+  "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
+  "/compare-guides/astrox-77-pro-vs-88s-pro/",
+  "/compare-guides/badminton-vs-tennis-shoes/",
+  "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/",
+  "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
+  "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/",
+  "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
+  "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
+  "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/",
+  "/compare-guides/yonex-65z4-vs-eclipsion-z3/",
+  "/best/beginner-rackets/",
+  "/best/smash-heavy-rackets/",
+  "/best/strings/",
+  "/best/intermediate-rackets/",
   "/manifest.webmanifest",
   "/intobadminton-mark.png",
   "/intobadminton-icon-192.png",

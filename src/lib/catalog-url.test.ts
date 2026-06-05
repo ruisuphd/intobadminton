@@ -213,6 +213,44 @@ describe("catalog-url", () => {
     );
   });
 
+  it("adds weight class when body weight is a strong racket signal", () => {
+    expect(
+      catalogHrefFromProfile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["balanced"],
+        category: "racket",
+        body: {
+          budgetMaxUsd: 150,
+          weightKg: 55,
+          footWidth: "normal",
+          stringTensionLbs: 24,
+          injuryFlags: [],
+        },
+      })
+    ).toBe(
+      "/catalog/?cat=racket&weight=5U&balance=even&price=under150&sort=fit-desc"
+    );
+
+    expect(
+      catalogHrefFromProfile({
+        level: "club",
+        discipline: "singles",
+        styles: ["offensive"],
+        category: "racket",
+        body: {
+          budgetMaxUsd: 200,
+          weightKg: 90,
+          footWidth: "normal",
+          stringTensionLbs: 28,
+          injuryFlags: [],
+        },
+      })
+    ).toBe(
+      "/catalog/?cat=racket&weight=3U&balance=head_heavy&price=under200&sort=fit-desc"
+    );
+  });
+
   it("builds glossary guide catalog href", () => {
     expect(catalogHrefFromGuideSlug("glossary")).toBe("/catalog/?cat=racket");
   });

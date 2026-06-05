@@ -300,12 +300,29 @@ function profileBalanceFromStyles(
   return "even";
 }
 
+/** Map body weight to a racket weight class when the signal is strong. */
+function profileWeightClassFromBody(
+  category: EquipmentCategory | null | undefined,
+  weightKg: number | undefined
+): WeightClass | null {
+  if (category !== "racket" || weightKg == null || !Number.isFinite(weightKg)) {
+    return null;
+  }
+  if (weightKg < 60) return "5U";
+  if (weightKg > 85) return "3U";
+  return null;
+}
+
 /** Quiz profile → shareable catalog filters — used from `/results/`. */
 export function catalogHrefFromProfile(profile: UserProfile): string {
   const balance =
     profile.category === "racket" && profile.styles.length > 0
       ? profileBalanceFromStyles(profile.styles)
       : null;
+  const weightClass = profileWeightClassFromBody(
+    profile.category,
+    profile.body.weightKg
+  );
   const hasCompleteProfile =
     profile.category != null &&
     profile.level != null &&
@@ -316,6 +333,7 @@ export function catalogHrefFromProfile(profile: UserProfile): string {
     category: profile.category ?? null,
     priceBand: budgetMaxToPriceBand(profile.body.budgetMaxUsd),
     balance,
+    weightClass,
     sort: hasCompleteProfile ? "fit-desc" : DEFAULT_CATALOG_URL_STATE.sort,
   });
 }
