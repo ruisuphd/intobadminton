@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v10"))) return false;
-      const cache = await caches.open("ib-v10-static");
+      if (!keys.some((key) => key.startsWith("ib-v11"))) return false;
+      const cache = await caches.open("ib-v11-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v10-static");
+    const cache = await caches.open("ib-v11-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -52,6 +52,10 @@ test("service worker precaches search, review, and offline shells", async ({
     "/faq/",
     "/best/",
     "/brands/",
+    "/brands/yonex/",
+    "/brands/victor/",
+    "/brands/li-ning/",
+    "/brands/anta/",
     "/compare-guides/",
   ]) {
     expect(
@@ -82,6 +86,7 @@ test("manifest exposes Reviews and Guides shortcuts", async ({ page }) => {
   expect(shortcuts).toContain("Guides");
   expect(shortcuts).toContain("Tools");
   expect(shortcuts).toContain("Best of");
+  expect(shortcuts).toContain("Brands");
   expect(shortcuts).toContain("Compare guides");
 });
 

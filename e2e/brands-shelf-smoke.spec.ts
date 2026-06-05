@@ -27,6 +27,16 @@ test("Anta brand page renders catalogue context", async ({ page }) => {
   await expect(page.getByRole("link", { name: /anta ah600w review/i })).toBeVisible();
 });
 
+test("Anta brand page links to filtered catalog browse", async ({ page }) => {
+  await page.goto("/brands/anta/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse anta in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?brand=Anta");
+});
+
 test("best-of hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/best/");
 

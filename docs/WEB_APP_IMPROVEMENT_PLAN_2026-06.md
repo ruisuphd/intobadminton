@@ -186,19 +186,26 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - `/search/?q=` client redirect for static hero form submissions
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT19_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT19_2026-06.md)
 
-### Sprint 20 — This branch (PR #167 integration + web app maturity)
+### Sprint 20 — Shipped (PR #168)
 
 - Sync Jun-4 **review→product map** (7 entries) to runtime `src/data/`
 - Fix ingest scripts to write `src/data/blog-review-product-map.json` (remove stale `scripts/` copy)
 - **`/brands/anta/`** landing + brands hub deep links for all dedicated guides
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT20_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT20_2026-06.md)
 
-### Next (Sprint 21+)
+### Sprint 21 — This branch (PR #169)
+
+- Brand landings → **filtered catalog** CTA (`catalogHrefFromBrand`)
+- PWA **`ib-v11`** precaches dedicated brand shells + manifest **Brands** shortcut
+- **Explainer slug allowlist** in audit script (13 intentional no-map reviews)
+- Lighthouse CI includes `/brands/anta/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT21_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT21_2026-06.md)
+
+### Next (Sprint 22+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
-- Intentional explainer slugs without single catalogue SKU (no forced product map)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

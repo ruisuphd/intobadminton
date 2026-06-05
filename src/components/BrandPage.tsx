@@ -3,6 +3,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
+import { catalogHrefFromBrand } from "@/lib/catalog-url";
 import { companyInfo } from "@/lib/company";
 import { articleJsonLd } from "@/lib/structured-data";
 
@@ -264,9 +265,17 @@ export function BrandPage({ config }: { config: BrandPageConfig }) {
             ranked picks across {config.brandName} and other brands so you can
             pick by fit, not loyalty.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Start the finder
+            </Link>
+            <Link
+              href={catalogHrefFromBrand(config.brandName)}
+              className="btn-secondary"
+            >
+              Browse {config.brandName} in catalog
+            </Link>
+          </div>
         </section>
       </article>
     </main>

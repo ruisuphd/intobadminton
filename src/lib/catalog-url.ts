@@ -107,3 +107,13 @@ export function catalogHrefFromKeywordQuery(raw: string): string {
   if (!q) return "/catalog/";
   return catalogUrlFromState({ ...DEFAULT_CATALOG_URL_STATE, q });
 }
+
+/** Brand-filtered catalog browse — used from `/brands/*` landings. */
+export function catalogHrefFromBrand(brand: string): string {
+  const trimmed = brand.trim();
+  if (!trimmed) return "/catalog/";
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    brand: trimmed,
+  });
+}
