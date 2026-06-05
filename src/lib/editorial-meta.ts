@@ -172,10 +172,6 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-06-05",
     priceCheckedAt: "2026-06-05",
   },
-  "/data/": {
-    publishedAt: "2026-06-05",
-    lastReviewedAt: "2026-06-05",
-  },
   "/updates/": {
     publishedAt: "2026-06-05",
     lastReviewedAt: "2026-06-05",
