@@ -12,6 +12,7 @@
 | **BadmintonCentral** | Community archive, search | ✅ On-site search (`/search/`) + catalog browse |
 | **Tennis Warehouse / retailer finders** | Imagery, comparison tables, filter browse | Tables ✅; `/catalog/` ✅; original photos open |
 | **RacketGuide-style finders** | Filter-first UX, calculators | Finder + 5 `/tools/*` + toolkit strip |
+| **Tennis Warehouse** | Spec-backed PDP per SKU, cross-sells | PDP golden-profile CI guard ✅ (Sprint 48) |
 | **Wirecutter / RTINGS** | Product schema, methodology | Product JSON-LD + methodology box ✅ |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 
@@ -391,7 +392,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright compare share smoke** — `e2e/compare-baseline-smoke.spec.ts` (direct `/compare/?` navigation)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT46_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT46_2026-06.md)
 
-### Sprint 47 — This branch
+### Sprint 47 — Shipped (PR #195)
 
 - **Review→product map golden profiles** — `docs/baselines/review-product-map-queries.json` (6 map + coverage expectations)
 - **Review map regression guard** — `src/lib/review-product-map-baseline.ts` + `npm run lint:review-product-map-baseline`
@@ -399,7 +400,16 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright review map smoke** — `e2e/review-product-map-baseline-smoke.spec.ts` (review finder panel + catalog CTA)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT47_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT47_2026-06.md)
 
-### Next (Sprint 48+)
+### Sprint 48 — This branch
+
+- **PDP golden profiles** — `docs/baselines/pdp-queries.json` (6 product + spec + review reverse-map expectations)
+- **PDP regression guard** — `src/lib/pdp-baseline.ts` + `npm run lint:pdp-baseline`
+- **Unified all-baselines command** — `npm run lint:all-baselines` (product funnel + editorial)
+- **Extended editorial command** — `lint:editorial-baselines` now includes PDP guard
+- **Playwright PDP smoke** — `e2e/pdp-baseline-smoke.spec.ts` (specs, finder CTA, catalog exit, review link)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT48_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT48_2026-06.md)
+
+### Next (Sprint 49+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

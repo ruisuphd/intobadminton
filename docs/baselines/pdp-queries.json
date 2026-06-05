@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "queries": [
+    {
+      "id": "lighthouse-grpht-throttle",
+      "productId": "yy-grpht-thrttl",
+      "expectCategory": "shoes",
+      "expectMinSpecRows": 7,
+      "expectMinRelatedReading": 3,
+      "expectProductJsonLd": true,
+      "expectCatalogHrefContains": "brand=Yonex",
+      "e2e": true,
+      "note": "Lighthouse CI PDP shell — Yonex shoes specs, related reading, catalog CTA"
+    },
+    {
+      "id": "crux-arcsaber-7-pro",
+      "productId": "yy-arcsaber-7-pro",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-arcsaber-7-pro-review",
+      "expectMinSpecRows": 8,
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "CrUX review pair — PDP links to mapped review slug"
+    },
+    {
+      "id": "flagship-nanoflare-1000z",
+      "productId": "yy-nanoflare-1000z",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-nanoflare-1000z-review",
+      "expectMinSpecRows": 8,
+      "expectProductJsonLd": true,
+      "note": "Flagship speed racket PDP + review wiring"
+    },
+    {
+      "id": "pdp-only-nanoray-light",
+      "productId": "yy-nanoray-light-70i",
+      "expectCategory": "racket",
+      "expectNoReviewSlug": true,
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Catalog-only SKU — no review map, catalog links to PDP"
+    },
+    {
+      "id": "club-shoes-p9200",
+      "productId": "vic-p9200-iii",
+      "expectCategory": "shoes",
+      "expectReviewSlug": "victor-p9200-iii-shoes-review",
+      "expectMinSpecRows": 7,
+      "expectProductJsonLd": true,
+      "note": "Shoe category PDP + review wiring"
+    },
+    {
+      "id": "budget-bonny-leisu",
+      "productId": "bonny-leisu-800",
+      "expectCategory": "racket",
+      "expectReviewSlug": "bonny-leisu-800-racket-review",
+      "expectMinSpecRows": 8,
+      "note": "Budget niche brand PDP"
+    }
+  ]
+}

@@ -444,7 +444,7 @@ const REVIEW_CLUSTER_PATTERNS: { pattern: RegExp; cluster: string }[] = [
 const PRODUCT_CATEGORY_CLUSTER: Record<string, string> = {
   racket: "all-round-rackets",
   string: "strings",
-  shoe: "shoe-fit",
+  shoes: "shoe-fit",
   bag: "compare",
   shuttle: "compare",
   grip: "strings",

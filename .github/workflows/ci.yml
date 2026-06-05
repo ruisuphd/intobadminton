@@ -46,6 +46,8 @@ jobs:
         run: npm run lint:compare-baseline
       - name: Review product map guard
         run: npm run lint:review-product-map-baseline
+      - name: PDP golden-profile guard
+        run: npm run lint:pdp-baseline
       - name: Build
         run: npm run build
         env:
