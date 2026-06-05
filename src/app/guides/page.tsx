@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { pageAlternates } from "@/lib/metadata";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Badminton equipment guides",
@@ -94,6 +96,7 @@ const guides = [
 export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
   const copy = t(locale).guides;
   const localized = (path: string) => buildLocalizedPath(locale, path);
+  const related = relatedReadingForPath("/guides/");
 
   return (
     <main className="flex-1 py-16">
@@ -174,6 +177,8 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
             </li>
           ))}
         </ul>
+
+        <RelatedReadingShelf items={related} />
 
         <section className="mt-16 max-w-3xl space-y-4 text-sm leading-relaxed text-[var(--color-muted)]">
           <h2 className="text-xl font-semibold text-[var(--text)]">

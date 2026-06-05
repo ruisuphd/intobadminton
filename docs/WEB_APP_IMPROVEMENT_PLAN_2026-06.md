@@ -122,13 +122,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/faq/`; e2e PDP + explainer shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
 
-### Sprint 14 — PR (`cursor/web-app-improvement-plan-154b`)
+### Sprint 14 — Shipped (PR #160)
 
 - **Results Keep reading** shelf via `relatedReadingForQuizCategory`
 - `/best/` hub, `/brands/`, and `/catalog/` decision-path shelves
 - PWA **`ib-v9`** precaches `/best/` and `/brands/`; Best-of manifest shortcut
 - Lighthouse CI includes `/best/` and `/brands/`; e2e results + brands shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md)
+
+### Sprint 15 — PR (`cursor/web-app-improvement-plan-8547`)
+
+- **Compare-guides**, **guides**, **search**, and **saved** hub decision-path shelves
+- `guides-hub` and `discovery` editorial clusters in `related-content.ts`
+- PWA **`ib-v10`** precaches `/compare-guides/`; Compare guides manifest shortcut
+- Lighthouse CI includes `/compare-guides/` index; e2e hub-shelf + PWA smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
@@ -151,12 +159,13 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 15+)
+### Next (Sprint 16+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Catalog keyword search (`q` param on `/catalog/`)
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
+- `/review/` index shelf (lower priority)
 - Intentional explainer slugs without single catalogue SKU (no forced product map)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  

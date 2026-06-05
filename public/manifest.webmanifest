@@ -66,6 +66,13 @@
       "description": "Curated buying guides for rackets, shoes, and strings",
       "url": "/best/",
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Compare guides",
+      "short_name": "Compare",
+      "description": "Head-to-head badminton equipment comparisons",
+      "url": "/compare-guides/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     }
   ],
   "icons": [

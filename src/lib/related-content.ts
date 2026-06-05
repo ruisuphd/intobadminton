@@ -199,6 +199,60 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Filter the full catalogue by brand, weight, and balance.",
     },
   ],
+  "guides-hub": [
+    {
+      href: "/guides/string-tension/",
+      title: "String tension guide",
+      summary: "How tension affects feel and flight — without the mysticism.",
+    },
+    {
+      href: "/guides/racket-balance/",
+      title: "Racket balance and flex",
+      summary: "Head weight, shaft stiffness, and how they show up in play.",
+    },
+    {
+      href: "/guides/equipment-authenticity/",
+      title: "Spot fake rackets",
+      summary: "Verify Yonex, Victor, and Li-Ning before you string or buy.",
+    },
+    {
+      href: "/quiz/",
+      title: "Equipment finder",
+      summary: "Five-step quiz — rank rackets, shoes, and strings for your profile.",
+    },
+    {
+      href: "/tools/string-tension-calculator/",
+      title: "String tension calculator",
+      summary: "Get a tension starting point for your level and frame.",
+    },
+  ],
+  discovery: [
+    {
+      href: "/compare/",
+      title: "Compare products",
+      summary: "Side-by-side spec tray for up to three saved catalogue items.",
+    },
+    {
+      href: "/best/",
+      title: "Best-of buying guides",
+      summary: "Curated shortlists for rackets, shoes, and strings.",
+    },
+    {
+      href: "/catalog/",
+      title: "Equipment catalog",
+      summary: "Filter every brand by spec, weight, balance, and price.",
+    },
+    {
+      href: "/quiz/",
+      title: "Equipment finder",
+      summary: "Personalised shortlist from level, style, and budget.",
+    },
+    {
+      href: "/compare-guides/yonex-astrox-vs-nanoflare/",
+      title: "Yonex Astrox vs Nanoflare",
+      summary: "Attack vs speed — Yonex's two racket families compared.",
+    },
+  ],
   brands: [
     {
       href: "/compare-guides/yonex-victor-li-ning/",
@@ -280,6 +334,10 @@ const PATH_CLUSTER: Record<string, string> = {
   "/best/": "compare",
   "/brands/": "brands",
   "/catalog/": "compare",
+  "/compare-guides/": "compare",
+  "/guides/": "guides-hub",
+  "/search/": "discovery",
+  "/saved/": "discovery",
 };
 
 const QUIZ_CATEGORY_CLUSTER: Record<string, string> = {

@@ -145,6 +145,31 @@ describe("relatedReadingForPath extended clusters", () => {
     const items = relatedReadingForPath("/catalog/");
     expect(items.some((i) => i.href.startsWith("/compare-guides/"))).toBe(true);
   });
+
+  it("returns compare cluster for compare-guides hub", () => {
+    const items = relatedReadingForPath("/compare-guides/");
+    expect(items.length).toBe(3);
+    expect(items.every((i) => i.href !== "/compare-guides/")).toBe(true);
+    expect(items.some((i) => i.href.startsWith("/compare-guides/"))).toBe(true);
+  });
+
+  it("returns guides-hub cluster for guides index", () => {
+    const items = relatedReadingForPath("/guides/");
+    expect(items.some((i) => i.href.includes("string-tension"))).toBe(true);
+    expect(items.every((i) => i.href !== "/guides/")).toBe(true);
+  });
+
+  it("returns discovery cluster for search page", () => {
+    const items = relatedReadingForPath("/search/");
+    expect(items.some((i) => i.href === "/compare/")).toBe(true);
+    expect(items.some((i) => i.href === "/catalog/")).toBe(true);
+  });
+
+  it("returns discovery cluster for saved shelf", () => {
+    const items = relatedReadingForPath("/saved/");
+    expect(items.some((i) => i.href === "/compare/")).toBe(true);
+    expect(items.some((i) => i.href === "/best/")).toBe(true);
+  });
 });
 
 describe("relatedReadingForQuizCategory", () => {
