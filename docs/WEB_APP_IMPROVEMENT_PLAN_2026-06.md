@@ -130,10 +130,11 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 13+)
+### Next (Sprint 13 — PR #157 rebase + catalog keyword search)
 
+- Catalog keyword search (`q` param on `/catalog/`) — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
+- PR #157 profile fit, catalog sort, review filters rebased onto Sprint 12 (#158)
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
-- Catalog keyword search (`q` param on `/catalog/`)
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
 - Editorial pairing for explainer-only review slugs (map ceiling ~87%)
