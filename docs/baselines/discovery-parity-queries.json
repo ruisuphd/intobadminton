@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "queries": [
+    {
+      "query": "ac102c",
+      "expectSubmitHrefContains": "/catalog/?q=ac102c",
+      "minCatalogResults": 1,
+      "expectProductIdContains": "ac102c",
+      "e2e": true,
+      "note": "String SKU — search submit routes to catalog with rows"
+    },
+    {
+      "query": "yy-ac102c",
+      "expectSubmitHrefContains": "/catalog/?q=yy-ac102c",
+      "minCatalogResults": 1,
+      "expectProductIdContains": "ac102c",
+      "note": "Product id alias — same catalog row as ac102c"
+    },
+    {
+      "query": "vic-p9200",
+      "expectSubmitHrefContains": "/catalog/?q=vic-p9200",
+      "minCatalogResults": 1,
+      "expectBrandContains": "Victor",
+      "e2e": true,
+      "note": "Full product id — bare p9200 has editorial hits"
+    },
+    {
+      "query": "yy-bg65",
+      "expectSubmitHrefContains": "/catalog/?q=yy-bg65",
+      "minCatalogResults": 1,
+      "expectProductIdContains": "bg65",
+      "note": "String product id — bare bg65 has editorial hits"
+    }
+  ]
+}

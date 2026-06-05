@@ -351,7 +351,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright golden-query e2e** — `e2e/search-baseline-smoke.spec.ts` for `"e2e": true` rows
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT41_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT41_2026-06.md)
 
-### Sprint 42 — This branch
+### Sprint 42 — Shipped (PR #190)
 
 - **Catalog keyword golden queries** — `docs/baselines/catalog-keyword-queries.json` (9 expectations)
 - **Catalog regression guard** — `src/lib/catalog-baseline.ts` + `npm run lint:catalog-baseline`
@@ -359,7 +359,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright engagement smoke** — `e2e/catalog-baseline-smoke.spec.ts`, `e2e/helpful-reaction-smoke.spec.ts`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT42_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT42_2026-06.md)
 
-### Next (Sprint 43+)
+### Sprint 43 — This branch
+
+- **Discovery parity golden pairs** — `docs/baselines/discovery-parity-queries.json` (product-intent routing ↔ catalog rows)
+- **Discovery regression guard** — `src/lib/discovery-parity.ts` + `npm run lint:discovery-baseline`
+- **Playwright funnel smoke** — `e2e/discovery-parity-smoke.spec.ts` (header submit → catalog results)
+- **Reactions deploy runbook** — `workers/reactions/README.md` checklist
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT43_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT43_2026-06.md)
+
+### Next (Sprint 44+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
