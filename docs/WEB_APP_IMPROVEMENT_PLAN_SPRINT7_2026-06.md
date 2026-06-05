@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 7 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-2162` (PR #139)  
-**Baseline:** Sprint 6 on `main` (fuzzy search, control rackets, catalog URL filters).
+**Branches:** `cursor/web-app-improvement-plan-9527` (#135), `cursor/web-app-improvement-plan-c7f0` (#138), `cursor/web-app-improvement-plan-2162` (#139)  
+**Baseline:** Sprint 6 on `main` (PR #127 programmatic landings, PR #134 fuzzy search).
 
 ---
 
@@ -9,50 +9,61 @@
 
 | Competitor | Strength vs IntoBadminton | Gap / response |
 |------------|---------------------------|----------------|
-| **Tennis Warehouse** | Sharable filtered URLs, RSS discovery | ✅ Results share link; RSS `rel=alternate` (PR #139) |
-| **Wirecutter / RTINGS** | Review full-text search, Product schema | ✅ Shipped on `main` — `reviewSearchExcerpt`, singles/head-light/wide-feet `/best/*`, all-round page |
-| **RacketGuide roundups** | Versatile / all-round landings | ✅ `/best/all-round-rackets/` on `main` |
-| **YouTube reviewers** | Video + social proof counts | ⏳ VideoObject + HelpfulReaction KV |
-| **Brand PDPs** | Original photography | ⏳ Editorial `public/products/` pipeline |
+| **Tennis Warehouse** | PDP per SKU + full-text search | ✅ PDP-lite `/product/[id]/` (#138); ✅ review body excerpts (#135) |
+| **Wirecutter / RTINGS** | Social proof vote counts | ⏳ HelpfulReaction Workers/KV (Phase C) |
+| **RacketGuide / affiliate roundups** | Long-tail budget landings | ✅ Budget shoes + head-heavy under $150 (#138); all-round on main (#127) |
+| **Brand PDPs** | First-party product photography | ⏳ Editorial `public/products/` pipeline |
+| **YouTube reviewers** | Video evidence | ⏳ `VideoObject` gated on video commitment |
+
+**Moat unchanged:** transparent fit score, claims CI, static export, 146+ reviews, postbuild SEO gate.
 
 ---
 
-## 2. Top 5 gaps (Sprint 7 — split across main + PR #139)
+## 2. Top 5 gaps (Sprint 7)
 
-| # | Gap | Status |
-|---|-----|--------|
-| 1 | Review search misses body keywords | ✅ `main` — `reviewSearchExcerpt()` in `site-search.ts` |
-| 2 | Missing programmatic `/best/*` clusters | ✅ `main` — all-round, singles, head-light, wide-feet shoes |
-| 3 | Review→product map below 75% | ✅ PR #139 — +24 map entries (79% coverage) |
-| 4 | No sharable results URL affordance | ✅ PR #139 — `ShareResultsLink` on `/results/` |
-| 5 | RSS not advertised to aggregators | ✅ PR #139 — `alternates.types` → `/feed.xml` |
-
----
-
-## 3. PR #139 execution summary
-
-| Deliverable | Files |
-|-------------|-------|
-| Product map expansion | `src/data/blog-review-product-map.json` |
-| Results share link | `ShareResultsLink.tsx`, `ResultsClient.tsx` |
-| RSS discovery | `src/app/layout.tsx` |
+| # | Gap | Impact | Delivery |
+|---|-----|--------|----------|
+| 1 | **No PDP for unmapped catalogue SKUs** | Catalog dead-end | ✅ PR #138 `/product/[id]/` |
+| 2 | **Search index misses review body terms** | Discovery friction | ✅ PR #135 excerpt enrichment |
+| 3 | **Missing budget shoe + value attack long-tail** | SEO topical coverage | ✅ PR #138 two `/best/*` pages |
+| 4 | HelpfulReaction aggregate counts | Social proof | ⏳ Workers/KV backend |
+| 5 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
 
 ---
 
-## 4. Ten-pass verification
+## 3. Execution summary
+
+**PR #135 (on main):**
+1. `reviewSearchExcerpt()` in `site-search.ts` — body tokens in review index.
+2. Playwright typo smoke in `e2e/search-smoke.spec.ts`.
+
+**PR #138:**
+1. `/product/[id]/` — static PDP-lite with Product JSON-LD, save/compare/buy.
+2. `catalogProductHref` → PDP when no review article.
+3. CompareTable “View details” links.
+4. `/best/budget-badminton-shoes/` and `/best/head-heavy-rackets-under-150/`.
+5. Sitemap product expansion + Lighthouse PDP URL.
+
+**PR #139:**
+1. `ShareResultsLink` on `/results/` — copy deep-linked finder profile URLs.
+2. RSS discovery via `alternates.types` → `/feed.xml` in root layout.
+
+---
+
+## 4. Ten-pass plan verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 6 deferred list | ✅ |
-| 2 | New map entries reference valid `products.json` ids | ✅ |
-| 3 | Share link uses `profileToResultsPath` (no PII) | ✅ |
-| 4 | Static export — no new API routes | ✅ |
-| 5 | No duplicate review-search modules | ✅ (uses `main` excerpt helper) |
-| 6 | `npm test` | ✅ |
-| 7 | `npm run build` + postbuild SEO audit | ✅ |
-| 8 | `npm run lint` | ✅ |
-| 9 | Map coverage ≥75% | ✅ (79%) |
-| 10 | Rebased on latest `main` without feature duplication | ✅ |
+| 1 | Gaps grounded in Sprint 6 deferred list + competitive audit | ✅ |
+| 2 | PDP static export safe | ✅ |
+| 3 | Excerpt cap prevents bundle blow-up | ✅ |
+| 4 | catalogProductHref never 404s for catalogue ids | ✅ |
+| 5 | New best picks use real `productId` values | ✅ |
+| 6 | Fuzzy e2e + unit search tests | ✅ |
+| 7 | `npm test` | ✅ |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | Sitemap includes `/product/[id]/` | ✅ |
+| 10 | Lighthouse includes PDP + new best URLs | ✅ |
 
 ---
 
@@ -61,14 +72,14 @@
 ```bash
 npm test
 npm run build
-node scripts/audit-review-product-map.mjs
+npm run lint
 ```
 
 ---
 
 ## 6. Deferred (Sprint 8+)
 
-- HelpfulReaction Workers/KV
-- Original photos on top commercial URLs
+- HelpfulReaction Workers/KV aggregate counts
 - GSC/CrUX baseline CSV in `docs/baselines/`
-- YouTube `sameAs` (channel claim)
+- Original photos on top commercial URLs
+- YouTube `sameAs` on author entity (after channel claim)

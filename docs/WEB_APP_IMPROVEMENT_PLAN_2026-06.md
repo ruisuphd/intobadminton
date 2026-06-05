@@ -68,11 +68,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Fuzzy site search; `/best/control-rackets/`; catalog URL filters + `/best/rackets-under-200/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
 
-### Sprint 7 — Shipped (main + PR #139)
+### Phase D — Shipped (PR #114)
 
-- Review body search excerpts; singles/head-light/wide-feet `/best/*`; all-round page
-- PR #139 adds: results share link, +24 product-map entries, RSS `rel=alternate`
-- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+- Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
+- `docs/baselines/README.md` GSC/CrUX runbook
+- `GuideTocAnchor` on SEO cluster pillar guides
+
+See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
+
+### Sprint 6–7 — Shipped (main)
+
+- Fuzzy search, control rackets, catalog URL filters (#134, #122)
+- Singles/head-light/all-round `/best/*`, review body search (#127, #135)
+- PDP-lite `/product/[id]/`, budget shoes pages (#138)
+- PR #139: results share link, RSS `rel=alternate` in layout
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
 
 ### Next (Sprint 8+)
 
@@ -80,10 +90,6 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Original photos on top commercial URLs
 - HelpfulReaction Workers/KV aggregate backend
 - YouTube `sameAs` on author entity (after channel claim)
-- YouTube `sameAs` on author entity (after channel claim)
-
-**Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).  
-**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
 
 ---
 
