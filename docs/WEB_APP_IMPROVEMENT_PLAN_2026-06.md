@@ -27,9 +27,9 @@
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
-**Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
+**Shipped on `main`:** site search, review body excerpts, `SearchAction`, `ContinueReading`, return-visit hooks, reactions API client, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC, claims `/data/`, PDP-lite.
 
 ---
 
@@ -67,6 +67,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 
 - Fuzzy site search; `/best/control-rackets/`; catalog URL filters + `/best/rackets-under-200/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
+
+### Sprint 6–8 — Shipped on `main`
+
+- Public **`/data/`** claims registry (#130); PDP-lite `/product/[id]/` (#138)
+- Fuzzy search, reactions worker scaffold, catalog compare funnel (#127, #129, #134)
+- PR #137: compare share-link fix, PWA shortcuts, retention e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Sprint 9 — This PR (`cursor/web-app-improvement-plan-5564`)
+
+- `/best/*` illustrative **Finder fit** column + `productId` backfill
+- PWA **`ib-v3`** precaches `/catalog/`
+- **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 

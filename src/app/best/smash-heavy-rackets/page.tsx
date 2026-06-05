@@ -49,6 +49,7 @@ const config: BestPicksConfig = {
       name: "Astrox 99 Pro",
       brand: "Yonex",
       priceUsd: 290,
+      productId: "yy-astrox-99-pro",
       bestFor: "Rear-court singles with technique",
       specs: [
         { label: "Weight", value: "4U" },
@@ -72,6 +73,7 @@ const config: BestPicksConfig = {
       name: "Astrox 88D Pro (2024)",
       brand: "Yonex",
       priceUsd: 290,
+      productId: "yy-astrox-88d-pro-2024",
       bestFor: "Doubles rear-court attack",
       specs: [
         { label: "Weight", value: "4U" },
