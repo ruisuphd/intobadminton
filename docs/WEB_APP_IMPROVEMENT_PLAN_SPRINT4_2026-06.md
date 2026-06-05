@@ -1,33 +1,35 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-f5af` → PR #113  
-**Baseline:** Sprint 3 on `main` (PRs #94–#98, #105 catalog/facets).
+**Branch:** `cursor/web-app-improvement-plan-3a42` → PR #115  
+**Baseline:** Sprint 3 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)); Q2 toolkit items in [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6.
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor pattern | IntoBadminton response |
-|--------------------|------------------------|
-| **Tennis Warehouse browse** | `/catalog/` + spec facets on `/results/` (PR #105 on `main`) |
-| **Tennis Warehouse saved lists** | `profileToResultsPath` + linked shortlist cards (PR #113) |
-| **Wirecutter price-band pages** | `/best/rackets-under-100/`, `/best/rackets-under-150/` |
-| **RacketGuide calculators** | Five `/tools/*` + guide cross-links (PR #97) |
-| **YouTube reviewers** | `VideoObject` deferred |
+| Competitor | Strength | IntoBadminton response |
+|------------|----------|------------------------|
+| **Tennis Warehouse / Wirecutter** | Buy CTAs on every pick | `ProductBuyLink` on results, reviews, best-of |
+| **RacketGuide / TW** | Interactive calculators | Five `/tools/*` pages + guide ↔ tool cross-links |
+| **Wirecutter / RTINGS** | Social + FTC on money pages | `editorialPageMetadata()` OG/Twitter; compare template parity |
+| **BadmintonCentral** | RSS / return visits | `/feed.xml` postbuild + footer link |
+| **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
 
-**Moat:** transparent fit score, postbuild SEO gate, claims CI, static export.
+**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring.
 
 ---
 
-## 2. Top 5 gaps (Sprint 4, combined)
+## 2. Top 5 gaps (closed this sprint)
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | No filter-first product catalog | ✅ `/catalog/` (main, PR #105) |
-| 2 | Recent shortlists not reopenable | ✅ `profileToResultsPath` (PR #113) |
-| 3 | Offline notify-me stranded at Buttondown cutover | ✅ migrate CTA (PR #113) |
-| 4 | Lighthouse blind to cluster guides + tools | ✅ `lighthouserc.json` (PR #113) |
-| 5 | HelpfulReaction aggregate counts | ⏳ Sprint 5 |
+| 1 | Affiliate buy links built but unused | ✅ `ProductBuyLink` + `product-retail.ts` |
+| 2 | Duplicate guide engagement (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
+| 3 | Legacy compare guides missing FTC / engagement | ✅ `CompareConceptChrome` + 77 vs 88S → `CompareGuidePage` |
+| 4 | `/best/*` and `/guides/*` missing OG/Twitter | ✅ `editorialPageMetadata()` |
+| 5 | No RSS for reviews | ✅ `scripts/generate-feed.mjs` → `out/feed.xml` |
+
+**Also on `main` (merged):** guide ↔ tool links, `GuideInPageToc`, programmatic `/best/rackets-under-100/`, search index expansions.
 
 ### Sprint 4b — Return-path polish (PR #100)
 
@@ -40,22 +42,21 @@
 
 ### Deferred (Sprint 5+)
 
-- HelpfulReaction Workers/KV
-- First-party `public/products/` photography
-- VideoObject + YouTube `sameAs`
-- GSC/CrUX baseline CSV
+- HelpfulReaction Workers/KV public counts
+- Faceted catalog browse
+- Original product photography
+- `Person.sameAs` after profile claims
 
 ---
 
 ## 3. Execution summary
 
-**On `main` (PRs #97, #105):** catalog, results facets, `/best/rackets-under-150/`, guide ↔ tool links.
-
-**PR #113:**
-
-1. `profileToResultsPath()` + linked `HomeRecentShortlists` / `RecentHistory`
-2. Buttondown migrate for device-only notify-me on `/saved/`
-3. Lighthouse URLs for cluster guides, tools, `/saved/`
+1. `src/lib/product-retail.ts` + `ProductBuyLink` on commercial surfaces.
+2. Removed duplicate `GuideEngagement`; extended `GUIDE_HEADLINES`.
+3. `CompareConceptChrome` + `CompareGuidePage` migration for 77 vs 88S.
+4. `editorialPageMetadata()` for guides and best-of.
+5. RSS feed postbuild + footer link.
+6. Merged latest `main` (tools, ToC, runlog).
 
 ---
 
@@ -63,22 +64,35 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in audit + Sprint 3 deferred list | ✅ |
-| 2 | Results deep links match quiz param shape | ✅ |
-| 3 | Catalog + shortlist flows static-export safe | ✅ |
-| 4 | Migrate clears local intent after Buttondown OK | ✅ |
-| 5 | No homepage signup wall | ✅ |
-| 6 | Lighthouse URLs in `out/` after build | ✅ |
-| 7 | Unit tests (`profile-url`, `product-filters`, search) | ✅ |
-| 8 | `npm test && npm run lint && npm run build` | ✅ |
-| 9 | postbuild SEO audit | ✅ |
-| 10 | Mergeable with latest `main` | ✅ |
+| 1 | Gaps grounded in competitive audit + Q2 plan | ✅ |
+| 2 | Buy links use official URLs when available | ✅ |
+| 3 | Export-audit disclosure markers intact | ✅ |
+| 4 | Single guide engagement footer | ✅ |
+| 5 | Legacy compares have FTC + engagement | ✅ |
+| 6 | OG + Twitter on guides and best-of | ✅ |
+| 7 | `feed.xml` in `out/` after build | ✅ |
+| 8 | `npm test` (198 tests) | ✅ |
+| 9 | `npm run build` + SEO audit | ✅ |
+| 10 | Mergeable with `main` | ✅ |
 
 ---
 
-## 5. Metrics (unchanged)
+## 5. Verification
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+---
+
+## 6. Metrics
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
+| Affiliate CTR | GA4 `affiliate_click` |
+| Tool → finder CTR | GA4 tool / quiz events |
+| Social referral CTR | Lift after OG metadata |

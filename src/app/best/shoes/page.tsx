@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { BestPicksPage, type BestPicksConfig } from "@/components/BestPicksPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: "/best/shoes/",
   title: "Best Badminton Shoes 2026 — Yonex & Victor Picks",
   description:
     "Six badminton shoes ranked by stability, cushioning, fit width, and weight feel — picks for narrow, regular, and wide feet, and for ankle recovery.",
-  alternates: pageAlternates("/best/shoes/"),
-};
+});
 
 const config: BestPicksConfig = {
   slug: "shoes",

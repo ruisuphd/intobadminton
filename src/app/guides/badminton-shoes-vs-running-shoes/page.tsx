@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 
 const PATH = "/guides/badminton-shoes-vs-running-shoes/";
@@ -8,11 +8,11 @@ const HEADLINE = "Badminton shoes vs running shoes";
 const DESCRIPTION =
   "Why running shoes are a poor substitute on a badminton court — heel drop, lateral stability, gum-rubber grip, and what to wear instead.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton shoes vs running shoes",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 const HOW_TO_STEPS = [
   {
