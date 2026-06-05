@@ -15,6 +15,7 @@
 | **Tennis Warehouse** | Spec-backed PDP per SKU, cross-sells | PDP golden-profile CI guard ✅ (Sprint 48) |
 | **Wirecutter** | Programmatic best-of + comparison tables + catalog exit | Best-of golden-profile CI guard ✅ (Sprint 49) |
 | **Tennis Warehouse** | Head-to-head comparison → filtered browse | Compare-guides golden-profile CI guard ✅ (Sprint 50) |
+| **Tennis Warehouse** | Procedural education → filtered browse | Guides golden-profile CI guard ✅ (Sprint 51) |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 
 **Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews, postbuild SEO gate.
@@ -418,7 +419,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright best-of smoke** — `e2e/best-baseline-smoke.spec.ts` (comparison table, Keep reading, catalog CTA)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT49_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT49_2026-06.md)
 
-### Sprint 50 — This branch
+### Sprint 50 — Shipped (PR #198)
 
 - **Compare-guides golden profiles** — `docs/baselines/compare-guides-queries.json` (6 slug + catalog exit + manifest + duel pick expectations)
 - **Compare-guides regression guard** — `src/lib/compare-guides-baseline.ts` + `npm run lint:compare-guides-baseline`
@@ -426,7 +427,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright compare-guides smoke** — `e2e/compare-guides-baseline-smoke.spec.ts` (catalog CTA, duel table, Keep reading)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT50_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT50_2026-06.md)
 
-### Next (Sprint 51+)
+### Sprint 51 — This branch
+
+- **Guides golden profiles** — `docs/baselines/guides-queries.json` (6 slug + catalog exit + related reading expectations)
+- **Guides regression guard** — `src/lib/guides-baseline.ts` + `npm run lint:guides-baseline`
+- **Extended editorial command** — `lint:editorial-baselines` now includes guides guard
+- **Playwright guides smoke** — `e2e/guides-baseline-smoke.spec.ts` (catalog CTA, Keep reading shelf)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT51_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT51_2026-06.md)
+
+### Next (Sprint 52+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

@@ -20,7 +20,21 @@ Refresh review→catalogue map and PDP regression layers in one operator command
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, and `lint:compare-guides-baseline`.
+Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, and `lint:guides-baseline`.
+
+## Guides (golden profiles)
+
+Committed `/guides/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, and catalogue CTA label wiring:
+
+- [`guides-queries.json`](guides-queries.json) — Lighthouse string tension, racket balance, shoe crossover, doubles positioning, wide feet, authenticity.
+
+Validate guide catalog parity (runs in CI after compare-guides guard):
+
+```bash
+npm run lint:guides-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/guides-baseline-smoke.spec.ts`) — direct navigation to committed guide URLs with catalog CTA and Keep reading shelf.
 
 ## Compare-guides (golden profiles)
 

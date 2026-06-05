@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "coverage": {
+    "minCatalogFilterSlugs": 11
+  },
+  "queries": [
+    {
+      "id": "lighthouse-string-tension",
+      "slug": "string-tension",
+      "expectCatalogHref": "/catalog/?cat=string",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "tension",
+      "expectCatalogLinkPattern": "browse strings in catalog",
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse procedural guide — HowTo + strings catalog exit"
+    },
+    {
+      "id": "lighthouse-racket-balance",
+      "slug": "racket-balance",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "balance",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse CI guide — racket catalog exit"
+    },
+    {
+      "id": "lighthouse-shoes-crossover",
+      "slug": "badminton-shoes-vs-running-shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "running",
+      "expectCatalogLinkPattern": "browse shoes in catalog",
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse shoe crossover — shoes catalog exit"
+    },
+    {
+      "id": "lighthouse-doubles-positioning",
+      "slug": "doubles-positioning-and-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "doubles",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse doubles procedural — racket catalog exit"
+    },
+    {
+      "id": "wide-feet-guide",
+      "slug": "wide-feet-badminton-shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "expectMinRelatedReading": 3,
+      "note": "Shoe-fit cluster guide — shoes catalog filter parity"
+    },
+    {
+      "id": "season-refresh-guide",
+      "slug": "season-refresh",
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "note": "Freshness cluster guide — full catalog exit fallback"
+    }
+  ]
+}
