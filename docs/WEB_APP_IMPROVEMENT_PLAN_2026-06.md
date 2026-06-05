@@ -56,13 +56,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Homepage bundle slimming (`home-featured-reviews.json`, dynamic `HomeContinueReading`)
 - `/best/rackets-under-200/`; catalog URL filters + sort — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
-### Sprint 6 — Shipped (PR #136 and parallel PRs)
+### Sprint 6–8 — Shipped on `main`
 
-- `/best/*` comparison tables: illustrative **Finder fit** column (`best-picks-scoring.ts`)
-- Public **`/data/`** claims registry (cite-back moat from Q2 plan)
-- PWA precache **`/catalog/`** + `ib-v3` service worker
-- **`productId` backfill** on `/best/*` picks with exact catalog name matches
-- Fuzzy search, reactions worker, catalog compare funnel — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
+- Public **`/data/`** claims registry (#130); PDP-lite `/product/[id]/` (#138)
+- Fuzzy search, reactions worker scaffold, catalog compare funnel (#127, #129, #134)
+- PR #137: compare share-link fix, PWA shortcuts, retention e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Sprint 9 — This PR (`cursor/web-app-improvement-plan-5564`)
+
+- `/best/*` illustrative **Finder fit** column + `productId` backfill
+- PWA **`ib-v3`** precaches `/catalog/`
+- **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
