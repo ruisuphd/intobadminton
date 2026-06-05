@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PRODUCTS = ROOT / "src/data/products.json"
 BRANDS = ROOT / "src/data/brands.json"
-REVIEW_MAP = ROOT / "scripts/blog-review-product-map.json"
+REVIEW_MAP = ROOT / "src/data/blog-review-product-map.json"
 DATE = "2026-06-05"
 
 

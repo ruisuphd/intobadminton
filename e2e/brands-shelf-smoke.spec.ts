@@ -12,6 +12,21 @@ test("brands index shows Keep reading shelf", async ({ page }) => {
   ).toBeVisible();
 });
 
+test("brands hub links to dedicated Anta guide", async ({ page }) => {
+  await page.goto("/brands/");
+
+  await expect(page.getByRole("link", { name: /read the anta guide/i })).toBeVisible();
+});
+
+test("Anta brand page renders catalogue context", async ({ page }) => {
+  await page.goto("/brands/anta/");
+
+  await expect(
+    page.getByRole("heading", { name: /anta badminton/i })
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: /anta ah600w review/i })).toBeVisible();
+});
+
 test("best-of hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/best/");
 

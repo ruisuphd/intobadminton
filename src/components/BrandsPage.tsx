@@ -12,6 +12,10 @@ const DEDICATED_BRAND_PAGES: Record<string, string> = {
   yonex: "/brands/yonex/",
   victor: "/brands/victor/",
   "li-ning": "/brands/li-ning/",
+  bonny: "/brands/bonny/",
+  kawasaki: "/brands/kawasaki/",
+  kumpoo: "/brands/kumpoo/",
+  anta: "/brands/anta/",
 };
 
 const c = {

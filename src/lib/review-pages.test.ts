@@ -24,6 +24,19 @@ describe("review page paths", () => {
     expect(reviewPath("not-yet-mapped")).toBe("/review/not-yet-mapped/");
   });
 
+  it("maps Jun-2026 drop catalogue rows to blog review slugs", () => {
+    expect(reviewPath("anta-ah600w")).toBe("/review/anta-ah600w-racket-review/");
+    expect(reviewPath("vic-fz-100xx")).toBe(
+      "/review/victor-fz-100xx-budget-attack-review/"
+    );
+    expect(reviewPath("mizuno-carbo-pro-825")).toBe(
+      "/review/mizuno-carbo-pro-825-review/"
+    );
+    expect(editorialReviewHref("anta-ah600w")).toBe(
+      "/review/anta-ah600w-racket-review/"
+    );
+  });
+
   it("builds absolute review URLs from canonical paths", () => {
     expect(reviewUrl("yy-as-50")).toBe(
       "https://intobadminton.com/review/yonex-aerosensa-50-shuttle-review/"

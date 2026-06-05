@@ -211,6 +211,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-05-21",
     lastReviewedAt: "2026-05-21",
   },
+  "/brands/anta/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+  },
 
   // Comparison guides (mix of price-bearing and pure spec/decision guides).
   "/compare-guides/astrox-77-pro-vs-88s-pro/": {
