@@ -102,6 +102,16 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-06-04",
     priceCheckedAt: "2026-06-04",
   },
+  "/best/lightweight-rackets-5u/": {
+    publishedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-04",
+    priceCheckedAt: "2026-06-04",
+  },
+  "/best/rackets-for-shoulder-comfort/": {
+    publishedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-04",
+    priceCheckedAt: "2026-06-04",
+  },
   "/best/shoes/": {
     publishedAt: "2025-10-11",
     lastReviewedAt: "2026-05-08",
@@ -267,6 +277,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-05-17",
   },
   "/tools/court-diagram/": {
+    publishedAt: "2026-05-17",
+    lastReviewedAt: "2026-05-17",
+  },
+  "/tools/authenticity-checker/": {
     publishedAt: "2026-05-17",
     lastReviewedAt: "2026-05-17",
   },
