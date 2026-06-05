@@ -82,15 +82,23 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
-### Sprint 10 — This PR (`cursor/web-app-improvement-plan-0d45`)
+### Sprint 10 — Shipped (PR #153)
 
 - PWA **`ib-v4`** precaches `/search/` and `/saved/`; Saved manifest shortcut
-- Review→product map **83%** (121/146); improved `suggest-review-product-map.mjs`
+- Review→product map **86%** (126/146); improved `suggest-review-product-map.mjs`
 - **HowTo** JSON-LD on four procedural guides in the Lighthouse URL set
 - Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
 
-### Phase D — Shipped (PR #114)
+### Sprint 11 — This PR (`cursor/web-app-improvement-plan-1801`)
+
+- PWA **`ib-v5`** precaches `/review/` + `/offline/` fallback; Reviews manifest shortcut
+- Review→product map **~91%** (133/146); buying-guide editorial overrides
+- **`NEXT_PUBLIC_REACTIONS_API_URL`** optional secret in Pages build
+- PWA offline e2e smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
+
+### Next (Sprint 12+)
 
 - Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
 - `docs/baselines/README.md` GSC/CrUX runbook

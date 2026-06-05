@@ -7,12 +7,19 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v4 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v4"');
+  it("uses ib-v5 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v5"');
   });
 
-  it("precaches finder, catalog, search, and saved shells", () => {
-    for (const path of ["/quiz/", "/catalog/", "/search/", "/saved/"]) {
+  it("precaches finder, catalog, search, saved, and review shells", () => {
+    for (const path of [
+      "/quiz/",
+      "/catalog/",
+      "/search/",
+      "/saved/",
+      "/review/",
+      "/offline/",
+    ]) {
       expect(source).toContain(`"${path}"`);
     }
   });

@@ -40,6 +40,7 @@ jobs:
           NEXT_PUBLIC_ADSENSE_CLIENT: "ca-pub-9641207581771694"
           NEXT_PUBLIC_ADSENSE_MODE: "disabled"
           NEXT_PUBLIC_BUTTONDOWN_USERNAME: "yoryouyoi"
+          NEXT_PUBLIC_REACTIONS_API_URL: ${{ secrets.REACTIONS_API_URL }}
 
       - name: Disable Jekyll on Pages
         run: touch out/.nojekyll
