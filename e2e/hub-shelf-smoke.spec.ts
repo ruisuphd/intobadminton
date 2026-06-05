@@ -257,3 +257,27 @@ test("updates page links to full catalog browse", async ({ page }) => {
   await expect(catalogLink).toBeVisible();
   await expect(catalogLink).toHaveAttribute("href", "/catalog/");
 });
+
+test("contact page links to full catalog browse", async ({ page }) => {
+  await page.goto("/contact/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("research page links to full catalog browse", async ({ page }) => {
+  await page.goto("/research/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("homepage links to full catalog browse", async ({ page }) => {
+  await page.goto("/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});

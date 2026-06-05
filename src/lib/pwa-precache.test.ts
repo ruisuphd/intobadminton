@@ -7,11 +7,11 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v18 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v18"');
+  it("uses ib-v19 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v19"');
   });
 
-  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
+  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, price-band best-of, contact, research, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
     for (const path of [
       "/quiz/",
       "/catalog/",
@@ -68,6 +68,17 @@ describe("PWA service worker precache", () => {
       "/best/smash-heavy-rackets/",
       "/best/strings/",
       "/best/intermediate-rackets/",
+      "/best/rackets-under-100/",
+      "/best/rackets-under-150/",
+      "/best/rackets-under-200/",
+      "/best/shoes/",
+      "/best/doubles-rackets/",
+      "/best/head-light-rackets/",
+      "/best/all-round-rackets/",
+      "/best/wide-feet-badminton-shoes/",
+      "/best/budget-badminton-shoes/",
+      "/contact/",
+      "/research/",
     ]) {
       expect(source).toContain(`"${path}"`);
     }

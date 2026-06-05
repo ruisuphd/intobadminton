@@ -243,7 +243,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/guides/doubles-roles/`, `/tools/racket-balance-explainer/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT26_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT26_2026-06.md)
 
-### Sprint 27 — This branch
+### Sprint 27 — Shipped (PR #175)
 
 - Trust/discovery pages → **Browse full catalog** CTAs (glossary, search, updates, data, methodology)
 - Quiz results → **richer profile-filtered catalog** (`balance` + `sort=fit-desc`)
@@ -252,7 +252,22 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes homepage + 7 commercial/trust routes
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT27_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT27_2026-06.md)
 
-### Next (Sprint 28+)
+### Sprint 28 — Shipped (PR #176)
+
+- Trust/editorial cluster → **Browse full catalog** CTAs (about, sources, source-policy, authors)
+- Quiz funnel entry → catalog band; profile → catalog adds **weight class**
+- PWA **`ib-v18`** precaches 10 compare articles + 4 tier-1 best-of landings
+- Lighthouse CI adds authors, commercial long-tail, trust cluster (excludes noindex saved/compare)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT28_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT28_2026-06.md)
+
+### Sprint 29 — This branch
+
+- Contact + research + homepage → **Browse full catalog** secondary CTAs
+- PWA **`ib-v19`** precaches contact, research, price-band + shoes best-of shells
+- Lighthouse CI adds `/contact/`, `/research/`, `/authors/rui-su/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT29_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT29_2026-06.md)
+
+### Next (Sprint 30+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs

@@ -86,12 +86,20 @@ export function MarketResearchPage({ locale = "en" }: { locale?: SiteLocale }) {
               </li>
             ))}
           </ul>
-          <Link
-            href={buildLocalizedPath(locale, "/quiz/")}
-            className="mt-6 inline-flex h-11 items-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white"
-          >
-            {text.cta}
-          </Link>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link
+              href={buildLocalizedPath(locale, "/quiz/")}
+              className="btn-primary"
+            >
+              {text.cta}
+            </Link>
+            <Link
+              href={buildLocalizedPath(locale, "/catalog/")}
+              className="btn-secondary"
+            >
+              Browse full catalog
+            </Link>
+          </div>
         </section>
       </div>
     </main>
