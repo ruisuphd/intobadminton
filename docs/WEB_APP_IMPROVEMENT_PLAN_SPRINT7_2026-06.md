@@ -38,6 +38,10 @@
 3. **Unit tests** — body-only term discovery + existing fuzzy cases in `site-search.test.ts`.
 4. **Docs hygiene** — resolve merge conflict in `WEB_APP_IMPROVEMENT_PLAN_2026-06.md`.
 
+### Follow-up (PR #142)
+
+5. **`blog-review-product-map.json`** — 15 additional high-confidence slug mappings (62% → 72% coverage).
+
 ---
 
 ## 4. Ten-pass plan verification
