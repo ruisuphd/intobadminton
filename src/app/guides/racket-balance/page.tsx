@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/racket-balance/";
 const HEADLINE = "Racket balance and shaft flex";
@@ -53,6 +54,7 @@ export default function RacketBalanceGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Racket balance and shaft flex
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Two specs do most of the work in determining how a badminton racket
           feels: where its mass sits along the shaft (the balance point) and

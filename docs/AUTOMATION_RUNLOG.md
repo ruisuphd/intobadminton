@@ -2,20 +2,42 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-05 — Homepage perf follow-up (`cursor/web-app-improvement-plan-dfd2`, PR #92)
+## 2026-06-05 — Homepage perf (PR #92)
 
-**Trigger:** PR #84 merged without homepage bundle slimming; rebased on latest `main`.
+- Prebuild homepage JSON slices; deferred ContinueReading
+- Lighthouse: no /saved/; CLS warn
 
-### Changes
+---
 
-- `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json` + prebuild generators
-- `HomeContinueReading` dynamic import; lightweight product names on shortlist rows
-- Lighthouse: `/saved/` excluded (noindex); CLS → warn on guides
+## 2026-06-04 — PR #105 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-6c92`)
 
-### Verification
+**Trigger:** GitHub pull request #105 (`ready_for_review`) — Sprint 3–4 web app (`cursor/web-app-improvement-plan-f8ee`). PR #105 **merged** to `main` as `98941e3`. Translation workflow ran in parallel; no review content changes.
 
-- `npm test` — 207 passed (post-merge)
-- Lighthouse homepage performance target ≥ 0.9
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 198 passed
+- `npm run build` + postbuild SEO audit — pass (649 HTML, 210 sitemap URLs)
+
+### Translation / import
+
+Not performed — no `blogs/` drop. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate → rename → npm run blog:import && npm run blog:validate
+```
 
 ---
 

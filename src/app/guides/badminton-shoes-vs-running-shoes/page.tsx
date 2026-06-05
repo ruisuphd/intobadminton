@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/badminton-shoes-vs-running-shoes/";
 const HEADLINE = "Badminton shoes vs running shoes";
@@ -55,6 +56,7 @@ export default function BadmintonVsRunningShoesGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Badminton shoes vs running shoes
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Most club players who show up in running trainers are not being
           cheap — they are using shoes engineered for a completely different
