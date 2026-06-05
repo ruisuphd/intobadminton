@@ -27,7 +27,7 @@
 | 2 | **Catalog lacks personalized sort** | Browse UX lags TW/RacketGuide | ✅ `fit-desc` sort when profile ready (PR #157) |
 | 3 | **Reviews hub is flat chronological** | Poor discovery vs Wirecutter browse | ✅ `ReviewsIndexClient` filters (PR #157) |
 | 4 | **Best-of pages lack “Keep reading” shelf** | Internal linking on high-intent landings | ✅ Extended `PATH_CLUSTER` (PR #158) |
-| 5 | **PWA omits guides + claims shells** | Offline users miss key flows | ✅ `ib-v7` precaches `/guides/`, `/data/`, `/methodology/`, `/review/`, `/offline/` |
+| 5 | **PWA omits guides + claims shells** | Offline users miss key flows | ✅ `ib-v7`+`ib-v8` precaches editorial + commercial shells |
 
 Additional shipped: HelpfulReaction API-off UX, `/methodology/` in updates feed, share URL round-trip e2e, moat-page e2e smoke.
 

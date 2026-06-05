@@ -52,6 +52,13 @@
       "description": "Evergreen equipment and technique guides",
       "url": "/guides/",
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Tools",
+      "short_name": "Tools",
+      "description": "String tension, skill level, and authenticity calculators",
+      "url": "/tools/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     }
   ],
   "icons": [

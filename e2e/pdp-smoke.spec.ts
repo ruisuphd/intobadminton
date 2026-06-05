@@ -14,6 +14,17 @@ test("product PDP renders specs and finder CTA", async ({ page }) => {
   await expect(page.getByRole("navigation", { name: "Breadcrumb" })).toBeVisible();
 });
 
+test("product PDP shows related reading shelf", async ({ page }) => {
+  await page.goto(`/product/${PDP_ONLY_ID}/`);
+
+  await expect(
+    page.getByRole("heading", { name: "Keep reading" })
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /read →/i }).first()
+  ).toBeVisible();
+});
+
 test("catalog links unmapped SKUs to product PDP", async ({ page }) => {
   await page.goto("/catalog/?cat=racket&brand=Yonex");
 

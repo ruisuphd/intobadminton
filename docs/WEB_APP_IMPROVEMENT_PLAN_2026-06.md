@@ -109,7 +109,25 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - PWA **`ib-v7`** precaches `/data/`, `/methodology/`, `/review/`, `/guides/`, `/offline/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
-### Phase D — Shipped (PR #114)
+### Sprint 13 — Shipped (PR #159)
+
+- **PDP related reading** shelf on `/product/[id]/`
+- Explainer review slugs (13) map to editorial clusters via pattern expansion
+- PWA **`ib-v8`** precaches `/tools/` and `/faq/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
+
+### Sprint 14 — PR #157 (profile fit + catalog keyword search)
+
+- Profile-aware fit on PDP + review panels; catalog **Best fit for you** sort
+- Reviews hub search + filters; share URL round-trip e2e
+- Catalog keyword search (`/catalog/?q=`)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md)
+
+### Next (Sprint 15+)
+
+- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
+- Original photos on top commercial URLs
+- YouTube `sameAs` on author entity (after channel claim)
 
 - Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
 - `docs/baselines/README.md` GSC/CrUX runbook
@@ -130,14 +148,10 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 13 — PR #157 rebase + catalog keyword search)
-
-- Catalog keyword search (`q` param on `/catalog/`) — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
-- PR #157 profile fit, catalog sort, review filters rebased onto Sprint 12 (#158)
-- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
+### Phase D — Shipped (PR #114)
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
-- Editorial pairing for explainer-only review slugs (map ceiling ~87%)
+- Intentional explainer slugs without single catalogue SKU (no forced product map)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
