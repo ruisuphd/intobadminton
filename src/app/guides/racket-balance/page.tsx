@@ -1,18 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/racket-balance/";
 const HEADLINE = "Racket balance and shaft flex";
 const DESCRIPTION =
   "How head weight and shaft stiffness interact on court — reading balance points in millimetres, choosing flex by skill level, and the shaft hardness scale.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton racket balance and shaft flex",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function RacketBalanceGuide() {
   return (
@@ -53,6 +54,7 @@ export default function RacketBalanceGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Racket balance and shaft flex
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Two specs do most of the work in determining how a badminton racket
           feels: where its mass sits along the shaft (the balance point) and

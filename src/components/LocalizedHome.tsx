@@ -3,6 +3,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { HomeContinueReading } from "@/components/HomeContinueReading";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
+import { SiteSearchForm } from "@/components/SiteSearchForm";
 import { JsonLd } from "@/components/JsonLd";
 import catalogStats from "@/data/catalog-stats.json";
 import { homeFeaturedReviewPath, homeFeaturedReviews, reviewArticleCount } from "@/lib/home-featured";
@@ -96,6 +97,10 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   };
 
   const popularSearches: { label: string; href: string; tag: string }[] = [
+    { label: "Best rackets under $100", href: "/best/rackets-under-100/", tag: "Budget" },
+    { label: "Best lightweight 5U rackets", href: "/best/lightweight-rackets-5u/", tag: "5U" },
+    { label: "Best rackets for shoulder comfort", href: "/best/rackets-for-shoulder-comfort/", tag: "Comfort" },
+    { label: "Browse equipment catalog", href: "/catalog/", tag: "Catalog" },
     { label: "Best beginner rackets", href: "/best/beginner-rackets/", tag: "Beginner" },
     { label: "Best doubles rackets", href: "/best/doubles-rackets/", tag: "Doubles" },
     { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Singles" },
@@ -149,6 +154,14 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <p className="mt-6 text-xs text-[var(--color-subtle)]">
               {"No signup · No email gate · Profiles stay on device"}
             </p>
+            <div className="mt-8 max-w-xl">
+              <p className="text-sm font-medium text-[var(--text)]">
+                Search reviews, guides, and tools
+              </p>
+              <div className="mt-3">
+                <SiteSearchForm />
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

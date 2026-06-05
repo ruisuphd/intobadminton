@@ -55,6 +55,27 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["beginner", "starter", "first racket"],
   },
   {
+    title: "Best rackets under $100",
+    href: "/best/rackets-under-100/",
+    kind: "best",
+    summary: "Budget shortlist — Yonex Play, Victor value, Li-Ning entry lines under a hundred dollars.",
+    keywords: ["budget", "cheap", "under 100", "affordable", "value"],
+  },
+  {
+    title: "Best lightweight & 5U rackets",
+    href: "/best/lightweight-rackets-5u/",
+    kind: "best",
+    summary: "Ultralight and 5U frames for fast recovery, juniors, and front-court doubles.",
+    keywords: ["5u", "lightweight", "ultralight", "nanoray light"],
+  },
+  {
+    title: "Best rackets for shoulder comfort",
+    href: "/best/rackets-for-shoulder-comfort/",
+    kind: "best",
+    summary: "Head-light and medium-flex picks for players managing arm and shoulder load.",
+    keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",
@@ -74,13 +95,6 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-heavy attack frames for singles power players.",
     keywords: ["smash", "attack", "singles", "power"],
-  },
-  {
-    title: "Best rackets under $100",
-    href: "/best/rackets-under-100/",
-    kind: "best",
-    summary: "Budget badminton rackets under $100 with editorial trade-offs.",
-    keywords: ["budget", "cheap", "under 100", "affordable", "beginner"],
   },
   {
     title: "Best badminton shoes",
@@ -256,6 +270,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "compare",
     summary: "Side-by-side racket and shoe comparisons by player role.",
     keywords: ["compare", "versus", "vs"],
+  },
+  {
+    title: "Badminton toolkit",
+    href: "/tools/",
+    kind: "tool",
+    summary:
+      "Calculators and references — skill converter, tension calculator, balance explainer, court diagram, authenticity checker.",
+    keywords: ["tools", "calculator", "toolkit", "interactive"],
   },
   {
     title: "Skill-level converter",

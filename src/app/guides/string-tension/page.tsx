@@ -1,18 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/string-tension/";
 const HEADLINE = "Badminton string tension: a practical guide";
 const DESCRIPTION =
   "How badminton string tension changes feel, power, and control — recommended pound ranges by skill, restring frequency, and climate effects most players miss.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton string tension guide",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function StringTensionGuide() {
   return (
@@ -53,6 +54,7 @@ export default function StringTensionGuide() {
         <h1 className="text-3xl font-semibold tracking-tight">
           Badminton string tension: a practical guide
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Tension is the single setting that changes how a racket feels more
           than any spec on the box. The same frame at 22 lb and at 28 lb plays

@@ -6,6 +6,7 @@ import {
   normalizePath,
   siteLocales,
 } from "@/lib/locale";
+import { articleSocialMetadata } from "@/lib/og";
 
 /**
  * Canonical + hreflang alternates for a route path.
@@ -27,4 +28,22 @@ export function pageAlternates(path: string): NonNullable<Metadata["alternates"]
   )}`;
 
   return { canonical, languages };
+}
+
+/** Title, description, hreflang, Open Graph, and Twitter for editorial routes. */
+export function editorialPageMetadata(input: {
+  path: string;
+  title: string;
+  description: string;
+}): Metadata {
+  return {
+    title: input.title,
+    description: input.description,
+    alternates: pageAlternates(input.path),
+    ...articleSocialMetadata({
+      path: input.path,
+      title: input.title,
+      description: input.description,
+    }),
+  };
 }

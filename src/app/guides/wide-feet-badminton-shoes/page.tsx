@@ -1,18 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/wide-feet-badminton-shoes/";
 const HEADLINE = "Badminton shoes for wide feet";
 const DESCRIPTION =
   "How wide-footed badminton players should choose court shoes — wide-fit options from Yonex, Victor, Mizuno, plus how to test fit and avoid heel slip.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: HEADLINE,
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function WideFeetShoesGuide() {
   return (
@@ -35,6 +36,7 @@ export default function WideFeetShoesGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Badminton shoes for wide feet
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Wide-footed players have one of the hardest fit problems in
           badminton: the standard last on most performance shoes is

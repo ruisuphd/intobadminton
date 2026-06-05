@@ -6,7 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/generate-product-images.mjs && node scripts/generate-product-display-names.mjs && node scripts/generate-catalog-stats.mjs && node scripts/generate-home-featured.mjs",
     "build": "next build",
-    "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/generate-blog-redirects.mjs && node scripts/check-source-attribution.mjs && node scripts/postbuild-seo-audit.mjs",
+    "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/generate-blog-redirects.mjs && node scripts/generate-feed.mjs && node scripts/check-source-attribution.mjs && node scripts/postbuild-seo-audit.mjs",
     "start": "npx -y serve@latest out",
     "lint": "eslint && node scripts/check-glossary-links.mjs --warn",
     "blog:import": "python3 scripts/blog-en-persona-normalize.py 2>/dev/null || true && python3 scripts/blog-import-option-b.py",
