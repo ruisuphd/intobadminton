@@ -27,9 +27,13 @@
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
+<<<<<<< HEAD
+**Shipped on `main`:** site search, review body excerpts, `SearchAction`, return-visit hooks, reactions API client, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
+=======
 **Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
+>>>>>>> origin/main
 
 ---
 
@@ -98,11 +102,16 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - PR #139: results share link, RSS `rel=alternate` in layout
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
 
-### Next (Sprint 8+)
+### Sprint 8 — This branch (PR #143)
+
+- Product map ≥86%; review body search e2e; results share link verification
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
+
+### Next (Sprint 9+)
 
 - GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
-- HelpfulReaction Workers/KV aggregate backend
+- Deploy HelpfulReaction Worker + `NEXT_PUBLIC_REACTIONS_API_URL`
 - YouTube `sameAs` on author entity (after channel claim)
 
 ---
