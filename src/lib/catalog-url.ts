@@ -231,6 +231,11 @@ const GUIDE_SLUG_CATALOG_FILTERS: Record<string, GuideSlugCatalogFilters> = {
   glossary: { category: "racket" },
 };
 
+/** Slugs with committed guide → catalog filter wiring. */
+export function guideCatalogFilterSlugs(): string[] {
+  return Object.keys(GUIDE_SLUG_CATALOG_FILTERS);
+}
+
 /** Filtered catalog browse — used from `/guides/*` procedural landings. */
 export function catalogHrefFromGuideSlug(slug: string): string {
   const filters = GUIDE_SLUG_CATALOG_FILTERS[slug.trim()];

@@ -35,6 +35,7 @@
     "lint:pdp-baseline": "node scripts/pdp-baseline.mjs",
     "lint:best-baseline": "node scripts/best-baseline.mjs",
     "lint:compare-guides-baseline": "node scripts/compare-guides-baseline.mjs",
+    "lint:guides-baseline": "node scripts/guides-baseline.mjs",
     "lint:product-funnel-baselines": "node scripts/product-funnel-baselines.mjs",
     "lint:editorial-baselines": "node scripts/editorial-baselines.mjs",
     "lint:all-baselines": "node scripts/all-baselines.mjs",
