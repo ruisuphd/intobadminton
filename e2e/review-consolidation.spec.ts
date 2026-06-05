@@ -29,7 +29,8 @@ test.describe("review blog style", () => {
     page,
   }) => {
     await page.goto("/review/yy-nanoflare-1000z/");
-    await expect(page).toHaveURL(/\/review\/yonex-nanoflare-1000z-review\/?$/);
+    // Legacy product-id stub redirects via blog-url-migrations (see out/review/yy-nanoflare-1000z/).
+    await expect(page).toHaveURL(/\/review\/yonex-nanoflare-1000z-play-review\/?$/);
   });
 
   test("legacy blogs hub redirects to review hub", async ({ page }) => {
