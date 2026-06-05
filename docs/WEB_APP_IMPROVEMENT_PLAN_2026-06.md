@@ -267,14 +267,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI adds `/contact/`, `/research/`, `/authors/rui-su/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT29_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT29_2026-06.md)
 
-### Sprint 30 — This branch
+### Sprint 30 — Shipped (PR #178)
 
 - Legal cluster (privacy, terms, cookies, security, privacy-choices) → **Browse full catalog** CTAs
 - PWA **`ib-v20`** precaches legal/policy shells
 - Lighthouse CI adds `/privacy/`, `/terms/`, `/cookies/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT30_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT30_2026-06.md)
 
-### Next (Sprint 31+)
+### Sprint 31 — This branch
+
+- PWA **`ib-v21`** precaches trust cluster (about, sources, source-policy, authors)
+- Offline recovery adds Best-of, Brands, and Privacy links
+- Lighthouse CI adds `/security/`, `/source-policy/` (`/privacy-choices/` excluded — noindex)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md)
+
+### Next (Sprint 32+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
