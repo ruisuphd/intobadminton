@@ -1,6 +1,7 @@
 import { readdirSync, type Dirent } from "node:fs";
 import { join } from "node:path";
 import { blogSlugs } from "@/lib/blog";
+import { allCatalogProductIds } from "@/lib/catalog-products";
 import { lastModifiedForRoute } from "@/lib/editorial-meta";
 
 export type SitemapEntry = {
@@ -40,6 +41,9 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
 const DYNAMIC_ROUTE_EXPANSIONS: Record<string, readonly string[]> = {
   get "/review/[slug]/"() {
     return blogSlugs;
+  },
+  get "/product/[id]/"() {
+    return allCatalogProductIds();
   },
 };
 
@@ -116,6 +120,7 @@ function routePriority(path: string): number {
   if (path === "/") return 1;
   if (path === "/quiz/") return 0.9;
   if (path.startsWith("/best/") || path.startsWith("/compare-guides/")) return 0.8;
+  if (path.startsWith("/product/")) return 0.7;
   if (path.startsWith("/review/") && path !== "/review/") return 0.8;
   if (path.startsWith("/brands/") && path !== "/brands/") return 0.8;
   if (path === "/brands/") return 0.7;
