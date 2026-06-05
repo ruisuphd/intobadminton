@@ -1,0 +1,5 @@
+{
+  "capturedAt": "2026-06-05",
+  "note": "Placeholder baseline — run `node scripts/lighthouse-baseline.mjs capture` after build to refresh.",
+  "urls": {}
+}
