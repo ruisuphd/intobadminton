@@ -68,6 +68,13 @@
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     },
     {
+      "name": "Brands",
+      "short_name": "Brands",
+      "description": "Yonex, Victor, Li-Ning, Anta, and more brand guides",
+      "url": "/brands/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
       "name": "Compare guides",
       "short_name": "Compare",
       "description": "Head-to-head badminton equipment comparisons",

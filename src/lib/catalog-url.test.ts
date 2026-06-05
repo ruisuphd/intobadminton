@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  catalogHrefFromBrand,
   catalogHrefFromKeywordQuery,
   catalogUrlFromState,
   parseCatalogSearchParams,
@@ -85,5 +86,13 @@ describe("catalog-url", () => {
       "yonex astrox"
     );
     expect(catalogHrefFromKeywordQuery("   ")).toBe("/catalog/");
+  });
+
+  it("builds brand-filtered catalog href for brand landings", () => {
+    expect(catalogHrefFromBrand("Anta")).toBe("/catalog/?brand=Anta");
+    expect(parseCatalogSearchParams(new URLSearchParams("brand=Anta")).brand).toBe(
+      "Anta"
+    );
+    expect(catalogHrefFromBrand("   ")).toBe("/catalog/");
   });
 });
