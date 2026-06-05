@@ -76,6 +76,28 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
   },
   {
+    title: "Best control rackets",
+    href: "/best/control-rackets/",
+    kind: "best",
+    summary: "Even-balance placement frames — Arcsaber, Halbertec, and Victor all-court control.",
+    keywords: ["control", "placement", "arcsaber", "even balance", "halbertec"],
+  },
+  {
+    title: "Rackets under $200",
+    href: "/best/rackets-under-200/",
+    kind: "best",
+    summary: "Mid-range catalogue discovery — verified frames at $200 or below with comparison table.",
+    keywords: ["under 200", "mid budget", "club", "price band"],
+  },
+  {
+    title: "Verified claims registry",
+    href: "/data/",
+    kind: "tool",
+    summary:
+      "Public table of cited facts with source quotes, verification dates, and authority tiers.",
+    keywords: ["claims", "data", "sources", "fact check", "registry"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",

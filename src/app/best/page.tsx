@@ -71,6 +71,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         title: "Rackets under $150",
         dek: "Club-budget frames at $150 or less — catalogue discovery with comparison table.",
       },
+      {
+        href: "/best/rackets-under-200/",
+        title: "Rackets under $200",
+        dek: "Mid-range club and competitive frames at $200 or less — full catalogue slice with comparison table.",
+      },
+      {
+        href: "/best/control-rackets/",
+        title: "Best control rackets",
+        dek: "Even-balance placement frames — Arcsaber, Halbertec, and Victor all-court picks for line accuracy.",
+      },
     ],
   },
   {

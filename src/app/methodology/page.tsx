@@ -67,7 +67,12 @@ export default function MethodologyPage() {
           claims while respecting source rights.
         </p>
         <p>
-          See also <Link href="/source-policy/" className="text-[var(--color-accent)] underline">Source policy</Link> and{" "}
+          Cited numeric facts (court dimensions, weight bands, grip sizes) are tracked in our{" "}
+          <Link href="/data/" className="text-[var(--color-accent)] underline">
+            verified claims registry
+          </Link>
+          {" "}with verbatim quotes and verification dates. See also{" "}
+          <Link href="/source-policy/" className="text-[var(--color-accent)] underline">Source policy</Link> and{" "}
           <Link href="/privacy/" className="text-[var(--color-accent)] underline">Privacy policy</Link>.
         </p>
       </article>

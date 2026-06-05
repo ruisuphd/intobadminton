@@ -52,7 +52,7 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   // lastmod for the hubs, which weakens freshness signals.
   "/best/": {
     publishedAt: "2025-09-12",
-    lastReviewedAt: "2026-05-18",
+    lastReviewedAt: "2026-06-05",
   },
   "/brands/": {
     publishedAt: "2025-09-26",
@@ -126,6 +126,20 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-04",
     lastReviewedAt: "2026-06-04",
     priceCheckedAt: "2026-06-04",
+  },
+  "/best/rackets-under-200/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/control-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/data/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
   },
 
   // Brand pages (no prices → no priceCheckedAt).
