@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Astrox 88S Pro (2024)",
       brand: "Yonex",
       priceUsd: 260,
+      productId: "yy-astrox-88s-pro-2024",
       bestFor: "Front-court / mixed doubles control",
       specs: [
         { label: "Weight", value: "4U (~84g)" },
@@ -49,6 +50,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 1000Z",
       brand: "Yonex",
       priceUsd: 289,
+      productId: "yy-nanoflare-1000z",
       bestFor: "Pure speed doubles and defense",
       specs: [
         { label: "Weight", value: "4U (~84g)" },
@@ -118,6 +120,7 @@ const config: BestPicksConfig = {
       name: "Astrox 88D Pro (2024)",
       brand: "Yonex",
       priceUsd: 290,
+      productId: "yy-astrox-88d-pro-2024",
       bestFor: "Rear-court men's doubles attack",
       specs: [
         { label: "Weight", value: "4U" },
@@ -141,6 +144,7 @@ const config: BestPicksConfig = {
       name: "DriveX 8S",
       brand: "Victor",
       priceUsd: 189,
+      productId: "vic-drivex-8s",
       bestFor: "Budget-conscious club doubles",
       specs: [
         { label: "Weight", value: "4U" },

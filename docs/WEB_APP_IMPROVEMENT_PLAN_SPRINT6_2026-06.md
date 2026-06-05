@@ -1,62 +1,32 @@
 # Web App Improvement Plan — Sprint 6 (June 2026)
 
-**Branches:** Multiple parallel sprints merged to `main` — `b7a9` (#134 fuzzy search), `06b6` (#129 reactions scaffold), `cc42` (#127 catalog/compare), `9a0c` (PR #130 `/data/` on branch 10b8)  
-**Baseline:** Sprint 5 on `main` (PR #116 — programmatic best pages, glossary autolink).
+**Branches:** #127 catalog/compare, #129 reactions, #134 fuzzy search, #130 `/data/`, #137 compare UX  
+**Baseline:** Sprint 5 on `main`.
 
 ---
 
-## 1. Competitive audit (June 2026)
+## 1. Top gaps (closed)
 
-| Competitor | Strength vs IntoBadminton | Sprint 6 response |
-|------------|---------------------------|-------------------|
-| **Wirecutter / RTINGS** | Public methodology + cited specs | ✅ `/data/` claims registry (PR #140) |
-| **Tennis Warehouse** | Faceted browse, long-tail landings | ✅ Catalog filters + 8+ `/best/*` pages |
-| **RacketGuide** | Programmatic SEO roundups | ✅ singles, head-light, all-round, wide-feet shoes |
-| **BadmintonCentral** | Community trust signals | ⏳ HelpfulReaction Workers/KV (scaffold #129) |
-| **Brand PDPs** | First-party photography | ⏳ Editorial `public/products/` pipeline |
-
----
-
-## 2. Top 5 gaps (combined Sprint 6)
-
-| # | Gap | Status |
-|---|-----|--------|
-| 1 | No public claims transparency page | ✅ `/data/` (PR #140) |
-| 2 | Site search typo tolerance | ✅ `search-fuzzy.ts` (#134) |
-| 3 | Programmatic `/best/*` coverage | ✅ control, singles, head-light, all-round, wide-feet shoes |
-| 4 | Catalog save/compare funnel | ✅ `CatalogProductActions` (#127) |
-| 5 | HelpfulReaction aggregate counts | ⏳ Workers/KV backend |
+| Gap | Status |
+|-----|--------|
+| Catalog save/compare + related reading | ✅ #127 |
+| Fuzzy site search | ✅ #134 |
+| Programmatic `/best/*` expansion | ✅ #127, #129, #134 |
+| `/data/` claims registry | ✅ #130 |
+| HelpfulReaction scaffold | ✅ #129 |
 
 ---
 
-## 3. Verification
+## 2. Verification
 
 ```bash
 npm test
-npm run build
 npm run lint
+npm run build
 ```
 
-All passes ✅ — Lighthouse CI on port 4173.
-
 ---
 
-## 4. Deferred (Sprint 7+)
+## 3. Deferred
 
 See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
-
----
-
-## 5. PR #137 follow-up (`cursor/web-app-improvement-plan-5049`)
-
-Additional maturity items merged after parallel Sprint 6 PRs (#127, #129, #134):
-
-| Deliverable | Files |
-|-------------|-------|
-| Compare share-link hydration fix | `ProfileContext.tsx` (`storageReady`), `compare/page.tsx` |
-| Compare row winner highlight | `CompareTable.tsx` |
-| PWA manifest shortcuts | `public/manifest.webmanifest` |
-| Retention-flow e2e | `e2e/catalog-compare-saved-smoke.spec.ts` |
-| Review map suggestion script | `scripts/suggest-review-product-map.mjs` |
-
-Review-product map coverage on `main`: **116/146 (79%)** after prior editorial expansion.

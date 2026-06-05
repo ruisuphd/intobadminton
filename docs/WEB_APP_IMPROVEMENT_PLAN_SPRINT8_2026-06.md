@@ -1,46 +1,34 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-32b1` (PR #145)  
-**Baseline:** Sprint 7 on `main` (#141 product map 86%, PDP-lite, `/data/`).
+**Branches:** `main` (#130–#146 map, claims, PDP e2e); **#145** (string cluster, `/updates/`, retention shelves)  
+**Baseline:** Sprint 7 on `main`.
 
 ---
 
-## 1. Top 5 gaps (PR #145)
+## 1. Top 5 gaps
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | String cluster incomplete | ✅ string feel guide + `related-content` |
-| 2 | Review pages lack decision-path shelf | ✅ `relatedReadingForReviewSlug` |
-| 3 | Homepage hides freshness lane | ✅ `HomeRecentUpdates` → `/updates/` |
-| 4 | Original product photography | ⏳ editorial |
-| 5 | HelpfulReaction KV aggregates | ⏳ deploy worker |
-
-*(Product map 85%+ gate shipped on `main` via #141 — separate Sprint 8 track.)*
+| 1 | Product map below 85% | ✅ on `main` (#141, 86%) |
+| 2 | Claims transparency | ✅ on `main` (#130 `/data/`) |
+| 3 | String cluster + freshness lane | ✅ #145 |
+| 4 | Review decision-path shelf | ✅ #145 |
+| 5 | HelpfulReaction KV aggregates | ⏳ |
 
 ---
 
-## 2. Execution
+## 2. PR #145 execution
 
 | Item | Files |
 |------|-------|
-| String cluster links | `related-content.ts` |
-| Review decision shelf | `EditorialArticlePage.tsx` |
-| Homepage updates strip | `HomeRecentUpdates.tsx`, `LocalizedHome.tsx` |
-| Tests | `related-content.test.ts` |
+| `/guides/string-feel-vs-durability/`, `/updates/` | app routes, `editorial-updates.ts` |
+| String cluster + review shelf | `related-content.ts`, `EditorialArticlePage.tsx` |
+| Homepage freshness strip | `HomeRecentUpdates.tsx` |
+| Redirect canonical fix | `blog-redirect-helpers.mjs` |
 
 ---
 
-## 3. Ten-pass verification
-
-| Pass | Result |
-|------|--------|
-| 1–5 | Gaps, static export, editorial dates, cluster links | ✅ |
-| 6–8 | Tests + build + SEO audit | ✅ |
-| 9–10 | Lighthouse + merge with latest `main` | ✅ |
-
----
-
-## 4. Verification
+## 3. Verification
 
 ```bash
 npm test
@@ -50,9 +38,8 @@ npm run build
 
 ---
 
-## 5. Deferred (Sprint 9+)
+## 4. Deferred (Sprint 9+)
 
-- Deploy `workers/reactions/` + `NEXT_PUBLIC_REACTIONS_API_URL`
-- GSC/CrUX baseline CSV
+- HelpfulReaction Workers/KV deploy
 - Original `public/products/` photography
-- YouTube `Person.sameAs` after channel claim
+- GSC/CrUX CSV baselines
