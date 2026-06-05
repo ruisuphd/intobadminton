@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v18"))) return false;
-      const cache = await caches.open("ib-v18-static");
+      if (!keys.some((key) => key.startsWith("ib-v19"))) return false;
+      const cache = await caches.open("ib-v19-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v18-static");
+    const cache = await caches.open("ib-v19-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -82,6 +82,12 @@ test("service worker precaches search, review, and offline shells", async ({
     "/best/smash-heavy-rackets/",
     "/best/strings/",
     "/best/intermediate-rackets/",
+    "/best/rackets-under-100/",
+    "/best/rackets-under-150/",
+    "/best/rackets-under-200/",
+    "/best/shoes/",
+    "/contact/",
+    "/research/",
   ]) {
     expect(
       cachedPaths.some((entry) => entry === path || entry.startsWith(path)),

@@ -399,9 +399,14 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           <p className="mt-5 text-base leading-relaxed text-[var(--color-muted)]">
             Answer a few questions. We rank gear with a transparent score — no email, no account, no signup wall.
           </p>
-          <Link href={localized("/quiz/")} className="btn-primary mt-10">
-            {copy.home.start}
-          </Link>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <Link href={localized("/quiz/")} className="btn-primary">
+              {copy.home.start}
+            </Link>
+            <Link href={localized("/catalog/")} className="btn-secondary">
+              Browse full catalog
+            </Link>
+          </div>
         </div>
       </section>
     </main>
