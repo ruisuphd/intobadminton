@@ -63,6 +63,8 @@ jobs:
           npm run lint:lighthouse
       - name: Lighthouse baseline regression guard
         run: npm run lint:lighthouse:baseline
+      - name: CrUX field-data baseline guard
+        run: npm run lint:crux-baseline
 
   e2e-quiz:
     runs-on: ubuntu-latest

@@ -21,6 +21,7 @@
     "lint:lighthouse": "npx -y @lhci/cli@0.14.x autorun",
     "lint:lighthouse:baseline": "node scripts/lighthouse-baseline.mjs compare",
     "capture:lighthouse:baseline": "node scripts/lighthouse-baseline.mjs capture",
+    "lint:crux-baseline": "node --experimental-strip-types scripts/crux-baseline.mjs validate",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
