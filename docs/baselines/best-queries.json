@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "coverage": {
+    "minCatalogFilterSlugs": 19
+  },
+  "queries": [
+    {
+      "id": "lighthouse-beginner-rackets",
+      "slug": "beginner-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "beginner",
+      "note": "Lighthouse CI best-of shell — comparison table + catalog CTA"
+    },
+    {
+      "id": "lighthouse-doubles-rackets",
+      "slug": "doubles-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "doubles",
+      "note": "Lighthouse baseline subset — doubles buying guide"
+    },
+    {
+      "id": "lighthouse-shoes",
+      "slug": "shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "expectMinRelatedReading": 3,
+      "expectProductId": "yy-comfort-z3",
+      "expectIllustrativeFit": true,
+      "e2e": true,
+      "expectHeadingPattern": "shoes",
+      "note": "CrUX shoes best-of — fit score column on mapped pick"
+    },
+    {
+      "id": "defensive-top-pick",
+      "slug": "defensive-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=head_light",
+      "expectMinRelatedReading": 3,
+      "expectProductId": "yy-nanoflare-700-pro-2024",
+      "expectIllustrativeFit": true,
+      "note": "Top defensive pick wired to catalog + illustrative fit score"
+    },
+    {
+      "id": "strings-guide",
+      "slug": "strings",
+      "expectCatalogHref": "/catalog/?cat=string",
+      "expectMinRelatedReading": 3,
+      "note": "String category best-of — catalog filter parity"
+    },
+    {
+      "id": "budget-under-100",
+      "slug": "rackets-under-100",
+      "expectCatalogHref": "/catalog/?cat=racket&price=under100",
+      "expectMinRelatedReading": 2,
+      "note": "Price-band programmatic page — budget cluster shelf"
+    }
+  ]
+}

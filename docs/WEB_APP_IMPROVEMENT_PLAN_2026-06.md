@@ -13,7 +13,7 @@
 | **Tennis Warehouse / retailer finders** | Imagery, comparison tables, filter browse | Tables ✅; `/catalog/` ✅; original photos open |
 | **RacketGuide-style finders** | Filter-first UX, calculators | Finder + 5 `/tools/*` + toolkit strip |
 | **Tennis Warehouse** | Spec-backed PDP per SKU, cross-sells | PDP golden-profile CI guard ✅ (Sprint 48) |
-| **Wirecutter / RTINGS** | Product schema, methodology | Product JSON-LD + methodology box ✅ |
+| **Wirecutter** | Programmatic best-of + comparison tables + catalog exit | Best-of golden-profile CI guard ✅ (Sprint 49) |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 
 **Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews, postbuild SEO gate.
@@ -400,7 +400,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright review map smoke** — `e2e/review-product-map-baseline-smoke.spec.ts` (review finder panel + catalog CTA)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT47_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT47_2026-06.md)
 
-### Sprint 48 — This branch
+### Sprint 48 — Shipped (PR #196)
 
 - **PDP golden profiles** — `docs/baselines/pdp-queries.json` (6 product + spec + review reverse-map expectations)
 - **PDP regression guard** — `src/lib/pdp-baseline.ts` + `npm run lint:pdp-baseline`
@@ -409,7 +409,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright PDP smoke** — `e2e/pdp-baseline-smoke.spec.ts` (specs, finder CTA, catalog exit, review link)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT48_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT48_2026-06.md)
 
-### Next (Sprint 49+)
+### Sprint 49 — This branch
+
+- **Best-of golden profiles** — `docs/baselines/best-queries.json` (6 slug + catalog exit + related reading expectations)
+- **Best-of regression guard** — `src/lib/best-baseline.ts` + `npm run lint:best-baseline`
+- **Extended editorial command** — `lint:editorial-baselines` now includes best-of guard
+- **Playwright best-of smoke** — `e2e/best-baseline-smoke.spec.ts` (comparison table, Keep reading, catalog CTA)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT49_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT49_2026-06.md)
+
+### Next (Sprint 50+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
