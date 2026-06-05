@@ -3,8 +3,10 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { CatalogClient } from "@/app/catalog/CatalogClient";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Badminton equipment catalog — browse by spec",
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function CatalogPage() {
+  const related = relatedReadingForPath("/catalog/");
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -66,6 +69,8 @@ export default function CatalogPage() {
           <CatalogClient />
         </Suspense>
       </div>
+
+      <RelatedReadingShelf items={related} />
     </main>
   );
 }

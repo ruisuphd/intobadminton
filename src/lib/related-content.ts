@@ -199,6 +199,33 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Filter the full catalogue by brand, weight, and balance.",
     },
   ],
+  brands: [
+    {
+      href: "/compare-guides/yonex-victor-li-ning/",
+      title: "Yonex vs Victor vs Li-Ning",
+      summary: "How the three flagships differ on price, feel, and tour visibility.",
+    },
+    {
+      href: "/compare-guides/yonex-astrox-vs-nanoflare/",
+      title: "Yonex Astrox vs Nanoflare",
+      summary: "Attack vs speed within the Yonex catalogue.",
+    },
+    {
+      href: "/best/all-round-rackets/",
+      title: "Best all-round rackets",
+      summary: "Even-balance frames across Yonex, Victor, and Li-Ning.",
+    },
+    {
+      href: "/catalog/",
+      title: "Equipment catalog",
+      summary: "Filter every brand we cover by spec and price.",
+    },
+    {
+      href: "/brands/",
+      title: "All brands we cover",
+      summary: "Tiering by global reach and catalogue depth.",
+    },
+  ],
 };
 
 const PATH_CLUSTER: Record<string, string> = {
@@ -249,6 +276,20 @@ const PATH_CLUSTER: Record<string, string> = {
 
   "/best/smash-heavy-rackets/": "all-round-rackets",
   "/best/rackets-under-200/": "budget",
+
+  "/best/": "compare",
+  "/brands/": "brands",
+  "/catalog/": "compare",
+};
+
+const QUIZ_CATEGORY_CLUSTER: Record<string, string> = {
+  racket: "all-round-rackets",
+  shoes: "shoe-fit",
+  string: "strings",
+  grip: "strings",
+  bag: "compare",
+  shuttle: "compare",
+  accessory: "compare",
 };
 
 function normalizePath(path: string): string {
@@ -269,6 +310,10 @@ export function relatedReadingForPath(
 
   if (!clusterKey && normalized.startsWith("/compare-guides/")) {
     clusterKey = "compare";
+  }
+
+  if (!clusterKey && normalized.startsWith("/brands/")) {
+    clusterKey = "brands";
   }
 
   if (!clusterKey) return [];
@@ -338,6 +383,20 @@ export function relatedReadingForProductCategory(
   const productPath = normalizePath(`/product/${productId}/`);
   const items = CLUSTER_ITEMS[clusterKey] ?? [];
   return items.filter((item) => item.href !== productPath).slice(0, limit);
+}
+
+/**
+ * Decision-path shelf for post-quiz `/results/` — maps finder category to
+ * the same editorial clusters used on guides and best-of pages.
+ */
+export function relatedReadingForQuizCategory(
+  category: string | undefined,
+  limit = 3
+): RelatedReadingItem[] {
+  const clusterKey =
+    (category && QUIZ_CATEGORY_CLUSTER[category]) ?? "all-round-rackets";
+  const items = CLUSTER_ITEMS[clusterKey] ?? [];
+  return items.slice(0, limit);
 }
 
 export function relatedReadingForReviewSlug(
