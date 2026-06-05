@@ -78,4 +78,4 @@ npx playwright test e2e/search-autocomplete-smoke.spec.ts e2e/search-catalog-dee
 - Owner: fill `docs/baselines/crux-template.csv` from PageSpeed Insights
 - Original `public/products/` photography on top commercial URLs
 - `VideoObject` / YouTube `sameAs` (channel claim)
-- Product-intent detection: auto-route header submit to catalog when only SKUs match
+- Product-intent auto-route — shipped Sprint 19 (`search-submit-route.ts`)
