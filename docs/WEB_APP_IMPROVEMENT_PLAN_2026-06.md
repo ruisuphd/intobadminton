@@ -146,7 +146,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2e catalog-keyword + review shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md)
 
-### Sprint 17 — This branch (`cursor/web-app-improvement-plan-9f3b`)
+### Sprint 17 — Shipped (PR #164)
 
 - **Site search → catalog deep-link** with `?q=` prefill and match count CTA
 - Empty editorial results surface catalog when catalogue rows match
@@ -174,7 +174,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Sprint 18 — Shipped (this branch)
+### Sprint 18 — Shipped (PR #165)
 
 - Header search **Catalog** split button + static hero `formAction`
 - Search autocomplete (`searchSuggestions` + combobox on `/search/` and header)
