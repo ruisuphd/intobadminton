@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "queries": [
+    {
+      "query": "nanoflare 1000",
+      "expectHrefContains": "nanoflare",
+      "minResults": 1,
+      "note": "Product name discovery"
+    },
+    {
+      "query": "string tension",
+      "expectHrefContains": "string-tension",
+      "minResults": 1,
+      "note": "Guide pillar"
+    },
+    {
+      "query": "running shoes",
+      "expectHrefContains": "badminton-shoes-vs-running",
+      "minResults": 1,
+      "note": "Cluster pillar — shoes vs running"
+    },
+    {
+      "query": "doubles positioning",
+      "expectHrefContains": "doubles-positioning",
+      "minResults": 1,
+      "note": "Cluster pillar — doubles positioning"
+    },
+    {
+      "query": "authenticity checker",
+      "expectHrefContains": "authenticity-checker",
+      "minResults": 1,
+      "note": "Interactive tool"
+    },
+    {
+      "query": "badminton toolkit",
+      "expectTopHref": "/tools/",
+      "note": "Tools hub exact match"
+    },
+    {
+      "query": "rackets under 100",
+      "expectHrefContains": "rackets-under-100",
+      "minResults": 1,
+      "note": "Budget best-of"
+    },
+    {
+      "query": "5u lightweight",
+      "expectHrefContains": "lightweight-rackets-5u",
+      "minResults": 1,
+      "note": "Lightweight best-of"
+    },
+    {
+      "query": "shoulder comfort",
+      "expectHrefContains": "rackets-for-shoulder-comfort",
+      "minResults": 1,
+      "note": "Shoulder comfort best-of"
+    },
+    {
+      "query": "singles racket",
+      "expectHrefContains": "singles-rackets",
+      "minResults": 1,
+      "note": "Singles best-of"
+    },
+    {
+      "query": "head light control",
+      "expectHrefContains": "head-light-rackets",
+      "minResults": 1,
+      "note": "Head-light best-of"
+    },
+    {
+      "query": "wide feet shoes",
+      "expectHrefContains": "wide-feet-badminton-shoes",
+      "minResults": 1,
+      "note": "Wide-feet shoes best-of"
+    },
+    {
+      "query": "all round rackets",
+      "expectHrefContains": "all-round-rackets",
+      "minResults": 1,
+      "note": "All-round best-of"
+    },
+    {
+      "query": "defensive doubles racket",
+      "expectHrefContains": "defensive-rackets",
+      "minResults": 1,
+      "note": "Defensive best-of"
+    },
+    {
+      "query": "control rackets placement",
+      "expectHrefContains": "control-rackets",
+      "minResults": 1,
+      "note": "Control best-of"
+    },
+    {
+      "query": "rackets under 150",
+      "expectHrefContains": "rackets-under-150",
+      "minResults": 1,
+      "note": "Price-band best-of"
+    },
+    {
+      "query": "rackets under 200",
+      "expectHrefContains": "rackets-under-200",
+      "minResults": 1,
+      "note": "Mid-budget price band"
+    },
+    {
+      "query": "astrox 99 pro 100zz",
+      "expectHrefContains": "astrox-99-pro-vs-astrox-100zz",
+      "minResults": 1,
+      "note": "Compare guide by model pair"
+    },
+    {
+      "query": "equipment catalog",
+      "expectTopHref": "/catalog/",
+      "note": "Catalog hub exact top result"
+    },
+    {
+      "query": "saved shortlist",
+      "expectTopHref": "/saved/",
+      "note": "Saved shelf discovery"
+    },
+    {
+      "query": "badmintn string tenson",
+      "expectHrefContains": "string-tension",
+      "minResults": 1,
+      "note": "Fuzzy typo tolerance"
+    },
+    {
+      "query": "interceptions",
+      "expectHrefContains": "racket-balance-vs-swing-speed",
+      "minResults": 1,
+      "note": "Body-only review excerpt match"
+    },
+    {
+      "query": "BG80",
+      "expectHrefContains": "l69-string",
+      "minResults": 1,
+      "note": "String model code in body"
+    },
+    {
+      "query": "halbertec axforce",
+      "expectHrefContains": "halbertec-9000-power-vs-axforce-100-gen-2",
+      "minResults": 1,
+      "note": "Compare guide brand matchup"
+    },
+    {
+      "query": "xyzzyplughnotreal",
+      "maxResults": 0,
+      "note": "Nonsense query returns empty"
+    }
+  ]
+}

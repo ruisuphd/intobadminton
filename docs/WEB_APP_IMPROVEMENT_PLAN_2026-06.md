@@ -330,14 +330,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - CI CrUX guard after Lighthouse baseline compare (structure always; CWV thresholds when filled)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT38_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT38_2026-06.md)
 
-### Sprint 39 — This branch
+### Sprint 39 — Shipped (PR #187)
 
 - **GSC performance validator** — `src/lib/gsc-baseline.ts` + `npm run lint:gsc-baseline`
 - **GSC regression guard** — `lint:gsc-baseline:compare` + `gsc-performance-baseline.json`
 - CI GSC guard after CrUX guard (structure always; sanity + regression when filled)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT39_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT39_2026-06.md)
 
-### Next (Sprint 40+)
+### Sprint 40 — This branch
+
+- **On-site search golden queries** — `docs/baselines/site-search-queries.json` (25 expectations)
+- **Search regression guard** — `src/lib/search-baseline.ts` + `npm run lint:search-baseline`
+- CI search guard after unit tests in `lint-and-build`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT40_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT40_2026-06.md)
+
+### Next (Sprint 41+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

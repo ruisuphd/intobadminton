@@ -1,6 +1,20 @@
 # Performance and search baselines
 
-Owner-run capture for Core Web Vitals and Google Search Console trends. Agents cannot access GSC; store exports here for regression comparison.
+Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
+
+## On-site search (golden queries)
+
+Committed expectations for `/search/` and header autocomplete quality:
+
+- [`site-search-queries.json`](site-search-queries.json) — 25 queries covering reviews, guides, best-of, compare, catalog, fuzzy typos, and empty-query guards.
+
+Validate against the live search index (runs in CI after unit tests):
+
+```bash
+npm run lint:search-baseline
+```
+
+Refresh the JSON when adding high-traffic discovery routes or changing search ranking — keep expectations aligned with intentional UX, not accidental top hits.
 
 ## CrUX (field data)
 
