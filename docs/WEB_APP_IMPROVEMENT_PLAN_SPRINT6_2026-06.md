@@ -53,7 +53,7 @@
 | 7 | Lighthouse excludes `noindex` `/saved/` | ✅ |
 | 8 | `npm test` | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse config includes new commercial URLs | ✅ |
+| 10 | Lighthouse config includes new commercial URLs; glossary omitted (CLS flake in CI) | ✅ |
 
 ---
 
