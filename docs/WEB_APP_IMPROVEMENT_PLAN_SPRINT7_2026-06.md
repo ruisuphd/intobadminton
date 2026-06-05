@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 7 (June 2026)
 
-**Branches:** `cursor/web-app-improvement-plan-9527` (merged #135), `cursor/web-app-improvement-plan-c7f0` (PR #138)  
-**Baseline:** Sprint 6 on `main` (PR #127 programmatic landings, PR #129 reactions API, PR #134 fuzzy search).
+**Branches:** `cursor/web-app-improvement-plan-9527` (#135), `cursor/web-app-improvement-plan-c7f0` (#138), `cursor/web-app-improvement-plan-2162` (#139)  
+**Baseline:** Sprint 6 on `main` (PR #127 programmatic landings, PR #134 fuzzy search).
 
 ---
 
@@ -43,6 +43,10 @@
 3. CompareTable “View details” links.
 4. `/best/budget-badminton-shoes/` and `/best/head-heavy-rackets-under-150/`.
 5. Sitemap product expansion + Lighthouse PDP URL.
+
+**PR #139:**
+1. `ShareResultsLink` on `/results/` — copy deep-linked finder profile URLs.
+2. RSS discovery via `alternates.types` → `/feed.xml` in root layout.
 
 ---
 
