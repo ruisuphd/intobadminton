@@ -3,7 +3,6 @@
     "collect": {
       "staticDistDir": "./out",
       "url": [
-        "http://localhost/index.html",
         "http://localhost/quiz/index.html",
         "http://localhost/best/index.html",
         "http://localhost/best/beginner-rackets/index.html",

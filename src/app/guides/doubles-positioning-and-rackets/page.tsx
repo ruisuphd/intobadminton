@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocSlot } from "@/components/GuideTocSlot";
 
 const PATH = "/guides/doubles-positioning-and-rackets/";
 const HEADLINE = "Doubles positioning and racket choice";
@@ -35,6 +36,7 @@ export default function DoublesPositioningGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Doubles positioning and racket choice
         </h1>
+        <GuideTocSlot />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Equipment advice for doubles only works if you know where you stand
           when the shuttle is in play. This guide connects court positioning —
