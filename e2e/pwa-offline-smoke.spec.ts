@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { OFFLINE_RECOVERY_PATHS } from "../src/lib/offline-recovery-paths";
 import { PRECACHE_ASSERT_PATHS } from "../src/lib/pwa-precache-paths";
 
 async function ensureServiceWorker(page: import("@playwright/test").Page) {
@@ -11,8 +12,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v24"))) return false;
-      const cache = await caches.open("ib-v24-static");
+      if (!keys.some((key) => key.startsWith("ib-v25"))) return false;
+      const cache = await caches.open("ib-v25-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -26,7 +27,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v24-static");
+    const cache = await caches.open("ib-v25-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -42,6 +43,45 @@ test("service worker precaches search, review, and offline shells", async ({
       `expected ${path} in precache, got ${cachedPaths.join(", ")}`
     ).toBe(true);
   }
+});
+
+test("precached commercial and guide pages load offline after prior visit", async ({
+  page,
+  context,
+}) => {
+  await ensureServiceWorker(page);
+
+  await page.goto("/best/beginner-rackets/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /beginner/i
+  );
+
+  await page.goto("/compare-guides/yonex-astrox-vs-nanoflare/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Astrox vs Nanoflare/i
+  );
+
+  await page.goto("/guides/string-tension/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /string tension/i
+  );
+
+  await context.setOffline(true);
+
+  await page.goto("/best/beginner-rackets/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /beginner/i
+  );
+
+  await page.goto("/compare-guides/yonex-astrox-vs-nanoflare/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Astrox vs Nanoflare/i
+  );
+
+  await page.goto("/guides/string-tension/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /string tension/i
+  );
 });
 
 test("precached PDP and review load offline after prior visit", async ({
@@ -117,22 +157,25 @@ test("offline fallback lists trust, legal, support, and sample content recovery 
   page,
 }) => {
   await page.goto("/offline/");
-  for (const href of [
-    "/about/",
-    "/sources/",
-    "/source-policy/",
-    "/authors/",
-    "/authors/rui-su/",
-    "/methodology/",
-    "/data/",
-    "/contact/",
-    "/research/",
-    "/terms/",
-    "/cookies/",
-    "/security/",
-    "/product/yy-grpht-thrttl/",
-    "/review/yonex-arcsaber-7-pro-review/",
-  ]) {
+  for (const href of OFFLINE_RECOVERY_PATHS.filter(
+    (path) =>
+      path.startsWith("/about/") ||
+      path.startsWith("/sources/") ||
+      path.startsWith("/source-policy/") ||
+      path.startsWith("/authors/") ||
+      path.startsWith("/methodology/") ||
+      path.startsWith("/data/") ||
+      path.startsWith("/contact/") ||
+      path.startsWith("/research/") ||
+      path.startsWith("/terms/") ||
+      path.startsWith("/cookies/") ||
+      path.startsWith("/security/") ||
+      path.startsWith("/product/") ||
+      path.startsWith("/review/yonex") ||
+      path.startsWith("/best/beginner") ||
+      path.startsWith("/compare-guides/yonex-astrox") ||
+      path.startsWith("/guides/string-tension")
+  )) {
     await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
   }
 });
