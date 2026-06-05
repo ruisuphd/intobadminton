@@ -36,7 +36,14 @@ function blogSlugForProduct(productId: string): BlogSlug | undefined {
     .map(([slug]) => slug);
   if (!candidates.length) return undefined;
 
-  return candidates
+  const product = CATALOG.find((p) => p.id === productId);
+  const withoutPlayVariant =
+    product && !/\bplay\b/i.test(product.name)
+      ? candidates.filter((slug) => !slug.includes("-play-"))
+      : candidates;
+  const pool = withoutPlayVariant.length > 0 ? withoutPlayVariant : candidates;
+
+  return pool
     .map((slug) => {
       const article = blogArticles.en.find((entry) => entry.slug === slug);
       let score = 0;
