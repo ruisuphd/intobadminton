@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/components/Analytics";
 import { CompareTable } from "@/components/CompareTable";
@@ -17,6 +17,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
     toggleCompare,
     hydrateCompareFromIds,
     profile,
+    storageReady,
   } = useProfile();
   const copy = t(locale).compare;
   const scored = new Map(scoreProductCatalog(profile).map((row) => [row.id, row]));
@@ -24,19 +25,23 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
     .map((id) => scored.get(id) ?? byId(id))
     .filter((x): x is ProductRecord | ScoredProduct => x != null);
 
+  const urlHydratedRef = useRef(false);
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (!storageReady || typeof window === "undefined") return;
+    if (urlHydratedRef.current) return;
     if (compareIds.length > 0) return;
     const params = new URLSearchParams(window.location.search);
     const raw = params.get("p");
     if (!raw) return;
     const ids = raw.split(",").map((s) => s.trim()).filter(Boolean);
     if (ids.length === 0) return;
+    urlHydratedRef.current = true;
     hydrateCompareFromIds(ids);
     const url = new URL(window.location.href);
     url.searchParams.delete("p");
     window.history.replaceState({}, "", url.toString());
-  }, [compareIds.length, hydrateCompareFromIds]);
+  }, [compareIds.length, hydrateCompareFromIds, storageReady]);
 
   const compareKey = compareIds.join(",");
   useEffect(() => {

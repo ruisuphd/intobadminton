@@ -52,6 +52,8 @@ type Ctx = {
   toggleSaved: (id: string) => void;
   isSaved: (id: string) => boolean;
   clearSaved: () => void;
+  /** True after localStorage has been read once on the client. */
+  storageReady: boolean;
 };
 
 const ProfileContext = createContext<Ctx | null>(null);
@@ -188,6 +190,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       toggleSaved,
       isSaved,
       clearSaved,
+      storageReady: hydrated,
     }),
     [
       profile,
@@ -202,6 +205,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       toggleSaved,
       isSaved,
       clearSaved,
+      hydrated,
     ]
   );
 
