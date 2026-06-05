@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/season-refresh/";
 const HEADLINE = "When to refresh your badminton gear";
@@ -35,6 +36,7 @@ export default function SeasonRefreshGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           When to refresh your badminton gear
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Most amateur players refresh their gear later than they should
           and on the wrong cycle. Strings get replaced when they snap, not

@@ -33,9 +33,12 @@ Also on `main`: compare engagement, results brand filter, `/best/rackets-under-1
 
 ### Deferred (Sprint 4+)
 
+- ~~Buttondown notify-me server sync (offline intents)~~ → Sprint 4 (`notify-me-sync.ts`, PR #110)
+- ~~Faceted spec search~~ → Sprint 4 (`/catalog/`, PR #105)
 - HelpfulReaction Workers/KV aggregates
 - First-party `public/products/` photography
-- Faceted spec search — **addressed in PR #105 Sprint 4**
+- VideoObject + claimed YouTube `sameAs`
+- zh locale content
 
 ---
 
