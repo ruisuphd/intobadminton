@@ -281,15 +281,22 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI adds `/security/`, `/source-policy/` (`/privacy-choices/` excluded — noindex)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md)
 
-### Sprint 32 — This branch
+### Sprint 32 — Shipped (PR #180)
 
 - PWA **`ib-v22`** precaches 6 long-tail best-of shells (control, singles, defensive, lightweight, shoulder-comfort, head-heavy-under-150)
 - Offline recovery adds trust/editorial (about, sources, methodology, data), legal (terms, cookies, security), and support (contact, research) links
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT32_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT32_2026-06.md)
 
-### Next (Sprint 33+)
+### Sprint 33 — This branch
 
-- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
+- PWA **`ib-v23`** precaches Lighthouse PDP + sample review shells (`/product/yy-grpht-thrttl/`, `/review/yonex-arcsaber-7-pro-review/`)
+- Offline recovery adds source-policy, authors, and author profile links
+- E2E saved shelf reload persistence assertion
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT33_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT33_2026-06.md)
+
+### Next (Sprint 34+)
+
+- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`; capture `lighthouse-scores.json`
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
 
