@@ -49,6 +49,13 @@ function normalizeArticleSlug(slug) {
 /** Slug patterns that need editorial pairing beyond substring heuristics. */
 const SLUG_OVERRIDES = {
   "yonex-nanoflare-1000z-play-review": "yy-nanoflare-1000-play",
+  "yonex-nanoflare-speed-series-explained": "yy-nanoflare-1000z",
+  "yonex-arcsaber-10-complete-buying-guide": "yy-arcsaber-11-pro",
+  "yonex-tour-series-buying-guide": "yy-astrox-88d-tour-2024",
+  "kumpoo-fourth-major-badminton-brand-profile": "kumpoo-shanhai-new",
+  "li-ning-flagship-racket-buying-guide-2026": "ln-axforce-100-gen-2",
+  "victor-replacement-insoles-buyer-guide": "vic-p9200-iii",
+  "badminton-shoe-buying-guide-and-replacement": "ln-bladesabre-max",
 };
 
 function suggest(slug) {

@@ -38,6 +38,20 @@
       "description": "Products and articles you saved for later",
       "url": "/saved/",
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Reviews",
+      "short_name": "Reviews",
+      "description": "Equipment notes from club play",
+      "url": "/review/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Guides",
+      "short_name": "Guides",
+      "description": "Evergreen equipment and technique guides",
+      "url": "/guides/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     }
   ],
   "icons": [

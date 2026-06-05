@@ -135,6 +135,7 @@ const SITEMAP_EXEMPT_ROUTES = new Set([
   "/blog/",
   "/comparisons/",
   "/saved/",
+  "/offline/",
 ]);
 
 function isPlainObject(value) {

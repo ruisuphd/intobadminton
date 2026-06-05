@@ -31,6 +31,7 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
   "/blog/",
   "/comparisons/",
   "/saved/",
+  "/offline/",
 ]);
 
 /**

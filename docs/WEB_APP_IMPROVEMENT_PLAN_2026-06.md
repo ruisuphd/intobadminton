@@ -82,19 +82,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
-### Sprint 10 — Shipped (#153)
+### Sprint 10 — Shipped (PR #153)
 
 - PWA **`ib-v4`** precaches `/search/` and `/saved/`; Saved manifest shortcut
-- Review→product map **86%**; improved `suggest-review-product-map.mjs`
+- Review→product map **86%** (126/146); improved `suggest-review-product-map.mjs`
 - **HowTo** JSON-LD on four procedural guides in the Lighthouse URL set
 - Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
 
-### Sprint 11 — This branch (`cursor/web-app-improvement-plan-a612`)
+### Sprint 11 — Shipped (main + PR #154)
 
 - Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
-- PWA **`ib-v5`** precaches `/compare/` and `/updates/`
-- Pages build reads optional **`REACTIONS_API_URL`** secret for HelpfulReaction counts
+- PWA **`ib-v5`** precaches `/compare/` and `/updates/` (main); **`ib-v6`** adds `/review/`, `/guides/`, `/offline/`
+- Review→product map **~91%** (133/146); buying-guide editorial overrides
+- **`NEXT_PUBLIC_REACTIONS_API_URL`** optional secret in Pages build
+- PWA offline e2e smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
@@ -104,6 +106,12 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - `GuideTocAnchor` on SEO cluster pillar guides
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
+
+### Sprint 12 — This PR (`cursor/web-app-improvement-plan-a467`)
+
+- PWA **`ib-v6`** precaches `/guides/`; Guides manifest shortcut
+- `/offline/` recovery link to guides hub; Lighthouse CI for `/offline/` + `/guides/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
 ### Sprint 6–7 — Shipped (main)
 
