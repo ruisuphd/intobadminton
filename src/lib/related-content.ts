@@ -226,6 +226,33 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Get a tension starting point for your level and frame.",
     },
   ],
+  "reviews-hub": [
+    {
+      href: "/best/",
+      title: "Best-of buying guides",
+      summary: "Curated shortlists for rackets, shoes, and strings.",
+    },
+    {
+      href: "/compare-guides/",
+      title: "Head-to-head comparisons",
+      summary: "Yonex vs Victor, Astrox vs Nanoflare, and more.",
+    },
+    {
+      href: "/quiz/",
+      title: "Equipment finder",
+      summary: "Ranked shortlist from your level, style, and budget.",
+    },
+    {
+      href: "/methodology/",
+      title: "How we score equipment",
+      summary: "Fit factors, source labels, and verification gates.",
+    },
+    {
+      href: "/catalog/",
+      title: "Equipment catalog",
+      summary: "Filter every product by spec, weight, and price.",
+    },
+  ],
   discovery: [
     {
       href: "/compare/",
@@ -338,6 +365,7 @@ const PATH_CLUSTER: Record<string, string> = {
   "/guides/": "guides-hub",
   "/search/": "discovery",
   "/saved/": "discovery",
+  "/review/": "reviews-hub",
 };
 
 const QUIZ_CATEGORY_CLUSTER: Record<string, string> = {

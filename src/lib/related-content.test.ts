@@ -170,6 +170,15 @@ describe("relatedReadingForPath extended clusters", () => {
     expect(items.some((i) => i.href === "/compare/")).toBe(true);
     expect(items.some((i) => i.href === "/best/")).toBe(true);
   });
+
+  it("returns reviews-hub cluster for review index", () => {
+    const items = relatedReadingForPath("/review/");
+    expect(items.length).toBe(3);
+    expect(items.every((i) => i.href !== "/review/")).toBe(true);
+    expect(items.some((i) => i.href === "/best/")).toBe(true);
+    expect(items.some((i) => i.href === "/compare-guides/")).toBe(true);
+    expect(items.some((i) => i.href === "/quiz/")).toBe(true);
+  });
 });
 
 describe("relatedReadingForQuizCategory", () => {

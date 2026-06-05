@@ -11,7 +11,7 @@ import { relatedReadingForPath } from "@/lib/related-content";
 export const metadata: Metadata = {
   title: "Badminton equipment catalog — browse by spec",
   description:
-    "Browse 148+ badminton rackets, shoes, strings, shuttles, grips, and bags. Filter by brand, weight, balance, and price — then run the finder for a scored shortlist.",
+    "Browse 148+ badminton rackets, shoes, strings, shuttles, grips, and bags. Search by model or filter by brand, weight, balance, and price — then run the finder for a scored shortlist.",
   alternates: pageAlternates("/catalog/"),
 };
 

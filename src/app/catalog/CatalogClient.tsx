@@ -32,6 +32,7 @@ import {
   type ProductFilterState,
   weightClassOptionsFor,
 } from "@/lib/product-filters";
+import { filterProductsByKeyword } from "@/lib/catalog-keyword";
 import { catalogProductHref } from "@/lib/review-pages";
 import { humanize } from "@/lib/text";
 import type { BalanceCategory, ProductRecord, WeightClass } from "@/lib/types/product";
@@ -134,15 +135,15 @@ export function CatalogClient() {
     [catalog, filters.category, filters.brand, filters.priceBand]
   );
 
-  const filtered = useMemo(
-    () =>
-      sortProducts(
-        filterProducts(catalog, filters),
-        state.sort,
-        profileReady ? profile : null
-      ),
-    [catalog, filters, state.sort, profile, profileReady]
-  );
+  const filtered = useMemo(() => {
+    const specFiltered = filterProducts(catalog, filters);
+    const keywordFiltered = filterProductsByKeyword(specFiltered, state.q);
+    return sortProducts(
+      keywordFiltered,
+      state.sort,
+      profileReady ? profile : null
+    );
+  }, [catalog, filters, state.q, state.sort, profile, profileReady]);
 
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
   const categories = useMemo(() => categoryOptionsFor(catalog), [catalog]);
@@ -172,8 +173,14 @@ export function CatalogClient() {
       weight: merged.weightClass ?? "all",
       balance: merged.balance ?? "all",
       sort: merged.sort,
+      keyword: merged.q ? "yes" : "no",
     });
     replaceState(merged);
+  };
+
+  const onKeywordChange = (raw: string) => {
+    const trimmed = raw.trim();
+    patch({ q: trimmed.length > 0 ? trimmed : null });
   };
 
   const onFinderCta = () => {
@@ -186,6 +193,22 @@ export function CatalogClient() {
 
   return (
     <div className="space-y-6">
+      <div>
+        <label htmlFor="catalog-keyword" className="sr-only">
+          Search catalog by name or spec
+        </label>
+        <input
+          id="catalog-keyword"
+          type="search"
+          value={state.q ?? ""}
+          onChange={(e) => onKeywordChange(e.target.value)}
+          placeholder="Search by brand, model, or spec (e.g. Yonex 4U head-light)"
+          className="w-full rounded-xl border border-[color:var(--line)] bg-white px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--color-subtle)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
+          autoComplete="off"
+          enterKeyHint="search"
+        />
+      </div>
+
       <div className="space-y-4">
         <FilterChipGroup
           label="Category"
@@ -275,7 +298,7 @@ export function CatalogClient() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-[var(--color-muted)]">
           {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
-          filters.
+          {state.q ? " search and filters" : " filters"}.
         </p>
         <Link
           href="/quiz/"
@@ -336,7 +359,22 @@ export function CatalogClient() {
 
       {filtered.length === 0 && (
         <p className="text-sm text-[var(--color-muted)]">
-          No products match — try clearing a filter or browse{" "}
+          No products match — try clearing your{" "}
+          {state.q ? (
+            <>
+              search or{" "}
+              <button
+                type="button"
+                onClick={() => onKeywordChange("")}
+                className="text-[var(--color-accent)] underline"
+              >
+                keyword
+              </button>
+            </>
+          ) : (
+            "filters"
+          )}{" "}
+          or browse{" "}
           <Link href="/best/" className="text-[var(--color-accent)] underline">
             best-of guides
           </Link>
