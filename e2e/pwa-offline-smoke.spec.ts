@@ -12,8 +12,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v25"))) return false;
-      const cache = await caches.open("ib-v25-static");
+      if (!keys.some((key) => key.startsWith("ib-v26"))) return false;
+      const cache = await caches.open("ib-v26-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -27,7 +27,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v25-static");
+    const cache = await caches.open("ib-v26-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -51,37 +51,35 @@ test("precached commercial and guide pages load offline after prior visit", asyn
 }) => {
   await ensureServiceWorker(page);
 
-  await page.goto("/best/beginner-rackets/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /beginner/i
-  );
+  const routes: { path: string; heading: RegExp }[] = [
+    { path: "/best/beginner-rackets/", heading: /beginner/i },
+    { path: "/best/doubles-rackets/", heading: /doubles/i },
+    { path: "/best/shoes/", heading: /shoes/i },
+    {
+      path: "/compare-guides/yonex-astrox-vs-nanoflare/",
+      heading: /Astrox vs Nanoflare/i,
+    },
+    {
+      path: "/compare-guides/yonex-victor-li-ning/",
+      heading: /Yonex vs Victor vs Li-Ning/i,
+    },
+    { path: "/guides/string-tension/", heading: /string tension/i },
+    { path: "/guides/glossary/", heading: /glossary/i },
+    { path: "/guides/equipment-authenticity/", heading: /authenticity/i },
+    { path: "/brands/bonny/", heading: /Bonny/i },
+  ];
 
-  await page.goto("/compare-guides/yonex-astrox-vs-nanoflare/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /Astrox vs Nanoflare/i
-  );
-
-  await page.goto("/guides/string-tension/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /string tension/i
-  );
+  for (const { path, heading } of routes) {
+    await page.goto(path);
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(heading);
+  }
 
   await context.setOffline(true);
 
-  await page.goto("/best/beginner-rackets/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /beginner/i
-  );
-
-  await page.goto("/compare-guides/yonex-astrox-vs-nanoflare/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /Astrox vs Nanoflare/i
-  );
-
-  await page.goto("/guides/string-tension/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /string tension/i
-  );
+  for (const { path, heading } of routes) {
+    await page.goto(path);
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(heading);
+  }
 });
 
 test("precached PDP and review load offline after prior visit", async ({
@@ -173,8 +171,14 @@ test("offline fallback lists trust, legal, support, and sample content recovery 
       path.startsWith("/product/") ||
       path.startsWith("/review/yonex") ||
       path.startsWith("/best/beginner") ||
+      path.startsWith("/best/doubles") ||
+      path.startsWith("/best/shoes") ||
       path.startsWith("/compare-guides/yonex-astrox") ||
-      path.startsWith("/guides/string-tension")
+      path.startsWith("/compare-guides/yonex-victor") ||
+      path.startsWith("/guides/string-tension") ||
+      path.startsWith("/guides/glossary") ||
+      path.startsWith("/guides/equipment-authenticity") ||
+      path.startsWith("/brands/bonny")
   )) {
     await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
   }

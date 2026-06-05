@@ -61,6 +61,36 @@ export const OFFLINE_RECOVERY_LINKS = [
     description: "Precached — how tension affects control and durability.",
   },
   {
+    href: "/best/doubles-rackets/",
+    label: "Best doubles rackets",
+    description: "Precached — doubles buying guide for front and rear court.",
+  },
+  {
+    href: "/best/shoes/",
+    label: "Best badminton shoes",
+    description: "Precached — shoe picks by fit width and stability.",
+  },
+  {
+    href: "/compare-guides/yonex-victor-li-ning/",
+    label: "Yonex vs Victor vs Li-Ning",
+    description: "Precached — flagship brand comparison for racket buyers.",
+  },
+  {
+    href: "/guides/glossary/",
+    label: "Equipment glossary",
+    description: "Precached — 40+ badminton gear terms in plain English.",
+  },
+  {
+    href: "/guides/equipment-authenticity/",
+    label: "Authenticity guide",
+    description: "Precached — counterfeit checks before you buy.",
+  },
+  {
+    href: "/brands/bonny/",
+    label: "Bonny brand hub",
+    description: "Precached — WuQue, MoJun, and Bonny catalogue decoded.",
+  },
+  {
     href: "/guides/",
     label: "Guides",
     description: "Precached hub — open guides you visited before.",
@@ -166,8 +196,14 @@ export const OFFLINE_RECOVERY_LINKS = [
 export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/quiz/",
   "/best/beginner-rackets/",
+  "/best/doubles-rackets/",
+  "/best/shoes/",
   "/review/yonex-arcsaber-7-pro-review/",
   "/compare-guides/yonex-astrox-vs-nanoflare/",
+  "/compare-guides/yonex-victor-li-ning/",
+  "/guides/glossary/",
+  "/guides/equipment-authenticity/",
+  "/brands/bonny/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

@@ -301,14 +301,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2E precache list synced; true offline navigation smoke for PDP + review
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT34_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT34_2026-06.md)
 
-### Sprint 35 — This branch
+### Sprint 35 — Shipped (PR #183)
 
 - PWA **`ib-v25`** offline shell — CrUX commercial deep-links (beginner-rackets, Astrox vs Nanoflare, string-tension)
 - **`offline-recovery-paths.ts`** shared recovery module; CrUX ↔ offline parity unit test
 - E2E offline navigation for best-of, compare-guide, and procedural guide shells
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT35_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT35_2026-06.md)
 
-### Next (Sprint 36+)
+### Sprint 36 — This branch
+
+- PWA **`ib-v26`** offline shell — full `crux-template.csv` recovery deep-links (doubles, shoes, brand compare, glossary, authenticity, Bonny)
+- **`crux-template.csv`** ↔ `CRUX_OFFLINE_RECOVERY_PATHS` parity unit test
+- E2E offline navigation for remaining CrUX field-data URLs
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT36_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT36_2026-06.md)
+
+### Next (Sprint 37+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`; capture `lighthouse-scores.json`
 - Original photos on top commercial URLs
