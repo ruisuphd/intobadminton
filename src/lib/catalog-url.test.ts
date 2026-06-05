@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  catalogHrefFromKeywordQuery,
   catalogUrlFromState,
   parseCatalogSearchParams,
 } from "@/lib/catalog-url";
@@ -75,5 +76,14 @@ describe("catalog-url", () => {
       new URLSearchParams(url.split("?")[1] ?? "")
     );
     expect(reparsed.q).toBe("nanoflare 4u");
+  });
+
+  it("builds keyword-only catalog href for site search", () => {
+    const href = catalogHrefFromKeywordQuery("yonex astrox");
+    expect(href).toMatch(/^\/catalog\/\?q=/);
+    expect(parseCatalogSearchParams(new URLSearchParams(href.split("?")[1])).q).toBe(
+      "yonex astrox"
+    );
+    expect(catalogHrefFromKeywordQuery("   ")).toBe("/catalog/");
   });
 });

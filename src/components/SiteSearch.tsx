@@ -5,11 +5,13 @@ import { useMemo, useState } from "react";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import { brandOptionsFor } from "@/lib/product-filters";
 import { reviewableProducts } from "@/lib/review-pages";
+import { catalogHrefFromKeywordQuery } from "@/lib/catalog-url";
 import {
   searchResultSummary,
   searchSite,
   type SearchEntryKind,
 } from "@/lib/site-search";
+import { countCatalogKeywordMatches } from "@/lib/site-search-catalog";
 
 const KIND_LABEL: Record<SearchEntryKind, string> = {
   review: "Review",
@@ -54,6 +56,16 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
     if (!brandFilter || kindFilter !== "product") return results;
     return results.filter((e) => e.keywords.includes(brandFilter));
   }, [results, brandFilter, kindFilter]);
+
+  const catalogMatchCount = useMemo(
+    () => countCatalogKeywordMatches(query),
+    [query]
+  );
+
+  const catalogHref = useMemo(
+    () => catalogHrefFromKeywordQuery(query),
+    [query]
+  );
 
   return (
     <div className="space-y-6">
@@ -104,6 +116,20 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
         />
       )}
 
+      {catalogMatchCount > 0 && query.trim().length > 0 && (
+        <p className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] px-4 py-3 text-sm text-[var(--color-muted)]">
+          <Link
+            href={catalogHref}
+            className="font-medium text-[var(--color-accent)] underline underline-offset-2"
+          >
+            Browse {catalogMatchCount} product
+            {catalogMatchCount === 1 ? "" : "s"} in the catalog
+          </Link>{" "}
+          matching &ldquo;{query.trim()}&rdquo; — spec filters and fit sort apply
+          there.
+        </p>
+      )}
+
       {query.trim().length === 0 ? (
         <p className="text-sm text-[var(--color-muted)]">
           Try &ldquo;astrox&rdquo;, &ldquo;wide feet shoes&rdquo;, or
@@ -111,7 +137,19 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
         </p>
       ) : brandFilteredResults.length === 0 ? (
         <p className="text-sm text-[var(--color-muted)]">
-          No matches for &ldquo;{query.trim()}&rdquo;. Browse the{" "}
+          No editorial matches for &ldquo;{query.trim()}&rdquo;.
+          {catalogMatchCount > 0 ? (
+            <>
+              {" "}
+              <Link href={catalogHref} className="text-[var(--color-accent)] underline">
+                Browse {catalogMatchCount} matching product
+                {catalogMatchCount === 1 ? "" : "s"} in the catalog
+              </Link>
+              , or try the{" "}
+            </>
+          ) : (
+            <> Browse the </>
+          )}
           <Link href="/review/" className="text-[var(--color-accent)] underline">
             reviews hub
           </Link>{" "}
