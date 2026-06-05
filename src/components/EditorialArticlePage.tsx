@@ -213,7 +213,7 @@ export function EditorialArticlePage({
             })}
 
             <SocialShare url={canonicalUrl} title={article.title} />
-            <HelpfulReaction contentId={`review:${article.slug}`} />
+            <HelpfulReaction key={article.slug} contentId={`review:${article.slug}`} />
         </div>
 
         <RelatedPostsGrid locale={locale} articles={related} />
