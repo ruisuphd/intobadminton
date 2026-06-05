@@ -12,7 +12,7 @@
 | **Tennis Warehouse** | About, sources, and buying-guide intros exit to filtered shop browse | ✅ Catalog CTAs on `/about/`, `/sources/`, `/source-policy/`, `/authors/*`, `/quiz/` |
 | **Running Warehouse** | Post-quiz browse opens with category + price + style + build filters | ✅ `catalogHrefFromProfile` adds weight class from `body.weightKg` |
 | **RTINGS** | Editorial trust cluster links to tested product index | ✅ About, sources, authors catalog exits |
-| **Wirecutter** | Saved/compare and commercial long-tail URLs in perf CI | ✅ Lighthouse adds saved, compare, smash/strings/intermediate best-of, kumpoo, about, sources |
+| **Wirecutter** | Commercial long-tail and trust URLs in perf CI | ✅ Lighthouse adds authors, smash/strings/intermediate best-of, kumpoo, about, sources (saved/compare excluded — noindex) |
 | **RacketGuide** | Offline reference + flagship comparisons for installed users | ✅ PWA `ib-v18` precaches 10 compare articles + 4 tier-1 best-of landings |
 
 **Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate, 153 first-person reviews.
@@ -26,7 +26,7 @@
 | 1 | **Trust/editorial cluster lacks catalog exit** | About, sources, source-policy, authors are dead-ends after Sprint 27 methodology/data coverage | ✅ Secondary `Browse full catalog` bands on 5 trust pages |
 | 2 | **Quiz funnel entry lacks catalog band** | Top entry point only links to best-of lists — no retailer-style browse escape hatch | ✅ Quiz secondary `Browse full catalog` CTA |
 | 3 | **PWA missing compare articles + tier-1 best-of shells** | Installed users lose flagship comparisons and buying guides offline | ✅ `ib-v18` precache expansion (14 routes) |
-| 4 | **Lighthouse CI gaps on funnel + commercial long-tail** | Perf regressions on saved/compare, smash/strings best-of, trust cluster undetected | ✅ CI adds 9 routes; removes duplicate `/best/` entry |
+| 4 | **Lighthouse CI gaps on funnel + commercial long-tail** | Perf regressions on smash/strings best-of, trust cluster undetected | ✅ CI adds 8 indexable routes; excludes noindex saved/compare; removes duplicate `/best/` entry |
 | 5 | **Profile catalog link ignores body weight; tray CTAs lack E2E** | Post-quiz browse misses weight-class filter; saved/compare CTAs have no regression coverage | ✅ Weight class in `catalogHrefFromProfile`; E2E for trust + tray CTAs; glossary deep-link fix |
 
 **Deferred (owner / editorial):** deploy reactions worker + `REACTIONS_API_URL`; fill `crux-template.csv`; original `public/products/` photography; YouTube `sameAs` after channel claim.
@@ -60,7 +60,7 @@
 | 7 | Unit tests: `catalog-url.test.ts`, `pwa-precache.test.ts` | ✅ |
 | 8 | `npm test` + `npm run build` + postbuild SEO audit | ✅ |
 | 9 | E2E: trust/quiz/saved/compare catalog CTAs + PWA ib-v18 | ✅ |
-| 10 | Lighthouse CI URL set includes saved, compare, commercial long-tail, trust cluster | ✅ |
+| 10 | Lighthouse CI URL set includes authors, commercial long-tail, trust cluster (no noindex routes) | ✅ |
 
 ---
 
