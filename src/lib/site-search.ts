@@ -51,6 +51,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["catalog", "browse", "filter", "specs", "products"],
   },
   {
+    title: "Verified claims registry",
+    href: "/data/",
+    kind: "tool",
+    summary:
+      "Public table of cited facts with source quotes, verification dates, and authority tiers.",
+    keywords: ["claims", "data", "sources", "fact check", "registry", "bwf"],
+  },
+  {
     title: "Equipment finder quiz",
     href: "/quiz/",
     kind: "tool",
