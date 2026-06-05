@@ -75,12 +75,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - PR #137: compare share-link fix, PWA shortcuts, retention e2e
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
 
-### Sprint 9 — This PR (`cursor/web-app-improvement-plan-5564`)
+### Sprint 9 — Shipped
 
 - `/best/*` illustrative **Finder fit** column + `productId` backfill
 - PWA **`ib-v3`** precaches `/catalog/`
 - **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
+
+### Sprint 10 — This PR (`cursor/web-app-improvement-plan-0d45`)
+
+- PWA **`ib-v4`** precaches `/search/` and `/saved/`; Saved manifest shortcut
+- Review→product map **83%** (121/146); improved `suggest-review-product-map.mjs`
+- **HowTo** JSON-LD on four procedural guides in the Lighthouse URL set
+- Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 

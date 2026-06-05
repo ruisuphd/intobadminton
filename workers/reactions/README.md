@@ -6,8 +6,8 @@ Anonymous aggregate counts for the `HelpfulReaction` component. Stores `{ up, do
 
 1. Create a KV namespace: `npx wrangler kv namespace create REACTIONS`
 2. Copy the namespace id into `wrangler.toml`.
-3. `npx wrangler deploy`
-4. Set `NEXT_PUBLIC_REACTIONS_API_URL` to the worker URL (e.g. `https://intobadminton-reactions.<account>.workers.dev`).
+3. `npx wrangler deploy` (or run the **Deploy reactions worker** GitHub Action on `main` after setting `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets).
+4. Set `NEXT_PUBLIC_REACTIONS_API_URL` to the worker URL (e.g. `https://intobadminton-reactions.<account>.workers.dev`) in the GitHub Pages / static hosting environment.
 
 ## API
 
