@@ -287,14 +287,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Offline recovery adds trust/editorial (about, sources, methodology, data), legal (terms, cookies, security), and support (contact, research) links
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT32_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT32_2026-06.md)
 
-### Sprint 33 — This branch
+### Sprint 33 — Shipped (PR #181)
 
 - PWA **`ib-v23`** precaches Lighthouse PDP + sample review shells (`/product/yy-grpht-thrttl/`, `/review/yonex-arcsaber-7-pro-review/`)
 - Offline recovery adds source-policy, authors, and author profile links
 - E2E saved shelf reload persistence assertion
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT33_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT33_2026-06.md)
 
-### Next (Sprint 34+)
+### Sprint 34 — This branch
+
+- PWA **`ib-v24`** offline shell — discoverability for precached PDP, flagship review, and privacy-choices
+- **`pwa-precache-paths.ts`** shared assert list; Lighthouse CI ↔ precache parity unit test
+- E2E precache list synced; true offline navigation smoke for PDP + review
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT34_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT34_2026-06.md)
+
+### Next (Sprint 35+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`; capture `lighthouse-scores.json`
 - Original photos on top commercial URLs

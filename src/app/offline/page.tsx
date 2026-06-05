@@ -39,6 +39,16 @@ const OFFLINE_LINKS = [
     description: "Precached index — open articles you visited before.",
   },
   {
+    href: "/review/yonex-arcsaber-7-pro-review/",
+    label: "Arcsaber 7 Pro review",
+    description: "Precached — flagship first-person racket review.",
+  },
+  {
+    href: "/product/yy-grpht-thrttl/",
+    label: "Sample product page",
+    description: "Precached — Yonex Grpht Thrttl specs and finder fit.",
+  },
+  {
     href: "/guides/",
     label: "Guides",
     description: "Precached hub — open guides you visited before.",
@@ -132,6 +142,11 @@ const OFFLINE_LINKS = [
     href: "/security/",
     label: "Security",
     description: "Precached — data handling and vulnerability reporting.",
+  },
+  {
+    href: "/privacy-choices/",
+    label: "Privacy choices",
+    description: "Precached — consent and ad personalization controls.",
   },
 ] as const;
 

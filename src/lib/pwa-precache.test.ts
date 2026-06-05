@@ -1,104 +1,42 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { PRECACHE_ASSERT_PATHS } from "./pwa-precache-paths";
 
 const SW_PATH = resolve(process.cwd(), "public/sw.js");
+const LIGHTHOUSE_PATH = resolve(process.cwd(), "lighthouserc.json");
+
+function lighthousePaths(): string[] {
+  const config = JSON.parse(readFileSync(LIGHTHOUSE_PATH, "utf8")) as {
+    ci: { collect: { url: string[] } };
+  };
+  return config.ci.collect.url.map((url) => {
+    let path = new URL(url).pathname;
+    if (path.endsWith("/index.html")) {
+      path = `${path.slice(0, -"/index.html".length)}/`;
+    } else if (!path.endsWith("/")) {
+      path = `${path}/`;
+    }
+    return path;
+  });
+}
 
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v23 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v23"');
+  it("uses ib-v24 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v24"');
   });
 
   it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, long-tail best-of landings, price-band best-of, contact, research, legal cluster, trust cluster, sample PDP and review shells, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
-    for (const path of [
-      "/quiz/",
-      "/catalog/",
-      "/search/",
-      "/saved/",
-      "/compare/",
-      "/review/",
-      "/updates/",
-      "/guides/",
-      "/offline/",
-      "/data/",
-      "/methodology/",
-      "/tools/",
-      "/faq/",
-      "/best/",
-      "/brands/",
-      "/brands/yonex/",
-      "/brands/victor/",
-      "/brands/li-ning/",
-      "/brands/anta/",
-      "/brands/bonny/",
-      "/brands/kawasaki/",
-      "/brands/kumpoo/",
-      "/compare-guides/",
-      "/compare-guides/yonex-astrox-vs-nanoflare/",
-      "/guides/string-tension/",
-      "/guides/wide-feet-badminton-shoes/",
-      "/guides/shoes-footwork/",
-      "/guides/racket-balance/",
-      "/guides/string-feel-vs-durability/",
-      "/guides/doubles-positioning-and-rackets/",
-      "/guides/doubles-roles/",
-      "/guides/equipment-authenticity/",
-      "/guides/badminton-shoes-vs-running-shoes/",
-      "/guides/glossary/",
-      "/guides/season-refresh/",
-      "/tools/racket-balance-explainer/",
-      "/tools/court-diagram/",
-      "/tools/skill-level-converter/",
-      "/tools/string-tension-calculator/",
-      "/tools/authenticity-checker/",
-      "/compare-guides/yonex-victor-li-ning/",
-      "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
-      "/compare-guides/astrox-77-pro-vs-88s-pro/",
-      "/compare-guides/badminton-vs-tennis-shoes/",
-      "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/",
-      "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
-      "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/",
-      "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
-      "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
-      "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/",
-      "/compare-guides/yonex-65z4-vs-eclipsion-z3/",
-      "/best/beginner-rackets/",
-      "/best/smash-heavy-rackets/",
-      "/best/strings/",
-      "/best/intermediate-rackets/",
-      "/best/rackets-under-100/",
-      "/best/rackets-under-150/",
-      "/best/rackets-under-200/",
-      "/best/shoes/",
-      "/best/doubles-rackets/",
-      "/best/head-light-rackets/",
-      "/best/all-round-rackets/",
-      "/best/wide-feet-badminton-shoes/",
-      "/best/budget-badminton-shoes/",
-      "/best/control-rackets/",
-      "/best/singles-rackets/",
-      "/best/defensive-rackets/",
-      "/best/lightweight-rackets-5u/",
-      "/best/rackets-for-shoulder-comfort/",
-      "/best/head-heavy-rackets-under-150/",
-      "/contact/",
-      "/research/",
-      "/privacy/",
-      "/terms/",
-      "/cookies/",
-      "/security/",
-      "/privacy-choices/",
-      "/about/",
-      "/sources/",
-      "/source-policy/",
-      "/authors/",
-      "/authors/rui-su/",
-      "/product/yy-grpht-thrttl/",
-      "/review/yonex-arcsaber-7-pro-review/",
-    ]) {
+    for (const path of PRECACHE_ASSERT_PATHS) {
       expect(source).toContain(`"${path}"`);
+    }
+  });
+
+  it("precaches every Lighthouse CI URL", () => {
+    for (const path of lighthousePaths()) {
+      expect(source, `missing precache for ${path}`).toContain(`"${path}"`);
     }
   });
 });
