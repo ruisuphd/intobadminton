@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { AuthenticityChecker } from "@/components/AuthenticityChecker";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 import { JsonLd } from "@/components/JsonLd";
 import {
   authenticityBrands,
@@ -120,6 +121,7 @@ export default function EquipmentAuthenticityGuide() {
           <h1 className="text-3xl font-semibold tracking-tight">
             {authenticityGuide.title}
           </h1>
+        <GuideTocAnchor />
           <p className="text-[var(--color-muted)] leading-relaxed">
             {authenticityGuide.dek}
           </p>

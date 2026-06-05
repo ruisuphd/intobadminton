@@ -1,25 +1,19 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { ContinueReading } from "@/components/ContinueReading";
+import { FinderQuickFilters } from "@/components/FinderQuickFilters";
+import { HomeContinueReading } from "@/components/HomeContinueReading";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { SiteSearchForm } from "@/components/SiteSearchForm";
 import { JsonLd } from "@/components/JsonLd";
-import products from "@/data/products.json";
-import {
-  articlesByDateDesc,
-  blogArticles,
-  readingTimeMinutes,
-} from "@/lib/blog";
-import { articlePathForSlug } from "@/lib/blog-migrations";
+import catalogStats from "@/data/catalog-stats.json";
+import { homeFeaturedReviewPath, homeFeaturedReviews, reviewArticleCount } from "@/lib/home-featured";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
-import type { ProductRecord } from "@/lib/types/product";
 
-const PRODUCT_CATALOGUE = products as ProductRecord[];
-const categoryCount = (category: ProductRecord["category"]) =>
-  PRODUCT_CATALOGUE.filter((product) => product.category === category).length;
+const categoryCount = (category: keyof typeof catalogStats) =>
+  catalogStats[category] ?? 0;
 
 const HOME_FAQ: { q: string; a: string }[] = [
   {
@@ -47,9 +41,8 @@ const HOME_FAQ: { q: string; a: string }[] = [
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = t(locale);
   const localized = (path: string) => buildLocalizedPath(locale, path);
-  const articles = articlesByDateDesc(blogArticles[locale]);
-  const featuredReviews = articles.slice(0, 6);
-  const reviewCount = articles.length;
+  const featuredReviews = homeFeaturedReviews;
+  const reviewCount = reviewArticleCount;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -176,7 +169,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
 
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { num: `${PRODUCT_CATALOGUE.length}`, label: "items in the finder" },
+              { num: `${catalogStats.total}`, label: "items in the finder" },
               { num: String(reviewCount), label: "review notes" },
               { num: "5", label: "transparent fit factors per result" },
               { num: "3", label: "major brand families covered" },
@@ -195,8 +188,14 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         </div>
       </section>
 
-      <ContinueReading locale={locale} />
+      <HomeContinueReading locale={locale} />
       <HomeRecentShortlists locale={locale} />
+
+      <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
+        <div className="layout-band max-w-6xl">
+          <FinderQuickFilters />
+        </div>
+      </section>
 
       {/* Popular searches */}
       <section className="border-t border-[color:var(--line)] py-16 lg:py-20">
@@ -323,12 +322,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
               {featuredReviews.map((article) => (
                 <Link
                   key={article.slug}
-                  href={localized(articlePathForSlug(article.slug))}
+                  href={localized(homeFeaturedReviewPath(article.slug))}
                   className="card card-interactive p-6 block"
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs text-[var(--color-subtle)]">
-                      {readingTimeMinutes(article)} min read
+                      {article.readingMinutes} min read
                     </span>
                     <span className="text-xs text-[var(--color-subtle)]">·</span>
                     <time
