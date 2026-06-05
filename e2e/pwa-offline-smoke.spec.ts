@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { PRECACHE_ASSERT_PATHS } from "../src/lib/pwa-precache-paths";
 
 async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.goto("/");
@@ -10,8 +11,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v23"))) return false;
-      const cache = await caches.open("ib-v23-static");
+      if (!keys.some((key) => key.startsWith("ib-v24"))) return false;
+      const cache = await caches.open("ib-v24-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +26,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v23-static");
+    const cache = await caches.open("ib-v24-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -35,83 +36,41 @@ test("service worker precaches search, review, and offline shells", async ({
     });
   });
 
-  for (const path of [
-    "/",
-    "/quiz/",
-    "/catalog/",
-    "/search/",
-    "/saved/",
-    "/compare/",
-    "/updates/",
-    "/review/",
-    "/guides/",
-    "/offline/",
-    "/data/",
-    "/methodology/",
-    "/tools/",
-    "/faq/",
-    "/best/",
-    "/brands/",
-    "/brands/yonex/",
-    "/brands/victor/",
-    "/brands/li-ning/",
-    "/brands/anta/",
-    "/brands/bonny/",
-    "/brands/kawasaki/",
-    "/brands/kumpoo/",
-    "/compare-guides/",
-    "/compare-guides/yonex-astrox-vs-nanoflare/",
-    "/guides/string-tension/",
-    "/guides/wide-feet-badminton-shoes/",
-    "/guides/shoes-footwork/",
-    "/guides/racket-balance/",
-    "/guides/badminton-shoes-vs-running-shoes/",
-    "/guides/doubles-roles/",
-    "/guides/equipment-authenticity/",
-    "/guides/glossary/",
-    "/guides/season-refresh/",
-    "/tools/racket-balance-explainer/",
-    "/tools/court-diagram/",
-    "/tools/skill-level-converter/",
-    "/tools/string-tension-calculator/",
-    "/tools/authenticity-checker/",
-    "/compare-guides/yonex-victor-li-ning/",
-    "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
-    "/compare-guides/badminton-vs-tennis-shoes/",
-    "/best/beginner-rackets/",
-    "/best/smash-heavy-rackets/",
-    "/best/strings/",
-    "/best/intermediate-rackets/",
-    "/best/rackets-under-100/",
-    "/best/rackets-under-150/",
-    "/best/rackets-under-200/",
-    "/best/shoes/",
-    "/best/control-rackets/",
-    "/best/singles-rackets/",
-    "/best/defensive-rackets/",
-    "/best/lightweight-rackets-5u/",
-    "/best/rackets-for-shoulder-comfort/",
-    "/best/head-heavy-rackets-under-150/",
-    "/contact/",
-    "/research/",
-    "/privacy/",
-    "/terms/",
-    "/cookies/",
-    "/security/",
-    "/privacy-choices/",
-    "/about/",
-    "/sources/",
-    "/source-policy/",
-    "/authors/",
-    "/authors/rui-su/",
-    "/product/yy-grpht-thrttl/",
-    "/review/yonex-arcsaber-7-pro-review/",
-  ]) {
+  for (const path of ["/", ...PRECACHE_ASSERT_PATHS]) {
     expect(
       cachedPaths.some((entry) => entry === path || entry.startsWith(path)),
       `expected ${path} in precache, got ${cachedPaths.join(", ")}`
     ).toBe(true);
   }
+});
+
+test("precached PDP and review load offline after prior visit", async ({
+  page,
+  context,
+}) => {
+  await ensureServiceWorker(page);
+
+  await page.goto("/product/yy-grpht-thrttl/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Grpht Thrttl/i
+  );
+
+  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Arcsaber 7 Pro/i
+  );
+
+  await context.setOffline(true);
+
+  await page.goto("/product/yy-grpht-thrttl/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Grpht Thrttl/i
+  );
+
+  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Arcsaber 7 Pro/i
+  );
 });
 
 test("offline fallback page renders recovery links", async ({ page }) => {
@@ -151,9 +110,10 @@ test("offline fallback lists best-of, brands, and privacy recovery links", async
   await expect(page.locator('a[href="/best/"]').first()).toBeVisible();
   await expect(page.locator('a[href="/brands/"]').first()).toBeVisible();
   await expect(page.locator('a[href="/privacy/"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/privacy-choices/"]').first()).toBeVisible();
 });
 
-test("offline fallback lists trust, legal, and support recovery links", async ({
+test("offline fallback lists trust, legal, support, and sample content recovery links", async ({
   page,
 }) => {
   await page.goto("/offline/");
@@ -170,6 +130,8 @@ test("offline fallback lists trust, legal, and support recovery links", async ({
     "/terms/",
     "/cookies/",
     "/security/",
+    "/product/yy-grpht-thrttl/",
+    "/review/yonex-arcsaber-7-pro-review/",
   ]) {
     await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
   }
