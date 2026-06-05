@@ -3,6 +3,7 @@ import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
 import { COMPARE_GUIDES } from "@/lib/compare-guides";
 import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
+import { tokenMatchesBlob } from "@/lib/search-fuzzy";
 
 export type SearchEntryKind =
   | "review"
@@ -77,6 +78,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
   },
   {
+    title: "Best control rackets",
+    href: "/best/control-rackets/",
+    kind: "best",
+    summary:
+      "Control-first frames for placement, doubles net play, and rally craft — Astrox 88S Pro, Arcsaber 11 Pro, Halbertec.",
+    keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
+  },
+  {
     title: "Best singles rackets",
     href: "/best/singles-rackets/",
     kind: "best",
@@ -110,6 +119,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-heavy attack frames for singles power players.",
     keywords: ["smash", "attack", "singles", "power"],
+  },
+  {
+    title: "Rackets under $150",
+    href: "/best/rackets-under-150/",
+    kind: "best",
+    summary: "Club-budget rackets at $150 or less — catalogue discovery page.",
+    keywords: ["budget", "under 150", "affordable", "club"],
+  },
+  {
+    title: "Rackets under $200",
+    href: "/best/rackets-under-200/",
+    kind: "best",
+    summary: "Upper club-budget rackets at $200 or less — catalogue discovery page.",
+    keywords: ["budget", "under 200", "mid tier", "club"],
   },
   {
     title: "Best badminton shoes",
@@ -333,7 +356,11 @@ function scoreEntry(entry: SearchEntry, query: string): number {
   const tokens = q.split(" ").filter(Boolean);
   let tokenHits = 0;
   for (const token of tokens) {
-    if (blob.includes(token)) tokenHits += 1;
+    if (blob.includes(token)) {
+      tokenHits += 1;
+    } else if (tokenMatchesBlob(token, blob)) {
+      tokenHits += 0.85;
+    }
   }
   if (tokenHits === 0) return 0;
   return 40 + (tokenHits / tokens.length) * 30;

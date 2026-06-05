@@ -89,6 +89,19 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);
   });
 
+  it("finds programmatic price-band guides", () => {
+    expect(
+      searchSite("rackets under 150").some((h) =>
+        h.href.includes("rackets-under-150")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("rackets under 200").some((h) =>
+        h.href.includes("rackets-under-200")
+      )
+    ).toBe(true);
+  });
+
   it("finds compare guides by model pair", () => {
     const hits = searchSite("astrox 99 pro 100zz");
     expect(
@@ -103,6 +116,19 @@ describe("site-search", () => {
 
   it("returns empty for nonsense query", () => {
     expect(searchSite("xyzzyplughnotreal")).toEqual([]);
+  });
+
+  it("tolerates common typos in guide queries", () => {
+    const hits = searchSite("badmintn string tenson");
+    expect(hits.some((h) => h.href.includes("string-tension"))).toBe(true);
+  });
+
+  it("finds control rackets best page", () => {
+    expect(
+      searchSite("control rackets placement").some((h) =>
+        h.href.includes("control-rackets")
+      )
+    ).toBe(true);
   });
 
   it("finds all compare guides by brand matchup", () => {

@@ -4,7 +4,7 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ## 2026-06-05 — Sprint 6 web app (branch `cursor/web-app-improvement-plan-06b6`, PR #129)
 
-**Trigger:** Cloud agent — audit → plan → execute (reactions API, singles/head-light landings, image placeholders, Lighthouse baseline script).
+**Trigger:** Cloud agent — audit → plan → execute (reactions API, singles/head-light landings, image placeholders, Lighthouse baseline script). Complements PR #134 (fuzzy search, control-rackets) already on `main`.
 
 ### Shipped
 
@@ -15,9 +15,42 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ### Verification
 
-- `npm test` — 217 passed
+- `npm test` — 228 passed
 - `npm run lint` — pass
 - `npm run build` + postbuild SEO audit — pass (653 HTML, 214 sitemap URLs)
+
+---
+
+## 2026-06-05 — PR #117 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-33f7`)
+
+**Trigger:** GitHub pull request #117 (`ready_for_review`) — guide ToC CLS fix (`cursor/web-app-improvement-plan-555d`). PR #117 **merged** to `main` as `586a621`. Translation workflow (steps 1–7) ran in parallel; no review content changes.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 212 passed
+- `npm run build` + postbuild SEO audit — pass (651 HTML, 212 sitemap URLs)
+
+### Translation / import
+
+Not performed — no `blogs/` drop. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate (Chinese above, ## English Translation below) → rename to English → map slug
+npm run blog:import && npm run blog:validate && npm test && npm run build
+```
 
 ---
 
@@ -34,6 +67,35 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 | `npm test` / `build` (post-merge `main`) | 212 passed; SEO audit pass |
 
 Re-run translation after `npm run blog:sync` with the Desktop drop or `BLOGS_DIR`.
+
+---
+
+## 2026-06-05 — PR #101 `ready_for_review` (translation `cursor/new-chinese-reviews-translation-6f9b`)
+
+**Trigger:** GitHub pull request #101 (`ready_for_review`) — Web app Phase B+C (`cursor/web-app-improvement-plan-f404`). Translation workflow ran in parallel on this branch.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **133** |
+| `blog-articles.json` imported articles | **146** — no import drift |
+| New translations this run | **None** |
+
+### Web app (PR #101)
+
+**Merged** to `main` (squash) — compare-guides engagement layout, full compare-guide search manifest, guide chrome deduplication, larger result-card images, review–product map audit script. Lighthouse CI fixed via explicit `:4173` URL list and CLS **warn**.
+
+### Unblock translation
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+npm run blog:import && npm run blog:validate && npm test && npm run build
+```
 
 ---
 

@@ -52,6 +52,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Head-light and medium-flex picks for players managing arm load.",
       },
       {
+        href: "/best/control-rackets/",
+        title: "Best control rackets",
+        dek: "Placement-first frames for doubles net play and singles rally craft.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
@@ -80,6 +85,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/rackets-under-150/",
         title: "Rackets under $150",
         dek: "Club-budget frames at $150 or less — catalogue discovery with comparison table.",
+      },
+      {
+        href: "/best/rackets-under-200/",
+        title: "Rackets under $200",
+        dek: "Upper club-budget frames at $200 or less — programmatic catalogue with comparison table.",
       },
     ],
   },
