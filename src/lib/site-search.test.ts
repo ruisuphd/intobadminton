@@ -152,6 +152,11 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds string reviews by model code in body", () => {
+    const hits = searchSite("BG80");
+    expect(hits.some((h) => h.href.includes("l69-string"))).toBe(true);
+  });
+
   it("finds all compare guides by brand matchup", () => {
     const hits = searchSite("halbertec axforce");
     expect(

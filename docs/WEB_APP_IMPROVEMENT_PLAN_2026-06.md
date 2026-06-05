@@ -27,9 +27,9 @@
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
-**Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
+**Shipped on `main`:** site search, review body excerpts, `SearchAction`, `ContinueReading`, reactions API client, Product JSON-LD enrichment (≥85% map), engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
 
 ---
 
@@ -63,16 +63,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - `HomeContinueReading` dynamic import
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
-### Phase C — Next (Sprint 8+)
+### Phase C — Next (Sprint 9+)
 
 - GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
-- HelpfulReaction Workers/KV aggregate backend
-- Expand `blog-review-product-map.json` toward full review coverage
+- Deploy HelpfulReaction Worker + `NEXT_PUBLIC_REACTIONS_API_URL`
 - YouTube `sameAs` on author entity (after channel claim)
 
 **Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).  
-**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+**Sprint 7 shipped (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+
+### Sprint 8 — This branch (PR #143)
+
+- Product map ≥85%; results share link; RSS `rel=alternate`; review search + share e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
 ---
 
