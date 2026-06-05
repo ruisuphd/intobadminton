@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AdSenseScript } from "@/components/AdSenseScript";
@@ -6,11 +7,16 @@ import { Analytics, ConsentModeDefaults } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import { CookieSettings } from "@/components/CookieSettings";
 import { FundingChoicesScript } from "@/components/FundingChoicesScript";
-import { PwaRegistration } from "@/components/PwaRegistration";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StructuredData } from "@/components/StructuredData";
 import { Providers } from "./providers";
+
+const PwaRegistration = dynamic(
+  () =>
+    import("@/components/PwaRegistration").then((mod) => mod.PwaRegistration),
+  { ssr: false }
+);
 
 const inter = Inter({
   variable: "--font-inter",

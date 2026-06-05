@@ -32,9 +32,19 @@ export function PwaRegistration() {
     if (typeof navigator === "undefined" || !("serviceWorker" in navigator))
       return;
 
-    navigator.serviceWorker.register("/sw.js").catch(() => {
-      /* registration failures are non-fatal; site still works without offline */
-    });
+    const register = () => {
+      navigator.serviceWorker.register("/sw.js").catch(() => {
+        /* registration failures are non-fatal; site still works without offline */
+      });
+    };
+
+    if ("requestIdleCallback" in window) {
+      const id = window.requestIdleCallback(register, { timeout: 4000 });
+      return () => window.cancelIdleCallback(id);
+    }
+
+    const timer = window.setTimeout(register, 1);
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {

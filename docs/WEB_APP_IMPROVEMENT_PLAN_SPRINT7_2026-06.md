@@ -29,7 +29,7 @@
 | 2 | **Review product map at 62%** — Product JSON-LD missing on ~55 URLs | Rich results + E-E-A-T | ✅ +24 mappings → 79% (115/146) |
 | 3 | **Role matrix** — all-round landings on main | Long-tail SEO vs RacketGuide | ✅ (main) `/best/all-round-rackets/` + wide-feet shoes |
 | 4 | **Lighthouse baseline not wired to npm** | CWV guardrail friction | ✅ `lint:lighthouse:baseline` + `capture:lighthouse:baseline` |
-| 5 | **HelpfulReaction remount on route change** | Stale vote state on client nav | ✅ `key={contentId}` on footer |
+| 5 | **Homepage Lighthouse perf** (CI TBT on `/`) | CWV gate | ✅ Defer `PwaRegistration` + idle SW register |
 
 ---
 
@@ -40,6 +40,7 @@
 | HelpfulReaction lint fix | `src/components/HelpfulReaction.tsx`, engagement footers |
 | Product map expansion | `src/data/blog-review-product-map.json` (+24 slugs) |
 | Lighthouse baseline npm scripts | `package.json` |
+| Homepage perf (CI) | `layout.tsx`, `PwaRegistration.tsx` |
 | Tests | `review-article-enrichment.test.ts` |
 
 ---
