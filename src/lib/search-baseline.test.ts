@@ -1,10 +1,14 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { searchSubmitHref } from "@/lib/search-submit-route";
+import { searchSuggestions } from "@/lib/search-suggestions";
 import { searchSite } from "@/lib/site-search";
 import {
   evaluateSearchBaseline,
   evaluateSearchBaselineQuery,
+  evaluateSearchBaselineSubmit,
+  evaluateSearchBaselineSuggestions,
   formatSearchBaselineIssues,
   validateSearchBaselineFile,
 } from "@/lib/search-baseline";
@@ -32,7 +36,10 @@ describe("search-baseline", () => {
 
     const result = evaluateSearchBaseline(parsed.file, (query) =>
       searchSite(query)
-    );
+    , {
+      submitHrefFn: searchSubmitHref,
+      suggestionsFn: (query) => searchSuggestions(query),
+    });
     if (!result.ok) {
       console.error(formatSearchBaselineIssues(result));
     }
@@ -77,5 +84,21 @@ describe("search-baseline", () => {
       []
     );
     expect(issue).toBeNull();
+  });
+
+  it("flags submit href mismatches", () => {
+    const issue = evaluateSearchBaselineSubmit(
+      { query: "ac102c", expectSubmitHrefContains: "/catalog/" },
+      "/search/?q=ac102c"
+    );
+    expect(issue?.message).toContain("/catalog/");
+  });
+
+  it("flags suggestion kind mismatches", () => {
+    const issue = evaluateSearchBaselineSuggestions(
+      { query: "string tension", expectFirstSuggestionKind: "catalog" },
+      [{ kind: "entry", entry: { title: "x", href: "/guides/string-tension/", kind: "guide", summary: "", keywords: [] } }]
+    );
+    expect(issue?.message).toContain("catalog");
   });
 });

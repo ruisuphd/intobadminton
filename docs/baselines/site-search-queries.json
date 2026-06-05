@@ -6,12 +6,19 @@
       "query": "nanoflare 1000",
       "expectHrefContains": "nanoflare",
       "minResults": 1,
+      "expectSubmitHrefContains": "/search/?q=",
+      "expectFirstSuggestionKind": "catalog",
+      "e2e": true,
       "note": "Product name discovery"
     },
     {
       "query": "string tension",
       "expectHrefContains": "string-tension",
       "minResults": 1,
+      "expectSubmitHrefContains": "/search/?q=",
+      "expectSuggestionHrefContains": "string-tension",
+      "minSuggestions": 1,
+      "e2e": true,
       "note": "Guide pillar"
     },
     {
@@ -35,6 +42,9 @@
     {
       "query": "badminton toolkit",
       "expectTopHref": "/tools/",
+      "expectSubmitHrefContains": "/search/?q=",
+      "expectSuggestionHrefContains": "/tools/",
+      "e2e": true,
       "note": "Tools hub exact match"
     },
     {
@@ -123,12 +133,15 @@
       "query": "badmintn string tenson",
       "expectHrefContains": "string-tension",
       "minResults": 1,
+      "expectSubmitHrefContains": "/search/?q=",
+      "e2e": true,
       "note": "Fuzzy typo tolerance"
     },
     {
       "query": "interceptions",
       "expectHrefContains": "racket-balance-vs-swing-speed",
       "minResults": 1,
+      "expectSubmitHrefContains": "/search/?q=",
       "note": "Body-only review excerpt match"
     },
     {
@@ -146,7 +159,25 @@
     {
       "query": "xyzzyplughnotreal",
       "maxResults": 0,
+      "expectSubmitHrefContains": "/search/?q=",
       "note": "Nonsense query returns empty"
+    },
+    {
+      "query": "ac102c",
+      "expectSubmitHrefContains": "/catalog/?q=ac102c",
+      "note": "Product-intent SKU routes to catalog"
+    },
+    {
+      "query": "yonex nanoflare",
+      "expectSubmitHrefContains": "/search/?q=",
+      "expectFirstSuggestionKind": "catalog",
+      "minSuggestions": 1,
+      "note": "Mixed catalog + editorial keeps search submit"
+    },
+    {
+      "query": "yy-ac102c",
+      "expectSubmitHrefContains": "/catalog/?q=yy-ac102c",
+      "note": "Product id product-intent routing"
     }
   ]
 }

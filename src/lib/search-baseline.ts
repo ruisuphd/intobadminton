@@ -1,10 +1,12 @@
 /**
- * Golden-query regression guard for on-site search (`searchSite`).
+ * Golden-query regression guard for on-site search (`searchSite`),
+ * submit routing (`searchSubmitHref`), and autocomplete (`searchSuggestions`).
  *
  * Committed expectations live in `docs/baselines/site-search-queries.json`.
  * CI runs this after unit tests to catch index regressions before deploy.
  */
 
+import type { SearchSuggestion } from "@/lib/search-suggestions";
 import type { SearchEntry } from "@/lib/site-search";
 
 export type SearchBaselineQuery = {
@@ -17,6 +19,18 @@ export type SearchBaselineQuery = {
   minResults?: number;
   /** Maximum number of results (for empty-query guards). */
   maxResults?: number;
+  /** `searchSubmitHref` must equal this exactly. */
+  expectSubmitHref?: string;
+  /** `searchSubmitHref` must include this substring. */
+  expectSubmitHrefContains?: string;
+  /** First autocomplete row kind when suggestions are non-empty. */
+  expectFirstSuggestionKind?: "catalog" | "entry";
+  /** At least one entry suggestion href must include this substring. */
+  expectSuggestionHrefContains?: string;
+  /** Minimum autocomplete rows (including catalog CTA). */
+  minSuggestions?: number;
+  /** Include in Playwright golden-query e2e smoke. */
+  e2e?: boolean;
   note?: string;
 };
 
@@ -99,11 +113,75 @@ export function validateSearchBaselineFile(
       };
     }
 
+    const expectSubmitHref =
+      q.expectSubmitHref === undefined ? undefined : String(q.expectSubmitHref);
+    const expectSubmitHrefContains =
+      q.expectSubmitHrefContains === undefined
+        ? undefined
+        : String(q.expectSubmitHrefContains);
+    const expectFirstSuggestionKind =
+      q.expectFirstSuggestionKind === undefined
+        ? undefined
+        : String(q.expectFirstSuggestionKind);
+    if (
+      expectFirstSuggestionKind !== undefined &&
+      expectFirstSuggestionKind !== "catalog" &&
+      expectFirstSuggestionKind !== "entry"
+    ) {
+      return {
+        ok: false,
+        message: `queries[${i}].expectFirstSuggestionKind must be "catalog" or "entry"`,
+      };
+    }
+    const expectSuggestionHrefContains =
+      q.expectSuggestionHrefContains === undefined
+        ? undefined
+        : String(q.expectSuggestionHrefContains);
+    const minSuggestions =
+      q.minSuggestions === undefined ? undefined : Number(q.minSuggestions);
+    const e2e = q.e2e === undefined ? undefined : Boolean(q.e2e);
+
+    if (expectSubmitHref !== undefined && !expectSubmitHref) {
+      return {
+        ok: false,
+        message: `queries[${i}].expectSubmitHref must be non-empty when set`,
+      };
+    }
+    if (expectSubmitHrefContains !== undefined && !expectSubmitHrefContains) {
+      return {
+        ok: false,
+        message: `queries[${i}].expectSubmitHrefContains must be non-empty when set`,
+      };
+    }
+    if (
+      expectSuggestionHrefContains !== undefined &&
+      !expectSuggestionHrefContains
+    ) {
+      return {
+        ok: false,
+        message: `queries[${i}].expectSuggestionHrefContains must be non-empty when set`,
+      };
+    }
+    if (
+      minSuggestions !== undefined &&
+      (!Number.isFinite(minSuggestions) || minSuggestions < 0)
+    ) {
+      return {
+        ok: false,
+        message: `queries[${i}].minSuggestions must be a non-negative number`,
+      };
+    }
+
     const hasExpectation =
       expectHrefContains !== undefined ||
       expectTopHref !== undefined ||
       minResults !== undefined ||
-      maxResults !== undefined;
+      maxResults !== undefined ||
+      expectSubmitHref !== undefined ||
+      expectSubmitHrefContains !== undefined ||
+      expectFirstSuggestionKind !== undefined ||
+      expectSuggestionHrefContains !== undefined ||
+      minSuggestions !== undefined;
     if (!hasExpectation) {
       return {
         ok: false,
@@ -117,6 +195,15 @@ export function validateSearchBaselineFile(
       expectTopHref,
       minResults,
       maxResults,
+      expectSubmitHref,
+      expectSubmitHrefContains,
+      expectFirstSuggestionKind: expectFirstSuggestionKind as
+        | "catalog"
+        | "entry"
+        | undefined,
+      expectSuggestionHrefContains,
+      minSuggestions,
+      e2e,
       note: q.note === undefined ? undefined : String(q.note),
     });
   }
@@ -191,16 +278,124 @@ export function evaluateSearchBaselineQuery(
   return null;
 }
 
+export function evaluateSearchBaselineSubmit(
+  spec: SearchBaselineQuery,
+  submitHref: string
+): SearchBaselineIssue | null {
+  if (spec.expectSubmitHref !== undefined && submitHref !== spec.expectSubmitHref) {
+    return {
+      query: spec.query,
+      message: `expected submit href "${spec.expectSubmitHref}", got "${submitHref}"`,
+      note: spec.note,
+    };
+  }
+
+  if (
+    spec.expectSubmitHrefContains !== undefined &&
+    !submitHref.includes(spec.expectSubmitHrefContains)
+  ) {
+    return {
+      query: spec.query,
+      message: `submit href "${submitHref}" does not contain "${spec.expectSubmitHrefContains}"`,
+      note: spec.note,
+    };
+  }
+
+  return null;
+}
+
+export function evaluateSearchBaselineSuggestions(
+  spec: SearchBaselineQuery,
+  suggestions: SearchSuggestion[]
+): SearchBaselineIssue | null {
+  if (spec.minSuggestions !== undefined && suggestions.length < spec.minSuggestions) {
+    return {
+      query: spec.query,
+      message: `expected at least ${spec.minSuggestions} suggestion(s), got ${suggestions.length}`,
+      note: spec.note,
+    };
+  }
+
+  if (spec.expectFirstSuggestionKind !== undefined) {
+    const first = suggestions[0]?.kind;
+    if (first !== spec.expectFirstSuggestionKind) {
+      return {
+        query: spec.query,
+        message: `expected first suggestion kind "${spec.expectFirstSuggestionKind}", got "${first ?? "(none)"}"`,
+        note: spec.note,
+      };
+    }
+  }
+
+  if (spec.expectSuggestionHrefContains !== undefined) {
+    const matched = suggestions.some(
+      (row) =>
+        row.kind === "entry" &&
+        row.entry.href.includes(spec.expectSuggestionHrefContains!)
+    );
+    if (!matched) {
+      const sample = suggestions
+        .filter((row): row is Extract<SearchSuggestion, { kind: "entry" }> => row.kind === "entry")
+        .slice(0, 3)
+        .map((row) => row.entry.href)
+        .join(", ");
+      return {
+        query: spec.query,
+        message: `no suggestion href contains "${spec.expectSuggestionHrefContains}" (entries: ${sample || "none"})`,
+        note: spec.note,
+      };
+    }
+  }
+
+  return null;
+}
+
 export function evaluateSearchBaseline(
   file: SearchBaselineFile,
-  searchFn: (query: string) => SearchEntry[]
+  searchFn: (query: string) => SearchEntry[],
+  options?: {
+    submitHrefFn?: (query: string) => string;
+    suggestionsFn?: (query: string) => SearchSuggestion[];
+  }
 ): SearchBaselineResult {
   const issues: SearchBaselineIssue[] = [];
 
   for (const spec of file.queries) {
-    const hits = searchFn(spec.query);
-    const issue = evaluateSearchBaselineQuery(spec, hits);
-    if (issue) issues.push(issue);
+    if (
+      spec.expectHrefContains !== undefined ||
+      spec.expectTopHref !== undefined ||
+      spec.minResults !== undefined ||
+      spec.maxResults !== undefined
+    ) {
+      const hits = searchFn(spec.query);
+      const issue = evaluateSearchBaselineQuery(spec, hits);
+      if (issue) issues.push(issue);
+    }
+
+    if (
+      options?.submitHrefFn &&
+      (spec.expectSubmitHref !== undefined ||
+        spec.expectSubmitHrefContains !== undefined)
+    ) {
+      const submitIssue = evaluateSearchBaselineSubmit(
+        spec,
+        options.submitHrefFn(spec.query)
+      );
+      if (submitIssue) issues.push(submitIssue);
+    }
+
+    if (
+      options?.suggestionsFn &&
+      (spec.expectFirstSuggestionKind !== undefined ||
+        spec.expectSuggestionHrefContains !== undefined ||
+        spec.minSuggestions !== undefined)
+    ) {
+      const suggestionIssue = evaluateSearchBaselineSuggestions(
+        spec,
+        options.suggestionsFn(spec.query)
+      );
+      if (suggestionIssue) issues.push(suggestionIssue);
+    }
   }
 
   return {
