@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-32b1`  
-**Baseline:** Sprint 7 merged (`/updates/`, `/data/`, string feel guide on PR #140).
+**Branch:** `cursor/web-app-improvement-plan-32b1` (PR #145)  
+**Baseline:** `/data/` claims registry on `main` (#130); PDP-lite (#138); review search excerpts (#135).
 
 ---
 
@@ -9,9 +9,9 @@
 
 | Competitor | Strength vs IntoBadminton | Gap / response |
 |------------|---------------------------|----------------|
-| **Wirecutter / RTINGS** | Methodology + cited specs | ✅ `/data/` claims registry |
-| **Tennis Warehouse** | Stringing education cluster | ✅ Cluster hub; Sprint 8 completes cross-links |
-| **Retailer blogs** | Freshness feeds | ✅ `/updates/` + homepage strip (this sprint) |
+| **Wirecutter / RTINGS** | Methodology + cited specs | ✅ `/data/` on `main` |
+| **Tennis Warehouse** | Stringing education cluster | ✅ Cluster hub; this PR completes cross-links + string feel guide |
+| **Retailer blogs** | Freshness feeds | ✅ `/updates/` + homepage strip |
 | **BadmintonCentral** | Community trust | ⏳ HelpfulReaction KV (deploy + env) |
 | **Brand PDPs** | Product photography | ⏳ Editorial `public/products/` pipeline |
 
@@ -23,7 +23,7 @@
 
 | # | Gap | Impact | Sprint 8 |
 |---|-----|--------|----------|
-| 1 | **String cluster incomplete** | Topical authority | ✅ `string-feel-vs-durability` in `related-content` cluster |
+| 1 | **String cluster incomplete** | Topical authority | ✅ `string-feel-vs-durability` guide + `related-content` cluster |
 | 2 | **Review pages lack decision-path shelf** | Post-article retention | ✅ `relatedReadingForReviewSlug` + shelf on reviews |
 | 3 | **Homepage hides freshness lane** | Return visits | ✅ `HomeRecentUpdates` strip → `/updates/` |
 | 4 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
@@ -33,11 +33,11 @@
 
 ## 3. Execution summary
 
-1. Extend `strings` cluster with `/guides/string-feel-vs-durability/`; map `/data/`, `/updates/`.
-2. `relatedReadingForReviewSlug()` — heuristic cluster from review slug (shoe/string/racket).
-3. `RelatedReadingShelf` on `EditorialArticlePage` for guide/best/compare cross-links.
-4. `HomeRecentUpdates` — three latest rows from `listEditorialUpdates(3)`.
-5. Tests + full CI verification.
+1. **`/guides/string-feel-vs-durability/`** — stringing cluster spoke (if not already on branch from Sprint 7).
+2. **`/updates/`** — `listEditorialUpdates()` freshness feed.
+3. Extend `strings` cluster; map `/data/`, `/updates/` in `related-content`.
+4. `relatedReadingForReviewSlug()` — heuristic cluster from review slug.
+5. `HomeRecentUpdates` — three latest rows from `listEditorialUpdates(3)`.
 
 ---
 
@@ -50,11 +50,11 @@
 | 3 | Review shelf excludes current slug; only mapped clusters | ✅ |
 | 4 | Homepage updates use editorial dates, not build time | ✅ |
 | 5 | Static export safe (no new API routes) | ✅ |
-| 6 | `/data/` and `/updates/` remain in sitemap/footer | ✅ |
+| 6 | `/data/` and `/updates/` in sitemap/footer | ✅ |
 | 7 | `related-content.test.ts` covers new paths | ✅ |
 | 8 | `npm test` | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse URLs unchanged for Sprint 7 routes | ✅ |
+| 10 | Lighthouse URL set includes PDP + new routes | ✅ |
 
 ---
 
