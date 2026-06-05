@@ -7,11 +7,11 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v19 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v19"');
+  it("uses ib-v20 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v20"');
   });
 
-  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, price-band best-of, contact, research, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
+  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, price-band best-of, contact, research, legal cluster, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
     for (const path of [
       "/quiz/",
       "/catalog/",
@@ -79,6 +79,11 @@ describe("PWA service worker precache", () => {
       "/best/budget-badminton-shoes/",
       "/contact/",
       "/research/",
+      "/privacy/",
+      "/terms/",
+      "/cookies/",
+      "/security/",
+      "/privacy-choices/",
     ]) {
       expect(source).toContain(`"${path}"`);
     }

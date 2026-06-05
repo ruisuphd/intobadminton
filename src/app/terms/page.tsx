@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
@@ -198,6 +199,24 @@ export default function TermsPage() {
           </a>
           .
         </p>
+
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Looking for equipment instead?
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Browse the full catalog with filters for brand, weight, balance, and
+            price — or run the finder for a personalised shortlist.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/catalog/" className="btn-primary">
+              Browse full catalog
+            </Link>
+            <Link href="/quiz/" className="btn-secondary">
+              Start the finder
+            </Link>
+          </div>
+        </section>
       </article>
     </main>
   );

@@ -281,3 +281,43 @@ test("homepage links to full catalog browse", async ({ page }) => {
   await expect(catalogLink).toBeVisible();
   await expect(catalogLink).toHaveAttribute("href", "/catalog/");
 });
+
+test("privacy page links to full catalog browse", async ({ page }) => {
+  await page.goto("/privacy/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("terms page links to full catalog browse", async ({ page }) => {
+  await page.goto("/terms/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("cookies page links to full catalog browse", async ({ page }) => {
+  await page.goto("/cookies/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("security page links to full catalog browse", async ({ page }) => {
+  await page.goto("/security/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("privacy-choices page links to full catalog browse", async ({ page }) => {
+  await page.goto("/privacy-choices/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
