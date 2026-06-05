@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
 import { COMPARE_GUIDES } from "@/lib/compare-guides";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Badminton equipment comparison guides",
@@ -23,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default function CompareGuidesIndex() {
+  const related = relatedReadingForPath("/compare-guides/");
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -70,6 +73,8 @@ export default function CompareGuidesIndex() {
             </Link>
           ))}
         </div>
+
+        <RelatedReadingShelf items={related} />
       </div>
     </main>
   );

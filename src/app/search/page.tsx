@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { SiteSearch } from "@/components/SiteSearch";
 import { companyInfo } from "@/lib/company";
 import { pageAlternates } from "@/lib/metadata";
+import { relatedReadingForPath } from "@/lib/related-content";
 import { searchIndexSize } from "@/lib/site-search";
 import { SearchPageClient } from "./SearchPageClient";
 
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function SearchPage() {
+  const related = relatedReadingForPath("/search/");
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -68,6 +71,8 @@ export default function SearchPage() {
             <SearchPageClient />
           </Suspense>
         </div>
+
+        <RelatedReadingShelf items={related} />
       </div>
     </main>
   );

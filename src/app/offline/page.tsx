@@ -53,6 +53,11 @@ const OFFLINE_LINKS = [
     label: "FAQ",
     description: "Precached — common finder and methodology questions.",
   },
+  {
+    href: "/compare-guides/",
+    label: "Compare guides",
+    description: "Precached hub — open comparisons you visited before.",
+  },
 ] as const;
 
 export default function OfflinePage() {
