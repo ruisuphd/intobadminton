@@ -22,6 +22,17 @@ export function reviewSearchExcerpt(
   return plain.slice(0, maxLen);
 }
 
+/** Short per-section samples so mid-article terms (e.g. string codes) stay searchable. */
+function reviewSectionSnippets(article: BlogArticle): string {
+  return article.sections
+    .map((section) => {
+      const heading = section.heading ?? "";
+      const body = stripHtml(section.body).slice(0, 120);
+      return `${heading} ${body}`.trim();
+    })
+    .join(" ");
+}
+
 export type SearchEntryKind =
   | "review"
   | "guide"
@@ -391,7 +402,11 @@ function reviewEntries(): SearchEntry[] {
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
     summary: article.dek ?? "",
-    keywords: [article.slug.replace(/-/g, " "), reviewSearchExcerpt(article)],
+    keywords: [
+      article.slug.replace(/-/g, " "),
+      reviewSearchExcerpt(article),
+      reviewSectionSnippets(article),
+    ],
   }));
 }
 

@@ -48,6 +48,7 @@ const config: BestPicksConfig = {
       name: "Power Cushion Aerus Z2",
       brand: "Yonex",
       priceUsd: 175,
+      productId: "yy-aerus-z2",
       bestFor: "Light, fast players (singles speed)",
       specs: [
         { label: "Fit width", value: "Narrow / regular" },
