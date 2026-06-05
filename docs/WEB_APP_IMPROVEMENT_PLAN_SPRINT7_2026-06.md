@@ -27,7 +27,7 @@
 |---|-----|--------|--------|
 | 1 | **CI lint failure** on HelpfulReaction (`set-state-in-effect`) from PR #129 | Blocks green `lint-and-build` on `main` | ✅ `useSyncExternalStore` client detection |
 | 2 | **HelpfulReaction stale vote** on client navigation | Wrong feedback state | ✅ `key={contentId}` on parents |
-| 3 | **Homepage Lighthouse perf** (CI TBT on `/`) | CWV gate failure | ✅ Dynamic-import `PwaRegistration` + idle SW register |
+| 3 | **Homepage Lighthouse perf** (CI TBT on `/`) | CWV gate failure | ✅ Idle `requestIdleCallback` SW register in `PwaRegistration` |
 | 4 | **Lighthouse baseline friction** | Hard to compare regressions | ✅ npm `lint:lighthouse:baseline` / `capture:lighthouse:baseline` |
 | 5 | **Product map / PDP / search** (Sprint 7a) | Discovery + schema | ✅ Already on `main` via #135, #138 |
 
