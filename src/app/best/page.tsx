@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Best Badminton Rackets, Shoes & Strings (2026)",
@@ -136,6 +138,7 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
 ];
 
 export default function BestIndexPage() {
+  const related = relatedReadingForPath("/best/");
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -208,6 +211,8 @@ export default function BestIndexPage() {
             </div>
           </section>
         ))}
+
+        <RelatedReadingShelf items={related} />
 
         <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">

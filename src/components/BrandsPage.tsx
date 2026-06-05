@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { brands, BRAND_TIER_LABELS, type BrandTier } from "@/lib/brands";
 import { companyInfo } from "@/lib/company";
+import { relatedReadingForPath } from "@/lib/related-content";
 import type { SiteLocale } from "@/lib/locale";
 
 const tierOrder: BrandTier[] = ["flagship", "tier2", "tier3", "tier4"];
@@ -42,6 +44,7 @@ function categoryLabel(cat: string): string {
 }
 
 export function BrandsPage({ locale: _locale }: { locale: SiteLocale }) {
+  const related = relatedReadingForPath("/brands/");
   const brandsJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -137,6 +140,8 @@ export function BrandsPage({ locale: _locale }: { locale: SiteLocale }) {
             </section>
           );
         })}
+
+        <RelatedReadingShelf items={related} />
 
         <section className="card p-6">
           <h2 className="text-xl font-semibold text-[var(--text)]">

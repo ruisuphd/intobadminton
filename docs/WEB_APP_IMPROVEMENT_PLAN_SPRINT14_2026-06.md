@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 14 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-bfaf` (PR #157)  
-**Baseline:** Sprint 13 on `main` (#159) — PDP related shelf, explainer clusters, PWA `ib-v8`.
+**Branch:** `cursor/web-app-improvement-plan-154b`  
+**Baseline:** Sprint 13 — PDP related shelf, explainer review clusters, PWA `ib-v8`, Lighthouse `/faq/`.
 
 ---
 
@@ -9,13 +9,13 @@
 
 | Competitor | Strength vs IntoBadminton | Sprint 14 response |
 |------------|---------------------------|-------------------|
-| **Tennis Warehouse** | Keyword search while filter-browsing catalog | ✅ `/catalog/?q=` shareable keyword filter |
-| **RacketGuide** | Model lookup without full site search | ✅ Fuzzy token match on brand, model, specs |
-| **Wirecutter / RTINGS** | Personalized fit on editorial pages | ✅ Profile-aware `ReviewProductPanel` on PDP + reviews |
-| **Retailer finders** | Personalized browse sort | ✅ Catalog **Best fit for you** when profile saved |
-| **BadmintonCentral** | Filterable review archive | ✅ Reviews hub search + kind/equipment chips |
+| **Tennis Warehouse** | Brand hubs → curated picks → compare articles | ✅ Keep reading on `/brands/` and brand profiles |
+| **RacketGuide** | Post-quiz “what next” links to guides | ✅ Results page decision-path shelf by category |
+| **Wirecutter** | Hub pages cross-link methodology + picks | ✅ `/best/` hub shelf + freshness cluster |
+| **RTINGS** | Catalog browse ↔ buying guides | ✅ `/catalog/` maps to compare cluster |
+| **BadmintonCentral** | Thread continuation after gear questions | ✅ Results + catalog exit paths |
 
-**Moat unchanged:** transparent fit score, claims CI, static export, postbuild SEO gate.
+**Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate.
 
 ---
 
@@ -23,11 +23,11 @@
 
 | # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Catalog lacks keyword search** | Users must leave browse for `/search/` | ✅ `q` param + `catalog-search.ts` (PR #157) |
-| 2 | **PDP/review fit uses reference profile only** | Weak personalization on highest-intent pages | ✅ `profile-ready.ts` + `ReviewProductPanel` |
-| 3 | **Catalog lacks personalized sort** | Browse UX lags TW/RacketGuide | ✅ `fit-desc` sort when profile ready |
-| 4 | **Reviews hub is flat chronological** | Poor discovery vs Wirecutter browse | ✅ `ReviewsIndexClient` filters |
-| 5 | **Share URL parity untested** | Viral results loop regressions | ✅ `results-share-smoke` round-trip e2e |
+| 1 | **Post-quiz `/results/` has no Keep reading shelf** | High-intent users dead-end after shortlist | ✅ `relatedReadingForQuizCategory` + shelf on results |
+| 2 | **`/best/` hub lacks editorial exit paths** | Hub is a grid only — weak cross-link to methodology | ✅ `PATH_CLUSTER` + `RelatedReadingShelf` |
+| 3 | **`/brands/` index lacks decision-path shelf** | Brand discovery does not route to compare/best-of | ✅ `brands` cluster + shelf on `BrandsPage` |
+| 4 | **`/catalog/` unmapped in related-content** | Filter browse misses guide/compare exits | ✅ `/catalog/` → compare cluster |
+| 5 | **PWA omits `/best/` + `/brands/` shells** | Installed users lose hub pages offline | ✅ `ib-v9` precache + manifest “Best of” shortcut |
 
 ---
 
@@ -35,13 +35,14 @@
 
 | Deliverable | Files |
 |-------------|-------|
-| Catalog keyword filter | `src/lib/catalog-search.ts`, `catalog-search.test.ts` |
-| Shareable `q` URL param | `src/lib/catalog-url.ts`, `catalog-url.test.ts` |
-| Catalog search UI | `src/app/catalog/CatalogClient.tsx` |
-| Profile-aware fit panels | `src/lib/profile-ready.ts`, `ReviewProductPanel.tsx`, `ProductDetailPage.tsx` |
-| Catalog best-fit sort | `catalog-url.ts`, `CatalogClient.tsx` |
-| Reviews hub filters | `review-hub-filters.ts`, `ReviewsIndexClient.tsx` |
-| E2E regression | `catalog-smoke`, `results-share-smoke`, `reviews-hub-smoke` |
+| Quiz-category + hub clusters | `src/lib/related-content.ts`, `related-content.test.ts` |
+| Results shelf | `src/app/results/ResultsClient.tsx` |
+| Best hub shelf | `src/app/best/page.tsx` |
+| Brands shelf | `src/components/BrandsPage.tsx` |
+| Catalog shelf | `src/app/catalog/page.tsx` |
+| PWA offline expansion | `public/sw.js` (`ib-v9`), `manifest.webmanifest`, `pwa-precache.test.ts` |
+| Lighthouse CI | `lighthouserc.json` |
+| E2E regression | `e2e/results-shelf-smoke.spec.ts`, `e2e/brands-shelf-smoke.spec.ts` |
 
 ---
 
@@ -49,16 +50,16 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 12–13 deferred list + competitive audit | ✅ |
-| 2 | `q` composes with existing facet filters (cat, brand, price) | ✅ |
-| 3 | Personalized fit falls back to reference when profile incomplete | ✅ |
-| 4 | Fuzzy match reuses `search-fuzzy.ts` (no duplicate logic) | ✅ |
-| 5 | Static export — client-only filter, no new routes | ✅ |
-| 6 | PWA stays on `ib-v8` from main (no version regression) | ✅ |
-| 7 | Unit tests: catalog-search, profile-ready, review-hub-filters | ✅ |
+| 1 | Gaps grounded in Sprint 13 deferred list + competitive audit | ✅ |
+| 2 | Related clusters only link to existing static routes | ✅ |
+| 3 | Shelves exclude current path | ✅ |
+| 4 | Results shelf respects quiz `category` param | ✅ |
+| 5 | Static export — no new dynamic routes | ✅ |
+| 6 | PWA cache version bumped (`ib-v9`) when URLs change | ✅ |
+| 7 | Unit tests: related-content, pwa-precache | ✅ |
 | 8 | `npm test` green | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | E2e: catalog keyword + results share + reviews hub | ✅ |
+| 10 | Lighthouse URL set includes `/best/` and `/brands/` | ✅ |
 
 ---
 
@@ -68,7 +69,7 @@
 npm test
 npm run build
 npm run lint
-npx playwright test e2e/catalog-smoke.spec.ts e2e/results-share-smoke.spec.ts e2e/reviews-hub-smoke.spec.ts
+npx playwright test e2e/results-shelf-smoke.spec.ts e2e/brands-shelf-smoke.spec.ts e2e/pwa-offline-smoke.spec.ts
 ```
 
 ---
@@ -79,4 +80,4 @@ npx playwright test e2e/catalog-smoke.spec.ts e2e/results-share-smoke.spec.ts e2
 - Owner: fill `docs/baselines/crux-template.csv` from PageSpeed Insights
 - Original `public/products/` photography on top commercial URLs
 - `VideoObject` / YouTube `sameAs` (channel claim)
-- Site search → catalog deep links with `?q=` for product hits
+- Intentional explainer slugs without single catalogue SKU (no forced product map)

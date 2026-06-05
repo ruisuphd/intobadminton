@@ -33,6 +33,8 @@ import type {
 } from "@/lib/types/product";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import { ShareResultsLink } from "@/components/ShareResultsLink";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
+import { relatedReadingForQuizCategory } from "@/lib/related-content";
 
 /**
  * /results/ is `noindex` so the structured data won't appear in SERPs, but
@@ -346,6 +348,9 @@ function ResultsBody() {
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}
+      <RelatedReadingShelf
+        items={relatedReadingForQuizCategory(profile.category ?? undefined)}
+      />
       {filteredOutCount > 0 && (
         <details className="card p-5 text-sm">
           <summary

@@ -7,25 +7,27 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v8 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v8"');
+  it("uses ib-v9 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v9"');
   });
 
-  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, and faq shells", () => {
+  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, and brands shells", () => {
     for (const path of [
       "/quiz/",
       "/catalog/",
       "/search/",
       "/saved/",
       "/compare/",
-      "/review/",
       "/updates/",
+      "/review/",
       "/guides/",
       "/offline/",
       "/data/",
       "/methodology/",
       "/tools/",
       "/faq/",
+      "/best/",
+      "/brands/",
     ]) {
       expect(source).toContain(`"${path}"`);
     }

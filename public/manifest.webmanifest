@@ -59,6 +59,13 @@
       "description": "String tension, skill level, and authenticity calculators",
       "url": "/tools/",
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Best of",
+      "short_name": "Best",
+      "description": "Curated buying guides for rackets, shoes, and strings",
+      "url": "/best/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     }
   ],
   "icons": [
