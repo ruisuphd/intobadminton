@@ -25,6 +25,8 @@ const PRECACHE_URLS = [
   "/catalog/",
   "/search/",
   "/saved/",
+  "/compare/",
+  "/updates/",
   "/review/",
   "/guides/",
   "/offline/",

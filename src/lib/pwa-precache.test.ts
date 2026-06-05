@@ -11,12 +11,14 @@ describe("PWA service worker precache", () => {
     expect(source).toContain('const CACHE_VERSION = "ib-v6"');
   });
 
-  it("precaches finder, catalog, search, saved, review, and guides shells", () => {
+  it("precaches finder, catalog, search, saved, review, guides, and offline shells", () => {
     for (const path of [
       "/quiz/",
       "/catalog/",
       "/search/",
       "/saved/",
+      "/compare/",
+      "/updates/",
       "/review/",
       "/guides/",
       "/offline/",

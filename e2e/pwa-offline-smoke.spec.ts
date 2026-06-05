@@ -41,6 +41,8 @@ test("service worker precaches search, review, and offline shells", async ({
     "/catalog/",
     "/search/",
     "/saved/",
+    "/compare/",
+    "/updates/",
     "/review/",
     "/guides/",
     "/offline/",

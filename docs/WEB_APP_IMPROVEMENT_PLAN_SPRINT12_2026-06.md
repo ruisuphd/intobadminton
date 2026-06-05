@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 12 (June 2026)
 
 **Branch:** `cursor/web-app-improvement-plan-a467`  
-**Baseline:** Sprint 11 (PR #154) — PWA `ib-v5`, review map 91%, `/offline/` fallback.
+**Baseline:** Sprint 11 — PWA `ib-v5` (`/compare/`, `/updates/` on main), PR #154 review map 91%, `/offline/` fallback.
 
 ---
 
@@ -23,7 +23,7 @@
 
 | # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Guides hub not in PWA precache** | Evergreen SEO cluster unavailable offline | ✅ `ib-v6` + `/guides/` |
+| 1 | **Guides hub not in PWA precache** | Evergreen SEO cluster unavailable offline | ✅ `ib-v6` + `/guides/` (keeps `/compare/`, `/updates/` from main) |
 | 2 | **Offline page omits guides recovery** | Users lose path to tension/shoe guides | ✅ Link on `/offline/` |
 | 3 | **Lighthouse CI skips `/offline/` and `/guides/`** | PWA regressions undetected | ✅ URLs in `lighthouserc.json` |
 | 4 | **No Guides PWA shortcut** | Install surface favors finder only | ✅ `manifest.webmanifest` |

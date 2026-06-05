@@ -90,9 +90,10 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
 
-### Sprint 11 — Shipped (PR #154)
+### Sprint 11 — Shipped (main + PR #154)
 
-- PWA **`ib-v5`** precaches `/review/` + `/offline/` fallback; Reviews manifest shortcut
+- Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
+- PWA **`ib-v5`** precaches `/compare/` and `/updates/` (main); **`ib-v6`** adds `/review/`, `/guides/`, `/offline/`
 - Review→product map **~91%** (133/146); buying-guide editorial overrides
 - **`NEXT_PUBLIC_REACTIONS_API_URL`** optional secret in Pages build
 - PWA offline e2e smoke
@@ -125,12 +126,12 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 9+)
+### Next (Sprint 12+)
 
-- GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
+- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
-- Deploy HelpfulReaction Worker + `NEXT_PUBLIC_REACTIONS_API_URL`
 - YouTube `sameAs` on author entity (after channel claim)
+- Editorial pairing for explainer-only review slugs (map ceiling ~87%)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

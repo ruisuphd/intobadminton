@@ -24,6 +24,16 @@ const OFFLINE_LINKS = [
     description: "Precached — your saved items stay on this device.",
   },
   {
+    href: "/compare/",
+    label: "Compare",
+    description: "Precached — revisit saved product comparisons.",
+  },
+  {
+    href: "/updates/",
+    label: "Updates",
+    description: "Precached — editorial freshness feed.",
+  },
+  {
     href: "/review/",
     label: "Reviews",
     description: "Precached index — open articles you visited before.",
