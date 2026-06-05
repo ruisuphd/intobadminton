@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+/** Sprint 7 PDP-lite regression smoke (static export). */
+
 /** Catalogue racket with no dedicated review slug — catalog links to PDP. */
 const PDP_ONLY_ID = "yy-nanoray-light-70i";
 
