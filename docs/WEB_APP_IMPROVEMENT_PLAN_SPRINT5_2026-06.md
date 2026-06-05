@@ -48,6 +48,7 @@
 5. `HelpfulReaction` — fetch/submit via optional reactions API
 6. `ToolEngagement` on `/tools/*` layout (from Sprint 4b branch)
 7. Lighthouse: `/catalog/index.html`; SW precache `/catalog/`, `/tools/`
+8. Guide ToC fixed sidebar (CLS fix from `fix/guide-toc-cls`); omit `/saved/` from Lighthouse (noindex)
 
 ---
 

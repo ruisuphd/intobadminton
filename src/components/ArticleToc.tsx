@@ -12,7 +12,14 @@ export type TocItem = { id: string; label: string };
  *
  * Mobile: collapses to a "Jump to" disclosure to preserve vertical space.
  */
-export function ArticleToc({ items }: { items: TocItem[] }) {
+export function ArticleToc({
+  items,
+  desktopOnly = false,
+}: {
+  items: TocItem[];
+  /** When true, skip the mobile disclosure (fixed sidebar layout). */
+  desktopOnly?: boolean;
+}) {
   const [activeId, setActiveId] = useState<string | null>(
     items[0]?.id ?? null
   );
@@ -60,34 +67,37 @@ export function ArticleToc({ items }: { items: TocItem[] }) {
 
   return (
     <>
-      {/* Mobile / narrow viewports: collapsible disclosure. */}
-      <details className="lg:hidden mb-6 rounded-2xl border border-[color:var(--line)] bg-white p-4">
-        <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
-          Jump to section ({items.length})
-        </summary>
-        <ol className="mt-3 space-y-2 text-sm">
-          {items.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className={`block py-1 ${
-                  activeId === item.id
-                    ? "font-medium text-[var(--color-accent)]"
-                    : "text-[var(--color-muted)] hover:text-[var(--text)]"
-                }`}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ol>
-      </details>
+      {!desktopOnly ? (
+        <details className="lg:hidden mb-6 rounded-2xl border border-[color:var(--line)] bg-white p-4">
+          <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
+            Jump to section ({items.length})
+          </summary>
+          <ol className="mt-3 space-y-2 text-sm">
+            {items.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className={`block py-1 ${
+                    activeId === item.id
+                      ? "font-medium text-[var(--color-accent)]"
+                      : "text-[var(--color-muted)] hover:text-[var(--text)]"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </details>
+      ) : null}
 
-      {/* Desktop: sticky sidebar. The parent layout decides where to mount
-          this and gives it the necessary width — we just paint the list. */}
       <nav
         aria-label="On this page"
-        className="hidden lg:block sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-auto"
+        className={
+          desktopOnly
+            ? "block"
+            : "hidden lg:block sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-auto"
+        }
       >
         <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
           On this page

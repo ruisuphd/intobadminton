@@ -81,11 +81,20 @@ export function HelpfulReaction({
       <section
         aria-label="Was this helpful?"
         className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
+        aria-busy="true"
       >
         <p className="text-sm font-medium text-[var(--text)]">
-          Was this helpful?
+          Was this article helpful?
         </p>
-        <p className="mt-2 text-xs text-[var(--color-subtle)]">Loading…</p>
+        <div className="mt-3 flex flex-wrap gap-2 opacity-0" aria-hidden>
+          <ReactionButton glyph="👍" label="Yes" onClick={() => {}} />
+          <ReactionButton
+            glyph="🤔"
+            label="Needs more detail"
+            onClick={() => {}}
+          />
+          <ReactionButton glyph="👎" label="Not for me" onClick={() => {}} />
+        </div>
       </section>
     );
   }
