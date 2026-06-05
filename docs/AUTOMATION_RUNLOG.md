@@ -1,5 +1,18 @@
 # Automation run log
 
+## 2026-06-05 — Sprint 8 (branch `cursor/web-app-improvement-plan-32b1`)
+
+**Trigger:** Cloud agent — audit → plan (10-pass) → execute after Sprint 7 PR #140.
+
+**Shipped:**
+- `docs/WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`
+- String cluster: `/guides/string-feel-vs-durability/` in `related-content` + freshness cluster for `/data/`, `/updates/`
+- `relatedReadingForReviewSlug()` + `RelatedReadingShelf` on review articles
+- `HomeRecentUpdates` homepage strip → `/updates/`
+
+**Verification:** `npm test`, `npm run build`, postbuild SEO audit.
+
+
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`, PR #140)
@@ -57,10 +70,6 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 - `npm test` — 245 passed
 - `npm run build` + postbuild SEO audit — pass
-
-### Merge status
-
-Merge when CI green.
 
 ---
 

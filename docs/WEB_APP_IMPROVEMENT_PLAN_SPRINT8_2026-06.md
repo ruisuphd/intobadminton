@@ -1,73 +1,43 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Baseline:** Sprint 7 on `main` (PR #135). Parallel tracks merged via PRs #141, #144, and Phase D on `main`.
+**Branch:** `cursor/web-app-improvement-plan-32b1` (PR #145)  
+**Baseline:** Sprint 7 on `main` (#140 string guide + `/updates/`; #130 `/data/`).
 
 ---
 
-## 1. Competitive audit (June 2026)
-
-| Competitor | Strength vs IntoBadminton | Sprint 8 response |
-|------------|---------------------------|-------------------|
-| **Wirecutter / RTINGS** | Public methodology + claim sourcing | ✅ `/data/` claims registry |
-| **Wirecutter / RTINGS** | Product + Review schema | ✅ Review→product map **86%** |
-| **Tennis Warehouse** | Search snippets + PDP | ✅ `searchResultSummary()`; `/product/[id]/` |
-| **RacketGuide** | “Balanced” keyword landings | ✅ Search alias → `/best/all-round-rackets/` |
-| **BadmintonCentral** | RSS discovery | ✅ `application/rss+xml` alternate |
-
----
-
-## 2. Top 5 gaps (Sprint 8)
+## 1. Top 5 gaps (PR #145)
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | No public claims transparency | ✅ `/data/` |
-| 2 | Product map below 85% | ✅ 86% + audit gate |
-| 3 | Search cards hide body-match context | ✅ Snippets (PR #144) |
-| 4 | No PDP-lite | ✅ `/product/[id]/` |
-| 5 | HelpfulReaction KV live | ⏳ Deploy + env URL |
+| 1 | String cluster cross-links incomplete | ✅ `related-content` hub→spoke |
+| 2 | Review pages lack decision-path shelf | ✅ `relatedReadingForReviewSlug` |
+| 3 | Homepage hides freshness lane | ✅ `HomeRecentUpdates` |
+| 4 | Blog redirect canonical drift | ✅ `blog-redirect-helpers.mjs` |
+| 5 | HelpfulReaction KV aggregates | ⏳ |
 
 ---
 
-## 3. Execution summary
+## 2. Execution
 
-- Claims registry, PDP-lite, map +9, canonical slug ranking
-- `searchResultSummary()`, RSS alternate, catalog list CLS fix
-- Balanced-racket search keywords; BG80 body search test
-- `audit-review-product-map.mjs --min-coverage=85`
-
----
-
-## 4. Ten-pass verification
-
-| Pass | Check | Result |
-|------|-------|--------|
-| 1 | Gaps grounded in Sprint 7 deferrals + audit | ✅ |
-| 2 | Map entries reference valid catalogue IDs | ✅ |
-| 3 | Search snippets complement excerpt indexing (Sprint 7) | ✅ |
-| 4 | No duplicate `/best/balanced-rackets/` URL | ✅ |
-| 5 | Static export safe | ✅ |
-| 6 | Body-only search e2e | ✅ |
-| 7 | `npm test` (256+) | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | Catalog list CLS fix | ✅ |
-| 10 | Lighthouse CI | ✅ PR #144 run 26990611633 |
+| Item | Files |
+|------|-------|
+| Review decision shelf | `EditorialArticlePage.tsx`, `related-content.ts` |
+| Homepage updates strip | `HomeRecentUpdates.tsx`, `LocalizedHome.tsx` |
+| Redirect canonical ranking | `scripts/blog-redirect-helpers.mjs` |
 
 ---
 
-## 5. Verification
+## 3. Verification
 
 ```bash
 npm test
 npm run lint
 npm run build
-node scripts/audit-review-product-map.mjs --min-coverage=85
 ```
 
 ---
 
-## 6. Deferred (Sprint 9+)
+## 4. Deferred (Sprint 9+)
 
-- HelpfulReaction Workers/KV production deploy
-- GSC/CrUX baseline CSV
-- Original product photography
-- YouTube `sameAs` / `VideoObject`
+- HelpfulReaction Workers/KV deploy
+- Original `public/products/` photography
