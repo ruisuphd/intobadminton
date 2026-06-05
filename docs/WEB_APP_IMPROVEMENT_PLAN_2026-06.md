@@ -138,6 +138,11 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/compare-guides/` index; e2e hub-shelf + PWA smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md)
 
+### Sprint 16 — Catalog keyword search (follow-up to #157)
+
+- Catalog keyword search (`/catalog/?q=`) with fuzzy brand/model/spec matching
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md)
+
 ### Phase D — Shipped (PR #114)
 
 - Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`

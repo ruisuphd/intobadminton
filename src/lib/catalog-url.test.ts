@@ -16,6 +16,7 @@ describe("catalog-url", () => {
       balance: "head_light",
       priceBand: "under150",
       sort: "price-desc",
+      q: null,
     });
   });
 
@@ -30,12 +31,31 @@ describe("catalog-url", () => {
       balance: null,
       priceBand: null,
       sort: "price-asc",
+      q: null,
     });
   });
 
   it("parses fit-desc sort", () => {
     const params = new URLSearchParams("sort=fit-desc");
     expect(parseCatalogSearchParams(params).sort).toBe("fit-desc");
+  });
+
+  it("parses keyword query", () => {
+    const params = new URLSearchParams("q=astrox+77");
+    expect(parseCatalogSearchParams(params).q).toBe("astrox 77");
+  });
+
+  it("round-trips q in shareable URL", () => {
+    const url = catalogUrlFromState({
+      category: "racket",
+      brand: null,
+      weightClass: null,
+      balance: null,
+      priceBand: null,
+      sort: "price-asc",
+      q: "astrox 77",
+    });
+    expect(url).toBe("/catalog/?cat=racket&q=astrox+77");
   });
 
   it("round-trips state to a shareable URL", () => {
@@ -46,6 +66,7 @@ describe("catalog-url", () => {
       balance: null,
       priceBand: "under200",
       sort: "name",
+      q: null,
     });
     expect(url).toBe("/catalog/?cat=racket&brand=Victor&price=under200&sort=name");
     const parsed = parseCatalogSearchParams(new URLSearchParams(url.split("?")[1]));

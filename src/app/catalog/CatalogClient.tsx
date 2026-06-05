@@ -18,6 +18,7 @@ import {
   type CatalogUrlState,
 } from "@/lib/catalog-url";
 import { catalogFitScore, isFinderProfileReady } from "@/lib/profile-ready";
+import { filterProductsByQuery } from "@/lib/catalog-search";
 import {
   BALANCE_OPTIONS,
   CATEGORY_OPTIONS,
@@ -137,11 +138,11 @@ export function CatalogClient() {
   const filtered = useMemo(
     () =>
       sortProducts(
-        filterProducts(catalog, filters),
+        filterProductsByQuery(filterProducts(catalog, filters), state.q ?? ""),
         state.sort,
         profileReady ? profile : null
       ),
-    [catalog, filters, state.sort, profile, profileReady]
+    [catalog, filters, state.q, state.sort, profile, profileReady]
   );
 
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
@@ -172,6 +173,7 @@ export function CatalogClient() {
       weight: merged.weightClass ?? "all",
       balance: merged.balance ?? "all",
       sort: merged.sort,
+      q: merged.q ?? "",
     });
     replaceState(merged);
   };
@@ -187,6 +189,20 @@ export function CatalogClient() {
   return (
     <div className="space-y-6">
       <div className="space-y-4">
+        <label className="block">
+          <span className="sr-only">Search catalog</span>
+          <input
+            type="search"
+            value={state.q ?? ""}
+            onChange={(e) => {
+              const next = e.target.value.trim();
+              patch({ q: next.length > 0 ? next : null });
+            }}
+            placeholder="Search by brand or model…"
+            className="w-full max-w-md rounded-xl border border-[color:var(--line)] bg-white px-4 py-2.5 text-sm text-[var(--text)] placeholder:text-[var(--color-subtle)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
+          />
+        </label>
+
         <FilterChipGroup
           label="Category"
           chips={[
@@ -275,7 +291,14 @@ export function CatalogClient() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-[var(--color-muted)]">
           {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
-          filters.
+          filters
+          {state.q ? (
+            <>
+              {" "}
+              for &ldquo;{state.q}&rdquo;
+            </>
+          ) : null}
+          .
         </p>
         <Link
           href="/quiz/"
@@ -336,7 +359,18 @@ export function CatalogClient() {
 
       {filtered.length === 0 && (
         <p className="text-sm text-[var(--color-muted)]">
-          No products match — try clearing a filter or browse{" "}
+          No products match
+          {state.q ? (
+            <>
+              {" "}
+              &ldquo;{state.q}&rdquo;
+            </>
+          ) : null}{" "}
+          — try clearing a filter, search{" "}
+          <Link href="/search/" className="text-[var(--color-accent)] underline">
+            the full site
+          </Link>
+          , or browse{" "}
           <Link href="/best/" className="text-[var(--color-accent)] underline">
             best-of guides
           </Link>
