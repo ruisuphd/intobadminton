@@ -63,13 +63,9 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 
 - GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
-<<<<<<< HEAD
-- HelpfulReaction aggregate backend (Workers/KV)
-- Expand `blog-review-product-map.json` toward full review coverage
-=======
 - HelpfulReaction Workers/KV
+- Expand `blog-review-product-map.json` toward full review coverage
 - YouTube `sameAs` on author entity (after channel claim)
->>>>>>> origin/main
 
 ---
 
