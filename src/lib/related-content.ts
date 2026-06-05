@@ -60,6 +60,33 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Attack line vs speed line — the brand's two racket philosophies.",
     },
   ],
+  "defensive-rackets": [
+    {
+      href: "/best/defensive-rackets/",
+      title: "Best defensive badminton rackets",
+      summary: "Frames for blocks, lifts, and flat drives in defensive doubles.",
+    },
+    {
+      href: "/best/head-light-rackets/",
+      title: "Best head-light rackets",
+      summary: "Head-light geometry for net control and fast recovery.",
+    },
+    {
+      href: "/guides/doubles-roles/",
+      title: "Doubles roles and positioning",
+      summary: "Side-by-side defence, rotation, and front-court coverage.",
+    },
+    {
+      href: "/best/doubles-rackets/",
+      title: "Best doubles rackets",
+      summary: "Six frames ranked for mixed, men's, and women's doubles.",
+    },
+    {
+      href: "/compare-guides/yonex-astrox-vs-nanoflare/",
+      title: "Yonex Astrox vs Nanoflare",
+      summary: "Attack line vs speed line — when to pick each family.",
+    },
+  ],
   doubles: [
     {
       href: "/guides/doubles-positioning-and-rackets/",
@@ -193,6 +220,9 @@ const PATH_CLUSTER: Record<string, string> = {
   "/guides/doubles-positioning-and-rackets/": "doubles",
   "/guides/doubles-roles/": "doubles",
   "/best/doubles-rackets/": "doubles",
+  "/best/defensive-rackets/": "defensive-rackets",
+  "/best/head-light-rackets/": "defensive-rackets",
+  "/best/control-rackets/": "defensive-rackets",
 
   "/guides/string-tension/": "strings",
   "/guides/string-feel-vs-durability/": "strings",

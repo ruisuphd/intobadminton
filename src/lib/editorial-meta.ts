@@ -137,6 +137,11 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-06-05",
     priceCheckedAt: "2026-06-05",
   },
+  "/best/defensive-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
   "/best/head-heavy-rackets-under-150/": {
     publishedAt: "2026-06-05",
     lastReviewedAt: "2026-06-05",

@@ -159,6 +159,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["head light", "head-light", "control", "net", "defensive", "nanoflare"],
   },
   {
+    title: "Best defensive badminton rackets",
+    href: "/best/defensive-rackets/",
+    kind: "best",
+    summary:
+      "Frames for defensive doubles, blocks, lifts, and flat drives — Nanoflare 700 Pro, 800 Pro, Auraspeed 90K II.",
+    keywords: ["defensive", "defence", "defense", "doubles", "block", "lift", "recovery"],
+  },
+  {
     title: "Best wide-feet badminton shoes",
     href: "/best/wide-feet-badminton-shoes/",
     kind: "best",

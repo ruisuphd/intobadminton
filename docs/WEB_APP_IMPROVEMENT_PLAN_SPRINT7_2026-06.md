@@ -25,7 +25,15 @@
 
 ---
 
-## 3. Ten-pass verification
+## 3. Execution summary
+
+- Review body search excerpts (#135); map expansion (PR #142 follow-up).
+- HelpfulReaction lint + hydration; PWA idle registration (#141).
+- Share results link + RSS `alternates` (#139).
+
+---
+
+## 4. Ten-pass plan verification
 
 | Pass | Check | Result |
 |------|-------|--------|

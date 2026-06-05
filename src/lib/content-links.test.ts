@@ -37,6 +37,13 @@ describe("content-links", () => {
     expect(play.map((a) => a.slug)).toContain("yonex-nanoflare-1000z-play-review");
   });
 
+  it("links Play comparison from flagship review editorially", () => {
+    const editorial = editorialComparisonsForReview("yy-nanoflare-1000z");
+    expect(
+      editorial.some((link) => link.href.includes("yonex-nanoflare-1000z-play-review"))
+    ).toBe(true);
+  });
+
   it("prefers editorNote for review descriptions", () => {
     const description = reviewDescriptionFromArticles("Short founder note", []);
     expect(description).toBe("Short founder note");

@@ -91,6 +91,14 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds defensive rackets best page", () => {
+    expect(
+      searchSite("defensive doubles racket").some((h) =>
+        h.href.includes("defensive-rackets")
+      )
+    ).toBe(true);
+  });
+
   it("finds catalog products by brand and model", () => {
     const hits = searchSite("yonex nanoflare 1000");
     expect(hits.some((h) => h.kind === "product")).toBe(true);
