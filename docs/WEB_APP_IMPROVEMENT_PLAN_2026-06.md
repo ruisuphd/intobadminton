@@ -46,6 +46,13 @@
 ### Sprint 3–4 — Shipped (main)
 
 - Notify-me intent, homepage recall, catalog search, `/catalog/`, results facets, price-band pages
+- Glossary autolinks, `GuideInPageToc`, quiz step hints, Sharp-preferred product images
+
+### Phase C — Shipped (PR #101)
+
+- Compare-guides layout chrome, `compare-guides.ts` search manifest, guide engagement deduplication, `ProductCardImage` on results, `audit-review-product-map.mjs`
+
+See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
 
 ### Sprint 5 — PR #92 + PR #122
 
@@ -61,6 +68,7 @@
 - GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
 - HelpfulReaction Workers/KV
+- Expand `blog-review-product-map.json` toward full review coverage
 - YouTube `sameAs` on author entity (after channel claim)
 
 ---
