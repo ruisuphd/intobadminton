@@ -193,7 +193,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`/brands/anta/`** landing + brands hub deep links for all dedicated guides
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT20_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT20_2026-06.md)
 
-### Sprint 21 — This branch (PR #169)
+### Sprint 21 — Shipped (PR #169)
 
 - Brand landings → **filtered catalog** CTA (`catalogHrefFromBrand`)
 - PWA **`ib-v11`** precaches dedicated brand shells + manifest **Brands** shortcut
@@ -201,7 +201,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/anta/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT21_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT21_2026-06.md)
 
-### Next (Sprint 22+)
+### Sprint 22 — This branch
+
+- Best-of landings → **filtered catalog** CTA (`catalogHrefFromBestSlug`)
+- `/best/` hub **Browse full catalog** secondary CTA
+- PWA **`ib-v12`** precaches bonny/kawasaki/kumpoo brand shells
+- Lighthouse CI includes `/brands/kawasaki/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT22_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT22_2026-06.md)
+
+### Next (Sprint 23+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
