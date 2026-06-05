@@ -57,8 +57,8 @@
 | 5 | Static export — no new API routes | ✅ |
 | 6 | Unit tests: `pwa-precache.test.ts` updated for ib-v19 | ✅ |
 | 7 | Lighthouse URLs are indexable (no noindex saved/compare) | ✅ |
-| 8 | `npm test` + `npm run build` + postbuild SEO audit | ⏳ CI |
-| 9 | E2E: contact/research/homepage catalog CTAs + PWA ib-v19 | ⏳ CI |
+| 8 | `npm test` + `npm run build` + postbuild SEO audit | ✅ |
+| 9 | E2E: contact/research/homepage catalog CTAs + PWA ib-v19 | ✅ |
 | 10 | Master plan doc updated with Sprint 29 entry | ✅ |
 
 ---
