@@ -50,6 +50,48 @@ test("concept compare guide links to filtered catalog browse", async ({
   );
 });
 
+test("guides hub links to full catalog browse", async ({ page }) => {
+  await page.goto("/guides/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("tools hub links to full catalog browse", async ({ page }) => {
+  await page.goto("/tools/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("review hub links to full catalog browse", async ({ page }) => {
+  await page.goto("/review/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("brands hub links to full catalog browse", async ({ page }) => {
+  await page.goto("/brands/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("procedural guide links to filtered catalog browse", async ({ page }) => {
+  await page.goto("/guides/string-tension/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse strings in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=string");
+});
+
 test("guides hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/guides/");
 

@@ -197,3 +197,49 @@ export function catalogHrefFromCompareSlug(slug: string): string {
     ...filters,
   });
 }
+
+/**
+ * Guide slug → shareable catalog filters (retailer-style education → browse).
+ * Unmapped slugs fall back to the full catalog index.
+ */
+type GuideSlugCatalogFilters = Partial<
+  Pick<CatalogUrlState, "category" | "balance" | "priceBand">
+>;
+
+const GUIDE_SLUG_CATALOG_FILTERS: Record<string, GuideSlugCatalogFilters> = {
+  "string-tension": { category: "string" },
+  "string-feel-vs-durability": { category: "string" },
+  "shoes-footwork": { category: "shoes" },
+  "badminton-shoes-vs-running-shoes": { category: "shoes" },
+  "wide-feet-badminton-shoes": { category: "shoes" },
+  "racket-balance": { category: "racket" },
+  "doubles-positioning-and-rackets": { category: "racket" },
+  "doubles-roles": { category: "racket" },
+  "equipment-authenticity": { category: "racket" },
+  "season-refresh": {},
+};
+
+/** Filtered catalog browse — used from `/guides/*` procedural landings. */
+export function catalogHrefFromGuideSlug(slug: string): string {
+  const filters = GUIDE_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters) return "/catalog/";
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    ...filters,
+  });
+}
+
+const GUIDE_CATALOG_CTA_LABELS: Record<string, string> = {
+  string: "Browse strings in catalog",
+  shoes: "Browse shoes in catalog",
+  racket: "Browse rackets in catalog",
+};
+
+/** Button label for guide → catalog CTA. */
+export function catalogCtaLabelFromGuideSlug(slug: string): string {
+  const filters = GUIDE_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters?.category) return "Browse matching catalog";
+  return (
+    GUIDE_CATALOG_CTA_LABELS[filters.category] ?? "Browse matching catalog"
+  );
+}

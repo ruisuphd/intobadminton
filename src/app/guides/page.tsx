@@ -180,6 +180,24 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
 
         <RelatedReadingShelf items={related} />
 
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Ready to browse the catalogue?
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Filter by brand, weight, balance, and price — or run the finder for a
+            personalised shortlist.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href={localized("/quiz/")} className="btn-primary">
+              Start the finder
+            </Link>
+            <Link href={localized("/catalog/")} className="btn-secondary">
+              Browse full catalog
+            </Link>
+          </div>
+        </section>
+
         <section className="mt-16 max-w-3xl space-y-4 text-sm leading-relaxed text-[var(--color-muted)]">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             Who these badminton guides are for

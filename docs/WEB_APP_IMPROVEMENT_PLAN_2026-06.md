@@ -209,7 +209,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/kawasaki/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT22_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT22_2026-06.md)
 
-### Sprint 23 — This branch
+### Sprint 23 — Shipped (PR #171)
 
 - Compare-guide landings → **filtered catalog** CTA (`catalogHrefFromCompareSlug`)
 - `/compare-guides/` hub **Browse full catalog** secondary CTA
@@ -218,7 +218,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/compare-guides/astrox-99-pro-vs-astrox-100zz/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT23_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT23_2026-06.md)
 
-### Next (Sprint 24+)
+### Sprint 24 — This branch
+
+- Discovery hubs (`/guides/`, `/tools/`, `/review/`, `/brands/`) → **Browse full catalog** CTAs
+- Procedural guides → **filtered catalog** CTA (`catalogHrefFromGuideSlug`, `GuideCatalogCta`)
+- PWA **`ib-v14`** precaches `/brands/yonex/` and `/guides/string-tension/`
+- Lighthouse CI includes `/brands/yonex/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT24_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT24_2026-06.md)
+
+### Next (Sprint 25+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
