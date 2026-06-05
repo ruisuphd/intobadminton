@@ -61,6 +61,8 @@ jobs:
           npx -y serve@latest out -l 4173 &
           sleep 2
           npm run lint:lighthouse
+      - name: Lighthouse baseline regression guard
+        run: npm run lint:lighthouse:baseline
 
   e2e-quiz:
     runs-on: ubuntu-latest

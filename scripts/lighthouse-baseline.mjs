@@ -16,23 +16,34 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const BASELINE_PATH = resolve(ROOT, "docs/baselines/lighthouse-scores.json");
+const BASELINE_CONFIG = resolve(ROOT, "lighthouserc-baseline.json");
 const REGRESSION_TOLERANCE = 0.05;
 
 function usage() {
   console.log(`Usage:
-  node scripts/lighthouse-baseline.mjs capture   Write baseline from LHCI autorun
+  node scripts/lighthouse-baseline.mjs capture   Write CrUX-priority baseline from LHCI
   node scripts/lighthouse-baseline.mjs compare   Fail on category score regression
 `);
 }
 
-function runLhci() {
+function runLhci({ configPath = BASELINE_CONFIG } = {}) {
   execFileSync(
     "npx",
-    ["-y", "@lhci/cli@0.14.x", "autorun", "--upload.target=filesystem"],
+    [
+      "-y",
+      "@lhci/cli@0.14.x",
+      "autorun",
+      `--config=${configPath}`,
+      "--upload.target=filesystem",
+    ],
     { cwd: ROOT, stdio: "inherit" }
   );
-  const manifestPath = resolve(ROOT, ".lighthouseci/manifest.json");
-  if (!existsSync(manifestPath)) {
+  const manifestCandidates = [
+    resolve(ROOT, ".lighthouseci/manifest.json"),
+    resolve(ROOT, "manifest.json"),
+  ];
+  const manifestPath = manifestCandidates.find((path) => existsSync(path));
+  if (!manifestPath) {
     throw new Error("LHCI manifest not found — did autorun succeed?");
   }
   return JSON.parse(readFileSync(manifestPath, "utf8"));
@@ -57,10 +68,34 @@ function summariseManifest(entries) {
 }
 
 function capture() {
-  const manifest = runLhci();
-  const baseline = summariseManifest(manifest);
+  const manifest = runLhci({ configPath: BASELINE_CONFIG });
+  const baseline = {
+    ...summariseManifest(manifest),
+    source: "lighthouserc-baseline.json",
+    note: "CrUX-priority URLs — refresh with npm run capture:lighthouse:baseline after build.",
+  };
   writeFileSync(BASELINE_PATH, `${JSON.stringify(baseline, null, 2)}\n`);
   console.log(`[lighthouse-baseline] wrote ${BASELINE_PATH.replace(ROOT + "/", "")}`);
+}
+
+function findManifestPath() {
+  const candidates = [
+    resolve(ROOT, ".lighthouseci/manifest.json"),
+    resolve(ROOT, "manifest.json"),
+  ];
+  return candidates.find((path) => existsSync(path));
+}
+
+function loadManifestForCompare() {
+  const manifestPath = findManifestPath();
+  if (manifestPath) {
+    console.log(
+      `[lighthouse-baseline] reusing ${manifestPath.replace(ROOT + "/", "")} from prior LHCI run`
+    );
+    return JSON.parse(readFileSync(manifestPath, "utf8"));
+  }
+  console.log("[lighthouse-baseline] no manifest found — running CrUX-priority LHCI subset");
+  return runLhci({ configPath: BASELINE_CONFIG });
 }
 
 function compare() {
@@ -71,7 +106,13 @@ function compare() {
     process.exit(1);
   }
   const expected = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
-  const manifest = runLhci();
+  if (!expected.urls || Object.keys(expected.urls).length === 0) {
+    console.error(
+      `[lighthouse-baseline] baseline has no url scores — run capture:lighthouse:baseline first`
+    );
+    process.exit(1);
+  }
+  const manifest = loadManifestForCompare();
   const actual = summariseManifest(manifest);
   const failures = [];
 

@@ -1,5 +1,19 @@
 # Automation run log
 
+## 2026-06-05 — Sprint 37 (branch `cursor/web-app-improvement-plan-258a`)
+
+**Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #184 merged.
+
+**Shipped:**
+- `docs/WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md`
+- `lighthouserc-baseline.json` — CrUX-priority 11-url Lighthouse config
+- Captured `docs/baselines/lighthouse-scores.json` (perf ≥0.99 on commercial URLs)
+- CI `lint:lighthouse:baseline` regression guard after full LHCI
+- `lighthouse-baseline.test.ts`, `reactions-worker-scaffold.test.ts`
+- `founderPersonJsonLd` conditional `sameAs` from `founderSameAs`
+
+**Verification:** `npm test` (356), `npm run build`, `npm run lint:lighthouse:baseline`.
+
 ## 2026-06-05 — Sprint 12 (branch `cursor/web-app-improvement-plan-4f36`)
 
 **Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #145 merged + Sprint 11 on main.
