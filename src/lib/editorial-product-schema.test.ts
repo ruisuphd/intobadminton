@@ -35,4 +35,11 @@ describe("review article product schema wiring", () => {
     const mapped = Object.values(blogReviewMap as Record<string, string>);
     expect(mapped.some((id) => catalog.some((p) => p.id === id))).toBe(true);
   });
+
+  it("enriches a Phase D mapped slug (DriveX 10)", () => {
+    const slug = "victor-drivex-10-review";
+    const productId = reviewProductIdForBlog(slug);
+    expect(productId).toBe("vic-drivex-10-metallic");
+    expect(reviewProductById(productId!)).toBeTruthy();
+  });
 });

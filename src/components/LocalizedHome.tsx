@@ -5,7 +5,7 @@ import { HomeContinueReading } from "@/components/HomeContinueReading";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
 import { HomeRecentUpdates } from "@/components/HomeRecentUpdates";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
-import { SiteSearchForm } from "@/components/SiteSearchForm";
+import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
 import catalogStats from "@/data/catalog-stats.json";
 import { homeFeaturedReviewPath, homeFeaturedReviews, reviewArticleCount } from "@/lib/home-featured";
@@ -166,7 +166,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 Search reviews, guides, and tools
               </p>
               <div className="mt-3">
-                <SiteSearchForm />
+                <SiteSearchFormStatic />
               </div>
             </div>
           </div>

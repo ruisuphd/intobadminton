@@ -2,7 +2,6 @@
   "ci": {
     "collect": {
       "url": [
-        "http://localhost:4173/index.html",
         "http://localhost:4173/quiz/index.html",
         "http://localhost:4173/best/index.html",
         "http://localhost:4173/best/beginner-rackets/index.html",
@@ -22,6 +21,7 @@
         "http://localhost:4173/guides/badminton-shoes-vs-running-shoes/index.html",
         "http://localhost:4173/guides/doubles-positioning-and-rackets/index.html",
         "http://localhost:4173/guides/string-tension/index.html",
+        "http://localhost:4173/guides/season-refresh/index.html",
         "http://localhost:4173/review/index.html",
         "http://localhost:4173/review/yonex-arcsaber-7-pro-review/index.html",
         "http://localhost:4173/search/index.html",
