@@ -11,6 +11,10 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const STRICT = process.argv.includes("--strict");
+const MIN_COVERAGE = Number(
+  process.argv.find((arg) => arg.startsWith("--min-coverage="))?.split("=")[1] ??
+    "0"
+);
 
 const map = JSON.parse(
   readFileSync(resolve(ROOT, "src/data/blog-review-product-map.json"), "utf8")
@@ -18,6 +22,10 @@ const map = JSON.parse(
 const articles = JSON.parse(
   readFileSync(resolve(ROOT, "src/data/blog-articles.json"), "utf8")
 );
+const products = JSON.parse(
+  readFileSync(resolve(ROOT, "src/data/products.json"), "utf8")
+);
+const catalogIds = new Set(products.map((p) => p.id));
 
 const slugs = articles.map((a) => a.slug);
 const mapped = new Set(Object.keys(map));
@@ -39,6 +47,22 @@ if (unmapped.length > 0) {
   if (unmapped.length > 20) {
     console.log(`  … and ${unmapped.length - 20} more`);
   }
+}
+
+const badIds = Object.entries(map).filter(([, id]) => !catalogIds.has(id));
+if (badIds.length > 0) {
+  console.error(`Invalid catalogue ids (${badIds.length}):`);
+  for (const [slug, id] of badIds.slice(0, 10)) {
+    console.error(`  - ${slug} → ${id}`);
+  }
+  process.exit(1);
+}
+
+if (MIN_COVERAGE > 0 && pct < MIN_COVERAGE) {
+  console.error(
+    `Coverage ${pct}% is below --min-coverage=${MIN_COVERAGE}`
+  );
+  process.exit(1);
 }
 
 if (STRICT && unmapped.length > 0) {

@@ -69,10 +69,18 @@ function rankBlogSlugsForProduct(slugs: BlogSlug[]) {
       let score = 0;
       if (slug.includes("review") || slug.includes("deep-dive")) score += 2;
       if (article && article.sections.length >= 3) score += 1;
-      return { slug, score, updatedAt: article?.updatedAt ?? "" };
+      if (slug.includes("-vs-") || slug.includes("-play-")) score -= 2;
+      if (slug.endsWith("-review") && !slug.includes("-vs-")) score += 1;
+      return {
+        slug,
+        score,
+        sections: article?.sections.length ?? 0,
+        updatedAt: article?.updatedAt ?? "",
+      };
     })
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
+      if (b.sections !== a.sections) return b.sections - a.sections;
       return a.updatedAt < b.updatedAt ? 1 : -1;
     });
 }
