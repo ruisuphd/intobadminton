@@ -2,6 +2,20 @@
 
 Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
 
+## Discovery parity (search submit ↔ catalog filter)
+
+Committed expectations for **product-intent** queries where header/search submit routes to `/catalog/?q=` and the catalogue keyword filter must return matching rows:
+
+- [`discovery-parity-queries.json`](discovery-parity-queries.json) — pairs covering SKU tokens and full product ids (`ac102c`, `yy-ac102c`, `vic-p9200`, `yy-bg65`).
+
+Validate routing + catalogue row counts (runs in CI after catalog guard):
+
+```bash
+npm run lint:discovery-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/discovery-parity-smoke.spec.ts`) — header submit through to visible catalog product rows.
+
 ## Catalogue keyword search (golden queries)
 
 Committed expectations for `/catalog/?q=` keyword filtering:
