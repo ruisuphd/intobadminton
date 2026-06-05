@@ -37,6 +37,11 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds tools hub", () => {
+    const hits = searchSite("badminton toolkit");
+    expect(hits.some((h) => h.href === "/tools/")).toBe(true);
+  });
+
   it("finds budget best-of page", () => {
     const hits = searchSite("rackets under 100");
     expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
@@ -71,6 +76,19 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);
   });
 
+  it("finds programmatic price-band guides", () => {
+    expect(
+      searchSite("rackets under 150").some((h) =>
+        h.href.includes("rackets-under-150")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("rackets under 200").some((h) =>
+        h.href.includes("rackets-under-200")
+      )
+    ).toBe(true);
+  });
+
   it("finds compare guides by model pair", () => {
     const hits = searchSite("astrox 99 pro 100zz");
     expect(
@@ -85,5 +103,38 @@ describe("site-search", () => {
 
   it("returns empty for nonsense query", () => {
     expect(searchSite("xyzzyplughnotreal")).toEqual([]);
+  });
+
+  it("tolerates common typos in guide queries", () => {
+    const hits = searchSite("badmintn string tenson");
+    expect(hits.some((h) => h.href.includes("string-tension"))).toBe(true);
+  });
+
+  it("finds control rackets best page", () => {
+    expect(
+      searchSite("control rackets placement").some((h) =>
+        h.href.includes("control-rackets")
+      )
+    ).toBe(true);
+  });
+
+  it("finds all compare guides by brand matchup", () => {
+    const hits = searchSite("halbertec axforce");
+    expect(
+      hits.some((h) =>
+        h.href.includes("halbertec-9000-power-vs-axforce-100-gen-2")
+      )
+    ).toBe(true);
+  });
+
+  it("indexes every compare guide slug", () => {
+    const index = buildSearchIndex();
+    const compareHrefs = index
+      .filter((e) => e.kind === "compare")
+      .map((e) => e.href);
+    expect(compareHrefs).toContain(
+      "/compare-guides/yonex-65z4-vs-eclipsion-z3/"
+    );
+    expect(compareHrefs.length).toBeGreaterThanOrEqual(13);
   });
 });

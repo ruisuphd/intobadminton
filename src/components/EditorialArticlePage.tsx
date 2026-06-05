@@ -66,7 +66,8 @@ export function EditorialArticlePage({
     dateModified: article.updatedAt,
     author: {
       "@type": "Person",
-      name: "Rui Su",
+      name: companyInfo.founderName,
+      url: `${companyInfo.siteUrl}${companyInfo.authorPagePath}`,
     },
     publisher: organizationJsonLd,
     mainEntityOfPage: canonicalUrl,

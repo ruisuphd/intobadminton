@@ -1,62 +1,74 @@
 # Web App Improvement Plan — Sprint 5 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-353e`  
-**Baseline:** Sprint 3–4 on `main` (PR #97, #105 — catalog filters, glossary links, toolkit cross-links).
+**Branches:** `cursor/web-app-improvement-plan-dfd2` (PR #92 — homepage perf); `cursor/web-app-improvement-plan-b963` (PR #122 — catalog URL + under-$200)  
+**Baseline:** Sprint 3–4 on `main`.
 
 ---
 
-## 1. Competitive audit (June 2026)
+## Top 5 gaps addressed
 
-| Competitor | Strength vs IntoBadminton | Gap / response |
-|------------|---------------------------|----------------|
-| **Tennis Warehouse / retailer finders** | Faceted spec browse | ✅ `/catalog/` on main (#105) |
-| **RacketGuide / affiliate roundups** | Long-tail landings (`5U`, shoulder comfort) | ✅ Two new `/best/*` pages (this PR) |
-| **BadmintonCentral / authority blogs** | Inline concept links to glossary | ✅ Auto + manual `segmentArticleGlossary` |
-| **Wirecutter / RTINGS** | Social proof vote counts | ⏳ HelpfulReaction Workers/KV |
-| **Brand PDPs** | First-party product photography | ⏳ Editorial `public/products/` pipeline |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | **Budget SEO cluster incomplete** — no $200 landing page | ✅ `/best/rackets-under-200/` (PR #122) |
+| 2 | **Catalog filters not shareable** | ✅ URL query params + sort (PR #122) |
+| 3 | **Homepage full JSON imports hurt Lighthouse** | ✅ Prebuild slices + `HomeContinueReading` (PR #92) |
+| 4 | **Lighthouse CI coverage gaps** | ✅ catalog + price-band URLs; CLS warn (PR #122) |
+| 5 | **Catalog → finder funnel uninstrumented** | ✅ GA4 events (PR #122) |
 
----
+### Deferred (Sprint 6+)
 
-## 2. Top 5 gaps (this sprint)
-
-| # | Gap | Impact | Sprint 5 |
-|---|-----|--------|----------|
-| 1 | **Missing long-tail programmatic `/best/*` landings** | SEO topical coverage | ✅ 5U + shoulder comfort |
-| 2 | **Glossary autolink only on declared terms** | Internal linking density | ✅ Automatic fill-in after manual links |
-| 3 | Faceted catalogue browse | Discovery | ✅ Already on main (`/catalog/`) |
-| 4 | Original product photography | AdSense / experience | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction aggregate counts (Workers/KV) | Social proof | ⏳ Phase C backend |
+- HelpfulReaction Workers/KV aggregates
+- First-party `public/products/` hero photography
+- VideoObject + claimed YouTube `sameAs`
+- GSC/CrUX baseline CSV capture
 
 ---
 
-## 3. Execution summary
+## Homepage perf (PR #92)
 
-1. **`/best/lightweight-rackets-5u/`** and **`/best/rackets-for-shoulder-comfort/`** — six catalog-backed picks each.
-2. **`segmentArticleGlossary`** — manual `glossaryLinks` first, then automatic first-mention fill-in from `glossary-terms.ts`.
-3. Registry updates — `editorial-meta`, `site-search`, `/best/` hub, homepage popular searches, Lighthouse URLs.
+- `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json`
+- Dynamic `ContinueReading`; lightweight `productDisplayName` for shortlists
 
 ---
 
-## 4. Ten-pass plan verification
+## Catalog maturity (PR #122)
+
+1. `src/lib/catalog-url.ts` — parse/serialize catalog filter + sort state
+2. `src/app/catalog/CatalogClient.tsx` — URL sync, sort, GA4 events
+3. `src/lib/price-band-best.ts` — `/best/rackets-under-200/`
+4. `lighthouserc.json` — merged commercial URLs; drop noindex `/saved/`; CLS warn
+
+---
+
+## Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 §3.3 programmatic pages + competitive audit | ✅ |
-| 2 | New best picks align with `products.json`; review links only when mapped | ✅ |
-| 3 | Each new best page has ≥200 words original intro | ✅ |
-| 4 | `editorial-meta` + sitemap `lastReviewedAt` registered | ✅ |
-| 5 | Distinct lenses vs existing `/best/*` guides | ✅ |
-| 6 | Static export safe (no API routes) | ✅ |
-| 7 | Glossary manual links take precedence over autolink | ✅ |
-| 8 | `npm test` | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse config includes new best URLs + `/catalog/` | ✅ |
+| 1 | Gaps grounded in Sprint 4 deferred list + competitive audit | ✅ |
+| 2 | Price-band page uses BestPicks schema via shared builder | ✅ |
+| 3 | Catalog URL params round-trip without invalid enum leakage | ✅ |
+| 4 | Sort preserves filter set; only order changes | ✅ |
+| 5 | Static export safe (client-only URL state) | ✅ |
+| 6 | Sitemap auto-discovers new `/best/rackets-under-200/` route | ✅ |
+| 7 | `catalog-url.test.ts` + `price-band-best.test.ts` | ✅ |
+| 8 | Lighthouse URLs include new commercial routes | ✅ |
+| 9 | `npm test && npm run lint && npm run build` | ✅ |
+| 10 | postbuild SEO audit clean | ✅ |
 
 ---
 
-## 5. Verification
+## Verification
 
 ```bash
-npm test
-npm run build
+npm test && npm run build && npm run lint:lighthouse
 ```
+
+---
+
+## Metrics (unchanged)
+
+| Goal | Target |
+|------|--------|
+| Pages per session | 2.5+ |
+| 7-day return rate | 15%+ |
+| Catalog → quiz conversion | GA4 `catalog_finder_cta` event |

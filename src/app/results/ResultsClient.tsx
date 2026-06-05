@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { ResultCard } from "@/components/ResultCard";
+import { ResultsFilterSummary } from "@/components/ResultsFilterSummary";
 import { useProfile } from "@/context/ProfileContext";
 import { companyInfo } from "@/lib/company";
 import {
@@ -258,8 +259,15 @@ function ResultsBody() {
     );
   }
 
+  const budgetMax = profile.body.budgetMaxUsd;
+  const showBudgetGuide =
+    profile.category === "racket" &&
+    budgetMax != null &&
+    budgetMax <= 100;
+
   return (
     <div className="space-y-6">
+      <ResultsFilterSummary profile={profile} />
       <div className="space-y-3">
         {brandOptions.length > 1 && (
           <FilterChipGroup
@@ -314,6 +322,23 @@ function ResultsBody() {
         )}
       </div>
       <JsonLd data={buildProductJsonLd(rows)} />
+      {showBudgetGuide && (
+        <aside className="card border-[color:var(--color-accent-soft)] bg-[color:var(--color-accent-soft)] p-5 text-sm">
+          <p className="font-medium text-[var(--text)]">
+            Shopping under ${budgetMax}?
+          </p>
+          <p className="mt-2 leading-relaxed text-[var(--color-muted)]">
+            See our editor-ranked budget rackets with trade-offs for Play tiers
+            and entry Victor/Li-Ning frames — not a marketplace price sort.
+          </p>
+          <Link
+            href="/best/rackets-under-100/"
+            className="mt-3 inline-block font-medium text-[var(--color-accent)] underline"
+          >
+            Best rackets under $100 →
+          </Link>
+        </aside>
+      )}
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}

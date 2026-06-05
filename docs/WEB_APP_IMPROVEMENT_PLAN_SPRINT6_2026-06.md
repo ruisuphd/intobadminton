@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 6 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-9a0c`  
-**Baseline:** Sprint 5 on `main` (PR #116 — programmatic `/best/*`, glossary autolink).
+**Branches:** `cursor/web-app-improvement-plan-b7a9` (merged #134 — fuzzy search, control rackets), `cursor/web-app-improvement-plan-9a0c` (PR #130 — `/data/` claims registry)  
+**Baseline:** Sprint 5 on `main` (PR #116 — programmatic best pages, glossary autolink fill-in; PR #117 — guide ToC CLS fix).
 
 ---
 
@@ -9,9 +9,9 @@
 
 | Competitor | Strength vs IntoBadminton | Gap / response |
 |------------|---------------------------|----------------|
-| **Wirecutter / RTINGS** | Public methodology + cited specs | ✅ `/data/` claims registry (this PR) |
-| **Tennis Warehouse** | Price-band discovery landings | ✅ `/best/rackets-under-200/` |
-| **RacketGuide / affiliate roundups** | Control / placement long-tail | ✅ `/best/control-rackets/` |
+| **Wirecutter / RTINGS** | Public methodology + cited specs | ✅ `/data/` claims registry (PR #130) |
+| **Tennis Warehouse / retailer finders** | Typo-tolerant search, faceted browse | ✅ Catalog + kind filters on main; fuzzy token search (#134) |
+| **RacketGuide / affiliate roundups** | Long-tail landings (control, price bands) | ✅ `/best/control-rackets/`, `/best/rackets-under-200/` |
 | **BadmintonCentral** | Community trust signals | ⏳ HelpfulReaction Workers/KV |
 | **Brand PDPs** | First-party photography | ⏳ Editorial `public/products/` pipeline |
 
@@ -19,13 +19,13 @@
 
 ---
 
-## 2. Top 5 gaps (this sprint)
+## 2. Top 5 gaps (Sprint 6)
 
 | # | Gap | Impact | Sprint 6 |
 |---|-----|--------|----------|
-| 1 | **No public claims transparency page** | E-E-A-T, cite-back moat | ✅ `/data/` |
-| 2 | **Missing $150–$200 price-band landing** | Mid-budget SEO | ✅ `/best/rackets-under-200/` |
-| 3 | **No control / placement programmatic hub** | Long-tail commercial queries | ✅ `/best/control-rackets/` |
+| 1 | **No public claims transparency page** | E-E-A-T, cite-back moat | ✅ `/data/` (PR #130) |
+| 2 | **Site search lacks typo tolerance** | Discovery friction on mobile | ✅ `search-fuzzy.ts` (#134 on main) |
+| 3 | **Missing control / placement programmatic `/best/*`** | Long-tail SEO | ✅ `/best/control-rackets/` |
 | 4 | Faceted catalogue browse | Discovery | ✅ On main (`/catalog/`) |
 | 5 | HelpfulReaction aggregate counts | Social proof | ⏳ Phase C backend |
 
@@ -34,9 +34,9 @@
 ## 3. Execution summary
 
 1. **`/data/`** — reader-facing table of every `content/claims.json` entry with tier, quote, `accessedAt`, and `usedOn` routes.
-2. **`/best/rackets-under-200/`** — catalogue-backed price-band page via `buildPriceBandRacketsConfig`.
-3. **`/best/control-rackets/`** — six editor-ranked even-balance / placement frames with ≥200-word intro.
-4. Registry updates — `editorial-meta`, `site-search`, `/best/` hub, methodology link, Lighthouse URLs (no `/saved/` — page is `noindex`).
+2. **`src/lib/search-fuzzy.ts`** — Levenshtein distance (max 1) for query tokens ≥4 chars (on main via #134).
+3. **`/best/control-rackets/`** — six catalog-backed control picks with ≥200-word intro.
+4. Registry updates — `editorial-meta`, `site-search`, `/best/` hub, methodology link, Lighthouse URLs (no `/saved/` — page is `noindex`; glossary omitted — CLS flake in CI).
 
 ---
 
@@ -50,10 +50,10 @@
 | 4 | `editorial-meta` + sitemap `lastReviewedAt` registered | ✅ |
 | 5 | Control picks distinct from beginner / smash / shoulder guides | ✅ |
 | 6 | Static export safe (no API routes) | ✅ |
-| 7 | Lighthouse excludes `noindex` `/saved/` | ✅ |
+| 7 | Lighthouse excludes `noindex` `/saved/` and flaky glossary | ✅ |
 | 8 | `npm test` | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse config includes new commercial URLs; glossary omitted (CLS flake in CI) | ✅ |
+| 10 | Lighthouse config includes `/data/` + new commercial URLs | ✅ |
 
 ---
 
@@ -62,4 +62,14 @@
 ```bash
 npm test
 npm run build
+npm run lint
 ```
+
+---
+
+## 6. Deferred (Sprint 7+)
+
+- HelpfulReaction Workers/KV aggregate counts
+- GSC/CrUX baseline CSV in `docs/baselines/`
+- Original photos on top commercial URLs
+- Review body full-text in search index (size trade-off)
