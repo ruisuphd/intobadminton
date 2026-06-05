@@ -154,6 +154,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
   },
   {
+    title: "Best budget badminton shoes under $130",
+    href: "/best/budget-badminton-shoes/",
+    kind: "best",
+    summary: "Court shoes under $130 with verified lateral stability specs.",
+    keywords: ["budget shoes", "cheap shoes", "under 130", "value shoes"],
+  },
+  {
+    title: "Best head-heavy rackets under $150",
+    href: "/best/head-heavy-rackets-under-150/",
+    kind: "best",
+    summary: "Attack-balance rackets under $150 for club rear-court players.",
+    keywords: ["head heavy", "attack", "under 150", "astrox game", "rear court"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",

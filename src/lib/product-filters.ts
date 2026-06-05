@@ -3,6 +3,7 @@ import type {
   BalanceCategory,
   ProductRecord,
   RacketProduct,
+  ShoeProduct,
   WeightClass,
 } from "@/lib/types/product";
 import type { EquipmentCategory } from "@/lib/taxonomy";
@@ -140,5 +141,18 @@ export function racketsHeadLight(): RacketProduct[] {
   return CATALOG.filter(
     (p): p is RacketProduct =>
       isRacket(p) && p.balanceCategory === "head_light"
+  ).sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
+}
+
+export function shoesUnderPrice(maxUsd: number): ShoeProduct[] {
+  return CATALOG.filter(
+    (p): p is ShoeProduct => p.category === "shoes" && p.priceUsd <= maxUsd
+  ).sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
+}
+
+export function headHeavyRackets(): RacketProduct[] {
+  return CATALOG.filter(
+    (p): p is RacketProduct =>
+      isRacket(p) && p.balanceCategory === "head_heavy"
   ).sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
 }

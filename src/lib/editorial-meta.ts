@@ -1,4 +1,5 @@
 import { blogArticles } from "@/lib/blog";
+import { catalogProductById } from "@/lib/catalog-products";
 
 export type EditorialMeta = {
   /**
@@ -122,7 +123,17 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-06-05",
     priceCheckedAt: "2026-06-05",
   },
+  "/best/budget-badminton-shoes/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
   "/best/all-round-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/head-heavy-rackets-under-150/": {
     publishedAt: "2026-06-05",
     lastReviewedAt: "2026-06-05",
     priceCheckedAt: "2026-06-05",
@@ -369,6 +380,14 @@ export function getEditorialMeta(path: string): EditorialMeta | undefined {
     );
     if (article) {
       return { lastReviewedAt: article.updatedAt };
+    }
+  }
+
+  const productMatch = path.match(/^\/product\/([^/]+)\/$/);
+  if (productMatch) {
+    const product = catalogProductById(productMatch[1]);
+    if (product) {
+      return { lastReviewedAt: product.lastVerifiedAt };
     }
   }
 
