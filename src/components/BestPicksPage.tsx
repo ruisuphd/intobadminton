@@ -12,6 +12,7 @@ import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { ProductBuyLink } from "@/components/ProductBuyLink";
 import { companyInfo } from "@/lib/company";
 import productsCatalog from "@/data/products.json";
@@ -228,11 +229,17 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex items-start gap-4">
-                  {canShowProductImage(p.image) && (
+                  {canShowProductImage(p.image) ? (
                     <ProductImageView
                       image={p.image}
                       size={88}
                       className="shrink-0"
+                    />
+                  ) : (
+                    <ProductImagePlaceholder
+                      brand={p.brand}
+                      name={p.name}
+                      size={88}
                     />
                   )}
                   <div>
