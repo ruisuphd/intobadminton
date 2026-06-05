@@ -1,19 +1,7 @@
 # Web App Improvement Plan — Sprint 6 (June 2026)
 
-**Branches:** Multiple parallel sprints merged to `main` — `b7a9` (#134 fuzzy search), `06b6` (#129 reactions scaffold), `cc42` (#127 catalog/compare), `9a0c` (PR #130 `/data/` on branch 10b8)  
+**Branches:** Multiple parallel sprints merged to `main` — #127 catalog/compare, #129 reactions, #134 fuzzy search, #130 `/data/`, #137 compare/PWA e2e  
 **Baseline:** Sprint 5 on `main` (PR #116 — programmatic best pages, glossary autolink).
-
----
-
-## 1. Competitive audit (June 2026)
-
-| Competitor | Strength vs IntoBadminton | Sprint 6 response |
-|------------|---------------------------|-------------------|
-| **Wirecutter / RTINGS** | Public methodology + cited specs | ✅ `/data/` claims registry (PR #140) |
-| **Tennis Warehouse** | Faceted browse, long-tail landings | ✅ Catalog filters + 8+ `/best/*` pages |
-| **RacketGuide** | Programmatic SEO roundups | ✅ singles, head-light, all-round, wide-feet shoes |
-| **BadmintonCentral** | Community trust signals | ⏳ HelpfulReaction Workers/KV (scaffold #129) |
-| **Brand PDPs** | First-party photography | ⏳ Editorial `public/products/` pipeline |
 
 ---
 
@@ -21,23 +9,22 @@
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | No public claims transparency page | ✅ `/data/` (PR #140) |
+| 1 | No public claims transparency page | ✅ `/data/` (#130) |
 | 2 | Site search typo tolerance | ✅ `search-fuzzy.ts` (#134) |
-| 3 | Programmatic `/best/*` coverage | ✅ control, singles, head-light, all-round, wide-feet shoes |
-| 4 | Catalog save/compare funnel | ✅ `CatalogProductActions` (#127) |
+| 3 | Programmatic `/best/*` coverage | ✅ Multiple PRs |
+| 4 | Catalog save/compare funnel | ✅ #127 |
 | 5 | HelpfulReaction aggregate counts | ⏳ Workers/KV backend |
 
 ---
 
-## 3. Verification
+## 3. PR #137 follow-up
 
-```bash
-npm test
-npm run build
-npm run lint
-```
-
-All passes ✅ — Lighthouse CI on port 4173.
+| Deliverable | Files |
+|-------------|-------|
+| Compare share-link hydration fix | `ProfileContext.tsx`, `compare/page.tsx` |
+| Compare row winner highlight | `CompareTable.tsx` |
+| PWA manifest shortcuts | `public/manifest.webmanifest` |
+| Retention-flow e2e | `e2e/catalog-compare-saved-smoke.spec.ts` |
 
 ---
 

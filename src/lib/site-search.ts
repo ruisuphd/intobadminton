@@ -51,6 +51,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["catalog", "browse", "filter", "specs", "products"],
   },
   {
+    title: "Verified claims registry",
+    href: "/data/",
+    kind: "tool",
+    summary:
+      "Public table of cited facts with source quotes, verification dates, and authority tiers.",
+    keywords: ["claims", "data", "sources", "fact check", "registry", "bwf"],
+  },
+  {
     title: "Equipment finder quiz",
     href: "/quiz/",
     kind: "tool",
@@ -151,7 +159,15 @@ const STATIC_ENTRIES: SearchEntry[] = [
     href: "/best/all-round-rackets/",
     kind: "best",
     summary: "Even-balance frames for club doubles and players covering every court position.",
-    keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
+    keywords: [
+      "all round",
+      "all-round",
+      "balanced",
+      "balanced rackets",
+      "even balance",
+      "versatile",
+      "doubles",
+    ],
   },
   {
     title: "Best budget badminton shoes under $130",

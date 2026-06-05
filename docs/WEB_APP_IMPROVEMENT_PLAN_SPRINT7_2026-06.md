@@ -1,40 +1,44 @@
 # Web App Improvement Plan — Sprint 7 (June 2026)
 
-**Branches:** `9527` (#135 search excerpts), `c7f0` (#138 PDP-lite), `10b8` (#140 `/data/`, string guide, `/updates/`)  
-**Baseline:** Sprint 6 on `main` (fuzzy search, programmatic `/best/*`, catalog compare).
+**Branch:** `cursor/web-app-improvement-plan-10b8` (PR #140)  
+**Baseline:** Sprint 6–7 work already on `main` (#130 `/data/`, #135 search excerpts, #138 PDP-lite, #141 balanced rackets).
 
 ---
 
-## 1. Competitive audit (June 2026)
+## 1. Top 5 gaps (this PR — incremental)
 
-| Competitor | Strength vs IntoBadminton | Sprint 7 response |
-|------------|---------------------------|-------------------|
-| **Tennis Warehouse** | PDP per SKU + full-text search | ✅ PDP-lite (#138); review excerpts (#135) |
-| **Wirecutter / RTINGS** | Public methodology + cited specs | ✅ `/data/` claims registry (#140) |
-| **Retailer blogs** | Freshness feeds + stringing education | ✅ `/updates/` (#140); string feel guide (#140) |
-| **BadmintonCentral** | Community trust | ⏳ HelpfulReaction Workers/KV |
-| **Brand PDPs** | First-party photography | ⏳ Editorial pipeline |
-
----
-
-## 2. Top 5 gaps (combined Sprint 7)
-
-| # | Gap | Status |
-|---|-----|--------|
-| 1 | No PDP for unmapped catalogue SKUs | ✅ #138 `/product/[id]/` |
-| 2 | Search index misses review body terms | ✅ #135 excerpt enrichment |
-| 3 | Incomplete stringing cluster + freshness lane | ✅ #140 string guide + `/updates/` |
-| 4 | No public claims transparency page | ✅ #140 `/data/` |
-| 5 | HelpfulReaction aggregate counts | ⏳ Workers/KV backend |
+| # | Gap | Impact | PR #140 |
+|---|-----|--------|---------|
+| 1 | **Incomplete stringing SEO cluster** | Topical authority | ✅ `/guides/string-feel-vs-durability/` |
+| 2 | **No domain freshness lane** | Crawler + return-visit signal | ✅ `/updates/` |
+| 3 | Search / PDP / claims | — | ✅ Already on `main` |
+| 4 | Original product photography | AdSense | ⏳ Editorial pipeline |
+| 5 | HelpfulReaction aggregate counts | Social proof | ⏳ Workers/KV |
 
 ---
 
-## 3. PR #140 deliverables (branch `10b8`)
+## 2. Execution summary
 
-1. **`/data/`** — verified claims registry (Sprint 6 carryover from PR #130).
-2. **`/guides/string-feel-vs-durability/`** — stringing cluster spoke with HowTo schema.
-3. **`/updates/`** — `listEditorialUpdates()` freshness feed.
-4. Registry + Lighthouse URLs for new routes.
+1. **`/guides/string-feel-vs-durability/`** — gauge vs durability guide with HowTo schema; hub links from string-tension guide.
+2. **`/updates/`** — `listEditorialUpdates()` freshness feed with CollectionPage JSON-LD.
+3. Registry — `editorial-meta`, `site-search`, guides index, footer, Lighthouse URLs.
+
+---
+
+## 3. Ten-pass verification
+
+| Pass | Check | Result |
+|------|-------|--------|
+| 1 | Gaps grounded in Q2 §3.3 stringing cluster + `/updates/` | ✅ |
+| 2 | String guide distinct from tension guide | ✅ |
+| 3 | `/updates/` uses editorial dates, not build time | ✅ |
+| 4 | `editorial-meta` registered | ✅ |
+| 5 | Static export safe | ✅ |
+| 6 | Does not duplicate `/data/` (on main via #130) | ✅ |
+| 7 | `npm test` | ✅ 255 passed |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | Lighthouse URLs include new routes | ✅ |
+| 10 | Footer + guides index wired | ✅ |
 
 ---
 
@@ -45,11 +49,3 @@ npm test
 npm run build
 npm run lint
 ```
-
----
-
-## 5. Deferred (Sprint 8+)
-
-- HelpfulReaction Workers/KV aggregate counts
-- GSC/CrUX baseline CSV in `docs/baselines/`
-- Original photos on top commercial URLs
