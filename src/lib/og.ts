@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import { companyInfo } from "@/lib/company";
+
 /**
  * Shared Open Graph image set.
  *
@@ -27,4 +30,41 @@ export function routeOgImages(routePath: string) {
       alt: "IntoBadminton — badminton equipment recommendations",
     },
   ] as const;
+}
+
+type ArticleSocialMetaInput = {
+  path: string;
+  title: string;
+  description: string;
+  type?: "article" | "website";
+};
+
+/**
+ * Open Graph + Twitter cards for long-form editorial routes (/best/*, /guides/*).
+ * Keeps image inheritance consistent and avoids partial openGraph overrides.
+ */
+export function articleSocialMetadata(
+  input: ArticleSocialMetaInput
+): Pick<Metadata, "openGraph" | "twitter"> {
+  const path = input.path.endsWith("/") ? input.path : `${input.path}/`;
+  const ogTitle = input.title;
+  const ogDescription = input.description;
+
+  return {
+    openGraph: {
+      title: ogTitle,
+      description: ogDescription,
+      url: path,
+      type: input.type ?? "article",
+      siteName: companyInfo.siteName,
+      locale: "en_US",
+      images: [...defaultOgImages],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description: ogDescription,
+      images: [defaultOgImages[0].url],
+    },
+  };
 }

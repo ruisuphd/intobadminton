@@ -19,7 +19,7 @@ test("header search navigates to results page", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto("/");
 
-  const searchbox = page.getByPlaceholder(/search rackets/i);
+  const searchbox = page.locator("header").getByPlaceholder(/search rackets/i);
   await searchbox.fill("string tension");
   await searchbox.press("Enter");
 

@@ -1,70 +1,74 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branches:** `cursor/web-app-improvement-plan-f8ee` (PR #105), `cursor/web-app-improvement-plan-ff21` (PR #110)  
-**Baseline:** Sprint 3 on `main` (PRs #94–#98).
+**Branches:** PRs #105, #110, #115 on `main`  
+**Baseline:** Sprint 3 ([`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor pattern | IntoBadminton (post–Sprint 3) | Sprint 4 response |
-|--------------------|-------------------------------|-------------------|
-| **Tennis Warehouse browse** | Finder + brand filter on `/results/` | `/catalog/` + spec facets on results (#105) |
-| **Wirecutter price-band pages** | `/best/rackets-under-100/` (#98) | `/best/rackets-under-150/` (#105) |
-| **Retailer notify-me** | Buttondown on `/saved/` when configured | Offline intent migration on deploy (#110) |
-| **RacketGuide calculators** | Five `/tools/*` on `main` | Lighthouse audits key tool URLs (#105) |
-| **Original photography** | Manufacturer images on some picks | Still editorial pipeline (deferred) |
+| Competitor | Strength | IntoBadminton response |
+|------------|----------|------------------------|
+| **Tennis Warehouse / Wirecutter** | Buy CTAs, catalog browse, notify-me | `ProductBuyLink`, `/catalog/`, Buttondown + offline intent sync |
+| **RacketGuide / TW** | Calculators + price-band pages | Five `/tools/*`, `/best/rackets-under-100/` + `/150/` |
+| **Wirecutter / RTINGS** | Social + FTC on money pages | `editorialPageMetadata()`, compare template parity |
+| **BadmintonCentral** | RSS / return visits | `/feed.xml` postbuild + footer link |
+| **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
 
-**Moat unchanged:** transparent fit score, postbuild SEO gate, claims CI, static export.
+**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring.
 
 ---
 
-## 2. Top 5 gaps (this sprint)
+## 2. Top gaps closed (Sprint 4)
 
 | # | Gap | Delivery |
 |---|-----|----------|
-| 1 | **No filter-first product catalog** | ✅ `/catalog/` + facets (#105) |
-| 2 | **Results shortlist lacks spec facets** | ✅ price / weight / balance chips (#105) |
-| 3 | **Offline notify-me never syncs to Buttondown** | ✅ `syncNotifyMeIntentsToButtondown()` (#110) |
-| 4 | **Budget finder → editorial shortlist CTA** | ✅ `/best/rackets-under-100/` banner (#110) |
-| 5 | **Lighthouse CI false failure on noindex `/saved/`** | ✅ removed from `lighthouserc.json` (#105/#110) |
+| 1 | Filter-first catalog + results spec facets | ✅ PR #105 |
+| 2 | Affiliate buy links unused | ✅ PR #115 (`ProductBuyLink`) |
+| 3 | Offline notify-me never syncs to Buttondown | ✅ PR #110 (`notify-me-sync.ts`) |
+| 4 | Budget finder → editorial shortlist CTA | ✅ PR #110 |
+| 5 | RSS + OG/Twitter on commercial pages | ✅ PR #115 |
+
+**Also merged:** guide ↔ tool links, `GuideInPageToc`, compare engagement cleanup, Lighthouse URL hygiene (no `/saved/`).
 
 ### Deferred (Sprint 5+)
 
-- HelpfulReaction Workers/KV aggregates
-- First-party `public/products/` hero photography
+- HelpfulReaction Workers/KV public counts
+- Original product photography
 - VideoObject + claimed YouTube `sameAs`
 - GSC/CrUX baseline CSV capture
 - zh locale content
 
 ---
 
-## 3. Execution summary
+## 3. Execution summary (PR #110 additive)
 
-**PR #105:** `product-filters.ts`, `/catalog/`, results spec chips, `/best/rackets-under-150/`, product search brand facet, `catalogProductHref`.
-
-**PR #110:** `notify-me-sync.ts`, budget guide CTA on `/results/`, search e2e for budget guide.
+1. `src/lib/notify-me-sync.ts` — migrate local intents to Buttondown when configured.
+2. `SavedListClient` — sync on mount + `notify_me_synced` analytics.
+3. `ResultsClient` — CTA to `/best/rackets-under-100/` when racket + budget ≤ $100.
+4. `lighthouserc.json` — CLS as warn (cookie/banner flake on long guides).
+5. `e2e/search-smoke.spec.ts` — budget guide search smoke.
 
 ---
 
-## 4. Ten-pass verification
+## 4. Ten-pass verification (PR #110)
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 3 deferred list + audit | ✅ |
-| 2 | Catalog links resolve to static routes | ✅ |
-| 3 | Notify sync only when Buttondown configured | ✅ |
-| 4 | Budget CTA only for racket + budget ≤ 100 | ✅ |
-| 5 | `/saved/` stays noindex; not in Lighthouse | ✅ |
+| 1 | Gaps grounded in audit + deferred list | ✅ |
+| 2 | Notify sync only when Buttondown configured | ✅ |
+| 3 | Failed sync rows stay in localStorage | ✅ |
+| 4 | Budget CTA scoped to racket + budget ≤ 100 | ✅ |
+| 5 | `/saved/` stays noindex | ✅ |
 | 6 | Static export safe | ✅ |
-| 7 | Unit tests (filters, notify sync, search) | ✅ |
+| 7 | `notify-me-sync.test.ts` + search e2e | ✅ |
 | 8 | No homepage signup wall | ✅ |
 | 9 | `npm test && npm run build` | ✅ |
 | 10 | postbuild SEO audit clean | ✅ |
 
 ---
 
-## 5. Metrics (unchanged)
+## 5. Metrics
 
 | Goal | Target |
 |------|--------|

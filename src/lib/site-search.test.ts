@@ -37,6 +37,24 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds budget best-of page", () => {
+    const hits = searchSite("rackets under 100");
+    expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
+  });
+
+  it("finds lightweight and shoulder-comfort best pages", () => {
+    expect(
+      searchSite("5u lightweight").some((h) =>
+        h.href.includes("lightweight-rackets-5u")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("shoulder comfort").some((h) =>
+        h.href.includes("rackets-for-shoulder-comfort")
+      )
+    ).toBe(true);
+  });
+
   it("finds catalog products by brand and model", () => {
     const hits = searchSite("yonex nanoflare 1000");
     expect(hits.some((h) => h.kind === "product")).toBe(true);
@@ -51,11 +69,6 @@ describe("site-search", () => {
   it("finds saved shelf", () => {
     const hits = searchSite("saved shortlist");
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);
-  });
-
-  it("finds budget best-of guide", () => {
-    const hits = searchSite("rackets under 100");
-    expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);
   });
 
   it("finds compare guides by model pair", () => {
