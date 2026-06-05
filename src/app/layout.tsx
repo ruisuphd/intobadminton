@@ -65,6 +65,11 @@ export const metadata: Metadata = {
     },
   },
   manifest: "/manifest.webmanifest",
+  alternates: {
+    types: {
+      "application/rss+xml": [{ url: "/feed.xml", title: "IntoBadminton RSS" }],
+    },
+  },
   other: process.env.NEXT_PUBLIC_ADSENSE_CLIENT
     ? {
         "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT,
