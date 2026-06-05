@@ -278,7 +278,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 
 - PWA **`ib-v21`** precaches trust cluster (about, sources, source-policy, authors)
 - Offline recovery adds Best-of, Brands, and Privacy links
-- Lighthouse CI adds `/security/`, `/privacy-choices/`, `/source-policy/`
+- Lighthouse CI adds `/security/`, `/source-policy/` (`/privacy-choices/` excluded — noindex)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md)
 
 ### Next (Sprint 32+)

@@ -9,10 +9,10 @@
 
 | Competitor | Strength vs IntoBadminton | Sprint 31 response |
 |------------|---------------------------|-------------------|
-| **RTINGS** | Security and source-policy URLs in perf CI | ✅ Lighthouse adds `/security/`, `/privacy-choices/`, `/source-policy/` |
+| **RTINGS** | Security and source-policy URLs in perf CI | ✅ Lighthouse adds `/security/`, `/source-policy/` |
 | **Wirecutter** | Installed PWA users can read about/sources offline | ✅ PWA `ib-v21` precaches trust cluster (5 routes) |
 | **Tennis Warehouse** | Offline recovery lists shop browse + brand index | ✅ Offline page adds Best-of + Brands recovery links |
-| **Running Warehouse** | Privacy-choices and security in Lighthouse set | ✅ CI covers remaining legal/trust URLs from Sprint 30 |
+| **Running Warehouse** | Security in Lighthouse set | ✅ CI covers remaining indexable legal/trust URLs from Sprint 30 |
 | **BadmintonCentral** | About/sources reachable without network after install | ✅ About, sources, authors shells precached |
 
 **Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate, 153 first-person reviews.
