@@ -1,21 +1,21 @@
 # Web App Improvement Plan — Sprint 9 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-e369` (follows PR #146 Sprint 8 on `766f`)  
-**Baseline:** Sprint 8 merged items — PDP e2e, mobile static search, review map 82% (#146).
+**Branch:** `cursor/web-app-improvement-plan-5564`  
+**Baseline:** `main` at Sprint 7–8 (#130 `/data/`, #137 compare/PWA shortcuts, #138 PDP-lite).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Gap / Sprint 9 response |
-|------------|---------------------------|-------------------------|
-| **Tennis Warehouse** | PDP imagery, filter browse, compare tray | ✅ PDP-lite; ⏳ original photography |
-| **Badminton Warehouse** | Finder + email alerts + compare | ✅ compare tray + share URL; ✅ e2e coverage |
-| **Wirecutter / RTINGS** | Social proof + methodology | ✅ `/data/` claims; ⏳ Workers/KV reaction counts |
-| **RacketGuide / affiliate roundups** | Long-tail landings | ✅ 18 `/best/*`; map toward 85% |
-| **YouTube reviewers** | Video evidence | ⏳ `VideoObject` gated on editorial video |
+| Competitor | Strength vs IntoBadminton | Sprint 9 response |
+|------------|---------------------------|-------------------|
+| **Tennis Warehouse** | Sortable spec grids with implicit “match” signals | ✅ Illustrative **Finder fit** column on `/best/*` tables |
+| **Wirecutter / RTINGS** | Scores visible before long copy; no dead review links | ✅ `FitScoreBadge` in table; ✅ `editorialReviewHref` guard |
+| **RacketGuide** | Offline browse after install | ✅ PWA `ib-v3` precaches `/catalog/` |
+| **BadmintonCentral** | Social proof on threads | ⏳ HelpfulReaction KV (worker scaffold; deploy optional) |
+| **Brand PDPs** | Hero photography | ⏳ Editorial `public/products/` pipeline |
 
-**Moat:** transparent fit score, claims CI, static export, postbuild SEO gate, enrichment JSON-LD on mapped reviews.
+**Moat unchanged:** transparent fit score, claims CI + `/data/`, static export, postbuild SEO gate, 146+ reviews.
 
 ---
 
@@ -23,13 +23,11 @@
 
 | # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Review→catalog map stuck at 82%** | Product rich results on more URLs | ✅ +5 mappings → **85%** |
-| 2 | **No e2e for `/saved/` or `/compare/`** | Regressions on engagement flows | ✅ `e2e/saved-compare-smoke.spec.ts` |
-| 3 | **HelpfulReaction aggregate counts** | Social proof on guides/reviews | ⏳ Worker ready; deploy + env URL |
-| 4 | **Original product photography** | PDP trust vs TW/BW | ⏳ Editorial / asset sprint |
-| 5 | **GSC/CrUX baseline capture** | Measure CWV regressions | ⏳ `docs/baselines/README.md` manual |
-
-**Deferred:** YouTube `sameAs`; full reactions worker production deploy.
+| 1 | **Best-of pages lack scannable fit signal** | Commercial intent; parity with finder results | ✅ `best-picks-scoring.ts` + sortable Finder fit column |
+| 2 | **“Read full review” could 404** | Trust + crawl waste on unmapped SKUs | ✅ `editorialReviewHref()` — link only when blog slug exists |
+| 3 | **PWA offline shell skips catalog** | Return visits on club Wi‑Fi | ✅ `ib-v3` + `/catalog/` in `PRECACHE_URLS` |
+| 4 | **`productId` missing on legacy best picks** | Fit column + PDP links incomplete | ✅ Backfill on 9 editorial `/best/*` routes |
+| 5 | **HelpfulReaction cross-user counts** | Social proof on articles | ⏳ Workers/KV deploy (`NEXT_PUBLIC_REACTIONS_API_URL`) |
 
 ---
 
@@ -37,9 +35,13 @@
 
 | Deliverable | Files |
 |-------------|-------|
-| Review map +5 (NF700, NF700 matrix, Thunder 100, Arcsaber guide, NF speed series) | `src/data/blog-review-product-map.json` |
-| Saved + compare Playwright smoke | `e2e/saved-compare-smoke.spec.ts` |
-| Master plan index | `docs/WEB_APP_IMPROVEMENT_PLAN_2026-06.md` |
+| Illustrative fit scores | `src/lib/best-picks-scoring.ts`, `best-picks-scoring.test.ts` |
+| Comparison table column | `src/components/BestPicksComparisonTable.tsx` |
+| Review link guard | `src/lib/review-pages.ts` (`editorialReviewHref`), `BestPicksPage.tsx` |
+| PWA catalog precache | `public/sw.js` (`ib-v3`) |
+| productId backfill | `src/app/best/*/page.tsx` (9 routes) |
+| E2E regression | `e2e/best-fit-smoke.spec.ts` |
+| Unit test | `review-pages.test.ts` (`editorialReviewHref`) |
 
 ---
 
@@ -47,16 +49,16 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 8 deferred list + competitive audit | ✅ |
-| 2 | New map ids exist in `products.json` | ✅ |
-| 3 | Mapped slugs have `computeEditorialRating` + enrichment | ✅ spot-check |
-| 4 | Compare e2e uses `?p=` share URL (no manual tray clicks) | ✅ |
-| 5 | Saved e2e seeds `localStorage` only (no server state) | ✅ |
-| 6 | Static export — no new API routes | ✅ |
-| 7 | `npm test` | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | `audit-review-product-map.mjs` coverage ≥85% | ✅ (124/146) |
-| 10 | Sprint 8 e2e (`pdp-smoke`) still passes | ✅ |
+| 1 | Gaps grounded in Sprint 6–8 deferred list + competitive audit | ✅ |
+| 2 | Fit score uses `referenceClubDoublesProfile` (methodology-aligned) | ✅ |
+| 3 | No duplicate `/data/` page vs #130 — rebase kept main registry | ✅ |
+| 4 | `editorialReviewHref` null when no blog map entry | ✅ |
+| 5 | Static export — no new dynamic routes | ✅ |
+| 6 | PWA cache version bumped (`ib-v3`) | ✅ |
+| 7 | Unit tests: best-picks-scoring, review-pages | ✅ |
+| 8 | E2E: Finder fit column visible on `/best/beginner-rackets/` | ✅ |
+| 9 | `npm test` + `npm run build` + postbuild SEO audit | ✅ |
+| 10 | Lighthouse URL set unchanged (beginner-rackets already listed) | ✅ |
 
 ---
 
@@ -65,6 +67,16 @@
 ```bash
 npm test
 npm run build
-npm run test:e2e
-node scripts/audit-review-product-map.mjs
+npm run lint
+npx playwright test e2e/best-fit-smoke.spec.ts
 ```
+
+---
+
+## 6. Deferred (Sprint 10+)
+
+- HelpfulReaction Workers/KV production deploy + env in hosting
+- GSC/CrUX baseline CSV exports in `docs/baselines/`
+- Original `public/products/` photography on top commercial URLs
+- `VideoObject` / YouTube `sameAs` (editorial commitment)
+- Review→product map beyond ~80% (comparison slugs need editorial pairing)

@@ -1,6 +1,6 @@
 # Web App Improvement Plan — June 2026
 
-**Branches:** PRs [#80](https://github.com/ruisuphd/intobadminton/pull/80), [#84](https://github.com/ruisuphd/intobadminton/pull/84), [#94](https://github.com/ruisuphd/intobadminton/pull/94), [#97](https://github.com/ruisuphd/intobadminton/pull/97), [#105](https://github.com/ruisuphd/intobadminton/pull/105), [#114](https://github.com/ruisuphd/intobadminton/pull/114) merged to `main`; homepage perf PR [#92](https://github.com/ruisuphd/intobadminton/pull/92)  
+**Branches:** PRs [#80](https://github.com/ruisuphd/intobadminton/pull/80), [#84](https://github.com/ruisuphd/intobadminton/pull/84), [#94](https://github.com/ruisuphd/intobadminton/pull/94), [#97](https://github.com/ruisuphd/intobadminton/pull/97), [#105](https://github.com/ruisuphd/intobadminton/pull/105) merged to `main`; homepage perf follow-up PR [#92](https://github.com/ruisuphd/intobadminton/pull/92)  
 **Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md)
 
 ---
@@ -25,11 +25,15 @@
 |---|-----|--------|--------|
 | 1 | Homepage Lighthouse / critical-path JS | CI + CWV | ✅ PR #92 (prebuild slices + deferred engagement) |
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
-| 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4–5 |
+| 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
-**Shipped on `main`:** site search, `SearchAction`, return-visit hooks, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
+<<<<<<< HEAD
+**Shipped on `main`:** site search, review body excerpts, `SearchAction`, return-visit hooks, reactions API client, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
+=======
+**Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
+>>>>>>> origin/main
 
 ---
 
@@ -43,55 +47,72 @@
 
 - SEO cluster guides; Product JSON-LD enrichment; Buttondown notify-me; compare-guide search index + e2e
 
+### Sprint 3–4 — Shipped (main)
+
+- Notify-me intent, homepage recall, catalog search, `/catalog/`, results facets, price-band pages
+- Glossary autolinks, `GuideInPageToc`, quiz step hints, Sharp-preferred product images
+
 ### Phase C — Shipped (PR #101)
 
 - Compare-guides layout chrome, `compare-guides.ts` search manifest, guide engagement deduplication, `ProductCardImage` on results, `audit-review-product-map.mjs`
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
 
-### Sprint 3–5 — Shipped (main)
+### Sprint 5 — PR #92 + PR #122
 
-- Notify-me intent, homepage recall, catalog search, `/catalog/`, results facets, price-band pages
-- Glossary autolinks, `GuideInPageToc` + `GuideTocAnchor`, quiz step hints, Sharp-preferred product images
-- Homepage bundle slimming (`home-featured-reviews.json`, dynamic `HomeContinueReading`)
-- `/best/rackets-under-200/`; catalog URL filters + sort — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
+- `/best/rackets-under-200/` programmatic price-band page
+- Catalog shareable URL filters + sort + GA4 funnel events
+- Lighthouse CI coverage for catalog and price-band routes
+- Homepage bundle slimming: `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json`
+- `HomeContinueReading` dynamic import
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
+
+### Sprint 6 — Shipped (PR #134, #122)
+
+- Fuzzy site search; `/best/control-rackets/`; catalog URL filters + `/best/rackets-under-200/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
+
+### Sprint 6–8 — Shipped on `main`
+
+- Public **`/data/`** claims registry (#130); PDP-lite `/product/[id]/` (#138)
+- Fuzzy search, reactions worker scaffold, catalog compare funnel (#127, #129, #134)
+- PR #137: compare share-link fix, PWA shortcuts, retention e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Sprint 9 — This PR (`cursor/web-app-improvement-plan-5564`)
+
+- `/best/*` illustrative **Finder fit** column + `productId` backfill
+- PWA **`ib-v3`** precaches `/catalog/`
+- **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
 - Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
 - `docs/baselines/README.md` GSC/CrUX runbook
-- `GuideTocAnchor` on SEO cluster pillar guides; Lighthouse uses `season-refresh` not `glossary`
+- `GuideTocAnchor` on SEO cluster pillar guides
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
 
-### Sprint 7 — Shipped (PR #138, #135)
+### Sprint 6–7 — Shipped (main)
 
-- PDP-lite `/product/[id]/`, programmatic budget shoes + head-heavy best pages
-- Review body search excerpts + fuzzy e2e
+- Fuzzy search, control rackets, catalog URL filters (#134, #122)
+- Singles/head-light/all-round `/best/*`, review body search (#127, #135)
+- PDP-lite `/product/[id]/`, budget shoes pages (#138)
+- PR #139: results share link, RSS `rel=alternate` in layout
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
 
-See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+### Sprint 8 — This branch (PR #143)
 
-### Sprint 8 — Shipped (PR #146, `cursor/web-app-improvement-plan-766f`)
+- Product map ≥86%; review body search e2e; results share link verification
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-- PDP + catalog→PDP Playwright smoke; mobile nav static search form
-- Review→product map +2 (Nanoflare Play, Thruster Falcon)
+### Next (Sprint 9+)
 
-See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md).
-
-### Sprint 9 — In progress (`cursor/web-app-improvement-plan-e369`)
-
-- E2E for `/saved/` and `/compare/` share URLs
-- Review→product map +5 → **85%** coverage
-
-See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md).
-
-### Sprint 10+ (deferred)
-
-- Deploy HelpfulReaction Workers/KV + `NEXT_PUBLIC_REACTIONS_API_URL`
+- GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
+- Deploy HelpfulReaction Worker + `NEXT_PUBLIC_REACTIONS_API_URL`
 - YouTube `sameAs` on author entity (after channel claim)
-
-**Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).
 
 ---
 
@@ -107,7 +128,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPR
 | 6 | Product JSON-LD via enrichment helper | ✅ |
 | 7 | `site-search.test.ts` + search e2e | ✅ |
 | 8 | `/search/` + `/catalog/` in sitemap | ✅ |
-| 9 | `npm test` | ✅ |
+| 9 | `npm test` (198) | ✅ |
 | 10 | `npm run build` + Lighthouse homepage ≥ 0.9 | ✅ CI (Sprint 5) |
 
 ---

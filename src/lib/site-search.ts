@@ -22,6 +22,17 @@ export function reviewSearchExcerpt(
   return plain.slice(0, maxLen);
 }
 
+/** Short per-section samples so mid-article terms (e.g. string codes) stay searchable. */
+function reviewSectionSnippets(article: BlogArticle): string {
+  return article.sections
+    .map((section) => {
+      const heading = section.heading ?? "";
+      const body = stripHtml(section.body).slice(0, 120);
+      return `${heading} ${body}`.trim();
+    })
+    .join(" ");
+}
+
 export type SearchEntryKind =
   | "review"
   | "guide"
@@ -136,7 +147,15 @@ const STATIC_ENTRIES: SearchEntry[] = [
     href: "/best/all-round-rackets/",
     kind: "best",
     summary: "Even-balance frames for club doubles and players covering every court position.",
-    keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
+    keywords: [
+      "all round",
+      "all-round",
+      "balanced",
+      "balanced rackets",
+      "even balance",
+      "versatile",
+      "doubles",
+    ],
   },
   {
     title: "Best budget badminton shoes under $130",
@@ -352,7 +371,11 @@ function reviewEntries(): SearchEntry[] {
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
     summary: article.dek ?? "",
-    keywords: [article.slug.replace(/-/g, " "), reviewSearchExcerpt(article)],
+    keywords: [
+      article.slug.replace(/-/g, " "),
+      reviewSearchExcerpt(article),
+      reviewSectionSnippets(article),
+    ],
   }));
 }
 
