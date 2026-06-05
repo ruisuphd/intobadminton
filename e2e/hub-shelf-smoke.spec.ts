@@ -153,3 +153,43 @@ test("review index shows Keep reading shelf", async ({ page }) => {
     page.getByRole("link", { name: /best-of buying guides/i }).first()
   ).toBeVisible();
 });
+
+test("faq page links to full catalog browse", async ({ page }) => {
+  await page.goto("/faq/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("mapped review article links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse yonex in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute(
+    "href",
+    "/catalog/?cat=racket&brand=Yonex"
+  );
+});
+
+test("quiz results link to profile-filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto(
+    "/results/?level=club&disc=doubles&styles=offensive&cat=racket&budget=120&weight=75&foot=normal&tension=26&n=8"
+  );
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse matching catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute(
+    "href",
+    "/catalog/?cat=racket&price=under150"
+  );
+});

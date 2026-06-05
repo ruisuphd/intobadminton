@@ -49,7 +49,9 @@
         "http://localhost:4173/brands/li-ning/index.html",
         "http://localhost:4173/guides/wide-feet-badminton-shoes/index.html",
         "http://localhost:4173/guides/shoes-footwork/index.html",
-        "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html"
+        "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html",
+        "http://localhost:4173/guides/doubles-roles/index.html",
+        "http://localhost:4173/tools/racket-balance-explainer/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

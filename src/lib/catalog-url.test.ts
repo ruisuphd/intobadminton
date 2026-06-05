@@ -1,11 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
+  catalogCtaLabelFromProduct,
   catalogHrefFromBestSlug,
   catalogHrefFromBrand,
   catalogHrefFromCompareSlug,
   catalogCtaLabelFromGuideSlug,
   catalogHrefFromGuideSlug,
   catalogHrefFromKeywordQuery,
+  catalogHrefFromProduct,
+  catalogHrefFromProfile,
   catalogHrefFromToolSlug,
   catalogCtaLabelFromToolSlug,
   catalogUrlFromState,
@@ -179,5 +182,32 @@ describe("catalog-url", () => {
     expect(catalogCtaLabelFromToolSlug("court-diagram")).toBe(
       "Browse matching catalog"
     );
+  });
+
+  it("builds product catalog hrefs with brand and category filters", () => {
+    expect(
+      catalogHrefFromProduct({ brand: "Yonex", category: "racket" })
+    ).toBe("/catalog/?cat=racket&brand=Yonex");
+    expect(
+      catalogCtaLabelFromProduct({ brand: "Yonex", category: "racket" })
+    ).toBe("Browse Yonex in catalog");
+  });
+
+  it("builds profile catalog hrefs from quiz category and budget", () => {
+    expect(
+      catalogHrefFromProfile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["offensive"],
+        category: "racket",
+        body: {
+          budgetMaxUsd: 120,
+          weightKg: 75,
+          footWidth: "normal",
+          preferredTensionLb: 26,
+          injuryFlags: [],
+        },
+      })
+    ).toBe("/catalog/?cat=racket&price=under150");
   });
 });

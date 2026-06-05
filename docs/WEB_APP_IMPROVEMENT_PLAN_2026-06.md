@@ -226,7 +226,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/yonex/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT24_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT24_2026-06.md)
 
-### Sprint 25 — This branch
+### Sprint 25 — Shipped (PR #173)
 
 - Remaining procedural guides → **filtered catalog** CTA (`GuideCatalogCta` on 4 landings)
 - Tool pages → **filtered catalog** CTA (`catalogHrefFromToolSlug`, `ToolCatalogCta`)
@@ -234,7 +234,16 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/victor/`, `/brands/li-ning/`, shoes guides
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT25_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT25_2026-06.md)
 
-### Next (Sprint 26+)
+### Sprint 26 — This branch
+
+- Review/PDP panels → **filtered catalog** CTA (`catalogHrefFromProduct` in `ReviewProductPanel`)
+- Quiz results → **profile-filtered catalog** CTA (`catalogHrefFromProfile`)
+- FAQ page → **Browse full catalog** secondary CTA
+- PWA **`ib-v16`** precaches remaining guides + racket-balance tool
+- Lighthouse CI includes `/guides/doubles-roles/`, `/tools/racket-balance-explainer/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT26_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT26_2026-06.md)
+
+### Next (Sprint 27+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
