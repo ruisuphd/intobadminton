@@ -8,6 +8,7 @@ import {
   MIN_SUGGESTION_QUERY_LEN,
   searchSuggestions,
 } from "@/lib/search-suggestions";
+import { searchSubmitHref } from "@/lib/search-submit-route";
 
 export function SiteSearchForm({
   defaultQuery = "",
@@ -39,12 +40,7 @@ export function SiteSearchForm({
   }, [open]);
 
   const goSearch = (q: string) => {
-    const trimmed = q.trim();
-    if (!trimmed) {
-      router.push("/search/");
-      return;
-    }
-    router.push(`/search/?q=${encodeURIComponent(trimmed)}`);
+    router.push(searchSubmitHref(q));
   };
 
   const goCatalog = (q: string) => {
