@@ -144,6 +144,14 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds reviews by body-only terms via excerpt enrichment", () => {
+    expect(
+      searchSite("interceptions").some((h) =>
+        h.href.includes("racket-balance-vs-swing-speed")
+      )
+    ).toBe(true);
+  });
+
   it("finds all compare guides by brand matchup", () => {
     const hits = searchSite("halbertec axforce");
     expect(

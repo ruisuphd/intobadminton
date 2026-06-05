@@ -2,6 +2,37 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #114 `ready_for_review` (web app Phase D, `cursor/web-app-improvement-plan-11b6`)
+
+**Trigger:** GitHub pull request #114 — competitive audit, Phase D execution, merge `main`, CI fixes. Chinese-review translation workflow ran in parallel on the same PR; no `blogs/` drop.
+
+### Phase D deliverables
+
+| Item | Result |
+| --- | --- |
+| Review→product map | **80%** (117/146); `scripts/suggest-review-product-map.mjs` |
+| GSC/CrUX baseline runbook | `docs/baselines/README.md` |
+| Merge `main` | Sprint 5–6 homepage perf, `GuideTocAnchor`, catalog filters |
+| Lighthouse | No `/` in CI URL set (use `scripts/lighthouse-baseline.mjs`); `season-refresh` not `glossary` |
+
+### Blog source check (translation parallel)
+
+| Check | Result |
+| --- | --- |
+| `blogs/` drop | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| New translations | **None** |
+
+### Verification
+
+- `npm test` — 245 passed
+- `npm run build` + postbuild SEO audit — pass
+
+### Merge status
+
+Merge when CI green.
+
+---
+
 ## 2026-06-05 — PR #118 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-fedb`)
 
 **Trigger:** GitHub pull request #118 (`ready_for_review`) — PR #92 translation cron re-run; no review content changes.
