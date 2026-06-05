@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { trackEvent } from "@/components/Analytics";
 import {
   fetchReactionCounts,
@@ -13,6 +13,25 @@ import {
 
 const STORAGE_PREFIX = "intobadminton.reaction.v1.";
 
+function readStoredVote(contentId: string): Reaction | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(STORAGE_PREFIX + contentId);
+    if (raw === "up" || raw === "down" || raw === "more") return raw;
+  } catch {
+    // Treat any storage error as "no vote yet".
+  }
+  return null;
+}
+
+function subscribeNoop() {
+  return () => {};
+}
+
+function useIsClient() {
+  return useSyncExternalStore(subscribeNoop, () => true, () => false);
+}
+
 /**
  * "Was this helpful?" reaction stripe.
  *
@@ -20,29 +39,17 @@ const STORAGE_PREFIX = "intobadminton.reaction.v1.";
  * `NEXT_PUBLIC_REACTIONS_API_URL` is set, aggregate counts are fetched from
  * the Cloudflare Workers/KV backend and shown as social proof.
  */
-
 export function HelpfulReaction({
   /** Unique article id, e.g. `blog:racket-balance-vs-swing-speed`. */
   contentId,
 }: {
   contentId: string;
 }) {
-  const [vote, setVote] = useState<Reaction | null>(null);
+  const mounted = useIsClient();
+  const [localVote, setLocalVote] = useState<Reaction | null>(null);
+  const [cleared, setCleared] = useState(false);
   const [counts, setCounts] = useState<ReactionCounts | null>(null);
-  const [storedVoteLoaded, setStoredVoteLoaded] = useState(false);
   const apiEnabled = reactionsApiEnabled();
-
-  useEffect(() => {
-    queueMicrotask(() => {
-      try {
-        const raw = localStorage.getItem(STORAGE_PREFIX + contentId);
-        if (raw === "up" || raw === "down" || raw === "more") setVote(raw);
-      } catch {
-        // Treat any storage error as "no vote yet".
-      }
-      setStoredVoteLoaded(true);
-    });
-  }, [contentId]);
 
   useEffect(() => {
     if (!apiEnabled) return;
@@ -55,8 +62,12 @@ export function HelpfulReaction({
     };
   }, [contentId, apiEnabled]);
 
+  const storedVote = mounted && !cleared ? readStoredVote(contentId) : null;
+  const vote = cleared ? null : (localVote ?? storedVote);
+
   const submit = async (next: Reaction) => {
-    setVote(next);
+    setCleared(false);
+    setLocalVote(next);
     try {
       localStorage.setItem(STORAGE_PREFIX + contentId, next);
     } catch {
@@ -83,7 +94,7 @@ export function HelpfulReaction({
   const shellClass =
     "mt-12 min-h-[8.5rem] rounded-2xl border border-[color:var(--line)] bg-white p-5";
 
-  if (storedVoteLoaded && vote != null) {
+  if (mounted && vote != null) {
     return (
       <section aria-label="Was this helpful?" className={shellClass}>
         <p className="text-sm font-medium text-[var(--text)]">
@@ -104,7 +115,8 @@ export function HelpfulReaction({
               } catch {
                 /* noop */
               }
-              setVote(null);
+              setCleared(true);
+              setLocalVote(null);
             }}
             className="text-[var(--color-accent)] underline"
           >
