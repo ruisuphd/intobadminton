@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v8"))) return false;
-      const cache = await caches.open("ib-v8-static");
+      if (!keys.some((key) => key.startsWith("ib-v9"))) return false;
+      const cache = await caches.open("ib-v9-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v8-static");
+    const cache = await caches.open("ib-v9-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -50,6 +50,8 @@ test("service worker precaches search, review, and offline shells", async ({
     "/methodology/",
     "/tools/",
     "/faq/",
+    "/best/",
+    "/brands/",
   ]) {
     expect(
       cachedPaths.some((entry) => entry === path || entry.startsWith(path)),
@@ -78,6 +80,7 @@ test("manifest exposes Reviews and Guides shortcuts", async ({ page }) => {
   expect(shortcuts).toContain("Reviews");
   expect(shortcuts).toContain("Guides");
   expect(shortcuts).toContain("Tools");
+  expect(shortcuts).toContain("Best of");
 });
 
 test("offline fallback lists guides recovery link", async ({ page }) => {

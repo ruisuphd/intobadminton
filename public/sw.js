@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v8";
+const CACHE_VERSION = "ib-v9";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -34,6 +34,8 @@ const PRECACHE_URLS = [
   "/methodology/",
   "/tools/",
   "/faq/",
+  "/best/",
+  "/brands/",
   "/manifest.webmanifest",
   "/intobadminton-mark.png",
   "/intobadminton-icon-192.png",

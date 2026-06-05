@@ -38,7 +38,9 @@
         "http://localhost:4173/tools/string-tension-calculator/index.html",
         "http://localhost:4173/tools/authenticity-checker/index.html",
         "http://localhost:4173/guides/index.html",
-        "http://localhost:4173/faq/index.html"
+        "http://localhost:4173/faq/index.html",
+        "http://localhost:4173/best/index.html",
+        "http://localhost:4173/brands/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

@@ -108,7 +108,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2e smoke for `/data/`, `/updates/`, review decision shelf
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
-### Sprint 13 — PR #159 (`cursor/web-app-improvement-plan-3ef7`)
+### Sprint 13 — Shipped (PR #159)
 
 - **PDP related reading** shelf on `/product/[id]/`
 - Explainer review slugs (13) map to editorial clusters via pattern expansion
@@ -116,6 +116,14 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - PWA **`ib-v8`** precaches `/tools/` and `/faq/`; Tools manifest shortcut
 - Lighthouse CI includes `/faq/`; e2e PDP + explainer shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
+
+### Sprint 14 — PR (`cursor/web-app-improvement-plan-154b`)
+
+- **Results Keep reading** shelf via `relatedReadingForQuizCategory`
+- `/best/` hub, `/brands/`, and `/catalog/` decision-path shelves
+- PWA **`ib-v9`** precaches `/best/` and `/brands/`; Best-of manifest shortcut
+- Lighthouse CI includes `/best/` and `/brands/`; e2e results + brands shelf smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
@@ -138,7 +146,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 14+)
+### Next (Sprint 15+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs

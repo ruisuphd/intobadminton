@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   relatedReadingForPath,
   relatedReadingForProductCategory,
+  relatedReadingForQuizCategory,
   relatedReadingForReviewSlug,
 } from "./related-content";
 
@@ -118,5 +119,47 @@ describe("relatedReadingForPath extended clusters", () => {
   it("returns budget cluster for rackets under 200", () => {
     const items = relatedReadingForPath("/best/rackets-under-200/");
     expect(items.some((i) => i.href.includes("rackets-under-100"))).toBe(true);
+  });
+
+  it("returns compare cluster for best-of hub", () => {
+    const items = relatedReadingForPath("/best/");
+    expect(items.length).toBe(3);
+    expect(items.every((i) => i.href !== "/best/")).toBe(true);
+    expect(items.some((i) => i.href.startsWith("/compare-guides/"))).toBe(true);
+  });
+
+  it("returns brands cluster for brands index", () => {
+    const items = relatedReadingForPath("/brands/");
+    expect(items.some((i) => i.href.includes("yonex-victor-li-ning"))).toBe(
+      true
+    );
+  });
+
+  it("returns brands cluster for Yonex brand profile", () => {
+    const items = relatedReadingForPath("/brands/yonex/");
+    expect(items.every((i) => i.href !== "/brands/yonex/")).toBe(true);
+    expect(items.some((i) => i.href.includes("compare-guides"))).toBe(true);
+  });
+
+  it("returns compare cluster for catalog browse", () => {
+    const items = relatedReadingForPath("/catalog/");
+    expect(items.some((i) => i.href.startsWith("/compare-guides/"))).toBe(true);
+  });
+});
+
+describe("relatedReadingForQuizCategory", () => {
+  it("returns shoe-fit cluster for shoe quiz results", () => {
+    const items = relatedReadingForQuizCategory("shoes");
+    expect(items.some((i) => i.href.includes("shoes"))).toBe(true);
+  });
+
+  it("returns strings cluster for string quiz results", () => {
+    const items = relatedReadingForQuizCategory("string");
+    expect(items.some((i) => i.href.includes("string-tension"))).toBe(true);
+  });
+
+  it("defaults to all-round rackets when category missing", () => {
+    const items = relatedReadingForQuizCategory(undefined);
+    expect(items.some((i) => i.href.includes("all-round-rackets"))).toBe(true);
   });
 });
