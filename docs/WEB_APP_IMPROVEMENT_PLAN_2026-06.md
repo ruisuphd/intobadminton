@@ -56,6 +56,14 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Homepage bundle slimming (`home-featured-reviews.json`, dynamic `HomeContinueReading`)
 - `/best/rackets-under-200/`; catalog URL filters + sort — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
+### Sprint 6 — Shipped (PR #136 and parallel PRs)
+
+- `/best/*` comparison tables: illustrative **Finder fit** column (`best-picks-scoring.ts`)
+- Public **`/data/`** claims registry (cite-back moat from Q2 plan)
+- PWA precache **`/catalog/`** + `ib-v3` service worker
+- **`productId` backfill** on `/best/*` picks with exact catalog name matches
+- Fuzzy search, reactions worker, catalog compare funnel — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
+
 ### Phase D — Shipped (PR #114)
 
 - Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
