@@ -146,7 +146,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2e catalog-keyword + review shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md)
 
-### Sprint 17 — This branch (`cursor/web-app-improvement-plan-9f3b`)
+### Sprint 17 — Shipped (PR #164)
 
 - **Site search → catalog deep-link** with `?q=` prefill and match count CTA
 - Empty editorial results surface catalog when catalogue rows match
@@ -174,13 +174,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 18+)
+### Sprint 18 — Shipped (PR #165)
+
+- Header search **Catalog** split button + static hero `formAction`
+- Search autocomplete (`searchSuggestions` + combobox on `/search/` and header)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md)
+
+### Next (Sprint 19+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
 - Intentional explainer slugs without single catalogue SKU (no forced product map)
-- Header search optional catalog-first affordance
+- Product-intent auto-route: header submit → catalog when only SKUs match
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

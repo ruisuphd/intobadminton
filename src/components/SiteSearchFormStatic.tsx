@@ -12,6 +12,18 @@ export function SiteSearchFormStatic({
 }) {
   const inputId = compact ? "site-search-compact" : "site-search-hero";
 
+  const inputClass = compact
+    ? "h-9 min-w-0 flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-3 text-sm text-[var(--text)] placeholder:text-[var(--color-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+    : "h-12 min-w-0 flex-1 rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-base text-[var(--text)] placeholder:text-[var(--color-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]";
+
+  const primaryBtnClass = compact
+    ? "inline-flex h-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] px-3 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
+    : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]";
+
+  const secondaryBtnClass = compact
+    ? "inline-flex h-9 shrink-0 items-center justify-center rounded-full border border-[color:var(--line-strong)] bg-white px-3 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)]"
+    : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)]";
+
   return (
     <form
       role="search"
@@ -19,7 +31,7 @@ export function SiteSearchFormStatic({
       method="get"
       className={
         compact
-          ? "flex w-full max-w-xs items-center gap-2"
+          ? "flex w-full max-w-md items-center gap-1.5"
           : "flex w-full max-w-xl items-stretch gap-2"
       }
     >
@@ -33,21 +45,19 @@ export function SiteSearchFormStatic({
         defaultValue={defaultQuery}
         placeholder="Search rackets, reviews, guides…"
         autoComplete="off"
-        className={
-          compact
-            ? "h-9 min-w-0 flex-1 rounded-full border border-[color:var(--line-strong)] bg-white px-3 text-sm text-[var(--text)] placeholder:text-[var(--color-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
-            : "h-12 min-w-0 flex-1 rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-base text-[var(--text)] placeholder:text-[var(--color-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
-        }
+        className={inputClass}
       />
+      <button type="submit" className={primaryBtnClass}>
+        Search
+      </button>
       <button
         type="submit"
-        className={
-          compact
-            ? "inline-flex h-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] px-4 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
-            : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-6 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
-        }
+        formAction="/catalog/"
+        formMethod="get"
+        className={secondaryBtnClass}
+        title="Browse matching products in the catalog"
       >
-        Search
+        Catalog
       </button>
     </form>
   );
