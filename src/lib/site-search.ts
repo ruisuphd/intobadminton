@@ -107,6 +107,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["smash", "attack", "singles", "power"],
   },
   {
+    title: "Rackets under $150",
+    href: "/best/rackets-under-150/",
+    kind: "best",
+    summary: "Club-budget rackets at $150 or less — catalogue discovery page.",
+    keywords: ["budget", "under 150", "affordable", "club"],
+  },
+  {
+    title: "Rackets under $200",
+    href: "/best/rackets-under-200/",
+    kind: "best",
+    summary: "Upper club-budget rackets at $200 or less — catalogue discovery page.",
+    keywords: ["budget", "under 200", "mid tier", "club"],
+  },
+  {
     title: "Best badminton shoes",
     href: "/best/shoes/",
     kind: "best",

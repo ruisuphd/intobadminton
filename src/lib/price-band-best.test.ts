@@ -14,4 +14,16 @@ describe("buildPriceBandRacketsConfig", () => {
     expect(config.picks.length).toBeGreaterThan(0);
     expect(config.picks.every((p) => p.priceUsd <= 100)).toBe(true);
   });
+
+  it("builds under-200 band with higher cap", () => {
+    const { config } = buildPriceBandRacketsConfig("rackets-under-200", 200, {
+      title: "Test",
+      description: "Test desc",
+      breadcrumbLabel: "Under $200",
+      pageTitle: "Under $200",
+      dek: "Test dek",
+    });
+    expect(config.picks.every((p) => p.priceUsd <= 200)).toBe(true);
+    expect(config.picks.length).toBeGreaterThan(0);
+  });
 });

@@ -76,6 +76,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         title: "Rackets under $150",
         dek: "Club-budget frames at $150 or less — catalogue discovery with comparison table.",
       },
+      {
+        href: "/best/rackets-under-200/",
+        title: "Rackets under $200",
+        dek: "Upper club-budget frames at $200 or less — programmatic catalogue with comparison table.",
+      },
     ],
   },
   {

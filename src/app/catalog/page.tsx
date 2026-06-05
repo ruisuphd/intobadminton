@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { CatalogClient } from "@/app/catalog/CatalogClient";
 import { JsonLd } from "@/components/JsonLd";
 import { pageAlternates } from "@/lib/metadata";
@@ -54,7 +55,16 @@ export default function CatalogPage() {
       </header>
 
       <div className="mt-8">
-        <CatalogClient />
+        <Suspense
+          fallback={
+            <div
+              className="min-h-[480px] rounded-2xl border border-[color:var(--line)] bg-white"
+              aria-hidden
+            />
+          }
+        >
+          <CatalogClient />
+        </Suspense>
       </div>
     </main>
   );

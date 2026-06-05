@@ -76,6 +76,19 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href === "/saved/")).toBe(true);
   });
 
+  it("finds programmatic price-band guides", () => {
+    expect(
+      searchSite("rackets under 150").some((h) =>
+        h.href.includes("rackets-under-150")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("rackets under 200").some((h) =>
+        h.href.includes("rackets-under-200")
+      )
+    ).toBe(true);
+  });
+
   it("finds compare guides by model pair", () => {
     const hits = searchSite("astrox 99 pro 100zz");
     expect(
