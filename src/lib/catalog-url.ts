@@ -194,6 +194,11 @@ const COMPARE_SLUG_CATALOG_FILTERS: Record<string, CompareSlugCatalogFilters> = 
   "yonex-65z4-vs-eclipsion-z3": { category: "shoes", brand: "Yonex" },
 };
 
+/** Slugs with committed compare-guide → catalog filter wiring. */
+export function compareCatalogFilterSlugs(): string[] {
+  return Object.keys(COMPARE_SLUG_CATALOG_FILTERS);
+}
+
 /** Filtered catalog browse — used from `/compare-guides/*` comparisons. */
 export function catalogHrefFromCompareSlug(slug: string): string {
   const filters = COMPARE_SLUG_CATALOG_FILTERS[slug.trim()];

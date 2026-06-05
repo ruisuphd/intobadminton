@@ -14,6 +14,7 @@
 | **RacketGuide-style finders** | Filter-first UX, calculators | Finder + 5 `/tools/*` + toolkit strip |
 | **Tennis Warehouse** | Spec-backed PDP per SKU, cross-sells | PDP golden-profile CI guard ✅ (Sprint 48) |
 | **Wirecutter** | Programmatic best-of + comparison tables + catalog exit | Best-of golden-profile CI guard ✅ (Sprint 49) |
+| **Tennis Warehouse** | Head-to-head comparison → filtered browse | Compare-guides golden-profile CI guard ✅ (Sprint 50) |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 
 **Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews, postbuild SEO gate.
@@ -409,7 +410,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright PDP smoke** — `e2e/pdp-baseline-smoke.spec.ts` (specs, finder CTA, catalog exit, review link)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT48_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT48_2026-06.md)
 
-### Sprint 49 — This branch
+### Sprint 49 — Shipped (PR #197)
 
 - **Best-of golden profiles** — `docs/baselines/best-queries.json` (6 slug + catalog exit + related reading expectations)
 - **Best-of regression guard** — `src/lib/best-baseline.ts` + `npm run lint:best-baseline`
@@ -417,7 +418,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright best-of smoke** — `e2e/best-baseline-smoke.spec.ts` (comparison table, Keep reading, catalog CTA)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT49_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT49_2026-06.md)
 
-### Next (Sprint 50+)
+### Sprint 50 — This branch
+
+- **Compare-guides golden profiles** — `docs/baselines/compare-guides-queries.json` (6 slug + catalog exit + manifest + duel pick expectations)
+- **Compare-guides regression guard** — `src/lib/compare-guides-baseline.ts` + `npm run lint:compare-guides-baseline`
+- **Extended editorial command** — `lint:editorial-baselines` now includes compare-guides guard
+- **Playwright compare-guides smoke** — `e2e/compare-guides-baseline-smoke.spec.ts` (catalog CTA, duel table, Keep reading)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT50_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT50_2026-06.md)
+
+### Next (Sprint 51+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

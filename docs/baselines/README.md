@@ -20,7 +20,21 @@ Refresh review→catalogue map and PDP regression layers in one operator command
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, and `lint:best-baseline`.
+Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, and `lint:compare-guides-baseline`.
+
+## Compare-guides (golden profiles)
+
+Committed `/compare-guides/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, manifest entries, and mapped duel pick wiring:
+
+- [`compare-guides-queries.json`](compare-guides-queries.json) — CrUX Astrox vs Nanoflare, Lighthouse brand/shoe/duel shells, even-balance and shoe duels.
+
+Validate compare-guide catalog parity (runs in CI after best-of guard):
+
+```bash
+npm run lint:compare-guides-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/compare-guides-baseline-smoke.spec.ts`) — direct navigation to committed compare-guide URLs with catalog CTA, and duel layouts with comparison table + Keep reading shelf.
 
 ## Best-of buying guides (golden profiles)
 

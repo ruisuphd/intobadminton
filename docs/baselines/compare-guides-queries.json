@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "coverage": {
+    "minCatalogFilterSlugs": 12,
+    "minManifestEntries": 12
+  },
+  "queries": [
+    {
+      "id": "lighthouse-astrox-vs-nanoflare",
+      "slug": "yonex-astrox-vs-nanoflare",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "astrox",
+      "expectCatalogLinkPattern": "yonex",
+      "note": "CrUX priority compare guide — concept layout + Yonex catalog exit"
+    },
+    {
+      "id": "lighthouse-brand-triad",
+      "slug": "yonex-victor-li-ning",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "yonex",
+      "expectCatalogLinkPattern": "browse matching catalog",
+      "note": "Lighthouse CI brand comparison — racket catalog exit"
+    },
+    {
+      "id": "lighthouse-shoes-crossover",
+      "slug": "badminton-vs-tennis-shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "expectMinRelatedReading": 3,
+      "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "tennis",
+      "expectCatalogLinkPattern": "browse shoes in catalog",
+      "note": "Lighthouse CI shoe crossover — shoes catalog exit"
+    },
+    {
+      "id": "lighthouse-flagship-duel",
+      "slug": "astrox-99-pro-vs-astrox-100zz",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectInManifest": true,
+      "expectProductIds": ["yy-astrox-99-pro", "yy-astrox-100zz"],
+      "e2e": true,
+      "expectHeadingPattern": "100zz",
+      "expectCatalogLinkPattern": "browse matching catalog",
+      "expectComparisonTable": true,
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse duel layout — side-by-side table + mapped picks"
+    },
+    {
+      "id": "even-balance-duel",
+      "slug": "astrox-77-pro-vs-88s-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectInManifest": true,
+      "note": "Even-balance Yonex duel — catalog filter parity"
+    },
+    {
+      "id": "shoe-duel",
+      "slug": "yonex-65z4-vs-eclipsion-z3",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectInManifest": true,
+      "note": "Shoe duel — Yonex shoes catalog exit"
+    }
+  ]
+}
