@@ -121,3 +121,24 @@ export function racketsUnderPrice(maxUsd: number): RacketProduct[] {
     (p): p is RacketProduct => isRacket(p) && p.priceUsd <= maxUsd
   ).sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
 }
+
+/** Rackets tagged for singles or all-round singles play in bestFor. */
+export function racketsForSingles(): RacketProduct[] {
+  return CATALOG.filter((p): p is RacketProduct => {
+    if (!isRacket(p)) return false;
+    return p.bestFor.some(
+      (tag) =>
+        tag === "singles" ||
+        tag === "all_round_singles" ||
+        tag === "control_singles"
+    );
+  }).sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
+}
+
+/** Head-light rackets for control, net, and defensive recovery roles. */
+export function racketsHeadLight(): RacketProduct[] {
+  return CATALOG.filter(
+    (p): p is RacketProduct =>
+      isRacket(p) && p.balanceCategory === "head_light"
+  ).sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
+}

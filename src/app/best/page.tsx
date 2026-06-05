@@ -59,7 +59,7 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
       {
         href: "/best/all-round-rackets/",
         title: "Best all-round rackets",
-        dek: "Balanced frames for players who rotate singles, doubles, and mixed without a specialist role.",
+        dek: "Even-balance frames that do not punish wrong role choices in doubles.",
       },
       {
         href: "/best/intermediate-rackets/",
@@ -70,6 +70,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/doubles-rackets/",
         title: "Best doubles rackets",
         dek: "Front-court speed, defensive recovery, and rear-court continuity — picks for men's, women's, and mixed.",
+      },
+      {
+        href: "/best/singles-rackets/",
+        title: "Best singles rackets",
+        dek: "Full-court coverage, recovery, and rear-court power — six frames for singles specialists.",
+      },
+      {
+        href: "/best/head-light-rackets/",
+        title: "Best head-light rackets",
+        dek: "Net control, flat drives, and defensive recovery — head-light geometry ranked by role.",
       },
       {
         href: "/best/smash-heavy-rackets/",
@@ -95,6 +105,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/shoes/",
         title: "Best badminton shoes",
         dek: "Picks by fit width, stability, and cushioning — the shoe matters more than the racket for most amateurs.",
+      },
+      {
+        href: "/best/wide-feet-badminton-shoes/",
+        title: "Best wide-feet badminton shoes",
+        dek: "Six shoes with wide or wide-available lasts — dedicated wide SKUs and 2E/3E variants.",
       },
       {
         href: "/best/strings/",

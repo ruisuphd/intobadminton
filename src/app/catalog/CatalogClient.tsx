@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 import { trackEvent } from "@/components/Analytics";
+import { CatalogProductActions } from "@/components/CatalogProductActions";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import {
   ProductImageView,
@@ -252,10 +253,17 @@ export function CatalogClient() {
 
       <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
         {filtered.map((p) => (
-          <li key={p.id}>
+          <li key={p.id} className="flex items-stretch">
             <Link
               href={catalogProductHref(p)}
-              className="flex gap-4 px-5 py-4 transition-colors hover:bg-[color:var(--surface-muted)]"
+              onClick={() =>
+                trackEvent("catalog_product_click", {
+                  product_id: p.id,
+                  product_brand: p.brand,
+                  category: p.category,
+                })
+              }
+              className="flex min-w-0 flex-1 gap-4 px-5 py-4 transition-colors hover:bg-[color:var(--surface-muted)]"
             >
               {canShowProductImage(p.image) ? (
                 <ProductImageView
@@ -285,6 +293,7 @@ export function CatalogClient() {
                 </p>
               </div>
             </Link>
+            <CatalogProductActions product={p} />
           </li>
         ))}
       </ul>

@@ -1,10 +1,26 @@
-import { blogArticles } from "@/lib/blog";
+import { blogArticles, type BlogArticle } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
 import { COMPARE_GUIDES } from "@/lib/compare-guides";
-import { reviewSearchTokens } from "@/lib/review-search-text";
 import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 import { tokenMatchesBlob } from "@/lib/search-fuzzy";
+
+const REVIEW_EXCERPT_MAX_CHARS = 400;
+
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/** Plain-text excerpt from review sections for search indexing (dek-only misses body terms). */
+export function reviewSearchExcerpt(
+  article: BlogArticle,
+  maxLen = REVIEW_EXCERPT_MAX_CHARS
+): string {
+  const plain = stripHtml(
+    article.sections.map((section) => `${section.heading} ${section.body}`).join(" ")
+  );
+  return plain.slice(0, maxLen);
+}
 
 export type SearchEntryKind =
   | "review"
@@ -87,12 +103,32 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
   },
   {
-    title: "Best all-round rackets",
+    title: "Best singles rackets",
+    href: "/best/singles-rackets/",
+    kind: "best",
+    summary: "Full-court singles frames ranked for recovery, control, and rear-court power.",
+    keywords: ["singles", "full court", "all court", "men's singles", "women's singles"],
+  },
+  {
+    title: "Best head-light rackets",
+    href: "/best/head-light-rackets/",
+    kind: "best",
+    summary: "Head-light frames for net control, defensive recovery, and front-court speed.",
+    keywords: ["head light", "head-light", "control", "net", "defensive", "nanoflare"],
+  },
+  {
+    title: "Best wide-feet badminton shoes",
+    href: "/best/wide-feet-badminton-shoes/",
+    kind: "best",
+    summary: "Court shoes with wide or wide-available lasts ranked by stability and cushioning.",
+    keywords: ["wide feet", "wide fit", "2e", "3e", "ee width", "shoes"],
+  },
+  {
+    title: "Best all-round badminton rackets",
     href: "/best/all-round-rackets/",
     kind: "best",
-    summary:
-      "Balanced frames for singles and doubles — Arcsaber 11 Pro, Astrox 77 Pro, Halbertec 8000, Nanoflare 700 Pro.",
-    keywords: ["all round", "all-round", "versatile", "balanced", "even balance"],
+    summary: "Even-balance frames for club doubles and players covering every court position.",
+    keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
   },
   {
     title: "Best intermediate rackets",
@@ -293,11 +329,8 @@ function reviewEntries(): SearchEntry[] {
     title: article.title,
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
-    summary: article.dek ?? article.verdict ?? "",
-    keywords: [
-      article.slug.replace(/-/g, " "),
-      ...reviewSearchTokens(article),
-    ],
+    summary: article.dek ?? "",
+    keywords: [article.slug.replace(/-/g, " "), reviewSearchExcerpt(article)],
   }));
 }
 

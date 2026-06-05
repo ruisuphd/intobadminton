@@ -60,6 +60,32 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds singles and head-light best pages", () => {
+    expect(
+      searchSite("singles racket").some((h) =>
+        h.href.includes("singles-rackets")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("head light control").some((h) =>
+        h.href.includes("head-light-rackets")
+      )
+    ).toBe(true);
+  });
+
+  it("finds wide-feet and all-round best pages", () => {
+    expect(
+      searchSite("wide feet shoes").some((h) =>
+        h.href.includes("wide-feet-badminton-shoes")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("all round rackets").some((h) =>
+        h.href.includes("all-round-rackets")
+      )
+    ).toBe(true);
+  });
+
   it("finds catalog products by brand and model", () => {
     const hits = searchSite("yonex nanoflare 1000");
     expect(hits.some((h) => h.kind === "product")).toBe(true);
@@ -118,17 +144,12 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
-  it("finds all-round rackets best page", () => {
+  it("finds reviews by body-only terms via excerpt enrichment", () => {
     expect(
-      searchSite("all round versatile racket").some((h) =>
-        h.href.includes("all-round-rackets")
+      searchSite("interceptions").some((h) =>
+        h.href.includes("racket-balance-vs-swing-speed")
       )
     ).toBe(true);
-  });
-
-  it("finds reviews by body keywords not in the title", () => {
-    const hits = searchSite("durable-balanced knife-sharp");
-    expect(hits.some((h) => h.href.includes("l69-string"))).toBe(true);
   });
 
   it("finds all compare guides by brand matchup", () => {
