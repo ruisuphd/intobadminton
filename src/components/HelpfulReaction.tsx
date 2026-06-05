@@ -33,6 +33,7 @@ export function HelpfulReaction({
   const apiEnabled = reactionsApiEnabled();
 
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- one-time localStorage hydrate */
     try {
       const raw = localStorage.getItem(STORAGE_PREFIX + contentId);
       if (raw === "up" || raw === "down" || raw === "more") setVote(raw);
@@ -40,6 +41,7 @@ export function HelpfulReaction({
       // Treat any storage error as "no vote yet".
     }
     setStoredVoteLoaded(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [contentId]);
 
   useEffect(() => {
