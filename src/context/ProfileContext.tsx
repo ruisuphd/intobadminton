@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { parseCompareShareIds } from "@/lib/compare-share-url";
 import { defaultUserProfile, type UserProfile } from "@/lib/taxonomy";
 
 const STORAGE_KEY = "intobadminton.profile.v1";
@@ -77,26 +78,15 @@ function pruneExpiredSaved(entries: SavedEntry[]): SavedEntry[] {
   });
 }
 
-/** Share links land on `/compare/?p=id1,id2` — prefer that over an empty tray on first load. */
-function compareIdsFromShareUrl(): string[] | null {
-  if (typeof window === "undefined") return null;
-  if (!window.location.pathname.includes("/compare")) return null;
-  const raw = new URLSearchParams(window.location.search).get("p");
-  if (!raw) return null;
-  const ids = raw
-    .split(",")
-    .map((s) => s.trim())
-    .filter((id) => id.length > 0)
-    .slice(0, MAX_COMPARE);
-  return ids.length > 0 ? ids : null;
-}
-
 export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfileState] = useState<UserProfile>(defaultUserProfile);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [compareIds, setCompareIds] = useState<string[]>(() => {
     if (typeof window === "undefined") return [];
-    return compareIdsFromShareUrl() ?? load(COMPARE_KEY, []);
+    return (
+      parseCompareShareIds(window.location.pathname, window.location.search) ??
+      load(COMPARE_KEY, [])
+    );
   });
   const [saved, setSaved] = useState<SavedEntry[]>([]);
   const [hydrated, setHydrated] = useState(false);

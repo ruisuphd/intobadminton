@@ -111,6 +111,11 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
   ],
   strings: [
     {
+      href: "/guides/string-feel-vs-durability/",
+      title: "String feel vs durability",
+      summary: "Gauge, repulsion, and how long strings last before you re-string.",
+    },
+    {
       href: "/guides/string-tension/",
       title: "String tension guide",
       summary: "How lbs changes feel, power, and control by skill level.",
@@ -124,6 +129,23 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       href: "/best/strings/",
       title: "Best badminton strings",
       summary: "Strings ranked by feel, durability, and tension window.",
+    },
+  ],
+  freshness: [
+    {
+      href: "/updates/",
+      title: "Editorial updates",
+      summary: "What changed recently — guides, best-of pages, and reviews.",
+    },
+    {
+      href: "/data/",
+      title: "Verified claims registry",
+      summary: "Manufacturer specs with source URLs and last-checked dates.",
+    },
+    {
+      href: "/methodology/",
+      title: "Recommendation methodology",
+      summary: "How fit scores, source labels, and verification gates work.",
     },
   ],
   authenticity: [
@@ -203,8 +225,13 @@ const PATH_CLUSTER: Record<string, string> = {
   "/best/control-rackets/": "defensive-rackets",
 
   "/guides/string-tension/": "strings",
+  "/guides/string-feel-vs-durability/": "strings",
   "/best/strings/": "strings",
   "/tools/string-tension-calculator/": "strings",
+
+  "/data/": "freshness",
+  "/updates/": "freshness",
+  "/methodology/": "freshness",
 
   "/guides/equipment-authenticity/": "authenticity",
   "/tools/authenticity-checker/": "authenticity",
@@ -239,4 +266,33 @@ export function relatedReadingForPath(
 
   const items = CLUSTER_ITEMS[clusterKey] ?? [];
   return items.filter((item) => item.href !== normalized).slice(0, limit);
+}
+
+const REVIEW_CLUSTER_PATTERNS: { pattern: RegExp; cluster: string }[] = [
+  { pattern: /\b(shoe|shoes|footwear|eclipsion|65z|aerus|bladesabre)\b/i, cluster: "shoe-fit" },
+  { pattern: /\b(string|gauge|repulsion|lbs|tension)\b/i, cluster: "strings" },
+  { pattern: /\b(shuttle|feather|nylon)\b/i, cluster: "compare" },
+  { pattern: /\b(grip|overgrip)\b/i, cluster: "strings" },
+  {
+    pattern: /\b(racket|astrox|nanoflare|arcsaber|halbertec|axforce|drivex|thruster|bladex)\b/i,
+    cluster: "all-round-rackets",
+  },
+];
+
+/**
+ * Decision-path shelf for `/review/[slug]/` articles — maps slug keywords to
+ * the same editorial clusters used on guides and best-of pages.
+ */
+export function relatedReadingForReviewSlug(
+  slug: string,
+  limit = 3
+): RelatedReadingItem[] {
+  const reviewPath = normalizePath(`/review/${slug}`);
+  for (const { pattern, cluster } of REVIEW_CLUSTER_PATTERNS) {
+    if (!pattern.test(slug)) continue;
+    const items = CLUSTER_ITEMS[cluster] ?? [];
+    const filtered = items.filter((item) => item.href !== reviewPath);
+    if (filtered.length > 0) return filtered.slice(0, limit);
+  }
+  return relatedReadingForPath("/compare-guides/yonex-astrox-vs-nanoflare/", limit);
 }

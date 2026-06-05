@@ -29,7 +29,7 @@
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
-**Shipped on `main`:** site search, review body excerpts, `SearchAction`, `ContinueReading`, return-visit hooks, reactions API client, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC, claims `/data/`, PDP-lite, Buttondown notify-me.
+**Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
 
@@ -82,36 +82,53 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
-### Sprint 10 — This PR (`cursor/web-app-improvement-plan-0d45`)
+### Sprint 10 — Shipped (#153)
 
 - PWA **`ib-v4`** precaches `/search/` and `/saved/`; Saved manifest shortcut
-- Review→product map **83%** (121/146); improved `suggest-review-product-map.mjs`
+- Review→product map **86%**; improved `suggest-review-product-map.mjs`
 - **HowTo** JSON-LD on four procedural guides in the Lighthouse URL set
 - Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
 
+### Sprint 11 — This branch (`cursor/web-app-improvement-plan-a612`)
+
+- Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
+- PWA **`ib-v5`** precaches `/compare/` and `/updates/`
+- Pages build reads optional **`REACTIONS_API_URL`** secret for HelpfulReaction counts
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
+
 ### Phase D — Shipped (PR #114)
 
-- Review→product map **80%+**; `scripts/suggest-review-product-map.mjs`
+- Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
 - `docs/baselines/README.md` GSC/CrUX runbook
 - `GuideTocAnchor` on SEO cluster pillar guides
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
 
-### Sprint 7–8 — Shipped (PR #135, #142)
+### Sprint 6–7 — Shipped (main)
 
-- Review body search excerpts + fuzzy e2e (#135)
-- PDP-lite `/product/[id]/`, budget shoes, head-heavy under $150 (#138)
-- Map ≥86%, canonical review slug ranking, `/best/defensive-rackets/` (#142)
-- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
+- Fuzzy search, control rackets, catalog URL filters (#134, #122)
+- Singles/head-light/all-round `/best/*`, review body search (#127, #135)
+- PDP-lite `/product/[id]/`, budget shoes pages (#138)
+- PR #139: results share link, RSS `rel=alternate` in layout
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
 
-### Sprint 9+ (deferred)
+### Sprint 8 — This branch (PR #143)
 
-- GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
+- Product map ≥86%; review body search e2e; results share link verification
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
+
+### Next (Sprint 12+)
+
+- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
-- HelpfulReaction Workers/KV deploy + `NEXT_PUBLIC_REACTIONS_API_URL`
-- Expand `blog-review-product-map.json` toward 90%+ (comparison slugs need editorial judgment)
 - YouTube `sameAs` on author entity (after channel claim)
+- Editorial pairing for explainer-only review slugs (map ceiling ~87%)
+
+**Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
+**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
+**Sprint 8:** claims registry, PDP-lite, product-map 86%, search snippets, RSS alternate. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md).  
+**Sprint 9:** CI e2e hardening; canonical review slug tie-break; reactions deploy deferred. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md).
 
 ---
 

@@ -43,3 +43,14 @@ test("site search tolerates common typos", async ({ page }) => {
     page.getByRole("link", { name: /string tension/i }).first()
   ).toBeVisible();
 });
+
+test("site search shows body-match snippet for review terms", async ({ page }) => {
+  await page.goto("/search/?q=interceptions");
+
+  const hit = page
+    .getByRole("link")
+    .filter({ hasText: /racket balance|swing speed/i })
+    .first();
+  await expect(hit).toBeVisible();
+  await expect(hit).toContainText(/interception/i);
+});

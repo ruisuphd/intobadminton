@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { relatedReadingForPath } from "./related-content";
+import {
+  relatedReadingForPath,
+  relatedReadingForReviewSlug,
+} from "./related-content";
 
 describe("relatedReadingForPath", () => {
   it("returns shoe-fit cluster for wide-feet guide", () => {
@@ -34,5 +37,27 @@ describe("relatedReadingForPath", () => {
 
   it("returns empty for unmapped paths", () => {
     expect(relatedReadingForPath("/about/")).toEqual([]);
+  });
+
+  it("includes string feel guide in strings cluster", () => {
+    const items = relatedReadingForPath("/guides/string-tension/");
+    expect(
+      items.some((i) => i.href === "/guides/string-feel-vs-durability/")
+    ).toBe(true);
+  });
+
+  it("maps review shoe slugs to shoe-fit cluster", () => {
+    const items = relatedReadingForReviewSlug("yonex-65z4-shoes-review");
+    expect(items.some((i) => i.href.includes("shoes"))).toBe(true);
+    expect(items.every((i) => !i.href.includes("yonex-65z4-shoes-review"))).toBe(
+      true
+    );
+  });
+
+  it("maps review string slugs to strings cluster", () => {
+    const items = relatedReadingForReviewSlug("li-ning-l69-string-review");
+    expect(
+      items.some((i) => i.href.includes("string-feel-vs-durability"))
+    ).toBe(true);
   });
 });

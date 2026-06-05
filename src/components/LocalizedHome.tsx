@@ -3,6 +3,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { FinderQuickFilters } from "@/components/FinderQuickFilters";
 import { HomeContinueReading } from "@/components/HomeContinueReading";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
+import { HomeRecentUpdates } from "@/components/HomeRecentUpdates";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
@@ -198,6 +199,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       </section>
 
       <HomeContinueReading locale={locale} />
+      <HomeRecentUpdates locale={locale} />
       <HomeRecentShortlists locale={locale} />
 
       <section className="border-t border-[color:var(--line)] py-12 lg:py-16">

@@ -50,15 +50,23 @@ export function ProductImageView({
   image,
   size = 240,
   className = "",
+  /** Omit credit line — use on dense list rows (catalog) to avoid CLS. */
+  hideCaption = false,
 }: {
   image: ProductImageData | undefined;
   size?: number;
   className?: string;
+  hideCaption?: boolean;
 }) {
   if (!canShowProductImage(image) || !image) return null;
 
+  const dim = image.width ?? size;
+
   return (
-    <figure className={`product-image ${className}`}>
+    <figure
+      className={`product-image ${className}`}
+      style={{ width: dim, minHeight: dim }}
+    >
       {/* Plain <img> rather than next/image — the site uses output:"export"
           with images.unoptimized, so next/image gives no benefit and adds
           opaque request behaviour. */}
@@ -66,16 +74,19 @@ export function ProductImageView({
       <img
         src={image.url}
         alt={image.alt}
-        width={image.width ?? size}
+        width={dim}
         height={image.height ?? size}
         loading="lazy"
         decoding="async"
         referrerPolicy="no-referrer"
         className="rounded-xl bg-[color:var(--surface-muted)] object-contain"
+        style={{ width: dim, height: dim }}
       />
-      <figcaption className="mt-1 text-[10px] uppercase tracking-wide text-[var(--color-subtle)]">
-        {image.credit}
-      </figcaption>
+      {!hideCaption && (
+        <figcaption className="mt-1 text-[10px] uppercase tracking-wide text-[var(--color-subtle)]">
+          {image.credit}
+        </figcaption>
+      )}
     </figure>
   );
 }
