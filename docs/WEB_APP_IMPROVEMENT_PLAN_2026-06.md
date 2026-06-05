@@ -294,14 +294,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2E saved shelf reload persistence assertion
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT33_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT33_2026-06.md)
 
-### Sprint 34 — This branch
+### Sprint 34 — Shipped (PR #182)
 
 - PWA **`ib-v24`** offline shell — discoverability for precached PDP, flagship review, and privacy-choices
 - **`pwa-precache-paths.ts`** shared assert list; Lighthouse CI ↔ precache parity unit test
 - E2E precache list synced; true offline navigation smoke for PDP + review
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT34_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT34_2026-06.md)
 
-### Next (Sprint 35+)
+### Sprint 35 — This branch
+
+- PWA **`ib-v25`** offline shell — CrUX commercial deep-links (beginner-rackets, Astrox vs Nanoflare, string-tension)
+- **`offline-recovery-paths.ts`** shared recovery module; CrUX ↔ offline parity unit test
+- E2E offline navigation for best-of, compare-guide, and procedural guide shells
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT35_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT35_2026-06.md)
+
+### Next (Sprint 36+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`; capture `lighthouse-scores.json`
 - Original photos on top commercial URLs
