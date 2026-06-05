@@ -52,6 +52,7 @@ describe("editorialMetaByPath registry", () => {
       "/compare-guides/badminton-vs-tennis-shoes/",
       "/guides/racket-balance/",
       "/guides/string-tension/",
+      "/guides/string-feel-vs-durability/",
       "/guides/shoes-footwork/",
       "/guides/wide-feet-badminton-shoes/",
       "/guides/doubles-roles/",

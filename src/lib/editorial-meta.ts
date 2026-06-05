@@ -141,6 +141,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-05",
     lastReviewedAt: "2026-06-05",
   },
+  "/updates/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+  },
 
   // Brand pages (no prices → no priceCheckedAt).
   "/brands/yonex/": {
@@ -229,6 +233,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   "/guides/string-tension/": {
     publishedAt: "2025-09-01",
     lastReviewedAt: "2026-05-08",
+  },
+  "/guides/string-feel-vs-durability/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
   },
   "/guides/shoes-footwork/": {
     publishedAt: "2025-09-08",

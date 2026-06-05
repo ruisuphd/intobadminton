@@ -101,6 +101,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["claims", "data", "sources", "fact check", "registry"],
   },
   {
+    title: "Editorial updates",
+    href: "/updates/",
+    kind: "tool",
+    summary:
+      "Chronological feed of recently reviewed guides, best-of pages, tools, and equipment reviews.",
+    keywords: ["updates", "freshness", "recent", "changelog"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",
@@ -155,6 +163,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "guide",
     summary: "How tension changes feel, power, and control by skill level.",
     keywords: ["tension", "lbs", "pound", "restring"],
+  },
+  {
+    title: "String feel vs durability",
+    href: "/guides/string-feel-vs-durability/",
+    kind: "guide",
+    summary:
+      "Gauge trade-offs — when to pick BG65-class durability vs thin repulsion strings.",
+    keywords: ["gauge", "bg65", "bg80", "durability", "repulsion", "feel"],
   },
   {
     title: "Racket balance vs swing speed",

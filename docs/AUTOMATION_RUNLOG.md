@@ -2,6 +2,29 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`)
+
+**Trigger:** GitHub pull request #130 (`ready_for_review`) — Sprint 6 claims registry. Rebased onto `main`, shipped Sprint 6 `/data/` plus Sprint 7 stringing cluster + `/updates/` lane.
+
+### Shipped
+
+- Merged `main` into branch (fuzzy search, catalog filters, control rackets already on main)
+- **`/data/`** — verified claims registry (Sprint 6 carryover from PR #130)
+- **`/guides/string-feel-vs-durability/`** — stringing cluster spoke with HowTo schema
+- **`/updates/`** — editorial freshness feed via `listEditorialUpdates()`
+- Registry: `editorial-meta`, `site-search`, guides index, footer, Lighthouse URLs
+
+### Verification
+
+- `npm test` — 235 passed
+- `npm run build` + postbuild SEO audit — pass (656 HTML, 217 sitemap URLs)
+
+### PR #130 status
+
+Superseded by this branch (includes `/data/` plus main reconciliation). Close #130 after Sprint 7 PR merges.
+
+---
+
 ## 2026-06-05 — PR #117 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-33f7`)
 
 **Trigger:** GitHub pull request #117 (`ready_for_review`) — guide ToC CLS fix (`cursor/web-app-improvement-plan-555d`). PR #117 **merged** to `main` as `586a621`. Translation workflow (steps 1–7) ran in parallel; no review content changes.
