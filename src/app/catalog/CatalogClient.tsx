@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo } from "react";
 import { trackEvent } from "@/components/Analytics";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import {
@@ -84,31 +84,11 @@ export function CatalogClient() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const catalog = useMemo(() => allCatalogProducts(), []);
-  const skipUrlSync = useRef(false);
 
-  const [state, setState] = useState<CatalogUrlState>(() =>
-    parseCatalogSearchParams(searchParams)
+  const state = useMemo(
+    () => parseCatalogSearchParams(searchParams),
+    [searchParams]
   );
-
-  useEffect(() => {
-    if (skipUrlSync.current) {
-      skipUrlSync.current = false;
-      return;
-    }
-    setState(parseCatalogSearchParams(searchParams));
-  }, [searchParams]);
-
-  useEffect(() => {
-    const params = catalogSearchParamsFromState(state);
-    const query = params.toString();
-    const nextUrl = query ? `${pathname}?${query}` : pathname;
-    const currentQuery = searchParams.toString();
-    const currentUrl = currentQuery ? `${pathname}?${currentQuery}` : pathname;
-    if (nextUrl === currentUrl) return;
-    skipUrlSync.current = true;
-    router.replace(nextUrl, { scroll: false });
-  }, [state, pathname, router, searchParams]);
-
   const filters = filtersFromState(state);
 
   const baseRows = useMemo(
@@ -141,19 +121,23 @@ export function CatalogClient() {
     (filters.category === "racket" || filters.category === null) &&
     (weightClasses.length > 0 || balances.length > 0);
 
+  const replaceState = (next: CatalogUrlState) => {
+    const params = catalogSearchParamsFromState(next);
+    const query = params.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  };
+
   const patch = (next: Partial<CatalogUrlState>) => {
-    setState((prev) => {
-      const merged = { ...prev, ...next };
-      trackEvent("catalog_filter", {
-        category: merged.category ?? "all",
-        brand: merged.brand ?? "all",
-        price_band: merged.priceBand ?? "all",
-        weight: merged.weightClass ?? "all",
-        balance: merged.balance ?? "all",
-        sort: merged.sort,
-      });
-      return merged;
+    const merged = { ...state, ...next };
+    trackEvent("catalog_filter", {
+      category: merged.category ?? "all",
+      brand: merged.brand ?? "all",
+      price_band: merged.priceBand ?? "all",
+      weight: merged.weightClass ?? "all",
+      balance: merged.balance ?? "all",
+      sort: merged.sort,
     });
+    replaceState(merged);
   };
 
   const onFinderCta = () => {

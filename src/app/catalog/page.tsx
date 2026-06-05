@@ -57,7 +57,10 @@ export default function CatalogPage() {
       <div className="mt-8">
         <Suspense
           fallback={
-            <p className="text-sm text-[var(--color-muted)]">Loading catalog…</p>
+            <div
+              className="min-h-[480px] rounded-2xl border border-[color:var(--line)] bg-white"
+              aria-hidden
+            />
           }
         >
           <CatalogClient />
