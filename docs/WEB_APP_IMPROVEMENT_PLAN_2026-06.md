@@ -70,7 +70,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Sharp-preferred product image pipeline
 - Catalog products in site search (`product` kind)
 
-### Phase D — In progress (`cursor/web-app-improvement-plan-11b6`)
+### Phase D — Shipped (`cursor/web-app-improvement-plan-11b6`, PR #114)
 
 - Expand `blog-review-product-map.json` (+29 high-confidence slug→product mappings)
 - `scripts/suggest-review-product-map.mjs` for editorial map expansion

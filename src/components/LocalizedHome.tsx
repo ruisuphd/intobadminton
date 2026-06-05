@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { ContinueReading } from "@/components/ContinueReading";
-import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
+import { HomeReturnVisit } from "@/components/HomeReturnVisit";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
-import { SiteSearchForm } from "@/components/SiteSearchForm";
+import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
 import products from "@/data/products.json";
 import {
@@ -167,7 +166,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 Search reviews, guides, and tools
               </p>
               <div className="mt-3">
-                <SiteSearchForm />
+                <SiteSearchFormStatic />
               </div>
             </div>
           </div>
@@ -193,8 +192,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         </div>
       </section>
 
-      <ContinueReading locale={locale} />
-      <HomeRecentShortlists locale={locale} />
+      <HomeReturnVisit locale={locale} />
 
       {/* Popular searches */}
       <section className="border-t border-[color:var(--line)] py-16 lg:py-20">

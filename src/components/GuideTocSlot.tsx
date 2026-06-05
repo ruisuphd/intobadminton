@@ -6,7 +6,7 @@ export function GuideTocSlot() {
   return (
     <div
       id="guide-toc-anchor"
-      className="mb-8 min-h-[11rem] empty:min-h-[11rem]"
+      className="mb-8 min-h-[14rem] empty:min-h-[14rem]"
       aria-hidden
     />
   );

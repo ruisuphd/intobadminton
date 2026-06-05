@@ -2,6 +2,32 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #114 `ready_for_review` (web app Phase D, `cursor/web-app-improvement-plan-11b6`)
+
+**Trigger:** GitHub pull request #114 — competitive audit, Phase D execution, CI Lighthouse fixes after merge from `main`.
+
+### Deliverables
+
+| Item | Result |
+| --- | --- |
+| Review→product map | **80%** (117/146); `scripts/suggest-review-product-map.mjs` |
+| GSC/CrUX baseline runbook | `docs/baselines/README.md` |
+| Merge `main` | Sprint 3–5 toolkit, catalog search, price-band pages |
+| Lighthouse CLS | `GuideTocSlot` on cluster pillar guides; ToC reserve height 14rem |
+| Lighthouse homepage perf | `SiteSearchFormStatic` (no client router); `HomeReturnVisit` defers shortlist strip |
+
+### Verification
+
+- `npm test` — 214 passed
+- `npm run build` + postbuild SEO audit — pass
+- `node scripts/audit-review-product-map.mjs` — 80%
+
+### Merge status
+
+Merge PR #114 when CI green (Lighthouse + lint-and-build + e2e-quiz).
+
+---
+
 ## 2026-06-04 — PR #99 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-f1ab`)
 
 **Trigger:** GitHub pull request #99 (`ready_for_review`) — Sprint 3 web app (`cursor/web-app-improvement-plan-9035`). Sprint 3 features already on `main` via #94–#98; PR #99 branch is superseded (runlog-only delta vs `main`).
