@@ -31,6 +31,13 @@
       "description": "Search reviews, guides, and best-of pages",
       "url": "/search/",
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Saved shortlist",
+      "short_name": "Saved",
+      "description": "Products and articles you saved for later",
+      "url": "/saved/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     }
   ],
   "icons": [
