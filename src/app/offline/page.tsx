@@ -69,9 +69,54 @@ const OFFLINE_LINKS = [
     description: "Precached hub — open comparisons you visited before.",
   },
   {
+    href: "/about/",
+    label: "About",
+    description: "Precached — who runs IntoBadminton and how we score gear.",
+  },
+  {
+    href: "/sources/",
+    label: "Sources",
+    description: "Precached — where product data and reviews come from.",
+  },
+  {
+    href: "/methodology/",
+    label: "Methodology",
+    description: "Precached — how fit scores and buying guides are built.",
+  },
+  {
+    href: "/data/",
+    label: "Claims registry",
+    description: "Precached — tracked claims with freshness dates.",
+  },
+  {
+    href: "/contact/",
+    label: "Contact",
+    description: "Precached — editorial and support contact details.",
+  },
+  {
+    href: "/research/",
+    label: "Research",
+    description: "Precached — market research signals behind recommendations.",
+  },
+  {
     href: "/privacy/",
     label: "Privacy policy",
     description: "Precached — how we handle data and consent.",
+  },
+  {
+    href: "/terms/",
+    label: "Terms of service",
+    description: "Precached — site terms and editorial integrity policy.",
+  },
+  {
+    href: "/cookies/",
+    label: "Cookie policy",
+    description: "Precached — cookies, Consent Mode, and ad partners.",
+  },
+  {
+    href: "/security/",
+    label: "Security",
+    description: "Precached — data handling and vulnerability reporting.",
   },
 ] as const;
 

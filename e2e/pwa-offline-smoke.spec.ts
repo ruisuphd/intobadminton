@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v21"))) return false;
-      const cache = await caches.open("ib-v21-static");
+      if (!keys.some((key) => key.startsWith("ib-v22"))) return false;
+      const cache = await caches.open("ib-v22-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v21-static");
+    const cache = await caches.open("ib-v22-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -86,6 +86,12 @@ test("service worker precaches search, review, and offline shells", async ({
     "/best/rackets-under-150/",
     "/best/rackets-under-200/",
     "/best/shoes/",
+    "/best/control-rackets/",
+    "/best/singles-rackets/",
+    "/best/defensive-rackets/",
+    "/best/lightweight-rackets-5u/",
+    "/best/rackets-for-shoulder-comfort/",
+    "/best/head-heavy-rackets-under-150/",
     "/contact/",
     "/research/",
     "/privacy/",
@@ -143,4 +149,23 @@ test("offline fallback lists best-of, brands, and privacy recovery links", async
   await expect(page.locator('a[href="/best/"]').first()).toBeVisible();
   await expect(page.locator('a[href="/brands/"]').first()).toBeVisible();
   await expect(page.locator('a[href="/privacy/"]').first()).toBeVisible();
+});
+
+test("offline fallback lists trust, legal, and support recovery links", async ({
+  page,
+}) => {
+  await page.goto("/offline/");
+  for (const href of [
+    "/about/",
+    "/sources/",
+    "/methodology/",
+    "/data/",
+    "/contact/",
+    "/research/",
+    "/terms/",
+    "/cookies/",
+    "/security/",
+  ]) {
+    await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
+  }
 });

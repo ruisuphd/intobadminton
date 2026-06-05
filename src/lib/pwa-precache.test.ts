@@ -7,11 +7,11 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v21 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v21"');
+  it("uses ib-v22 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v22"');
   });
 
-  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, price-band best-of, contact, research, legal cluster, trust cluster, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
+  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, long-tail best-of landings, price-band best-of, contact, research, legal cluster, trust cluster, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
     for (const path of [
       "/quiz/",
       "/catalog/",
@@ -77,6 +77,12 @@ describe("PWA service worker precache", () => {
       "/best/all-round-rackets/",
       "/best/wide-feet-badminton-shoes/",
       "/best/budget-badminton-shoes/",
+      "/best/control-rackets/",
+      "/best/singles-rackets/",
+      "/best/defensive-rackets/",
+      "/best/lightweight-rackets-5u/",
+      "/best/rackets-for-shoulder-comfort/",
+      "/best/head-heavy-rackets-under-150/",
       "/contact/",
       "/research/",
       "/privacy/",

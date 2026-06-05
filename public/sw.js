@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v21";
+const CACHE_VERSION = "ib-v22";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -85,6 +85,12 @@ const PRECACHE_URLS = [
   "/best/all-round-rackets/",
   "/best/wide-feet-badminton-shoes/",
   "/best/budget-badminton-shoes/",
+  "/best/control-rackets/",
+  "/best/singles-rackets/",
+  "/best/defensive-rackets/",
+  "/best/lightweight-rackets-5u/",
+  "/best/rackets-for-shoulder-comfort/",
+  "/best/head-heavy-rackets-under-150/",
   "/contact/",
   "/research/",
   "/privacy/",
