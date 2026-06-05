@@ -23,7 +23,7 @@
 
 | # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Lighthouse CI gaps on security/privacy-choices/source-policy** | Perf regressions on remaining compliance URLs undetected | ✅ CI adds 3 indexable routes |
+| 1 | **Lighthouse CI gaps on security/source-policy** | Perf regressions on remaining compliance URLs undetected | ✅ CI adds 2 indexable routes (`/privacy-choices/` excluded — noindex) |
 | 2 | **PWA missing trust/editorial shells** | Installed users lose about/sources/authors offline | ✅ `ib-v21` precache (5 routes) |
 | 3 | **Offline recovery omits best/brands** | PWA users cannot discover buying guides or brand hubs offline | ✅ Offline sidebar adds Best-of + Brands |
 | 4 | **Offline recovery omits legal cluster** | Policy pages unreachable from offline fallback | ✅ Offline sidebar adds Privacy link |
