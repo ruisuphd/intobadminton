@@ -45,6 +45,13 @@
       "description": "Equipment notes from club play",
       "url": "/review/",
       "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Guides",
+      "short_name": "Guides",
+      "description": "Evergreen equipment and technique guides",
+      "url": "/guides/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
     }
   ],
   "icons": [

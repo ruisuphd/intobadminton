@@ -28,6 +28,11 @@ const OFFLINE_LINKS = [
     label: "Reviews",
     description: "Precached index — open articles you visited before.",
   },
+  {
+    href: "/guides/",
+    label: "Guides",
+    description: "Precached hub — open guides you visited before.",
+  },
 ] as const;
 
 export default function OfflinePage() {

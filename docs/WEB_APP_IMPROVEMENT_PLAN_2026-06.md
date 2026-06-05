@@ -106,7 +106,11 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
 
-### Next (Sprint 12+)
+### Sprint 12 — This PR (`cursor/web-app-improvement-plan-a467`)
+
+- PWA **`ib-v6`** precaches `/guides/`; Guides manifest shortcut
+- `/offline/` recovery link to guides hub; Lighthouse CI for `/offline/` + `/guides/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
 ### Sprint 6–7 — Shipped (main)
 

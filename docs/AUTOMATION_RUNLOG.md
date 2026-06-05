@@ -17,6 +17,14 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ---
 
+## 2026-06-05 — Sprint 11–12 web app (PR #154, branch `cursor/web-app-improvement-plan-a467`)
+
+**Scope:** Sprint 11 — PWA `ib-v5` (`/review/`, `/offline/`), review map 91%, reactions Pages env. Sprint 12 — `ib-v6` `/guides/`, Guides shortcut, Lighthouse offline/guides URLs.
+
+**Verify:** `npm test`, `npm run build`, `npx playwright test e2e/pwa-offline-smoke.spec.ts`.
+
+---
+
 ## 2026-06-05 — Sprint 10 web app (`cursor/web-app-improvement-plan-0d45`)
 
 **Scope:** PWA `ib-v4` (`/search/`, `/saved/`), review map 83% (121/146), HowTo on 4 guides, reactions deploy workflow, `crux-template.csv`.
