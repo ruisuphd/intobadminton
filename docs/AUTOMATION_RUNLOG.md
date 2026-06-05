@@ -2,39 +2,34 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-05 — PR #114 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-772c`)
+## 2026-06-05 — PR #114 `ready_for_review` (web app Phase D, `cursor/web-app-improvement-plan-11b6`)
 
-**Trigger:** GitHub pull request #114 (`ready_for_review`) — Web app Phase D (`cursor/web-app-improvement-plan-11b6`). Full Chinese-review translation workflow (check → translate → 10-pass verify → rename → import → web-app update) ran in parallel on this branch.
+**Trigger:** GitHub pull request #114 — competitive audit, Phase D execution, merge `main`, CI fixes. Chinese-review translation workflow ran in parallel on the same PR; no `blogs/` drop.
 
-### Blog source check
+### Phase D deliverables
+
+| Item | Result |
+| --- | --- |
+| Review→product map | **80%** (117/146); `scripts/suggest-review-product-map.mjs` |
+| GSC/CrUX baseline runbook | `docs/baselines/README.md` |
+| Merge `main` | Sprint 5–6 homepage perf, `GuideTocAnchor`, catalog filters |
+| Lighthouse | No `/` in CI URL set (use `scripts/lighthouse-baseline.mjs`); `season-refresh` not `glossary` |
+
+### Blog source check (translation parallel)
 
 | Check | Result |
 | --- | --- |
-| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
-| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
-| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
-| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift |
-| New translations this run | **None** |
+| `blogs/` drop | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| New translations | **None** |
 
-### Verification (no content changes)
+### Verification
 
-- `npm test` — 209 passed
-- `npm run blog:validate` — 20/20 passes, 0 issues
-
-### Translation / import
-
-Not performed — no `blogs/` drop. Re-run after syncing:
-
-```bash
-npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
-CURSOR_AGENT=1 npm run blog:check
-# translate (Chinese above, ## English Translation below) → rename to English → map slug
-npm run blog:import && npm run blog:validate
-```
+- `npm test` — 245 passed
+- `npm run build` + postbuild SEO audit — pass
 
 ### Merge status
 
-Runlog-only PR #131; merge when CI green. No review content to import until the private drop is synced into the workspace.
+Merge when CI green.
 
 ---
 
