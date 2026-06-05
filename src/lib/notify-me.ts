@@ -66,3 +66,7 @@ export function setNotifyMeIntent(productId: string, email: string): NotifyMeInt
 export function clearNotifyMeIntent(productId: string) {
   saveAll(loadAll().filter((r) => r.productId !== productId));
 }
+
+export function listNotifyMeIntents(): NotifyMeIntent[] {
+  return loadAll();
+}
