@@ -23,6 +23,24 @@ export default function WideFeetShoesGuide() {
         headline={HEADLINE}
         description={DESCRIPTION}
         breadcrumbLabel="Wide-feet shoes"
+        howToSteps={[
+          {
+            name: "Confirm you need a wide last",
+            text: "If the forefoot pinches but the heel is loose, try wide-fit models before sizing up — extra length often worsens heel slip.",
+          },
+          {
+            name: "Compare wide SKUs across brands",
+            text: "Yonex wide (e.g. 65Z Wide), Victor wide lasts, and ASICS wide options use different lasts — try more than one brand.",
+          },
+          {
+            name: "Lace for forefoot room",
+            text: "Skip the bottom eyelet or use a window lacing pattern to relieve pressure on the ball of the foot without losing heel lock.",
+          },
+          {
+            name: "Shortlist from the wide-feet best list",
+            text: "Use the wide-feet badminton shoes best-of page for models with verified wide-fit notes before ordering online.",
+          },
+        ]}
       />
       <article className="layout-band max-w-3xl space-y-6">
         <p>

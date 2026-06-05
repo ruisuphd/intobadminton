@@ -23,6 +23,24 @@ export default function DoublesPositioningGuide() {
         headline={HEADLINE}
         description={DESCRIPTION}
         breadcrumbLabel="Doubles positioning"
+        howToSteps={[
+          {
+            name: "Identify your default court zone",
+            text: "Note whether you spend more time at the net (front) or covering the rear court on attack — your zone drives balance and flex choices.",
+          },
+          {
+            name: "Match racket balance to zone",
+            text: "Front players favour head-light or even-balance frames for fast net kills; rear players often want head-heavy or stiff shafts for rear-court power.",
+          },
+          {
+            name: "Align shoes to movement pattern",
+            text: "Front players need lateral grip and low profile; rear players need cushioning for jump landings. Do not reuse running shoes.",
+          },
+          {
+            name: "Run the finder with doubles discipline",
+            text: "Use the equipment finder with discipline set to doubles so fit scores weight rear-court vs front-court signals correctly.",
+          },
+        ]}
       />
       <article className="layout-band max-w-3xl space-y-6">
         <p>

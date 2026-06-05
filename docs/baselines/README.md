@@ -9,6 +9,9 @@ Owner-run capture for Core Web Vitals and Google Search Console trends. Agents c
 3. Save as `docs/baselines/crux-YYYY-MM-DD.csv` with columns:
    `url,device,lcp_ms,inp_ms,cls,note`
 
+   Copy [`crux-template.csv`](crux-template.csv) as a starting point — it lists the
+   priority URLs with empty metric cells ready to fill from PageSpeed Insights.
+
 Priority URLs:
 
 - `https://intobadminton.com/`
