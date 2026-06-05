@@ -17,6 +17,7 @@
 | **Tennis Warehouse** | Head-to-head comparison → filtered browse | Compare-guides golden-profile CI guard ✅ (Sprint 50) |
 | **Tennis Warehouse** | Procedural education → filtered browse | Guides golden-profile CI guard ✅ (Sprint 51) |
 | **RacketGuide-style finders** | Calculator → filtered catalogue browse | Tools golden-profile CI guard ✅ (Sprint 52) |
+| **Tennis Warehouse** | Brand hubs → filtered SKU browse | Brands golden-profile CI guard ✅ (Sprint 53) |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 
 **Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews, postbuild SEO gate.
@@ -436,7 +437,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright guides smoke** — `e2e/guides-baseline-smoke.spec.ts` (catalog CTA, Keep reading shelf)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT51_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT51_2026-06.md)
 
-### Sprint 52 — This branch
+### Sprint 52 — Shipped (PR #200)
 
 - **Tools golden profiles** — `docs/baselines/tools-queries.json` (5 slug + catalog exit + finder CTA expectations)
 - **Tools regression guard** — `src/lib/tools-baseline.ts` + `npm run lint:tools-baseline`
@@ -444,9 +445,18 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright tools smoke** — `e2e/tools-baseline-smoke.spec.ts` (catalog CTA, finder exit)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT52_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT52_2026-06.md)
 
-### Next (Sprint 53+)
+### Sprint 53 — This branch
+
+- **Brands golden profiles** — `docs/baselines/brands-queries.json` (8 slug + catalog exit + finder CTA expectations)
+- **Brands regression guard** — `src/lib/brands-baseline.ts` + `npm run lint:brands-baseline`
+- **Extended editorial command** — `lint:editorial-baselines` now includes brands guard
+- **Playwright brands smoke** — `e2e/brands-baseline-smoke.spec.ts` (catalog CTA, finder exit, Keep reading on hub)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT53_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT53_2026-06.md)
+
+### Next (Sprint 54+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
+- Extend `guides-queries.json` with 5 missing Lighthouse slugs; extend `best-queries.json`; review hub golden profile
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
 

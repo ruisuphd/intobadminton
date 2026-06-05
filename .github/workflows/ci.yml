@@ -56,6 +56,8 @@ jobs:
         run: npm run lint:guides-baseline
       - name: Tools golden-profile guard
         run: npm run lint:tools-baseline
+      - name: Brands golden-profile guard
+        run: npm run lint:brands-baseline
       - name: Build
         run: npm run build
         env:

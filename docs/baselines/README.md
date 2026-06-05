@@ -20,7 +20,21 @@ Refresh review→catalogue map and PDP regression layers in one operator command
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, and `lint:tools-baseline`.
+Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, `lint:tools-baseline`, and `lint:brands-baseline`.
+
+## Brands (golden profiles)
+
+Committed `/brands/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves on the hub, and catalogue CTA label wiring:
+
+- [`brands-queries.json`](brands-queries.json) — Lighthouse brands hub, Yonex, Victor, Li-Ning, Anta, Kawasaki, Kumpoo, Bonny.
+
+Validate brand catalog parity (runs in CI after tools guard):
+
+```bash
+npm run lint:brands-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/brands-baseline-smoke.spec.ts`) — direct navigation to committed brand URLs with catalog CTA and finder exit.
 
 ## Tools (golden profiles)
 
