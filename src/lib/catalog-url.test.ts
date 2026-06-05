@@ -3,6 +3,8 @@ import {
   catalogHrefFromBestSlug,
   catalogHrefFromBrand,
   catalogHrefFromCompareSlug,
+  catalogCtaLabelFromGuideSlug,
+  catalogHrefFromGuideSlug,
   catalogHrefFromKeywordQuery,
   catalogUrlFromState,
   parseCatalogSearchParams,
@@ -120,5 +122,34 @@ describe("catalog-url", () => {
       "/catalog/?cat=shoes&brand=Yonex"
     );
     expect(catalogHrefFromCompareSlug("unknown-slug")).toBe("/catalog/");
+  });
+
+  it("builds guide slug catalog hrefs with matching filters", () => {
+    expect(catalogHrefFromGuideSlug("string-tension")).toBe(
+      "/catalog/?cat=string"
+    );
+    expect(catalogHrefFromGuideSlug("badminton-shoes-vs-running-shoes")).toBe(
+      "/catalog/?cat=shoes"
+    );
+    expect(catalogHrefFromGuideSlug("racket-balance")).toBe(
+      "/catalog/?cat=racket"
+    );
+    expect(catalogHrefFromGuideSlug("season-refresh")).toBe("/catalog/");
+    expect(catalogHrefFromGuideSlug("unknown-slug")).toBe("/catalog/");
+  });
+
+  it("labels guide catalog CTAs by category", () => {
+    expect(catalogCtaLabelFromGuideSlug("string-tension")).toBe(
+      "Browse strings in catalog"
+    );
+    expect(catalogCtaLabelFromGuideSlug("badminton-shoes-vs-running-shoes")).toBe(
+      "Browse shoes in catalog"
+    );
+    expect(catalogCtaLabelFromGuideSlug("racket-balance")).toBe(
+      "Browse rackets in catalog"
+    );
+    expect(catalogCtaLabelFromGuideSlug("unknown-slug")).toBe(
+      "Browse matching catalog"
+    );
   });
 });
