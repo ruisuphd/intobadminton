@@ -10,7 +10,21 @@ Refresh discovery, finder scoring, and results share URL regression layers in on
 npm run lint:product-funnel-baselines
 ```
 
-Runs `lint:discovery-baselines`, `lint:finder-baseline`, and `lint:results-url-baseline` sequentially.
+Runs `lint:discovery-baselines`, `lint:finder-baseline`, `lint:results-url-baseline`, and `lint:compare-baseline` sequentially.
+
+## Compare share URLs (golden profiles)
+
+Committed sharable `/compare/?p=id1,id2` paths that must round-trip through URL serialisation to valid catalog rows with enough spec rows to render:
+
+- [`compare-share-queries.json`](compare-share-queries.json) — flagship racket duel, club doubles top pair, budget beginner pair, wide-foot shoes.
+
+Validate compare URL round-trip + catalog resolution (runs in CI after results URL guard):
+
+```bash
+npm run lint:compare-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/compare-baseline-smoke.spec.ts`) — direct navigation to committed compare share URLs.
 
 ## Results share URLs (golden profiles)
 

@@ -42,6 +42,8 @@ jobs:
         run: npm run lint:finder-baseline
       - name: Results share URL guard
         run: npm run lint:results-url-baseline
+      - name: Compare share URL guard
+        run: npm run lint:compare-baseline
       - name: Build
         run: npm run build
         env:

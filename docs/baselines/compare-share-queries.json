@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "queries": [
+    {
+      "id": "flagship-rackets-duel",
+      "productIds": ["yy-nanoflare-1000z", "yy-astrox-100zz"],
+      "expectSameCategory": true,
+      "minCompareFields": 6,
+      "e2e": true,
+      "note": "Headline speed vs power flagship compare share URL"
+    },
+    {
+      "id": "club-doubles-top-pair",
+      "finderProfileId": "club-doubles-racket",
+      "topFromFinder": 2,
+      "expectSameCategory": true,
+      "e2e": true,
+      "note": "Top two club doubles picks round-trip through compare share URL"
+    },
+    {
+      "id": "budget-beginner-pair",
+      "finderProfileId": "budget-beginner-racket",
+      "topFromFinder": 2,
+      "expectSameCategory": true,
+      "note": "Budget beginner shortlist survives compare URL serialisation"
+    },
+    {
+      "id": "wide-foot-shoes-pair",
+      "productIds": ["yy-power-cushion-65z-wide", "vic-p9200"],
+      "expectSameCategory": true,
+      "minCompareFields": 5,
+      "note": "Wide-foot shoe decision compare share URL"
+    }
+  ]
+}

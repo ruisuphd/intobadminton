@@ -1,6 +1,16 @@
 /** Max products in the compare tray — must match ProfileContext. */
 export const COMPARE_SHARE_MAX = 3;
 
+/** Build a sharable `/compare/?p=` path from product ids. */
+export function buildCompareSharePath(productIds: string[]): string {
+  const ids = productIds
+    .map((id) => id.trim())
+    .filter((id) => id.length > 0)
+    .slice(0, COMPARE_SHARE_MAX);
+  if (ids.length === 0) return "/compare/";
+  return `/compare/?p=${encodeURIComponent(ids.join(","))}`;
+}
+
 /**
  * Parse `?p=id1,id2` from a compare share URL.
  * Returns null when not on `/compare` or when `p` is missing/invalid.

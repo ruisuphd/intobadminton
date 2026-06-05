@@ -30,6 +30,7 @@
     "lint:discovery-baselines": "node scripts/discovery-baselines.mjs",
     "lint:finder-baseline": "node scripts/finder-baseline.mjs",
     "lint:results-url-baseline": "node scripts/results-url-baseline.mjs",
+    "lint:compare-baseline": "node scripts/compare-baseline.mjs",
     "lint:product-funnel-baselines": "node scripts/product-funnel-baselines.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
