@@ -54,8 +54,6 @@ npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton
 Re-run after `npm run blog:sync` with the Desktop path or `BLOGS_DIR`.
 
 ---
->>>>>>> origin/main
-
 ## 2026-06-04 — Sprint 4 web app (branch `cursor/web-app-improvement-plan-3a42`, PR #115)
 
 **Trigger:** Cloud agent — audit → plan → execute (commerce CTAs, OG metadata, RSS, compare parity).
