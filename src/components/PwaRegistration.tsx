@@ -38,13 +38,13 @@ export function PwaRegistration() {
       });
     };
 
-    if ("requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(register, { timeout: 4000 });
-      return () => window.cancelIdleCallback(id);
+    if (typeof requestIdleCallback === "function") {
+      const id = requestIdleCallback(register, { timeout: 4000 });
+      return () => cancelIdleCallback(id);
     }
 
-    const timer = window.setTimeout(register, 1);
-    return () => window.clearTimeout(timer);
+    const timer = setTimeout(register, 1);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
