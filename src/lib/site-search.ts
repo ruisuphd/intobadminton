@@ -1,9 +1,26 @@
-import { blogArticles } from "@/lib/blog";
+import { blogArticles, type BlogArticle } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
 import { COMPARE_GUIDES } from "@/lib/compare-guides";
 import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 import { tokenMatchesBlob } from "@/lib/search-fuzzy";
+
+const REVIEW_EXCERPT_MAX_CHARS = 400;
+
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/** Plain-text excerpt from review sections for search indexing (dek-only misses body terms). */
+export function reviewSearchExcerpt(
+  article: BlogArticle,
+  maxLen = REVIEW_EXCERPT_MAX_CHARS
+): string {
+  const plain = stripHtml(
+    article.sections.map((section) => `${section.heading} ${section.body}`).join(" ")
+  );
+  return plain.slice(0, maxLen);
+}
 
 export type SearchEntryKind =
   | "review"
@@ -313,7 +330,7 @@ function reviewEntries(): SearchEntry[] {
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
     summary: article.dek ?? "",
-    keywords: [article.slug.replace(/-/g, " ")],
+    keywords: [article.slug.replace(/-/g, " "), reviewSearchExcerpt(article)],
   }));
 }
 
