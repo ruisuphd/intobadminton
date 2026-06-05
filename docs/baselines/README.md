@@ -32,7 +32,24 @@ Local parity with GitHub Actions:
 
 ```bash
 npm run build
-npx @lhci/cli autorun
+npx -y serve@latest out -l 4173 &
+sleep 2
+npm run lint:lighthouse
+npm run lint:lighthouse:baseline
 ```
 
-Config: [`lighthouserc.json`](../../lighthouserc.json).
+Configs:
+
+- Full CI URL set (78 routes): [`lighthouserc.json`](../../lighthouserc.json)
+- CrUX-priority baseline subset (11 routes): [`lighthouserc-baseline.json`](../../lighthouserc-baseline.json)
+
+Refresh the committed baseline after intentional perf work:
+
+```bash
+npm run build
+npx -y serve@latest out -l 4173 &
+sleep 2
+npm run capture:lighthouse:baseline
+```
+
+Committed scores: [`lighthouse-scores.json`](lighthouse-scores.json).

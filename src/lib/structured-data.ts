@@ -1,4 +1,4 @@
-import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { companyInfo, founderSameAs, organizationJsonLd } from "@/lib/company";
 import {
   ratingDatePublished,
   type EditorialRating,
@@ -69,6 +69,7 @@ export const founderPersonJsonLd = {
   "@id": PERSON_ID,
   name: companyInfo.founderName,
   url: companyInfo.founderWebsite,
+  ...(founderSameAs.length > 0 ? { sameAs: founderSameAs } : {}),
   description: companyInfo.founderDescription,
   jobTitle: "Founder, IntoBadminton",
   worksFor: { "@id": organizationJsonLd["@id"] },

@@ -1,5 +1,73 @@
 {
   "capturedAt": "2026-06-05",
-  "note": "Placeholder baseline — run `node scripts/lighthouse-baseline.mjs capture` after build to refresh.",
-  "urls": {}
+  "urls": {
+    "http://localhost:4173/index.html": {
+      "performance": 0.99,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/quiz/index.html": {
+      "performance": 0.99,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/beginner-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/doubles-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/shoes/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/review/yonex-arcsaber-7-pro-review/index.html": {
+      "performance": 0.99,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare-guides/yonex-astrox-vs-nanoflare/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare-guides/yonex-victor-li-ning/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/guides/glossary/index.html": {
+      "performance": 1,
+      "accessibility": 0.97,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/guides/equipment-authenticity/index.html": {
+      "performance": 0.99,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/brands/bonny/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  "source": "lighthouserc-baseline.json",
+  "note": "CrUX-priority URLs — refresh with npm run capture:lighthouse:baseline after build."
 }

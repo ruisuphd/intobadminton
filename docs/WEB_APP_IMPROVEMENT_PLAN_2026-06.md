@@ -308,18 +308,26 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2E offline navigation for best-of, compare-guide, and procedural guide shells
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT35_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT35_2026-06.md)
 
-### Sprint 36 — This branch
+### Sprint 36 — Shipped (PR #184)
 
 - PWA **`ib-v26`** offline shell — full `crux-template.csv` recovery deep-links (doubles, shoes, brand compare, glossary, authenticity, Bonny)
 - **`crux-template.csv`** ↔ `CRUX_OFFLINE_RECOVERY_PATHS` parity unit test
 - E2E offline navigation for remaining CrUX field-data URLs
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT36_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT36_2026-06.md)
 
-### Next (Sprint 37+)
+### Sprint 37 — This branch
 
-- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`; capture `lighthouse-scores.json`
+- **Lighthouse baseline** — captured CrUX-priority scores in `docs/baselines/lighthouse-scores.json`
+- **`lighthouserc-baseline.json`** — 11-url subset aligned with `crux-template.csv`
+- CI **`lint:lighthouse:baseline`** regression guard after full LHCI
+- Reactions worker scaffold tests; `founderPersonJsonLd` conditional `sameAs`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT37_2026-06.md)
+
+### Next (Sprint 38+)
+
+- Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` LCP/INP/CLS from PageSpeed Insights
 - Original photos on top commercial URLs
-- YouTube `sameAs` on author entity (after channel claim)
+- Uncomment YouTube `sameAs` after channel claim
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
