@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { CompareConceptChrome } from "@/components/CompareConceptChrome";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
+import { catalogHrefFromCompareSlug } from "@/lib/catalog-url";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
 import { articleJsonLd } from "@/lib/structured-data";
@@ -155,9 +156,17 @@ export default function YonexVictorLiningPage() {
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Our finder ranks rackets across all three brands against your level, discipline, style, body, and budget. The fit score is the score — brand loyalty is irrelevant.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Run the cross-brand finder
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Run the cross-brand finder
+            </Link>
+            <Link
+              href={catalogHrefFromCompareSlug("yonex-victor-li-ning")}
+              className="btn-secondary"
+            >
+              Browse matching catalog
+            </Link>
+          </div>
         </div>
       </article>
     </CompareConceptChrome>

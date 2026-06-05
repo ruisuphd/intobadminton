@@ -7,6 +7,7 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
+import { catalogHrefFromCompareSlug } from "@/lib/catalog-url";
 import { companyInfo } from "@/lib/company";
 import { reviewPath } from "@/lib/review-pages";
 import { relatedReadingForPath } from "@/lib/related-content";
@@ -295,9 +296,17 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
             everything else in the catalogue — against your level, role, body,
             and budget.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Start the finder
+            </Link>
+            <Link
+              href={catalogHrefFromCompareSlug(config.slug)}
+              className="btn-secondary"
+            >
+              Browse matching catalog
+            </Link>
+          </div>
         </section>
 
         <RelatedReadingShelf items={related} />

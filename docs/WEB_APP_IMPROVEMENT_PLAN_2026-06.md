@@ -201,7 +201,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/anta/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT21_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT21_2026-06.md)
 
-### Sprint 22 — This branch
+### Sprint 22 — Shipped (PR #170)
 
 - Best-of landings → **filtered catalog** CTA (`catalogHrefFromBestSlug`)
 - `/best/` hub **Browse full catalog** secondary CTA
@@ -209,7 +209,16 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/kawasaki/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT22_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT22_2026-06.md)
 
-### Next (Sprint 23+)
+### Sprint 23 — This branch
+
+- Compare-guide landings → **filtered catalog** CTA (`catalogHrefFromCompareSlug`)
+- `/compare-guides/` hub **Browse full catalog** secondary CTA
+- Concept compare pages (3) gain catalog CTAs
+- PWA **`ib-v13`** precaches `yonex-astrox-vs-nanoflare` compare shell
+- Lighthouse CI includes `/compare-guides/astrox-99-pro-vs-astrox-100zz/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT23_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT23_2026-06.md)
+
+### Next (Sprint 24+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs

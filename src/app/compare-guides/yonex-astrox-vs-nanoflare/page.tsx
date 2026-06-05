@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { CompareConceptChrome } from "@/components/CompareConceptChrome";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
+import { catalogHrefFromCompareSlug } from "@/lib/catalog-url";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
 import { articleJsonLd } from "@/lib/structured-data";
@@ -144,12 +145,17 @@ export default function AstroxVsNanoflarePage() {
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Run the finder with your level, role, and budget. We will rank Astrox, Nanoflare, and the rest of the catalogue against your actual play pattern.
           </p>
-          <Link
-            href="/quiz/"
-            className="btn-primary mt-5"
-          >
-            Compare them through my profile
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Compare them through my profile
+            </Link>
+            <Link
+              href={catalogHrefFromCompareSlug("yonex-astrox-vs-nanoflare")}
+              className="btn-secondary"
+            >
+              Browse Yonex in catalog
+            </Link>
+          </div>
         </div>
       </article>
     </CompareConceptChrome>
