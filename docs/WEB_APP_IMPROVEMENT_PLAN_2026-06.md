@@ -367,7 +367,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Reactions deploy runbook** — `workers/reactions/README.md` checklist
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT43_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT43_2026-06.md)
 
-### Sprint 44 — This branch
+### Sprint 44 — Shipped (PR #192)
 
 - **Finder golden profiles** — `docs/baselines/finder-profile-queries.json` (6 scoring-engine expectations)
 - **Finder regression guard** — `src/lib/finder-baseline.ts` + `npm run lint:finder-baseline`
@@ -375,7 +375,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright finder smoke** — `e2e/finder-baseline-smoke.spec.ts` (quiz → results shortlist)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT44_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT44_2026-06.md)
 
-### Next (Sprint 45+)
+### Sprint 45 — This branch
+
+- **Results share URL golden profiles** — `docs/baselines/results-url-queries.json` (4 URL round-trip expectations)
+- **Results URL regression guard** — `src/lib/results-url-baseline.ts` + `npm run lint:results-url-baseline`
+- **Unified product funnel command** — `npm run lint:product-funnel-baselines` (discovery + finder + results URL)
+- **Playwright share URL smoke** — `e2e/results-url-baseline-smoke.spec.ts` (direct `/results/?` navigation)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT45_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT45_2026-06.md)
+
+### Next (Sprint 46+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
