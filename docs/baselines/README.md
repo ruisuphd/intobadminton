@@ -20,7 +20,21 @@ Refresh review→catalogue map and PDP regression layers in one operator command
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline` and `lint:pdp-baseline`.
+Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, and `lint:best-baseline`.
+
+## Best-of buying guides (golden profiles)
+
+Committed `/best/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, and mapped pick wiring:
+
+- [`best-queries.json`](best-queries.json) — Lighthouse beginner/doubles/shoes, defensive top pick, strings, budget under-100.
+
+Validate best-of catalog parity (runs in CI after PDP guard):
+
+```bash
+npm run lint:best-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/best-baseline-smoke.spec.ts`) — direct navigation to committed best-of URLs with comparison table, Keep reading shelf, and catalog CTA.
 
 ## Catalogue PDP (golden profiles)
 

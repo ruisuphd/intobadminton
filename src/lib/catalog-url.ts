@@ -153,6 +153,11 @@ const BEST_SLUG_CATALOG_FILTERS: Record<string, BestSlugCatalogFilters> = {
   strings: { category: "string" },
 };
 
+/** Slugs with committed catalog filter wiring on `/best/*` pages. */
+export function bestCatalogFilterSlugs(): string[] {
+  return Object.keys(BEST_SLUG_CATALOG_FILTERS);
+}
+
 /** Filtered catalog browse — used from `/best/*` buying guides. */
 export function catalogHrefFromBestSlug(slug: string): string {
   const filters = BEST_SLUG_CATALOG_FILTERS[slug.trim()];
