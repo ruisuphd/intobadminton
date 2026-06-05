@@ -92,6 +92,30 @@ test("procedural guide links to filtered catalog browse", async ({ page }) => {
   await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=string");
 });
 
+test("wide-feet shoes guide links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/guides/wide-feet-badminton-shoes/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse shoes in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=shoes");
+});
+
+test("string tension calculator links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/tools/string-tension-calculator/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse strings in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=string");
+});
+
 test("guides hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/guides/");
 

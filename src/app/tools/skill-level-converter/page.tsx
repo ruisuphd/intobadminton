@@ -3,6 +3,7 @@ import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { ToolCatalogCta } from "@/components/ToolCatalogCta";
 import { SkillLevelConverter } from "./SkillLevelConverter";
 
 export const metadata: Metadata = {
@@ -97,6 +98,8 @@ export default function SkillLevelConverterPage() {
             .
           </p>
         </section>
+
+        <ToolCatalogCta slug="skill-level-converter" />
       </div>
     </main>
   );
