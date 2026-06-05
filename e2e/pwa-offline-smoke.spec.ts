@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v20"))) return false;
-      const cache = await caches.open("ib-v20-static");
+      if (!keys.some((key) => key.startsWith("ib-v21"))) return false;
+      const cache = await caches.open("ib-v21-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v20-static");
+    const cache = await caches.open("ib-v21-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -93,6 +93,11 @@ test("service worker precaches search, review, and offline shells", async ({
     "/cookies/",
     "/security/",
     "/privacy-choices/",
+    "/about/",
+    "/sources/",
+    "/source-policy/",
+    "/authors/",
+    "/authors/rui-su/",
   ]) {
     expect(
       cachedPaths.some((entry) => entry === path || entry.startsWith(path)),
@@ -129,4 +134,13 @@ test("manifest exposes Reviews and Guides shortcuts", async ({ page }) => {
 test("offline fallback lists guides recovery link", async ({ page }) => {
   await page.goto("/offline/");
   await expect(page.locator('a[href="/guides/"]').first()).toBeVisible();
+});
+
+test("offline fallback lists best-of, brands, and privacy recovery links", async ({
+  page,
+}) => {
+  await page.goto("/offline/");
+  await expect(page.locator('a[href="/best/"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/brands/"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/privacy/"]').first()).toBeVisible();
 });

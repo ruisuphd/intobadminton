@@ -54,9 +54,24 @@ const OFFLINE_LINKS = [
     description: "Precached — common finder and methodology questions.",
   },
   {
+    href: "/best/",
+    label: "Best-of guides",
+    description: "Precached — buying guides for rackets, shoes, and strings.",
+  },
+  {
+    href: "/brands/",
+    label: "Brands",
+    description: "Precached — Yonex, Victor, Li-Ning, and more brand hubs.",
+  },
+  {
     href: "/compare-guides/",
     label: "Compare guides",
     description: "Precached hub — open comparisons you visited before.",
+  },
+  {
+    href: "/privacy/",
+    label: "Privacy policy",
+    description: "Precached — how we handle data and consent.",
   },
 ] as const;
 
