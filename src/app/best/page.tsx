@@ -57,6 +57,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Placement-first frames for doubles net play and singles rally craft.",
       },
       {
+        href: "/best/all-round-rackets/",
+        title: "Best all-round rackets",
+        dek: "Even-balance frames that do not punish wrong role choices in doubles.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
@@ -100,6 +105,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/shoes/",
         title: "Best badminton shoes",
         dek: "Picks by fit width, stability, and cushioning — the shoe matters more than the racket for most amateurs.",
+      },
+      {
+        href: "/best/wide-feet-badminton-shoes/",
+        title: "Best wide-feet badminton shoes",
+        dek: "Six shoes with wide or wide-available lasts — dedicated wide SKUs and 2E/3E variants.",
       },
       {
         href: "/best/strings/",
