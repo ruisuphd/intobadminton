@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { CompareConceptChrome } from "@/components/CompareConceptChrome";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { JsonLd } from "@/components/JsonLd";
+import { catalogHrefFromCompareSlug } from "@/lib/catalog-url";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
 import { articleJsonLd } from "@/lib/structured-data";
@@ -132,9 +133,17 @@ export default function BadmintonVsTennisShoesPage() {
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Six badminton shoes ranked by fit width, stability, and cushioning — for narrow, medium, and wide feet.
           </p>
-          <Link href="/best/shoes/" className="btn-primary mt-5">
-            Best badminton shoes
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <Link href="/best/shoes/" className="btn-primary">
+              Best badminton shoes
+            </Link>
+            <Link
+              href={catalogHrefFromCompareSlug("badminton-vs-tennis-shoes")}
+              className="btn-secondary"
+            >
+              Browse shoes in catalog
+            </Link>
+          </div>
         </div>
 
         <p className="text-sm text-[var(--color-muted)]">

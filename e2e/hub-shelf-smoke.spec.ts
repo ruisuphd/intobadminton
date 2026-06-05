@@ -12,6 +12,44 @@ test("compare-guides hub shows Keep reading shelf", async ({ page }) => {
   ).toBeVisible();
 });
 
+test("compare-guides hub links to full catalog browse", async ({ page }) => {
+  await page.goto("/compare-guides/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("product compare guide links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/compare-guides/astrox-99-pro-vs-astrox-100zz/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse matching catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute(
+    "href",
+    "/catalog/?cat=racket&brand=Yonex"
+  );
+});
+
+test("concept compare guide links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/compare-guides/yonex-astrox-vs-nanoflare/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse yonex in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute(
+    "href",
+    "/catalog/?cat=racket&brand=Yonex"
+  );
+});
+
 test("guides hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/guides/");
 

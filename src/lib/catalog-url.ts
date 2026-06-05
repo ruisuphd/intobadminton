@@ -161,3 +161,39 @@ export function catalogHrefFromBestSlug(slug: string): string {
     ...filters,
   });
 }
+
+/**
+ * Compare-guide slug → shareable catalog filters (retailer-style comparison → browse).
+ * Unmapped slugs fall back to the full catalog index.
+ */
+type CompareSlugCatalogFilters = Partial<
+  Pick<CatalogUrlState, "category" | "brand">
+>;
+
+const COMPARE_SLUG_CATALOG_FILTERS: Record<string, CompareSlugCatalogFilters> = {
+  "yonex-astrox-vs-nanoflare": { category: "racket", brand: "Yonex" },
+  "yonex-victor-li-ning": { category: "racket" },
+  "astrox-77-pro-vs-88s-pro": { category: "racket", brand: "Yonex" },
+  "badminton-vs-tennis-shoes": { category: "shoes" },
+  "astrox-99-pro-vs-astrox-100zz": { category: "racket", brand: "Yonex" },
+  "astrox-99-pro-vs-halbertec-9000-power": { category: "racket" },
+  "astrox-88d-pro-vs-axforce-90-new": { category: "racket" },
+  "halbertec-9000-power-vs-axforce-100-gen-2": {
+    category: "racket",
+    brand: "Li-Ning",
+  },
+  "bladex-800-speed-vs-nanoflare-1000z": { category: "racket" },
+  "nanoflare-1000z-vs-auraspeed-99": { category: "racket" },
+  "nanoflare-800-pro-vs-auraspeed-hs-plus": { category: "racket" },
+  "yonex-65z4-vs-eclipsion-z3": { category: "shoes", brand: "Yonex" },
+};
+
+/** Filtered catalog browse — used from `/compare-guides/*` comparisons. */
+export function catalogHrefFromCompareSlug(slug: string): string {
+  const filters = COMPARE_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters) return "/catalog/";
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    ...filters,
+  });
+}

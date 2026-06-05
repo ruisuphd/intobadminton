@@ -43,7 +43,8 @@
         "http://localhost:4173/best/index.html",
         "http://localhost:4173/brands/index.html",
         "http://localhost:4173/brands/anta/index.html",
-        "http://localhost:4173/brands/kawasaki/index.html"
+        "http://localhost:4173/brands/kawasaki/index.html",
+        "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   catalogHrefFromBestSlug,
   catalogHrefFromBrand,
+  catalogHrefFromCompareSlug,
   catalogHrefFromKeywordQuery,
   catalogUrlFromState,
   parseCatalogSearchParams,
@@ -106,5 +107,18 @@ describe("catalog-url", () => {
     );
     expect(catalogHrefFromBestSlug("strings")).toBe("/catalog/?cat=string");
     expect(catalogHrefFromBestSlug("unknown-slug")).toBe("/catalog/");
+  });
+
+  it("builds compare-guide slug catalog hrefs with matching filters", () => {
+    expect(catalogHrefFromCompareSlug("yonex-astrox-vs-nanoflare")).toBe(
+      "/catalog/?cat=racket&brand=Yonex"
+    );
+    expect(catalogHrefFromCompareSlug("badminton-vs-tennis-shoes")).toBe(
+      "/catalog/?cat=shoes"
+    );
+    expect(catalogHrefFromCompareSlug("yonex-65z4-vs-eclipsion-z3")).toBe(
+      "/catalog/?cat=shoes&brand=Yonex"
+    );
+    expect(catalogHrefFromCompareSlug("unknown-slug")).toBe("/catalog/");
   });
 });
