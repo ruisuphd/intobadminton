@@ -27,7 +27,7 @@
 |---|-----|--------|--------|
 | 1 | **CI lint failure** on HelpfulReaction (`set-state-in-effect`) | Blocks green builds on `main` | ✅ Hydration-safe read after mount |
 | 2 | **Review product map at 62%** — Product JSON-LD missing on ~55 URLs | Rich results + E-E-A-T | ✅ +24 mappings → 79% (115/146) |
-| 3 | **Role matrix gap: balanced / all-round** | Long-tail SEO vs RacketGuide | ✅ `/best/balanced-rackets/` |
+| 3 | **Role matrix** — all-round landings on main | Long-tail SEO vs RacketGuide | ✅ (main) `/best/all-round-rackets/` + wide-feet shoes |
 | 4 | **Lighthouse baseline not wired to npm** | CWV guardrail friction | ✅ `lint:lighthouse:baseline` + `capture:lighthouse:baseline` |
 | 5 | **HelpfulReaction remount on route change** | Stale vote state on client nav | ✅ `key={contentId}` on footer |
 
@@ -37,11 +37,9 @@
 
 | Item | Files |
 |------|-------|
-| HelpfulReaction lint fix | `src/components/HelpfulReaction.tsx`, `ArticleEngagementFooter.tsx` |
+| HelpfulReaction lint fix | `src/components/HelpfulReaction.tsx`, engagement footers |
 | Product map expansion | `src/data/blog-review-product-map.json` (+24 slugs) |
-| Balanced rackets landing | `src/app/best/balanced-rackets/page.tsx` |
-| Discovery wiring | `best/page.tsx`, `site-search.ts`, `editorial-meta.ts`, `LocalizedHome.tsx`, `lighthouserc.json` |
-| npm scripts | `package.json` |
+| Lighthouse baseline npm scripts | `package.json` |
 | Tests | `review-article-enrichment.test.ts` |
 
 ---
@@ -53,9 +51,9 @@
 | 1 | Gaps grounded in Sprint 6 deferrals + PR #129 CI failure | ✅ |
 | 2 | Product map entries reference existing catalogue IDs only | ✅ (verified via script) |
 | 3 | Editorial / concept articles remain unmapped (no forced Product schema) | ✅ |
-| 4 | Balanced page picks use distinct lens vs control / head-light / singles | ✅ |
-| 5 | Balanced page has ≥200 words intro + 4 FAQs | ✅ |
-| 6 | `editorial-meta`, site search, `/best/` hub, Lighthouse URLs updated | ✅ |
+| 4 | All-round page already on main — no duplicate `/best/balanced-rackets/` | ✅ |
+| 5 | Balanced vs control / head-light / singles lenses distinct on main | ✅ |
+| 6 | Product map + HelpfulReaction keys; no broken discovery entries | ✅ |
 | 7 | HelpfulReaction avoids synchronous setState on localStorage read | ✅ |
 | 8 | Unit tests pass including new enrichment case | ✅ |
 | 9 | `npm test` + `npm run lint` + `npm run build` | ✅ |

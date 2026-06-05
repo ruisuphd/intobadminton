@@ -86,14 +86,6 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
   },
   {
-    title: "Best balanced rackets",
-    href: "/best/balanced-rackets/",
-    kind: "best",
-    summary:
-      "Even-balance all-round frames for club singles, doubles, and mixed — Arcsaber 11 Pro, Astrox 77 Pro, Halbertec 7000.",
-    keywords: ["balanced", "even balance", "all round", "all-round", "club"],
-  },
-  {
     title: "Best singles rackets",
     href: "/best/singles-rackets/",
     kind: "best",
@@ -106,6 +98,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-light frames for net control, defensive recovery, and front-court speed.",
     keywords: ["head light", "head-light", "control", "net", "defensive", "nanoflare"],
+  },
+  {
+    title: "Best wide-feet badminton shoes",
+    href: "/best/wide-feet-badminton-shoes/",
+    kind: "best",
+    summary: "Court shoes with wide or wide-available lasts ranked by stability and cushioning.",
+    keywords: ["wide feet", "wide fit", "2e", "3e", "ee width", "shoes"],
+  },
+  {
+    title: "Best all-round badminton rackets",
+    href: "/best/all-round-rackets/",
+    kind: "best",
+    summary: "Even-balance frames for club doubles and players covering every court position.",
+    keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
   },
   {
     title: "Best intermediate rackets",

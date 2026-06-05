@@ -2,6 +2,21 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #118 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-fedb`)
+
+**Trigger:** GitHub pull request #118 (`ready_for_review`) — PR #92 translation cron re-run; no review content changes.
+
+| Check | Result |
+| --- | --- |
+| Desktop `blogs/` | **Not found** — `blog:sync` exit 1 |
+| `CURSOR_AGENT=1 npm run blog:check` | exit 1 |
+| `blog-slug-source-map` vs `blog-articles.json` | **146 / 146** |
+| New translations | **None** |
+
+Re-run after `npm run blog:sync` with the Desktop drop or `BLOGS_DIR`.
+
+---
+
 ## 2026-06-05 — Sprint 6 web app (branch `cursor/web-app-improvement-plan-06b6`, PR #129)
 
 **Trigger:** Cloud agent — audit → plan → execute (reactions API, singles/head-light landings, image placeholders, Lighthouse baseline script). Complements PR #134 (fuzzy search, control-rackets) already on `main`.
