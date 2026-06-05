@@ -7,6 +7,10 @@ import { ProductFitScoreRadar } from "@/components/FitScoreRadar";
 import { ProductBuyLink } from "@/components/ProductBuyLink";
 import { SaveProductButton } from "@/components/SaveProductButton";
 import { useProfile } from "@/context/ProfileContext";
+import {
+  catalogCtaLabelFromProduct,
+  catalogHrefFromProduct,
+} from "@/lib/catalog-url";
 import { profileToResultsPath } from "@/lib/profile-url";
 import {
   isFinderProfileReady,
@@ -119,7 +123,7 @@ export function ReviewProductPanel({
         </div>
       </details>
 
-      <p className="mt-4 text-sm">
+      <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
         <Link
           href={shortlistPath}
           className="font-medium text-[var(--color-accent)] hover:underline"
@@ -128,7 +132,13 @@ export function ReviewProductPanel({
             ? "See your shortlist →"
             : "See club doubles shortlist →"}
         </Link>
-      </p>
+        <Link
+          href={catalogHrefFromProduct(product)}
+          className="font-medium text-[var(--color-accent)] hover:underline"
+        >
+          {catalogCtaLabelFromProduct(product)} →
+        </Link>
+      </div>
     </aside>
   );
 }

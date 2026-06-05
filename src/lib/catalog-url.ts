@@ -1,5 +1,5 @@
 import type { BalanceCategory, WeightClass } from "@/lib/types/product";
-import type { EquipmentCategory } from "@/lib/taxonomy";
+import type { EquipmentCategory, UserProfile } from "@/lib/taxonomy";
 import {
   BALANCE_OPTIONS,
   CATEGORY_OPTIONS,
@@ -242,4 +242,80 @@ export function catalogCtaLabelFromGuideSlug(slug: string): string {
   return (
     GUIDE_CATALOG_CTA_LABELS[filters.category] ?? "Browse matching catalog"
   );
+}
+
+/**
+ * Tool slug → shareable catalog filters (retailer-style calculator → browse).
+ * Unmapped slugs fall back to the full catalog index.
+ */
+type ToolSlugCatalogFilters = Partial<
+  Pick<CatalogUrlState, "category" | "balance">
+>;
+
+const TOOL_SLUG_CATALOG_FILTERS: Record<string, ToolSlugCatalogFilters> = {
+  "string-tension-calculator": { category: "string" },
+  "skill-level-converter": { category: "racket" },
+  "racket-balance-explainer": { category: "racket" },
+  "court-diagram": {},
+  "authenticity-checker": { category: "racket" },
+};
+
+/** Filtered catalog browse — used from `/tools/*` interactive landings. */
+export function catalogHrefFromToolSlug(slug: string): string {
+  const filters = TOOL_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters) return "/catalog/";
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    ...filters,
+  });
+}
+
+/** Button label for tool → catalog CTA. */
+export function catalogCtaLabelFromToolSlug(slug: string): string {
+  const filters = TOOL_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters?.category) return "Browse matching catalog";
+  return (
+    GUIDE_CATALOG_CTA_LABELS[filters.category] ?? "Browse matching catalog"
+  );
+}
+
+function budgetMaxToPriceBand(
+  budgetMaxUsd: number | undefined
+): PriceBand | null {
+  if (budgetMaxUsd == null || !Number.isFinite(budgetMaxUsd)) return null;
+  if (budgetMaxUsd <= 100) return "under100";
+  if (budgetMaxUsd <= 150) return "under150";
+  if (budgetMaxUsd <= 200) return "under200";
+  return "200plus";
+}
+
+/** Quiz profile → shareable catalog filters — used from `/results/`. */
+export function catalogHrefFromProfile(profile: UserProfile): string {
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    category: profile.category ?? null,
+    priceBand: budgetMaxToPriceBand(profile.body.budgetMaxUsd),
+  });
+}
+
+type ProductCatalogRef = {
+  brand: string;
+  category: EquipmentCategory;
+};
+
+/** Product row → brand + category filtered catalog — used on review/PDP panels. */
+export function catalogHrefFromProduct(product: ProductCatalogRef): string {
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    category: product.category,
+    brand: product.brand.trim() || null,
+  });
+}
+
+/** Button label for product → catalog CTA. */
+export function catalogCtaLabelFromProduct(product: ProductCatalogRef): string {
+  const brand = product.brand.trim();
+  if (brand) return `Browse ${brand} in catalog`;
+  const categoryLabel = GUIDE_CATALOG_CTA_LABELS[product.category];
+  return categoryLabel ?? "Browse matching catalog";
 }

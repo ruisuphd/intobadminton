@@ -92,6 +92,30 @@ test("procedural guide links to filtered catalog browse", async ({ page }) => {
   await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=string");
 });
 
+test("wide-feet shoes guide links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/guides/wide-feet-badminton-shoes/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse shoes in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=shoes");
+});
+
+test("string tension calculator links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/tools/string-tension-calculator/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse strings in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=string");
+});
+
 test("guides hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/guides/");
 
@@ -128,4 +152,44 @@ test("review index shows Keep reading shelf", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: /best-of buying guides/i }).first()
   ).toBeVisible();
+});
+
+test("faq page links to full catalog browse", async ({ page }) => {
+  await page.goto("/faq/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("mapped review article links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse yonex in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute(
+    "href",
+    "/catalog/?cat=racket&brand=Yonex"
+  );
+});
+
+test("quiz results link to profile-filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto(
+    "/results/?level=club&disc=doubles&styles=offensive&cat=racket&budget=120&weight=75&foot=normal&tension=26&n=8"
+  );
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse matching catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute(
+    "href",
+    "/catalog/?cat=racket&price=under150"
+  );
 });

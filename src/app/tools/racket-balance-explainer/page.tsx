@@ -3,6 +3,7 @@ import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { ToolCatalogCta } from "@/components/ToolCatalogCta";
 import { RacketBalanceExplainer } from "./RacketBalanceExplainer";
 
 export const metadata: Metadata = {
@@ -87,6 +88,8 @@ export default function RacketBalanceExplainerPage() {
             for the rest of the model.
           </p>
         </section>
+
+        <ToolCatalogCta slug="racket-balance-explainer" />
       </div>
     </main>
   );

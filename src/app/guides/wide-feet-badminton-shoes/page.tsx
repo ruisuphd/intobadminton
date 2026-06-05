@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
+import { GuideCatalogCta } from "@/components/GuideCatalogCta";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
@@ -200,6 +201,8 @@ export default function WideFeetShoesGuide() {
           </Link>
           .
         </p>
+
+        <GuideCatalogCta slug="wide-feet-badminton-shoes" />
       </article>
     </main>
   );

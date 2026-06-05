@@ -34,6 +34,7 @@ import type {
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import { ShareResultsLink } from "@/components/ShareResultsLink";
 import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
+import { catalogHrefFromProfile } from "@/lib/catalog-url";
 import { relatedReadingForQuizCategory } from "@/lib/related-content";
 
 /**
@@ -272,7 +273,15 @@ function ResultsBody() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <ResultsFilterSummary profile={profile} />
-        <ShareResultsLink profile={profile} topN={topN} />
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href={catalogHrefFromProfile(profile)}
+            className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+          >
+            Browse matching catalog →
+          </Link>
+          <ShareResultsLink profile={profile} topN={topN} />
+        </div>
       </div>
       <div className="space-y-3">
         {brandOptions.length > 1 && (

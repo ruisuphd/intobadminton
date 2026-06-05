@@ -3,6 +3,7 @@ import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { ToolCatalogCta } from "@/components/ToolCatalogCta";
 import { StringTensionCalculator } from "./StringTensionCalculator";
 
 export const metadata: Metadata = {
@@ -91,6 +92,8 @@ export default function StringTensionCalculatorPage() {
             .
           </p>
         </section>
+
+        <ToolCatalogCta slug="string-tension-calculator" />
       </div>
     </main>
   );

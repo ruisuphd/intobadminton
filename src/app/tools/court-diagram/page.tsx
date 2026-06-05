@@ -3,6 +3,7 @@ import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
+import { ToolCatalogCta } from "@/components/ToolCatalogCta";
 import { CourtDiagram } from "./CourtDiagram";
 
 export const metadata: Metadata = {
@@ -90,6 +91,8 @@ export default function CourtDiagramPage() {
             <Row label="Doubles tramlines" value="0.46 m strip each side" />
           </dl>
         </section>
+
+        <ToolCatalogCta slug="court-diagram" />
       </div>
     </main>
   );
