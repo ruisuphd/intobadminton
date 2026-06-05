@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "coverage": {
+    "minCatalogFilterSlugs": 5
+  },
+  "queries": [
+    {
+      "id": "lighthouse-string-tension-calculator",
+      "slug": "string-tension-calculator",
+      "expectCatalogHref": "/catalog/?cat=string",
+      "e2e": true,
+      "expectHeadingPattern": "tension",
+      "expectCatalogLinkPattern": "browse strings in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse calculator — strings catalog exit"
+    },
+    {
+      "id": "lighthouse-skill-level-converter",
+      "slug": "skill-level-converter",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "skill-level",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse calculator — racket catalog exit"
+    },
+    {
+      "id": "lighthouse-racket-balance-explainer",
+      "slug": "racket-balance-explainer",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "balance",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse calculator — balance explainer"
+    },
+    {
+      "id": "lighthouse-authenticity-checker",
+      "slug": "authenticity-checker",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "authentic",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse HowTo tool — racket catalog exit"
+    },
+    {
+      "id": "lighthouse-court-diagram",
+      "slug": "court-diagram",
+      "expectCatalogHref": "/catalog/",
+      "note": "Reference tool — full catalog fallback"
+    }
+  ]
+}

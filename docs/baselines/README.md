@@ -20,7 +20,21 @@ Refresh review→catalogue map and PDP regression layers in one operator command
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, and `lint:guides-baseline`.
+Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, and `lint:tools-baseline`.
+
+## Tools (golden profiles)
+
+Committed `/tools/*` slugs that must resolve to valid catalog exit hrefs and catalogue CTA label wiring:
+
+- [`tools-queries.json`](tools-queries.json) — Lighthouse string tension calculator, skill-level converter, racket balance explainer, authenticity checker, court diagram.
+
+Validate tool catalog parity (runs in CI after guides guard):
+
+```bash
+npm run lint:tools-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/tools-baseline-smoke.spec.ts`) — direct navigation to committed tool URLs with catalog CTA and finder exit.
 
 ## Guides (golden profiles)
 
