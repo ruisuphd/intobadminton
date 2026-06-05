@@ -50,7 +50,7 @@ export function GuideEngagementFooter() {
   return (
     <div className="layout-band max-w-3xl pb-16">
       <SocialShare url={canonicalUrl} title={title} />
-      <HelpfulReaction contentId={contentId} />
+      <HelpfulReaction key={contentId} contentId={contentId} />
     </div>
   );
 }
