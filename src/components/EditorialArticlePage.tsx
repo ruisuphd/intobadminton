@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { RelatedPostsGrid } from "@/components/RelatedPostsGrid";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { SocialShare } from "@/components/SocialShare";
@@ -22,6 +23,7 @@ import { articlePathForSlug } from "@/lib/blog-migrations";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
+import { relatedReadingForReviewSlug } from "@/lib/related-content";
 
 function isSpecLikeHeading(heading: string) {
   return /\bspec(?:s|ifications?)?\b/i.test(heading);
@@ -51,6 +53,7 @@ export function EditorialArticlePage({
     sectionAnchorId(section.heading, index, anchorSeen)
   );
   const related = relatedArticles(blogArticles[locale], article, 3);
+  const decisionPath = relatedReadingForReviewSlug(article.slug);
   const enrichment = enrichmentForReviewArticle(slug, article);
   const tocItems = sections.map((section, index) => ({
     id: sectionIds[index] ?? sectionAnchorId(section.heading, index, new Map()),
@@ -217,6 +220,7 @@ export function EditorialArticlePage({
         </div>
 
         <RelatedPostsGrid locale={locale} articles={related} />
+        <RelatedReadingShelf items={decisionPath} />
       </article>
     </main>
   );
