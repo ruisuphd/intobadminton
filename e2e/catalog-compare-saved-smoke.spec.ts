@@ -1,5 +1,17 @@
 import { expect, test } from "@playwright/test";
 
+test("catalog product deep link highlights a row", async ({ page }) => {
+  await page.goto("/catalog/?id=yy-nanoflare-1000z");
+
+  await expect(
+    page.getByRole("heading", { name: /Equipment catalog/i })
+  ).toBeVisible();
+
+  const row = page.locator("#catalog-product-yy-nanoflare-1000z");
+  await expect(row).toBeVisible();
+  await expect(row.getByText(/Nanoflare/i).first()).toBeVisible();
+});
+
 test("catalog filters sync to URL and narrow results", async ({ page }) => {
   await page.goto("/catalog/?cat=racket&brand=Yonex");
 

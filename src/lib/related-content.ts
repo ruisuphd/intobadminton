@@ -150,6 +150,28 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Filter the full catalogue by brand, weight, and balance.",
     },
   ],
+  catalog: [
+    {
+      href: "/quiz/",
+      title: "Equipment finder quiz",
+      summary: "Five-step funnel that ranks gear for your level, style, and budget.",
+    },
+    {
+      href: "/best/beginner-rackets/",
+      title: "Best beginner rackets",
+      summary: "Editor-ranked starter frames with transparent fit scoring.",
+    },
+    {
+      href: "/compare/",
+      title: "Compare equipment",
+      summary: "Side-by-side spec table for up to four saved products.",
+    },
+    {
+      href: "/guides/racket-balance/",
+      title: "Racket balance guide",
+      summary: "Head-heavy vs even vs head-light — how balance changes your game.",
+    },
+  ],
 };
 
 const PATH_CLUSTER: Record<string, string> = {
@@ -179,6 +201,7 @@ const PATH_CLUSTER: Record<string, string> = {
   "/guides/equipment-authenticity/": "authenticity",
   "/tools/authenticity-checker/": "authenticity",
 
+  "/catalog/": "catalog",
   "/best/rackets-under-100/": "budget",
   "/best/rackets-under-150/": "budget",
 

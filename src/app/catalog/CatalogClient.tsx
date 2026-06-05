@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { trackEvent } from "@/components/Analytics";
 import { CatalogProductActions } from "@/components/CatalogProductActions";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
@@ -109,6 +109,23 @@ export function CatalogClient() {
     [catalog, filters, state.sort]
   );
 
+  const highlightId = state.productId;
+
+  const highlightProduct = useMemo(
+    () => (highlightId ? catalog.find((p) => p.id === highlightId) : undefined),
+    [catalog, highlightId]
+  );
+
+  const displayRows = useMemo(() => {
+    if (
+      !highlightProduct ||
+      filtered.some((p) => p.id === highlightProduct.id)
+    ) {
+      return filtered;
+    }
+    return [highlightProduct, ...filtered];
+  }, [filtered, highlightProduct]);
+
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
   const categories = useMemo(() => categoryOptionsFor(catalog), [catalog]);
   const priceBands = useMemo(() => priceBandOptionsFor(baseRows), [baseRows]);
@@ -117,6 +134,16 @@ export function CatalogClient() {
     [baseRows]
   );
   const balances = useMemo(() => balanceOptionsFor(baseRows), [baseRows]);
+
+  const highlightRef = useRef<HTMLLIElement | null>(null);
+  const highlightOutsideFilters =
+    highlightProduct != null &&
+    !filtered.some((p) => p.id === highlightProduct.id);
+
+  useEffect(() => {
+    if (!highlightId || !highlightRef.current) return;
+    highlightRef.current.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }, [highlightId, displayRows.length]);
 
   const showRacketFilters =
     (filters.category === "racket" || filters.category === null) &&
@@ -237,6 +264,17 @@ export function CatalogClient() {
         />
       </div>
 
+      {highlightOutsideFilters && highlightProduct && (
+        <p className="rounded-xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] px-4 py-3 text-sm text-[var(--color-muted)]">
+          Showing{" "}
+          <span className="font-medium text-[var(--text)]">
+            {highlightProduct.brand} {highlightProduct.name}
+          </span>{" "}
+          from your link — it does not match the active filters. Clear filters to
+          browse similar products.
+        </p>
+      )}
+
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-[var(--color-muted)]">
           {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
@@ -252,8 +290,15 @@ export function CatalogClient() {
       </div>
 
       <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
-        {filtered.map((p) => (
-          <li key={p.id} className="flex items-stretch">
+        {displayRows.map((p) => {
+          const highlighted = highlightId === p.id;
+          return (
+          <li
+            key={p.id}
+            ref={highlighted ? highlightRef : undefined}
+            id={highlighted ? `catalog-product-${p.id}` : undefined}
+            className={`flex items-stretch ${highlighted ? "bg-[color:var(--surface-muted)] ring-2 ring-inset ring-[var(--color-accent)]" : ""}`}
+          >
             <Link
               href={catalogProductHref(p)}
               onClick={() =>
@@ -295,7 +340,8 @@ export function CatalogClient() {
             </Link>
             <CatalogProductActions product={p} />
           </li>
-        ))}
+          );
+        })}
       </ul>
 
       {filtered.length === 0 && (

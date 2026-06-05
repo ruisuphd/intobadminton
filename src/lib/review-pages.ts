@@ -1,8 +1,8 @@
 import productsCatalog from "@/data/products.json";
 import blogReviewMap from "@/data/blog-review-product-map.json";
 import { blogArticles, type BlogSlug } from "@/lib/blog";
-import { companyInfo } from "@/lib/company";
 import { productPath } from "@/lib/catalog-products";
+import { companyInfo } from "@/lib/company";
 import type { ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];

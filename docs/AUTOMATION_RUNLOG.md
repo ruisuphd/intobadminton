@@ -2,6 +2,28 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #137 `ready_for_review` (branch `cursor/web-app-improvement-plan-8de3`)
+
+**Trigger:** GitHub pull request #137 (`ready_for_review`) — audit → Sprint 8 plan (10-pass) → execute → verify.
+
+### Shipped
+
+- Rebased onto `main` (Sprint 7 search excerpts + Phase D map 80%)
+- Catalog PDP-lite: `/catalog/?id=` deep links, row highlight + scroll
+- `catalogProductHref` routes unmapped products to catalog deep links
+- `RelatedReadingShelf` on `/catalog/`
+- Docs: `WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`
+- Includes PR #137 items: compare UX, PWA shortcuts, retention e2e
+
+### Verification
+
+- `npm test` — 248 passed
+- `npm run lint` — pass
+- `npm run build` + postbuild SEO audit — pass
+- `node scripts/audit-review-product-map.mjs` — 117/146 mapped (80%)
+
+---
+
 ## 2026-06-05 — PR #114 `ready_for_review` (web app Phase D, `cursor/web-app-improvement-plan-11b6`)
 
 **Trigger:** GitHub pull request #114 — competitive audit, Phase D execution, merge `main`, CI fixes. Chinese-review translation workflow ran in parallel on the same PR; no `blogs/` drop.

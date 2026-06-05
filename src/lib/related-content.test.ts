@@ -28,5 +28,9 @@ describe("relatedReadingForPath", () => {
 
   it("returns empty for unmapped paths", () => {
     expect(relatedReadingForPath("/about/")).toEqual([]);
+
+    const catalog = relatedReadingForPath("/catalog/");
+    expect(catalog.length).toBeGreaterThan(0);
+    expect(catalog.some((item) => item.href === "/quiz/")).toBe(true);
   });
 });

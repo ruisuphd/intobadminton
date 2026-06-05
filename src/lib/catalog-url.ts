@@ -19,7 +19,11 @@ const PRICE_BAND_VALUES = new Set(PRICE_BANDS.map((band) => band.value));
 const WEIGHT_VALUES = new Set(["3U", "4U", "5U", "6U", "F"]);
 const BALANCE_VALUES = new Set(BALANCE_OPTIONS.map((option) => option.value));
 
-export type CatalogUrlState = ProductFilterState & { sort: CatalogSort };
+export type CatalogUrlState = ProductFilterState & {
+  sort: CatalogSort;
+  /** Deep-link to a catalogue row (PDP-lite share URLs). */
+  productId: string | null;
+};
 
 export const DEFAULT_CATALOG_URL_STATE: CatalogUrlState = {
   category: null,
@@ -28,6 +32,7 @@ export const DEFAULT_CATALOG_URL_STATE: CatalogUrlState = {
   balance: null,
   priceBand: null,
   sort: "price-asc",
+  productId: null,
 };
 
 function parseEnum<T extends string>(
@@ -43,6 +48,8 @@ export function parseCatalogSearchParams(
 ): CatalogUrlState {
   const brand = params.get("brand")?.trim();
   const sort = parseEnum(params.get("sort"), new Set(SORT_VALUES));
+
+  const productId = params.get("id")?.trim();
 
   return {
     category: parseEnum(
@@ -63,6 +70,7 @@ export function parseCatalogSearchParams(
       PRICE_BAND_VALUES as Set<PriceBand>
     ),
     sort: sort ?? DEFAULT_CATALOG_URL_STATE.sort,
+    productId: productId && productId.length > 0 ? productId : null,
   };
 }
 
@@ -78,7 +86,13 @@ export function catalogSearchParamsFromState(
   if (state.sort !== DEFAULT_CATALOG_URL_STATE.sort) {
     params.set("sort", state.sort);
   }
+  if (state.productId) params.set("id", state.productId);
   return params;
+}
+
+/** Shareable catalog URL that highlights a single product row. */
+export function catalogProductShareUrl(productId: string): string {
+  return `/catalog/?id=${encodeURIComponent(productId)}`;
 }
 
 export function catalogUrlFromState(state: CatalogUrlState): string {

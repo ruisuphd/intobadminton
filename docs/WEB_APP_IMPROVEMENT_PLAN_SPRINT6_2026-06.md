@@ -55,4 +55,4 @@ Additional maturity items merged after parallel Sprint 6 PRs (#127, #129, #134):
 | Retention-flow e2e | `e2e/catalog-compare-saved-smoke.spec.ts` |
 | Review map suggestion script | `scripts/suggest-review-product-map.mjs` |
 
-Review-product map coverage on `main`: **116/146 (79%)** after prior editorial expansion.
+Review-product map coverage on `main`: **117/146 (80%)** after Phase D (#114); Sprint 8 focuses on catalog PDP-lite UX.

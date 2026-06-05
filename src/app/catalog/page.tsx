@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { CatalogClient } from "@/app/catalog/CatalogClient";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
+import { relatedReadingForPath } from "@/lib/related-content";
 import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function CatalogPage() {
+  const related = relatedReadingForPath("/catalog/");
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -66,6 +69,12 @@ export default function CatalogPage() {
           <CatalogClient />
         </Suspense>
       </div>
+
+      {related.length > 0 && (
+        <div className="mt-12">
+          <RelatedReadingShelf items={related} />
+        </div>
+      )}
     </main>
   );
 }

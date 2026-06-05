@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  catalogProductShareUrl,
   catalogUrlFromState,
   parseCatalogSearchParams,
 } from "@/lib/catalog-url";
@@ -16,7 +17,19 @@ describe("catalog-url", () => {
       balance: "head_light",
       priceBand: "under150",
       sort: "price-desc",
+      productId: null,
     });
+  });
+
+  it("parses product deep-link id", () => {
+    const params = new URLSearchParams("id=yy-nanoflare-1000z&cat=racket");
+    expect(parseCatalogSearchParams(params).productId).toBe("yy-nanoflare-1000z");
+  });
+
+  it("builds shareable product URLs", () => {
+    expect(catalogProductShareUrl("yy-astrox-100zz")).toBe(
+      "/catalog/?id=yy-astrox-100zz"
+    );
   });
 
   it("drops invalid enum values", () => {
@@ -30,6 +43,7 @@ describe("catalog-url", () => {
       balance: null,
       priceBand: null,
       sort: "price-asc",
+      productId: null,
     });
   });
 
@@ -41,6 +55,7 @@ describe("catalog-url", () => {
       balance: null,
       priceBand: "under200",
       sort: "name",
+      productId: null,
     });
     expect(url).toBe("/catalog/?cat=racket&brand=Victor&price=under200&sort=name");
     const parsed = parseCatalogSearchParams(new URLSearchParams(url.split("?")[1]));
