@@ -2,6 +2,21 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`, PR #140)
+
+**Trigger:** PR #130 (`ready_for_review`). Shipped string feel guide + `/updates/` (`/data/` already on main via #130).
+
+### Shipped
+
+- **`/guides/string-feel-vs-durability/`** — stringing cluster spoke with HowTo schema
+- **`/updates/`** — editorial freshness feed via `listEditorialUpdates()`
+
+### Verification
+
+- `npm test` — 263+ passed; `npm run build` + postbuild SEO audit — pass
+
+---
+
 ## 2026-06-05 — Sprint 10 web app (`cursor/web-app-improvement-plan-0d45`)
 
 **Scope:** PWA `ib-v4` (`/search/`, `/saved/`), review map 83% (121/146), HowTo on 4 guides, reactions deploy workflow, `crux-template.csv`.

@@ -122,6 +122,29 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
   },
   {
+    title: "Rackets under $200",
+    href: "/best/rackets-under-200/",
+    kind: "best",
+    summary: "Mid-range catalogue discovery — verified frames at $200 or below with comparison table.",
+    keywords: ["under 200", "mid budget", "club", "price band"],
+  },
+  {
+    title: "Verified claims registry",
+    href: "/data/",
+    kind: "tool",
+    summary:
+      "Public table of cited facts with source quotes, verification dates, and authority tiers.",
+    keywords: ["claims", "data", "sources", "fact check", "registry"],
+  },
+  {
+    title: "Editorial updates",
+    href: "/updates/",
+    kind: "tool",
+    summary:
+      "Chronological feed of recently reviewed guides, best-of pages, tools, and equipment reviews.",
+    keywords: ["updates", "freshness", "recent", "changelog"],
+  },
+  {
     title: "Best singles rackets",
     href: "/best/singles-rackets/",
     kind: "best",
@@ -234,6 +257,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "guide",
     summary: "How tension changes feel, power, and control by skill level.",
     keywords: ["tension", "lbs", "pound", "restring"],
+  },
+  {
+    title: "String feel vs durability",
+    href: "/guides/string-feel-vs-durability/",
+    kind: "guide",
+    summary:
+      "Gauge trade-offs — when to pick BG65-class durability vs thin repulsion strings.",
+    keywords: ["gauge", "bg65", "bg80", "durability", "repulsion", "feel"],
   },
   {
     title: "Racket balance vs swing speed",
