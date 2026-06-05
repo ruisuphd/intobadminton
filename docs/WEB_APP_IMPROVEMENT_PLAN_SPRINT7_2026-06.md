@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 7 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-00c0` (PR #141)  
-**Baseline:** Sprint 6 on `main` (PR #127–#129, #134); Sprint 7a on `main` (PR #135 review search excerpts, PR #138 PDP-lite + budget landings).
+**Branches:** `cursor/web-app-improvement-plan-00c0` (PR #141), plus merged `main` work (#135 review search excerpts, #138 PDP-lite + budget landings).  
+**Baseline:** Sprint 6 on `main` (PR #127–#129, #134).
 
 ---
 
@@ -43,6 +43,10 @@
 | Enrichment regression test | `review-article-enrichment.test.ts` |
 
 **Already on `main` (not repeated in #141):** review body search excerpts (#135), `/product/[id]/` PDP-lite, budget shoe + head-heavy under-$150 landings (#138), expanded `blog-review-product-map.json`.
+
+**PR #139:**
+1. `ShareResultsLink` on `/results/` — copy deep-linked finder profile URLs.
+2. RSS discovery via `alternates.types` → `/feed.xml` in root layout.
 
 ---
 

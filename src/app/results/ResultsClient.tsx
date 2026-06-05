@@ -32,6 +32,7 @@ import type {
   WeightClass,
 } from "@/lib/types/product";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
+import { ShareResultsLink } from "@/components/ShareResultsLink";
 
 /**
  * /results/ is `noindex` so the structured data won't appear in SERPs, but
@@ -267,7 +268,10 @@ function ResultsBody() {
 
   return (
     <div className="space-y-6">
-      <ResultsFilterSummary profile={profile} />
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <ResultsFilterSummary profile={profile} />
+        <ShareResultsLink profile={profile} topN={topN} />
+      </div>
       <div className="space-y-3">
         {brandOptions.length > 1 && (
           <FilterChipGroup

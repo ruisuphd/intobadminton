@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
 **Branch:** `cursor/web-app-improvement-plan-00c0` (PR #141)  
-**Baseline:** Sprint 7 + Phase D PDP work on `main` (product map ~80%, PWA in client component).
+**Baseline:** Sprint 7 + Phase D on `main` (PDP-lite, `/data/` claims registry, product map ~80%, PWA in client component).
 
 ---
 
@@ -81,3 +81,9 @@ node scripts/audit-review-product-map.mjs --min-coverage=85
 | CI lint-and-build | Green |
 | Pages per session | 2.5+ |
 | GSC clicks | 4× baseline |
+
+---
+
+## Note: parallel Sprint 8 on `main`
+
+Claims transparency (`/data/` registry from `content/claims.json`) shipped on `main` in a separate automation branch. This PR focuses on product-map coverage and canonical review URLs.
