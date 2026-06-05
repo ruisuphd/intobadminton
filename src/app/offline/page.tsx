@@ -79,6 +79,21 @@ const OFFLINE_LINKS = [
     description: "Precached — where product data and reviews come from.",
   },
   {
+    href: "/source-policy/",
+    label: "Source policy",
+    description: "Precached — how we cite retailers and manufacturer data.",
+  },
+  {
+    href: "/authors/",
+    label: "Authors",
+    description: "Precached — editorial team and credentials.",
+  },
+  {
+    href: "/authors/rui-su/",
+    label: "Rui Su",
+    description: "Precached — lead author profile and experience.",
+  },
+  {
     href: "/methodology/",
     label: "Methodology",
     description: "Precached — how fit scores and buying guides are built.",

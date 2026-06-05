@@ -67,4 +67,7 @@ test("saved shelf persists a product from results", async ({ page }) => {
     page.getByRole("heading", { name: /Your saved shelf/i })
   ).toBeVisible();
   await expect(page.getByText(/1 item saved/i)).toBeVisible();
+
+  await page.reload();
+  await expect(page.getByText(/1 item saved/i)).toBeVisible();
 });

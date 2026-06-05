@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v22"))) return false;
-      const cache = await caches.open("ib-v22-static");
+      if (!keys.some((key) => key.startsWith("ib-v23"))) return false;
+      const cache = await caches.open("ib-v23-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v22-static");
+    const cache = await caches.open("ib-v23-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -104,6 +104,8 @@ test("service worker precaches search, review, and offline shells", async ({
     "/source-policy/",
     "/authors/",
     "/authors/rui-su/",
+    "/product/yy-grpht-thrttl/",
+    "/review/yonex-arcsaber-7-pro-review/",
   ]) {
     expect(
       cachedPaths.some((entry) => entry === path || entry.startsWith(path)),
@@ -158,6 +160,9 @@ test("offline fallback lists trust, legal, and support recovery links", async ({
   for (const href of [
     "/about/",
     "/sources/",
+    "/source-policy/",
+    "/authors/",
+    "/authors/rui-su/",
     "/methodology/",
     "/data/",
     "/contact/",
