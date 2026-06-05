@@ -6,6 +6,8 @@ import {
   catalogCtaLabelFromGuideSlug,
   catalogHrefFromGuideSlug,
   catalogHrefFromKeywordQuery,
+  catalogHrefFromToolSlug,
+  catalogCtaLabelFromToolSlug,
   catalogUrlFromState,
   parseCatalogSearchParams,
 } from "@/lib/catalog-url";
@@ -149,6 +151,32 @@ describe("catalog-url", () => {
       "Browse rackets in catalog"
     );
     expect(catalogCtaLabelFromGuideSlug("unknown-slug")).toBe(
+      "Browse matching catalog"
+    );
+  });
+
+  it("builds tool slug catalog hrefs with matching filters", () => {
+    expect(catalogHrefFromToolSlug("string-tension-calculator")).toBe(
+      "/catalog/?cat=string"
+    );
+    expect(catalogHrefFromToolSlug("racket-balance-explainer")).toBe(
+      "/catalog/?cat=racket"
+    );
+    expect(catalogHrefFromToolSlug("authenticity-checker")).toBe(
+      "/catalog/?cat=racket"
+    );
+    expect(catalogHrefFromToolSlug("court-diagram")).toBe("/catalog/");
+    expect(catalogHrefFromToolSlug("unknown-slug")).toBe("/catalog/");
+  });
+
+  it("labels tool catalog CTAs by category", () => {
+    expect(catalogCtaLabelFromToolSlug("string-tension-calculator")).toBe(
+      "Browse strings in catalog"
+    );
+    expect(catalogCtaLabelFromToolSlug("authenticity-checker")).toBe(
+      "Browse rackets in catalog"
+    );
+    expect(catalogCtaLabelFromToolSlug("court-diagram")).toBe(
       "Browse matching catalog"
     );
   });

@@ -243,3 +243,38 @@ export function catalogCtaLabelFromGuideSlug(slug: string): string {
     GUIDE_CATALOG_CTA_LABELS[filters.category] ?? "Browse matching catalog"
   );
 }
+
+/**
+ * Tool slug → shareable catalog filters (retailer-style calculator → browse).
+ * Unmapped slugs fall back to the full catalog index.
+ */
+type ToolSlugCatalogFilters = Partial<
+  Pick<CatalogUrlState, "category" | "balance">
+>;
+
+const TOOL_SLUG_CATALOG_FILTERS: Record<string, ToolSlugCatalogFilters> = {
+  "string-tension-calculator": { category: "string" },
+  "skill-level-converter": { category: "racket" },
+  "racket-balance-explainer": { category: "racket" },
+  "court-diagram": {},
+  "authenticity-checker": { category: "racket" },
+};
+
+/** Filtered catalog browse — used from `/tools/*` interactive landings. */
+export function catalogHrefFromToolSlug(slug: string): string {
+  const filters = TOOL_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters) return "/catalog/";
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    ...filters,
+  });
+}
+
+/** Button label for tool → catalog CTA. */
+export function catalogCtaLabelFromToolSlug(slug: string): string {
+  const filters = TOOL_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters?.category) return "Browse matching catalog";
+  return (
+    GUIDE_CATALOG_CTA_LABELS[filters.category] ?? "Browse matching catalog"
+  );
+}

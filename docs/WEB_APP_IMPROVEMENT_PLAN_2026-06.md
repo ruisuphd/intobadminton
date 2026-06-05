@@ -218,7 +218,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/compare-guides/astrox-99-pro-vs-astrox-100zz/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT23_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT23_2026-06.md)
 
-### Sprint 24 — This branch
+### Sprint 24 — Shipped (PR #172)
 
 - Discovery hubs (`/guides/`, `/tools/`, `/review/`, `/brands/`) → **Browse full catalog** CTAs
 - Procedural guides → **filtered catalog** CTA (`catalogHrefFromGuideSlug`, `GuideCatalogCta`)
@@ -226,7 +226,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI includes `/brands/yonex/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT24_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT24_2026-06.md)
 
-### Next (Sprint 25+)
+### Sprint 25 — This branch
+
+- Remaining procedural guides → **filtered catalog** CTA (`GuideCatalogCta` on 4 landings)
+- Tool pages → **filtered catalog** CTA (`catalogHrefFromToolSlug`, `ToolCatalogCta`)
+- PWA **`ib-v15`** precaches shoes guides + racket-balance guide shells
+- Lighthouse CI includes `/brands/victor/`, `/brands/li-ning/`, shoes guides
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT25_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT25_2026-06.md)
+
+### Next (Sprint 26+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs

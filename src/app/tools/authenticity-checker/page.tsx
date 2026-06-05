@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
+import { ToolCatalogCta } from "@/components/ToolCatalogCta";
 import { AuthenticityChecker } from "@/components/AuthenticityChecker";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
@@ -202,6 +203,8 @@ export default function AuthenticityCheckerToolPage() {
             </li>
           </ul>
         </section>
+
+        <ToolCatalogCta slug="authenticity-checker" />
       </div>
     </main>
   );

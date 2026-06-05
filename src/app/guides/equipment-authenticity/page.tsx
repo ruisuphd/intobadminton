@@ -5,6 +5,10 @@ import { AuthenticityChecker } from "@/components/AuthenticityChecker";
 import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 import { JsonLd } from "@/components/JsonLd";
 import {
+  catalogCtaLabelFromGuideSlug,
+  catalogHrefFromGuideSlug,
+} from "@/lib/catalog-url";
+import {
   authenticityBrands,
   authenticityGuide,
 } from "@/lib/authenticity";
@@ -385,6 +389,12 @@ export default function EquipmentAuthenticityGuide() {
             </Link>
             <Link href="/quiz/" className="btn-secondary">
               Start the finder
+            </Link>
+            <Link
+              href={catalogHrefFromGuideSlug("equipment-authenticity")}
+              className="btn-secondary"
+            >
+              {catalogCtaLabelFromGuideSlug("equipment-authenticity")}
             </Link>
           </div>
         </section>
