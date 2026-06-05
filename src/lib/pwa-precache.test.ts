@@ -7,11 +7,11 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v17 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v17"');
+  it("uses ib-v18 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v18"');
   });
 
-  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
+  it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
     for (const path of [
       "/quiz/",
       "/catalog/",
@@ -54,6 +54,20 @@ describe("PWA service worker precache", () => {
       "/tools/string-tension-calculator/",
       "/tools/authenticity-checker/",
       "/compare-guides/yonex-victor-li-ning/",
+      "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
+      "/compare-guides/astrox-77-pro-vs-88s-pro/",
+      "/compare-guides/badminton-vs-tennis-shoes/",
+      "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/",
+      "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
+      "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/",
+      "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
+      "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
+      "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/",
+      "/compare-guides/yonex-65z4-vs-eclipsion-z3/",
+      "/best/beginner-rackets/",
+      "/best/smash-heavy-rackets/",
+      "/best/strings/",
+      "/best/intermediate-rackets/",
     ]) {
       expect(source).toContain(`"${path}"`);
     }

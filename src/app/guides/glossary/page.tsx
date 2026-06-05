@@ -479,7 +479,7 @@ export default function GlossaryPage() {
             <Link href="/quiz/" className="btn-primary">
               Start the finder
             </Link>
-            <Link href="/catalog/" className="btn-secondary">
+            <Link href="/catalog/?cat=racket" className="btn-secondary">
               Browse full catalog
             </Link>
           </div>

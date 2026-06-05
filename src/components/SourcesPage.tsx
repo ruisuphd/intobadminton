@@ -235,17 +235,25 @@ export function SourcesPage({ locale }: { locale: SiteLocale }) {
           />
         </section>
 
-        <section className="space-y-3 card p-6">
+        <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             {c.reportHeading}
           </h2>
-          <p className="text-sm text-[var(--color-muted)]">{c.reportBody}</p>
-          <Link
-            href={buildLocalizedPath(locale, c.ctaLink)}
-            className="inline-flex h-10 items-center rounded-2xl bg-[var(--color-accent)] px-4 text-sm font-medium text-white"
-          >
-            {c.cta}
-          </Link>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">{c.reportBody}</p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href={buildLocalizedPath(locale, c.ctaLink)}
+              className="btn-primary"
+            >
+              {c.cta}
+            </Link>
+            <Link
+              href={buildLocalizedPath(locale, "/catalog/")}
+              className="btn-secondary"
+            >
+              Browse full catalog
+            </Link>
+          </div>
         </section>
       </article>
     </main>

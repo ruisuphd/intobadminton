@@ -202,8 +202,32 @@ test("search page links to full catalog browse", async ({ page }) => {
   await expect(catalogLink).toHaveAttribute("href", "/catalog/");
 });
 
-test("glossary page links to full catalog browse", async ({ page }) => {
+test("glossary page links to racket-filtered catalog browse", async ({ page }) => {
   await page.goto("/guides/glossary/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=racket");
+});
+
+test("about page links to full catalog browse", async ({ page }) => {
+  await page.goto("/about/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("sources page links to full catalog browse", async ({ page }) => {
+  await page.goto("/sources/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("quiz page links to full catalog browse", async ({ page }) => {
+  await page.goto("/quiz/");
 
   const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
   await expect(catalogLink).toBeVisible();

@@ -29,6 +29,24 @@ test("compare page loads shared product set from URL", async ({ page }) => {
   await expect(page.getByText(/Astrox 100ZZ/i).first()).toBeVisible();
 });
 
+test("saved shelf empty state links to full catalog browse", async ({ page }) => {
+  await page.goto("/saved/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("compare page empty state links to full catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/compare/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
 test("saved shelf persists a product from results", async ({ page }) => {
   await page.goto("/quiz/");
   const funnel = page.locator("#quiz-funnel");

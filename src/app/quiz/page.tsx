@@ -131,6 +131,25 @@ export function QuizShell() {
             .
           </p>
         </section>
+
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Prefer to browse first?
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Skip the quiz and explore the full equipment catalog with filters for
+            brand, weight, balance, and price — or read buying guides and
+            reviews.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/catalog/" className="btn-primary">
+              Browse full catalog
+            </Link>
+            <Link href="/best/" className="btn-secondary">
+              Best-of buying guides
+            </Link>
+          </div>
+        </section>
       </div>
     </main>
   );
