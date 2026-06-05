@@ -86,6 +86,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
   },
   {
+    title: "Best balanced rackets",
+    href: "/best/balanced-rackets/",
+    kind: "best",
+    summary:
+      "Even-balance all-round frames for club singles, doubles, and mixed — Arcsaber 11 Pro, Astrox 77 Pro, Halbertec 7000.",
+    keywords: ["balanced", "even balance", "all round", "all-round", "club"],
+  },
+  {
     title: "Best singles rackets",
     href: "/best/singles-rackets/",
     kind: "best",
