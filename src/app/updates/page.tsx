@@ -134,6 +134,19 @@ export default function UpdatesPage() {
           </Link>
           .
         </p>
+
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Ready to shop with filters?
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Browse the full catalog with category, brand, and price filters —
+            the same inventory behind every review and guide.
+          </p>
+          <Link href="/catalog/" className="btn-secondary mt-5">
+            Browse full catalog
+          </Link>
+        </section>
       </div>
     </main>
   );

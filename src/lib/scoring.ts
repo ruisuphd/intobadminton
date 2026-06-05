@@ -61,7 +61,7 @@ function isGrip(p: ProductRecord): p is GripProduct {
   return p.category === "grip";
 }
 
-function styleHeadPreference(styles: PlayStyle[]): "heavy" | "light" | "even" {
+export function styleHeadPreference(styles: PlayStyle[]): "heavy" | "light" | "even" {
   if (styles.includes("front_court") && !styles.includes("smash_heavy")) {
     return "light";
   }

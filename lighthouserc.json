@@ -2,6 +2,7 @@
   "ci": {
     "collect": {
       "url": [
+        "http://localhost:4173/index.html",
         "http://localhost:4173/quiz/index.html",
         "http://localhost:4173/best/index.html",
         "http://localhost:4173/best/beginner-rackets/index.html",
@@ -51,7 +52,14 @@
         "http://localhost:4173/guides/shoes-footwork/index.html",
         "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html",
         "http://localhost:4173/guides/doubles-roles/index.html",
-        "http://localhost:4173/tools/racket-balance-explainer/index.html"
+        "http://localhost:4173/tools/racket-balance-explainer/index.html",
+        "http://localhost:4173/guides/glossary/index.html",
+        "http://localhost:4173/guides/equipment-authenticity/index.html",
+        "http://localhost:4173/tools/court-diagram/index.html",
+        "http://localhost:4173/best/doubles-rackets/index.html",
+        "http://localhost:4173/best/shoes/index.html",
+        "http://localhost:4173/brands/bonny/index.html",
+        "http://localhost:4173/compare-guides/yonex-victor-li-ning/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

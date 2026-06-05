@@ -75,23 +75,21 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
         </h2>
         <p className="mt-2 text-[var(--color-muted)]">{copy.subtitle}</p>
         {compareIds.length === 0 ? (
-          <p className="mt-8 text-sm text-[var(--color-muted)]">
-            Add gear from your{" "}
-            <Link
-              href="/results/"
-              className="text-[var(--color-accent)] underline"
-            >
-              results
+          <div className="mt-8 space-y-5">
+            <p className="text-sm text-[var(--color-muted)]">
+              Add gear from your{" "}
+              <Link
+                href="/results/"
+                className="text-[var(--color-accent)] underline"
+              >
+                results
+              </Link>
+              , the catalog, or saved shelf.
+            </p>
+            <Link href="/catalog/" className="btn-secondary">
+              Browse full catalog
             </Link>
-            , the{" "}
-            <Link
-              href="/catalog/"
-              className="text-[var(--color-accent)] underline"
-            >
-              catalog
-            </Link>
-            , or saved shelf.
-          </p>
+          </div>
         ) : (
           <>
             <div className="mt-6">
@@ -128,6 +126,11 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
               Share the URL above to send this exact compare set to a teammate or
               opponent — they will land on this same comparison on any device.
             </p>
+            <div className="mt-6">
+              <Link href="/catalog/" className="btn-secondary">
+                Browse more in catalog
+              </Link>
+            </div>
           </>
         )}
       </div>

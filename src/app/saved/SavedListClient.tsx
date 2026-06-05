@@ -81,6 +81,9 @@ export function SavedListClient() {
             <Link href="/quiz/" className="btn-primary">
               Run the finder
             </Link>
+            <Link href="/catalog/" className="btn-secondary">
+              Browse full catalog
+            </Link>
             <Link href="/best/" className="btn-secondary">
               Browse best-of guides
             </Link>
@@ -171,6 +174,12 @@ export function SavedListClient() {
             );
           })}
         </ol>
+
+        <div className="mt-10 text-center">
+          <Link href="/catalog/" className="btn-secondary">
+            Browse more in catalog
+          </Link>
+        </div>
 
         <RelatedReadingShelf items={related} />
       </div>

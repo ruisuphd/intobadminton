@@ -182,6 +182,19 @@ export default function DataRegistryPage() {
           </code>{" "}
           in the public repository.
         </p>
+
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            See the products these claims support
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Every cited fact ties back to equipment in our catalog — browse with
+            filters to find the models behind the registry.
+          </p>
+          <Link href="/catalog/" className="btn-secondary mt-5">
+            Browse full catalog
+          </Link>
+        </section>
       </article>
     </main>
   );

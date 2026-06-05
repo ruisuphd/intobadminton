@@ -193,7 +193,7 @@ describe("catalog-url", () => {
     ).toBe("Browse Yonex in catalog");
   });
 
-  it("builds profile catalog hrefs from quiz category and budget", () => {
+  it("builds profile catalog hrefs from quiz category, budget, style, and sort", () => {
     expect(
       catalogHrefFromProfile({
         level: "club",
@@ -208,6 +208,12 @@ describe("catalog-url", () => {
           injuryFlags: [],
         },
       })
-    ).toBe("/catalog/?cat=racket&price=under150");
+    ).toBe(
+      "/catalog/?cat=racket&balance=head_heavy&price=under150&sort=fit-desc"
+    );
+  });
+
+  it("builds glossary guide catalog href", () => {
+    expect(catalogHrefFromGuideSlug("glossary")).toBe("/catalog/?cat=racket");
   });
 });
