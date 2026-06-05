@@ -269,6 +269,7 @@ export function CatalogClient() {
                 <ProductImageView
                   image={p.image}
                   size={72}
+                  hideCaption
                   className="shrink-0"
                 />
               ) : (

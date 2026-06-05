@@ -492,3 +492,76 @@ export function searchSite(
 }
 
 export const searchIndexSize = SEARCH_INDEX.length;
+
+const SEARCH_SNIPPET_MAX = 140;
+
+/** Review-body excerpt token attached in `reviewEntries()` (may be multiple). */
+function reviewBodyExcerpt(entry: SearchEntry, query?: string): string | null {
+  const candidates = entry.keywords.filter((k) => k.length >= 60);
+  if (candidates.length === 0) return null;
+
+  if (query) {
+    const tokens = normalize(query).split(" ").filter(Boolean);
+    const withHit = candidates.find((text) => {
+      const norm = text.toLowerCase();
+      return tokens.some((token) => norm.includes(token));
+    });
+    if (withHit) return withHit;
+  }
+
+  return candidates.sort((a, b) => b.length - a.length)[0] ?? null;
+}
+
+function trimSnippetAround(
+  text: string,
+  matchStart: number,
+  matchLen: number,
+  maxLen = SEARCH_SNIPPET_MAX
+): string {
+  const room = Math.max(0, maxLen - matchLen);
+  const before = Math.floor(room / 2);
+  const start = Math.max(0, matchStart - before);
+  const end = Math.min(text.length, matchStart + matchLen + (room - before));
+  let out = text.slice(start, end).trim();
+  if (start > 0) out = `…${out}`;
+  if (end < text.length) out = `${out}…`;
+  return out;
+}
+
+/**
+ * User-visible summary for a search hit. When the query matched review body
+ * tokens but not the title or dek, show a short excerpt around the match.
+ */
+export function searchResultSummary(entry: SearchEntry, query: string): string {
+  const trimmed = query.trim();
+  if (!trimmed) return entry.summary;
+
+  const tokens = normalize(trimmed).split(" ").filter(Boolean);
+  if (tokens.length === 0) return entry.summary;
+
+  const titleNorm = normalize(entry.title);
+  const summaryNorm = normalize(entry.summary);
+  const titleOrDekHit = tokens.some(
+    (token) => titleNorm.includes(token) || summaryNorm.includes(token)
+  );
+  if (titleOrDekHit) return entry.summary;
+
+  const excerpt = reviewBodyExcerpt(entry, trimmed);
+  if (!excerpt) return entry.summary;
+
+  const excerptNorm = excerpt.toLowerCase();
+  for (const token of tokens) {
+    const idx = excerptNorm.indexOf(token);
+    if (idx >= 0) {
+      return trimSnippetAround(excerpt, idx, token.length);
+    }
+  }
+
+  for (const token of tokens) {
+    if (tokenMatchesBlob(token, excerptNorm)) {
+      return trimSnippetAround(excerpt, 0, Math.min(token.length, excerpt.length));
+    }
+  }
+
+  return entry.summary;
+}
