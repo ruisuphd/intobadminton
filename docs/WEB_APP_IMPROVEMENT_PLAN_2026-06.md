@@ -72,7 +72,8 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - YouTube `sameAs` on author entity (after channel claim)
 
 **Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).  
-**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
+**Sprint 8:** search result snippets + RSS `rel=alternate`. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md).
 
 ---
 

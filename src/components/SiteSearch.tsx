@@ -5,7 +5,11 @@ import { useMemo, useState } from "react";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import { brandOptionsFor } from "@/lib/product-filters";
 import { reviewableProducts } from "@/lib/review-pages";
-import { searchSite, type SearchEntryKind } from "@/lib/site-search";
+import {
+  searchResultSummary,
+  searchSite,
+  type SearchEntryKind,
+} from "@/lib/site-search";
 
 const KIND_LABEL: Record<SearchEntryKind, string> = {
   review: "Review",
@@ -135,7 +139,7 @@ export function SiteSearch({ initialQuery = "" }: { initialQuery?: string }) {
                 </div>
                 {entry.summary && (
                   <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)] line-clamp-2">
-                    {entry.summary}
+                    {searchResultSummary(entry, query)}
                   </p>
                 )}
               </Link>
