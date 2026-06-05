@@ -48,6 +48,7 @@ const config: BestPicksConfig = {
       name: "BG80",
       brand: "Yonex",
       priceUsd: 9,
+      productId: "yy-bg80",
       bestFor: "Club players upgrading from BG65",
       specs: [
         { label: "Gauge", value: "0.68 mm" },
@@ -71,6 +72,7 @@ const config: BestPicksConfig = {
       name: "EXBOLT 63",
       brand: "Yonex",
       priceUsd: 13,
+      productId: "yy-exbolt-63",
       bestFor: "Tournament-tier control + power",
       specs: [
         { label: "Gauge", value: "0.63 mm" },

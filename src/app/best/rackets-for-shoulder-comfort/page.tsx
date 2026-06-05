@@ -56,6 +56,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 1000 Play",
       brand: "Yonex",
       priceUsd: 75,
+      productId: "yy-nanoflare-1000-play",
       bestFor: "Return-to-play after time off",
       specs: [
         { label: "Weight", value: "4U" },
@@ -71,6 +72,7 @@ const config: BestPicksConfig = {
       name: "DriveX 8S",
       brand: "Victor",
       priceUsd: 180,
+      productId: "vic-drivex-8s",
       bestFor: "Victor all-court with medium flex",
       specs: [
         { label: "Weight", value: "4U" },
@@ -101,6 +103,7 @@ const config: BestPicksConfig = {
       name: "Nanoray Light 70i",
       brand: "Yonex",
       priceUsd: 99,
+      productId: "yy-nanoray-light-70i",
       bestFor: "Minimum swing weight while rehabbing",
       specs: [
         { label: "Weight", value: "~70 g (7.0i class)" },
