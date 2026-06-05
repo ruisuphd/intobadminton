@@ -10,7 +10,6 @@ import { PwaRegistration } from "@/components/PwaRegistration";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StructuredData } from "@/components/StructuredData";
-import { companyInfo } from "@/lib/company";
 import { Providers } from "./providers";
 
 const inter = Inter({
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   alternates: {
     types: {
-      "application/rss+xml": `${companyInfo.siteUrl}/feed.xml`,
+      "application/rss+xml": [{ url: "/feed.xml", title: "IntoBadminton RSS" }],
     },
   },
   other: process.env.NEXT_PUBLIC_ADSENSE_CLIENT
