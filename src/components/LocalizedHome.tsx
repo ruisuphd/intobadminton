@@ -104,6 +104,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Best control rackets", href: "/best/control-rackets/", tag: "Control" },
     { label: "Best wide-feet shoes", href: "/best/wide-feet-badminton-shoes/", tag: "Shoes" },
     { label: "Best all-round rackets", href: "/best/all-round-rackets/", tag: "All-round" },
+    { label: "Budget shoes under $130", href: "/best/budget-badminton-shoes/", tag: "Shoes" },
+    {
+      label: "Head-heavy rackets under $150",
+      href: "/best/head-heavy-rackets-under-150/",
+      tag: "Attack",
+    },
     { label: "Browse equipment catalog", href: "/catalog/", tag: "Catalog" },
     { label: "Best beginner rackets", href: "/best/beginner-rackets/", tag: "Beginner" },
     { label: "Best doubles rackets", href: "/best/doubles-rackets/", tag: "Doubles" },
