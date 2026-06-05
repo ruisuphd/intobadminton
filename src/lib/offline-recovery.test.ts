@@ -8,6 +8,27 @@ import {
 } from "./offline-recovery-paths";
 
 const SW_PATH = resolve(process.cwd(), "public/sw.js");
+const CRUX_TEMPLATE_PATH = resolve(
+  process.cwd(),
+  "docs/baselines/crux-template.csv"
+);
+
+function cruxTemplatePaths(): string[] {
+  const lines = readFileSync(CRUX_TEMPLATE_PATH, "utf8").trim().split("\n");
+  return lines
+    .slice(1)
+    .map((line) => {
+      const url = line.split(",")[0]?.trim();
+      if (!url) return null;
+      try {
+        const path = new URL(url).pathname;
+        return path === "/" ? null : path.endsWith("/") ? path : `${path}/`;
+      } catch {
+        return null;
+      }
+    })
+    .filter((path): path is string => path != null);
+}
 
 describe("offline recovery paths", () => {
   const swSource = readFileSync(SW_PATH, "utf8");
@@ -20,6 +41,12 @@ describe("offline recovery paths", () => {
     }
   });
 
+  it("CRUX_OFFLINE_RECOVERY_PATHS matches crux-template.csv (excluding homepage)", () => {
+    expect([...CRUX_OFFLINE_RECOVERY_PATHS].sort()).toEqual(
+      cruxTemplatePaths().sort()
+    );
+  });
+
   it("only links to precached routes", () => {
     for (const path of OFFLINE_RECOVERY_PATHS) {
       expect(
@@ -29,12 +56,8 @@ describe("offline recovery paths", () => {
     }
   });
 
-  it("CrUX commercial deep-links are precached in the service worker", () => {
-    for (const path of [
-      "/best/beginner-rackets/",
-      "/compare-guides/yonex-astrox-vs-nanoflare/",
-      "/guides/string-tension/",
-    ]) {
+  it("CrUX template paths are precached in the service worker", () => {
+    for (const path of cruxTemplatePaths()) {
       expect(swSource, `missing precache for ${path}`).toContain(`"${path}"`);
     }
   });
