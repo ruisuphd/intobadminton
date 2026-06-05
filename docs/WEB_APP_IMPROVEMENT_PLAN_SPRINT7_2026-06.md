@@ -38,7 +38,7 @@
 | Item | Files |
 |------|-------|
 | HelpfulReaction lint + hydration | `HelpfulReaction.tsx`, engagement footers |
-| Homepage TBT | `layout.tsx`, `PwaRegistration.tsx` |
+| Homepage TBT | `PwaRegistration.tsx` (idle SW register) |
 | Lighthouse baseline npm scripts | `package.json` |
 | Enrichment regression test | `review-article-enrichment.test.ts` |
 
