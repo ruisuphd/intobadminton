@@ -274,14 +274,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Lighthouse CI adds `/privacy/`, `/terms/`, `/cookies/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT30_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT30_2026-06.md)
 
-### Sprint 31 — This branch
+### Sprint 31 — Shipped (PR #179)
 
 - PWA **`ib-v21`** precaches trust cluster (about, sources, source-policy, authors)
 - Offline recovery adds Best-of, Brands, and Privacy links
 - Lighthouse CI adds `/security/`, `/source-policy/` (`/privacy-choices/` excluded — noindex)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT31_2026-06.md)
 
-### Next (Sprint 32+)
+### Sprint 32 — This branch
+
+- PWA **`ib-v22`** precaches 6 long-tail best-of shells (control, singles, defensive, lightweight, shoulder-comfort, head-heavy-under-150)
+- Offline recovery adds trust/editorial (about, sources, methodology, data), legal (terms, cookies, security), and support (contact, research) links
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT32_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT32_2026-06.md)
+
+### Next (Sprint 33+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
