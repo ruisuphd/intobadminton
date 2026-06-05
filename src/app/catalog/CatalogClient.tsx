@@ -28,6 +28,8 @@ import { humanize } from "@/lib/text";
 import type { BalanceCategory, ProductRecord, WeightClass } from "@/lib/types/product";
 import type { EquipmentCategory } from "@/lib/taxonomy";
 
+const CATALOG_PAGE_SIZE = 40;
+
 function specLine(p: ProductRecord): string {
   if (p.category === "racket") {
     return `${p.weightClass} · ${humanize(p.balanceCategory)} · ${humanize(p.shaftFlex)} shaft`;
@@ -59,6 +61,7 @@ export function CatalogClient() {
   }, [searchParams]);
 
   const [filters, setFilters] = useState<ProductFilterState>(initialFilters);
+  const [visibleCount, setVisibleCount] = useState(CATALOG_PAGE_SIZE);
 
   const baseRows = useMemo(
     () =>
@@ -77,6 +80,11 @@ export function CatalogClient() {
     [catalog, filters]
   );
 
+  const visible = useMemo(
+    () => filtered.slice(0, visibleCount),
+    [filtered, visibleCount]
+  );
+
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
   const categories = useMemo(() => categoryOptionsFor(catalog), [catalog]);
   const priceBands = useMemo(() => priceBandOptionsFor(baseRows), [baseRows]);
@@ -90,8 +98,10 @@ export function CatalogClient() {
     (filters.category === "racket" || filters.category === null) &&
     (weightClasses.length > 0 || balances.length > 0);
 
-  const patch = (next: Partial<ProductFilterState>) =>
+  const patch = (next: Partial<ProductFilterState>) => {
+    setVisibleCount(CATALOG_PAGE_SIZE);
     setFilters((prev) => ({ ...prev, ...next }));
+  };
 
   return (
     <div className="space-y-6">
@@ -181,7 +191,7 @@ export function CatalogClient() {
       </p>
 
       <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
-        {filtered.map((p) => (
+        {visible.map((p) => (
           <li key={p.id}>
             <Link
               href={catalogProductHref(p)}
@@ -218,6 +228,20 @@ export function CatalogClient() {
           </li>
         ))}
       </ul>
+
+      {filtered.length > visibleCount && (
+        <button
+          type="button"
+          onClick={() =>
+            setVisibleCount((n) =>
+              Math.min(n + CATALOG_PAGE_SIZE, filtered.length)
+            )
+          }
+          className="btn-secondary mt-4"
+        >
+          Show more ({filtered.length - visibleCount} remaining)
+        </button>
+      )}
 
       {filtered.length === 0 && (
         <p className="text-sm text-[var(--color-muted)]">
