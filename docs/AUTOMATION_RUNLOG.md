@@ -2,6 +2,42 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #114 `ready_for_review` (translation run `cursor/new-chinese-reviews-translation-772c`)
+
+**Trigger:** GitHub pull request #114 (`ready_for_review`) — Web app Phase D (`cursor/web-app-improvement-plan-11b6`). Full Chinese-review translation workflow (check → translate → 10-pass verify → rename → import → web-app update) ran in parallel on this branch.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift |
+| New translations this run | **None** |
+
+### Verification (no content changes)
+
+- `npm test` — 209 passed
+- `npm run blog:validate` — 20/20 passes, 0 issues
+
+### Translation / import
+
+Not performed — no `blogs/` drop. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+# translate (Chinese above, ## English Translation below) → rename to English → map slug
+npm run blog:import && npm run blog:validate
+```
+
+### Merge status
+
+Runlog-only PR #131; merge when CI green. No review content to import until the private drop is synced into the workspace.
+
+---
+
 ## 2026-06-05 — PR #118 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-fedb`)
 
 **Trigger:** GitHub pull request #118 (`ready_for_review`) — PR #92 translation cron re-run; no review content changes.
