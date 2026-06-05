@@ -38,6 +38,8 @@ jobs:
         run: npm run lint:catalog-baseline
       - name: Discovery parity guard
         run: npm run lint:discovery-baseline
+      - name: Finder golden-profile guard
+        run: npm run lint:finder-baseline
       - name: Build
         run: npm run build
         env:
