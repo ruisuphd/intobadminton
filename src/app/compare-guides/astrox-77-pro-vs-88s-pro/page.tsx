@@ -1,176 +1,95 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
-import { EditorialMeta } from "@/components/EditorialMeta";
-import { EditorialNotice } from "@/components/EditorialNotice";
-import { AdSlot } from "@/components/AdSlot";
-import { JsonLd } from "@/components/JsonLd";
-import { companyInfo } from "@/lib/company";
-import { defaultOgImages } from "@/lib/og";
-import { articleJsonLd } from "@/lib/structured-data";
+import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
+import { articleSocialMetadata } from "@/lib/og";
+import { reviewPath } from "@/lib/review-pages";
+
+const PATH = "/compare-guides/astrox-77-pro-vs-88s-pro/";
 
 export const metadata: Metadata = {
   title: "Astrox 77 Pro vs 88S Pro 2024 — Which Fits You?",
   description:
     "Both 4U Yonex Astrox frames with slight head-heavy balance. Honest comparison of shaft hardness, swing feel, and which player each suits — by an owner of both.",
-  alternates: pageAlternates("/compare-guides/astrox-77-pro-vs-88s-pro/"),
-  openGraph: {
+  alternates: pageAlternates(PATH),
+  ...articleSocialMetadata({
+    path: PATH,
     title: "Astrox 77 Pro vs 88S Pro 2024 — Which Fits You?",
     description:
       "Owner-level comparison of two Yonex Astrox frames — shaft hardness, balance, and which player each suits.",
-    url: "/compare-guides/astrox-77-pro-vs-88s-pro/",
-    type: "article",
-    siteName: "IntoBadminton",
-    images: [...defaultOgImages],
+  }),
+};
+
+const config: CompareGuideConfig = {
+  slug: "astrox-77-pro-vs-88s-pro",
+  breadcrumbLabel: "Astrox 77 Pro vs 88S Pro",
+  title: "Astrox 77 Pro vs Astrox 88S Pro 2024",
+  dek: "Both are 4U Yonex Astrox frames with slight head-heavy balance — close to even within the Astrox line. The 77 Pro is the friendliest pro-tier upgrade Yonex makes. The 88S Pro 2024 is the market's current control-balance benchmark for doubles.",
+  intro:
+    "Author note: I (Rui Su, Division 4 Ireland) currently use the 88S Pro 2024 as my main racket and previously played the 77 Pro for two seasons. Both are excellent. The honest gap between them is smaller than reviewers usually claim.",
+  productA: {
+    name: "Astrox 77 Pro",
+    brand: "Yonex",
+    productId: "yy-astrox-77-pro",
+    bestFor: "Recreational-to-club players; mixed disciplines; shoulder comfort",
+    pricePoint: "~$220",
+    specBullets: [
+      "4U (~83–85g)",
+      "Slightly head-heavy balance",
+      "Medium shaft — forgiving timing window",
+      "Standard frame size",
+      "Friendliest pro-tier Astrox upgrade",
+    ],
   },
+  productB: {
+    name: "Astrox 88S Pro 2024",
+    brand: "Yonex",
+    productId: "yy-astrox-88s-pro-2024",
+    bestFor: "Competitive club doubles; front court and mixed",
+    pricePoint: "~$240",
+    specBullets: [
+      "4U (~84g unstrung)",
+      "Slight head-heavy (~301 mm)",
+      "Stiff shaft (Namd Flex Force)",
+      "Slightly larger frame than 77 Pro",
+      "Current control-balance doubles benchmark",
+    ],
+  },
+  rows: [
+    { factor: "Weight", a: "4U (~83–85g)", b: "4U (~84g unstrung)", winner: "tie" },
+    { factor: "Balance", a: "Slightly head-heavy", b: "Slight head-heavy (~301 mm)", winner: "tie" },
+    { factor: "Shaft flex", a: "Medium", b: "Stiff", winner: "a" },
+    { factor: "Frame size", a: "Standard", b: "Slightly larger", winner: "b" },
+    { factor: "Timing window", a: "Forgiving", b: "Demanding on mishits", winner: "a" },
+    { factor: "Net / control", a: "Good", b: "Excellent (longer dwell)", winner: "b" },
+    { factor: "Recovery speed", a: "Faster", b: "Slightly slower", winner: "a" },
+    { factor: "Entry threshold", a: "Lower", b: "Higher", winner: "a" },
+  ],
+  middleParagraph:
+    "The biggest functional difference is shaft hardness. The 77 Pro loads gently — you feel the bend and snap-back. The 88S Pro 2024 is meaningfully stiffer; when you load it cleanly the response is crisper, when timing slips it punishes more than the 77 Pro.",
+  whoBuysA:
+    "Buy the 77 Pro if you are recreational-to-club level, your overhead contact is still inconsistent, you play mixed disciplines and want one frame for everything, or you have shoulder, elbow, or wrist comfort flags.",
+  whoBuysB:
+    "Buy the 88S Pro 2024 if you are a competitive club or league player, your overhead timing is consistent (mishit rate under ~15%), your primary discipline is doubles (especially front court or mixed), and you want the current market benchmark for control-balance doubles.",
+  founderNote:
+    "If you smash from the back court as your primary attack pattern, consider the 88D Pro instead of 88S. If you switch roles or play significant front court, stay with 88S.",
+  relatedLinks: [
+    {
+      label: "Read the full Astrox 77 Pro review",
+      href: reviewPath("yy-astrox-77-pro"),
+    },
+    {
+      label: "Read the full Astrox 88S Pro review",
+      href: reviewPath("yy-astrox-88s-pro-2024"),
+    },
+    {
+      label: "Astrox 88D Pro vs 88S Pro 2024 deep-dive",
+      href: "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/",
+    },
+    { label: "Best doubles rackets", href: "/best/doubles-rackets/" },
+    { label: "Run the racket finder", href: "/quiz/" },
+  ],
 };
 
 export default function Astrox77vs88SProPage() {
-  const path = "/compare-guides/astrox-77-pro-vs-88s-pro/";
-  const articleSchema = articleJsonLd({
-    path,
-    headline: "Astrox 77 Pro vs Astrox 88S Pro 2024",
-    description:
-      "Both 4U Yonex Astrox frames with slight head-heavy balance. Honest comparison of shaft hardness, swing feel, and which player each suits — by an owner of both.",
-    section: "Comparison",
-  });
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${companyInfo.siteUrl}/` },
-      { "@type": "ListItem", position: 2, name: "Comparison guides", item: `${companyInfo.siteUrl}/compare-guides/` },
-      { "@type": "ListItem", position: 3, name: "Astrox 77 Pro vs 88S Pro", item: `${companyInfo.siteUrl}/compare-guides/astrox-77-pro-vs-88s-pro/` },
-    ],
-  };
-
-  return (
-    <main className="flex-1 py-16">
-      <JsonLd data={articleSchema} />
-      <JsonLd data={breadcrumbJsonLd} />
-      <article className="layout-band max-w-3xl space-y-6">
-        <nav className="text-xs text-[var(--color-subtle)]" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-[var(--text)]">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/compare-guides/" className="hover:text-[var(--text)]">Comparison guides</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--text)]">Astrox 77 Pro vs 88S Pro</span>
-        </nav>
-
-        <header className="space-y-3">
-          <h1 className="text-display text-[var(--text)]">
-            Astrox 77 Pro vs Astrox 88S Pro 2024
-          </h1>
-          <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            Both are 4U Yonex Astrox frames with slight head-heavy balance &mdash; close to even within the Astrox line, in contrast to the 88D Pro and 100ZZ smash frames. The 77 Pro is the friendliest pro-tier upgrade Yonex makes. The 88S Pro 2024 is the market&rsquo;s current control-balance benchmark for doubles. Choose by your timing tier, not by the price tag.
-          </p>
-          <EditorialMeta path="/compare-guides/astrox-77-pro-vs-88s-pro/" />
-        </header>
-
-        <EditorialNotice />
-
-        <p className="text-sm text-[var(--color-muted)]">
-          Author note: I (Rui Su, Division 4 Ireland) currently use the 88S Pro 2024 as my main racket and previously played the 77 Pro for two seasons. Both are excellent. The honest gap between them is smaller than reviewers usually claim.
-        </p>
-
-        <div className="overflow-x-auto card">
-          <table className="w-full min-w-[40rem] text-left text-sm">
-            <thead className="border-b border-[color:var(--line-strong)] text-[var(--text)]">
-              <tr>
-                <th className="p-4">Spec</th>
-                <th className="p-4">77 Pro</th>
-                <th className="p-4">88S Pro 2024</th>
-              </tr>
-            </thead>
-            <tbody className="text-[var(--color-muted)]">
-              <tr className="border-b border-[color:var(--line)]">
-                <td className="p-4 font-medium text-[var(--text)]">Weight</td>
-                <td className="p-4">4U (~83-85g)</td>
-                <td className="p-4">4U (~84g unstrung)</td>
-              </tr>
-              <tr className="border-b border-[color:var(--line)]">
-                <td className="p-4 font-medium text-[var(--text)]">Balance</td>
-                <td className="p-4">Slightly head-heavy</td>
-                <td className="p-4">Slight head-heavy (~301mm)</td>
-              </tr>
-              <tr className="border-b border-[color:var(--line)]">
-                <td className="p-4 font-medium text-[var(--text)]">Shaft flex</td>
-                <td className="p-4">Medium</td>
-                <td className="p-4">Stiff (Namd Flex Force)</td>
-              </tr>
-              <tr className="border-b border-[color:var(--line)]">
-                <td className="p-4 font-medium text-[var(--text)]">Frame size</td>
-                <td className="p-4">Standard</td>
-                <td className="p-4">Slightly larger</td>
-              </tr>
-              <tr>
-                <td className="p-4 font-medium text-[var(--text)]">Price (USD)</td>
-                <td className="p-4">~$220</td>
-                <td className="p-4">~$240</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2 className="text-headline text-[var(--text)]">
-          The honest difference: shaft hardness
-        </h2>
-        <p className="text-base leading-relaxed text-[var(--color-muted)]">
-          The 77 Pro shaft loads gently — you feel the bend, you feel it snap back, and your timing window is forgiving. The 88S Pro 2024 shaft is meaningfully stiffer — mid-7s on the YuanShi-rig hardness scale (lower = stiffer; YuanShi is a Chinese badminton creator who tests rackets on a professional shaft-deflection machine and posts the numbers) versus the 77 Pro&rsquo;s softer profile. When you load it cleanly, the response is crisper and faster. When your timing slips, the 88S Pro punishes it more than the 77 Pro does.
-        </p>
-
-        <h2 className="text-headline text-[var(--text)]">
-          The frame: 88S Pro is bigger
-        </h2>
-        <p className="text-base leading-relaxed text-[var(--color-muted)]">
-          The 88S Pro 2024 frame is a step larger than the 77 Pro and slightly larger than the original 88S Pro. The bigger frame plus thicker rim creates a longer dwell time on contact — the shuttle stays on the strings a fraction longer, which gives you more directional control on drops, slices, and net play. It also makes the racket slightly slower to recover than the 77 Pro on rapid drives.
-        </p>
-
-        <h2 className="text-headline text-[var(--text)]">
-          Choose 77 Pro if
-        </h2>
-        <ul className="list-disc pl-5 text-base leading-relaxed text-[var(--color-muted)]">
-          <li>You are a recreational-to-club player or an honest intermediate.</li>
-          <li>Your contact point is still inconsistent on overheads.</li>
-          <li>You play mixed disciplines and want one frame for everything.</li>
-          <li>You have any shoulder, elbow, or wrist comfort flags.</li>
-        </ul>
-
-        <h2 className="text-headline text-[var(--text)]">
-          Choose 88S Pro 2024 if
-        </h2>
-        <ul className="list-disc pl-5 text-base leading-relaxed text-[var(--color-muted)]">
-          <li>You are a competitive club or league-level player.</li>
-          <li>Your timing on overheads is consistent (mishit rate under 15%).</li>
-          <li>Your primary discipline is doubles, especially front court or mixed.</li>
-          <li>You want the current market benchmark for control-balance doubles.</li>
-        </ul>
-
-        <AdSlot id="compare-77-vs-88s-mid" />
-
-        <h2 className="text-headline text-[var(--text)]">
-          What about the 88D Pro?
-        </h2>
-        <p className="text-base leading-relaxed text-[var(--color-muted)]">
-          The 88D Pro 2024 is the dedicated rear-court attack version — narrower frame, even stiffer shaft tuning, more head-heavy bias. If you smash from the back court as your primary attack pattern, choose 88D over 88S. If you switch roles or play significant front court, stay with 88S. Read the dedicated 88D Pro vs 88S Pro 2024 comparison for the deep-dive.
-        </p>
-
-        <div className="card p-6">
-          <h2 className="text-xl font-semibold text-[var(--text)]">
-            Still unsure? Score them through your profile
-          </h2>
-          <p className="mt-3 text-sm text-[var(--color-muted)]">
-            The finder weighs your level, role, body, and budget — both rackets will appear with explained reasons.
-          </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Run the racket finder
-          </Link>
-        </div>
-
-        <p className="text-sm text-[var(--color-muted)]">
-          Related: <Link href="/review/yonex-astrox-88d-pro-vs-88s-pro-2024/" className="text-[var(--color-accent)] underline">Astrox 88D Pro vs 88S Pro 2024 deep-dive</Link>.
-        </p>
-      </article>
-    </main>
-  );
+  return <CompareGuidePage config={config} />;
 }

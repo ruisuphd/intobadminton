@@ -4,6 +4,7 @@ import {
   clampBudgetUsd,
   parseTopN,
   profileFromSearchParams,
+  profileToResultsPath,
   profileToSearchParams,
 } from "@/lib/profile-url";
 import { defaultUserProfile } from "@/lib/taxonomy";
@@ -88,6 +89,29 @@ describe("profile-url round trip", () => {
     expect(parseTopN("20")).toBe(20);
     expect(parseTopN("5")).toBe(8);
     expect(parseTopN("not-a-number")).toBe(8);
+  });
+
+  it("profileToResultsPath serialises level and discipline", () => {
+    const path = profileToResultsPath({
+      ...defaultUserProfile(),
+      level: "club",
+      discipline: "doubles",
+    });
+    expect(path).toMatch(/^\/results\/\?/);
+    expect(path).toContain("level=club");
+    expect(path).toContain("disc=doubles");
+  });
+
+  it("profileToResultsPath includes topN when provided", () => {
+    const path = profileToResultsPath(
+      { ...defaultUserProfile(), level: "club", discipline: "doubles" },
+      4
+    );
+    expect(path).toContain("n=4");
+    expect(profileToResultsPath(
+      { ...defaultUserProfile(), level: "club", discipline: "doubles" },
+      99
+    )).toContain("n=8");
   });
 
   it("clampBudgetUsd applies the hard cap", () => {

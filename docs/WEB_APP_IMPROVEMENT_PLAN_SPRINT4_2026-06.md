@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-c920` (merged with Sprint 3)  
-**Baseline:** Sprint 3 on `main` after PR #97; toolkit pages shipped on `main` per [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6 Sprint 4.
+**Branch:** `cursor/web-app-improvement-plan-3a42` → PR #115  
+**Baseline:** Sprint 3 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)); Q2 toolkit items in [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6.
 
 ---
 
@@ -9,42 +9,45 @@
 
 | Competitor | Strength | IntoBadminton response |
 |------------|----------|------------------------|
-| **RacketGuide / Tennis Warehouse** | Interactive calculators + comparison | Five `/tools/*` pages + homepage toolkit strip |
-| **Wirecutter** | Topic clusters with deep internal links | Guide ↔ tool cross-links (string tension, balance, authenticity) |
-| **BadmintonCentral** | Community Q&A density | Glossary + autolinks in reviews (Sprint 3) |
-| **RTINGS** | Methodology transparency | Scoring breakdown + `ReviewMethodologyBox` |
+| **Tennis Warehouse / Wirecutter** | Buy CTAs on every pick | `ProductBuyLink` on results, reviews, best-of |
+| **RacketGuide / TW** | Interactive calculators | Five `/tools/*` pages + guide ↔ tool cross-links |
+| **Wirecutter / RTINGS** | Social + FTC on money pages | `editorialPageMetadata()` OG/Twitter; compare template parity |
+| **BadmintonCentral** | RSS / return visits | `/feed.xml` postbuild + footer link |
 | **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
 
-**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring, no signup on finder.
+**Moat:** static export, postbuild SEO gate, signed reviews, transparent fit scoring.
 
 ---
 
-## 2. Top 5 gaps (Sprint 4 + polish)
+## 2. Top 5 gaps (closed this sprint)
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | Toolkit pages exist but guides did not link into tools | ✅ Cluster cross-links (this PR) |
-| 2 | Duplicate engagement chrome on guides (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
-| 3 | Sprint 3 PR blocked on `main` merge conflict | ✅ Merged `main` into branch |
-| 4 | Lighthouse did not cover representative tool URL | ✅ `/tools/index.html` in `lighthouserc.json` |
-| 5 | HelpfulReaction counts still client-only (no KV) | ⏳ Sprint 5 |
+| 1 | Affiliate buy links built but unused | ✅ `ProductBuyLink` + `product-retail.ts` |
+| 2 | Duplicate guide engagement (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
+| 3 | Legacy compare guides missing FTC / engagement | ✅ `CompareConceptChrome` + 77 vs 88S → `CompareGuidePage` |
+| 4 | `/best/*` and `/guides/*` missing OG/Twitter | ✅ `editorialPageMetadata()` |
+| 5 | No RSS for reviews | ✅ `scripts/generate-feed.mjs` → `out/feed.xml` |
+
+**Also on `main` (merged):** guide ↔ tool links, `GuideInPageToc`, programmatic `/best/rackets-under-100/`, search index expansions.
 
 ### Deferred (Sprint 5+)
 
-- HelpfulReaction Workers/KV aggregates
-- First-party `public/products/` photography
-- `Person.sameAs` after social profile claims
-- PWA web push
-- GSC/CrUX CSV in `docs/baselines/`
+- HelpfulReaction Workers/KV public counts
+- Faceted catalog browse
+- Original product photography
+- `Person.sameAs` after profile claims
 
 ---
 
 ## 3. Execution summary
 
-1. Merge `origin/main` into Sprint 3 branch; resolve `SavedListClient` conflict
-2. Remove duplicate `GuideEngagement` from guide articles (layout footer owns share + helpful stripe)
-3. Link `/tools/string-tension-calculator/`, `/tools/racket-balance-explainer/`, `/tools/authenticity-checker/` from matching guides
-4. Extend `GUIDE_HEADLINES` for cluster pillar guides
+1. `src/lib/product-retail.ts` + `ProductBuyLink` on commercial surfaces.
+2. Removed duplicate `GuideEngagement`; extended `GUIDE_HEADLINES`.
+3. `CompareConceptChrome` + `CompareGuidePage` migration for 77 vs 88S.
+4. `editorialPageMetadata()` for guides and best-of.
+5. RSS feed postbuild + footer link.
+6. Merged latest `main` (tools, ToC, runlog).
 
 ---
 
@@ -52,16 +55,16 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 4 + competitive audit | ✅ |
-| 2 | Tools index lists all five tools | ✅ (on `main`) |
-| 3 | No duplicate ReadingProgress on guides | ✅ |
-| 4 | Guide ToC still portal-mounted after h1 | ✅ |
-| 5 | Glossary autolinks unchanged | ✅ |
-| 6 | Static export safe | ✅ |
-| 7 | `npm test` | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | `npm run lint` | ✅ |
-| 10 | PR mergeable with `main` | ✅ |
+| 1 | Gaps grounded in competitive audit + Q2 plan | ✅ |
+| 2 | Buy links use official URLs when available | ✅ |
+| 3 | Export-audit disclosure markers intact | ✅ |
+| 4 | Single guide engagement footer | ✅ |
+| 5 | Legacy compares have FTC + engagement | ✅ |
+| 6 | OG + Twitter on guides and best-of | ✅ |
+| 7 | `feed.xml` in `out/` after build | ✅ |
+| 8 | `npm test` (198 tests) | ✅ |
+| 9 | `npm run build` + SEO audit | ✅ |
+| 10 | Mergeable with `main` | ✅ |
 
 ---
 
@@ -75,10 +78,12 @@ npm run build
 
 ---
 
-## 6. Metrics (unchanged)
+## 6. Metrics
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Tool → finder CTR | Track `tool_open` / outbound quiz clicks in GA4 |
+| Affiliate CTR | GA4 `affiliate_click` |
+| Tool → finder CTR | GA4 tool / quiz events |
+| Social referral CTR | Lift after OG metadata |

@@ -2,7 +2,7 @@ import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
 import { COMPARE_GUIDES } from "@/lib/compare-guides";
-import { reviewPath, reviewableProducts } from "@/lib/review-pages";
+import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 
 export type SearchEntryKind =
   | "review"
@@ -24,6 +24,14 @@ export type SearchEntry = {
 };
 
 const STATIC_ENTRIES: SearchEntry[] = [
+  {
+    title: "Equipment catalog",
+    href: "/catalog/",
+    kind: "tool",
+    summary:
+      "Browse and filter the full product catalogue by brand, weight, balance, and price.",
+    keywords: ["catalog", "browse", "filter", "specs", "products"],
+  },
   {
     title: "Equipment finder quiz",
     href: "/quiz/",
@@ -48,6 +56,27 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["beginner", "starter", "first racket"],
   },
   {
+    title: "Best rackets under $100",
+    href: "/best/rackets-under-100/",
+    kind: "best",
+    summary: "Budget shortlist — Yonex Play, Victor value, Li-Ning entry lines under a hundred dollars.",
+    keywords: ["budget", "cheap", "under 100", "affordable", "value"],
+  },
+  {
+    title: "Best lightweight & 5U rackets",
+    href: "/best/lightweight-rackets-5u/",
+    kind: "best",
+    summary: "Ultralight and 5U frames for fast recovery, juniors, and front-court doubles.",
+    keywords: ["5u", "lightweight", "ultralight", "nanoray light"],
+  },
+  {
+    title: "Best rackets for shoulder comfort",
+    href: "/best/rackets-for-shoulder-comfort/",
+    kind: "best",
+    summary: "Head-light and medium-flex picks for players managing arm and shoulder load.",
+    keywords: ["shoulder", "injury", "comfort", "head light", "rehab"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",
@@ -67,13 +96,6 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Head-heavy attack frames for singles power players.",
     keywords: ["smash", "attack", "singles", "power"],
-  },
-  {
-    title: "Best rackets under $100",
-    href: "/best/rackets-under-100/",
-    kind: "best",
-    summary: "Budget badminton rackets under $100 with editorial trade-offs.",
-    keywords: ["budget", "cheap", "under 100", "affordable", "beginner"],
   },
   {
     title: "Best badminton shoes",
@@ -160,6 +182,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["fake", "counterfeit", "authenticity"],
   },
   {
+    title: "Badminton toolkit",
+    href: "/tools/",
+    kind: "tool",
+    summary:
+      "Calculators and references — skill converter, tension calculator, balance explainer, court diagram, authenticity checker.",
+    keywords: ["tools", "calculator", "toolkit", "interactive"],
+  },
+  {
     title: "Skill-level converter",
     href: "/tools/skill-level-converter/",
     kind: "tool",
@@ -239,7 +269,7 @@ function reviewEntries(): SearchEntry[] {
 function productEntries(): SearchEntry[] {
   return reviewableProducts().map((product) => ({
     title: `${product.brand} ${product.name}`,
-    href: reviewPath(product.id),
+    href: catalogProductHref(product),
     kind: "product" as const,
     summary:
       product.editorNote?.slice(0, 160) ??

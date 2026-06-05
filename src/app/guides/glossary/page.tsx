@@ -1,15 +1,15 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: "/guides/glossary/",
   title: "Badminton Equipment Glossary — 40+ Terms",
   description:
     "Plain-English glossary of badminton equipment terms — 3U/4U/5U, shaft flex, balance point, sweet spot, repulsion, control, gauge, T-throat, and more.",
-  alternates: pageAlternates("/guides/glossary/"),
-};
+});
 
 type Term = {
   id: string;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { pageAlternates } from "@/lib/metadata";
+import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
 import { GuideTocSlot } from "@/components/GuideTocSlot";
 
@@ -9,11 +9,11 @@ const HEADLINE = "Badminton string tension: a practical guide";
 const DESCRIPTION =
   "How badminton string tension changes feel, power, and control — recommended pound ranges by skill, restring frequency, and climate effects most players miss.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = editorialPageMetadata({
+  path: PATH,
   title: "Badminton string tension guide",
   description: DESCRIPTION,
-  alternates: pageAlternates(PATH),
-};
+});
 
 export default function StringTensionGuide() {
   return (
