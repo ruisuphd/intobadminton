@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Run all product-funnel regression guards in one operator command:
- * discovery (search + catalog + parity), finder scoring, and results share URLs.
+ * discovery (search + catalog + parity), finder scoring, results share URLs,
+ * and compare share URLs.
  *
  * Usage:
  *   node scripts/product-funnel-baselines.mjs
@@ -17,11 +18,12 @@ const GUARDS = [
   { name: "discovery baselines", script: "scripts/discovery-baselines.mjs" },
   { name: "finder golden profiles", script: "scripts/finder-baseline.mjs" },
   { name: "results share URLs", script: "scripts/results-url-baseline.mjs" },
+  { name: "compare share URLs", script: "scripts/compare-baseline.mjs" },
 ];
 
 function usage() {
   console.log(`Usage:
-  node scripts/product-funnel-baselines.mjs   Run discovery + finder + results URL guards
+  node scripts/product-funnel-baselines.mjs   Run discovery + finder + results + compare URL guards
 `);
 }
 

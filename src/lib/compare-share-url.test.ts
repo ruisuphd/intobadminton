@@ -1,5 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { parseCompareShareIds } from "./compare-share-url";
+import { buildCompareSharePath, parseCompareShareIds } from "./compare-share-url";
+
+describe("buildCompareSharePath", () => {
+  it("serialises product ids into compare share path", () => {
+    expect(buildCompareSharePath(["yy-astrox-100zz", "yy-nanoflare-1000z"])).toBe(
+      "/compare/?p=yy-astrox-100zz%2Cyy-nanoflare-1000z"
+    );
+  });
+});
 
 describe("parseCompareShareIds", () => {
   it("returns ids from compare share query", () => {
