@@ -1,64 +1,58 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-00c0` (PR #141)  
-**Baseline:** Sprint 7 + Phase D on `main` (PDP-lite, `/data/` claims registry, product map ~80%, PWA in client component).
+**Branches:** #130 claims registry, #141 map 86% + canonical ranking, #146 PDP e2e + mobile static search  
+**Baseline:** Sprint 7 on `main` (PR #138 PDP-lite; PR #135 search excerpts).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Gap / Sprint 8 response |
-|------------|---------------------------|------------------------|
-| **Wirecutter / RTINGS** | Product + Review schema on commercial URLs | ✅ Map coverage 80% → **86%** (126/146) |
-| **RacketGuide / affiliate hubs** | “Balanced” keyword landings | ✅ Search keywords on all-round hub (no duplicate URL) |
-| **Retailer finders** | Green CI on every PR | ✅ (Sprint 7) PWA in client component — layout build fixed on 00c0 |
-| **Mature review sites** | Valid structured-data wiring | ✅ Audit script validates catalogue ids + `--min-coverage` |
-| **Editorial ops** | Coverage gates in repo | ✅ Vitest asserts ≥85% map + valid ids |
+| Competitor | Strength vs IntoBadminton | Sprint 8 response |
+|------------|---------------------------|-------------------|
+| **Wirecutter / RTINGS** | Product schema + methodology | ✅ Map **86%** (#141); ✅ `/data/` claims (#130) |
+| **Tennis Warehouse** | PDP per SKU | ✅ PDP-lite (#138); ✅ PDP e2e (#146) |
+| **RacketGuide** | Long-tail landings | ✅ “Balanced” → all-round hub keywords (#141) |
+| **Retailer finders** | Mobile search | ✅ Static search in mobile nav (#146) |
+| **YouTube reviewers** | Video evidence | ⏳ `VideoObject` deferred |
 
-**Moat (unchanged):** transparent fit score, postbuild SEO gate, static export, claims CI, PDP-lite pages (Phase D).
-
-**Deferred to Sprint 9+:** first-party `public/products/` photography, GSC/CrUX CSV capture, claimed YouTube `Person.sameAs`, `VideoObject`, web push, comments.
+**Moat:** transparent fit score, claims CI, static export, postbuild SEO gate.
 
 ---
 
-## 2. Top 5 gaps (closed Sprint 8)
+## 2. Top 5 gaps (Sprint 8 — closed)
 
-| # | Gap | Impact | Status |
-|---|-----|--------|--------|
-| 1 | **Product map below 85%** | Rich results / E-E-A-T | ✅ +9 mappings → 86% |
-| 2 | **Canonical slug drift** when multiple articles map to one product | Wrong `/review/` primary URL | ✅ Rank flagship `-review` over `-play-` / `-vs-` |
-| 3 | **“Balanced rackets” discovery** | Long-tail search | ✅ Keywords → `/best/all-round-rackets/` |
-| 4 | **Map audit lacks catalogue validation** | Bad mappings slip through | ✅ Id check + `--min-coverage=85` |
-| 5 | **No coverage regression test** | Silent map drift | ✅ Vitest ≥85% gate |
+| # | Gap | Delivery |
+|---|-----|----------|
+| 1 | Product map below 85% | ✅ #141 → 86% (126/146) |
+| 2 | No PDP/catalog e2e | ✅ #146 `e2e/pdp-smoke.spec.ts` |
+| 3 | Mobile nav search needs hydration | ✅ #146 `SiteSearchFormStatic` |
+| 4 | Claims transparency | ✅ #130 `/data/` registry |
+| 5 | HelpfulReaction public counts | ⏳ Workers/KV deploy |
 
 ---
 
 ## 3. Execution summary
 
-| Item | Files |
-|------|-------|
-| Product map +9 | `blog-review-product-map.json` |
-| Canonical ranking | `review-pages.ts`, `content-links.ts` |
-| Search “balanced” alias | `site-search.ts` |
-| Audit hardening | `audit-review-product-map.mjs` |
-| Tests | `review-article-enrichment.test.ts`, `editorial-product-schema.test.ts`, `content-links.test.ts` |
+| Item | PR |
+|------|-----|
+| Map +9, canonical ranking, audit `--min-coverage=85` | #141 |
+| Claims registry | #130 |
+| PDP e2e, mobile static search | #146 |
 
 ---
 
-## 4. Ten-pass plan verification
+## 4. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 7 deferrals + map audit | ✅ |
-| 2 | New map entries reference existing catalogue IDs only | ✅ |
-| 3 | Concept/how-to articles remain unmapped | ✅ |
-| 4 | No duplicate `/best/balanced-rackets/` URL | ✅ |
-| 5 | PWA unchanged (client component import in layout) | ✅ |
-| 6 | Enrichment tests cover new racket/shoe slugs | ✅ |
-| 7 | 1000Z Play comparison secondary to flagship review | ✅ |
-| 8 | `npm test` + `npm run lint` + `npm run build` | ✅ |
-| 9 | `node scripts/audit-review-product-map.mjs --min-coverage=85` | ✅ |
-| 10 | Static export safe | ✅ |
+| 1 | Gaps grounded in Sprint 7 deferrals | ✅ |
+| 2 | PDP e2e (`yy-nanoray-light-70i`) | ✅ #146 |
+| 3 | Map ids valid; coverage ≥85% | ✅ #141 |
+| 4 | Mobile search native submit | ✅ #146 |
+| 5 | Static export safe | ✅ |
+| 6–8 | `npm test`, `lint`, `build` | ✅ CI |
+| 9 | `audit-review-product-map.mjs --min-coverage=85` | ✅ |
+| 10 | Lighthouse PDP URL | ✅ |
 
 ---
 
@@ -66,24 +60,16 @@
 
 ```bash
 npm test
-npm run lint
 npm run build
+npm run test:e2e
 node scripts/audit-review-product-map.mjs --min-coverage=85
 ```
 
 ---
 
-## 6. Metrics (Q2)
+## 6. Deferred (Sprint 9+)
 
-| Goal | Target |
-|------|--------|
-| Review product map coverage | ≥85% (achieved 86%) |
-| CI lint-and-build | Green |
-| Pages per session | 2.5+ |
-| GSC clicks | 4× baseline |
-
----
-
-## Note: parallel Sprint 8 on `main`
-
-Claims transparency (`/data/` registry from `content/claims.json`) shipped on `main` in a separate automation branch. This PR focuses on product-map coverage and canonical review URLs.
+- HelpfulReaction Workers/KV + `NEXT_PUBLIC_REACTIONS_API_URL`
+- Original `public/products/` photography
+- GSC/CrUX CSV baselines
+- E2E for `/saved/`, `/compare/`

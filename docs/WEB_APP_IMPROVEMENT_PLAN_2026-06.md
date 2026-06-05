@@ -72,6 +72,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Fuzzy site search; `/best/control-rackets/`; catalog URL filters + `/best/rackets-under-200/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
 
+### Sprint 6–8 — Shipped on `main`
+
+- Public **`/data/`** claims registry (#130); PDP-lite `/product/[id]/` (#138)
+- Fuzzy search, reactions worker scaffold, catalog compare funnel (#127, #129, #134)
+- PR #137: compare share-link fix, PWA shortcuts, retention e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Sprint 9 — This PR (`cursor/web-app-improvement-plan-5564`)
+
+- `/best/*` illustrative **Finder fit** column + `productId` backfill
+- PWA **`ib-v3`** precaches `/catalog/`
+- **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
+
 ### Phase D — Shipped (PR #114)
 
 - Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`

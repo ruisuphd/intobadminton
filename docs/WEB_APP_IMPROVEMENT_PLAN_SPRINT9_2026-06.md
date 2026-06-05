@@ -1,31 +1,33 @@
 # Web App Improvement Plan — Sprint 9 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-f1fa` (PR #143)  
-**Baseline:** Sprint 8 on `main` (PR #130 — `/data/` claims registry; PR #138 — PDP-lite product pages).
+**Branch:** `cursor/web-app-improvement-plan-5564`  
+**Baseline:** `main` at Sprint 7–8 (#130 `/data/`, #137 compare/PWA shortcuts, #138 PDP-lite).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Gap / response |
-|------------|---------------------------|----------------|
-| **Wirecutter / RTINGS** | Product schema on ~90%+ review URLs; aggregate helpful votes | ✅ Map **87%**; reactions Worker ready |
-| **Tennis Warehouse** | Sharable filtered URLs + spec compare | ✅ `ShareResultsLink` on `/results/` |
-| **RacketGuide / affiliate roundups** | Long-tail landings | ✅ Programmatic `/best/*` on main |
-| **BadmintonCentral** | Forum search depth | ✅ Per-section review search snippets |
-| **Brand PDPs / YouTube** | Original photography, video | ⏳ Editorial pipeline |
+| Competitor | Strength vs IntoBadminton | Sprint 9 response |
+|------------|---------------------------|-------------------|
+| **Tennis Warehouse** | Sortable spec grids with implicit “match” signals | ✅ Illustrative **Finder fit** column on `/best/*` tables |
+| **Wirecutter / RTINGS** | Scores visible before long copy; no dead review links | ✅ `FitScoreBadge` in table; ✅ `editorialReviewHref` guard |
+| **RacketGuide** | Offline browse after install | ✅ PWA `ib-v3` precaches `/catalog/` |
+| **BadmintonCentral** | Social proof on threads | ⏳ HelpfulReaction KV (worker scaffold; deploy optional) |
+| **Brand PDPs** | Hero photography | ⏳ Editorial `public/products/` pipeline |
+
+**Moat unchanged:** transparent fit score, claims CI + `/data/`, static export, postbuild SEO gate, 146+ reviews.
 
 ---
 
 ## 2. Top 5 gaps (Sprint 9)
 
-| # | Gap | Impact | Sprint 9 |
+| # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Product map below 85%** | Rich-result coverage | ✅ 127/146 (87%) |
-| 2 | **Review body search not e2e-verified** | Regression risk | ✅ Playwright `BG80` smoke |
-| 3 | **No results share affordance** | Coach/partner sharing | ✅ `ShareResultsLink` |
-| 4 | **RSS not in `<head>` alternates** | Aggregator discovery | ✅ `layout.tsx` |
-| 5 | **Original photos / video schema** | AdSense signal | ⏳ Editorial |
+| 1 | **Best-of pages lack scannable fit signal** | Commercial intent; parity with finder results | ✅ `best-picks-scoring.ts` + sortable Finder fit column |
+| 2 | **“Read full review” could 404** | Trust + crawl waste on unmapped SKUs | ✅ `editorialReviewHref()` — link only when blog slug exists |
+| 3 | **PWA offline shell skips catalog** | Return visits on club Wi‑Fi | ✅ `ib-v3` + `/catalog/` in `PRECACHE_URLS` |
+| 4 | **`productId` missing on legacy best picks** | Fit column + PDP links incomplete | ✅ Backfill on 9 editorial `/best/*` routes |
+| 5 | **HelpfulReaction cross-user counts** | Social proof on articles | ⏳ Workers/KV deploy (`NEXT_PUBLIC_REACTIONS_API_URL`) |
 
 ---
 
@@ -33,28 +35,30 @@
 
 | Deliverable | Files |
 |-------------|-------|
-| Product map ≥85% | `blog-review-product-map.json` |
-| Per-section search snippets | `site-search.ts` (`reviewSectionSnippets`) |
-| Results share link | `ShareResultsLink.tsx`, `ResultsClient.tsx` |
-| RSS discovery | `layout.tsx` |
-| E2E smoke | `results-share-smoke.spec.ts`, `search-smoke.spec.ts` |
+| Illustrative fit scores | `src/lib/best-picks-scoring.ts`, `best-picks-scoring.test.ts` |
+| Comparison table column | `src/components/BestPicksComparisonTable.tsx` |
+| Review link guard | `src/lib/review-pages.ts` (`editorialReviewHref`), `BestPicksPage.tsx` |
+| PWA catalog precache | `public/sw.js` (`ib-v3`) |
+| productId backfill | `src/app/best/*/page.tsx` (9 routes) |
+| E2E regression | `e2e/best-fit-smoke.spec.ts` |
+| Unit test | `review-pages.test.ts` (`editorialReviewHref`) |
 
 ---
 
-## 4. Ten-pass verification
+## 4. Ten-pass plan verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 audit + Sprint 8 deferred | ✅ |
-| 2 | Map entries reference valid product ids | ✅ |
-| 3 | Evergreen guides remain unmapped | ✅ |
-| 4 | `BG80` → L69 in unit + e2e | ✅ |
-| 5 | Share link uses `profileToResultsPath` | ✅ |
-| 6 | Static export safe | ✅ |
-| 7 | `npm test` (247) | ✅ |
-| 8 | `npm run build` + SEO audit | ✅ |
-| 9 | Map ≥85% | ✅ (87%) |
-| 10 | No duplicate Sprint 8 claims scope | ✅ |
+| 1 | Gaps grounded in Sprint 6–8 deferred list + competitive audit | ✅ |
+| 2 | Fit score uses `referenceClubDoublesProfile` (methodology-aligned) | ✅ |
+| 3 | No duplicate `/data/` page vs #130 — rebase kept main registry | ✅ |
+| 4 | `editorialReviewHref` null when no blog map entry | ✅ |
+| 5 | Static export — no new dynamic routes | ✅ |
+| 6 | PWA cache version bumped (`ib-v3`) | ✅ |
+| 7 | Unit tests: best-picks-scoring, review-pages | ✅ |
+| 8 | E2E: Finder fit column visible on `/best/beginner-rackets/` | ✅ |
+| 9 | `npm test` + `npm run build` + postbuild SEO audit | ✅ |
+| 10 | Lighthouse URL set unchanged (beginner-rackets already listed) | ✅ |
 
 ---
 
@@ -63,5 +67,16 @@
 ```bash
 npm test
 npm run build
-node scripts/audit-review-product-map.mjs
+npm run lint
+npx playwright test e2e/best-fit-smoke.spec.ts
 ```
+
+---
+
+## 6. Deferred (Sprint 10+)
+
+- HelpfulReaction Workers/KV production deploy + env in hosting
+- GSC/CrUX baseline CSV exports in `docs/baselines/`
+- Original `public/products/` photography on top commercial URLs
+- `VideoObject` / YouTube `sameAs` (editorial commitment)
+- Review→product map beyond ~80% (comparison slugs need editorial pairing)
