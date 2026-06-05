@@ -180,7 +180,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Search autocomplete (`searchSuggestions` + combobox on `/search/` and header)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md)
 
-### Sprint 19 — This branch
+### Sprint 19 — This branch (PR #166)
 
 - Product-intent **search submit** → `/catalog/?q=` when only catalogue SKUs match
 - `/search/?q=` client redirect for static hero form submissions
