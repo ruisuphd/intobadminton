@@ -277,6 +277,11 @@ const TOOL_SLUG_CATALOG_FILTERS: Record<string, ToolSlugCatalogFilters> = {
   "authenticity-checker": { category: "racket" },
 };
 
+/** Slugs with committed tool → catalog filter wiring. */
+export function toolCatalogFilterSlugs(): string[] {
+  return Object.keys(TOOL_SLUG_CATALOG_FILTERS);
+}
+
 /** Filtered catalog browse — used from `/tools/*` interactive landings. */
 export function catalogHrefFromToolSlug(slug: string): string {
   const filters = TOOL_SLUG_CATALOG_FILTERS[slug.trim()];

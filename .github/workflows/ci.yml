@@ -54,6 +54,8 @@ jobs:
         run: npm run lint:compare-guides-baseline
       - name: Guides golden-profile guard
         run: npm run lint:guides-baseline
+      - name: Tools golden-profile guard
+        run: npm run lint:tools-baseline
       - name: Build
         run: npm run build
         env:
