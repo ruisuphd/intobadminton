@@ -22,6 +22,17 @@ export function reviewSearchExcerpt(
   return plain.slice(0, maxLen);
 }
 
+/** Short per-section samples so mid-article terms (e.g. string codes) stay searchable. */
+function reviewSectionSnippets(article: BlogArticle): string {
+  return article.sections
+    .map((section) => {
+      const heading = section.heading ?? "";
+      const body = stripHtml(section.body).slice(0, 120);
+      return `${heading} ${body}`.trim();
+    })
+    .join(" ");
+}
+
 export type SearchEntryKind =
   | "review"
   | "guide"
@@ -360,7 +371,11 @@ function reviewEntries(): SearchEntry[] {
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
     summary: article.dek ?? "",
-    keywords: [article.slug.replace(/-/g, " "), reviewSearchExcerpt(article)],
+    keywords: [
+      article.slug.replace(/-/g, " "),
+      reviewSearchExcerpt(article),
+      reviewSectionSnippets(article),
+    ],
   }));
 }
 
@@ -449,10 +464,20 @@ export const searchIndexSize = SEARCH_INDEX.length;
 
 const SEARCH_SNIPPET_MAX = 140;
 
-/** Longest review-body excerpt token attached in `reviewEntries()`. */
-function reviewBodyExcerpt(entry: SearchEntry): string | null {
+/** Review-body excerpt token attached in `reviewEntries()` (may be multiple). */
+function reviewBodyExcerpt(entry: SearchEntry, query?: string): string | null {
   const candidates = entry.keywords.filter((k) => k.length >= 60);
   if (candidates.length === 0) return null;
+
+  if (query) {
+    const tokens = normalize(query).split(" ").filter(Boolean);
+    const withHit = candidates.find((text) => {
+      const norm = text.toLowerCase();
+      return tokens.some((token) => norm.includes(token));
+    });
+    if (withHit) return withHit;
+  }
+
   return candidates.sort((a, b) => b.length - a.length)[0] ?? null;
 }
 
@@ -486,15 +511,11 @@ export function searchResultSummary(entry: SearchEntry, query: string): string {
   const titleNorm = normalize(entry.title);
   const summaryNorm = normalize(entry.summary);
   const titleOrDekHit = tokens.some(
-    (token) =>
-      titleNorm.includes(token) ||
-      summaryNorm.includes(token) ||
-      tokenMatchesBlob(token, titleNorm) ||
-      tokenMatchesBlob(token, summaryNorm)
+    (token) => titleNorm.includes(token) || summaryNorm.includes(token)
   );
   if (titleOrDekHit) return entry.summary;
 
-  const excerpt = reviewBodyExcerpt(entry);
+  const excerpt = reviewBodyExcerpt(entry, trimmed);
   if (!excerpt) return entry.summary;
 
   const excerptNorm = excerpt.toLowerCase();

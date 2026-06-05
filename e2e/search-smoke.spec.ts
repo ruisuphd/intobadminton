@@ -15,6 +15,15 @@ test("site search finds budget rackets guide", async ({ page }) => {
   ).toBeVisible();
 });
 
+test("site search finds review by body keyword BG80", async ({ page }) => {
+  await page.goto("/search/?q=BG80");
+
+  await expect(page.getByRole("heading", { name: /^Search$/i })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /l69|BG80|string/i }).first()
+  ).toBeVisible();
+});
+
 test("header search navigates to results page", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto("/");

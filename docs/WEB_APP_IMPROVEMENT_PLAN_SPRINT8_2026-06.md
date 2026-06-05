@@ -1,7 +1,6 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Branches:** Phase D + claims (`main`), product-map coverage (PR #141), search snippets (PR #144)  
-**Baseline:** Sprint 7 on `main` (PR #135 — review excerpt search, fuzzy e2e).
+**Baseline:** Sprint 7 on `main` (PR #135). Parallel tracks merged via PRs #141, #144, and Phase D on `main`.
 
 ---
 
@@ -10,13 +9,10 @@
 | Competitor | Strength vs IntoBadminton | Sprint 8 response |
 |------------|---------------------------|-------------------|
 | **Wirecutter / RTINGS** | Public methodology + claim sourcing | ✅ `/data/` claims registry |
-| **Wirecutter / RTINGS** | Product + Review schema on commercial URLs | ✅ Review→product map **86%** (126/146) |
-| **Tennis Warehouse** | Result snippets + PDP pages | ✅ Search snippets (PR #144); `/product/[id]/` PDP-lite |
-| **RacketGuide** | “Balanced” keyword landings | ✅ Search keywords → `/best/all-round-rackets/` |
-| **BadmintonCentral** | RSS discovery | ✅ `application/rss+xml` alternate in layout |
-| **YouTube-first reviewers** | Video evidence | ⏳ `VideoObject` gated on video commitment |
-
-**Moat:** transparent fit score, claims CI, static export, postbuild SEO gate.
+| **Wirecutter / RTINGS** | Product + Review schema | ✅ Review→product map **86%** |
+| **Tennis Warehouse** | Search snippets + PDP | ✅ `searchResultSummary()`; `/product/[id]/` |
+| **RacketGuide** | “Balanced” keyword landings | ✅ Search alias → `/best/all-round-rackets/` |
+| **BadmintonCentral** | RSS discovery | ✅ `application/rss+xml` alternate |
 
 ---
 
@@ -24,39 +20,26 @@
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | No public claims transparency | ✅ `/data/` registry |
-| 2 | Product map below 85% | ✅ 86% + audit `--min-coverage=85` |
-| 3 | Search cards hide body-match context | ✅ `searchResultSummary()` (PR #144) |
-| 4 | No PDP-lite for catalog products | ✅ `/product/[id]/` |
-| 5 | HelpfulReaction KV live | ⏳ Deploy Workers/KV + env URL |
+| 1 | No public claims transparency | ✅ `/data/` |
+| 2 | Product map below 85% | ✅ 86% + audit gate |
+| 3 | Search cards hide body-match context | ✅ Snippets (PR #144) |
+| 4 | No PDP-lite | ✅ `/product/[id]/` |
+| 5 | HelpfulReaction KV live | ⏳ Deploy + env URL |
 
 ---
 
 ## 3. Execution summary
 
-| Track | Deliverables |
-|-------|----------------|
-| **Trust / schema** | `/data/` claims page; map +9 entries; canonical slug ranking in `review-pages.ts` |
-| **Discovery** | `searchResultSummary()`; balanced-racket search alias; budget/head-heavy best pages |
-| **Perf** | Catalog list CLS (reserved 72×72 image box); RSS alternate metadata |
-| **Quality** | `audit-review-product-map.mjs --min-coverage=85`; Vitest coverage gate |
+- Claims registry, PDP-lite, map +9, canonical slug ranking
+- `searchResultSummary()`, RSS alternate, catalog list CLS fix
+- Balanced-racket search keywords; BG80 body search test
+- `audit-review-product-map.mjs --min-coverage=85`
 
 ---
 
-## 4. Ten-pass plan verification
+## 4. Ten-pass verification
 
-| Pass | Check | Result |
-|------|-------|--------|
-| 1 | Gaps grounded in Sprint 7 deferrals + audit | ✅ |
-| 2 | Map entries reference valid catalogue IDs | ✅ |
-| 3 | Search snippets complement excerpt indexing (Sprint 7) | ✅ |
-| 4 | No duplicate `/best/balanced-rackets/` URL | ✅ |
-| 5 | Static export safe | ✅ |
-| 6 | Body-only search e2e | ✅ |
-| 7 | `npm test` (253+) | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | Lighthouse CI | ✅ (PR #144 after catalog CLS fix) |
-| 10 | PWA unchanged (client component in layout) | ✅ |
+All passes ✅ — `npm test` (256+), `npm run build`, Lighthouse CI on PR #144.
 
 ---
 
@@ -73,7 +56,7 @@ node scripts/audit-review-product-map.mjs --min-coverage=85
 
 ## 6. Deferred (Sprint 9+)
 
-- Deploy HelpfulReaction Workers/KV to production
-- GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
-- Original photos on top commercial URLs
-- YouTube `sameAs` on author entity (after channel claim)
+- HelpfulReaction Workers/KV production deploy
+- GSC/CrUX baseline CSV
+- Original product photography
+- YouTube `sameAs` / `VideoObject`
