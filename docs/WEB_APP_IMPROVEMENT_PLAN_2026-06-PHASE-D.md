@@ -56,6 +56,7 @@
 | 8 | `npm test` | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
 | 10 | Lighthouse URLs include tools calculator | ✅ |
+| 11 | Cluster guides reserve ToC space (`GuideTocSlot`); homepage static search | ✅ (post-merge CI fix) |
 
 ---
 

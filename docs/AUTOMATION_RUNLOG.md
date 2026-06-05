@@ -2,6 +2,27 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #114 `ready_for_review` (web app Phase D, `cursor/web-app-improvement-plan-11b6`)
+
+**Trigger:** GitHub pull request #114 — competitive audit, Phase D execution, CI Lighthouse fixes after merge from `main`.
+
+### Deliverables
+
+| Item | Result |
+| --- | --- |
+| Review→product map | **80%** (117/146); `scripts/suggest-review-product-map.mjs` |
+| GSC/CrUX baseline runbook | `docs/baselines/README.md` |
+| Merge `main` | Sprint 3–5 toolkit, catalog search, price-band pages |
+| Lighthouse CLS | `GuideTocAnchor` on cluster pillar guides (SSR reserve slot) |
+
+### Verification
+
+- `npm test` — 221 passed
+- `npm run build` + postbuild SEO audit — pass
+- `node scripts/audit-review-product-map.mjs` — 80%
+
+---
+
 ## 2026-06-05 — PR #128 `ready_for_review` (merged #128)
 
 **Trigger:** GitHub pull request #128 (`ready_for_review`) — Chinese review translation automation. **Merged** to `main` as `1d7585f` (runlog only). Translation blocked: no `blogs/` drop in cloud VM.
