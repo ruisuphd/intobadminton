@@ -82,6 +82,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Net control, flat drives, and defensive recovery — head-light geometry ranked by role.",
       },
       {
+        href: "/best/defensive-rackets/",
+        title: "Best defensive rackets",
+        dek: "Blocks, lifts, and flat drives — picks for defensive doubles and front-court recovery.",
+      },
+      {
         href: "/best/smash-heavy-rackets/",
         title: "Best smash rackets",
         dek: "Head-heavy attack frames ranked by smash mass, continuity, and the shaft hardness you can actually drive.",

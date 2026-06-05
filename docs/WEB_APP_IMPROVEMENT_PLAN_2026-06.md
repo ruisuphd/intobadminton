@@ -63,16 +63,18 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - `HomeContinueReading` dynamic import
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
-### Phase C — Next (Sprint 8+)
+### Phase C — Next (Sprint 9+)
 
 - GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
-- HelpfulReaction Workers/KV aggregate backend
-- Expand `blog-review-product-map.json` toward full review coverage
+- HelpfulReaction Workers/KV deploy + `NEXT_PUBLIC_REACTIONS_API_URL`
+- Expand `blog-review-product-map.json` toward 90%+ (comparison slugs need editorial judgment)
 - YouTube `sameAs` on author entity (after channel claim)
 
 **Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).  
-**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
+**Sprint 7 follow-up (PR #142):** `blog-review-product-map.json` expansion to 72%.  
+**Sprint 8:** `/best/defensive-rackets/` + map toward 80%. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md).
 
 ---
 

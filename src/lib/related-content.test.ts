@@ -18,6 +18,12 @@ describe("relatedReadingForPath", () => {
     expect(items.some((i) => i.href.includes("all-round-rackets"))).toBe(true);
   });
 
+  it("returns defensive cluster for defensive best-of page", () => {
+    const items = relatedReadingForPath("/best/defensive-rackets/");
+    expect(items.some((i) => i.href.includes("head-light-rackets"))).toBe(true);
+    expect(items.every((i) => i.href !== "/best/defensive-rackets/")).toBe(true);
+  });
+
   it("falls back to compare cluster for unmapped compare guides", () => {
     const items = relatedReadingForPath(
       "/compare-guides/astrox-99-pro-vs-astrox-100zz/"
