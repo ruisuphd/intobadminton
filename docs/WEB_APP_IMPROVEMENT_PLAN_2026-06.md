@@ -180,13 +180,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Search autocomplete (`searchSuggestions` + combobox on `/search/` and header)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md)
 
-### Sprint 19 — This branch (PR #166)
+### Sprint 19 — Shipped (PR #166)
 
 - Product-intent **search submit** → `/catalog/?q=` when only catalogue SKUs match
 - `/search/?q=` client redirect for static hero form submissions
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT19_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT19_2026-06.md)
 
-### Next (Sprint 20+)
+### Sprint 20 — This branch (PR #167 integration + web app maturity)
+
+- Sync Jun-4 **review→product map** (7 entries) to runtime `src/data/`
+- Fix ingest scripts to write `src/data/blog-review-product-map.json` (remove stale `scripts/` copy)
+- **`/brands/anta/`** landing + brands hub deep links for all dedicated guides
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT20_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT20_2026-06.md)
+
+### Next (Sprint 21+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs

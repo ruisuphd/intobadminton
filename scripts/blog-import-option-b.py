@@ -20,7 +20,7 @@ if not BLOGS.is_absolute():
     BLOGS = ROOT / BLOGS
 LEGACY_TS = ROOT / "scripts/archive/blog.legacy.ts"
 SLUG_MAP = ROOT / "scripts/blog-slug-source-map.json"
-REVIEW_MAP = ROOT / "scripts/blog-review-product-map.json"
+REVIEW_MAP = ROOT / "src/data/blog-review-product-map.json"
 CANONICAL = ROOT / "scripts/blog-translation-canonical-names.json"
 GLOSSARY_PAGE = ROOT / "src/app/guides/glossary/page.tsx"
 OUT_JSON = ROOT / "src/data/blog-articles.json"

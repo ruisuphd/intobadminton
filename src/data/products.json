@@ -3738,22 +3738,40 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U", "5U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 295,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 18, "max": 26 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["beginner_attack", "learning_smash", "forgiving_attack"],
-    "sourceUrls": ["https://en.lining.com/badminton/rackets"],
+    "bestFor": [
+      "beginner_attack",
+      "learning_smash",
+      "forgiving_attack"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
     "editorNote": "Entry-tier of the AxForce (Thunder) family. STD high-elasticity carbon, large frame head, soft shaft, audio explosion contact feedback. Designed as a teaching racket — gives new players real attack experience without flagship-frame punishment. Pearl-white, dark-purple, and black colourways.",
     "reviewCount": 0
   },
@@ -3766,22 +3784,39 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "5U",
-    "weightVariants": ["5U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 288,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["front_court_doubles", "fast_drive", "defense"],
-    "sourceUrls": ["https://en.lining.com/badminton/rackets"],
+    "bestFor": [
+      "front_court_doubles",
+      "fast_drive",
+      "defense"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
     "editorNote": "Entry-tier of the Bladex (锋影) speed line. 5U super-light, low balance, flexible-control speed shaft, mechanical-optimised frame. Specialist front-court doubles weapon with credible mid-court burst attack. 30 lb tension support unusual for entry tier.",
     "reviewCount": 0
   },
@@ -3797,14 +3832,23 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/shoes",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["soft_landing", "all_round", "domestic_value"],
-    "sourceUrls": ["https://en.lining.com/badminton/shoes"],
+    "bestFor": [
+      "soft_landing",
+      "all_round",
+      "domestic_value"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/shoes"
+    ],
     "editorNote": "Domestic alternative for Yonex 65 Z series users frustrated by Z4 toe-crack reports. Heavy interior sponge filling, soft toe-box leather, soft heel landing distributing force outward rather than punching back. Average breathability; sizing runs differently from Yonex/Victor (fit in-store recommended).",
     "reviewCount": 0
   },
@@ -3817,22 +3861,44 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "official",
     "launchYear": 2023,
-    "regionAvailability": ["global", "cn", "sg", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles_attack", "rear_court", "smash"],
-    "sourceUrls": ["https://en.lining.com/badminton/rackets"],
+    "bestFor": [
+      "singles_attack",
+      "rear_court",
+      "smash"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
     "editorNote": "First-generation Thunder 100 (2022). Stiff shaft, head-heavy, demanding sweet spot. Gen 2 (2024) lowers the entry threshold meaningfully while preserving attack identity.",
     "reviewCount": 0
   },
@@ -3845,22 +3911,40 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 298,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round", "balanced_attack", "midcourt"],
-    "sourceUrls": ["https://en.lining.com/badminton/rackets"],
+    "bestFor": [
+      "all_round",
+      "balanced_attack",
+      "midcourt"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
     "editorNote": "Original Halbertec 7000 — balanced all-rounder with attack lean. Entry to the Halbertec family below 8000/9000 flagship tier.",
     "reviewCount": 0
   },
@@ -3873,22 +3957,40 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 29 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 29
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round_attack", "doubles", "continuous_attack"],
-    "sourceUrls": ["https://en.lining.com/badminton/rackets"],
+    "bestFor": [
+      "all_round_attack",
+      "doubles",
+      "continuous_attack"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
     "editorNote": "2nd generation Halbertec 7000 — firmer shaft, slightly more head-heavy than original. Bridges entry-tier and flagship Halbertec performance.",
     "reviewCount": 0
   },
@@ -3901,22 +4003,41 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg", "global"],
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "global"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["speed", "doubles", "fast_drive"],
-    "sourceUrls": ["https://en.lining.com/badminton/rackets"],
+    "bestFor": [
+      "speed",
+      "doubles",
+      "fast_drive"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
     "editorNote": "Speed-tier Bladex above the 800 line. Faster swing, head-light, stiff shaft. Doubles speed weapon with attack credibility.",
     "reviewCount": 0
   },
@@ -3932,14 +4053,23 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/shoes",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round", "speed_with_cushion", "lateral_support"],
-    "sourceUrls": ["https://en.lining.com/badminton/shoes"],
+    "bestFor": [
+      "all_round",
+      "speed_with_cushion",
+      "lateral_support"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/shoes"
+    ],
     "editorNote": "Li-Ning's third-generation speed-cushion hybrid. Balances quick ground feel with meaningful protection; popular among Chinese amateur tournament players.",
     "reviewCount": 0
   },
@@ -3954,16 +4084,28 @@
     "repulsion": "high",
     "control": "high",
     "durability": "high",
-    "tensionRangeLbs": { "min": 20, "max": 30 },
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 30
+    },
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/strings",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["balanced", "tension_hold", "audio_feedback"],
-    "sourceUrls": ["https://en.lining.com/badminton/strings"],
+    "bestFor": [
+      "balanced",
+      "tension_hold",
+      "audio_feedback"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/strings"
+    ],
     "editorNote": "Balanced 0.66mm string finally fixing the L-series 'soft and slow' reputation. Sharp audio signature, strong tension hold, BG65-class durability with better playing character.",
     "reviewCount": 0
   },
@@ -3978,16 +4120,28 @@
     "repulsion": "very_high",
     "control": "high",
     "durability": "high",
-    "tensionRangeLbs": { "min": 22, "max": 30 },
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 30
+    },
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/strings",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["power", "attack", "stiff_response"],
-    "sourceUrls": ["https://en.lining.com/badminton/strings"],
+    "bestFor": [
+      "power",
+      "attack",
+      "stiff_response"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/strings"
+    ],
     "editorNote": "Power-tier coated 0.66mm string from Li-Ning's new LT (coated) family. Firmer feel than L66, higher repulsion for attack-focused players.",
     "reviewCount": 0
   },
@@ -4003,14 +4157,23 @@
     "sweatAbsorption": "high",
     "packCount": 3,
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/accessories",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["dry_feel", "sweaty_hands", "value"],
-    "sourceUrls": ["https://en.lining.com/badminton/accessories"],
+    "bestFor": [
+      "dry_feel",
+      "sweaty_hands",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/accessories"
+    ],
     "editorNote": "Dry-feel overgrip with micro-perforations for sweat absorption. Grip improves with sweat exposure. Strong value vs Yonex Super Grap.",
     "reviewCount": 0
   },
@@ -4023,22 +4186,42 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 19, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2023,
-    "regionAvailability": ["global", "us", "jp", "sg", "uk"],
+    "regionAvailability": [
+      "global",
+      "us",
+      "jp",
+      "sg",
+      "uk"
+    ],
     "officialSourceUrl": "https://us.yonex.com/products/astrox-nextage",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["learning_attack", "intermediate_singles", "friendly_power"],
-    "sourceUrls": ["https://us.yonex.com/products/astrox-nextage"],
+    "bestFor": [
+      "learning_attack",
+      "intermediate_singles",
+      "friendly_power"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/astrox-nextage"
+    ],
     "editorNote": "Friendly Astrox-line entry: head-heavy, medium flex. The most accessible 'real' Astrox for intermediate players building power mechanics.",
     "reviewCount": 0
   },
@@ -4051,22 +4234,42 @@
     "headWeight": "head_light",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 19, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2024,
-    "regionAvailability": ["global", "us", "jp", "sg", "uk"],
+    "regionAvailability": [
+      "global",
+      "us",
+      "jp",
+      "sg",
+      "uk"
+    ],
     "officialSourceUrl": "https://us.yonex.com/products/nanoflare-nextage",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["learning_speed", "front_court_doubles", "friendly_speed"],
-    "sourceUrls": ["https://us.yonex.com/products/nanoflare-nextage"],
+    "bestFor": [
+      "learning_speed",
+      "front_court_doubles",
+      "friendly_speed"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/nanoflare-nextage"
+    ],
     "editorNote": "Friendly Nanoflare-line entry: head-light, medium flex. The Nanoflare answer to Astrox Nextage — speed identity at a forgiving threshold.",
     "reviewCount": 0
   },
@@ -4079,22 +4282,45 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 293,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 19, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 27
+    },
     "shaftFlexSource": "official",
     "launchYear": 2022,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/arcsaber",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round_control", "placement", "doubles"],
-    "sourceUrls": ["https://www.yonex.com/arcsaber"],
+    "bestFor": [
+      "all_round_control",
+      "placement",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/arcsaber"
+    ],
     "editorNote": "Mid-tier of the new Arcsaber 7 generation. Bridges entry-tier Play and premium Pro. Strong value for control-leaning amateurs.",
     "reviewCount": 0
   },
@@ -4107,22 +4333,43 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 296,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 18, "max": 25 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 25
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2022,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/arcsaber",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["beginner_doubles", "front_court", "brand_entry"],
-    "sourceUrls": ["https://www.yonex.com/arcsaber"],
+    "bestFor": [
+      "beginner_doubles",
+      "front_court",
+      "brand_entry"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/arcsaber"
+    ],
     "editorNote": "Entry-tier of new Arcsaber 7 generation. Limited materials and softer feel — the missing 'Game' tier above creates a meaningful gap to Tour. Beginner-friendly handling.",
     "reviewCount": 0
   },
@@ -4135,22 +4382,43 @@
     "headWeight": "head_light",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 292,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 18, "max": 25 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 25
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/nanoflare",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["recreational_speed", "beginner_doubles", "brand_entry"],
-    "sourceUrls": ["https://www.yonex.com/nanoflare"],
+    "bestFor": [
+      "recreational_speed",
+      "beginner_doubles",
+      "brand_entry"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/nanoflare"
+    ],
     "editorNote": "Beginner-tier Nanoflare with 1000 family shape. Yellow paint invites comparison with 1000 Z but specs and feel are entry-tier. Buy for the family shape at low cost; not for Z performance.",
     "reviewCount": 0
   },
@@ -4163,22 +4431,45 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 289,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "official",
     "launchYear": 2023,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/nanoflare",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["doubles_speed", "fast_drive", "counterattack"],
-    "sourceUrls": ["https://www.yonex.com/nanoflare"],
+    "bestFor": [
+      "doubles_speed",
+      "fast_drive",
+      "counterattack"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/nanoflare"
+    ],
     "editorNote": "Tour-tier of the Nanoflare 800 Pro family. Inherits 800 Pro DNA at lower price; strong speed-attack value for doubles.",
     "reviewCount": 0
   },
@@ -4194,14 +4485,27 @@
     "weightFeel": "fast",
     "hasWideOption": false,
     "launchYear": 2023,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/shoes",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["beginner_all_round", "value_yonex", "training"],
-    "sourceUrls": ["https://www.yonex.com/badminton/shoes"],
+    "bestFor": [
+      "beginner_all_round",
+      "value_yonex",
+      "training"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shoes"
+    ],
     "editorNote": "Entry-tier Yonex shoe. Power Cushion midsole at accessible price. Strong choice for new players wanting genuine Yonex shoe experience.",
     "reviewCount": 0
   },
@@ -4217,14 +4521,27 @@
     "weightFeel": "fast",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/shoes",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["training", "lifestyle_court_hybrid", "value_yonex"],
-    "sourceUrls": ["https://www.yonex.com/badminton/shoes"],
+    "bestFor": [
+      "training",
+      "lifestyle_court_hybrid",
+      "value_yonex"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shoes"
+    ],
     "editorNote": "Training-focused shoe with lifestyle aesthetic. Not aimed at competition use.",
     "reviewCount": 0
   },
@@ -4240,14 +4557,26 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["global", "jp", "sg", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/shoes",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["quick_lacing", "all_round", "convenience"],
-    "sourceUrls": ["https://www.yonex.com/badminton/shoes"],
+    "bestFor": [
+      "quick_lacing",
+      "all_round",
+      "convenience"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shoes"
+    ],
     "editorNote": "Yonex's BOA-style dial lacing shoe. Quick mid-session adjustment for serious club players.",
     "reviewCount": 0
   },
@@ -4263,14 +4592,27 @@
     "weightFeel": "fast",
     "hasWideOption": true,
     "launchYear": 2025,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/news/announcements/update-notice-regarding-the-power-cushion-65-z-series-badminton-shoes/",
     "lastVerifiedAt": "2026-05-21",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round", "quick_handling", "doubles"],
-    "sourceUrls": ["https://www.yonex.com/badminton/shoes"],
+    "bestFor": [
+      "all_round",
+      "quick_handling",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/shoes"
+    ],
     "editorNote": "Standard-width version of the 65 Z platform. Note: documented toe-crack reports led to community search for alternatives like Li-Ning Bladesabre 2 Pro and Bonny WuQue 088.",
     "reviewCount": 0
   },
@@ -4286,14 +4628,27 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["global", "cn", "sg", "kr", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "kr",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-shoes",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["stability", "all_round", "doubles"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-shoes"],
+    "bestFor": [
+      "stability",
+      "all_round",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-shoes"
+    ],
     "editorNote": "Victor's stable mid-tier all-rounder. Lite variant available with reduced cushioning for faster handling.",
     "reviewCount": 0
   },
@@ -4306,22 +4661,45 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 303,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "official",
     "launchYear": 2024,
-    "regionAvailability": ["global", "cn", "sg", "kr", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "kr",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/product/drivex-12",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles_attack", "control_with_power", "rear_court"],
-    "sourceUrls": ["https://www.victorsport.com/product/drivex-12"],
+    "bestFor": [
+      "doubles_attack",
+      "control_with_power",
+      "rear_court"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/drivex-12"
+    ],
     "editorNote": "Standalone deep-dive variant of DriveX 12. Existing DriveX 12 O catalog row covers the 'Original' colourway; this row is the broader product family entry.",
     "reviewCount": 0
   },
@@ -4334,22 +4712,40 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 287,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["speed", "doubles", "fast_drive"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "speed",
+      "doubles",
+      "fast_drive"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Auraspeed speed-tier with phantom blade identity. Quick handling, stiff shaft, head-light.",
     "reviewCount": 0
   },
@@ -4362,22 +4758,46 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U", "5U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 22, "max": 32 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 32
+    },
     "shaftFlexSource": "official",
     "launchYear": 2024,
-    "regionAvailability": ["global", "cn", "sg", "kr", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "kr",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["attack", "singles", "rear_court"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "attack",
+      "singles",
+      "rear_court"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Ultra (top-tier) variant of the Thruster Falcon C platform with three weight specs. Premium attack racket in the Golden Talon family.",
     "reviewCount": 0
   },
@@ -4390,22 +4810,43 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "official",
     "launchYear": 2024,
-    "regionAvailability": ["global", "cn", "sg", "kr", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "kr",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/product/drivex-10metallic",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["control_attack", "all_round_attack", "build_then_hit"],
-    "sourceUrls": ["https://www.victorsport.com/product/drivex-10metallic"],
+    "bestFor": [
+      "control_attack",
+      "all_round_attack",
+      "build_then_hit"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/drivex-10metallic"
+    ],
     "editorNote": "Firmer DriveX with metallic carbon shaft. Control-first frame with credible finishing shot when the rally opens.",
     "reviewCount": 0
   },
@@ -4418,22 +4859,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5", "G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
     "balanceMm": 298,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 18, "max": 26 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["budget_attack", "beginner_attack", "value"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "budget_attack",
+      "beginner_attack",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Budget-tier Victor attack racket. ~RMB 300 retail. Value pick for new players wanting attack identity at minimal spend.",
     "reviewCount": 0
   },
@@ -4446,22 +4904,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 18, "max": 26 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2018,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["budget_attack", "curiosity", "older_design"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "budget_attack",
+      "curiosity",
+      "older_design"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Older Thruster line. Niche curiosity product for older-platform enthusiasts.",
     "reviewCount": 0
   },
@@ -4474,22 +4949,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "5U",
-    "weightVariants": ["5U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 328,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["heavy_balance_attack", "power_tactical_singles", "net_pressure_then_finish"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "heavy_balance_attack",
+      "power_tactical_singles",
+      "net_pressure_then_finish"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Extreme 328mm balance in 5U weight — specialist heavy-balance light-weight racket. Marketed as 'nuke' (核武器). Slow recovery cost.",
     "reviewCount": 0
   },
@@ -4502,22 +4993,38 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 298,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 18, "max": 26 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["low_effort_backup", "returning_player", "comfort"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "low_effort_backup",
+      "returning_player",
+      "comfort"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Victor's JIPO (击破) sub-brand value pick. Soft shaft + durable string produces muffled feel. Neutral but unexciting.",
     "reviewCount": 0
   },
@@ -4530,22 +5037,38 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "5U",
-    "weightVariants": ["5U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 296,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 18, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 27
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "recreational",
-    "bestFor": ["aesthetic_first_beginner", "gift_for_beginner", "recreational"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "aesthetic_first_beginner",
+      "gift_for_beginner",
+      "recreational"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Cherry Blossom Blade — TK7 platform reskin with pink/white aesthetic targeting female beginners. Performance ceiling is real.",
     "reviewCount": 0
   },
@@ -4558,22 +5081,39 @@
     "headWeight": "head_light",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 289,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["doubles_speed", "fast_drive", "auraspeed_alternative"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "doubles_speed",
+      "fast_drive",
+      "auraspeed_alternative"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Victor's FZ sub-brand speed flagship. Inherits Auraspeed 1000Z frame design with WES 3.0 shaft. Strong sub-flagship value.",
     "reviewCount": 0
   },
@@ -4586,22 +5126,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 297,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/badminton-racket",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["continuous_attack_doubles", "short_power_swing", "tk15_successor"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-racket"],
+    "bestFor": [
+      "continuous_attack_doubles",
+      "short_power_swing",
+      "tk15_successor"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-racket"
+    ],
     "editorNote": "Victor's FZ sub-brand 88D. WES 3.0 shaft amplifies small swings. Credible TK-15 successor for compact-swing players.",
     "reviewCount": 0
   },
@@ -4614,22 +5170,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["attack", "doubles", "value_attack"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "attack",
+      "doubles",
+      "value_attack"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "Master Mao (Spear) 20 — second-generation attack racket from Kawasaki's master-tuned line.",
     "reviewCount": 0
   },
@@ -4642,22 +5215,39 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 295,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 22, "max": 32 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 32
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["speed_attack_hybrid", "tactical_placement", "doubles"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "speed_attack_hybrid",
+      "tactical_placement",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "Flagship-tier Kawasaki. Thin-wing wind-breaker frame, C60 shaft engineering. Speed-attack hybrid with serious placement capability.",
     "reviewCount": 0
   },
@@ -4670,22 +5260,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 298,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["continuous_attack_doubles", "value_alternative_to_88d_pro", "balanced_attack"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "continuous_attack_doubles",
+      "value_alternative_to_88d_pro",
+      "balanced_attack"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "Gilded-finish Kawasaki 88D — credible doubles continuous-attack alternative to Yonex 88D Pro 2024 at a meaningful discount. True-vacuum-moulded carbon nanotube construction.",
     "reviewCount": 0
   },
@@ -4698,22 +5305,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 298,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["tactical_attack", "placement_attacker", "compact_rhythm"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "tactical_attack",
+      "placement_attacker",
+      "compact_rhythm"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "M46 carbon shaft. Smooth-handling attack racket that rewards compact swing rhythm.",
     "reviewCount": 0
   },
@@ -4726,22 +5349,38 @@
     "headWeight": "head_light",
     "shaftFlex": "medium",
     "weightClass": "6U",
-    "weightVariants": ["6U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "6U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["front_court_doubles", "flat_drive_interception", "super_light"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "front_court_doubles",
+      "flat_drive_interception",
+      "super_light"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "6U super-light specialist. 30T+40T frame, 30T+46T shaft. Front-court doubles dominance with rear-court compromise.",
     "reviewCount": 0
   },
@@ -4757,14 +5396,23 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["suspension_cushion", "fast_attack", "all_round"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "suspension_cushion",
+      "fast_attack",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "Kawasaki's suspension-cushion shoe. Filter-vibration midsole for hard-court doubles.",
     "reviewCount": 0
   },
@@ -4780,14 +5428,23 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["quick_lacing", "all_round", "convenience"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "quick_lacing",
+      "all_round",
+      "convenience"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "BOA-style dial lacing all-rounder. White-purple and white-grey colourways. Carbon torsion plate + EVA cushioning.",
     "reviewCount": 0
   },
@@ -4800,22 +5457,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 22, "max": 32 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 32
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["second_tier_flagship", "balanced_attack", "g6_handle"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "second_tier_flagship",
+      "balanced_attack",
+      "g6_handle"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Bonny / OuJi second-tier flagship. 90n + 900n hybrid concept. G6 handle is unusual; year-end second-tier high-end pick.",
     "reviewCount": 0
   },
@@ -4828,22 +5501,38 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 292,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["speed_attack_hybrid", "continuous_attack_doubles", "value_speed_attack"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "speed_attack_hybrid",
+      "continuous_attack_doubles",
+      "value_speed_attack"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "M46 frame + 46T nickel-titanium-wire shaft, 6.8mm. Three colourways: black/purple, black/green, black/blue. Continuous-attack speed identity.",
     "reviewCount": 0
   },
@@ -4856,22 +5545,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 22, "max": 32 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 32
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["heavy_attack", "singles", "demon_slayer_aesthetic"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "heavy_attack",
+      "singles",
+      "demon_slayer_aesthetic"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Bonny WuQue ZD-series flagship. Demon Slayer Sword theme.",
     "reviewCount": 0
   },
@@ -4884,22 +5590,38 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 298,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["all_round", "value", "niche_collector"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "all_round",
+      "value",
+      "niche_collector"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Niche Bonny WuQue series racket. Lower SEO priority but completes the WuQue lineup coverage.",
     "reviewCount": 0
   },
@@ -4912,22 +5634,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["high_end_attack", "control_attack_hybrid", "arcsaber_11_alternative"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "high_end_attack",
+      "control_attack_hybrid",
+      "arcsaber_11_alternative"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Bonny's high-end attack racket. Positioned as Arcsaber 11 Pro alternative at lower price.",
     "reviewCount": 0
   },
@@ -4943,14 +5682,23 @@
     "weightFeel": "medium",
     "hasWideOption": true,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["wide_feet", "torsion_control", "lateral_stability"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "wide_feet",
+      "torsion_control",
+      "lateral_stability"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "3rd-generation Future Land. 3.0E wide last. Heavy hot-melt film upper, Z-pattern carbon torsion plate. Stability-first all-rounder.",
     "reviewCount": 0
   },
@@ -4966,14 +5714,23 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["flagship_protection", "long_doubles_sessions", "all_round"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "flagship_protection",
+      "long_doubles_sessions",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Flagship protection shoe. Multi-layer upper: hot-melt + mesh + microfiber + KPU + TPU. 3.0E medium-wide last. Strong materials value vs Japanese flagships.",
     "reviewCount": 0
   },
@@ -4989,14 +5746,23 @@
     "weightFeel": "fast",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["budget_speed", "lighter_players", "junior"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "budget_speed",
+      "lighter_players",
+      "junior"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Sub-USD-30 carbon-plate speed shoe. Strong value for players under 140lb / 65kg. Ankle brace recommended for sprain-history players.",
     "reviewCount": 0
   },
@@ -5012,14 +5778,23 @@
     "weightFeel": "medium",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["cyberpunk_aesthetic", "all_round", "wuque_midsole"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "cyberpunk_aesthetic",
+      "all_round",
+      "wuque_midsole"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Bonny WuQue midsole tech with cyberpunk Y3K colourway. Niche aesthetic appeal with capable all-round performance.",
     "reviewCount": 0
   },
@@ -5035,14 +5810,23 @@
     "weightFeel": "protective",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["protection", "heavy_players", "long_sessions"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "protection",
+      "heavy_players",
+      "long_sessions"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Niche protection shoe — Bonny's heavy-build offering for players who prioritise foot safety over speed.",
     "reviewCount": 0
   },
@@ -5055,22 +5839,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kumpoo.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round_attack", "value", "kumpoo_signature"],
-    "sourceUrls": ["https://www.kumpoo.com/"],
+    "bestFor": [
+      "all_round_attack",
+      "value",
+      "kumpoo_signature"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
     "editorNote": "Updated Shanhai (Mountain-Sea) — Kumpoo's most recognisable mid-tier attack racket. M40 carbon shaft.",
     "reviewCount": 0
   },
@@ -5083,22 +5884,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 302,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 22, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kumpoo.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["attack", "doubles", "value_flagship"],
-    "sourceUrls": ["https://www.kumpoo.com/"],
+    "bestFor": [
+      "attack",
+      "doubles",
+      "value_flagship"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
     "editorNote": "Kumpoo's premium-tier Shura racket. M50 high-modulus carbon, solid-shaft. Used by 3x Lin Dan Cup champion Zhan Junwei. Performance compares to three-major flagships at 30-40% the price.",
     "reviewCount": 0
   },
@@ -5114,14 +5932,23 @@
     "weightFeel": "fast",
     "hasWideOption": false,
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kumpoo.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["all_round_training", "student_player", "balanced"],
-    "sourceUrls": ["https://www.kumpoo.com/"],
+    "bestFor": [
+      "all_round_training",
+      "student_player",
+      "balanced"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
     "editorNote": "Water-bucket all-rounder. Carbon torsion plate, EVA cushioning. Slim/fast last (wide feet size up). Strong campus-team choice.",
     "reviewCount": 0
   },
@@ -5136,16 +5963,28 @@
     "repulsion": "high",
     "control": "medium",
     "durability": "high",
-    "tensionRangeLbs": { "min": 20, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.kumpoo.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["balanced", "value", "kumpoo_signature"],
-    "sourceUrls": ["https://www.kumpoo.com/"],
+    "bestFor": [
+      "balanced",
+      "value",
+      "kumpoo_signature"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
     "editorNote": "Kumpoo's 2025 Japan-produced JS-series flagship 0.67mm string. Ultra-fibre composite coating for durability + elasticity.",
     "reviewCount": 0
   },
@@ -5158,22 +5997,38 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 295,
     "balanceCategory": "even",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.badmintoncn.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["budget_value", "high_modulus_carbon_entry", "student"],
-    "sourceUrls": ["https://www.badmintoncn.com/"],
+    "bestFor": [
+      "budget_value",
+      "high_modulus_carbon_entry",
+      "student"
+    ],
+    "sourceUrls": [
+      "https://www.badmintoncn.com/"
+    ],
     "editorNote": "JuJiang LBTU at ~RMB 279. M40X frame, 46T + 4-axis carbon shaft. Best-value high-modulus-carbon racket currently available.",
     "reviewCount": 0
   },
@@ -5188,16 +6043,28 @@
     "repulsion": "medium",
     "control": "medium",
     "durability": "high",
-    "tensionRangeLbs": { "min": 20, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.badmintoncn.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["tension_hold", "0_65mm_durability", "curious_tester"],
-    "sourceUrls": ["https://www.badmintoncn.com/"],
+    "bestFor": [
+      "tension_hold",
+      "0_65mm_durability",
+      "curious_tester"
+    ],
+    "sourceUrls": [
+      "https://www.badmintoncn.com/"
+    ],
     "editorNote": "JuJiang's first serious string launch. Neutral feel, slightly slippery coating; underwhelming first impression even for sympathetic reviewers.",
     "reviewCount": 0
   },
@@ -5213,14 +6080,26 @@
     "weightFeel": "protective",
     "hasWideOption": true,
     "launchYear": 2022,
-    "regionAvailability": ["global", "jp", "sg", "us", "uk"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "us",
+      "uk"
+    ],
     "officialSourceUrl": "https://corp.asics.com/en/press/article/move-with-more-power-with-the-blast-fftm-3",
     "lastVerifiedAt": "2026-05-21",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["lateral_support", "wide_feet", "heavier_players"],
-    "sourceUrls": ["https://www.asics.com/us/en-us/blast-ff-3/p/ANA_20041038054.html"],
+    "bestFor": [
+      "lateral_support",
+      "wide_feet",
+      "heavier_players"
+    ],
+    "sourceUrls": [
+      "https://www.asics.com/us/en-us/blast-ff-3/p/ANA_20041038054.html"
+    ],
     "editorNote": "Not a badminton-branded shoe — ASICS indoor-court / handball platform. Strong wide-foot option for badminton players who dislike narrow badminton lasts.",
     "reviewCount": 0
   },
@@ -5236,14 +6115,26 @@
     "unitsPerTube": 12,
     "bwfApproved": true,
     "durabilityTier": "tournament",
-    "regionAvailability": ["global", "cn", "sg", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.rsl.world/shuttlecocks",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["competition", "premium_goose_feather", "tournament_durability"],
-    "sourceUrls": ["https://www.rsl.world/shuttlecocks"],
+    "bestFor": [
+      "competition",
+      "premium_goose_feather",
+      "tournament_durability"
+    ],
+    "sourceUrls": [
+      "https://www.rsl.world/shuttlecocks"
+    ],
     "editorNote": "RSL Supreme — premium goose-feather tournament shuttle. Stable rear-guard model in the RSL competition range.",
     "reviewCount": 0
   },
@@ -5259,14 +6150,26 @@
     "unitsPerTube": 12,
     "bwfApproved": true,
     "durabilityTier": "tournament",
-    "regionAvailability": ["global", "cn", "sg", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.rsl.world/shuttlecocks",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["competition", "late_rally_consistency", "club_tournament"],
-    "sourceUrls": ["https://www.rsl.world/shuttlecocks"],
+    "bestFor": [
+      "competition",
+      "late_rally_consistency",
+      "club_tournament"
+    ],
+    "sourceUrls": [
+      "https://www.rsl.world/shuttlecocks"
+    ],
     "editorNote": "RSL Aero U — half-step upgrade over Aero C. Thicker feathers, cleaner late-rally trajectory.",
     "reviewCount": 0
   },
@@ -5283,14 +6186,27 @@
     "bwfApproved": false,
     "durabilityTier": "practice",
     "launchYear": 2024,
-    "regionAvailability": ["global", "cn", "sg", "kr", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "cn",
+      "sg",
+      "kr",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://ca.victorsport.com/product/newcarbonsonicmax12pcs",
     "lastVerifiedAt": "2026-05-21",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["practice", "synthetic_durability", "outdoor"],
-    "sourceUrls": ["https://www.victorsport.com/badminton-shuttlecock"],
+    "bestFor": [
+      "practice",
+      "synthetic_durability",
+      "outdoor"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-shuttlecock"
+    ],
     "editorNote": "Victor's premium synthetic shuttle. Long-lasting practice and casual play; not for competition.",
     "reviewCount": 0
   },
@@ -5305,16 +6221,28 @@
     "repulsion": "high",
     "control": "medium",
     "durability": "high",
-    "tensionRangeLbs": { "min": 20, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
     "launchYear": 2023,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.badmintoncn.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["value", "balanced", "high_modulus_friendly"],
-    "sourceUrls": ["https://www.badmintoncn.com/"],
+    "bestFor": [
+      "value",
+      "balanced",
+      "high_modulus_friendly"
+    ],
+    "sourceUrls": [
+      "https://www.badmintoncn.com/"
+    ],
     "editorNote": "Goshen / Gosen Leiming (Thunder) 69 — high-modulus-friendly 0.69mm balanced string. Niche value pick.",
     "reviewCount": 0
   },
@@ -5327,22 +6255,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.bonny-sports.com/",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["fast_attack", "doubles", "value"],
-    "sourceUrls": ["https://www.bonny-sports.com/"],
+    "bestFor": [
+      "fast_attack",
+      "doubles",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
     "editorNote": "Bonny Leisu (Thunder Speed) 800 — fast-paced attack racket. Value tier with credible attack identity.",
     "reviewCount": 0
   },
@@ -5358,14 +6303,30 @@
     "weightFeel": "protective",
     "hasWideOption": true,
     "launchYear": 2023,
-    "regionAvailability": ["global", "tw", "kr", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/product/shp8500ii",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["heavy_player_cushioning", "lateral_stability", "ankle_protection", "wide_foot"],
-    "sourceUrls": ["https://www.victorsport.com/product/shp8500ii", "https://badmintondirect.com/products/2022-victor-sh8500-ii-performance-badminton-shoes"],
+    "bestFor": [
+      "heavy_player_cushioning",
+      "lateral_stability",
+      "ankle_protection",
+      "wide_foot"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/shp8500ii",
+      "https://badmintondirect.com/products/2022-victor-sh8500-ii-performance-badminton-shoes"
+    ],
     "editorNote": "Victor's P-series stability flagship (2023). Per Victor official: HYPEREVA + ENERGYMAX 3.0 + TPU + Carbon Power + Solid EVA midsole, VSR rubber outsole, V-Tough abrasion patch, U2.5 last (wide variant U2.5E). Enlarged wave-shaped eagle-claw lateral plate with LS-S support. Mohammad Ahsan endorses (Victor official copy quotes him directly); he wore the red colourway at 2023 All England. Two BadmintonCN community sources both flag that the stock insole wears markedly faster than the rest of the shoe — plan to buy aftermarket replacements. Best for heavier players, players who roll ankles on cuts, and wide-foot buyers. Note: breathability is mediocre in hot/humid venues.",
     "reviewCount": 0,
     "marketSignals": [
@@ -5390,14 +6351,31 @@
     "weightFeel": "cushioned",
     "hasWideOption": false,
     "launchYear": 2023,
-    "regionAvailability": ["global", "tw", "kr", "sg", "cn", "uk", "us", "jp", "my"],
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us",
+      "jp",
+      "my"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/product/A970NitroLite",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["all_around", "cushioned_landing", "singles_jumps"],
-    "sourceUrls": ["https://www.victorsport.com/product/A970NitroLite", "https://www.allrackets.com/en/webshop/blog/2025/07/23/de-topschoen-van-2025-onze-review-van-de-victor-a970-nitrolite/"],
+    "bestFor": [
+      "all_around",
+      "cushioned_landing",
+      "singles_jumps"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/A970NitroLite",
+      "https://www.allrackets.com/en/webshop/blog/2025/07/23/de-topschoen-van-2025-onze-review-van-de-victor-a970-nitrolite/"
+    ],
     "editorNote": "Victor's A970 platform evolved with NitroLite (nitrogen supercritical foam) midsole, replacing the A970 ACE's HyperEVA. Released 20 Nov 2023. Per Victor official: NITROLITE MIDSOLE + E-TPU + TPU + Carbon Power + Solid EVA, VSR rubber outsole, V-Durable+ + double mesh + microfibre PU leather upper, V-SHAPE 2.5 (V2.5) standard last. Lee Zii Jia (李梓嘉) endorses the Hawaii Blue/Black colourway; Anders Antonsen, Kodai Naraoka, Kenta Nishimoto, Wang Tzu Wei, and H.S. Prannoy use the pearl white. Community-measured weight (43 size, 275mm internal): ~344g per shoe — about 6g heavier than A970 ACE due to thicker upper materials. Sizing runs small; half-size up recommended. Breathability is the weakness vs vented speed shoes.",
     "reviewCount": 0,
     "marketSignals": [
@@ -5419,22 +6397,38 @@
     "headWeight": "head_light",
     "shaftFlex": "stiff",
     "weightClass": "3U",
-    "weightVariants": ["3U"],
-    "gripSizes": ["G4", "G5"],
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
     "balanceMm": 290,
     "balanceCategory": "head_light",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 18, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 27
+    },
     "shaftFlexSource": "official",
     "launchYear": 2013,
-    "regionAvailability": ["used_market_only"],
+    "regionAvailability": [
+      "used_market_only"
+    ],
     "officialSourceUrl": "https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "advanced",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles", "fast_drive", "small_frame_attack"],
-    "sourceUrls": ["https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/"],
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "small_frame_attack"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/"
+    ],
     "editorNote": "Legacy Yonex small-frame speed-attack racket (NR-ZSP / NRZS). Out of production; used-market only. Per Yonex official: 3U/86g average, balance ~290mm ±3mm, max tension 27 lbs, H.M. Graphite + Sonic Metal + EX-HMG + Nanometric + X-Fullerene. Notable for setting the men's fastest-hit Guinness record at 493 km/h on 28 July 2013 (player: Tan Boon Heong / Malaysia; transliterated 陳文宏 in Chinese pinyin — same player, different spelling system). Held the record until 2025 when Satwiksairaj Rankireddy clocked 565 km/h with the Nanoflare 1000 Z. Buyer caution: newer reissues reportedly feel softer in the shaft than 2013 originals; check provenance.",
     "reviewCount": 0,
     "marketSignals": [
@@ -5456,22 +6450,37 @@
     "headWeight": "even",
     "shaftFlex": "extra_stiff",
     "weightClass": "3U",
-    "weightVariants": ["3U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 295,
     "balanceCategory": "even_balance",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 19, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 27
+    },
     "shaftFlexSource": "official",
     "launchYear": 2017,
-    "regionAvailability": ["used_market_only"],
+    "regionAvailability": [
+      "used_market_only"
+    ],
     "officialSourceUrl": "https://www.yonex.com/duo-zs",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "advanced",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["doubles", "small_frame_attack", "advanced_technique"],
-    "sourceUrls": ["https://www.yonex.com/duo-zs"],
+    "bestFor": [
+      "doubles",
+      "small_frame_attack",
+      "advanced_technique"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/duo-zs"
+    ],
     "editorNote": "Legacy Yonex small-frame asymmetric attack racket. Out of production; used-market only. Per Yonex official: 3U/88g average, G5, even balance, extra-slim shaft, Dual Optimum System (Box Frame on forehand side for stability/smash + Aero Frame on backhand side for reduced drag/faster swing). Materials: H.M. Graphite, Nanometric DR, Hyper-MG, Duora Grommet System, Solid Feel Core. Horizontal-A Concept grommet pattern enlarges sweet spot at top of frame. Requires player to register which side of the frame faces shuttle each shot — learning curve some players never complete. Reviewers who completed the curve rate it among Yonex's most rewarding attack rackets; reviewers who didn't found it confused.",
     "reviewCount": 0,
     "marketSignals": [
@@ -5493,22 +6502,40 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2026,
-    "regionAvailability": ["cn", "tw", "eu"],
+    "regionAvailability": [
+      "cn",
+      "tw",
+      "eu"
+    ],
     "officialSourceUrl": "https://fz-forza.com/badminton/rackets/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["all_round", "entry_attack", "value"],
-    "sourceUrls": ["https://www.chianshiangsports.com.tw/en/products/fz-aero-power-odin-8800", "https://fz-forza.com/badminton/rackets/"],
+    "bestFor": [
+      "all_round",
+      "entry_attack",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.chianshiangsports.com.tw/en/products/fz-aero-power-odin-8800",
+      "https://fz-forza.com/badminton/rackets/"
+    ],
     "editorNote": "FZ Forza's entry-to-mid attack racket in the Aero Power line; first racket marketed under FZ Forza's Chinese trademark 佛斩 (Fo Zhan). Retailer-listed: 83±2g unstrung, 76 holes, head-heavy, slightly soft flex, max 30 lbs. Community-measured 4U/G5: 92.81g playing weight, 300mm balance, 6.8mm × 213mm shaft. Source-only verification.",
     "reviewCount": 0
   },
@@ -5521,22 +6548,41 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium_stiff",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 22, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2026,
-    "regionAvailability": ["cn", "tw", "eu", "dk"],
+    "regionAvailability": [
+      "cn",
+      "tw",
+      "eu",
+      "dk"
+    ],
     "officialSourceUrl": "https://fz-forza.com/badminton/rackets/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["balanced_attack", "control", "limited_edition_collector"],
-    "sourceUrls": ["https://fz-forza.com/badminton/rackets/", "https://bbs.badmintoncn.com/"],
+    "bestFor": [
+      "balanced_attack",
+      "control",
+      "limited_edition_collector"
+    ],
+    "sourceUrls": [
+      "https://fz-forza.com/badminton/rackets/",
+      "https://bbs.badmintoncn.com/"
+    ],
     "editorNote": "FZ Forza's Danish national team limited edition. Labelled 'FZ FORZA AERO POWER 88D' with Danish national team badge. Lapis Lazuli purple gradient + black-gold cosmetic. 4U/G5, max 28 lbs. Reviewer references Whip-Assist 3.0 and Victor-licensed toughness-elastic terminology — flagged for buyer verification. Balanced-attack character.",
     "reviewCount": 0
   },
@@ -5549,22 +6595,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 24, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 24,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2026,
-    "regionAvailability": ["cn"],
+    "regionAvailability": [
+      "cn"
+    ],
     "officialSourceUrl": "https://bonnysports1982.com/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["balanced_attack", "control", "bonny_brand_fans"],
-    "sourceUrls": ["https://bonnysports1982.com/", "https://bbs.badmintoncn.com/"],
+    "bestFor": [
+      "balanced_attack",
+      "control",
+      "bonny_brand_fans"
+    ],
+    "sourceUrls": [
+      "https://bonnysports1982.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
     "editorNote": "Bonny's 金龙呤 Pro (Jin Long Yin Pro / Golden Dragon Roar Pro). Material change vs predecessor: nickel-titanium alloy shaft replaces boron fibre; frame thinner and rounder but rigidity preserved. Community-measured 4U/G5: 91.94g playing weight, 300mm balance, 6.5mm × 222mm shaft. Source-only verification.",
     "reviewCount": 0
   },
@@ -5577,22 +6639,43 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 305,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 20, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
     "shaftFlexSource": "official",
     "launchYear": 2025,
-    "regionAvailability": ["asia", "jp", "in", "sg", "tw", "cn", "ph"],
+    "regionAvailability": [
+      "asia",
+      "jp",
+      "in",
+      "sg",
+      "tw",
+      "cn",
+      "ph"
+    ],
     "officialSourceUrl": "https://www.mizunobadminton-asia.com/product-page/carbo-pro-823",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["entry_attack", "net_steady", "mizuno_brand_fans"],
-    "sourceUrls": ["https://www.mizunobadminton-asia.com/product-page/carbo-pro-823"],
+    "bestFor": [
+      "entry_attack",
+      "net_steady",
+      "mizuno_brand_fans"
+    ],
+    "sourceUrls": [
+      "https://www.mizunobadminton-asia.com/product-page/carbo-pro-823"
+    ],
     "editorNote": "Mizuno's entry-to-mid Carbo Pro line head-heavy attack racket. Per Mizuno Badminton Asia official: model MZ-BF2228, 4U5, 675mm length, medium flex, head-heavy, max 30 lbs, Japan HM Graphite + Inner Wave + Aerobox. Community reviewer flags tier mismatch — racket plays closer to entry-level head-heavy training frame than mid-tier flagship. 72-hole bed unusual at this tier.",
     "reviewCount": 0
   },
@@ -5605,22 +6688,37 @@
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 310,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 24, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 24,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2026,
-    "regionAvailability": ["cn"],
+    "regionAvailability": [
+      "cn"
+    ],
     "officialSourceUrl": "https://bonnysports1982.com/p6978.html",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["doubles_back_court_attack", "flat_drive", "crisp_attack"],
-    "sourceUrls": ["https://bonnysports1982.com/p6978.html"],
+    "bestFor": [
+      "doubles_back_court_attack",
+      "flat_drive",
+      "crisp_attack"
+    ],
+    "sourceUrls": [
+      "https://bonnysports1982.com/p6978.html"
+    ],
     "editorNote": "Bonny's 幻影88 (Phantom 88) yellow attack racket. 210mm extended handle (vs standard 200mm); 6.8mm boron-fibre shaft. Community-measured 4U/G5: 91g playing weight, 310mm balance, aero frame with sword-channel (剑樋) line slots. Source-only verification. Crisp attack identity: fast snap, flat-drive leverage from long handle.",
     "reviewCount": 0
   },
@@ -5636,14 +6734,22 @@
     "weightFeel": "balanced",
     "hasWideOption": true,
     "launchYear": 2026,
-    "regionAvailability": ["cn"],
+    "regionAvailability": [
+      "cn"
+    ],
     "officialSourceUrl": "https://bonnysports1982.com/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["lateral_stability", "wide_foot", "heavy_player_protection"],
-    "sourceUrls": ["https://bonnysports1982.com/"],
+    "bestFor": [
+      "lateral_stability",
+      "wide_foot",
+      "heavy_player_protection"
+    ],
+    "sourceUrls": [
+      "https://bonnysports1982.com/"
+    ],
     "editorNote": "Bonny's WuQue Flagship 089 shoes — sibling to 088 with refined materials. Pure white + black-gold minimal design. 3.0E wide last with broad foot-shape adaptation. Carbon plate + TPU dual anti-twist, arch-support stability device, tongue cushion pad, reinforced toe + inner-side abrasion zones. Source-only verification.",
     "reviewCount": 0
   },
@@ -5658,16 +6764,29 @@
     "repulsion": "very_high",
     "control": "medium",
     "durability": "medium",
-    "tensionRangeLbs": { "min": 22, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 28
+    },
     "launchYear": 2024,
-    "regionAvailability": ["cn", "asia"],
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
     "officialSourceUrl": "https://en.lining.com/badminton/strings",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["high_elasticity", "crisp_sound", "value"],
-    "sourceUrls": ["https://en.lining.com/badminton/strings", "https://bbs.badmintoncn.com/"],
+    "bestFor": [
+      "high_elasticity",
+      "crisp_sound",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/strings",
+      "https://bbs.badmintoncn.com/"
+    ],
     "editorNote": "Li-Ning L64 high-elasticity string — 0.64mm diameter, woven outer + nylon core, Made in China. Source-reviewer's name is 'L64'; Li-Ning's closest officially-documented 0.64mm string is AP64 Rainbow (multifilament core + nylon monofilament outer + Nano-Tec coating). Source-only verification. Best for amateur players (2-3 sessions/week) who value crisp hit sound and easy power; not for hard smashers.",
     "reviewCount": 0
   },
@@ -5682,16 +6801,29 @@
     "repulsion": "very_high",
     "control": "medium",
     "durability": "medium",
-    "tensionRangeLbs": { "min": 22, "max": 28 },
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 28
+    },
     "launchYear": 2024,
-    "regionAvailability": ["cn", "asia"],
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
     "officialSourceUrl": "https://www.kumpoo.com/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["crisp_sound", "value", "thin_gauge"],
-    "sourceUrls": ["https://www.kumpoo.com/", "https://bbs.badmintoncn.com/"],
+    "bestFor": [
+      "crisp_sound",
+      "value",
+      "thin_gauge"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/",
+      "https://bbs.badmintoncn.com/"
+    ],
     "editorNote": "Kumpoo JS-63 'Sound Boom' string — 0.63mm diameter, Made in Japan (rare for a Chinese-brand string). Build: multifilament strands + woven processing + core coating + side-filament coating. Sound character compared to Yonex XB63 at lower price. Source-only verification. Community reviewer reports better durability than expected for the thin gauge — 4 matches at 25-27 lbs tension without fraying.",
     "reviewCount": 0
   },
@@ -5708,14 +6840,28 @@
     "bwfApproved": true,
     "durabilityTier": "tournament",
     "launchYear": 2024,
-    "regionAvailability": ["global", "eu", "asia", "us", "ca"],
+    "regionAvailability": [
+      "global",
+      "eu",
+      "asia",
+      "us",
+      "ca"
+    ],
     "officialSourceUrl": "https://www.rsl.world/shuttlecocks",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["tournament_grade", "goose_feather", "club_bulk_buying"],
-    "sourceUrls": ["https://www.rsl.world/shuttlecocks", "https://www.badmintonbay.com/RSL-Classic-Tourney-Shuttlecock.html", "https://www.nydhi.com/products/rsl-classic-tourney-feather-badminton-shuttlecock"],
+    "bestFor": [
+      "tournament_grade",
+      "goose_feather",
+      "club_bulk_buying"
+    ],
+    "sourceUrls": [
+      "https://www.rsl.world/shuttlecocks",
+      "https://www.badmintonbay.com/RSL-Classic-Tourney-Shuttlecock.html",
+      "https://www.nydhi.com/products/rsl-classic-tourney-feather-badminton-shuttlecock"
+    ],
     "editorNote": "RSL's premium-value goose-feather shuttle in the Classic line (distinct from the No.1 numbered series). BWF approved tournament shuttle, speed 77. Premium natural goose feathers (16 per shuttle, left-wing-selected for consistency) on natural cork base with synthetic-leather wrap. Weight 4.9-5.1g (within BWF 4.74-5.50g tolerance); ~68mm spread diameter. 12 shuttlecocks per tube. Community reviewer rates better value-per-shuttle than the marquee RSL No.1 series — comparable durability and flight quality at lower price. Some shuttles mix left-wing and right-wing feathers (cost-management) — fine for amateur play.",
     "reviewCount": 0
   },
@@ -5728,22 +6874,40 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "5U",
-    "weightVariants": ["5U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 309,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 22, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 27
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2024,
-    "regionAvailability": ["cn", "asia"],
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
     "officialSourceUrl": "https://lining.com/badminton",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["entry_axforce", "doubles_secondary", "value", "lightweight"],
-    "sourceUrls": ["https://lining.com/badminton", "https://bbs.badmintoncn.com/"],
+    "bestFor": [
+      "entry_axforce",
+      "doubles_secondary",
+      "value",
+      "lightweight"
+    ],
+    "sourceUrls": [
+      "https://lining.com/badminton",
+      "https://bbs.badmintoncn.com/"
+    ],
     "editorNote": "Li-Ning AxForce/Thunder 80 JR — despite the JR suffix, NOT a kids' racket. Standard 675mm length. 5U lightweight class. Community-measured 5U/G6: 81.65g playing weight, 309mm balance, 218mm shaft, mid stiffness (Li-Ning lists 'soft'), 76-hole box frame, max 27 lbs (vs standard 80's 28-29 lbs). Pricing on used market typically ~200 RMB / US$30-40. Sensible entry-tier AxForce or fatigue-day 5U backup. Source-only verification.",
     "reviewCount": 0
   },
@@ -5756,22 +6920,39 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 297,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 22, "max": 32 },
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 32
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2026,
-    "regionAvailability": ["cn", "be"],
+    "regionAvailability": [
+      "cn",
+      "be"
+    ],
     "officialSourceUrl": "https://www.badmintoncn.com/cbo_eq/view_25450.html",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["balanced", "value", "small_brand_alternative"],
-    "sourceUrls": ["https://www.badmintoncn.com/cbo_eq/view_25450.html", "https://www.instagram.com/huayubc.belgium/"],
+    "bestFor": [
+      "balanced",
+      "value",
+      "small_brand_alternative"
+    ],
+    "sourceUrls": [
+      "https://www.badmintoncn.com/cbo_eq/view_25450.html",
+      "https://www.instagram.com/huayubc.belgium/"
+    ],
     "editorNote": "Huayu (华羽) Slayer (屠夫) — small Chinese self-owned brand racket run by 'Coach Liu' (刘教练). Community-measured 4U/G5: 92.34g playing weight, 297mm balance, 218mm shaft, mid stiffness, box frame, 76-hole bed, max 32 lbs (high warranty for amateur tier), 46T carbon material. Two colourway variants with different tuning: white-gold leans control, black-pink leans attack. OEM-templated tuning per source-reviewer. Source-only verification.",
     "reviewCount": 0
   },
@@ -5784,22 +6965,45 @@
     "headWeight": "even",
     "shaftFlex": "stiff",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G4", "G5", "G6"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
     "balanceMm": 292,
     "balanceCategory": "even",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
-    "regionAvailability": ["global", "jp", "sg", "cn", "uk", "us"],
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
     "officialSourceUrl": "https://www.yonex.com/badminton/racquets/astrox-88-s-tour",
     "lastVerifiedAt": "2026-05-25",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["doubles_front", "fast_net", "agile_intercept"],
-    "sourceUrls": ["https://www.yonex.com/badminton/racquets/astrox-88-s-tour"],
+    "bestFor": [
+      "doubles_front",
+      "fast_net",
+      "agile_intercept"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/badminton/racquets/astrox-88-s-tour"
+    ],
     "editorNote": "Mid-tier Astrox 88 S Tour (68-hole bed). Community-measured 4U/G5: 92.9 g playing, 292 mm balance, 6.8 mm shaft, 205 mm length, strung 24–26 lb. Agile net frame — not beginner-friendly despite Tour pricing. Thin shaft and power cap retained versus Pro.",
     "reviewCount": 0
   },
@@ -5812,22 +7016,38 @@
     "headWeight": "head_heavy",
     "shaftFlex": "extra_stiff",
     "weightClass": "4U",
-    "weightVariants": ["4U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 300,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "heavy",
-    "commonStringTensionLbs": { "min": 25, "max": 27 },
+    "commonStringTensionLbs": {
+      "min": 25,
+      "max": 27
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2025,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.rsl.world/",
     "lastVerifiedAt": "2026-05-25",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
-    "bestFor": ["singles_attack", "small_head_power", "budget_flagship_experiment"],
-    "sourceUrls": ["https://www.rsl.world/"],
+    "bestFor": [
+      "singles_attack",
+      "small_head_power",
+      "budget_flagship_experiment"
+    ],
+    "sourceUrls": [
+      "https://www.rsl.world/"
+    ],
     "editorNote": "RSL AT70 (2025). Only 4U/G6 listed. Community build: 96.1 g / 300 mm balance strung with towel grip after cap removal; 6.2 mm solid-feel shaft, small head, 76 holes. Hard shaft near Astrox 100ZZ tier — singles smash weapon, doubles load high. ~three-bill street pricing in China.",
     "reviewCount": 0
   },
@@ -5840,22 +7060,42 @@
     "headWeight": "even",
     "shaftFlex": "medium",
     "weightClass": "3U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 295,
     "balanceCategory": "even",
     "swingWeightEstimate": "fast",
-    "commonStringTensionLbs": { "min": 20, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2020,
-    "regionAvailability": ["global", "sg", "cn", "jp", "tw"],
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "tw"
+    ],
     "officialSourceUrl": "https://www.victorsport.com/product/jetspeed-12",
     "lastVerifiedAt": "2026-05-25",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["doubles_all_round", "fast_drive", "chain_offense"],
-    "sourceUrls": ["https://www.victorsport.com/product/jetspeed-12"],
+    "bestFor": [
+      "doubles_all_round",
+      "fast_drive",
+      "chain_offense"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/jetspeed-12"
+    ],
     "editorNote": "Victor Jetspeed 12 — classic speed-doubles ceiling for many club players. 3U/G5 community setup at 28 lb XB63: balanced head-light feel, medium shaft, 8–4 grooves. Forgiving sweet spot; watch Taiwan-build grommet collapse at high tension.",
     "reviewCount": 0
   },
@@ -5868,22 +7108,40 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "4U",
-    "weightVariants": ["3U", "4U"],
-    "gripSizes": ["G5"],
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
     "balanceMm": 304,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 25, "max": 30 },
+    "commonStringTensionLbs": {
+      "min": 25,
+      "max": 30
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2023,
-    "regionAvailability": ["cn", "sg", "asia"],
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
     "officialSourceUrl": "https://www.lining.com/badminton/rackets",
     "lastVerifiedAt": "2026-05-25",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "competitive",
-    "bestFor": ["attack", "doubles_rear", "value_attack"],
-    "sourceUrls": ["https://www.lining.com/badminton/rackets"],
+    "bestFor": [
+      "attack",
+      "doubles_rear",
+      "value_attack"
+    ],
+    "sourceUrls": [
+      "https://www.lining.com/badminton/rackets"
+    ],
     "editorNote": "Li-Ning Blade 500 Pro (风刃500 Pro — pre-Bladex naming). 4U/G5 community: 93.0 g, 304 mm balance, 6.8 mm shaft, 220 mm length, full-groove aero frame. Thinner shaft fixes original Blade 500 woody feel; still not a flat-drive specialist.",
     "reviewCount": 0
   },
@@ -5896,22 +7154,37 @@
     "headWeight": "head_heavy",
     "shaftFlex": "medium",
     "weightClass": "5U",
-    "weightVariants": ["5U"],
-    "gripSizes": ["G6"],
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
     "balanceMm": 306,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
-    "commonStringTensionLbs": { "min": 26, "max": 28 },
+    "commonStringTensionLbs": {
+      "min": 26,
+      "max": 28
+    },
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2026,
-    "regionAvailability": ["cn"],
+    "regionAvailability": [
+      "cn"
+    ],
     "officialSourceUrl": "https://www.kawasakisports.com/",
     "lastVerifiedAt": "2026-05-25",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["budget_attack", "easy_power", "recreational_doubles"],
-    "sourceUrls": ["https://www.kawasakisports.com/"],
+    "bestFor": [
+      "budget_attack",
+      "easy_power",
+      "recreational_doubles"
+    ],
+    "sourceUrls": [
+      "https://www.kawasakisports.com/"
+    ],
     "editorNote": "Kawasaki Crimson Blade (绯红之刃). 5U/G6 community: 82.97 g playing, 306 mm balance, medium-soft shaft, fluid box frame, 76 holes. Borrowed-power attack feel at low price — not a speed frame.",
     "reviewCount": 0
   },
@@ -5928,15 +7201,397 @@
     "bwfApproved": false,
     "durabilityTier": "club",
     "launchYear": 2026,
-    "regionAvailability": ["cn", "sg"],
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
     "officialSourceUrl": "https://www.rsl.world/shuttlecocks",
     "lastVerifiedAt": "2026-05-25",
     "verificationStatus": "source_only",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
-    "bestFor": ["club_sessions", "budget_tube"],
-    "sourceUrls": ["https://www.rsl.world/shuttlecocks"],
+    "bestFor": [
+      "club_sessions",
+      "budget_tube"
+    ],
+    "sourceUrls": [
+      "https://www.rsl.world/shuttlecocks"
+    ],
     "editorNote": "RSL No.4 Plus — marketed upgrade to classic RSL No.4 with full-round goose feathers. Community reports mixed-feather tubes and unstable flight versus standard No.4; ~140 RMB street pricing weakens value.",
     "reviewCount": 0
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "cn"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "https://www.yonex.com/"
+    ],
+    "reviewCount": 0,
+    "id": "yy-nanospeed-9900-ltg",
+    "name": "NanoSpeed 9900 LTG (Green Sword)",
+    "brand": "Yonex",
+    "priceUsd": 320,
+    "headWeight": "head_light",
+    "shaftFlex": "stiff",
+    "weightClass": "3U",
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 298,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2011,
+    "officialSourceUrl": "https://www.yonex.com/",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "doubles",
+      "fast_drive",
+      "defense",
+      "collector"
+    ],
+    "editorNote": "Rare 2011 London Worlds limited 'Green Sword' (LT green), never reissued; price is an indicative second-hand/collector figure, not retail. Plays like a fast, forgiving head-light speed frame nearer 3.5U; firmer shaft than the standard NS9900. Buy on authenticity/condition.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "3U plays close to 3.5U at ~90g fully set up; fast, planted drives and strong defence; smashes are fast and accurate rather than heavy; notably consistent on off days. A grail finish more than a performance upgrade over a modern speed racket.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "global",
+      "jp",
+      "cn"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "https://www.yonex.com/"
+    ],
+    "reviewCount": 0,
+    "id": "yy-voltric-z-force-ltd",
+    "name": "Voltric Z-Force LTD (2012)",
+    "brand": "Yonex",
+    "priceUsd": 400,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 27
+    },
+    "launchYear": 2012,
+    "officialSourceUrl": "https://www.yonex.com/",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "smash_heavy",
+      "attack",
+      "collector"
+    ],
+    "editorNote": "2012 London Olympics limited 'Purple-Gold' Voltric Z-Force LTD; price is an indicative collector figure. The 4U (~88g) is a surprisingly all-court attacker, but the shaft is in Yonex's stiffest historic tier (100ZZ/Astrox 99 class) and unplayable without concentrated whip power; fragile paint. For committed attackers only.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "4U/G4 around 88g; fast-accurate smashes plus underrated soft-press and very easy clears; bigger sweet spot than VTZF2. Core flaw is an extremely stiff shaft with a high skill threshold and wrist/shoulder risk if you cannot load it.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "jp",
+      "cn",
+      "global"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "https://www.gosen.jp/"
+    ],
+    "reviewCount": 0,
+    "id": "gosen-ryoga-shiden",
+    "name": "Ryoga Shiden (1st gen)",
+    "brand": "Gosen",
+    "priceUsd": 250,
+    "headWeight": "even",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "3U",
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 28
+    },
+    "launchYear": 2016,
+    "officialSourceUrl": "https://www.gosen.jp/",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "fast_drive",
+      "smash_heavy",
+      "attack",
+      "collector"
+    ],
+    "editorNote": "Cult first-gen Ryoga Shiden ('Blue-Purple Lightning') with a tapered Zylon/Aermet conical shaft (7.5mm->6.7mm) and Gosen's hardest +3 shaft; price is an indicative collector figure. Extraordinary point-smash and drive feel, but a tiny sweet spot and near-zero tolerance. String choice (hybrid) matters a lot.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "3U; best-in-class instant-release point smashes and bullet flat drives, but the smallest sweet spot the reviewer has used and an iron-stiff +3 shaft demanding active, concentrated power. High ceiling, very state-dependent.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "cn",
+      "global"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
+    "reviewCount": 0,
+    "id": "vic-fz-100xx",
+    "name": "FZ-100XX",
+    "brand": "Victor",
+    "priceUsd": 78,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 298,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 30
+    },
+    "launchYear": 2025,
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "attack",
+      "doubles",
+      "singles",
+      "value"
+    ],
+    "editorNote": "Mid-tier value attacker in Victor's FZ sub-line, styled on the Astrox 100ZZ, with a wide fluid box frame, second-gen floating handle and Whip Enhance 3.0. Lower skill floor than a flagship attacker; real smash power for the price. Positioned as a budget Axelsen-style attack racket.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "Slight head-heavy box frame with an elastic shaft: easy clears, forgiving big sweet spot, and accessible whip smashes for improving players. Stable under continuous attack; trails dedicated speed rackets only in the very fastest exchanges.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "cn"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "https://www.anta.com/"
+    ],
+    "reviewCount": 0,
+    "id": "anta-ah600w",
+    "name": "AH600W",
+    "brand": "Anta",
+    "priceUsd": 35,
+    "headWeight": "even",
+    "shaftFlex": "flexible",
+    "weightClass": "5U",
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G6"
+    ],
+    "balanceMm": 299,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 24,
+      "max": 26
+    },
+    "launchYear": 2025,
+    "officialSourceUrl": "https://www.anta.com/",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner",
+      "balanced",
+      "lightweight"
+    ],
+    "editorNote": "Sportswear brand Anta's first badminton racket: a 5U/G6 (~82g) balanced beginner blade, box frame, 76 holes, strung 24-26 lb. Honest entry-level, likely OEM-built, but surprisingly drivable. Note the AH600 is 4U and the AH600W is 5U - confirm the code before buying.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "5U/G6, ~82g in use, 299mm balance, mid-low stiffness: a tidy balanced blade, easy to start, with no borrow deficit and even a little rebound on downward presses. A respectable debut but a low-ceiling stepping-stone.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "cn"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "http://www.bonny.com/"
+    ],
+    "reviewCount": 0,
+    "id": "bonny-leisu-800-lt",
+    "name": "Leisu 800 LT",
+    "brand": "Bonny",
+    "priceUsd": 70,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "5U",
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 25,
+      "max": 27
+    },
+    "launchYear": 2026,
+    "officialSourceUrl": "http://www.bonny.com/",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "fast_drive",
+      "attack",
+      "doubles",
+      "speed"
+    ],
+    "editorNote": "A clearly named tribute to the discontinued Nanoflare 800 LT: 5U/G5 (~85g), high 305mm balance but fast swing, small box frame. Colourways carry different shafts (nickel-titanium vs boron). Precise, fast continuous attack; the small frame charges an accuracy tax. In-production way to get the NF800LT character.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "5U/G5 ~85g, 305mm balance, mid-high stiffness, small box frame: crisp, decisive drives and whip-loaded continuous smashes via the NiTi shaft. Lower damping reduces net/drop confidence; small frame magnifies precision demands on defence.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "category": "racket",
+    "regionAvailability": [
+      "cn",
+      "global"
+    ],
+    "lastVerifiedAt": "2026-06-05",
+    "verificationStatus": "needs_review",
+    "shaftFlexSource": "editor_estimate",
+    "sourceUrls": [
+      "https://www.mizuno.com/"
+    ],
+    "reviewCount": 0,
+    "id": "mizuno-carbo-pro-825",
+    "name": "Carbo Pro 825",
+    "brand": "Mizuno",
+    "priceUsd": 60,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 26
+    },
+    "launchYear": 2023,
+    "officialSourceUrl": "https://www.mizuno.com/",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "attack",
+      "control",
+      "value"
+    ],
+    "editorNote": "The softer, stickier sibling to the Carbo Pro 823 (a distinct SKU, not a recolour): 4U/G5 (~94g), thinner rounder fluid box frame, 72 holes. Less-extreme base attacker, more forgiving than the 823 with stronger hold-on-ball; weak front-court flat drives. Restring firmer than the stock string for net feel.",
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "Community source review (BadmintonCN)",
+        "summary": "4U/G5 ~94g, 300mm balance, mid-low stiffness: lower power impedance and easier to use than the 823, stable box frame, sticky hold-on-ball aiding slice drops. Better rear-court continuity and defence than the 823; flat drives remain its weakness.",
+        "confidence": "medium"
+      }
+    ]
   }
 ]

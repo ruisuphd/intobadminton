@@ -148,6 +148,13 @@ export const blogSlugs = [
   "yonex-nanoflare-800-pro-vs-nf700",
   "yonex-aerosensa-50-shuttle-review",
   "yonex-comfort-z3-shoes-review",
+  "yonex-nanospeed-9900-ltg-green-sword-review",
+  "yonex-voltric-z-force-ltd-2012-review",
+  "gosen-ryoga-shiden-review",
+  "victor-fz-100xx-budget-attack-review",
+  "anta-ah600w-racket-review",
+  "bonny-leisu-800-lt-review",
+  "mizuno-carbo-pro-825-review",
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
