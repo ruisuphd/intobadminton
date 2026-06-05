@@ -1,5 +1,6 @@
+import { styleHeadPreference } from "@/lib/scoring";
 import type { BalanceCategory, WeightClass } from "@/lib/types/product";
-import type { EquipmentCategory, UserProfile } from "@/lib/taxonomy";
+import type { EquipmentCategory, PlayStyle, UserProfile } from "@/lib/taxonomy";
 import {
   BALANCE_OPTIONS,
   CATEGORY_OPTIONS,
@@ -217,6 +218,7 @@ const GUIDE_SLUG_CATALOG_FILTERS: Record<string, GuideSlugCatalogFilters> = {
   "doubles-roles": { category: "racket" },
   "equipment-authenticity": { category: "racket" },
   "season-refresh": {},
+  glossary: { category: "racket" },
 };
 
 /** Filtered catalog browse — used from `/guides/*` procedural landings. */
@@ -289,12 +291,32 @@ function budgetMaxToPriceBand(
   return "200plus";
 }
 
+function profileBalanceFromStyles(
+  styles: PlayStyle[]
+): BalanceCategory | null {
+  const want = styleHeadPreference(styles.length === 0 ? ["balanced"] : styles);
+  if (want === "heavy") return "head_heavy";
+  if (want === "light") return "head_light";
+  return "even";
+}
+
 /** Quiz profile → shareable catalog filters — used from `/results/`. */
 export function catalogHrefFromProfile(profile: UserProfile): string {
+  const balance =
+    profile.category === "racket" && profile.styles.length > 0
+      ? profileBalanceFromStyles(profile.styles)
+      : null;
+  const hasCompleteProfile =
+    profile.category != null &&
+    profile.level != null &&
+    profile.discipline != null;
+
   return catalogUrlFromState({
     ...DEFAULT_CATALOG_URL_STATE,
     category: profile.category ?? null,
     priceBand: budgetMaxToPriceBand(profile.body.budgetMaxUsd),
+    balance,
+    sort: hasCompleteProfile ? "fit-desc" : DEFAULT_CATALOG_URL_STATE.sort,
   });
 }
 

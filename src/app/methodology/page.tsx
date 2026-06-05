@@ -75,6 +75,24 @@ export default function MethodologyPage() {
           <Link href="/source-policy/" className="text-[var(--color-accent)] underline">Source policy</Link> and{" "}
           <Link href="/privacy/" className="text-[var(--color-accent)] underline">Privacy policy</Link>.
         </p>
+
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            See the methodology in action
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Run the finder for a personalised shortlist, or browse the full
+            catalog with transparent fit scoring on every product.
+          </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Start the finder
+            </Link>
+            <Link href="/catalog/" className="btn-secondary">
+              Browse full catalog
+            </Link>
+          </div>
+        </section>
       </article>
     </main>
   );

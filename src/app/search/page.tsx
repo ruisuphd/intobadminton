@@ -73,6 +73,19 @@ export default function SearchPage() {
         </div>
 
         <RelatedReadingShelf items={related} />
+
+        <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+          <h2 className="text-xl font-semibold text-[var(--text)]">
+            Want to browse instead?
+          </h2>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Filter the full equipment catalog by category, brand, weight, balance,
+            and price — no quiz required.
+          </p>
+          <Link href="/catalog/" className="btn-secondary mt-5">
+            Browse full catalog
+          </Link>
+        </section>
       </div>
     </main>
   );

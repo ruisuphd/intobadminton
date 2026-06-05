@@ -475,9 +475,14 @@ export default function GlossaryPage() {
             Five questions, ranked picks with the reasoning right there on the
             card. No signup. No email gate.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Start the finder
+            </Link>
+            <Link href="/catalog/" className="btn-secondary">
+              Browse full catalog
+            </Link>
+          </div>
         </section>
 
         <p className="text-sm text-[var(--color-muted)] leading-relaxed">
