@@ -42,7 +42,8 @@
         "http://localhost:4173/faq/index.html",
         "http://localhost:4173/best/index.html",
         "http://localhost:4173/brands/index.html",
-        "http://localhost:4173/brands/anta/index.html"
+        "http://localhost:4173/brands/anta/index.html",
+        "http://localhost:4173/brands/kawasaki/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

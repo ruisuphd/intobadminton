@@ -117,3 +117,47 @@ export function catalogHrefFromBrand(brand: string): string {
     brand: trimmed,
   });
 }
+
+/**
+ * Best-of slug → shareable catalog filters (retailer-style guide → browse).
+ * Unmapped slugs fall back to the full catalog index.
+ */
+type BestSlugCatalogFilters = Partial<
+  Pick<CatalogUrlState, "category" | "weightClass" | "balance" | "priceBand">
+>;
+
+const BEST_SLUG_CATALOG_FILTERS: Record<string, BestSlugCatalogFilters> = {
+  "beginner-rackets": { category: "racket" },
+  "rackets-under-100": { category: "racket", priceBand: "under100" },
+  "rackets-under-150": { category: "racket", priceBand: "under150" },
+  "rackets-under-200": { category: "racket", priceBand: "under200" },
+  "lightweight-rackets-5u": { category: "racket", weightClass: "5U" },
+  "head-light-rackets": { category: "racket", balance: "head_light" },
+  "head-heavy-rackets-under-150": {
+    category: "racket",
+    balance: "head_heavy",
+    priceBand: "under150",
+  },
+  "control-rackets": { category: "racket", balance: "head_light" },
+  "all-round-rackets": { category: "racket", balance: "even" },
+  "singles-rackets": { category: "racket" },
+  "doubles-rackets": { category: "racket" },
+  "defensive-rackets": { category: "racket", balance: "head_light" },
+  "smash-heavy-rackets": { category: "racket", balance: "head_heavy" },
+  "intermediate-rackets": { category: "racket" },
+  "rackets-for-shoulder-comfort": { category: "racket", balance: "head_light" },
+  shoes: { category: "shoes" },
+  "wide-feet-badminton-shoes": { category: "shoes" },
+  "budget-badminton-shoes": { category: "shoes", priceBand: "under150" },
+  strings: { category: "string" },
+};
+
+/** Filtered catalog browse — used from `/best/*` buying guides. */
+export function catalogHrefFromBestSlug(slug: string): string {
+  const filters = BEST_SLUG_CATALOG_FILTERS[slug.trim()];
+  if (!filters) return "/catalog/";
+  return catalogUrlFromState({
+    ...DEFAULT_CATALOG_URL_STATE,
+    ...filters,
+  });
+}

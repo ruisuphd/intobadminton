@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  catalogHrefFromBestSlug,
   catalogHrefFromBrand,
   catalogHrefFromKeywordQuery,
   catalogUrlFromState,
@@ -94,5 +95,16 @@ describe("catalog-url", () => {
       "Anta"
     );
     expect(catalogHrefFromBrand("   ")).toBe("/catalog/");
+  });
+
+  it("builds best-of slug catalog hrefs with matching filters", () => {
+    expect(catalogHrefFromBestSlug("rackets-under-100")).toBe(
+      "/catalog/?cat=racket&price=under100"
+    );
+    expect(catalogHrefFromBestSlug("lightweight-rackets-5u")).toBe(
+      "/catalog/?cat=racket&weight=5U"
+    );
+    expect(catalogHrefFromBestSlug("strings")).toBe("/catalog/?cat=string");
+    expect(catalogHrefFromBestSlug("unknown-slug")).toBe("/catalog/");
   });
 });

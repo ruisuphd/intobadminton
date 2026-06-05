@@ -7,8 +7,8 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v11 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v11"');
+  it("uses ib-v12 cache version", () => {
+    expect(source).toContain('const CACHE_VERSION = "ib-v12"');
   });
 
   it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, and compare-guides shells", () => {
@@ -32,6 +32,9 @@ describe("PWA service worker precache", () => {
       "/brands/victor/",
       "/brands/li-ning/",
       "/brands/anta/",
+      "/brands/bonny/",
+      "/brands/kawasaki/",
+      "/brands/kumpoo/",
       "/compare-guides/",
     ]) {
       expect(source).toContain(`"${path}"`);

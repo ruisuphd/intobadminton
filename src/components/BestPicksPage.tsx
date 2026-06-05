@@ -23,6 +23,7 @@ import {
   ratingDatePublished,
 } from "@/lib/editorial-rating";
 import { articleJsonLd } from "@/lib/structured-data";
+import { catalogHrefFromBestSlug } from "@/lib/catalog-url";
 import { relatedReadingForPath } from "@/lib/related-content";
 import { editorialReviewHref, productHref } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
@@ -366,9 +367,17 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             {config.ctaBody}
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Start the finder
+            </Link>
+            <Link
+              href={catalogHrefFromBestSlug(config.slug)}
+              className="btn-secondary"
+            >
+              Browse matching catalog
+            </Link>
+          </div>
         </section>
 
         <RelatedReadingShelf items={related} />

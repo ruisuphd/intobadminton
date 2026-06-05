@@ -221,9 +221,14 @@ export default function BestIndexPage() {
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             The IntoBadminton finder takes 60 seconds and ranks the catalogue against your level, role, and body — with reasons.
           </p>
-          <Link href="/quiz/" className="btn-primary mt-5">
-            Start the finder
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/quiz/" className="btn-primary">
+              Start the finder
+            </Link>
+            <Link href="/catalog/" className="btn-secondary">
+              Browse full catalog
+            </Link>
+          </div>
         </section>
       </div>
     </main>

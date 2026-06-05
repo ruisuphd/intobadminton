@@ -37,6 +37,16 @@ test("Anta brand page links to filtered catalog browse", async ({ page }) => {
   await expect(catalogLink).toHaveAttribute("href", "/catalog/?brand=Anta");
 });
 
+test("Kawasaki brand page links to filtered catalog browse", async ({ page }) => {
+  await page.goto("/brands/kawasaki/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse kawasaki in catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?brand=Kawasaki");
+});
+
 test("best-of hub shows Keep reading shelf", async ({ page }) => {
   await page.goto("/best/");
 
@@ -44,4 +54,24 @@ test("best-of hub shows Keep reading shelf", async ({ page }) => {
     page.getByRole("heading", { name: /best of badminton/i })
   ).toBeVisible();
   await expect(page.getByRole("heading", { name: /keep reading/i })).toBeVisible();
+});
+
+test("best-of hub links to full catalog browse", async ({ page }) => {
+  await page.goto("/best/");
+
+  const catalogLink = page.getByRole("link", { name: /browse full catalog/i });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/");
+});
+
+test("beginner rackets best-of links to filtered catalog browse", async ({
+  page,
+}) => {
+  await page.goto("/best/beginner-rackets/");
+
+  const catalogLink = page.getByRole("link", {
+    name: /browse matching catalog/i,
+  });
+  await expect(catalogLink).toBeVisible();
+  await expect(catalogLink).toHaveAttribute("href", "/catalog/?cat=racket");
 });
