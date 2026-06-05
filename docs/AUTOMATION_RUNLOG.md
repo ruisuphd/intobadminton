@@ -2,36 +2,10 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-05 — PR #116 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-7bc3`)
+## 2026-06-05 — Homepage perf (PR #92)
 
-**Trigger:** GitHub pull request #116 (`ready_for_review`) — Sprint 5 web app (`cursor/web-app-improvement-plan-353e`: catalogue browse, programmatic best pages, glossary autolink). PR #116 **merged** to `main` as `a131ca5`. Translation workflow blocked: no private `blogs/` drop in cloud VM.
-
-### Blog source check
-
-| Check | Result |
-| --- | --- |
-| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
-| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
-| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
-| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift on `main` |
-| New translations this run | **None** |
-
-### Verification (no review content changes)
-
-- `npm run blog:validate` — 20/20 passes, 0 issues
-- `npm test` — 207 passed
-- `npm run build` + postbuild SEO audit — pass
-
-### Translation / import
-
-Not performed — sync the Desktop drop (or set `BLOGS_DIR`), then:
-
-```bash
-npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
-CURSOR_AGENT=1 npm run blog:check
-# translate (keep Chinese, add ## English Translation below), rename to English, map slug
-npm run blog:import && npm run blog:validate
-```
+- Prebuild homepage JSON slices; deferred ContinueReading
+- Lighthouse: no /saved/; CLS warn
 
 ---
 
