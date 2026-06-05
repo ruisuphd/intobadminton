@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 1000 Play",
       brand: "Yonex",
       priceUsd: 75,
+      productId: "yy-nanoflare-1000-play",
       bestFor: "Speed-first recreational doubles",
       specs: [
         { label: "Weight", value: "4U" },
@@ -56,6 +57,7 @@ const config: BestPicksConfig = {
       name: "Nanoray Light 70i",
       brand: "Yonex",
       priceUsd: 99,
+      productId: "yy-nanoray-light-70i",
       bestFor: "Ultralight club warm-up / junior transition",
       specs: [
         { label: "Weight", value: "~70 g (7.0i class)" },
