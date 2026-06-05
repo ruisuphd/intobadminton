@@ -204,7 +204,7 @@ describe("catalog-url", () => {
           budgetMaxUsd: 120,
           weightKg: 75,
           footWidth: "normal",
-          preferredTensionLb: 26,
+          stringTensionLbs: 26,
           injuryFlags: [],
         },
       })
