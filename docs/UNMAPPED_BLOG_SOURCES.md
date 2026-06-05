@@ -1,11 +1,31 @@
-# Unmapped Blog Sources — Triage (May 2026)
+# Unmapped Blog Sources — Triage (May–Jun 2026)
 
-**Inventory date:** 2026-05-25  
-**Mapped sources:** 119  
+**Inventory date:** 2026-06-05  
+**Active source files:** 133 (`blogs/*.md`)  
 **Unmapped active files:** 0  
-**Archived (merged / duplicate):** 12 in `blogs/_archive/`
+**Archived (merged / duplicate):** 14 in `blogs/_archive/`
 
-All previously deferred sources are now mapped or merged. Re-run verification after any new `blogs/*.md` drop.
+All active sources are mapped. Re-run verification after any new `blogs/*.md` drop.
+
+---
+
+## 2026-06-04 drop (ingested 2026-06-05)
+
+Nine Chinese-named source files landed on 2026-06-04 (the "blogs drop" PRs #110/#121/#128 had flagged as absent). Triage — 7 published, 2 archived as duplicates:
+
+| Source | Decision | Live URL / target |
+|--------|----------|-------------------|
+| `…NS-9900-LTG-青剑…` | **Published** (grail) | `/review/yonex-nanospeed-9900-ltg-green-sword-review/` |
+| `…VT-ZF-LTD-紫金大姐夫…` | **Published** (grail) | `/review/yonex-voltric-z-force-ltd-2012-review/` |
+| `…高神-Ryoga-Shiden…` | **Published** (Gosen racket — 高神 = Gosen, existing brand) | `/review/gosen-ryoga-shiden-review/` |
+| `…胜利佛斩-FZ-100XX…` | **Published** | `/review/victor-fz-100xx-budget-attack-review/` |
+| `…安踏AH600W…` | **Published** (new brand: Anta) | `/review/anta-ah600w-racket-review/` |
+| `…波力雷速800LT…` | **Published** (distinct LT SKU vs `bonny-leisu-800`) | `/review/bonny-leisu-800-lt-review/` |
+| `…美津浓carbo-pro-825…` | **Published** (distinct SKU vs 823) | `/review/mizuno-carbo-pro-825-review/` |
+| `…胜利「音爆Pro」…` | **Archived** — duplicate of live `victor-sonic-boom-pro-budget-attack-review` | `blogs/_archive/` |
+| `…李宁雷霆100二代…` | **Archived** — duplicate of live `li-ning-thunder-100-gen-2-vs-gen-1` (legacy-pinned) | `blogs/_archive/` |
+
+7 net-new reviews authored in `scripts/blog-main-sprint-articles.json` (observer/brand voice; none founder-firsthand). Catalog: 7 `needs_review` rows added to `products.json` (+ Anta brand in `brands.json`), wired via `blog-review-product-map.json`. Gates green: `blog:validate` 0 issues, 220 unit tests, build + SEO audit (672 HTML, 219 sitemap URLs). Reproduce via `scripts/ingest-jun2026-drop.py` + `scripts/ingest-jun2026-catalog.py`.
 
 ---
 
