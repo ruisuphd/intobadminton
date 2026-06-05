@@ -101,6 +101,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         title: "Rackets under $200",
         dek: "Upper club-budget frames at $200 or less — programmatic catalogue with comparison table.",
       },
+      {
+        href: "/best/head-heavy-rackets-under-150/",
+        title: "Head-heavy rackets under $150",
+        dek: "Attack balance without flagship pricing — Astrox Game, Nextage, and value Thruster lines.",
+      },
     ],
   },
   {
@@ -115,6 +120,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/wide-feet-badminton-shoes/",
         title: "Best wide-feet badminton shoes",
         dek: "Six shoes with wide or wide-available lasts — dedicated wide SKUs and 2E/3E variants.",
+      },
+      {
+        href: "/best/budget-badminton-shoes/",
+        title: "Best budget badminton shoes",
+        dek: "Six court shoes under $130 with real lateral stability — not running trainers.",
       },
       {
         href: "/best/strings/",

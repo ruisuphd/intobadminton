@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 7 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-9527`  
-**Baseline:** Sprint 6 on `main` (PR #134 fuzzy search; PR #127 programmatic landings including `/best/all-round-rackets/`).
+**Branches:** `cursor/web-app-improvement-plan-9527` (merged #135), `cursor/web-app-improvement-plan-c7f0` (PR #138)  
+**Baseline:** Sprint 6 on `main` (PR #127 programmatic landings, PR #129 reactions API, PR #134 fuzzy search).
 
 ---
 
@@ -9,11 +9,11 @@
 
 | Competitor | Strength vs IntoBadminton | Gap / response |
 |------------|---------------------------|----------------|
-| **Tennis Warehouse / retailer finders** | Full-text product search, typo tolerance | ✅ Fuzzy tokens (Sprint 6); **review body excerpts in index (this sprint)** |
+| **Tennis Warehouse** | PDP per SKU + full-text search | ✅ PDP-lite `/product/[id]/` (#138); ✅ review body excerpts (#135) |
 | **Wirecutter / RTINGS** | Social proof vote counts | ⏳ HelpfulReaction Workers/KV (Phase C) |
-| **RacketGuide / affiliate roundups** | Long-tail landings (all-round, control, power) | ✅ Shipped on main (PR #127) |
+| **RacketGuide / affiliate roundups** | Long-tail budget landings | ✅ Budget shoes + head-heavy under $150 (#138); all-round on main (#127) |
 | **Brand PDPs** | First-party product photography | ⏳ Editorial `public/products/` pipeline |
-| **YouTube-first reviewers** | Video evidence | ⏳ `VideoObject` gated on video commitment |
+| **YouTube reviewers** | Video evidence | ⏳ `VideoObject` gated on video commitment |
 
 **Moat unchanged:** transparent fit score, claims CI, static export, 146+ reviews, postbuild SEO gate.
 
@@ -21,22 +21,28 @@
 
 ## 2. Top 5 gaps (Sprint 7)
 
-| # | Gap | Impact | Sprint 7 |
+| # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Search index misses review body terms** | Discovery friction — dek-only matching | ✅ Excerpt enrichment in `reviewEntries()` |
-| 2 | **Fuzzy search lacks e2e coverage** | Regressions on typo UX | ✅ Playwright typo smoke |
-| 3 | HelpfulReaction aggregate counts | Social proof (Wirecutter parity) | ⏳ Workers/KV backend |
-| 4 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
-| 5 | Video / `VideoObject` schema | E-E-A-T visual evidence | ⏳ Gated on video commitment |
+| 1 | **No PDP for unmapped catalogue SKUs** | Catalog dead-end | ✅ PR #138 `/product/[id]/` |
+| 2 | **Search index misses review body terms** | Discovery friction | ✅ PR #135 excerpt enrichment |
+| 3 | **Missing budget shoe + value attack long-tail** | SEO topical coverage | ✅ PR #138 two `/best/*` pages |
+| 4 | HelpfulReaction aggregate counts | Social proof | ⏳ Workers/KV backend |
+| 5 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
 
 ---
 
 ## 3. Execution summary
 
-1. **`src/lib/site-search.ts`** — `reviewSearchExcerpt()` strips HTML from section bodies and adds capped plain-text tokens to review index keywords.
-2. **`e2e/search-smoke.spec.ts`** — typo query smoke for fuzzy matching (`badmintn string tenson`).
-3. **Unit tests** — body-only term discovery + existing fuzzy cases in `site-search.test.ts`.
-4. **Docs hygiene** — resolve merge conflict in `WEB_APP_IMPROVEMENT_PLAN_2026-06.md`.
+**PR #135 (on main):**
+1. `reviewSearchExcerpt()` in `site-search.ts` — body tokens in review index.
+2. Playwright typo smoke in `e2e/search-smoke.spec.ts`.
+
+**PR #138:**
+1. `/product/[id]/` — static PDP-lite with Product JSON-LD, save/compare/buy.
+2. `catalogProductHref` → PDP when no review article.
+3. CompareTable “View details” links.
+4. `/best/budget-badminton-shoes/` and `/best/head-heavy-rackets-under-150/`.
+5. Sitemap product expansion + Lighthouse PDP URL.
 
 ### Follow-up (PR #142)
 
@@ -49,15 +55,15 @@
 | Pass | Check | Result |
 |------|-------|--------|
 | 1 | Gaps grounded in Sprint 6 deferred list + competitive audit | ✅ |
-| 2 | Excerpt cap prevents bundle blow-up (≤400 chars/article) | ✅ |
-| 3 | Does not duplicate PR #127 all-round page work | ✅ |
-| 4 | Static export safe (no API routes) | ✅ |
-| 5 | Fuzzy e2e covers typo path end-to-end | ✅ |
-| 6 | Body-only search term finds correct review | ✅ |
-| 7 | Nonsense queries still return empty | ✅ |
-| 8 | `npm test` | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | No Lighthouse URL regressions vs main | ✅ |
+| 2 | PDP static export safe | ✅ |
+| 3 | Excerpt cap prevents bundle blow-up | ✅ |
+| 4 | catalogProductHref never 404s for catalogue ids | ✅ |
+| 5 | New best picks use real `productId` values | ✅ |
+| 6 | Fuzzy e2e + unit search tests | ✅ |
+| 7 | `npm test` | ✅ |
+| 8 | `npm run build` + postbuild SEO audit | ✅ |
+| 9 | Sitemap includes `/product/[id]/` | ✅ |
+| 10 | Lighthouse includes PDP + new best URLs | ✅ |
 
 ---
 

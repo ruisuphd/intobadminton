@@ -51,6 +51,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["catalog", "browse", "filter", "specs", "products"],
   },
   {
+    title: "Verified claims registry",
+    href: "/data/",
+    kind: "tool",
+    summary:
+      "Public table of cited facts with source quotes, verification dates, and authority tiers.",
+    keywords: ["claims", "data", "sources", "fact check", "registry", "bwf"],
+  },
+  {
     title: "Equipment finder quiz",
     href: "/quiz/",
     kind: "tool",
@@ -137,6 +145,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     kind: "best",
     summary: "Even-balance frames for club doubles and players covering every court position.",
     keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
+  },
+  {
+    title: "Best budget badminton shoes under $130",
+    href: "/best/budget-badminton-shoes/",
+    kind: "best",
+    summary: "Court shoes under $130 with verified lateral stability specs.",
+    keywords: ["budget shoes", "cheap shoes", "under 130", "value shoes"],
+  },
+  {
+    title: "Best head-heavy rackets under $150",
+    href: "/best/head-heavy-rackets-under-150/",
+    kind: "best",
+    summary: "Attack-balance rackets under $150 for club rear-court players.",
+    keywords: ["head heavy", "attack", "under 150", "astrox game", "rear court"],
   },
   {
     title: "Best intermediate rackets",
