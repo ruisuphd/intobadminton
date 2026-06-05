@@ -1,6 +1,6 @@
 # Web App Improvement Plan — June 2026
 
-**Branches:** PRs [#80](https://github.com/ruisuphd/intobadminton/pull/80), [#84](https://github.com/ruisuphd/intobadminton/pull/84), [#94](https://github.com/ruisuphd/intobadminton/pull/94), [#97](https://github.com/ruisuphd/intobadminton/pull/97), [#105](https://github.com/ruisuphd/intobadminton/pull/105) merged to `main`; homepage perf follow-up PR [#92](https://github.com/ruisuphd/intobadminton/pull/92)  
+**Branches:** PRs [#80](https://github.com/ruisuphd/intobadminton/pull/80), [#84](https://github.com/ruisuphd/intobadminton/pull/84), [#94](https://github.com/ruisuphd/intobadminton/pull/94), [#97](https://github.com/ruisuphd/intobadminton/pull/97), [#105](https://github.com/ruisuphd/intobadminton/pull/105), [#114](https://github.com/ruisuphd/intobadminton/pull/114) merged to `main`; homepage perf PR [#92](https://github.com/ruisuphd/intobadminton/pull/92)  
 **Baseline:** [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md), [`AUDIT_2026-05.md`](AUDIT_2026-05.md)
 
 ---
@@ -25,11 +25,11 @@
 |---|-----|--------|--------|
 | 1 | Homepage Lighthouse / critical-path JS | CI + CWV | ✅ PR #92 (prebuild slices + deferred engagement) |
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
-| 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
+| 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4–5 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
 
-**Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
+**Shipped on `main`:** site search, `SearchAction`, return-visit hooks, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
 
@@ -43,30 +43,32 @@
 
 - SEO cluster guides; Product JSON-LD enrichment; Buttondown notify-me; compare-guide search index + e2e
 
-### Phase C — Shipped (PR #101 / compare-guide engagement)
+### Phase C — Shipped (PR #101)
 
-- Compare-guides layout: reading progress, affiliate disclosure, engagement footer
-- All 12 compare guides in site search (`src/lib/compare-guides.ts`)
-- Guide engagement deduplication; larger `ProductCardImage` on result cards
-- `scripts/audit-review-product-map.mjs`
+- Compare-guides layout chrome, `compare-guides.ts` search manifest, guide engagement deduplication, `ProductCardImage` on results, `audit-review-product-map.mjs`
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
 
 ### Sprint 3–5 — Shipped (main)
 
-- Glossary autolinks, `GuideInPageToc` + `GuideTocAnchor`, quiz UX, catalog search, price-band pages
+- Notify-me intent, homepage recall, catalog search, `/catalog/`, results facets, price-band pages
+- Glossary autolinks, `GuideInPageToc` + `GuideTocAnchor`, quiz step hints, Sharp-preferred product images
 - Homepage bundle slimming (`home-featured-reviews.json`, dynamic `HomeContinueReading`)
+- `/best/rackets-under-200/`; catalog URL filters + sort — see [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
-### Phase D — Shipped (PR #114 / `cursor/web-app-improvement-plan-11b6`)
+### Phase D — Shipped (PR #114)
 
-- Review→product map **80%**; `scripts/suggest-review-product-map.mjs`
+- Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
 - `docs/baselines/README.md` GSC/CrUX runbook
+- `GuideTocAnchor` on SEO cluster pillar guides; Lighthouse uses `season-refresh` not `glossary`
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
 
-### Deferred (Sprint 6+)
+### Sprint 6+ (deferred)
 
-- HelpfulReaction Workers/KV; original photography; YouTube `sameAs` after channel claim
+- Original photos on top commercial URLs
+- HelpfulReaction Workers/KV
+- YouTube `sameAs` on author entity (after channel claim)
 
 ---
 
@@ -82,7 +84,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 | 6 | Product JSON-LD via enrichment helper | ✅ |
 | 7 | `site-search.test.ts` + search e2e | ✅ |
 | 8 | `/search/` + `/catalog/` in sitemap | ✅ |
-| 9 | `npm test` (198) | ✅ |
+| 9 | `npm test` | ✅ |
 | 10 | `npm run build` + Lighthouse homepage ≥ 0.9 | ✅ CI (Sprint 5) |
 
 ---
