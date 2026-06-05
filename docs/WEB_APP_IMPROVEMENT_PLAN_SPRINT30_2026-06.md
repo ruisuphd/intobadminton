@@ -56,8 +56,8 @@
 | 5 | Static export — no new API routes | ✅ |
 | 6 | Unit tests: `pwa-precache.test.ts` updated for ib-v20 | ✅ |
 | 7 | Lighthouse URLs are indexable (no noindex setup/saved/compare) | ✅ |
-| 8 | `npm test` + `npm run build` + postbuild SEO audit | ⏳ CI |
-| 9 | E2E: legal cluster catalog CTAs + PWA ib-v20 | ⏳ CI |
+| 8 | `npm test` + `npm run build` + postbuild SEO audit | ✅ |
+| 9 | E2E: legal cluster catalog CTAs + PWA ib-v20 | ✅ |
 | 10 | Master plan doc updated with Sprint 30 entry | ✅ |
 
 ---
