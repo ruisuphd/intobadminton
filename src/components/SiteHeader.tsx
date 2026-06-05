@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { SavedHeaderLink } from "@/components/SavedHeaderLink";
 import { SiteSearchForm } from "@/components/SiteSearchForm";
+import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -192,7 +193,7 @@ export function SiteHeader() {
               <SavedHeaderLink variant="mobile" onNavigate={close} />
             </li>
             <li className="py-2">
-              <SiteSearchForm compact />
+              <SiteSearchFormStatic compact />
             </li>
             <li>
               <Link

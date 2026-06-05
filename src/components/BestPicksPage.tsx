@@ -12,7 +12,9 @@ import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { ProductBuyLink } from "@/components/ProductBuyLink";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { companyInfo } from "@/lib/company";
 import productsCatalog from "@/data/products.json";
 import {
@@ -21,7 +23,8 @@ import {
   ratingDatePublished,
 } from "@/lib/editorial-rating";
 import { articleJsonLd } from "@/lib/structured-data";
-import { productHref } from "@/lib/review-pages";
+import { relatedReadingForPath } from "@/lib/related-content";
+import { editorialReviewHref, productHref } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];
@@ -63,6 +66,8 @@ export type BestPicksConfig = {
 };
 
 export function BestPicksPage({ config }: { config: BestPicksConfig }) {
+  const path = `/best/${config.slug}/`;
+  const related = relatedReadingForPath(path);
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -164,7 +169,6 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
     ],
   };
 
-  const path = `/best/${config.slug}/`;
   const articleSchema = articleJsonLd({
     path,
     headline: config.title,
@@ -228,11 +232,17 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex items-start gap-4">
-                  {canShowProductImage(p.image) && (
+                  {canShowProductImage(p.image) ? (
                     <ProductImageView
                       image={p.image}
                       size={88}
                       className="shrink-0"
+                    />
+                  ) : (
+                    <ProductImagePlaceholder
+                      brand={p.brand}
+                      name={p.name}
+                      size={88}
                     />
                   )}
                   <div>
@@ -291,14 +301,18 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                 <strong className="text-[var(--text)]">Tradeoff:</strong>{" "}
                 {p.tradeoff}
               </p>
-              {p.productId && (
+              {p.productId && (() => {
+                const reviewHref = editorialReviewHref(p.productId);
+                return (
                 <div className="mt-4 flex flex-wrap items-center gap-3">
-                  <Link
-                    href={productHref(p.productId)}
-                    className="text-sm font-medium text-[var(--color-accent)] hover:underline"
-                  >
-                    Read full review →
-                  </Link>
+                  {reviewHref ? (
+                    <Link
+                      href={reviewHref}
+                      className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+                    >
+                      Read full review →
+                    </Link>
+                  ) : null}
                   {(() => {
                     const catalogMatch = lookupCatalogProduct(
                       CATALOG,
@@ -316,7 +330,8 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     );
                   })()}
                 </div>
-              )}
+                );
+              })()}
             </li>
           ))}
         </ol>
@@ -355,6 +370,8 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             Start the finder
           </Link>
         </section>
+
+        <RelatedReadingShelf items={related} />
 
         <ArticleEngagementFooter
           url={`${companyInfo.siteUrl}${path}`}

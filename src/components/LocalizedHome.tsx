@@ -3,8 +3,9 @@ import { AdSlot } from "@/components/AdSlot";
 import { FinderQuickFilters } from "@/components/FinderQuickFilters";
 import { HomeContinueReading } from "@/components/HomeContinueReading";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
+import { HomeRecentUpdates } from "@/components/HomeRecentUpdates";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
-import { SiteSearchForm } from "@/components/SiteSearchForm";
+import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
 import catalogStats from "@/data/catalog-stats.json";
 import { homeFeaturedReviewPath, homeFeaturedReviews, reviewArticleCount } from "@/lib/home-featured";
@@ -101,10 +102,21 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Best rackets under $100", href: "/best/rackets-under-100/", tag: "Budget" },
     { label: "Best lightweight 5U rackets", href: "/best/lightweight-rackets-5u/", tag: "5U" },
     { label: "Best rackets for shoulder comfort", href: "/best/rackets-for-shoulder-comfort/", tag: "Comfort" },
+    { label: "Best control rackets", href: "/best/control-rackets/", tag: "Control" },
+    { label: "Best wide-feet shoes", href: "/best/wide-feet-badminton-shoes/", tag: "Shoes" },
+    { label: "Best all-round rackets", href: "/best/all-round-rackets/", tag: "All-round" },
+    { label: "Budget shoes under $130", href: "/best/budget-badminton-shoes/", tag: "Shoes" },
+    {
+      label: "Head-heavy rackets under $150",
+      href: "/best/head-heavy-rackets-under-150/",
+      tag: "Attack",
+    },
     { label: "Browse equipment catalog", href: "/catalog/", tag: "Catalog" },
     { label: "Best beginner rackets", href: "/best/beginner-rackets/", tag: "Beginner" },
     { label: "Best doubles rackets", href: "/best/doubles-rackets/", tag: "Doubles" },
-    { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Singles" },
+    { label: "Best singles rackets", href: "/best/singles-rackets/", tag: "Singles" },
+    { label: "Best head-light rackets", href: "/best/head-light-rackets/", tag: "Control" },
+    { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Attack" },
     { label: "Best intermediate rackets", href: "/best/intermediate-rackets/", tag: "Intermediate" },
     { label: "Best badminton shoes", href: "/best/shoes/", tag: "Shoes" },
     {
@@ -160,7 +172,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 Search reviews, guides, and tools
               </p>
               <div className="mt-3">
-                <SiteSearchForm />
+                <SiteSearchFormStatic />
               </div>
             </div>
           </div>
@@ -187,6 +199,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       </section>
 
       <HomeContinueReading locale={locale} />
+      <HomeRecentUpdates locale={locale} />
       <HomeRecentShortlists locale={locale} />
 
       <section className="border-t border-[color:var(--line)] py-12 lg:py-16">

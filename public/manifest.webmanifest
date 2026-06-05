@@ -10,6 +10,71 @@
   "orientation": "any",
   "lang": "en",
   "categories": ["sports", "utilities", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Equipment finder",
+      "short_name": "Finder",
+      "description": "Run the five-step badminton equipment quiz",
+      "url": "/quiz/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Browse catalog",
+      "short_name": "Catalog",
+      "description": "Filter rackets, shoes, and strings by spec",
+      "url": "/catalog/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Site search",
+      "short_name": "Search",
+      "description": "Search reviews, guides, and best-of pages",
+      "url": "/search/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Saved shortlist",
+      "short_name": "Saved",
+      "description": "Products and articles you saved for later",
+      "url": "/saved/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Reviews",
+      "short_name": "Reviews",
+      "description": "Equipment notes from club play",
+      "url": "/review/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Guides",
+      "short_name": "Guides",
+      "description": "Evergreen equipment and technique guides",
+      "url": "/guides/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Tools",
+      "short_name": "Tools",
+      "description": "String tension, skill level, and authenticity calculators",
+      "url": "/tools/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Best of",
+      "short_name": "Best",
+      "description": "Curated buying guides for rackets, shoes, and strings",
+      "url": "/best/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Compare guides",
+      "short_name": "Compare",
+      "description": "Head-to-head badminton equipment comparisons",
+      "url": "/compare-guides/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    }
+  ],
   "icons": [
     {
       "src": "/intobadminton-mark.png",

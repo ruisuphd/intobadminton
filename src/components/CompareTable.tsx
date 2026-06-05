@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { FitScoreBadge } from "@/components/FitScoreBadge";
 import { ProductImageView } from "@/components/ProductImage";
+import { catalogProductHref } from "@/lib/review-pages";
 import {
   compareCellValue,
   compareFieldsForItems,
@@ -86,6 +88,12 @@ export function CompareTable({
                   <span className="text-xs font-normal text-[var(--color-subtle)]">
                     {p.brand}
                   </span>
+                  <Link
+                    href={catalogProductHref(p)}
+                    className="text-xs font-medium text-[var(--color-accent)] hover:underline"
+                  >
+                    View details →
+                  </Link>
                 </div>
               </th>
             ))}
@@ -94,10 +102,13 @@ export function CompareTable({
         <tbody>
           {fields.map((field) => {
             const winners = compareWinners(items, field);
+            const singleWinner = winners.size === 1;
             return (
               <tr
                 key={field.key}
-                className="border-b border-[color:var(--line)]"
+                className={`border-b border-[color:var(--line)] ${
+                  singleWinner ? "bg-[color:var(--color-accent-soft)]/30" : ""
+                }`}
               >
                 <th
                   scope="row"

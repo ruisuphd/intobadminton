@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { pageAlternates } from "@/lib/metadata";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Badminton equipment guides",
@@ -32,6 +34,13 @@ const guides = [
     desc: "How tension affects feel and flight — without the mysticism.",
     long:
       "A practical primer on choosing badminton string tension by skill level, climate, and gauge. Covers when 22 lb feels powerful and when 26 lb starts to feel dead, how strings lose tension over weeks even without breaking, and how to read your own contact quality before chasing higher numbers.",
+  },
+  {
+    href: "/guides/string-feel-vs-durability/",
+    title: "String feel vs durability",
+    desc: "Gauge, coating, and when to pick a workhorse over a performance string.",
+    long:
+      "How thinner gauges add repulsion but break faster, which players should stay on BG65-class strings, and a simple A/B protocol to learn your preference without wasting restrings.",
   },
   {
     href: "/guides/shoes-footwork/",
@@ -87,6 +96,7 @@ const guides = [
 export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
   const copy = t(locale).guides;
   const localized = (path: string) => buildLocalizedPath(locale, path);
+  const related = relatedReadingForPath("/guides/");
 
   return (
     <main className="flex-1 py-16">
@@ -167,6 +177,8 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
             </li>
           ))}
         </ul>
+
+        <RelatedReadingShelf items={related} />
 
         <section className="mt-16 max-w-3xl space-y-4 text-sm leading-relaxed text-[var(--color-muted)]">
           <h2 className="text-xl font-semibold text-[var(--text)]">

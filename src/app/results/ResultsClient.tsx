@@ -32,6 +32,9 @@ import type {
   WeightClass,
 } from "@/lib/types/product";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
+import { ShareResultsLink } from "@/components/ShareResultsLink";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
+import { relatedReadingForQuizCategory } from "@/lib/related-content";
 
 /**
  * /results/ is `noindex` so the structured data won't appear in SERPs, but
@@ -267,7 +270,10 @@ function ResultsBody() {
 
   return (
     <div className="space-y-6">
-      <ResultsFilterSummary profile={profile} />
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <ResultsFilterSummary profile={profile} />
+        <ShareResultsLink profile={profile} topN={topN} />
+      </div>
       <div className="space-y-3">
         {brandOptions.length > 1 && (
           <FilterChipGroup
@@ -342,6 +348,9 @@ function ResultsBody() {
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}
+      <RelatedReadingShelf
+        items={relatedReadingForQuizCategory(profile.category ?? undefined)}
+      />
       {filteredOutCount > 0 && (
         <details className="card p-5 text-sm">
           <summary

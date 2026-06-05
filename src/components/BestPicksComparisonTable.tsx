@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import productsCatalog from "@/data/products.json";
+import { FitScoreBadge } from "@/components/FitScoreBadge";
 import {
   computeEditorialRating,
   lookupCatalogProduct,
 } from "@/lib/editorial-rating";
+import { illustrativeFitForProductId } from "@/lib/best-picks-scoring";
 import type { ProductRecord } from "@/lib/types/product";
 import type { Pick } from "@/components/BestPicksPage";
 import { productHref } from "@/lib/review-pages";
@@ -24,12 +26,13 @@ const CATALOG = productsCatalog as ProductRecord[];
  * full of "—" reads as a missing data field and hurts trust.
  */
 
-type SortKey = "rank" | "name" | "priceUsd" | "rating";
+type SortKey = "rank" | "name" | "priceUsd" | "rating" | "fitScore";
 
 type Row = {
   pick: Pick;
   ratingValue: number | null;
   ratingCount: number | null;
+  fitScore: number | null;
   specMap: Record<string, string>;
 };
 
@@ -41,10 +44,12 @@ function deriveRows(picks: Pick[]): { rows: Row[]; specLabels: string[] } {
     for (const s of pick.specs) {
       specMap[s.label] = s.value;
     }
+    const scored = illustrativeFitForProductId(pick.productId);
     return {
       pick,
       ratingValue: rating?.ratingValue ?? null,
       ratingCount: rating?.meetsAggregateThreshold ? rating.reviewCount : null,
+      fitScore: scored?.fitScore ?? null,
       specMap,
     };
   });
@@ -80,6 +85,9 @@ function compareBy(
       break;
     case "rating":
       result = (a.ratingValue ?? 0) - (b.ratingValue ?? 0);
+      break;
+    case "fitScore":
+      result = (a.fitScore ?? 0) - (b.fitScore ?? 0);
       break;
   }
   return result * direction;
@@ -163,6 +171,13 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
             >
               {headerButton("rating", "Editorial rating")}
             </th>
+            <th
+              scope="col"
+              aria-sort={sortAttrFor("fitScore")}
+              className="px-4 py-3 text-xs font-semibold uppercase tracking-wide"
+            >
+              {headerButton("fitScore", "Finder fit")}
+            </th>
             {specLabels.map((label) => (
               <th
                 key={label}
@@ -226,6 +241,13 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
                   <span className="text-xs text-[var(--color-subtle)]">—</span>
                 )}
               </td>
+              <td className="px-4 py-3 align-top">
+                {row.fitScore != null ? (
+                  <FitScoreBadge fitScore={row.fitScore} size={40} showLabel={false} />
+                ) : (
+                  <span className="text-xs text-[var(--color-subtle)]">—</span>
+                )}
+              </td>
               {specLabels.map((label) => (
                 <td key={label} className="px-4 py-3 align-top">
                   {row.specMap[label] ?? (
@@ -240,6 +262,17 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
           ))}
         </tbody>
       </table>
+      <p className="border-t border-[color:var(--line)] px-4 py-3 text-xs text-[var(--color-muted)]">
+        Finder fit scores use the{" "}
+        <Link href="/methodology/" className="text-[var(--color-accent)] hover:underline">
+          reference club doubles profile
+        </Link>
+        .{" "}
+        <Link href="/quiz/" className="text-[var(--color-accent)] hover:underline">
+          Take the quiz
+        </Link>{" "}
+        for your shortlist.
+      </p>
     </section>
   );
 }

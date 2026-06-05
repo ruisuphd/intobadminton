@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { companyInfo } from "@/lib/company";
 import { defaultOgImages } from "@/lib/og";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Best Badminton Rackets, Shoes & Strings (2026)",
@@ -52,6 +54,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Head-light and medium-flex picks for players managing arm load.",
       },
       {
+        href: "/best/control-rackets/",
+        title: "Best control rackets",
+        dek: "Placement-first frames for doubles net play and singles rally craft.",
+      },
+      {
+        href: "/best/all-round-rackets/",
+        title: "Best all-round rackets",
+        dek: "Even-balance frames that do not punish wrong role choices in doubles.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
@@ -62,6 +74,21 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Front-court speed, defensive recovery, and rear-court continuity — picks for men's, women's, and mixed.",
       },
       {
+        href: "/best/singles-rackets/",
+        title: "Best singles rackets",
+        dek: "Full-court coverage, recovery, and rear-court power — six frames for singles specialists.",
+      },
+      {
+        href: "/best/head-light-rackets/",
+        title: "Best head-light rackets",
+        dek: "Net control, flat drives, and defensive recovery — head-light geometry ranked by role.",
+      },
+      {
+        href: "/best/defensive-rackets/",
+        title: "Best defensive rackets",
+        dek: "Blocks, lifts, and flat drives — picks for defensive doubles and front-court recovery.",
+      },
+      {
         href: "/best/smash-heavy-rackets/",
         title: "Best smash rackets",
         dek: "Head-heavy attack frames ranked by smash mass, continuity, and the shaft hardness you can actually drive.",
@@ -70,6 +97,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/rackets-under-150/",
         title: "Rackets under $150",
         dek: "Club-budget frames at $150 or less — catalogue discovery with comparison table.",
+      },
+      {
+        href: "/best/rackets-under-200/",
+        title: "Rackets under $200",
+        dek: "Upper club-budget frames at $200 or less — programmatic catalogue with comparison table.",
+      },
+      {
+        href: "/best/head-heavy-rackets-under-150/",
+        title: "Head-heavy rackets under $150",
+        dek: "Attack balance without flagship pricing — Astrox Game, Nextage, and value Thruster lines.",
       },
     ],
   },
@@ -82,6 +119,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Picks by fit width, stability, and cushioning — the shoe matters more than the racket for most amateurs.",
       },
       {
+        href: "/best/wide-feet-badminton-shoes/",
+        title: "Best wide-feet badminton shoes",
+        dek: "Six shoes with wide or wide-available lasts — dedicated wide SKUs and 2E/3E variants.",
+      },
+      {
+        href: "/best/budget-badminton-shoes/",
+        title: "Best budget badminton shoes",
+        dek: "Six court shoes under $130 with real lateral stability — not running trainers.",
+      },
+      {
         href: "/best/strings/",
         title: "Best badminton strings",
         dek: "Strings ranked by feel, repulsion, control, and durability with tension recommendations.",
@@ -91,6 +138,7 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
 ];
 
 export default function BestIndexPage() {
+  const related = relatedReadingForPath("/best/");
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -163,6 +211,8 @@ export default function BestIndexPage() {
             </div>
           </section>
         ))}
+
+        <RelatedReadingShelf items={related} />
 
         <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">

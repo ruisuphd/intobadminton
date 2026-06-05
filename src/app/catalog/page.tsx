@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { CatalogClient } from "@/app/catalog/CatalogClient";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
   title: "Badminton equipment catalog — browse by spec",
   description:
-    "Browse 148+ badminton rackets, shoes, strings, shuttles, grips, and bags. Filter by brand, weight, balance, and price — then run the finder for a scored shortlist.",
+    "Browse 148+ badminton rackets, shoes, strings, shuttles, grips, and bags. Search by model or filter by brand, weight, balance, and price — then run the finder for a scored shortlist.",
   alternates: pageAlternates("/catalog/"),
 };
 
 export default function CatalogPage() {
+  const related = relatedReadingForPath("/catalog/");
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -54,8 +58,19 @@ export default function CatalogPage() {
       </header>
 
       <div className="mt-8">
-        <CatalogClient />
+        <Suspense
+          fallback={
+            <div
+              className="min-h-[480px] rounded-2xl border border-[color:var(--line)] bg-white"
+              aria-hidden
+            />
+          }
+        >
+          <CatalogClient />
+        </Suspense>
       </div>
+
+      <RelatedReadingShelf items={related} />
     </main>
   );
 }

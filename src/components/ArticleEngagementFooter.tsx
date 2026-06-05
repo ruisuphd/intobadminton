@@ -20,7 +20,7 @@ export function ArticleEngagementFooter({
   return (
     <footer className="mt-12 space-y-0 border-t border-[color:var(--line)] pt-10">
       <SocialShare url={url} title={title} />
-      <HelpfulReaction contentId={contentId} />
+      <HelpfulReaction key={contentId} contentId={contentId} />
     </footer>
   );
 }

@@ -1,50 +1,77 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { trackEvent } from "@/components/Analytics";
+import {
+  helpfulReactionCountLine,
+  helpfulReactionShellClass,
+  helpfulReactionSubline,
+} from "@/lib/helpful-reaction-ui";
+import {
+  fetchReactionCounts,
+  reactionsApiEnabled,
+  submitReaction,
+  type Reaction,
+  type ReactionCounts,
+} from "@/lib/reactions-api";
 
 const STORAGE_PREFIX = "intobadminton.reaction.v1.";
+
+function readStoredVote(contentId: string): Reaction | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(STORAGE_PREFIX + contentId);
+    if (raw === "up" || raw === "down" || raw === "more") return raw;
+  } catch {
+    // Treat any storage error as "no vote yet".
+  }
+  return null;
+}
+
+function subscribeNoop() {
+  return () => {};
+}
+
+function useIsClient() {
+  return useSyncExternalStore(subscribeNoop, () => true, () => false);
+}
 
 /**
  * "Was this helpful?" reaction stripe.
  *
- * Initially ships with a local-only persistence model: the user's
- * up / down / "needs more detail" vote is stored in localStorage per article
- * id so the same user does not re-vote on a return visit. An Analytics event
- * is fired on each vote so we can aggregate at the GA4 level until the
- * Workers/KV backend lands (then this component flips to that endpoint
- * without changing its public surface).
- *
- * The displayed counts are intentionally NOT shown until the backend lands —
- * faking counts (or anchoring on a small local-only sample) is worse than
- * showing none.
+ * Votes persist in localStorage per content id. When
+ * `NEXT_PUBLIC_REACTIONS_API_URL` is set, aggregate counts are fetched from
+ * the Cloudflare Workers/KV backend and shown as social proof.
  */
-
-type Reaction = "up" | "down" | "more";
-
 export function HelpfulReaction({
   /** Unique article id, e.g. `blog:racket-balance-vs-swing-speed`. */
   contentId,
 }: {
   contentId: string;
 }) {
-  const [vote, setVote] = useState<Reaction | null>(null);
-  const [hydrated, setHydrated] = useState(false);
+  const mounted = useIsClient();
+  const [localVote, setLocalVote] = useState<Reaction | null>(null);
+  const [cleared, setCleared] = useState(false);
+  const [counts, setCounts] = useState<ReactionCounts | null>(null);
+  const apiEnabled = reactionsApiEnabled();
 
   useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect -- single-shot hydration */
-    try {
-      const raw = localStorage.getItem(STORAGE_PREFIX + contentId);
-      if (raw === "up" || raw === "down" || raw === "more") setVote(raw);
-    } catch {
-      // Treat any storage error as "no vote yet".
-    }
-    setHydrated(true);
-    /* eslint-enable react-hooks/set-state-in-effect */
-  }, [contentId]);
+    if (!apiEnabled) return;
+    let cancelled = false;
+    fetchReactionCounts(contentId).then((next) => {
+      if (!cancelled && next) setCounts(next);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [contentId, apiEnabled]);
 
-  const submit = (next: Reaction) => {
-    setVote(next);
+  const storedVote = mounted && !cleared ? readStoredVote(contentId) : null;
+  const vote = cleared ? null : (localVote ?? storedVote);
+
+  const submit = async (next: Reaction) => {
+    setCleared(false);
+    setLocalVote(next);
     try {
       localStorage.setItem(STORAGE_PREFIX + contentId, next);
     } catch {
@@ -54,30 +81,21 @@ export function HelpfulReaction({
       content_id: contentId,
       reaction: next,
     });
+    if (apiEnabled) {
+      const updated = await submitReaction(contentId, next);
+      if (updated) setCounts(updated);
+    }
   };
 
-  if (!hydrated) {
-    // Avoid hydration mismatch: render the placeholder structure with no
-    // active state until we have read localStorage.
-    return (
-      <section
-        aria-label="Was this helpful?"
-        className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
-      >
-        <p className="text-sm font-medium text-[var(--text)]">
-          Was this helpful?
-        </p>
-        <p className="mt-2 text-xs text-[var(--color-subtle)]">Loading…</p>
-      </section>
-    );
-  }
+  const subline =
+    vote != null
+      ? helpfulReactionCountLine(counts)
+      : helpfulReactionSubline(apiEnabled, counts);
+  const shellClass = helpfulReactionShellClass(apiEnabled, vote != null);
 
-  if (vote != null) {
+  if (mounted && vote != null) {
     return (
-      <section
-        aria-label="Was this helpful?"
-        className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
-      >
+      <section aria-label="Was this helpful?" className={shellClass}>
         <p className="text-sm font-medium text-[var(--text)]">
           Thanks for the feedback.
         </p>
@@ -96,25 +114,29 @@ export function HelpfulReaction({
               } catch {
                 /* noop */
               }
-              setVote(null);
+              setCleared(true);
+              setLocalVote(null);
             }}
             className="text-[var(--color-accent)] underline"
           >
             Change my vote
           </button>
         </p>
+        {subline ? (
+          <p className="mt-2 text-xs text-[var(--color-subtle)]">{subline}</p>
+        ) : null}
       </section>
     );
   }
 
   return (
-    <section
-      aria-label="Was this helpful?"
-      className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
-    >
+    <section aria-label="Was this helpful?" className={shellClass}>
       <p className="text-sm font-medium text-[var(--text)]">
         Was this article helpful?
       </p>
+      {subline ? (
+        <p className="mt-2 text-xs text-[var(--color-subtle)]">{subline}</p>
+      ) : null}
       <div className="mt-3 flex flex-wrap gap-2">
         <ReactionButton glyph="👍" label="Yes" onClick={() => submit("up")} />
         <ReactionButton

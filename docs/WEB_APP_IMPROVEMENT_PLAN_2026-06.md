@@ -27,9 +27,9 @@
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ GA4 interim only |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
-**Shipped on `main`:** site search, `SearchAction`, `ContinueReading`, `HomeRecentShortlists`, Buttondown notify-me, Product JSON-LD enrichment, engagement on `/best/*` and `/guides/*`, comparison tables, glossary autolinks, guide ToC.
+**Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
 
@@ -54,18 +54,149 @@
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md).
 
-### Sprint 5 — PR #92
+### Sprint 5 — PR #92 + PR #122
 
+- `/best/rackets-under-200/` programmatic price-band page
+- Catalog shareable URL filters + sort + GA4 funnel events
+- Lighthouse CI coverage for catalog and price-band routes
 - Homepage bundle slimming: `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json`
-- `HomeContinueReading` dynamic import; rebased on Sprint 4 `main`
+- `HomeContinueReading` dynamic import
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
-### Phase C — Next (Sprint 6+)
+### Sprint 6 — Shipped (PR #134, #122)
 
-- GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
+- Fuzzy site search; `/best/control-rackets/`; catalog URL filters + `/best/rackets-under-200/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
+
+### Sprint 6–8 — Shipped on `main`
+
+- Public **`/data/`** claims registry (#130); PDP-lite `/product/[id]/` (#138)
+- Fuzzy search, reactions worker scaffold, catalog compare funnel (#127, #129, #134)
+- PR #137: compare share-link fix, PWA shortcuts, retention e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Sprint 9 — Shipped
+
+- `/best/*` illustrative **Finder fit** column + `productId` backfill
+- PWA **`ib-v3`** precaches `/catalog/`
+- **`editorialReviewHref`** — no “Read full review” without a mapped blog slug
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
+
+### Sprint 10 — Shipped (PR #153)
+
+- PWA **`ib-v4`** precaches `/search/` and `/saved/`; Saved manifest shortcut
+- Review→product map **86%** (126/146); improved `suggest-review-product-map.mjs`
+- **HowTo** JSON-LD on four procedural guides in the Lighthouse URL set
+- Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
+
+### Sprint 11 — Shipped (#155, #154)
+
+- Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
+- PWA **`ib-v5`** precaches `/compare/` and `/updates/`
+- Review→product map **~91%** (133/146); buying-guide editorial overrides
+- **`NEXT_PUBLIC_REACTIONS_API_URL`** optional secret in Pages build
+- PWA offline e2e smoke (`pwa-offline-smoke.spec.ts`)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
+
+### Sprint 12 — Shipped (PR #158)
+
+- Extended **Keep reading** clusters on commercial `/best/*` landings
+- **`/methodology/`** in editorial freshness feed + human labels on updates
+- HelpfulReaction **API-off prompt** (no empty count shell)
+- PWA **`ib-v7`** precaches `/data/` and `/methodology/` (plus guides/offline/review from #154)
+- E2e smoke for `/data/`, `/updates/`, review decision shelf
+
+### Sprint 12b — This PR (`cursor/web-app-improvement-plan-bfaf`, #157)
+
+- Profile-aware fit on PDP + review panels; catalog **Best fit for you** sort
+- Reviews hub search + filters; share URL round-trip e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
+
+### Sprint 13 — Shipped (PR #159)
+
+- **PDP related reading** shelf on `/product/[id]/`
+- Explainer review slugs (13) map to editorial clusters via pattern expansion
+- `PATH_CLUSTER` for `/best/rackets-under-200/` (strings/doubles already mapped)
+- PWA **`ib-v8`** precaches `/tools/` and `/faq/`; Tools manifest shortcut
+- Lighthouse CI includes `/faq/`; e2e PDP + explainer shelf smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
+
+### Sprint 14 — Shipped (PR #160)
+
+- **Results Keep reading** shelf via `relatedReadingForQuizCategory`
+- `/best/` hub, `/brands/`, and `/catalog/` decision-path shelves
+- PWA **`ib-v9`** precaches `/best/` and `/brands/`; Best-of manifest shortcut
+- Lighthouse CI includes `/best/` and `/brands/`; e2e results + brands shelf smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT14_2026-06.md)
+
+### Sprint 15 — Shipped (PR #161)
+
+- **Compare-guides**, **guides**, **search**, and **saved** hub decision-path shelves
+- `guides-hub` and `discovery` editorial clusters in `related-content.ts`
+- PWA **`ib-v10`** precaches `/compare-guides/`; Compare guides manifest shortcut
+- Lighthouse CI includes `/compare-guides/` index; e2e hub-shelf + PWA smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT15_2026-06.md)
+
+### Sprint 16 — Shipped (PR #163)
+
+- **Catalog keyword search** via shareable `?q=` on `/catalog/`
+- **`/review/` index** Keep reading shelf via `reviews-hub` cluster
+- Fuzzy token match on brand, model, and spec fields
+- E2e catalog-keyword + review shelf smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT16_2026-06.md)
+
+### Sprint 17 — Shipped (PR #164)
+
+- **Site search → catalog deep-link** with `?q=` prefill and match count CTA
+- Empty editorial results surface catalog when catalogue rows match
+- E2e search-catalog-deeplink smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT17_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT17_2026-06.md)
+
+### Phase D — Shipped (PR #114)
+
+- Review→product map **80%** (117/146); `scripts/suggest-review-product-map.mjs`
+- `docs/baselines/README.md` GSC/CrUX runbook
+- `GuideTocAnchor` on SEO cluster pillar guides
+
+See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
+
+### Sprint 6–7 — Shipped (main)
+
+- Fuzzy search, control rackets, catalog URL filters (#134, #122)
+- Singles/head-light/all-round `/best/*`, review body search (#127, #135)
+- PDP-lite `/product/[id]/`, budget shoes pages (#138)
+- PR #139: results share link, RSS `rel=alternate` in layout
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md), [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Sprint 8 — This branch (PR #143)
+
+- Product map ≥86%; review body search e2e; results share link verification
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
+
+### Sprint 18 — Shipped (PR #165)
+
+- Header search **Catalog** split button + static hero `formAction`
+- Search autocomplete (`searchSuggestions` + combobox on `/search/` and header)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT18_2026-06.md)
+
+### Sprint 19 — This branch (PR #166)
+
+- Product-intent **search submit** → `/catalog/?q=` when only catalogue SKUs match
+- `/search/?q=` client redirect for static hero form submissions
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT19_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT19_2026-06.md)
+
+### Next (Sprint 20+)
+
+- Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs
-- HelpfulReaction Workers/KV
-- Expand `blog-review-product-map.json` toward full review coverage
 - YouTube `sameAs` on author entity (after channel claim)
+- Intentional explainer slugs without single catalogue SKU (no forced product map)
+
+**Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
+**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
+**Sprint 8:** claims registry, PDP-lite, product-map 86%, search snippets, RSS alternate. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md).  
+**Sprint 9:** CI e2e hardening; canonical review slug tie-break; reactions deploy deferred. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md).
 
 ---
 

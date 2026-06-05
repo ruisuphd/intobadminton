@@ -19,6 +19,14 @@ describe("editorialMetaByPath registry", () => {
       "/best/rackets-under-150/",
       "/best/lightweight-rackets-5u/",
       "/best/rackets-for-shoulder-comfort/",
+      "/best/control-rackets/",
+      "/best/singles-rackets/",
+      "/best/head-light-rackets/",
+      "/best/wide-feet-badminton-shoes/",
+      "/best/all-round-rackets/",
+      "/best/rackets-under-200/",
+      "/best/budget-badminton-shoes/",
+      "/best/head-heavy-rackets-under-150/",
       "/best/shoes/",
       "/best/strings/",
     ];
@@ -52,6 +60,7 @@ describe("editorialMetaByPath registry", () => {
       "/compare-guides/badminton-vs-tennis-shoes/",
       "/guides/racket-balance/",
       "/guides/string-tension/",
+      "/guides/string-feel-vs-durability/",
       "/guides/shoes-footwork/",
       "/guides/wide-feet-badminton-shoes/",
       "/guides/doubles-roles/",
@@ -101,6 +110,13 @@ describe("getEditorialMeta", () => {
   it("returns undefined for unknown routes", () => {
     expect(getEditorialMeta("/totally-not-a-page/")).toBeUndefined();
     expect(getEditorialMeta("/blog/this-slug-does-not-exist/")).toBeUndefined();
+  });
+});
+
+describe("getEditorialMeta product pages", () => {
+  it("uses lastVerifiedAt from the catalogue row", () => {
+    const meta = getEditorialMeta("/product/yy-grpht-thrttl/");
+    expect(meta?.lastReviewedAt).toMatch(ISO_DATE);
   });
 });
 

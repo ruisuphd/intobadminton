@@ -15,6 +15,15 @@ test("site search finds budget rackets guide", async ({ page }) => {
   ).toBeVisible();
 });
 
+test("site search finds review by body keyword BG80", async ({ page }) => {
+  await page.goto("/search/?q=BG80");
+
+  await expect(page.getByRole("heading", { name: /^Search$/i })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /l69|BG80|string/i }).first()
+  ).toBeVisible();
+});
+
 test("header search navigates to results page", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto("/");
@@ -25,4 +34,23 @@ test("header search navigates to results page", async ({ page }) => {
 
   await page.waitForURL(/\/search\/\?q=/);
   await expect(page.getByRole("link", { name: /string tension/i }).first()).toBeVisible();
+});
+
+test("site search tolerates common typos", async ({ page }) => {
+  await page.goto("/search/?q=badmintn%20string%20tenson");
+
+  await expect(
+    page.getByRole("link", { name: /string tension/i }).first()
+  ).toBeVisible();
+});
+
+test("site search shows body-match snippet for review terms", async ({ page }) => {
+  await page.goto("/search/?q=interceptions");
+
+  const hit = page
+    .getByRole("link")
+    .filter({ hasText: /racket balance|swing speed/i })
+    .first();
+  await expect(hit).toBeVisible();
+  await expect(hit).toContainText(/interception/i);
 });

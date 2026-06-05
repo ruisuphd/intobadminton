@@ -23,6 +23,24 @@ export default function SeasonRefreshGuide() {
         headline={HEADLINE}
         description={DESCRIPTION}
         breadcrumbLabel="Gear refresh"
+        howToSteps={[
+          {
+            name: "Check stringbed tension loss",
+            text: "If clears and drops feel dead despite good technique, restring at your usual tension — aim for at least one restring per playing hour per week.",
+          },
+          {
+            name: "Inspect grips and insoles",
+            text: "Replace worn overgrips when the handle feels slick. Swap compressed insoles before the upper collapses around your foot.",
+          },
+          {
+            name: "Evaluate shoe outsole wear",
+            text: "Smooth zones at the forefoot or heel mean lost grip. Replace shoes before lateral rolls become habitual.",
+          },
+          {
+            name: "Re-run the finder after big level changes",
+            text: "A jump in club level or injury recovery can shift the right balance and tension band — rerun the quiz before buying a new frame.",
+          },
+        ]}
       />
       <article className="layout-band max-w-3xl space-y-6">
         <p>

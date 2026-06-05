@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { parseCompareShareIds } from "@/lib/compare-share-url";
 import { defaultUserProfile, type UserProfile } from "@/lib/taxonomy";
 
 const STORAGE_KEY = "intobadminton.profile.v1";
@@ -52,6 +53,8 @@ type Ctx = {
   toggleSaved: (id: string) => void;
   isSaved: (id: string) => boolean;
   clearSaved: () => void;
+  /** True after localStorage has been read once on the client. */
+  storageReady: boolean;
 };
 
 const ProfileContext = createContext<Ctx | null>(null);
@@ -78,7 +81,13 @@ function pruneExpiredSaved(entries: SavedEntry[]): SavedEntry[] {
 export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfileState] = useState<UserProfile>(defaultUserProfile);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
-  const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [compareIds, setCompareIds] = useState<string[]>(() => {
+    if (typeof window === "undefined") return [];
+    return (
+      parseCompareShareIds(window.location.pathname, window.location.search) ??
+      load(COMPARE_KEY, [])
+    );
+  });
   const [saved, setSaved] = useState<SavedEntry[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
@@ -86,7 +95,9 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     /* eslint-disable react-hooks/set-state-in-effect -- one-time localStorage hydrate */
     setProfileState(load(STORAGE_KEY, defaultUserProfile()));
     setHistory(load(HISTORY_KEY, []));
-    setCompareIds(load(COMPARE_KEY, []));
+    setCompareIds((prev) =>
+      prev.length > 0 ? prev : load(COMPARE_KEY, [])
+    );
     // Prune TTL-expired saves on hydration; the persisted write below
     // re-flushes the cleaned list back to disk.
     setSaved(pruneExpiredSaved(load(SAVED_KEY, [] as SavedEntry[])));
@@ -188,6 +199,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       toggleSaved,
       isSaved,
       clearSaved,
+      storageReady: hydrated,
     }),
     [
       profile,
@@ -202,6 +214,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       toggleSaved,
       isSaved,
       clearSaved,
+      hydrated,
     ]
   );
 

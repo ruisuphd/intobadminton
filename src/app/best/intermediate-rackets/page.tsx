@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Astrox 77 Pro",
       brand: "Yonex",
       priceUsd: 219,
+      productId: "yy-astrox-77-pro",
       bestFor: "All-court intermediate (most players)",
       specs: [
         { label: "Weight", value: "4U" },
@@ -49,6 +50,7 @@ const config: BestPicksConfig = {
       name: "Astrox 88S Pro (2024)",
       brand: "Yonex",
       priceUsd: 260,
+      productId: "yy-astrox-88s-pro-2024",
       bestFor: "Front-court doubles / mixed doubles",
       specs: [
         { label: "Weight", value: "4U (~84g)" },
@@ -73,6 +75,7 @@ const config: BestPicksConfig = {
       name: "Arcsaber 11 Pro",
       brand: "Yonex",
       priceUsd: 285,
+      productId: "yy-arcsaber-11-pro",
       bestFor: "Control players who hate stiff frames",
       specs: [
         { label: "Weight", value: "4U" },
@@ -142,6 +145,7 @@ const config: BestPicksConfig = {
       name: "DriveX 12",
       brand: "Victor",
       priceUsd: 230,
+      productId: "vic-yu-12",
       bestFor: "Intermediate flat-drive doubles",
       specs: [
         { label: "Weight", value: "4U" },

@@ -1,12 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useMemo } from "react";
+import { trackEvent } from "@/components/Analytics";
+import { useProfile } from "@/context/ProfileContext";
+import { CatalogProductActions } from "@/components/CatalogProductActions";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import {
   ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
+import {
+  catalogSearchParamsFromState,
+  parseCatalogSearchParams,
+  type CatalogSort,
+  type CatalogUrlState,
+} from "@/lib/catalog-url";
+import { catalogFitScore, isFinderProfileReady } from "@/lib/profile-ready";
 import {
   BALANCE_OPTIONS,
   CATEGORY_OPTIONS,
@@ -21,10 +32,22 @@ import {
   type ProductFilterState,
   weightClassOptionsFor,
 } from "@/lib/product-filters";
+import { filterProductsByKeyword } from "@/lib/catalog-keyword";
 import { catalogProductHref } from "@/lib/review-pages";
 import { humanize } from "@/lib/text";
 import type { BalanceCategory, ProductRecord, WeightClass } from "@/lib/types/product";
 import type { EquipmentCategory } from "@/lib/taxonomy";
+
+const BASE_SORT_OPTIONS: { value: CatalogSort; label: string }[] = [
+  { value: "price-asc", label: "Price: low to high" },
+  { value: "price-desc", label: "Price: high to low" },
+  { value: "name", label: "Name A–Z" },
+];
+
+const FIT_SORT_OPTION: { value: CatalogSort; label: string } = {
+  value: "fit-desc",
+  label: "Best fit for you",
+};
 
 function specLine(p: ProductRecord): string {
   if (p.category === "racket") {
@@ -39,16 +62,66 @@ function specLine(p: ProductRecord): string {
   return humanize(p.category);
 }
 
-export function CatalogClient() {
-  const catalog = useMemo(() => allCatalogProducts(), []);
+function sortProducts(
+  rows: ProductRecord[],
+  sort: CatalogSort,
+  profile: ReturnType<typeof useProfile>["profile"] | null
+): ProductRecord[] {
+  const next = [...rows];
+  switch (sort) {
+    case "fit-desc": {
+      if (!profile || !isFinderProfileReady(profile)) {
+        return sortProducts(rows, "price-asc", profile);
+      }
+      return next.sort((a, b) => {
+        const fitDelta = catalogFitScore(b, profile) - catalogFitScore(a, profile);
+        if (fitDelta !== 0) return fitDelta;
+        return a.name.localeCompare(b.name);
+      });
+    }
+    case "price-desc":
+      return next.sort((a, b) => b.priceUsd - a.priceUsd || a.name.localeCompare(b.name));
+    case "name":
+      return next.sort(
+        (a, b) =>
+          a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name)
+      );
+    case "price-asc":
+    default:
+      return next.sort((a, b) => a.priceUsd - b.priceUsd || a.name.localeCompare(b.name));
+  }
+}
 
-  const [filters, setFilters] = useState<ProductFilterState>({
-    category: null,
-    brand: null,
-    weightClass: null,
-    balance: null,
-    priceBand: null,
-  });
+function filtersFromState(state: CatalogUrlState): ProductFilterState {
+  return {
+    category: state.category,
+    brand: state.brand,
+    weightClass: state.weightClass,
+    balance: state.balance,
+    priceBand: state.priceBand,
+  };
+}
+
+export function CatalogClient() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { profile, storageReady } = useProfile();
+  const catalog = useMemo(() => allCatalogProducts(), []);
+  const profileReady = storageReady && isFinderProfileReady(profile);
+  const sortOptions = useMemo(
+    () =>
+      profileReady
+        ? [FIT_SORT_OPTION, ...BASE_SORT_OPTIONS]
+        : BASE_SORT_OPTIONS,
+    [profileReady]
+  );
+
+  const state = useMemo(
+    () => parseCatalogSearchParams(searchParams),
+    [searchParams]
+  );
+  const filters = filtersFromState(state);
 
   const baseRows = useMemo(
     () =>
@@ -62,10 +135,15 @@ export function CatalogClient() {
     [catalog, filters.category, filters.brand, filters.priceBand]
   );
 
-  const filtered = useMemo(
-    () => filterProducts(catalog, filters),
-    [catalog, filters]
-  );
+  const filtered = useMemo(() => {
+    const specFiltered = filterProducts(catalog, filters);
+    const keywordFiltered = filterProductsByKeyword(specFiltered, state.q);
+    return sortProducts(
+      keywordFiltered,
+      state.sort,
+      profileReady ? profile : null
+    );
+  }, [catalog, filters, state.q, state.sort, profile, profileReady]);
 
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
   const categories = useMemo(() => categoryOptionsFor(catalog), [catalog]);
@@ -80,11 +158,57 @@ export function CatalogClient() {
     (filters.category === "racket" || filters.category === null) &&
     (weightClasses.length > 0 || balances.length > 0);
 
-  const patch = (next: Partial<ProductFilterState>) =>
-    setFilters((prev) => ({ ...prev, ...next }));
+  const replaceState = (next: CatalogUrlState) => {
+    const params = catalogSearchParamsFromState(next);
+    const query = params.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  };
+
+  const patch = (next: Partial<CatalogUrlState>) => {
+    const merged = { ...state, ...next };
+    trackEvent("catalog_filter", {
+      category: merged.category ?? "all",
+      brand: merged.brand ?? "all",
+      price_band: merged.priceBand ?? "all",
+      weight: merged.weightClass ?? "all",
+      balance: merged.balance ?? "all",
+      sort: merged.sort,
+      keyword: merged.q ? "yes" : "no",
+    });
+    replaceState(merged);
+  };
+
+  const onKeywordChange = (raw: string) => {
+    const trimmed = raw.trim();
+    patch({ q: trimmed.length > 0 ? trimmed : null });
+  };
+
+  const onFinderCta = () => {
+    trackEvent("catalog_finder_cta", {
+      result_count: filtered.length,
+      category: filters.category ?? "all",
+      price_band: filters.priceBand ?? "all",
+    });
+  };
 
   return (
     <div className="space-y-6">
+      <div>
+        <label htmlFor="catalog-keyword" className="sr-only">
+          Search catalog by name or spec
+        </label>
+        <input
+          id="catalog-keyword"
+          type="search"
+          value={state.q ?? ""}
+          onChange={(e) => onKeywordChange(e.target.value)}
+          placeholder="Search by brand, model, or spec (e.g. Yonex 4U head-light)"
+          className="w-full rounded-xl border border-[color:var(--line)] bg-white px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--color-subtle)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
+          autoComplete="off"
+          enterKeyHint="search"
+        />
+      </div>
+
       <div className="space-y-4">
         <FilterChipGroup
           label="Category"
@@ -159,28 +283,51 @@ export function CatalogClient() {
             />
           </>
         )}
+
+        <FilterChipGroup
+          label="Sort"
+          chips={sortOptions.map((option) => ({
+            value: option.value,
+            label: option.label,
+          }))}
+          active={state.sort}
+          onChange={(v) => patch({ sort: (v ?? "price-asc") as CatalogSort })}
+        />
       </div>
 
-      <p className="text-sm text-[var(--color-muted)]">
-        {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
-        filters. Run the{" "}
-        <Link href="/quiz/" className="text-[var(--color-accent)] underline">
-          finder
-        </Link>{" "}
-        for a profile-scored shortlist.
-      </p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-sm text-[var(--color-muted)]">
+          {filtered.length} product{filtered.length === 1 ? "" : "s"} match your
+          {state.q ? " search and filters" : " filters"}.
+        </p>
+        <Link
+          href="/quiz/"
+          onClick={onFinderCta}
+          className="btn-primary text-sm"
+        >
+          Score these with the finder
+        </Link>
+      </div>
 
       <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
         {filtered.map((p) => (
-          <li key={p.id}>
+          <li key={p.id} className="flex items-stretch">
             <Link
               href={catalogProductHref(p)}
-              className="flex gap-4 px-5 py-4 transition-colors hover:bg-[color:var(--surface-muted)]"
+              onClick={() =>
+                trackEvent("catalog_product_click", {
+                  product_id: p.id,
+                  product_brand: p.brand,
+                  category: p.category,
+                })
+              }
+              className="flex min-w-0 flex-1 gap-4 px-5 py-4 transition-colors hover:bg-[color:var(--surface-muted)]"
             >
               {canShowProductImage(p.image) ? (
                 <ProductImageView
                   image={p.image}
                   size={72}
+                  hideCaption
                   className="shrink-0"
                 />
               ) : (
@@ -205,13 +352,29 @@ export function CatalogClient() {
                 </p>
               </div>
             </Link>
+            <CatalogProductActions product={p} />
           </li>
         ))}
       </ul>
 
       {filtered.length === 0 && (
         <p className="text-sm text-[var(--color-muted)]">
-          No products match — try clearing a filter or browse{" "}
+          No products match — try clearing your{" "}
+          {state.q ? (
+            <>
+              search or{" "}
+              <button
+                type="button"
+                onClick={() => onKeywordChange("")}
+                className="text-[var(--color-accent)] underline"
+              >
+                keyword
+              </button>
+            </>
+          ) : (
+            "filters"
+          )}{" "}
+          or browse{" "}
           <Link href="/best/" className="text-[var(--color-accent)] underline">
             best-of guides
           </Link>

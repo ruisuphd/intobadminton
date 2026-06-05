@@ -1,38 +1,14 @@
-import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import {
-  articlesByDateDesc,
-  blogArticles,
-  type BlogArticle,
-} from "@/lib/blog";
-import { articlePathForSlug } from "@/lib/blog-migrations";
-import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
+import { ReviewsIndexClient } from "@/components/ReviewsIndexClient";
+import { articlesByDateDesc, blogArticles } from "@/lib/blog";
+import type { SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
-
-function ArticleCard({
-  article,
-  locale,
-}: {
-  article: BlogArticle;
-  locale: SiteLocale;
-}) {
-  return (
-    <Link
-      href={buildLocalizedPath(locale, articlePathForSlug(article.slug))}
-      className="group block border-b border-[color:var(--line)] py-5"
-    >
-      <div className="flex items-center gap-2 text-xs text-[var(--color-subtle)]">
-        <time dateTime={article.updatedAt}>{article.updatedAt}</time>
-      </div>
-      <h2 className="mt-2 text-lg font-semibold tracking-tight text-[var(--text)] group-hover:text-[var(--color-accent)]">
-        {article.title}
-      </h2>
-    </Link>
-  );
-}
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
   const articles = articlesByDateDesc(blogArticles[locale]);
+  const related = relatedReadingForPath("/review/");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -60,11 +36,9 @@ export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
           </p>
         </header>
 
-        <div>
-          {articles.map((article) => (
-            <ArticleCard key={article.slug} article={article} locale={locale} />
-          ))}
-        </div>
+        <ReviewsIndexClient articles={articles} locale={locale} />
+
+        <RelatedReadingShelf items={related} />
       </div>
     </main>
   );

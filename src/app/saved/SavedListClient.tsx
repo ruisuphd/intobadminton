@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import productsCatalog from "@/data/products.json";
 import { trackEvent } from "@/components/Analytics";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import {
   ProductImageView,
   canShowProductImage,
@@ -22,6 +23,7 @@ import {
   setNotifyMeIntent,
 } from "@/lib/notify-me";
 import { humanize } from "@/lib/text";
+import { relatedReadingForPath } from "@/lib/related-content";
 import { reviewPath } from "@/lib/review-pages";
 import type { ProductRecord } from "@/lib/types/product";
 
@@ -62,6 +64,8 @@ export function SavedListClient() {
     [saved]
   );
 
+  const related = relatedReadingForPath("/saved/");
+
   if (items.length === 0) {
     return (
       <main className="flex-1 py-16">
@@ -81,6 +85,7 @@ export function SavedListClient() {
               Browse best-of guides
             </Link>
           </div>
+          <RelatedReadingShelf items={related} />
         </div>
       </main>
     );
@@ -166,6 +171,8 @@ export function SavedListClient() {
             );
           })}
         </ol>
+
+        <RelatedReadingShelf items={related} />
       </div>
     </main>
   );

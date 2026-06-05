@@ -1,4 +1,5 @@
 import { blogArticles } from "@/lib/blog";
+import { catalogProductById } from "@/lib/catalog-products";
 
 export type EditorialMeta = {
   /**
@@ -52,7 +53,7 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   // lastmod for the hubs, which weakens freshness signals.
   "/best/": {
     publishedAt: "2025-09-12",
-    lastReviewedAt: "2026-05-18",
+    lastReviewedAt: "2026-06-05",
   },
   "/brands/": {
     publishedAt: "2025-09-26",
@@ -74,6 +75,14 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-04",
     lastReviewedAt: "2026-06-04",
     priceCheckedAt: "2026-06-04",
+  },
+  "/data/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+  },
+  "/methodology/": {
+    publishedAt: "2025-09-01",
+    lastReviewedAt: "2026-06-05",
   },
 
   // Best-pick roundups (have prices → priceCheckedAt set).
@@ -112,6 +121,36 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-06-04",
     priceCheckedAt: "2026-06-04",
   },
+  "/best/control-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/wide-feet-badminton-shoes/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/budget-badminton-shoes/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/all-round-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/defensive-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/head-heavy-rackets-under-150/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
   "/best/shoes/": {
     publishedAt: "2025-10-11",
     lastReviewedAt: "2026-05-08",
@@ -126,6 +165,25 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-04",
     lastReviewedAt: "2026-06-04",
     priceCheckedAt: "2026-06-04",
+  },
+  "/best/singles-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/head-light-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/rackets-under-200/": {
+    publishedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/updates/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
   },
 
   // Brand pages (no prices → no priceCheckedAt).
@@ -215,6 +273,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   "/guides/string-tension/": {
     publishedAt: "2025-09-01",
     lastReviewedAt: "2026-05-08",
+  },
+  "/guides/string-feel-vs-durability/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
   },
   "/guides/shoes-footwork/": {
     publishedAt: "2025-09-08",
@@ -327,6 +389,14 @@ export function getEditorialMeta(path: string): EditorialMeta | undefined {
     );
     if (article) {
       return { lastReviewedAt: article.updatedAt };
+    }
+  }
+
+  const productMatch = path.match(/^\/product\/([^/]+)\/$/);
+  if (productMatch) {
+    const product = catalogProductById(productMatch[1]);
+    if (product) {
+      return { lastReviewedAt: product.lastVerifiedAt };
     }
   }
 

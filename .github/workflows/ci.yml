@@ -79,5 +79,7 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ""
       - name: Install Playwright Chromium
         run: npx playwright install chromium --with-deps
-      - name: Quiz smoke test
+      - name: E2E smoke tests
         run: npx playwright test
+        env:
+          CI: "true"
