@@ -18,7 +18,6 @@
         "http://localhost:4173/best/defensive-rackets/index.html",
         "http://localhost:4173/best/budget-badminton-shoes/index.html",
         "http://localhost:4173/best/head-heavy-rackets-under-150/index.html",
-        "http://localhost:4173/compare/index.html",
         "http://localhost:4173/methodology/index.html",
         "http://localhost:4173/data/index.html",
         "http://localhost:4173/updates/index.html",
@@ -38,7 +37,6 @@
         "http://localhost:4173/tools/index.html",
         "http://localhost:4173/tools/string-tension-calculator/index.html",
         "http://localhost:4173/tools/authenticity-checker/index.html",
-        "http://localhost:4173/offline/index.html",
         "http://localhost:4173/guides/index.html"
       ],
       "numberOfRuns": 1,
