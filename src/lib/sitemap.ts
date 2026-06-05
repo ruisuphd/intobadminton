@@ -2,6 +2,7 @@ import { readdirSync, type Dirent } from "node:fs";
 import { join } from "node:path";
 import { blogSlugs } from "@/lib/blog";
 import { lastModifiedForRoute } from "@/lib/editorial-meta";
+import { reviewProductById, reviewSlugs } from "@/lib/review-pages";
 
 export type SitemapEntry = {
   url: string;
@@ -40,6 +41,9 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
 const DYNAMIC_ROUTE_EXPANSIONS: Record<string, readonly string[]> = {
   get "/review/[slug]/"() {
     return blogSlugs;
+  },
+  get "/gear/[id]/"() {
+    return reviewSlugs();
   },
 };
 
@@ -117,6 +121,7 @@ function routePriority(path: string): number {
   if (path === "/quiz/") return 0.9;
   if (path.startsWith("/best/") || path.startsWith("/compare-guides/")) return 0.8;
   if (path.startsWith("/review/") && path !== "/review/") return 0.8;
+  if (path.startsWith("/gear/") && path !== "/gear/") return 0.75;
   if (path.startsWith("/brands/") && path !== "/brands/") return 0.8;
   if (path === "/brands/") return 0.7;
   if (path === "/guides/" || path.startsWith("/guides/"))
@@ -139,10 +144,18 @@ function cleanOrigin(origin: string): string {
   return origin.replace(/\/+$/, "");
 }
 
+function lastModifiedForSitemap(path: string): string | undefined {
+  if (path.startsWith("/gear/") && path !== "/gear/") {
+    const id = path.slice("/gear/".length).replace(/\/$/, "");
+    return reviewProductById(id)?.lastVerifiedAt;
+  }
+  return lastModifiedForRoute(path);
+}
+
 function entry(origin: string, path: string): SitemapEntry {
   return {
     url: `${cleanOrigin(origin)}${path}`,
-    lastModified: lastModifiedForRoute(path),
+    lastModified: lastModifiedForSitemap(path),
     changeFrequency: routeFrequency(path),
     priority: routePriority(path),
   };

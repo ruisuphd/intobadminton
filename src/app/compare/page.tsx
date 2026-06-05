@@ -17,6 +17,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
     toggleCompare,
     hydrateCompareFromIds,
     profile,
+    profileStorageHydrated,
   } = useProfile();
   const copy = t(locale).compare;
   const scored = new Map(scoreProductCatalog(profile).map((row) => [row.id, row]));
@@ -26,6 +27,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!profileStorageHydrated) return;
     if (compareIds.length > 0) return;
     const params = new URLSearchParams(window.location.search);
     const raw = params.get("p");
@@ -36,7 +38,7 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
     const url = new URL(window.location.href);
     url.searchParams.delete("p");
     window.history.replaceState({}, "", url.toString());
-  }, [compareIds.length, hydrateCompareFromIds]);
+  }, [profileStorageHydrated, compareIds.length, hydrateCompareFromIds]);
 
   const compareKey = compareIds.join(",");
   useEffect(() => {

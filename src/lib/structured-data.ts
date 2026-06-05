@@ -194,3 +194,43 @@ export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
 
   return schema;
 }
+
+export type ProductCatalogJsonLdInput = {
+  product: ProductRecord;
+  /** Route path with trailing slash, e.g. "/gear/yy-nanoflare-800-pro/". */
+  path: string;
+  description: string;
+};
+
+/**
+ * Product JSON-LD for catalogue PDP-lite pages (`/gear/[id]/`) without a
+ * fabricated Review node — editorial reviews keep `productReviewJsonLd`.
+ */
+export function productCatalogJsonLd(input: ProductCatalogJsonLdInput) {
+  const url = `${companyInfo.siteUrl}${input.path}`;
+  const productId = `${url}#product`;
+
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": productId,
+    name: `${input.product.brand} ${input.product.name}`,
+    brand: { "@type": "Brand", name: input.product.brand },
+    category: input.product.category,
+    description: input.description,
+    url,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      price: input.product.priceUsd,
+      availability: "https://schema.org/InStock",
+      url: input.product.officialSourceUrl,
+    },
+  };
+
+  if (input.product.image?.url) {
+    schema.image = input.product.image.url;
+  }
+
+  return schema;
+}

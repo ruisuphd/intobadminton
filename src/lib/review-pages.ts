@@ -66,10 +66,25 @@ export function reviewPath(id: string): string {
   return `/review/${id}/`;
 }
 
+/** Editorial review URL when a blog article maps to this product id. */
+export function blogReviewHrefForProduct(productId: string): string | null {
+  const slug = blogSlugForProduct(productId);
+  return slug ? `/review/${slug}/` : null;
+}
+
+/** PDP-lite path for reviewable catalogue rows without an editorial review. */
+export function gearPath(productId: string): string {
+  return `/gear/${productId}/`;
+}
+
 /** Link target for catalog rows — only emits URLs that exist in the static export. */
 export function catalogProductHref(product: ProductRecord): string {
-  const slug = blogSlugForProduct(product.id);
-  if (slug) return `/review/${slug}/`;
+  const editorial = blogReviewHrefForProduct(product.id);
+  if (editorial) return editorial;
+
+  if (REVIEW_ELIGIBLE_CATEGORIES.has(product.category)) {
+    return gearPath(product.id);
+  }
 
   const brand = brands.find(
     (b) => b.name.toLowerCase() === product.brand.toLowerCase()

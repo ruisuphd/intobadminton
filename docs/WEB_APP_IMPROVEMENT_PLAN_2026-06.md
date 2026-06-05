@@ -73,10 +73,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 **Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).  
 **Sprint 7 shipped (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
 
-### Sprint 8 — This branch (PR #143)
+### Sprint 8 — Shipped (PR #143)
 
 - Product map ≥85%; results share link; RSS `rel=alternate`; review search + share e2e
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
+
+### Sprint 9 — This branch
+
+- PDP-lite `/gear/[id]/` for catalogue rows without editorial reviews; compare + catalog e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT9_2026-06.md)
 
 ---
 
