@@ -1,6 +1,6 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
-**Branches:** `cursor/web-app-improvement-plan-9a0c` (merged #130 — claims registry), `cursor/web-app-improvement-plan-766f` (PR #146 — PDP e2e + mobile search)  
+**Branches:** `cursor/web-app-improvement-plan-9a0c` (merged #130 — claims registry), `cursor/web-app-improvement-plan-766f` (PR #146 — PDP e2e + mobile search, merged or ready)  
 **Baseline:** Sprint 7 on `main` (PR #138 PDP-lite; PR #135 search excerpts; Phase D map 80%).
 
 ---
