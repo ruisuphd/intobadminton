@@ -51,6 +51,35 @@ Re-run translation after `npm run blog:sync` with the Desktop drop or `BLOGS_DIR
 
 ---
 
+## 2026-06-05 — PR #101 `ready_for_review` (translation `cursor/new-chinese-reviews-translation-6f9b`)
+
+**Trigger:** GitHub pull request #101 (`ready_for_review`) — Web app Phase B+C (`cursor/web-app-improvement-plan-f404`). Translation workflow ran in parallel on this branch.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` mapped sources | **133** |
+| `blog-articles.json` imported articles | **146** — no import drift |
+| New translations this run | **None** |
+
+### Web app (PR #101)
+
+**Merged** to `main` (squash) — compare-guides engagement layout, full compare-guide search manifest, guide chrome deduplication, larger result-card images, review–product map audit script. Lighthouse CI fixed via explicit `:4173` URL list and CLS **warn**.
+
+### Unblock translation
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+npm run blog:import && npm run blog:validate && npm test && npm run build
+```
+
+---
+
 ## 2026-06-05 — PR #121 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-d80a`)
 
 **Trigger:** GitHub pull request #121 (`ready_for_review`) — Chinese review translation workflow re-ran after PR #110 logging PR. Translation steps 1–5 still require the private `blogs/` drop.
