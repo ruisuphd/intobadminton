@@ -64,14 +64,28 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
 
-### Sprint 8+ (deferred)
+### Sprint 7 — Shipped (PR #138, #135)
 
+- PDP-lite `/product/[id]/`, programmatic budget shoes + head-heavy best pages
+- Review body search excerpts + fuzzy e2e
+
+See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+
+### Sprint 8 — In progress (`cursor/web-app-improvement-plan-766f`)
+
+- PDP + catalog→PDP Playwright smoke; mobile nav static search form
+- Review→product map +2 (Nanoflare Play, Thruster Falcon)
+
+See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md).
+
+### Sprint 9+ (deferred)
+
+- Deploy HelpfulReaction Workers/KV + `NEXT_PUBLIC_REACTIONS_API_URL`
 - Original photos on top commercial URLs
-- HelpfulReaction Workers/KV aggregate backend
 - YouTube `sameAs` on author entity (after channel claim)
+- E2E for `/saved/`, `/compare/`
 
-**Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).  
-**Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e smoke. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).
+**Sprint 6 shipped:** fuzzy search + `/best/control-rackets/` (PR #134); singles/head-light/all-round landings (PR #127).
 
 ---
 
