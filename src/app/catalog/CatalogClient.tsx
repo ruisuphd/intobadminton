@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 import { trackEvent } from "@/components/Analytics";
+import { useProfile } from "@/context/ProfileContext";
 import { CatalogProductActions } from "@/components/CatalogProductActions";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import {
@@ -16,6 +17,7 @@ import {
   type CatalogSort,
   type CatalogUrlState,
 } from "@/lib/catalog-url";
+import { catalogFitScore, isFinderProfileReady } from "@/lib/profile-ready";
 import {
   BALANCE_OPTIONS,
   CATEGORY_OPTIONS,
@@ -35,11 +37,16 @@ import { humanize } from "@/lib/text";
 import type { BalanceCategory, ProductRecord, WeightClass } from "@/lib/types/product";
 import type { EquipmentCategory } from "@/lib/taxonomy";
 
-const SORT_OPTIONS: { value: CatalogSort; label: string }[] = [
+const BASE_SORT_OPTIONS: { value: CatalogSort; label: string }[] = [
   { value: "price-asc", label: "Price: low to high" },
   { value: "price-desc", label: "Price: high to low" },
   { value: "name", label: "Name A–Z" },
 ];
+
+const FIT_SORT_OPTION: { value: CatalogSort; label: string } = {
+  value: "fit-desc",
+  label: "Best fit for you",
+};
 
 function specLine(p: ProductRecord): string {
   if (p.category === "racket") {
@@ -54,9 +61,23 @@ function specLine(p: ProductRecord): string {
   return humanize(p.category);
 }
 
-function sortProducts(rows: ProductRecord[], sort: CatalogSort): ProductRecord[] {
+function sortProducts(
+  rows: ProductRecord[],
+  sort: CatalogSort,
+  profile: ReturnType<typeof useProfile>["profile"] | null
+): ProductRecord[] {
   const next = [...rows];
   switch (sort) {
+    case "fit-desc": {
+      if (!profile || !isFinderProfileReady(profile)) {
+        return sortProducts(rows, "price-asc", profile);
+      }
+      return next.sort((a, b) => {
+        const fitDelta = catalogFitScore(b, profile) - catalogFitScore(a, profile);
+        if (fitDelta !== 0) return fitDelta;
+        return a.name.localeCompare(b.name);
+      });
+    }
     case "price-desc":
       return next.sort((a, b) => b.priceUsd - a.priceUsd || a.name.localeCompare(b.name));
     case "name":
@@ -84,7 +105,16 @@ export function CatalogClient() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { profile, storageReady } = useProfile();
   const catalog = useMemo(() => allCatalogProducts(), []);
+  const profileReady = storageReady && isFinderProfileReady(profile);
+  const sortOptions = useMemo(
+    () =>
+      profileReady
+        ? [FIT_SORT_OPTION, ...BASE_SORT_OPTIONS]
+        : BASE_SORT_OPTIONS,
+    [profileReady]
+  );
 
   const state = useMemo(
     () => parseCatalogSearchParams(searchParams),
@@ -105,8 +135,13 @@ export function CatalogClient() {
   );
 
   const filtered = useMemo(
-    () => sortProducts(filterProducts(catalog, filters), state.sort),
-    [catalog, filters, state.sort]
+    () =>
+      sortProducts(
+        filterProducts(catalog, filters),
+        state.sort,
+        profileReady ? profile : null
+      ),
+    [catalog, filters, state.sort, profile, profileReady]
   );
 
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
@@ -228,7 +263,7 @@ export function CatalogClient() {
 
         <FilterChipGroup
           label="Sort"
-          chips={SORT_OPTIONS.map((option) => ({
+          chips={sortOptions.map((option) => ({
             value: option.value,
             label: option.label,
           }))}

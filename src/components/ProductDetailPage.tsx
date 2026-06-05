@@ -10,8 +10,6 @@ import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { companyInfo } from "@/lib/company";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
 import { reviewPath } from "@/lib/review-pages";
-import { scoreProductCatalog } from "@/lib/scoring";
-import { referenceClubDoublesProfile } from "@/lib/reference-profile";
 import type { ProductRecord } from "@/lib/types/product";
 import blogReviewMap from "@/data/blog-review-product-map.json";
 import type { BlogSlug } from "@/lib/blog";
@@ -27,10 +25,6 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
   const path = `/product/${product.id}/`;
   const specs = specRowsForProduct(product);
   const reviewSlug = reviewSlugForProduct(product.id);
-  const referenceProfile = referenceClubDoublesProfile(product.category);
-  const scored = scoreProductCatalog(referenceProfile).find(
-    (row) => row.id === product.id
-  );
 
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -108,11 +102,9 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
           </div>
         </div>
 
-        {scored && (
-          <div className="mt-10">
-            <ReviewProductPanel scored={scored} />
-          </div>
-        )}
+        <div className="mt-10">
+          <ReviewProductPanel product={product} />
+        </div>
 
         <section className="mt-10" aria-labelledby="product-specs-heading">
           <h2
