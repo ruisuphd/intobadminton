@@ -4,15 +4,17 @@ Owner-run capture for Core Web Vitals and Google Search Console trends, plus com
 
 ## On-site search (golden queries)
 
-Committed expectations for `/search/` and header autocomplete quality:
+Committed expectations for `/search/`, header autocomplete, and product-intent submit routing:
 
-- [`site-search-queries.json`](site-search-queries.json) — 25 queries covering reviews, guides, best-of, compare, catalog, fuzzy typos, and empty-query guards.
+- [`site-search-queries.json`](site-search-queries.json) — queries covering reviews, guides, best-of, compare, catalog, fuzzy typos, empty-query guards, **submit routing** (`/catalog/?q=` vs `/search/?q=`), and **autocomplete** suggestion rows.
 
-Validate against the live search index (runs in CI after unit tests):
+Validate against the live search index, routing, and suggestions (runs in CI after unit tests):
 
 ```bash
 npm run lint:search-baseline
 ```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/search-baseline-smoke.spec.ts`) after static build.
 
 Refresh the JSON when adding high-traffic discovery routes or changing search ranking — keep expectations aligned with intentional UX, not accidental top hits.
 
