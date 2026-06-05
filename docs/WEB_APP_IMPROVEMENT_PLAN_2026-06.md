@@ -29,7 +29,7 @@
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
 
-**Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
+**Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
 

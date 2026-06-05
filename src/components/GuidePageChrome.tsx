@@ -11,6 +11,7 @@ import { relatedReadingForPath } from "@/lib/related-content";
 
 const GUIDE_HEADLINES: Record<string, string> = {
   "/guides/string-tension/": "Badminton string tension guide",
+  "/guides/string-feel-vs-durability/": "String feel vs durability",
   "/guides/racket-balance/": "Racket balance and swing weight",
   "/guides/shoes-footwork/": "Badminton shoes and footwork",
   "/guides/wide-feet-badminton-shoes/": "Wide feet badminton shoes",

@@ -53,7 +53,7 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   // lastmod for the hubs, which weakens freshness signals.
   "/best/": {
     publishedAt: "2025-09-12",
-    lastReviewedAt: "2026-05-18",
+    lastReviewedAt: "2026-06-05",
   },
   "/brands/": {
     publishedAt: "2025-09-26",
@@ -169,8 +169,12 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   },
   "/best/rackets-under-200/": {
     publishedAt: "2026-06-04",
-    lastReviewedAt: "2026-06-04",
-    priceCheckedAt: "2026-06-04",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/updates/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
   },
 
   // Brand pages (no prices → no priceCheckedAt).
@@ -260,6 +264,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
   "/guides/string-tension/": {
     publishedAt: "2025-09-01",
     lastReviewedAt: "2026-05-08",
+  },
+  "/guides/string-feel-vs-durability/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
   },
   "/guides/shoes-footwork/": {
     publishedAt: "2025-09-08",

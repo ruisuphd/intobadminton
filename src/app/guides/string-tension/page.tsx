@@ -219,6 +219,13 @@ export default function StringTensionGuide() {
             string tension calculator
           </Link>
           ,{" "}
+          <Link
+            href="/guides/string-feel-vs-durability/"
+            className="text-[var(--color-accent)] underline"
+          >
+            string feel vs durability
+          </Link>
+          ,{" "}
           <Link href="/best/strings/" className="text-[var(--color-accent)] underline">
             best badminton strings
           </Link>
