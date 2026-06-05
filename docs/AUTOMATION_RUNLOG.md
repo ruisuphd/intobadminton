@@ -10,7 +10,8 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 - `home-featured-reviews.json`, `catalog-stats.json`, `product-display-names.json` + prebuild generators
 - `HomeContinueReading` dynamic import; lightweight product names on homepage shortlist rows
-- Retains PR #113: `profileToResultsPath`, notify-me migrate CTA, expanded Lighthouse URLs
+- Retains PR #113: `profileToResultsPath`, notify-me migrate CTA
+- Lighthouse: core commercial URLs only (guide ToC CLS fixes deferred); `/saved/` excluded (noindex)
 
 ### Verification
 
