@@ -26,3 +26,11 @@ test("header search navigates to results page", async ({ page }) => {
   await page.waitForURL(/\/search\/\?q=/);
   await expect(page.getByRole("link", { name: /string tension/i }).first()).toBeVisible();
 });
+
+test("site search tolerates common typos", async ({ page }) => {
+  await page.goto("/search/?q=badmintn%20string%20tenson");
+
+  await expect(
+    page.getByRole("link", { name: /string tension/i }).first()
+  ).toBeVisible();
+});
