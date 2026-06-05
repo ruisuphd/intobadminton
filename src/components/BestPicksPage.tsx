@@ -14,6 +14,7 @@ import {
 } from "@/components/ProductImage";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { ProductBuyLink } from "@/components/ProductBuyLink";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { companyInfo } from "@/lib/company";
 import productsCatalog from "@/data/products.json";
 import {
@@ -22,6 +23,7 @@ import {
   ratingDatePublished,
 } from "@/lib/editorial-rating";
 import { articleJsonLd } from "@/lib/structured-data";
+import { relatedReadingForPath } from "@/lib/related-content";
 import { productHref } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
@@ -64,6 +66,8 @@ export type BestPicksConfig = {
 };
 
 export function BestPicksPage({ config }: { config: BestPicksConfig }) {
+  const path = `/best/${config.slug}/`;
+  const related = relatedReadingForPath(path);
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -165,7 +169,6 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
     ],
   };
 
-  const path = `/best/${config.slug}/`;
   const articleSchema = articleJsonLd({
     path,
     headline: config.title,
@@ -362,6 +365,8 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             Start the finder
           </Link>
         </section>
+
+        <RelatedReadingShelf items={related} />
 
         <ArticleEngagementFooter
           url={`${companyInfo.siteUrl}${path}`}

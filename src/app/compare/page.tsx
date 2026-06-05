@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/components/Analytics";
 import { CompareTable } from "@/components/CompareTable";
 import { useProfile } from "@/context/ProfileContext";
 import type { ProductRecord, ScoredProduct } from "@/lib/types/product";
@@ -37,6 +38,15 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
     window.history.replaceState({}, "", url.toString());
   }, [compareIds.length, hydrateCompareFromIds]);
 
+  const compareKey = compareIds.join(",");
+  useEffect(() => {
+    if (compareIds.length === 0) return;
+    trackEvent("compare_view", {
+      product_ids: compareKey,
+      count: compareIds.length,
+    });
+  }, [compareKey, compareIds.length]);
+
   const [copied, setCopied] = useState(false);
   const handleCopyShareLink = () => {
     if (typeof window === "undefined") return;
@@ -44,6 +54,10 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
     url.search = `?p=${encodeURIComponent(compareIds.join(","))}`;
     navigator.clipboard?.writeText(url.toString()).then(() => {
       setCopied(true);
+      trackEvent("compare_share_link", {
+        product_ids: compareIds.join(","),
+        count: compareIds.length,
+      });
       window.setTimeout(() => setCopied(false), 2000);
     });
   };
@@ -57,14 +71,21 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
         <p className="mt-2 text-[var(--color-muted)]">{copy.subtitle}</p>
         {compareIds.length === 0 ? (
           <p className="mt-8 text-sm text-[var(--color-muted)]">
-            {"Add gear from your"}{" "}
+            Add gear from your{" "}
             <Link
-              href={"/results/"}
+              href="/results/"
               className="text-[var(--color-accent)] underline"
             >
-              {"results"}
+              results
             </Link>
-            {"."}
+            , the{" "}
+            <Link
+              href="/catalog/"
+              className="text-[var(--color-accent)] underline"
+            >
+              catalog
+            </Link>
+            , or saved shelf.
           </p>
         ) : (
           <>

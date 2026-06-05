@@ -100,6 +100,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["head light", "head-light", "control", "net", "defensive", "nanoflare"],
   },
   {
+    title: "Best wide-feet badminton shoes",
+    href: "/best/wide-feet-badminton-shoes/",
+    kind: "best",
+    summary: "Court shoes with wide or wide-available lasts ranked by stability and cushioning.",
+    keywords: ["wide feet", "wide fit", "2e", "3e", "ee width", "shoes"],
+  },
+  {
+    title: "Best all-round badminton rackets",
+    href: "/best/all-round-rackets/",
+    kind: "best",
+    summary: "Even-balance frames for club doubles and players covering every court position.",
+    keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",

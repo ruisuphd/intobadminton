@@ -73,6 +73,19 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds wide-feet and all-round best pages", () => {
+    expect(
+      searchSite("wide feet shoes").some((h) =>
+        h.href.includes("wide-feet-badminton-shoes")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("all round rackets").some((h) =>
+        h.href.includes("all-round-rackets")
+      )
+    ).toBe(true);
+  });
+
   it("finds catalog products by brand and model", () => {
     const hits = searchSite("yonex nanoflare 1000");
     expect(hits.some((h) => h.kind === "product")).toBe(true);
