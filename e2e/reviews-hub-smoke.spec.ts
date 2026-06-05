@@ -5,7 +5,7 @@ test("reviews hub filters narrow the list", async ({ page }) => {
 
   await expect(page.getByRole("heading", { name: /^Reviews$/i })).toBeVisible();
 
-  const search = page.getByRole("searchbox");
+  const search = page.getByPlaceholder("Search titles…");
   await search.fill("Astrox");
   await expect(page.getByText(/Showing \d+ of/i)).toBeVisible();
 
