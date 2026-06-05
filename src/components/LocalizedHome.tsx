@@ -102,6 +102,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Best lightweight 5U rackets", href: "/best/lightweight-rackets-5u/", tag: "5U" },
     { label: "Best rackets for shoulder comfort", href: "/best/rackets-for-shoulder-comfort/", tag: "Comfort" },
     { label: "Best control rackets", href: "/best/control-rackets/", tag: "Control" },
+    { label: "Best all-round rackets", href: "/best/all-round-rackets/", tag: "All-round" },
     { label: "Browse equipment catalog", href: "/catalog/", tag: "Catalog" },
     { label: "Best beginner rackets", href: "/best/beginner-rackets/", tag: "Beginner" },
     { label: "Best doubles rackets", href: "/best/doubles-rackets/", tag: "Doubles" },

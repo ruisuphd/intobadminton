@@ -2,6 +2,7 @@ import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
 import { COMPARE_GUIDES } from "@/lib/compare-guides";
+import { reviewSearchTokens } from "@/lib/review-search-text";
 import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 import { tokenMatchesBlob } from "@/lib/search-fuzzy";
 
@@ -84,6 +85,14 @@ const STATIC_ENTRIES: SearchEntry[] = [
     summary:
       "Control-first frames for placement, doubles net play, and rally craft — Astrox 88S Pro, Arcsaber 11 Pro, Halbertec.",
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
+  },
+  {
+    title: "Best all-round rackets",
+    href: "/best/all-round-rackets/",
+    kind: "best",
+    summary:
+      "Balanced frames for singles and doubles — Arcsaber 11 Pro, Astrox 77 Pro, Halbertec 8000, Nanoflare 700 Pro.",
+    keywords: ["all round", "all-round", "versatile", "balanced", "even balance"],
   },
   {
     title: "Best intermediate rackets",
@@ -284,8 +293,11 @@ function reviewEntries(): SearchEntry[] {
     title: article.title,
     href: articlePathForSlug(article.slug),
     kind: "review" as const,
-    summary: article.dek ?? "",
-    keywords: [article.slug.replace(/-/g, " ")],
+    summary: article.dek ?? article.verdict ?? "",
+    keywords: [
+      article.slug.replace(/-/g, " "),
+      ...reviewSearchTokens(article),
+    ],
   }));
 }
 

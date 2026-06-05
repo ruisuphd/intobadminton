@@ -118,6 +118,19 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds all-round rackets best page", () => {
+    expect(
+      searchSite("all round versatile racket").some((h) =>
+        h.href.includes("all-round-rackets")
+      )
+    ).toBe(true);
+  });
+
+  it("finds reviews by body keywords not in the title", () => {
+    const hits = searchSite("durable-balanced knife-sharp");
+    expect(hits.some((h) => h.href.includes("l69-string"))).toBe(true);
+  });
+
   it("finds all compare guides by brand matchup", () => {
     const hits = searchSite("halbertec axforce");
     expect(

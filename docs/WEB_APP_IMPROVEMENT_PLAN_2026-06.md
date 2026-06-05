@@ -63,12 +63,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - `HomeContinueReading` dynamic import
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT5_2026-06.md)
 
-### Phase C — Next (Sprint 6+)
+### Sprint 6 — Shipped (PR #134, #122)
+
+- Fuzzy site search; `/best/control-rackets/`; catalog URL filters + `/best/rackets-under-200/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT6_2026-06.md)
+
+### Sprint 7 — This branch
+
+- Review body search tokens; +24 product-map entries; results share link; `/best/all-round-rackets/`; RSS `rel=alternate`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md)
+
+### Next (Sprint 8+)
 
 - GSC/CrUX baseline CSV capture (owner manual per `docs/baselines/README.md`)
 - Original photos on top commercial URLs
 - HelpfulReaction Workers/KV
-- Expand `blog-review-product-map.json` toward full review coverage
 - YouTube `sameAs` on author entity (after channel claim)
 
 ---

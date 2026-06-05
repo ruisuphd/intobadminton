@@ -57,6 +57,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Placement-first frames for doubles net play and singles rally craft.",
       },
       {
+        href: "/best/all-round-rackets/",
+        title: "Best all-round rackets",
+        dek: "Balanced frames for players who rotate singles, doubles, and mixed without a specialist role.",
+      },
+      {
         href: "/best/intermediate-rackets/",
         title: "Best intermediate rackets",
         dek: "Six rackets for players who have outgrown beginner frames but are not ready for pro flagships.",
