@@ -40,3 +40,19 @@
 ## 4. Ten-pass verification
 
 All passes ✅ — `npm test` (236+ tests), `npm run build`, Lighthouse CI (port 4173).
+
+---
+
+## 5. PR #137 follow-up (`cursor/web-app-improvement-plan-5049`)
+
+Additional maturity items merged after parallel Sprint 6 PRs (#127, #129, #134):
+
+| Deliverable | Files |
+|-------------|-------|
+| Compare share-link hydration fix | `ProfileContext.tsx` (`storageReady`), `compare/page.tsx` |
+| Compare row winner highlight | `CompareTable.tsx` |
+| PWA manifest shortcuts | `public/manifest.webmanifest` |
+| Retention-flow e2e | `e2e/catalog-compare-saved-smoke.spec.ts` |
+| Review map suggestion script | `scripts/suggest-review-product-map.mjs` |
+
+Review-product map coverage on `main`: **116/146 (79%)** after prior editorial expansion.

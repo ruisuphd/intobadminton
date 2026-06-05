@@ -10,6 +10,29 @@
   "orientation": "any",
   "lang": "en",
   "categories": ["sports", "utilities", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Equipment finder",
+      "short_name": "Finder",
+      "description": "Run the five-step badminton equipment quiz",
+      "url": "/quiz/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Browse catalog",
+      "short_name": "Catalog",
+      "description": "Filter rackets, shoes, and strings by spec",
+      "url": "/catalog/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    },
+    {
+      "name": "Site search",
+      "short_name": "Search",
+      "description": "Search reviews, guides, and best-of pages",
+      "url": "/search/",
+      "icons": [{ "src": "/intobadminton-mark.png", "sizes": "128x128" }]
+    }
+  ],
   "icons": [
     {
       "src": "/intobadminton-mark.png",

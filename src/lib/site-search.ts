@@ -144,7 +144,15 @@ const STATIC_ENTRIES: SearchEntry[] = [
     href: "/best/all-round-rackets/",
     kind: "best",
     summary: "Even-balance frames for club doubles and players covering every court position.",
-    keywords: ["all round", "all-round", "even balance", "versatile", "doubles"],
+    keywords: [
+      "all round",
+      "all-round",
+      "balanced",
+      "balanced rackets",
+      "even balance",
+      "versatile",
+      "doubles",
+    ],
   },
   {
     title: "Best budget badminton shoes under $130",

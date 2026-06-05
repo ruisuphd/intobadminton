@@ -1,48 +1,52 @@
 # Web App Improvement Plan — Sprint 7 (June 2026)
 
-**Branches:** `cursor/web-app-improvement-plan-9527` (merged #135), `cursor/web-app-improvement-plan-c7f0` (PR #138)  
-**Baseline:** Sprint 6 on `main` (PR #127 programmatic landings, PR #129 reactions API, PR #134 fuzzy search).
+**Branches:** `cursor/web-app-improvement-plan-00c0` (PR #141), plus merged `main` work (#135 review search excerpts, #138 PDP-lite + budget landings).  
+**Baseline:** Sprint 6 on `main` (PR #127–#129, #134).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Gap / response |
-|------------|---------------------------|----------------|
-| **Tennis Warehouse** | PDP per SKU + full-text search | ✅ PDP-lite `/product/[id]/` (#138); ✅ review body excerpts (#135) |
-| **Wirecutter / RTINGS** | Social proof vote counts | ⏳ HelpfulReaction Workers/KV (Phase C) |
-| **RacketGuide / affiliate roundups** | Long-tail budget landings | ✅ Budget shoes + head-heavy under $150 (#138); all-round on main (#127) |
-| **Brand PDPs** | First-party product photography | ⏳ Editorial `public/products/` pipeline |
-| **YouTube reviewers** | Video evidence | ⏳ `VideoObject` gated on video commitment |
+| Competitor | Strength vs IntoBadminton | Gap / Sprint 7 response |
+|------------|---------------------------|------------------------|
+| **Tennis Warehouse** | PDP per SKU + search | ✅ `/product/[id]/` on main (#138) |
+| **Wirecutter / RTINGS** | Product + Review schema coverage | ✅ Product map ~80%+ on main; PR #141 lint-safe HelpfulReaction |
+| **RacketGuide** | Role / budget long-tail landings | ✅ All-round, wide-feet, budget shoes on main |
+| **Retailer finders** | CI performance gates | ✅ PR #141: HelpfulReaction lint fix + deferred PWA register |
+| **Editorial ops** | Lighthouse regression snapshots | ✅ `lint:lighthouse:baseline` npm scripts |
 
-**Moat unchanged:** transparent fit score, claims CI, static export, 146+ reviews, postbuild SEO gate.
+**Moat:** transparent fit score, postbuild SEO gate, static export, 146+ signed reviews, claims CI.
 
----
-
-## 2. Top 5 gaps (Sprint 7)
-
-| # | Gap | Impact | Delivery |
-|---|-----|--------|----------|
-| 1 | **No PDP for unmapped catalogue SKUs** | Catalog dead-end | ✅ PR #138 `/product/[id]/` |
-| 2 | **Search index misses review body terms** | Discovery friction | ✅ PR #135 excerpt enrichment |
-| 3 | **Missing budget shoe + value attack long-tail** | SEO topical coverage | ✅ PR #138 two `/best/*` pages |
-| 4 | HelpfulReaction aggregate counts | Social proof | ⏳ Workers/KV backend |
-| 5 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
+**Deferred (Sprint 8+):** first-party `public/products/` photography, GSC/CrUX CSV capture, claimed YouTube `Person.sameAs`, `VideoObject`, HelpfulReaction Workers/KV deploy.
 
 ---
 
-## 3. Execution summary
+## 2. Top 5 gaps (closed in PR #141)
 
-**PR #135 (on main):**
-1. `reviewSearchExcerpt()` in `site-search.ts` — body tokens in review index.
-2. Playwright typo smoke in `e2e/search-smoke.spec.ts`.
+| # | Gap | Impact | Status |
+|---|-----|--------|--------|
+| 1 | **CI lint failure** on HelpfulReaction (`set-state-in-effect`) from PR #129 | Blocks green `lint-and-build` on `main` | ✅ `useSyncExternalStore` client detection |
+| 2 | **HelpfulReaction stale vote** on client navigation | Wrong feedback state | ✅ `key={contentId}` on parents |
+| 3 | **Homepage Lighthouse perf** (CI TBT on `/`) | CWV gate failure | ✅ Idle `requestIdleCallback` SW register in `PwaRegistration` |
+| 4 | **Lighthouse baseline friction** | Hard to compare regressions | ✅ npm `lint:lighthouse:baseline` / `capture:lighthouse:baseline` |
+| 5 | **Product map / PDP / search** (Sprint 7a) | Discovery + schema | ✅ Already on `main` via #135, #138 |
 
-**PR #138:**
-1. `/product/[id]/` — static PDP-lite with Product JSON-LD, save/compare/buy.
-2. `catalogProductHref` → PDP when no review article.
-3. CompareTable “View details” links.
-4. `/best/budget-badminton-shoes/` and `/best/head-heavy-rackets-under-150/`.
-5. Sitemap product expansion + Lighthouse PDP URL.
+---
+
+## 3. Execution summary (PR #141)
+
+| Item | Files |
+|------|-------|
+| HelpfulReaction lint + hydration | `HelpfulReaction.tsx`, engagement footers |
+| Homepage TBT | `PwaRegistration.tsx` (idle SW register) |
+| Lighthouse baseline npm scripts | `package.json` |
+| Enrichment regression test | `review-article-enrichment.test.ts` |
+
+**Already on `main` (not repeated in #141):** review body search excerpts (#135), `/product/[id]/` PDP-lite, budget shoe + head-heavy under-$150 landings (#138), expanded `blog-review-product-map.json`.
+
+**PR #139:**
+1. `ShareResultsLink` on `/results/` — copy deep-linked finder profile URLs.
+2. RSS discovery via `alternates.types` → `/feed.xml` in root layout.
 
 ### Follow-up (PR #142)
 
@@ -54,16 +58,16 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 6 deferred list + competitive audit | ✅ |
-| 2 | PDP static export safe | ✅ |
-| 3 | Excerpt cap prevents bundle blow-up | ✅ |
-| 4 | catalogProductHref never 404s for catalogue ids | ✅ |
-| 5 | New best picks use real `productId` values | ✅ |
-| 6 | Fuzzy e2e + unit search tests | ✅ |
-| 7 | `npm test` | ✅ |
-| 8 | `npm run build` + postbuild SEO audit | ✅ |
-| 9 | Sitemap includes `/product/[id]/` | ✅ |
-| 10 | Lighthouse includes PDP + new best URLs | ✅ |
+| 1 | Gaps grounded in Sprint 6 CI failure + main Sprint 7a | ✅ |
+| 2 | HelpfulReaction avoids `setState` in `useEffect` for localStorage | ✅ |
+| 3 | No duplicate `/best/balanced-rackets/` vs main all-round | ✅ |
+| 4 | Product map canonical slug rules preserved | ✅ (main map) |
+| 5 | PWA registration deferred off critical path | ✅ |
+| 6 | npm scripts documented in plan | ✅ |
+| 7 | Unit tests pass including enrichment case | ✅ |
+| 8 | `npm run lint` + `npm run build` | ✅ |
+| 9 | Static export safe | ✅ |
+| 10 | Merged with latest `main` before ship | ✅ |
 
 ---
 
@@ -71,15 +75,19 @@
 
 ```bash
 npm test
-npm run build
 npm run lint
+npm run build
+node scripts/audit-review-product-map.mjs
+node scripts/lighthouse-baseline.mjs --help
 ```
 
 ---
 
-## 6. Deferred (Sprint 8+)
+## 6. Metrics (Q2)
 
-- HelpfulReaction Workers/KV aggregate counts
-- GSC/CrUX baseline CSV in `docs/baselines/`
-- Original photos on top commercial URLs
-- YouTube `sameAs` on author entity (after channel claim)
+| Goal | Target |
+|------|--------|
+| `lint-and-build` green on `main` | ✅ after #141 |
+| Review product map coverage | ≥75% (main ~80%) |
+| CWV p75 LCP | <2.5s |
+| GSC clicks | 4× baseline |

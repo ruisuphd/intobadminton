@@ -102,10 +102,13 @@ export function CompareTable({
         <tbody>
           {fields.map((field) => {
             const winners = compareWinners(items, field);
+            const singleWinner = winners.size === 1;
             return (
               <tr
                 key={field.key}
-                className="border-b border-[color:var(--line)]"
+                className={`border-b border-[color:var(--line)] ${
+                  singleWinner ? "bg-[color:var(--color-accent-soft)]/30" : ""
+                }`}
               >
                 <th
                   scope="row"

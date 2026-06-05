@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 8 (June 2026)
 
 **Branch:** `cursor/web-app-improvement-plan-b4ca` / PR #142  
-**Baseline:** Sprint 7 on `main` (PR #135); PR #142 stack (PDP-lite, budget shoes, 84% map, claims registry).
+**Baseline:** Sprint 7 on `main`; PR #142 stack (PDP-lite, budget shoes, claims `/data/`, map ~86%).
 
 ---
 
@@ -9,36 +9,38 @@
 
 | Competitor | Strength vs IntoBadminton | Gap / response |
 |------------|---------------------------|----------------|
-| **Tennis Warehouse / retailer finders** | Role-based landing URLs (defensive, power, all-round) | ✅ 17+ `/best/*` pages; **defensive doubles landing (this sprint)** |
-| **Wirecutter / RTINGS** | Social proof vote counts | ⏳ HelpfulReaction Workers/KV (env scaffold shipped; deploy + `NEXT_PUBLIC_REACTIONS_API_URL`) |
-| **RacketGuide / affiliate roundups** | Long-tail SEO clusters | ✅ Smash, head-light, all-round, budget shoes; **defensive keyword cluster** |
-| **Brand PDPs** | First-party product photography + `/product/[id]/` | ✅ PDP-lite on PR #142 stack |
-| **YouTube-first reviewers** | Video evidence | ⏳ `VideoObject` gated on video commitment |
+| **Tennis Warehouse / retailer finders** | Role-based landing URLs | ✅ 17+ `/best/*`; **defensive doubles landing** |
+| **Wirecutter / RTINGS** | Product + Review schema, social proof | ✅ Map ≥85%; HelpfulReaction KV ⏳ deploy |
+| **RacketGuide / affiliate roundups** | Long-tail clusters (balanced, defensive) | ✅ All-round hub + defensive page |
+| **Brand PDPs** | Product detail pages | ✅ PDP-lite `/product/[id]/` |
+| **YouTube-first reviewers** | Video evidence | ⏳ `VideoObject` gated |
 
-**Moat unchanged:** transparent fit score, claims CI, static export, 146+ reviews, postbuild SEO gate, fuzzy site search with review body excerpts.
+**Moat:** transparent fit score, claims CI, static export, postbuild SEO gate, fuzzy search with review body excerpts.
 
 ---
 
 ## 2. Top 5 gaps (Sprint 8)
 
-| # | Gap | Impact | Sprint 8 |
-|---|-----|--------|----------|
-| 1 | **No `/best/defensive-rackets/` landing** | Misses "defensive badminton racket" long-tail vs RacketGuide/TW | ✅ Programmatic best-of page |
-| 2 | **Review map below 90%** | Product JSON-LD / finder panel coverage | ✅ Merged PR #142 stack at ~84%+; added `1000z-play` mapping |
-| 3 | HelpfulReaction aggregate counts live | Social proof (Wirecutter parity) | ⏳ Worker deploy + env (infra) |
-| 4 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
-| 5 | Video / `VideoObject` schema | E-E-A-T visual evidence | ⏳ Gated on video commitment |
+| # | Gap | Impact | Status |
+|---|-----|--------|--------|
+| 1 | **No `/best/defensive-rackets/` landing** | Defensive doubles long-tail SEO | ✅ |
+| 2 | **Product map below 85%** | Rich results / canonical `/review/` URLs | ✅ 86%+; canonical slug ranking in `review-pages.ts` |
+| 3 | **1000Z Play mapped to wrong catalogue id** | Broken legacy `/review/yy-nanoflare-1000z/` redirect | ✅ `yy-nanoflare-1000-play` |
+| 4 | HelpfulReaction aggregate counts live | Social proof | ⏳ Worker deploy + env |
+| 5 | Original product photography | AdSense / visual maturity | ⏳ Editorial pipeline |
 
 ---
 
 ## 3. Execution summary
 
-1. **`/best/defensive-rackets/`** — six picks for defensive doubles / front-court recovery.
-2. **`site-search.ts`** — index entry for defensive landing.
-3. **`related-content.ts`** — `defensive-rackets` cluster + path mappings.
-4. **`/best/` hub** — link to defensive guide.
-5. **`lighthouserc.json`** — Lighthouse URL for new page (alongside budget shoes, PDP sample).
-6. **`e2e/best-smoke.spec.ts`** — smoke for defensive page + search discovery.
+| Item | Files |
+|------|-------|
+| Defensive best-of page | `src/app/best/defensive-rackets/` |
+| Discovery wiring | `site-search.ts`, `related-content.ts`, `best/page.tsx` |
+| Map + canonical fixes | `blog-review-product-map.json`, `review-pages.ts` |
+| Audit hardening | `audit-review-product-map.mjs` (`--min-coverage=85`) |
+| E2E smoke | `e2e/best-smoke.spec.ts` |
+| Lighthouse | `lighthouserc.json` |
 
 ---
 
@@ -46,16 +48,16 @@
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Sprint 7 deferred list + competitive audit | ✅ |
-| 2 | Defensive page distinct SEO intent from head-light (role vs geometry) | ✅ |
-| 3 | All `productId` values exist in `products.json` | ✅ |
-| 4 | Static export safe (no API routes) | ✅ |
-| 5 | Sitemap auto-discovers new `/best/defensive-rackets/` route | ✅ |
-| 6 | Map entries only for catalogue-backed products | ✅ |
-| 7 | Related reading + search index wired | ✅ |
-| 8 | `npm test` | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse CI includes new URL | ✅ |
+| 1 | Gaps grounded in audit + Sprint 7 deferrals | ✅ |
+| 2 | Defensive page distinct from head-light (role vs geometry) | ✅ |
+| 3 | Map entries reference valid catalogue IDs | ✅ |
+| 4 | `reviewPath('yy-nanoflare-1000z')` → flagship review slug | ✅ |
+| 5 | Static export safe | ✅ |
+| 6 | Related reading + search index wired | ✅ |
+| 7 | `npm test` (253+) | ✅ |
+| 8 | `npm run build` + SEO audit | ✅ |
+| 9 | `audit-review-product-map.mjs --min-coverage=85` | ✅ |
+| 10 | Lighthouse includes defensive URL | ✅ |
 
 ---
 
@@ -63,17 +65,17 @@
 
 ```bash
 npm test
-npm run build
 npm run lint
-node scripts/audit-review-product-map.mjs
+npm run build
+node scripts/audit-review-product-map.mjs --min-coverage=85
 ```
 
 ---
 
 ## 6. Deferred (Sprint 9+)
 
-- Deploy HelpfulReaction Workers/KV and set `NEXT_PUBLIC_REACTIONS_API_URL`
+- Deploy HelpfulReaction Workers/KV + `NEXT_PUBLIC_REACTIONS_API_URL`
 - GSC/CrUX baseline CSV in `docs/baselines/`
 - Original photos on top commercial URLs
-- Expand map toward 90%+ (comparison slugs need editorial judgment)
+- Map toward 90%+ (comparison slugs need editorial judgment)
 - YouTube `sameAs` on author entity (after channel claim)

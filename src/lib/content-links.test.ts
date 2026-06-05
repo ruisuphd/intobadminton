@@ -27,10 +27,14 @@ describe("content-links", () => {
     expect(slugs).toContain("yonex-astrox-99-pro-gen-1-review");
   });
 
-  it("returns no merged blog for Nanoflare 1000 Z (comparison lives on /review/)", () => {
+  it("ranks Nanoflare 1000 Z flagship review and links Play comparison editorially", () => {
     const articles = blogArticlesForReview("yy-nanoflare-1000z");
     expect(articles.length).toBe(1);
     expect(articles[0]?.slug).toBe("yonex-nanoflare-1000z-review");
+    const editorial = editorialComparisonsForReview("yy-nanoflare-1000z");
+    expect(
+      editorial.some((link) => link.href.includes("yonex-nanoflare-1000z-play-review"))
+    ).toBe(true);
   });
 
   it("prefers editorNote for review descriptions", () => {
