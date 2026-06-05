@@ -23,6 +23,24 @@ export default function ShoesGuide() {
         headline={HEADLINE}
         description={DESCRIPTION}
         breadcrumbLabel="Shoes & footwork"
+        howToSteps={[
+          {
+            name: "Measure fit at end of day",
+            text: "Try shoes when feet are slightly swollen — the same size that feels fine in the morning can pinch after two games.",
+          },
+          {
+            name: "Test lateral stop in store",
+            text: "Slide sideways on a court surface if possible. The shoe should catch without your foot sliding inside the upper.",
+          },
+          {
+            name: "Match cushioning to your role",
+            text: "Rear-court jumpers need more heel cushioning; net players can accept a lower profile if lateral grip stays strong.",
+          },
+          {
+            name: "Break in before league night",
+            text: "Wear new shoes for one casual session before a competitive match — stiff uppers cause blisters under match intensity.",
+          },
+        ]}
       />
       <article className="layout-band max-w-3xl space-y-6">
         <p>
