@@ -2,6 +2,30 @@
 
 Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
 
+## Editorial guards (unified)
+
+Refresh review→catalogue map regression layers in one operator command:
+
+```bash
+npm run lint:editorial-baselines
+```
+
+Runs `lint:review-product-map-baseline`.
+
+## Review→product map (golden profiles)
+
+Committed review slug → catalogue id mappings that must round-trip to valid product rows and Product+Review JSON-LD:
+
+- [`review-product-map-queries.json`](review-product-map-queries.json) — CrUX priority review, Phase D map, flagship racket, shoes, budget niche brand, explainer unmapped guard.
+
+Validate map parity + coverage thresholds (runs in CI after compare share URL guard):
+
+```bash
+npm run lint:review-product-map-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/review-product-map-baseline-smoke.spec.ts`) — direct navigation to committed review URLs with finder panel + catalog CTA.
+
 ## Product funnel guards (unified)
 
 Refresh discovery, finder scoring, and results share URL regression layers in one operator command:

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "coverage": {
+    "minMappedCount": 140,
+    "minMappablePct": 100
+  },
+  "queries": [
+    {
+      "id": "crux-arcsaber-7-pro",
+      "slug": "yonex-arcsaber-7-pro-review",
+      "expectProductId": "yy-arcsaber-7-pro",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "CrUX priority review URL — Product+Review JSON-LD and finder panel"
+    },
+    {
+      "id": "phase-d-drivex-10",
+      "slug": "victor-drivex-10-review",
+      "expectProductId": "vic-drivex-10-metallic",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "note": "Phase D map expansion regression guard"
+    },
+    {
+      "id": "flagship-nanoflare-1000z",
+      "slug": "yonex-nanoflare-1000z-review",
+      "expectProductId": "yy-nanoflare-1000z",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship speed racket linked from compare guides"
+    },
+    {
+      "id": "club-shoes-p9200",
+      "slug": "victor-p9200-iii-shoes-review",
+      "expectProductId": "vic-p9200-iii",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "note": "Shoe category map + catalog CTA parity"
+    },
+    {
+      "id": "budget-bonny-leisu",
+      "slug": "bonny-leisu-800-racket-review",
+      "expectProductId": "bonny-leisu-800",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "note": "Budget niche brand review→catalog wiring"
+    },
+    {
+      "id": "explainer-intentional-unmapped",
+      "slug": "how-to-choose-a-badminton-racket",
+      "expectUnmapped": true,
+      "note": "Explainer slug must stay outside product map"
+    }
+  ]
+}

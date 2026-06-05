@@ -383,7 +383,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright share URL smoke** — `e2e/results-url-baseline-smoke.spec.ts` (direct `/results/?` navigation)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT45_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT45_2026-06.md)
 
-### Sprint 46 — This branch
+### Sprint 46 — Shipped (PR #194)
 
 - **Compare share URL golden profiles** — `docs/baselines/compare-share-queries.json` (4 compare round-trip expectations)
 - **Compare share regression guard** — `src/lib/compare-baseline.ts` + `npm run lint:compare-baseline`
@@ -391,7 +391,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright compare share smoke** — `e2e/compare-baseline-smoke.spec.ts` (direct `/compare/?` navigation)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT46_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT46_2026-06.md)
 
-### Next (Sprint 47+)
+### Sprint 47 — This branch
+
+- **Review→product map golden profiles** — `docs/baselines/review-product-map-queries.json` (6 map + coverage expectations)
+- **Review map regression guard** — `src/lib/review-product-map-baseline.ts` + `npm run lint:review-product-map-baseline`
+- **Unified editorial command** — `npm run lint:editorial-baselines`
+- **Playwright review map smoke** — `e2e/review-product-map-baseline-smoke.spec.ts` (review finder panel + catalog CTA)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT47_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT47_2026-06.md)
+
+### Next (Sprint 48+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
