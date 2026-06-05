@@ -105,7 +105,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     { label: "Browse equipment catalog", href: "/catalog/", tag: "Catalog" },
     { label: "Best beginner rackets", href: "/best/beginner-rackets/", tag: "Beginner" },
     { label: "Best doubles rackets", href: "/best/doubles-rackets/", tag: "Doubles" },
-    { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Singles" },
+    { label: "Best singles rackets", href: "/best/singles-rackets/", tag: "Singles" },
+    { label: "Best head-light rackets", href: "/best/head-light-rackets/", tag: "Control" },
+    { label: "Best smash rackets", href: "/best/smash-heavy-rackets/", tag: "Attack" },
     { label: "Best intermediate rackets", href: "/best/intermediate-rackets/", tag: "Intermediate" },
     { label: "Best badminton shoes", href: "/best/shoes/", tag: "Shoes" },
     {

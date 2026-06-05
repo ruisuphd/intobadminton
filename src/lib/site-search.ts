@@ -86,6 +86,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["control", "placement", "pocketing", "doubles net", "arcsaber", "88s"],
   },
   {
+    title: "Best singles rackets",
+    href: "/best/singles-rackets/",
+    kind: "best",
+    summary: "Full-court singles frames ranked for recovery, control, and rear-court power.",
+    keywords: ["singles", "full court", "all court", "men's singles", "women's singles"],
+  },
+  {
+    title: "Best head-light rackets",
+    href: "/best/head-light-rackets/",
+    kind: "best",
+    summary: "Head-light frames for net control, defensive recovery, and front-court speed.",
+    keywords: ["head light", "head-light", "control", "net", "defensive", "nanoflare"],
+  },
+  {
     title: "Best intermediate rackets",
     href: "/best/intermediate-rackets/",
     kind: "best",

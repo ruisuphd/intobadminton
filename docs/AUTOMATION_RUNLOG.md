@@ -2,6 +2,25 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — Sprint 6 web app (branch `cursor/web-app-improvement-plan-06b6`, PR #129)
+
+**Trigger:** Cloud agent — audit → plan → execute (reactions API, singles/head-light landings, image placeholders, Lighthouse baseline script). Complements PR #134 (fuzzy search, control-rackets) already on `main`.
+
+### Shipped
+
+- HelpfulReaction optional Workers/KV client + `workers/reactions/` deploy scaffold
+- `/best/singles-rackets/` and `/best/head-light-rackets/` programmatic SEO landings
+- `ProductImagePlaceholder` on best-of rows without verified images
+- `scripts/lighthouse-baseline.mjs` + `docs/baselines/lighthouse-scores.json` scaffold
+
+### Verification
+
+- `npm test` — 228 passed
+- `npm run lint` — pass
+- `npm run build` + postbuild SEO audit — pass (653 HTML, 214 sitemap URLs)
+
+---
+
 ## 2026-06-05 — PR #117 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-33f7`)
 
 **Trigger:** GitHub pull request #117 (`ready_for_review`) — guide ToC CLS fix (`cursor/web-app-improvement-plan-555d`). PR #117 **merged** to `main` as `586a621`. Translation workflow (steps 1–7) ran in parallel; no review content changes.

@@ -67,6 +67,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         dek: "Front-court speed, defensive recovery, and rear-court continuity — picks for men's, women's, and mixed.",
       },
       {
+        href: "/best/singles-rackets/",
+        title: "Best singles rackets",
+        dek: "Full-court coverage, recovery, and rear-court power — six frames for singles specialists.",
+      },
+      {
+        href: "/best/head-light-rackets/",
+        title: "Best head-light rackets",
+        dek: "Net control, flat drives, and defensive recovery — head-light geometry ranked by role.",
+      },
+      {
         href: "/best/smash-heavy-rackets/",
         title: "Best smash rackets",
         dek: "Head-heavy attack frames ranked by smash mass, continuity, and the shaft hardness you can actually drive.",
