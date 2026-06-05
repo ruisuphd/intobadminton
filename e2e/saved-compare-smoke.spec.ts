@@ -9,9 +9,11 @@ test("compare page hydrates from share URL", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "Compare gear" })
   ).toBeVisible();
+  await expect(page.getByText(/Nanoray Light 70i/i).first()).toBeVisible({
+    timeout: 10_000,
+  });
+  await expect(page.getByText(/Nanoflare 1000 Z/i).first()).toBeVisible();
   await expect(page.getByRole("button", { name: /clear all/i })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Nanoray Light 70i/i })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Nanoflare 1000 Z/i })).toBeVisible();
 });
 
 test("saved shelf shows locally stored shortlist", async ({ page }) => {

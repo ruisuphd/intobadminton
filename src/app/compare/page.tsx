@@ -26,14 +26,15 @@ export function CompareShell({ locale = "en" }: { locale?: SiteLocale }) {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (compareIds.length > 0) return;
     const params = new URLSearchParams(window.location.search);
     const raw = params.get("p");
     if (!raw) return;
     const ids = raw.split(",").map((s) => s.trim()).filter(Boolean);
-    if (ids.length === 0) return;
-    hydrateCompareFromIds(ids);
+    if (compareIds.length === 0 && ids.length > 0) {
+      hydrateCompareFromIds(ids);
+    }
     const url = new URL(window.location.href);
+    if (!url.searchParams.has("p")) return;
     url.searchParams.delete("p");
     window.history.replaceState({}, "", url.toString());
   }, [compareIds.length, hydrateCompareFromIds]);
