@@ -8,9 +8,14 @@ import {
   type ProductFilterState,
 } from "@/lib/product-filters";
 
-export type CatalogSort = "price-asc" | "price-desc" | "name";
+export type CatalogSort = "price-asc" | "price-desc" | "name" | "fit-desc";
 
-const SORT_VALUES: CatalogSort[] = ["price-asc", "price-desc", "name"];
+const SORT_VALUES: CatalogSort[] = [
+  "price-asc",
+  "price-desc",
+  "name",
+  "fit-desc",
+];
 
 const CATEGORY_VALUES = new Set(
   CATEGORY_OPTIONS.map((option) => option.value)

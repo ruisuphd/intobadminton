@@ -93,7 +93,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 ### Sprint 11 — Shipped (#155, #154)
 
 - Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
-- PWA **`ib-v5`** precaches `/compare/` and `/updates/` (main); **`ib-v6`** adds `/review/`, `/guides/`, `/offline/`
+- PWA **`ib-v5`** precaches `/compare/` and `/updates/`
 - Review→product map **~91%** (133/146); buying-guide editorial overrides
 - **`NEXT_PUBLIC_REACTIONS_API_URL`** optional secret in Pages build
 - PWA offline e2e smoke (`pwa-offline-smoke.spec.ts`)
@@ -104,8 +104,13 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Extended **Keep reading** clusters on commercial `/best/*` landings
 - **`/methodology/`** in editorial freshness feed + human labels on updates
 - HelpfulReaction **API-off prompt** (no empty count shell)
-- PWA **`ib-v7`** precaches `/data/` and `/methodology/` (plus guides/offline from #154)
+- PWA **`ib-v7`** precaches `/data/` and `/methodology/` (plus guides/offline/review from #154)
 - E2e smoke for `/data/`, `/updates/`, review decision shelf
+
+### Sprint 12b — This PR (`cursor/web-app-improvement-plan-bfaf`, #157)
+
+- Profile-aware fit on PDP + review panels; catalog **Best fit for you** sort
+- Reviews hub search + filters; share URL round-trip e2e
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
 ### Sprint 13 — Shipped (PR #159)
@@ -149,6 +154,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 ### Next (Sprint 15+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
+- Catalog keyword search (`q` param on `/catalog/`)
 - Original photos on top commercial URLs
 - YouTube `sameAs` on author entity (after channel claim)
 - Intentional explainer slugs without single catalogue SKU (no forced product map)

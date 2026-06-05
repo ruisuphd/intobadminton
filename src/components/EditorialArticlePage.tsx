@@ -136,9 +136,9 @@ export function EditorialArticlePage({
         </header>
 
         <div className="mt-10 space-y-8">
-            {enrichment?.scored && (
+            {enrichment?.product && (
               <ReviewProductPanel
-                scored={enrichment.scored}
+                product={enrichment.product}
                 quizPath={buildLocalizedPath(locale, "/quiz/")}
               />
             )}

@@ -33,6 +33,11 @@ describe("catalog-url", () => {
     });
   });
 
+  it("parses fit-desc sort", () => {
+    const params = new URLSearchParams("sort=fit-desc");
+    expect(parseCatalogSearchParams(params).sort).toBe("fit-desc");
+  });
+
   it("round-trips state to a shareable URL", () => {
     const url = catalogUrlFromState({
       category: "racket",

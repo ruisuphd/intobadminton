@@ -1,34 +1,32 @@
-# Web App Improvement Plan — Sprint 12 (June 2026)
+# Web App Improvement Plan — Sprint 12b (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-4f36` (merged with PR #154 guides/offline work on `main`)  
-**Baseline:** Sprint 11 — PWA `ib-v5`, review map ~91%, compare share init, reactions Pages secret.
+**Branch:** `cursor/web-app-improvement-plan-bfaf` (PR #157)  
+**Baseline:** Sprint 12a on `main` (#158 — PWA `ib-v7`, related shelves, HelpfulReaction UX).
 
 ---
 
 ## 1. Competitive audit (June 2026)
 
-| Competitor | Strength vs IntoBadminton | Sprint 12 response |
+| Competitor | Strength vs IntoBadminton | Sprint 12b response |
 |------------|---------------------------|-------------------|
-| **Tennis Warehouse** | Related picks + offline buying guides | ✅ `PATH_CLUSTER` on commercial `/best/*`; PWA precaches `/guides/` |
-| **Wirecutter / RTINGS** | Methodology in freshness feed + offline trust | ✅ `/methodology/` in updates feed; PWA precaches `/data/` |
-| **RacketGuide** | Clear offline recovery | ✅ `/offline/` page + `/guides/` shortcut (PR #154) |
-| **BadmintonCentral** | Helpful counts on threads | ✅ API-off editorial prompt (no empty shell) |
-| **Google Search Console** | Regression gates on moat routes | ✅ Lighthouse: methodology, guides; noindex routes exempt |
+| **Tennis Warehouse** | Personalized sort while browsing | ✅ Catalog **Best fit for you** when finder profile is saved |
+| **RacketGuide** | Fit preview on product pages | ✅ PDP + review panels use saved profile, not reference-only |
+| **Wirecutter / RTINGS** | Filterable review archive | ✅ Reviews hub search + kind/equipment chips |
+| **Retailer finders** | Shareable shortlist URLs | ✅ E2E round-trip for `/results/?…` share links |
 
 **Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate.
 
 ---
 
-## 2. Top 5 gaps (Sprint 12 — combined)
+## 2. Top 5 gaps (Sprint 12b)
 
 | # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
-| 1 | **Best-of pages lack “Keep reading” shelf** | Internal linking on high-intent landings | ✅ Extended `PATH_CLUSTER` |
-| 2 | **`/methodology/` missing from updates feed** | Trust anchor invisible in freshness story | ✅ `editorial-meta.ts` + `PATH_LABELS` |
-| 3 | **HelpfulReaction empty shell when API off** | Poor UX on every editorial page | ✅ `helpful-reaction-ui.ts` |
-| 4 | **PWA omits guides + claims shells** | Offline users miss key flows | ✅ `ib-v7` precaches `/guides/`, `/data/`, `/methodology/`, `/offline/` |
-| 5 | **No e2e for moat pages + PWA drift** | Regressions undetected | ✅ `data-updates-smoke`, `review-shelf-smoke`, `pwa-offline-smoke` |
-| — | **Guides hub + Lighthouse (from main #154)** | Evergreen cluster offline + CI gate | ✅ `ib-v6`/`ib-v7` guides precache, `/guides/` in Lighthouse |
+| 1 | **PDP/review fit uses reference profile only** | Weak personalization on highest-intent pages | ✅ `ReviewProductPanel` + `profile-ready.ts` |
+| 2 | **Catalog lacks personalized sort** | Browse UX lags TW/RacketGuide | ✅ `fit-desc` sort when profile ready |
+| 3 | **Reviews hub is flat chronological** | Poor discovery vs Wirecutter browse | ✅ `ReviewsIndexClient` filters |
+| 4 | **Share URL parity untested** | Viral results loop regressions | ✅ `results-share-smoke` round-trip e2e |
+| 5 | **Reviews hub filter e2e missing** | Regressions on discovery UX | ✅ `reviews-hub-smoke.spec.ts` |
 
 ---
 
@@ -36,12 +34,10 @@
 
 | Deliverable | Files |
 |-------------|-------|
-| Related reading clusters | `src/lib/related-content.ts`, `related-content.test.ts` |
-| Updates feed completeness | `src/lib/editorial-meta.ts`, `editorial-updates.ts` |
-| HelpfulReaction API-off UX | `src/lib/helpful-reaction-ui.ts`, `HelpfulReaction.tsx` |
-| PWA offline expansion | `public/sw.js` (`ib-v7`), `manifest.webmanifest`, `src/app/offline/` |
-| Lighthouse CI | `lighthouserc.json` |
-| E2E regression | `e2e/data-updates-smoke.spec.ts`, `review-shelf-smoke.spec.ts`, `pwa-offline-smoke.spec.ts` |
+| Profile-aware fit panels | `src/lib/profile-ready.ts`, `ReviewProductPanel.tsx`, `ProductDetailPage.tsx` |
+| Catalog best-fit sort | `catalog-url.ts`, `CatalogClient.tsx` |
+| Reviews hub filters | `review-hub-filters.ts`, `ReviewsIndexClient.tsx` |
+| Share URL e2e | `e2e/results-share-smoke.spec.ts`, `e2e/reviews-hub-smoke.spec.ts` |
 
 ---
 
@@ -50,15 +46,15 @@
 | Pass | Check | Result |
 |------|-------|--------|
 | 1 | Gaps grounded in Sprint 11 deferred list + competitive audit | ✅ |
-| 2 | Related clusters only link to existing static routes | ✅ |
-| 3 | `/methodology/` freshness aligns with `/data/` sweep date | ✅ |
-| 4 | HelpfulReaction shrinks shell when API off and no vote | ✅ |
-| 5 | Static export — no new dynamic routes beyond `/offline/` | ✅ |
-| 6 | PWA cache version bumped (`ib-v7`) when URLs change | ✅ |
-| 7 | Unit tests: related-content, editorial-updates, helpful-reaction-ui, pwa-precache | ✅ |
+| 2 | Personalized fit falls back to reference when profile incomplete | ✅ |
+| 3 | `fit-desc` invalid without profile → price-asc fallback | ✅ |
+| 4 | Review filters do not hide mapped SKUs incorrectly | ✅ unit tests |
+| 5 | Static export — no new dynamic routes | ✅ |
+| 6 | Does not regress PWA `ib-v7` on main | ✅ |
+| 7 | Unit tests: profile-ready, review-hub-filters, catalog-url | ✅ |
 | 8 | `npm test` green | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse URL set excludes noindex routes; includes methodology + guides | ✅ |
+| 10 | Lighthouse URL set unchanged | ✅ |
 
 ---
 
@@ -67,16 +63,15 @@
 ```bash
 npm test
 npm run build
-npm run lint
-npx playwright test e2e/data-updates-smoke.spec.ts e2e/review-shelf-smoke.spec.ts e2e/pwa-offline-smoke.spec.ts
+npx playwright test e2e/results-share-smoke.spec.ts e2e/reviews-hub-smoke.spec.ts
 ```
 
 ---
 
 ## 6. Deferred (Sprint 13+)
 
-- Owner: deploy reactions worker + set `REACTIONS_API_URL` repository secret
+- Production `NEXT_PUBLIC_REACTIONS_API_URL` in GitHub repo secrets
 - Owner: fill `docs/baselines/crux-template.csv` from PageSpeed Insights
+- Catalog keyword search (`q` param on `/catalog/`)
 - Original `public/products/` photography on top commercial URLs
 - `VideoObject` / YouTube `sameAs` (channel claim)
-- Remaining explainer slugs without single catalogue SKU (intentional ~9%)
