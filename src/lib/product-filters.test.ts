@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import {
   filterProducts,
   priceInBand,
+  racketsForSingles,
+  racketsHeadLight,
   racketsUnderPrice,
 } from "@/lib/product-filters";
 import type { ProductRecord } from "@/lib/types/product";
@@ -74,5 +76,30 @@ describe("racketsUnderPrice", () => {
     for (let i = 1; i < rows.length; i++) {
       expect(rows[i]!.priceUsd).toBeGreaterThanOrEqual(rows[i - 1]!.priceUsd);
     }
+  });
+});
+
+describe("racketsForSingles", () => {
+  it("returns rackets tagged for singles play", () => {
+    const rows = racketsForSingles();
+    expect(rows.length).toBeGreaterThan(0);
+    expect(
+      rows.every((r) =>
+        r.bestFor.some(
+          (tag) =>
+            tag === "singles" ||
+            tag === "all_round_singles" ||
+            tag === "control_singles"
+        )
+      )
+    ).toBe(true);
+  });
+});
+
+describe("racketsHeadLight", () => {
+  it("returns only head-light rackets", () => {
+    const rows = racketsHeadLight();
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows.every((r) => r.balanceCategory === "head_light")).toBe(true);
   });
 });

@@ -117,6 +117,16 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     lastReviewedAt: "2026-06-05",
     priceCheckedAt: "2026-06-05",
   },
+  "/best/wide-feet-badminton-shoes/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/all-round-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
   "/best/shoes/": {
     publishedAt: "2025-10-11",
     lastReviewedAt: "2026-05-08",
@@ -131,6 +141,16 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-04",
     lastReviewedAt: "2026-06-04",
     priceCheckedAt: "2026-06-04",
+  },
+  "/best/singles-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
+  },
+  "/best/head-light-rackets/": {
+    publishedAt: "2026-06-05",
+    lastReviewedAt: "2026-06-05",
+    priceCheckedAt: "2026-06-05",
   },
   "/best/rackets-under-200/": {
     publishedAt: "2026-06-04",
