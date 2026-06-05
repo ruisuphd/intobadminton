@@ -69,6 +69,12 @@ export function productHref(productId: string): string {
   return catalogProductHref(product);
 }
 
+/** Href for a long-form review article, or null when only a brand hub exists. */
+export function editorialReviewHref(productId: string): string | null {
+  const slug = blogSlugForProduct(productId);
+  return slug ? `/review/${slug}/` : null;
+}
+
 export function reviewUrl(id: string): string {
   return `${companyInfo.siteUrl}${reviewPath(id)}`;
 }
