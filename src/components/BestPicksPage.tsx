@@ -24,7 +24,7 @@ import {
 } from "@/lib/editorial-rating";
 import { articleJsonLd } from "@/lib/structured-data";
 import { relatedReadingForPath } from "@/lib/related-content";
-import { productHref } from "@/lib/review-pages";
+import { editorialReviewHref, productHref } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];
@@ -301,14 +301,18 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                 <strong className="text-[var(--text)]">Tradeoff:</strong>{" "}
                 {p.tradeoff}
               </p>
-              {p.productId && (
+              {p.productId && (() => {
+                const reviewHref = editorialReviewHref(p.productId);
+                return (
                 <div className="mt-4 flex flex-wrap items-center gap-3">
-                  <Link
-                    href={productHref(p.productId)}
-                    className="text-sm font-medium text-[var(--color-accent)] hover:underline"
-                  >
-                    Read full review →
-                  </Link>
+                  {reviewHref ? (
+                    <Link
+                      href={reviewHref}
+                      className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+                    >
+                      Read full review →
+                    </Link>
+                  ) : null}
                   {(() => {
                     const catalogMatch = lookupCatalogProduct(
                       CATALOG,
@@ -326,7 +330,8 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     );
                   })()}
                 </div>
-              )}
+                );
+              })()}
             </li>
           ))}
         </ol>
