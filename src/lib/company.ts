@@ -6,6 +6,8 @@ export const companyInfo = {
   operatorWebsite: "https://intonationlabs.com",
   founderName: "Rui Su",
   founderWebsite: "https://ruisuphd.com",
+  /** On-site author hub — preferred `author.url` for Article/BlogPosting on intobadminton.com. */
+  authorPagePath: "/authors/rui-su/",
   registrationJurisdiction: "Singapore",
   contactEmail: "info@intonationlabs.com",
   privacyEmail: "info@intonationlabs.com",

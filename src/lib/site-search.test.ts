@@ -104,4 +104,24 @@ describe("site-search", () => {
       )
     ).toBe(true);
   });
+
+  it("finds all compare guides by brand matchup", () => {
+    const hits = searchSite("halbertec axforce");
+    expect(
+      hits.some((h) =>
+        h.href.includes("halbertec-9000-power-vs-axforce-100-gen-2")
+      )
+    ).toBe(true);
+  });
+
+  it("indexes every compare guide slug", () => {
+    const index = buildSearchIndex();
+    const compareHrefs = index
+      .filter((e) => e.kind === "compare")
+      .map((e) => e.href);
+    expect(compareHrefs).toContain(
+      "/compare-guides/yonex-65z4-vs-eclipsion-z3/"
+    );
+    expect(compareHrefs.length).toBeGreaterThanOrEqual(13);
+  });
 });
