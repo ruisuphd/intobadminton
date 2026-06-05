@@ -13,7 +13,7 @@
 | **Wirecutter / RTINGS** | Methodology in freshness feed + offline trust | ✅ `/methodology/` in updates feed; PWA precaches `/data/` |
 | **RacketGuide** | Clear offline recovery | ✅ `/offline/` page + `/guides/` shortcut (PR #154) |
 | **BadmintonCentral** | Helpful counts on threads | ✅ API-off editorial prompt (no empty shell) |
-| **Google Search Console** | Regression gates on moat routes | ✅ Lighthouse: compare, methodology, offline, guides |
+| **Google Search Console** | Regression gates on moat routes | ✅ Lighthouse: methodology, guides; noindex routes exempt |
 
 **Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate.
 
@@ -23,11 +23,19 @@
 
 | # | Gap | Impact | Delivery |
 |---|-----|--------|----------|
+<<<<<<< HEAD
 | 1 | **Best-of pages lack “Keep reading” shelf** | Internal linking on high-intent landings | ✅ Extended `PATH_CLUSTER` |
 | 2 | **`/methodology/` missing from updates feed** | Trust anchor invisible in freshness story | ✅ `editorial-meta.ts` + `PATH_LABELS` |
 | 3 | **HelpfulReaction empty shell when API off** | Poor UX on every editorial page | ✅ `helpful-reaction-ui.ts` |
 | 4 | **PWA omits guides + claims shells** | Offline users miss key flows | ✅ `ib-v7` precaches `/guides/`, `/data/`, `/methodology/`, `/offline/` |
 | 5 | **No e2e for moat pages + PWA drift** | Regressions undetected | ✅ `data-updates-smoke`, `review-shelf-smoke`, `pwa-offline-smoke` |
+=======
+| 1 | **Guides hub not in PWA precache** | Evergreen SEO cluster unavailable offline | ✅ `ib-v6` + `/guides/` (keeps `/compare/`, `/updates/` from main) |
+| 2 | **Offline page omits guides recovery** | Users lose path to tension/shoe guides | ✅ Link on `/offline/` |
+| 3 | **Lighthouse CI skips `/guides/`** | PWA regressions undetected | ✅ `/guides/` in `lighthouserc.json`; `/offline/` exempt (noindex utility page) |
+| 4 | **No Guides PWA shortcut** | Install surface favors finder only | ✅ `manifest.webmanifest` |
+| 5 | **E2E does not assert guides precache** | SW cache drift | ✅ `pwa-offline-smoke.spec.ts` |
+>>>>>>> origin/main
 
 ---
 
