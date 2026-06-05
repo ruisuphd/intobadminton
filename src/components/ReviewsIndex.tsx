@@ -1,11 +1,14 @@
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { ReviewsIndexClient } from "@/components/ReviewsIndexClient";
 import { articlesByDateDesc, blogArticles } from "@/lib/blog";
 import type { SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
   const articles = articlesByDateDesc(blogArticles[locale]);
+  const related = relatedReadingForPath("/review/");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -34,6 +37,8 @@ export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
         </header>
 
         <ReviewsIndexClient articles={articles} locale={locale} />
+
+        <RelatedReadingShelf items={related} />
       </div>
     </main>
   );

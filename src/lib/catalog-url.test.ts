@@ -16,6 +16,7 @@ describe("catalog-url", () => {
       balance: "head_light",
       priceBand: "under150",
       sort: "price-desc",
+      q: null,
     });
   });
 
@@ -30,6 +31,7 @@ describe("catalog-url", () => {
       balance: null,
       priceBand: null,
       sort: "price-asc",
+      q: null,
     });
   });
 
@@ -46,11 +48,32 @@ describe("catalog-url", () => {
       balance: null,
       priceBand: "under200",
       sort: "name",
+      q: null,
     });
     expect(url).toBe("/catalog/?cat=racket&brand=Victor&price=under200&sort=name");
     const parsed = parseCatalogSearchParams(new URLSearchParams(url.split("?")[1]));
     expect(parsed.brand).toBe("Victor");
     expect(parsed.priceBand).toBe("under200");
     expect(parsed.sort).toBe("name");
+  });
+
+  it("parses and round-trips keyword query", () => {
+    const params = new URLSearchParams("q=nanoflare+4u");
+    expect(parseCatalogSearchParams(params).q).toBe("nanoflare 4u");
+
+    const url = catalogUrlFromState({
+      ...parseCatalogSearchParams(params),
+      category: null,
+      brand: null,
+      weightClass: null,
+      balance: null,
+      priceBand: null,
+      sort: "price-asc",
+    });
+    expect(url).toContain("q=nanoflare");
+    const reparsed = parseCatalogSearchParams(
+      new URLSearchParams(url.split("?")[1] ?? "")
+    );
+    expect(reparsed.q).toBe("nanoflare 4u");
   });
 });

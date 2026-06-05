@@ -39,3 +39,13 @@ test("saved shelf shows Keep reading when empty", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByRole("heading", { name: /keep reading/i })).toBeVisible();
 });
+
+test("review index shows Keep reading shelf", async ({ page }) => {
+  await page.goto("/review/");
+
+  await expect(page.getByRole("heading", { name: /^reviews$/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /keep reading/i })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /best-of buying guides/i }).first()
+  ).toBeVisible();
+});
