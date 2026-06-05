@@ -48,7 +48,7 @@ export function GuideEngagementFooter() {
   const contentId = `guide:${path.replace(/^\/guides\//, "").replace(/\/$/, "")}`;
 
   return (
-    <div className="layout-band max-w-3xl pb-16">
+    <div className="layout-band max-w-3xl min-h-[8rem] pb-16">
       <SocialShare url={canonicalUrl} title={title} />
       <HelpfulReaction contentId={contentId} />
     </div>

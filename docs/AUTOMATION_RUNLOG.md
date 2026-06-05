@@ -22,6 +22,7 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 - `npm run blog:validate` — 20/20 passes, 0 issues
 - `npm test` — 207 passed
 - `npm run build` + postbuild SEO audit — pass (651 HTML, 212 sitemap URLs)
+- Lighthouse CI fix: exclude noindex `/saved/`; reserve guide ToC / engagement footer height to reduce CLS on glossary and string-tension guides
 
 ### Translation / import
 
