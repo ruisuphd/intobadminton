@@ -55,6 +55,19 @@ describe("site-search", () => {
     ).toBe(true);
   });
 
+  it("finds singles and head-light best pages", () => {
+    expect(
+      searchSite("singles racket").some((h) =>
+        h.href.includes("singles-rackets")
+      )
+    ).toBe(true);
+    expect(
+      searchSite("head light control").some((h) =>
+        h.href.includes("head-light-rackets")
+      )
+    ).toBe(true);
+  });
+
   it("finds catalog products by brand and model", () => {
     const hits = searchSite("yonex nanoflare 1000");
     expect(hits.some((h) => h.kind === "product")).toBe(true);
