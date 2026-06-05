@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/doubles-roles/";
 const HEADLINE = "Doubles court roles";
@@ -35,6 +36,7 @@ export default function DoublesRolesGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Doubles court roles
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Doubles badminton runs on two formations and the rotation
           between them. Knowing which role you are playing in any given

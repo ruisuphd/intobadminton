@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useProfile } from "@/context/ProfileContext";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
-import { resultsPathForProfile } from "@/lib/profile-url";
+import { profileToResultsPath } from "@/lib/profile-url";
 import { byId } from "@/lib/scoring";
 
 /** Surfaces the last finder shortlists on the homepage for return visits. */
@@ -39,7 +39,7 @@ export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {
               .map((id) => byId(id)?.name ?? id)
               .join(" · ");
             const href = localized(
-              resultsPathForProfile(entry.profile, entry.topIds.length)
+              profileToResultsPath(entry.profile, entry.topIds.length)
             );
             return (
               <li key={entry.at}>

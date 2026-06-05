@@ -136,8 +136,14 @@ export function profileFromSearchParams(
  * doesn't carry "default" noise.
  */
 /** Build a shareable `/results/` path for a stored profile snapshot. */
-export function profileToResultsPath(profile: UserProfile): string {
-  const qs = profileToSearchParams(profile).toString();
+export function profileToResultsPath(
+  profile: UserProfile,
+  topN: number = DEFAULT_TOP_N
+): string {
+  const params = profileToSearchParams(profile);
+  const n = ALLOWED_TOP_N.has(topN) ? topN : DEFAULT_TOP_N;
+  params.set("n", String(n));
+  const qs = params.toString();
   return qs.length > 0 ? `/results/?${qs}` : "/results/";
 }
 

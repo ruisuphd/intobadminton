@@ -1,7 +1,7 @@
 # Web App Improvement Plan — Sprint 4 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-3a42` → PR #115  
-**Baseline:** Sprint 3 on `main` ([`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)); Q2 toolkit items in [`IMPROVEMENT_PLAN_2026Q2.md`](IMPROVEMENT_PLAN_2026Q2.md) §6.
+**Branches:** PRs #105, #110, #115 on `main`  
+**Baseline:** Sprint 3 ([`WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT3_2026-06.md)).
 
 ---
 
@@ -9,9 +9,9 @@
 
 | Competitor | Strength | IntoBadminton response |
 |------------|----------|------------------------|
-| **Tennis Warehouse / Wirecutter** | Buy CTAs on every pick | `ProductBuyLink` on results, reviews, best-of |
-| **RacketGuide / TW** | Interactive calculators | Five `/tools/*` pages + guide ↔ tool cross-links |
-| **Wirecutter / RTINGS** | Social + FTC on money pages | `editorialPageMetadata()` OG/Twitter; compare template parity |
+| **Tennis Warehouse / Wirecutter** | Buy CTAs, catalog browse, notify-me | `ProductBuyLink`, `/catalog/`, Buttondown + offline intent sync |
+| **RacketGuide / TW** | Calculators + price-band pages | Five `/tools/*`, `/best/rackets-under-100/` + `/150/` |
+| **Wirecutter / RTINGS** | Social + FTC on money pages | `editorialPageMetadata()`, compare template parity |
 | **BadmintonCentral** | RSS / return visits | `/feed.xml` postbuild + footer link |
 | **YouTube reviewers** | Video proof | Deferred (`VideoObject` gated) |
 
@@ -19,17 +19,17 @@
 
 ---
 
-## 2. Top 5 gaps (closed this sprint)
+## 2. Top gaps closed (Sprint 4)
 
-| # | Gap | Status |
-|---|-----|--------|
-| 1 | Affiliate buy links built but unused | ✅ `ProductBuyLink` + `product-retail.ts` |
-| 2 | Duplicate guide engagement (layout + per-page) | ✅ Removed per-page `GuideEngagement` |
-| 3 | Legacy compare guides missing FTC / engagement | ✅ `CompareConceptChrome` + 77 vs 88S → `CompareGuidePage` |
-| 4 | `/best/*` and `/guides/*` missing OG/Twitter | ✅ `editorialPageMetadata()` |
-| 5 | No RSS for reviews | ✅ `scripts/generate-feed.mjs` → `out/feed.xml` |
+| # | Gap | Delivery |
+|---|-----|----------|
+| 1 | Filter-first catalog + results spec facets | ✅ PR #105 |
+| 2 | Affiliate buy links unused | ✅ PR #115 (`ProductBuyLink`) |
+| 3 | Offline notify-me never syncs to Buttondown | ✅ PR #110 (`notify-me-sync.ts`) |
+| 4 | Budget finder → editorial shortlist CTA | ✅ PR #110 |
+| 5 | RSS + OG/Twitter on commercial pages | ✅ PR #115 |
 
-**Also on `main` (merged):** guide ↔ tool links, `GuideInPageToc`, programmatic `/best/rackets-under-100/`, search index expansions.
+**Also merged:** guide ↔ tool links, `GuideInPageToc`, compare engagement cleanup, Lighthouse URL hygiene (no `/saved/`).
 
 ### Sprint 4b — Return-path polish (PR #100)
 
@@ -43,56 +43,45 @@
 ### Deferred (Sprint 5+)
 
 - HelpfulReaction Workers/KV public counts
-- Faceted catalog browse
 - Original product photography
-- `Person.sameAs` after profile claims
+- VideoObject + claimed YouTube `sameAs`
+- GSC/CrUX baseline CSV capture
+- zh locale content
 
 ---
 
-## 3. Execution summary
+## 3. Execution summary (PR #110 additive)
 
-1. `src/lib/product-retail.ts` + `ProductBuyLink` on commercial surfaces.
-2. Removed duplicate `GuideEngagement`; extended `GUIDE_HEADLINES`.
-3. `CompareConceptChrome` + `CompareGuidePage` migration for 77 vs 88S.
-4. `editorialPageMetadata()` for guides and best-of.
-5. RSS feed postbuild + footer link.
-6. Merged latest `main` (tools, ToC, runlog).
+1. `src/lib/notify-me-sync.ts` — migrate local intents to Buttondown when configured.
+2. `SavedListClient` — sync on mount + `notify_me_synced` analytics.
+3. `ResultsClient` — CTA to `/best/rackets-under-100/` when racket + budget ≤ $100.
+4. `lighthouserc.json` — CLS as warn (cookie/banner flake on long guides).
+5. `e2e/search-smoke.spec.ts` — budget guide search smoke.
 
 ---
 
-## 4. Ten-pass verification
+## 4. Ten-pass verification (PR #110)
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in competitive audit + Q2 plan | ✅ |
-| 2 | Buy links use official URLs when available | ✅ |
-| 3 | Export-audit disclosure markers intact | ✅ |
-| 4 | Single guide engagement footer | ✅ |
-| 5 | Legacy compares have FTC + engagement | ✅ |
-| 6 | OG + Twitter on guides and best-of | ✅ |
-| 7 | `feed.xml` in `out/` after build | ✅ |
-| 8 | `npm test` (198 tests) | ✅ |
-| 9 | `npm run build` + SEO audit | ✅ |
-| 10 | Mergeable with `main` | ✅ |
+| 1 | Gaps grounded in audit + deferred list | ✅ |
+| 2 | Notify sync only when Buttondown configured | ✅ |
+| 3 | Failed sync rows stay in localStorage | ✅ |
+| 4 | Budget CTA scoped to racket + budget ≤ 100 | ✅ |
+| 5 | `/saved/` stays noindex | ✅ |
+| 6 | Static export safe | ✅ |
+| 7 | `notify-me-sync.test.ts` + search e2e | ✅ |
+| 8 | No homepage signup wall | ✅ |
+| 9 | `npm test && npm run build` | ✅ |
+| 10 | postbuild SEO audit clean | ✅ |
 
 ---
 
-## 5. Verification
-
-```bash
-npm test
-npm run lint
-npm run build
-```
-
----
-
-## 6. Metrics
+## 5. Metrics
 
 | Goal | Target |
 |------|--------|
 | Pages per session | 2.5+ |
 | 7-day return rate | 15%+ |
-| Affiliate CTR | GA4 `affiliate_click` |
-| Tool → finder CTR | GA4 tool / quiz events |
-| Social referral CTR | Lift after OG metadata |
+| Notify-me opt-ins | `notify_me_synced` weekly |
+| Lighthouse CI | Green on indexable URLs |

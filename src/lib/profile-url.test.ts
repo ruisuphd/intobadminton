@@ -103,6 +103,18 @@ describe("profile-url round trip", () => {
     expect(path).toContain("disc=doubles");
   });
 
+  it("profileToResultsPath includes topN when provided", () => {
+    const path = profileToResultsPath(
+      { ...defaultUserProfile(), level: "club", discipline: "doubles" },
+      4
+    );
+    expect(path).toContain("n=4");
+    expect(profileToResultsPath(
+      { ...defaultUserProfile(), level: "club", discipline: "doubles" },
+      99
+    )).toContain("n=8");
+  });
+
   it("clampBudgetUsd applies the hard cap", () => {
     expect(clampBudgetUsd(50)).toBe(50);
     expect(clampBudgetUsd(-5)).toBe(0);
