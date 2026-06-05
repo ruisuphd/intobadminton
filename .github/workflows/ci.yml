@@ -44,6 +44,8 @@ jobs:
         run: npm run lint:results-url-baseline
       - name: Compare share URL guard
         run: npm run lint:compare-baseline
+      - name: Review product map guard
+        run: npm run lint:review-product-map-baseline
       - name: Build
         run: npm run build
         env:

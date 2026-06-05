@@ -31,7 +31,9 @@
     "lint:finder-baseline": "node scripts/finder-baseline.mjs",
     "lint:results-url-baseline": "node scripts/results-url-baseline.mjs",
     "lint:compare-baseline": "node scripts/compare-baseline.mjs",
+    "lint:review-product-map-baseline": "node scripts/review-product-map-baseline.mjs",
     "lint:product-funnel-baselines": "node scripts/product-funnel-baselines.mjs",
+    "lint:editorial-baselines": "node scripts/editorial-baselines.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
