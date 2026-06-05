@@ -15,22 +15,20 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`, PR #140 → superseded by PR #145)
+## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`, PR #140)
 
-**Trigger:** GitHub pull request #130 (`ready_for_review`) — Sprint 6 claims registry. Rebased onto latest `main`, shipped Sprint 6 `/data/` plus Sprint 7 stringing cluster + `/updates/` lane.
+**Trigger:** PR #130 (`ready_for_review`). Shipped string feel guide + `/updates/` (`/data/` already on main via #130).
 
 ### Shipped
 
-- Merged latest `main` (singles/head-light/all-round/wide-feet best pages, catalog compare funnel)
-- **`/data/`** — verified claims registry (Sprint 6 carryover from PR #130)
 - **`/guides/string-feel-vs-durability/`** — stringing cluster spoke with HowTo schema
 - **`/updates/`** — editorial freshness feed via `listEditorialUpdates()`
-- Registry: `editorial-meta`, `site-search`, guides index, footer, Lighthouse URLs
 
 ### Verification
 
-- `npm test` — 235+ passed
-- `npm run build` + postbuild SEO audit — pass
+- `npm test` — 263+ passed; `npm run build` + postbuild SEO audit — pass
+
+---
 
 ## 2026-06-05 — Sprint 10 web app (`cursor/web-app-improvement-plan-0d45`)
 
