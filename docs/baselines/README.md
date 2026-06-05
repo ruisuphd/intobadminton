@@ -2,6 +2,20 @@
 
 Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
 
+## Catalogue keyword search (golden queries)
+
+Committed expectations for `/catalog/?q=` keyword filtering:
+
+- [`catalog-keyword-queries.json`](catalog-keyword-queries.json) — brand, model, SKU, spec-token, and empty-result guards.
+
+Validate against the live product index (runs in CI after site search guard):
+
+```bash
+npm run lint:catalog-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/catalog-baseline-smoke.spec.ts`) after static build.
+
 ## On-site search (golden queries)
 
 Committed expectations for `/search/`, header autocomplete, and product-intent submit routing:

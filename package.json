@@ -25,6 +25,7 @@
     "lint:gsc-baseline": "node --experimental-strip-types scripts/gsc-baseline.mjs validate",
     "lint:gsc-baseline:compare": "node --experimental-strip-types scripts/gsc-baseline.mjs compare",
     "lint:search-baseline": "node scripts/search-baseline.mjs",
+    "lint:catalog-baseline": "node scripts/catalog-baseline.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
