@@ -5,7 +5,6 @@ import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { FilterChipGroup } from "@/components/FilterChipGroup";
 import {
-  ProductImageView,
   canShowProductImage,
 } from "@/components/ProductImage";
 import {
@@ -28,7 +27,7 @@ import { humanize } from "@/lib/text";
 import type { BalanceCategory, ProductRecord, WeightClass } from "@/lib/types/product";
 import type { EquipmentCategory } from "@/lib/taxonomy";
 
-const CATALOG_PAGE_SIZE = 40;
+const CATALOG_PAGE_SIZE = 24;
 
 function specLine(p: ProductRecord): string {
   if (p.category === "racket") {
@@ -198,10 +197,16 @@ export function CatalogClient() {
               className="flex gap-4 px-5 py-4 transition-colors hover:bg-[color:var(--surface-muted)]"
             >
               {canShowProductImage(p.image) ? (
-                <ProductImageView
-                  image={p.image}
-                  size={72}
-                  className="shrink-0"
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={p.image!.url}
+                  alt=""
+                  width={72}
+                  height={72}
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                  className="h-[72px] w-[72px] shrink-0 rounded-xl bg-[color:var(--surface-muted)] object-contain"
                 />
               ) : (
                 <div
