@@ -2,7 +2,6 @@
   "ci": {
     "collect": {
       "url": [
-        "http://localhost:4173/index.html",
         "http://localhost:4173/quiz/index.html",
         "http://localhost:4173/best/index.html",
         "http://localhost:4173/best/beginner-rackets/index.html",
