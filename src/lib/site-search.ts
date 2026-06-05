@@ -1,6 +1,7 @@
 import { blogArticles } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { brands } from "@/lib/brands";
+import { COMPARE_GUIDES } from "@/lib/compare-guides";
 import { reviewableProducts, catalogProductHref } from "@/lib/review-pages";
 
 export type SearchEntryKind =
@@ -181,97 +182,6 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["fake", "counterfeit", "authenticity"],
   },
   {
-    title: "Yonex Astrox vs Nanoflare",
-    href: "/compare-guides/yonex-astrox-vs-nanoflare/",
-    kind: "compare",
-    summary: "Attack vs speed Yonex families decoded for club players.",
-    keywords: ["yonex", "astrox", "nanoflare", "compare"],
-  },
-  {
-    title: "Yonex vs Victor vs Li-Ning",
-    href: "/compare-guides/yonex-victor-li-ning/",
-    kind: "compare",
-    summary: "Brand philosophy and lineup comparison for doubles players.",
-    keywords: ["yonex", "victor", "li-ning", "brand"],
-  },
-  {
-    title: "Astrox 77 Pro vs 88S Pro 2024",
-    href: "/compare-guides/astrox-77-pro-vs-88s-pro/",
-    kind: "compare",
-    summary: "Two 4U Yonex Astrox frames compared by shaft hardness and swing feel.",
-    keywords: ["astrox", "77", "88s", "yonex"],
-  },
-  {
-    title: "Astrox 99 Pro vs Astrox 100ZZ",
-    href: "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
-    kind: "compare",
-    summary: "Yonex flagship attack frames with different timing windows.",
-    keywords: ["astrox", "99", "100zz", "yonex"],
-  },
-  {
-    title: "Astrox 99 Pro vs Halbertec 9000 Power",
-    href: "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/",
-    kind: "compare",
-    summary: "Yonex vs Li-Ning singles attack flagships compared.",
-    keywords: ["astrox", "halbertec", "li-ning", "yonex"],
-  },
-  {
-    title: "Astrox 88D Pro vs AxForce 90 New",
-    href: "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
-    kind: "compare",
-    summary: "Doubles rear-court attack: Yonex 88D Pro vs Li-Ning AxForce 90.",
-    keywords: ["astrox", "88d", "axforce", "doubles"],
-  },
-  {
-    title: "Nanoflare 1000Z vs Auraspeed 99",
-    href: "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
-    kind: "compare",
-    summary: "Speed-series flagships from Yonex and Victor.",
-    keywords: ["nanoflare", "auraspeed", "victor", "yonex"],
-  },
-  {
-    title: "Nanoflare 800 Pro vs Auraspeed HS Plus",
-    href: "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/",
-    kind: "compare",
-    summary: "Mid-flagship speed rackets compared for drive and swing weight.",
-    keywords: ["nanoflare", "auraspeed", "speed"],
-  },
-  {
-    title: "Bladex 800 Speed vs Nanoflare 1000Z",
-    href: "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
-    kind: "compare",
-    summary: "Li-Ning speed flagship vs Yonex Nanoflare 1000Z.",
-    keywords: ["bladex", "nanoflare", "li-ning", "yonex"],
-  },
-  {
-    title: "Halbertec 9000 Power vs AxForce 100 Gen 2",
-    href: "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/",
-    kind: "compare",
-    summary: "Two Li-Ning attack flagships for smash specialists.",
-    keywords: ["halbertec", "axforce", "li-ning"],
-  },
-  {
-    title: "Yonex 65 Z4 vs Eclipsion Z3",
-    href: "/compare-guides/yonex-65z4-vs-eclipsion-z3/",
-    kind: "compare",
-    summary: "Yonex Power Cushion speed vs premium Eclipsion stability shoes.",
-    keywords: ["65 z4", "eclipsion", "shoes", "yonex"],
-  },
-  {
-    title: "Badminton shoes vs tennis shoes",
-    href: "/compare-guides/badminton-vs-tennis-shoes/",
-    kind: "compare",
-    summary: "Outsole, stability, and why mixing court shoes risks injury.",
-    keywords: ["shoes", "tennis", "court"],
-  },
-  {
-    title: "Comparison guides hub",
-    href: "/compare-guides/",
-    kind: "compare",
-    summary: "Side-by-side racket and shoe comparisons by player role.",
-    keywords: ["compare", "versus", "vs"],
-  },
-  {
     title: "Badminton toolkit",
     href: "/tools/",
     kind: "tool",
@@ -316,6 +226,26 @@ const STATIC_ENTRIES: SearchEntry[] = [
   },
 ];
 
+function compareGuideEntries(): SearchEntry[] {
+  const guides = COMPARE_GUIDES.map((guide) => ({
+    title: guide.title,
+    href: guide.href,
+    kind: "compare" as const,
+    summary: guide.dek,
+    keywords: guide.keywords,
+  }));
+  return [
+    {
+      title: "Comparison guides hub",
+      href: "/compare-guides/",
+      kind: "compare" as const,
+      summary: "Side-by-side racket and shoe comparisons by player role.",
+      keywords: ["compare", "versus", "vs"],
+    },
+    ...guides,
+  ];
+}
+
 function brandEntries(): SearchEntry[] {
   return brands.map((b) => ({
     title: `${b.name} rackets decoded`,
@@ -358,6 +288,7 @@ function productEntries(): SearchEntry[] {
 export function buildSearchIndex(): SearchEntry[] {
   return [
     ...STATIC_ENTRIES,
+    ...compareGuideEntries(),
     ...brandEntries(),
     ...reviewEntries(),
     ...productEntries(),

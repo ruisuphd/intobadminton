@@ -2,6 +2,143 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
+## 2026-06-05 — PR #128 `ready_for_review` (merged #128)
+
+**Trigger:** GitHub pull request #128 (`ready_for_review`) — Chinese review translation automation. **Merged** to `main` as `1d7585f` (runlog only). Translation blocked: no `blogs/` drop in cloud VM.
+
+| Check | Result |
+| --- | --- |
+| Desktop `blogs/` path | **Not found** |
+| `CURSOR_AGENT=1 npm run blog:check` | exit 1 (no drop) |
+| New translations | **None** |
+| `blog-slug-source-map` vs `blog-articles.json` | **146 / 146** |
+| `npm test` / `build` (post-merge `main`) | 212 passed; SEO audit pass |
+
+Re-run translation after `npm run blog:sync` with the Desktop drop or `BLOGS_DIR`.
+
+---
+
+## 2026-06-05 — PR #121 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-d80a`)
+
+**Trigger:** GitHub pull request #121 (`ready_for_review`) — Chinese review translation workflow re-ran after PR #110 logging PR. Translation steps 1–5 still require the private `blogs/` drop.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **133 mapped / 146 articles** — no import this run |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 198 passed
+- `npm run build` — not re-run (docs-only delta)
+
+### Merge status
+
+Documentation-only PR #121 (run log). No review markdown translated. Translation import remains blocked until `blogs/` is synced.
+
+---
+
+## 2026-06-04 — PR #110 `ready_for_review` (branch `cursor/web-app-improvement-plan-ff21`)
+
+**Trigger:** GitHub pull request #110 (`ready_for_review`) — Chinese review translation workflow re-ran on a Sprint 4 web-app PR (notify-me sync, budget funnel, Lighthouse CI). Translation steps 1–5 still require the private `blogs/` drop.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 198 passed
+- `npm run build` — not re-run (no content changes)
+
+### Merge status
+
+No translation PR merged (nothing to import). PR #110 is unrelated Sprint 4 web-app work — not merged by this automation.
+
+---
+
+## 2026-06-04 — PR #100 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-e771`)
+
+**Trigger:** GitHub pull request #100 (`ready_for_review`) — Sprint 3–4 web app (`cursor/web-app-improvement-plan-a58e`). Full Chinese-review translation workflow (check → translate → 10-pass verify → rename → import → web-app update) re-ran in parallel on branch `cursor/new-chinese-reviews-translation-e771`.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 198 passed
+- `npm run build` + postbuild SEO audit — pass
+
+### Translation / import
+
+Not performed — private `blogs/` drop is gitignored and not mounted in the cloud workspace. Re-run after syncing:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+```
+
+---
+
+## 2026-06-04 — PR #91 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-467a`)
+
+**Trigger:** GitHub pull request #91 (`ready_for_review`) — Web app Phase B PR **already merged** to `main` as `1403e47` before this run completed.
+
+### Blog source check
+
+| Check | Result |
+| --- | --- |
+| Path `/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs` | **Not found** (`npm run blog:sync` exit 1) |
+| Repo `blogs/` | **Absent** — `CURSOR_AGENT=1 npm run blog:check` exit 1 |
+| Chinese filenames pending `## English Translation` | **Unknown** (no drop to scan) |
+| `blog-slug-source-map.json` vs `blog-articles.json` | **146 / 146** — no drift on `main` |
+| New translations this run | **None** |
+
+### Verification (no review content changes)
+
+- `npm run blog:validate` — 20/20 passes, 0 issues
+- `npm test` — 207 passed
+- `npm run build` + postbuild SEO audit — pass
+
+### Merge status
+
+Translation, rename, import, and web-app review updates **not performed** (no `blogs/` drop). Re-run after syncing the private drop:
+
+```bash
+npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton/blogs"
+CURSOR_AGENT=1 npm run blog:check
+```
+
+---
+
+## 2026-06-05 — Homepage perf (PR #92)
+
+- Prebuild homepage JSON slices; deferred ContinueReading
+- Lighthouse: no /saved/; CLS warn
+
+---
+
 ## 2026-06-04 — PR #105 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-6c92`)
 
 **Trigger:** GitHub pull request #105 (`ready_for_review`) — Sprint 3–4 web app (`cursor/web-app-improvement-plan-f8ee`). PR #105 **merged** to `main` as `98941e3`. Translation workflow ran in parallel; no review content changes.
@@ -127,7 +264,6 @@ npm run blog:sync -- "/Users/ruisu/Desktop/Files/Singapore Company/intobadminton
 Re-run after `npm run blog:sync` with the Desktop path or `BLOGS_DIR`.
 
 ---
-
 ## 2026-06-04 — Sprint 4 web app (branch `cursor/web-app-improvement-plan-3a42`, PR #115)
 
 **Trigger:** Cloud agent — audit → plan → execute (commerce CTAs, OG metadata, RSS, compare parity).

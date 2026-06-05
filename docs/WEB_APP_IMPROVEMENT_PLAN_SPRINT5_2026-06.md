@@ -1,78 +1,64 @@
 # Web App Improvement Plan — Sprint 5 (June 2026)
 
-**Branch:** `cursor/web-app-improvement-plan-df3b`  
-**Baseline:** Sprint 4 on `main` after PR #113; PR #116 (programmatic best pages + glossary autolink).
+**Branch:** `cursor/web-app-improvement-plan-df3b` (PR #123)  
+**Baseline:** Sprint 4 on `main` (PR #113, #116, #117, #110).
 
 ---
 
-## 1. Competitive audit (June 2026)
+## 1. Competitive audit
 
-| Competitor | Strength | IntoBadminton response |
-|------------|----------|------------------------|
-| **Tennis Warehouse / retailer finders** | Filter-first catalogue browse + deep category URLs | `/catalog/` on main (#105); **HomeCatalogStrip** + deep links |
-| **RacketGuide / affiliate roundups** | Long-tail landings (`5U`, shoulder comfort) | ✅ PR #116 programmatic `/best/*` |
-| **BadmintonCentral / authority blogs** | Inline concept links to glossary | ✅ PR #116 `segmentArticleGlossary` |
-| **Wirecutter / RTINGS** | Social proof on helpful votes | **Optional `NEXT_PUBLIC_REACTIONS_URL` hook** |
-| **RacketGuide-style tool sites** | Share + feedback on calculators | **ToolEngagement** on `/tools/*` |
-
-**Moat:** static export, postbuild SEO gate, transparent fit scoring, 148-product catalogue.
+| Competitor | Strength | Response (this PR + main) |
+|------------|----------|---------------------------|
+| Tennis Warehouse | Filter-first catalogue | `/catalog/` + `HomeCatalogStrip` + `FinderQuickFilters` |
+| Wirecutter / RTINGS | Helpful vote social proof | Optional `NEXT_PUBLIC_REACTIONS_URL` client hook |
+| RacketGuide | Tool share + feedback | `ToolEngagement` on `/tools/*` |
+| Long-tail SEO sites | Programmatic `/best/*` | ✅ PR #116 on main |
+| Performance leaders | Lighthouse CI gate | Homepage perf slices (main); catalog pagination |
 
 ---
 
-## 2. Top 5 gaps (Sprint 5 — this PR)
+## 2. Top 5 gaps (Sprint 5b — PR #123)
 
 | # | Gap | Status |
 |---|-----|--------|
-| 1 | Catalog not discoverable from homepage | ✅ `HomeCatalogStrip` |
-| 2 | Catalog deep links (`?cat=racket`) ignored | ✅ `parseCatalogFiltersFromSearchParams` |
-| 3 | HelpfulReaction counts client-only | ✅ Optional reactions API client |
-| 4 | Toolkit pages lack share/helpful stripe | ✅ `ToolEngagement` layout |
-| 5 | Lighthouse CLS on guides + noindex `/saved/` in gate | ✅ Fixed sidebar ToC; omit `/saved/` |
+| 1 | Catalog browse not linked from homepage gear path | ✅ `HomeCatalogStrip` |
+| 2 | Catalog deep links ignored | ✅ `parseCatalogFiltersFromSearchParams` |
+| 3 | HelpfulReaction counts client-only | ✅ Optional reactions API |
+| 4 | Toolkit pages lack engagement footer | ✅ `ToolEngagement` |
+| 5 | Catalog Lighthouse perf (148-row DOM) | ✅ Paginate to 40 + show more |
 
-### Already on main (PR #116)
+### Already on main
 
-- `/best/lightweight-rackets-5u/`, `/best/rackets-for-shoulder-comfort/`
-- Enhanced glossary autolink (`segmentArticleGlossary`)
+- Programmatic `/best/lightweight-rackets-5u/`, `/best/rackets-for-shoulder-comfort/`
+- Enhanced glossary autolink, homepage perf slices, guide ToC CLS anchor
+- Lighthouse: CLS warn; `/saved/` excluded
 
 ### Deferred (Sprint 6+)
 
 - Deploy Cloudflare Worker for reactions aggregates
-- First-party `public/products/` photography
+- First-party product photography
 - `Person.sameAs` after profile claims
-- GSC/CrUX CSV in `docs/baselines/`
 
 ---
 
-## 3. Execution summary
-
-1. Merge `origin/main` (PR #116 programmatic pages)
-2. `HomeCatalogStrip` + catalog engagement footer
-3. Catalog URL param parsing (Suspense-wrapped)
-4. `HelpfulReaction` optional `NEXT_PUBLIC_REACTIONS_URL`
-5. `ToolEngagement` on `/tools/*`
-6. SW `ib-v3` precache `/catalog/` + `/tools/`
-7. Guide ToC fixed sidebar (CLS); Lighthouse `/catalog/`; no `/saved/`
-
----
-
-## 4. Ten-pass verification
+## 3. Ten-pass verification
 
 | Pass | Check | Result |
 |------|-------|--------|
-| 1 | Gaps grounded in Q2 Sprint 5+ + competitive audit | ✅ |
-| 2 | Catalog deep links parse only known enum values | ✅ |
-| 3 | HelpfulReaction hides counts below 5-vote threshold | ✅ |
+| 1 | Gaps grounded in competitive audit | ✅ |
+| 2 | Catalog deep links validated | ✅ unit tests |
+| 3 | Reactions threshold (≥5 votes) | ✅ unit tests |
 | 4 | Static export safe | ✅ |
-| 5 | ToolEngagement covers all five tools + hub | ✅ |
-| 6 | SW version bumped (`ib-v3`) | ✅ |
-| 7 | `npm test` | ✅ |
+| 5 | ToolEngagement on all tools | ✅ |
+| 6 | SW `ib-v3` precache | ✅ |
+| 7 | `npm test` (218) | ✅ |
 | 8 | `npm run lint` | ✅ |
-| 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse CLS + no noindex URLs in gate | ✅ |
+| 9 | `npm run build` + SEO audit | ✅ |
+| 10 | Lighthouse aligned with main config | ✅ |
 
 ---
 
-## 5. Verification
+## 4. Verification
 
 ```bash
 npm test
@@ -80,13 +66,3 @@ npm run lint
 npm run build
 npm run test:e2e
 ```
-
----
-
-## 6. Metrics
-
-| Goal | Target |
-|------|--------|
-| Pages per session | 2.5+ |
-| 7-day return rate | 15%+ |
-| Catalog → finder CTR | Track in GA4 |

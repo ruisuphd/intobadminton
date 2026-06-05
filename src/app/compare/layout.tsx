@@ -51,7 +51,7 @@ export default function CompareLayout({
           <p>
             From any results page, brand page, or curated &quot;best of&quot;
             shortlist on IntoBadminton, tap the compare button on a card to
-            add it to your list. Two to four items is the sweet spot — beyond
+            add it to your list. Two or three items is the sweet spot — beyond
             that the table starts to feel crowded and meaningful differences
             get lost. When you are done with a comparison, clear the list
             from the bottom of the table. The compare list lives in your
