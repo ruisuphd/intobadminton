@@ -108,11 +108,11 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - E2e smoke for `/data/`, `/updates/`, review decision shelf
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
-### Sprint 13 — This branch (`cursor/web-app-improvement-plan-3ef7`)
+### Sprint 13 — PR #159 (`cursor/web-app-improvement-plan-3ef7`)
 
 - **PDP related reading** shelf on `/product/[id]/`
 - Explainer review slugs (13) map to editorial clusters via pattern expansion
-- `PATH_CLUSTER` for `/best/strings/`, `/best/doubles-rackets/`, `/best/rackets-under-200/`
+- `PATH_CLUSTER` for `/best/rackets-under-200/` (strings/doubles already mapped)
 - PWA **`ib-v8`** precaches `/tools/` and `/faq/`; Tools manifest shortcut
 - Lighthouse CI includes `/faq/`; e2e PDP + explainer shelf smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT13_2026-06.md)
