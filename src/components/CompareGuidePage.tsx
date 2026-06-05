@@ -4,10 +4,12 @@ import { ArticleEngagementFooter } from "@/components/ArticleEngagementFooter";
 import { InArticleAffiliateDisclosure } from "@/components/InArticleAffiliateDisclosure";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
 import { companyInfo } from "@/lib/company";
 import { reviewPath } from "@/lib/review-pages";
+import { relatedReadingForPath } from "@/lib/related-content";
 import { articleJsonLd } from "@/lib/structured-data";
 
 export type CompareSide = {
@@ -90,6 +92,7 @@ function winnerChip(value: NonNullable<CompareRow["winner"]>) {
 export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
   const path = `/compare-guides/${config.slug}/`;
   const url = `${companyInfo.siteUrl}${path}`;
+  const related = relatedReadingForPath(path);
 
   const article = articleJsonLd({
     path,
@@ -296,6 +299,8 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
             Start the finder
           </Link>
         </section>
+
+        <RelatedReadingShelf items={related} />
 
         <ArticleEngagementFooter
           url={url}

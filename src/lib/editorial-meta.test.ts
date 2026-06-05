@@ -19,6 +19,9 @@ describe("editorialMetaByPath registry", () => {
       "/best/rackets-under-150/",
       "/best/lightweight-rackets-5u/",
       "/best/rackets-for-shoulder-comfort/",
+      "/best/control-rackets/",
+      "/best/wide-feet-badminton-shoes/",
+      "/best/all-round-rackets/",
       "/best/shoes/",
       "/best/strings/",
     ];

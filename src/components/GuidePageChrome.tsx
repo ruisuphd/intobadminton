@@ -4,8 +4,10 @@ import { usePathname } from "next/navigation";
 import { GuideInPageToc } from "@/components/GuideInPageToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { SocialShare } from "@/components/SocialShare";
 import { companyInfo } from "@/lib/company";
+import { relatedReadingForPath } from "@/lib/related-content";
 
 const GUIDE_HEADLINES: Record<string, string> = {
   "/guides/string-tension/": "Badminton string tension guide",
@@ -47,9 +49,11 @@ export function GuideEngagementFooter() {
       : "Guide");
   const canonicalUrl = `${companyInfo.siteUrl}${path}`;
   const contentId = `guide:${path.replace(/^\/guides\//, "").replace(/\/$/, "")}`;
+  const related = relatedReadingForPath(path);
 
   return (
     <div className="layout-band max-w-3xl pb-16">
+      <RelatedReadingShelf items={related} />
       <SocialShare url={canonicalUrl} title={title} />
       <HelpfulReaction contentId={contentId} />
     </div>

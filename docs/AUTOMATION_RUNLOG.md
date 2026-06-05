@@ -2,13 +2,13 @@
 
 Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
-## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`)
+## 2026-06-05 — Sprint 7 web app (branch `cursor/web-app-improvement-plan-10b8`, PR #140)
 
-**Trigger:** GitHub pull request #130 (`ready_for_review`) — Sprint 6 claims registry. Rebased onto `main`, shipped Sprint 6 `/data/` plus Sprint 7 stringing cluster + `/updates/` lane.
+**Trigger:** GitHub pull request #130 (`ready_for_review`) — Sprint 6 claims registry. Rebased onto latest `main`, shipped Sprint 6 `/data/` plus Sprint 7 stringing cluster + `/updates/` lane.
 
 ### Shipped
 
-- Merged `main` into branch (fuzzy search, catalog filters, control rackets already on main)
+- Merged latest `main` (singles/head-light/all-round/wide-feet best pages, catalog compare funnel)
 - **`/data/`** — verified claims registry (Sprint 6 carryover from PR #130)
 - **`/guides/string-feel-vs-durability/`** — stringing cluster spoke with HowTo schema
 - **`/updates/`** — editorial freshness feed via `listEditorialUpdates()`
@@ -16,12 +16,46 @@ Cron and cloud-agent runs that sync reviews from the private `blogs/` drop.
 
 ### Verification
 
-- `npm test` — 235 passed
-- `npm run build` + postbuild SEO audit — pass (656 HTML, 217 sitemap URLs)
+- `npm test` — 235+ passed
+- `npm run build` + postbuild SEO audit — pass
 
 ### PR #130 status
 
-Superseded by this branch (includes `/data/` plus main reconciliation). Close #130 after Sprint 7 PR merges.
+Superseded by PR #140. Close #130 after #140 merges.
+
+---
+
+## 2026-06-05 — PR #118 `ready_for_review` (branch `cursor/new-chinese-reviews-translation-fedb`)
+
+**Trigger:** GitHub pull request #118 (`ready_for_review`) — PR #92 translation cron re-run; no review content changes.
+
+| Check | Result |
+| --- | --- |
+| Desktop `blogs/` | **Not found** — `blog:sync` exit 1 |
+| `CURSOR_AGENT=1 npm run blog:check` | exit 1 |
+| `blog-slug-source-map` vs `blog-articles.json` | **146 / 146** |
+| New translations | **None** |
+
+Re-run after `npm run blog:sync` with the Desktop drop or `BLOGS_DIR`.
+
+---
+
+## 2026-06-05 — Sprint 6 web app (branch `cursor/web-app-improvement-plan-06b6`, PR #129)
+
+**Trigger:** Cloud agent — audit → plan → execute (reactions API, singles/head-light landings, image placeholders, Lighthouse baseline script). Complements PR #134 (fuzzy search, control-rackets) already on `main`.
+
+### Shipped
+
+- HelpfulReaction optional Workers/KV client + `workers/reactions/` deploy scaffold
+- `/best/singles-rackets/` and `/best/head-light-rackets/` programmatic SEO landings
+- `ProductImagePlaceholder` on best-of rows without verified images
+- `scripts/lighthouse-baseline.mjs` + `docs/baselines/lighthouse-scores.json` scaffold
+
+### Verification
+
+- `npm test` — 228 passed
+- `npm run lint` — pass
+- `npm run build` + postbuild SEO audit — pass (653 HTML, 214 sitemap URLs)
 
 ---
 
