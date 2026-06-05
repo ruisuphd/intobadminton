@@ -2,6 +2,30 @@
 
 Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
 
+## Product funnel guards (unified)
+
+Refresh discovery, finder scoring, and results share URL regression layers in one operator command:
+
+```bash
+npm run lint:product-funnel-baselines
+```
+
+Runs `lint:discovery-baselines`, `lint:finder-baseline`, and `lint:results-url-baseline` sequentially.
+
+## Results share URLs (golden profiles)
+
+Committed sharable `/results/?level=...` paths that must round-trip through URL serialisation to the same scoring output as the finder golden profiles:
+
+- [`results-url-queries.json`](results-url-queries.json) — club doubles, budget beginner, wide-foot shoes, ankle-injury guard.
+
+Validate URL round-trip + scoring parity (runs in CI after finder guard):
+
+```bash
+npm run lint:results-url-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/results-url-baseline-smoke.spec.ts`) — direct navigation to committed share URLs.
+
 ## Finder golden profiles (scoring engine)
 
 Committed player profiles and expected shortlist behaviour for the transparent fit-score engine:
