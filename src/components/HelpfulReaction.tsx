@@ -29,19 +29,17 @@ export function HelpfulReaction({
 }) {
   const [vote, setVote] = useState<Reaction | null>(null);
   const [counts, setCounts] = useState<ReactionCounts | null>(null);
-  const [hydrated, setHydrated] = useState(false);
+  const [storedVoteLoaded, setStoredVoteLoaded] = useState(false);
   const apiEnabled = reactionsApiEnabled();
 
   useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect -- single-shot hydration */
     try {
       const raw = localStorage.getItem(STORAGE_PREFIX + contentId);
       if (raw === "up" || raw === "down" || raw === "more") setVote(raw);
     } catch {
       // Treat any storage error as "no vote yet".
     }
-    setHydrated(true);
-    /* eslint-enable react-hooks/set-state-in-effect */
+    setStoredVoteLoaded(true);
   }, [contentId]);
 
   useEffect(() => {
@@ -72,34 +70,20 @@ export function HelpfulReaction({
     }
   };
 
-  const countSummary =
+  const countLine =
     counts != null && totalHelpful(counts) > 0 ? (
-      <p className="mt-2 text-xs text-[var(--color-subtle)]">
+      <>
         {counts.up} found this helpful
         {counts.more > 0 ? ` · ${counts.more} asked for more detail` : ""}
-      </p>
+      </>
     ) : null;
 
-  if (!hydrated) {
-    return (
-      <section
-        aria-label="Was this helpful?"
-        className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
-      >
-        <p className="text-sm font-medium text-[var(--text)]">
-          Was this helpful?
-        </p>
-        <p className="mt-2 text-xs text-[var(--color-subtle)]">Loading…</p>
-      </section>
-    );
-  }
+  const shellClass =
+    "mt-12 min-h-[8.5rem] rounded-2xl border border-[color:var(--line)] bg-white p-5";
 
-  if (vote != null) {
+  if (storedVoteLoaded && vote != null) {
     return (
-      <section
-        aria-label="Was this helpful?"
-        className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
-      >
+      <section aria-label="Was this helpful?" className={shellClass}>
         <p className="text-sm font-medium text-[var(--text)]">
           Thanks for the feedback.
         </p>
@@ -125,20 +109,21 @@ export function HelpfulReaction({
             Change my vote
           </button>
         </p>
-        {countSummary}
+        <p className="mt-2 min-h-[1rem] text-xs text-[var(--color-subtle)]">
+          {countLine ?? "\u00a0"}
+        </p>
       </section>
     );
   }
 
   return (
-    <section
-      aria-label="Was this helpful?"
-      className="mt-12 rounded-2xl border border-[color:var(--line)] bg-white p-5"
-    >
+    <section aria-label="Was this helpful?" className={shellClass}>
       <p className="text-sm font-medium text-[var(--text)]">
         Was this article helpful?
       </p>
-      {countSummary}
+      <p className="mt-2 min-h-[1rem] text-xs text-[var(--color-subtle)]">
+        {countLine ?? "\u00a0"}
+      </p>
       <div className="mt-3 flex flex-wrap gap-2">
         <ReactionButton glyph="👍" label="Yes" onClick={() => submit("up")} />
         <ReactionButton
