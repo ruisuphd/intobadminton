@@ -57,7 +57,7 @@
 | 7 | Unit tests: related-content, editorial-updates, helpful-reaction-ui, pwa-precache | ✅ |
 | 8 | `npm test` green | ✅ |
 | 9 | `npm run build` + postbuild SEO audit | ✅ |
-| 10 | Lighthouse URL set includes compare, methodology, offline, guides | ✅ |
+| 10 | Lighthouse URL set excludes noindex routes; includes methodology + guides | ✅ |
 
 ---
 
