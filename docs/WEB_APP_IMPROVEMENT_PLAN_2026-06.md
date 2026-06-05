@@ -359,7 +359,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright engagement smoke** — `e2e/catalog-baseline-smoke.spec.ts`, `e2e/helpful-reaction-smoke.spec.ts`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT42_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT42_2026-06.md)
 
-### Sprint 43 — This branch
+### Sprint 43 — Shipped (PR #191)
 
 - **Discovery parity golden pairs** — `docs/baselines/discovery-parity-queries.json` (product-intent routing ↔ catalog rows)
 - **Discovery regression guard** — `src/lib/discovery-parity.ts` + `npm run lint:discovery-baseline`
@@ -367,7 +367,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Reactions deploy runbook** — `workers/reactions/README.md` checklist
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT43_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT43_2026-06.md)
 
-### Next (Sprint 44+)
+### Sprint 44 — This branch
+
+- **Finder golden profiles** — `docs/baselines/finder-profile-queries.json` (6 scoring-engine expectations)
+- **Finder regression guard** — `src/lib/finder-baseline.ts` + `npm run lint:finder-baseline`
+- **Unified discovery command** — `npm run lint:discovery-baselines` (search + catalog + parity)
+- **Playwright finder smoke** — `e2e/finder-baseline-smoke.spec.ts` (quiz → results shortlist)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT44_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT44_2026-06.md)
+
+### Next (Sprint 45+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

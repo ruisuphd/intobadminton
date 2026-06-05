@@ -2,6 +2,30 @@
 
 Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
 
+## Finder golden profiles (scoring engine)
+
+Committed player profiles and expected shortlist behaviour for the transparent fit-score engine:
+
+- [`finder-profile-queries.json`](finder-profile-queries.json) — club doubles racket, budget beginner, wide-foot shoes, string shopper, pro singles, ankle-injury guard.
+
+Validate against the live scoring engine (runs in CI after discovery parity guard):
+
+```bash
+npm run lint:finder-baseline
+```
+
+Profiles with `"e2e": true` are also exercised in Playwright (`e2e/finder-baseline-smoke.spec.ts`) — quiz funnel through to a non-empty results shortlist.
+
+## Unified discovery guards
+
+Refresh all three discovery regression layers in one operator command:
+
+```bash
+npm run lint:discovery-baselines
+```
+
+Runs `lint:search-baseline`, `lint:catalog-baseline`, and `lint:discovery-baseline` sequentially.
+
 ## Discovery parity (search submit ↔ catalog filter)
 
 Committed expectations for **product-intent** queries where header/search submit routes to `/catalog/?q=` and the catalogue keyword filter must return matching rows:

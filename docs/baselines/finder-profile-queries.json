@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "queries": [
+    {
+      "id": "club-doubles-racket",
+      "profile": {
+        "level": "club",
+        "discipline": "doubles",
+        "styles": ["balanced"],
+        "category": "racket",
+        "body": { "budgetMaxUsd": 250, "injuryFlags": ["none"] }
+      },
+      "minResults": 5,
+      "expectTopCategory": "racket",
+      "minTopFitScore": 0.55,
+      "e2e": true,
+      "note": "Default club doubles racket finder path"
+    },
+    {
+      "id": "budget-beginner-racket",
+      "profile": {
+        "level": "recreational",
+        "discipline": "singles",
+        "styles": ["offensive"],
+        "category": "racket",
+        "body": { "budgetMaxUsd": 100, "injuryFlags": ["none"] }
+      },
+      "minResults": 3,
+      "maxTopNPriceUsd": 150,
+      "topN": 3,
+      "e2e": true,
+      "note": "Budget beginner should not surface flagship rackets in top 3"
+    },
+    {
+      "id": "wide-foot-shoes",
+      "profile": {
+        "level": "recreational",
+        "discipline": "doubles",
+        "styles": ["balanced"],
+        "category": "shoes",
+        "body": {
+          "budgetMaxUsd": 150,
+          "footWidth": "wide",
+          "injuryFlags": ["none"]
+        }
+      },
+      "minResults": 1,
+      "expectTopCategory": "shoes",
+      "note": "Wide-foot recreational doubles player gets shoe shortlist"
+    },
+    {
+      "id": "club-doubles-string",
+      "profile": {
+        "level": "club",
+        "discipline": "doubles",
+        "styles": ["offensive"],
+        "category": "string",
+        "body": {
+          "budgetMaxUsd": 15,
+          "stringTensionLbs": 26,
+          "injuryFlags": ["none"]
+        }
+      },
+      "minResults": 1,
+      "expectAnyProductIdContains": "string",
+      "note": "Offensive doubles string shopper sees string catalogue rows"
+    },
+    {
+      "id": "pro-singles-racket",
+      "profile": {
+        "level": "pro_oriented",
+        "discipline": "singles",
+        "styles": ["offensive", "smash_heavy"],
+        "category": "racket",
+        "body": { "budgetMaxUsd": 500, "injuryFlags": ["none"] }
+      },
+      "minResults": 5,
+      "minTopNPriceUsdCount": 3,
+      "minTopNPriceUsd": 200,
+      "topN": 5,
+      "note": "Pro-oriented singles smasher sees flagship band in top 5"
+    },
+    {
+      "id": "ankle-injury-racket",
+      "profile": {
+        "level": "competitive",
+        "discipline": "singles",
+        "styles": ["offensive", "smash_heavy"],
+        "category": "racket",
+        "body": { "budgetMaxUsd": 400, "injuryFlags": ["ankle"] }
+      },
+      "minResults": 1,
+      "expectTopShaftFlexNot": "extra_stiff",
+      "note": "Ankle injury penalty should avoid extra-stiff top pick"
+    }
+  ]
+}
