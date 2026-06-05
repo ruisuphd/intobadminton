@@ -2,15 +2,39 @@
 
 Owner-run capture for Core Web Vitals and Google Search Console trends, plus committed on-site search golden queries. Agents cannot access GSC; store exports here for regression comparison.
 
+## All guards (unified)
+
+Refresh every committed golden-profile regression layer in one operator command:
+
+```bash
+npm run lint:all-baselines
+```
+
+Runs `lint:product-funnel-baselines` then `lint:editorial-baselines`.
+
 ## Editorial guards (unified)
 
-Refresh review→catalogue map regression layers in one operator command:
+Refresh review→catalogue map and PDP regression layers in one operator command:
 
 ```bash
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline`.
+Runs `lint:review-product-map-baseline` and `lint:pdp-baseline`.
+
+## Catalogue PDP (golden profiles)
+
+Committed product ids that must resolve to valid spec tables, related reading shelves, review reverse-map wiring, and Product JSON-LD:
+
+- [`pdp-queries.json`](pdp-queries.json) — Lighthouse PDP, CrUX review pair, PDP-only SKU, shoes, budget niche brand.
+
+Validate PDP parity against the live catalogue (runs in CI after review map guard):
+
+```bash
+npm run lint:pdp-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/pdp-baseline-smoke.spec.ts`) — direct navigation to committed PDP URLs with specs, finder CTA, and catalog exit.
 
 ## Review→product map (golden profiles)
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Run all editorial regression guards in one operator command:
- * review→product map golden profiles.
+ * review→product map and catalogue PDP golden profiles.
  *
  * Usage:
  *   node scripts/editorial-baselines.mjs
@@ -17,6 +17,10 @@ const GUARDS = [
   {
     name: "review product map",
     script: "scripts/review-product-map-baseline.mjs",
+  },
+  {
+    name: "PDP golden profiles",
+    script: "scripts/pdp-baseline.mjs",
   },
 ];
 

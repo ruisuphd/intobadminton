@@ -103,6 +103,12 @@ describe("relatedReadingForProductCategory", () => {
     const items = relatedReadingForProductCategory("string", "yy-bg80");
     expect(items.some((i) => i.href.includes("string-tension"))).toBe(true);
   });
+
+  it("returns shoe-fit cluster for shoes PDP", () => {
+    const items = relatedReadingForProductCategory("shoes", "yy-grpht-thrttl");
+    expect(items.length).toBe(3);
+    expect(items.some((i) => i.href.includes("shoes"))).toBe(true);
+  });
 });
 
 describe("relatedReadingForPath extended clusters", () => {
