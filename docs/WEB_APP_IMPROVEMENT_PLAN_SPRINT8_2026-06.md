@@ -62,7 +62,7 @@
 | 7 | `npm test` | ✅ |
 | 8 | `npm run build` + postbuild SEO audit | ✅ |
 | 9 | Catalog list CLS fix | ✅ |
-| 10 | Lighthouse CI | ⏳ verify on PR #144 after merge with main |
+| 10 | Lighthouse CI | ✅ PR #144 run 26990611633 |
 
 ---
 
