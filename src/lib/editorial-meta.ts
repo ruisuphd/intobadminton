@@ -80,6 +80,10 @@ export const editorialMetaByPath: Record<string, EditorialMeta> = {
     publishedAt: "2026-06-05",
     lastReviewedAt: "2026-06-05",
   },
+  "/methodology/": {
+    publishedAt: "2025-09-01",
+    lastReviewedAt: "2026-06-05",
+  },
 
   // Best-pick roundups (have prices → priceCheckedAt set).
   "/best/beginner-rackets/": {

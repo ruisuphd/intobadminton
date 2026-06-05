@@ -39,6 +39,22 @@ describe("relatedReadingForPath", () => {
     expect(relatedReadingForPath("/about/")).toEqual([]);
   });
 
+  it("returns all-round cluster for singles rackets best page", () => {
+    const items = relatedReadingForPath("/best/singles-rackets/");
+    expect(items.length).toBe(3);
+    expect(items.some((i) => i.href.includes("all-round-rackets"))).toBe(true);
+  });
+
+  it("returns shoe-fit cluster for budget shoes best page", () => {
+    const items = relatedReadingForPath("/best/budget-badminton-shoes/");
+    expect(items.some((i) => i.href.includes("shoes"))).toBe(true);
+  });
+
+  it("returns freshness cluster for season refresh guide", () => {
+    const items = relatedReadingForPath("/guides/season-refresh/");
+    expect(items.some((i) => i.href === "/data/")).toBe(true);
+  });
+
   it("includes string feel guide in strings cluster", () => {
     const items = relatedReadingForPath("/guides/string-tension/");
     expect(

@@ -90,14 +90,23 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Reactions worker **workflow_dispatch** deploy + `crux-template.csv`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT10_2026-06.md)
 
-### Sprint 11 — Shipped (main + PR #154)
+### Sprint 11 — Shipped (#155, #154)
 
 - Compare share URL init (`parseCompareShareIds`) + ProfileContext hydration fix
 - PWA **`ib-v5`** precaches `/compare/` and `/updates/` (main); **`ib-v6`** adds `/review/`, `/guides/`, `/offline/`
 - Review→product map **~91%** (133/146); buying-guide editorial overrides
 - **`NEXT_PUBLIC_REACTIONS_API_URL`** optional secret in Pages build
-- PWA offline e2e smoke
+- PWA offline e2e smoke (`pwa-offline-smoke.spec.ts`)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT11_2026-06.md)
+
+### Sprint 12 — This branch (`cursor/web-app-improvement-plan-4f36`)
+
+- Extended **Keep reading** clusters on commercial `/best/*` landings
+- **`/methodology/`** in editorial freshness feed + human labels on updates
+- HelpfulReaction **API-off prompt** (no empty count shell)
+- PWA **`ib-v7`** precaches `/data/` and `/methodology/` (plus guides/offline from #154)
+- E2e smoke for `/data/`, `/updates/`, review decision shelf
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
 ### Phase D — Shipped (PR #114)
 
@@ -106,12 +115,6 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-C.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - `GuideTocAnchor` on SEO cluster pillar guides
 
 See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md).
-
-### Sprint 12 — This PR (`cursor/web-app-improvement-plan-a467`)
-
-- PWA **`ib-v6`** precaches `/guides/`; Guides manifest shortcut
-- `/offline/` recovery link to guides hub; Lighthouse CI for `/offline/` + `/guides/`
-- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md)
 
 ### Sprint 6–7 — Shipped (main)
 
@@ -126,7 +129,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Product map ≥86%; review body search e2e; results share link verification
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT8_2026-06.md)
 
-### Next (Sprint 12+)
+### Next (Sprint 13+)
 
 - Owner: set `REACTIONS_API_URL` after worker deploy; fill `crux-template.csv`
 - Original photos on top commercial URLs

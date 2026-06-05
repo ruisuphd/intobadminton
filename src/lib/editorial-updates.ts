@@ -54,6 +54,12 @@ const PATH_LABELS: Record<string, string> = {
   "/best/lightweight-rackets-5u/": "Lightweight & 5U rackets",
   "/best/rackets-for-shoulder-comfort/": "Rackets for shoulder comfort",
   "/best/control-rackets/": "Best control rackets",
+  "/best/all-round-rackets/": "Best all-round rackets",
+  "/best/singles-rackets/": "Best singles rackets",
+  "/best/head-light-rackets/": "Best head-light rackets",
+  "/best/head-heavy-rackets-under-150/": "Head-heavy rackets under $150",
+  "/best/budget-badminton-shoes/": "Best budget badminton shoes",
+  "/best/wide-feet-badminton-shoes/": "Best wide-feet badminton shoes",
   "/best/shoes/": "Best badminton shoes",
   "/best/strings/": "Best badminton strings",
   "/guides/string-tension/": "String tension guide",
@@ -72,6 +78,13 @@ const PATH_LABELS: Record<string, string> = {
   "/tools/racket-balance-explainer/": "Racket balance explainer",
   "/tools/court-diagram/": "Court diagram",
   "/tools/authenticity-checker/": "Authenticity checker",
+  "/compare-guides/yonex-astrox-vs-nanoflare/": "Yonex Astrox vs Nanoflare",
+  "/compare-guides/yonex-victor-li-ning/": "Yonex vs Victor vs Li-Ning",
+  "/compare-guides/badminton-vs-tennis-shoes/": "Badminton vs tennis shoes",
+  "/compare-guides/yonex-65z4-vs-eclipsion-z3/": "Yonex 65 Z4 vs Eclipsion Z3",
+  "/brands/yonex/": "Yonex brand guide",
+  "/brands/victor/": "Victor brand guide",
+  "/brands/li-ning/": "Li-Ning brand guide",
 };
 
 function kindForPath(path: string): EditorialUpdateKind {

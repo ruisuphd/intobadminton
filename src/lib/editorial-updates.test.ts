@@ -13,6 +13,13 @@ describe("listEditorialUpdates", () => {
   it("includes the claims registry and string feel guide when registered", () => {
     const rows = listEditorialUpdates(200);
     expect(rows.some((r) => r.path === "/data/")).toBe(true);
+    expect(rows.some((r) => r.path === "/methodology/")).toBe(true);
+  });
+
+  it("uses human labels for best-of pages in the feed", () => {
+    const rows = listEditorialUpdates(200);
+    const singles = rows.find((r) => r.path === "/best/singles-rackets/");
+    expect(singles?.title).toBe("Best singles rackets");
   });
 
   it("includes review articles", () => {
