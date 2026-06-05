@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useProfile } from "@/context/ProfileContext";
-import { byId } from "@/lib/scoring";
+import { productDisplayName } from "@/lib/product-display-names";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 
 const LAST_ARTICLE_KEY = "intobadminton.last-article.v1";
@@ -99,7 +99,7 @@ export function ContinueReading({ locale }: { locale: SiteLocale }) {
               </p>
               <ul className="mt-3 space-y-1 text-sm font-medium text-[var(--text)]">
                 {latestShortlist.topIds.slice(0, 3).map((id) => (
-                  <li key={id}>{byId(id)?.name ?? id}</li>
+                  <li key={id}>{productDisplayName(id) ?? id}</li>
                 ))}
               </ul>
               <Link

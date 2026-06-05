@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SavedHeaderLink } from "@/components/SavedHeaderLink";
 import { SiteSearchForm } from "@/components/SiteSearchForm";
 
@@ -27,21 +27,47 @@ function isActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(href);
 }
 
+const FOCUSABLE =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname() ?? "/";
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!open) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab" || !mobileNavRef.current) return;
+      const nodes = [
+        ...mobileNavRef.current.querySelectorAll<HTMLElement>(FOCUSABLE),
+      ];
+      if (nodes.length === 0) return;
+      const first = nodes[0];
+      const last = nodes[nodes.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener("keydown", handler);
-    // Lock body scroll while the mobile menu is open so the page does
-    // not jump on iOS Safari rubber-band scroll.
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const focusTimer = window.setTimeout(() => {
+      const first = mobileNavRef.current?.querySelector<HTMLElement>(FOCUSABLE);
+      first?.focus();
+    }, 0);
     return () => {
+      window.clearTimeout(focusTimer);
       document.removeEventListener("keydown", handler);
       document.body.style.overflow = previousOverflow;
     };
@@ -99,6 +125,7 @@ export function SiteHeader() {
         </nav>
 
         <button
+          ref={menuButtonRef}
           type="button"
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -134,8 +161,11 @@ export function SiteHeader() {
 
       {open && (
         <nav
+          ref={mobileNavRef}
           id="mobile-nav"
           aria-label="Primary"
+          aria-modal="true"
+          role="dialog"
           className="border-t border-[color:var(--line)] bg-white sm:hidden"
         >
           <ul className="layout-band max-w-6xl py-3">

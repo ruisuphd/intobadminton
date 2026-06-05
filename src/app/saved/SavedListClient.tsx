@@ -15,6 +15,7 @@ import {
   notifyTagForProduct,
   subscribeViaButtondown,
 } from "@/lib/buttondown";
+import { syncNotifyMeIntentsToButtondown } from "@/lib/notify-me-sync";
 import {
   clearNotifyMeIntent,
   getNotifyMeIntent,
@@ -34,6 +35,18 @@ const CATALOG_BY_ID = new Map(CATALOG.map((p) => [p.id, p]));
  */
 export function SavedListClient() {
   const { saved, clearSaved } = useProfile();
+
+  useEffect(() => {
+    if (!buttondownConfigured()) return;
+    void syncNotifyMeIntentsToButtondown().then((result) => {
+      if (result.synced > 0) {
+        trackEvent("notify_me_synced", {
+          synced: result.synced,
+          failed: result.failed,
+        });
+      }
+    });
+  }, []);
 
   const items = useMemo(
     () =>
