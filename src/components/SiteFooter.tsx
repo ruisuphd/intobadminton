@@ -28,6 +28,7 @@ const COLUMNS: FooterColumn[] = [
       { label: "FAQ", path: "/faq/" },
       { label: "Methodology", path: "/methodology/" },
       { label: "Claims registry", path: "/data/" },
+      { label: "Updates", path: "/updates/" },
       { label: "Sources", path: "/sources/" },
     ],
   },
