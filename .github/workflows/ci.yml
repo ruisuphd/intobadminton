@@ -34,6 +34,8 @@ jobs:
         run: npm test
       - name: Site search golden-query guard
         run: npm run lint:search-baseline
+      - name: Catalog keyword golden-query guard
+        run: npm run lint:catalog-baseline
       - name: Build
         run: npm run build
         env:

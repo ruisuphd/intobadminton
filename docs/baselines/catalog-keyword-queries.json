@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "queries": [
+    {
+      "query": "yonex nanoflare",
+      "minResults": 1,
+      "expectProductIdContains": "nanoflare",
+      "expectBrandContains": "Yonex",
+      "e2e": true,
+      "note": "Brand + line discovery"
+    },
+    {
+      "query": "astrox 77",
+      "minResults": 1,
+      "expectProductIdContains": "astrox-77",
+      "e2e": true,
+      "note": "Model number search"
+    },
+    {
+      "query": "p9200",
+      "minResults": 1,
+      "expectBrandContains": "Victor",
+      "note": "Shoe SKU"
+    },
+    {
+      "query": "ac102c",
+      "minResults": 1,
+      "expectProductIdContains": "ac102c",
+      "note": "String SKU — pairs with search submit routing"
+    },
+    {
+      "query": "bg65",
+      "minResults": 1,
+      "expectProductIdContains": "bg65",
+      "note": "Popular string line"
+    },
+    {
+      "query": "4u head light",
+      "minResults": 1,
+      "note": "Spec token combo"
+    },
+    {
+      "query": "yonex astrox 99",
+      "minResults": 1,
+      "expectProductIdContains": "astrox-99",
+      "note": "Multi-token racket match"
+    },
+    {
+      "query": "li-ning",
+      "minResults": 1,
+      "expectBrandContains": "Li-Ning",
+      "note": "Brand filter via keyword"
+    },
+    {
+      "query": "zzzznotaproduct",
+      "maxResults": 0,
+      "e2e": true,
+      "note": "Empty-result guard"
+    }
+  ]
+}

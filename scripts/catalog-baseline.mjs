@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+/**
+ * Validate catalogue keyword golden queries against the live product index.
+ *
+ * Usage:
+ *   node scripts/catalog-baseline.mjs
+ *   node scripts/catalog-baseline.mjs --help
+ */
+import { execFileSync } from "node:child_process";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+function usage() {
+  console.log(`Usage:
+  node scripts/catalog-baseline.mjs   Run golden-query regression guard
+`);
+}
+
+if (process.argv.includes("--help") || process.argv.includes("-h")) {
+  usage();
+  process.exit(0);
+}
+
+execFileSync(
+  "npx",
+  ["vitest", "run", "src/lib/catalog-baseline.test.ts", "-t", "passes all committed"],
+  { cwd: ROOT, stdio: "inherit" }
+);

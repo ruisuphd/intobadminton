@@ -1,12 +1,14 @@
-export type Reaction = "up" | "down" | "more";
+import {
+  EMPTY_REACTION_COUNTS,
+  parseReactionCounts,
+  reactionCountsGetUrl,
+  type Reaction,
+  type ReactionCounts,
+} from "@/lib/reactions-contract";
 
-export type ReactionCounts = {
-  up: number;
-  down: number;
-  more: number;
-};
+export type { Reaction, ReactionCounts };
 
-const EMPTY_COUNTS: ReactionCounts = { up: 0, down: 0, more: 0 };
+const EMPTY_COUNTS = EMPTY_REACTION_COUNTS;
 
 /** Returns the configured reactions API origin, or null when unset. */
 export function reactionsApiUrl(): string | null {
@@ -25,15 +27,12 @@ export async function fetchReactionCounts(
   const base = reactionsApiUrl();
   if (!base) return null;
   try {
-    const url = `${base.replace(/\/$/, "")}?contentId=${encodeURIComponent(contentId)}`;
-    const res = await fetch(url, { method: "GET", cache: "no-store" });
+    const res = await fetch(reactionCountsGetUrl(base, contentId), {
+      method: "GET",
+      cache: "no-store",
+    });
     if (!res.ok) return null;
-    const data = (await res.json()) as Partial<ReactionCounts>;
-    return {
-      up: Number(data.up) || 0,
-      down: Number(data.down) || 0,
-      more: Number(data.more) || 0,
-    };
+    return parseReactionCounts(await res.json());
   } catch {
     return null;
   }
@@ -53,12 +52,7 @@ export async function submitReaction(
       body: JSON.stringify({ contentId, reaction }),
     });
     if (!res.ok) return null;
-    const data = (await res.json()) as Partial<ReactionCounts>;
-    return {
-      up: Number(data.up) || 0,
-      down: Number(data.down) || 0,
-      more: Number(data.more) || 0,
-    };
+    return parseReactionCounts(await res.json());
   } catch {
     return null;
   }
