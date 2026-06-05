@@ -37,6 +37,11 @@ describe("site-search", () => {
     expect(hits.some((h) => h.href.includes("authenticity-checker"))).toBe(true);
   });
 
+  it("finds tools hub", () => {
+    const hits = searchSite("badminton toolkit");
+    expect(hits.some((h) => h.href === "/tools/")).toBe(true);
+  });
+
   it("finds budget best-of page", () => {
     const hits = searchSite("rackets under 100");
     expect(hits.some((h) => h.href.includes("rackets-under-100"))).toBe(true);

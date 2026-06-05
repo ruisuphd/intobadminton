@@ -38,7 +38,9 @@ export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {
             const names = entry.topIds
               .map((id) => byId(id)?.name ?? id)
               .join(" · ");
-            const href = localized(profileToResultsPath(entry.profile));
+            const href = localized(
+              profileToResultsPath(entry.profile, entry.topIds.length)
+            );
             return (
               <li key={entry.at}>
                 <Link href={href} className="card card-interactive block p-4">
