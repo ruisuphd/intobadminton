@@ -10,8 +10,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v6"))) return false;
-      const cache = await caches.open("ib-v6-static");
+      if (!keys.some((key) => key.startsWith("ib-v7"))) return false;
+      const cache = await caches.open("ib-v7-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -25,7 +25,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v6-static");
+    const cache = await caches.open("ib-v7-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -46,6 +46,8 @@ test("service worker precaches search, review, and offline shells", async ({
     "/review/",
     "/guides/",
     "/offline/",
+    "/data/",
+    "/methodology/",
   ]) {
     expect(
       cachedPaths.some((entry) => entry === path || entry.startsWith(path)),

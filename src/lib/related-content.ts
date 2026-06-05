@@ -241,8 +241,6 @@ const PATH_CLUSTER: Record<string, string> = {
   "/best/head-heavy-rackets-under-150/": "budget",
 
   "/best/singles-rackets/": "all-round-rackets",
-  "/best/head-light-rackets/": "all-round-rackets",
-  "/best/control-rackets/": "all-round-rackets",
 
   "/best/budget-badminton-shoes/": "shoe-fit",
 
