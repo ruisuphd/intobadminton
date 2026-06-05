@@ -238,6 +238,16 @@ const PATH_CLUSTER: Record<string, string> = {
 
   "/best/rackets-under-100/": "budget",
   "/best/rackets-under-150/": "budget",
+  "/best/head-heavy-rackets-under-150/": "budget",
+
+  "/best/singles-rackets/": "all-round-rackets",
+  "/best/head-light-rackets/": "all-round-rackets",
+  "/best/control-rackets/": "all-round-rackets",
+
+  "/best/budget-badminton-shoes/": "shoe-fit",
+
+  "/guides/glossary/": "all-round-rackets",
+  "/guides/season-refresh/": "freshness",
 
   "/best/smash-heavy-rackets/": "all-round-rackets",
 };

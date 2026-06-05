@@ -1,5 +1,20 @@
 # Automation run log
 
+## 2026-06-05 — Sprint 12 (branch `cursor/web-app-improvement-plan-4f36`)
+
+**Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #145 merged + Sprint 11 on main.
+
+**Shipped:**
+- `docs/WEB_APP_IMPROVEMENT_PLAN_SPRINT12_2026-06.md`
+- Related reading clusters on singles/control/head-light/budget shoes best pages
+- `/methodology/` in editorial meta + updates feed labels
+- HelpfulReaction API-off UX (`helpful-reaction-ui.ts`)
+- PWA `ib-v7` precaches `/data/`, `/methodology/` (merged with #154 guides/offline)
+- E2e: `data-updates-smoke`, `review-shelf-smoke`
+- Lighthouse CI: compare, methodology, racket-balance; deduped `/data/`
+
+**Verification:** `npm test`, `npm run build`, postbuild SEO audit.
+
 ## 2026-06-05 — Sprint 8 (branch `cursor/web-app-improvement-plan-32b1`)
 
 **Trigger:** Cloud agent — audit → plan (10-pass) → execute after Sprint 7 PR #140.

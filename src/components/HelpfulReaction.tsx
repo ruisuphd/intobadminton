@@ -3,10 +3,14 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { trackEvent } from "@/components/Analytics";
 import {
+  helpfulReactionCountLine,
+  helpfulReactionShellClass,
+  helpfulReactionSubline,
+} from "@/lib/helpful-reaction-ui";
+import {
   fetchReactionCounts,
   reactionsApiEnabled,
   submitReaction,
-  totalHelpful,
   type Reaction,
   type ReactionCounts,
 } from "@/lib/reactions-api";
@@ -83,16 +87,11 @@ export function HelpfulReaction({
     }
   };
 
-  const countLine =
-    counts != null && totalHelpful(counts) > 0 ? (
-      <>
-        {counts.up} found this helpful
-        {counts.more > 0 ? ` · ${counts.more} asked for more detail` : ""}
-      </>
-    ) : null;
-
-  const shellClass =
-    "mt-12 min-h-[8.5rem] rounded-2xl border border-[color:var(--line)] bg-white p-5";
+  const subline =
+    vote != null
+      ? helpfulReactionCountLine(counts)
+      : helpfulReactionSubline(apiEnabled, counts);
+  const shellClass = helpfulReactionShellClass(apiEnabled, vote != null);
 
   if (mounted && vote != null) {
     return (
@@ -123,9 +122,9 @@ export function HelpfulReaction({
             Change my vote
           </button>
         </p>
-        <p className="mt-2 min-h-[1rem] text-xs text-[var(--color-subtle)]">
-          {countLine ?? "\u00a0"}
-        </p>
+        {subline ? (
+          <p className="mt-2 text-xs text-[var(--color-subtle)]">{subline}</p>
+        ) : null}
       </section>
     );
   }
@@ -135,9 +134,9 @@ export function HelpfulReaction({
       <p className="text-sm font-medium text-[var(--text)]">
         Was this article helpful?
       </p>
-      <p className="mt-2 min-h-[1rem] text-xs text-[var(--color-subtle)]">
-        {countLine ?? "\u00a0"}
-      </p>
+      {subline ? (
+        <p className="mt-2 text-xs text-[var(--color-subtle)]">{subline}</p>
+      ) : null}
       <div className="mt-3 flex flex-wrap gap-2">
         <ReactionButton glyph="👍" label="Yes" onClick={() => submit("up")} />
         <ReactionButton
