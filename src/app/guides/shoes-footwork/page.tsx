@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/shoes-footwork/";
 const HEADLINE = "Badminton shoes and footwork";
@@ -35,6 +36,7 @@ export default function ShoesGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Badminton shoes and footwork
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Badminton happens in sharp lateral bursts. The split step
           followed by a side lunge, the toe drag during a clear, and the

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { editorialPageMetadata } from "@/lib/metadata";
 import { GuideStructuredData } from "@/components/GuideStructuredData";
+import { GuideTocAnchor } from "@/components/GuideTocAnchor";
 
 const PATH = "/guides/wide-feet-badminton-shoes/";
 const HEADLINE = "Badminton shoes for wide feet";
@@ -35,6 +36,7 @@ export default function WideFeetShoesGuide() {
         <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)]">
           Badminton shoes for wide feet
         </h1>
+        <GuideTocAnchor />
         <p className="text-[var(--color-muted)] leading-relaxed">
           Wide-footed players have one of the hardest fit problems in
           badminton: the standard last on most performance shoes is

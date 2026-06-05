@@ -73,21 +73,11 @@ export function GuideInPageToc() {
       return;
     }
 
-    const h1 = article.querySelector("h1");
-    if (!h1) {
+    const host = article.querySelector<HTMLElement>("#guide-toc-anchor");
+    if (!host) {
       setItems([]);
       setMountNode(null);
       return;
-    }
-
-    let host = article.querySelector<HTMLElement>("#guide-toc-anchor");
-    if (!host) {
-      host = document.createElement("div");
-      host.id = "guide-toc-anchor";
-      host.className = "mb-8 min-h-48";
-      h1.insertAdjacentElement("afterend", host);
-    } else if (!host.classList.contains("min-h-48")) {
-      host.classList.add("mb-8", "min-h-48");
     }
 
     setItems(next);
