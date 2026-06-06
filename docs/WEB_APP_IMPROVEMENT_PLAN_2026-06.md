@@ -85,6 +85,8 @@
 
 **Sprint 94 addendum:** Budget racket + strings commercial review-map e2e — ✅ Nanoflare 1000 Play + Arcsaber 7 Play + Astrox Nextage + Thruster 9900 golden profiles; L69 string unblocked via `string` in `REVIEW_ELIGIBLE_CATEGORIES`; `minMappedE2eGuards: 51`; DriveX 8S blocked (no dedicated review article in catalogue).
 
+**Sprint 95 addendum:** Smash + shuttle commercial review-map e2e — ✅ 100ZZ VA remap + `PRODUCT_REVIEW_ALIASES` (P9200 / 65 Z Wide / 77 Play); AS-50 shuttle + 65 Z4 + 99 Pro gen-1 + HS Plus attack + AxForce 90 New standalone golden profiles; `minMappedE2eGuards: 56`; DriveX 8S blocked (no dedicated review article in catalogue).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -783,14 +785,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 46`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT93_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT93_2026-06.md)
 
-### Sprint 94 — This branch (`cursor/web-app-improvement-plan-b2af`)
+### Sprint 94 — Shipped (PR #242)
 
 - **Budget racket + strings commercial review-map e2e** — Nanoflare 1000 Play + Arcsaber 7 Play + Astrox Nextage + Thruster 9900 + L69 string golden profiles with Playwright smoke
 - **`string` in `REVIEW_ELIGIBLE_CATEGORIES`** — unblocks L69 string review enrichment and `reviewProductIdForBlog`
 - **`minMappedE2eGuards: 51`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT94_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT94_2026-06.md)
 
-### Next (Sprint 95+)
+### Sprint 95 — This branch (`cursor/web-app-improvement-plan-77f8`)
+
+- **Smash + shuttle commercial review-map e2e** — 100ZZ VA remap; AS-50 shuttle + 65 Z4 + 99 Pro gen-1 + HS Plus attack + AxForce 90 New standalone golden profiles with Playwright smoke
+- **`PRODUCT_REVIEW_ALIASES`** — P9200 Series, 65 Z Wide, and Astrox 77 Play resolve to nearest reviewed sibling SKU
+- **`minMappedE2eGuards: 56`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT95_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT95_2026-06.md)
+
+### Next (Sprint 96+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim

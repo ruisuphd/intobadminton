@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 51
+    "minMappedE2eGuards": 56
   },
   "queries": [
     {
@@ -173,11 +173,11 @@
     {
       "id": "flagship-astrox-100zz-va-vs-kurenai",
       "slug": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
-      "expectProductId": "yy-astrox-100zz",
+      "expectProductId": "yy-astrox-100zz-va",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Flagship compare-guide review — Astrox 100ZZ VA vs Kurenai edition deep-dive"
+      "note": "Astrox 100ZZ VA review — /best/smash-heavy-rackets/ rank 6 (anders slug still maps 100ZZ via comparison article)"
     },
     {
       "id": "flagship-astrox-99-pro-2",
@@ -466,6 +466,51 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning string review — L69 on /best/strings/ (sole mapped string pick; string category now review-eligible)"
+    },
+    {
+      "id": "commercial-shuttle-yy-as-50",
+      "slug": "yonex-aerosensa-50-shuttle-review",
+      "expectProductId": "yy-as-50",
+      "expectCategory": "shuttle",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex tournament shuttle review — AS-50 shuttle category map + finder panel"
+    },
+    {
+      "id": "commercial-yy-65z4-shoes",
+      "slug": "yonex-65z4-shoes-review",
+      "expectProductId": "yy-power-cushion-65-z4",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex 65 series shoe review — editorial sibling for /best/shoes/ 65 Z Wide via PRODUCT_REVIEW_ALIASES"
+    },
+    {
+      "id": "commercial-yy-astrox-99-pro-gen1",
+      "slug": "yonex-astrox-99-pro-gen-1-review",
+      "expectProductId": "yy-astrox-99-pro",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Astrox 99 Pro gen-1 review — alternate editorial path for /best/smash-heavy-rackets/ and /best/singles-rackets/"
+    },
+    {
+      "id": "commercial-vic-auraspeed-hs-plus-attack",
+      "slug": "victor-auraspeed-hs-plus-attack-review",
+      "expectProductId": "vic-auraspeed-hs-plus",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor HS Plus attack tuning review — compare-guide wiring + speed-attack cluster"
+    },
+    {
+      "id": "commercial-ln-axforce-90-new-standalone",
+      "slug": "li-ning-axforce-90-new-review",
+      "expectProductId": "ln-axforce-90-new",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning AxForce 90 New standalone review — attack flagship editorial path alongside comparison slug"
     },
     {
       "id": "explainer-how-to-choose-racket",
