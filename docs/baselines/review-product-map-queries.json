@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-12",
+  "updated": "2026-06-13",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 29
+    "minMappedE2eGuards": 31
   },
   "queries": [
     {
@@ -268,6 +268,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning flagship attack racket review — AxForce 100 Gen 2 on /best/singles-rackets/ and compare-guide halbertec-9000-power-vs-axforce-100-gen-2"
+    },
+    {
+      "id": "flagship-vic-jetspeed-12",
+      "slug": "victor-jetspeed-12-curious-review",
+      "expectProductId": "vic-jetspeed-12",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor classic speed/defensive racket review — Jetspeed 12 on /best/defensive-rackets/ and /best/all-round-rackets/"
+    },
+    {
+      "id": "flagship-ln-halbertec-8000",
+      "slug": "li-ning-halbertec-8000-vs-9000-vs-9000-power",
+      "expectProductId": "ln-halbertec-8000",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning value control racket review — Halbertec 8000 on /best/control-rackets/, /best/intermediate-rackets/, and /best/all-round-rackets/"
     },
     {
       "id": "explainer-how-to-choose-racket",
