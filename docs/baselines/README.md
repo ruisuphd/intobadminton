@@ -10,7 +10,17 @@ Refresh every committed golden-profile regression layer in one operator command:
 npm run lint:all-baselines
 ```
 
-Runs `lint:product-funnel-baselines` then `lint:editorial-baselines`.
+Runs `lint:product-funnel-baselines`, `lint:editorial-baselines`, and `lint:performance-baselines`.
+
+## Performance guards (unified)
+
+Refresh owner-maintained CrUX and GSC CSV templates in one operator command:
+
+```bash
+npm run lint:performance-baselines
+```
+
+Runs `lint:crux-baseline` then `lint:gsc-baseline`.
 
 ## Editorial guards (unified)
 

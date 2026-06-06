@@ -17,6 +17,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const GUARDS = [
   { name: "product funnel", script: "scripts/product-funnel-baselines.mjs" },
   { name: "editorial", script: "scripts/editorial-baselines.mjs" },
+  { name: "performance", script: "scripts/performance-baselines.mjs" },
 ];
 
 function usage() {

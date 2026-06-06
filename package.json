@@ -24,6 +24,7 @@
     "lint:crux-baseline": "node --experimental-strip-types scripts/crux-baseline.mjs validate",
     "lint:gsc-baseline": "node --experimental-strip-types scripts/gsc-baseline.mjs validate",
     "lint:gsc-baseline:compare": "node --experimental-strip-types scripts/gsc-baseline.mjs compare",
+    "lint:performance-baselines": "node scripts/performance-baselines.mjs",
     "lint:search-baseline": "node scripts/search-baseline.mjs",
     "lint:catalog-baseline": "node scripts/catalog-baseline.mjs",
     "lint:discovery-baseline": "node scripts/discovery-parity.mjs",

@@ -33,7 +33,7 @@
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Editorial pipeline |
-| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; prod URL pending |
+| 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; deploy smoke + weekly health; prod URL pending |
 
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
@@ -553,7 +553,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **E2e proof** — `pwa-offline-smoke.spec.ts` asserts full popular-search grid on recovery sidebar
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT65_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT65_2026-06.md)
 
-### Sprint 66 — This branch
+### Sprint 66 — Shipped (PR #214)
 
 - **Popular-search PWA precache parity** — explicit guard for all 30 homepage grid hrefs
 - **Shared precache manifest** — `homePopularSearchPrecachePaths()` in `home-popular-searches.ts`
@@ -561,9 +561,16 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **HelpfulReaction API-on UX** — first-vote subline when aggregates not yet loaded
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT66_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT66_2026-06.md)
 
-### Next (Sprint 67+)
+### Sprint 67 — This branch
 
-- Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
+- **Post-deploy reactions smoke** — deploy workflow runs contract tests, parses worker URL, hits `GET /health`
+- **Scheduled reactions health** — weekly `reactions-health.yml` when `REACTIONS_API_URL` is set
+- **Unified performance baselines** — `lint:performance-baselines` chains CrUX + GSC; included in `lint:all-baselines`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT67_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT67_2026-06.md)
+
+### Next (Sprint 68+)
+
+- Owner: set `REACTIONS_API_URL` secret + Pages rebuild; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
 
