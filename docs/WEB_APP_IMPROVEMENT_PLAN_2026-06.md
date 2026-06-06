@@ -49,6 +49,8 @@
 
 **Sprint 76 addendum:** Full commercial image CI — ✅ 17/17 landings guarded; Voltric 8DG + ASICS Blast FF 3 images; Nanoray waiver on 4 landings; Bonny Future Land 3 waiver documented.
 
+**Sprint 77 addendum:** Tier-4 budget image baseline — ✅ 13 SKUs guarded; HWQL verified image; head-heavy-under-150 waiver 3→2; 12 CN-market waivers documented.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -649,11 +651,18 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Waiver documentation** — Nanoray Light 70i on 4 landings; Bonny Future Land 3 on wide-feet shoes
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT76_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT76_2026-06.md)
 
-### Next (Sprint 77+)
+### Sprint 77 — This branch (`cursor/web-app-improvement-plan-5491`)
+
+- **Tier-4 budget image baseline** — `lint:tier4-image-baseline` guards 13 CN-market / budget SKUs on specialty landings
+- **HWQL catalogue image** — Victor TK-HMRL U verified photo from e78.us
+- **head-heavy-under-150 waiver tighten** — 3→2 after HWQL backfill
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT77_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT77_2026-06.md)
+
+### Next (Sprint 78+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
-- Tier-4 catalogue image backfill (Bonny, Kumpoo, Kawasaki, Victor niche SKUs on budget/specialty landings)
+- Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier)
 - Nanoray Light 70i verified image (unblocks 4 landings)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  

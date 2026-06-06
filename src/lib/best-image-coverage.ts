@@ -68,7 +68,7 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
   "wide-feet-badminton-shoes": { pickCount: 6, waivers: 1 },
   "budget-badminton-shoes": { pickCount: 6, waivers: 4 },
   "lightweight-rackets-5u": { pickCount: 6, waivers: 5 },
-  "head-heavy-rackets-under-150": { pickCount: 6, waivers: 3 },
+  "head-heavy-rackets-under-150": { pickCount: 6, waivers: 2 },
   "rackets-under-100": { pickCount: 6, waivers: 3 },
 };
 

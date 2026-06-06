@@ -62,7 +62,7 @@ describe("best-image-coverage", () => {
     });
     expect(BEST_IMAGE_REQUIREMENTS["head-heavy-rackets-under-150"]).toEqual({
       pickCount: 6,
-      waivers: 3,
+      waivers: 2,
     });
     expect(BEST_IMAGE_REQUIREMENTS["rackets-under-100"]).toEqual({
       pickCount: 6,
