@@ -532,7 +532,16 @@
       "https://www.yonex.com/"
     ],
     "editorNote": "Legacy/value attack reference; keep hidden if no current official listing is available.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://cdn.shopify.com/s/files/1/0086/4101/9967/products/VT8DGSLGE-CYN_voltric-8dg-slim.jpg?v=1568635583",
+      "source": "retailer",
+      "credit": "Image: e78.us (Yonex Voltric 8 DG)",
+      "alt": "Yonex Voltric 8DG badminton racket",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "li-3d-calibar-900b",
@@ -6468,7 +6477,16 @@
       "https://www.asics.com/us/en-us/blast-ff-3/p/ANA_20041038054.html"
     ],
     "editorNote": "Not a badminton-branded shoe — ASICS indoor-court / handball platform. Strong wide-foot option for badminton players who dislike narrow badminton lasts.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://images.asics.com/is/image/asics/1071A086_400_SR_RT_GLB?$sfcc-product$&wid=800&hei=800",
+      "source": "asics",
+      "credit": "Image: ASICS (asics.com)",
+      "alt": "ASICS Blast FF 3 indoor court shoe",
+      "width": 800,
+      "height": 800,
+      "verified": true
+    }
   },
   {
     "id": "rsl-supreme-shuttle",
