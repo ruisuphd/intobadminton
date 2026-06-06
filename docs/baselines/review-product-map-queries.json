@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-15",
+  "updated": "2026-06-16",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 46
+    "minMappedE2eGuards": 51
   },
   "queries": [
     {
@@ -421,6 +421,51 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "ASICS wide shoe review — Blast FF 3 on /best/wide-feet-badminton-shoes/ (indoor wide crossover pick)"
+    },
+    {
+      "id": "commercial-yy-nanoflare-1000-play",
+      "slug": "yonex-nanoflare-1000z-play-review",
+      "expectProductId": "yy-nanoflare-1000-play",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex budget speed review — Nanoflare 1000 Play on /best/rackets-under-100/ and /best/rackets-for-shoulder-comfort/ (top budget pick)"
+    },
+    {
+      "id": "commercial-yy-arcsaber-7-play",
+      "slug": "yonex-arcsaber-7-play-review",
+      "expectProductId": "yy-arcsaber-7-play",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex budget control review — Arcsaber 7 Play on /best/rackets-under-100/ (control-first beginner pick)"
+    },
+    {
+      "id": "commercial-yy-astrox-nextage",
+      "slug": "yonex-astrox-nextage-review",
+      "expectProductId": "yy-astrox-nextage",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex attack review — Astrox Nextage on /best/head-heavy-rackets-under-150/ (forgiving attack frame)"
+    },
+    {
+      "id": "tier4-vic-thruster-9900",
+      "slug": "victor-thruster-9900-curiosity-review",
+      "expectProductId": "vic-thruster-9900",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor budget smash review — Thruster 9900 on /best/rackets-under-100/ (max-budget Thruster pick)"
+    },
+    {
+      "id": "commercial-ln-l69-string",
+      "slug": "li-ning-l69-string-review",
+      "expectProductId": "ln-l69-string",
+      "expectCategory": "string",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning string review — L69 on /best/strings/ (sole mapped string pick; string category now review-eligible)"
     },
     {
       "id": "explainer-how-to-choose-racket",

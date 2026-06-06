@@ -45,7 +45,12 @@ function catalogLinkPatternFromProduct(product) {
   return "browse";
 }
 
-const REVIEW_ELIGIBLE_CATEGORIES = new Set(["racket", "shoes", "shuttle"]);
+const REVIEW_ELIGIBLE_CATEGORIES = new Set([
+  "racket",
+  "shoes",
+  "shuttle",
+  "string",
+]);
 
 function makeAutoRow(slug, productId) {
   const product = productById.get(productId);
