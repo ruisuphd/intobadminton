@@ -5,7 +5,7 @@
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 37
+    "minMappedE2eGuards": 39
   },
   "queries": [
     {
@@ -340,6 +340,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Yonex defensive control review — Arcsaber 7 Tour on /best/defensive-rackets/ and /best/all-round-rackets/"
+    },
+    {
+      "id": "flagship-vic-yu-12",
+      "slug": "victor-yu-12-racket-review",
+      "expectProductId": "vic-yu-12",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor intermediate review — DriveX 12 (Yu 12) on /best/intermediate-rackets/ (DriveX 8S blocked: no dedicated review article)"
+    },
+    {
+      "id": "flagship-ln-halbertec-9000",
+      "slug": "li-ning-halbertec-9000-standalone-review",
+      "expectProductId": "ln-halbertec-9000",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning control review — Halbertec 9000 on /best/control-rackets/ (completes Halbertec family e2e after 8000/9000 Power/7000 II)"
     },
     {
       "id": "explainer-how-to-choose-racket",
