@@ -1,9 +1,10 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "coverage": {
     "minMappedCount": 140,
-    "minMappablePct": 100
+    "minMappablePct": 100,
+    "minExplainerGuards": 13
   },
   "queries": [
     {
@@ -21,6 +22,7 @@
       "expectProductId": "vic-drivex-10-metallic",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
+      "e2e": true,
       "note": "Phase D map expansion regression guard"
     },
     {
@@ -38,6 +40,7 @@
       "expectProductId": "vic-p9200-iii",
       "expectCategory": "shoes",
       "expectProductJsonLd": true,
+      "e2e": true,
       "note": "Shoe category map + catalog CTA parity"
     },
     {
@@ -167,10 +170,82 @@
       "note": "Tier-4 budget shoe review on /best/budget-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
     },
     {
-      "id": "explainer-intentional-unmapped",
+      "id": "explainer-how-to-choose-racket",
       "slug": "how-to-choose-a-badminton-racket",
       "expectUnmapped": true,
       "note": "Explainer slug must stay outside product map"
+    },
+    {
+      "id": "explainer-racket-balance-vs-swing-speed",
+      "slug": "racket-balance-vs-swing-speed",
+      "expectUnmapped": true,
+      "note": "Concept explainer — no single-SKU product map"
+    },
+    {
+      "id": "explainer-how-to-read-reviews",
+      "slug": "how-to-read-badminton-reviews",
+      "expectUnmapped": true,
+      "note": "Meta editorial explainer — no product map"
+    },
+    {
+      "id": "explainer-beginner-racket-mistakes",
+      "slug": "beginner-racket-mistakes",
+      "expectUnmapped": true,
+      "note": "Beginner education explainer — no product map"
+    },
+    {
+      "id": "explainer-badminton-string-selector",
+      "slug": "badminton-string-selector",
+      "expectUnmapped": true,
+      "note": "String selection explainer — no product map"
+    },
+    {
+      "id": "explainer-badminton-shoe-fit-stability",
+      "slug": "badminton-shoe-fit-stability",
+      "expectUnmapped": true,
+      "note": "Shoe fit explainer — no product map"
+    },
+    {
+      "id": "explainer-badminton-bag-loadout",
+      "slug": "badminton-bag-loadout",
+      "expectUnmapped": true,
+      "note": "Bag loadout explainer — no product map"
+    },
+    {
+      "id": "explainer-used-racket-depreciation",
+      "slug": "used-racket-depreciation",
+      "expectUnmapped": true,
+      "note": "Resale/depreciation explainer — no product map"
+    },
+    {
+      "id": "explainer-yuan-shaft-hardness",
+      "slug": "yuan-style-shaft-hardness-explained",
+      "expectUnmapped": true,
+      "note": "Shaft hardness explainer — no product map"
+    },
+    {
+      "id": "explainer-badminton-equipment-for-kids",
+      "slug": "badminton-equipment-for-kids",
+      "expectUnmapped": true,
+      "note": "Kids equipment explainer — no product map"
+    },
+    {
+      "id": "explainer-badminton-glossary",
+      "slug": "badminton-glossary-terms-every-player-should-know",
+      "expectUnmapped": true,
+      "note": "Glossary explainer — no product map"
+    },
+    {
+      "id": "explainer-yonex-grip-sizes",
+      "slug": "yonex-grip-sizes-explained",
+      "expectUnmapped": true,
+      "note": "Grip sizing explainer — no product map"
+    },
+    {
+      "id": "explainer-stringing-hole-patterns",
+      "slug": "racket-stringing-hole-patterns-explained",
+      "expectUnmapped": true,
+      "note": "Stringing hole explainer — no product map"
     }
   ]
 }

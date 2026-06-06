@@ -8,6 +8,7 @@ import { blogArticles } from "@/lib/blog";
 import {
   evaluateReviewProductMapBaseline,
   evaluateReviewProductMapBaselineQuery,
+  evaluateReviewProductMapCoverage,
   formatReviewProductMapBaselineIssues,
   validateReviewProductMapBaselineFile,
 } from "@/lib/review-product-map-baseline";
@@ -74,6 +75,17 @@ describe("review-product-map-baseline", () => {
       explainerSet
     );
     expect(issue?.message).toContain("expected");
+  });
+
+  it("enforces minExplainerGuards coverage counter", () => {
+    const issue = evaluateReviewProductMapCoverage(
+      { minExplainerGuards: 13 },
+      articleSlugs,
+      explainerSet,
+      map,
+      [{ id: "one", slug: "how-to-choose-a-badminton-racket", expectUnmapped: true }]
+    );
+    expect(issue?.message).toContain("minExplainerGuards");
   });
 
   it("flags explainer slugs that become mapped", () => {

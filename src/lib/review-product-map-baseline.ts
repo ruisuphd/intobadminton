@@ -31,6 +31,8 @@ export type ReviewProductMapBaselineQuery = {
 export type ReviewProductMapCoverageSpec = {
   minMappedCount?: number;
   minMappablePct?: number;
+  /** Minimum expectUnmapped explainer rows in committed golden profiles. */
+  minExplainerGuards?: number;
 };
 
 export type ReviewProductMapBaselineFile = {
@@ -121,6 +123,10 @@ export function validateReviewProductMapBaselineFile(
         typeof c.minMappedCount === "number" ? c.minMappedCount : undefined,
       minMappablePct:
         typeof c.minMappablePct === "number" ? c.minMappablePct : undefined,
+      minExplainerGuards:
+        typeof c.minExplainerGuards === "number"
+          ? c.minExplainerGuards
+          : undefined,
     };
   }
 
@@ -140,7 +146,8 @@ export function evaluateReviewProductMapCoverage(
   coverage: ReviewProductMapCoverageSpec | undefined,
   articleSlugs: string[],
   explainerSlugs: Set<string>,
-  map: Record<string, string>
+  map: Record<string, string>,
+  queries: ReviewProductMapBaselineQuery[] = []
 ): ReviewProductMapBaselineIssue | null {
   if (!coverage) return null;
 
@@ -165,6 +172,16 @@ export function evaluateReviewProductMapCoverage(
       id: "coverage",
       message: `coverage ${pct}% below minMappablePct ${coverage.minMappablePct}`,
     };
+  }
+
+  if (coverage.minExplainerGuards != null) {
+    const explainerGuards = queries.filter((q) => q.expectUnmapped).length;
+    if (explainerGuards < coverage.minExplainerGuards) {
+      return {
+        id: "coverage",
+        message: `explainer guards ${explainerGuards} below minExplainerGuards ${coverage.minExplainerGuards}`,
+      };
+    }
   }
 
   return null;
@@ -271,7 +288,8 @@ export function evaluateReviewProductMapBaseline(
     file.coverage,
     articleSlugs,
     explainerSlugs,
-    map
+    map,
+    file.queries
   );
   if (coverageIssue) issues.push(coverageIssue);
 
