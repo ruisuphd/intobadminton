@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v28";
+const CACHE_VERSION = "ib-v29";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -117,6 +117,23 @@ const PRECACHE_URLS = [
   "/review/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/",
   "/review/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/",
   "/review/li-ning-bladex-800-speed-tough-elastic/",
+  "/review/yonex-comfort-z3-shoes-review/",
+  "/review/yonex-aerosensa-50-shuttle-review/",
+  "/review/li-ning-halbertec-7000-review/",
+  "/review/kumpoo-shura-2-racket-review/",
+  "/review/kumpoo-fourth-major-badminton-brand-profile/",
+  "/review/kumpoo-js-67-string-review/",
+  "/review/kumpoo-kh-g805-lite-pro-shoes-review/",
+  "/review/bonny-snake-breath-second-tier-flagship-review/",
+  "/review/bonny-wuque-flagship-088-shoes-review/",
+  "/review/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
+  "/review/bonny-zhangui-dao-8888ax-ultra-review/",
+  "/review/bonny-leisu-800-racket-review/",
+  "/review/kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro/",
+  "/review/kawasaki-master-mao-20-racket-review/",
+  "/review/kawasaki-star-cross-racket-review/",
+  "/review/kawasaki-kace-shoes-review/",
+  "/review/racket-stringing-hole-patterns-explained/",
   "/manifest.webmanifest",
   "/intobadminton-mark.png",
   "/intobadminton-icon-192.png",

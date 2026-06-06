@@ -12,8 +12,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v28"))) return false;
-      const cache = await caches.open("ib-v28-static");
+      if (!keys.some((key) => key.startsWith("ib-v29"))) return false;
+      const cache = await caches.open("ib-v29-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -27,7 +27,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v28-static");
+    const cache = await caches.open("ib-v29-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
