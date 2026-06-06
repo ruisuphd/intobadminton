@@ -12,6 +12,7 @@ import { resolve } from "node:path";
 
 import productsCatalog from "@/data/products.json";
 import { blogArticles, getBlogArticle } from "@/lib/blog";
+import { brandReviewSlugs } from "@/lib/brand-reviews";
 import { compareGuideReviewSlugs } from "@/lib/compare-guide-reviews";
 import {
   mappedProductIdForSlug,
@@ -77,6 +78,8 @@ export type ReviewsBaselineCoverageSpec = {
   requireCompareGuideReviewParity?: boolean;
   /** Every slug in blog-review-product-map.json must appear here. */
   requireFullMappedParity?: boolean;
+  /** Every editorial review slug linked from brand hubs must appear here. */
+  requireBrandReviewParity?: boolean;
 };
 
 export type ReviewsBaselineFile = {
@@ -215,6 +218,7 @@ export function validateReviewsBaselineFile(
       requirePopularSearchParity: c.requirePopularSearchParity === true,
       requireCompareGuideReviewParity: c.requireCompareGuideReviewParity === true,
       requireFullMappedParity: c.requireFullMappedParity === true,
+      requireBrandReviewParity: c.requireBrandReviewParity === true,
     };
   }
 
@@ -451,6 +455,20 @@ export function evaluateReviewsBaselineCoverage(
         return {
           id: "coverage",
           message: `mapped review slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
+    }
+  }
+
+  if (file.coverage?.requireBrandReviewParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of brandReviewSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `brand review slug "${slug}" missing from reviews-queries.json`,
         };
       }
     }

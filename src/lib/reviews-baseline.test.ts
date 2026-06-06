@@ -171,6 +171,17 @@ describe("reviews-baseline", () => {
     expect(result.ok).toBe(true);
   });
 
+  it("requires brand shelf review slugs in committed reviews baseline", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+
+    expect(parsed.file.coverage?.requireBrandReviewParity).toBe(true);
+    const result = evaluateReviewsBaseline(parsed.file);
+    expect(result.ok).toBe(true);
+  });
+
   it("requires full mapped corpus in committed reviews baseline", () => {
     const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
     const parsed = validateReviewsBaselineFile(raw);
