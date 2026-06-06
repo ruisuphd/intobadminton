@@ -545,7 +545,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Parity guards** — `offline-recovery.test.ts` asserts featured + popular-search href coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT64_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT64_2026-06.md)
 
-### Sprint 65 — This branch
+### Sprint 65 — Shipped (PR #213)
 
 - **Popular-search editorial offline recovery parity** — all 22 non-review grid picks on `/offline/` recovery sidebar
 - **Shared editorial recovery manifest** — `homePopularSearchEditorialOfflineRecoveryLinks()` in `home-popular-searches.ts`
@@ -553,7 +553,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **E2e proof** — `pwa-offline-smoke.spec.ts` asserts full popular-search grid on recovery sidebar
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT65_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT65_2026-06.md)
 
-### Next (Sprint 66+)
+### Sprint 66 — This branch
+
+- **Popular-search PWA precache parity** — explicit guard for all 30 homepage grid hrefs
+- **Shared precache manifest** — `homePopularSearchPrecachePaths()` in `home-popular-searches.ts`
+- **Reactions worker health** — `GET /health` + `npm run reactions:smoke` operator verification
+- **HelpfulReaction API-on UX** — first-vote subline when aggregates not yet loaded
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT66_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT66_2026-06.md)
+
+### Next (Sprint 67+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
@@ -578,7 +586,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 | 6 | Product JSON-LD via enrichment helper | ✅ |
 | 7 | `site-search.test.ts` + search e2e | ✅ |
 | 8 | `/search/` + `/catalog/` in sitemap | ✅ |
-| 9 | `npm test` (198) | ✅ |
+| 9 | `npm test` (511+) | ✅ |
 | 10 | `npm run build` + Lighthouse homepage ≥ 0.9 | ✅ CI (Sprint 5) |
 
 ---
