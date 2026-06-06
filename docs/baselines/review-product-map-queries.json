@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-06",
+  "updated": "2026-06-07",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100
@@ -46,7 +46,8 @@
       "expectProductId": "bonny-leisu-800",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
-      "note": "Budget niche brand review→catalog wiring"
+      "e2e": true,
+      "note": "Budget niche brand review→catalog wiring on /best/rackets-under-100/"
     },
     {
       "id": "tier4-bonny-carbon-armour-shoes",
@@ -65,6 +66,51 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Tier-4 budget racket review on /best/head-heavy-rackets-under-150/ — HWQL verified image sibling"
+    },
+    {
+      "id": "tier4-kumpoo-g805-shoes",
+      "slug": "kumpoo-kh-g805-lite-pro-shoes-review",
+      "expectProductId": "kumpoo-kh-g805-lite-pro",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget shoe review on /best/budget-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-kawasaki-kace-shoes",
+      "slug": "kawasaki-kace-shoes-review",
+      "expectProductId": "kawasaki-kace",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget shoe review on /best/budget-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-kumpoo-shura-2",
+      "slug": "kumpoo-shura-2-racket-review",
+      "expectProductId": "kumpoo-shura-2",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/head-heavy-rackets-under-150/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-kawasaki-crimson-blade",
+      "slug": "kawasaki-crimson-blade-racket-review",
+      "expectProductId": "kawasaki-crimson-blade",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/lightweight-rackets-5u/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-victor-thruster-sr",
+      "slug": "victor-thruster-sr-cherry-blossom-review",
+      "expectProductId": "vic-thruster-sr",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/lightweight-rackets-5u/ and /best/rackets-under-100/ — Product+Review JSON-LD + catalog CTA"
     },
     {
       "id": "explainer-intentional-unmapped",
