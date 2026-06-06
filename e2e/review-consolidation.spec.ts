@@ -86,8 +86,57 @@ test.describe("review blog style", () => {
     ).toHaveAttribute("href", "/review/yonex-65z4-shoes-review/");
     await expect(
       page
+        .locator("#power-cushion-aerus-z2")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/yonex-eclipsion-z3-shoes-review/");
+    await expect(
+      page
         .locator("#power-cushion-comfort-z3")
         .getByRole("link", { name: "Read full review →" })
     ).toHaveAttribute("href", "/review/yonex-comfort-z3-shoes-review/");
+  });
+
+  test("beginner rackets page links DriveX 8S to DriveX 10 editorial review", async ({
+    page,
+  }) => {
+    await page.goto("/best/beginner-rackets/");
+    await expect(
+      page
+        .locator("#drivex-8s")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/victor-drivex-10-review/");
+  });
+
+  test("head-heavy-under-150 page links Astrox 100 Game to Nextage review", async ({
+    page,
+  }) => {
+    await page.goto("/best/head-heavy-rackets-under-150/");
+    await expect(
+      page
+        .locator("#astrox-100-game")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/yonex-astrox-nextage-review/");
+  });
+
+  test("all-round rackets page links Brave Sword 12 to Jetspeed 12 review", async ({
+    page,
+  }) => {
+    await page.goto("/best/all-round-rackets/");
+    await expect(
+      page
+        .locator("#brave-sword-12")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/victor-jetspeed-12-curious-review/");
+  });
+
+  test("smash-heavy rackets page links Auraspeed 100X SE to 90K II review", async ({
+    page,
+  }) => {
+    await page.goto("/best/smash-heavy-rackets/");
+    await expect(
+      page
+        .locator('[id="auraspeed-100x-se-(mohammad-ahsan)"]')
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/victor-auraspeed-90k-ii-review/");
   });
 });

@@ -71,6 +71,21 @@ describe("review page paths", () => {
     expect(editorialReviewHref("yy-astrox-77-play")).toBe(
       "/review/yonex-astrox-77-pro-review/"
     );
+    expect(editorialReviewHref("vic-drivex-8s")).toBe(
+      "/review/victor-drivex-10-review/"
+    );
+    expect(editorialReviewHref("yy-astrox-100-game")).toBe(
+      "/review/yonex-astrox-nextage-review/"
+    );
+    expect(editorialReviewHref("yy-aerus-z2")).toBe(
+      "/review/yonex-eclipsion-z3-shoes-review/"
+    );
+    expect(editorialReviewHref("vic-brave-sword-12")).toBe(
+      "/review/victor-jetspeed-12-curious-review/"
+    );
+    expect(editorialReviewHref("vic-auraspeed-100x-se")).toBe(
+      "/review/victor-auraspeed-90k-ii-review/"
+    );
   });
 
   it("maps Astrox 100ZZ VA to the Axelsen comparison review slug", () => {
