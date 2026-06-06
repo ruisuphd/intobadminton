@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 27
+    "minMappedE2eGuards": 29
   },
   "queries": [
     {
@@ -250,6 +250,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning flagship attack racket review — Halbertec 9000 Power on /best/smash-heavy-rackets/ and /best/singles-rackets/"
+    },
+    {
+      "id": "flagship-vic-auraspeed-90k-ii",
+      "slug": "victor-auraspeed-90k-ii-review",
+      "expectProductId": "vic-auraspeed-90k-ii",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor flagship speed/doubles racket review — Auraspeed 90K II on /best/defensive-rackets/, /best/intermediate-rackets/, and /best/singles-rackets/"
+    },
+    {
+      "id": "flagship-ln-axforce-100-gen-2",
+      "slug": "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
+      "expectProductId": "ln-axforce-100-gen-2",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning flagship attack racket review — AxForce 100 Gen 2 on /best/singles-rackets/ and compare-guide halbertec-9000-power-vs-axforce-100-gen-2"
     },
     {
       "id": "explainer-how-to-choose-racket",
