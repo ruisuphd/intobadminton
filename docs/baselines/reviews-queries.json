@@ -1,6 +1,9 @@
 {
   "version": 1,
   "updated": "2026-06-06",
+  "coverage": {
+    "minArticleSlugs": 5
+  },
   "queries": [
     {
       "id": "lighthouse-reviews-index",
@@ -14,6 +17,66 @@
       "expectFinderCta": true,
       "expectKeepReadingShelf": true,
       "note": "Lighthouse reviews hub — 153-article archive + catalog/finder exit"
+    },
+    {
+      "id": "crux-arcsaber-7-pro",
+      "slug": "yonex-arcsaber-7-pro-review",
+      "expectProductId": "yy-arcsaber-7-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectKeepReadingShelf": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "CrUX priority review URL — Product+Review JSON-LD and finder panel"
+    },
+    {
+      "id": "flagship-nanoflare-1000z",
+      "slug": "yonex-nanoflare-1000z-review",
+      "expectProductId": "yy-nanoflare-1000z",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectKeepReadingShelf": true,
+      "note": "Flagship speed racket linked from compare guides"
+    },
+    {
+      "id": "phase-d-drivex-10",
+      "slug": "victor-drivex-10-review",
+      "expectProductId": "vic-drivex-10-metallic",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "note": "Phase D map expansion regression guard"
+    },
+    {
+      "id": "club-shoes-p9200",
+      "slug": "victor-p9200-iii-shoes-review",
+      "expectProductId": "vic-p9200-iii",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "note": "Shoe category map + catalog CTA parity"
+    },
+    {
+      "id": "budget-bonny-leisu",
+      "slug": "bonny-leisu-800-racket-review",
+      "expectProductId": "bonny-leisu-800",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "note": "Budget niche brand review→catalog wiring"
+    },
+    {
+      "id": "explainer-intentional-unmapped",
+      "slug": "how-to-choose-a-badminton-racket",
+      "expectUnmapped": true,
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectKeepReadingShelf": true,
+      "note": "Explainer slug must stay outside product map — decision-path shelf only"
     }
   ]
 }

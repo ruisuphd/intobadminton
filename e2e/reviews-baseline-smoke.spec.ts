@@ -15,11 +15,14 @@ const BASELINE_PATH = resolve(
 function e2eReviewPaths(): {
   id: string;
   path: string;
+  slug: string;
   expectCatalogHref: string;
   expectHeadingPattern?: string;
   expectCatalogLinkPattern?: string;
   expectFinderCta?: boolean;
   expectKeepReadingShelf?: boolean;
+  expectEquipmentFinderPanel?: boolean;
+  expectUnmapped?: boolean;
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validateReviewsBaselineFile(raw);
@@ -29,23 +32,29 @@ function e2eReviewPaths(): {
     .filter((q: ReviewsBaselineQuery) => q.e2e)
     .map((q: ReviewsBaselineQuery) => ({
       id: q.id,
+      slug: q.slug,
       path: reviewPathForSlug(q.slug),
       expectCatalogHref: q.expectCatalogHref,
       expectHeadingPattern: q.expectHeadingPattern,
       expectCatalogLinkPattern: q.expectCatalogLinkPattern,
       expectFinderCta: q.expectFinderCta,
       expectKeepReadingShelf: q.expectKeepReadingShelf,
+      expectEquipmentFinderPanel: q.expectEquipmentFinderPanel,
+      expectUnmapped: q.expectUnmapped,
     }));
 }
 
 for (const {
   id,
   path,
+  slug,
   expectCatalogHref,
   expectHeadingPattern,
   expectCatalogLinkPattern,
   expectFinderCta,
   expectKeepReadingShelf,
+  expectEquipmentFinderPanel,
+  expectUnmapped,
 } of e2eReviewPaths()) {
   test(`Reviews baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
@@ -59,19 +68,45 @@ for (const {
       );
     }
 
-    const catalogLink = page
-      .getByRole("main")
-      .getByRole("link", {
-        name: expectCatalogLinkPattern
-          ? new RegExp(expectCatalogLinkPattern, "i")
-          : /browse.*catalog/i,
-      });
-    await expect(catalogLink).toHaveAttribute("href", expectCatalogHref);
+    if (slug === "index") {
+      const catalogLink = page
+        .getByRole("main")
+        .getByRole("link", {
+          name: expectCatalogLinkPattern
+            ? new RegExp(expectCatalogLinkPattern, "i")
+            : /browse.*catalog/i,
+        });
+      await expect(catalogLink).toHaveAttribute("href", expectCatalogHref);
 
-    if (expectFinderCta) {
+      if (expectFinderCta) {
+        await expect(
+          page.getByRole("main").getByRole("link", { name: /start the finder/i })
+        ).toHaveAttribute("href", "/quiz/");
+      }
+    } else if (expectEquipmentFinderPanel) {
       await expect(
-        page.getByRole("main").getByRole("link", { name: /start the finder/i })
-      ).toHaveAttribute("href", "/quiz/");
+        page.getByRole("complementary", { name: "Equipment finder" })
+      ).toBeVisible();
+
+      await expect(
+        page
+          .getByRole("complementary", { name: "Equipment finder" })
+          .getByRole("link", {
+            name: expectCatalogLinkPattern
+              ? new RegExp(expectCatalogLinkPattern, "i")
+              : /browse .* in catalog/i,
+          })
+      ).toHaveAttribute("href", expectCatalogHref);
+    } else if (!expectUnmapped) {
+      const catalogLink = page
+        .getByRole("main")
+        .getByRole("link", {
+          name: expectCatalogLinkPattern
+            ? new RegExp(expectCatalogLinkPattern, "i")
+            : /browse.*catalog/i,
+        })
+        .first();
+      await expect(catalogLink).toHaveAttribute("href", expectCatalogHref);
     }
 
     if (expectKeepReadingShelf) {

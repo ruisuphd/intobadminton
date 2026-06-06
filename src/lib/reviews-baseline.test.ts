@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  catalogHrefFromReviewSlug,
   evaluateReviewsBaseline,
   evaluateReviewsBaselineQuery,
   formatReviewsBaselineIssues,
@@ -21,6 +22,8 @@ describe("reviews-baseline", () => {
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
       expect(parsed.file.queries.length).toBeGreaterThanOrEqual(1);
+      const articleRows = parsed.file.queries.filter((q) => q.slug !== "index");
+      expect(articleRows.length).toBeGreaterThanOrEqual(5);
     }
   });
 
@@ -45,6 +48,22 @@ describe("reviews-baseline", () => {
     expect(parsed.ok).toBe(false);
   });
 
+  it("rejects expectUnmapped and expectProductId together", () => {
+    const parsed = validateReviewsBaselineFile({
+      version: 1,
+      queries: [
+        {
+          id: "bad",
+          slug: "test-slug",
+          expectCatalogHref: "/catalog/",
+          expectUnmapped: true,
+          expectProductId: "yy-arcsaber-7-pro",
+        },
+      ],
+    });
+    expect(parsed.ok).toBe(false);
+  });
+
   it("flags related reading shortfalls on reviews hub", () => {
     const issue = evaluateReviewsBaselineQuery({
       id: "test",
@@ -65,7 +84,35 @@ describe("reviews-baseline", () => {
     expect(issue?.message).toContain("review article count");
   });
 
-  it("builds canonical review hub path", () => {
+  it("flags missing article slugs", () => {
+    const issue = evaluateReviewsBaselineQuery({
+      id: "test",
+      slug: "nonexistent-slug-xyz",
+      expectCatalogHref: "/catalog/",
+    });
+    expect(issue?.message).toContain("not in corpus");
+  });
+
+  it("flags unmapped slug that is mapped", () => {
+    const issue = evaluateReviewsBaselineQuery({
+      id: "test",
+      slug: "yonex-arcsaber-7-pro-review",
+      expectCatalogHref: "/catalog/",
+      expectUnmapped: true,
+    });
+    expect(issue?.message).toContain("must stay unmapped");
+  });
+
+  it("builds canonical review paths", () => {
     expect(reviewPathForSlug("index")).toBe("/review/");
+    expect(reviewPathForSlug("yonex-arcsaber-7-pro-review")).toBe(
+      "/review/yonex-arcsaber-7-pro-review/"
+    );
+  });
+
+  it("resolves catalog href from mapped review slug", () => {
+    const href = catalogHrefFromReviewSlug("yonex-arcsaber-7-pro-review");
+    expect(href).toContain("/catalog/?cat=racket");
+    expect(href).toContain("brand=Yonex");
   });
 });
