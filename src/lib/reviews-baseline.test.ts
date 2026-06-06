@@ -137,4 +137,15 @@ describe("reviews-baseline", () => {
     const result = evaluateReviewsBaseline(parsed.file);
     expect(result.ok).toBe(true);
   });
+
+  it("requires Lighthouse review article slugs in committed reviews baseline", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+
+    expect(parsed.file.coverage?.requireLighthouseParity).toBe(true);
+    const result = evaluateReviewsBaseline(parsed.file);
+    expect(result.ok).toBe(true);
+  });
 });

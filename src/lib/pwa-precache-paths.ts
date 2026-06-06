@@ -84,4 +84,9 @@ export const PRECACHE_ASSERT_PATHS = [
   "/authors/rui-su/",
   "/product/yy-grpht-thrttl/",
   "/review/yonex-arcsaber-7-pro-review/",
+  "/review/yonex-nanoflare-1000z-review/",
+  "/review/gosen-ryoga-shiden-review/",
+  "/review/anta-ah600w-racket-review/",
+  "/review/yonex-tour-series-buying-guide/",
+  "/review/how-to-choose-a-badminton-racket/",
 ] as const;

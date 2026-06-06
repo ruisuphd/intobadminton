@@ -12,6 +12,7 @@ import { resolve } from "node:path";
 
 import { blogArticles, getBlogArticle } from "@/lib/blog";
 import { homeFeaturedReviewSlugs } from "@/lib/home-featured";
+import { lighthouseReviewArticleSlugs } from "@/lib/lighthouse-paths";
 import { catalogHrefFromProduct } from "@/lib/catalog-url";
 import { reviewProductIdForBlog } from "@/lib/content-links";
 import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
@@ -54,6 +55,8 @@ export type ReviewsBaselineCoverageSpec = {
   requireReviewMapParity?: boolean;
   /** Every slug in home-featured-reviews.json must appear here. */
   requireFeaturedParity?: boolean;
+  /** Every article slug in lighthouserc.json `/review/` URLs must appear here. */
+  requireLighthouseParity?: boolean;
 };
 
 export type ReviewsBaselineFile = {
@@ -180,6 +183,7 @@ export function validateReviewsBaselineFile(
         typeof c.minArticleSlugs === "number" ? c.minArticleSlugs : undefined,
       requireReviewMapParity: c.requireReviewMapParity === true,
       requireFeaturedParity: c.requireFeaturedParity === true,
+      requireLighthouseParity: c.requireLighthouseParity === true,
     };
   }
 
@@ -360,6 +364,20 @@ export function evaluateReviewsBaselineCoverage(
         return {
           id: "coverage",
           message: `featured review slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
+    }
+  }
+
+  if (file.coverage?.requireLighthouseParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of lighthouseReviewArticleSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `lighthouse review slug "${slug}" missing from reviews-queries.json`,
         };
       }
     }
