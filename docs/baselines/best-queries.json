@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-06",
   "coverage": {
     "minCatalogFilterSlugs": 19
   },
@@ -56,6 +56,59 @@
       "expectCatalogHref": "/catalog/?cat=racket&price=under100",
       "expectMinRelatedReading": 2,
       "note": "Price-band programmatic page — budget cluster shelf"
+    },
+    {
+      "id": "lighthouse-rackets-under-200",
+      "slug": "rackets-under-200",
+      "expectCatalogHref": "/catalog/?cat=racket&price=under200",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "200",
+      "note": "Lighthouse price-band page — under-200 catalog exit"
+    },
+    {
+      "id": "lighthouse-control-rackets",
+      "slug": "control-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=head_light",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "control",
+      "note": "Lighthouse style guide — head-light catalog exit"
+    },
+    {
+      "id": "lighthouse-singles-rackets",
+      "slug": "singles-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "note": "Lighthouse singles buying guide — racket catalog exit"
+    },
+    {
+      "id": "lighthouse-head-light",
+      "slug": "head-light-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=head_light",
+      "expectMinRelatedReading": 3,
+      "note": "Lighthouse balance guide — head-light catalog exit"
+    },
+    {
+      "id": "lighthouse-all-round",
+      "slug": "all-round-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=even",
+      "expectMinRelatedReading": 3,
+      "note": "Lighthouse even-balance guide — even balance catalog exit"
+    },
+    {
+      "id": "lighthouse-smash-heavy",
+      "slug": "smash-heavy-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=head_heavy",
+      "expectMinRelatedReading": 3,
+      "note": "Lighthouse power guide — head-heavy catalog exit"
+    },
+    {
+      "id": "lighthouse-intermediate",
+      "slug": "intermediate-rackets",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "expectMinRelatedReading": 3,
+      "note": "Lighthouse skill-tier guide — racket catalog exit"
     }
   ]
 }

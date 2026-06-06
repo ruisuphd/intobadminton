@@ -18,6 +18,7 @@
 | **Tennis Warehouse** | Procedural education → filtered browse | Guides golden-profile CI guard ✅ (Sprint 51) |
 | **RacketGuide-style finders** | Calculator → filtered catalogue browse | Tools golden-profile CI guard ✅ (Sprint 52) |
 | **Tennis Warehouse** | Brand hubs → filtered SKU browse | Brands golden-profile CI guard ✅ (Sprint 53) |
+| **Wirecutter** | Large review archive with hub discovery | Reviews hub golden-profile CI guard ✅ (Sprint 54) |
 | **YouTube-first reviewers** | Video evidence | Open — `VideoObject` gated on video commitment |
 
 **Moat:** transparent fit score, claims CI, static export, 146+ first-person reviews, postbuild SEO gate.
@@ -445,7 +446,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright tools smoke** — `e2e/tools-baseline-smoke.spec.ts` (catalog CTA, finder exit)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT52_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT52_2026-06.md)
 
-### Sprint 53 — This branch
+### Sprint 53 — Shipped (PR #201)
 
 - **Brands golden profiles** — `docs/baselines/brands-queries.json` (8 slug + catalog exit + finder CTA expectations)
 - **Brands regression guard** — `src/lib/brands-baseline.ts` + `npm run lint:brands-baseline`
@@ -453,10 +454,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright brands smoke** — `e2e/brands-baseline-smoke.spec.ts` (catalog CTA, finder exit, Keep reading on hub)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT53_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT53_2026-06.md)
 
-### Next (Sprint 54+)
+### Sprint 54 — This branch
+
+- **Guides golden profiles extended** — all 11 Lighthouse guide slugs in `docs/baselines/guides-queries.json`
+- **Best-of golden profiles extended** — 13 Lighthouse best-of slugs in `docs/baselines/best-queries.json`
+- **Reviews hub golden profiles** — `docs/baselines/reviews-queries.json` (hub + article corpus expectations)
+- **Reviews hub regression guard** — `src/lib/reviews-baseline.ts` + `npm run lint:reviews-baseline`
+- **Extended editorial command** — `lint:editorial-baselines` now includes reviews hub guard
+- **Playwright reviews smoke** — `e2e/reviews-baseline-smoke.spec.ts` (catalog CTA, finder exit, Keep reading on hub)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT54_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT54_2026-06.md)
+
+### Next (Sprint 55+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
-- Extend `guides-queries.json` with 5 missing Lighthouse slugs; extend `best-queries.json`; review hub golden profile
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
 

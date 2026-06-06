@@ -20,7 +20,21 @@ Refresh review→catalogue map and PDP regression layers in one operator command
 npm run lint:editorial-baselines
 ```
 
-Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, `lint:tools-baseline`, and `lint:brands-baseline`.
+Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, `lint:tools-baseline`, `lint:brands-baseline`, and `lint:reviews-baseline`.
+
+## Reviews hub (golden profiles)
+
+Committed `/review/` hub expectations for catalog exit, related reading shelf, finder CTA, and minimum article corpus:
+
+- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index (153-article archive).
+
+Validate reviews hub parity (runs in CI after brands guard):
+
+```bash
+npm run lint:reviews-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/reviews-baseline-smoke.spec.ts`) — direct navigation to committed review hub URL with catalog CTA, finder exit, and Keep reading shelf.
 
 ## Brands (golden profiles)
 
@@ -54,7 +68,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/tools-baseline
 
 Committed `/guides/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, and catalogue CTA label wiring:
 
-- [`guides-queries.json`](guides-queries.json) — Lighthouse string tension, racket balance, shoe crossover, doubles positioning, wide feet, authenticity.
+- [`guides-queries.json`](guides-queries.json) — All 11 Lighthouse guide slugs including string feel, shoes footwork, doubles roles, glossary, and equipment authenticity.
 
 Validate guide catalog parity (runs in CI after compare-guides guard):
 
@@ -82,7 +96,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/compare-guides
 
 Committed `/best/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, and mapped pick wiring:
 
-- [`best-queries.json`](best-queries.json) — Lighthouse beginner/doubles/shoes, defensive top pick, strings, budget under-100.
+- [`best-queries.json`](best-queries.json) — 13 Lighthouse best-of slugs including control, singles, all-round, smash-heavy, intermediate, and price-band under-200.
 
 Validate best-of catalog parity (runs in CI after PDP guard):
 
