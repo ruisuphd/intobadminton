@@ -69,6 +69,8 @@
 
 **Sprint 86 addendum:** Victor/Li-Ning flagship review-map e2e completion — ✅ Auraspeed 90K II + AxForce 100 Gen 2 golden profiles; `minMappedE2eGuards: 29`; Nanoray Light 70i image hunt deferred (no verified Western listing).
 
+**Sprint 87 addendum:** Victor/Li-Ning classic review-map e2e — ✅ Jetspeed 12 + Halbertec 8000 golden profiles; `minMappedE2eGuards: 31`; Nanoray Light 70i image hunt deferred (no verified Western listing).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -719,19 +721,25 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 27`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT85_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT85_2026-06.md)
 
-### Sprint 86 — This branch (`cursor/web-app-improvement-plan-fbba`)
+### Sprint 86 — Shipped (PR #234)
 
 - **Review-map e2e expansion** — Auraspeed 90K II + AxForce 100 Gen 2 golden profiles with Playwright smoke
 - **`minMappedE2eGuards: 29`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT86_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT86_2026-06.md)
 
-### Next (Sprint 87+)
+### Sprint 87 — This branch (`cursor/web-app-improvement-plan-41da`)
+
+- **Review-map e2e expansion** — Jetspeed 12 + Halbertec 8000 golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 31`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT87_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT87_2026-06.md)
+
+### Next (Sprint 88+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
-- Jetspeed 12 + Halbertec 8000 flagship review-map e2e
+- Thruster Ryuga II + Bladex 800 Speed flagship review-map e2e
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
