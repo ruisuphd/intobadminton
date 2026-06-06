@@ -22,11 +22,25 @@ npm run lint:editorial-baselines
 
 Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, `lint:tools-baseline`, `lint:brands-baseline`, and `lint:reviews-baseline`.
 
+## Homepage (golden profiles)
+
+Committed `/` CrUX-priority landing expectations for finder/catalog exit, featured review slice, catalogue stats, and popular-search commercial deep-links:
+
+- [`home-queries.json`](home-queries.json) — CrUX homepage with 11 committed popular-search hrefs.
+
+Validate homepage discovery parity (runs in CI after discovery parity guard):
+
+```bash
+npm run lint:home-baseline
+```
+
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/home-baseline-smoke.spec.ts`) — finder CTA, catalog CTA, and latest reviews shelf.
+
 ## Reviews hub + articles (golden profiles)
 
 Committed `/review/` hub and priority article slug expectations for catalog exit, related reading shelf, finder CTA, equipment finder panel, and minimum article corpus:
 
-- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus 6 priority article slugs (CrUX Arcsaber 7 Pro, flagship Nanoflare 1000Z, DriveX 10, P9200 III shoes, Bonny Leisu 800, explainer guard).
+- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus all review-map article slugs (CrUX Arcsaber 7 Pro, flagship Nanoflare 1000Z, DriveX 10, P9200 III shoes, Bonny Leisu 800, explainer guard). `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json).
 
 Validate reviews hub + article parity (runs in CI after brands guard):
 
@@ -194,7 +208,7 @@ Refresh all three discovery regression layers in one operator command:
 npm run lint:discovery-baselines
 ```
 
-Runs `lint:search-baseline`, `lint:catalog-baseline`, and `lint:discovery-baseline` sequentially.
+Runs `lint:search-baseline`, `lint:catalog-baseline`, `lint:discovery-baseline`, and `lint:home-baseline` sequentially.
 
 ## Discovery parity (search submit ↔ catalog filter)
 

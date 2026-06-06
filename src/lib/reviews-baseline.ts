@@ -7,6 +7,9 @@
  * Committed expectations live in `docs/baselines/reviews-queries.json`.
  */
 
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
 import { blogArticles, getBlogArticle } from "@/lib/blog";
 import { catalogHrefFromProduct } from "@/lib/catalog-url";
 import { reviewProductIdForBlog } from "@/lib/content-links";
@@ -46,6 +49,8 @@ export type ReviewsBaselineQuery = {
 
 export type ReviewsBaselineCoverageSpec = {
   minArticleSlugs?: number;
+  /** Every article slug in review-product-map-queries must appear here. */
+  requireReviewMapParity?: boolean;
 };
 
 export type ReviewsBaselineFile = {
@@ -170,6 +175,7 @@ export function validateReviewsBaselineFile(
     coverage = {
       minArticleSlugs:
         typeof c.minArticleSlugs === "number" ? c.minArticleSlugs : undefined,
+      requireReviewMapParity: c.requireReviewMapParity === true,
     };
   }
 
@@ -297,6 +303,22 @@ export function evaluateReviewsBaselineQuery(
   return null;
 }
 
+const REVIEW_MAP_BASELINE_PATH = resolve(
+  process.cwd(),
+  "docs/baselines/review-product-map-queries.json"
+);
+
+export function reviewMapBaselineArticleSlugs(): string[] {
+  const raw = JSON.parse(readFileSync(REVIEW_MAP_BASELINE_PATH, "utf8"));
+  if (!Array.isArray(raw.queries)) return [];
+  return raw.queries
+    .map((row: { slug?: string }) => row.slug)
+    .filter(
+      (slug: string | undefined): slug is string =>
+        typeof slug === "string" && slug.trim().length > 0
+    );
+}
+
 export function evaluateReviewsBaselineCoverage(
   file: ReviewsBaselineFile
 ): ReviewsBaselineIssue | null {
@@ -308,6 +330,20 @@ export function evaluateReviewsBaselineCoverage(
         id: "coverage",
         message: `article slug rows ${articleRows} < ${minSlugs}`,
       };
+    }
+  }
+
+  if (file.coverage?.requireReviewMapParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of reviewMapBaselineArticleSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `review map slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
     }
   }
 
