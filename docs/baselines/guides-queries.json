@@ -6,6 +6,18 @@
   },
   "queries": [
     {
+      "id": "lighthouse-guides-index",
+      "slug": "index",
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "equipment guides",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "expectFinderCta": true,
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse guides hub — full catalog exit + Keep reading shelf"
+    },
+    {
       "id": "lighthouse-string-tension",
       "slug": "string-tension",
       "expectCatalogHref": "/catalog/?cat=string",
@@ -90,6 +102,10 @@
       "slug": "doubles-roles",
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "roles",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectKeepReadingShelf": true,
       "note": "Lighthouse doubles roles — racket catalog exit"
     },
     {
@@ -97,6 +113,10 @@
       "slug": "glossary",
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "glossary",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "expectKeepReadingShelf": true,
       "note": "Lighthouse glossary hub — racket catalog exit"
     },
     {
@@ -104,6 +124,10 @@
       "slug": "equipment-authenticity",
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 1,
+      "e2e": true,
+      "expectHeadingPattern": "authentic",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "expectKeepReadingShelf": true,
       "note": "Lighthouse authenticity guide — racket catalog exit (narrow cluster)"
     }
   ]

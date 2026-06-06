@@ -19,6 +19,7 @@ function e2eGuidePaths(): {
   expectHeadingPattern?: string;
   expectCatalogLinkPattern?: string;
   expectKeepReadingShelf?: boolean;
+  expectFinderCta?: boolean;
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validateGuidesBaselineFile(raw);
@@ -33,6 +34,7 @@ function e2eGuidePaths(): {
       expectHeadingPattern: q.expectHeadingPattern,
       expectCatalogLinkPattern: q.expectCatalogLinkPattern,
       expectKeepReadingShelf: q.expectKeepReadingShelf,
+      expectFinderCta: q.expectFinderCta,
     }));
 }
 
@@ -43,6 +45,7 @@ for (const {
   expectHeadingPattern,
   expectCatalogLinkPattern,
   expectKeepReadingShelf,
+  expectFinderCta,
 } of e2eGuidePaths()) {
   test(`Guides baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
@@ -64,6 +67,12 @@ for (const {
           : /browse.*catalog/i,
       });
     await expect(catalogLink).toHaveAttribute("href", expectCatalogHref);
+
+    if (expectFinderCta) {
+      await expect(
+        page.getByRole("main").getByRole("link", { name: /start the finder/i })
+      ).toHaveAttribute("href", "/quiz/");
+    }
 
     if (expectKeepReadingShelf) {
       await expect(

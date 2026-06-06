@@ -36,6 +36,8 @@ export type CompareGuidesBaselineQuery = {
   expectComparisonTable?: boolean;
   /** Concept/duel layout must render Keep reading shelf. */
   expectKeepReadingShelf?: boolean;
+  /** Hub layout must render finder CTA. */
+  expectFinderCta?: boolean;
   note?: string;
 };
 
@@ -64,7 +66,9 @@ export type CompareGuidesBaselineResult = {
 };
 
 export function compareGuidePathForSlug(slug: string): string {
-  return `/compare-guides/${slug.trim()}/`;
+  const trimmed = slug.trim();
+  if (!trimmed || trimmed === "index") return "/compare-guides/";
+  return `/compare-guides/${trimmed}/`;
 }
 
 export function validateCompareGuidesBaselineFile(
@@ -135,6 +139,7 @@ export function validateCompareGuidesBaselineFile(
           : undefined,
       expectComparisonTable: q.expectComparisonTable === true,
       expectKeepReadingShelf: q.expectKeepReadingShelf === true,
+      expectFinderCta: q.expectFinderCta === true,
       note: typeof q.note === "string" ? q.note : undefined,
     });
   }
@@ -174,7 +179,8 @@ export function evaluateCompareGuidesBaselineQuery(
   spec: CompareGuidesBaselineQuery,
   lookup: (id: string) => ProductRecord | undefined
 ): CompareGuidesBaselineIssue | null {
-  const href = catalogHrefFromCompareSlug(spec.slug);
+  const isIndex = spec.slug === "index";
+  const href = isIndex ? "/catalog/" : catalogHrefFromCompareSlug(spec.slug);
   if (href !== spec.expectCatalogHref) {
     return {
       id: spec.id,
@@ -196,7 +202,7 @@ export function evaluateCompareGuidesBaselineQuery(
     };
   }
 
-  if (spec.expectInManifest && !compareGuideByPath(path)) {
+  if (spec.expectInManifest && !isIndex && !compareGuideByPath(path)) {
     return {
       id: spec.id,
       message: `slug "${spec.slug}" missing from COMPARE_GUIDES manifest`,
@@ -205,6 +211,13 @@ export function evaluateCompareGuidesBaselineQuery(
   }
 
   if (spec.expectProductIds) {
+    if (isIndex) {
+      return {
+        id: spec.id,
+        message: "expectProductIds is not valid for hub index slug",
+        note: spec.note,
+      };
+    }
     for (const productId of spec.expectProductIds) {
       const product = lookup(productId);
       if (!product) {

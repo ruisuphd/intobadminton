@@ -20,6 +20,7 @@ function e2eCompareGuidePaths(): {
   expectCatalogLinkPattern?: string;
   expectComparisonTable?: boolean;
   expectKeepReadingShelf?: boolean;
+  expectFinderCta?: boolean;
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validateCompareGuidesBaselineFile(raw);
@@ -35,6 +36,7 @@ function e2eCompareGuidePaths(): {
       expectCatalogLinkPattern: q.expectCatalogLinkPattern,
       expectComparisonTable: q.expectComparisonTable,
       expectKeepReadingShelf: q.expectKeepReadingShelf,
+      expectFinderCta: q.expectFinderCta,
     }));
 }
 
@@ -46,6 +48,7 @@ for (const {
   expectCatalogLinkPattern,
   expectComparisonTable,
   expectKeepReadingShelf,
+  expectFinderCta,
 } of e2eCompareGuidePaths()) {
   test(`Compare guides baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
@@ -70,6 +73,12 @@ for (const {
 
     if (expectComparisonTable) {
       await expect(page.getByRole("columnheader", { name: /factor/i })).toBeVisible();
+    }
+
+    if (expectFinderCta) {
+      await expect(
+        page.getByRole("main").getByRole("link", { name: /start the finder/i })
+      ).toHaveAttribute("href", "/quiz/");
     }
 
     if (expectKeepReadingShelf) {

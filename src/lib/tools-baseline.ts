@@ -53,7 +53,9 @@ export type ToolsBaselineResult = {
 };
 
 export function toolPathForSlug(slug: string): string {
-  return `/tools/${slug.trim()}/`;
+  const trimmed = slug.trim();
+  if (!trimmed || trimmed === "index") return "/tools/";
+  return `/tools/${trimmed}/`;
 }
 
 export function validateToolsBaselineFile(
@@ -144,13 +146,18 @@ export function validateToolsBaselineFile(
 export function evaluateToolsBaselineQuery(
   spec: ToolsBaselineQuery
 ): ToolsBaselineIssue | null {
-  const href = catalogHrefFromToolSlug(spec.slug);
+  const isIndex = spec.slug === "index";
+  const href = isIndex ? "/catalog/" : catalogHrefFromToolSlug(spec.slug);
   if (href !== spec.expectCatalogHref) {
     return {
       id: spec.id,
       message: `catalog href "${href}" !== expected "${spec.expectCatalogHref}"`,
       note: spec.note,
     };
+  }
+
+  if (isIndex) {
+    return null;
   }
 
   const ctaLabel = catalogCtaLabelFromToolSlug(spec.slug);

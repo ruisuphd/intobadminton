@@ -61,18 +61,30 @@
       "id": "lighthouse-kawasaki",
       "slug": "kawasaki",
       "expectCatalogHref": "/catalog/?brand=Kawasaki",
+      "e2e": true,
+      "expectHeadingPattern": "kawasaki",
+      "expectCatalogLinkPattern": "browse kawasaki in catalog",
+      "expectFinderCta": true,
       "note": "Lighthouse tier-2 brand — Kawasaki catalog exit"
     },
     {
       "id": "lighthouse-kumpoo",
       "slug": "kumpoo",
       "expectCatalogHref": "/catalog/?brand=Kumpoo",
+      "e2e": true,
+      "expectHeadingPattern": "kumpoo",
+      "expectCatalogLinkPattern": "browse kumpoo in catalog",
+      "expectFinderCta": true,
       "note": "Lighthouse tier-2 brand — Kumpoo catalog exit"
     },
     {
       "id": "lighthouse-bonny",
       "slug": "bonny",
       "expectCatalogHref": "/catalog/?brand=Bonny",
+      "e2e": true,
+      "expectHeadingPattern": "bonny",
+      "expectCatalogLinkPattern": "browse bonny in catalog",
+      "expectFinderCta": true,
       "note": "Lighthouse tier-2 brand — Bonny catalog exit"
     }
   ]

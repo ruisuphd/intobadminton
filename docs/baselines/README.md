@@ -54,7 +54,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/brands-baselin
 
 Committed `/tools/*` slugs that must resolve to valid catalog exit hrefs and catalogue CTA label wiring:
 
-- [`tools-queries.json`](tools-queries.json) — Lighthouse string tension calculator, skill-level converter, racket balance explainer, authenticity checker, court diagram.
+- [`tools-queries.json`](tools-queries.json) — `/tools/` hub index plus Lighthouse string tension calculator, skill-level converter, racket balance explainer, authenticity checker, court diagram.
 
 Validate tool catalog parity (runs in CI after guides guard):
 
@@ -68,7 +68,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/tools-baseline
 
 Committed `/guides/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, and catalogue CTA label wiring:
 
-- [`guides-queries.json`](guides-queries.json) — All 11 Lighthouse guide slugs including string feel, shoes footwork, doubles roles, glossary, and equipment authenticity.
+- [`guides-queries.json`](guides-queries.json) — `/guides/` hub index plus all 11 Lighthouse guide slugs including string feel, shoes footwork, doubles roles, glossary, and equipment authenticity.
 
 Validate guide catalog parity (runs in CI after compare-guides guard):
 
@@ -82,7 +82,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/guides-baselin
 
 Committed `/compare-guides/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, manifest entries, and mapped duel pick wiring:
 
-- [`compare-guides-queries.json`](compare-guides-queries.json) — CrUX Astrox vs Nanoflare, Lighthouse brand/shoe/duel shells, even-balance and shoe duels.
+- [`compare-guides-queries.json`](compare-guides-queries.json) — `/compare-guides/` hub index plus all 12 wired duel slugs (CrUX Astrox vs Nanoflare, brand/shoe crossovers, flagship and long-tail power/speed duels).
 
 Validate compare-guide catalog parity (runs in CI after best-of guard):
 
@@ -96,7 +96,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/compare-guides
 
 Committed `/best/*` slugs that must resolve to valid catalog exit hrefs, related reading shelves, and mapped pick wiring:
 
-- [`best-queries.json`](best-queries.json) — 13 Lighthouse best-of slugs including control, singles, all-round, smash-heavy, intermediate, and price-band under-200.
+- [`best-queries.json`](best-queries.json) — `/best/` hub index plus all 19 wired buying-guide slugs including price-band, shoe-fit, shoulder-comfort, and style guides.
 
 Validate best-of catalog parity (runs in CI after PDP guard):
 

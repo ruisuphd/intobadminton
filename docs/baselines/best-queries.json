@@ -6,12 +6,25 @@
   },
   "queries": [
     {
+      "id": "lighthouse-best-index",
+      "slug": "index",
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "buying guides",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "expectFinderCta": true,
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse best-of hub — full catalog exit + Keep reading shelf"
+    },
+    {
       "id": "lighthouse-beginner-rackets",
       "slug": "beginner-rackets",
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
       "e2e": true,
       "expectHeadingPattern": "beginner",
+      "expectComparisonTable": true,
       "note": "Lighthouse CI best-of shell — comparison table + catalog CTA"
     },
     {
@@ -21,6 +34,7 @@
       "expectMinRelatedReading": 3,
       "e2e": true,
       "expectHeadingPattern": "doubles",
+      "expectComparisonTable": true,
       "note": "Lighthouse baseline subset — doubles buying guide"
     },
     {
@@ -32,6 +46,7 @@
       "expectIllustrativeFit": true,
       "e2e": true,
       "expectHeadingPattern": "shoes",
+      "expectComparisonTable": true,
       "note": "CrUX shoes best-of — fit score column on mapped pick"
     },
     {
@@ -41,6 +56,8 @@
       "expectMinRelatedReading": 3,
       "expectProductId": "yy-nanoflare-700-pro-2024",
       "expectIllustrativeFit": true,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Top defensive pick wired to catalog + illustrative fit score"
     },
     {
@@ -48,6 +65,8 @@
       "slug": "strings",
       "expectCatalogHref": "/catalog/?cat=string",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "String category best-of — catalog filter parity"
     },
     {
@@ -55,6 +74,8 @@
       "slug": "rackets-under-100",
       "expectCatalogHref": "/catalog/?cat=racket&price=under100",
       "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Price-band programmatic page — budget cluster shelf"
     },
     {
@@ -64,6 +85,7 @@
       "expectMinRelatedReading": 2,
       "e2e": true,
       "expectHeadingPattern": "200",
+      "expectComparisonTable": true,
       "note": "Lighthouse price-band page — under-200 catalog exit"
     },
     {
@@ -73,6 +95,7 @@
       "expectMinRelatedReading": 3,
       "e2e": true,
       "expectHeadingPattern": "control",
+      "expectComparisonTable": true,
       "note": "Lighthouse style guide — head-light catalog exit"
     },
     {
@@ -80,6 +103,8 @@
       "slug": "singles-rackets",
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Lighthouse singles buying guide — racket catalog exit"
     },
     {
@@ -87,6 +112,8 @@
       "slug": "head-light-rackets",
       "expectCatalogHref": "/catalog/?cat=racket&balance=head_light",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Lighthouse balance guide — head-light catalog exit"
     },
     {
@@ -94,6 +121,8 @@
       "slug": "all-round-rackets",
       "expectCatalogHref": "/catalog/?cat=racket&balance=even",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Lighthouse even-balance guide — even balance catalog exit"
     },
     {
@@ -101,6 +130,8 @@
       "slug": "smash-heavy-rackets",
       "expectCatalogHref": "/catalog/?cat=racket&balance=head_heavy",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Lighthouse power guide — head-heavy catalog exit"
     },
     {
@@ -108,7 +139,69 @@
       "slug": "intermediate-rackets",
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
       "note": "Lighthouse skill-tier guide — racket catalog exit"
+    },
+    {
+      "id": "lighthouse-rackets-under-150",
+      "slug": "rackets-under-150",
+      "expectCatalogHref": "/catalog/?cat=racket&price=under150",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "150",
+      "expectComparisonTable": true,
+      "note": "Lighthouse price-band page — under-150 catalog exit"
+    },
+    {
+      "id": "lighthouse-lightweight-5u",
+      "slug": "lightweight-rackets-5u",
+      "expectCatalogHref": "/catalog/?cat=racket&weight=5U",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "5u",
+      "expectComparisonTable": true,
+      "note": "Lighthouse ultralight guide — 5U catalog exit"
+    },
+    {
+      "id": "lighthouse-shoulder-comfort",
+      "slug": "rackets-for-shoulder-comfort",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=head_light",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "shoulder",
+      "expectComparisonTable": true,
+      "note": "Lighthouse arm-comfort guide — head-light catalog exit"
+    },
+    {
+      "id": "lighthouse-wide-feet-shoes",
+      "slug": "wide-feet-badminton-shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "wide",
+      "expectComparisonTable": true,
+      "note": "Lighthouse shoe-fit guide — shoes catalog exit"
+    },
+    {
+      "id": "lighthouse-budget-shoes",
+      "slug": "budget-badminton-shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes&price=under150",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "budget",
+      "expectComparisonTable": true,
+      "note": "Lighthouse budget shoe guide — under-150 shoes catalog exit"
+    },
+    {
+      "id": "lighthouse-head-heavy-under-150",
+      "slug": "head-heavy-rackets-under-150",
+      "expectCatalogHref": "/catalog/?cat=racket&balance=head_heavy&price=under150",
+      "expectMinRelatedReading": 2,
+      "e2e": true,
+      "expectHeadingPattern": "head-heavy",
+      "expectComparisonTable": true,
+      "note": "Lighthouse power budget guide — head-heavy under-150 catalog exit"
     }
   ]
 }

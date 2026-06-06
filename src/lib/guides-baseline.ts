@@ -28,6 +28,8 @@ export type GuidesBaselineQuery = {
   expectCatalogLinkPattern?: string;
   /** Guide layout must render Keep reading shelf. */
   expectKeepReadingShelf?: boolean;
+  /** Hub layout must render finder CTA. */
+  expectFinderCta?: boolean;
   note?: string;
 };
 
@@ -55,7 +57,9 @@ export type GuidesBaselineResult = {
 };
 
 export function guidePathForSlug(slug: string): string {
-  return `/guides/${slug.trim()}/`;
+  const trimmed = slug.trim();
+  if (!trimmed || trimmed === "index") return "/guides/";
+  return `/guides/${trimmed}/`;
 }
 
 export function validateGuidesBaselineFile(
@@ -116,6 +120,7 @@ export function validateGuidesBaselineFile(
           ? q.expectCatalogLinkPattern
           : undefined,
       expectKeepReadingShelf: q.expectKeepReadingShelf === true,
+      expectFinderCta: q.expectFinderCta === true,
       note: typeof q.note === "string" ? q.note : undefined,
     });
   }
@@ -150,7 +155,8 @@ export function validateGuidesBaselineFile(
 export function evaluateGuidesBaselineQuery(
   spec: GuidesBaselineQuery
 ): GuidesBaselineIssue | null {
-  const href = catalogHrefFromGuideSlug(spec.slug);
+  const isIndex = spec.slug === "index";
+  const href = isIndex ? "/catalog/" : catalogHrefFromGuideSlug(spec.slug);
   if (href !== spec.expectCatalogHref) {
     return {
       id: spec.id,
@@ -170,6 +176,10 @@ export function evaluateGuidesBaselineQuery(
       message: `related reading count ${related.length} < ${spec.expectMinRelatedReading}`,
       note: spec.note,
     };
+  }
+
+  if (isIndex) {
+    return null;
   }
 
   const ctaLabel = catalogCtaLabelFromGuideSlug(spec.slug);

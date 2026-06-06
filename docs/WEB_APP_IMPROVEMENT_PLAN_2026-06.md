@@ -454,7 +454,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright brands smoke** — `e2e/brands-baseline-smoke.spec.ts` (catalog CTA, finder exit, Keep reading on hub)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT53_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT53_2026-06.md)
 
-### Sprint 54 — This branch
+### Sprint 54 — Shipped (PR #202)
 
 - **Guides golden profiles extended** — all 11 Lighthouse guide slugs in `docs/baselines/guides-queries.json`
 - **Best-of golden profiles extended** — 13 Lighthouse best-of slugs in `docs/baselines/best-queries.json`
@@ -464,11 +464,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright reviews smoke** — `e2e/reviews-baseline-smoke.spec.ts` (catalog CTA, finder exit, Keep reading on hub)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT54_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT54_2026-06.md)
 
-### Next (Sprint 55+)
+### Sprint 55 — This branch
+
+- **Best-of golden profiles complete** — all 19 wired slugs + `/best/` hub index in `docs/baselines/best-queries.json`
+- **Compare-guides golden profiles complete** — all 12 wired slugs + `/compare-guides/` hub index
+- **Editorial hub golden profiles** — `/guides/` and `/tools/` hub index rows with finder + catalog CTA
+- **Hub index evaluator support** — `index` slug in best/guides/compare/tools baseline modules
+- **e2e backfill** — brands tier-2, guides glossary/authenticity/roles, tools court diagram, best long tail
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT55_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT55_2026-06.md)
+
+### Next (Sprint 56+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
+- Per-article review golden profiles beyond hub guard
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
