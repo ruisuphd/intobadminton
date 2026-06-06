@@ -30,6 +30,14 @@ export type BestBaselineQuery = {
   e2e?: boolean;
   /** Case-insensitive substring for h1 assertion in e2e. */
   expectHeadingPattern?: string;
+  /** Case-insensitive substring for catalog CTA link text in e2e. */
+  expectCatalogLinkPattern?: string;
+  /** Hub layout must render finder CTA. */
+  expectFinderCta?: boolean;
+  /** Hub layout must render Keep reading shelf. */
+  expectKeepReadingShelf?: boolean;
+  /** Buying-guide layout must render comparison table (not hub index). */
+  expectComparisonTable?: boolean;
   note?: string;
 };
 
@@ -57,7 +65,9 @@ export type BestBaselineResult = {
 };
 
 export function bestPathForSlug(slug: string): string {
-  return `/best/${slug.trim()}/`;
+  const trimmed = slug.trim();
+  if (!trimmed || trimmed === "index") return "/best/";
+  return `/best/${trimmed}/`;
 }
 
 export function validateBestBaselineFile(
@@ -116,6 +126,13 @@ export function validateBestBaselineFile(
         typeof q.expectHeadingPattern === "string"
           ? q.expectHeadingPattern
           : undefined,
+      expectCatalogLinkPattern:
+        typeof q.expectCatalogLinkPattern === "string"
+          ? q.expectCatalogLinkPattern
+          : undefined,
+      expectFinderCta: q.expectFinderCta === true,
+      expectKeepReadingShelf: q.expectKeepReadingShelf === true,
+      expectComparisonTable: q.expectComparisonTable === true,
       note: typeof q.note === "string" ? q.note : undefined,
     });
   }
@@ -151,7 +168,8 @@ export function evaluateBestBaselineQuery(
   spec: BestBaselineQuery,
   lookup: (id: string) => ProductRecord | undefined
 ): BestBaselineIssue | null {
-  const href = catalogHrefFromBestSlug(spec.slug);
+  const isIndex = spec.slug === "index";
+  const href = isIndex ? "/catalog/" : catalogHrefFromBestSlug(spec.slug);
   if (href !== spec.expectCatalogHref) {
     return {
       id: spec.id,
@@ -173,6 +191,13 @@ export function evaluateBestBaselineQuery(
   }
 
   if (spec.expectProductId) {
+    if (isIndex) {
+      return {
+        id: spec.id,
+        message: "expectProductId is not valid for hub index slug",
+        note: spec.note,
+      };
+    }
     const product = lookup(spec.expectProductId);
     if (!product) {
       return {

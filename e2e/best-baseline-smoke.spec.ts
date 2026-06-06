@@ -17,6 +17,10 @@ function e2eBestPaths(): {
   path: string;
   expectCatalogHref: string;
   expectHeadingPattern?: string;
+  expectCatalogLinkPattern?: string;
+  expectFinderCta?: boolean;
+  expectKeepReadingShelf?: boolean;
+  expectComparisonTable?: boolean;
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validateBestBaselineFile(raw);
@@ -29,6 +33,10 @@ function e2eBestPaths(): {
       path: bestPathForSlug(q.slug),
       expectCatalogHref: q.expectCatalogHref,
       expectHeadingPattern: q.expectHeadingPattern,
+      expectCatalogLinkPattern: q.expectCatalogLinkPattern,
+      expectFinderCta: q.expectFinderCta,
+      expectKeepReadingShelf: q.expectKeepReadingShelf,
+      expectComparisonTable: q.expectComparisonTable,
     }));
 }
 
@@ -37,6 +45,10 @@ for (const {
   path,
   expectCatalogHref,
   expectHeadingPattern,
+  expectCatalogLinkPattern,
+  expectFinderCta,
+  expectKeepReadingShelf,
+  expectComparisonTable,
 } of e2eBestPaths()) {
   test(`Best baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
@@ -48,18 +60,31 @@ for (const {
       await expect(heading).toContainText(new RegExp(expectHeadingPattern, "i"));
     }
 
-    await expect(
-      page.getByRole("link", { name: /browse matching catalog/i })
-    ).toHaveAttribute("href", expectCatalogHref);
+    const catalogLink = page.getByRole("main").getByRole("link", {
+      name: expectCatalogLinkPattern
+        ? new RegExp(expectCatalogLinkPattern, "i")
+        : /browse matching catalog/i,
+    });
+    await expect(catalogLink).toHaveAttribute("href", expectCatalogHref);
 
-    await expect(
-      page.getByRole("heading", { name: /keep reading/i })
-    ).toBeVisible();
+    if (expectFinderCta) {
+      await expect(
+        page.getByRole("main").getByRole("link", { name: /start the finder/i })
+      ).toHaveAttribute("href", "/quiz/");
+    }
 
-    await expect(
-      page.getByRole("region", {
-        name: /side-by-side comparison of every pick/i,
-      })
-    ).toBeVisible();
+    if (expectKeepReadingShelf) {
+      await expect(
+        page.getByRole("heading", { name: /keep reading/i })
+      ).toBeVisible();
+    }
+
+    if (expectComparisonTable) {
+      await expect(
+        page.getByRole("region", {
+          name: /side-by-side comparison of every pick/i,
+        })
+      ).toBeVisible();
+    }
   });
 }
