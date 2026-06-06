@@ -496,7 +496,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Homepage featured href guard** — `expectFeaturedReviewHrefs` on CrUX `/` row + e2e card assertions
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT58_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT58_2026-06.md)
 
-### Sprint 59 — This branch
+### Sprint 59 — Shipped (PR #207)
 
 - **Lighthouse review URL expansion** — 6 review article URLs in `lighthouserc.json` (flagship, featured, popular-search, explainer)
 - **Lighthouse parity** — `coverage.requireLighthouseParity` links reviews baseline to Lighthouse review article slugs
@@ -504,12 +504,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **PWA ib-v27** — precaches 5 additional Lighthouse review article shells
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT59_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT59_2026-06.md)
 
-### Next (Sprint 60+)
+### Sprint 60 — This branch
+
+- **Compare-guide editorial review golden profiles** — 7 shelf-linked review slugs in `reviews-queries.json`
+- **Compare-guide parity** — `coverage.requireCompareGuideReviewParity` links reviews baseline to compare-guide shelves
+- **Popular-search parity** — `coverage.requirePopularSearchParity` links reviews baseline to homepage search grid review hrefs
+- **Shared compare-guide review manifest** — `src/lib/compare-guide-reviews.ts`
+- **PWA ib-v28** — precaches 7 compare-guide editorial review article shells
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT60_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT60_2026-06.md)
+
+### Next (Sprint 61+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
-- Expand per-article review golden profiles beyond Lighthouse set
+- Expand per-article review golden profiles to full mapped corpus
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

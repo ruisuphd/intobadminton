@@ -2,10 +2,12 @@
   "version": 1,
   "updated": "2026-06-06",
   "coverage": {
-    "minArticleSlugs": 15,
+    "minArticleSlugs": 22,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
-    "requireLighthouseParity": true
+    "requireLighthouseParity": true,
+    "requirePopularSearchParity": true,
+    "requireCompareGuideReviewParity": true
   },
   "queries": [
     {
@@ -180,6 +182,80 @@
       "expectMinRelatedReading": 3,
       "expectKeepReadingShelf": true,
       "note": "Homepage popular-search grid — explainer must stay unmapped"
+    },
+    {
+      "id": "compare-guide-nanoflare-speed-series",
+      "slug": "yonex-nanoflare-speed-series-explained",
+      "expectProductId": "yy-nanoflare-1000z",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Compare-guide shelf — Nanoflare speed line breakdown linked from two duels"
+    },
+    {
+      "id": "compare-guide-halbertec-line",
+      "slug": "li-ning-halbertec-8000-vs-9000-vs-9000-power",
+      "expectProductId": "ln-halbertec-8000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Compare-guide shelf — Halbertec family explainer linked from two power duels"
+    },
+    {
+      "id": "compare-guide-astrox-88d-vs-88s",
+      "slug": "yonex-astrox-88d-pro-vs-88s-pro-2024",
+      "expectProductId": "yy-astrox-88s-pro-2024",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Compare-guide shelf — Astrox 77 vs 88S duel extended notes"
+    },
+    {
+      "id": "compare-guide-nanoflare-800-pro-notes",
+      "slug": "yonex-nanoflare-800-pro-and-victor-hs-plus",
+      "expectProductId": "yy-nanoflare-800-pro-2024",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Compare-guide shelf — Nanoflare 800 Pro vs HS Plus extended notes"
+    },
+    {
+      "id": "compare-guide-axforce-line",
+      "slug": "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
+      "expectProductId": "ln-axforce-100-gen-2",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Compare-guide shelf — AxForce family three-way breakdown"
+    },
+    {
+      "id": "compare-guide-axforce-three-way",
+      "slug": "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp",
+      "expectProductId": "ln-axforce-90-new",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Compare-guide shelf — AxForce 90 vs 80 vs 88DP three-way from doubles duel"
+    },
+    {
+      "id": "compare-guide-bladex-deep-dive",
+      "slug": "li-ning-bladex-800-speed-tough-elastic",
+      "expectProductId": "ln-bladex-800-speed",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Compare-guide shelf — Bladex 800 Speed deep dive from speed duel"
     }
   ]
 }
