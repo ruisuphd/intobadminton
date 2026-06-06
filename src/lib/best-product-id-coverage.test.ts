@@ -10,7 +10,7 @@ describe("best-product-id-coverage", () => {
   it("covers key commercial landings with waiver-adjusted thresholds", () => {
     expect(BEST_PRODUCT_ID_REQUIREMENTS.strings).toEqual({
       pickCount: 6,
-      waivers: 2,
+      waivers: 0,
     });
     expect(BEST_PRODUCT_ID_REQUIREMENTS.shoes).toEqual({
       pickCount: 6,
@@ -34,16 +34,7 @@ describe("best-product-id-coverage", () => {
     expect(result.ok).toBe(true);
   });
 
-  it("documents strings pick waivers", () => {
-    expect(
-      BEST_PRODUCT_ID_WAIVERS.some(
-        (w) => w.slug === "strings" && w.pickName === "Aerobite"
-      )
-    ).toBe(true);
-    expect(
-      BEST_PRODUCT_ID_WAIVERS.some(
-        (w) => w.slug === "beginner-rackets"
-      )
-    ).toBe(false);
+  it("has no active productId waivers on commercial landings", () => {
+    expect(BEST_PRODUCT_ID_WAIVERS).toEqual([]);
   });
 });

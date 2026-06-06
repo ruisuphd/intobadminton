@@ -1127,6 +1127,120 @@
     }
   },
   {
+    "id": "yy-aerobite",
+    "category": "string",
+    "name": "Aerobite",
+    "brand": "Yonex",
+    "priceUsd": 16,
+    "gaugeMm": 0.61,
+    "feel": "hard",
+    "repulsion": "high",
+    "control": "very_high",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2017,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/aerobite-set",
+    "lastVerifiedAt": "2026-06-06",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "slice",
+      "net_spin",
+      "hybrid_feel",
+      "control_with_bite"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/aerobite-set"
+    ],
+    "editorNote": "Hybrid mains/crosses setup — textured bite on slices and net spin that single-string beds cannot replicate.",
+    "reviewCount": 2,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-06-06"
+    },
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ABGABWR_White_Red_1.jpg?v=1740344337&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Aerobite badminton string",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
+  },
+  {
+    "id": "yy-bg80-power",
+    "category": "string",
+    "name": "BG80 Power",
+    "brand": "Yonex",
+    "priceUsd": 10,
+    "gaugeMm": 0.68,
+    "feel": "hard",
+    "repulsion": "very_high",
+    "control": "high",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "launchYear": 2018,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/bg80",
+    "lastVerifiedAt": "2026-06-06",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "smash_power",
+      "repulsion",
+      "attacking_singles"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/bg80",
+      "https://www.yonex.com/media/catalog/product/b/g/bg80p_ex_pac_221006.png"
+    ],
+    "editorNote": "BG80's repulsion-forward sibling — same 0.68 mm gauge with a polymer mix tuned for extra smash power at the cost of a little net touch.",
+    "reviewCount": 1,
+    "resale": {
+      "estimatedUsedUsd": 0,
+      "depreciationPct": 100,
+      "confidence": "high",
+      "basis": "Strings are consumables; resale value is treated as zero after installation.",
+      "updatedAt": "2026-06-06"
+    },
+    "image": {
+      "url": "https://www.yonex.com/media/catalog/product/b/g/bg80p_ex_pac_221006.png?quality=80&bg-color=248,248,248,0.75&fit=bounds&height=819&width=600&canvas=600:819",
+      "source": "yonex",
+      "credit": "Image: Yonex (yonex.com)",
+      "alt": "Yonex BG80 Power badminton string",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
+  },
+  {
     "id": "yy-power-cushion-65z-wide",
     "category": "shoes",
     "name": "Power Cushion 65 Z Wide",

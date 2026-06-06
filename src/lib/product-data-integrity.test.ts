@@ -1,7 +1,7 @@
 import products from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { sourceAuthorityForProduct } from "@/lib/source-authority";
-import type { ProductRecord, RacketProduct } from "@/lib/types/product";
+import type { ProductRecord, RacketProduct, StringProduct } from "@/lib/types/product";
 
 const CATALOGUE = products as ProductRecord[];
 
@@ -9,6 +9,12 @@ function racket(id: string): RacketProduct {
   const product = CATALOGUE.find((candidate) => candidate.id === id);
   expect(product?.category).toBe("racket");
   return product as RacketProduct;
+}
+
+function stringProduct(id: string): StringProduct {
+  const product = CATALOGUE.find((candidate) => candidate.id === id);
+  expect(product?.category).toBe("string");
+  return product as StringProduct;
 }
 
 describe("product data integrity", () => {
@@ -57,6 +63,23 @@ describe("product data integrity", () => {
       headWeight: "head_heavy",
       verificationStatus: "official_verified",
       officialSourceUrl: "https://us.yonex.com/products/astrox-77-play",
+    });
+  });
+
+  it("keeps high-traffic Yonex string SKUs aligned to official sources", () => {
+    expect(stringProduct("yy-aerobite")).toMatchObject({
+      name: "Aerobite",
+      gaugeMm: 0.61,
+      verificationStatus: "official_verified",
+      officialSourceUrl: "https://us.yonex.com/products/aerobite-set",
+    });
+
+    expect(stringProduct("yy-bg80-power")).toMatchObject({
+      name: "BG80 Power",
+      gaugeMm: 0.68,
+      repulsion: "very_high",
+      verificationStatus: "editor_verified",
+      officialSourceUrl: "https://www.yonex.com/bg80",
     });
   });
 });
