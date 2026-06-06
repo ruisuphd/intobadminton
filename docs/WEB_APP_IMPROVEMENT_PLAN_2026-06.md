@@ -537,7 +537,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Offline recovery** — Gosen Ryoga Shiden featured review on `/offline/` sidebar
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT63_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT63_2026-06.md)
 
-### Sprint 64 — This branch
+### Sprint 64 — Shipped (PR #212)
 
 - **Featured review offline recovery parity** — all 6 featured reviews on `/offline/` recovery sidebar
 - **Popular-search review offline recovery** — all 4 homepage grid review picks on recovery sidebar
@@ -545,7 +545,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Parity guards** — `offline-recovery.test.ts` asserts featured + popular-search href coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT64_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT64_2026-06.md)
 
-### Next (Sprint 65+)
+### Sprint 65 — This branch
+
+- **Popular-search editorial offline recovery parity** — all 22 non-review grid picks on `/offline/` recovery sidebar
+- **Shared editorial recovery manifest** — `homePopularSearchEditorialOfflineRecoveryLinks()` in `home-popular-searches.ts`
+- **Full grid parity guard** — `offline-recovery.test.ts` asserts every `homePopularSearchHrefs()` entry
+- **E2e proof** — `pwa-offline-smoke.spec.ts` asserts full popular-search grid on recovery sidebar
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT65_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT65_2026-06.md)
+
+### Next (Sprint 66+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

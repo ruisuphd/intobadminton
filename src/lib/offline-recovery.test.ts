@@ -2,7 +2,11 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { homeFeaturedReviewHrefs } from "./home-featured";
-import { homePopularSearchReviewOfflineRecoveryLinks } from "./home-popular-searches";
+import {
+  homePopularSearchEditorialOfflineRecoveryLinks,
+  homePopularSearchHrefs,
+  homePopularSearchReviewOfflineRecoveryLinks,
+} from "./home-popular-searches";
 import { PRECACHE_ASSERT_PATHS } from "./pwa-precache-paths";
 import {
   CRUX_OFFLINE_RECOVERY_PATHS,
@@ -78,6 +82,24 @@ describe("offline recovery paths", () => {
         OFFLINE_RECOVERY_PATHS,
         `missing offline recovery for ${link.href}`
       ).toContain(link.href);
+    }
+  });
+
+  it("lists every homepage popular-search editorial pick in offline recovery", () => {
+    for (const link of homePopularSearchEditorialOfflineRecoveryLinks()) {
+      expect(
+        OFFLINE_RECOVERY_PATHS,
+        `missing offline recovery for ${link.href}`
+      ).toContain(link.href);
+    }
+  });
+
+  it("lists every homepage popular-search href in offline recovery", () => {
+    for (const href of homePopularSearchHrefs()) {
+      expect(
+        OFFLINE_RECOVERY_PATHS,
+        `missing offline recovery for ${href}`
+      ).toContain(href);
     }
   });
 });
