@@ -33,6 +33,8 @@ export type ReviewProductMapCoverageSpec = {
   minMappablePct?: number;
   /** Minimum expectUnmapped explainer rows in committed golden profiles. */
   minExplainerGuards?: number;
+  /** Minimum mapped review rows with Playwright e2e smoke. */
+  minMappedE2eGuards?: number;
 };
 
 export type ReviewProductMapBaselineFile = {
@@ -127,6 +129,10 @@ export function validateReviewProductMapBaselineFile(
         typeof c.minExplainerGuards === "number"
           ? c.minExplainerGuards
           : undefined,
+      minMappedE2eGuards:
+        typeof c.minMappedE2eGuards === "number"
+          ? c.minMappedE2eGuards
+          : undefined,
     };
   }
 
@@ -180,6 +186,18 @@ export function evaluateReviewProductMapCoverage(
       return {
         id: "coverage",
         message: `explainer guards ${explainerGuards} below minExplainerGuards ${coverage.minExplainerGuards}`,
+      };
+    }
+  }
+
+  if (coverage.minMappedE2eGuards != null) {
+    const mappedE2e = queries.filter(
+      (q) => q.e2e && !q.expectUnmapped && q.expectProductId
+    ).length;
+    if (mappedE2e < coverage.minMappedE2eGuards) {
+      return {
+        id: "coverage",
+        message: `mapped e2e guards ${mappedE2e} below minMappedE2eGuards ${coverage.minMappedE2eGuards}`,
       };
     }
   }
