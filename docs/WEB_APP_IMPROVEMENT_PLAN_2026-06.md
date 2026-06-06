@@ -51,6 +51,8 @@
 
 **Sprint 77 addendum:** Tier-4 budget image baseline — ✅ 13 SKUs guarded; HWQL verified image; head-heavy-under-150 waiver 3→2; 12 CN-market waivers documented.
 
+**Sprint 78 addendum:** Tier-4 review→catalog map CI — ✅ Bonny Carbon Armour + Victor Thruster HWQL golden profiles with e2e; CN-market image backfill deferred.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -651,18 +653,24 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Waiver documentation** — Nanoray Light 70i on 4 landings; Bonny Future Land 3 on wide-feet shoes
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT76_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT76_2026-06.md)
 
-### Sprint 77 — This branch (`cursor/web-app-improvement-plan-5491`)
+### Sprint 77 — Shipped (PR #225)
 
 - **Tier-4 budget image baseline** — `lint:tier4-image-baseline` guards 13 CN-market / budget SKUs on specialty landings
 - **HWQL catalogue image** — Victor TK-HMRL U verified photo from e78.us
 - **head-heavy-under-150 waiver tighten** — 3→2 after HWQL backfill
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT77_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT77_2026-06.md)
 
-### Next (Sprint 78+)
+### Sprint 78 — This branch (`cursor/web-app-improvement-plan-5a05`)
+
+- **Tier-4 review→catalog golden profiles** — Bonny Carbon Armour shoes + Victor Thruster HWQL review map CI + e2e
+- **Review map baseline** — +2 queries in `docs/baselines/review-product-map-queries.json`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT78_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT78_2026-06.md)
+
+### Next (Sprint 79+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
-- Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier)
+- Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
