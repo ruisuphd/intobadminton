@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "updated": "2026-06-06",
+  "queries": [
+    {
+      "id": "crux-homepage",
+      "expectCatalogHref": "/catalog/",
+      "expectFinderHref": "/quiz/",
+      "expectMinFeaturedReviews": 6,
+      "expectMinReviewCount": 140,
+      "expectMinCatalogTotal": 150,
+      "expectPopularSearchHrefs": [
+        "/catalog/",
+        "/best/beginner-rackets/",
+        "/best/doubles-rackets/",
+        "/best/shoes/",
+        "/compare-guides/yonex-astrox-vs-nanoflare/",
+        "/compare-guides/yonex-victor-li-ning/",
+        "/guides/glossary/",
+        "/guides/equipment-authenticity/",
+        "/review/yonex-nanoflare-1000z-review/"
+      ],
+      "e2e": true,
+      "expectHeadingPattern": "badminton",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX priority homepage — finder/catalog exit, featured slice, commercial deep-links"
+    }
+  ]
+}

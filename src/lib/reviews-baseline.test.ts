@@ -115,4 +115,15 @@ describe("reviews-baseline", () => {
     expect(href).toContain("/catalog/?cat=racket");
     expect(href).toContain("brand=Yonex");
   });
+
+  it("requires review map article slugs in committed reviews baseline", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+
+    expect(parsed.file.coverage?.requireReviewMapParity).toBe(true);
+    const result = evaluateReviewsBaseline(parsed.file);
+    expect(result.ok).toBe(true);
+  });
 });
