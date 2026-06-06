@@ -25,6 +25,24 @@ export const BEST_IMAGE_WAIVERS: BestImageWaiver[] = [
     reason:
       "Discontinued Yonex entry SKU — no verified manufacturer or distributor product photo yet",
   },
+  {
+    slug: "lightweight-rackets-5u",
+    pickName: "Nanoray Light 70i",
+    reason:
+      "Discontinued Yonex entry SKU — no verified manufacturer or distributor product photo yet",
+  },
+  {
+    slug: "rackets-under-100",
+    pickName: "Nanoray Light 70i",
+    reason:
+      "Discontinued Yonex entry SKU — no verified manufacturer or distributor product photo yet",
+  },
+  {
+    slug: "wide-feet-badminton-shoes",
+    pickName: "Future Land 3 (Polaris / 极星)",
+    reason:
+      "Bonny wide-last shoe — no verified manufacturer or distributor product photo in Western catalogues yet",
+  },
 ];
 
 /**
@@ -47,6 +65,11 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
   "defensive-rackets": { pickCount: 6, waivers: 0 },
   "head-light-rackets": { pickCount: 6, waivers: 1 },
   "rackets-for-shoulder-comfort": { pickCount: 6, waivers: 1 },
+  "wide-feet-badminton-shoes": { pickCount: 6, waivers: 1 },
+  "budget-badminton-shoes": { pickCount: 6, waivers: 4 },
+  "lightweight-rackets-5u": { pickCount: 6, waivers: 5 },
+  "head-heavy-rackets-under-150": { pickCount: 6, waivers: 3 },
+  "rackets-under-100": { pickCount: 6, waivers: 3 },
 };
 
 export type BestImageCoverageIssue = {

@@ -48,6 +48,27 @@ describe("best-image-coverage", () => {
       pickCount: 6,
       waivers: 1,
     });
+    expect(BEST_IMAGE_REQUIREMENTS["wide-feet-badminton-shoes"]).toEqual({
+      pickCount: 6,
+      waivers: 1,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["budget-badminton-shoes"]).toEqual({
+      pickCount: 6,
+      waivers: 4,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["lightweight-rackets-5u"]).toEqual({
+      pickCount: 6,
+      waivers: 5,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["head-heavy-rackets-under-150"]).toEqual({
+      pickCount: 6,
+      waivers: 3,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["rackets-under-100"]).toEqual({
+      pickCount: 6,
+      waivers: 3,
+    });
+    expect(Object.keys(BEST_IMAGE_REQUIREMENTS)).toHaveLength(17);
   });
 
   it("passes verified-image guard for commercial /best/* landings", () => {
@@ -58,11 +79,29 @@ describe("best-image-coverage", () => {
     expect(result.ok).toBe(true);
   });
 
-  it("documents Nanoray Light 70i waiver on two landings", () => {
-    expect(BEST_IMAGE_WAIVERS).toHaveLength(2);
-    expect(BEST_IMAGE_WAIVERS.every((w) => w.pickName === "Nanoray Light 70i")).toBe(
-      true
+  it("documents Nanoray Light 70i waiver on four landings", () => {
+    const nanoray = BEST_IMAGE_WAIVERS.filter(
+      (w) => w.pickName === "Nanoray Light 70i"
     );
+    expect(nanoray).toHaveLength(4);
+    expect(nanoray.map((w) => w.slug).sort()).toEqual(
+      [
+        "head-light-rackets",
+        "lightweight-rackets-5u",
+        "rackets-for-shoulder-comfort",
+        "rackets-under-100",
+      ].sort()
+    );
+  });
+
+  it("documents Bonny Future Land 3 waiver on wide-feet shoes landing", () => {
+    expect(
+      BEST_IMAGE_WAIVERS.some(
+        (w) =>
+          w.slug === "wide-feet-badminton-shoes" &&
+          w.pickName.includes("Future Land 3")
+      )
+    ).toBe(true);
   });
 
   it("counts catalogue-backed verified images via productId", () => {
