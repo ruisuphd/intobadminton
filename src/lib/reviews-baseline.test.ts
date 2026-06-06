@@ -170,4 +170,17 @@ describe("reviews-baseline", () => {
     const result = evaluateReviewsBaseline(parsed.file);
     expect(result.ok).toBe(true);
   });
+
+  it("requires full mapped corpus in committed reviews baseline", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+
+    expect(parsed.file.coverage?.requireFullMappedParity).toBe(true);
+    const articleRows = parsed.file.queries.filter((q) => q.slug !== "index");
+    expect(articleRows.length).toBeGreaterThanOrEqual(140);
+    const result = evaluateReviewsBaseline(parsed.file);
+    expect(result.ok).toBe(true);
+  });
 });

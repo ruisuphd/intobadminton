@@ -2,12 +2,13 @@
   "version": 1,
   "updated": "2026-06-06",
   "coverage": {
-    "minArticleSlugs": 22,
+    "minArticleSlugs": 142,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
     "requireLighthouseParity": true,
     "requirePopularSearchParity": true,
-    "requireCompareGuideReviewParity": true
+    "requireCompareGuideReviewParity": true,
+    "requireFullMappedParity": true
   },
   "queries": [
     {
@@ -256,6 +257,1179 @@
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse li-ning",
       "note": "Compare-guide shelf — Bladex 800 Speed deep dive from speed duel"
+    },
+    {
+      "id": "asics-blast-ff-3-badminton-shoes-review",
+      "slug": "asics-blast-ff-3-badminton-shoes-review",
+      "expectProductId": "asics-blast-ff-3",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=ASICS",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse asics",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "badminton-shoe-buying-guide-and-replacement",
+      "slug": "badminton-shoe-buying-guide-and-replacement",
+      "expectProductId": "ln-bladesabre-max",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-carbon-armour-shoes-review",
+      "slug": "bonny-carbon-armour-shoes-review",
+      "expectProductId": "bonny-carbon-armour",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-future-land-3-polaris-shoes-review",
+      "slug": "bonny-future-land-3-polaris-shoes-review",
+      "expectProductId": "bonny-future-land-3",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-golden-dragon-roar-pro-racket-review",
+      "slug": "bonny-golden-dragon-roar-pro-racket-review",
+      "expectProductId": "bonny-golden-dragon-roar-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+      "slug": "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+      "expectProductId": "yy-arcsaber-11-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-phantom-100-racket-review",
+      "slug": "bonny-phantom-100-racket-review",
+      "expectProductId": "bonny-phantom-100",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-phantom-88-racket-review",
+      "slug": "bonny-phantom-88-racket-review",
+      "expectProductId": "bonny-phantom-88",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-snake-breath-second-tier-flagship-review",
+      "slug": "bonny-snake-breath-second-tier-flagship-review",
+      "expectProductId": "bonny-snake-breath",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-wind-shadow-budget-speed-shoes-review",
+      "slug": "bonny-wind-shadow-budget-speed-shoes-review",
+      "expectProductId": "bonny-wind-shadow",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-wuque-1982-y3k-shoes-review",
+      "slug": "bonny-wuque-1982-y3k-shoes-review",
+      "expectProductId": "bonny-wuque-1982-y3k",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-wuque-flagship-088-shoes-review",
+      "slug": "bonny-wuque-flagship-088-shoes-review",
+      "expectProductId": "bonny-wuque-flagship-088",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-wuque-flagship-089-shoes-review",
+      "slug": "bonny-wuque-flagship-089-shoes-review",
+      "expectProductId": "bonny-wuque-089-shoes",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-wuque-xuanwu-review",
+      "slug": "bonny-wuque-xuanwu-review",
+      "expectProductId": "bonny-wuque-xuanwu",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "bonny-zhangui-dao-8888ax-ultra-review",
+      "slug": "bonny-zhangui-dao-8888ax-ultra-review",
+      "expectProductId": "bonny-zhangui-dao-8888ax",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "fz-forza-88d-review",
+      "slug": "fz-forza-88d-review",
+      "expectProductId": "fz-forza-88d",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=FZ+Forza",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse fz forza",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "fz-forza-odin-8800-review",
+      "slug": "fz-forza-odin-8800-review",
+      "expectProductId": "fz-forza-odin-8800",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=FZ+Forza",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse fz forza",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "goshen-leiming-69-string-review",
+      "slug": "goshen-leiming-69-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "huayu-slayer-racket-review",
+      "slug": "huayu-slayer-racket-review",
+      "expectProductId": "huayu-slayer",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Huayu",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse huayu",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "jujiang-lbtu-value-racket-review",
+      "slug": "jujiang-lbtu-value-racket-review",
+      "expectProductId": "jujiang-lbtu",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=JuJiang",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse jujiang",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "jujiang-mzs-66un-string-review",
+      "slug": "jujiang-mzs-66un-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=JuJiang",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+      "slug": "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro",
+      "expectProductId": "kawasaki-chocolate-88d",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-crimson-blade-racket-review",
+      "slug": "kawasaki-crimson-blade-racket-review",
+      "expectProductId": "kawasaki-crimson-blade",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-glacier-800-racket-review",
+      "slug": "kawasaki-glacier-800-racket-review",
+      "expectProductId": "kawasaki-glacier-800",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-h2-6u-superlight-racket-review",
+      "slug": "kawasaki-h2-6u-superlight-racket-review",
+      "expectProductId": "kawasaki-h2",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-kace-shoes-review",
+      "slug": "kawasaki-kace-shoes-review",
+      "expectProductId": "kawasaki-kace",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-master-mao-20-racket-review",
+      "slug": "kawasaki-master-mao-20-racket-review",
+      "expectProductId": "kawasaki-master-mao-20",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-star-cross-racket-review",
+      "slug": "kawasaki-star-cross-racket-review",
+      "expectProductId": "kawasaki-star-cross",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-star-cross-second-perspective-review",
+      "slug": "kawasaki-star-cross-second-perspective-review",
+      "expectProductId": "kawasaki-star-cross",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kawasaki-twilight-shoes-review",
+      "slug": "kawasaki-twilight-shoes-review",
+      "expectProductId": "kawasaki-twilight",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kumpoo-js-63-string-review",
+      "slug": "kumpoo-js-63-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kumpoo-js-67-string-review",
+      "slug": "kumpoo-js-67-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kumpoo-kh-g805-lite-pro-shoes-review",
+      "slug": "kumpoo-kh-g805-lite-pro-shoes-review",
+      "expectProductId": "kumpoo-kh-g805-lite-pro",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kumpoo-shanhai-new-racket-review",
+      "slug": "kumpoo-shanhai-new-racket-review",
+      "expectProductId": "kumpoo-shanhai-new",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kumpoo-shura-2-racket-review",
+      "slug": "kumpoo-shura-2-racket-review",
+      "expectProductId": "kumpoo-shura-2",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-aerus-iii-pro-shoes-review",
+      "slug": "li-ning-aerus-iii-pro-shoes-review",
+      "expectProductId": "ln-saga-iii-pro",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-axforce-10-beginner-attack-review",
+      "slug": "li-ning-axforce-10-beginner-attack-review",
+      "expectProductId": "ln-axforce-10",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-axforce-100-gen-2-vs-gen-1",
+      "slug": "li-ning-axforce-100-gen-2-vs-gen-1",
+      "expectProductId": "ln-axforce-100-gen-2",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-axforce-80-jr-junior-review",
+      "slug": "li-ning-axforce-80-jr-junior-review",
+      "expectProductId": "ln-axforce-80-jr",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-axforce-80-review",
+      "slug": "li-ning-axforce-80-review",
+      "expectProductId": "ln-axforce-80",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-axforce-90-new-5u-deep-dive",
+      "slug": "li-ning-axforce-90-new-5u-deep-dive",
+      "expectProductId": "ln-axforce-90-new",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-axforce-90-new-review",
+      "slug": "li-ning-axforce-90-new-review",
+      "expectProductId": "ln-axforce-90-new",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-bladesabre-2-pro-shoes-review",
+      "slug": "li-ning-bladesabre-2-pro-shoes-review",
+      "expectProductId": "ln-bladesabre-2-pro",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-bladesabre-max-shoes-review",
+      "slug": "li-ning-bladesabre-max-shoes-review",
+      "expectProductId": "ln-bladesabre-max",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-bladex-500-pro-curious-review",
+      "slug": "li-ning-bladex-500-pro-curious-review",
+      "expectProductId": "ln-blade-500-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-bladex-800-speed-vs-halbertec-9000-power",
+      "slug": "li-ning-bladex-800-speed-vs-halbertec-9000-power",
+      "expectProductId": "ln-bladex-800-speed",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-bladex-900-new-review",
+      "slug": "li-ning-bladex-900-new-review",
+      "expectProductId": "ln-bladex-900-new",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-bladex-arrow-review",
+      "slug": "li-ning-bladex-arrow-review",
+      "expectProductId": "ln-bladex-arrow",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-flagship-racket-buying-guide-2026",
+      "slug": "li-ning-flagship-racket-buying-guide-2026",
+      "expectProductId": "ln-axforce-100-gen-2",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-gp100-pro-overgrip-review",
+      "slug": "li-ning-gp100-pro-overgrip-review",
+      "expectCatalogHref": "/catalog/?cat=grip&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-halbertec-7000-ii-review",
+      "slug": "li-ning-halbertec-7000-ii-review",
+      "expectProductId": "ln-halbertec-7000-ii",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-halbertec-7000-review",
+      "slug": "li-ning-halbertec-7000-review",
+      "expectProductId": "ln-halbertec-7000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+      "slug": "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+      "expectProductId": "yy-arcsaber-11-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-halbertec-9000-power-deep-dive",
+      "slug": "li-ning-halbertec-9000-power-deep-dive",
+      "expectProductId": "ln-halbertec-9000-power",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-halbertec-9000-standalone-review",
+      "slug": "li-ning-halbertec-9000-standalone-review",
+      "expectProductId": "ln-halbertec-9000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-halbertec-flagship-lineup-review",
+      "slug": "li-ning-halbertec-flagship-lineup-review",
+      "expectProductId": "ln-halbertec-9000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-l64-string-review",
+      "slug": "li-ning-l64-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-l66-string-first-look",
+      "slug": "li-ning-l66-string-first-look",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-l69-string-review",
+      "slug": "li-ning-l69-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-lt66-power-string-review",
+      "slug": "li-ning-lt66-power-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "li-ning-thunder-100-gen-2-vs-gen-1",
+      "slug": "li-ning-thunder-100-gen-2-vs-gen-1",
+      "expectProductId": "ln-axforce-100-gen-2",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "mizuno-carbo-pro-823-review",
+      "slug": "mizuno-carbo-pro-823-review",
+      "expectProductId": "mizuno-carbo-pro-823",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Mizuno",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse mizuno",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "mizuno-carbo-pro-825-review",
+      "slug": "mizuno-carbo-pro-825-review",
+      "expectProductId": "mizuno-carbo-pro-825",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Mizuno",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse mizuno",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "rsl-aero-classic-tourney-shuttle-review",
+      "slug": "rsl-aero-classic-tourney-shuttle-review",
+      "expectProductId": "rsl-aero-classic-tourney-shuttle",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=RSL",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse rsl",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "rsl-aero-u-shuttle-review",
+      "slug": "rsl-aero-u-shuttle-review",
+      "expectProductId": "rsl-aero-u-shuttle",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=RSL",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse rsl",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "rsl-at70-racket-review",
+      "slug": "rsl-at70-racket-review",
+      "expectProductId": "rsl-at70",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=RSL",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse rsl",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "rsl-no4-plus-shuttle-review",
+      "slug": "rsl-no4-plus-shuttle-review",
+      "expectProductId": "rsl-no4-plus-shuttle",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=RSL",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse rsl",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "rsl-supreme-shuttle-review",
+      "slug": "rsl-supreme-shuttle-review",
+      "expectProductId": "rsl-supreme-shuttle",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=RSL",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse rsl",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-a970-nitro-lite-shoes-review",
+      "slug": "victor-a970-nitro-lite-shoes-review",
+      "expectProductId": "vic-a970-nitro-lite",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-auraspeed-90k-ii-review",
+      "slug": "victor-auraspeed-90k-ii-review",
+      "expectProductId": "vic-auraspeed-90k-ii",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-auraspeed-99-hayabusa-review",
+      "slug": "victor-auraspeed-99-hayabusa-review",
+      "expectProductId": "vic-auraspeed-99",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-auraspeed-fantome-review",
+      "slug": "victor-auraspeed-fantome-review",
+      "expectProductId": "vic-auraspeed-fantome",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-auraspeed-hs-plus-attack-review",
+      "slug": "victor-auraspeed-hs-plus-attack-review",
+      "expectProductId": "vic-auraspeed-hs-plus",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-auraspeed-hs-plus-deep-dive",
+      "slug": "victor-auraspeed-hs-plus-deep-dive",
+      "expectProductId": "vic-auraspeed-hs-plus",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-c90nl-shoes-review",
+      "slug": "victor-c90nl-shoes-review",
+      "expectProductId": "vic-c90nl",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-carbonsonic-max-shuttle-review",
+      "slug": "victor-carbonsonic-max-shuttle-review",
+      "expectProductId": "vic-carbonsonic-max-shuttle",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-drivex-12-vs-astrox-88d-pro",
+      "slug": "victor-drivex-12-vs-astrox-88d-pro",
+      "expectProductId": "vic-yu-12",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+      "slug": "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+      "expectProductId": "vic-yu-12",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-drivex-12-zsw-vs-original-comparison",
+      "slug": "victor-drivex-12-zsw-vs-original-comparison",
+      "expectProductId": "vic-yu-12",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-fz-88d-power-purple-review",
+      "slug": "victor-fz-88d-power-purple-review",
+      "expectProductId": "vic-fz-88d-power-purple",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-fz-flash-1000-racket-review",
+      "slug": "victor-fz-flash-1000-racket-review",
+      "expectProductId": "vic-fz-flash-1000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-jetspeed-12-curious-review",
+      "slug": "victor-jetspeed-12-curious-review",
+      "expectProductId": "vic-jetspeed-12",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-jipo-ls-racket-review",
+      "slug": "victor-jipo-ls-racket-review",
+      "expectProductId": "vic-jipo-ls",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-p8500-ii-shoes-review",
+      "slug": "victor-p8500-ii-shoes-review",
+      "expectProductId": "vic-p8500-ii",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-p8500-ii-vs-a970-nitro-lite",
+      "slug": "victor-p8500-ii-vs-a970-nitro-lite",
+      "expectProductId": "vic-p8500-ii",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-replacement-insoles-buyer-guide",
+      "slug": "victor-replacement-insoles-buyer-guide",
+      "expectProductId": "vic-p9200-iii",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-sonic-boom-pro-budget-attack-review",
+      "slug": "victor-sonic-boom-pro-budget-attack-review",
+      "expectProductId": "vic-sonic-boom-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-thruster-9900-curiosity-review",
+      "slug": "victor-thruster-9900-curiosity-review",
+      "expectProductId": "vic-thruster-9900",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-thruster-falcon-review",
+      "slug": "victor-thruster-falcon-review",
+      "expectProductId": "vic-thruster-falcon-enhanced",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-thruster-hwql-nuke-review",
+      "slug": "victor-thruster-hwql-nuke-review",
+      "expectProductId": "vic-thruster-hwql",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-thruster-sr-cherry-blossom-review",
+      "slug": "victor-thruster-sr-cherry-blossom-review",
+      "expectProductId": "vic-thruster-sr",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-tk-f-c-ultra-review",
+      "slug": "victor-tk-f-c-ultra-review",
+      "expectProductId": "vic-tk-f-c-ultra",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "victor-yu-12-racket-review",
+      "slug": "victor-yu-12-racket-review",
+      "expectProductId": "vic-yu-12",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-65z4-shoes-review",
+      "slug": "yonex-65z4-shoes-review",
+      "expectProductId": "yy-power-cushion-65-z4",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-aerosensa-50-shuttle-review",
+      "slug": "yonex-aerosensa-50-shuttle-review",
+      "expectProductId": "yy-as-50",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-arcsaber-10-complete-buying-guide",
+      "slug": "yonex-arcsaber-10-complete-buying-guide",
+      "expectProductId": "yy-arcsaber-11-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-arcsaber-11-pro-review",
+      "slug": "yonex-arcsaber-11-pro-review",
+      "expectProductId": "yy-arcsaber-11-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-arcsaber-7-play-review",
+      "slug": "yonex-arcsaber-7-play-review",
+      "expectProductId": "yy-arcsaber-7-play",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-arcsaber-7-tour-review",
+      "slug": "yonex-arcsaber-7-tour-review",
+      "expectProductId": "yy-arcsaber-7-tour",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+      "slug": "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+      "expectProductId": "yy-astrox-100zz",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      "slug": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      "expectProductId": "yy-astrox-100zz",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-77-pro-review",
+      "slug": "yonex-astrox-77-pro-review",
+      "expectProductId": "yy-astrox-77-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-88-pro-2024-review",
+      "slug": "yonex-astrox-88-pro-2024-review",
+      "expectProductId": "yy-astrox-88d-pro-2024",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-88s-tour-curious-review",
+      "slug": "yonex-astrox-88s-tour-curious-review",
+      "expectProductId": "yy-astrox-88s-tour",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-99-pro-2-deep-dive",
+      "slug": "yonex-astrox-99-pro-2-deep-dive",
+      "expectProductId": "yy-astrox-99-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-99-pro-3-deep-dive",
+      "slug": "yonex-astrox-99-pro-3-deep-dive",
+      "expectProductId": "yy-astrox-99-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-99-pro-gen-1-review",
+      "slug": "yonex-astrox-99-pro-gen-1-review",
+      "expectProductId": "yy-astrox-99-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-astrox-nextage-review",
+      "slug": "yonex-astrox-nextage-review",
+      "expectProductId": "yy-astrox-nextage",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-comfort-z3-shoes-review",
+      "slug": "yonex-comfort-z3-shoes-review",
+      "expectProductId": "yy-comfort-z3",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-eclipsion-z3-shoes-review",
+      "slug": "yonex-eclipsion-z3-shoes-review",
+      "expectProductId": "yy-eclipsion-z3",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-grpht-thrttl-training-shoe-review",
+      "slug": "yonex-grpht-thrttl-training-shoe-review",
+      "expectProductId": "yy-grpht-thrttl",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoflare-1000z-play-review",
+      "slug": "yonex-nanoflare-1000z-play-review",
+      "expectProductId": "yy-nanoflare-1000-play",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+      "slug": "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z",
+      "expectProductId": "yy-nanoflare-700-pro-2024",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoflare-700-review",
+      "slug": "yonex-nanoflare-700-review",
+      "expectProductId": "yy-nanoflare-700-pro-2024",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoflare-800-pro-tour-review",
+      "slug": "yonex-nanoflare-800-pro-tour-review",
+      "expectProductId": "yy-nanoflare-800-pro-tour",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoflare-800-pro-vs-nf700",
+      "slug": "yonex-nanoflare-800-pro-vs-nf700",
+      "expectProductId": "yy-nanoflare-800-pro",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoflare-nextage-review",
+      "slug": "yonex-nanoflare-nextage-review",
+      "expectProductId": "yy-nanoflare-nextage",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
+      "slug": "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
+      "expectProductId": "yy-nanoray-zspeed",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-power-cushion-88-dial-3-review",
+      "slug": "yonex-power-cushion-88-dial-3-review",
+      "expectProductId": "yy-power-cushion-88-dial-3",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "yonex-subaxia-gt-shoes-review",
+      "slug": "yonex-subaxia-gt-shoes-review",
+      "expectProductId": "yy-subaxia-gt",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
     }
   ]
 }

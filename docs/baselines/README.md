@@ -40,7 +40,13 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/home-baseline-
 
 Committed `/review/` hub and priority article slug expectations for catalog exit, related reading shelf, finder CTA, equipment finder panel, and minimum article corpus:
 
-- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus review-map article slugs, homepage featured reviews, popular-search review deep-links, compare-guide editorial review shelves, and every `/review/[slug]/` URL in [`lighthouserc.json`](../../lighthouserc.json). `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json); `requireFeaturedParity` links to [`home-featured-reviews.json`](../../src/data/home-featured-reviews.json); `requireLighthouseParity` links to committed Lighthouse review article URLs via `src/lib/lighthouse-paths.ts`; `requirePopularSearchParity` links to `src/lib/home-popular-searches.ts`; `requireCompareGuideReviewParity` links to `src/lib/compare-guide-reviews.ts`.
+- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus the full mapped review corpus (140 slugs), homepage featured reviews, popular-search review deep-links, compare-guide editorial review shelves, and every `/review/[slug]/` URL in [`lighthouserc.json`](../../lighthouserc.json). `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json); `requireFeaturedParity` links to [`home-featured-reviews.json`](../../src/data/home-featured-reviews.json); `requireLighthouseParity` links to committed Lighthouse review article URLs via `src/lib/lighthouse-paths.ts`; `requirePopularSearchParity` links to `src/lib/home-popular-searches.ts`; `requireCompareGuideReviewParity` links to `src/lib/compare-guide-reviews.ts`; `requireFullMappedParity` links to every key in [`blog-review-product-map.json`](../../src/data/blog-review-product-map.json) via `src/lib/mapped-review-slugs.ts`.
+
+After adding review→product map entries, sync new baseline rows:
+
+```bash
+npm run reviews:sync-baseline
+```
 
 Validate reviews hub + article parity (runs in CI after brands guard):
 

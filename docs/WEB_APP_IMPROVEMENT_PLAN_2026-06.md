@@ -504,7 +504,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **PWA ib-v27** — precaches 5 additional Lighthouse review article shells
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT59_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT59_2026-06.md)
 
-### Sprint 60 — This branch
+### Sprint 60 — Shipped (PR #208)
 
 - **Compare-guide editorial review golden profiles** — 7 shelf-linked review slugs in `reviews-queries.json`
 - **Compare-guide parity** — `coverage.requireCompareGuideReviewParity` links reviews baseline to compare-guide shelves
@@ -513,12 +513,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **PWA ib-v28** — precaches 7 compare-guide editorial review article shells
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT60_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT60_2026-06.md)
 
-### Next (Sprint 61+)
+### Sprint 61 — This branch
+
+- **Full mapped corpus golden profiles** — 140 mapped review slugs in `reviews-queries.json` (22 → 142 article rows)
+- **Full-corpus parity** — `coverage.requireFullMappedParity` links reviews baseline to `blog-review-product-map.json`
+- **Baseline sync tooling** — `scripts/sync-reviews-baseline.mjs` + `npm run reviews:sync-baseline`
+- **Shared mapped slug manifest** — `src/lib/mapped-review-slugs.ts`
+- **Category-aware guards** — string/grip rows get catalog exit without equipment finder panel
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT61_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT61_2026-06.md)
+
+### Next (Sprint 62+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
-- Expand per-article review golden profiles to full mapped corpus
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
