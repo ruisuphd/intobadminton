@@ -36,5 +36,18 @@ describe("reactions worker scaffold", () => {
     );
     expect(deployWorkflow).toContain("workflow_dispatch");
     expect(deployWorkflow).toContain("wrangler");
+    expect(deployWorkflow).toContain("reactions:smoke");
+    expect(deployWorkflow).toContain("REACTIONS_API_URL");
+  });
+
+  it("ships scheduled reactions health workflow", () => {
+    const healthWorkflow = readFileSync(
+      resolve(ROOT, ".github/workflows/reactions-health.yml"),
+      "utf8"
+    );
+    expect(healthWorkflow).toContain("schedule:");
+    expect(healthWorkflow).toContain("workflow_dispatch");
+    expect(healthWorkflow).toContain("reactions:smoke");
+    expect(healthWorkflow).toContain("REACTIONS_API_URL");
   });
 });

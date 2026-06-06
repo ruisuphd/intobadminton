@@ -21,8 +21,28 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Contract tests
+        working-directory: ${{ github.workspace }}
+        run: npm test -- workers/reactions/index.test.js src/lib/reactions-contract.test.ts
       - name: Deploy with Wrangler
-        run: npx -y wrangler@3 deploy
+        id: deploy
+        run: |
+          set -o pipefail
+          npx -y wrangler@3 deploy 2>&1 | tee deploy.log
+          WORKER_URL=$(grep -Eo 'https://[^[:space:]]+\.workers\.dev' deploy.log | head -1 || true)
+          if [ -z "$WORKER_URL" ]; then
+            echo "::warning::Could not parse worker URL from wrangler output — post-deploy smoke skipped"
+          else
+            echo "worker_url=$WORKER_URL" >> "$GITHUB_OUTPUT"
+            echo "Deployed worker: $WORKER_URL"
+            echo "Set repository secret REACTIONS_API_URL=$WORKER_URL then rebuild Pages."
+          fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Post-deploy health smoke
+        if: steps.deploy.outputs.worker_url != ''
+        working-directory: ${{ github.workspace }}
+        env:
+          REACTIONS_API_URL: ${{ steps.deploy.outputs.worker_url }}
+        run: npm run reactions:smoke
