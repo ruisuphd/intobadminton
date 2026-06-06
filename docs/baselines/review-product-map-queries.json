@@ -5,7 +5,7 @@
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 39
+    "minMappedE2eGuards": 42
   },
   "queries": [
     {
@@ -358,6 +358,33 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning control review — Halbertec 9000 on /best/control-rackets/ (completes Halbertec family e2e after 8000/9000 Power/7000 II)"
+    },
+    {
+      "id": "commercial-yy-comfort-z3",
+      "slug": "yonex-comfort-z3-shoes-review",
+      "expectProductId": "yy-comfort-z3",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex comfort shoe review — Comfort Z3 on /best/shoes/ (joint-comfort pick)"
+    },
+    {
+      "id": "commercial-yy-eclipsion-z3",
+      "slug": "yonex-eclipsion-z3-shoes-review",
+      "expectProductId": "yy-eclipsion-z3",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex stability shoe review — Eclipsion Z3 on /best/shoes/ (max stability pick)"
+    },
+    {
+      "id": "commercial-ln-bladesabre-max",
+      "slug": "li-ning-bladesabre-max-shoes-review",
+      "expectProductId": "ln-bladesabre-max",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning value shoe review — Bladesabre MAX on /best/shoes/ (sub-$120 pick)"
     },
     {
       "id": "explainer-how-to-choose-racket",

@@ -79,6 +79,8 @@
 
 **Sprint 91 addendum:** Intermediate/control review-map e2e — ✅ Victor Yu 12 (DriveX 12) + Halbertec 9000 standalone golden profiles; `minMappedE2eGuards: 39`; DriveX 8S blocked (no dedicated review article in catalogue).
 
+**Sprint 92 addendum:** Shoes commercial review-map e2e — ✅ Comfort Z3 + Eclipsion Z3 + Bladesabre MAX golden profiles on `/best/shoes/`; `minMappedE2eGuards: 42`; DriveX 8S blocked (no dedicated review article in catalogue).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -759,19 +761,25 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 37`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT90_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT90_2026-06.md)
 
-### Sprint 91 — This branch (`cursor/web-app-improvement-plan-6460`)
+### Sprint 91 — Shipped (PR #239)
 
 - **Review-map e2e expansion** — Victor Yu 12 (DriveX 12) + Halbertec 9000 standalone golden profiles with Playwright smoke
 - **`minMappedE2eGuards: 39`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT91_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT91_2026-06.md)
 
-### Next (Sprint 92+)
+### Sprint 92 — This branch (`cursor/web-app-improvement-plan-a389`)
+
+- **Shoes commercial review-map e2e** — Comfort Z3 + Eclipsion Z3 + Bladesabre MAX golden profiles with Playwright smoke on `/best/shoes/`
+- **`minMappedE2eGuards: 42`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT92_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT92_2026-06.md)
+
+### Next (Sprint 93+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
-- Thruster Ryuga II + DriveX 8S review ingestion; shoes commercial review-map e2e (Comfort Z3, Eclipsion Z3, Bladesabre MAX)
+- Thruster Ryuga II + DriveX 8S review ingestion
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
