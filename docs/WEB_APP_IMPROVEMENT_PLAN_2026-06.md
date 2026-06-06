@@ -32,7 +32,7 @@
 | 1 | Homepage Lighthouse / critical-path JS | CI + CWV | ✅ PR #92 (prebuild slices + deferred engagement) |
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
-| 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — catalogue-backed image CI on 6 commercial landings; video deferred |
+| 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — catalogue-backed image CI on 12/17 commercial landings; video deferred |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; wire workflow + Pages smoke; owner secret pending |
 
 **Sprint 70 addendum:** `productId` linkage on commercial `/best/*` — ✅ 17 landings guarded in CI; 22 new wires (PR #218).
@@ -44,6 +44,8 @@
 **Sprint 73 addendum:** L69 retailer image — ✅ strings 6/6 imagery; catalogue-backed image CI; Li-Ning + Victor brand PDP exits.
 
 **Sprint 74 addendum:** Tier-4 brand hub PDP exits — ✅ 7/7 hubs; Halbertec 9000 image; image CI on 9 commercial landings.
+
+**Sprint 75 addendum:** Catalogue image backfill — ✅ 10 SKUs; image CI on 12 commercial landings; defensive 6/6; Nanoray Light 70i waiver documented.
 
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
@@ -623,7 +625,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Brand hub PDP exits** — Li-Ning L69 + Victor DriveX 8S → `/product/[id]/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT73_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT73_2026-06.md)
 
-### Sprint 74 — This branch
+### Sprint 74 — Shipped (PR #222)
 
 - **Tier-4 brand hub PDP exits** — Anta AH600W, Bonny Snake Breath, Kawasaki Chocolate 88D, Kumpoo Shura II → `/product/[id]/`
 - **Halbertec 9000 catalogue image** — li-ningfamily.com distributor photo on `ln-halbertec-9000`
@@ -631,11 +633,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Brand hub PDP parity test** — all 7 dedicated hubs asserted in CI
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT74_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT74_2026-06.md)
 
-### Next (Sprint 75+)
+### Sprint 75 — This branch
+
+- **Catalogue image backfill** — 10 verified distributor photos (Yonex US, BadmintonDirect, e78.us)
+- **Image CI expansion** — defensive-rackets 6/6; head-light-rackets + rackets-for-shoulder-comfort 5/6 with Nanoray Light 70i waiver
+- **Commercial landings under image CI** — 12/17 (was 9/17)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT75_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT75_2026-06.md)
+
+### Next (Sprint 76+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
-- Expand image CI to remaining 8 commercial landings (catalogue image backfill)
+- Expand image CI to remaining 5 commercial landings (wide-feet, budget-shoes, lightweight-5u, head-heavy-under-150, rackets-under-100)
+- Nanoray Light 70i verified image (unblocks 4 landings)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
