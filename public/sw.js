@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v27";
+const CACHE_VERSION = "ib-v28";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -110,6 +110,13 @@ const PRECACHE_URLS = [
   "/review/anta-ah600w-racket-review/",
   "/review/yonex-tour-series-buying-guide/",
   "/review/how-to-choose-a-badminton-racket/",
+  "/review/yonex-nanoflare-speed-series-explained/",
+  "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/",
+  "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/",
+  "/review/yonex-nanoflare-800-pro-and-victor-hs-plus/",
+  "/review/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/",
+  "/review/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/",
+  "/review/li-ning-bladex-800-speed-tough-elastic/",
   "/manifest.webmanifest",
   "/intobadminton-mark.png",
   "/intobadminton-icon-192.png",

@@ -89,4 +89,11 @@ export const PRECACHE_ASSERT_PATHS = [
   "/review/anta-ah600w-racket-review/",
   "/review/yonex-tour-series-buying-guide/",
   "/review/how-to-choose-a-badminton-racket/",
+  "/review/yonex-nanoflare-speed-series-explained/",
+  "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/",
+  "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/",
+  "/review/yonex-nanoflare-800-pro-and-victor-hs-plus/",
+  "/review/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/",
+  "/review/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/",
+  "/review/li-ning-bladex-800-speed-tough-elastic/",
 ] as const;

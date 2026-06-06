@@ -49,3 +49,13 @@ export const homePopularSearches: HomePopularSearch[] = [
 export function homePopularSearchHrefs(): string[] {
   return homePopularSearches.map((entry) => entry.href);
 }
+
+/** Review article slugs surfaced in the homepage popular-search grid. */
+export function homePopularReviewSlugs(): string[] {
+  return homePopularSearches
+    .filter(
+      (entry) =>
+        entry.href.startsWith("/review/") && entry.href !== "/review/"
+    )
+    .map((entry) => entry.href.slice("/review/".length).replace(/\/$/, ""));
+}

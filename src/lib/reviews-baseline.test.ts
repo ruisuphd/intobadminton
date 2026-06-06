@@ -148,4 +148,26 @@ describe("reviews-baseline", () => {
     const result = evaluateReviewsBaseline(parsed.file);
     expect(result.ok).toBe(true);
   });
+
+  it("requires homepage popular-search review slugs in committed reviews baseline", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+
+    expect(parsed.file.coverage?.requirePopularSearchParity).toBe(true);
+    const result = evaluateReviewsBaseline(parsed.file);
+    expect(result.ok).toBe(true);
+  });
+
+  it("requires compare-guide editorial review slugs in committed reviews baseline", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+
+    expect(parsed.file.coverage?.requireCompareGuideReviewParity).toBe(true);
+    const result = evaluateReviewsBaseline(parsed.file);
+    expect(result.ok).toBe(true);
+  });
 });

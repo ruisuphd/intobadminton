@@ -11,7 +11,9 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { blogArticles, getBlogArticle } from "@/lib/blog";
+import { compareGuideReviewSlugs } from "@/lib/compare-guide-reviews";
 import { homeFeaturedReviewSlugs } from "@/lib/home-featured";
+import { homePopularReviewSlugs } from "@/lib/home-popular-searches";
 import { lighthouseReviewArticleSlugs } from "@/lib/lighthouse-paths";
 import { catalogHrefFromProduct } from "@/lib/catalog-url";
 import { reviewProductIdForBlog } from "@/lib/content-links";
@@ -57,6 +59,10 @@ export type ReviewsBaselineCoverageSpec = {
   requireFeaturedParity?: boolean;
   /** Every article slug in lighthouserc.json `/review/` URLs must appear here. */
   requireLighthouseParity?: boolean;
+  /** Every review slug in homepage popular-search grid must appear here. */
+  requirePopularSearchParity?: boolean;
+  /** Every editorial review slug linked from compare guides must appear here. */
+  requireCompareGuideReviewParity?: boolean;
 };
 
 export type ReviewsBaselineFile = {
@@ -184,6 +190,8 @@ export function validateReviewsBaselineFile(
       requireReviewMapParity: c.requireReviewMapParity === true,
       requireFeaturedParity: c.requireFeaturedParity === true,
       requireLighthouseParity: c.requireLighthouseParity === true,
+      requirePopularSearchParity: c.requirePopularSearchParity === true,
+      requireCompareGuideReviewParity: c.requireCompareGuideReviewParity === true,
     };
   }
 
@@ -378,6 +386,34 @@ export function evaluateReviewsBaselineCoverage(
         return {
           id: "coverage",
           message: `lighthouse review slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
+    }
+  }
+
+  if (file.coverage?.requirePopularSearchParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of homePopularReviewSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `popular-search review slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
+    }
+  }
+
+  if (file.coverage?.requireCompareGuideReviewParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of compareGuideReviewSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `compare-guide review slug "${slug}" missing from reviews-queries.json`,
         };
       }
     }
