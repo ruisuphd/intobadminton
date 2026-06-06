@@ -529,7 +529,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **PWA ib-v29** — precaches 16 brand shelf review shells + stringing-hole explainer
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT62_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT62_2026-06.md)
 
-### Sprint 63 — This branch
+### Sprint 63 — Shipped (PR #211)
 
 - **Homepage featured review PWA precache** — all 6 featured review shells offline-precached
 - **Shared featured precache manifest** — `homeFeaturedReviewPrecachePaths()` in `home-featured.ts`
@@ -537,7 +537,15 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Offline recovery** — Gosen Ryoga Shiden featured review on `/offline/` sidebar
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT63_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT63_2026-06.md)
 
-### Next (Sprint 64+)
+### Sprint 64 — This branch
+
+- **Featured review offline recovery parity** — all 6 featured reviews on `/offline/` recovery sidebar
+- **Popular-search review offline recovery** — all 4 homepage grid review picks on recovery sidebar
+- **Shared offline recovery manifests** — `homeFeaturedOfflineRecoveryLinks()` + `homePopularSearchReviewOfflineRecoveryLinks()`
+- **Parity guards** — `offline-recovery.test.ts` asserts featured + popular-search href coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT64_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT64_2026-06.md)
+
+### Next (Sprint 65+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

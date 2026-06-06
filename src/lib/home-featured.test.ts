@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  homeFeaturedOfflineRecoveryLinks,
   homeFeaturedReviewHrefs,
   homeFeaturedReviewPrecachePaths,
   homeFeaturedReviewSlugs,
@@ -28,5 +29,15 @@ describe("home-featured", () => {
     expect(paths).toContain("/review/yonex-nanospeed-9900-ltg-green-sword-review/");
     expect(paths).toContain("/review/victor-fz-100xx-budget-attack-review/");
     expect(paths).toHaveLength(4);
+  });
+
+  it("builds offline recovery links for every featured review", () => {
+    const links = homeFeaturedOfflineRecoveryLinks();
+    expect(links).toHaveLength(6);
+    expect(links.map((link) => link.href)).toEqual(homeFeaturedReviewHrefs());
+    for (const link of links) {
+      expect(link.label.length).toBeGreaterThan(0);
+      expect(link.description).toMatch(/^Precached —/);
+    }
   });
 });

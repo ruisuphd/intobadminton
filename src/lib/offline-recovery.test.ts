@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { homeFeaturedReviewHrefs } from "./home-featured";
+import { homePopularSearchReviewOfflineRecoveryLinks } from "./home-popular-searches";
 import { PRECACHE_ASSERT_PATHS } from "./pwa-precache-paths";
 import {
   CRUX_OFFLINE_RECOVERY_PATHS,
@@ -59,6 +61,23 @@ describe("offline recovery paths", () => {
   it("CrUX template paths are precached in the service worker", () => {
     for (const path of cruxTemplatePaths()) {
       expect(swSource, `missing precache for ${path}`).toContain(`"${path}"`);
+    }
+  });
+
+  it("lists every homepage featured review in offline recovery", () => {
+    for (const path of homeFeaturedReviewHrefs()) {
+      expect(OFFLINE_RECOVERY_PATHS, `missing offline recovery for ${path}`).toContain(
+        path
+      );
+    }
+  });
+
+  it("lists every homepage popular-search review in offline recovery", () => {
+    for (const link of homePopularSearchReviewOfflineRecoveryLinks()) {
+      expect(
+        OFFLINE_RECOVERY_PATHS,
+        `missing offline recovery for ${link.href}`
+      ).toContain(link.href);
     }
   });
 });
