@@ -355,6 +355,9 @@ export function reviewMapBaselineArticleSlugs(): string[] {
   const raw = JSON.parse(readFileSync(REVIEW_MAP_BASELINE_PATH, "utf8"));
   if (!Array.isArray(raw.queries)) return [];
   return raw.queries
+    .filter(
+      (row: { expectUnmapped?: boolean }) => row.expectUnmapped !== true
+    )
     .map((row: { slug?: string }) => row.slug)
     .filter(
       (slug: string | undefined): slug is string =>
