@@ -54,6 +54,8 @@ jobs:
         run: npm run lint:best-baseline
       - name: Best-of image coverage guard
         run: npm run lint:best-image-coverage
+      - name: Best-of productId coverage guard
+        run: npm run lint:best-product-id-coverage
       - name: Compare-guides golden-profile guard
         run: npm run lint:compare-guides-baseline
       - name: Guides golden-profile guard

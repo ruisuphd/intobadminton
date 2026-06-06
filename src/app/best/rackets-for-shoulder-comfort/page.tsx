@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 700 Pro (2024)",
       brand: "Yonex",
       priceUsd: 240,
+      productId: "yy-nanoflare-700-pro-2024",
       bestFor: "Club doubles with shoulder caution",
       specs: [
         { label: "Weight", value: "4U / 5U" },
@@ -88,6 +89,7 @@ const config: BestPicksConfig = {
       name: "Altius N-Feel",
       brand: "Mizuno",
       priceUsd: 200,
+      productId: "mizuno-altius-01-feel",
       bestFor: "Softest flagship-class feel",
       specs: [
         { label: "Weight", value: "4U" },

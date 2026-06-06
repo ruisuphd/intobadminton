@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Power Cushion 65 Z Wide",
       brand: "Yonex",
       priceUsd: 165,
+      productId: "yy-power-cushion-65z-wide",
       bestFor: "Wide feet, club to tournament play",
       specs: [
         { label: "Fit width", value: "Wide (also regular avail.)" },
@@ -96,6 +97,7 @@ const config: BestPicksConfig = {
       name: "P9200 Series",
       brand: "Victor",
       priceUsd: 130,
+      productId: "vic-p9200",
       bestFor: "Asian fit, value tournament shoe",
       specs: [
         { label: "Fit width", value: "Regular (slightly snug heel)" },
@@ -119,6 +121,7 @@ const config: BestPicksConfig = {
       name: "Eclipsion Z3",
       brand: "Yonex",
       priceUsd: 200,
+      productId: "yy-eclipsion-z3",
       bestFor: "Maximum stability and protection",
       specs: [
         { label: "Fit width", value: "Regular" },

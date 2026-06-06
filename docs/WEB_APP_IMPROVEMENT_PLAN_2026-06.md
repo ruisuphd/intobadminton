@@ -35,6 +35,8 @@
 | 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — DriveX 8S + Bladesabre MAX; L69 string image waiver |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; wire workflow + Pages smoke; owner secret pending |
 
+**Sprint 70 addendum:** `productId` linkage on commercial `/best/*` — ✅ 17 landings guarded in CI; 22 new wires this sprint.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -576,7 +578,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Victor DriveX 8S imagery** — verified manufacturer image on beginner/doubles/all-round best-of landings
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT68_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT68_2026-06.md)
 
-### Sprint 69 — This branch
+### Sprint 69 — Shipped (PR #217)
 
 - **Li-Ning Bladesabre MAX imagery** — verified Blade Max (AYAU003) on `/best/shoes/` + catalogue
 - **Catalogue image fallback** — `resolveBestPickImage` reuses verified SKU photos via `productId`
@@ -584,10 +586,18 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`productId` linkage** — L69 + Bladesabre MAX rows wire to finder/PDP exits
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT69_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT69_2026-06.md)
 
-### Next (Sprint 70+)
+### Sprint 70 — This branch
+
+- **`productId` backfill** — 22 new pick→SKU wires across 10 `/best/*` commercial landings
+- **Best-of productId coverage CI** — `lint:best-product-id-coverage` guards catalogue linkage
+- **Full linkage on smash/intermediate/singles** — 6/6 `productId` on key attack landings
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT70_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT70_2026-06.md)
+
+### Next (Sprint 71+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - L69 string verified product image when UK/EU distributor lists SKU
+- Ingest Play-tier catalogue SKUs (Astrox 77 Play, Nanoflare 700 Play)
 - Uncomment YouTube `sameAs` after channel claim
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
