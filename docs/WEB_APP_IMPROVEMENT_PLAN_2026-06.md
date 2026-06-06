@@ -83,6 +83,8 @@
 
 **Sprint 93 addendum:** Budget + wide-feet shoes commercial review-map e2e — ✅ Grpht Thrttl + Subaxia GT golden profiles on `/best/budget-badminton-shoes/`; P8500 II + Blast FF 3 on `/best/wide-feet-badminton-shoes/`; `minMappedE2eGuards: 46`; L69 string e2e blocked (string category excluded from reviewProductById lookup); DriveX 8S blocked (no dedicated review article in catalogue).
 
+**Sprint 94 addendum:** Budget racket + strings commercial review-map e2e — ✅ Nanoflare 1000 Play + Arcsaber 7 Play + Astrox Nextage + Thruster 9900 golden profiles; L69 string unblocked via `string` in `REVIEW_ELIGIBLE_CATEGORIES`; `minMappedE2eGuards: 51`; DriveX 8S blocked (no dedicated review article in catalogue).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -769,13 +771,26 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 39`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT91_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT91_2026-06.md)
 
-### Sprint 92 — This branch (`cursor/web-app-improvement-plan-a389`)
+### Sprint 92 — Shipped (PR #240)
 
 - **Shoes commercial review-map e2e** — Comfort Z3 + Eclipsion Z3 + Bladesabre MAX golden profiles with Playwright smoke on `/best/shoes/`
 - **`minMappedE2eGuards: 42`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT92_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT92_2026-06.md)
 
-### Next (Sprint 93+)
+### Sprint 93 — Shipped (PR #241)
+
+- **Budget + wide-feet shoes commercial review-map e2e** — Grpht Thrttl + Subaxia GT + P8500 II + Blast FF 3 golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 46`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT93_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT93_2026-06.md)
+
+### Sprint 94 — This branch (`cursor/web-app-improvement-plan-b2af`)
+
+- **Budget racket + strings commercial review-map e2e** — Nanoflare 1000 Play + Arcsaber 7 Play + Astrox Nextage + Thruster 9900 + L69 string golden profiles with Playwright smoke
+- **`string` in `REVIEW_ELIGIBLE_CATEGORIES`** — unblocks L69 string review enrichment and `reviewProductIdForBlog`
+- **`minMappedE2eGuards: 51`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT94_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT94_2026-06.md)
+
+### Next (Sprint 95+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
