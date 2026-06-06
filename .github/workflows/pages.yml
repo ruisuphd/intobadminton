@@ -43,6 +43,16 @@ jobs:
           # Optional: set repository secret REACTIONS_API_URL after deploying workers/reactions
           NEXT_PUBLIC_REACTIONS_API_URL: ${{ secrets.REACTIONS_API_URL }}
 
+      - name: Reactions worker smoke (when secret set)
+        env:
+          REACTIONS_API_URL: ${{ secrets.REACTIONS_API_URL }}
+        run: |
+          if [ -z "$REACTIONS_API_URL" ]; then
+            echo "REACTIONS_API_URL not configured — skipping pre-deploy smoke"
+            exit 0
+          fi
+          npm run reactions:smoke
+
       - name: Disable Jekyll on Pages
         run: touch out/.nojekyll
 

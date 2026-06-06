@@ -22,6 +22,23 @@ npm run lint:performance-baselines
 
 Runs `lint:crux-baseline` then `lint:gsc-baseline`.
 
+## Performance capture (owner)
+
+Print PageSpeed Insights and Search Console capture steps for the committed CSV templates:
+
+```bash
+npm run capture:performance-hints
+```
+
+Or individually:
+
+```bash
+npm run capture:crux-hints   # PSI links for docs/baselines/crux-template.csv
+npm run capture:gsc-hints    # GSC export steps for docs/baselines/gsc-template.csv
+```
+
+After filling metrics, validate with `npm run lint:performance-baselines`.
+
 ## Editorial guards (unified)
 
 Refresh review→catalogue map and PDP regression layers in one operator command:

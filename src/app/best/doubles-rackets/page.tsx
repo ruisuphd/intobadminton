@@ -153,8 +153,15 @@ const config: BestPicksConfig = {
       ],
       why: "Best $100-bracket racket for flat-drive doubles. Light enough for defense, stiff enough to teach clean contact, and built around the exact rally pattern doubles produces.",
       tradeoff: "Pro-tier 88S Pro / 1000Z players will outscore you with absolute equipment ceiling — but at this price, the gap is closer than the price tag suggests.",
-      // TODO image: Victor DriveX 8S J — source from victorsport.com/product/drivex-8-s
-      // (page is JS-rendered, copy hero image URL from browser inspector).
+      image: {
+        url: "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
+        source: "victor",
+        credit: "Image: Victor (victorsport.com)",
+        alt: "Victor DriveX 8S badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
   ],
   faqs: [

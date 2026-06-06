@@ -51,6 +51,15 @@ const config: BestPicksConfig = {
       why: "Victor's even-balance workhorse — fast enough for front court, stable enough for rear-court drives. Medium shaft forgives timing gaps better than extra-stiff flagships.",
       tradeoff: "Less smash ceiling than head-heavy DriveX attack variants.",
       evidenceLevel: "specs",
+      image: {
+        url: "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
+        source: "victor",
+        credit: "Image: Victor (victorsport.com)",
+        alt: "Victor DriveX 8S badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 3,

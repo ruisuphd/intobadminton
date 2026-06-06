@@ -1,0 +1,34 @@
+name: Wire reactions to Pages
+
+# Owner workflow: verify REACTIONS_API_URL then rebuild GitHub Pages so
+# NEXT_PUBLIC_REACTIONS_API_URL is baked into the static export.
+# Run after setting the repository secret to the deployed worker URL.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Reactions health smoke
+        env:
+          REACTIONS_API_URL: ${{ secrets.REACTIONS_API_URL }}
+        run: |
+          if [ -z "$REACTIONS_API_URL" ]; then
+            echo "::error::Set repository secret REACTIONS_API_URL to the worker origin first"
+            exit 1
+          fi
+          npm run reactions:smoke
+      - name: Trigger Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
