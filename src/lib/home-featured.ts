@@ -31,3 +31,12 @@ export function homeFeaturedReviewSlugs(): string[] {
 export function homeFeaturedReviewHrefs(): string[] {
   return homeFeaturedReviewSlugs().map((slug) => homeFeaturedReviewPath(slug));
 }
+
+/** Featured review shells not already covered by Lighthouse / brand / compare precache. */
+export function homeFeaturedReviewPrecachePaths(): string[] {
+  const alreadyPrecached = new Set([
+    "/review/gosen-ryoga-shiden-review/",
+    "/review/anta-ah600w-racket-review/",
+  ]);
+  return homeFeaturedReviewHrefs().filter((href) => !alreadyPrecached.has(href));
+}

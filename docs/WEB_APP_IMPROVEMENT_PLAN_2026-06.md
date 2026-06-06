@@ -522,14 +522,22 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Category-aware guards** — string/grip rows get catalog exit without equipment finder panel
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT61_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT61_2026-06.md)
 
-### Sprint 62 — This branch
+### Sprint 62 — Shipped (PR #210)
 
 - **Brand shelf review golden profiles** — 19 brand `relatedLinks` review slugs guarded via `requireBrandReviewParity`
 - **Shared brand review manifest** — `src/lib/brand-reviews.ts`
 - **PWA ib-v29** — precaches 16 brand shelf review shells + stringing-hole explainer
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT62_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT62_2026-06.md)
 
-### Next (Sprint 63+)
+### Sprint 63 — This branch
+
+- **Homepage featured review PWA precache** — all 6 featured review shells offline-precached
+- **Shared featured precache manifest** — `homeFeaturedReviewPrecachePaths()` in `home-featured.ts`
+- **PWA ib-v30** — precaches 4 new featured shells (nanospeed, voltric, fz-100xx, leisu-800-lt)
+- **Offline recovery** — Gosen Ryoga Shiden featured review on `/offline/` sidebar
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT63_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT63_2026-06.md)
+
+### Next (Sprint 64+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs

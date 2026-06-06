@@ -113,4 +113,8 @@ export const PRECACHE_ASSERT_PATHS = [
   "/review/kawasaki-star-cross-racket-review/",
   "/review/kawasaki-kace-shoes-review/",
   "/review/racket-stringing-hole-patterns-explained/",
+  "/review/yonex-nanospeed-9900-ltg-green-sword-review/",
+  "/review/yonex-voltric-z-force-ltd-2012-review/",
+  "/review/victor-fz-100xx-budget-attack-review/",
+  "/review/bonny-leisu-800-lt-review/",
 ] as const;
