@@ -137,15 +137,12 @@ const config: BestPicksConfig = {
         verified: true,
       },
     },
-    // TODO: image — Li-Ning BladeSabre Max shoe. Note: li-ningfamily.com
-    // catalog only shows Blade Pro / Blade Lite — verify the model name
-    // first; "BladeSabre Max" may be a misremembered SKU. Check
-    // li-ningfamily.com/products/1198-badminton-shoes/ or li-ning.com.cn.
     {
       rank: 6,
       name: "BladeSabre Max",
       brand: "Li-Ning",
       priceUsd: 110,
+      productId: "ln-bladesabre-max",
       bestFor: "Best sub-$120 shoe",
       specs: [
         { label: "Fit width", value: "Regular" },
@@ -154,6 +151,16 @@ const config: BestPicksConfig = {
       ],
       why: "Li-Ning's most legitimately competitive court shoe at the value tier. Build quality has caught up to Yonex / Victor mid-range models, and grip on wood courts is excellent. Strong choice if you replace shoes annually and refuse to spend $150+.",
       tradeoff: "Less stability than Power Cushion 65 Z. Skip if you have ankle history.",
+      image: {
+        url: "https://li-ningsports.co.uk/cdn/shop/files/AYAU003-212.jpg?v=1763149402&width=1520",
+        source: "lining",
+        credit:
+          "Image: Li-Ning (li-ningsports.co.uk) — Blade Max AYAU003-2 (UK name for Bladesabre MAX)",
+        alt: "Li-Ning Bladesabre MAX badminton shoe",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
   ],
   faqs: [

@@ -25,6 +25,7 @@ import {
 import { articleJsonLd } from "@/lib/structured-data";
 import { catalogHrefFromBestSlug } from "@/lib/catalog-url";
 import { relatedReadingForPath } from "@/lib/related-content";
+import { resolveBestPickImage } from "@/lib/best-pick-image";
 import { editorialReviewHref, productHref } from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
@@ -69,14 +70,18 @@ export type BestPicksConfig = {
 export function BestPicksPage({ config }: { config: BestPicksConfig }) {
   const path = `/best/${config.slug}/`;
   const related = relatedReadingForPath(path);
+  const picks = config.picks.map((p) => ({
+    ...p,
+    image: resolveBestPickImage(p, CATALOG),
+  }));
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": `${companyInfo.siteUrl}/best/${config.slug}/#list`,
     name: config.title,
     inLanguage: "en",
-    numberOfItems: config.picks.length,
-    itemListElement: config.picks.map((p) => {
+    numberOfItems: picks.length,
+    itemListElement: picks.map((p) => {
       const catalogMatch = lookupCatalogProduct(CATALOG, p.brand, p.name);
       const rating = computeEditorialRating(catalogMatch);
       const datePublished = ratingDatePublished(catalogMatch);
@@ -222,10 +227,10 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
          * /best/* needed to compete with retailer-style buying guides without
          * adopting their RPM-first layout.
          */}
-        <BestPicksComparisonTable picks={config.picks} />
+        <BestPicksComparisonTable picks={picks} />
 
         <ol className="space-y-6">
-          {config.picks.map((p) => (
+          {picks.map((p) => (
             <li
               key={p.name}
               id={p.name.toLowerCase().replace(/\s+/g, "-")}

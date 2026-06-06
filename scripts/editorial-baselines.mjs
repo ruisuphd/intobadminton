@@ -27,6 +27,10 @@ const GUARDS = [
     script: "scripts/best-baseline.mjs",
   },
   {
+    name: "best-of image coverage",
+    script: "scripts/best-image-coverage.mjs",
+  },
+  {
     name: "compare-guides golden profiles",
     script: "scripts/compare-guides-baseline.mjs",
   },

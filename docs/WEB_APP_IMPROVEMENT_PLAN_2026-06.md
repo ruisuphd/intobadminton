@@ -32,7 +32,7 @@
 | 1 | Homepage Lighthouse / critical-path JS | CI + CWV | ✅ PR #92 (prebuild slices + deferred engagement) |
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
-| 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — DriveX 8S on 3 best-of landings; Li-Ning TODOs remain |
+| 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — DriveX 8S + Bladesabre MAX; L69 string image waiver |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; wire workflow + Pages smoke; owner secret pending |
 
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
@@ -568,7 +568,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Unified performance baselines** — `lint:performance-baselines` chains CrUX + GSC; included in `lint:all-baselines`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT67_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT67_2026-06.md)
 
-### Sprint 68 — This branch
+### Sprint 68 — Shipped (PR #216)
 
 - **Wire reactions to Pages** — `wire-reactions-pages.yml` smoke + Pages rebuild trigger
 - **Pages pre-deploy smoke** — `pages.yml` hits `GET /health` when `REACTIONS_API_URL` is set
@@ -576,10 +576,18 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Victor DriveX 8S imagery** — verified manufacturer image on beginner/doubles/all-round best-of landings
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT68_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT68_2026-06.md)
 
-### Next (Sprint 69+)
+### Sprint 69 — This branch
+
+- **Li-Ning Bladesabre MAX imagery** — verified Blade Max (AYAU003) on `/best/shoes/` + catalogue
+- **Catalogue image fallback** — `resolveBestPickImage` reuses verified SKU photos via `productId`
+- **Best-of image coverage CI** — `lint:best-image-coverage` guards commercial `/best/*` photography
+- **`productId` linkage** — L69 + Bladesabre MAX rows wire to finder/PDP exits
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT69_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT69_2026-06.md)
+
+### Next (Sprint 70+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
-- Li-Ning product images on `/best/strings/` and `/best/shoes/`
+- L69 string verified product image when UK/EU distributor lists SKU
 - Uncomment YouTube `sameAs` after channel claim
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  

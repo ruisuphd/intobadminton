@@ -114,14 +114,12 @@ const config: BestPicksConfig = {
         verified: true,
       },
     },
-    // TODO: image — Li-Ning L69 string. Not on li-ningfamily.com (their
-    // current strings: No.1, N65, N68). Verify SKU naming; this may be the
-    // "No.5" or a regional variant. Check lining.com.cn or an Asian retailer.
     {
       rank: 5,
       name: "L69",
       brand: "Li-Ning",
       priceUsd: 8,
+      productId: "ln-l69-string",
       bestFor: "Best non-Yonex string under $10",
       specs: [
         { label: "Gauge", value: "0.69 mm" },
