@@ -15,7 +15,7 @@
 | **BadmintonCentral** | Explainer articles distinct from product reviews in CI | ✅ Unmapped racket-chooser explainer in Lighthouse + baseline |
 | **RacketGuide** | Shared URL parsing for PWA + CI guards | ✅ `lighthouse-paths.ts` module deduplicates parsing |
 
-**Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate, PWA ib-v26, lab + CrUX + GSC + full product-funnel + editorial CI guards.
+**Moat unchanged:** transparent fit score, `/data/` claims registry, static export, postbuild SEO gate, PWA ib-v27, lab + CrUX + GSC + full product-funnel + editorial CI guards.
 
 ---
 
