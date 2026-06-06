@@ -1,6 +1,10 @@
 import { expect, test } from "@playwright/test";
 import { homeFeaturedReviewHrefs } from "../src/lib/home-featured";
-import { homePopularSearchReviewOfflineRecoveryLinks } from "../src/lib/home-popular-searches";
+import {
+  homePopularSearchEditorialOfflineRecoveryLinks,
+  homePopularSearchHrefs,
+  homePopularSearchReviewOfflineRecoveryLinks,
+} from "../src/lib/home-popular-searches";
 import { OFFLINE_RECOVERY_PATHS } from "../src/lib/offline-recovery-paths";
 import { PRECACHE_ASSERT_PATHS } from "../src/lib/pwa-precache-paths";
 
@@ -180,6 +184,18 @@ test("offline fallback lists homepage featured and popular-search review recover
     await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
   }
   for (const link of homePopularSearchReviewOfflineRecoveryLinks()) {
+    await expect(page.locator(`a[href="${link.href}"]`).first()).toBeVisible();
+  }
+});
+
+test("offline fallback lists every homepage popular-search recovery link", async ({
+  page,
+}) => {
+  await page.goto("/offline/");
+  for (const href of homePopularSearchHrefs()) {
+    await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
+  }
+  for (const link of homePopularSearchEditorialOfflineRecoveryLinks()) {
     await expect(page.locator(`a[href="${link.href}"]`).first()).toBeVisible();
   }
 });

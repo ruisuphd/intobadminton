@@ -92,3 +92,53 @@ export function homePopularSearchReviewOfflineRecoveryLinks(): OfflineRecoveryLi
         "Precached — homepage popular-search editorial pick.",
     }));
 }
+
+const POPULAR_SEARCH_EDITORIAL_OFFLINE_DESCRIPTIONS: Record<string, string> = {
+  "/best/rackets-under-100/":
+    "Precached — homepage popular-search budget racket guide.",
+  "/best/lightweight-rackets-5u/":
+    "Precached — homepage popular-search 5U lightweight guide.",
+  "/best/rackets-for-shoulder-comfort/":
+    "Precached — homepage popular-search shoulder-comfort guide.",
+  "/best/control-rackets/":
+    "Precached — homepage popular-search control racket guide.",
+  "/best/wide-feet-badminton-shoes/":
+    "Precached — homepage popular-search wide-feet shoe guide.",
+  "/best/all-round-rackets/":
+    "Precached — homepage popular-search all-round racket guide.",
+  "/best/budget-badminton-shoes/":
+    "Precached — homepage popular-search budget shoe guide.",
+  "/best/head-heavy-rackets-under-150/":
+    "Precached — homepage popular-search head-heavy attack guide.",
+  "/best/singles-rackets/":
+    "Precached — homepage popular-search singles racket guide.",
+  "/best/head-light-rackets/":
+    "Precached — homepage popular-search head-light control guide.",
+  "/best/smash-heavy-rackets/":
+    "Precached — homepage popular-search smash racket guide.",
+  "/best/intermediate-rackets/":
+    "Precached — homepage popular-search intermediate racket guide.",
+  "/guides/badminton-shoes-vs-running-shoes/":
+    "Precached — homepage popular-search shoe comparison guide.",
+  "/best/strings/":
+    "Precached — homepage popular-search string buying guide.",
+  "/brands/yonex/":
+    "Precached — homepage popular-search Yonex brand hub.",
+  "/brands/victor/":
+    "Precached — homepage popular-search Victor brand hub.",
+  "/brands/li-ning/":
+    "Precached — homepage popular-search Li-Ning brand hub.",
+};
+
+/** Best-of, guide, and brand popular-search picks for `/offline/` recovery — shared with parity CI. */
+export function homePopularSearchEditorialOfflineRecoveryLinks(): OfflineRecoveryLink[] {
+  return homePopularSearches
+    .filter((entry) => !entry.href.startsWith("/review/"))
+    .map((entry) => ({
+      href: entry.href,
+      label: entry.label,
+      description:
+        POPULAR_SEARCH_EDITORIAL_OFFLINE_DESCRIPTIONS[entry.href] ??
+        "Precached — homepage popular-search editorial pick.",
+    }));
+}

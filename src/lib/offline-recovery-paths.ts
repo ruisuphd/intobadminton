@@ -1,5 +1,8 @@
 import { homeFeaturedOfflineRecoveryLinks } from "@/lib/home-featured";
-import { homePopularSearchReviewOfflineRecoveryLinks } from "@/lib/home-popular-searches";
+import {
+  homePopularSearchEditorialOfflineRecoveryLinks,
+  homePopularSearchReviewOfflineRecoveryLinks,
+} from "@/lib/home-popular-searches";
 
 /** CrUX-priority and Lighthouse commercial paths listed on `/offline/` recovery sidebar. */
 const CORE_OFFLINE_RECOVERY_LINKS = [
@@ -212,6 +215,7 @@ export const OFFLINE_RECOVERY_LINKS = dedupeOfflineRecoveryLinks([
   ...CORE_OFFLINE_RECOVERY_LINKS,
   ...homeFeaturedOfflineRecoveryLinks(),
   ...homePopularSearchReviewOfflineRecoveryLinks(),
+  ...homePopularSearchEditorialOfflineRecoveryLinks(),
 ]);
 
 /** Paths from `docs/baselines/crux-template.csv` that must appear in offline recovery. */
