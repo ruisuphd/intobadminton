@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "BG65",
       brand: "Yonex",
       priceUsd: 7,
+      productId: "yy-bg65",
       bestFor: "Most beginners and high-volume club players",
       specs: [
         { label: "Gauge", value: "0.70 mm" },

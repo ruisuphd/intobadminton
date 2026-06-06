@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Astrox 100ZZ",
       brand: "Yonex",
       priceUsd: 295,
+      productId: "yy-astrox-100zz",
       bestFor: "Singles attack with elite timing",
       specs: [
         { label: "Weight", value: "3U / 4U" },
@@ -101,6 +102,7 @@ const config: BestPicksConfig = {
       name: "Halbertec 9000 Power",
       brand: "Li-Ning",
       priceUsd: 245,
+      productId: "ln-halbertec-9000-power",
       bestFor: "Maximum smash mass per dollar",
       specs: [
         { label: "Weight", value: "3U / 4U" },
@@ -115,6 +117,7 @@ const config: BestPicksConfig = {
       name: "Auraspeed 100X SE (Mohammad Ahsan)",
       brand: "Victor",
       priceUsd: 245,
+      productId: "vic-auraspeed-100x-se",
       bestFor: "Singles attacker who values speed too",
       specs: [
         { label: "Weight", value: "3U / 4U" },
@@ -138,6 +141,7 @@ const config: BestPicksConfig = {
       name: "Astrox 100ZZ VA (Viktor Axelsen)",
       brand: "Yonex",
       priceUsd: 320,
+      productId: "yy-astrox-100zz-va",
       bestFor: "100ZZ feel, less punishment",
       specs: [
         { label: "Weight", value: "3U / 4U" },

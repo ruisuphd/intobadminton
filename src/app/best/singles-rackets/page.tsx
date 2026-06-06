@@ -73,6 +73,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 700 Pro (2024)",
       brand: "Yonex",
       priceUsd: 240,
+      productId: "yy-nanoflare-700-pro-2024",
       bestFor: "Speed-first singles / women's singles",
       specs: [
         { label: "Weight", value: "4U / 5U" },

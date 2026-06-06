@@ -31,6 +31,10 @@ const GUARDS = [
     script: "scripts/best-image-coverage.mjs",
   },
   {
+    name: "best-of productId coverage",
+    script: "scripts/best-product-id-coverage.mjs",
+  },
+  {
     name: "compare-guides golden profiles",
     script: "scripts/compare-guides-baseline.mjs",
   },

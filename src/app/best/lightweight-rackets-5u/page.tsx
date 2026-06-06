@@ -41,6 +41,7 @@ const config: BestPicksConfig = {
       name: "Bladex Arrow (锋影 利箭 / EX)",
       brand: "Li-Ning",
       priceUsd: 32,
+      productId: "ln-bladex-arrow",
       bestFor: "Budget 5U doubles front court",
       specs: [
         { label: "Weight", value: "5U" },
@@ -72,6 +73,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 700 Pro (2024)",
       brand: "Yonex",
       priceUsd: 240,
+      productId: "yy-nanoflare-700-pro-2024",
       bestFor: "5U option in a flagship speed line",
       specs: [
         { label: "Weight", value: "4U / 5U" },

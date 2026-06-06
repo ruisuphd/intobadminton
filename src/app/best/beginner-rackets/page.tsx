@@ -147,6 +147,7 @@ const config: BestPicksConfig = {
       name: "Altius N-Feel",
       brand: "Mizuno",
       priceUsd: 169,
+      productId: "mizuno-altius-01-feel",
       bestFor: "Beginner who wants something different",
       specs: [
         { label: "Weight", value: "4U" },

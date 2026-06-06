@@ -74,6 +74,7 @@ const config: BestPicksConfig = {
       name: "Auraspeed HS Plus",
       brand: "Victor",
       priceUsd: 240,
+      productId: "vic-auraspeed-hs-plus",
       bestFor: "Stable, well-rounded doubles attack",
       specs: [
         { label: "Weight", value: "4U" },
@@ -97,6 +98,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 700 Pro (2024)",
       brand: "Yonex",
       priceUsd: 240,
+      productId: "yy-nanoflare-700-pro-2024",
       bestFor: "Club doubles, women's doubles speed",
       specs: [
         { label: "Weight", value: "4U / 5U" },

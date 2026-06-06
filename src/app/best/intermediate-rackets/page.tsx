@@ -99,6 +99,7 @@ const config: BestPicksConfig = {
       name: "Halbertec 8000",
       brand: "Li-Ning",
       priceUsd: 165,
+      productId: "ln-halbertec-8000",
       bestFor: "Intermediate doubles attack",
       specs: [
         { label: "Weight", value: "4U" },
@@ -122,6 +123,7 @@ const config: BestPicksConfig = {
       name: "Auraspeed 90K II",
       brand: "Victor",
       priceUsd: 219,
+      productId: "vic-auraspeed-90k-ii",
       bestFor: "Speed-leaning intermediate doubles",
       specs: [
         { label: "Weight", value: "4U" },
