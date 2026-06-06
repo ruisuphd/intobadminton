@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "updated": "2026-06-06",
+  "queries": [
+    {
+      "id": "lighthouse-reviews-index",
+      "slug": "index",
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "expectMinArticles": 140,
+      "e2e": true,
+      "expectHeadingPattern": "reviews",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "expectFinderCta": true,
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse reviews hub — 153-article archive + catalog/finder exit"
+    }
+  ]
+}
