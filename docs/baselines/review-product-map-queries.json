@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-07",
+  "updated": "2026-06-08",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100
@@ -111,6 +111,60 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Tier-4 budget racket review on /best/lightweight-rackets-5u/ and /best/rackets-under-100/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-victor-fz-88d-power-purple",
+      "slug": "victor-fz-88d-power-purple-review",
+      "expectProductId": "vic-fz-88d-power-purple",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/head-heavy-rackets-under-150/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-bonny-future-land-3-shoes",
+      "slug": "bonny-future-land-3-polaris-shoes-review",
+      "expectProductId": "bonny-future-land-3",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget shoe review on /best/wide-feet-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-ln-bladex-arrow",
+      "slug": "li-ning-bladex-arrow-review",
+      "expectProductId": "ln-bladex-arrow",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/lightweight-rackets-5u/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-ln-axforce-80-jr",
+      "slug": "li-ning-axforce-80-jr-junior-review",
+      "expectProductId": "ln-axforce-80-jr",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget junior racket review on /best/lightweight-rackets-5u/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-ln-axforce-10",
+      "slug": "li-ning-axforce-10-beginner-attack-review",
+      "expectProductId": "ln-axforce-10",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/rackets-under-100/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-ln-bladesabre-2-pro-shoes",
+      "slug": "li-ning-bladesabre-2-pro-shoes-review",
+      "expectProductId": "ln-bladesabre-2-pro",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget shoe review on /best/budget-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
     },
     {
       "id": "explainer-intentional-unmapped",
