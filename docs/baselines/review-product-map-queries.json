@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-06",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100
@@ -47,6 +47,24 @@
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "note": "Budget niche brand review→catalog wiring"
+    },
+    {
+      "id": "tier4-bonny-carbon-armour-shoes",
+      "slug": "bonny-carbon-armour-shoes-review",
+      "expectProductId": "bonny-carbon-armour",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget shoe review on /best/budget-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "tier4-victor-thruster-hwql",
+      "slug": "victor-thruster-hwql-nuke-review",
+      "expectProductId": "vic-thruster-hwql",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Tier-4 budget racket review on /best/head-heavy-rackets-under-150/ — HWQL verified image sibling"
     },
     {
       "id": "explainer-intentional-unmapped",
