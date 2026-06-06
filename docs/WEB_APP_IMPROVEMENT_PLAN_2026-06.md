@@ -39,6 +39,8 @@
 
 **Sprint 71 addendum:** Play-tier catalogue ingest — ✅ 2 SKUs; beginner-rackets 6/6 wired; Yonex hub PDP exit.
 
+**Sprint 72 addendum:** String SKU catalogue ingest — ✅ Aerobite + BG80 Power; strings 6/6 wired; waivers removed.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -595,18 +597,24 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Full linkage on smash/intermediate/singles** — 6/6 `productId` on key attack landings
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT70_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT70_2026-06.md)
 
-### Sprint 71 — This branch
+### Sprint 71 — Shipped (PR #219)
 
 - **Play-tier catalogue ingest** — `yy-nanoflare-700-play`, `yy-astrox-77-play` in `products.json`
 - **Beginner-rackets full linkage** — 6/6 `productId`; Play-tier waivers removed
 - **Yonex brand hub PDP exit** — NF700 Play top pick → `/product/yy-nanoflare-700-play/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT71_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT71_2026-06.md)
 
-### Next (Sprint 72+)
+### Sprint 72 — This branch
+
+- **String SKU catalogue ingest** — `yy-aerobite`, `yy-bg80-power` in `products.json`
+- **Strings full linkage** — 6/6 `productId`; string waivers removed
+- **String integrity tests** — Aerobite + BG80 Power spec assertions in CI
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT72_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT72_2026-06.md)
+
+### Next (Sprint 73+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - L69 string verified product image when UK/EU distributor lists SKU
-- Ingest Aerobite / BG80 Power string SKUs (closes strings waivers)
 - Uncomment YouTube `sameAs` after channel claim
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  

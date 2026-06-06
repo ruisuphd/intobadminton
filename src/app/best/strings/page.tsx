@@ -97,6 +97,7 @@ const config: BestPicksConfig = {
       name: "Aerobite",
       brand: "Yonex",
       priceUsd: 16,
+      productId: "yy-aerobite",
       bestFor: "Players who slice / hit drops",
       specs: [
         { label: "Gauge", value: "0.61 / 0.67 mm hybrid" },
@@ -135,6 +136,7 @@ const config: BestPicksConfig = {
       name: "BG80 Power",
       brand: "Yonex",
       priceUsd: 10,
+      productId: "yy-bg80-power",
       bestFor: "Smash-heavy players who want max repulsion",
       specs: [
         { label: "Gauge", value: "0.68 mm" },

@@ -8,18 +8,7 @@ export type BestProductIdWaiver = {
 };
 
 /** Picks without a catalogue SKU — documented until ingest adds the product. */
-export const BEST_PRODUCT_ID_WAIVERS: BestProductIdWaiver[] = [
-  {
-    slug: "strings",
-    pickName: "Aerobite",
-    reason: "Hybrid string not yet in catalogue — no single-SKU mapping.",
-  },
-  {
-    slug: "strings",
-    pickName: "BG80 Power",
-    reason: "BG80 Power variant not yet ingested as a separate catalogue SKU.",
-  },
-];
+export const BEST_PRODUCT_ID_WAIVERS: BestProductIdWaiver[] = [];
 
 /**
  * Commercial /best/* landings guarded for catalogue `productId` linkage.
@@ -29,7 +18,7 @@ export const BEST_PRODUCT_ID_REQUIREMENTS: Record<
   string,
   { pickCount: number; waivers: number }
 > = {
-  strings: { pickCount: 6, waivers: 2 },
+  strings: { pickCount: 6, waivers: 0 },
   shoes: { pickCount: 6, waivers: 0 },
   "beginner-rackets": { pickCount: 6, waivers: 0 },
   "doubles-rackets": { pickCount: 6, waivers: 0 },
