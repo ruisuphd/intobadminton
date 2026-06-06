@@ -464,7 +464,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Playwright reviews smoke** — `e2e/reviews-baseline-smoke.spec.ts` (catalog CTA, finder exit, Keep reading on hub)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT54_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT54_2026-06.md)
 
-### Sprint 55 — This branch
+### Sprint 55 — Shipped (PR #203)
 
 - **Best-of golden profiles complete** — all 19 wired slugs + `/best/` hub index in `docs/baselines/best-queries.json`
 - **Compare-guides golden profiles complete** — all 12 wired slugs + `/compare-guides/` hub index
@@ -473,12 +473,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **e2e backfill** — brands tier-2, guides glossary/authenticity/roles, tools court diagram, best long tail
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT55_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT55_2026-06.md)
 
-### Next (Sprint 56+)
+### Sprint 56 — This branch
+
+- **Per-article review golden profiles** — 6 priority article slugs in `docs/baselines/reviews-queries.json`
+- **Reviews baseline evaluator extended** — `catalogHrefFromReviewSlug`, mapped/unmapped guards, equipment finder panel
+- **e2e backfill** — CrUX Arcsaber 7 Pro, Nanoflare 1000Z, unmapped explainer decision-path shelf
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT56_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT56_2026-06.md)
+
+### Next (Sprint 57+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
-- Per-article review golden profiles beyond hub guard
+- Expand per-article review golden profiles to full CrUX/Lighthouse review URL set
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Validate `/review/` hub golden profiles against catalog exit wiring.
+ * Validate `/review/` hub and article golden profiles against catalog exit wiring.
  *
  * Usage:
  *   node scripts/reviews-baseline.mjs

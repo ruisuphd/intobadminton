@@ -22,19 +22,19 @@ npm run lint:editorial-baselines
 
 Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baseline`, `lint:compare-guides-baseline`, `lint:guides-baseline`, `lint:tools-baseline`, `lint:brands-baseline`, and `lint:reviews-baseline`.
 
-## Reviews hub (golden profiles)
+## Reviews hub + articles (golden profiles)
 
-Committed `/review/` hub expectations for catalog exit, related reading shelf, finder CTA, and minimum article corpus:
+Committed `/review/` hub and priority article slug expectations for catalog exit, related reading shelf, finder CTA, equipment finder panel, and minimum article corpus:
 
-- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index (153-article archive).
+- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus 6 priority article slugs (CrUX Arcsaber 7 Pro, flagship Nanoflare 1000Z, DriveX 10, P9200 III shoes, Bonny Leisu 800, explainer guard).
 
-Validate reviews hub parity (runs in CI after brands guard):
+Validate reviews hub + article parity (runs in CI after brands guard):
 
 ```bash
 npm run lint:reviews-baseline
 ```
 
-Queries with `"e2e": true` are also exercised in Playwright (`e2e/reviews-baseline-smoke.spec.ts`) — direct navigation to committed review hub URL with catalog CTA, finder exit, and Keep reading shelf.
+Queries with `"e2e": true` are also exercised in Playwright (`e2e/reviews-baseline-smoke.spec.ts`) — hub catalog CTA + finder exit; mapped articles with equipment finder panel + Keep reading shelf; unmapped explainer with decision-path shelf only.
 
 ## Brands (golden profiles)
 
