@@ -36,6 +36,18 @@ describe("best-image-coverage", () => {
       pickCount: 6,
       waivers: 0,
     });
+    expect(BEST_IMAGE_REQUIREMENTS["defensive-rackets"]).toEqual({
+      pickCount: 6,
+      waivers: 0,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["head-light-rackets"]).toEqual({
+      pickCount: 6,
+      waivers: 1,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["rackets-for-shoulder-comfort"]).toEqual({
+      pickCount: 6,
+      waivers: 1,
+    });
   });
 
   it("passes verified-image guard for commercial /best/* landings", () => {
@@ -46,8 +58,11 @@ describe("best-image-coverage", () => {
     expect(result.ok).toBe(true);
   });
 
-  it("has no active image waivers on commercial landings", () => {
-    expect(BEST_IMAGE_WAIVERS).toEqual([]);
+  it("documents Nanoray Light 70i waiver on two landings", () => {
+    expect(BEST_IMAGE_WAIVERS).toHaveLength(2);
+    expect(BEST_IMAGE_WAIVERS.every((w) => w.pickName === "Nanoray Light 70i")).toBe(
+      true
+    );
   });
 
   it("counts catalogue-backed verified images via productId", () => {

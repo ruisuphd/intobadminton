@@ -12,7 +12,20 @@ export type BestImageWaiver = {
 };
 
 /** Documented gaps until a verified manufacturer/retailer image is available. */
-export const BEST_IMAGE_WAIVERS: BestImageWaiver[] = [];
+export const BEST_IMAGE_WAIVERS: BestImageWaiver[] = [
+  {
+    slug: "head-light-rackets",
+    pickName: "Nanoray Light 70i",
+    reason:
+      "Discontinued Yonex entry SKU — no verified manufacturer or distributor product photo yet",
+  },
+  {
+    slug: "rackets-for-shoulder-comfort",
+    pickName: "Nanoray Light 70i",
+    reason:
+      "Discontinued Yonex entry SKU — no verified manufacturer or distributor product photo yet",
+  },
+];
 
 /**
  * Commercial /best/* landings guarded for verified manufacturer photography.
@@ -31,6 +44,9 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
   "smash-heavy-rackets": { pickCount: 6, waivers: 0 },
   "singles-rackets": { pickCount: 6, waivers: 0 },
   "control-rackets": { pickCount: 6, waivers: 0 },
+  "defensive-rackets": { pickCount: 6, waivers: 0 },
+  "head-light-rackets": { pickCount: 6, waivers: 1 },
+  "rackets-for-shoulder-comfort": { pickCount: 6, waivers: 1 },
 };
 
 export type BestImageCoverageIssue = {

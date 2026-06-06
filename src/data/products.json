@@ -3675,7 +3675,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://badmintondirect.com/cdn/shop/files/VictorP9200IIIBX-1_1200x1200.png?v=1683878257",
+      "source": "retailer",
+      "credit": "Image: BadmintonDirect.com (Victor P9200 III)",
+      "alt": "Victor P9200 III badminton shoes",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "ln-axforce-100-gen-2",
@@ -4260,7 +4269,16 @@
       "https://en.lining.com/badminton/rackets"
     ],
     "editorNote": "2nd generation Halbertec 7000 — firmer shaft, slightly more head-heavy than original. Bridges entry-tier and flagship Halbertec performance.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://e78.us/cdn/shop/files/AYPW015_1200x1200.jpg?v=1773897415",
+      "source": "retailer",
+      "credit": "Image: e78.us (Li-Ning Halbertec 7000 II)",
+      "alt": "Li-Ning Halbertec 7000 II badminton racket",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "ln-bladex-900-new",
@@ -4491,7 +4509,16 @@
       "https://us.yonex.com/products/astrox-nextage"
     ],
     "editorNote": "Friendly Astrox-line entry: head-heavy, medium flex. The most accessible 'real' Astrox for intermediate players building power mechanics.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/AX-NX_BLACKGREEN_-Photoroom.png?v=1757360622",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox Nextage badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-nextage",
@@ -4648,7 +4675,16 @@
       "https://www.yonex.com/arcsaber"
     ],
     "editorNote": "Entry-tier of new Arcsaber 7 generation. Limited materials and softer feel — the missing 'Game' tier above creates a meaningful gap to Tour. Beginner-friendly handling.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/arc7-pl_grayyellow.png?v=1738288164",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Arcsaber 7 Play badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-1000-play",
@@ -4697,7 +4733,16 @@
       "https://www.yonex.com/nanoflare"
     ],
     "editorNote": "Beginner-tier Nanoflare with 1000 family shape. Yellow paint invites comparison with 1000 Z but specs and feel are entry-tier. Buy for the family shape at low cost; not for Z performance.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/NF1000PL_Lightning_Yellow_1.jpg?v=1740596508",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Nanoflare 1000 Play badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-nanoflare-800-pro-tour",
@@ -4784,7 +4829,16 @@
       "https://www.yonex.com/badminton/shoes"
     ],
     "editorNote": "Entry-tier Yonex shoe. Power Cushion midsole at accessible price. Strong choice for new players wanting genuine Yonex shoe experience.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://badmintondirect.com/cdn/shop/files/ALL_SHBSG1W_010-1_1200x1200.webp?v=1769825959",
+      "source": "retailer",
+      "credit": "Image: BadmintonDirect.com (Yonex Subaxia GT Wide)",
+      "alt": "Yonex Power Cushion Subaxia GT badminton shoes",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "yy-grpht-thrttl",
@@ -4820,7 +4874,16 @@
       "https://www.yonex.com/badminton/shoes"
     ],
     "editorNote": "Training-focused shoe with lifestyle aesthetic. Not aimed at competition use.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/ALL_SH-GT1M_206-1B.jpg?v=1761251855",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Power Cushion Grpht Thrttl badminton shoes",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-power-cushion-88-dial-3",
@@ -5033,7 +5096,16 @@
       "https://www.victorsport.com/badminton-racket"
     ],
     "editorNote": "Auraspeed speed-tier with phantom blade identity. Quick handling, stiff shaft, head-light.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://e78.us/cdn/shop/files/123600_4_20241114144727_1200x1200.jpg?v=1746863566",
+      "source": "retailer",
+      "credit": "Image: e78.us (Victor Auraspeed Fantome)",
+      "alt": "Victor Auraspeed Fantome badminton racket",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "vic-tk-f-c-ultra",
@@ -5224,7 +5296,16 @@
       "https://www.victorsport.com/badminton-racket"
     ],
     "editorNote": "Older Thruster line. Niche curiosity product for older-platform enthusiasts.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://e78.us/cdn/shop/products/TK-9900_1200x1200.jpg?v=1556578505",
+      "source": "retailer",
+      "credit": "Image: e78.us (Victor Thruster 9900)",
+      "alt": "Victor Thruster 9900 badminton racket",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "vic-thruster-hwql",
@@ -6623,7 +6704,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://badmintondirect.com/cdn/shop/files/P8500A_1200x1200.png?v=1702455650",
+      "source": "retailer",
+      "credit": "Image: BadmintonDirect.com (Victor P8500 II)",
+      "alt": "Victor P8500 II badminton shoes",
+      "width": 1200,
+      "height": 1200,
+      "verified": true
+    }
   },
   {
     "id": "vic-a970-nitro-lite",
