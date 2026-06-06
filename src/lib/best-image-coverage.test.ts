@@ -24,6 +24,18 @@ describe("best-image-coverage", () => {
       pickCount: 6,
       waivers: 0,
     });
+    expect(BEST_IMAGE_REQUIREMENTS["smash-heavy-rackets"]).toEqual({
+      pickCount: 6,
+      waivers: 0,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["singles-rackets"]).toEqual({
+      pickCount: 6,
+      waivers: 0,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS["control-rackets"]).toEqual({
+      pickCount: 6,
+      waivers: 0,
+    });
   });
 
   it("passes verified-image guard for commercial /best/* landings", () => {

@@ -43,6 +43,8 @@
 
 **Sprint 73 addendum:** L69 retailer image — ✅ strings 6/6 imagery; catalogue-backed image CI; Li-Ning + Victor brand PDP exits.
 
+**Sprint 74 addendum:** Tier-4 brand hub PDP exits — ✅ 7/7 hubs; Halbertec 9000 image; image CI on 9 commercial landings.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -613,7 +615,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **String integrity tests** — Aerobite + BG80 Power spec assertions in CI
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT72_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT72_2026-06.md)
 
-### Sprint 73 — This branch
+### Sprint 73 — Shipped (PR #221)
 
 - **L69 verified retailer image** — `ln-l69-string` in catalogue; strings 6/6 imagery; waiver removed
 - **Catalogue-backed image CI** — `countVerifiedPickCoverage` mirrors `resolveBestPickImage`
@@ -621,10 +623,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Brand hub PDP exits** — Li-Ning L69 + Victor DriveX 8S → `/product/[id]/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT73_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT73_2026-06.md)
 
-### Next (Sprint 74+)
+### Sprint 74 — This branch
+
+- **Tier-4 brand hub PDP exits** — Anta AH600W, Bonny Snake Breath, Kawasaki Chocolate 88D, Kumpoo Shura II → `/product/[id]/`
+- **Halbertec 9000 catalogue image** — li-ningfamily.com distributor photo on `ln-halbertec-9000`
+- **Image CI expansion** — smash-heavy, singles, control landings guarded at 6/6
+- **Brand hub PDP parity test** — all 7 dedicated hubs asserted in CI
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT74_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT74_2026-06.md)
+
+### Next (Sprint 75+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
+- Expand image CI to remaining 8 commercial landings (catalogue image backfill)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

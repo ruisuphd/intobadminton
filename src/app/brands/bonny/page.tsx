@@ -91,7 +91,7 @@ const config: BrandPageConfig = {
       line: "WuQue (lower-flagship)",
       bestFor: "Year's-best second-tier flagship pick; smaller-hand G6 handle",
       priceUsd: 145,
-      href: reviewPath("bonny-snake-breath"),
+      href: "/product/bonny-snake-breath/",
     },
     {
       name: "Bonny WuQue Flagship 088",

@@ -88,7 +88,7 @@ const config: BrandPageConfig = {
       line: "Chocolate 88D",
       bestFor: "Astrox 88D Pro budget alternative",
       priceUsd: 75,
-      href: reviewPath("kawasaki-chocolate-88d"),
+      href: "/product/kawasaki-chocolate-88d/",
     },
     {
       name: "Kawasaki Master Mao 20",

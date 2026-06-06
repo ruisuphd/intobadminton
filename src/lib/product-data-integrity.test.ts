@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import products from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { sourceAuthorityForProduct } from "@/lib/source-authority";
@@ -94,5 +96,29 @@ describe("product data integrity", () => {
     expect(racket("vic-jetspeed-12").image).toMatchObject({ verified: true });
     expect(racket("yy-arcsaber-7-tour").image).toMatchObject({ verified: true });
     expect(racket("vic-yu-12").image).toMatchObject({ verified: true });
+    expect(racket("ln-halbertec-9000").image).toMatchObject({ verified: true });
+  });
+
+  it("wires flagship brand hub top picks to live PDP shells", () => {
+    const exits: Record<string, string> = {
+      yonex: "/product/yy-nanoflare-700-play/",
+      victor: "/product/vic-drivex-8s/",
+      "li-ning": "/product/ln-l69-string/",
+      anta: "/product/anta-ah600w/",
+      bonny: "/product/bonny-snake-breath/",
+      kawasaki: "/product/kawasaki-chocolate-88d/",
+      kumpoo: "/product/kumpoo-shura-2/",
+    };
+
+    for (const [slug, href] of Object.entries(exits)) {
+      expect(CATALOGUE.some((p) => p.id === href.replace(/^\/product\/|\/$/g, ""))).toBe(
+        true
+      );
+      const source = readFileSync(
+        resolve(process.cwd(), `src/app/brands/${slug}/page.tsx`),
+        "utf8"
+      );
+      expect(source).toContain(`href: "${href}"`);
+    }
   });
 });
