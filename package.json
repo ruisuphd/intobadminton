@@ -41,6 +41,7 @@
     "lint:brands-baseline": "node scripts/brands-baseline.mjs",
     "lint:reviews-baseline": "node scripts/reviews-baseline.mjs",
     "reviews:sync-baseline": "node scripts/sync-reviews-baseline.mjs",
+    "reactions:smoke": "node scripts/smoke-reactions-worker.mjs",
     "lint:product-funnel-baselines": "node scripts/product-funnel-baselines.mjs",
     "lint:editorial-baselines": "node scripts/editorial-baselines.mjs",
     "lint:all-baselines": "node scripts/all-baselines.mjs",

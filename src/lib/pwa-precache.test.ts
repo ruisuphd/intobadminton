@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { homeFeaturedReviewHrefs } from "./home-featured";
+import { homePopularSearchPrecachePaths } from "./home-popular-searches";
 import { lighthousePaths } from "./lighthouse-paths";
 import { PRECACHE_ASSERT_PATHS } from "./pwa-precache-paths";
 
@@ -28,6 +29,12 @@ describe("PWA service worker precache", () => {
 
   it("precaches every homepage featured review shell", () => {
     for (const path of homeFeaturedReviewHrefs()) {
+      expect(source, `missing precache for ${path}`).toContain(`"${path}"`);
+    }
+  });
+
+  it("precaches every homepage popular-search deep link", () => {
+    for (const path of homePopularSearchPrecachePaths()) {
       expect(source, `missing precache for ${path}`).toContain(`"${path}"`);
     }
   });

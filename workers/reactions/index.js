@@ -1,6 +1,7 @@
 /**
  * Cloudflare Worker — anonymous helpful-reaction counts (KV-backed).
  *
+ * GET  /health           → { ok: true, service: "reactions" }
  * GET  /?contentId=<id>  → { up, down, more }
  * POST /                 → body { contentId, reaction: "up"|"down"|"more" }
  *
@@ -48,6 +49,9 @@ const worker = {
     const url = new URL(request.url);
 
     if (request.method === "GET") {
+      if (url.pathname === "/health" || url.pathname.endsWith("/health")) {
+        return json({ ok: true, service: "reactions" });
+      }
       const contentId = url.searchParams.get("contentId");
       if (!contentId || contentId.length > 200) {
         return json({ error: "contentId required" }, 400);

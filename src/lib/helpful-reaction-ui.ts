@@ -22,7 +22,7 @@ export function helpfulReactionSubline(
   if (!apiEnabled) {
     return "Your vote helps us prioritize the next editorial sweep.";
   }
-  return null;
+  return "Community counts appear here after the first vote.";
 }
 
 export function helpfulReactionShellClass(

@@ -50,6 +50,11 @@ export function homePopularSearchHrefs(): string[] {
   return homePopularSearches.map((entry) => entry.href);
 }
 
+/** Every homepage popular-search deep link must be PWA-precached — shared with parity CI. */
+export function homePopularSearchPrecachePaths(): string[] {
+  return homePopularSearchHrefs();
+}
+
 /** Review article slugs surfaced in the homepage popular-search grid. */
 export function homePopularReviewSlugs(): string[] {
   return homePopularSearches

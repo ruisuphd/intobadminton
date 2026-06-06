@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
+import { PRECACHE_ASSERT_PATHS } from "@/lib/pwa-precache-paths";
 import {
   homePopularReviewSlugs,
   homePopularSearchEditorialOfflineRecoveryLinks,
+  homePopularSearchPrecachePaths,
   homePopularSearchReviewOfflineRecoveryLinks,
   homePopularSearches,
 } from "@/lib/home-popular-searches";
@@ -21,6 +23,16 @@ describe("home-popular-searches", () => {
     for (const link of links) {
       expect(link.label.length).toBeGreaterThan(0);
       expect(link.description).toMatch(/^Precached —/);
+    }
+  });
+
+  it("lists every popular-search href for PWA precache parity", () => {
+    const paths = homePopularSearchPrecachePaths();
+    expect(paths).toEqual(homePopularSearches.map((entry) => entry.href));
+    for (const path of paths) {
+      expect(PRECACHE_ASSERT_PATHS, `${path} missing from PRECACHE_ASSERT_PATHS`).toContain(
+        path
+      );
     }
   });
 

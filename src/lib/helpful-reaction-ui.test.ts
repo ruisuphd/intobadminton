@@ -18,8 +18,10 @@ describe("helpfulReactionSubline", () => {
     );
   });
 
-  it("returns null when API enabled but counts not loaded yet", () => {
-    expect(helpfulReactionSubline(true, null)).toBeNull();
+  it("shows first-vote prompt when API enabled but counts not loaded yet", () => {
+    expect(helpfulReactionSubline(true, null)).toBe(
+      "Community counts appear here after the first vote."
+    );
   });
 });
 

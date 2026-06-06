@@ -13,6 +13,14 @@ function mockKv(initial = new Map()) {
 }
 
 describe("reactions worker contract", () => {
+  it("GET /health returns ok payload", async () => {
+    const res = await worker.fetch(new Request("https://example.com/health"), {
+      REACTIONS: mockKv(),
+    });
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ ok: true, service: "reactions" });
+  });
+
   it("GET returns empty counts for unknown contentId", async () => {
     const res = await worker.fetch(
       new Request("https://example.com/?contentId=guide:test"),
