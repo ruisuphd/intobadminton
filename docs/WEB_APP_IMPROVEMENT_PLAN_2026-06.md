@@ -55,6 +55,8 @@
 
 **Sprint 79 addendum:** Tier-4 review→catalog map CI completion — ✅ Kumpoo G805, Kawasaki KACE, Kumpoo Shura II, Kawasaki Crimson Blade, Victor Thruster SR golden profiles with e2e; Bonny Leisu 800 e2e enabled; CN-market image backfill deferred.
 
+**Sprint 80 addendum:** Tier-4 review→catalog map CI finalization — ✅ Victor FZ 88D Power Purple, Bonny Future Land 3, Li-Ning Bladex Arrow, AxForce 80 JR, AxForce 10, Bladesabre 2 Pro golden profiles with e2e; 13/13 tier-4 commercial picks guarded; CN-market image backfill deferred.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -668,14 +670,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Review map baseline** — +2 queries in `docs/baselines/review-product-map-queries.json`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT78_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT78_2026-06.md)
 
-### Sprint 79 — This branch (`cursor/web-app-improvement-plan-b723`)
+### Sprint 79 — Shipped (PR #227)
 
 - **Tier-4 review→catalog golden profiles** — Kumpoo G805, Kawasaki KACE, Kumpoo Shura II, Kawasaki Crimson Blade, Victor Thruster SR review map CI + e2e
 - **Bonny Leisu 800 e2e smoke** — budget niche review on rackets-under-100
 - **Review map baseline** — +5 queries, +1 e2e upgrade in `docs/baselines/review-product-map-queries.json`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT79_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT79_2026-06.md)
 
-### Next (Sprint 80+)
+### Sprint 80 — This branch (`cursor/web-app-improvement-plan-0acb`)
+
+- **Tier-4 review→catalog golden profiles** — Victor FZ 88D Power Purple, Bonny Future Land 3, Li-Ning Bladex Arrow, AxForce 80 JR, AxForce 10, Bladesabre 2 Pro review map CI + e2e
+- **Review map baseline** — +6 queries in `docs/baselines/review-product-map-queries.json`; 13/13 tier-4 commercial picks guarded
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT80_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT80_2026-06.md)
+
+### Next (Sprint 81+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
