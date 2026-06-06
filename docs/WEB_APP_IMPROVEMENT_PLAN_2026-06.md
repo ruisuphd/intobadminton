@@ -63,6 +63,8 @@
 
 **Sprint 83 addendum:** Flagship review-map e2e expansion — ✅ Arcsaber 11 Pro + Astrox 88D Pro + Nanoflare 700 Pro golden profiles; `minMappedE2eGuards: 23`; Nanoray Light 70i image hunt deferred (no verified Western listing).
 
+**Sprint 84 addendum:** Flagship review-map e2e completion — ✅ Astrox 88S Pro + Nanoflare 800 Pro golden profiles; `minMappedE2eGuards: 25`; Nanoray Light 70i image hunt deferred (no verified Western listing).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

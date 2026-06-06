@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-09",
+  "updated": "2026-06-10",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 23
+    "minMappedE2eGuards": 25
   },
   "queries": [
     {
@@ -214,6 +214,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Flagship defensive/singles racket review — Nanoflare 700 Pro on /best/defensive-rackets/ and /best/singles-rackets/"
+    },
+    {
+      "id": "flagship-astrox-88s-pro",
+      "slug": "yonex-astrox-88d-pro-vs-88s-pro-2024",
+      "expectProductId": "yy-astrox-88s-pro-2024",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship front-court doubles racket review — Astrox 88S Pro (2024) on /best/doubles-rackets/ and /best/control-rackets/"
+    },
+    {
+      "id": "flagship-nanoflare-800-pro",
+      "slug": "yonex-nanoflare-800-pro-and-victor-hs-plus",
+      "expectProductId": "yy-nanoflare-800-pro-2024",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship speed/defensive racket review — Nanoflare 800 Pro (2024) on /best/defensive-rackets/ and /best/head-light-rackets/"
     },
     {
       "id": "explainer-how-to-choose-racket",
