@@ -5,7 +5,7 @@
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 20
+    "minMappedE2eGuards": 23
   },
   "queries": [
     {
@@ -187,6 +187,33 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Flagship attack racket review — Astrox 99 Pro 2 deep-dive linked from compare guides"
+    },
+    {
+      "id": "flagship-arcsaber-11-pro",
+      "slug": "yonex-arcsaber-11-pro-review",
+      "expectProductId": "yy-arcsaber-11-pro",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship control racket review — Arcsaber 11 Pro on /best/singles-rackets/ and /best/control-rackets/"
+    },
+    {
+      "id": "flagship-astrox-88d-pro",
+      "slug": "yonex-astrox-88-pro-2024-review",
+      "expectProductId": "yy-astrox-88d-pro-2024",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship doubles racket review — Astrox 88D Pro (2024) on /best/doubles-rackets/ and /best/smash-heavy-rackets/"
+    },
+    {
+      "id": "flagship-nanoflare-700-pro",
+      "slug": "yonex-nanoflare-700-review",
+      "expectProductId": "yy-nanoflare-700-pro-2024",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship defensive/singles racket review — Nanoflare 700 Pro on /best/defensive-rackets/ and /best/singles-rackets/"
     },
     {
       "id": "explainer-how-to-choose-racket",
