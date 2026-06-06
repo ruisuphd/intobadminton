@@ -75,7 +75,7 @@ const config: BrandPageConfig = {
       line: "Shura II",
       bestFor: "Aggressive-attack flagship outside mainstream trio",
       priceUsd: 145,
-      href: reviewPath("kumpoo-shura-2"),
+      href: "/product/kumpoo-shura-2/",
     },
     {
       name: "Kumpoo Shanhai NEW",

@@ -54,7 +54,7 @@ const config: BrandPageConfig = {
       line: "AH600W",
       bestFor: "Beginners wanting a light, forgiving first racket from a familiar brand",
       priceUsd: 45,
-      href: reviewPath("anta-ah600w"),
+      href: "/product/anta-ah600w/",
     },
   ],
   faqs: [

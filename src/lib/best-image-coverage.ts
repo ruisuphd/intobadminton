@@ -28,6 +28,9 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
   "doubles-rackets": { pickCount: 6, waivers: 0 },
   "all-round-rackets": { pickCount: 6, waivers: 0 },
   "intermediate-rackets": { pickCount: 6, waivers: 0 },
+  "smash-heavy-rackets": { pickCount: 6, waivers: 0 },
+  "singles-rackets": { pickCount: 6, waivers: 0 },
+  "control-rackets": { pickCount: 6, waivers: 0 },
 };
 
 export type BestImageCoverageIssue = {
