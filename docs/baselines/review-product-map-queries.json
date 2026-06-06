@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-13",
+  "updated": "2026-06-14",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 31
+    "minMappedE2eGuards": 33
   },
   "queries": [
     {
@@ -286,6 +286,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning value control racket review — Halbertec 8000 on /best/control-rackets/, /best/intermediate-rackets/, and /best/all-round-rackets/"
+    },
+    {
+      "id": "flagship-ln-bladex-800-speed",
+      "slug": "li-ning-bladex-800-speed-tough-elastic",
+      "expectProductId": "ln-bladex-800-speed",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning speed flagship review — Bladex 800 Speed on /best/head-light-rackets/ and compare-guide bladex-800-speed-vs-nanoflare-1000z"
+    },
+    {
+      "id": "flagship-vic-auraspeed-fantome",
+      "slug": "victor-auraspeed-fantome-review",
+      "expectProductId": "vic-auraspeed-fantome",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor head-light speed review — Fantome on /best/head-light-rackets/ (Ryuga II blocked: no dedicated review article)"
     },
     {
       "id": "explainer-how-to-choose-racket",

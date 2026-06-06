@@ -71,6 +71,8 @@
 
 **Sprint 87 addendum:** Victor/Li-Ning classic review-map e2e — ✅ Jetspeed 12 + Halbertec 8000 golden profiles; `minMappedE2eGuards: 31`; Nanoray Light 70i image hunt deferred (no verified Western listing).
 
+**Sprint 88 addendum:** Head-light speed review-map e2e — ✅ Bladex 800 Speed + Auraspeed Fantome golden profiles; `minMappedE2eGuards: 33`; Thruster Ryuga II blocked (no dedicated review article in catalogue).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
