@@ -113,7 +113,7 @@ const config: BrandPageConfig = {
       line: "Nanoflare (Play tier)",
       bestFor: "First serious club racket",
       priceUsd: 80,
-      href: "/best/beginner-rackets/",
+      href: "/product/yy-nanoflare-700-play/",
     },
     {
       name: "Yonex Arcsaber 7 Pro",

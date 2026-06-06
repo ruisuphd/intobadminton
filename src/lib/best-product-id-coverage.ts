@@ -19,16 +19,6 @@ export const BEST_PRODUCT_ID_WAIVERS: BestProductIdWaiver[] = [
     pickName: "BG80 Power",
     reason: "BG80 Power variant not yet ingested as a separate catalogue SKU.",
   },
-  {
-    slug: "beginner-rackets",
-    pickName: "Nanoflare 700 Play",
-    reason: "Play-tier SKU not yet in catalogue (700 Game / Pro variants exist).",
-  },
-  {
-    slug: "beginner-rackets",
-    pickName: "Astrox 77 Play",
-    reason: "Play-tier SKU not yet in catalogue.",
-  },
 ];
 
 /**
@@ -41,7 +31,7 @@ export const BEST_PRODUCT_ID_REQUIREMENTS: Record<
 > = {
   strings: { pickCount: 6, waivers: 2 },
   shoes: { pickCount: 6, waivers: 0 },
-  "beginner-rackets": { pickCount: 6, waivers: 2 },
+  "beginner-rackets": { pickCount: 6, waivers: 0 },
   "doubles-rackets": { pickCount: 6, waivers: 0 },
   "smash-heavy-rackets": { pickCount: 6, waivers: 0 },
   "intermediate-rackets": { pickCount: 6, waivers: 0 },
