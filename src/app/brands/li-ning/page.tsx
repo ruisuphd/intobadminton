@@ -121,11 +121,11 @@ const config: BrandPageConfig = {
       href: "/best/intermediate-rackets/",
     },
     {
-      name: "Li-Ning No.1 string",
+      name: "Li-Ning L69 string",
       line: "Strings",
-      bestFor: "Durable club-play default",
-      priceUsd: 12,
-      href: "/best/strings/",
+      bestFor: "Crisp all-rounder under $10",
+      priceUsd: 8,
+      href: "/product/ln-l69-string/",
     },
   ],
   faqs: [

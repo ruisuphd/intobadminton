@@ -1,5 +1,9 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import products from "@/data/products.json";
+import type { ProductRecord } from "@/lib/types/product";
+
+const CATALOG = products as ProductRecord[];
 
 export type BestImageWaiver = {
   slug: string;
@@ -8,14 +12,7 @@ export type BestImageWaiver = {
 };
 
 /** Documented gaps until a verified manufacturer/retailer image is available. */
-export const BEST_IMAGE_WAIVERS: BestImageWaiver[] = [
-  {
-    slug: "strings",
-    pickName: "L69",
-    reason:
-      "L69 (2026) has no verified UK/EU distributor product image yet; awaiting official retailer listing.",
-  },
-];
+export const BEST_IMAGE_WAIVERS: BestImageWaiver[] = [];
 
 /**
  * Commercial /best/* landings guarded for verified manufacturer photography.
@@ -25,10 +22,12 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
   string,
   { pickCount: number; waivers: number }
 > = {
-  strings: { pickCount: 6, waivers: 1 },
+  strings: { pickCount: 6, waivers: 0 },
   shoes: { pickCount: 6, waivers: 0 },
   "beginner-rackets": { pickCount: 6, waivers: 0 },
   "doubles-rackets": { pickCount: 6, waivers: 0 },
+  "all-round-rackets": { pickCount: 6, waivers: 0 },
+  "intermediate-rackets": { pickCount: 6, waivers: 0 },
 };
 
 export type BestImageCoverageIssue = {
@@ -36,8 +35,38 @@ export type BestImageCoverageIssue = {
   message: string;
 };
 
+/** @deprecated Prefer {@link countVerifiedPickCoverage} — counts inline `verified: true` only. */
 export function countVerifiedImagesInSource(source: string): number {
   return (source.match(/verified:\s*true/g) ?? []).length;
+}
+
+export function productIdsInBestSource(source: string): string[] {
+  return [...source.matchAll(/productId:\s*"([^"]+)"/g)].map((m) => m[1]);
+}
+
+/** True when inline pick image or catalogue SKU image is verified. */
+export function pickHasVerifiedImage(
+  source: string,
+  productId: string,
+  catalog: ProductRecord[] = CATALOG
+): boolean {
+  const product = catalog.find((p) => p.id === productId);
+  if (product?.image?.verified) return true;
+
+  const escaped = productId.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const block = new RegExp(
+    `productId:\\s*"${escaped}"[\\s\\S]{0,1400}?verified:\\s*true`
+  );
+  return block.test(source);
+}
+
+/** Count picks with verified imagery via inline block or catalogue `productId` fallback. */
+export function countVerifiedPickCoverage(
+  source: string,
+  catalog: ProductRecord[] = CATALOG
+): number {
+  const ids = productIdsInBestSource(source);
+  return ids.filter((id) => pickHasVerifiedImage(source, id, catalog)).length;
 }
 
 export function requirementForSlug(slug: string) {
@@ -57,13 +86,13 @@ export function evaluateBestImageCoverage(
     }
 
     const source = readFileSync(pagePath, "utf8");
-    const verified = countVerifiedImagesInSource(source);
+    const verified = countVerifiedPickCoverage(source);
     const required = req.pickCount - req.waivers;
 
     if (verified < required) {
       issues.push({
         slug,
-        message: `expected ≥${required} verified images (${req.pickCount} picks − ${req.waivers} waiver), found ${verified}`,
+        message: `expected ≥${required} verified pick images (${req.pickCount} picks − ${req.waivers} waiver), found ${verified}`,
       });
     }
   }

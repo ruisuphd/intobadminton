@@ -81,5 +81,18 @@ describe("product data integrity", () => {
       verificationStatus: "editor_verified",
       officialSourceUrl: "https://www.yonex.com/bg80",
     });
+
+    expect(stringProduct("ln-l69-string")).toMatchObject({
+      name: "L69 String",
+      gaugeMm: 0.69,
+      image: { verified: true },
+    });
+  });
+
+  it("keeps catalogue-backed best-of racket images verified", () => {
+    expect(racket("vic-drivex-8s").image).toMatchObject({ verified: true });
+    expect(racket("vic-jetspeed-12").image).toMatchObject({ verified: true });
+    expect(racket("yy-arcsaber-7-tour").image).toMatchObject({ verified: true });
+    expect(racket("vic-yu-12").image).toMatchObject({ verified: true });
   });
 });
