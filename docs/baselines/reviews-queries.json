@@ -2,8 +2,9 @@
   "version": 1,
   "updated": "2026-06-06",
   "coverage": {
-    "minArticleSlugs": 6,
-    "requireReviewMapParity": true
+    "minArticleSlugs": 15,
+    "requireReviewMapParity": true,
+    "requireFeaturedParity": true
   },
   "queries": [
     {
@@ -84,6 +85,100 @@
       "e2e": true,
       "expectKeepReadingShelf": true,
       "note": "Explainer slug must stay outside product map — decision-path shelf only"
+    },
+    {
+      "id": "featured-nanospeed-9900-ltg",
+      "slug": "yonex-nanospeed-9900-ltg-green-sword-review",
+      "expectProductId": "yy-nanospeed-9900-ltg",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectKeepReadingShelf": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Homepage featured slice — Yonex grail review"
+    },
+    {
+      "id": "featured-voltric-z-force-ltd",
+      "slug": "yonex-voltric-z-force-ltd-2012-review",
+      "expectProductId": "yy-voltric-z-force-ltd",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Homepage featured slice — collector grail review"
+    },
+    {
+      "id": "featured-gosen-ryoga-shiden",
+      "slug": "gosen-ryoga-shiden-review",
+      "expectProductId": "gosen-ryoga-shiden",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse gosen",
+      "note": "Homepage featured slice — cult speed blade review"
+    },
+    {
+      "id": "featured-victor-fz-100xx",
+      "slug": "victor-fz-100xx-budget-attack-review",
+      "expectProductId": "vic-fz-100xx",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor",
+      "note": "Homepage featured slice — budget attack racket review"
+    },
+    {
+      "id": "featured-anta-ah600w",
+      "slug": "anta-ah600w-racket-review",
+      "expectProductId": "anta-ah600w",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Anta",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse anta",
+      "note": "Homepage featured slice — Anta brand debut review"
+    },
+    {
+      "id": "featured-bonny-leisu-800-lt",
+      "slug": "bonny-leisu-800-lt-review",
+      "expectProductId": "bonny-leisu-800-lt",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Homepage featured slice — Bonny LT variant review"
+    },
+    {
+      "id": "popular-search-tour-guide",
+      "slug": "yonex-tour-series-buying-guide",
+      "expectProductId": "yy-astrox-88d-tour-2024",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse yonex",
+      "note": "Homepage popular-search grid — Tour vs Pro buying guide"
+    },
+    {
+      "id": "popular-search-kumpoo-profile",
+      "slug": "kumpoo-fourth-major-badminton-brand-profile",
+      "expectProductId": "kumpoo-shanhai-new",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo",
+      "note": "Homepage popular-search grid — Kumpoo brand profile"
+    },
+    {
+      "id": "popular-search-stringing-holes",
+      "slug": "racket-stringing-hole-patterns-explained",
+      "expectUnmapped": true,
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "expectKeepReadingShelf": true,
+      "note": "Homepage popular-search grid — explainer must stay unmapped"
     }
   ]
 }

@@ -23,3 +23,11 @@ export const reviewArticleCount = payload.reviewCount;
 export function homeFeaturedReviewPath(slug: string): string {
   return articlePathForSlug(slug);
 }
+
+export function homeFeaturedReviewSlugs(): string[] {
+  return homeFeaturedReviews.map((article) => article.slug);
+}
+
+export function homeFeaturedReviewHrefs(): string[] {
+  return homeFeaturedReviewSlugs().map((slug) => homeFeaturedReviewPath(slug));
+}

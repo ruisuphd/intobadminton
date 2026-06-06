@@ -26,7 +26,7 @@ Runs `lint:review-product-map-baseline`, `lint:pdp-baseline`, `lint:best-baselin
 
 Committed `/` CrUX-priority landing expectations for finder/catalog exit, featured review slice, catalogue stats, and popular-search commercial deep-links:
 
-- [`home-queries.json`](home-queries.json) — CrUX homepage with 11 committed popular-search hrefs.
+- [`home-queries.json`](home-queries.json) — CrUX homepage with committed popular-search hrefs and featured-review slice hrefs.
 
 Validate homepage discovery parity (runs in CI after discovery parity guard):
 
@@ -40,7 +40,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/home-baseline-
 
 Committed `/review/` hub and priority article slug expectations for catalog exit, related reading shelf, finder CTA, equipment finder panel, and minimum article corpus:
 
-- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus all review-map article slugs (CrUX Arcsaber 7 Pro, flagship Nanoflare 1000Z, DriveX 10, P9200 III shoes, Bonny Leisu 800, explainer guard). `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json).
+- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus review-map article slugs, homepage featured reviews, and popular-search review deep-links. `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json); `requireFeaturedParity` links to [`home-featured-reviews.json`](../../src/data/home-featured-reviews.json).
 
 Validate reviews hub + article parity (runs in CI after brands guard):
 

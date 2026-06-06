@@ -65,6 +65,16 @@ describe("home-baseline", () => {
     expect(issue?.message).toContain("popular search href");
   });
 
+  it("flags missing featured review hrefs", () => {
+    const issue = evaluateHomeBaselineQuery({
+      id: "test",
+      expectCatalogHref: "/catalog/",
+      expectFinderHref: "/quiz/",
+      expectFeaturedReviewHrefs: ["/review/nonexistent-featured-slug/"],
+    });
+    expect(issue?.message).toContain("featured review href");
+  });
+
   it("exposes canonical homepage path", () => {
     expect(HOME_PATH).toBe("/");
   });

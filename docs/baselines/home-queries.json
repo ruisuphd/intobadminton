@@ -18,7 +18,18 @@
         "/compare-guides/yonex-victor-li-ning/",
         "/guides/glossary/",
         "/guides/equipment-authenticity/",
-        "/review/yonex-nanoflare-1000z-review/"
+        "/review/yonex-nanoflare-1000z-review/",
+        "/review/yonex-tour-series-buying-guide/",
+        "/review/kumpoo-fourth-major-badminton-brand-profile/",
+        "/review/racket-stringing-hole-patterns-explained/"
+      ],
+      "expectFeaturedReviewHrefs": [
+        "/review/yonex-nanospeed-9900-ltg-green-sword-review/",
+        "/review/yonex-voltric-z-force-ltd-2012-review/",
+        "/review/gosen-ryoga-shiden-review/",
+        "/review/victor-fz-100xx-budget-attack-review/",
+        "/review/anta-ah600w-racket-review/",
+        "/review/bonny-leisu-800-lt-review/"
       ],
       "e2e": true,
       "expectHeadingPattern": "badminton",
