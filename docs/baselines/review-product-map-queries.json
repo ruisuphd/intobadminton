@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-10",
+  "updated": "2026-06-11",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 25
+    "minMappedE2eGuards": 27
   },
   "queries": [
     {
@@ -232,6 +232,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Flagship speed/defensive racket review — Nanoflare 800 Pro (2024) on /best/defensive-rackets/ and /best/head-light-rackets/"
+    },
+    {
+      "id": "flagship-vic-auraspeed-hs-plus",
+      "slug": "victor-auraspeed-hs-plus-deep-dive",
+      "expectProductId": "vic-auraspeed-hs-plus",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor flagship speed/doubles racket review — Auraspeed HS Plus on /best/doubles-rackets/ and /best/head-light-rackets/"
+    },
+    {
+      "id": "flagship-ln-halbertec-9000-power",
+      "slug": "li-ning-halbertec-9000-power-deep-dive",
+      "expectProductId": "ln-halbertec-9000-power",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning flagship attack racket review — Halbertec 9000 Power on /best/smash-heavy-rackets/ and /best/singles-rackets/"
     },
     {
       "id": "explainer-how-to-choose-racket",

@@ -65,6 +65,8 @@
 
 **Sprint 84 addendum:** Flagship review-map e2e completion — ✅ Astrox 88S Pro + Nanoflare 800 Pro golden profiles; `minMappedE2eGuards: 25`; Nanoray Light 70i image hunt deferred (no verified Western listing).
 
+**Sprint 85 addendum:** Victor/Li-Ning flagship review-map e2e — ✅ Auraspeed HS Plus + Halbertec 9000 Power golden profiles; `minMappedE2eGuards: 27`; Nanoray Light 70i image hunt deferred (no verified Western listing).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -709,13 +711,19 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 23`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT83_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT83_2026-06.md)
 
-### Next (Sprint 84+)
+### Sprint 85 — This branch (`cursor/web-app-improvement-plan-3c62`)
+
+- **Review-map e2e expansion** — Auraspeed HS Plus + Halbertec 9000 Power golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 27`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT85_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT85_2026-06.md)
+
+### Next (Sprint 86+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
-- Astrox 88S Pro + Nanoflare 800 Pro flagship review-map e2e
+- AxForce 100 Gen 2 + Auraspeed 90K II flagship review-map e2e
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
