@@ -32,7 +32,7 @@
 | 1 | Homepage Lighthouse / critical-path JS | CI + CWV | ✅ PR #92 (prebuild slices + deferred engagement) |
 | 2 | Filter-first product catalog | Discovery vs retailers | ✅ Sprint 4 (`/catalog/`) |
 | 3 | Results spec facets + price-band SEO | Post-quiz retention | ✅ Sprint 4 |
-| 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — DriveX 8S + Bladesabre MAX; L69 string image waiver |
+| 4 | Original photography / video | AdSense + experience signal | ⏳ Partial — catalogue-backed image CI on 6 commercial landings; video deferred |
 | 5 | HelpfulReaction KV aggregates | Social proof | ⏳ Worker ready; wire workflow + Pages smoke; owner secret pending |
 
 **Sprint 70 addendum:** `productId` linkage on commercial `/best/*` — ✅ 17 landings guarded in CI; 22 new wires (PR #218).
@@ -40,6 +40,8 @@
 **Sprint 71 addendum:** Play-tier catalogue ingest — ✅ 2 SKUs; beginner-rackets 6/6 wired; Yonex hub PDP exit.
 
 **Sprint 72 addendum:** String SKU catalogue ingest — ✅ Aerobite + BG80 Power; strings 6/6 wired; waivers removed.
+
+**Sprint 73 addendum:** L69 retailer image — ✅ strings 6/6 imagery; catalogue-backed image CI; Li-Ning + Victor brand PDP exits.
 
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
@@ -604,17 +606,24 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Yonex brand hub PDP exit** — NF700 Play top pick → `/product/yy-nanoflare-700-play/`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT71_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT71_2026-06.md)
 
-### Sprint 72 — This branch
+### Sprint 72 — Shipped (PR #220)
 
 - **String SKU catalogue ingest** — `yy-aerobite`, `yy-bg80-power` in `products.json`
 - **Strings full linkage** — 6/6 `productId`; string waivers removed
 - **String integrity tests** — Aerobite + BG80 Power spec assertions in CI
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT72_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT72_2026-06.md)
 
-### Next (Sprint 73+)
+### Sprint 73 — This branch
+
+- **L69 verified retailer image** — `ln-l69-string` in catalogue; strings 6/6 imagery; waiver removed
+- **Catalogue-backed image CI** — `countVerifiedPickCoverage` mirrors `resolveBestPickImage`
+- **All-round + intermediate image guards** — expanded `BEST_IMAGE_REQUIREMENTS`
+- **Brand hub PDP exits** — Li-Ning L69 + Victor DriveX 8S → `/product/[id]/`
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT73_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT73_2026-06.md)
+
+### Next (Sprint 74+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
-- L69 string verified product image when UK/EU distributor lists SKU
 - Uncomment YouTube `sameAs` after channel claim
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  

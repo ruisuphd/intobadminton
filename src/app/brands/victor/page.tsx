@@ -102,7 +102,7 @@ const config: BrandPageConfig = {
       line: "DriveX",
       bestFor: "Beginner who likes flat doubles drives",
       priceUsd: 110,
-      href: "/best/beginner-rackets/",
+      href: "/product/vic-drivex-8s/",
     },
     {
       name: "Victor Auraspeed 90F Pro",

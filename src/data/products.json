@@ -688,7 +688,16 @@
       "https://www.victorsport.com/"
     ],
     "editorNote": "Balanced club-level reference frame; verify local SKU before affiliate display.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com)",
+      "alt": "Victor DriveX 8S badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "vic-thruster-ryuga-ii",
@@ -3600,7 +3609,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://cdn.shopify.com/s/files/1/0086/4101/9967/files/L69.png?v=1776754606",
+      "source": "retailer",
+      "credit": "Image: e78.us (Li-Ning L69 badminton string)",
+      "alt": "Li-Ning L69 badminton string",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "vic-p9200-iii",
@@ -4563,7 +4581,16 @@
       "https://www.yonex.com/arcsaber"
     ],
     "editorNote": "Mid-tier of the new Arcsaber 7 generation. Bridges entry-tier Play and premium Pro. Strong value for control-leaning amateurs.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/arc7-t_grayyellow.png",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Arcsaber 7 Tour badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "yy-arcsaber-7-play",
@@ -4942,7 +4969,16 @@
       "https://www.victorsport.com/product/drivex-12"
     ],
     "editorNote": "Standalone deep-dive variant of DriveX 12. Existing DriveX 12 O catalog row covers the 'Original' colourway; this row is the broader product family entry.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com)",
+      "alt": "Victor DriveX 12 badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "vic-auraspeed-fantome",
@@ -7338,7 +7374,16 @@
       "https://www.victorsport.com/product/jetspeed-12"
     ],
     "editorNote": "Victor Jetspeed 12 — classic speed-doubles ceiling for many club players. 3U/G5 community setup at 28 lb XB63: balanced head-light feel, medium shaft, 8–4 grooves. Forgiving sweet spot; watch Taiwan-build grommet collapse at high tension.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com)",
+      "alt": "Victor Jetspeed 12 badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   },
   {
     "id": "ln-blade-500-pro",
