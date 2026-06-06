@@ -3727,7 +3727,16 @@
         "href": "https://bbs.badmintoncn.com/",
         "confidence": "high"
       }
-    ]
+    ],
+    "image": {
+      "url": "https://li-ningsports.co.uk/cdn/shop/files/AYAU003-212.jpg?v=1763149402&width=1520",
+      "source": "lining",
+      "credit": "Image: Li-Ning (li-ningsports.co.uk) — Blade Max AYAU003-2 (UK name for Bladesabre MAX)",
+      "alt": "Li-Ning Bladesabre MAX badminton shoe",
+      "width": 1520,
+      "height": 1520,
+      "verified": true
+    }
   },
   {
     "id": "ln-axforce-10",
