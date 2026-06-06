@@ -1,8 +1,11 @@
 import { describe, expect, it } from "vitest";
 import {
+  catalogCtaLabelForBrandsIndex,
+  catalogCtaLabelFromBrandSlug,
   catalogCtaLabelFromProduct,
   catalogHrefFromBestSlug,
   catalogHrefFromBrand,
+  catalogHrefFromBrandSlug,
   catalogHrefFromCompareSlug,
   catalogCtaLabelFromGuideSlug,
   catalogHrefFromGuideSlug,
@@ -12,6 +15,7 @@ import {
   catalogHrefFromToolSlug,
   catalogCtaLabelFromToolSlug,
   catalogUrlFromState,
+  dedicatedBrandPageSlugs,
   parseCatalogSearchParams,
 } from "@/lib/catalog-url";
 
@@ -191,6 +195,14 @@ describe("catalog-url", () => {
     expect(
       catalogCtaLabelFromProduct({ brand: "Yonex", category: "racket" })
     ).toBe("Browse Yonex in catalog");
+  });
+
+  it("builds dedicated brand slug catalog hrefs and CTA labels", () => {
+    expect(catalogHrefFromBrandSlug("yonex")).toBe("/catalog/?brand=Yonex");
+    expect(catalogHrefFromBrandSlug("li-ning")).toBe("/catalog/?brand=Li-Ning");
+    expect(catalogCtaLabelFromBrandSlug("anta")).toBe("Browse Anta in catalog");
+    expect(catalogCtaLabelForBrandsIndex()).toBe("Browse full catalog");
+    expect(dedicatedBrandPageSlugs()).toContain("kumpoo");
   });
 
   it("builds profile catalog hrefs from quiz category, budget, style, and sort", () => {

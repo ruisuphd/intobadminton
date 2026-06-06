@@ -119,6 +119,45 @@ export function catalogHrefFromBrand(brand: string): string {
   });
 }
 
+/** Dedicated `/brands/[slug]/` pages with brand-filtered catalog exit wiring. */
+const DEDICATED_BRAND_PAGE_NAMES: Record<string, string> = {
+  yonex: "Yonex",
+  victor: "Victor",
+  "li-ning": "Li-Ning",
+  bonny: "Bonny",
+  kawasaki: "Kawasaki",
+  kumpoo: "Kumpoo",
+  anta: "Anta",
+};
+
+/** Slugs with committed catalog filter wiring on dedicated brand landings. */
+export function dedicatedBrandPageSlugs(): string[] {
+  return Object.keys(DEDICATED_BRAND_PAGE_NAMES);
+}
+
+export function brandNameFromBrandSlug(slug: string): string | null {
+  return DEDICATED_BRAND_PAGE_NAMES[slug.trim()] ?? null;
+}
+
+/** Filtered catalog browse — used from `/brands/[slug]/` landings. */
+export function catalogHrefFromBrandSlug(slug: string): string {
+  const name = brandNameFromBrandSlug(slug);
+  if (!name) return "/catalog/";
+  return catalogHrefFromBrand(name);
+}
+
+/** Button label for dedicated brand → catalog CTA. */
+export function catalogCtaLabelFromBrandSlug(slug: string): string {
+  const name = brandNameFromBrandSlug(slug);
+  if (!name) return "Browse matching catalog";
+  return `Browse ${name} in catalog`;
+}
+
+/** Button label for `/brands/` hub → full catalog CTA. */
+export function catalogCtaLabelForBrandsIndex(): string {
+  return "Browse full catalog";
+}
+
 /**
  * Best-of slug → shareable catalog filters (retailer-style guide → browse).
  * Unmapped slugs fall back to the full catalog index.

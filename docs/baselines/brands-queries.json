@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "updated": "2026-06-05",
+  "coverage": {
+    "minDedicatedBrandSlugs": 7
+  },
+  "queries": [
+    {
+      "id": "lighthouse-brands-index",
+      "slug": "index",
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "brands we cover",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "expectFinderCta": true,
+      "expectKeepReadingShelf": true,
+      "note": "Lighthouse brands hub — full catalog exit + Keep reading shelf"
+    },
+    {
+      "id": "lighthouse-yonex",
+      "slug": "yonex",
+      "expectCatalogHref": "/catalog/?brand=Yonex",
+      "e2e": true,
+      "expectHeadingPattern": "yonex",
+      "expectCatalogLinkPattern": "browse yonex in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse flagship brand — Yonex catalog exit"
+    },
+    {
+      "id": "lighthouse-victor",
+      "slug": "victor",
+      "expectCatalogHref": "/catalog/?brand=Victor",
+      "e2e": true,
+      "expectHeadingPattern": "victor",
+      "expectCatalogLinkPattern": "browse victor in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse flagship brand — Victor catalog exit"
+    },
+    {
+      "id": "lighthouse-li-ning",
+      "slug": "li-ning",
+      "expectCatalogHref": "/catalog/?brand=Li-Ning",
+      "e2e": true,
+      "expectHeadingPattern": "li-ning",
+      "expectCatalogLinkPattern": "browse li-ning in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse flagship brand — Li-Ning catalog exit"
+    },
+    {
+      "id": "lighthouse-anta",
+      "slug": "anta",
+      "expectCatalogHref": "/catalog/?brand=Anta",
+      "e2e": true,
+      "expectHeadingPattern": "anta",
+      "expectCatalogLinkPattern": "browse anta in catalog",
+      "expectFinderCta": true,
+      "note": "Lighthouse tier-4 brand — Anta catalog exit"
+    },
+    {
+      "id": "lighthouse-kawasaki",
+      "slug": "kawasaki",
+      "expectCatalogHref": "/catalog/?brand=Kawasaki",
+      "note": "Lighthouse tier-2 brand — Kawasaki catalog exit"
+    },
+    {
+      "id": "lighthouse-kumpoo",
+      "slug": "kumpoo",
+      "expectCatalogHref": "/catalog/?brand=Kumpoo",
+      "note": "Lighthouse tier-2 brand — Kumpoo catalog exit"
+    },
+    {
+      "id": "lighthouse-bonny",
+      "slug": "bonny",
+      "expectCatalogHref": "/catalog/?brand=Bonny",
+      "note": "Lighthouse tier-2 brand — Bonny catalog exit"
+    }
+  ]
+}
