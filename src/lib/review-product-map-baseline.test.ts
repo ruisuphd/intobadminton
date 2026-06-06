@@ -88,6 +88,24 @@ describe("review-product-map-baseline", () => {
     expect(issue?.message).toContain("minExplainerGuards");
   });
 
+  it("enforces minMappedE2eGuards coverage counter", () => {
+    const issue = evaluateReviewProductMapCoverage(
+      { minMappedE2eGuards: 20 },
+      articleSlugs,
+      explainerSet,
+      map,
+      [
+        {
+          id: "one",
+          slug: "yonex-arcsaber-7-pro-review",
+          expectProductId: "yy-arcsaber-7-pro",
+          e2e: true,
+        },
+      ]
+    );
+    expect(issue?.message).toContain("minMappedE2eGuards");
+  });
+
   it("flags explainer slugs that become mapped", () => {
     const issue = evaluateReviewProductMapBaselineQuery(
       {

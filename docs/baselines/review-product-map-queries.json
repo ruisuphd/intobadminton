@@ -4,7 +4,8 @@
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
-    "minExplainerGuards": 13
+    "minExplainerGuards": 13,
+    "minMappedE2eGuards": 20
   },
   "queries": [
     {
@@ -168,6 +169,24 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Tier-4 budget shoe review on /best/budget-badminton-shoes/ — Product+Review JSON-LD + catalog CTA"
+    },
+    {
+      "id": "flagship-astrox-100zz-va-vs-kurenai",
+      "slug": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      "expectProductId": "yy-astrox-100zz",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship compare-guide review — Astrox 100ZZ VA vs Kurenai edition deep-dive"
+    },
+    {
+      "id": "flagship-astrox-99-pro-2",
+      "slug": "yonex-astrox-99-pro-2-deep-dive",
+      "expectProductId": "yy-astrox-99-pro",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Flagship attack racket review — Astrox 99 Pro 2 deep-dive linked from compare guides"
     },
     {
       "id": "explainer-how-to-choose-racket",
