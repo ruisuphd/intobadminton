@@ -73,6 +73,10 @@
 
 **Sprint 88 addendum:** Head-light speed review-map e2e — ✅ Bladex 800 Speed + Auraspeed Fantome golden profiles; `minMappedE2eGuards: 33`; Thruster Ryuga II blocked (no dedicated review article in catalogue).
 
+**Sprint 89 addendum:** Attack/graduation review-map e2e — ✅ AxForce 90 New + Astrox 77 Pro golden profiles; `minMappedE2eGuards: 35`; DriveX 8S blocked (no dedicated review article in catalogue).
+
+**Sprint 90 addendum:** Defensive/all-round review-map e2e — ✅ Halbertec 7000 II + Arcsaber 7 Tour golden profiles; `minMappedE2eGuards: 37`; DriveX 8S blocked (no dedicated review article in catalogue).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -735,13 +739,31 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 31`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT87_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT87_2026-06.md)
 
-### Next (Sprint 88+)
+### Sprint 88 — This branch (PR #236)
+
+- **Review-map e2e expansion** — Bladex 800 Speed + Auraspeed Fantome golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 33`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT88_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT88_2026-06.md)
+
+### Sprint 89 — Shipped (PR #237)
+
+- **Review-map e2e expansion** — AxForce 90 New + Astrox 77 Pro golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 35`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT89_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT89_2026-06.md)
+
+### Sprint 90 — This branch (`cursor/web-app-improvement-plan-2d5a`)
+
+- **Review-map e2e expansion** — Halbertec 7000 II + Arcsaber 7 Tour golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 37`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT90_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT90_2026-06.md)
+
+### Next (Sprint 91+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
-- Thruster Ryuga II + Bladex 800 Speed flagship review-map e2e
+- Thruster Ryuga II + DriveX 8S review ingestion
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

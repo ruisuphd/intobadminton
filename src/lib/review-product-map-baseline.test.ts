@@ -90,7 +90,7 @@ describe("review-product-map-baseline", () => {
 
   it("enforces minMappedE2eGuards coverage counter", () => {
     const issue = evaluateReviewProductMapCoverage(
-      { minMappedE2eGuards: 25 },
+      { minMappedE2eGuards: 37 },
       articleSlugs,
       explainerSet,
       map,

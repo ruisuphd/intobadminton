@@ -5,7 +5,7 @@
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 33
+    "minMappedE2eGuards": 37
   },
   "queries": [
     {
@@ -304,6 +304,42 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Victor head-light speed review — Fantome on /best/head-light-rackets/ (Ryuga II blocked: no dedicated review article)"
+    },
+    {
+      "id": "flagship-ln-axforce-90-new",
+      "slug": "li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp",
+      "expectProductId": "ln-axforce-90-new",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning attack flagship review — AxForce 90 New on /compare-guides/astrox-88d-pro-vs-axforce-90-new/"
+    },
+    {
+      "id": "flagship-yy-astrox-77-pro",
+      "slug": "yonex-astrox-77-pro-review",
+      "expectProductId": "yy-astrox-77-pro",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex graduation racket review — Astrox 77 Pro on /best/beginner-rackets/ and /best/intermediate-rackets/ (DriveX 8S blocked: no dedicated review article)"
+    },
+    {
+      "id": "flagship-ln-halbertec-7000-ii",
+      "slug": "li-ning-halbertec-7000-ii-review",
+      "expectProductId": "ln-halbertec-7000-ii",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning defensive all-round review — Halbertec 7000 II on /best/defensive-rackets/ and /best/all-round-rackets/"
+    },
+    {
+      "id": "flagship-yy-arcsaber-7-tour",
+      "slug": "yonex-arcsaber-7-tour-review",
+      "expectProductId": "yy-arcsaber-7-tour",
+      "expectCategory": "racket",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex defensive control review — Arcsaber 7 Tour on /best/defensive-rackets/ and /best/all-round-rackets/"
     },
     {
       "id": "explainer-how-to-choose-racket",
