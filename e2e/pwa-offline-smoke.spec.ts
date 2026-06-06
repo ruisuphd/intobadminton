@@ -12,8 +12,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v29"))) return false;
-      const cache = await caches.open("ib-v29-static");
+      if (!keys.some((key) => key.startsWith("ib-v30"))) return false;
+      const cache = await caches.open("ib-v30-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -27,7 +27,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v29-static");
+    const cache = await caches.open("ib-v30-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -80,6 +80,25 @@ test("precached commercial and guide pages load offline after prior visit", asyn
     await page.goto(path);
     await expect(page.getByRole("heading", { level: 1 })).toContainText(heading);
   }
+});
+
+test("precached homepage featured review loads offline after prior visit", async ({
+  page,
+  context,
+}) => {
+  await ensureServiceWorker(page);
+
+  await page.goto("/review/gosen-ryoga-shiden-review/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Ryoga Shiden/i
+  );
+
+  await context.setOffline(true);
+
+  await page.goto("/review/gosen-ryoga-shiden-review/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    /Ryoga Shiden/i
+  );
 });
 
 test("precached PDP and review load offline after prior visit", async ({

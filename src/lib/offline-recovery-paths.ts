@@ -41,6 +41,11 @@ export const OFFLINE_RECOVERY_LINKS = [
     description: "Precached — flagship first-person racket review.",
   },
   {
+    href: "/review/gosen-ryoga-shiden-review/",
+    label: "Gosen Ryoga Shiden review",
+    description: "Precached — homepage featured cult speed blade review.",
+  },
+  {
     href: "/product/yy-grpht-thrttl/",
     label: "Sample product page",
     description: "Precached — Yonex Grpht Thrttl specs and finder fit.",
