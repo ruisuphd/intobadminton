@@ -11,6 +11,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { blogArticles, getBlogArticle } from "@/lib/blog";
+import { homeFeaturedReviewSlugs } from "@/lib/home-featured";
 import { catalogHrefFromProduct } from "@/lib/catalog-url";
 import { reviewProductIdForBlog } from "@/lib/content-links";
 import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
@@ -51,6 +52,8 @@ export type ReviewsBaselineCoverageSpec = {
   minArticleSlugs?: number;
   /** Every article slug in review-product-map-queries must appear here. */
   requireReviewMapParity?: boolean;
+  /** Every slug in home-featured-reviews.json must appear here. */
+  requireFeaturedParity?: boolean;
 };
 
 export type ReviewsBaselineFile = {
@@ -176,6 +179,7 @@ export function validateReviewsBaselineFile(
       minArticleSlugs:
         typeof c.minArticleSlugs === "number" ? c.minArticleSlugs : undefined,
       requireReviewMapParity: c.requireReviewMapParity === true,
+      requireFeaturedParity: c.requireFeaturedParity === true,
     };
   }
 
@@ -342,6 +346,20 @@ export function evaluateReviewsBaselineCoverage(
         return {
           id: "coverage",
           message: `review map slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
+    }
+  }
+
+  if (file.coverage?.requireFeaturedParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of homeFeaturedReviewSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `featured review slug "${slug}" missing from reviews-queries.json`,
         };
       }
     }

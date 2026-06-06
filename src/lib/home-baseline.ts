@@ -9,6 +9,7 @@
 
 import catalogStats from "@/data/catalog-stats.json";
 import {
+  homeFeaturedReviewHrefs,
   homeFeaturedReviews,
   reviewArticleCount,
 } from "@/lib/home-featured";
@@ -24,6 +25,8 @@ export type HomeBaselineQuery = {
   expectMinCatalogTotal?: number;
   /** Hrefs that must appear in the homepage popular-search grid. */
   expectPopularSearchHrefs?: string[];
+  /** Review article hrefs that must appear in the homepage featured slice. */
+  expectFeaturedReviewHrefs?: string[];
   /** Include in Playwright home baseline e2e smoke. */
   e2e?: boolean;
   /** Case-insensitive substring for h1 assertion in e2e. */
@@ -99,6 +102,12 @@ export function validateHomeBaselineFile(
         )
       : undefined;
 
+    const expectFeaturedReviewHrefs = Array.isArray(q.expectFeaturedReviewHrefs)
+      ? q.expectFeaturedReviewHrefs.filter(
+          (href): href is string => typeof href === "string" && href.trim().length > 0
+        )
+      : undefined;
+
     queries.push({
       id: q.id,
       expectCatalogHref: q.expectCatalogHref,
@@ -116,6 +125,7 @@ export function validateHomeBaselineFile(
           ? q.expectMinCatalogTotal
           : undefined,
       expectPopularSearchHrefs,
+      expectFeaturedReviewHrefs,
       e2e: q.e2e === true,
       expectHeadingPattern:
         typeof q.expectHeadingPattern === "string"
@@ -183,6 +193,19 @@ export function evaluateHomeBaselineQuery(
         return {
           id: spec.id,
           message: `popular search href "${href}" missing from homepage grid`,
+          note: spec.note,
+        };
+      }
+    }
+  }
+
+  if (spec.expectFeaturedReviewHrefs != null) {
+    const live = new Set(homeFeaturedReviewHrefs());
+    for (const href of spec.expectFeaturedReviewHrefs) {
+      if (!live.has(href)) {
+        return {
+          id: spec.id,
+          message: `featured review href "${href}" missing from homepage slice`,
           note: spec.note,
         };
       }

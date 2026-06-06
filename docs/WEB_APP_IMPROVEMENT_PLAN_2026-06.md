@@ -480,7 +480,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **e2e backfill** — CrUX Arcsaber 7 Pro, Nanoflare 1000Z, unmapped explainer decision-path shelf
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT56_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT56_2026-06.md)
 
-### Sprint 57 — This branch
+### Sprint 57 — Shipped (PR #205)
 
 - **Homepage golden profile** — `docs/baselines/home-queries.json` (CrUX `/` catalog/finder exit + commercial deep-links)
 - **Shared popular searches** — `src/lib/home-popular-searches.ts` wired into homepage + CI guard
@@ -488,12 +488,20 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Reviews e2e backfill** — all 5 mapped article slugs + hub in Playwright smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT57_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT57_2026-06.md)
 
-### Next (Sprint 58+)
+### Sprint 58 — This branch
+
+- **Featured review golden profiles** — 6 `home-featured-reviews.json` slugs in `reviews-queries.json`
+- **Featured parity** — `coverage.requireFeaturedParity` links reviews baseline to homepage featured slice
+- **Popular-search review guards** — Tour guide, Kumpoo profile, stringing-hole explainer article rows
+- **Homepage featured href guard** — `expectFeaturedReviewHrefs` on CrUX `/` row + e2e card assertions
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT58_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT58_2026-06.md)
+
+### Next (Sprint 59+)
 
 - Owner: deploy reactions worker + set `REACTIONS_API_URL`; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Original photos on top commercial URLs
 - Uncomment YouTube `sameAs` after channel claim
-- Expand per-article review golden profiles beyond review-map parity set
+- Expand per-article review golden profiles to full Lighthouse review URL set
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

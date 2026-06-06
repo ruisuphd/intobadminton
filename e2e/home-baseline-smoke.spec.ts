@@ -19,6 +19,7 @@ function e2eHomeQueries(): {
   expectFinderHref: string;
   expectHeadingPattern?: string;
   expectCatalogLinkPattern?: string;
+  expectFeaturedReviewHrefs?: string[];
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validateHomeBaselineFile(raw);
@@ -33,6 +34,7 @@ function e2eHomeQueries(): {
       expectFinderHref: q.expectFinderHref,
       expectHeadingPattern: q.expectHeadingPattern,
       expectCatalogLinkPattern: q.expectCatalogLinkPattern,
+      expectFeaturedReviewHrefs: q.expectFeaturedReviewHrefs,
     }));
 }
 
@@ -43,6 +45,7 @@ for (const {
   expectFinderHref,
   expectHeadingPattern,
   expectCatalogLinkPattern,
+  expectFeaturedReviewHrefs,
 } of e2eHomeQueries()) {
   test(`Home baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
@@ -70,5 +73,11 @@ for (const {
     await expect(
       page.getByRole("heading", { name: /latest reviews/i })
     ).toBeVisible();
+
+    if (expectFeaturedReviewHrefs?.length) {
+      for (const href of expectFeaturedReviewHrefs) {
+        await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
+      }
+    }
   });
 }
