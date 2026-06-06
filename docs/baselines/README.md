@@ -40,7 +40,7 @@ Queries with `"e2e": true` are also exercised in Playwright (`e2e/home-baseline-
 
 Committed `/review/` hub and priority article slug expectations for catalog exit, related reading shelf, finder CTA, equipment finder panel, and minimum article corpus:
 
-- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus review-map article slugs, homepage featured reviews, and popular-search review deep-links. `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json); `requireFeaturedParity` links to [`home-featured-reviews.json`](../../src/data/home-featured-reviews.json).
+- [`reviews-queries.json`](reviews-queries.json) — Lighthouse reviews index plus review-map article slugs, homepage featured reviews, popular-search review deep-links, and every `/review/[slug]/` URL in [`lighthouserc.json`](../../lighthouserc.json). `requireReviewMapParity` links to [`review-product-map-queries.json`](review-product-map-queries.json); `requireFeaturedParity` links to [`home-featured-reviews.json`](../../src/data/home-featured-reviews.json); `requireLighthouseParity` links to committed Lighthouse review article URLs via `src/lib/lighthouse-paths.ts`.
 
 Validate reviews hub + article parity (runs in CI after brands guard):
 
