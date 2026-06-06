@@ -1,5 +1,8 @@
+import { homeFeaturedOfflineRecoveryLinks } from "@/lib/home-featured";
+import { homePopularSearchReviewOfflineRecoveryLinks } from "@/lib/home-popular-searches";
+
 /** CrUX-priority and Lighthouse commercial paths listed on `/offline/` recovery sidebar. */
-export const OFFLINE_RECOVERY_LINKS = [
+const CORE_OFFLINE_RECOVERY_LINKS = [
   {
     href: "/quiz/",
     label: "Equipment finder",
@@ -39,11 +42,6 @@ export const OFFLINE_RECOVERY_LINKS = [
     href: "/review/yonex-arcsaber-7-pro-review/",
     label: "Arcsaber 7 Pro review",
     description: "Precached — flagship first-person racket review.",
-  },
-  {
-    href: "/review/gosen-ryoga-shiden-review/",
-    label: "Gosen Ryoga Shiden review",
-    description: "Precached — homepage featured cult speed blade review.",
   },
   {
     href: "/product/yy-grpht-thrttl/",
@@ -196,6 +194,25 @@ export const OFFLINE_RECOVERY_LINKS = [
     description: "Precached — consent and ad personalization controls.",
   },
 ] as const;
+
+function dedupeOfflineRecoveryLinks<
+  T extends { href: string; label: string; description: string },
+>(links: T[]): T[] {
+  const seen = new Set<string>();
+  const out: T[] = [];
+  for (const link of links) {
+    if (seen.has(link.href)) continue;
+    seen.add(link.href);
+    out.push(link);
+  }
+  return out;
+}
+
+export const OFFLINE_RECOVERY_LINKS = dedupeOfflineRecoveryLinks([
+  ...CORE_OFFLINE_RECOVERY_LINKS,
+  ...homeFeaturedOfflineRecoveryLinks(),
+  ...homePopularSearchReviewOfflineRecoveryLinks(),
+]);
 
 /** Paths from `docs/baselines/crux-template.csv` that must appear in offline recovery. */
 export const CRUX_OFFLINE_RECOVERY_PATHS = [

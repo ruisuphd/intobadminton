@@ -59,3 +59,36 @@ export function homePopularReviewSlugs(): string[] {
     )
     .map((entry) => entry.href.slice("/review/".length).replace(/\/$/, ""));
 }
+
+export type OfflineRecoveryLink = {
+  href: string;
+  label: string;
+  description: string;
+};
+
+const POPULAR_SEARCH_OFFLINE_DESCRIPTIONS: Record<string, string> = {
+  "/review/racket-stringing-hole-patterns-explained/":
+    "Precached — homepage popular-search stringing hole explainer.",
+  "/review/yonex-nanoflare-1000z-review/":
+    "Precached — homepage popular-search flagship speed racket review.",
+  "/review/yonex-tour-series-buying-guide/":
+    "Precached — homepage popular-search Tour vs Pro value guide.",
+  "/review/kumpoo-fourth-major-badminton-brand-profile/":
+    "Precached — homepage popular-search Kumpoo brand profile.",
+};
+
+/** Popular-search review deep links for `/offline/` recovery sidebar — shared with parity CI. */
+export function homePopularSearchReviewOfflineRecoveryLinks(): OfflineRecoveryLink[] {
+  return homePopularSearches
+    .filter(
+      (entry) =>
+        entry.href.startsWith("/review/") && entry.href !== "/review/"
+    )
+    .map((entry) => ({
+      href: entry.href,
+      label: entry.label,
+      description:
+        POPULAR_SEARCH_OFFLINE_DESCRIPTIONS[entry.href] ??
+        "Precached — homepage popular-search editorial pick.",
+    }));
+}
