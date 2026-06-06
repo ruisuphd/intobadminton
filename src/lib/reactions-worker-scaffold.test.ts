@@ -19,6 +19,8 @@ describe("reactions worker scaffold", () => {
     );
     expect(readme).toContain("REACTIONS_API_URL");
     expect(readme).toContain("NEXT_PUBLIC_REACTIONS_API_URL");
+    expect(readme).toContain("/health");
+    expect(readme).toContain("reactions:smoke");
 
     const pagesWorkflow = readFileSync(
       resolve(ROOT, ".github/workflows/pages.yml"),
