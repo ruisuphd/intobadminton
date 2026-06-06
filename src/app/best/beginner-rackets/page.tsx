@@ -104,8 +104,15 @@ const config: BestPicksConfig = {
       ],
       why: "Victor's DriveX series is tuned around flat-drive doubles play. The 8S is light enough to defend with and stiff enough to teach proper contact, without the price tag of an Auraspeed Pro.",
       tradeoff: "Less brand awareness in North America — string and grip swap on local stringer is fine.",
-      // TODO image: Victor DriveX 8S J — source from victorsport.com/product/drivex-8-s
-      // (page is JS-rendered, copy hero image URL from browser inspector).
+      image: {
+        url: "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
+        source: "victor",
+        credit: "Image: Victor (victorsport.com)",
+        alt: "Victor DriveX 8S badminton racket",
+        width: 480,
+        height: 480,
+        verified: true,
+      },
     },
     {
       rank: 5,

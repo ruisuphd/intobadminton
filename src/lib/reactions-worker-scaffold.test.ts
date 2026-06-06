@@ -50,4 +50,23 @@ describe("reactions worker scaffold", () => {
     expect(healthWorkflow).toContain("reactions:smoke");
     expect(healthWorkflow).toContain("REACTIONS_API_URL");
   });
+
+  it("Pages build smoke-tests reactions when secret is set", () => {
+    const pagesWorkflow = readFileSync(
+      resolve(ROOT, ".github/workflows/pages.yml"),
+      "utf8"
+    );
+    expect(pagesWorkflow).toContain("reactions:smoke");
+    expect(pagesWorkflow).toContain("REACTIONS_API_URL");
+  });
+
+  it("exposes wire-reactions-pages workflow for owner rebuild", () => {
+    const wireWorkflow = readFileSync(
+      resolve(ROOT, ".github/workflows/wire-reactions-pages.yml"),
+      "utf8"
+    );
+    expect(wireWorkflow).toContain("workflow_dispatch");
+    expect(wireWorkflow).toContain("reactions:smoke");
+    expect(wireWorkflow).toContain("pages.yml");
+  });
 });

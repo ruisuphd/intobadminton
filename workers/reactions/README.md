@@ -10,7 +10,8 @@ Anonymous aggregate counts for the `HelpfulReaction` component. Stores `{ up, do
 4. **Deploy** — `cd workers/reactions && npx wrangler deploy`  
    Or run the **Deploy reactions worker** GitHub Action on `main` after setting `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets. The workflow runs contract tests, deploys, then hits `GET /health` on the published worker URL.
 5. **Pages secret** — add repository secret **`REACTIONS_API_URL`** with the worker URL (e.g. `https://intobadminton-reactions.<account>.workers.dev`). The deploy workflow prints the URL in its log. The Pages workflow passes it as `NEXT_PUBLIC_REACTIONS_API_URL` at build time.
-6. **Smoke** — `REACTIONS_API_URL=https://…workers.dev npm run reactions:smoke` (hits `GET /health`). The **Reactions worker health** workflow re-runs this weekly when the secret is set. Then open a guide with `HelpfulReaction`, vote once, reload; counts should persist. CI covers local vote UX in `e2e/helpful-reaction-smoke.spec.ts` (API-off path when secret unset).
+6. **Wire to production** — run the **Wire reactions to Pages** GitHub Action (`wire-reactions-pages.yml`). It smoke-tests the secret, then triggers a Pages rebuild so the static export picks up the API URL.
+7. **Smoke** — `REACTIONS_API_URL=https://…workers.dev npm run reactions:smoke` (hits `GET /health`). The **Reactions worker health** workflow re-runs this weekly when the secret is set; the **Deploy to GitHub Pages** workflow also smoke-tests before upload when the secret is set. Then open a guide with `HelpfulReaction`, vote once, reload; counts should persist. CI covers local vote UX in `e2e/helpful-reaction-smoke.spec.ts` (API-off path when secret unset).
 
 ## API
 
