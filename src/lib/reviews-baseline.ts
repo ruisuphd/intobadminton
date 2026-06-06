@@ -10,8 +10,13 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+import productsCatalog from "@/data/products.json";
 import { blogArticles, getBlogArticle } from "@/lib/blog";
 import { compareGuideReviewSlugs } from "@/lib/compare-guide-reviews";
+import {
+  mappedProductIdForSlug,
+  mappedReviewSlugs,
+} from "@/lib/mapped-review-slugs";
 import { homeFeaturedReviewSlugs } from "@/lib/home-featured";
 import { homePopularReviewSlugs } from "@/lib/home-popular-searches";
 import { lighthouseReviewArticleSlugs } from "@/lib/lighthouse-paths";
@@ -23,6 +28,13 @@ import {
   relatedReadingForPath,
   relatedReadingForReviewSlug,
 } from "@/lib/related-content";
+import type { ProductRecord } from "@/lib/types/product";
+
+const FULL_CATALOG = productsCatalog as ProductRecord[];
+
+function catalogProductById(id: string): ProductRecord | undefined {
+  return FULL_CATALOG.find((p) => p.id === id);
+}
 
 export type ReviewsBaselineQuery = {
   /** Stable id for logs and e2e test titles. */
@@ -63,6 +75,8 @@ export type ReviewsBaselineCoverageSpec = {
   requirePopularSearchParity?: boolean;
   /** Every editorial review slug linked from compare guides must appear here. */
   requireCompareGuideReviewParity?: boolean;
+  /** Every slug in blog-review-product-map.json must appear here. */
+  requireFullMappedParity?: boolean;
 };
 
 export type ReviewsBaselineFile = {
@@ -97,10 +111,18 @@ export function reviewArticleCount(): number {
 /** Product-mapped review slug → brand+category catalog exit; otherwise `/catalog/`. */
 export function catalogHrefFromReviewSlug(slug: string): string {
   const productId = reviewProductIdForBlog(slug);
-  if (!productId) return "/catalog/";
-  const product = reviewProductById(productId);
-  if (!product) return "/catalog/";
-  return catalogHrefFromProduct(product);
+  if (productId) {
+    const product = reviewProductById(productId);
+    if (product) return catalogHrefFromProduct(product);
+  }
+
+  const rawMapId = mappedProductIdForSlug(slug);
+  if (rawMapId) {
+    const product = catalogProductById(rawMapId);
+    if (product) return catalogHrefFromProduct(product);
+  }
+
+  return "/catalog/";
 }
 
 export function validateReviewsBaselineFile(
@@ -192,6 +214,7 @@ export function validateReviewsBaselineFile(
       requireLighthouseParity: c.requireLighthouseParity === true,
       requirePopularSearchParity: c.requirePopularSearchParity === true,
       requireCompareGuideReviewParity: c.requireCompareGuideReviewParity === true,
+      requireFullMappedParity: c.requireFullMappedParity === true,
     };
   }
 
@@ -414,6 +437,20 @@ export function evaluateReviewsBaselineCoverage(
         return {
           id: "coverage",
           message: `compare-guide review slug "${slug}" missing from reviews-queries.json`,
+        };
+      }
+    }
+  }
+
+  if (file.coverage?.requireFullMappedParity) {
+    const committed = new Set(
+      file.queries.filter((q) => q.slug !== "index").map((q) => q.slug)
+    );
+    for (const slug of mappedReviewSlugs()) {
+      if (!committed.has(slug)) {
+        return {
+          id: "coverage",
+          message: `mapped review slug "${slug}" missing from reviews-queries.json`,
         };
       }
     }
