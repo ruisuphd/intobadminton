@@ -265,6 +265,65 @@
     }
   },
   {
+    "id": "yy-astrox-77-play",
+    "category": "racket",
+    "name": "Astrox 77 Play",
+    "brand": "Yonex",
+    "priceUsd": 100,
+    "headWeight": "head_heavy",
+    "shaftFlex": "flexible",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 19,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/astrox-77-play",
+    "lastVerifiedAt": "2026-06-06",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner_friendly",
+      "attack_learning",
+      "doubles_starter"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/astrox-77-play"
+    ],
+    "editorNote": "Beginner-tier Astrox with Hi-Flex shaft and head-heavy balance — teaches Astrox attack geometry without the stiff-shaft penalty of the 77 Pro. Best pick when a new player specifically wants to learn head-heavy overhead technique from day one.",
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/INT_AX77-PL_343-1.jpg?v=1774596539&width=1946",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Astrox 77 Play badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
+  },
+  {
     "id": "yy-arcsaber-11-pro",
     "category": "racket",
     "name": "Arcsaber 11 Pro",
@@ -2263,6 +2322,65 @@
       "alt": "Yonex Nanoflare 700 Game badminton racket",
       "width": 600,
       "height": 819,
+      "verified": true
+    }
+  },
+  {
+    "id": "yy-nanoflare-700-play",
+    "category": "racket",
+    "name": "Nanoflare 700 Play",
+    "brand": "Yonex",
+    "priceUsd": 80,
+    "headWeight": "head_light",
+    "shaftFlex": "flexible",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 285,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "jp",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://us.yonex.com/products/nanoflare-700-play",
+    "lastVerifiedAt": "2026-06-06",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner_friendly",
+      "fast_handling",
+      "doubles_starter"
+    ],
+    "sourceUrls": [
+      "https://us.yonex.com/products/nanoflare-700-play"
+    ],
+    "editorNote": "Founder firsthand (Rui, Div 4 IE): the 5U version is a very beginner-friendly first serious club racket — head-light speed feel without the stiff-shaft demand of the 700 Pro. The 4U row on /best/beginner-rackets/ is the default adult pick.",
+    "reviewCount": 0,
+    "image": {
+      "url": "https://us.yonex.com/cdn/shop/files/int_nf-700pl_529-1_2.png?v=1738288292&width=1445",
+      "source": "yonex",
+      "credit": "Image: Yonex (us.yonex.com)",
+      "alt": "Yonex Nanoflare 700 Play badminton racket",
+      "width": 480,
+      "height": 480,
       "verified": true
     }
   },

@@ -25,6 +25,7 @@ const config: BestPicksConfig = {
       name: "Nanoflare 700 Play",
       brand: "Yonex",
       priceUsd: 80,
+      productId: "yy-nanoflare-700-play",
       bestFor: "First serious club racket — speed leaning",
       specs: [
         { label: "Weight", value: "4U" },
@@ -48,6 +49,7 @@ const config: BestPicksConfig = {
       name: "Astrox 77 Play",
       brand: "Yonex",
       priceUsd: 100,
+      productId: "yy-astrox-77-play",
       bestFor: "Beginner who wants Astrox attack feel",
       specs: [
         { label: "Weight", value: "4U (~83g)" },

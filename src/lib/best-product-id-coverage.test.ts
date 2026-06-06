@@ -16,6 +16,10 @@ describe("best-product-id-coverage", () => {
       pickCount: 6,
       waivers: 0,
     });
+    expect(BEST_PRODUCT_ID_REQUIREMENTS["beginner-rackets"]).toEqual({
+      pickCount: 6,
+      waivers: 0,
+    });
     expect(BEST_PRODUCT_ID_REQUIREMENTS["smash-heavy-rackets"]).toEqual({
       pickCount: 6,
       waivers: 0,
@@ -30,7 +34,7 @@ describe("best-product-id-coverage", () => {
     expect(result.ok).toBe(true);
   });
 
-  it("documents strings and beginner pick waivers", () => {
+  it("documents strings pick waivers", () => {
     expect(
       BEST_PRODUCT_ID_WAIVERS.some(
         (w) => w.slug === "strings" && w.pickName === "Aerobite"
@@ -38,9 +42,8 @@ describe("best-product-id-coverage", () => {
     ).toBe(true);
     expect(
       BEST_PRODUCT_ID_WAIVERS.some(
-        (w) =>
-          w.slug === "beginner-rackets" && w.pickName === "Astrox 77 Play"
+        (w) => w.slug === "beginner-rackets"
       )
-    ).toBe(true);
+    ).toBe(false);
   });
 });

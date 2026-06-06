@@ -41,4 +41,22 @@ describe("product data integrity", () => {
       officialSourceUrl: "https://www.yonex.com/astrox-99-pro-3ax99-p",
     });
   });
+
+  it("keeps Play-tier beginner SKUs aligned to official US product pages", () => {
+    expect(racket("yy-nanoflare-700-play")).toMatchObject({
+      name: "Nanoflare 700 Play",
+      shaftFlex: "flexible",
+      minRecommendedLevel: "recreational",
+      verificationStatus: "official_verified",
+      officialSourceUrl: "https://us.yonex.com/products/nanoflare-700-play",
+    });
+
+    expect(racket("yy-astrox-77-play")).toMatchObject({
+      name: "Astrox 77 Play",
+      shaftFlex: "flexible",
+      headWeight: "head_heavy",
+      verificationStatus: "official_verified",
+      officialSourceUrl: "https://us.yonex.com/products/astrox-77-play",
+    });
+  });
 });
