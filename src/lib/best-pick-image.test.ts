@@ -10,6 +10,12 @@ const catalog: ProductRecord[] = [
     name: "L69 String",
     brand: "Li-Ning",
     priceUsd: 14,
+    gaugeMm: 0.69,
+    feel: "hard",
+    repulsion: "high",
+    control: "high",
+    durability: "very_high",
+    tensionRangeLbs: { min: 22, max: 30 },
     regionAvailability: ["global"],
     officialSourceUrl: "https://lining.com/",
     lastVerifiedAt: "2026-04-30",
@@ -25,7 +31,7 @@ const catalog: ProductRecord[] = [
       alt: "Li-Ning L69 string",
       verified: true,
     },
-  } as ProductRecord,
+  },
 ];
 
 describe("resolveBestPickImage", () => {
