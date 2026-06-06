@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-14",
+  "updated": "2026-06-15",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 42
+    "minMappedE2eGuards": 46
   },
   "queries": [
     {
@@ -385,6 +385,42 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning value shoe review — Bladesabre MAX on /best/shoes/ (sub-$120 pick)"
+    },
+    {
+      "id": "commercial-yy-grpht-thrttl",
+      "slug": "yonex-grpht-thrttl-training-shoe-review",
+      "expectProductId": "yy-grpht-thrttl",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex budget shoe review — Grpht Thrttl on /best/budget-badminton-shoes/ (value stability pick)"
+    },
+    {
+      "id": "commercial-yy-subaxia-gt",
+      "slug": "yonex-subaxia-gt-shoes-review",
+      "expectProductId": "yy-subaxia-gt",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Yonex budget shoe review — Subaxia GT on /best/budget-badminton-shoes/ (step-up stability pick)"
+    },
+    {
+      "id": "commercial-vic-p8500-ii",
+      "slug": "victor-p8500-ii-shoes-review",
+      "expectProductId": "vic-p8500-ii",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Victor wide shoe review — P8500 II on /best/wide-feet-badminton-shoes/ (heavy-player wide pick)"
+    },
+    {
+      "id": "commercial-asics-blast-ff-3",
+      "slug": "asics-blast-ff-3-badminton-shoes-review",
+      "expectProductId": "asics-blast-ff-3",
+      "expectCategory": "shoes",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "ASICS wide shoe review — Blast FF 3 on /best/wide-feet-badminton-shoes/ (indoor wide crossover pick)"
     },
     {
       "id": "explainer-how-to-choose-racket",

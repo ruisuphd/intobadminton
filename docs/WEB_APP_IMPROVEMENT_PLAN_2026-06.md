@@ -81,6 +81,8 @@
 
 **Sprint 92 addendum:** Shoes commercial review-map e2e — ✅ Comfort Z3 + Eclipsion Z3 + Bladesabre MAX golden profiles on `/best/shoes/`; `minMappedE2eGuards: 42`; DriveX 8S blocked (no dedicated review article in catalogue).
 
+**Sprint 93 addendum:** Budget + wide-feet shoes commercial review-map e2e — ✅ Grpht Thrttl + Subaxia GT golden profiles on `/best/budget-badminton-shoes/`; P8500 II + Blast FF 3 on `/best/wide-feet-badminton-shoes/`; `minMappedE2eGuards: 46`; L69 string e2e blocked (string category excluded from reviewProductById lookup); DriveX 8S blocked (no dedicated review article in catalogue).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
