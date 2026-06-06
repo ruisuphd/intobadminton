@@ -31,6 +31,10 @@ const GUARDS = [
     script: "scripts/best-image-coverage.mjs",
   },
   {
+    name: "tier-4 budget image baseline",
+    script: "scripts/tier4-image-baseline.mjs",
+  },
+  {
     name: "best-of productId coverage",
     script: "scripts/best-product-id-coverage.mjs",
   },
