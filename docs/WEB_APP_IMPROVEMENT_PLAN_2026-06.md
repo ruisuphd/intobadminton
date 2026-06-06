@@ -61,6 +61,8 @@
 
 **Sprint 82 addendum:** Flagship review-map e2e expansion — ✅ Astrox 100ZZ VA vs Kurenai + Astrox 99 Pro 2 golden profiles; `minMappedE2eGuards: 20`; Nanoray Light 70i image hunt deferred (no verified Western listing).
 
+**Sprint 83 addendum:** Flagship review-map e2e expansion — ✅ Arcsaber 11 Pro + Astrox 88D Pro + Nanoflare 700 Pro golden profiles; `minMappedE2eGuards: 23`; Nanoray Light 70i image hunt deferred (no verified Western listing).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -693,18 +695,25 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Review-map e2e expansion** — DriveX 10 + P9200 III golden profiles with Playwright smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT81_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT81_2026-06.md)
 
-### Sprint 82 — This branch (`cursor/web-app-improvement-plan-af11`)
+### Sprint 82 — Shipped (PR #230)
 
 - **Review-map e2e expansion** — Astrox 100ZZ VA vs Kurenai + Astrox 99 Pro 2 golden profiles with Playwright smoke
 - **`minMappedE2eGuards: 20`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT82_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT82_2026-06.md)
 
-### Next (Sprint 83+)
+### Sprint 83 — This branch (`cursor/web-app-improvement-plan-680d`)
+
+- **Review-map e2e expansion** — Arcsaber 11 Pro + Astrox 88D Pro + Nanoflare 700 Pro golden profiles with Playwright smoke
+- **`minMappedE2eGuards: 23`** — prevents silent shrinkage of mapped review e2e coverage
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT83_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT83_2026-06.md)
+
+### Next (Sprint 84+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
+- Astrox 88S Pro + Nanoflare 800 Pro flagship review-map e2e
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
