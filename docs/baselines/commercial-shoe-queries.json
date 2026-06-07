@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "updated": "2026-06-09",
+  "queries": [
+    {
+      "id": "commercial-shoe-yy-power-cushion-65z-wide",
+      "productId": "yy-power-cushion-65z-wide",
+      "expectHref": "/review/yonex-65z4-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "shoes",
+      "expectAnchor": "power-cushion-65-z-wide",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "65 Z Wide aliases to 65 Z4 review"
+    },
+    {
+      "id": "commercial-shoe-yy-aerus-z2",
+      "productId": "yy-aerus-z2",
+      "expectHref": "/review/yonex-eclipsion-z3-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "shoes",
+      "expectAnchor": "power-cushion-aerus-z2",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Aerus Z2 aliases to Eclipsion Z3 review"
+    },
+    {
+      "id": "commercial-shoe-yy-comfort-z3",
+      "productId": "yy-comfort-z3",
+      "expectHref": "/review/yonex-comfort-z3-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "shoes",
+      "expectAnchor": "power-cushion-comfort-z3",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Comfort Z3 dedicated review"
+    },
+    {
+      "id": "commercial-shoe-vic-p9200",
+      "productId": "vic-p9200",
+      "expectHref": "/review/victor-p9200-iii-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "shoes",
+      "expectAnchor": "p9200-series",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "P9200 series aliases to P9200 III review"
+    },
+    {
+      "id": "commercial-shoe-yy-eclipsion-z3",
+      "productId": "yy-eclipsion-z3",
+      "expectHref": "/review/yonex-eclipsion-z3-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "shoes",
+      "expectAnchor": "eclipsion-z3",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Eclipsion Z3 dedicated review"
+    },
+    {
+      "id": "commercial-shoe-ln-bladesabre-max",
+      "productId": "ln-bladesabre-max",
+      "expectHref": "/review/li-ning-bladesabre-max-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "shoes",
+      "expectAnchor": "bladesabre-max",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Bladesabre MAX dedicated review"
+    },
+    {
+      "id": "commercial-shoe-vic-p9200-iii",
+      "productId": "vic-p9200-iii",
+      "expectHref": "/review/victor-p9200-iii-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "wide-feet-badminton-shoes",
+      "expectAnchor": "p9200-iii",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "P9200 III on wide-feet guide"
+    },
+    {
+      "id": "commercial-shoe-vic-p8500-ii",
+      "productId": "vic-p8500-ii",
+      "expectHref": "/review/victor-p8500-ii-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "wide-feet-badminton-shoes",
+      "expectAnchor": "p8500-ii",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "P8500 II wide pick"
+    },
+    {
+      "id": "commercial-shoe-bonny-future-land-3",
+      "productId": "bonny-future-land-3",
+      "expectHref": "/review/bonny-future-land-3-polaris-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "wide-feet-badminton-shoes",
+      "expectAnchor": "future-land-3-(polaris-/-极星)",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Bonny Future Land 3 wide pick"
+    },
+    {
+      "id": "commercial-shoe-asics-blast-ff-3",
+      "productId": "asics-blast-ff-3",
+      "expectHref": "/review/asics-blast-ff-3-badminton-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "wide-feet-badminton-shoes",
+      "expectAnchor": "blast-ff-3",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "ASICS Blast FF 3 crossover pick"
+    },
+    {
+      "id": "commercial-shoe-yy-grpht-thrttl",
+      "productId": "yy-grpht-thrttl",
+      "expectHref": "/review/yonex-grpht-thrttl-training-shoe-review/",
+      "expectKind": "review",
+      "expectBestSlug": "budget-badminton-shoes",
+      "expectAnchor": "power-cushion-grpht-thrttl",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Grpht Thrttl budget pick"
+    },
+    {
+      "id": "commercial-shoe-ln-bladesabre-2-pro",
+      "productId": "ln-bladesabre-2-pro",
+      "expectHref": "/review/li-ning-bladesabre-2-pro-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "budget-badminton-shoes",
+      "expectAnchor": "bladesabre-2-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Bladesabre 2 Pro budget pick"
+    },
+    {
+      "id": "commercial-shoe-kumpoo-kh-g805-lite-pro",
+      "productId": "kumpoo-kh-g805-lite-pro",
+      "expectHref": "/review/kumpoo-kh-g805-lite-pro-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "budget-badminton-shoes",
+      "expectAnchor": "kh-g805-lite-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Kumpoo G805 Lite Pro budget pick"
+    },
+    {
+      "id": "commercial-shoe-bonny-carbon-armour",
+      "productId": "bonny-carbon-armour",
+      "expectHref": "/review/bonny-carbon-armour-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "budget-badminton-shoes",
+      "expectAnchor": "carbon-armour",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Bonny Carbon Armour budget pick"
+    },
+    {
+      "id": "commercial-shoe-kawasaki-kace",
+      "productId": "kawasaki-kace",
+      "expectHref": "/review/kawasaki-kace-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "budget-badminton-shoes",
+      "expectAnchor": "kace",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Kawasaki KACE budget pick"
+    },
+    {
+      "id": "commercial-shoe-yy-subaxia-gt",
+      "productId": "yy-subaxia-gt",
+      "expectHref": "/review/yonex-subaxia-gt-shoes-review/",
+      "expectKind": "review",
+      "expectBestSlug": "budget-badminton-shoes",
+      "expectAnchor": "power-cushion-subaxia-gt",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Subaxia GT step-up budget pick"
+    }
+  ]
+}

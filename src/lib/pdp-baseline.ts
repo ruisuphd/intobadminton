@@ -9,9 +9,9 @@
 
 import { catalogHrefFromProduct } from "@/lib/catalog-url";
 import {
+  editorialReviewHref,
   editorialReviewKind,
   PRODUCT_REVIEW_ALIASES,
-  PRODUCT_REVIEW_EXPLAINER_ALIASES,
 } from "@/lib/review-pages";
 import { relatedReadingForProductCategory } from "@/lib/related-content";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
@@ -62,8 +62,11 @@ export function reviewSlugForProductId(
   productId: string,
   map: Record<string, string>
 ): string | undefined {
-  const explainer = PRODUCT_REVIEW_EXPLAINER_ALIASES[productId];
-  if (explainer) return explainer;
+  const href = editorialReviewHref(productId);
+  if (href) {
+    const match = href.match(/^\/review\/([^/]+)\/$/);
+    return match?.[1];
+  }
 
   const resolvedId = PRODUCT_REVIEW_ALIASES[productId] ?? productId;
   const entry = Object.entries(map).find(([, id]) => id === resolvedId);
