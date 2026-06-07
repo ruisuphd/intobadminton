@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
-/** Catalogue racket with no dedicated review slug — catalog links to PDP. */
-const PDP_ONLY_ID = "vic-thruster-ryuga-ii";
+/** Catalogue grip with no dedicated review slug — catalog links to PDP. */
+const PDP_ONLY_ID = "yy-ac102c";
 
 test("product PDP renders specs and finder CTA", async ({ page }) => {
   await page.goto(`/product/${PDP_ONLY_ID}/`);
@@ -26,9 +26,9 @@ test("product PDP shows related reading shelf", async ({ page }) => {
 });
 
 test("catalog links unmapped SKUs to product PDP", async ({ page }) => {
-  await page.goto("/catalog/?cat=racket&brand=Victor");
+  await page.goto("/catalog/?cat=grip&brand=Yonex");
 
-  await page.getByRole("link", { name: /Thruster Ryuga II/i }).click();
+  await page.getByRole("link", { name: /Super Grap \(AC102C/i }).click();
 
   await expect(page).toHaveURL(new RegExp(`/product/${PDP_ONLY_ID}/?$`));
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();

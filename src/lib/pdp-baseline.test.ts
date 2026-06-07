@@ -85,11 +85,11 @@ describe("pdp-baseline", () => {
     const issue = evaluatePdpBaselineQuery(
       {
         id: "test",
-        productId: "yy-nanoray-light-70i",
+        productId: "yy-ac102c",
         expectNoReviewSlug: true,
       },
       (id) => reviewProductById(id) ?? catalog.find((p) => p.id === id),
-      { "some-review": "yy-nanoray-light-70i" }
+      { "some-review": "yy-ac102c" }
     );
     expect(issue?.message).toContain("must have no review map");
   });
@@ -97,6 +97,12 @@ describe("pdp-baseline", () => {
   it("resolves reverse review slug from map", () => {
     expect(reviewSlugForProductId("yy-arcsaber-7-pro", map)).toBe(
       "yonex-arcsaber-7-pro-review"
+    );
+  });
+
+  it("resolves sibling alias review slugs from map", () => {
+    expect(reviewSlugForProductId("vic-thruster-ryuga-ii", map)).toBe(
+      "victor-thruster-9900-curiosity-review"
     );
   });
 });

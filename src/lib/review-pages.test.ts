@@ -4,8 +4,11 @@ import {
   catalogProductHref,
   editorialReviewHref,
   PRODUCT_REVIEW_ALIASES,
+  PRODUCT_REVIEW_EXPLAINER_ALIASES,
   reviewPath,
   reviewUrl,
+  editorialReviewKind,
+  editorialReviewLinkLabel,
 } from "@/lib/review-pages";
 
 describe("review page paths", () => {
@@ -97,6 +100,32 @@ describe("review page paths", () => {
     );
     expect(editorialReviewHref("mizuno-altius-01-feel")).toBe(
       "/review/mizuno-carbo-pro-823-review/"
+    );
+    expect(editorialReviewHref("vic-thruster-ryuga-ii")).toBe(
+      "/review/victor-thruster-9900-curiosity-review/"
+    );
+  });
+
+  it("routes Yonex string picks to the string-selector explainer", () => {
+    for (const id of [
+      "yy-bg65",
+      "yy-bg80",
+      "yy-exbolt-63",
+      "yy-aerobite",
+      "yy-bg80-power",
+    ]) {
+      expect(PRODUCT_REVIEW_EXPLAINER_ALIASES[id]).toBe("badminton-string-selector");
+      expect(editorialReviewHref(id)).toBe("/review/badminton-string-selector/");
+      expect(editorialReviewKind(id)).toBe("guide");
+      expect(editorialReviewLinkLabel(id)).toBe("Read string guide →");
+    }
+  });
+
+  it("keeps dedicated string reviews on review link labels", () => {
+    expect(editorialReviewKind("ln-l69-string")).toBe("review");
+    expect(editorialReviewLinkLabel("ln-l69-string")).toBe("Read full review →");
+    expect(editorialReviewLinkLabel("ln-l69-string", { pdp: true })).toBe(
+      "Read the full review →"
     );
   });
 

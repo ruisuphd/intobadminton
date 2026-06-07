@@ -91,6 +91,8 @@
 
 **Sprint 97 addendum:** Remaining racket alias expansion — ✅ Voltric 8DG + Nanoray Light 70i + Nanoflare 700 Play + Mizuno Altius N-Feel resolve to nearest reviewed sibling SKU; e2e smoke on four `/best/*` landings; commercial alias pairs 8→12; Yonex string picks on `/best/strings/` deferred (no mapped string articles except L69).
 
+**Sprint 98 addendum:** String explainer + Ryuga PDP alias — ✅ Five Yonex string picks exit to `badminton-string-selector` with guide CTA labels; Thruster Ryuga II aliases to Thruster 9900 curiosity review; PDP review links use alias-aware `editorialReviewHref`; commercial alias pairs 12→13; string explainer alias pairs 5.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -810,21 +812,27 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Commercial alias pairs: 8** — up from 3 in Sprint 95
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT96_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT96_2026-06.md)
 
-### Sprint 97 — This branch (`cursor/web-app-improvement-plan-f95b`)
+### Sprint 97 — Shipped (PR #245)
 
 - **Remaining racket alias expansion** — Voltric 8DG, Nanoray Light 70i, Nanoflare 700 Play, and Mizuno Altius N-Feel resolve to nearest reviewed sibling SKU
 - **E2e smoke** — four `/best/*` landings assert alias editorial hrefs
 - **Commercial alias pairs: 12** — up from 8 in Sprint 96
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT97_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT97_2026-06.md)
 
-### Next (Sprint 98+)
+### Sprint 98 — This branch (`cursor/web-app-improvement-plan-5169`)
+
+- **String explainer editorial exits** — five Yonex string picks on `/best/strings/` link to `badminton-string-selector` with honest guide CTA copy
+- **Thruster Ryuga II sibling alias** — PDP and baseline resolve to Thruster 9900 curiosity review
+- **PDP alias-aware review links** — `ProductDetailPage` uses `editorialReviewHref` (fixes aliased SKUs missing review CTA)
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT98_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT98_2026-06.md)
+
+### Next (Sprint 99+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
-- Thruster Ryuga II dedicated review ingestion
-- Yonex string review ingestion (BG65, BG80, EXBOLT, Aerobite, BG80 Power)
+- Dedicated Yonex string review ingestion (BG65, BG80, EXBOLT, Aerobite, BG80 Power hands-on articles)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

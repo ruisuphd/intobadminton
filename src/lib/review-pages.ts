@@ -25,7 +25,22 @@ export const PRODUCT_REVIEW_ALIASES: Record<string, string> = {
   "yy-nanoray-light-70i": "yy-nanoflare-1000-play",
   "yy-nanoflare-700-play": "yy-nanoflare-700-pro-2024",
   "mizuno-altius-01-feel": "mizuno-carbo-pro-823",
+  "vic-thruster-ryuga-ii": "vic-thruster-9900",
 };
+
+/**
+ * Catalogue rows without a dedicated product review that exit to an intentional
+ * explainer article (multi-SKU guides kept unmapped in blog-review-product-map).
+ */
+export const PRODUCT_REVIEW_EXPLAINER_ALIASES: Record<string, BlogSlug> = {
+  "yy-bg65": "badminton-string-selector",
+  "yy-bg80": "badminton-string-selector",
+  "yy-exbolt-63": "badminton-string-selector",
+  "yy-aerobite": "badminton-string-selector",
+  "yy-bg80-power": "badminton-string-selector",
+};
+
+export type EditorialReviewKind = "review" | "guide";
 
 /**
  * Categories that get a dedicated `/review/[slug]/` page. Grips stay excluded
@@ -52,6 +67,9 @@ export function reviewProductById(id: string): ProductRecord | undefined {
 }
 
 function blogSlugForProduct(productId: string): BlogSlug | undefined {
+  const explainerSlug = PRODUCT_REVIEW_EXPLAINER_ALIASES[productId];
+  if (explainerSlug) return explainerSlug;
+
   const resolvedId = PRODUCT_REVIEW_ALIASES[productId] ?? productId;
   const candidates = (Object.entries(blogReviewMap) as [BlogSlug, string][])
     .filter(([, id]) => id === resolvedId)
@@ -103,6 +121,21 @@ export function productHref(productId: string): string {
 export function editorialReviewHref(productId: string): string | null {
   const slug = blogSlugForProduct(productId);
   return slug ? `/review/${slug}/` : null;
+}
+
+export function editorialReviewKind(productId: string): EditorialReviewKind | null {
+  if (!editorialReviewHref(productId)) return null;
+  return PRODUCT_REVIEW_EXPLAINER_ALIASES[productId] ? "guide" : "review";
+}
+
+export function editorialReviewLinkLabel(
+  productId: string,
+  options?: { pdp?: boolean }
+): string | null {
+  const kind = editorialReviewKind(productId);
+  if (!kind) return null;
+  if (kind === "guide") return "Read string guide →";
+  return options?.pdp ? "Read the full review →" : "Read full review →";
 }
 
 export function reviewUrl(id: string): string {

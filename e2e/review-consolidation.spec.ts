@@ -183,4 +183,37 @@ test.describe("review blog style", () => {
         .getByRole("link", { name: "Read full review →" })
     ).toHaveAttribute("href", "/review/mizuno-carbo-pro-823-review/");
   });
+
+  test("strings page links Yonex BG65 to string-selector guide", async ({
+    page,
+  }) => {
+    await page.goto("/best/strings/");
+    await expect(
+      page
+        .locator("#bg65")
+        .getByRole("link", { name: "Read string guide →" })
+    ).toHaveAttribute("href", "/review/badminton-string-selector/");
+  });
+
+  test("strings page links Yonex EXBOLT 63 to string-selector guide", async ({
+    page,
+  }) => {
+    await page.goto("/best/strings/");
+    await expect(
+      page
+        .locator("#exbolt-63")
+        .getByRole("link", { name: "Read string guide →" })
+    ).toHaveAttribute("href", "/review/badminton-string-selector/");
+  });
+
+  test("strings page links Li-Ning L69 to dedicated string review", async ({
+    page,
+  }) => {
+    await page.goto("/best/strings/");
+    await expect(
+      page
+        .locator("#l69")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/li-ning-l69-string-review/");
+  });
 });
