@@ -38,6 +38,7 @@
     "lint:compare-baseline": "node scripts/compare-baseline.mjs",
     "lint:review-product-map-baseline": "node scripts/review-product-map-baseline.mjs",
     "lint:pdp-baseline": "node scripts/pdp-baseline.mjs",
+    "lint:catalog-string-baseline": "node scripts/catalog-string-baseline.mjs",
     "lint:best-baseline": "node scripts/best-baseline.mjs",
     "lint:best-image-coverage": "node scripts/best-image-coverage.mjs",
     "lint:tier4-image-baseline": "node scripts/tier4-image-baseline.mjs",

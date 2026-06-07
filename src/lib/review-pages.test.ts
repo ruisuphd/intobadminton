@@ -54,9 +54,25 @@ describe("review page paths", () => {
   });
 
   it("links string explainer SKUs to the string-selector guide", () => {
-    const bg65 = catalogProductById("yy-bg65");
-    expect(bg65).toBeDefined();
-    expect(catalogProductHref(bg65!)).toBe("/review/badminton-string-selector/");
+    for (const id of [
+      "yy-bg65",
+      "yy-bg80",
+      "yy-exbolt-63",
+      "yy-aerobite",
+      "yy-bg80-power",
+    ]) {
+      const product = catalogProductById(id);
+      expect(product).toBeDefined();
+      expect(catalogProductHref(product!)).toBe(
+        "/review/badminton-string-selector/"
+      );
+    }
+  });
+
+  it("links mapped string reviews to dedicated review articles", () => {
+    const l69 = catalogProductById("ln-l69-string");
+    expect(l69).toBeDefined();
+    expect(catalogProductHref(l69!)).toBe("/review/li-ning-l69-string-review/");
   });
 
   it("editorialReviewHref returns null when no blog article is mapped", () => {

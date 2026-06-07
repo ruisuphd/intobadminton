@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "catalog-string-yy-bg65",
+      "productId": "yy-bg65",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex BG65 catalog browse exits to string-selector guide"
+    },
+    {
+      "id": "catalog-string-yy-bg80",
+      "productId": "yy-bg80",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex BG80 catalog browse exits to string-selector guide"
+    },
+    {
+      "id": "catalog-string-yy-exbolt-63",
+      "productId": "yy-exbolt-63",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex EXBOLT 63 catalog browse exits to string-selector guide"
+    },
+    {
+      "id": "catalog-string-yy-aerobite",
+      "productId": "yy-aerobite",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex Aerobite catalog browse exits to string-selector guide"
+    },
+    {
+      "id": "catalog-string-yy-bg80-power",
+      "productId": "yy-bg80-power",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex BG80 Power catalog browse exits to string-selector guide"
+    },
+    {
+      "id": "catalog-string-ln-l69",
+      "productId": "ln-l69-string",
+      "expectHref": "/review/li-ning-l69-string-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "Li-Ning L69 catalog browse exits to dedicated string review"
+    }
+  ]
+}

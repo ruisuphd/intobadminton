@@ -97,6 +97,8 @@
 
 **Sprint 100 addendum:** Full string explainer CI coverage — ✅ PDP guide-kind golden profiles for all five Yonex string SKUs; commercial `/best/strings/` e2e 2/5→5/5; catalog BG80 + EXBOLT guide exits; PDP e2e profiles 5→9.
 
+**Sprint 101 addendum:** Catalog string editorial exit CI — ✅ `catalog-string-queries.json` golden profiles for five Yonex guide exits + L69 review; catalog e2e 3/5→6/6; `lint:catalog-string-baseline` in editorial guard suite.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -837,14 +839,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Stale alias notes corrected** — review-map baseline docs reflect DriveX 8S / Ryuga II sibling aliases
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT99_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT99_2026-06.md)
 
-### Sprint 100 — This branch (`cursor/web-app-improvement-plan-32cb`)
+### Sprint 100 — Shipped (PR #248)
 
 - **Full string explainer PDP CI** — guide-kind golden profiles for BG80, EXBOLT, Aerobite, BG80 Power
 - **Commercial string e2e completion** — all five Yonex picks on `/best/strings/` assert guide CTA
 - **Catalog string guide exits** — BG80 + EXBOLT catalog browse e2e smoke
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT100_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT100_2026-06.md)
 
-### Next (Sprint 101+)
+### Sprint 101 — This branch (`cursor/web-app-improvement-plan-d181`)
+
+- **Catalog string golden-profile CI** — six rows guard Yonex guide exits + L69 review href/kind
+- **Catalog string e2e completion** — Aerobite + BG80 Power + L69 catalog browse smoke
+- **Baseline-driven e2e** — `catalog-string-baseline-smoke.spec.ts` reads committed golden profiles
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT101_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT101_2026-06.md)
+
+### Next (Sprint 102+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim

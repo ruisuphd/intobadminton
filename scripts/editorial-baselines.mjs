@@ -23,6 +23,10 @@ const GUARDS = [
     script: "scripts/pdp-baseline.mjs",
   },
   {
+    name: "catalog string editorial exits",
+    script: "scripts/catalog-string-baseline.mjs",
+  },
+  {
     name: "best-of golden profiles",
     script: "scripts/best-baseline.mjs",
   },

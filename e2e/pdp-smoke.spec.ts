@@ -74,3 +74,36 @@ test("catalog links Yonex EXBOLT 63 string to string-selector guide", async ({
   await expect(page).toHaveURL(/\/review\/badminton-string-selector\/?$/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });
+
+test("catalog links Yonex Aerobite string to string-selector guide", async ({
+  page,
+}) => {
+  await page.goto("/catalog/?cat=string&brand=Yonex");
+
+  await page.getByRole("link", { name: /Aerobite/i }).first().click();
+
+  await expect(page).toHaveURL(/\/review\/badminton-string-selector\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
+
+test("catalog links Yonex BG80 Power string to string-selector guide", async ({
+  page,
+}) => {
+  await page.goto("/catalog/?cat=string&brand=Yonex");
+
+  await page.getByRole("link", { name: /BG80 Power/i }).first().click();
+
+  await expect(page).toHaveURL(/\/review\/badminton-string-selector\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
+
+test("catalog links Li-Ning L69 string to dedicated review", async ({
+  page,
+}) => {
+  await page.goto("/catalog/?cat=string&brand=Li-Ning");
+
+  await page.getByRole("link", { name: /L69/i }).first().click();
+
+  await expect(page).toHaveURL(/\/review\/li-ning-l69-string-review\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
