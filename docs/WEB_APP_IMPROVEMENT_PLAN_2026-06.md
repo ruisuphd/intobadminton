@@ -103,6 +103,8 @@
 
 **Sprint 103 addendum:** String editorial three-way parity — ✅ L69 PDP golden profile; PDP ↔ catalog ↔ commercial parity guard; `lint:string-editorial-parity` + `lint:string-editorial-baselines` aggregate; PDP e2e profiles 9→10.
 
+**Sprint 104 addendum:** Shuttle commercial landing + editorial parity — ✅ `/best/shuttles/` six-pick landing; shuttle three-way parity guard; 6 catalog + 6 commercial shuttle golden profiles; 6 PDP shuttle rows; commercial image CI 17→18; PWA ib-v31.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -871,13 +873,22 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **String editorial aggregate** — `lint:string-editorial-baselines` runs catalog + commercial + parity guards
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT103_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT103_2026-06.md)
 
-### Next (Sprint 104+)
+### Sprint 104 — This branch (`cursor/web-app-improvement-plan-ce25`)
+
+- **Commercial `/best/shuttles/` landing** — six picks (AS-50, Carbonsonic MAX, four RSL reviews) with comparison table
+- **Shuttle editorial three-way parity** — PDP ↔ catalog ↔ commercial baselines must agree per productId
+- **Shuttle golden-profile CI** — `lint:shuttle-editorial-baselines` + catalog/commercial/parity guards in CI workflow
+- **PDP shuttle golden profiles** — six rows in `pdp-queries.json`; AS-50 + Carbonsonic with e2e
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT104_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT104_2026-06.md)
+
+### Next (Sprint 105+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
 - Dedicated Yonex string review ingestion (BG65, BG80, EXBOLT, Aerobite, BG80 Power hands-on articles)
+- RSL shuttle verified Western distributor image backfill (4 waivers on `/best/shuttles/`)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

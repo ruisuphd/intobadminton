@@ -19,6 +19,7 @@ export const BEST_PRODUCT_ID_REQUIREMENTS: Record<
   { pickCount: number; waivers: number }
 > = {
   strings: { pickCount: 6, waivers: 0 },
+  shuttles: { pickCount: 6, waivers: 0 },
   shoes: { pickCount: 6, waivers: 0 },
   "beginner-rackets": { pickCount: 6, waivers: 0 },
   "doubles-rackets": { pickCount: 6, waivers: 0 },

@@ -131,6 +131,28 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Strings ranked by feel, durability, and tension window.",
     },
   ],
+  shuttles: [
+    {
+      href: "/best/shuttles/",
+      title: "Best badminton shuttles",
+      summary: "Feather and nylon picks ranked by flight and durability per tube.",
+    },
+    {
+      href: "/review/yonex-aerosensa-50-shuttle-review/",
+      title: "Yonex AS-50 shuttle review",
+      summary: "Tournament feather reference — flight, cork, and tube consistency.",
+    },
+    {
+      href: "/review/victor-carbonsonic-max-shuttle-review/",
+      title: "Victor Carbonsonic MAX review",
+      summary: "Synthetic shuttle that closes the gap with mid-tier naturals.",
+    },
+    {
+      href: "/catalog/?cat=shuttle",
+      title: "Browse shuttles in catalog",
+      summary: "Filter by feather vs nylon, speed code, and brand.",
+    },
+  ],
   freshness: [
     {
       href: "/updates/",
@@ -335,6 +357,7 @@ const PATH_CLUSTER: Record<string, string> = {
   "/guides/string-tension/": "strings",
   "/guides/string-feel-vs-durability/": "strings",
   "/best/strings/": "strings",
+  "/best/shuttles/": "shuttles",
   "/tools/string-tension-calculator/": "strings",
 
   "/data/": "freshness",
@@ -374,7 +397,7 @@ const QUIZ_CATEGORY_CLUSTER: Record<string, string> = {
   string: "strings",
   grip: "strings",
   bag: "compare",
-  shuttle: "compare",
+  shuttle: "shuttles",
   accessory: "compare",
 };
 
@@ -415,7 +438,7 @@ const REVIEW_CLUSTER_PATTERNS: { pattern: RegExp; cluster: string }[] = [
       /\b(string|gauge|repulsion|lbs|tension|bg80|exbolt|hole-pattern|stringing)\b/i,
     cluster: "strings",
   },
-  { pattern: /\b(shuttle|feather|nylon)\b/i, cluster: "compare" },
+  { pattern: /\b(shuttle|feather|nylon|aerosensa|carbonsonic)\b/i, cluster: "shuttles" },
   { pattern: /\b(grip|overgrip|grip-size)\b/i, cluster: "strings" },
   {
     pattern: /\b(bag|loadout|backpack)\b/i,
@@ -446,7 +469,7 @@ const PRODUCT_CATEGORY_CLUSTER: Record<string, string> = {
   string: "strings",
   shoes: "shoe-fit",
   bag: "compare",
-  shuttle: "compare",
+  shuttle: "shuttles",
   grip: "strings",
 };
 

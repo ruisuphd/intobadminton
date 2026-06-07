@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "commercial-shuttle-yy-as-50",
+      "productId": "yy-as-50",
+      "expectHref": "/review/yonex-aerosensa-50-shuttle-review/",
+      "expectKind": "review",
+      "expectAnchor": "as-50",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Yonex AS-50 on /best/shuttles/ exits to dedicated shuttle review"
+    },
+    {
+      "id": "commercial-shuttle-vic-carbonsonic-max",
+      "productId": "vic-carbonsonic-max-shuttle",
+      "expectHref": "/review/victor-carbonsonic-max-shuttle-review/",
+      "expectKind": "review",
+      "expectAnchor": "carbonsonic-max",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Victor Carbonsonic MAX on /best/shuttles/ exits to dedicated shuttle review"
+    },
+    {
+      "id": "commercial-shuttle-rsl-supreme",
+      "productId": "rsl-supreme-shuttle",
+      "expectHref": "/review/rsl-supreme-shuttle-review/",
+      "expectKind": "review",
+      "expectAnchor": "supreme",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "RSL Supreme on /best/shuttles/ exits to dedicated shuttle review"
+    },
+    {
+      "id": "commercial-shuttle-rsl-aero-u",
+      "productId": "rsl-aero-u-shuttle",
+      "expectHref": "/review/rsl-aero-u-shuttle-review/",
+      "expectKind": "review",
+      "expectAnchor": "aero-u",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "RSL Aero U on /best/shuttles/ exits to dedicated shuttle review"
+    },
+    {
+      "id": "commercial-shuttle-rsl-aero-classic-tourney",
+      "productId": "rsl-aero-classic-tourney-shuttle",
+      "expectHref": "/review/rsl-aero-classic-tourney-shuttle-review/",
+      "expectKind": "review",
+      "expectAnchor": "classic-tourney",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "RSL Classic Tourney on /best/shuttles/ exits to dedicated shuttle review"
+    },
+    {
+      "id": "commercial-shuttle-rsl-no4-plus",
+      "productId": "rsl-no4-plus-shuttle",
+      "expectHref": "/review/rsl-no4-plus-shuttle-review/",
+      "expectKind": "review",
+      "expectAnchor": "no4-plus",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "RSL No.4 Plus on /best/shuttles/ exits to dedicated shuttle review"
+    }
+  ]
+}

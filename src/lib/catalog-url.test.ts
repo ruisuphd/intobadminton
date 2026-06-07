@@ -117,6 +117,7 @@ describe("catalog-url", () => {
       "/catalog/?cat=racket&weight=5U"
     );
     expect(catalogHrefFromBestSlug("strings")).toBe("/catalog/?cat=string");
+    expect(catalogHrefFromBestSlug("shuttles")).toBe("/catalog/?cat=shuttle");
     expect(catalogHrefFromBestSlug("unknown-slug")).toBe("/catalog/");
   });
 

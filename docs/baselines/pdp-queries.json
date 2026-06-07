@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "queries": [
     {
       "id": "lighthouse-grpht-throttle",
@@ -108,6 +108,68 @@
       "expectMinRelatedReading": 3,
       "e2e": true,
       "note": "Li-Ning L69 exits to dedicated string review on PDP"
+    },
+    {
+      "id": "pdp-review-yy-as-50",
+      "productId": "yy-as-50",
+      "expectCategory": "shuttle",
+      "expectReviewSlug": "yonex-aerosensa-50-shuttle-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex AS-50 exits to dedicated shuttle review on PDP"
+    },
+    {
+      "id": "pdp-review-vic-carbonsonic-max",
+      "productId": "vic-carbonsonic-max-shuttle",
+      "expectCategory": "shuttle",
+      "expectReviewSlug": "victor-carbonsonic-max-shuttle-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Victor Carbonsonic MAX exits to dedicated shuttle review on PDP"
+    },
+    {
+      "id": "pdp-review-rsl-supreme",
+      "productId": "rsl-supreme-shuttle",
+      "expectCategory": "shuttle",
+      "expectReviewSlug": "rsl-supreme-shuttle-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "RSL Supreme exits to dedicated shuttle review on PDP"
+    },
+    {
+      "id": "pdp-review-rsl-aero-u",
+      "productId": "rsl-aero-u-shuttle",
+      "expectCategory": "shuttle",
+      "expectReviewSlug": "rsl-aero-u-shuttle-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "RSL Aero U exits to dedicated shuttle review on PDP"
+    },
+    {
+      "id": "pdp-review-rsl-aero-classic-tourney",
+      "productId": "rsl-aero-classic-tourney-shuttle",
+      "expectCategory": "shuttle",
+      "expectReviewSlug": "rsl-aero-classic-tourney-shuttle-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "RSL Classic Tourney exits to dedicated shuttle review on PDP"
+    },
+    {
+      "id": "pdp-review-rsl-no4-plus",
+      "productId": "rsl-no4-plus-shuttle",
+      "expectCategory": "shuttle",
+      "expectReviewSlug": "rsl-no4-plus-shuttle-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "RSL No.4 Plus exits to dedicated shuttle review on PDP"
     },
     {
       "id": "pdp-only-super-grap",
