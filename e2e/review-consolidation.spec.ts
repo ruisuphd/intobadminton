@@ -139,4 +139,48 @@ test.describe("review blog style", () => {
         .getByRole("link", { name: "Read full review →" })
     ).toHaveAttribute("href", "/review/victor-auraspeed-90k-ii-review/");
   });
+
+  test("head-heavy-under-150 page links Voltric 8DG to Voltric Z-Force LTD review", async ({
+    page,
+  }) => {
+    await page.goto("/best/head-heavy-rackets-under-150/");
+    await expect(
+      page
+        .locator("#voltric-8dg")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/yonex-voltric-z-force-ltd-2012-review/");
+  });
+
+  test("rackets-under-100 page links Nanoray Light 70i to Nanoflare 1000 Play review", async ({
+    page,
+  }) => {
+    await page.goto("/best/rackets-under-100/");
+    await expect(
+      page
+        .locator("#nanoray-light-70i")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/yonex-nanoflare-1000z-play-review/");
+  });
+
+  test("beginner rackets page links Nanoflare 700 Play to Nanoflare 700 review", async ({
+    page,
+  }) => {
+    await page.goto("/best/beginner-rackets/");
+    await expect(
+      page
+        .locator("#nanoflare-700-play")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/yonex-nanoflare-700-review/");
+  });
+
+  test("beginner rackets page links Mizuno Altius N-Feel to Carbo Pro 823 review", async ({
+    page,
+  }) => {
+    await page.goto("/best/beginner-rackets/");
+    await expect(
+      page
+        .locator("#altius-n-feel")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/mizuno-carbo-pro-823-review/");
+  });
 });

@@ -86,6 +86,18 @@ describe("review page paths", () => {
     expect(editorialReviewHref("vic-auraspeed-100x-se")).toBe(
       "/review/victor-auraspeed-90k-ii-review/"
     );
+    expect(editorialReviewHref("yy-voltric-8dg")).toBe(
+      "/review/yonex-voltric-z-force-ltd-2012-review/"
+    );
+    expect(editorialReviewHref("yy-nanoray-light-70i")).toBe(
+      "/review/yonex-nanoflare-1000z-play-review/"
+    );
+    expect(editorialReviewHref("yy-nanoflare-700-play")).toBe(
+      "/review/yonex-nanoflare-700-review/"
+    );
+    expect(editorialReviewHref("mizuno-altius-01-feel")).toBe(
+      "/review/mizuno-carbo-pro-823-review/"
+    );
   });
 
   it("maps Astrox 100ZZ VA to the Axelsen comparison review slug", () => {
