@@ -33,13 +33,23 @@
       "note": "Flagship speed racket PDP + review wiring"
     },
     {
-      "id": "pdp-only-thruster-ryuga-ii",
+      "id": "pdp-alias-thruster-ryuga-ii",
       "productId": "vic-thruster-ryuga-ii",
       "expectCategory": "racket",
-      "expectNoReviewSlug": true,
+      "expectReviewSlug": "victor-thruster-9900-curiosity-review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Catalog-only SKU — no review map, catalog links to PDP (Nanoray Light 70i now aliases to play-tier review)"
+      "e2e": true,
+      "note": "Thruster Ryuga II aliases to Thruster 9900 curiosity review via PRODUCT_REVIEW_ALIASES"
+    },
+    {
+      "id": "pdp-only-super-grap",
+      "productId": "yy-ac102c",
+      "expectCategory": "grip",
+      "expectNoReviewSlug": true,
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "Grip SKU — no review map, catalog links to PDP"
     },
     {
       "id": "club-shoes-p9200",

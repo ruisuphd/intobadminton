@@ -26,7 +26,11 @@ import { articleJsonLd } from "@/lib/structured-data";
 import { catalogHrefFromBestSlug } from "@/lib/catalog-url";
 import { relatedReadingForPath } from "@/lib/related-content";
 import { resolveBestPickImage } from "@/lib/best-pick-image";
-import { editorialReviewHref, productHref } from "@/lib/review-pages";
+import {
+  editorialReviewHref,
+  editorialReviewLinkLabel,
+  productHref,
+} from "@/lib/review-pages";
 import type { ProductImage, ProductRecord } from "@/lib/types/product";
 
 const CATALOG = productsCatalog as ProductRecord[];
@@ -309,14 +313,15 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
               </p>
               {p.productId && (() => {
                 const reviewHref = editorialReviewHref(p.productId);
+                const reviewLabel = editorialReviewLinkLabel(p.productId);
                 return (
                 <div className="mt-4 flex flex-wrap items-center gap-3">
-                  {reviewHref ? (
+                  {reviewHref && reviewLabel ? (
                     <Link
                       href={reviewHref}
                       className="text-sm font-medium text-[var(--color-accent)] hover:underline"
                     >
-                      Read full review →
+                      {reviewLabel}
                     </Link>
                   ) : null}
                   {(() => {

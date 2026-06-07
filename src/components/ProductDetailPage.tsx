@@ -11,22 +11,17 @@ import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { relatedReadingForProductCategory } from "@/lib/related-content";
 import { companyInfo } from "@/lib/company";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
-import { reviewPath } from "@/lib/review-pages";
+import {
+  editorialReviewHref,
+  editorialReviewLinkLabel,
+} from "@/lib/review-pages";
 import type { ProductRecord } from "@/lib/types/product";
-import blogReviewMap from "@/data/blog-review-product-map.json";
-import type { BlogSlug } from "@/lib/blog";
-
-function reviewSlugForProduct(productId: string): BlogSlug | undefined {
-  const entry = (Object.entries(blogReviewMap) as [BlogSlug, string][]).find(
-    ([, id]) => id === productId
-  );
-  return entry?.[0];
-}
 
 export function ProductDetailPage({ product }: { product: ProductRecord }) {
   const path = `/product/${product.id}/`;
   const specs = specRowsForProduct(product);
-  const reviewSlug = reviewSlugForProduct(product.id);
+  const reviewHref = editorialReviewHref(product.id);
+  const reviewLabel = editorialReviewLinkLabel(product.id, { pdp: true });
   const related = relatedReadingForProductCategory(
     product.category,
     product.id
@@ -95,13 +90,13 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
               first-person review when we have one.
             </p>
             <ProductDetailActions product={product} />
-            {reviewSlug && (
+            {reviewHref && reviewLabel && (
               <p className="text-sm">
                 <Link
-                  href={reviewPath(product.id)}
+                  href={reviewHref}
                   className="font-medium text-[var(--color-accent)] hover:underline"
                 >
-                  Read the full review →
+                  {reviewLabel}
                 </Link>
               </p>
             )}
