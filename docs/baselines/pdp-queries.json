@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-07",
+  "updated": "2026-06-08",
   "queries": [
     {
       "id": "lighthouse-grpht-throttle",
@@ -53,6 +53,50 @@
       "expectMinRelatedReading": 3,
       "e2e": true,
       "note": "Yonex BG65 exits to string-selector explainer with guide CTA on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-bg80",
+      "productId": "yy-bg80",
+      "expectCategory": "string",
+      "expectReviewSlug": "badminton-string-selector",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex BG80 exits to string-selector explainer with guide CTA on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-exbolt-63",
+      "productId": "yy-exbolt-63",
+      "expectCategory": "string",
+      "expectReviewSlug": "badminton-string-selector",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex EXBOLT 63 exits to string-selector explainer with guide CTA on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-aerobite",
+      "productId": "yy-aerobite",
+      "expectCategory": "string",
+      "expectReviewSlug": "badminton-string-selector",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex Aerobite exits to string-selector explainer with guide CTA on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-bg80-power",
+      "productId": "yy-bg80-power",
+      "expectCategory": "string",
+      "expectReviewSlug": "badminton-string-selector",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex BG80 Power exits to string-selector explainer with guide CTA on PDP"
     },
     {
       "id": "pdp-only-super-grap",

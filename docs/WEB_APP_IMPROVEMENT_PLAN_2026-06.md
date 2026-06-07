@@ -95,6 +95,8 @@
 
 **Sprint 99 addendum:** PDP guide-kind CI + catalog string exits — ✅ `expectReviewKind` on PDP baseline; BG65 explainer golden profile with guide-aware e2e; catalog string browse links to string-selector; stale DriveX 8S / Ryuga II "blocked" notes corrected; PDP e2e profiles 4→5.
 
+**Sprint 100 addendum:** Full string explainer CI coverage — ✅ PDP guide-kind golden profiles for all five Yonex string SKUs; commercial `/best/strings/` e2e 2/5→5/5; catalog BG80 + EXBOLT guide exits; PDP e2e profiles 5→9.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -828,14 +830,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **PDP alias-aware review links** — `ProductDetailPage` uses `editorialReviewHref` (fixes aliased SKUs missing review CTA)
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT98_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT98_2026-06.md)
 
-### Sprint 99 — This branch (`cursor/web-app-improvement-plan-6edc`)
+### Sprint 99 — Shipped (PR #247)
 
 - **PDP guide-kind CI guard** — `expectReviewKind` distinguishes guide vs review exits on `/product/[id]/`
 - **BG65 explainer golden profile** — string PDP + catalog browse exit to `badminton-string-selector`
 - **Stale alias notes corrected** — review-map baseline docs reflect DriveX 8S / Ryuga II sibling aliases
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT99_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT99_2026-06.md)
 
-### Next (Sprint 100+)
+### Sprint 100 — This branch (`cursor/web-app-improvement-plan-32cb`)
+
+- **Full string explainer PDP CI** — guide-kind golden profiles for BG80, EXBOLT, Aerobite, BG80 Power
+- **Commercial string e2e completion** — all five Yonex picks on `/best/strings/` assert guide CTA
+- **Catalog string guide exits** — BG80 + EXBOLT catalog browse e2e smoke
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT100_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT100_2026-06.md)
+
+### Next (Sprint 101+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
