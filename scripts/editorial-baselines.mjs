@@ -31,6 +31,18 @@ const GUARDS = [
     script: "scripts/commercial-string-baseline.mjs",
   },
   {
+    name: "catalog shuttle editorial exits",
+    script: "scripts/catalog-shuttle-baseline.mjs",
+  },
+  {
+    name: "commercial shuttle editorial exits",
+    script: "scripts/commercial-shuttle-baseline.mjs",
+  },
+  {
+    name: "shuttle editorial three-way parity",
+    script: "scripts/shuttle-editorial-parity.mjs",
+  },
+  {
     name: "best-of golden profiles",
     script: "scripts/best-baseline.mjs",
   },

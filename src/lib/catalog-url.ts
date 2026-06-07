@@ -190,6 +190,7 @@ const BEST_SLUG_CATALOG_FILTERS: Record<string, BestSlugCatalogFilters> = {
   "wide-feet-badminton-shoes": { category: "shoes" },
   "budget-badminton-shoes": { category: "shoes", priceBand: "under150" },
   strings: { category: "string" },
+  shuttles: { category: "shuttle" },
 };
 
 /** Slugs with committed catalog filter wiring on `/best/*` pages. */
@@ -287,6 +288,7 @@ export function catalogHrefFromGuideSlug(slug: string): string {
 
 const GUIDE_CATALOG_CTA_LABELS: Record<string, string> = {
   string: "Browse strings in catalog",
+  shuttle: "Browse shuttles in catalog",
   shoes: "Browse shoes in catalog",
   racket: "Browse rackets in catalog",
 };

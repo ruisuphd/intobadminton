@@ -29,6 +29,7 @@ describe("editorialMetaByPath registry", () => {
       "/best/head-heavy-rackets-under-150/",
       "/best/shoes/",
       "/best/strings/",
+      "/best/shuttles/",
     ];
     for (const path of expected) {
       const meta = editorialMetaByPath[path];

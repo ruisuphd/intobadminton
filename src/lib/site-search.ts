@@ -252,6 +252,13 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["string", "restring", "bg80", "aerobite"],
   },
   {
+    title: "Best badminton shuttles",
+    href: "/best/shuttles/",
+    kind: "best",
+    summary: "Feather and nylon shuttle picks by flight, durability, and session type.",
+    keywords: ["shuttle", "feather", "nylon", "as-50", "carbonsonic"],
+  },
+  {
     title: "Badminton string tension guide",
     href: "/guides/string-tension/",
     kind: "guide",

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "catalog-shuttle-yy-as-50",
+      "productId": "yy-as-50",
+      "expectHref": "/review/yonex-aerosensa-50-shuttle-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "Yonex AS-50 catalog browse exits to dedicated shuttle review"
+    },
+    {
+      "id": "catalog-shuttle-vic-carbonsonic-max",
+      "productId": "vic-carbonsonic-max-shuttle",
+      "expectHref": "/review/victor-carbonsonic-max-shuttle-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "Victor Carbonsonic MAX catalog browse exits to dedicated shuttle review"
+    },
+    {
+      "id": "catalog-shuttle-rsl-supreme",
+      "productId": "rsl-supreme-shuttle",
+      "expectHref": "/review/rsl-supreme-shuttle-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "RSL Supreme catalog browse exits to dedicated shuttle review"
+    },
+    {
+      "id": "catalog-shuttle-rsl-aero-u",
+      "productId": "rsl-aero-u-shuttle",
+      "expectHref": "/review/rsl-aero-u-shuttle-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "RSL Aero U catalog browse exits to dedicated shuttle review"
+    },
+    {
+      "id": "catalog-shuttle-rsl-aero-classic-tourney",
+      "productId": "rsl-aero-classic-tourney-shuttle",
+      "expectHref": "/review/rsl-aero-classic-tourney-shuttle-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "RSL Classic Tourney catalog browse exits to dedicated shuttle review"
+    },
+    {
+      "id": "catalog-shuttle-rsl-no4-plus",
+      "productId": "rsl-no4-plus-shuttle",
+      "expectHref": "/review/rsl-no4-plus-shuttle-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "RSL No.4 Plus catalog browse exits to dedicated shuttle review"
+    }
+  ]
+}

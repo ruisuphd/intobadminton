@@ -8,12 +8,12 @@ import { defaultOgImages } from "@/lib/og";
 import { relatedReadingForPath } from "@/lib/related-content";
 
 export const metadata: Metadata = {
-  title: "Best Badminton Rackets, Shoes & Strings (2026)",
+  title: "Best Badminton Rackets, Shoes, Strings & Shuttles (2026)",
   description:
-    "Curated 2026 badminton buying guides — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings by feel and durability.",
+    "Curated 2026 badminton buying guides — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings and shuttles by feel and durability.",
   alternates: pageAlternates("/best/"),
   openGraph: {
-    title: "Best Badminton Rackets, Shoes & Strings (2026)",
+    title: "Best Badminton Rackets, Shoes, Strings & Shuttles (2026)",
     description:
       "Curated badminton buying guides — every pick scored on transparent fit factors with source authority labelled.",
     url: "/best/",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Badminton Rackets, Shoes & Strings — 2026 Buying Guides",
+    title: "Best Badminton Rackets, Shoes, Strings & Shuttles — 2026 Buying Guides",
     description:
-      "Best badminton rackets, shoes, and strings — by level, role, and fit width. Transparent scoring, source labels, no email gate.",
+      "Best badminton rackets, shoes, strings, and shuttles — by level, role, and fit width. Transparent scoring, source labels, no email gate.",
   },
 };
 
@@ -111,7 +111,7 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
     ],
   },
   {
-    heading: "Shoes & strings",
+    heading: "Shoes, strings & shuttles",
     items: [
       {
         href: "/best/shoes/",
@@ -132,6 +132,11 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/strings/",
         title: "Best badminton strings",
         dek: "Strings ranked by feel, repulsion, control, and durability with tension recommendations.",
+      },
+      {
+        href: "/best/shuttles/",
+        title: "Best badminton shuttles",
+        dek: "Feather and nylon shuttles ranked by flight consistency, durability per tube, and session type.",
       },
     ],
   },

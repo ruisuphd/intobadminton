@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-06-06",
+  "updated": "2026-06-08",
   "coverage": {
-    "minCatalogFilterSlugs": 19
+    "minCatalogFilterSlugs": 20
   },
   "queries": [
     {
@@ -68,6 +68,15 @@
       "e2e": true,
       "expectComparisonTable": true,
       "note": "String category best-of — catalog filter parity"
+    },
+    {
+      "id": "shuttles-guide",
+      "slug": "shuttles",
+      "expectCatalogHref": "/catalog/?cat=shuttle",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
+      "note": "Shuttle category best-of — catalog filter parity"
     },
     {
       "id": "budget-under-100",

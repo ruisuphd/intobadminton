@@ -15,6 +15,10 @@ describe("best-image-coverage", () => {
       pickCount: 6,
       waivers: 0,
     });
+    expect(BEST_IMAGE_REQUIREMENTS.shuttles).toEqual({
+      pickCount: 6,
+      waivers: 4,
+    });
     expect(BEST_IMAGE_REQUIREMENTS.shoes).toEqual({ pickCount: 6, waivers: 0 });
     expect(BEST_IMAGE_REQUIREMENTS["all-round-rackets"]).toEqual({
       pickCount: 6,
@@ -68,7 +72,7 @@ describe("best-image-coverage", () => {
       pickCount: 6,
       waivers: 3,
     });
-    expect(Object.keys(BEST_IMAGE_REQUIREMENTS)).toHaveLength(17);
+    expect(Object.keys(BEST_IMAGE_REQUIREMENTS)).toHaveLength(18);
   });
 
   it("passes verified-image guard for commercial /best/* landings", () => {
