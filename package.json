@@ -40,6 +40,8 @@
     "lint:pdp-baseline": "node scripts/pdp-baseline.mjs",
     "lint:catalog-string-baseline": "node scripts/catalog-string-baseline.mjs",
     "lint:commercial-string-baseline": "node scripts/commercial-string-baseline.mjs",
+    "lint:string-editorial-parity": "node scripts/string-editorial-parity.mjs",
+    "lint:string-editorial-baselines": "node scripts/string-editorial-baselines.mjs",
     "lint:best-baseline": "node scripts/best-baseline.mjs",
     "lint:best-image-coverage": "node scripts/best-image-coverage.mjs",
     "lint:tier4-image-baseline": "node scripts/tier4-image-baseline.mjs",

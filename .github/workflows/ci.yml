@@ -54,6 +54,8 @@ jobs:
         run: npm run lint:catalog-string-baseline
       - name: Commercial string editorial exit guard
         run: npm run lint:commercial-string-baseline
+      - name: String editorial three-way parity guard
+        run: npm run lint:string-editorial-parity
       - name: Best-of golden-profile guard
         run: npm run lint:best-baseline
       - name: Best-of image coverage guard

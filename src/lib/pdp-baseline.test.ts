@@ -27,7 +27,7 @@ describe("pdp-baseline", () => {
     const parsed = validatePdpBaselineFile(raw);
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(5);
+      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
     }
   });
 
