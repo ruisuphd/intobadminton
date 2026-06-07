@@ -101,6 +101,8 @@
 
 **Sprint 102 addendum:** Commercial string editorial exit CI — ✅ `commercial-string-queries.json` golden profiles for six `/best/strings/` picks; catalog↔commercial parity test; `lint:commercial-string-baseline` + Sprint 101 guards wired into CI workflow.
 
+**Sprint 103 addendum:** String editorial three-way parity — ✅ L69 PDP golden profile; PDP ↔ catalog ↔ commercial parity guard; `lint:string-editorial-parity` + `lint:string-editorial-baselines` aggregate; PDP e2e profiles 9→10.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -855,14 +857,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Baseline-driven e2e** — `catalog-string-baseline-smoke.spec.ts` reads committed golden profiles
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT101_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT101_2026-06.md)
 
-### Sprint 102 — Shipped (PR #249+)
+### Sprint 102 — Shipped (PR #250)
 
 - **Commercial string golden-profile CI** — six rows guard `/best/strings/` href, kind, and CTA labels
 - **Cross-surface parity** — catalog and commercial string baselines must agree per productId
 - **CI workflow parity** — `lint:catalog-string-baseline`, `lint:commercial-string-baseline`, `lint:tier4-image-baseline` in `ci.yml`
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT102_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT102_2026-06.md)
 
-### Next (Sprint 103+)
+### Sprint 103 — This branch (`cursor/web-app-improvement-plan-983f`)
+
+- **L69 PDP golden profile** — completes six-SKU string editorial corpus on `/product/[id]/`
+- **Three-way string parity** — PDP ↔ catalog ↔ commercial baselines must agree per productId
+- **String editorial aggregate** — `lint:string-editorial-baselines` runs catalog + commercial + parity guards
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT103_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT103_2026-06.md)
+
+### Next (Sprint 104+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim

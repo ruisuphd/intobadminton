@@ -99,6 +99,17 @@
       "note": "Yonex BG80 Power exits to string-selector explainer with guide CTA on PDP"
     },
     {
+      "id": "pdp-review-ln-l69",
+      "productId": "ln-l69-string",
+      "expectCategory": "string",
+      "expectReviewSlug": "li-ning-l69-string-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Li-Ning L69 exits to dedicated string review on PDP"
+    },
+    {
       "id": "pdp-only-super-grap",
       "productId": "yy-ac102c",
       "expectCategory": "grip",
