@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "commercial-string-yy-bg65",
+      "productId": "yy-bg65",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "expectAnchor": "bg65",
+      "expectLinkLabel": "Read string guide →",
+      "e2e": true,
+      "note": "Yonex BG65 on /best/strings/ exits to string-selector guide"
+    },
+    {
+      "id": "commercial-string-yy-bg80",
+      "productId": "yy-bg80",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "expectAnchor": "bg80",
+      "expectLinkLabel": "Read string guide →",
+      "e2e": true,
+      "note": "Yonex BG80 on /best/strings/ exits to string-selector guide"
+    },
+    {
+      "id": "commercial-string-yy-exbolt-63",
+      "productId": "yy-exbolt-63",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "expectAnchor": "exbolt-63",
+      "expectLinkLabel": "Read string guide →",
+      "e2e": true,
+      "note": "Yonex EXBOLT 63 on /best/strings/ exits to string-selector guide"
+    },
+    {
+      "id": "commercial-string-yy-aerobite",
+      "productId": "yy-aerobite",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "expectAnchor": "aerobite",
+      "expectLinkLabel": "Read string guide →",
+      "e2e": true,
+      "note": "Yonex Aerobite on /best/strings/ exits to string-selector guide"
+    },
+    {
+      "id": "commercial-string-yy-bg80-power",
+      "productId": "yy-bg80-power",
+      "expectHref": "/review/badminton-string-selector/",
+      "expectKind": "guide",
+      "expectAnchor": "bg80-power",
+      "expectLinkLabel": "Read string guide →",
+      "e2e": true,
+      "note": "Yonex BG80 Power on /best/strings/ exits to string-selector guide"
+    },
+    {
+      "id": "commercial-string-ln-l69",
+      "productId": "ln-l69-string",
+      "expectHref": "/review/li-ning-l69-string-review/",
+      "expectKind": "review",
+      "expectAnchor": "l69",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Li-Ning L69 on /best/strings/ exits to dedicated string review"
+    }
+  ]
+}

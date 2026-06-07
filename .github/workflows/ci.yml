@@ -50,10 +50,16 @@ jobs:
         run: npm run lint:review-product-map-baseline
       - name: PDP golden-profile guard
         run: npm run lint:pdp-baseline
+      - name: Catalog string editorial exit guard
+        run: npm run lint:catalog-string-baseline
+      - name: Commercial string editorial exit guard
+        run: npm run lint:commercial-string-baseline
       - name: Best-of golden-profile guard
         run: npm run lint:best-baseline
       - name: Best-of image coverage guard
         run: npm run lint:best-image-coverage
+      - name: Tier-4 budget image baseline guard
+        run: npm run lint:tier4-image-baseline
       - name: Best-of productId coverage guard
         run: npm run lint:best-product-id-coverage
       - name: Compare-guides golden-profile guard
