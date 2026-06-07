@@ -107,9 +107,17 @@ describe("pdp-baseline", () => {
   });
 
   it("resolves explainer review slugs from map", () => {
-    expect(reviewSlugForProductId("yy-bg65", map)).toBe(
-      "badminton-string-selector"
-    );
+    for (const id of [
+      "yy-bg65",
+      "yy-bg80",
+      "yy-exbolt-63",
+      "yy-aerobite",
+      "yy-bg80-power",
+    ]) {
+      expect(reviewSlugForProductId(id, map)).toBe(
+        "badminton-string-selector"
+      );
+    }
   });
 
   it("flags editorial review kind mismatches", () => {

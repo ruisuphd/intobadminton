@@ -206,6 +206,39 @@ test.describe("review blog style", () => {
     ).toHaveAttribute("href", "/review/badminton-string-selector/");
   });
 
+  test("strings page links Yonex BG80 to string-selector guide", async ({
+    page,
+  }) => {
+    await page.goto("/best/strings/");
+    await expect(
+      page
+        .locator("#bg80")
+        .getByRole("link", { name: "Read string guide →" })
+    ).toHaveAttribute("href", "/review/badminton-string-selector/");
+  });
+
+  test("strings page links Yonex Aerobite to string-selector guide", async ({
+    page,
+  }) => {
+    await page.goto("/best/strings/");
+    await expect(
+      page
+        .locator("#aerobite")
+        .getByRole("link", { name: "Read string guide →" })
+    ).toHaveAttribute("href", "/review/badminton-string-selector/");
+  });
+
+  test("strings page links Yonex BG80 Power to string-selector guide", async ({
+    page,
+  }) => {
+    await page.goto("/best/strings/");
+    await expect(
+      page
+        .locator("#bg80-power")
+        .getByRole("link", { name: "Read string guide →" })
+    ).toHaveAttribute("href", "/review/badminton-string-selector/");
+  });
+
   test("strings page links Li-Ning L69 to dedicated string review", async ({
     page,
   }) => {

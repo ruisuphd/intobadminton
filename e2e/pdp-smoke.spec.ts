@@ -52,3 +52,25 @@ test("BG65 PDP shows string guide exit", async ({ page }) => {
     page.getByRole("link", { name: "Read string guide →" })
   ).toHaveAttribute("href", "/review/badminton-string-selector/");
 });
+
+test("catalog links Yonex BG80 string to string-selector guide", async ({
+  page,
+}) => {
+  await page.goto("/catalog/?cat=string&brand=Yonex");
+
+  await page.getByRole("link", { name: /BG80(?! Power)/i }).first().click();
+
+  await expect(page).toHaveURL(/\/review\/badminton-string-selector\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
+
+test("catalog links Yonex EXBOLT 63 string to string-selector guide", async ({
+  page,
+}) => {
+  await page.goto("/catalog/?cat=string&brand=Yonex");
+
+  await page.getByRole("link", { name: /EXBOLT 63/i }).first().click();
+
+  await expect(page).toHaveURL(/\/review\/badminton-string-selector\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
