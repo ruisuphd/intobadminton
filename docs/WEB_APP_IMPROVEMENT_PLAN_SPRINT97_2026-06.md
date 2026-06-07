@@ -39,6 +39,7 @@
 |-------------|-------|
 | Four new `PRODUCT_REVIEW_ALIASES` | `src/lib/review-pages.ts`, `src/lib/review-pages.test.ts` |
 | Commercial alias e2e smoke (4 landings) | `e2e/review-consolidation.spec.ts` |
+| PDP-only baseline retarget (Nanoray → Thruster Ryuga II) | `e2e/pdp-smoke.spec.ts`, `docs/baselines/pdp-queries.json` |
 | Master plan | `docs/WEB_APP_IMPROVEMENT_PLAN_2026-06.md` |
 
 **Alias pairs added:**
