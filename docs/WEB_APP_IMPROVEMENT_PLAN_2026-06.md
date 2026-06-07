@@ -87,6 +87,8 @@
 
 **Sprint 95 addendum:** Smash + shuttle commercial review-map e2e — ✅ 100ZZ VA remap + `PRODUCT_REVIEW_ALIASES` (P9200 / 65 Z Wide / 77 Play); AS-50 shuttle + 65 Z4 + 99 Pro gen-1 + HS Plus attack + AxForce 90 New standalone golden profiles; `minMappedE2eGuards: 56`; DriveX 8S blocked (no dedicated review article in catalogue).
 
+**Sprint 96 addendum:** Commercial sibling alias expansion — ✅ DriveX 8S + Astrox 100 Game + Aerus Z2 + Brave Sword 12 + Auraspeed 100X SE resolve to nearest reviewed sibling SKU via `PRODUCT_REVIEW_ALIASES`; e2e smoke on five `/best/*` landings; commercial alias pairs 3→8; Thruster Ryuga II + Nanoray Light 70i image hunt deferred.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -792,14 +794,21 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 51`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT94_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT94_2026-06.md)
 
-### Sprint 95 — This branch (`cursor/web-app-improvement-plan-77f8`)
+### Sprint 95 — Shipped (PR #243)
 
 - **Smash + shuttle commercial review-map e2e** — 100ZZ VA remap; AS-50 shuttle + 65 Z4 + 99 Pro gen-1 + HS Plus attack + AxForce 90 New standalone golden profiles with Playwright smoke
 - **`PRODUCT_REVIEW_ALIASES`** — P9200 Series, 65 Z Wide, and Astrox 77 Play resolve to nearest reviewed sibling SKU
 - **`minMappedE2eGuards: 56`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT95_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT95_2026-06.md)
 
-### Next (Sprint 96+)
+### Sprint 96 — This branch (`cursor/web-app-improvement-plan-ef5e`)
+
+- **Commercial sibling alias expansion** — DriveX 8S, Astrox 100 Game, Aerus Z2, Brave Sword 12, and Auraspeed 100X SE resolve to nearest reviewed sibling SKU
+- **E2e smoke** — five `/best/*` landings assert alias editorial hrefs
+- **Commercial alias pairs: 8** — up from 3 in Sprint 95
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT96_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT96_2026-06.md)
+
+### Next (Sprint 97+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
