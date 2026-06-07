@@ -59,6 +59,18 @@ const GUARDS = [
     script: "scripts/shoe-editorial-parity.mjs",
   },
   {
+    name: "catalog racket editorial exits",
+    script: "scripts/catalog-racket-baseline.mjs",
+  },
+  {
+    name: "commercial racket editorial exits",
+    script: "scripts/commercial-racket-baseline.mjs",
+  },
+  {
+    name: "racket editorial three-way parity",
+    script: "scripts/racket-editorial-parity.mjs",
+  },
+  {
     name: "best-of golden profiles",
     script: "scripts/best-baseline.mjs",
   },
