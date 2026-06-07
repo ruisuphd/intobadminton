@@ -31,6 +31,10 @@ const GUARDS = [
     script: "scripts/commercial-string-baseline.mjs",
   },
   {
+    name: "string editorial three-way parity",
+    script: "scripts/string-editorial-parity.mjs",
+  },
+  {
     name: "catalog shuttle editorial exits",
     script: "scripts/catalog-shuttle-baseline.mjs",
   },
@@ -41,6 +45,18 @@ const GUARDS = [
   {
     name: "shuttle editorial three-way parity",
     script: "scripts/shuttle-editorial-parity.mjs",
+  },
+  {
+    name: "catalog shoe editorial exits",
+    script: "scripts/catalog-shoe-baseline.mjs",
+  },
+  {
+    name: "commercial shoe editorial exits",
+    script: "scripts/commercial-shoe-baseline.mjs",
+  },
+  {
+    name: "shoe editorial three-way parity",
+    script: "scripts/shoe-editorial-parity.mjs",
   },
   {
     name: "best-of golden profiles",
