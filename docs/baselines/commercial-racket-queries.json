@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "updated": "2026-06-09",
+  "queries": [
+    {
+      "id": "commercial-racket-kawasaki-crimson-blade",
+      "productId": "kawasaki-crimson-blade",
+      "expectHref": "/review/kawasaki-crimson-blade-racket-review/",
+      "expectKind": "review",
+      "expectBestSlug": "lightweight-rackets-5u",
+      "expectAnchor": "kawasaki-crimson-blade",
+      "expectLinkLabel": "Read full review →",
+      "note": "Kawasaki Crimson Blade on /best/lightweight-rackets-5u/"
+    },
+    {
+      "id": "commercial-racket-kumpoo-shura-2",
+      "productId": "kumpoo-shura-2",
+      "expectHref": "/review/kumpoo-shura-2-racket-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-heavy-rackets-under-150",
+      "expectAnchor": "shura-ii",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Shura II on /best/head-heavy-rackets-under-150/"
+    },
+    {
+      "id": "commercial-racket-ln-axforce-10",
+      "productId": "ln-axforce-10",
+      "expectHref": "/review/li-ning-axforce-10-beginner-attack-review/",
+      "expectKind": "review",
+      "expectBestSlug": "rackets-under-100",
+      "expectAnchor": "axforce-10-(雷霆-10)",
+      "expectLinkLabel": "Read full review →",
+      "note": "AxForce 10 (雷霆 10) on /best/rackets-under-100/"
+    },
+    {
+      "id": "commercial-racket-ln-axforce-100-gen-2",
+      "productId": "ln-axforce-100-gen-2",
+      "expectHref": "/review/li-ning-flagship-racket-buying-guide-2026/",
+      "expectKind": "review",
+      "expectBestSlug": "singles-rackets",
+      "expectAnchor": "axforce-100-(gen-2)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Axforce 100 (Gen 2) on /best/singles-rackets/"
+    },
+    {
+      "id": "commercial-racket-ln-axforce-80-jr",
+      "productId": "ln-axforce-80-jr",
+      "expectHref": "/review/li-ning-axforce-80-jr-junior-review/",
+      "expectKind": "review",
+      "expectBestSlug": "lightweight-rackets-5u",
+      "expectAnchor": "axforce-80-jr",
+      "expectLinkLabel": "Read full review →",
+      "note": "AxForce 80 JR on /best/lightweight-rackets-5u/"
+    },
+    {
+      "id": "commercial-racket-ln-bladex-800-speed",
+      "productId": "ln-bladex-800-speed",
+      "expectHref": "/review/li-ning-bladex-800-speed-tough-elastic/",
+      "expectKind": "review",
+      "expectBestSlug": "head-light-rackets",
+      "expectAnchor": "bladex-800-speed",
+      "expectLinkLabel": "Read full review →",
+      "note": "Bladex 800 Speed on /best/head-light-rackets/"
+    },
+    {
+      "id": "commercial-racket-ln-bladex-arrow",
+      "productId": "ln-bladex-arrow",
+      "expectHref": "/review/li-ning-bladex-arrow-review/",
+      "expectKind": "review",
+      "expectBestSlug": "lightweight-rackets-5u",
+      "expectAnchor": "bladex-arrow-(锋影-利箭-/-ex)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Bladex Arrow (锋影 利箭 / EX) on /best/lightweight-rackets-5u/"
+    },
+    {
+      "id": "commercial-racket-ln-halbertec-7000-ii",
+      "productId": "ln-halbertec-7000-ii",
+      "expectHref": "/review/li-ning-halbertec-7000-ii-review/",
+      "expectKind": "review",
+      "expectBestSlug": "defensive-rackets",
+      "expectAnchor": "halbertec-7000-ii",
+      "expectLinkLabel": "Read full review →",
+      "note": "Halbertec 7000 II on /best/defensive-rackets/"
+    },
+    {
+      "id": "commercial-racket-ln-halbertec-8000",
+      "productId": "ln-halbertec-8000",
+      "expectHref": "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/",
+      "expectKind": "review",
+      "expectBestSlug": "intermediate-rackets",
+      "expectAnchor": "halbertec-8000",
+      "expectLinkLabel": "Read full review →",
+      "note": "Halbertec 8000 on /best/intermediate-rackets/"
+    },
+    {
+      "id": "commercial-racket-ln-halbertec-9000",
+      "productId": "ln-halbertec-9000",
+      "expectHref": "/review/li-ning-halbertec-flagship-lineup-review/",
+      "expectKind": "review",
+      "expectBestSlug": "control-rackets",
+      "expectAnchor": "halbertec-9000-(战戟-9000)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Halbertec 9000 (战戟 9000) on /best/control-rackets/"
+    },
+    {
+      "id": "commercial-racket-ln-halbertec-9000-power",
+      "productId": "ln-halbertec-9000-power",
+      "expectHref": "/review/li-ning-halbertec-9000-power-deep-dive/",
+      "expectKind": "review",
+      "expectBestSlug": "smash-heavy-rackets",
+      "expectAnchor": "halbertec-9000-power",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Halbertec 9000 Power on /best/smash-heavy-rackets/"
+    },
+    {
+      "id": "commercial-racket-mizuno-altius-01-feel",
+      "productId": "mizuno-altius-01-feel",
+      "expectHref": "/review/mizuno-carbo-pro-823-review/",
+      "expectKind": "review",
+      "expectBestSlug": "beginner-rackets",
+      "expectAnchor": "altius-n-feel",
+      "expectLinkLabel": "Read full review →",
+      "note": "Altius N-Feel on /best/beginner-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-auraspeed-100x-se",
+      "productId": "vic-auraspeed-100x-se",
+      "expectHref": "/review/victor-auraspeed-90k-ii-review/",
+      "expectKind": "review",
+      "expectBestSlug": "smash-heavy-rackets",
+      "expectAnchor": "auraspeed-100x-se-(mohammad-ahsan)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Auraspeed 100X SE (Mohammad Ahsan) on /best/smash-heavy-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-auraspeed-90k-ii",
+      "productId": "vic-auraspeed-90k-ii",
+      "expectHref": "/review/victor-auraspeed-90k-ii-review/",
+      "expectKind": "review",
+      "expectBestSlug": "intermediate-rackets",
+      "expectAnchor": "auraspeed-90k-ii",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Auraspeed 90K II on /best/intermediate-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-auraspeed-fantome",
+      "productId": "vic-auraspeed-fantome",
+      "expectHref": "/review/victor-auraspeed-fantome-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-light-rackets",
+      "expectAnchor": "auraspeed-fantome-(影刃)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Auraspeed Fantome (影刃) on /best/head-light-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-auraspeed-hs-plus",
+      "productId": "vic-auraspeed-hs-plus",
+      "expectHref": "/review/victor-auraspeed-hs-plus-attack-review/",
+      "expectKind": "review",
+      "expectBestSlug": "doubles-rackets",
+      "expectAnchor": "auraspeed-hs-plus",
+      "expectLinkLabel": "Read full review →",
+      "note": "Auraspeed HS Plus on /best/doubles-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-brave-sword-12",
+      "productId": "vic-brave-sword-12",
+      "expectHref": "/review/victor-jetspeed-12-curious-review/",
+      "expectKind": "review",
+      "expectBestSlug": "all-round-rackets",
+      "expectAnchor": "brave-sword-12",
+      "expectLinkLabel": "Read full review →",
+      "note": "Brave Sword 12 on /best/all-round-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-drivex-8s",
+      "productId": "vic-drivex-8s",
+      "expectHref": "/review/victor-drivex-10-review/",
+      "expectKind": "review",
+      "expectBestSlug": "beginner-rackets",
+      "expectAnchor": "drivex-8s",
+      "expectLinkLabel": "Read full review →",
+      "note": "DriveX 8S on /best/beginner-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-fz-88d-power-purple",
+      "productId": "vic-fz-88d-power-purple",
+      "expectHref": "/review/victor-fz-88d-power-purple-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-heavy-rackets-under-150",
+      "expectAnchor": "fz-88d-power-purple",
+      "expectLinkLabel": "Read full review →",
+      "note": "FZ 88D Power Purple on /best/head-heavy-rackets-under-150/"
+    },
+    {
+      "id": "commercial-racket-vic-jetspeed-12",
+      "productId": "vic-jetspeed-12",
+      "expectHref": "/review/victor-jetspeed-12-curious-review/",
+      "expectKind": "review",
+      "expectBestSlug": "all-round-rackets",
+      "expectAnchor": "jetspeed-12",
+      "expectLinkLabel": "Read full review →",
+      "note": "Jetspeed 12 on /best/all-round-rackets/"
+    },
+    {
+      "id": "commercial-racket-vic-thruster-9900",
+      "productId": "vic-thruster-9900",
+      "expectHref": "/review/victor-thruster-9900-curiosity-review/",
+      "expectKind": "review",
+      "expectBestSlug": "rackets-under-100",
+      "expectAnchor": "thruster-9900-(tk9900)",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Thruster 9900 (TK9900) on /best/rackets-under-100/"
+    },
+    {
+      "id": "commercial-racket-vic-thruster-hwql",
+      "productId": "vic-thruster-hwql",
+      "expectHref": "/review/victor-thruster-hwql-nuke-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-heavy-rackets-under-150",
+      "expectAnchor": "thruster-hwql-light",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Thruster HWQL Light on /best/head-heavy-rackets-under-150/"
+    },
+    {
+      "id": "commercial-racket-vic-thruster-sr",
+      "productId": "vic-thruster-sr",
+      "expectHref": "/review/victor-thruster-sr-cherry-blossom-review/",
+      "expectKind": "review",
+      "expectBestSlug": "lightweight-rackets-5u",
+      "expectAnchor": "thruster-sr-light-(樱花刃)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Thruster SR Light (樱花刃) on /best/lightweight-rackets-5u/"
+    },
+    {
+      "id": "commercial-racket-vic-yu-12",
+      "productId": "vic-yu-12",
+      "expectHref": "/review/victor-yu-12-racket-review/",
+      "expectKind": "review",
+      "expectBestSlug": "intermediate-rackets",
+      "expectAnchor": "drivex-12",
+      "expectLinkLabel": "Read full review →",
+      "note": "DriveX 12 on /best/intermediate-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-arcsaber-11-pro",
+      "productId": "yy-arcsaber-11-pro",
+      "expectHref": "/review/yonex-arcsaber-11-pro-review/",
+      "expectKind": "review",
+      "expectBestSlug": "intermediate-rackets",
+      "expectAnchor": "arcsaber-11-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Arcsaber 11 Pro on /best/intermediate-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-arcsaber-7-play",
+      "productId": "yy-arcsaber-7-play",
+      "expectHref": "/review/yonex-arcsaber-7-play-review/",
+      "expectKind": "review",
+      "expectBestSlug": "rackets-under-100",
+      "expectAnchor": "arcsaber-7-play",
+      "expectLinkLabel": "Read full review →",
+      "note": "Arcsaber 7 Play on /best/rackets-under-100/"
+    },
+    {
+      "id": "commercial-racket-yy-arcsaber-7-pro",
+      "productId": "yy-arcsaber-7-pro",
+      "expectHref": "/review/yonex-arcsaber-7-pro-review/",
+      "expectKind": "review",
+      "expectBestSlug": "beginner-rackets",
+      "expectAnchor": "arcsaber-7-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Arcsaber 7 Pro on /best/beginner-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-arcsaber-7-tour",
+      "productId": "yy-arcsaber-7-tour",
+      "expectHref": "/review/yonex-arcsaber-7-tour-review/",
+      "expectKind": "review",
+      "expectBestSlug": "all-round-rackets",
+      "expectAnchor": "arcsaber-7-tour",
+      "expectLinkLabel": "Read full review →",
+      "note": "Arcsaber 7 Tour on /best/all-round-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-100-game",
+      "productId": "yy-astrox-100-game",
+      "expectHref": "/review/yonex-astrox-nextage-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-heavy-rackets-under-150",
+      "expectAnchor": "astrox-100-game",
+      "expectLinkLabel": "Read full review →",
+      "note": "Astrox 100 Game on /best/head-heavy-rackets-under-150/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-100zz",
+      "productId": "yy-astrox-100zz",
+      "expectHref": "/review/yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai/",
+      "expectKind": "review",
+      "expectBestSlug": "smash-heavy-rackets",
+      "expectAnchor": "astrox-100zz",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Astrox 100ZZ on /best/smash-heavy-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-100zz-va",
+      "productId": "yy-astrox-100zz-va",
+      "expectHref": "/review/yonex-astrox-100zz-axelsen-va-vs-kurenai/",
+      "expectKind": "review",
+      "expectBestSlug": "smash-heavy-rackets",
+      "expectAnchor": "astrox-100zz-va-(viktor-axelsen)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Astrox 100ZZ VA (Viktor Axelsen) on /best/smash-heavy-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-77-play",
+      "productId": "yy-astrox-77-play",
+      "expectHref": "/review/yonex-astrox-77-pro-review/",
+      "expectKind": "review",
+      "expectBestSlug": "beginner-rackets",
+      "expectAnchor": "astrox-77-play",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Astrox 77 Play on /best/beginner-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-77-pro",
+      "productId": "yy-astrox-77-pro",
+      "expectHref": "/review/yonex-astrox-77-pro-review/",
+      "expectKind": "review",
+      "expectBestSlug": "beginner-rackets",
+      "expectAnchor": "astrox-77-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Astrox 77 Pro on /best/beginner-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-88d-pro-2024",
+      "productId": "yy-astrox-88d-pro-2024",
+      "expectHref": "/review/yonex-astrox-88-pro-2024-review/",
+      "expectKind": "review",
+      "expectBestSlug": "doubles-rackets",
+      "expectAnchor": "astrox-88d-pro-(2024)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Astrox 88D Pro (2024) on /best/doubles-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-88s-pro-2024",
+      "productId": "yy-astrox-88s-pro-2024",
+      "expectHref": "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/",
+      "expectKind": "review",
+      "expectBestSlug": "doubles-rackets",
+      "expectAnchor": "astrox-88s-pro-(2024)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Astrox 88S Pro (2024) on /best/doubles-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-99-pro",
+      "productId": "yy-astrox-99-pro",
+      "expectHref": "/review/yonex-astrox-99-pro-3-deep-dive/",
+      "expectKind": "review",
+      "expectBestSlug": "smash-heavy-rackets",
+      "expectAnchor": "astrox-99-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Astrox 99 Pro on /best/smash-heavy-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-astrox-nextage",
+      "productId": "yy-astrox-nextage",
+      "expectHref": "/review/yonex-astrox-nextage-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-heavy-rackets-under-150",
+      "expectAnchor": "astrox-nextage",
+      "expectLinkLabel": "Read full review →",
+      "note": "Astrox Nextage on /best/head-heavy-rackets-under-150/"
+    },
+    {
+      "id": "commercial-racket-yy-nanoflare-1000-play",
+      "productId": "yy-nanoflare-1000-play",
+      "expectHref": "/review/yonex-nanoflare-1000z-play-review/",
+      "expectKind": "review",
+      "expectBestSlug": "rackets-for-shoulder-comfort",
+      "expectAnchor": "nanoflare-1000-play",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Nanoflare 1000 Play on /best/rackets-for-shoulder-comfort/"
+    },
+    {
+      "id": "commercial-racket-yy-nanoflare-1000z",
+      "productId": "yy-nanoflare-1000z",
+      "expectHref": "/review/yonex-nanoflare-1000z-review/",
+      "expectKind": "review",
+      "expectBestSlug": "doubles-rackets",
+      "expectAnchor": "nanoflare-1000z",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Nanoflare 1000Z on /best/doubles-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-nanoflare-700-play",
+      "productId": "yy-nanoflare-700-play",
+      "expectHref": "/review/yonex-nanoflare-700-review/",
+      "expectKind": "review",
+      "expectBestSlug": "beginner-rackets",
+      "expectAnchor": "nanoflare-700-play",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Nanoflare 700 Play on /best/beginner-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-nanoflare-700-pro-2024",
+      "productId": "yy-nanoflare-700-pro-2024",
+      "expectHref": "/review/yonex-nanoflare-700-review/",
+      "expectKind": "review",
+      "expectBestSlug": "doubles-rackets",
+      "expectAnchor": "nanoflare-700-pro-(2024)",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Nanoflare 700 Pro (2024) on /best/doubles-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-nanoflare-800-pro-2024",
+      "productId": "yy-nanoflare-800-pro-2024",
+      "expectHref": "/review/yonex-nanoflare-800-pro-and-victor-hs-plus/",
+      "expectKind": "review",
+      "expectBestSlug": "control-rackets",
+      "expectAnchor": "nanoflare-800-pro-(2024)",
+      "expectLinkLabel": "Read full review →",
+      "note": "Nanoflare 800 Pro (2024) on /best/control-rackets/"
+    },
+    {
+      "id": "commercial-racket-yy-nanoray-light-70i",
+      "productId": "yy-nanoray-light-70i",
+      "expectHref": "/review/yonex-nanoflare-1000z-play-review/",
+      "expectKind": "review",
+      "expectBestSlug": "lightweight-rackets-5u",
+      "expectAnchor": "nanoray-light-70i",
+      "expectLinkLabel": "Read full review →",
+      "note": "Nanoray Light 70i on /best/lightweight-rackets-5u/"
+    },
+    {
+      "id": "commercial-racket-yy-voltric-8dg",
+      "productId": "yy-voltric-8dg",
+      "expectHref": "/review/yonex-voltric-z-force-ltd-2012-review/",
+      "expectKind": "review",
+      "expectBestSlug": "head-heavy-rackets-under-150",
+      "expectAnchor": "voltric-8dg",
+      "expectLinkLabel": "Read full review →",
+      "note": "Voltric 8DG on /best/head-heavy-rackets-under-150/"
+    }
+  ]
+}

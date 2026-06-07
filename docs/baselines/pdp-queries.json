@@ -23,7 +23,8 @@
       "expectMinSpecRows": 8,
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "CrUX review pair — PDP links to mapped review slug"
+      "note": "CrUX review pair — PDP links to mapped review slug",
+      "expectReviewKind": "review"
     },
     {
       "id": "flagship-nanoflare-1000z",
@@ -32,7 +33,9 @@
       "expectReviewSlug": "yonex-nanoflare-1000z-review",
       "expectMinSpecRows": 8,
       "expectProductJsonLd": true,
-      "note": "Flagship speed racket PDP + review wiring"
+      "note": "Flagship speed racket PDP + review wiring",
+      "expectReviewKind": "review",
+      "e2e": true
     },
     {
       "id": "pdp-alias-thruster-ryuga-ii",
@@ -343,7 +346,441 @@
       "expectCategory": "racket",
       "expectReviewSlug": "bonny-leisu-800-racket-review",
       "expectMinSpecRows": 8,
-      "note": "Budget niche brand PDP"
+      "note": "Budget niche brand PDP",
+      "expectReviewKind": "review"
+    },
+    {
+      "id": "pdp-racket-kawasaki-crimson-blade",
+      "productId": "kawasaki-crimson-blade",
+      "expectCategory": "racket",
+      "expectReviewSlug": "kawasaki-crimson-blade-racket-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Kawasaki Crimson Blade"
+    },
+    {
+      "id": "pdp-racket-kumpoo-shura-2",
+      "productId": "kumpoo-shura-2",
+      "expectCategory": "racket",
+      "expectReviewSlug": "kumpoo-shura-2-racket-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Shura II",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-ln-axforce-10",
+      "productId": "ln-axforce-10",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-axforce-10-beginner-attack-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "AxForce 10 (雷霆 10)"
+    },
+    {
+      "id": "pdp-racket-ln-axforce-100-gen-2",
+      "productId": "ln-axforce-100-gen-2",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-flagship-racket-buying-guide-2026",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Axforce 100 (Gen 2)"
+    },
+    {
+      "id": "pdp-racket-ln-axforce-80-jr",
+      "productId": "ln-axforce-80-jr",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-axforce-80-jr-junior-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "AxForce 80 JR"
+    },
+    {
+      "id": "pdp-racket-ln-bladex-800-speed",
+      "productId": "ln-bladex-800-speed",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-bladex-800-speed-tough-elastic",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Bladex 800 Speed"
+    },
+    {
+      "id": "pdp-racket-ln-bladex-arrow",
+      "productId": "ln-bladex-arrow",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-bladex-arrow-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Bladex Arrow (锋影 利箭 / EX)"
+    },
+    {
+      "id": "pdp-racket-ln-halbertec-7000-ii",
+      "productId": "ln-halbertec-7000-ii",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-halbertec-7000-ii-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Halbertec 7000 II"
+    },
+    {
+      "id": "pdp-racket-ln-halbertec-8000",
+      "productId": "ln-halbertec-8000",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-halbertec-8000-vs-9000-vs-9000-power",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Halbertec 8000"
+    },
+    {
+      "id": "pdp-racket-ln-halbertec-9000",
+      "productId": "ln-halbertec-9000",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-halbertec-flagship-lineup-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Halbertec 9000 (战戟 9000)"
+    },
+    {
+      "id": "pdp-racket-ln-halbertec-9000-power",
+      "productId": "ln-halbertec-9000-power",
+      "expectCategory": "racket",
+      "expectReviewSlug": "li-ning-halbertec-9000-power-deep-dive",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Halbertec 9000 Power",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-mizuno-altius-01-feel",
+      "productId": "mizuno-altius-01-feel",
+      "expectCategory": "racket",
+      "expectReviewSlug": "mizuno-carbo-pro-823-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Altius N-Feel"
+    },
+    {
+      "id": "pdp-racket-vic-auraspeed-100x-se",
+      "productId": "vic-auraspeed-100x-se",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-auraspeed-90k-ii-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Auraspeed 100X SE (Mohammad Ahsan)"
+    },
+    {
+      "id": "pdp-racket-vic-auraspeed-90k-ii",
+      "productId": "vic-auraspeed-90k-ii",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-auraspeed-90k-ii-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Auraspeed 90K II",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-vic-auraspeed-fantome",
+      "productId": "vic-auraspeed-fantome",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-auraspeed-fantome-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Auraspeed Fantome (影刃)"
+    },
+    {
+      "id": "pdp-racket-vic-auraspeed-hs-plus",
+      "productId": "vic-auraspeed-hs-plus",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-auraspeed-hs-plus-attack-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Auraspeed HS Plus"
+    },
+    {
+      "id": "pdp-racket-vic-brave-sword-12",
+      "productId": "vic-brave-sword-12",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-jetspeed-12-curious-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Brave Sword 12"
+    },
+    {
+      "id": "pdp-racket-vic-drivex-8s",
+      "productId": "vic-drivex-8s",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-drivex-10-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "DriveX 8S"
+    },
+    {
+      "id": "pdp-racket-vic-fz-88d-power-purple",
+      "productId": "vic-fz-88d-power-purple",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-fz-88d-power-purple-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "FZ 88D Power Purple"
+    },
+    {
+      "id": "pdp-racket-vic-jetspeed-12",
+      "productId": "vic-jetspeed-12",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-jetspeed-12-curious-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Jetspeed 12"
+    },
+    {
+      "id": "pdp-racket-vic-thruster-9900",
+      "productId": "vic-thruster-9900",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-thruster-9900-curiosity-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Thruster 9900 (TK9900)",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-vic-thruster-hwql",
+      "productId": "vic-thruster-hwql",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-thruster-hwql-nuke-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Thruster HWQL Light",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-vic-thruster-sr",
+      "productId": "vic-thruster-sr",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-thruster-sr-cherry-blossom-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Thruster SR Light (樱花刃)"
+    },
+    {
+      "id": "pdp-racket-vic-yu-12",
+      "productId": "vic-yu-12",
+      "expectCategory": "racket",
+      "expectReviewSlug": "victor-yu-12-racket-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "DriveX 12"
+    },
+    {
+      "id": "pdp-racket-yy-arcsaber-11-pro",
+      "productId": "yy-arcsaber-11-pro",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-arcsaber-11-pro-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Arcsaber 11 Pro",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-arcsaber-7-play",
+      "productId": "yy-arcsaber-7-play",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-arcsaber-7-play-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Arcsaber 7 Play"
+    },
+    {
+      "id": "pdp-racket-yy-arcsaber-7-tour",
+      "productId": "yy-arcsaber-7-tour",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-arcsaber-7-tour-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Arcsaber 7 Tour"
+    },
+    {
+      "id": "pdp-racket-yy-astrox-100-game",
+      "productId": "yy-astrox-100-game",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-nextage-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 100 Game"
+    },
+    {
+      "id": "pdp-racket-yy-astrox-100zz",
+      "productId": "yy-astrox-100zz",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 100ZZ",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-astrox-100zz-va",
+      "productId": "yy-astrox-100zz-va",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 100ZZ VA (Viktor Axelsen)"
+    },
+    {
+      "id": "pdp-racket-yy-astrox-77-play",
+      "productId": "yy-astrox-77-play",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-77-pro-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 77 Play",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-astrox-77-pro",
+      "productId": "yy-astrox-77-pro",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-77-pro-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 77 Pro",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-astrox-88d-pro-2024",
+      "productId": "yy-astrox-88d-pro-2024",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-88-pro-2024-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 88D Pro (2024)"
+    },
+    {
+      "id": "pdp-racket-yy-astrox-88s-pro-2024",
+      "productId": "yy-astrox-88s-pro-2024",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-88d-pro-vs-88s-pro-2024",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 88S Pro (2024)"
+    },
+    {
+      "id": "pdp-racket-yy-astrox-99-pro",
+      "productId": "yy-astrox-99-pro",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-99-pro-3-deep-dive",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox 99 Pro",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-astrox-nextage",
+      "productId": "yy-astrox-nextage",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-astrox-nextage-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Astrox Nextage"
+    },
+    {
+      "id": "pdp-racket-yy-nanoflare-1000-play",
+      "productId": "yy-nanoflare-1000-play",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-nanoflare-1000z-play-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Nanoflare 1000 Play",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-nanoflare-700-play",
+      "productId": "yy-nanoflare-700-play",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-nanoflare-700-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Nanoflare 700 Play",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-nanoflare-700-pro-2024",
+      "productId": "yy-nanoflare-700-pro-2024",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-nanoflare-700-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Nanoflare 700 Pro (2024)",
+      "e2e": true
+    },
+    {
+      "id": "pdp-racket-yy-nanoflare-800-pro-2024",
+      "productId": "yy-nanoflare-800-pro-2024",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-nanoflare-800-pro-and-victor-hs-plus",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Nanoflare 800 Pro (2024)"
+    },
+    {
+      "id": "pdp-racket-yy-nanoray-light-70i",
+      "productId": "yy-nanoray-light-70i",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-nanoflare-1000z-play-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Nanoray Light 70i"
+    },
+    {
+      "id": "pdp-racket-yy-voltric-8dg",
+      "productId": "yy-voltric-8dg",
+      "expectCategory": "racket",
+      "expectReviewSlug": "yonex-voltric-z-force-ltd-2012-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 8,
+      "expectMinRelatedReading": 3,
+      "note": "Voltric 8DG"
     }
   ]
 }
