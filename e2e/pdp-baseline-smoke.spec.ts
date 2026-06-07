@@ -11,7 +11,12 @@ const BASELINE_PATH = resolve(
   "docs/baselines/pdp-queries.json"
 );
 
-function e2ePdpPaths(): { id: string; path: string; expectReviewSlug?: string }[] {
+function e2ePdpPaths(): {
+  id: string;
+  path: string;
+  expectReviewSlug?: string;
+  expectReviewKind?: "review" | "guide";
+}[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validatePdpBaselineFile(raw);
   if (!parsed.ok) return [];
@@ -22,10 +27,11 @@ function e2ePdpPaths(): { id: string; path: string; expectReviewSlug?: string }[
       id: q.id,
       path: `/product/${q.productId}/`,
       expectReviewSlug: q.expectReviewSlug,
+      expectReviewKind: q.expectReviewKind,
     }));
 }
 
-for (const { id, path, expectReviewSlug } of e2ePdpPaths()) {
+for (const { id, path, expectReviewSlug, expectReviewKind } of e2ePdpPaths()) {
   test(`PDP baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
 
@@ -46,11 +52,13 @@ for (const { id, path, expectReviewSlug } of e2ePdpPaths()) {
     ).toBeVisible();
 
     if (expectReviewSlug) {
+      const reviewLinkLabel =
+        expectReviewKind === "guide"
+          ? /Read string guide/i
+          : /Read the full review/i;
+      await expect(page.getByRole("link", { name: reviewLinkLabel })).toBeVisible();
       await expect(
-        page.getByRole("link", { name: /Read the full review/i })
-      ).toBeVisible();
-      await expect(
-        page.getByRole("link", { name: /Read the full review/i })
+        page.getByRole("link", { name: reviewLinkLabel })
       ).toHaveAttribute("href", `/review/${expectReviewSlug}/`);
     }
   });

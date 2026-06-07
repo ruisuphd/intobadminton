@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-07",
   "queries": [
     {
       "id": "lighthouse-grpht-throttle",
@@ -37,10 +37,22 @@
       "productId": "vic-thruster-ryuga-ii",
       "expectCategory": "racket",
       "expectReviewSlug": "victor-thruster-9900-curiosity-review",
+      "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
       "e2e": true,
       "note": "Thruster Ryuga II aliases to Thruster 9900 curiosity review via PRODUCT_REVIEW_ALIASES"
+    },
+    {
+      "id": "pdp-explainer-yy-bg65",
+      "productId": "yy-bg65",
+      "expectCategory": "string",
+      "expectReviewSlug": "badminton-string-selector",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex BG65 exits to string-selector explainer with guide CTA on PDP"
     },
     {
       "id": "pdp-only-super-grap",
