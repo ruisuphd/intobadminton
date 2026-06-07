@@ -303,7 +303,7 @@
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Victor head-light speed review — Fantome on /best/head-light-rackets/ (Ryuga II blocked: no dedicated review article)"
+      "note": "Victor head-light speed review — Fantome on /best/head-light-rackets/ (Thruster Ryuga II aliases to Thruster 9900 curiosity review)"
     },
     {
       "id": "flagship-ln-axforce-90-new",
@@ -321,7 +321,7 @@
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Yonex graduation racket review — Astrox 77 Pro on /best/beginner-rackets/ and /best/intermediate-rackets/ (DriveX 8S blocked: no dedicated review article)"
+      "note": "Yonex graduation racket review — Astrox 77 Pro on /best/beginner-rackets/ and /best/intermediate-rackets/ (DriveX 8S aliases to DriveX 10 review)"
     },
     {
       "id": "flagship-ln-halbertec-7000-ii",
@@ -348,7 +348,7 @@
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Victor intermediate review — DriveX 12 (Yu 12) on /best/intermediate-rackets/ (DriveX 8S blocked: no dedicated review article)"
+      "note": "Victor intermediate review — DriveX 12 (Yu 12) on /best/intermediate-rackets/ (DriveX 8S aliases to DriveX 10 review)"
     },
     {
       "id": "flagship-ln-halbertec-9000",

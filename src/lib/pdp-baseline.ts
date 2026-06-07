@@ -9,6 +9,7 @@
 
 import { catalogHrefFromProduct } from "@/lib/catalog-url";
 import {
+  editorialReviewKind,
   PRODUCT_REVIEW_ALIASES,
   PRODUCT_REVIEW_EXPLAINER_ALIASES,
 } from "@/lib/review-pages";
@@ -24,6 +25,8 @@ export type PdpBaselineQuery = {
   expectCategory?: ProductRecord["category"];
   /** Reverse-mapped review slug must match. */
   expectReviewSlug?: string;
+  /** Editorial exit kind — review vs multi-SKU guide explainer. */
+  expectReviewKind?: "review" | "guide";
   /** Product must not appear in the review map. */
   expectNoReviewSlug?: boolean;
   expectMinSpecRows?: number;
@@ -128,6 +131,10 @@ export function validatePdpBaselineFile(
           : undefined,
       expectReviewSlug:
         typeof q.expectReviewSlug === "string" ? q.expectReviewSlug : undefined,
+      expectReviewKind:
+        q.expectReviewKind === "review" || q.expectReviewKind === "guide"
+          ? q.expectReviewKind
+          : undefined,
       expectNoReviewSlug: q.expectNoReviewSlug === true,
       expectMinSpecRows:
         typeof q.expectMinSpecRows === "number" ? q.expectMinSpecRows : undefined,
@@ -193,6 +200,17 @@ export function evaluatePdpBaselineQuery(
       return {
         id: spec.id,
         message: `review slug "${reviewSlug ?? "(missing)"}" !== expected "${spec.expectReviewSlug}"`,
+        note: spec.note,
+      };
+    }
+  }
+
+  if (spec.expectReviewKind) {
+    const kind = editorialReviewKind(spec.productId);
+    if (kind !== spec.expectReviewKind) {
+      return {
+        id: spec.id,
+        message: `editorial review kind "${kind ?? "(missing)"}" !== expected "${spec.expectReviewKind}"`,
         note: spec.note,
       };
     }

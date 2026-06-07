@@ -105,4 +105,23 @@ describe("pdp-baseline", () => {
       "victor-thruster-9900-curiosity-review"
     );
   });
+
+  it("resolves explainer review slugs from map", () => {
+    expect(reviewSlugForProductId("yy-bg65", map)).toBe(
+      "badminton-string-selector"
+    );
+  });
+
+  it("flags editorial review kind mismatches", () => {
+    const issue = evaluatePdpBaselineQuery(
+      {
+        id: "test",
+        productId: "yy-bg65",
+        expectReviewKind: "review",
+      },
+      (id) => reviewProductById(id) ?? catalog.find((p) => p.id === id),
+      map
+    );
+    expect(issue?.message).toContain("editorial review kind");
+  });
 });

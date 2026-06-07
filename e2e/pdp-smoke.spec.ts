@@ -33,3 +33,22 @@ test("catalog links unmapped SKUs to product PDP", async ({ page }) => {
   await expect(page).toHaveURL(new RegExp(`/product/${PDP_ONLY_ID}/?$`));
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });
+
+test("catalog links Yonex BG65 string to string-selector guide", async ({
+  page,
+}) => {
+  await page.goto("/catalog/?cat=string&brand=Yonex");
+
+  await page.getByRole("link", { name: /BG65/i }).first().click();
+
+  await expect(page).toHaveURL(/\/review\/badminton-string-selector\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
+
+test("BG65 PDP shows string guide exit", async ({ page }) => {
+  await page.goto("/product/yy-bg65/");
+
+  await expect(
+    page.getByRole("link", { name: "Read string guide →" })
+  ).toHaveAttribute("href", "/review/badminton-string-selector/");
+});

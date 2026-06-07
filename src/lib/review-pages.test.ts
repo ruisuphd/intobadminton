@@ -53,6 +53,12 @@ describe("review page paths", () => {
     expect(catalogProductHref(grip!)).toBe("/product/yy-ac102c/");
   });
 
+  it("links string explainer SKUs to the string-selector guide", () => {
+    const bg65 = catalogProductById("yy-bg65");
+    expect(bg65).toBeDefined();
+    expect(catalogProductHref(bg65!)).toBe("/review/badminton-string-selector/");
+  });
+
   it("editorialReviewHref returns null when no blog article is mapped", () => {
     expect(editorialReviewHref("not-yet-mapped")).toBeNull();
   });
