@@ -89,6 +89,8 @@
 
 **Sprint 96 addendum:** Commercial sibling alias expansion — ✅ DriveX 8S + Astrox 100 Game + Aerus Z2 + Brave Sword 12 + Auraspeed 100X SE resolve to nearest reviewed sibling SKU via `PRODUCT_REVIEW_ALIASES`; e2e smoke on five `/best/*` landings; commercial alias pairs 3→8; Thruster Ryuga II + Nanoray Light 70i image hunt deferred.
 
+**Sprint 97 addendum:** Remaining racket alias expansion — ✅ Voltric 8DG + Nanoray Light 70i + Nanoflare 700 Play + Mizuno Altius N-Feel resolve to nearest reviewed sibling SKU; e2e smoke on four `/best/*` landings; commercial alias pairs 8→12; Yonex string picks on `/best/strings/` deferred (no mapped string articles except L69).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -801,20 +803,28 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **`minMappedE2eGuards: 56`** — prevents silent shrinkage of mapped review e2e coverage
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT95_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT95_2026-06.md)
 
-### Sprint 96 — This branch (`cursor/web-app-improvement-plan-ef5e`)
+### Sprint 96 — Shipped (PR #244)
 
 - **Commercial sibling alias expansion** — DriveX 8S, Astrox 100 Game, Aerus Z2, Brave Sword 12, and Auraspeed 100X SE resolve to nearest reviewed sibling SKU
 - **E2e smoke** — five `/best/*` landings assert alias editorial hrefs
 - **Commercial alias pairs: 8** — up from 3 in Sprint 95
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT96_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT96_2026-06.md)
 
-### Next (Sprint 97+)
+### Sprint 97 — This branch (`cursor/web-app-improvement-plan-f95b`)
+
+- **Remaining racket alias expansion** — Voltric 8DG, Nanoray Light 70i, Nanoflare 700 Play, and Mizuno Altius N-Feel resolve to nearest reviewed sibling SKU
+- **E2e smoke** — four `/best/*` landings assert alias editorial hrefs
+- **Commercial alias pairs: 12** — up from 8 in Sprint 96
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT97_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT97_2026-06.md)
+
+### Next (Sprint 98+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
 - Tier-4 Western distributor image backfill (Bonny, Kumpoo, Kawasaki, Li-Ning entry tier); raise `TIER4_IMAGE_MIN_VERIFIED` to 2
 - Nanoray Light 70i verified image (unblocks 4 landings)
-- Thruster Ryuga II + DriveX 8S review ingestion
+- Thruster Ryuga II dedicated review ingestion
+- Yonex string review ingestion (BG65, BG80, EXBOLT, Aerobite, BG80 Power)
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  

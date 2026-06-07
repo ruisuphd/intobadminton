@@ -21,6 +21,10 @@ export const PRODUCT_REVIEW_ALIASES: Record<string, string> = {
   "yy-aerus-z2": "yy-eclipsion-z3",
   "vic-brave-sword-12": "vic-jetspeed-12",
   "vic-auraspeed-100x-se": "vic-auraspeed-90k-ii",
+  "yy-voltric-8dg": "yy-voltric-z-force-ltd",
+  "yy-nanoray-light-70i": "yy-nanoflare-1000-play",
+  "yy-nanoflare-700-play": "yy-nanoflare-700-pro-2024",
+  "mizuno-altius-01-feel": "mizuno-carbo-pro-823",
 };
 
 /**

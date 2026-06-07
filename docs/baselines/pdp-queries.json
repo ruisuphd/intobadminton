@@ -33,13 +33,13 @@
       "note": "Flagship speed racket PDP + review wiring"
     },
     {
-      "id": "pdp-only-nanoray-light",
-      "productId": "yy-nanoray-light-70i",
+      "id": "pdp-only-thruster-ryuga-ii",
+      "productId": "vic-thruster-ryuga-ii",
       "expectCategory": "racket",
       "expectNoReviewSlug": true,
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Catalog-only SKU — no review map, catalog links to PDP"
+      "note": "Catalog-only SKU — no review map, catalog links to PDP (Nanoray Light 70i now aliases to play-tier review)"
     },
     {
       "id": "club-shoes-p9200",
