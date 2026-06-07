@@ -3,6 +3,7 @@ import { catalogProductById } from "@/lib/catalog-products";
 import {
   catalogProductHref,
   editorialReviewHref,
+  PRODUCT_REVIEW_ALIASES,
   reviewPath,
   reviewUrl,
 } from "@/lib/review-pages";
@@ -56,6 +57,25 @@ describe("review page paths", () => {
   it("editorialReviewHref returns review path when blog slug exists", () => {
     expect(editorialReviewHref("yy-arcsaber-7-pro")).toBe(
       "/review/yonex-arcsaber-7-pro-review/"
+    );
+  });
+
+  it("resolves commercial sibling SKUs via PRODUCT_REVIEW_ALIASES", () => {
+    expect(PRODUCT_REVIEW_ALIASES["vic-p9200"]).toBe("vic-p9200-iii");
+    expect(editorialReviewHref("vic-p9200")).toBe(
+      "/review/victor-p9200-iii-shoes-review/"
+    );
+    expect(editorialReviewHref("yy-power-cushion-65z-wide")).toBe(
+      "/review/yonex-65z4-shoes-review/"
+    );
+    expect(editorialReviewHref("yy-astrox-77-play")).toBe(
+      "/review/yonex-astrox-77-pro-review/"
+    );
+  });
+
+  it("maps Astrox 100ZZ VA to the Axelsen comparison review slug", () => {
+    expect(reviewPath("yy-astrox-100zz-va")).toBe(
+      "/review/yonex-astrox-100zz-axelsen-va-vs-kurenai/"
     );
   });
 });

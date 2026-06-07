@@ -8,6 +8,17 @@ import type { ProductRecord } from "@/lib/types/product";
 const CATALOG = productsCatalog as ProductRecord[];
 
 /**
+ * Commercial catalogue rows that share an editorial review with a sibling SKU.
+ * Used when `/best/*` picks reference a series or play-tier id but the mapped
+ * hands-on article covers the nearest reviewed variant.
+ */
+export const PRODUCT_REVIEW_ALIASES: Record<string, string> = {
+  "vic-p9200": "vic-p9200-iii",
+  "yy-power-cushion-65z-wide": "yy-power-cushion-65-z4",
+  "yy-astrox-77-play": "yy-astrox-77-pro",
+};
+
+/**
  * Categories that get a dedicated `/review/[slug]/` page. Grips stay excluded
  * until standalone editorial depth exists. Strings join once a mapped review
  * article exists (e.g. L69).
@@ -32,8 +43,9 @@ export function reviewProductById(id: string): ProductRecord | undefined {
 }
 
 function blogSlugForProduct(productId: string): BlogSlug | undefined {
+  const resolvedId = PRODUCT_REVIEW_ALIASES[productId] ?? productId;
   const candidates = (Object.entries(blogReviewMap) as [BlogSlug, string][])
-    .filter(([, id]) => id === productId)
+    .filter(([, id]) => id === resolvedId)
     .map(([slug]) => slug);
   if (!candidates.length) return undefined;
 

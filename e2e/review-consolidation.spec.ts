@@ -75,12 +75,19 @@ test.describe("review blog style", () => {
     ).toHaveAttribute("href", "/review/yonex-aerosensa-50-shuttle-review/");
   });
 
-  test("best shoes page links Comfort Z3 pick to full review", async ({
+  test("best shoes page links ranked picks to editorial reviews", async ({
     page,
   }) => {
     await page.goto("/best/shoes/");
     await expect(
-      page.getByRole("link", { name: "Read full review →" }).first()
+      page
+        .locator("#power-cushion-65-z-wide")
+        .getByRole("link", { name: "Read full review →" })
+    ).toHaveAttribute("href", "/review/yonex-65z4-shoes-review/");
+    await expect(
+      page
+        .locator("#power-cushion-comfort-z3")
+        .getByRole("link", { name: "Read full review →" })
     ).toHaveAttribute("href", "/review/yonex-comfort-z3-shoes-review/");
   });
 });
