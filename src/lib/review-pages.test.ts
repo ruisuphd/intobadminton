@@ -47,10 +47,22 @@ describe("review page paths", () => {
     );
   });
 
-  it("links unmapped catalogue rows to PDP-lite pages", () => {
+  it("links grip explainer SKUs to the grip-sizes guide", () => {
     const grip = catalogProductById("yy-ac102c");
     expect(grip).toBeDefined();
-    expect(catalogProductHref(grip!)).toBe("/product/yy-ac102c/");
+    expect(catalogProductHref(grip!)).toBe("/review/yonex-grip-sizes-explained/");
+    expect(editorialReviewKind("yy-ac102c")).toBe("guide");
+    expect(editorialReviewLinkLabel("yy-ac102c")).toBe("Read grip guide →");
+  });
+
+  it("links bag explainer SKUs to the bag-loadout guide", () => {
+    const bag = catalogProductById("yy-pro-racket-bag-92429");
+    expect(bag).toBeDefined();
+    expect(catalogProductHref(bag!)).toBe("/review/badminton-bag-loadout/");
+    expect(editorialReviewKind("yy-pro-racket-bag-92429")).toBe("guide");
+    expect(editorialReviewLinkLabel("yy-pro-racket-bag-92429")).toBe(
+      "Read bag guide →"
+    );
   });
 
   it("links string explainer SKUs to the string-selector guide", () => {

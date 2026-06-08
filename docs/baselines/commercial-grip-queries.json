@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "commercial-grip-yy-ac102c",
+      "productId": "yy-ac102c",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "expectAnchor": "super-grap",
+      "expectLinkLabel": "Read grip guide →",
+      "e2e": true,
+      "note": "Yonex Super Grap on /best/grips/ exits to grip-sizes guide"
+    },
+    {
+      "id": "commercial-grip-ln-gp100-pro",
+      "productId": "ln-gp100-pro-grip",
+      "expectHref": "/review/li-ning-gp100-pro-overgrip-review/",
+      "expectKind": "review",
+      "expectAnchor": "gp100-pro",
+      "expectLinkLabel": "Read full review →",
+      "e2e": true,
+      "note": "Li-Ning GP100 Pro on /best/grips/ exits to dedicated grip review"
+    },
+    {
+      "id": "commercial-grip-yy-ac108ex",
+      "productId": "yy-ac108ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "expectAnchor": "towel-grip",
+      "expectLinkLabel": "Read grip guide →",
+      "e2e": true,
+      "note": "Yonex Towel Grip on /best/grips/ exits to grip-sizes guide"
+    },
+    {
+      "id": "commercial-grip-yy-ac130ex",
+      "productId": "yy-ac130ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "expectAnchor": "strong-grap",
+      "expectLinkLabel": "Read grip guide →",
+      "note": "Yonex Strong Grap on /best/grips/ exits to grip-sizes guide"
+    },
+    {
+      "id": "commercial-grip-yy-ac125ex",
+      "productId": "yy-ac125ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "expectAnchor": "smash-grap",
+      "expectLinkLabel": "Read grip guide →",
+      "note": "Yonex Smash Grap on /best/grips/ exits to grip-sizes guide"
+    },
+    {
+      "id": "commercial-grip-yy-ac104ex",
+      "productId": "yy-ac104ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "expectAnchor": "wave-grap",
+      "expectLinkLabel": "Read grip guide →",
+      "note": "Yonex Wave Grap on /best/grips/ exits to grip-sizes guide"
+    },
+    {
+      "id": "commercial-grip-yy-ac102ex",
+      "productId": "yy-ac102ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "expectAnchor": "super-grap-bulk",
+      "expectLinkLabel": "Read grip guide →",
+      "note": "Yonex Super Grap bulk on /best/grips/ exits to grip-sizes guide"
+    }
+  ]
+}

@@ -74,6 +74,18 @@ jobs:
         run: npm run lint:commercial-racket-baseline
       - name: Racket editorial three-way parity guard
         run: npm run lint:racket-editorial-parity
+      - name: Catalog grip editorial exit guard
+        run: npm run lint:catalog-grip-baseline
+      - name: Commercial grip editorial exit guard
+        run: npm run lint:commercial-grip-baseline
+      - name: Grip editorial three-way parity guard
+        run: npm run lint:grip-editorial-parity
+      - name: Catalog bag editorial exit guard
+        run: npm run lint:catalog-bag-baseline
+      - name: Commercial bag editorial exit guard
+        run: npm run lint:commercial-bag-baseline
+      - name: Bag editorial three-way parity guard
+        run: npm run lint:bag-editorial-parity
       - name: Best-of golden-profile guard
         run: npm run lint:best-baseline
       - name: Best-of image coverage guard

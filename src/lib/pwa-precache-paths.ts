@@ -55,6 +55,8 @@ export const PRECACHE_ASSERT_PATHS = [
   "/best/smash-heavy-rackets/",
   "/best/strings/",
   "/best/shuttles/",
+  "/best/grips/",
+  "/best/bags/",
   "/best/intermediate-rackets/",
   "/best/rackets-under-100/",
   "/best/rackets-under-150/",

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "catalog-bag-yy-pro-tournament",
+      "productId": "yy-pro-racket-bag-92429",
+      "expectHref": "/review/badminton-bag-loadout/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex Pro Tournament bag catalog browse exits to bag-loadout guide"
+    },
+    {
+      "id": "catalog-bag-vic-compact",
+      "productId": "vic-compact-backpack",
+      "expectHref": "/review/badminton-bag-loadout/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Victor Compact Backpack catalog browse exits to bag-loadout guide"
+    }
+  ]
+}

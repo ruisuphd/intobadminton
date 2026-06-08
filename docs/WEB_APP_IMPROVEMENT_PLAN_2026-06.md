@@ -105,6 +105,8 @@
 
 **Sprint 104 addendum:** Shuttle commercial landing + editorial parity — ✅ `/best/shuttles/` six-pick landing; shuttle three-way parity guard; 6 catalog + 6 commercial shuttle golden profiles; 6 PDP shuttle rows; commercial image CI 17→18; PWA ib-v31.
 
+**Sprint 107 addendum:** Grip + bag commercial landings + three-way editorial parity — ✅ `/best/grips/` seven-pick + `/best/bags/` two-pick landings; grip/bag explainer aliases; 7+2 catalog/commercial golden profiles; 9 PDP rows; commercial image CI 18→20; PWA ib-v32.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

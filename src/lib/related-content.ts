@@ -131,6 +131,50 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "Strings ranked by feel, durability, and tension window.",
     },
   ],
+  grips: [
+    {
+      href: "/best/grips/",
+      title: "Best badminton grips",
+      summary: "Overgrips ranked by tackiness, sweat handling, and replacement cadence.",
+    },
+    {
+      href: "/review/yonex-grip-sizes-explained/",
+      title: "Yonex grip sizes explained",
+      summary: "SKU codes, thickness trade-offs, and when towel beats tacky.",
+    },
+    {
+      href: "/review/li-ning-gp100-pro-overgrip-review/",
+      title: "Li-Ning GP100 Pro overgrip review",
+      summary: "Dry-feel perforated grip with hands-on sweat-handling notes.",
+    },
+    {
+      href: "/catalog/?cat=grip",
+      title: "Browse grips in catalog",
+      summary: "Filter by feel, thickness, and pack size.",
+    },
+  ],
+  bags: [
+    {
+      href: "/best/bags/",
+      title: "Best badminton bags",
+      summary: "Tournament and commute backpacks ranked by capacity and shoe separation.",
+    },
+    {
+      href: "/review/badminton-bag-loadout/",
+      title: "Badminton bag loadout guide",
+      summary: "What to pack for drills vs matches — grips, shuttles, and spares.",
+    },
+    {
+      href: "/catalog/?cat=bag",
+      title: "Browse bags in catalog",
+      summary: "Filter by capacity, shoe pocket, and carry style.",
+    },
+    {
+      href: "/best/shoes/",
+      title: "Best badminton shoes",
+      summary: "Pair shoe-pocket bags with court shoes that fit your width.",
+    },
+  ],
   shuttles: [
     {
       href: "/best/shuttles/",
@@ -358,6 +402,8 @@ const PATH_CLUSTER: Record<string, string> = {
   "/guides/string-feel-vs-durability/": "strings",
   "/best/strings/": "strings",
   "/best/shuttles/": "shuttles",
+  "/best/grips/": "grips",
+  "/best/bags/": "bags",
   "/tools/string-tension-calculator/": "strings",
 
   "/data/": "freshness",
@@ -395,8 +441,8 @@ const QUIZ_CATEGORY_CLUSTER: Record<string, string> = {
   racket: "all-round-rackets",
   shoes: "shoe-fit",
   string: "strings",
-  grip: "strings",
-  bag: "compare",
+  grip: "grips",
+  bag: "bags",
   shuttle: "shuttles",
   accessory: "compare",
 };
@@ -439,10 +485,10 @@ const REVIEW_CLUSTER_PATTERNS: { pattern: RegExp; cluster: string }[] = [
     cluster: "strings",
   },
   { pattern: /\b(shuttle|feather|nylon|aerosensa|carbonsonic)\b/i, cluster: "shuttles" },
-  { pattern: /\b(grip|overgrip|grip-size)\b/i, cluster: "strings" },
+  { pattern: /\b(grip|overgrip|grip-size)\b/i, cluster: "grips" },
   {
     pattern: /\b(bag|loadout|backpack)\b/i,
-    cluster: "compare",
+    cluster: "bags",
   },
   {
     pattern:
@@ -468,9 +514,9 @@ const PRODUCT_CATEGORY_CLUSTER: Record<string, string> = {
   racket: "all-round-rackets",
   string: "strings",
   shoes: "shoe-fit",
-  bag: "compare",
+  bag: "bags",
   shuttle: "shuttles",
-  grip: "strings",
+  grip: "grips",
 };
 
 /**

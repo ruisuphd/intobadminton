@@ -72,7 +72,15 @@ describe("best-image-coverage", () => {
       pickCount: 6,
       waivers: 3,
     });
-    expect(Object.keys(BEST_IMAGE_REQUIREMENTS)).toHaveLength(18);
+    expect(BEST_IMAGE_REQUIREMENTS.grips).toEqual({
+      pickCount: 7,
+      waivers: 3,
+    });
+    expect(BEST_IMAGE_REQUIREMENTS.bags).toEqual({
+      pickCount: 2,
+      waivers: 1,
+    });
+    expect(Object.keys(BEST_IMAGE_REQUIREMENTS)).toHaveLength(20);
   });
 
   it("passes verified-image guard for commercial /best/* landings", () => {

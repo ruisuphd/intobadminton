@@ -55,6 +55,8 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
 > = {
   strings: { pickCount: 6, waivers: 0 },
   shuttles: { pickCount: 6, waivers: 4 },
+  grips: { pickCount: 7, waivers: 3 },
+  bags: { pickCount: 2, waivers: 1 },
   shoes: { pickCount: 6, waivers: 0 },
   "beginner-rackets": { pickCount: 6, waivers: 0 },
   "doubles-rackets": { pickCount: 6, waivers: 0 },

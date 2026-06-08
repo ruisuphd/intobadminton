@@ -111,7 +111,7 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
     ],
   },
   {
-    heading: "Shoes, strings & shuttles",
+    heading: "Shoes, strings, shuttles, grips & bags",
     items: [
       {
         href: "/best/shoes/",
@@ -137,6 +137,16 @@ const SECTIONS: { heading: string; items: { href: string; title: string; dek: st
         href: "/best/shuttles/",
         title: "Best badminton shuttles",
         dek: "Feather and nylon shuttles ranked by flight consistency, durability per tube, and session type.",
+      },
+      {
+        href: "/best/grips/",
+        title: "Best badminton grips",
+        dek: "Overgrips ranked by tackiness, sweat handling, thickness, and replacement cadence.",
+      },
+      {
+        href: "/best/bags/",
+        title: "Best badminton bags",
+        dek: "Tournament and commute backpacks ranked by capacity, shoe separation, and session workflow.",
       },
     ],
   },

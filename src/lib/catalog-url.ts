@@ -191,6 +191,8 @@ const BEST_SLUG_CATALOG_FILTERS: Record<string, BestSlugCatalogFilters> = {
   "budget-badminton-shoes": { category: "shoes", priceBand: "under150" },
   strings: { category: "string" },
   shuttles: { category: "shuttle" },
+  grips: { category: "grip" },
+  bags: { category: "bag" },
 };
 
 /** Slugs with committed catalog filter wiring on `/best/*` pages. */

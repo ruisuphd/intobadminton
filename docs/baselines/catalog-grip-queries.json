@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "updated": "2026-06-08",
+  "queries": [
+    {
+      "id": "catalog-grip-yy-ac102c",
+      "productId": "yy-ac102c",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex Super Grap catalog browse exits to grip-sizes guide"
+    },
+    {
+      "id": "catalog-grip-ln-gp100-pro",
+      "productId": "ln-gp100-pro-grip",
+      "expectHref": "/review/li-ning-gp100-pro-overgrip-review/",
+      "expectKind": "review",
+      "e2e": true,
+      "note": "Li-Ning GP100 Pro catalog browse exits to dedicated grip review"
+    },
+    {
+      "id": "catalog-grip-yy-ac108ex",
+      "productId": "yy-ac108ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "e2e": true,
+      "note": "Yonex Towel Grip catalog browse exits to grip-sizes guide"
+    },
+    {
+      "id": "catalog-grip-yy-ac130ex",
+      "productId": "yy-ac130ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "note": "Yonex Strong Grap catalog browse exits to grip-sizes guide"
+    },
+    {
+      "id": "catalog-grip-yy-ac125ex",
+      "productId": "yy-ac125ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "note": "Yonex Smash Grap catalog browse exits to grip-sizes guide"
+    },
+    {
+      "id": "catalog-grip-yy-ac104ex",
+      "productId": "yy-ac104ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "note": "Yonex Wave Grap catalog browse exits to grip-sizes guide"
+    },
+    {
+      "id": "catalog-grip-yy-ac102ex",
+      "productId": "yy-ac102ex",
+      "expectHref": "/review/yonex-grip-sizes-explained/",
+      "expectKind": "guide",
+      "note": "Yonex Super Grap bulk catalog browse exits to grip-sizes guide"
+    }
+  ]
+}
