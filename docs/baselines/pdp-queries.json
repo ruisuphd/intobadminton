@@ -177,13 +177,87 @@
       "note": "RSL No.4 Plus exits to dedicated shuttle review on PDP"
     },
     {
-      "id": "pdp-only-super-grap",
+      "id": "pdp-explainer-yy-ac102c",
       "productId": "yy-ac102c",
       "expectCategory": "grip",
-      "expectNoReviewSlug": true,
+      "expectReviewSlug": "yonex-grip-sizes-explained",
+      "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "Grip SKU — no review map, catalog links to PDP"
+      "e2e": true,
+      "note": "Yonex Super Grap exits to grip-sizes explainer with guide CTA on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-ac108ex",
+      "productId": "yy-ac108ex",
+      "expectCategory": "grip",
+      "expectReviewSlug": "yonex-grip-sizes-explained",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "Yonex Towel Grip exits to grip-sizes explainer on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-ac104ex",
+      "productId": "yy-ac104ex",
+      "expectCategory": "grip",
+      "expectReviewSlug": "yonex-grip-sizes-explained",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "Yonex Wave Grap exits to grip-sizes explainer on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-ac125ex",
+      "productId": "yy-ac125ex",
+      "expectCategory": "grip",
+      "expectReviewSlug": "yonex-grip-sizes-explained",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "Yonex Smash Grap exits to grip-sizes explainer on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-ac130ex",
+      "productId": "yy-ac130ex",
+      "expectCategory": "grip",
+      "expectReviewSlug": "yonex-grip-sizes-explained",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "Yonex Strong Grap exits to grip-sizes explainer on PDP"
+    },
+    {
+      "id": "pdp-review-ln-gp100-pro-grip",
+      "productId": "ln-gp100-pro-grip",
+      "expectCategory": "grip",
+      "expectReviewSlug": "li-ning-gp100-pro-overgrip-review",
+      "expectReviewKind": "review",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Li-Ning GP100 Pro exits to dedicated overgrip review on PDP"
+    },
+    {
+      "id": "pdp-explainer-yy-pro-tournament-bag",
+      "productId": "yy-pro-racket-bag-92429",
+      "expectCategory": "bag",
+      "expectReviewSlug": "badminton-bag-loadout",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "note": "Yonex Pro Tournament bag exits to bag-loadout guide on PDP"
+    },
+    {
+      "id": "pdp-explainer-vic-compact-backpack",
+      "productId": "vic-compact-backpack",
+      "expectCategory": "bag",
+      "expectReviewSlug": "badminton-bag-loadout",
+      "expectReviewKind": "guide",
+      "expectMinSpecRows": 4,
+      "expectMinRelatedReading": 3,
+      "note": "Victor Compact Backpack exits to bag-loadout guide on PDP"
     },
     {
       "id": "club-shoes-p9200",

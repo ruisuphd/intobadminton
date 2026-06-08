@@ -28,9 +28,18 @@ test("product PDP shows related reading shelf", async ({ page }) => {
 test("catalog links unmapped SKUs to product PDP", async ({ page }) => {
   await page.goto("/catalog/?cat=grip&brand=Yonex");
 
+  await page.getByRole("link", { name: /Super Grap \(AC102EX/i }).click();
+
+  await expect(page).toHaveURL(/\/product\/yy-ac102ex\/?$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
+
+test("catalog links Yonex Super Grap to grip-sizes guide", async ({ page }) => {
+  await page.goto("/catalog/?cat=grip&brand=Yonex");
+
   await page.getByRole("link", { name: /Super Grap \(AC102C/i }).click();
 
-  await expect(page).toHaveURL(new RegExp(`/product/${PDP_ONLY_ID}/?$`));
+  await expect(page).toHaveURL(/\/review\/yonex-grip-sizes-explained\/?$/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });
 

@@ -43,6 +43,30 @@ export const BEST_IMAGE_WAIVERS: BestImageWaiver[] = [
     reason:
       "Bonny wide-last shoe — no verified manufacturer or distributor product photo in Western catalogues yet",
   },
+  {
+    slug: "grips",
+    pickName: "Wave Grap",
+    reason:
+      "Yonex Wave Grap — no verified Western distributor product photo in catalogue yet",
+  },
+  {
+    slug: "grips",
+    pickName: "Smash Grap",
+    reason:
+      "Yonex Smash Grap — no verified Western distributor product photo in catalogue yet",
+  },
+  {
+    slug: "grips",
+    pickName: "GP100 Pro",
+    reason:
+      "Li-Ning GP100 Pro — CN-market accessory without verified Western distributor product photo yet",
+  },
+  {
+    slug: "bags",
+    pickName: "Compact Backpack",
+    reason:
+      "Victor compact backpack — no verified Western distributor product photo in catalogue yet",
+  },
 ];
 
 /**
@@ -55,6 +79,8 @@ export const BEST_IMAGE_REQUIREMENTS: Record<
 > = {
   strings: { pickCount: 6, waivers: 0 },
   shuttles: { pickCount: 6, waivers: 4 },
+  grips: { pickCount: 6, waivers: 3 },
+  bags: { pickCount: 2, waivers: 1 },
   shoes: { pickCount: 6, waivers: 0 },
   "beginner-rackets": { pickCount: 6, waivers: 0 },
   "doubles-rackets": { pickCount: 6, waivers: 0 },

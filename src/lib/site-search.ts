@@ -259,6 +259,20 @@ const STATIC_ENTRIES: SearchEntry[] = [
     keywords: ["shuttle", "feather", "nylon", "as-50", "carbonsonic"],
   },
   {
+    title: "Best badminton overgrips",
+    href: "/best/grips/",
+    kind: "best",
+    summary: "Overgrip picks by tackiness, sweat handling, thickness, and durability.",
+    keywords: ["grip", "overgrip", "super grap", "towel grip"],
+  },
+  {
+    title: "Best badminton bags",
+    href: "/best/bags/",
+    kind: "best",
+    summary: "Tournament bags and backpacks ranked by capacity and compartment design.",
+    keywords: ["bag", "backpack", "loadout", "racket bag"],
+  },
+  {
     title: "Badminton string tension guide",
     href: "/guides/string-tension/",
     kind: "guide",

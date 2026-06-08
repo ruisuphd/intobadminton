@@ -47,10 +47,32 @@ describe("review page paths", () => {
     );
   });
 
-  it("links unmapped catalogue rows to PDP-lite pages", () => {
-    const grip = catalogProductById("yy-ac102c");
-    expect(grip).toBeDefined();
-    expect(catalogProductHref(grip!)).toBe("/product/yy-ac102c/");
+  it("links Yonex grip SKUs to the grip-sizes explainer", () => {
+    for (const id of [
+      "yy-ac102c",
+      "yy-ac108ex",
+      "yy-ac104ex",
+      "yy-ac125ex",
+      "yy-ac130ex",
+    ]) {
+      const product = catalogProductById(id);
+      expect(product).toBeDefined();
+      expect(catalogProductHref(product!)).toBe(
+        "/review/yonex-grip-sizes-explained/"
+      );
+      expect(editorialReviewKind(id)).toBe("guide");
+      expect(editorialReviewLinkLabel(id)).toBe("Read grip guide →");
+    }
+  });
+
+  it("links bag SKUs to the bag-loadout explainer", () => {
+    for (const id of ["yy-pro-racket-bag-92429", "vic-compact-backpack"]) {
+      expect(catalogProductHref(catalogProductById(id)!)).toBe(
+        "/review/badminton-bag-loadout/"
+      );
+      expect(editorialReviewKind(id)).toBe("guide");
+      expect(editorialReviewLinkLabel(id)).toBe("Read bag guide →");
+    }
   });
 
   it("links string explainer SKUs to the string-selector guide", () => {
@@ -148,6 +170,16 @@ describe("review page paths", () => {
     expect(editorialReviewLinkLabel("ln-l69-string")).toBe("Read full review →");
     expect(editorialReviewLinkLabel("ln-l69-string", { pdp: true })).toBe(
       "Read the full review →"
+    );
+  });
+
+  it("keeps dedicated grip reviews on review link labels", () => {
+    expect(editorialReviewHref("ln-gp100-pro-grip")).toBe(
+      "/review/li-ning-gp100-pro-overgrip-review/"
+    );
+    expect(editorialReviewKind("ln-gp100-pro-grip")).toBe("review");
+    expect(editorialReviewLinkLabel("ln-gp100-pro-grip")).toBe(
+      "Read full review →"
     );
   });
 

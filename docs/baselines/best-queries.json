@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-08",
   "coverage": {
-    "minCatalogFilterSlugs": 20
+    "minCatalogFilterSlugs": 22
   },
   "queries": [
     {
@@ -77,6 +77,24 @@
       "e2e": true,
       "expectComparisonTable": true,
       "note": "Shuttle category best-of — catalog filter parity"
+    },
+    {
+      "id": "grips-guide",
+      "slug": "grips",
+      "expectCatalogHref": "/catalog/?cat=grip",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
+      "note": "Grip category best-of — catalog filter parity"
+    },
+    {
+      "id": "bags-guide",
+      "slug": "bags",
+      "expectCatalogHref": "/catalog/?cat=bag",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectComparisonTable": true,
+      "note": "Bag category best-of — catalog filter parity"
     },
     {
       "id": "budget-under-100",
