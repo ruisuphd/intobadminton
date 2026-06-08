@@ -71,6 +71,30 @@ const GUARDS = [
     script: "scripts/racket-editorial-parity.mjs",
   },
   {
+    name: "catalog grip editorial exits",
+    script: "scripts/catalog-grip-baseline.mjs",
+  },
+  {
+    name: "commercial grip editorial exits",
+    script: "scripts/commercial-grip-baseline.mjs",
+  },
+  {
+    name: "grip editorial three-way parity",
+    script: "scripts/grip-editorial-parity.mjs",
+  },
+  {
+    name: "catalog bag editorial exits",
+    script: "scripts/catalog-bag-baseline.mjs",
+  },
+  {
+    name: "commercial bag editorial exits",
+    script: "scripts/commercial-bag-baseline.mjs",
+  },
+  {
+    name: "bag editorial three-way parity",
+    script: "scripts/bag-editorial-parity.mjs",
+  },
+  {
     name: "best-of golden profiles",
     script: "scripts/best-baseline.mjs",
   },

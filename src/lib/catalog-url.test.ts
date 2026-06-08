@@ -118,6 +118,8 @@ describe("catalog-url", () => {
     );
     expect(catalogHrefFromBestSlug("strings")).toBe("/catalog/?cat=string");
     expect(catalogHrefFromBestSlug("shuttles")).toBe("/catalog/?cat=shuttle");
+    expect(catalogHrefFromBestSlug("grips")).toBe("/catalog/?cat=grip");
+    expect(catalogHrefFromBestSlug("bags")).toBe("/catalog/?cat=bag");
     expect(catalogHrefFromBestSlug("unknown-slug")).toBe("/catalog/");
   });
 

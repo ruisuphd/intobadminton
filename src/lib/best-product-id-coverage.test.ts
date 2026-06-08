@@ -16,6 +16,14 @@ describe("best-product-id-coverage", () => {
       pickCount: 6,
       waivers: 0,
     });
+    expect(BEST_PRODUCT_ID_REQUIREMENTS.grips).toEqual({
+      pickCount: 6,
+      waivers: 0,
+    });
+    expect(BEST_PRODUCT_ID_REQUIREMENTS.bags).toEqual({
+      pickCount: 2,
+      waivers: 0,
+    });
     expect(BEST_PRODUCT_ID_REQUIREMENTS.shoes).toEqual({
       pickCount: 6,
       waivers: 0,

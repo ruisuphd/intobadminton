@@ -38,6 +38,13 @@ export const PRODUCT_REVIEW_EXPLAINER_ALIASES: Record<string, BlogSlug> = {
   "yy-exbolt-63": "badminton-string-selector",
   "yy-aerobite": "badminton-string-selector",
   "yy-bg80-power": "badminton-string-selector",
+  "yy-ac102c": "yonex-grip-sizes-explained",
+  "yy-ac108ex": "yonex-grip-sizes-explained",
+  "yy-ac104ex": "yonex-grip-sizes-explained",
+  "yy-ac125ex": "yonex-grip-sizes-explained",
+  "yy-ac130ex": "yonex-grip-sizes-explained",
+  "yy-pro-racket-bag-92429": "badminton-bag-loadout",
+  "vic-compact-backpack": "badminton-bag-loadout",
 };
 
 export type EditorialReviewKind = "review" | "guide";
@@ -52,6 +59,7 @@ const REVIEW_ELIGIBLE_CATEGORIES = new Set<ProductRecord["category"]>([
   "shoes",
   "shuttle",
   "string",
+  "grip",
 ]);
 
 export function reviewableProducts(): ProductRecord[] {
@@ -134,7 +142,12 @@ export function editorialReviewLinkLabel(
 ): string | null {
   const kind = editorialReviewKind(productId);
   if (!kind) return null;
-  if (kind === "guide") return "Read string guide →";
+  if (kind === "guide") {
+    const explainer = PRODUCT_REVIEW_EXPLAINER_ALIASES[productId];
+    if (explainer === "badminton-bag-loadout") return "Read bag guide →";
+    if (explainer === "yonex-grip-sizes-explained") return "Read grip guide →";
+    return "Read string guide →";
+  }
   return options?.pdp ? "Read the full review →" : "Read full review →";
 }
 

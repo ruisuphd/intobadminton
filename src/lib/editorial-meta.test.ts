@@ -30,6 +30,8 @@ describe("editorialMetaByPath registry", () => {
       "/best/shoes/",
       "/best/strings/",
       "/best/shuttles/",
+      "/best/grips/",
+      "/best/bags/",
     ];
     for (const path of expected) {
       const meta = editorialMetaByPath[path];
