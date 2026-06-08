@@ -95,6 +95,10 @@ const GUARDS = [
     script: "scripts/bag-editorial-parity.mjs",
   },
   {
+    name: "all-category editorial three-way parity",
+    script: "scripts/all-category-editorial-parity.mjs",
+  },
+  {
     name: "best-of golden profiles",
     script: "scripts/best-baseline.mjs",
   },

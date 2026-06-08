@@ -107,6 +107,8 @@
 
 **Sprint 107 addendum:** Grip/bag commercial landings + editorial parity — ✅ `/best/grips/` six-pick + `/best/bags/` two-pick landings; grip + bag three-way parity guards; Yonex grip explainer aliases → `yonex-grip-sizes-explained`; bag explainer aliases → `badminton-bag-loadout`; commercial image CI 18→20; PWA ib-v32.
 
+**Sprint 108 addendum:** All-category editorial parity aggregate + CrUX/offline expansion — ✅ `lint:all-category-editorial-parity` (80 commercial picks); grips/bags in `crux-template.csv`, offline recovery, lighthouse baseline; homepage popular-search discovery for accessory landings.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

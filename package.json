@@ -62,6 +62,7 @@
     "lint:commercial-bag-baseline": "node scripts/commercial-bag-baseline.mjs",
     "lint:bag-editorial-parity": "node scripts/bag-editorial-parity.mjs",
     "lint:bag-editorial-baselines": "node scripts/bag-editorial-baselines.mjs",
+    "lint:all-category-editorial-parity": "node scripts/all-category-editorial-parity.mjs",
     "lint:best-baseline": "node scripts/best-baseline.mjs",
     "lint:best-image-coverage": "node scripts/best-image-coverage.mjs",
     "lint:tier4-image-baseline": "node scripts/tier4-image-baseline.mjs",
