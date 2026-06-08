@@ -17,12 +17,8 @@ const BASELINE_PATH = resolve(
 );
 
 const PRODUCT_LABELS: Record<string, RegExp> = {
-  "yy-as-50": /AS-50|Aerosensa 50/i,
-  "vic-carbonsonic-max-bag": /Carbonsonic MAX/i,
-  "rsl-supreme-bag": /Supreme/i,
-  "rsl-aero-u-bag": /Aero U/i,
-  "rsl-aero-classic-tourney-bag": /Classic Tourney/i,
-  "rsl-no4-plus-bag": /No\.?4 Plus/i,
+  "yy-pro-racket-bag-92429": /Pro Tournament Racket Bag/i,
+  "vic-compact-backpack": /Compact Court Backpack/i,
 };
 
 function e2eQueries(): E2eQuery[] {

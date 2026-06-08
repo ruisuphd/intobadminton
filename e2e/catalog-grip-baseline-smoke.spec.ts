@@ -17,12 +17,12 @@ const BASELINE_PATH = resolve(
 );
 
 const PRODUCT_LABELS: Record<string, RegExp> = {
-  "yy-as-50": /AS-50|Aerosensa 50/i,
-  "vic-carbonsonic-max-grip": /Carbonsonic MAX/i,
-  "rsl-supreme-grip": /Supreme/i,
-  "rsl-aero-u-grip": /Aero U/i,
-  "rsl-aero-classic-tourney-grip": /Classic Tourney/i,
-  "rsl-no4-plus-grip": /No\.?4 Plus/i,
+  "yy-ac102c": /Super Grap \(AC102C/i,
+  "yy-ac108ex": /Towel Grip/i,
+  "yy-ac104ex": /Wave Grap/i,
+  "yy-ac125ex": /Smash Grap/i,
+  "yy-ac130ex": /Strong Grap/i,
+  "ln-gp100-pro-grip": /GP100 Pro/i,
 };
 
 function e2eQueries(): E2eQuery[] {

@@ -54,7 +54,7 @@ for (const { id, path, expectReviewSlug, expectReviewKind } of e2ePdpPaths()) {
     if (expectReviewSlug) {
       const reviewLinkLabel =
         expectReviewKind === "guide"
-          ? /Read string guide/i
+          ? /Read (string|grip|bag) guide/i
           : /Read the full review/i;
       await expect(page.getByRole("link", { name: reviewLinkLabel })).toBeVisible();
       await expect(
