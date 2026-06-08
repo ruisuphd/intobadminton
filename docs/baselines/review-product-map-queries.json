@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-06-17",
+  "updated": "2026-06-08",
   "coverage": {
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 56
+    "minMappedE2eGuards": 57
   },
   "queries": [
     {
@@ -466,6 +466,15 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Li-Ning string review — L69 on /best/strings/ (sole mapped string pick; string category now review-eligible)"
+    },
+    {
+      "id": "accessory-ln-gp100-pro-grip",
+      "slug": "li-ning-gp100-pro-overgrip-review",
+      "expectProductId": "ln-gp100-pro-grip",
+      "expectCategory": "grip",
+      "expectProductJsonLd": true,
+      "e2e": true,
+      "note": "Li-Ning GP100 Pro overgrip review — grip category map on /best/grips/ and PDP"
     },
     {
       "id": "commercial-shuttle-yy-as-50",

@@ -26,6 +26,7 @@
     "lint:gsc-baseline:compare": "node --experimental-strip-types scripts/gsc-baseline.mjs compare",
     "lint:performance-baselines": "node scripts/performance-baselines.mjs",
     "capture:crux-hints": "node scripts/crux-capture-hints.mjs",
+    "capture:crux-psi": "node scripts/crux-capture-psi.mjs",
     "capture:gsc-hints": "node scripts/gsc-capture-hints.mjs",
     "capture:performance-hints": "node scripts/performance-capture-hints.mjs",
     "lint:search-baseline": "node scripts/search-baseline.mjs",
