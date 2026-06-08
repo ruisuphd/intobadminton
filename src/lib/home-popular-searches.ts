@@ -32,6 +32,8 @@ export const homePopularSearches: HomePopularSearch[] = [
     tag: "Shoes",
   },
   { label: "Best badminton strings", href: "/best/strings/", tag: "Strings" },
+  { label: "Best badminton overgrips", href: "/best/grips/", tag: "Grips" },
+  { label: "Best badminton bags", href: "/best/bags/", tag: "Bags" },
   { label: "Yonex rackets decoded", href: "/brands/yonex/", tag: "Yonex" },
   { label: "Victor rackets decoded", href: "/brands/victor/", tag: "Victor" },
   { label: "Li-Ning rackets decoded", href: "/brands/li-ning/", tag: "Li-Ning" },
@@ -127,6 +129,10 @@ const POPULAR_SEARCH_EDITORIAL_OFFLINE_DESCRIPTIONS: Record<string, string> = {
     "Precached — homepage popular-search shoe comparison guide.",
   "/best/strings/":
     "Precached — homepage popular-search string buying guide.",
+  "/best/grips/":
+    "Precached — homepage popular-search overgrip buying guide.",
+  "/best/bags/":
+    "Precached — homepage popular-search bag buying guide.",
   "/brands/yonex/":
     "Precached — homepage popular-search Yonex brand hub.",
   "/brands/victor/":

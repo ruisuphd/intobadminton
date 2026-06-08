@@ -224,6 +224,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/best/beginner-rackets/",
   "/best/doubles-rackets/",
   "/best/shoes/",
+  "/best/grips/",
+  "/best/bags/",
   "/review/yonex-arcsaber-7-pro-review/",
   "/compare-guides/yonex-astrox-vs-nanoflare/",
   "/compare-guides/yonex-victor-li-ning/",
