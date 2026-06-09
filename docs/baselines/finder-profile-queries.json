@@ -1,6 +1,9 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-09",
+  "coverage": {
+    "minE2eGuards": 6
+  },
   "queries": [
     {
       "id": "club-doubles-racket",
@@ -47,6 +50,7 @@
       },
       "minResults": 1,
       "expectTopCategory": "shoes",
+      "e2e": true,
       "note": "Wide-foot recreational doubles player gets shoe shortlist"
     },
     {
@@ -64,6 +68,7 @@
       },
       "minResults": 1,
       "expectAnyProductIdContains": "string",
+      "e2e": true,
       "note": "Offensive doubles string shopper sees string catalogue rows"
     },
     {
@@ -79,6 +84,7 @@
       "minTopNPriceUsdCount": 3,
       "minTopNPriceUsd": 200,
       "topN": 5,
+      "e2e": true,
       "note": "Pro-oriented singles smasher sees flagship band in top 5"
     },
     {
@@ -92,6 +98,7 @@
       },
       "minResults": 1,
       "expectTopShaftFlexNot": "extra_stiff",
+      "e2e": true,
       "note": "Ankle injury penalty should avoid extra-stiff top pick"
     }
   ]

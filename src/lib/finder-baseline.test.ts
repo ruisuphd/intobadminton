@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { scoreProductCatalog } from "@/lib/scoring";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   evaluateFinderBaseline,
   evaluateFinderBaselineQuery,
@@ -76,5 +77,23 @@ describe("finder-baseline", () => {
     const profile = profileFromBaseline({ category: "racket", level: "club" });
     expect(profile.body.injuryFlags).toEqual(["none"]);
     expect(profile.level).toBe("club");
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 6 },
+      [{ e2e: true }],
+      "finder"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
+  });
+
+  it("commits minE2eGuards on golden-profile coverage", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateFinderBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      expect(parsed.file.coverage?.minE2eGuards).toBe(6);
+    }
   });
 });

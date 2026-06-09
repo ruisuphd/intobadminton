@@ -1,6 +1,9 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-09",
+  "coverage": {
+    "minE2eGuards": 4
+  },
   "queries": [
     {
       "id": "flagship-rackets-duel",
@@ -23,6 +26,7 @@
       "finderProfileId": "budget-beginner-racket",
       "topFromFinder": 2,
       "expectSameCategory": true,
+      "e2e": true,
       "note": "Budget beginner shortlist survives compare URL serialisation"
     },
     {
@@ -30,6 +34,7 @@
       "productIds": ["yy-power-cushion-65z-wide", "vic-p9200"],
       "expectSameCategory": true,
       "minCompareFields": 5,
+      "e2e": true,
       "note": "Wide-foot shoe decision compare share URL"
     }
   ]

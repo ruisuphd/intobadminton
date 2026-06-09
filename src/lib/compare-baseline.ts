@@ -7,6 +7,10 @@
  * Committed expectations live in `docs/baselines/compare-share-queries.json`.
  */
 
+import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
 import { compareFieldsForItems } from "@/lib/compare-fields";
 import {
   buildCompareSharePath,
@@ -49,6 +53,7 @@ export type CompareShareBaselineQuery = {
 export type CompareShareBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: BaselineE2eCoverage;
   queries: CompareShareBaselineQuery[];
 };
 
@@ -177,12 +182,26 @@ export function validateCompareShareBaselineFile(
     return { ok: false, message: "baseline.queries must not be empty" };
   }
 
+  const coverageRaw = record.coverage;
+  let coverage: BaselineE2eCoverage | undefined;
+  if (coverageRaw != null) {
+    if (typeof coverageRaw !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = coverageRaw as Record<string, unknown>;
+    coverage = {
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated:
         record.updated === undefined ? undefined : String(record.updated),
+      coverage,
       queries,
     },
   };
@@ -273,6 +292,18 @@ export function evaluateCompareShareBaseline(
   scoreFn: (profile: UserProfile) => ScoredProduct[]
 ): CompareShareBaselineResult {
   const issues: CompareShareBaselineIssue[] = [];
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "compare-share"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const spec of file.queries) {
     const resolved = resolveCompareProductIds(

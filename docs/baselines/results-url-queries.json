@@ -1,6 +1,9 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-09",
+  "coverage": {
+    "minE2eGuards": 4
+  },
   "queries": [
     {
       "id": "club-doubles-racket-share",
@@ -17,11 +20,13 @@
     {
       "id": "wide-foot-shoes-share",
       "finderProfileId": "wide-foot-shoes",
+      "e2e": true,
       "note": "Wide-foot shoes share URL keeps shoe category top pick"
     },
     {
       "id": "ankle-injury-racket-share",
       "finderProfileId": "ankle-injury-racket",
+      "e2e": true,
       "note": "Injury flags survive URL serialisation and scoring guard"
     }
   ]
