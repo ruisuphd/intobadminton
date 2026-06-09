@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 6
+    "minE2eGuards": 9
   },
   "queries": [
     {
@@ -58,6 +58,33 @@
       "expectHeadingPattern": "faq",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX support trust path — FAQ catalog exit"
+    },
+    {
+      "id": "crux-authors",
+      "path": "/authors/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "author",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX editorial-team trust path — authors hub catalog exit"
+    },
+    {
+      "id": "crux-methodology",
+      "path": "/methodology/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "methodology",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX methodology trust path — scoring transparency catalog exit"
+    },
+    {
+      "id": "crux-contact",
+      "path": "/contact/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "contact",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX support trust path — contact page catalog exit"
     }
   ]
 }

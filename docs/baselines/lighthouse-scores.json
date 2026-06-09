@@ -306,6 +306,48 @@
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
+    },
+    "http://localhost:4173/authors/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/contact/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/brands/kumpoo/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/brands/kawasaki/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/brands/anta/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/privacy/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/terms/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
     }
   },
   "source": "lighthouserc-baseline.json",

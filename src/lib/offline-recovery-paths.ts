@@ -117,6 +117,21 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — WuQue, MoJun, and Bonny catalogue decoded.",
   },
   {
+    href: "/brands/kumpoo/",
+    label: "Kumpoo brand hub",
+    description: "Precached — Kumpoo catalogue decoded.",
+  },
+  {
+    href: "/brands/kawasaki/",
+    label: "Kawasaki brand hub",
+    description: "Precached — Kawasaki catalogue decoded.",
+  },
+  {
+    href: "/brands/anta/",
+    label: "Anta brand hub",
+    description: "Precached — Anta catalogue decoded.",
+  },
+  {
     href: "/guides/",
     label: "Guides",
     description: "Precached hub — open guides you visited before.",
@@ -290,6 +305,13 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/authors/rui-su/",
   "/source-policy/",
   "/faq/",
+  "/authors/",
+  "/contact/",
+  "/brands/kumpoo/",
+  "/brands/kawasaki/",
+  "/brands/anta/",
+  "/privacy/",
+  "/terms/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(
