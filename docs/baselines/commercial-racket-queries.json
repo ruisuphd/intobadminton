@@ -10,7 +10,8 @@
       "expectBestSlug": "lightweight-rackets-5u",
       "expectAnchor": "kawasaki-crimson-blade",
       "expectLinkLabel": "Read full review →",
-      "note": "Kawasaki Crimson Blade on /best/lightweight-rackets-5u/"
+      "note": "Kawasaki Crimson Blade on /best/lightweight-rackets-5u/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-kumpoo-shura-2",
@@ -31,7 +32,8 @@
       "expectBestSlug": "rackets-under-100",
       "expectAnchor": "axforce-10-(雷霆-10)",
       "expectLinkLabel": "Read full review →",
-      "note": "AxForce 10 (雷霆 10) on /best/rackets-under-100/"
+      "note": "AxForce 10 (雷霆 10) on /best/rackets-under-100/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-axforce-100-gen-2",
@@ -41,7 +43,8 @@
       "expectBestSlug": "singles-rackets",
       "expectAnchor": "axforce-100-(gen-2)",
       "expectLinkLabel": "Read full review →",
-      "note": "Axforce 100 (Gen 2) on /best/singles-rackets/"
+      "note": "Axforce 100 (Gen 2) on /best/singles-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-axforce-80-jr",
@@ -51,7 +54,8 @@
       "expectBestSlug": "lightweight-rackets-5u",
       "expectAnchor": "axforce-80-jr",
       "expectLinkLabel": "Read full review →",
-      "note": "AxForce 80 JR on /best/lightweight-rackets-5u/"
+      "note": "AxForce 80 JR on /best/lightweight-rackets-5u/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-bladex-800-speed",
@@ -61,7 +65,8 @@
       "expectBestSlug": "head-light-rackets",
       "expectAnchor": "bladex-800-speed",
       "expectLinkLabel": "Read full review →",
-      "note": "Bladex 800 Speed on /best/head-light-rackets/"
+      "note": "Bladex 800 Speed on /best/head-light-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-bladex-arrow",
@@ -71,7 +76,8 @@
       "expectBestSlug": "lightweight-rackets-5u",
       "expectAnchor": "bladex-arrow-(锋影-利箭-/-ex)",
       "expectLinkLabel": "Read full review →",
-      "note": "Bladex Arrow (锋影 利箭 / EX) on /best/lightweight-rackets-5u/"
+      "note": "Bladex Arrow (锋影 利箭 / EX) on /best/lightweight-rackets-5u/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-halbertec-7000-ii",
@@ -81,7 +87,8 @@
       "expectBestSlug": "defensive-rackets",
       "expectAnchor": "halbertec-7000-ii",
       "expectLinkLabel": "Read full review →",
-      "note": "Halbertec 7000 II on /best/defensive-rackets/"
+      "note": "Halbertec 7000 II on /best/defensive-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-halbertec-8000",
@@ -91,7 +98,8 @@
       "expectBestSlug": "intermediate-rackets",
       "expectAnchor": "halbertec-8000",
       "expectLinkLabel": "Read full review →",
-      "note": "Halbertec 8000 on /best/intermediate-rackets/"
+      "note": "Halbertec 8000 on /best/intermediate-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-halbertec-9000",
@@ -101,7 +109,8 @@
       "expectBestSlug": "control-rackets",
       "expectAnchor": "halbertec-9000-(战戟-9000)",
       "expectLinkLabel": "Read full review →",
-      "note": "Halbertec 9000 (战戟 9000) on /best/control-rackets/"
+      "note": "Halbertec 9000 (战戟 9000) on /best/control-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-ln-halbertec-9000-power",
@@ -122,7 +131,8 @@
       "expectBestSlug": "beginner-rackets",
       "expectAnchor": "altius-n-feel",
       "expectLinkLabel": "Read full review →",
-      "note": "Altius N-Feel on /best/beginner-rackets/"
+      "note": "Altius N-Feel on /best/beginner-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-auraspeed-100x-se",
@@ -132,7 +142,8 @@
       "expectBestSlug": "smash-heavy-rackets",
       "expectAnchor": "auraspeed-100x-se-(mohammad-ahsan)",
       "expectLinkLabel": "Read full review →",
-      "note": "Auraspeed 100X SE (Mohammad Ahsan) on /best/smash-heavy-rackets/"
+      "note": "Auraspeed 100X SE (Mohammad Ahsan) on /best/smash-heavy-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-auraspeed-90k-ii",
@@ -153,7 +164,8 @@
       "expectBestSlug": "head-light-rackets",
       "expectAnchor": "auraspeed-fantome-(影刃)",
       "expectLinkLabel": "Read full review →",
-      "note": "Auraspeed Fantome (影刃) on /best/head-light-rackets/"
+      "note": "Auraspeed Fantome (影刃) on /best/head-light-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-auraspeed-hs-plus",
@@ -163,7 +175,8 @@
       "expectBestSlug": "doubles-rackets",
       "expectAnchor": "auraspeed-hs-plus",
       "expectLinkLabel": "Read full review →",
-      "note": "Auraspeed HS Plus on /best/doubles-rackets/"
+      "note": "Auraspeed HS Plus on /best/doubles-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-brave-sword-12",
@@ -173,7 +186,8 @@
       "expectBestSlug": "all-round-rackets",
       "expectAnchor": "brave-sword-12",
       "expectLinkLabel": "Read full review →",
-      "note": "Brave Sword 12 on /best/all-round-rackets/"
+      "note": "Brave Sword 12 on /best/all-round-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-drivex-8s",
@@ -183,7 +197,8 @@
       "expectBestSlug": "beginner-rackets",
       "expectAnchor": "drivex-8s",
       "expectLinkLabel": "Read full review →",
-      "note": "DriveX 8S on /best/beginner-rackets/"
+      "note": "DriveX 8S on /best/beginner-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-fz-88d-power-purple",
@@ -193,7 +208,8 @@
       "expectBestSlug": "head-heavy-rackets-under-150",
       "expectAnchor": "fz-88d-power-purple",
       "expectLinkLabel": "Read full review →",
-      "note": "FZ 88D Power Purple on /best/head-heavy-rackets-under-150/"
+      "note": "FZ 88D Power Purple on /best/head-heavy-rackets-under-150/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-jetspeed-12",
@@ -203,7 +219,8 @@
       "expectBestSlug": "all-round-rackets",
       "expectAnchor": "jetspeed-12",
       "expectLinkLabel": "Read full review →",
-      "note": "Jetspeed 12 on /best/all-round-rackets/"
+      "note": "Jetspeed 12 on /best/all-round-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-thruster-9900",
@@ -235,7 +252,8 @@
       "expectBestSlug": "lightweight-rackets-5u",
       "expectAnchor": "thruster-sr-light-(樱花刃)",
       "expectLinkLabel": "Read full review →",
-      "note": "Thruster SR Light (樱花刃) on /best/lightweight-rackets-5u/"
+      "note": "Thruster SR Light (樱花刃) on /best/lightweight-rackets-5u/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-vic-yu-12",
@@ -245,7 +263,8 @@
       "expectBestSlug": "intermediate-rackets",
       "expectAnchor": "drivex-12",
       "expectLinkLabel": "Read full review →",
-      "note": "DriveX 12 on /best/intermediate-rackets/"
+      "note": "DriveX 12 on /best/intermediate-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-arcsaber-11-pro",
@@ -266,7 +285,8 @@
       "expectBestSlug": "rackets-under-100",
       "expectAnchor": "arcsaber-7-play",
       "expectLinkLabel": "Read full review →",
-      "note": "Arcsaber 7 Play on /best/rackets-under-100/"
+      "note": "Arcsaber 7 Play on /best/rackets-under-100/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-arcsaber-7-pro",
@@ -287,7 +307,8 @@
       "expectBestSlug": "all-round-rackets",
       "expectAnchor": "arcsaber-7-tour",
       "expectLinkLabel": "Read full review →",
-      "note": "Arcsaber 7 Tour on /best/all-round-rackets/"
+      "note": "Arcsaber 7 Tour on /best/all-round-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-astrox-100-game",
@@ -297,7 +318,8 @@
       "expectBestSlug": "head-heavy-rackets-under-150",
       "expectAnchor": "astrox-100-game",
       "expectLinkLabel": "Read full review →",
-      "note": "Astrox 100 Game on /best/head-heavy-rackets-under-150/"
+      "note": "Astrox 100 Game on /best/head-heavy-rackets-under-150/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-astrox-100zz",
@@ -318,7 +340,8 @@
       "expectBestSlug": "smash-heavy-rackets",
       "expectAnchor": "astrox-100zz-va-(viktor-axelsen)",
       "expectLinkLabel": "Read full review →",
-      "note": "Astrox 100ZZ VA (Viktor Axelsen) on /best/smash-heavy-rackets/"
+      "note": "Astrox 100ZZ VA (Viktor Axelsen) on /best/smash-heavy-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-astrox-77-play",
@@ -350,7 +373,8 @@
       "expectBestSlug": "doubles-rackets",
       "expectAnchor": "astrox-88d-pro-(2024)",
       "expectLinkLabel": "Read full review →",
-      "note": "Astrox 88D Pro (2024) on /best/doubles-rackets/"
+      "note": "Astrox 88D Pro (2024) on /best/doubles-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-astrox-88s-pro-2024",
@@ -360,7 +384,8 @@
       "expectBestSlug": "doubles-rackets",
       "expectAnchor": "astrox-88s-pro-(2024)",
       "expectLinkLabel": "Read full review →",
-      "note": "Astrox 88S Pro (2024) on /best/doubles-rackets/"
+      "note": "Astrox 88S Pro (2024) on /best/doubles-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-astrox-99-pro",
@@ -381,7 +406,8 @@
       "expectBestSlug": "head-heavy-rackets-under-150",
       "expectAnchor": "astrox-nextage",
       "expectLinkLabel": "Read full review →",
-      "note": "Astrox Nextage on /best/head-heavy-rackets-under-150/"
+      "note": "Astrox Nextage on /best/head-heavy-rackets-under-150/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-nanoflare-1000-play",
@@ -435,7 +461,8 @@
       "expectBestSlug": "control-rackets",
       "expectAnchor": "nanoflare-800-pro-(2024)",
       "expectLinkLabel": "Read full review →",
-      "note": "Nanoflare 800 Pro (2024) on /best/control-rackets/"
+      "note": "Nanoflare 800 Pro (2024) on /best/control-rackets/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-nanoray-light-70i",
@@ -445,7 +472,8 @@
       "expectBestSlug": "lightweight-rackets-5u",
       "expectAnchor": "nanoray-light-70i",
       "expectLinkLabel": "Read full review →",
-      "note": "Nanoray Light 70i on /best/lightweight-rackets-5u/"
+      "note": "Nanoray Light 70i on /best/lightweight-rackets-5u/",
+      "e2e": true
     },
     {
       "id": "commercial-racket-yy-voltric-8dg",
@@ -455,7 +483,8 @@
       "expectBestSlug": "head-heavy-rackets-under-150",
       "expectAnchor": "voltric-8dg",
       "expectLinkLabel": "Read full review →",
-      "note": "Voltric 8DG on /best/head-heavy-rackets-under-150/"
+      "note": "Voltric 8DG on /best/head-heavy-rackets-under-150/",
+      "e2e": true
     }
   ]
 }

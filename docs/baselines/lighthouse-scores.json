@@ -13,6 +13,12 @@
       "best-practices": 1,
       "seo": 1
     },
+    "http://localhost:4173/catalog/index.html": {
+      "performance": 0.99,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
     "http://localhost:4173/best/beginner-rackets/index.html": {
       "performance": 1,
       "accessibility": 0.93,

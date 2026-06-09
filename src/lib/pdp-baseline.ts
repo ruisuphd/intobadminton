@@ -40,9 +40,14 @@ export type PdpBaselineQuery = {
   note?: string;
 };
 
+export type PdpBaselineCoverageSpec = {
+  minPdpE2eGuards?: number;
+};
+
 export type PdpBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: PdpBaselineCoverageSpec;
   queries: PdpBaselineQuery[];
 };
 
@@ -155,15 +160,47 @@ export function validatePdpBaselineFile(
     });
   }
 
+  let coverage: PdpBaselineCoverageSpec | undefined;
+  if (record.coverage != null) {
+    if (typeof record.coverage !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = record.coverage as Record<string, unknown>;
+    coverage = {
+      minPdpE2eGuards:
+        typeof c.minPdpE2eGuards === "number" ? c.minPdpE2eGuards : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated:
         typeof record.updated === "string" ? record.updated : undefined,
+      coverage,
       queries,
     },
   };
+}
+
+export function evaluatePdpBaselineCoverage(
+  coverage: PdpBaselineCoverageSpec | undefined,
+  queries: PdpBaselineQuery[]
+): PdpBaselineIssue | null {
+  if (!coverage) return null;
+
+  if (coverage.minPdpE2eGuards != null) {
+    const e2eCount = queries.filter((q) => q.e2e).length;
+    if (e2eCount < coverage.minPdpE2eGuards) {
+      return {
+        id: "coverage",
+        message: `PDP e2e guards ${e2eCount} below minPdpE2eGuards ${coverage.minPdpE2eGuards}`,
+      };
+    }
+  }
+
+  return null;
 }
 
 export function evaluatePdpBaselineQuery(
@@ -284,6 +321,9 @@ export function evaluatePdpBaseline(
   map: Record<string, string>
 ): PdpBaselineResult {
   const issues: PdpBaselineIssue[] = [];
+
+  const coverageIssue = evaluatePdpBaselineCoverage(file.coverage, file.queries);
+  if (coverageIssue) issues.push(coverageIssue);
 
   for (const spec of file.queries) {
     const issue = evaluatePdpBaselineQuery(spec, lookup, map);
