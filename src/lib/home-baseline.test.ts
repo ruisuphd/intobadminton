@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   evaluateHomeBaseline,
   evaluateHomeBaselineQuery,
@@ -77,5 +78,24 @@ describe("home-baseline", () => {
 
   it("exposes canonical homepage path", () => {
     expect(HOME_PATH).toBe("/");
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 1 },
+      [],
+      "home"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
+  });
+
+  it("commits minE2eGuards on golden-profile coverage", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateHomeBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      expect(parsed.file.coverage?.minE2eGuards).toBe(1);
+      expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(1);
+    }
   });
 });

@@ -40,6 +40,8 @@ for (const spec of e2eQueries()) {
 
     const rows = page.locator("ul.divide-y > li");
     await expect(rows.first()).toBeVisible();
-    await expect(page.getByText(/products match your search/i)).toBeVisible();
+    await expect(
+      page.getByText(/product(s)? match your search/i)
+    ).toBeVisible();
   });
 }

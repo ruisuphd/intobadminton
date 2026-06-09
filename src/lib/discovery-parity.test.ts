@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import { filterProductsByKeyword } from "@/lib/catalog-keyword";
 import { allCatalogProducts } from "@/lib/product-filters";
 import { searchSubmitHref } from "@/lib/search-submit-route";
@@ -65,6 +66,25 @@ describe("discovery-parity", () => {
       }
     );
     expect(issue?.message).toContain("submit href");
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 4 },
+      [{ e2e: true }],
+      "discovery-parity"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
+  });
+
+  it("commits minE2eGuards on golden-pair coverage", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateDiscoveryParityFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      expect(parsed.file.coverage?.minE2eGuards).toBe(4);
+      expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(4);
+    }
   });
 
   it("flags catalog count below minimum", () => {

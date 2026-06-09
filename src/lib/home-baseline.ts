@@ -9,6 +9,7 @@
 
 import catalogStats from "@/data/catalog-stats.json";
 import type { BaselineE2eCoverage } from "@/lib/baseline-coverage";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   homeFeaturedReviewHrefs,
   homeFeaturedReviews,
@@ -156,6 +157,8 @@ export function validateHomeBaselineFile(
         typeof c.minPopularSearchHrefs === "number"
           ? c.minPopularSearchHrefs
           : undefined,
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
     };
   }
 
@@ -270,6 +273,18 @@ export function evaluateHomeBaseline(file: HomeBaselineFile): HomeBaselineResult
 
   const coverageIssue = evaluateHomePopularSearchCoverage(file.coverage, file.queries);
   if (coverageIssue) issues.push(coverageIssue);
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "home"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const query of file.queries) {
     const issue = evaluateHomeBaselineQuery(query);

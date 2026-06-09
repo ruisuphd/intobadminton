@@ -1,6 +1,9 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-09",
+  "coverage": {
+    "minE2eGuards": 4
+  },
   "queries": [
     {
       "query": "ac102c",
@@ -15,6 +18,7 @@
       "expectSubmitHrefContains": "/catalog/?q=yy-ac102c",
       "minCatalogResults": 1,
       "expectProductIdContains": "ac102c",
+      "e2e": true,
       "note": "Product id alias — same catalog row as ac102c"
     },
     {
@@ -30,6 +34,7 @@
       "expectSubmitHrefContains": "/catalog/?q=yy-bg65",
       "minCatalogResults": 1,
       "expectProductIdContains": "bg65",
+      "e2e": true,
       "note": "String product id — bare bg65 has editorial hits"
     }
   ]

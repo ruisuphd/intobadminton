@@ -2,7 +2,8 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minPopularSearchHrefs": 33
+    "minPopularSearchHrefs": 33,
+    "minE2eGuards": 1
   },
   "queries": [
     {
