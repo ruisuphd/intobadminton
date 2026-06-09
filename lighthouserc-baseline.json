@@ -52,7 +52,14 @@
         "http://localhost:4173/data/index.html",
         "http://localhost:4173/authors/rui-su/index.html",
         "http://localhost:4173/source-policy/index.html",
-        "http://localhost:4173/faq/index.html"
+        "http://localhost:4173/faq/index.html",
+        "http://localhost:4173/authors/index.html",
+        "http://localhost:4173/contact/index.html",
+        "http://localhost:4173/brands/kumpoo/index.html",
+        "http://localhost:4173/brands/kawasaki/index.html",
+        "http://localhost:4173/brands/anta/index.html",
+        "http://localhost:4173/privacy/index.html",
+        "http://localhost:4173/terms/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {
