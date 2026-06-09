@@ -1,8 +1,9 @@
 {
   "version": 1,
-  "updated": "2026-06-06",
+  "updated": "2026-06-09",
   "coverage": {
-    "minCatalogFilterSlugs": 11
+    "minCatalogFilterSlugs": 11,
+    "minE2eGuards": 12
   },
   "queries": [
     {
@@ -66,6 +67,10 @@
       "slug": "wide-feet-badminton-shoes",
       "expectCatalogHref": "/catalog/?cat=shoes",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "wide feet",
+      "expectCatalogLinkPattern": "browse shoes in catalog",
+      "expectKeepReadingShelf": true,
       "note": "Shoe-fit cluster guide — shoes catalog filter parity"
     },
     {
@@ -73,6 +78,10 @@
       "slug": "season-refresh",
       "expectCatalogHref": "/catalog/",
       "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectHeadingPattern": "refresh",
+      "expectCatalogLinkPattern": "browse matching catalog",
+      "expectKeepReadingShelf": true,
       "note": "Freshness cluster guide — full catalog exit fallback"
     },
     {

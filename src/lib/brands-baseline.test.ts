@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   brandPathForSlug,
   evaluateBrandsBaseline,
@@ -72,5 +73,14 @@ describe("brands-baseline", () => {
 
   it("resolves yonex catalog href from slug", () => {
     expect(catalogHrefFromBrandSlug("yonex")).toBe("/catalog/?brand=Yonex");
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 8 },
+      [{ e2e: true }],
+      "brands"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
   });
 });

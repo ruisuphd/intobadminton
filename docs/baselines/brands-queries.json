@@ -2,7 +2,8 @@
   "version": 1,
   "updated": "2026-06-05",
   "coverage": {
-    "minDedicatedBrandSlugs": 7
+    "minDedicatedBrandSlugs": 7,
+    "minE2eGuards": 8
   },
   "queries": [
     {

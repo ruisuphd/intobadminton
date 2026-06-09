@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   evaluateToolsBaseline,
   evaluateToolsBaselineQuery,
@@ -65,5 +66,14 @@ describe("tools-baseline", () => {
     expect(catalogHrefFromToolSlug("string-tension-calculator")).toBe(
       "/catalog/?cat=string"
     );
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 6 },
+      [{ e2e: true }],
+      "tools"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
   });
 });
