@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-09",
+  "updated": "2026-06-08",
   "queries": [
     {
       "id": "lighthouse-grpht-throttle",
@@ -144,7 +144,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "RSL Supreme exits to dedicated shuttle review on PDP"
+      "note": "RSL Supreme exits to dedicated shuttle review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-rsl-aero-u",
@@ -154,7 +155,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "RSL Aero U exits to dedicated shuttle review on PDP"
+      "note": "RSL Aero U exits to dedicated shuttle review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-rsl-aero-classic-tourney",
@@ -164,7 +166,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "RSL Classic Tourney exits to dedicated shuttle review on PDP"
+      "note": "RSL Classic Tourney exits to dedicated shuttle review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-rsl-no4-plus",
@@ -174,7 +177,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "RSL No.4 Plus exits to dedicated shuttle review on PDP"
+      "note": "RSL No.4 Plus exits to dedicated shuttle review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-explainer-yy-ac102c",
@@ -195,7 +199,8 @@
       "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "Yonex Towel Grip exits to grip-sizes explainer on PDP"
+      "note": "Yonex Towel Grip exits to grip-sizes explainer on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-explainer-yy-ac104ex",
@@ -205,7 +210,8 @@
       "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "Yonex Wave Grap exits to grip-sizes explainer on PDP"
+      "note": "Yonex Wave Grap exits to grip-sizes explainer on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-explainer-yy-ac125ex",
@@ -215,7 +221,8 @@
       "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "Yonex Smash Grap exits to grip-sizes explainer on PDP"
+      "note": "Yonex Smash Grap exits to grip-sizes explainer on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-explainer-yy-ac130ex",
@@ -225,7 +232,8 @@
       "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "Yonex Strong Grap exits to grip-sizes explainer on PDP"
+      "note": "Yonex Strong Grap exits to grip-sizes explainer on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-ln-gp100-pro-grip",
@@ -257,7 +265,8 @@
       "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
-      "note": "Victor Compact Backpack exits to bag-loadout guide on PDP"
+      "note": "Victor Compact Backpack exits to bag-loadout guide on PDP",
+      "e2e": true
     },
     {
       "id": "club-shoes-p9200",

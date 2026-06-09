@@ -34,6 +34,7 @@ Or individually:
 
 ```bash
 npm run capture:crux-hints   # PSI links for docs/baselines/crux-template.csv
+npm run capture:crux-psi     # Auto-fill CrUX field data (requires GOOGLE_PSI_API_KEY)
 npm run capture:gsc-hints    # GSC export steps for docs/baselines/gsc-template.csv
 ```
 
