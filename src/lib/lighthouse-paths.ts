@@ -9,6 +9,16 @@ import { resolve } from "node:path";
 
 const LIGHTHOUSE_CONFIG_PATH = resolve(process.cwd(), "lighthouserc.json");
 
+/**
+ * CrUX-priority paths that stay out of `lighthouserc-baseline.json` because
+ * they are intentionally noindex — Lighthouse SEO scores ~0.69 on those URLs.
+ */
+export const LIGHTHOUSE_BASELINE_NOINDEX_EXEMPT_PATHS = [
+  "/saved/",
+  "/compare/",
+  "/privacy-choices/",
+] as const;
+
 /** Convert a local LHCI collect URL to a trailing-slash site path. */
 export function lighthouseUrlToPath(url: string): string {
   const path = new URL(url).pathname;

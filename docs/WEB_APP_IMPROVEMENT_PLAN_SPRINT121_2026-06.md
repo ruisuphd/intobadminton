@@ -25,8 +25,8 @@
 |---|-----|--------|----------|
 | 1 | **Privacy/terms in CrUX but not trust-path e2e** | AdSense compliance pages lack browser regression guards | ✅ `/privacy/` + `/terms/` in trust-path e2e (`minE2eGuards: 13`) |
 | 2 | **Cookie policy missing from CrUX** | Consent Mode CMP page absent from CWV monitoring | ✅ `/cookies/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
-| 3 | **Privacy choices missing from CrUX** | Do-not-sell / ad personalization controls absent from CWV set | ✅ `/privacy-choices/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
-| 4 | **Saved/compare retention paths missing from CrUX** | Return-visit hooks not in CWV monitoring | ✅ `/saved/` + `/compare/` in crux-template (+ offline recovery + lighthouse baseline) |
+| 3 | **Privacy choices missing from CrUX** | Do-not-sell / ad personalization controls absent from CWV set | ✅ `/privacy-choices/` in crux-template (+ offline recovery + trust-path e2e; excluded from lighthouse baseline — noindex) |
+| 4 | **Saved/compare retention paths missing from CrUX** | Return-visit hooks not in CWV monitoring | ✅ `/saved/` + `/compare/` in crux-template (+ offline recovery; excluded from lighthouse baseline — noindex) |
 | 5 | **No CI guard on expanded compliance trust-path e2e** | Cookie/privacy pages lack `minE2eGuards` | ✅ `trust-path-queries.json` + `minE2eGuards: 13` |
 
 **Deferred (Sprint 122+):** dedicated Yonex string hands-on articles; tier-4 Western distributor image backfill; Nanoray Light 70i verified image; YouTube `sameAs`; `VideoObject` schema; fill CrUX CSV cells (owner runs `capture:crux-psi` with API key); HelpfulReaction production wiring.
@@ -52,7 +52,7 @@
 | 3 | `minE2eGuards: 13` enforced on trust-path baseline | ✅ |
 | 4 | CrUX template includes `/cookies/`, `/privacy-choices/`, `/saved/`, `/compare/` | ✅ |
 | 5 | `CRUX_OFFLINE_RECOVERY_PATHS` matches crux-template (excl. homepage) | ✅ |
-| 6 | Lighthouse baseline config + scores include new CrUX paths | ✅ |
+| 6 | Lighthouse baseline config + scores include new indexable CrUX paths (cookies only; noindex saved/compare/privacy-choices exempt) | ✅ |
 | 7 | HelpfulReaction / VideoObject / YouTube sameAs assessed — unchanged waivers | ✅ deferred |
 | 8 | Site-search product-intent queries assessed — remain in discovery-parity layer | ✅ by design |
 | 9 | Yonex string articles / tier-4 images assessed — content deferred | ✅ deferred |

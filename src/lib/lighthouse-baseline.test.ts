@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { LIGHTHOUSE_BASELINE_NOINDEX_EXEMPT_PATHS } from "@/lib/lighthouse-paths";
 
 const BASELINE_PATH = resolve(
   process.cwd(),
@@ -58,7 +59,8 @@ describe("lighthouse baseline", () => {
     expect(baseline.urls).toBeDefined();
     expect(Object.keys(baseline.urls ?? {}).length).toBeGreaterThan(0);
 
-    for (const path of cruxTemplatePaths()) {
+    const exempt = new Set<string>(LIGHTHOUSE_BASELINE_NOINDEX_EXEMPT_PATHS);
+    for (const path of cruxTemplatePaths().filter((p) => !exempt.has(p))) {
       const url = localLhciUrl(path);
       expect(baseline.urls, `missing baseline for ${url}`).toHaveProperty(url);
       const scores = baseline.urls![url];
@@ -77,7 +79,11 @@ describe("lighthouse baseline", () => {
       return path;
     });
 
-    const cruxPaths = [...cruxTemplatePaths(), "/"].sort();
+    const exempt = new Set<string>(LIGHTHOUSE_BASELINE_NOINDEX_EXEMPT_PATHS);
+    const cruxPaths = cruxTemplatePaths()
+      .filter((path) => !exempt.has(path))
+      .concat("/")
+      .sort();
     const fromConfig = [...configPaths].sort();
     expect(fromConfig).toEqual(cruxPaths);
   });

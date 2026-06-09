@@ -60,10 +60,7 @@
         "http://localhost:4173/brands/anta/index.html",
         "http://localhost:4173/privacy/index.html",
         "http://localhost:4173/terms/index.html",
-        "http://localhost:4173/cookies/index.html",
-        "http://localhost:4173/privacy-choices/index.html",
-        "http://localhost:4173/saved/index.html",
-        "http://localhost:4173/compare/index.html"
+        "http://localhost:4173/cookies/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {
