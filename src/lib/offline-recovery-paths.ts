@@ -82,6 +82,16 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — defensive and counter-attack racket buying guide.",
   },
   {
+    href: "/best/rackets-under-150/",
+    label: "Rackets under $150",
+    description: "Precached — mid-budget racket buying guide.",
+  },
+  {
+    href: "/best/rackets-under-200/",
+    label: "Rackets under $200",
+    description: "Precached — upper-budget racket buying guide.",
+  },
+  {
     href: "/best/shoes/",
     label: "Best badminton shoes",
     description: "Precached — shoe picks by fit width and stability.",
@@ -253,6 +263,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/best/lightweight-rackets-5u/",
   "/best/head-heavy-rackets-under-150/",
   "/best/rackets-under-100/",
+  "/best/rackets-under-150/",
+  "/best/rackets-under-200/",
   "/review/",
   "/review/yonex-arcsaber-7-pro-review/",
   "/tools/string-tension-calculator/",
@@ -266,6 +278,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/product/yy-grpht-thrttl/",
   "/guides/string-tension/",
   "/brands/yonex/",
+  "/brands/victor/",
+  "/brands/li-ning/",
   "/tools/",
   "/guides/",
   "/brands/",
@@ -274,6 +288,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/sources/",
   "/data/",
   "/authors/rui-su/",
+  "/source-policy/",
+  "/faq/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 4
+    "minE2eGuards": 6
   },
   "queries": [
     {
@@ -40,6 +40,24 @@
       "expectHeadingPattern": "rui",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX author-credibility trust path — lead reviewer profile catalog exit"
+    },
+    {
+      "id": "crux-source-policy",
+      "path": "/source-policy/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "source",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX copyright/evidence trust path — source policy catalog exit"
+    },
+    {
+      "id": "crux-faq",
+      "path": "/faq/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "faq",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX support trust path — FAQ catalog exit"
     }
   ]
 }
