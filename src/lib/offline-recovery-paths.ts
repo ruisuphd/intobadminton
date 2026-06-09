@@ -317,6 +317,10 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/research/",
   "/updates/",
   "/guides/badminton-shoes-vs-running-shoes/",
+  "/guides/wide-feet-badminton-shoes/",
+  "/guides/season-refresh/",
+  "/tools/authenticity-checker/",
+  "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

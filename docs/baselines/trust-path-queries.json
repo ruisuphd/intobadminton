@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 13
+    "minE2eGuards": 14
   },
   "queries": [
     {
@@ -121,6 +121,15 @@
       "expectHeadingPattern": "update",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX freshness trust path — editorial updates feed catalog exit"
+    },
+    {
+      "id": "crux-shoe-fit-guide",
+      "path": "/guides/badminton-shoes-vs-running-shoes/",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "e2e": true,
+      "expectHeadingPattern": "running",
+      "expectCatalogLinkPattern": "browse shoes in catalog",
+      "note": "CrUX shoe-fit editorial trust path — homepage popular-search shoes catalog exit"
     }
   ]
 }

@@ -378,6 +378,30 @@
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
+    },
+    "http://localhost:4173/guides/wide-feet-badminton-shoes/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/guides/season-refresh/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/tools/authenticity-checker/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
     }
   },
   "source": "lighthouserc-baseline.json",
