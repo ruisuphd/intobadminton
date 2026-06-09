@@ -82,6 +82,16 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — defensive and counter-attack racket buying guide.",
   },
   {
+    href: "/best/rackets-under-150/",
+    label: "Rackets under $150",
+    description: "Precached — mid-budget racket buying guide.",
+  },
+  {
+    href: "/best/rackets-under-200/",
+    label: "Rackets under $200",
+    description: "Precached — upper-budget racket buying guide.",
+  },
+  {
     href: "/best/shoes/",
     label: "Best badminton shoes",
     description: "Precached — shoe picks by fit width and stability.",
