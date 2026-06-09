@@ -42,7 +42,11 @@
         "http://localhost:4173/tools/index.html",
         "http://localhost:4173/guides/index.html",
         "http://localhost:4173/brands/index.html",
-        "http://localhost:4173/methodology/index.html"
+        "http://localhost:4173/methodology/index.html",
+        "http://localhost:4173/about/index.html",
+        "http://localhost:4173/sources/index.html",
+        "http://localhost:4173/data/index.html",
+        "http://localhost:4173/authors/rui-su/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

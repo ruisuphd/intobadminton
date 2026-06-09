@@ -40,6 +40,8 @@ jobs:
         run: npm run lint:discovery-baseline
       - name: Homepage golden-profile guard
         run: npm run lint:home-baseline
+      - name: Trust-path golden-profile guard
+        run: npm run lint:trust-path-baseline
       - name: Finder golden-profile guard
         run: npm run lint:finder-baseline
       - name: Results share URL guard
