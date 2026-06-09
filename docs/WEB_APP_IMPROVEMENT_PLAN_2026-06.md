@@ -123,7 +123,7 @@
 
 **Sprint 115 addendum:** Commercial editorial e2e guards + compare-guides e2e completion + hub CrUX expansion — ✅ `minE2eGuards` on best (23), compare-guides (13), reviews (15); compare-guides e2e 8→13; `/best/`, `/compare-guides/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
-**Sprint 116 addendum:** Product-funnel e2e completion + retention CrUX expansion — ✅ finder e2e 2→6; results-url e2e 2→4; compare-share e2e 2→4; `minE2eGuards` on finder (6), results-url (4), compare-share (4); `/guides/`, `/saved/`, `/compare/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+**Sprint 116 addendum:** Product-funnel e2e completion + guides hub CrUX expansion — ✅ finder e2e 2→6; results-url e2e 2→4; compare-share e2e 2→4; `minE2eGuards` on finder (6), results-url (4), compare-share (4); `/guides/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
