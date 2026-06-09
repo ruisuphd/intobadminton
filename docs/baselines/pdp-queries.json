@@ -440,7 +440,8 @@
       "expectReviewSlug": "bonny-leisu-800-racket-review",
       "expectMinSpecRows": 8,
       "note": "Budget niche brand PDP",
-      "expectReviewKind": "review"
+      "expectReviewKind": "review",
+      "e2e": true
     },
     {
       "id": "pdp-racket-kawasaki-crimson-blade",
@@ -450,7 +451,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Kawasaki Crimson Blade"
+      "note": "Kawasaki Crimson Blade",
+      "e2e": true
     },
     {
       "id": "pdp-racket-kumpoo-shura-2",
@@ -471,7 +473,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "AxForce 10 (雷霆 10)"
+      "note": "AxForce 10 (雷霆 10)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-axforce-100-gen-2",
@@ -481,7 +484,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Axforce 100 (Gen 2)"
+      "note": "Axforce 100 (Gen 2)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-axforce-80-jr",
@@ -491,7 +495,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "AxForce 80 JR"
+      "note": "AxForce 80 JR",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-bladex-800-speed",
@@ -501,7 +506,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Bladex 800 Speed"
+      "note": "Bladex 800 Speed",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-bladex-arrow",
@@ -511,7 +517,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Bladex Arrow (锋影 利箭 / EX)"
+      "note": "Bladex Arrow (锋影 利箭 / EX)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-halbertec-7000-ii",
@@ -521,7 +528,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Halbertec 7000 II"
+      "note": "Halbertec 7000 II",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-halbertec-8000",
@@ -531,7 +539,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Halbertec 8000"
+      "note": "Halbertec 8000",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-halbertec-9000",
@@ -541,7 +550,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Halbertec 9000 (战戟 9000)"
+      "note": "Halbertec 9000 (战戟 9000)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-ln-halbertec-9000-power",
@@ -562,7 +572,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Altius N-Feel"
+      "note": "Altius N-Feel",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-auraspeed-100x-se",
@@ -572,7 +583,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Auraspeed 100X SE (Mohammad Ahsan)"
+      "note": "Auraspeed 100X SE (Mohammad Ahsan)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-auraspeed-90k-ii",
@@ -593,7 +605,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Auraspeed Fantome (影刃)"
+      "note": "Auraspeed Fantome (影刃)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-auraspeed-hs-plus",
@@ -603,7 +616,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Auraspeed HS Plus"
+      "note": "Auraspeed HS Plus",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-brave-sword-12",
@@ -613,7 +627,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Brave Sword 12"
+      "note": "Brave Sword 12",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-drivex-8s",
@@ -634,7 +649,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "FZ 88D Power Purple"
+      "note": "FZ 88D Power Purple",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-jetspeed-12",
@@ -644,7 +660,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Jetspeed 12"
+      "note": "Jetspeed 12",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-thruster-9900",
@@ -676,7 +693,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Thruster SR Light (樱花刃)"
+      "note": "Thruster SR Light (樱花刃)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-yu-12",
@@ -686,7 +704,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "DriveX 12"
+      "note": "DriveX 12",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-arcsaber-11-pro",
@@ -707,7 +726,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Arcsaber 7 Play"
+      "note": "Arcsaber 7 Play",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-arcsaber-7-tour",
@@ -717,7 +737,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Arcsaber 7 Tour"
+      "note": "Arcsaber 7 Tour",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-astrox-100-game",
@@ -727,7 +748,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Astrox 100 Game"
+      "note": "Astrox 100 Game",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-astrox-100zz",
@@ -748,7 +770,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Astrox 100ZZ VA (Viktor Axelsen)"
+      "note": "Astrox 100ZZ VA (Viktor Axelsen)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-astrox-77-play",
@@ -780,7 +803,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Astrox 88D Pro (2024)"
+      "note": "Astrox 88D Pro (2024)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-astrox-88s-pro-2024",
@@ -790,7 +814,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Astrox 88S Pro (2024)"
+      "note": "Astrox 88S Pro (2024)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-astrox-99-pro",
@@ -811,7 +836,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Astrox Nextage"
+      "note": "Astrox Nextage",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-nanoflare-1000-play",
@@ -854,7 +880,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Nanoflare 800 Pro (2024)"
+      "note": "Nanoflare 800 Pro (2024)",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-nanoray-light-70i",
@@ -864,7 +891,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Nanoray Light 70i"
+      "note": "Nanoray Light 70i",
+      "e2e": true
     },
     {
       "id": "pdp-racket-yy-voltric-8dg",
@@ -874,7 +902,11 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "Voltric 8DG"
+      "note": "Voltric 8DG",
+      "e2e": true
     }
-  ]
+  ],
+  "coverage": {
+    "minPdpE2eGuards": 82
+  }
 }

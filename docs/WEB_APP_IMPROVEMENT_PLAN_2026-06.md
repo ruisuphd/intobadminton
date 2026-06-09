@@ -113,6 +113,8 @@
 
 **Sprint 110 addendum:** Commercial shoe PDP e2e completion + strings/shuttles CrUX expansion — ✅ PDP e2e 42→53 (16/16 shoe, DriveX 8S); strings/shuttles in `crux-template.csv`, offline recovery, lighthouse baseline; homepage shuttles chip + home-queries guard; `capture:crux-psi` in performance scaffold test.
 
+**Sprint 111 addendum:** Commercial racket PDP e2e completion + catalog CrUX expansion — ✅ PDP e2e 53→82 (44/44 commercial racket); commercial-racket e2e 15→44; `minPdpE2eGuards: 82`; `/catalog/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

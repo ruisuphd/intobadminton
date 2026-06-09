@@ -221,6 +221,7 @@ export const OFFLINE_RECOVERY_LINKS = dedupeOfflineRecoveryLinks([
 /** Paths from `docs/baselines/crux-template.csv` that must appear in offline recovery. */
 export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/quiz/",
+  "/catalog/",
   "/best/beginner-rackets/",
   "/best/doubles-rackets/",
   "/best/shoes/",

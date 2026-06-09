@@ -4,6 +4,7 @@
       "url": [
         "http://localhost:4173/index.html",
         "http://localhost:4173/quiz/index.html",
+        "http://localhost:4173/catalog/index.html",
         "http://localhost:4173/best/beginner-rackets/index.html",
         "http://localhost:4173/best/doubles-rackets/index.html",
         "http://localhost:4173/best/shoes/index.html",

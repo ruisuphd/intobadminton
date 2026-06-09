@@ -5,6 +5,7 @@ import blogReviewMap from "@/data/blog-review-product-map.json";
 import products from "@/data/products.json";
 import {
   evaluatePdpBaseline,
+  evaluatePdpBaselineCoverage,
   evaluatePdpBaselineQuery,
   formatPdpBaselineIssues,
   reviewSlugForProductId,
@@ -131,5 +132,13 @@ describe("pdp-baseline", () => {
       map
     );
     expect(issue?.message).toContain("editorial review kind");
+  });
+
+  it("enforces minPdpE2eGuards coverage counter", () => {
+    const issue = evaluatePdpBaselineCoverage(
+      { minPdpE2eGuards: 82 },
+      [{ id: "a", productId: "yy-arcsaber-7-pro", e2e: true }]
+    );
+    expect(issue?.message).toContain("minPdpE2eGuards");
   });
 });
