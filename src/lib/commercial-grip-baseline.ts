@@ -4,6 +4,10 @@
  * Committed expectations live in `docs/baselines/commercial-grip-queries.json`.
  */
 
+import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
 import type { ProductRecord } from "@/lib/types/product";
 import {
   editorialReviewHref,
@@ -26,6 +30,7 @@ export type CommercialGripBaselineQuery = {
 export type CommercialGripBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: BaselineE2eCoverage;
   queries: CommercialGripBaselineQuery[];
 };
 
@@ -102,11 +107,24 @@ export function validateCommercialGripBaselineFile(
     return { ok: false, message: "baseline.queries must not be empty" };
   }
 
+  let coverage: BaselineE2eCoverage | undefined;
+  if (record.coverage != null) {
+    if (typeof record.coverage !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = record.coverage as Record<string, unknown>;
+    coverage = {
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated: record.updated === undefined ? undefined : String(record.updated),
+      coverage,
       queries,
     },
   };
@@ -161,6 +179,13 @@ export function evaluateCommercialGripBaseline(
   lookup: (productId: string) => ProductRecord | undefined
 ): CommercialGripBaselineResult {
   const issues: CommercialGripBaselineIssue[] = [];
+
+  const coverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "commercial-grip"
+  );
+  if (coverageIssue) issues.push(coverageIssue);
 
   for (const spec of file.queries) {
     const issue = evaluateCommercialGripBaselineQuery(spec, lookup(spec.productId));

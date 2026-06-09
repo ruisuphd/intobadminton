@@ -7,7 +7,8 @@
       "productId": "kawasaki-crimson-blade",
       "expectHref": "/review/kawasaki-crimson-blade-racket-review/",
       "expectKind": "review",
-      "note": "Kawasaki Crimson Blade"
+      "note": "Kawasaki Crimson Blade",
+      "e2e": true
     },
     {
       "id": "catalog-racket-kumpoo-shura-2",
@@ -22,56 +23,64 @@
       "productId": "ln-axforce-10",
       "expectHref": "/review/li-ning-axforce-10-beginner-attack-review/",
       "expectKind": "review",
-      "note": "AxForce 10 (雷霆 10)"
+      "note": "AxForce 10 (雷霆 10)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-axforce-100-gen-2",
       "productId": "ln-axforce-100-gen-2",
       "expectHref": "/review/li-ning-flagship-racket-buying-guide-2026/",
       "expectKind": "review",
-      "note": "Axforce 100 (Gen 2)"
+      "note": "Axforce 100 (Gen 2)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-axforce-80-jr",
       "productId": "ln-axforce-80-jr",
       "expectHref": "/review/li-ning-axforce-80-jr-junior-review/",
       "expectKind": "review",
-      "note": "AxForce 80 JR"
+      "note": "AxForce 80 JR",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-bladex-800-speed",
       "productId": "ln-bladex-800-speed",
       "expectHref": "/review/li-ning-bladex-800-speed-tough-elastic/",
       "expectKind": "review",
-      "note": "Bladex 800 Speed"
+      "note": "Bladex 800 Speed",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-bladex-arrow",
       "productId": "ln-bladex-arrow",
       "expectHref": "/review/li-ning-bladex-arrow-review/",
       "expectKind": "review",
-      "note": "Bladex Arrow (锋影 利箭 / EX)"
+      "note": "Bladex Arrow (锋影 利箭 / EX)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-halbertec-7000-ii",
       "productId": "ln-halbertec-7000-ii",
       "expectHref": "/review/li-ning-halbertec-7000-ii-review/",
       "expectKind": "review",
-      "note": "Halbertec 7000 II"
+      "note": "Halbertec 7000 II",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-halbertec-8000",
       "productId": "ln-halbertec-8000",
       "expectHref": "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/",
       "expectKind": "review",
-      "note": "Halbertec 8000"
+      "note": "Halbertec 8000",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-halbertec-9000",
       "productId": "ln-halbertec-9000",
       "expectHref": "/review/li-ning-halbertec-flagship-lineup-review/",
       "expectKind": "review",
-      "note": "Halbertec 9000 (战戟 9000)"
+      "note": "Halbertec 9000 (战戟 9000)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-ln-halbertec-9000-power",
@@ -86,14 +95,16 @@
       "productId": "mizuno-altius-01-feel",
       "expectHref": "/review/mizuno-carbo-pro-823-review/",
       "expectKind": "review",
-      "note": "Altius N-Feel"
+      "note": "Altius N-Feel",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-auraspeed-100x-se",
       "productId": "vic-auraspeed-100x-se",
       "expectHref": "/review/victor-auraspeed-90k-ii-review/",
       "expectKind": "review",
-      "note": "Auraspeed 100X SE (Mohammad Ahsan)"
+      "note": "Auraspeed 100X SE (Mohammad Ahsan)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-auraspeed-90k-ii",
@@ -108,42 +119,48 @@
       "productId": "vic-auraspeed-fantome",
       "expectHref": "/review/victor-auraspeed-fantome-review/",
       "expectKind": "review",
-      "note": "Auraspeed Fantome (影刃)"
+      "note": "Auraspeed Fantome (影刃)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-auraspeed-hs-plus",
       "productId": "vic-auraspeed-hs-plus",
       "expectHref": "/review/victor-auraspeed-hs-plus-attack-review/",
       "expectKind": "review",
-      "note": "Auraspeed HS Plus"
+      "note": "Auraspeed HS Plus",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-brave-sword-12",
       "productId": "vic-brave-sword-12",
       "expectHref": "/review/victor-jetspeed-12-curious-review/",
       "expectKind": "review",
-      "note": "Brave Sword 12"
+      "note": "Brave Sword 12",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-drivex-8s",
       "productId": "vic-drivex-8s",
       "expectHref": "/review/victor-drivex-10-review/",
       "expectKind": "review",
-      "note": "DriveX 8S"
+      "note": "DriveX 8S",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-fz-88d-power-purple",
       "productId": "vic-fz-88d-power-purple",
       "expectHref": "/review/victor-fz-88d-power-purple-review/",
       "expectKind": "review",
-      "note": "FZ 88D Power Purple"
+      "note": "FZ 88D Power Purple",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-jetspeed-12",
       "productId": "vic-jetspeed-12",
       "expectHref": "/review/victor-jetspeed-12-curious-review/",
       "expectKind": "review",
-      "note": "Jetspeed 12"
+      "note": "Jetspeed 12",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-thruster-9900",
@@ -166,14 +183,16 @@
       "productId": "vic-thruster-sr",
       "expectHref": "/review/victor-thruster-sr-cherry-blossom-review/",
       "expectKind": "review",
-      "note": "Thruster SR Light (樱花刃)"
+      "note": "Thruster SR Light (樱花刃)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-vic-yu-12",
       "productId": "vic-yu-12",
       "expectHref": "/review/victor-yu-12-racket-review/",
       "expectKind": "review",
-      "note": "DriveX 12"
+      "note": "DriveX 12",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-arcsaber-11-pro",
@@ -188,7 +207,8 @@
       "productId": "yy-arcsaber-7-play",
       "expectHref": "/review/yonex-arcsaber-7-play-review/",
       "expectKind": "review",
-      "note": "Arcsaber 7 Play"
+      "note": "Arcsaber 7 Play",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-arcsaber-7-pro",
@@ -203,14 +223,16 @@
       "productId": "yy-arcsaber-7-tour",
       "expectHref": "/review/yonex-arcsaber-7-tour-review/",
       "expectKind": "review",
-      "note": "Arcsaber 7 Tour"
+      "note": "Arcsaber 7 Tour",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-astrox-100-game",
       "productId": "yy-astrox-100-game",
       "expectHref": "/review/yonex-astrox-nextage-review/",
       "expectKind": "review",
-      "note": "Astrox 100 Game"
+      "note": "Astrox 100 Game",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-astrox-100zz",
@@ -225,7 +247,8 @@
       "productId": "yy-astrox-100zz-va",
       "expectHref": "/review/yonex-astrox-100zz-axelsen-va-vs-kurenai/",
       "expectKind": "review",
-      "note": "Astrox 100ZZ VA (Viktor Axelsen)"
+      "note": "Astrox 100ZZ VA (Viktor Axelsen)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-astrox-77-play",
@@ -248,14 +271,16 @@
       "productId": "yy-astrox-88d-pro-2024",
       "expectHref": "/review/yonex-astrox-88-pro-2024-review/",
       "expectKind": "review",
-      "note": "Astrox 88D Pro (2024)"
+      "note": "Astrox 88D Pro (2024)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-astrox-88s-pro-2024",
       "productId": "yy-astrox-88s-pro-2024",
       "expectHref": "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/",
       "expectKind": "review",
-      "note": "Astrox 88S Pro (2024)"
+      "note": "Astrox 88S Pro (2024)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-astrox-99-pro",
@@ -270,7 +295,8 @@
       "productId": "yy-astrox-nextage",
       "expectHref": "/review/yonex-astrox-nextage-review/",
       "expectKind": "review",
-      "note": "Astrox Nextage"
+      "note": "Astrox Nextage",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-nanoflare-1000-play",
@@ -309,21 +335,27 @@
       "productId": "yy-nanoflare-800-pro-2024",
       "expectHref": "/review/yonex-nanoflare-800-pro-and-victor-hs-plus/",
       "expectKind": "review",
-      "note": "Nanoflare 800 Pro (2024)"
+      "note": "Nanoflare 800 Pro (2024)",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-nanoray-light-70i",
       "productId": "yy-nanoray-light-70i",
       "expectHref": "/review/yonex-nanoflare-1000z-play-review/",
       "expectKind": "review",
-      "note": "Nanoray Light 70i"
+      "note": "Nanoray Light 70i",
+      "e2e": true
     },
     {
       "id": "catalog-racket-yy-voltric-8dg",
       "productId": "yy-voltric-8dg",
       "expectHref": "/review/yonex-voltric-z-force-ltd-2012-review/",
       "expectKind": "review",
-      "note": "Voltric 8DG"
+      "note": "Voltric 8DG",
+      "e2e": true
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 44
+  }
 }

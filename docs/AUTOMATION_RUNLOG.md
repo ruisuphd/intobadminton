@@ -1,5 +1,20 @@
 # Automation run log
 
+## 2026-06-09 — Sprint 112 (branch `cursor/web-app-improvement-plan-27e7`)
+
+**Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #260 merged.
+
+**Shipped:**
+- `docs/WEB_APP_IMPROVEMENT_PLAN_SPRINT112_2026-06.md`
+- Catalog-racket e2e completion (15→44) + `minE2eGuards: 44`
+- `minE2eGuards` on all 6 commercial baselines (80 total)
+- Homepage popular-search CI parity (16→33 hrefs, `minPopularSearchHrefs: 33`)
+- CrUX template expansion (+13 commercial landings, 28 non-home paths)
+- `src/lib/baseline-coverage.ts` shared e2e guard evaluator
+- Defensive-rackets offline recovery link
+
+**Verification:** `npm test` (630), `npm run build`, baseline lint scripts.
+
 ## 2026-06-05 — Sprint 37 (branch `cursor/web-app-improvement-plan-258a`)
 
 **Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #184 merged.

@@ -8,6 +8,7 @@
  */
 
 import catalogStats from "@/data/catalog-stats.json";
+import type { BaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   homeFeaturedReviewHrefs,
   homeFeaturedReviews,
@@ -36,9 +37,14 @@ export type HomeBaselineQuery = {
   note?: string;
 };
 
+export type HomePopularSearchCoverage = BaselineE2eCoverage & {
+  minPopularSearchHrefs?: number;
+};
+
 export type HomeBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: HomePopularSearchCoverage;
   queries: HomeBaselineQuery[];
 };
 
@@ -139,15 +145,59 @@ export function validateHomeBaselineFile(
     });
   }
 
+  let coverage: HomePopularSearchCoverage | undefined;
+  if (record.coverage != null) {
+    if (typeof record.coverage !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = record.coverage as Record<string, unknown>;
+    coverage = {
+      minPopularSearchHrefs:
+        typeof c.minPopularSearchHrefs === "number"
+          ? c.minPopularSearchHrefs
+          : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated:
         typeof record.updated === "string" ? record.updated : undefined,
+      coverage,
       queries,
     },
   };
+}
+
+export function evaluateHomePopularSearchCoverage(
+  coverage: HomePopularSearchCoverage | undefined,
+  queries: HomeBaselineQuery[]
+): HomeBaselineIssue | null {
+  if (coverage?.minPopularSearchHrefs == null) return null;
+
+  const committed = Math.max(
+    ...queries.map((q) => q.expectPopularSearchHrefs?.length ?? 0)
+  );
+  const liveCount = homePopularSearchHrefs().length;
+  const min = coverage.minPopularSearchHrefs;
+
+  if (committed < min) {
+    return {
+      id: "coverage",
+      message: `committed popular search href guards ${committed} below minPopularSearchHrefs ${min}`,
+    };
+  }
+
+  if (liveCount < min) {
+    return {
+      id: "coverage",
+      message: `homepage popular search chips ${liveCount} below minPopularSearchHrefs ${min}`,
+    };
+  }
+
+  return null;
 }
 
 export function evaluateHomeBaselineQuery(
@@ -217,6 +267,9 @@ export function evaluateHomeBaselineQuery(
 
 export function evaluateHomeBaseline(file: HomeBaselineFile): HomeBaselineResult {
   const issues: HomeBaselineIssue[] = [];
+
+  const coverageIssue = evaluateHomePopularSearchCoverage(file.coverage, file.queries);
+  if (coverageIssue) issues.push(coverageIssue);
 
   for (const query of file.queries) {
     const issue = evaluateHomeBaselineQuery(query);

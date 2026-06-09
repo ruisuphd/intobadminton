@@ -486,5 +486,8 @@
       "note": "Voltric 8DG on /best/head-heavy-rackets-under-150/",
       "e2e": true
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 44
+  }
 }

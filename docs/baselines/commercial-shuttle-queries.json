@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "queries": [
     {
       "id": "commercial-shuttle-yy-as-50",
@@ -62,5 +62,8 @@
       "e2e": true,
       "note": "RSL No.4 Plus on /best/shuttles/ exits to dedicated shuttle review"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 6
+  }
 }
