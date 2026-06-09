@@ -4,6 +4,10 @@
  * Committed expectations live in `docs/baselines/catalog-shoe-queries.json`.
  */
 
+import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
 import type { ProductRecord } from "@/lib/types/product";
 import {
   catalogProductHref,
@@ -23,6 +27,7 @@ export type CatalogShoeBaselineQuery = {
 export type CatalogShoeBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: BaselineE2eCoverage;
   queries: CatalogShoeBaselineQuery[];
 };
 
@@ -95,11 +100,24 @@ export function validateCatalogShoeBaselineFile(
     return { ok: false, message: "baseline.queries must not be empty" };
   }
 
+  let coverage: BaselineE2eCoverage | undefined;
+  if (record.coverage != null) {
+    if (typeof record.coverage !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = record.coverage as Record<string, unknown>;
+    coverage = {
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated: record.updated === undefined ? undefined : String(record.updated),
+      coverage,
       queries,
     },
   };
@@ -143,6 +161,13 @@ export function evaluateCatalogShoeBaseline(
   lookup: (productId: string) => ProductRecord | undefined
 ): CatalogShoeBaselineResult {
   const issues: CatalogShoeBaselineIssue[] = [];
+
+  const coverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "catalog-shoe"
+  );
+  if (coverageIssue) issues.push(coverageIssue);
 
   for (const spec of file.queries) {
     const issue = evaluateCatalogShoeBaselineQuery(spec, lookup(spec.productId));

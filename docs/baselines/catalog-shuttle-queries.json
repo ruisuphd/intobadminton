@@ -50,5 +50,8 @@
       "e2e": true,
       "note": "RSL No.4 Plus catalog browse exits to dedicated shuttle review"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 6
+  }
 }

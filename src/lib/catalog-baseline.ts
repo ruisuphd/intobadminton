@@ -5,6 +5,10 @@
  * CI runs this after unit tests to catch filter regressions before deploy.
  */
 
+import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
 import type { ProductRecord } from "@/lib/types/product";
 
 export type CatalogBaselineQuery = {
@@ -25,6 +29,7 @@ export type CatalogBaselineQuery = {
 export type CatalogBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: BaselineE2eCoverage;
   queries: CatalogBaselineQuery[];
 };
 
@@ -134,12 +139,25 @@ export function validateCatalogBaselineFile(
     return { ok: false, message: "baseline.queries must not be empty" };
   }
 
+  let coverage: BaselineE2eCoverage | undefined;
+  if (record.coverage != null) {
+    if (typeof record.coverage !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = record.coverage as Record<string, unknown>;
+    coverage = {
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated:
         record.updated === undefined ? undefined : String(record.updated),
+      coverage,
       queries,
     },
   };
@@ -212,6 +230,18 @@ export function evaluateCatalogBaseline(
   filterFn: (query: string) => ProductRecord[]
 ): CatalogBaselineResult {
   const issues: CatalogBaselineIssue[] = [];
+
+  const coverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "catalog-keyword"
+  );
+  if (coverageIssue) {
+    issues.push({
+      query: "coverage",
+      message: coverageIssue.message,
+    });
+  }
 
   for (const spec of file.queries) {
     const products = filterFn(spec.query);

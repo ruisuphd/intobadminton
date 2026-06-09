@@ -40,6 +40,15 @@ describe("catalog-baseline", () => {
     expect(result.ok).toBe(true);
   });
 
+  it("enforces minE2eGuards coverage counter", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateCatalogBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+    expect(parsed.file.coverage?.minE2eGuards).toBe(9);
+    expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(9);
+  });
+
   it("rejects baseline rows without expectations", () => {
     const parsed = validateCatalogBaselineFile({
       version: 1,

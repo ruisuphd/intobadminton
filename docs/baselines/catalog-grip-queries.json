@@ -50,5 +50,8 @@
       "e2e": true,
       "note": "Li-Ning GP100 Pro catalog browse exits to dedicated overgrip review"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 6
+  }
 }

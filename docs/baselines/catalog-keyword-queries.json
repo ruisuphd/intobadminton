@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-09",
   "queries": [
     {
       "query": "yonex nanoflare",
@@ -21,35 +21,41 @@
       "query": "p9200",
       "minResults": 1,
       "expectBrandContains": "Victor",
+      "e2e": true,
       "note": "Shoe SKU"
     },
     {
       "query": "ac102c",
       "minResults": 1,
       "expectProductIdContains": "ac102c",
+      "e2e": true,
       "note": "String SKU — pairs with search submit routing"
     },
     {
       "query": "bg65",
       "minResults": 1,
       "expectProductIdContains": "bg65",
+      "e2e": true,
       "note": "Popular string line"
     },
     {
       "query": "4u head light",
       "minResults": 1,
+      "e2e": true,
       "note": "Spec token combo"
     },
     {
       "query": "yonex astrox 99",
       "minResults": 1,
       "expectProductIdContains": "astrox-99",
+      "e2e": true,
       "note": "Multi-token racket match"
     },
     {
       "query": "li-ning",
       "minResults": 1,
       "expectBrandContains": "Li-Ning",
+      "e2e": true,
       "note": "Brand filter via keyword"
     },
     {
@@ -58,5 +64,8 @@
       "e2e": true,
       "note": "Empty-result guard"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 9
+  }
 }

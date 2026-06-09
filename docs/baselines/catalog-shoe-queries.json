@@ -130,5 +130,8 @@
       "e2e": true,
       "note": "Subaxia GT step-up budget pick"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 16
+  }
 }

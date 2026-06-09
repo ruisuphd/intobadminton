@@ -44,6 +44,15 @@ describe("catalog-shoe-baseline", () => {
     expect(result.ok).toBe(true);
   });
 
+  it("enforces minE2eGuards coverage counter", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateCatalogShoeBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+    expect(parsed.file.coverage?.minE2eGuards).toBe(16);
+    expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(16);
+  });
+
   it("flags href mismatches", () => {
     const product = catalogProductById("yy-comfort-z3");
     expect(product).toBeDefined();

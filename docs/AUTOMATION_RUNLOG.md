@@ -1,5 +1,18 @@
 # Automation run log
 
+## 2026-06-09 — Sprint 113 (branch `cursor/web-app-improvement-plan-122a`)
+
+**Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #261 ready for review.
+
+**Shipped:**
+- `docs/WEB_APP_IMPROVEMENT_PLAN_SPRINT113_2026-06.md`
+- `minE2eGuards` on 5 remaining catalog category baselines (36 guards)
+- Catalog-keyword e2e completion (3→9) + `minE2eGuards: 9`
+- CrUX template expansion (+2 paths: review hub, string tension calculator)
+- Offline recovery + lighthouse baseline sync
+
+**Verification:** `npm test`, `npm run build`, baseline lint scripts.
+
 ## 2026-06-09 — Sprint 112 (branch `cursor/web-app-improvement-plan-27e7`)
 
 **Trigger:** Cloud agent — audit → plan (10-pass) → execute after PR #260 merged.
