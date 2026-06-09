@@ -125,6 +125,8 @@
 
 **Sprint 116 addendum:** Product-funnel e2e completion + guides hub CrUX expansion — ✅ finder e2e 2→6; results-url e2e 2→4; compare-share e2e 2→4; `minE2eGuards` on finder (6), results-url (4), compare-share (4); `/guides/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 117 addendum:** Discovery parity e2e completion + trust-path CrUX expansion — ✅ discovery-parity e2e 2→4; `minE2eGuards` on discovery-parity (4) + home (1); `/brands/` + `/methodology/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
