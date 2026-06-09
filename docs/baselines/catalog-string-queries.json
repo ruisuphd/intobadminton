@@ -50,5 +50,8 @@
       "e2e": true,
       "note": "Li-Ning L69 catalog browse exits to dedicated string review"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 6
+  }
 }

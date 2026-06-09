@@ -67,6 +67,11 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — how tension affects control and durability.",
   },
   {
+    href: "/tools/string-tension-calculator/",
+    label: "String tension calculator",
+    description: "Precached — recommended tension by level and arm comfort.",
+  },
+  {
     href: "/best/doubles-rackets/",
     label: "Best doubles rackets",
     description: "Precached — doubles buying guide for front and rear court.",
@@ -247,7 +252,9 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/best/lightweight-rackets-5u/",
   "/best/head-heavy-rackets-under-150/",
   "/best/rackets-under-100/",
+  "/review/",
   "/review/yonex-arcsaber-7-pro-review/",
+  "/tools/string-tension-calculator/",
   "/compare-guides/yonex-astrox-vs-nanoflare/",
   "/compare-guides/yonex-victor-li-ning/",
   "/guides/glossary/",

@@ -117,6 +117,8 @@
 
 **Sprint 112 addendum:** Catalog-racket e2e completion + commercial e2e guards + homepage discovery parity + commercial CrUX expansion — ✅ catalog-racket e2e 15→44; `minE2eGuards` on catalog-racket + 6 commercial baselines; homepage popular-search CI 16→33; 13 commercial landings in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 113 addendum:** Catalog category e2e guards + catalog-keyword e2e completion + CrUX tools/review expansion — ✅ `minE2eGuards` on 5 remaining catalog baselines (shoe/string/shuttle/grip/bag); catalog-keyword e2e 3→9; `/review/` + `/tools/string-tension-calculator/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

@@ -61,8 +61,20 @@
       "best-practices": 1,
       "seo": 1
     },
+    "http://localhost:4173/review/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
     "http://localhost:4173/review/yonex-arcsaber-7-pro-review/index.html": {
       "performance": 0.99,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/tools/string-tension-calculator/index.html": {
+      "performance": 1,
       "accessibility": 0.93,
       "best-practices": 1,
       "seo": 1

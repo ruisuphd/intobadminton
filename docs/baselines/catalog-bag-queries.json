@@ -18,5 +18,8 @@
       "e2e": true,
       "note": "Victor Compact Backpack catalog browse exits to bag-loadout guide"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 2
+  }
 }
