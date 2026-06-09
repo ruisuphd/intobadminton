@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-06-05",
+  "capturedAt": "2026-06-09",
   "urls": {
     "http://localhost:4173/index.html": {
       "performance": 0.99,
@@ -94,6 +94,84 @@
     "http://localhost:4173/brands/bonny/index.html": {
       "performance": 1,
       "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/all-round-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/intermediate-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/smash-heavy-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/singles-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/control-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/defensive-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/head-light-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/rackets-for-shoulder-comfort/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/wide-feet-badminton-shoes/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/budget-badminton-shoes/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/lightweight-rackets-5u/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/head-heavy-rackets-under-150/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/rackets-under-100/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
       "best-practices": 1,
       "seo": 1
     }

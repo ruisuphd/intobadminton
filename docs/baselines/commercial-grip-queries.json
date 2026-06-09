@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "queries": [
     {
       "id": "commercial-grip-yy-ac102c",
@@ -62,5 +62,8 @@
       "e2e": true,
       "note": "Li-Ning GP100 Pro on /best/grips/ exits to dedicated overgrip review"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 6
+  }
 }

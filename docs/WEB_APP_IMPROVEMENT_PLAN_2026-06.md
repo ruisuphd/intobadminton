@@ -115,6 +115,8 @@
 
 **Sprint 111 addendum:** Commercial racket PDP e2e completion + catalog CrUX expansion — ✅ PDP e2e 53→82 (44/44 commercial racket); commercial-racket e2e 15→44; `minPdpE2eGuards: 82`; `/catalog/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 112 addendum:** Catalog-racket e2e completion + commercial e2e guards + homepage discovery parity + commercial CrUX expansion — ✅ catalog-racket e2e 15→44; `minE2eGuards` on catalog-racket + 6 commercial baselines; homepage popular-search CI 16→33; 13 commercial landings in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

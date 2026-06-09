@@ -59,6 +59,15 @@ describe("catalog-racket-baseline", () => {
     expect(issue?.message).toContain("expected href");
   });
 
+  it("enforces minE2eGuards coverage counter", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateCatalogRacketBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (!parsed.ok) return;
+    expect(parsed.file.coverage?.minE2eGuards).toBe(44);
+    expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(44);
+  });
+
   it("flags editorial kind mismatches", () => {
     const product = catalogProductById("yy-arcsaber-7-pro");
     expect(product).toBeDefined();

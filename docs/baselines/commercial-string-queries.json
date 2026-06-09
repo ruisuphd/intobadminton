@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "queries": [
     {
       "id": "commercial-string-yy-bg65",
@@ -62,5 +62,8 @@
       "e2e": true,
       "note": "Li-Ning L69 on /best/strings/ exits to dedicated string review"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 6
+  }
 }

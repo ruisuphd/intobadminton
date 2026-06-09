@@ -1,6 +1,9 @@
 {
   "version": 1,
   "updated": "2026-06-09",
+  "coverage": {
+    "minPopularSearchHrefs": 33
+  },
   "queries": [
     {
       "id": "crux-homepage",
@@ -10,22 +13,39 @@
       "expectMinReviewCount": 140,
       "expectMinCatalogTotal": 150,
       "expectPopularSearchHrefs": [
+        "/best/rackets-under-100/",
+        "/best/lightweight-rackets-5u/",
+        "/best/rackets-for-shoulder-comfort/",
+        "/best/control-rackets/",
+        "/best/wide-feet-badminton-shoes/",
+        "/best/all-round-rackets/",
+        "/best/budget-badminton-shoes/",
+        "/best/head-heavy-rackets-under-150/",
         "/catalog/",
         "/best/beginner-rackets/",
         "/best/doubles-rackets/",
+        "/best/singles-rackets/",
+        "/best/head-light-rackets/",
+        "/best/smash-heavy-rackets/",
+        "/best/intermediate-rackets/",
         "/best/shoes/",
-        "/best/grips/",
-        "/best/bags/",
+        "/guides/badminton-shoes-vs-running-shoes/",
         "/best/strings/",
         "/best/shuttles/",
+        "/best/grips/",
+        "/best/bags/",
+        "/brands/yonex/",
+        "/brands/victor/",
+        "/brands/li-ning/",
         "/compare-guides/yonex-astrox-vs-nanoflare/",
         "/compare-guides/yonex-victor-li-ning/",
-        "/guides/glossary/",
         "/guides/equipment-authenticity/",
+        "/guides/glossary/",
+        "/review/racket-stringing-hole-patterns-explained/",
+        "/review/",
         "/review/yonex-nanoflare-1000z-review/",
         "/review/yonex-tour-series-buying-guide/",
-        "/review/kumpoo-fourth-major-badminton-brand-profile/",
-        "/review/racket-stringing-hole-patterns-explained/"
+        "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
         "/review/yonex-nanospeed-9900-ltg-green-sword-review/",
@@ -38,7 +58,7 @@
       "e2e": true,
       "expectHeadingPattern": "badminton",
       "expectCatalogLinkPattern": "browse full catalog",
-      "note": "CrUX priority homepage — finder/catalog exit, featured slice, commercial deep-links"
+      "note": "CrUX priority homepage — full popular-search grid parity (33 chips)"
     }
   ]
 }
