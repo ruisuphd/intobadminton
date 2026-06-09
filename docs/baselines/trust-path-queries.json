@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 9
+    "minE2eGuards": 13
   },
   "queries": [
     {
@@ -85,6 +85,42 @@
       "expectHeadingPattern": "contact",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX support trust path — contact page catalog exit"
+    },
+    {
+      "id": "crux-privacy",
+      "path": "/privacy/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "privacy",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX AdSense compliance trust path — privacy policy catalog exit"
+    },
+    {
+      "id": "crux-terms",
+      "path": "/terms/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "terms",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX publisher compliance trust path — terms of service catalog exit"
+    },
+    {
+      "id": "crux-cookies",
+      "path": "/cookies/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "cookie",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX Consent Mode trust path — cookie policy catalog exit"
+    },
+    {
+      "id": "crux-privacy-choices",
+      "path": "/privacy-choices/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "privacy",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX CMP trust path — privacy choices catalog exit"
     }
   ]
 }
