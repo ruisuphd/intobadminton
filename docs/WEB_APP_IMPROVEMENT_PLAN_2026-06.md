@@ -133,6 +133,8 @@
 
 **Sprint 120 addendum:** Trust-path e2e completion + brand/compliance CrUX expansion — ✅ trust-path e2e 6→9; `minE2eGuards: 9` on trust-path baseline; `/authors/` + `/contact/` + `/brands/kumpoo/` + `/brands/kawasaki/` + `/brands/anta/` + `/privacy/` + `/terms/` in `crux-template.csv`, offline recovery, lighthouse baseline; `/methodology/` in trust-path e2e.
 
+**Sprint 121 addendum:** Trust-path e2e expansion + consent/transparency CrUX expansion — ✅ trust-path e2e 9→13; `minE2eGuards: 13` on trust-path baseline; `/cookies/` + `/security/` + `/research/` + `/updates/` in trust-path e2e; `/guides/badminton-shoes-vs-running-shoes/` in `crux-template.csv`, offline recovery, lighthouse baseline; `/privacy-choices/` waived (noindex CMP).
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

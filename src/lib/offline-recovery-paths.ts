@@ -312,6 +312,11 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/brands/anta/",
   "/privacy/",
   "/terms/",
+  "/cookies/",
+  "/security/",
+  "/research/",
+  "/updates/",
+  "/guides/badminton-shoes-vs-running-shoes/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

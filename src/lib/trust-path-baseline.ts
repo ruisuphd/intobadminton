@@ -1,7 +1,8 @@
 /**
  * Golden-profile regression guard for E-E-A-T trust paths:
  * `/about/`, `/sources/`, `/data/`, `/authors/rui-su/`, `/source-policy/`, `/faq/`,
- * `/authors/`, `/methodology/`, `/contact/`.
+ * `/authors/`, `/methodology/`, `/contact/`, `/cookies/`, `/security/`,
+ * `/research/`, `/updates/`.
  *
  * Ensures committed paths resolve catalog exits and stay in the CrUX
  * monitoring + Playwright e2e smoke set.

@@ -59,7 +59,12 @@
         "http://localhost:4173/brands/kawasaki/index.html",
         "http://localhost:4173/brands/anta/index.html",
         "http://localhost:4173/privacy/index.html",
-        "http://localhost:4173/terms/index.html"
+        "http://localhost:4173/terms/index.html",
+        "http://localhost:4173/cookies/index.html",
+        "http://localhost:4173/security/index.html",
+        "http://localhost:4173/research/index.html",
+        "http://localhost:4173/updates/index.html",
+        "http://localhost:4173/guides/badminton-shoes-vs-running-shoes/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {
