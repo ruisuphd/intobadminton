@@ -117,6 +117,21 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — WuQue, MoJun, and Bonny catalogue decoded.",
   },
   {
+    href: "/brands/kumpoo/",
+    label: "Kumpoo brand hub",
+    description: "Precached — Kumpoo catalogue decoded.",
+  },
+  {
+    href: "/brands/kawasaki/",
+    label: "Kawasaki brand hub",
+    description: "Precached — Kawasaki catalogue decoded.",
+  },
+  {
+    href: "/brands/anta/",
+    label: "Anta brand hub",
+    description: "Precached — Anta catalogue decoded.",
+  },
+  {
     href: "/guides/",
     label: "Guides",
     description: "Precached hub — open guides you visited before.",
