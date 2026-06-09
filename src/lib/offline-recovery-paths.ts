@@ -232,6 +232,7 @@ export const OFFLINE_RECOVERY_LINKS = dedupeOfflineRecoveryLinks([
 export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/quiz/",
   "/catalog/",
+  "/best/",
   "/best/beginner-rackets/",
   "/best/doubles-rackets/",
   "/best/shoes/",
@@ -255,6 +256,7 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/review/",
   "/review/yonex-arcsaber-7-pro-review/",
   "/tools/string-tension-calculator/",
+  "/compare-guides/",
   "/compare-guides/yonex-astrox-vs-nanoflare/",
   "/compare-guides/yonex-victor-li-ning/",
   "/guides/glossary/",

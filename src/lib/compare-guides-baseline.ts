@@ -7,6 +7,7 @@
  * Committed expectations live in `docs/baselines/compare-guides-queries.json`.
  */
 
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import { compareGuideByPath, COMPARE_GUIDES } from "@/lib/compare-guides";
 import {
   catalogHrefFromCompareSlug,
@@ -44,6 +45,7 @@ export type CompareGuidesBaselineQuery = {
 export type CompareGuidesBaselineCoverageSpec = {
   minCatalogFilterSlugs?: number;
   minManifestEntries?: number;
+  minE2eGuards?: number;
 };
 
 export type CompareGuidesBaselineFile = {
@@ -160,6 +162,8 @@ export function validateCompareGuidesBaselineFile(
         typeof c.minManifestEntries === "number"
           ? c.minManifestEntries
           : undefined,
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
     };
   }
 
@@ -275,6 +279,18 @@ export function evaluateCompareGuidesBaseline(
 
   const coverageIssue = evaluateCompareGuidesBaselineCoverage(file);
   if (coverageIssue) issues.push(coverageIssue);
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "compare-guides"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const query of file.queries) {
     const issue = evaluateCompareGuidesBaselineQuery(query, lookup);

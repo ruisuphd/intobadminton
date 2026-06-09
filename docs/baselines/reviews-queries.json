@@ -3,6 +3,7 @@
   "updated": "2026-06-06",
   "coverage": {
     "minArticleSlugs": 142,
+    "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
     "requireLighthouseParity": true,

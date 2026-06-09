@@ -7,6 +7,7 @@
  * Committed expectations live in `docs/baselines/best-queries.json`.
  */
 
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import { illustrativeFitForProductId } from "@/lib/best-picks-scoring";
 import {
   bestCatalogFilterSlugs,
@@ -43,6 +44,7 @@ export type BestBaselineQuery = {
 
 export type BestBaselineCoverageSpec = {
   minCatalogFilterSlugs?: number;
+  minE2eGuards?: number;
 };
 
 export type BestBaselineFile = {
@@ -149,6 +151,8 @@ export function validateBestBaselineFile(
         typeof c.minCatalogFilterSlugs === "number"
           ? c.minCatalogFilterSlugs
           : undefined,
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
     };
   }
 
@@ -256,6 +260,18 @@ export function evaluateBestBaseline(
 
   const coverageIssue = evaluateBestBaselineCoverage(file);
   if (coverageIssue) issues.push(coverageIssue);
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "best"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const query of file.queries) {
     const issue = evaluateBestBaselineQuery(query, lookup);
