@@ -8,6 +8,10 @@
  */
 
 import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
+import {
   brandNameFromBrandSlug,
   catalogCtaLabelForBrandsIndex,
   catalogCtaLabelFromBrandSlug,
@@ -36,7 +40,7 @@ export type BrandsBaselineQuery = {
   note?: string;
 };
 
-export type BrandsBaselineCoverageSpec = {
+export type BrandsBaselineCoverageSpec = BaselineE2eCoverage & {
   minDedicatedBrandSlugs?: number;
 };
 
@@ -140,6 +144,8 @@ export function validateBrandsBaselineFile(
         typeof c.minDedicatedBrandSlugs === "number"
           ? c.minDedicatedBrandSlugs
           : undefined,
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
     };
   }
 
@@ -227,6 +233,18 @@ export function evaluateBrandsBaseline(
 
   const coverageIssue = evaluateBrandsBaselineCoverage(file);
   if (coverageIssue) issues.push(coverageIssue);
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "brands"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const query of file.queries) {
     const issue = evaluateBrandsBaselineQuery(query);

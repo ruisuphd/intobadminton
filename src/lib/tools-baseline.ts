@@ -8,6 +8,10 @@
  */
 
 import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
+import {
   catalogCtaLabelFromToolSlug,
   catalogHrefFromToolSlug,
   toolCatalogFilterSlugs,
@@ -29,7 +33,7 @@ export type ToolsBaselineQuery = {
   note?: string;
 };
 
-export type ToolsBaselineCoverageSpec = {
+export type ToolsBaselineCoverageSpec = BaselineE2eCoverage & {
   minCatalogFilterSlugs?: number;
 };
 
@@ -128,6 +132,8 @@ export function validateToolsBaselineFile(
         typeof c.minCatalogFilterSlugs === "number"
           ? c.minCatalogFilterSlugs
           : undefined,
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
     };
   }
 
@@ -196,6 +202,18 @@ export function evaluateToolsBaseline(
 
   const coverageIssue = evaluateToolsBaselineCoverage(file);
   if (coverageIssue) issues.push(coverageIssue);
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "tools"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const query of file.queries) {
     const issue = evaluateToolsBaselineQuery(query);

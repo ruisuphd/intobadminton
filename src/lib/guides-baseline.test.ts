@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   evaluateGuidesBaseline,
   evaluateGuidesBaselineQuery,
@@ -67,5 +68,14 @@ describe("guides-baseline", () => {
 
   it("builds canonical guide paths", () => {
     expect(guidePathForSlug("string-tension")).toBe("/guides/string-tension/");
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 12 },
+      [{ e2e: true }],
+      "guides"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
   });
 });

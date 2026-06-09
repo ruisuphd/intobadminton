@@ -260,6 +260,11 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/guides/glossary/",
   "/guides/equipment-authenticity/",
   "/brands/bonny/",
+  "/search/",
+  "/product/yy-grpht-thrttl/",
+  "/guides/string-tension/",
+  "/brands/yonex/",
+  "/tools/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

@@ -6,6 +6,10 @@
  * CI runs this after unit tests to catch index regressions before deploy.
  */
 
+import {
+  evaluateBaselineE2eCoverage,
+  type BaselineE2eCoverage,
+} from "@/lib/baseline-coverage";
 import type { SearchSuggestion } from "@/lib/search-suggestions";
 import type { SearchEntry } from "@/lib/site-search";
 
@@ -37,6 +41,7 @@ export type SearchBaselineQuery = {
 export type SearchBaselineFile = {
   version: number;
   updated?: string;
+  coverage?: BaselineE2eCoverage;
   queries: SearchBaselineQuery[];
 };
 
@@ -212,12 +217,25 @@ export function validateSearchBaselineFile(
     return { ok: false, message: "baseline.queries must not be empty" };
   }
 
+  let coverage: BaselineE2eCoverage | undefined;
+  if (record.coverage != null) {
+    if (typeof record.coverage !== "object") {
+      return { ok: false, message: "baseline.coverage must be an object" };
+    }
+    const c = record.coverage as Record<string, unknown>;
+    coverage = {
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
+    };
+  }
+
   return {
     ok: true,
     file: {
       version: record.version,
       updated:
         record.updated === undefined ? undefined : String(record.updated),
+      coverage,
       queries,
     },
   };
@@ -359,6 +377,18 @@ export function evaluateSearchBaseline(
   }
 ): SearchBaselineResult {
   const issues: SearchBaselineIssue[] = [];
+
+  const coverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "site-search"
+  );
+  if (coverageIssue) {
+    issues.push({
+      query: "coverage",
+      message: coverageIssue.message,
+    });
+  }
 
   for (const spec of file.queries) {
     if (

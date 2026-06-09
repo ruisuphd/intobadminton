@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import { searchSubmitHref } from "@/lib/search-submit-route";
 import { searchSuggestions } from "@/lib/search-suggestions";
 import { searchSite } from "@/lib/site-search";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   evaluateSearchBaseline,
   evaluateSearchBaselineQuery,
@@ -100,5 +101,14 @@ describe("search-baseline", () => {
       [{ kind: "entry", entry: { title: "x", href: "/guides/string-tension/", kind: "guide", summary: "", keywords: [] } }]
     );
     expect(issue?.message).toContain("catalog");
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 26 },
+      [{ e2e: true }],
+      "site-search"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
   });
 });

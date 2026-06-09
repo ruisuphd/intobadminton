@@ -119,6 +119,8 @@
 
 **Sprint 113 addendum:** Catalog category e2e guards + catalog-keyword e2e completion + CrUX tools/review expansion — ✅ `minE2eGuards` on 5 remaining catalog baselines (shoe/string/shuttle/grip/bag); catalog-keyword e2e 3→9; `/review/` + `/tools/string-tension-calculator/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 114 addendum:** Site search e2e completion + editorial e2e guards + discovery CrUX expansion — ✅ site-search e2e 4→26; guides e2e 10→12; `minE2eGuards` on search/guides/tools/brands baselines; `/search/`, sample PDP, `/guides/string-tension/`, `/brands/yonex/`, `/tools/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

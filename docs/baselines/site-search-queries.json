@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-05",
+  "updated": "2026-06-09",
   "queries": [
     {
       "query": "nanoflare 1000",
@@ -25,19 +25,22 @@
       "query": "running shoes",
       "expectHrefContains": "badminton-shoes-vs-running",
       "minResults": 1,
-      "note": "Cluster pillar — shoes vs running"
+      "note": "Cluster pillar — shoes vs running",
+      "e2e": true
     },
     {
       "query": "doubles positioning",
       "expectHrefContains": "doubles-positioning",
       "minResults": 1,
-      "note": "Cluster pillar — doubles positioning"
+      "note": "Cluster pillar — doubles positioning",
+      "e2e": true
     },
     {
       "query": "authenticity checker",
       "expectHrefContains": "authenticity-checker",
       "minResults": 1,
-      "note": "Interactive tool"
+      "note": "Interactive tool",
+      "e2e": true
     },
     {
       "query": "badminton toolkit",
@@ -51,83 +54,97 @@
       "query": "rackets under 100",
       "expectHrefContains": "rackets-under-100",
       "minResults": 1,
-      "note": "Budget best-of"
+      "note": "Budget best-of",
+      "e2e": true
     },
     {
       "query": "5u lightweight",
       "expectHrefContains": "lightweight-rackets-5u",
       "minResults": 1,
-      "note": "Lightweight best-of"
+      "note": "Lightweight best-of",
+      "e2e": true
     },
     {
       "query": "shoulder comfort",
       "expectHrefContains": "rackets-for-shoulder-comfort",
       "minResults": 1,
-      "note": "Shoulder comfort best-of"
+      "note": "Shoulder comfort best-of",
+      "e2e": true
     },
     {
       "query": "singles racket",
       "expectHrefContains": "singles-rackets",
       "minResults": 1,
-      "note": "Singles best-of"
+      "note": "Singles best-of",
+      "e2e": true
     },
     {
       "query": "head light control",
       "expectHrefContains": "head-light-rackets",
       "minResults": 1,
-      "note": "Head-light best-of"
+      "note": "Head-light best-of",
+      "e2e": true
     },
     {
       "query": "wide feet shoes",
       "expectHrefContains": "wide-feet-badminton-shoes",
       "minResults": 1,
-      "note": "Wide-feet shoes best-of"
+      "note": "Wide-feet shoes best-of",
+      "e2e": true
     },
     {
       "query": "all round rackets",
       "expectHrefContains": "all-round-rackets",
       "minResults": 1,
-      "note": "All-round best-of"
+      "note": "All-round best-of",
+      "e2e": true
     },
     {
       "query": "defensive doubles racket",
       "expectHrefContains": "defensive-rackets",
       "minResults": 1,
-      "note": "Defensive best-of"
+      "note": "Defensive best-of",
+      "e2e": true
     },
     {
       "query": "control rackets placement",
       "expectHrefContains": "control-rackets",
       "minResults": 1,
-      "note": "Control best-of"
+      "note": "Control best-of",
+      "e2e": true
     },
     {
       "query": "rackets under 150",
       "expectHrefContains": "rackets-under-150",
       "minResults": 1,
-      "note": "Price-band best-of"
+      "note": "Price-band best-of",
+      "e2e": true
     },
     {
       "query": "rackets under 200",
       "expectHrefContains": "rackets-under-200",
       "minResults": 1,
-      "note": "Mid-budget price band"
+      "note": "Mid-budget price band",
+      "e2e": true
     },
     {
       "query": "astrox 99 pro 100zz",
       "expectHrefContains": "astrox-99-pro-vs-astrox-100zz",
       "minResults": 1,
-      "note": "Compare guide by model pair"
+      "note": "Compare guide by model pair",
+      "e2e": true
     },
     {
       "query": "equipment catalog",
       "expectTopHref": "/catalog/",
-      "note": "Catalog hub exact top result"
+      "note": "Catalog hub exact top result",
+      "e2e": true
     },
     {
       "query": "saved shortlist",
       "expectTopHref": "/saved/",
-      "note": "Saved shelf discovery"
+      "note": "Saved shelf discovery",
+      "e2e": true
     },
     {
       "query": "badmintn string tenson",
@@ -142,25 +159,29 @@
       "expectHrefContains": "racket-balance-vs-swing-speed",
       "minResults": 1,
       "expectSubmitHrefContains": "/search/?q=",
-      "note": "Body-only review excerpt match"
+      "note": "Body-only review excerpt match",
+      "e2e": true
     },
     {
       "query": "BG80",
       "expectHrefContains": "l69-string",
       "minResults": 1,
-      "note": "String model code in body"
+      "note": "String model code in body",
+      "e2e": true
     },
     {
       "query": "halbertec axforce",
       "expectHrefContains": "halbertec-9000-power-vs-axforce-100-gen-2",
       "minResults": 1,
-      "note": "Compare guide brand matchup"
+      "note": "Compare guide brand matchup",
+      "e2e": true
     },
     {
       "query": "xyzzyplughnotreal",
       "maxResults": 0,
       "expectSubmitHrefContains": "/search/?q=",
-      "note": "Nonsense query returns empty"
+      "note": "Nonsense query returns empty",
+      "e2e": true
     },
     {
       "query": "ac102c",
@@ -172,12 +193,16 @@
       "expectSubmitHrefContains": "/search/?q=",
       "expectFirstSuggestionKind": "catalog",
       "minSuggestions": 1,
-      "note": "Mixed catalog + editorial keeps search submit"
+      "note": "Mixed catalog + editorial keeps search submit",
+      "e2e": true
     },
     {
       "query": "yy-ac102c",
       "expectSubmitHrefContains": "/catalog/?q=yy-ac102c",
       "note": "Product id product-intent routing"
     }
-  ]
+  ],
+  "coverage": {
+    "minE2eGuards": 26
+  }
 }
