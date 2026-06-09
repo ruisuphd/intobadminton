@@ -26,6 +26,8 @@
         "http://localhost:4173/best/lightweight-rackets-5u/index.html",
         "http://localhost:4173/best/head-heavy-rackets-under-150/index.html",
         "http://localhost:4173/best/rackets-under-100/index.html",
+        "http://localhost:4173/best/rackets-under-150/index.html",
+        "http://localhost:4173/best/rackets-under-200/index.html",
         "http://localhost:4173/review/index.html",
         "http://localhost:4173/review/yonex-arcsaber-7-pro-review/index.html",
         "http://localhost:4173/tools/string-tension-calculator/index.html",
@@ -39,6 +41,8 @@
         "http://localhost:4173/product/yy-grpht-thrttl/index.html",
         "http://localhost:4173/guides/string-tension/index.html",
         "http://localhost:4173/brands/yonex/index.html",
+        "http://localhost:4173/brands/victor/index.html",
+        "http://localhost:4173/brands/li-ning/index.html",
         "http://localhost:4173/tools/index.html",
         "http://localhost:4173/guides/index.html",
         "http://localhost:4173/brands/index.html",
@@ -46,7 +50,9 @@
         "http://localhost:4173/about/index.html",
         "http://localhost:4173/sources/index.html",
         "http://localhost:4173/data/index.html",
-        "http://localhost:4173/authors/rui-su/index.html"
+        "http://localhost:4173/authors/rui-su/index.html",
+        "http://localhost:4173/source-policy/index.html",
+        "http://localhost:4173/faq/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

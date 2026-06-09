@@ -145,6 +145,18 @@
       "best-practices": 1,
       "seo": 1
     },
+    "http://localhost:4173/best/rackets-under-150/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/best/rackets-under-200/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
     "http://localhost:4173/review/index.html": {
       "performance": 0.99,
       "accessibility": 0.96,
@@ -223,6 +235,18 @@
       "best-practices": 1,
       "seo": 1
     },
+    "http://localhost:4173/brands/victor/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/brands/li-ning/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
     "http://localhost:4173/tools/index.html": {
       "performance": 0.99,
       "accessibility": 1,
@@ -266,6 +290,18 @@
       "seo": 1
     },
     "http://localhost:4173/authors/rui-su/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/source-policy/index.html": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/faq/index.html": {
       "performance": 1,
       "accessibility": 0.96,
       "best-practices": 1,

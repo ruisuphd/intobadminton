@@ -253,6 +253,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/best/lightweight-rackets-5u/",
   "/best/head-heavy-rackets-under-150/",
   "/best/rackets-under-100/",
+  "/best/rackets-under-150/",
+  "/best/rackets-under-200/",
   "/review/",
   "/review/yonex-arcsaber-7-pro-review/",
   "/tools/string-tension-calculator/",
@@ -266,6 +268,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/product/yy-grpht-thrttl/",
   "/guides/string-tension/",
   "/brands/yonex/",
+  "/brands/victor/",
+  "/brands/li-ning/",
   "/tools/",
   "/guides/",
   "/brands/",
@@ -274,6 +278,8 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/sources/",
   "/data/",
   "/authors/rui-su/",
+  "/source-policy/",
+  "/faq/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(
