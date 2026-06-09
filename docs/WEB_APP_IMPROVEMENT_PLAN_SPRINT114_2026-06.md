@@ -58,7 +58,7 @@
 | 7 | `CRUX_OFFLINE_RECOVERY_PATHS` matches crux-template (excl. homepage) | ✅ |
 | 8 | Lighthouse baseline config + scores include new CrUX paths | ✅ |
 | 9 | HelpfulReaction / VideoObject / YouTube sameAs assessed — unchanged waivers | ✅ deferred |
-| 10 | `npm test` + baselines + `npm run build` pass | ⏳ CI |
+| 10 | `npm test` + baselines + `npm run build` pass | ✅ |
 
 ---
 
