@@ -270,6 +270,10 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/guides/",
   "/brands/",
   "/methodology/",
+  "/about/",
+  "/sources/",
+  "/data/",
+  "/authors/rui-su/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

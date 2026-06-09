@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "updated": "2026-06-09",
+  "coverage": {
+    "minE2eGuards": 4
+  },
+  "queries": [
+    {
+      "id": "crux-about",
+      "path": "/about/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "about",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX E-E-A-T trust path — about page catalog exit"
+    },
+    {
+      "id": "crux-sources",
+      "path": "/sources/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "sources",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX source-authority trust path — sources page catalog exit"
+    },
+    {
+      "id": "crux-data",
+      "path": "/data/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "claims",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX claims-registry trust path — verified claims catalog exit"
+    },
+    {
+      "id": "crux-author-rui-su",
+      "path": "/authors/rui-su/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "rui",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX author-credibility trust path — lead reviewer profile catalog exit"
+    }
+  ]
+}

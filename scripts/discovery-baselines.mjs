@@ -18,6 +18,7 @@ const GUARDS = [
   { name: "catalog keyword", script: "scripts/catalog-baseline.mjs" },
   { name: "discovery parity", script: "scripts/discovery-parity.mjs" },
   { name: "homepage golden profiles", script: "scripts/home-baseline.mjs" },
+  { name: "trust-path golden profiles", script: "scripts/trust-path-baseline.mjs" },
 ];
 
 function usage() {
