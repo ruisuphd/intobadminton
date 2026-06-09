@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import { validateFinderBaselineFile } from "@/lib/finder-baseline";
 import { scoreProductCatalog } from "@/lib/scoring";
 import {
@@ -113,6 +114,24 @@ describe("results-url-baseline", () => {
     for (const row of parsed.file.queries.filter((q) => q.e2e)) {
       const path = sharePathForResultsUrlQuery(row, finderParsed.file);
       expect(path).toMatch(/^\/results\/\?/);
+    }
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 4 },
+      [{ e2e: true }],
+      "results-url"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
+  });
+
+  it("commits minE2eGuards on golden-profile coverage", () => {
+    const raw = JSON.parse(readFileSync(RESULTS_URL_BASELINE_PATH, "utf8"));
+    const parsed = validateResultsUrlBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      expect(parsed.file.coverage?.minE2eGuards).toBe(4);
     }
   });
 });

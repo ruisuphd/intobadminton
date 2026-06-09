@@ -39,7 +39,8 @@
         "http://localhost:4173/product/yy-grpht-thrttl/index.html",
         "http://localhost:4173/guides/string-tension/index.html",
         "http://localhost:4173/brands/yonex/index.html",
-        "http://localhost:4173/tools/index.html"
+        "http://localhost:4173/tools/index.html",
+        "http://localhost:4173/guides/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

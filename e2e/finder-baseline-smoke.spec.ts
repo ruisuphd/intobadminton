@@ -10,7 +10,11 @@ type E2eProfile = {
     discipline?: string;
     styles?: string[];
     category?: string;
-    body?: { budgetMaxUsd?: number };
+    body?: {
+      budgetMaxUsd?: number;
+      footWidth?: string;
+      injuryFlags?: string[];
+    };
   };
 };
 
@@ -94,6 +98,16 @@ async function runQuizProfile(
     await funnel
       .getByLabel(/budget max/i)
       .fill(String(profile.body.budgetMaxUsd));
+  }
+  if (profile.body?.footWidth) {
+    await funnel
+      .getByRole("button", { name: profile.body.footWidth, exact: true })
+      .click();
+  }
+  for (const flag of profile.body?.injuryFlags ?? []) {
+    if (flag !== "none") {
+      await funnel.getByRole("button", { name: flag, exact: true }).click();
+    }
   }
   await funnel.getByRole("button", { name: /see recommendations/i }).click();
   await page.waitForURL(/\/results\//, { timeout: 15_000 });

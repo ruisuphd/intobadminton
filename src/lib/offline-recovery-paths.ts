@@ -267,6 +267,7 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/guides/string-tension/",
   "/brands/yonex/",
   "/tools/",
+  "/guides/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

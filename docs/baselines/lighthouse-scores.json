@@ -228,6 +228,12 @@
       "accessibility": 0.93,
       "best-practices": 1,
       "seo": 1
+    },
+    "http://localhost:4173/guides/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
     }
   },
   "source": "lighthouserc-baseline.json",
