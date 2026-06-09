@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "queries": [
     {
       "id": "lighthouse-grpht-throttle",
@@ -298,7 +298,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Aerus Z2 aliases to Eclipsion Z3 review on PDP"
+      "note": "Aerus Z2 aliases to Eclipsion Z3 review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-yy-comfort-z3",
@@ -319,7 +320,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "P9200 series aliases to P9200 III review on PDP"
+      "note": "P9200 series aliases to P9200 III review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-yy-eclipsion-z3",
@@ -329,7 +331,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Eclipsion Z3 dedicated review on PDP"
+      "note": "Eclipsion Z3 dedicated review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-ln-bladesabre-max",
@@ -339,7 +342,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Bladesabre MAX dedicated review on PDP"
+      "note": "Bladesabre MAX dedicated review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-vic-p8500-ii",
@@ -349,7 +353,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "P8500 II wide shoe review on PDP"
+      "note": "P8500 II wide shoe review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-bonny-future-land-3",
@@ -359,7 +364,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Bonny Future Land 3 wide shoe review on PDP"
+      "note": "Bonny Future Land 3 wide shoe review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-asics-blast-ff-3",
@@ -391,7 +397,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Kumpoo G805 Lite Pro budget shoe review on PDP"
+      "note": "Kumpoo G805 Lite Pro budget shoe review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-bonny-carbon-armour",
@@ -401,7 +408,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Bonny Carbon Armour budget shoe review on PDP"
+      "note": "Bonny Carbon Armour budget shoe review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-kawasaki-kace",
@@ -411,7 +419,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Kawasaki KACE budget shoe review on PDP"
+      "note": "Kawasaki KACE budget shoe review on PDP",
+      "e2e": true
     },
     {
       "id": "pdp-review-yy-subaxia-gt",
@@ -421,7 +430,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Subaxia GT step-up budget shoe review on PDP"
+      "note": "Subaxia GT step-up budget shoe review on PDP",
+      "e2e": true
     },
     {
       "id": "budget-bonny-leisu",
@@ -613,7 +623,8 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
-      "note": "DriveX 8S"
+      "note": "DriveX 8S",
+      "e2e": true
     },
     {
       "id": "pdp-racket-vic-fz-88d-power-purple",

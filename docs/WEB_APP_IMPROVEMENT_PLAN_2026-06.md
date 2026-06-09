@@ -111,6 +111,8 @@
 
 **Sprint 109 addendum:** Accessory + shuttle PDP e2e completion + GP100 review-map guard + CrUX PSI capture — ✅ PDP e2e 33→42 (6/6 shuttle, 6/6 grip, 2/2 bag); `accessory-ln-gp100-pro-grip` review-map e2e; `minMappedE2eGuards` 57; `npm run capture:crux-psi` for owner CrUX field-data refresh.
 
+**Sprint 110 addendum:** Commercial shoe PDP e2e completion + strings/shuttles CrUX expansion — ✅ PDP e2e 42→53 (16/16 shoe, DriveX 8S); strings/shuttles in `crux-template.csv`, offline recovery, lighthouse baseline; homepage shuttles chip + home-queries guard; `capture:crux-psi` in performance scaffold test.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

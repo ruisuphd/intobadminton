@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "queries": [
     {
       "id": "crux-homepage",
@@ -16,6 +16,8 @@
         "/best/shoes/",
         "/best/grips/",
         "/best/bags/",
+        "/best/strings/",
+        "/best/shuttles/",
         "/compare-guides/yonex-astrox-vs-nanoflare/",
         "/compare-guides/yonex-victor-li-ning/",
         "/guides/glossary/",

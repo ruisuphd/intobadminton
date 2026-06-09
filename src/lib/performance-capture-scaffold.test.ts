@@ -9,6 +9,9 @@ describe("performance capture scaffold", () => {
     expect(existsSync(resolve(ROOT, "scripts/crux-capture-hints.mjs"))).toBe(
       true
     );
+    expect(existsSync(resolve(ROOT, "scripts/crux-capture-psi.mjs"))).toBe(
+      true
+    );
     expect(existsSync(resolve(ROOT, "scripts/gsc-capture-hints.mjs"))).toBe(
       true
     );
@@ -23,6 +26,7 @@ describe("performance capture scaffold", () => {
       "performance-capture-hints.mjs"
     );
     expect(pkg.scripts["capture:crux-hints"]).toContain("crux-capture-hints.mjs");
+    expect(pkg.scripts["capture:crux-psi"]).toContain("crux-capture-psi.mjs");
     expect(pkg.scripts["capture:gsc-hints"]).toContain("gsc-capture-hints.mjs");
   });
 
@@ -33,6 +37,7 @@ describe("performance capture scaffold", () => {
     );
     expect(readme).toContain("capture:performance-hints");
     expect(readme).toContain("capture:crux-hints");
+    expect(readme).toContain("capture:crux-psi");
     expect(readme).toContain("capture:gsc-hints");
   });
 });
