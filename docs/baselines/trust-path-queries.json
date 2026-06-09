@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 9
+    "minE2eGuards": 14
   },
   "queries": [
     {
@@ -85,6 +85,51 @@
       "expectHeadingPattern": "contact",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX support trust path — contact page catalog exit"
+    },
+    {
+      "id": "crux-cookies",
+      "path": "/cookies/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "cookie",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX consent compliance trust path — cookie policy catalog exit"
+    },
+    {
+      "id": "crux-security",
+      "path": "/security/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "security",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX security trust path — vulnerability reporting catalog exit"
+    },
+    {
+      "id": "crux-privacy-choices",
+      "path": "/privacy-choices/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "privacy",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX consent UI trust path — privacy choices catalog exit"
+    },
+    {
+      "id": "crux-research",
+      "path": "/research/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "research",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX transparency trust path — market research catalog exit"
+    },
+    {
+      "id": "crux-updates",
+      "path": "/updates/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "update",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX freshness trust path — editorial updates feed catalog exit"
     }
   ]
 }
