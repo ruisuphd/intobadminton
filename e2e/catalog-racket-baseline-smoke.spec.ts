@@ -58,7 +58,7 @@ const PRODUCT_LABELS: Record<string, RegExp> = {
   "yy-nanoflare-1000z": /Nanoflare 1000 Z/i,
   "yy-nanoflare-700-play": /Nanoflare 700 Play/i,
   "yy-nanoflare-700-pro-2024": /Nanoflare 700 Pro/i,
-  "yy-nanoflare-800-pro-2024": /Nanoflare 800 Pro/i,
+  "yy-nanoflare-800-pro-2024": /Nanoflare 800 Pro \(2024\)/i,
   "yy-nanoray-light-70i": /Nanoray Light 70i/i,
   "yy-voltric-8dg": /Voltric 8DG/i,
 };
