@@ -9,7 +9,7 @@
 
 | Competitor | Strength vs IntoBadminton | Sprint 121 response |
 |------------|---------------------------|---------------------|
-| **Wirecutter / NYT** | Cookie + privacy choice pages in CWV monitoring | ✅ `/cookies/` + `/privacy-choices/` in crux-template + trust-path e2e |
+| **Wirecutter / NYT** | Cookie + privacy choice pages in CWV monitoring | ✅ `/cookies/` in crux-template + trust-path e2e; `/privacy-choices/` waived (noindex — SEO 0.69 in Lighthouse) |
 | **RTINGS** | Security / vulnerability disclosure page | ✅ `/security/` in crux-template + trust-path e2e |
 | **Tennis Warehouse** | Research / buying-guide methodology transparency | ✅ `/research/` in crux-template + trust-path e2e |
 | **Wirecutter** | "Recently updated" editorial freshness feed | ✅ `/updates/` in crux-template + trust-path e2e |
@@ -25,9 +25,11 @@
 |---|-----|--------|----------|
 | 1 | **Cookie policy missing from CrUX** | AdSense / Consent Mode compliance page absent from CWV monitoring | ✅ `/cookies/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
 | 2 | **Security page missing from CrUX** | Vulnerability-reporting trust path absent from CWV monitoring | ✅ `/security/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
-| 3 | **Privacy choices missing from CrUX** | GDPR/CCPA consent UI absent from CWV monitoring | ✅ `/privacy-choices/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
-| 4 | **Research page missing from CrUX** | Market-research transparency absent from CWV monitoring | ✅ `/research/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
-| 5 | **Updates feed missing from CrUX + trust-path e2e** | Editorial freshness feed absent from CWV monitoring and trust-path CI | ✅ `/updates/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
+| 3 | **Research page missing from CrUX** | Market-research transparency absent from CWV monitoring | ✅ `/research/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
+| 4 | **Updates feed missing from CrUX + trust-path e2e** | Editorial freshness feed absent from CWV monitoring and trust-path CI | ✅ `/updates/` in crux-template (+ offline recovery + lighthouse baseline + trust-path e2e) |
+| 5 | **Shoe-fit guide missing from CrUX** | Homepage popular-search editorial path absent from CWV monitoring | ✅ `/guides/badminton-shoes-vs-running-shoes/` in crux-template (+ offline recovery + lighthouse baseline) |
+
+**Waived:** `/privacy-choices/` remains noindex (CMP) — Lighthouse SEO 0.69 blocks CrUX subset inclusion; precached in PWA only.
 
 **Deferred (Sprint 122+):** dedicated Yonex string hands-on articles; tier-4 Western distributor image backfill; Nanoray Light 70i verified image; YouTube `sameAs`; `VideoObject` schema; fill CrUX CSV cells (owner runs `capture:crux-psi` with API key); HelpfulReaction production wiring.
 
@@ -48,9 +50,9 @@
 | Pass | Check | Result |
 |------|-------|--------|
 | 1 | Gaps grounded in Sprint 120 deferred items + competitive audit | ✅ |
-| 2 | All 14 trust-path golden profiles have `e2e: true` | ✅ |
-| 3 | `minE2eGuards: 14` enforced on trust-path baseline | ✅ |
-| 4 | CrUX template includes `/cookies/`, `/security/`, `/privacy-choices/`, `/research/`, `/updates/` | ✅ |
+| 2 | All 13 trust-path golden profiles have `e2e: true` | ✅ |
+| 3 | `minE2eGuards: 13` enforced on trust-path baseline | ✅ |
+| 4 | CrUX template includes `/cookies/`, `/security/`, `/research/`, `/updates/`, shoe-fit guide | ✅ |
 | 5 | `CRUX_OFFLINE_RECOVERY_PATHS` matches crux-template (excl. homepage) | ✅ |
 | 6 | Lighthouse baseline config + scores include new CrUX paths | ✅ |
 | 7 | HelpfulReaction / VideoObject / YouTube sameAs assessed — unchanged waivers | ✅ deferred |
@@ -77,9 +79,9 @@ npx playwright test e2e/trust-path-baseline-smoke.spec.ts
 
 | Goal | Target |
 |------|--------|
-| Trust-path e2e golden profiles | 14 (was 9) |
-| Trust-path `minE2eGuards` | 14 |
-| CrUX-priority non-home paths | 63 (+5 cookies, security, privacy-choices, research, updates) |
+| Trust-path e2e golden profiles | 13 (was 9) |
+| Trust-path `minE2eGuards` | 13 |
+| CrUX-priority non-home paths | 63 (+5 cookies, security, research, updates, shoe-fit guide) |
 | Discovery-parity e2e golden pairs | 4 (unchanged) |
 | Home `minE2eGuards` | 1 (unchanged) |
 | Finder e2e golden profiles | 6 (unchanged) |

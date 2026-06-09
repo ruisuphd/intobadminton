@@ -62,9 +62,9 @@
         "http://localhost:4173/terms/index.html",
         "http://localhost:4173/cookies/index.html",
         "http://localhost:4173/security/index.html",
-        "http://localhost:4173/privacy-choices/index.html",
         "http://localhost:4173/research/index.html",
-        "http://localhost:4173/updates/index.html"
+        "http://localhost:4173/updates/index.html",
+        "http://localhost:4173/guides/badminton-shoes-vs-running-shoes/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

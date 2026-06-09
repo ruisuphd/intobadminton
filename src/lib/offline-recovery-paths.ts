@@ -314,9 +314,9 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/terms/",
   "/cookies/",
   "/security/",
-  "/privacy-choices/",
   "/research/",
   "/updates/",
+  "/guides/badminton-shoes-vs-running-shoes/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

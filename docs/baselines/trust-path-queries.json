@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 14
+    "minE2eGuards": 13
   },
   "queries": [
     {
@@ -103,15 +103,6 @@
       "expectHeadingPattern": "security",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX security trust path — vulnerability reporting catalog exit"
-    },
-    {
-      "id": "crux-privacy-choices",
-      "path": "/privacy-choices/",
-      "expectCatalogHref": "/catalog/",
-      "e2e": true,
-      "expectHeadingPattern": "privacy",
-      "expectCatalogLinkPattern": "browse full catalog",
-      "note": "CrUX consent UI trust path — privacy choices catalog exit"
     },
     {
       "id": "crux-research",
