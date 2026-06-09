@@ -121,6 +121,8 @@
 
 **Sprint 114 addendum:** Site search e2e completion + editorial e2e guards + discovery CrUX expansion — ✅ site-search e2e 4→26; guides e2e 10→12; `minE2eGuards` on search/guides/tools/brands baselines; `/search/`, sample PDP, `/guides/string-tension/`, `/brands/yonex/`, `/tools/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 115 addendum:** Commercial editorial e2e guards + compare-guides e2e completion + hub CrUX expansion — ✅ `minE2eGuards` on best (23), compare-guides (13), reviews (15); compare-guides e2e 8→13; `/best/`, `/compare-guides/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

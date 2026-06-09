@@ -11,6 +11,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import productsCatalog from "@/data/products.json";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import { blogArticles, getBlogArticle } from "@/lib/blog";
 import { brandReviewSlugs } from "@/lib/brand-reviews";
 import { compareGuideReviewSlugs } from "@/lib/compare-guide-reviews";
@@ -66,6 +67,7 @@ export type ReviewsBaselineQuery = {
 
 export type ReviewsBaselineCoverageSpec = {
   minArticleSlugs?: number;
+  minE2eGuards?: number;
   /** Every article slug in review-product-map-queries must appear here. */
   requireReviewMapParity?: boolean;
   /** Every slug in home-featured-reviews.json must appear here. */
@@ -212,6 +214,8 @@ export function validateReviewsBaselineFile(
     coverage = {
       minArticleSlugs:
         typeof c.minArticleSlugs === "number" ? c.minArticleSlugs : undefined,
+      minE2eGuards:
+        typeof c.minE2eGuards === "number" ? c.minE2eGuards : undefined,
       requireReviewMapParity: c.requireReviewMapParity === true,
       requireFeaturedParity: c.requireFeaturedParity === true,
       requireLighthouseParity: c.requireLighthouseParity === true,
@@ -487,6 +491,18 @@ export function evaluateReviewsBaseline(
 
   const coverageIssue = evaluateReviewsBaselineCoverage(file);
   if (coverageIssue) issues.push(coverageIssue);
+
+  const e2eCoverageIssue = evaluateBaselineE2eCoverage(
+    file.coverage,
+    file.queries,
+    "reviews"
+  );
+  if (e2eCoverageIssue) {
+    issues.push({
+      id: "coverage",
+      message: e2eCoverageIssue.message,
+    });
+  }
 
   for (const query of file.queries) {
     const issue = evaluateReviewsBaselineQuery(query);

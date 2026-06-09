@@ -3,7 +3,8 @@
   "updated": "2026-06-06",
   "coverage": {
     "minCatalogFilterSlugs": 12,
-    "minManifestEntries": 12
+    "minManifestEntries": 12,
+    "minE2eGuards": 13
   },
   "queries": [
     {
@@ -101,6 +102,8 @@
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
       "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "88d",
       "note": "Doubles-oriented duel — racket catalog exit"
     },
     {
@@ -109,6 +112,8 @@
       "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
       "expectMinRelatedReading": 3,
       "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "halbertec",
       "note": "Li-Ning power duel — brand-filtered catalog exit"
     },
     {
@@ -117,6 +122,8 @@
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
       "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "bladex",
       "note": "Speed-frame duel — racket catalog exit"
     },
     {
@@ -125,6 +132,8 @@
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
       "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "nanoflare",
       "note": "Flagship speed duel — racket catalog exit"
     },
     {
@@ -133,6 +142,8 @@
       "expectCatalogHref": "/catalog/?cat=racket",
       "expectMinRelatedReading": 3,
       "expectInManifest": true,
+      "e2e": true,
+      "expectHeadingPattern": "auraspeed",
       "note": "Pro-tier speed duel — racket catalog exit"
     }
   ]

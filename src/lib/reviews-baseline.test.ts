@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { evaluateBaselineE2eCoverage } from "@/lib/baseline-coverage";
 import {
   catalogHrefFromReviewSlug,
   evaluateReviewsBaseline,
@@ -180,6 +181,24 @@ describe("reviews-baseline", () => {
     expect(parsed.file.coverage?.requireBrandReviewParity).toBe(true);
     const result = evaluateReviewsBaseline(parsed.file);
     expect(result.ok).toBe(true);
+  });
+
+  it("enforces minE2eGuards coverage counter", () => {
+    const issue = evaluateBaselineE2eCoverage(
+      { minE2eGuards: 15 },
+      [{ e2e: true }],
+      "reviews"
+    );
+    expect(issue?.message).toContain("minE2eGuards");
+  });
+
+  it("commits minE2eGuards on golden-profile coverage", () => {
+    const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
+    const parsed = validateReviewsBaselineFile(raw);
+    expect(parsed.ok).toBe(true);
+    if (parsed.ok) {
+      expect(parsed.file.coverage?.minE2eGuards).toBe(15);
+    }
   });
 
   it("requires full mapped corpus in committed reviews baseline", () => {
