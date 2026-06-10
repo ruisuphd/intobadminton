@@ -486,6 +486,24 @@
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
+    },
+    "http://localhost:4173/compare-guides/astrox-77-pro-vs-88s-pro/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare-guides/yonex-65z4-vs-eclipsion-z3/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
     }
   },
   "source": "lighthouserc-baseline.json",
