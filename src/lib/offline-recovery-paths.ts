@@ -62,6 +62,11 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — flagship Yonex power vs speed comparison.",
   },
   {
+    href: "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
+    label: "Astrox 99 Pro vs 100ZZ",
+    description: "Precached — Yonex flagship attack racket head-to-head.",
+  },
+  {
     href: "/guides/string-tension/",
     label: "String tension guide",
     description: "Precached — how tension affects control and durability.",
@@ -110,6 +115,21 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     href: "/guides/equipment-authenticity/",
     label: "Authenticity guide",
     description: "Precached — counterfeit checks before you buy.",
+  },
+  {
+    href: "/guides/wide-feet-badminton-shoes/",
+    label: "Wide-feet shoe guide",
+    description: "Precached — fit width and toe-box clearance for badminton shoes.",
+  },
+  {
+    href: "/guides/season-refresh/",
+    label: "Season refresh guide",
+    description: "Precached — when to replace rackets, strings, and shoes.",
+  },
+  {
+    href: "/tools/authenticity-checker/",
+    label: "Authenticity checker",
+    description: "Precached — step-by-step counterfeit racket checks.",
   },
   {
     href: "/brands/bonny/",
@@ -317,6 +337,10 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/research/",
   "/updates/",
   "/guides/badminton-shoes-vs-running-shoes/",
+  "/guides/wide-feet-badminton-shoes/",
+  "/guides/season-refresh/",
+  "/tools/authenticity-checker/",
+  "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(
