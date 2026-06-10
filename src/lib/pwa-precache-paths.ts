@@ -2,6 +2,7 @@
 export const PRECACHE_ASSERT_PATHS = [
   "/quiz/",
   "/catalog/",
+  "/results/",
   "/search/",
   "/saved/",
   "/compare/",

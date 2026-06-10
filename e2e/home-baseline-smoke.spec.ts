@@ -20,6 +20,7 @@ function e2eHomeQueries(): {
   expectHeadingPattern?: string;
   expectCatalogLinkPattern?: string;
   expectFeaturedReviewHrefs?: string[];
+  expectContinueReadingSlot?: boolean;
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validateHomeBaselineFile(raw);
@@ -35,6 +36,7 @@ function e2eHomeQueries(): {
       expectHeadingPattern: q.expectHeadingPattern,
       expectCatalogLinkPattern: q.expectCatalogLinkPattern,
       expectFeaturedReviewHrefs: q.expectFeaturedReviewHrefs,
+      expectContinueReadingSlot: q.expectContinueReadingSlot,
     }));
 }
 
@@ -46,6 +48,7 @@ for (const {
   expectHeadingPattern,
   expectCatalogLinkPattern,
   expectFeaturedReviewHrefs,
+  expectContinueReadingSlot,
 } of e2eHomeQueries()) {
   test(`Home baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
@@ -78,6 +81,10 @@ for (const {
       for (const href of expectFeaturedReviewHrefs) {
         await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
       }
+    }
+
+    if (expectContinueReadingSlot) {
+      await expect(page.locator("[data-home-continue-reading]")).toBeAttached();
     }
   });
 }

@@ -29,6 +29,8 @@ export type HomeBaselineQuery = {
   expectPopularSearchHrefs?: string[];
   /** Review article hrefs that must appear in the homepage featured slice. */
   expectFeaturedReviewHrefs?: string[];
+  /** Homepage must mount the deferred ContinueReading slot (even when empty). */
+  expectContinueReadingSlot?: boolean;
   /** Include in Playwright home baseline e2e smoke. */
   e2e?: boolean;
   /** Case-insensitive substring for h1 assertion in e2e. */
@@ -133,6 +135,7 @@ export function validateHomeBaselineFile(
           : undefined,
       expectPopularSearchHrefs,
       expectFeaturedReviewHrefs,
+      expectContinueReadingSlot: q.expectContinueReadingSlot === true,
       e2e: q.e2e === true,
       expectHeadingPattern:
         typeof q.expectHeadingPattern === "string"

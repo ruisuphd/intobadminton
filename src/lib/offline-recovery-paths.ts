@@ -17,6 +17,11 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — browse rackets, shoes, and strings.",
   },
   {
+    href: "/results/",
+    label: "Finder results",
+    description: "Precached — reopen your latest equipment shortlist.",
+  },
+  {
     href: "/search/",
     label: "Search",
     description: "Precached shell — results need a prior online visit.",
@@ -362,6 +367,9 @@ export const OFFLINE_RECOVERY_LINKS = dedupeOfflineRecoveryLinks([
 export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/quiz/",
   "/catalog/",
+  "/results/",
+  "/compare/",
+  "/saved/",
   "/best/",
   "/best/beginner-rackets/",
   "/best/doubles-rackets/",

@@ -57,6 +57,7 @@
         "/review/bonny-leisu-800-lt-review/"
       ],
       "e2e": true,
+      "expectContinueReadingSlot": true,
       "expectHeadingPattern": "badminton",
       "expectCatalogLinkPattern": "browse full catalog",
       "note": "CrUX priority homepage — full popular-search grid parity (33 chips)"
