@@ -72,7 +72,12 @@
         "http://localhost:4173/guides/racket-balance/index.html",
         "http://localhost:4173/guides/doubles-positioning-and-rackets/index.html",
         "http://localhost:4173/guides/string-feel-vs-durability/index.html",
-        "http://localhost:4173/compare-guides/badminton-vs-tennis-shoes/index.html"
+        "http://localhost:4173/compare-guides/badminton-vs-tennis-shoes/index.html",
+        "http://localhost:4173/guides/shoes-footwork/index.html",
+        "http://localhost:4173/guides/doubles-roles/index.html",
+        "http://localhost:4173/tools/skill-level-converter/index.html",
+        "http://localhost:4173/tools/racket-balance-explainer/index.html",
+        "http://localhost:4173/tools/court-diagram/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

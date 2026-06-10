@@ -92,6 +92,31 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — why court shoes matter for indoor wood courts.",
   },
   {
+    href: "/guides/shoes-footwork/",
+    label: "Shoes and footwork guide",
+    description: "Precached — shoe fit, stability, and court movement.",
+  },
+  {
+    href: "/guides/doubles-roles/",
+    label: "Doubles roles guide",
+    description: "Precached — front/rear court roles and racket fit.",
+  },
+  {
+    href: "/tools/skill-level-converter/",
+    label: "Skill level converter",
+    description: "Precached — BWF, US, UK, and China tier crosswalk.",
+  },
+  {
+    href: "/tools/racket-balance-explainer/",
+    label: "Racket balance explainer",
+    description: "Precached — interactive head-heavy vs head-light slider.",
+  },
+  {
+    href: "/tools/court-diagram/",
+    label: "Court diagram",
+    description: "Precached — singles vs doubles court dimensions.",
+  },
+  {
     href: "/tools/string-tension-calculator/",
     label: "String tension calculator",
     description: "Precached — recommended tension by level and arm comfort.",
@@ -365,6 +390,11 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/guides/doubles-positioning-and-rackets/",
   "/guides/string-feel-vs-durability/",
   "/compare-guides/badminton-vs-tennis-shoes/",
+  "/guides/shoes-footwork/",
+  "/guides/doubles-roles/",
+  "/tools/skill-level-converter/",
+  "/tools/racket-balance-explainer/",
+  "/tools/court-diagram/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(

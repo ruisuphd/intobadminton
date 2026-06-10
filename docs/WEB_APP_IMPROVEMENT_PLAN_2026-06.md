@@ -139,6 +139,8 @@
 
 **Sprint 123 addendum:** Trust-path editorial parity + procedural-guide CrUX expansion — ✅ trust-path e2e 14→17; `minE2eGuards: 17` on trust-path baseline; `/guides/wide-feet-badminton-shoes/` + `/guides/equipment-authenticity/` + `/guides/season-refresh/` in trust-path e2e; `/guides/racket-balance/` + `/guides/doubles-positioning-and-rackets/` + `/guides/string-feel-vs-durability/` + `/compare-guides/badminton-vs-tennis-shoes/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 124 addendum:** Trust-path procedural parity + toolkit CrUX expansion — ✅ trust-path e2e 17→22; `minE2eGuards: 22` on trust-path baseline; `/guides/racket-balance/` + `/guides/doubles-positioning-and-rackets/` + `/guides/string-feel-vs-durability/` + `/guides/glossary/` + `/guides/string-tension/` in trust-path e2e; `/guides/shoes-footwork/` + `/guides/doubles-roles/` + `/tools/skill-level-converter/` + `/tools/racket-balance-explainer/` + `/tools/court-diagram/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

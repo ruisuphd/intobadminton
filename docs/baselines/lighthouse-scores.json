@@ -426,6 +426,36 @@
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
+    },
+    "http://localhost:4173/guides/shoes-footwork/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/guides/doubles-roles/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/tools/skill-level-converter/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/tools/racket-balance-explainer/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/tools/court-diagram/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
     }
   },
   "source": "lighthouserc-baseline.json",
