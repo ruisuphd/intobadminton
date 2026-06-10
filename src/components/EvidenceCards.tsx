@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { catalogProductById } from "@/lib/catalog-products";
 import { getEvidenceForProduct } from "@/lib/review-evidence";
 import {
   parseYoutubeWatchId,
-  youtubeEvidenceForProduct,
+  youtubeEvidenceForProductId,
 } from "@/lib/youtube-evidence";
 
 function YoutubeEvidenceCard({
@@ -60,8 +59,7 @@ function YoutubeEvidenceCard({
 }
 
 export function EvidenceCards({ productId }: { productId: string }) {
-  const product = catalogProductById(productId);
-  const youtube = product ? youtubeEvidenceForProduct(product) : null;
+  const youtube = youtubeEvidenceForProductId(productId);
   const youtubeWatchId = youtube ? parseYoutubeWatchId(youtube.watchUrl) : null;
 
   const rows = getEvidenceForProduct(productId)

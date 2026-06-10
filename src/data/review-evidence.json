@@ -160,6 +160,22 @@
     "rightsNote": "Link and summarize at high level only; do not reproduce video transcript."
   },
   {
+    "id": "yt-exbolt-63-2026-review-1",
+    "productId": "yy-exbolt-63",
+    "sourceName": "YouTube creator review reference",
+    "platform": "youtube",
+    "language": "en",
+    "sourceUrl": "https://www.youtube.com/watch?v=DbQyBZt3FWs",
+    "sourceKind": "search_result_metadata",
+    "displayPolicy": "metadata_summary_link_only",
+    "themes": ["repulsion", "sound", "control"],
+    "sentiment": 1,
+    "confidence": 0.45,
+    "summary": "Creator-review metadata highlights EXBOLT 63's crisp repulsion and distinctive sound, with control improving after a short adjustment window.",
+    "collectedAt": "2026-04-28",
+    "rightsNote": "Link and summarize at high level only; do not reproduce video transcript."
+  },
+  {
     "id": "reddit-exbolt-63-2026-search-1",
     "productId": "yy-exbolt-63",
     "sourceName": "Reddit string discussion",

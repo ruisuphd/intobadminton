@@ -3,6 +3,7 @@ import { catalogProductById } from "@/lib/catalog-products";
 import {
   parseYoutubeWatchId,
   youtubeEvidenceForProduct,
+  youtubeEvidenceForProductId,
 } from "@/lib/youtube-evidence";
 
 describe("youtube evidence", () => {
@@ -26,5 +27,11 @@ describe("youtube evidence", () => {
     expect(product).toBeTruthy();
     const ref = youtubeEvidenceForProduct(product!);
     expect(ref?.videoId).toBe("DbQyBZt3FWs");
+  });
+
+  it("resolves EXBOLT 63 via productId without full catalogue import", () => {
+    const ref = youtubeEvidenceForProductId("yy-exbolt-63");
+    expect(ref?.videoId).toBe("DbQyBZt3FWs");
+    expect(ref?.name).toContain("EXBOLT 63");
   });
 });
