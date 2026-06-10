@@ -51,6 +51,31 @@ test("service worker precaches search, review, and offline shells", async ({
   }
 });
 
+test("precached product-funnel shells load offline after prior visit", async ({
+  page,
+  context,
+}) => {
+  await ensureServiceWorker(page);
+
+  const funnelRoutes: { path: string; heading: RegExp; level?: 1 | 2 }[] = [
+    { path: "/results/", heading: /equipment shortlist/i, level: 1 },
+    { path: "/compare/", heading: /compare gear/i, level: 2 },
+    { path: "/saved/", heading: /saved shelf/i, level: 1 },
+  ];
+
+  for (const { path, heading, level = 1 } of funnelRoutes) {
+    await page.goto(path);
+    await expect(page.getByRole("heading", { level })).toContainText(heading);
+  }
+
+  await context.setOffline(true);
+
+  for (const { path, heading, level = 1 } of funnelRoutes) {
+    await page.goto(path);
+    await expect(page.getByRole("heading", { level })).toContainText(heading);
+  }
+});
+
 test("precached commercial and guide pages load offline after prior visit", async ({
   page,
   context,

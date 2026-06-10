@@ -9,7 +9,7 @@ import {
 import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { relatedReadingForProductCategory } from "@/lib/related-content";
-import { companyInfo } from "@/lib/company";
+import { buildPdpProductJsonLd } from "@/lib/pdp-baseline";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
 import {
   editorialReviewHref,
@@ -27,21 +27,7 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
     product.id
   );
 
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${companyInfo.siteUrl}${path}#product`,
-    name: `${product.brand} ${product.name}`,
-    brand: { "@type": "Brand", name: product.brand },
-    category: product.category,
-    offers: {
-      "@type": "Offer",
-      price: product.priceUsd,
-      priceCurrency: "USD",
-      url: product.officialSourceUrl,
-      availability: "https://schema.org/InStock",
-    },
-  };
+  const productJsonLd = buildPdpProductJsonLd(product, path);
 
   return (
     <main className="flex-1 py-12">

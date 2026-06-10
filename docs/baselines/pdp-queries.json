@@ -78,6 +78,7 @@
       "expectReviewKind": "guide",
       "expectMinSpecRows": 4,
       "expectMinRelatedReading": 3,
+      "expectVideoObjectJsonLd": true,
       "e2e": true,
       "note": "Yonex EXBOLT 63 exits to string-selector explainer with guide CTA on PDP"
     },
@@ -803,6 +804,7 @@
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,
+      "expectVideoObjectJsonLd": true,
       "note": "Astrox 88D Pro (2024)",
       "e2e": true
     },

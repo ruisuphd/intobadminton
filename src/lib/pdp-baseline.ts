@@ -16,7 +16,9 @@ import {
 import { relatedReadingForProductCategory } from "@/lib/related-content";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
 import { companyInfo } from "@/lib/company";
+import { videoObjectJsonLd } from "@/lib/structured-data";
 import type { ProductRecord } from "@/lib/types/product";
+import { youtubeEvidenceForProduct } from "@/lib/youtube-evidence";
 
 export type PdpBaselineQuery = {
   /** Stable id for logs and e2e test titles. */
@@ -33,6 +35,8 @@ export type PdpBaselineQuery = {
   expectMinRelatedReading?: number;
   /** Product JSON-LD must build with @type Product and offers. */
   expectProductJsonLd?: boolean;
+  /** Product JSON-LD must include subjectOf VideoObject for YouTube evidence. */
+  expectVideoObjectJsonLd?: boolean;
   /** catalogHrefFromProduct must include this substring. */
   expectCatalogHrefContains?: string;
   /** Include in Playwright PDP baseline e2e smoke. */
@@ -79,7 +83,7 @@ export function reviewSlugForProductId(
 }
 
 export function buildPdpProductJsonLd(product: ProductRecord, path: string) {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
     "@id": `${companyInfo.siteUrl}${path}#product`,
@@ -94,6 +98,13 @@ export function buildPdpProductJsonLd(product: ProductRecord, path: string) {
       availability: "https://schema.org/InStock",
     },
   };
+
+  const youtube = youtubeEvidenceForProduct(product);
+  if (youtube) {
+    schema.subjectOf = videoObjectJsonLd({ product, path, evidence: youtube });
+  }
+
+  return schema;
 }
 
 export function validatePdpBaselineFile(
@@ -151,6 +162,7 @@ export function validatePdpBaselineFile(
           ? q.expectMinRelatedReading
           : undefined,
       expectProductJsonLd: q.expectProductJsonLd === true,
+      expectVideoObjectJsonLd: q.expectVideoObjectJsonLd === true,
       expectCatalogHrefContains:
         typeof q.expectCatalogHrefContains === "string"
           ? q.expectCatalogHrefContains
@@ -281,7 +293,7 @@ export function evaluatePdpBaselineQuery(
     }
   }
 
-  if (spec.expectProductJsonLd) {
+  if (spec.expectProductJsonLd || spec.expectVideoObjectJsonLd) {
     const path = `/product/${product.id}/`;
     const schema = buildPdpProductJsonLd(product, path);
     if (schema["@type"] !== "Product") {
@@ -291,13 +303,35 @@ export function evaluatePdpBaselineQuery(
         note: spec.note,
       };
     }
-    const offers = schema.offers as Record<string, unknown> | undefined;
-    if (offers?.["@type"] !== "Offer") {
-      return {
-        id: spec.id,
-        message: "Product JSON-LD missing nested Offer node",
-        note: spec.note,
-      };
+    if (spec.expectProductJsonLd) {
+      const offers = schema.offers as Record<string, unknown> | undefined;
+      if (offers?.["@type"] !== "Offer") {
+        return {
+          id: spec.id,
+          message: "Product JSON-LD missing nested Offer node",
+          note: spec.note,
+        };
+      }
+    }
+    if (spec.expectVideoObjectJsonLd) {
+      const subjectOf = schema.subjectOf as Record<string, unknown> | undefined;
+      if (subjectOf?.["@type"] !== "VideoObject") {
+        return {
+          id: spec.id,
+          message: "Product JSON-LD missing subjectOf VideoObject for YouTube evidence",
+          note: spec.note,
+        };
+      }
+      if (
+        typeof subjectOf.contentUrl !== "string" ||
+        typeof subjectOf.embedUrl !== "string"
+      ) {
+        return {
+          id: spec.id,
+          message: "VideoObject JSON-LD missing contentUrl/embedUrl",
+          note: spec.note,
+        };
+      }
     }
   }
 
