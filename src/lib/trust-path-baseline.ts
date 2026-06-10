@@ -2,7 +2,9 @@
  * Golden-profile regression guard for E-E-A-T trust paths:
  * `/about/`, `/sources/`, `/data/`, `/authors/rui-su/`, `/source-policy/`, `/faq/`,
  * `/authors/`, `/methodology/`, `/contact/`, `/cookies/`, `/security/`,
- * `/research/`, `/updates/`, `/guides/badminton-shoes-vs-running-shoes/`.
+ * `/research/`, `/updates/`, `/guides/badminton-shoes-vs-running-shoes/`,
+ * `/guides/wide-feet-badminton-shoes/`, `/guides/equipment-authenticity/`,
+ * `/guides/season-refresh/`.
  *
  * Ensures committed paths resolve catalog exits and stay in the CrUX
  * monitoring + Playwright e2e smoke set.

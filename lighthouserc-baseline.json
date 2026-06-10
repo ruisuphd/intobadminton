@@ -68,7 +68,11 @@
         "http://localhost:4173/guides/wide-feet-badminton-shoes/index.html",
         "http://localhost:4173/guides/season-refresh/index.html",
         "http://localhost:4173/tools/authenticity-checker/index.html",
-        "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html"
+        "http://localhost:4173/compare-guides/astrox-99-pro-vs-astrox-100zz/index.html",
+        "http://localhost:4173/guides/racket-balance/index.html",
+        "http://localhost:4173/guides/doubles-positioning-and-rackets/index.html",
+        "http://localhost:4173/guides/string-feel-vs-durability/index.html",
+        "http://localhost:4173/compare-guides/badminton-vs-tennis-shoes/index.html"
       ],
       "numberOfRuns": 1,
       "settings": {

@@ -402,6 +402,30 @@
       "accessibility": 0.96,
       "best-practices": 1,
       "seo": 1
+    },
+    "http://localhost:4173/guides/racket-balance/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/guides/doubles-positioning-and-rackets/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/guides/string-feel-vs-durability/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare-guides/badminton-vs-tennis-shoes/index.html": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
     }
   },
   "source": "lighthouserc-baseline.json",
