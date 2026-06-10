@@ -143,6 +143,8 @@
 
 **Sprint 125 addendum:** Trust-path shoe/doubles parity + flagship compare-guide CrUX expansion — ✅ trust-path e2e 22→24; `minE2eGuards: 24` on trust-path baseline; `/guides/shoes-footwork/` + `/guides/doubles-roles/` in trust-path e2e; five flagship `/compare-guides/*` duels in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 126 addendum:** Long-tail compare-guide CrUX completion — ✅ three remaining `/compare-guides/*` duels (77 Pro vs 88S Pro, 65 Z4 vs Eclipsion Z3, Nanoflare 800 Pro vs Auraspeed HS Plus) in `crux-template.csv`, offline recovery, lighthouse baseline; compare-guide CrUX coverage 10/13→13/13.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

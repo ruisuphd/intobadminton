@@ -117,6 +117,21 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — doubles rear-court attack racket comparison.",
   },
   {
+    href: "/compare-guides/astrox-77-pro-vs-88s-pro/",
+    label: "Astrox 77 Pro vs Astrox 88S Pro",
+    description: "Precached — even-balance Yonex singles alternatives head-to-head.",
+  },
+  {
+    href: "/compare-guides/yonex-65z4-vs-eclipsion-z3/",
+    label: "Yonex 65 Z4 vs Eclipsion Z3",
+    description: "Precached — Yonex court-shoe flagship duel for indoor wood courts.",
+  },
+  {
+    href: "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/",
+    label: "Nanoflare 800 Pro vs Auraspeed HS Plus",
+    description: "Precached — pro-tier speed-frame Yonex vs Victor duel.",
+  },
+  {
     href: "/guides/shoes-footwork/",
     label: "Shoes and footwork guide",
     description: "Precached — shoe fit, stability, and court movement.",
@@ -425,6 +440,9 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
   "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
   "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
+  "/compare-guides/astrox-77-pro-vs-88s-pro/",
+  "/compare-guides/yonex-65z4-vs-eclipsion-z3/",
+  "/compare-guides/nanoflare-800-pro-vs-auraspeed-hs-plus/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(
