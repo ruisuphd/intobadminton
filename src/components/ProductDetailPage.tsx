@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArticleEngagementFooter } from "@/components/ArticleEngagementFooter";
+import { EvidenceCards } from "@/components/EvidenceCards";
 import { JsonLd } from "@/components/JsonLd";
 import { ProductDetailActions } from "@/components/ProductDetailActions";
 import {
@@ -129,6 +130,8 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
             for verification tiers.
           </p>
         </section>
+
+        <EvidenceCards productId={product.id} />
 
         <RelatedReadingShelf items={related} />
 

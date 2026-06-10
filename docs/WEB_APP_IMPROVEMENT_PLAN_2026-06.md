@@ -149,6 +149,8 @@
 
 **Sprint 128 addendum:** VideoObject PDP schema + product-funnel PWA offline e2e — ✅ `subjectOf` VideoObject on two YouTube-backed PDPs; `youtube-evidence.ts` helper; `expectVideoObjectJsonLd` PDP baseline guards; offline navigation e2e for `/results/`, `/compare/`, `/saved/`.
 
+**Sprint 129 addendum:** PDP creator-video evidence UI — ✅ `EvidenceCards` on `/product/[id]/` with YouTube thumbnail card; `expectEvidenceSection` + `expectYoutubeEvidenceUi` PDP baseline guards; Playwright smoke for creator-video link on two VideoObject PDPs.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -937,7 +939,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Compare-guide duel CrUX expansion** — five flagship duels in crux-template + offline recovery + lighthouse baseline
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md)
 
-### Next (Sprint 129+)
+### Next (Sprint 130+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim

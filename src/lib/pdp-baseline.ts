@@ -18,6 +18,7 @@ import { specRowsForProduct } from "@/lib/product-spec-rows";
 import { companyInfo } from "@/lib/company";
 import { videoObjectJsonLd } from "@/lib/structured-data";
 import type { ProductRecord } from "@/lib/types/product";
+import { getEvidenceForProduct } from "@/lib/review-evidence";
 import { youtubeEvidenceForProduct } from "@/lib/youtube-evidence";
 
 export type PdpBaselineQuery = {
@@ -37,6 +38,10 @@ export type PdpBaselineQuery = {
   expectProductJsonLd?: boolean;
   /** Product JSON-LD must include subjectOf VideoObject for YouTube evidence. */
   expectVideoObjectJsonLd?: boolean;
+  /** PDP must render the evidence references section (YouTube and/or community rows). */
+  expectEvidenceSection?: boolean;
+  /** PDP evidence section must include a creator-video card (matches VideoObject). */
+  expectYoutubeEvidenceUi?: boolean;
   /** catalogHrefFromProduct must include this substring. */
   expectCatalogHrefContains?: string;
   /** Include in Playwright PDP baseline e2e smoke. */
@@ -163,6 +168,8 @@ export function validatePdpBaselineFile(
           : undefined,
       expectProductJsonLd: q.expectProductJsonLd === true,
       expectVideoObjectJsonLd: q.expectVideoObjectJsonLd === true,
+      expectEvidenceSection: q.expectEvidenceSection === true,
+      expectYoutubeEvidenceUi: q.expectYoutubeEvidenceUi === true,
       expectCatalogHrefContains:
         typeof q.expectCatalogHrefContains === "string"
           ? q.expectCatalogHrefContains
@@ -341,6 +348,30 @@ export function evaluatePdpBaselineQuery(
       return {
         id: spec.id,
         message: `catalog href "${href}" missing "${spec.expectCatalogHrefContains}"`,
+        note: spec.note,
+      };
+    }
+  }
+
+  if (spec.expectEvidenceSection || spec.expectYoutubeEvidenceUi) {
+    const youtube = youtubeEvidenceForProduct(product);
+    const communityCount = getEvidenceForProduct(product.id).length;
+    const hasEvidence = Boolean(youtube) || communityCount > 0;
+
+    if (spec.expectEvidenceSection && !hasEvidence) {
+      return {
+        id: spec.id,
+        message:
+          "PDP evidence section expected but product has no YouTube or community evidence rows",
+        note: spec.note,
+      };
+    }
+
+    if (spec.expectYoutubeEvidenceUi && !youtube) {
+      return {
+        id: spec.id,
+        message:
+          "PDP creator-video evidence expected but youtubeEvidenceForProduct returned null",
         note: spec.note,
       };
     }
