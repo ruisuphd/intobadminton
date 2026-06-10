@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-06-09",
+  "capturedAt": "2026-06-10",
   "urls": {
     "http://localhost:4173/index.html": {
       "performance": 1,
@@ -16,6 +16,24 @@
     "http://localhost:4173/catalog/index.html": {
       "performance": 0.93,
       "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/results/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/compare/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "http://localhost:4173/saved/index.html": {
+      "performance": 1,
+      "accessibility": 0.93,
       "best-practices": 1,
       "seo": 1
     },

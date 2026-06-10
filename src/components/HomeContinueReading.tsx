@@ -11,5 +11,9 @@ const ContinueReading = dynamic(
 
 /** Defers shortlist + last-read UI so the homepage initial bundle stays lean. */
 export function HomeContinueReading({ locale }: { locale: SiteLocale }) {
-  return <ContinueReading locale={locale} />;
+  return (
+    <div data-home-continue-reading="">
+      <ContinueReading locale={locale} />
+    </div>
+  );
 }

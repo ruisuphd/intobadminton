@@ -145,6 +145,8 @@
 
 **Sprint 126 addendum:** Long-tail compare-guide CrUX completion — ✅ three remaining `/compare-guides/*` duels (77 Pro vs 88S Pro, 65 Z4 vs Eclipsion Z3, Nanoflare 800 Pro vs Auraspeed HS Plus) in `crux-template.csv`, offline recovery, lighthouse baseline; compare-guide CrUX coverage 10/13→13/13.
 
+**Sprint 127 addendum:** Product-funnel CrUX completion — ✅ `/results/`, `/compare/`, `/saved/` in `crux-template.csv`, offline recovery, lighthouse baseline; `/results/` PWA precache (`ib-v33`); home baseline `expectContinueReadingSlot` e2e guard; product-funnel CrUX coverage 0/3→3/3.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -933,7 +935,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Compare-guide duel CrUX expansion** — five flagship duels in crux-template + offline recovery + lighthouse baseline
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md)
 
-### Next (Sprint 126+)
+### Next (Sprint 128+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
