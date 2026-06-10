@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-10",
   "coverage": {
-    "minE2eGuards": 22
+    "minE2eGuards": 24
   },
   "queries": [
     {
@@ -202,6 +202,24 @@
       "expectHeadingPattern": "tension",
       "expectCatalogLinkPattern": "browse strings in catalog",
       "note": "CrUX string procedural trust path — tension guide catalog exit"
+    },
+    {
+      "id": "crux-shoes-footwork",
+      "path": "/guides/shoes-footwork/",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "e2e": true,
+      "expectHeadingPattern": "footwork",
+      "expectCatalogLinkPattern": "browse shoes in catalog",
+      "note": "CrUX shoe procedural trust path — shoes-footwork guide catalog exit"
+    },
+    {
+      "id": "crux-doubles-roles",
+      "path": "/guides/doubles-roles/",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "roles",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "note": "CrUX doubles procedural trust path — doubles-roles guide catalog exit"
     }
   ]
 }

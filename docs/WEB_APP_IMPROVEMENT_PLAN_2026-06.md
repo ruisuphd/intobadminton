@@ -141,6 +141,8 @@
 
 **Sprint 124 addendum:** Trust-path procedural parity + toolkit CrUX expansion — ✅ trust-path e2e 17→22; `minE2eGuards: 22` on trust-path baseline; `/guides/racket-balance/` + `/guides/doubles-positioning-and-rackets/` + `/guides/string-feel-vs-durability/` + `/guides/glossary/` + `/guides/string-tension/` in trust-path e2e; `/guides/shoes-footwork/` + `/guides/doubles-roles/` + `/tools/skill-level-converter/` + `/tools/racket-balance-explainer/` + `/tools/court-diagram/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 125 addendum:** Trust-path shoe/doubles parity + flagship compare-guide CrUX expansion — ✅ trust-path e2e 22→24; `minE2eGuards: 24` on trust-path baseline; `/guides/shoes-footwork/` + `/guides/doubles-roles/` in trust-path e2e; five flagship `/compare-guides/*` duels in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -923,7 +925,13 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **CrUX procedural expansion** — racket-balance, doubles-positioning, string-feel guides + badminton-vs-tennis-shoes compare in crux-template
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT123_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT123_2026-06.md)
 
-### Next (Sprint 124+)
+### Sprint 125 — This branch (`cursor/web-app-improvement-plan-23d9`)
+
+- **Trust-path procedural parity** — shoes-footwork + doubles-roles guides in trust-path e2e (`minE2eGuards: 24`)
+- **Compare-guide duel CrUX expansion** — five flagship duels in crux-template + offline recovery + lighthouse baseline
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md)
+
+### Next (Sprint 126+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
