@@ -20,8 +20,8 @@ describe("trust-path-baseline", () => {
     const parsed = validateTrustPathBaselineFile(raw);
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
-      expect(parsed.file.queries.length).toBe(22);
-      expect(parsed.file.coverage?.minE2eGuards).toBe(22);
+      expect(parsed.file.queries.length).toBe(24);
+      expect(parsed.file.coverage?.minE2eGuards).toBe(24);
     }
   });
 

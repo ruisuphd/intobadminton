@@ -92,6 +92,31 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — why court shoes matter for indoor wood courts.",
   },
   {
+    href: "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/",
+    label: "Astrox 99 Pro vs Halbertec 9000 Power",
+    description: "Precached — Yonex vs Li-Ning singles attack flagship duel.",
+  },
+  {
+    href: "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/",
+    label: "Halbertec 9000 Power vs AxForce 100 Gen 2",
+    description: "Precached — Li-Ning attack flagship head-to-head.",
+  },
+  {
+    href: "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
+    label: "Bladex 800 Speed vs Nanoflare 1000Z",
+    description: "Precached — Li-Ning vs Yonex speed-frame flagship duel.",
+  },
+  {
+    href: "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
+    label: "Nanoflare 1000Z vs Auraspeed 99",
+    description: "Precached — Yonex vs Victor speed-series flagship duel.",
+  },
+  {
+    href: "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
+    label: "Astrox 88D Pro vs AxForce 90 New",
+    description: "Precached — doubles rear-court attack racket comparison.",
+  },
+  {
     href: "/guides/shoes-footwork/",
     label: "Shoes and footwork guide",
     description: "Precached — shoe fit, stability, and court movement.",
@@ -395,6 +420,11 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/tools/skill-level-converter/",
   "/tools/racket-balance-explainer/",
   "/tools/court-diagram/",
+  "/compare-guides/astrox-99-pro-vs-halbertec-9000-power/",
+  "/compare-guides/halbertec-9000-power-vs-axforce-100-gen-2/",
+  "/compare-guides/bladex-800-speed-vs-nanoflare-1000z/",
+  "/compare-guides/nanoflare-1000z-vs-auraspeed-99/",
+  "/compare-guides/astrox-88d-pro-vs-axforce-90-new/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(
