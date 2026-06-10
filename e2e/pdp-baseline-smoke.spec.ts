@@ -16,6 +16,7 @@ function e2ePdpPaths(): {
   path: string;
   expectReviewSlug?: string;
   expectReviewKind?: "review" | "guide";
+  expectYoutubeEvidencePanel?: boolean;
 }[] {
   const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
   const parsed = validatePdpBaselineFile(raw);
@@ -28,10 +29,17 @@ function e2ePdpPaths(): {
       path: `/product/${q.productId}/`,
       expectReviewSlug: q.expectReviewSlug,
       expectReviewKind: q.expectReviewKind,
+      expectYoutubeEvidencePanel: q.expectYoutubeEvidencePanel,
     }));
 }
 
-for (const { id, path, expectReviewSlug, expectReviewKind } of e2ePdpPaths()) {
+for (const {
+  id,
+  path,
+  expectReviewSlug,
+  expectReviewKind,
+  expectYoutubeEvidencePanel,
+} of e2ePdpPaths()) {
   test(`PDP baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
 
@@ -60,6 +68,15 @@ for (const { id, path, expectReviewSlug, expectReviewKind } of e2ePdpPaths()) {
       await expect(
         page.getByRole("link", { name: reviewLinkLabel })
       ).toHaveAttribute("href", `/review/${expectReviewSlug}/`);
+    }
+
+    if (expectYoutubeEvidencePanel) {
+      await expect(
+        page.getByRole("heading", { name: "Creator review reference" })
+      ).toBeVisible();
+      await expect(
+        page.getByRole("link", { name: /Watch on YouTube/i }).first()
+      ).toBeVisible();
     }
   });
 }

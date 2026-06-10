@@ -21,10 +21,12 @@ describe("youtube evidence", () => {
     expect(ref?.sourceName).toContain("YouTube");
   });
 
-  it("falls back to sourceUrls for EXBOLT 63", () => {
+  it("prefers review-evidence rows for EXBOLT 63", () => {
     const product = catalogProductById("yy-exbolt-63");
     expect(product).toBeTruthy();
     const ref = youtubeEvidenceForProduct(product!);
     expect(ref?.videoId).toBe("DbQyBZt3FWs");
+    expect(ref?.sourceName).toContain("YouTube");
+    expect(ref?.description).toContain("EXBOLT 63");
   });
 });

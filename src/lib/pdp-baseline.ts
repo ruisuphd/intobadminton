@@ -37,6 +37,8 @@ export type PdpBaselineQuery = {
   expectProductJsonLd?: boolean;
   /** Product JSON-LD must include subjectOf VideoObject for YouTube evidence. */
   expectVideoObjectJsonLd?: boolean;
+  /** PDP must render the visible creator-review reference panel. */
+  expectYoutubeEvidencePanel?: boolean;
   /** catalogHrefFromProduct must include this substring. */
   expectCatalogHrefContains?: string;
   /** Include in Playwright PDP baseline e2e smoke. */
@@ -163,6 +165,7 @@ export function validatePdpBaselineFile(
           : undefined,
       expectProductJsonLd: q.expectProductJsonLd === true,
       expectVideoObjectJsonLd: q.expectVideoObjectJsonLd === true,
+      expectYoutubeEvidencePanel: q.expectYoutubeEvidencePanel === true,
       expectCatalogHrefContains:
         typeof q.expectCatalogHrefContains === "string"
           ? q.expectCatalogHrefContains
@@ -341,6 +344,25 @@ export function evaluatePdpBaselineQuery(
       return {
         id: spec.id,
         message: `catalog href "${href}" missing "${spec.expectCatalogHrefContains}"`,
+        note: spec.note,
+      };
+    }
+  }
+
+  if (spec.expectYoutubeEvidencePanel) {
+    const youtube = youtubeEvidenceForProduct(product);
+    if (!youtube) {
+      return {
+        id: spec.id,
+        message:
+          "expectYoutubeEvidencePanel set but product has no YouTube evidence",
+        note: spec.note,
+      };
+    }
+    if (!youtube.watchUrl || !youtube.thumbnailUrl) {
+      return {
+        id: spec.id,
+        message: "YouTube evidence missing watchUrl or thumbnailUrl",
         note: spec.note,
       };
     }

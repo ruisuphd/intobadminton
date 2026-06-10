@@ -149,6 +149,8 @@
 
 **Sprint 128 addendum:** VideoObject PDP schema + product-funnel PWA offline e2e — ✅ `subjectOf` VideoObject on two YouTube-backed PDPs; `youtube-evidence.ts` helper; `expectVideoObjectJsonLd` PDP baseline guards; offline navigation e2e for `/results/`, `/compare/`, `/saved/`.
 
+**Sprint 129 addendum:** Visible YouTube creator evidence on PDP — ✅ `YoutubeEvidencePanel` with thumbnail + watch link; EXBOLT 63 YouTube row in `review-evidence.json`; `expectYoutubeEvidencePanel` PDP baseline + e2e guards on two video-backed SKUs.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---

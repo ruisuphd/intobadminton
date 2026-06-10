@@ -160,6 +160,22 @@
     "rightsNote": "Link and summarize at high level only; do not reproduce video transcript."
   },
   {
+    "id": "yt-exbolt-63-review-1",
+    "productId": "yy-exbolt-63",
+    "sourceName": "YouTube creator review reference",
+    "platform": "youtube",
+    "language": "en",
+    "sourceUrl": "https://www.youtube.com/watch?v=DbQyBZt3FWs",
+    "sourceKind": "search_result_metadata",
+    "displayPolicy": "metadata_summary_link_only",
+    "themes": ["repulsion", "control", "string_feel"],
+    "sentiment": 1,
+    "confidence": 0.44,
+    "summary": "Creator-review metadata highlights EXBOLT 63's repulsion and crisp feel versus control-oriented alternatives, with adjustment time as a common caveat.",
+    "collectedAt": "2026-06-10",
+    "rightsNote": "Link and summarize at high level only; do not reproduce video transcript."
+  },
+  {
     "id": "reddit-exbolt-63-2026-search-1",
     "productId": "yy-exbolt-63",
     "sourceName": "Reddit string discussion",
