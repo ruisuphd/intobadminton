@@ -4,7 +4,9 @@
  * `/authors/`, `/methodology/`, `/contact/`, `/cookies/`, `/security/`,
  * `/research/`, `/updates/`, `/guides/badminton-shoes-vs-running-shoes/`,
  * `/guides/wide-feet-badminton-shoes/`, `/guides/equipment-authenticity/`,
- * `/guides/season-refresh/`.
+ * `/guides/season-refresh/`, `/guides/racket-balance/`,
+ * `/guides/doubles-positioning-and-rackets/`, `/guides/string-feel-vs-durability/`,
+ * `/guides/glossary/`, `/guides/string-tension/`.
  *
  * Ensures committed paths resolve catalog exits and stay in the CrUX
  * monitoring + Playwright e2e smoke set.

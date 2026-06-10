@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-06-09",
+  "updated": "2026-06-10",
   "coverage": {
-    "minE2eGuards": 17
+    "minE2eGuards": 22
   },
   "queries": [
     {
@@ -157,6 +157,51 @@
       "expectHeadingPattern": "refresh",
       "expectCatalogLinkPattern": "browse matching catalog",
       "note": "CrUX freshness editorial trust path — season refresh full catalog exit"
+    },
+    {
+      "id": "crux-racket-balance",
+      "path": "/guides/racket-balance/",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "balance",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "note": "CrUX procedural trust path — racket balance education catalog exit"
+    },
+    {
+      "id": "crux-doubles-positioning",
+      "path": "/guides/doubles-positioning-and-rackets/",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "doubles",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "note": "CrUX doubles procedural trust path — positioning guide catalog exit"
+    },
+    {
+      "id": "crux-string-feel",
+      "path": "/guides/string-feel-vs-durability/",
+      "expectCatalogHref": "/catalog/?cat=string",
+      "e2e": true,
+      "expectHeadingPattern": "feel",
+      "expectCatalogLinkPattern": "browse strings in catalog",
+      "note": "CrUX string education trust path — feel vs durability catalog exit"
+    },
+    {
+      "id": "crux-glossary",
+      "path": "/guides/glossary/",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "glossary",
+      "expectCatalogLinkPattern": "browse full catalog",
+      "note": "CrUX glossary trust path — homepage popular-search editorial catalog exit"
+    },
+    {
+      "id": "crux-string-tension",
+      "path": "/guides/string-tension/",
+      "expectCatalogHref": "/catalog/?cat=string",
+      "e2e": true,
+      "expectHeadingPattern": "tension",
+      "expectCatalogLinkPattern": "browse strings in catalog",
+      "note": "CrUX string procedural trust path — tension guide catalog exit"
     }
   ]
 }
