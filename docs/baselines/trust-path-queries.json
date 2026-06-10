@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-06-09",
   "coverage": {
-    "minE2eGuards": 14
+    "minE2eGuards": 17
   },
   "queries": [
     {
@@ -130,6 +130,33 @@
       "expectHeadingPattern": "running",
       "expectCatalogLinkPattern": "browse shoes in catalog",
       "note": "CrUX shoe-fit editorial trust path — homepage popular-search shoes catalog exit"
+    },
+    {
+      "id": "crux-wide-feet-guide",
+      "path": "/guides/wide-feet-badminton-shoes/",
+      "expectCatalogHref": "/catalog/?cat=shoes",
+      "e2e": true,
+      "expectHeadingPattern": "wide feet",
+      "expectCatalogLinkPattern": "browse shoes in catalog",
+      "note": "CrUX wide-feet editorial trust path — homepage popular-search shoes catalog exit"
+    },
+    {
+      "id": "crux-equipment-authenticity",
+      "path": "/guides/equipment-authenticity/",
+      "expectCatalogHref": "/catalog/?cat=racket",
+      "e2e": true,
+      "expectHeadingPattern": "authentic",
+      "expectCatalogLinkPattern": "browse rackets in catalog",
+      "note": "CrUX authenticity editorial trust path — homepage popular-search counterfeit catalog exit"
+    },
+    {
+      "id": "crux-season-refresh",
+      "path": "/guides/season-refresh/",
+      "expectCatalogHref": "/catalog/",
+      "e2e": true,
+      "expectHeadingPattern": "refresh",
+      "expectCatalogLinkPattern": "browse matching catalog",
+      "note": "CrUX freshness editorial trust path — season refresh full catalog exit"
     }
   ]
 }

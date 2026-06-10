@@ -137,6 +137,8 @@
 
 **Sprint 122 addendum:** Trust-path e2e completion + editorial-cluster CrUX expansion — ✅ trust-path e2e 13→14; `minE2eGuards: 14` on trust-path baseline; `/guides/badminton-shoes-vs-running-shoes/` in trust-path e2e; `/guides/wide-feet-badminton-shoes/` + `/guides/season-refresh/` + `/tools/authenticity-checker/` + `/compare-guides/astrox-99-pro-vs-astrox-100zz/` in `crux-template.csv`, offline recovery, lighthouse baseline.
 
+**Sprint 123 addendum:** Trust-path editorial parity + procedural-guide CrUX expansion — ✅ trust-path e2e 14→17; `minE2eGuards: 17` on trust-path baseline; `/guides/wide-feet-badminton-shoes/` + `/guides/equipment-authenticity/` + `/guides/season-refresh/` in trust-path e2e; `/guides/racket-balance/` + `/guides/doubles-positioning-and-rackets/` + `/guides/string-feel-vs-durability/` + `/compare-guides/badminton-vs-tennis-shoes/` in `crux-template.csv`, offline recovery, lighthouse baseline.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -913,7 +915,13 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **PDP shuttle golden profiles** — six rows in `pdp-queries.json`; AS-50 + Carbonsonic with e2e
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT104_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT104_2026-06.md)
 
-### Next (Sprint 105+)
+### Sprint 123 — This branch (`cursor/web-app-improvement-plan-39e3`)
+
+- **Trust-path editorial parity** — wide-feet, equipment-authenticity, season-refresh guides in trust-path e2e (`minE2eGuards: 17`)
+- **CrUX procedural expansion** — racket-balance, doubles-positioning, string-feel guides + badminton-vs-tennis-shoes compare in crux-template
+- See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT123_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT123_2026-06.md)
+
+### Next (Sprint 124+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim

@@ -72,6 +72,26 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached — how tension affects control and durability.",
   },
   {
+    href: "/guides/racket-balance/",
+    label: "Racket balance guide",
+    description: "Precached — head balance, shaft flex, and swing speed.",
+  },
+  {
+    href: "/guides/doubles-positioning-and-rackets/",
+    label: "Doubles positioning guide",
+    description: "Precached — front/rear court roles and racket choice.",
+  },
+  {
+    href: "/guides/string-feel-vs-durability/",
+    label: "String feel vs durability",
+    description: "Precached — repulsion, control, and string lifespan trade-offs.",
+  },
+  {
+    href: "/compare-guides/badminton-vs-tennis-shoes/",
+    label: "Badminton vs tennis shoes",
+    description: "Precached — why court shoes matter for indoor wood courts.",
+  },
+  {
     href: "/tools/string-tension-calculator/",
     label: "String tension calculator",
     description: "Precached — recommended tension by level and arm comfort.",
@@ -341,6 +361,10 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/guides/season-refresh/",
   "/tools/authenticity-checker/",
   "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
+  "/guides/racket-balance/",
+  "/guides/doubles-positioning-and-rackets/",
+  "/guides/string-feel-vs-durability/",
+  "/compare-guides/badminton-vs-tennis-shoes/",
 ] as const;
 
 export const OFFLINE_RECOVERY_PATHS = OFFLINE_RECOVERY_LINKS.map(
