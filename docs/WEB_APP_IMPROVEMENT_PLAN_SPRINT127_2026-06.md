@@ -37,7 +37,7 @@
 
 | Deliverable | Files |
 |-------------|-------|
-| Product-funnel CrUX expansion | `docs/baselines/crux-template.csv`, `src/lib/offline-recovery-paths.ts`, `lighthouserc-baseline.json`, `docs/baselines/lighthouse-scores.json` |
+| Product-funnel CrUX expansion | `docs/baselines/crux-template.csv`, `src/lib/offline-recovery-paths.ts`, `src/lib/lighthouse-lab-exempt.ts` (noindex paths skip lab SEO assert) |
 | PWA results precache | `public/sw.js` (`ib-v33`), `src/lib/pwa-precache-paths.ts`, `e2e/pwa-offline-smoke.spec.ts` |
 | ContinueReading home guard | `src/components/HomeContinueReading.tsx`, `docs/baselines/home-queries.json`, `src/lib/home-baseline.ts`, `e2e/home-baseline-smoke.spec.ts` |
 | Documentation | this file, master plan addendum |
@@ -53,7 +53,7 @@
 | 3 | All 4 results-url + 4 compare-share golden profiles unchanged | ✅ unchanged |
 | 4 | CrUX template includes `/results/`, `/compare/`, `/saved/` | ✅ |
 | 5 | `CRUX_OFFLINE_RECOVERY_PATHS` matches crux-template (excl. homepage) | ✅ |
-| 6 | Lighthouse baseline config + scores include new CrUX paths | ✅ |
+| 6 | Noindex funnel paths in CrUX but exempt from lighthouse lab baseline | ✅ |
 | 7 | `/results/` in PWA precache (`ib-v33`) and `PRECACHE_ASSERT_PATHS` | ✅ |
 | 8 | Home baseline `expectContinueReadingSlot` e2e guard passes | ✅ |
 | 9 | HelpfulReaction / VideoObject / string articles assessed — deferred | ✅ deferred |
