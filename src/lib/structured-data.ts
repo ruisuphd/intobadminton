@@ -220,8 +220,9 @@ export function videoObjectJsonLd(input: VideoObjectJsonLdInput) {
     contentUrl: input.evidence.watchUrl,
     embedUrl: input.evidence.embedUrl,
     publisher: {
-      "@type": "Organization",
+      "@type": "Person",
       name: input.evidence.sourceName,
+      url: input.evidence.watchUrl,
     },
     isPartOf: { "@type": "WebPage", "@id": pageUrl, url: pageUrl },
   };

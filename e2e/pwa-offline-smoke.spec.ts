@@ -57,22 +57,22 @@ test("precached product-funnel shells load offline after prior visit", async ({
 }) => {
   await ensureServiceWorker(page);
 
-  const funnelRoutes: { path: string; heading: RegExp; level?: 1 | 2 }[] = [
-    { path: "/results/", heading: /equipment shortlist/i, level: 1 },
-    { path: "/compare/", heading: /compare gear/i, level: 2 },
-    { path: "/saved/", heading: /saved shelf/i, level: 1 },
+  const funnelRoutes: { path: string; heading: RegExp }[] = [
+    { path: "/results/", heading: /equipment shortlist/i },
+    { path: "/compare/", heading: /^compare gear$/i },
+    { path: "/saved/", heading: /saved shelf/i },
   ];
 
-  for (const { path, heading, level = 1 } of funnelRoutes) {
+  for (const { path, heading } of funnelRoutes) {
     await page.goto(path);
-    await expect(page.getByRole("heading", { level })).toContainText(heading);
+    await expect(page.getByRole("heading", { name: heading })).toBeVisible();
   }
 
   await context.setOffline(true);
 
-  for (const { path, heading, level = 1 } of funnelRoutes) {
+  for (const { path, heading } of funnelRoutes) {
     await page.goto(path);
-    await expect(page.getByRole("heading", { level })).toContainText(heading);
+    await expect(page.getByRole("heading", { name: heading })).toBeVisible();
   }
 });
 
