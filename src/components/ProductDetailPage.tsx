@@ -8,7 +8,7 @@ import {
 } from "@/components/ProductImage";
 import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { ReviewProductPanel } from "@/components/ReviewProductPanel";
-import { YoutubeEvidencePanel } from "@/components/YoutubeEvidencePanel";
+import { YoutubeEvidenceSection } from "@/components/YoutubeEvidenceSection";
 import { relatedReadingForProductCategory } from "@/lib/related-content";
 import { buildPdpProductJsonLd } from "@/lib/pdp-baseline";
 import { specRowsForProduct } from "@/lib/product-spec-rows";
@@ -94,7 +94,7 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
           <ReviewProductPanel product={product} />
         </div>
 
-        <YoutubeEvidencePanel product={product} />
+        <YoutubeEvidenceSection product={product} />
 
         <section className="mt-10" aria-labelledby="product-specs-heading">
           <h2

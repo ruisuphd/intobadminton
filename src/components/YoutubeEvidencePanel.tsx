@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ProductRecord } from "@/lib/types/product";
 import { youtubeEvidenceForProduct } from "@/lib/youtube-evidence";
 
@@ -38,13 +37,15 @@ export function YoutubeEvidencePanel({ product }: { product: ProductRecord }) {
             className="relative block aspect-video w-full shrink-0 overflow-hidden rounded-xl bg-[var(--surface-muted)] sm:max-w-[220px]"
             aria-label={`Watch ${evidence.sourceName} on YouTube`}
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={evidence.thumbnailUrl}
               alt=""
-              fill
-              sizes="220px"
-              className="object-cover"
-              unoptimized
+              width={220}
+              height={124}
+              className="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </a>
           <div className="min-w-0 flex-1 space-y-2">
