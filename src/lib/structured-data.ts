@@ -5,6 +5,7 @@ import {
 } from "@/lib/editorial-rating";
 import { getEditorialMeta } from "@/lib/editorial-meta";
 import type { ProductRecord } from "@/lib/types/product";
+import type { YoutubeEvidenceRef } from "@/lib/youtube-evidence";
 
 type ArticleSection = "Reviews" | "Guides" | "Brand Profile" | "Comparison";
 
@@ -194,4 +195,35 @@ export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
   }
 
   return schema;
+}
+
+export type VideoObjectJsonLdInput = {
+  product: ProductRecord;
+  /** Route path with trailing slash, e.g. "/product/yy-astrox-88d-pro-2024/". */
+  path: string;
+  evidence: YoutubeEvidenceRef;
+};
+
+/**
+ * VideoObject JSON-LD for third-party YouTube creator evidence cited on PDPs.
+ * Linked from Product via `subjectOf` — not IntoBadminton-hosted video.
+ */
+export function videoObjectJsonLd(input: VideoObjectJsonLdInput) {
+  const pageUrl = `${companyInfo.siteUrl}${input.path}`;
+
+  return {
+    "@type": "VideoObject",
+    "@id": `${pageUrl}#creator-video`,
+    name: input.evidence.name,
+    description: input.evidence.description,
+    thumbnailUrl: input.evidence.thumbnailUrl,
+    contentUrl: input.evidence.watchUrl,
+    embedUrl: input.evidence.embedUrl,
+    publisher: {
+      "@type": "Person",
+      name: input.evidence.sourceName,
+      url: input.evidence.watchUrl,
+    },
+    isPartOf: { "@type": "WebPage", "@id": pageUrl, url: pageUrl },
+  };
 }

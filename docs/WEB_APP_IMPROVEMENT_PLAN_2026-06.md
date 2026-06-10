@@ -147,6 +147,8 @@
 
 **Sprint 127 addendum:** Product-funnel CrUX completion — ✅ `/results/`, `/compare/`, `/saved/` in `crux-template.csv`, offline recovery, lighthouse baseline; `/results/` PWA precache (`ib-v33`); home baseline `expectContinueReadingSlot` e2e guard; product-funnel CrUX coverage 0/3→3/3.
 
+**Sprint 128 addendum:** VideoObject PDP schema + product-funnel PWA offline e2e — ✅ `subjectOf` VideoObject on two YouTube-backed PDPs; `youtube-evidence.ts` helper; `expectVideoObjectJsonLd` PDP baseline guards; offline navigation e2e for `/results/`, `/compare/`, `/saved/`.
+
 **Shipped on `main`:** site search + body excerpts, `SearchAction`, return-visit hooks, `ContinueReading`, reactions API client, Buttondown notify-me, Product JSON-LD enrichment, engagement on commercial routes, comparison tables, glossary autolinks, guide ToC.
 
 ---
@@ -935,7 +937,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - **Compare-guide duel CrUX expansion** — five flagship duels in crux-template + offline recovery + lighthouse baseline
 - See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT125_2026-06.md)
 
-### Next (Sprint 128+)
+### Next (Sprint 129+)
 
 - Owner: set `REACTIONS_API_URL` secret + run wire workflow; fill `crux-template.csv` and `gsc-template.csv` from live exports
 - Uncomment YouTube `sameAs` after channel claim
@@ -943,6 +945,7 @@ See [`WEB_APP_IMPROVEMENT_PLAN_2026-06-PHASE-D.md`](WEB_APP_IMPROVEMENT_PLAN_202
 - Nanoray Light 70i verified image (unblocks 4 landings)
 - Dedicated Yonex string review ingestion (BG65, BG80, EXBOLT, Aerobite, BG80 Power hands-on articles)
 - RSL shuttle verified Western distributor image backfill (4 waivers on `/best/shuttles/`)
+- Expand VideoObject coverage as more products gain verified YouTube evidence rows
 
 **Sprint 6 shipped:** fuzzy search + programmatic `/best/*` landings (PRs #127, #134).  
 **Sprint 7 (PR #135):** review body search excerpts + fuzzy e2e. See [`WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md`](WEB_APP_IMPROVEMENT_PLAN_SPRINT7_2026-06.md).  
