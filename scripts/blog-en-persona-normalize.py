@@ -80,10 +80,43 @@ REPLACEMENTS: list[tuple[str, str]] = [
 ]
 
 
+# Verbs that end up third-person singular after a noun-phrase → "I" swap
+# ("one reviewer rates" → "I rates"). Conjugated back to base form.
+_THIRD_PERSON_VERBS = (
+    "rates|notes|makes|gives|calls|says|sees|puts|thinks|reads|likes|prefers|"
+    "recommends|describes|reckons|considers|frames|treats|keeps|wants|feels|"
+    "holds|takes|uses|gets|knows|judges|scores|ranks|sums|concludes|argues|"
+    "suggests|admits|warns|highlights|measures|weighs|tests|reports|claims|"
+    "positions|compares|credits|blames|praises|finds|breaks|leads|pegs|"
+    "advises|ends|rounds|mains|plays|pushes|stresses|passes|shows|agrees"
+)
+
+
+def _conjugate_base(verb: str) -> str:
+    if verb.endswith(("sses", "shes", "ches", "xes")):
+        return verb[:-2]
+    return verb[:-1]
+
+
+# Grammar repairs applied after the noun-phrase swaps above.
+POST_FIXES: list[tuple[re.Pattern[str], object]] = [
+    (re.compile(rf"\bI ({_THIRD_PERSON_VERBS})\b"), lambda m: f"I {_conjugate_base(m.group(1))}"),
+    (re.compile(r"\bI's\b"), "my"),
+    (re.compile(r"\bI is\b"), "I am"),
+    (re.compile(r"\bI has\b"), "I have"),
+    (re.compile(r"\bfrom I\b"), "from me"),
+]
+
+
 def normalize_en(en: str) -> tuple[str, int]:
     n = 0
     for pat, repl in REPLACEMENTS:
         new, c = re.subn(pat, repl, en, flags=re.MULTILINE)
+        if c:
+            n += c
+            en = new
+    for cpat, crepl in POST_FIXES:
+        new, c = cpat.subn(crepl, en)
         if c:
             n += c
             en = new

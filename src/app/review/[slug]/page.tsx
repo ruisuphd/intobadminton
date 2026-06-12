@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { EditorialArticlePage } from "@/components/EditorialArticlePage";
 import { blogSlugs, getBlogArticle } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
+import { canonicalReviewSlug } from "@/lib/review-canonical";
 import { routeOgImages } from "@/lib/og";
 
 export function generateStaticParams() {
@@ -25,11 +26,14 @@ export async function generateMetadata({
     };
   }
   const path = articlePathForSlug(slug);
+  // Near-duplicate articles consolidate ranking signals onto their primary
+  // sibling; everything else stays self-canonical.
+  const canonicalPath = articlePathForSlug(canonicalReviewSlug(slug));
   const images = [...routeOgImages(path)];
   return {
     title: article.title,
     description: article.dek,
-    alternates: pageAlternates(path),
+    alternates: pageAlternates(canonicalPath),
     openGraph: {
       title: article.title,
       description: article.dek,

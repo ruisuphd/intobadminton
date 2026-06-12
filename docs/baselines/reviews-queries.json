@@ -1416,12 +1416,12 @@
     {
       "id": "yonex-power-cushion-88-dial-3-review",
       "slug": "yonex-power-cushion-88-dial-3-review",
-      "expectProductId": "yy-power-cushion-88-dial-3",
+      "expectProductId": "yy-aerus-z2",
       "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex",
-      "note": "Auto-synced mapped corpus row — Sprint 61"
+      "note": "Content is the Aerus Z2 (SHBAZ2MEX) deep dive — remapped from mislabeled 88 Dial 3 row in Sprint 129"
     },
     {
       "id": "yonex-subaxia-gt-shoes-review",

@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { blogSlugs } from "@/lib/blog";
 import { allCatalogProductIds } from "@/lib/catalog-products";
 import { lastModifiedForRoute } from "@/lib/editorial-meta";
+import { duplicateReviewCanonicalSlugs } from "@/lib/review-canonical";
 
 export type SitemapEntry = {
   url: string;
@@ -41,7 +42,12 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
  */
 const DYNAMIC_ROUTE_EXPANSIONS: Record<string, readonly string[]> = {
   get "/review/[slug]/"() {
-    return blogSlugs;
+    // Near-duplicate articles canonicalise to a primary sibling (see
+    // review-canonical.ts); sitemaps should list canonical URLs only. The
+    // postbuild SEO audit mirrors these routes in SITEMAP_EXEMPT_ROUTES.
+    return blogSlugs.filter(
+      (slug) => !(slug in duplicateReviewCanonicalSlugs)
+    );
   },
   get "/product/[id]/"() {
     return allCatalogProductIds();

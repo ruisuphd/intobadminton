@@ -136,6 +136,15 @@ const SITEMAP_EXEMPT_ROUTES = new Set([
   "/comparisons/",
   "/saved/",
   "/offline/",
+  // Near-duplicate reviews canonicalised to a primary sibling — exported but
+  // intentionally absent from the sitemap (see src/lib/review-canonical.ts).
+  "/review/rsl-aero-u-shuttle-review/",
+  "/review/fz-forza-88d-review/",
+  "/review/yonex-astrox-99-pro-gen-1-review/",
+  "/review/victor-auraspeed-hs-plus-deep-dive/",
+  "/review/li-ning-axforce-90-new-5u-deep-dive/",
+  "/review/yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai/",
+  "/review/li-ning-bladex-800-speed-vs-halbertec-9000-power/",
 ]);
 
 function isPlainObject(value) {

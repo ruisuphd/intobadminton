@@ -18,7 +18,6 @@ export const PRODUCT_REVIEW_ALIASES: Record<string, string> = {
   "yy-astrox-77-play": "yy-astrox-77-pro",
   "vic-drivex-8s": "vic-drivex-10-metallic",
   "yy-astrox-100-game": "yy-astrox-nextage",
-  "yy-aerus-z2": "yy-eclipsion-z3",
   "vic-brave-sword-12": "vic-jetspeed-12",
   "vic-auraspeed-100x-se": "vic-auraspeed-90k-ii",
   "yy-voltric-8dg": "yy-voltric-z-force-ltd",

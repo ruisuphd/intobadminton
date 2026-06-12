@@ -295,11 +295,11 @@
       "id": "pdp-review-yy-aerus-z2",
       "productId": "yy-aerus-z2",
       "expectCategory": "shoes",
-      "expectReviewSlug": "yonex-eclipsion-z3-shoes-review",
+      "expectReviewSlug": "yonex-power-cushion-88-dial-3-review",
       "expectReviewKind": "review",
       "expectMinSpecRows": 7,
       "expectMinRelatedReading": 3,
-      "note": "Aerus Z2 aliases to Eclipsion Z3 review on PDP",
+      "note": "Aerus Z2 links its own SHBAZ2MEX deep dive (Sprint 129 — was aliased to Eclipsion Z3 review)",
       "e2e": true
     },
     {

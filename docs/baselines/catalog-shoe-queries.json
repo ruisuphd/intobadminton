@@ -13,10 +13,10 @@
     {
       "id": "catalog-shoe-yy-aerus-z2",
       "productId": "yy-aerus-z2",
-      "expectHref": "/review/yonex-eclipsion-z3-shoes-review/",
+      "expectHref": "/review/yonex-power-cushion-88-dial-3-review/",
       "expectKind": "review",
       "e2e": true,
-      "note": "Aerus Z2 aliases to Eclipsion Z3 review"
+      "note": "Aerus Z2 links its own SHBAZ2MEX deep dive (Sprint 129)"
     },
     {
       "id": "catalog-shoe-yy-comfort-z3",

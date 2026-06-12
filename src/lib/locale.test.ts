@@ -6,6 +6,7 @@ import {
   siteLocales,
 } from "@/lib/locale";
 import { blogSlugs } from "@/lib/blog";
+import { duplicateReviewCanonicalSlugs } from "@/lib/review-canonical";
 import { sitemapEntries } from "@/lib/sitemap";
 
 describe("locale routing", () => {
@@ -85,10 +86,16 @@ describe("sitemapEntries", () => {
     expect(urls).not.toContain("https://example.com/review/submit/");
   });
 
-  it("emits every blog article under /review/ and excludes legacy hubs", () => {
+  it("emits every canonical blog article under /review/ and excludes legacy hubs", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
 
     for (const slug of blogSlugs) {
+      if (slug in duplicateReviewCanonicalSlugs) {
+        // Near-duplicate articles canonicalise to a primary sibling and stay
+        // out of the sitemap (see review-canonical.ts).
+        expect(urls).not.toContain(`https://example.com/review/${slug}/`);
+        continue;
+      }
       expect(urls).toContain(`https://example.com/review/${slug}/`);
     }
     expect(urls).not.toContain("https://example.com/blog/");

@@ -124,8 +124,10 @@ describe("review page paths", () => {
     expect(editorialReviewHref("yy-astrox-100-game")).toBe(
       "/review/yonex-astrox-nextage-review/"
     );
+    // yy-aerus-z2 left the alias map in Sprint 129: its own SHBAZ2MEX deep
+    // dive (formerly mislabeled 88 Dial 3) is mapped directly.
     expect(editorialReviewHref("yy-aerus-z2")).toBe(
-      "/review/yonex-eclipsion-z3-shoes-review/"
+      "/review/yonex-power-cushion-88-dial-3-review/"
     );
     expect(editorialReviewHref("vic-brave-sword-12")).toBe(
       "/review/victor-jetspeed-12-curious-review/"

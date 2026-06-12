@@ -62,6 +62,69 @@ TITLE_OVERRIDES = {
     "li-ning-halbertec-8000-vs-9000-vs-9000-power": "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which one fits your game",
     "victor-yu-12-racket-review": "Victor DriveX 12 review: control players finally have a Victor flagship",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ VA vs Kurenai: not an Anders Antonsen racket",
+    "asics-blast-ff-3-badminton-shoes-review": "ASICS Blast FF 3 badminton shoes review: mature tuning over carbon hype",
+    "bonny-carbon-armour-shoes-review": "Bonny Carbon Armour review: quick notes on the pale-pink court shoe",
+    "bonny-future-land-3-polaris-shoes-review": "Bonny Future Land 3 Polaris review: a balanced all-round court shoe",
+    "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review": "Bonny Mojun vs Yonex Arcsaber 11 Pro: a balanced-attack benchmark test",
+    "bonny-phantom-100-racket-review": "Bonny Phantom 100 review: hard-frame craft without the luxury markup",
+    "bonny-snake-breath-second-tier-flagship-review": "Bonny Snake Breath review: a self-developed flagship beyond the clones",
+    "bonny-wind-shadow-budget-speed-shoes-review": "Bonny Wind Shadow review: dual carbon plates in a budget speed shoe",
+    "bonny-wuque-1982-y3k-shoes-review": "Bonny WuQue 1982 Y3K review: the classic benchmark gets a cyberpunk refit",
+    "bonny-wuque-flagship-088-shoes-review": "Bonny WuQue 088 review: flagship woven court shoes built as tools",
+    "bonny-wuque-xuanwu-review": "Bonny WuQue Xuanwu review: Factory B's long-promised racket arrives",
+    "bonny-zhangui-dao-8888ax-ultra-review": "Bonny ZhanGui Dao 8888AX Ultra review: a clear, easy high-end balance",
+    "goshen-leiming-69-string-review": "Gosen Leiming 69 string review: an honest log from a first-year player",
+    "jujiang-lbtu-value-racket-review": "JuJiang LBTU review: a value pick that outlasted my racket rotation",
+    "jujiang-mzs-66un-string-review": "JuJiang MZS-66un string review: an indie brand's shot at the big three",
+    "kawasaki-crimson-blade-racket-review": "Kawasaki Crimson Blade review: a niche frame from my budget test brand",
+    "kawasaki-glacier-800-racket-review": "Kawasaki Glacier 800 review: what budget Kawasaki actually buys you",
+    "kawasaki-h2-6u-superlight-racket-review": "Kawasaki H2 review: a 6U superlight that takes light demand seriously",
+    "kawasaki-star-cross-second-perspective-review": "Kawasaki Star Cross review, second perspective: high-end speed-attack",
+    "kawasaki-twilight-shoes-review": "Kawasaki Twilight review: dial fit and carbon support without the price",
+    "kumpoo-js-67-string-review": "Kumpoo JS-67 string review: ice-blue notes from a school-team player",
+    "kumpoo-kh-g805-lite-pro-shoes-review": "Kumpoo KH-G805 Lite Pro review: three weeks as my main match shoe",
+    "li-ning-axforce-10-beginner-attack-review": "Li-Ning AxForce 10 review: beginner attack without the punishment",
+    "li-ning-axforce-100-gen-2-vs-gen-1": "Li-Ning AxForce 100 Gen 2 vs Gen 1: lower entry bar, same attack ceiling",
+    "li-ning-axforce-90-new-5u-deep-dive": "Li-Ning AxForce 90 New 5U deep dive: how light can a flagship attacker go?",
+    "li-ning-axforce-90-new-review": "Li-Ning AxForce 90 New review: a faster, more forgiving flagship attacker",
+    "li-ning-bladesabre-2-pro-shoes-review": "Li-Ning Bladesabre 2 Pro review: the fast-launch flagship goes lighter",
+    "li-ning-bladex-500-pro-curious-review": "Li-Ning Blade 500 Pro review: a rare honest Pro upgrade in the mid tier",
+    "li-ning-bladex-900-new-review": "Li-Ning Bladex 900 New review: the first full wind-cut Bladex speed flagship",
+    "li-ning-bladex-arrow-review": "Li-Ning Bladex Arrow review: the entry-advanced Bladex, also sold as EX",
+    "li-ning-gp100-pro-overgrip-review": "Li-Ning GP100 Pro overgrip review: dry feel from a domestic material",
+    "li-ning-halbertec-9000-power-deep-dive": "Li-Ning Halbertec 9000 Power deep dive: more than a speed-racket rival",
+    "li-ning-halbertec-9000-standalone-review": "Li-Ning Halbertec 9000 review: launch like lightning, land like rock",
+    "li-ning-l66-string-first-look": "Li-Ning L66 string first look: a 0.66 mm balanced BG65 alternative",
+    "li-ning-lt66-power-string-review": "Li-Ning LT66 Power string review: the new power string, strung and hit",
+    "rsl-aero-u-shuttle-review": "RSL Classic shuttle, second look: goose-feather durability first",
+    "rsl-at70-racket-review": "RSL AT70 review: the viral 2025 flagship at a three-bill street price",
+    "rsl-supreme-shuttle-review": "RSL Supreme shuttle review: is it really a step above the Classic?",
+    "victor-auraspeed-90k-ii-review": "Victor Auraspeed 90K Metallic (90K II) review: alloy carbon, full power",
+    "victor-auraspeed-hs-plus-attack-review": "Victor Auraspeed HS Plus review: WES 3.0 pushes the HS near max stiffness",
+    "victor-drivex-10-review": "Victor DriveX 10 Metallic review: firm, elastic control that rewards strength",
+    "victor-fz-88d-power-purple-review": "Victor FZ 88D Power Purple review: Forza's Danish limited 88D, tested",
+    "victor-fz-flash-1000-racket-review": "Victor FZ Flash 1000 review: budget speed for amateur tournament play",
+    "victor-jetspeed-12-curious-review": "Victor Jetspeed 12 review: a classic that outgrew curiosity status",
+    "victor-jipo-ls-racket-review": "Victor JIPO LS review: an easy, forgiving racket for off days",
+    "victor-sonic-boom-pro-budget-attack-review": "Victor Sonic Boom Pro review: budget attack value that's hard to beat",
+    "victor-thruster-9900-curiosity-review": "Victor Thruster 9900 review: Victor's best small-frame racket, on trial",
+    "victor-thruster-falcon-review": "Victor Thruster Falcon Enhanced (TK-F) review: the Blue Falcon, upgraded",
+    "victor-thruster-hwql-nuke-review": "Victor Thruster HWQL Light review: the dealer-custom 'nuke', decoded",
+    "victor-thruster-sr-cherry-blossom-review": "Victor Thruster SR Light review: cherry blossom paint, real substance",
+    "yonex-arcsaber-7-play-review": "Yonex Arcsaber 7 Play review: the entry tier of a beloved control line",
+    "yonex-arcsaber-7-pro-review": "Yonex Arcsaber 7 Pro review: light, stable control for doubles players",
+    "yonex-arcsaber-7-tour-review": "Yonex Arcsaber 7 Tour review: how much 7 Pro feel survives the mid tier",
+    "yonex-astrox-88-pro-2024-review": "Yonex Astrox 88D Pro and 88S Pro (2024) review: the new colours, tested",
+    "yonex-astrox-88s-tour-curious-review": "Yonex Astrox 88S Tour review: borrowed, doubted, then taken seriously",
+    "yonex-astrox-99-pro-3-deep-dive": "Yonex Astrox 99 Pro gen 3 deep dive: Momota's line pushed further into attack",
+    "yonex-astrox-99-pro-gen-1-review": "Yonex Astrox 99 Pro review: the first Pro generation in family context",
+    "yonex-astrox-nextage-review": "Yonex Astrox Nextage review: the new Astrox branch, honestly assessed",
+    "yonex-grpht-thrttl-training-shoe-review": "Yonex GRPHT THRTTL (SH-GT1MEX) review: the Graphite Thruster concept trainer",
+    "yonex-nanoflare-700-review": "Yonex Nanoflare 700 review: the original Nanoflare, still worth knowing",
+    "yonex-nanoflare-800-pro-tour-review": "Yonex Nanoflare 800 Pro and Tour review: a 'Pro upgrade' with a thin link",
+    "yonex-nanoflare-nextage-review": "Yonex Nanoflare Nextage review: fast, soft mid-tier with front-court control",
+    "yonex-power-cushion-88-dial-3-review": "Yonex Power Cushion Aerus Z2 (SHBAZ2MEX) review: three colourways, tested",
+    "yonex-subaxia-gt-shoes-review": "Yonex Power Cushion Subaxia GT review: the Graphite Thruster idea goes pro",
 }
 
 DEK_OVERRIDES = {
@@ -196,10 +259,42 @@ def strip_markdown_inline(text: str) -> str:
     return text
 
 
+_THIRD_PERSON_VERBS = (
+    "rates|notes|makes|gives|calls|says|sees|puts|thinks|reads|likes|prefers|"
+    "recommends|describes|reckons|considers|frames|treats|keeps|wants|feels|"
+    "holds|takes|uses|gets|knows|judges|scores|ranks|sums|concludes|argues|"
+    "suggests|admits|warns|highlights|measures|weighs|tests|reports|claims|"
+    "positions|compares|credits|blames|praises|finds|breaks|leads|pegs|"
+    "advises|ends|rounds|mains|plays|pushes|stresses|passes|shows|agrees"
+)
+
+
+def _conjugate_base(verb: str) -> str:
+    if verb.endswith(("sses", "shes", "ches", "xes")):
+        return verb[:-2]
+    return verb[:-1]
+
+
+# Repairs third-person verbs left behind when VOICE_FIXES swaps a noun phrase
+# ("the reviewer rates" → "I rates"). Case-sensitive: only capital "I".
+GRAMMAR_FIXES = [
+    (
+        re.compile(rf"\bI ({_THIRD_PERSON_VERBS})\b"),
+        lambda m: f"I {_conjugate_base(m.group(1))}",
+    ),
+    (re.compile(r"\bI's\b"), "my"),
+    (re.compile(r"\bI is\b"), "I am"),
+    (re.compile(r"\bI has\b"), "I have"),
+    (re.compile(r"\bfrom I\b"), "from me"),
+]
+
+
 def clean_prose(text: str) -> str:
     text = strip_markdown_inline(text)
     for pat, repl in VOICE_FIXES:
         text = re.sub(pat, repl, text, flags=re.I)
+    for pat, repl in GRAMMAR_FIXES:
+        text = pat.sub(repl, text)
     for wrong, right in load_canonical():
         text = text.replace(wrong, right)
     text = re.sub(r"\n{3,}", "\n\n", text)
