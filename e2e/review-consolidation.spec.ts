@@ -84,11 +84,13 @@ test.describe("review blog style", () => {
         .locator("#power-cushion-65-z-wide")
         .getByRole("link", { name: "Read full review →" })
     ).toHaveAttribute("href", "/review/yonex-65z4-shoes-review/");
+    // Sprint 129: Aerus Z2 links its own SHBAZ2MEX deep dive (formerly
+    // mislabeled 88 Dial 3) instead of aliasing to the Eclipsion Z3 review.
     await expect(
       page
         .locator("#power-cushion-aerus-z2")
         .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-eclipsion-z3-shoes-review/");
+    ).toHaveAttribute("href", "/review/yonex-power-cushion-88-dial-3-review/");
     await expect(
       page
         .locator("#power-cushion-comfort-z3")
