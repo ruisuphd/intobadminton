@@ -6,8 +6,13 @@ import {
 import { getEditorialMeta } from "@/lib/editorial-meta";
 import type { ProductRecord } from "@/lib/types/product";
 import type { YoutubeEvidenceRef } from "@/lib/youtube-evidence";
+import type { BlogComparison } from "@/lib/blog";
 
 type ArticleSection = "Reviews" | "Guides" | "Brand Profile" | "Comparison";
+
+/** CC BY 4.0 — editorial spec/QC tables published as open data. */
+export const EDITORIAL_DATA_LICENSE =
+  "https://creativecommons.org/licenses/by/4.0/";
 
 export type ArticleJsonLdInput = {
   /** Route path with trailing slash, e.g. "/best/beginner-rackets/". */
@@ -130,10 +135,52 @@ export type ProductReviewJsonLdInput = {
   rating?: EditorialRating | null;
 };
 
+export type DatasetJsonLdInput = {
+  path: string;
+  name: string;
+  description: string;
+  comparison: BlogComparison;
+};
+
+/**
+ * Dataset JSON-LD for structured comparison / QC tables on review pages.
+ * Includes `license` for Google Dataset rich-result eligibility.
+ */
+export function datasetJsonLd(input: DatasetJsonLdInput) {
+  const url = `${companyInfo.siteUrl}${input.path}`;
+  const variableMeasured = [
+    input.comparison.caption?.trim() || "Parameter",
+    ...input.comparison.columns,
+  ].map((name) => ({
+    "@type": "PropertyValue" as const,
+    name,
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "@id": `${url}#dataset`,
+    name: input.name,
+    description: input.description,
+    url,
+    license: EDITORIAL_DATA_LICENSE,
+    isAccessibleForFree: true,
+    creator: ARTICLE_AUTHOR,
+    publisher: ARTICLE_PUBLISHER,
+    variableMeasured,
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "text/html",
+        contentUrl: url,
+      },
+    ],
+  };
+}
+
 /**
  * Product + nested Review JSON-LD for `/review/[slug]/` pages.
- * Optionally includes editorial reviewRating and aggregateRating when backed
- * by at least two distinct review sources.
+ * Emits editorial `reviewRating` and matching `aggregateRating` on the Product.
  */
 export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
   const url = `${companyInfo.siteUrl}${input.path}`;
@@ -176,6 +223,7 @@ export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
       price: input.product.priceUsd,
       availability: "https://schema.org/InStock",
       url: input.product.officialSourceUrl,
+      description: input.description,
     },
     review,
   };
@@ -184,11 +232,11 @@ export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
     schema.image = input.product.image.url;
   }
 
-  if (input.rating?.meetsAggregateThreshold) {
+  if (input.rating) {
     schema.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: input.rating.ratingValue,
-      reviewCount: input.rating.reviewCount,
+      reviewCount: Math.max(1, input.rating.reviewCount),
       bestRating: input.rating.bestRating,
       worstRating: input.rating.worstRating,
     };

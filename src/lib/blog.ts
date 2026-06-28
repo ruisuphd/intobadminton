@@ -155,6 +155,13 @@ export const blogSlugs = [
   "anta-ah600w-racket-review",
   "bonny-leisu-800-lt-review",
   "mizuno-carbo-pro-825-review",
+  "anta-dingyin-1000-racket-review",
+  "gosen-kyokugen-racket-review",
+  "li-ning-bladex-880-shida-racket-review",
+  "victor-yinbao-a-boom-shoes-review",
+  "chengong-feng-racket-review",
+  "bonny-baidi-800lt-racket-review",
+  "kumpoo-js-65-string-review"
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];

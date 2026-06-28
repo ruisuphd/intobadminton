@@ -24,6 +24,7 @@ import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
 import { relatedReadingForReviewSlug } from "@/lib/related-content";
+import { datasetJsonLd } from "@/lib/structured-data";
 
 function isSpecLikeHeading(heading: string) {
   return /\bspec(?:s|ifications?)?\b/i.test(heading);
@@ -77,6 +78,18 @@ export function EditorialArticlePage({
     inLanguage: "en",
   };
 
+  const comparisonDatasetJsonLd =
+    article.comparison && article.comparison.rows.length > 0
+      ? datasetJsonLd({
+          path,
+          name: `${article.title} — structured data`,
+          description:
+            article.comparison.caption?.trim() ||
+            `Editorial specification and measurement data from ${article.title}.`,
+          comparison: article.comparison,
+        })
+      : null;
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -108,6 +121,9 @@ export function EditorialArticlePage({
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
       {enrichment && <JsonLd data={enrichment.productSchema} />}
+      {comparisonDatasetJsonLd ? (
+        <JsonLd data={comparisonDatasetJsonLd} />
+      ) : null}
       <JsonLd data={breadcrumbJsonLd} />
 
       <article className="layout-band max-w-3xl py-16">

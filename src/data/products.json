@@ -2271,7 +2271,7 @@
     "brand": "Yonex",
     "priceUsd": 220,
     "headWeight": "even",
-    "shaftFlex": "medium",
+    "shaftFlex": "stiff",
     "weightClass": "4U",
     "weightVariants": [
       "4U"
@@ -6822,7 +6822,7 @@
     "officialSourceUrl": "https://www.yonex.com/news/introducing-world-record-breaking-nanoray-z-speed/",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
-    "minRecommendedLevel": "advanced",
+    "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
       "doubles",
@@ -6874,7 +6874,7 @@
     "officialSourceUrl": "https://www.yonex.com/duo-zs",
     "lastVerifiedAt": "2026-05-22",
     "verificationStatus": "official_verified",
-    "minRecommendedLevel": "advanced",
+    "minRecommendedLevel": "competitive",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
       "doubles",
@@ -6949,7 +6949,7 @@
     "brand": "FZ Forza",
     "priceUsd": 175,
     "headWeight": "head_heavy",
-    "shaftFlex": "medium_stiff",
+    "shaftFlex": "stiff",
     "weightClass": "4U",
     "weightVariants": [
       "4U"
@@ -8005,5 +8005,284 @@
         "confidence": "medium"
       }
     ]
+  },
+  {
+    "id": "anta-dingyin-1000",
+    "category": "racket",
+    "name": "Dingyin 1000",
+    "brand": "Anta",
+    "priceUsd": 180,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 298,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.anta.com/",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "flagship_attack",
+      "anta_brand"
+    ],
+    "sourceUrls": [
+      "https://www.anta.com/"
+    ],
+    "editorNote": "Anta Dingyin 1000 — Anta badminton flagship attack frame.",
+    "reviewCount": 0
+  },
+  {
+    "id": "gosen-kyokugen",
+    "category": "racket",
+    "name": "Kyokugen",
+    "brand": "Gosen",
+    "priceUsd": 160,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "jp",
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.gosen.jp/",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "continuity",
+      "all_round",
+      "gosen_flagship"
+    ],
+    "sourceUrls": [
+      "https://www.gosen.jp/"
+    ],
+    "editorNote": "Gosen Kyokugen (极炫) — Gosen flagship with Ya-wen shaft tuning, strong continuity and defence.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-bladex-880-shida",
+    "category": "racket",
+    "name": "Bladex 880 Shida",
+    "brand": "Li-Ning",
+    "priceUsd": 200,
+    "headWeight": "even",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 292,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.lining.com/",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "pro_signature",
+      "speed_control"
+    ],
+    "sourceUrls": [
+      "https://www.lining.com/"
+    ],
+    "editorNote": "Li-Ning Bladex 880 Shida — pro signature speed-control frame.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-yinbao-a-boom",
+    "category": "shoe",
+    "name": "A-BOOM",
+    "brand": "Victor",
+    "priceUsd": 85,
+    "courtType": "indoor",
+    "stability": "medium",
+    "cushioning": "medium",
+    "weightClass": "standard",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/badminton-shoes",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "value",
+      "attack_movement"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/badminton-shoes"
+    ],
+    "editorNote": "Victor A-BOOM (音爆) badminton shoes — budget attack movement shoe.",
+    "reviewCount": 0
+  },
+  {
+    "id": "chengong-feng",
+    "category": "racket",
+    "name": "Feng",
+    "brand": "Chengong",
+    "priceUsd": 55,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.badmintoncn.com/",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "source_only",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "budget_attack",
+      "oem_value"
+    ],
+    "sourceUrls": [
+      "https://www.badmintoncn.com/"
+    ],
+    "editorNote": "Chengong Feng — budget head-heavy attack racket from niche OEM brand.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-baidi-800lt",
+    "category": "racket",
+    "name": "Baidi 800LT",
+    "brand": "Bonny",
+    "priceUsd": 90,
+    "headWeight": "head_light",
+    "shaftFlex": "medium",
+    "weightClass": "5U",
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.bonny-sports.com/",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "speed",
+      "doubles_front"
+    ],
+    "sourceUrls": [
+      "https://www.bonny-sports.com/"
+    ],
+    "editorNote": "Bonny Baidi 800LT — lightweight speed frame in Bonny line.",
+    "reviewCount": 0
+  },
+  {
+    "id": "kumpoo-js-65-string",
+    "category": "string",
+    "name": "JS-65 String",
+    "brand": "Kumpoo",
+    "priceUsd": 11,
+    "gaugeMm": 0.65,
+    "feel": "medium",
+    "repulsion": "high",
+    "control": "medium",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 22,
+      "max": 28
+    },
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.kumpoo.com/",
+    "lastVerifiedAt": "2026-06-28",
+    "verificationStatus": "source_only",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "thin_gauge",
+      "repulsion",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
+    "editorNote": "Kumpoo JS-65 — thin repulsion string, sibling tier to JS-63/67 line.",
+    "reviewCount": 0
   }
 ]

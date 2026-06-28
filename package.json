@@ -13,6 +13,8 @@
     "blog:sync": "node scripts/sync-blogs-drop.mjs",
     "blog:check": "node scripts/check-new-blog-sources.mjs",
     "blog:validate": "node scripts/blog-validate-20pass.mjs",
+    "audit:catalog": "node scripts/audit-catalog-schema.mjs",
+    "audit:review-claims": "node scripts/audit-review-claims.mjs",
     "home:featured": "node scripts/generate-home-featured.mjs",
     "test:e2e": "playwright test",
     "lint:eslint": "eslint",

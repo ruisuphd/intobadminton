@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-06-06",
+  "updated": "2026-06-28",
   "coverage": {
-    "minArticleSlugs": 142,
+    "minArticleSlugs": 149,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1431,6 +1431,73 @@
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex",
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "anta-dingyin-1000-racket-review",
+      "slug": "anta-dingyin-1000-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Anta",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "anta-dingyin-1000",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse anta"
+    },
+    {
+      "id": "bonny-baidi-800lt-racket-review",
+      "slug": "bonny-baidi-800lt-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "bonny-baidi-800lt",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny"
+    },
+    {
+      "id": "chengong-feng-racket-review",
+      "slug": "chengong-feng-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Chengong",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "chengong-feng",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse chengong"
+    },
+    {
+      "id": "gosen-kyokugen-racket-review",
+      "slug": "gosen-kyokugen-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "gosen-kyokugen",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse gosen"
+    },
+    {
+      "id": "kumpoo-js-65-string-review",
+      "slug": "kumpoo-js-65-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "kumpoo-js-65-string",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo"
+    },
+    {
+      "id": "li-ning-bladex-880-shida-racket-review",
+      "slug": "li-ning-bladex-880-shida-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-bladex-880-shida",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-yinbao-a-boom-shoes-review",
+      "slug": "victor-yinbao-a-boom-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoe&brand=Victor",
+      "expectMinRelatedReading": 3,
       "note": "Auto-synced mapped corpus row — Sprint 61"
     }
   ]
