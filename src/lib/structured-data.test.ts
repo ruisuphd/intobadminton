@@ -24,5 +24,8 @@ describe("productReviewJsonLd", () => {
     expect(review["@type"]).toBe("Review");
     expect(review.reviewBody).toBe("Hands-on AS-50 notes.");
     expect(review.reviewRating).toBeTruthy();
+    const aggregate = schema.aggregateRating as Record<string, unknown>;
+    expect(aggregate["@type"]).toBe("AggregateRating");
+    expect(aggregate.reviewCount).toBeGreaterThanOrEqual(1);
   });
 });

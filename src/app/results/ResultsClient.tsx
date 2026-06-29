@@ -84,16 +84,15 @@ function buildProductJsonLd(rows: ScoredProduct[]) {
           : {}),
       };
 
-      const aggregateRating =
-        rating && rating.meetsAggregateThreshold
-          ? {
-              "@type": "AggregateRating" as const,
-              ratingValue: rating.ratingValue,
-              reviewCount: rating.reviewCount,
-              bestRating: rating.bestRating,
-              worstRating: rating.worstRating,
-            }
-          : undefined;
+      const aggregateRating = rating
+        ? {
+            "@type": "AggregateRating" as const,
+            ratingValue: rating.ratingValue,
+            reviewCount: Math.max(1, rating.reviewCount),
+            bestRating: rating.bestRating,
+            worstRating: rating.worstRating,
+          }
+        : undefined;
 
       return {
         "@type": "ListItem" as const,

@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-05",
+  "date": "2026-06-28",
   "passes": [
     {
       "pass": 1,
@@ -122,6 +122,6 @@
       "samples": []
     }
   ],
-  "articles": 153,
+  "articles": 160,
   "final_issue_count": 0
 }

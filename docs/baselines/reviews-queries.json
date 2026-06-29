@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-06-06",
+  "updated": "2026-06-29",
   "coverage": {
-    "minArticleSlugs": 142,
+    "minArticleSlugs": 149,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -93,49 +93,6 @@
       "note": "Explainer slug must stay outside product map — decision-path shelf only"
     },
     {
-      "id": "featured-nanospeed-9900-ltg",
-      "slug": "yonex-nanospeed-9900-ltg-green-sword-review",
-      "expectProductId": "yy-nanospeed-9900-ltg",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "e2e": true,
-      "expectKeepReadingShelf": true,
-      "expectCatalogLinkPattern": "browse yonex",
-      "note": "Homepage featured slice — Yonex grail review"
-    },
-    {
-      "id": "featured-voltric-z-force-ltd",
-      "slug": "yonex-voltric-z-force-ltd-2012-review",
-      "expectProductId": "yy-voltric-z-force-ltd",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "expectCatalogLinkPattern": "browse yonex",
-      "note": "Homepage featured slice — collector grail review"
-    },
-    {
-      "id": "featured-gosen-ryoga-shiden",
-      "slug": "gosen-ryoga-shiden-review",
-      "expectProductId": "gosen-ryoga-shiden",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Gosen",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "e2e": true,
-      "expectCatalogLinkPattern": "browse gosen",
-      "note": "Homepage featured slice — cult speed blade review"
-    },
-    {
-      "id": "featured-victor-fz-100xx",
-      "slug": "victor-fz-100xx-budget-attack-review",
-      "expectProductId": "vic-fz-100xx",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "expectCatalogLinkPattern": "browse victor",
-      "note": "Homepage featured slice — budget attack racket review"
-    },
-    {
       "id": "featured-anta-ah600w",
       "slug": "anta-ah600w-racket-review",
       "expectProductId": "anta-ah600w",
@@ -143,8 +100,31 @@
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
       "e2e": true,
+      "expectKeepReadingShelf": true,
       "expectCatalogLinkPattern": "browse anta",
       "note": "Homepage featured slice — Anta brand debut review"
+    },
+    {
+      "id": "featured-anta-dingyin-1000",
+      "slug": "anta-dingyin-1000-racket-review",
+      "expectProductId": "anta-dingyin-1000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Anta",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse anta",
+      "note": "Homepage featured slice — Anta Dingyin 1000 review"
+    },
+    {
+      "id": "featured-bonny-baidi-800lt",
+      "slug": "bonny-baidi-800lt-racket-review",
+      "expectProductId": "bonny-baidi-800lt",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse bonny",
+      "note": "Homepage featured slice — Bonny Baidi 800LT review"
     },
     {
       "id": "featured-bonny-leisu-800-lt",
@@ -153,8 +133,31 @@
       "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
+      "e2e": true,
       "expectCatalogLinkPattern": "browse bonny",
       "note": "Homepage featured slice — Bonny LT variant review"
+    },
+    {
+      "id": "featured-chengong-feng",
+      "slug": "chengong-feng-racket-review",
+      "expectProductId": "chengong-feng",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Chengong",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse chengong",
+      "note": "Homepage featured slice — Chenggong Feng review"
+    },
+    {
+      "id": "featured-gosen-kyokugen",
+      "slug": "gosen-kyokugen-racket-review",
+      "expectProductId": "gosen-kyokugen",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "e2e": true,
+      "expectCatalogLinkPattern": "browse gosen",
+      "note": "Homepage featured slice — Gosen Kyokugen review"
     },
     {
       "id": "popular-search-tour-guide",
@@ -1432,6 +1435,73 @@
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex",
       "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "kumpoo-js-65-string-review",
+      "slug": "kumpoo-js-65-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "kumpoo-js-65-string",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo"
+    },
+    {
+      "id": "li-ning-bladex-880-shida-racket-review",
+      "slug": "li-ning-bladex-880-shida-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-bladex-880-shida",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-yinbao-a-boom-shoes-review",
+      "slug": "victor-yinbao-a-boom-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoe&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61"
+    },
+    {
+      "id": "gosen-ryoga-shiden-review",
+      "slug": "gosen-ryoga-shiden-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "gosen-ryoga-shiden",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse gosen"
+    },
+    {
+      "id": "victor-fz-100xx-budget-attack-review",
+      "slug": "victor-fz-100xx-budget-attack-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-fz-100xx",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "yonex-nanospeed-9900-ltg-green-sword-review",
+      "slug": "yonex-nanospeed-9900-ltg-green-sword-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "yy-nanospeed-9900-ltg",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex"
+    },
+    {
+      "id": "yonex-voltric-z-force-ltd-2012-review",
+      "slug": "yonex-voltric-z-force-ltd-2012-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "yy-voltric-z-force-ltd",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex"
     }
   ]
 }

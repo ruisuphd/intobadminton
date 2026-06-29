@@ -1,40 +1,40 @@
 {
-  "reviewCount": 153,
+  "reviewCount": 160,
   "featured": [
-    {
-      "slug": "yonex-nanospeed-9900-ltg-green-sword-review",
-      "title": "Yonex NanoSpeed 9900 LTG (Green Sword) review: the rarest 2011 grail still plays",
-      "updatedAt": "2026-06-04",
-      "readingMinutes": 3
-    },
-    {
-      "slug": "yonex-voltric-z-force-ltd-2012-review",
-      "title": "Yonex Voltric Z-Force LTD (2012) review: the 'Purple-Gold' grail, fourteen years on",
-      "updatedAt": "2026-06-04",
-      "readingMinutes": 3
-    },
-    {
-      "slug": "gosen-ryoga-shiden-review",
-      "title": "Gosen Ryoga Shiden review: the cult conical-shaft speed blade, decoded",
-      "updatedAt": "2026-06-04",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "victor-fz-100xx-budget-attack-review",
-      "title": "Victor FZ-100XX review: a 100ZZ-styled budget attack racket that overdelivers",
-      "updatedAt": "2026-06-04",
-      "readingMinutes": 2
-    },
     {
       "slug": "anta-ah600w-racket-review",
       "title": "Anta AH600W review: a sportswear giant's first badminton racket, honestly assessed",
-      "updatedAt": "2026-06-04",
-      "readingMinutes": 2
+      "updatedAt": "2026-06-28",
+      "readingMinutes": 1
+    },
+    {
+      "slug": "anta-dingyin-1000-racket-review",
+      "title": "Anta Dingyin 1000 Racket Review",
+      "updatedAt": "2026-06-28",
+      "readingMinutes": 3
+    },
+    {
+      "slug": "bonny-baidi-800lt-racket-review",
+      "title": "Bonny Baidi 800Lt Racket Review",
+      "updatedAt": "2026-06-28",
+      "readingMinutes": 1
     },
     {
       "slug": "bonny-leisu-800-lt-review",
       "title": "Bonny Leisu 800 LT review: a clear-named NF800LT tribute for continuous attack",
-      "updatedAt": "2026-06-04",
+      "updatedAt": "2026-06-28",
+      "readingMinutes": 2
+    },
+    {
+      "slug": "chengong-feng-racket-review",
+      "title": "Chengong Feng Racket Review",
+      "updatedAt": "2026-06-28",
+      "readingMinutes": 1
+    },
+    {
+      "slug": "gosen-kyokugen-racket-review",
+      "title": "Gosen Kyokugen Racket Review",
+      "updatedAt": "2026-06-28",
       "readingMinutes": 2
     }
   ]
