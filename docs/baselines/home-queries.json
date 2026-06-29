@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-09",
+  "updated": "2026-06-28",
   "coverage": {
     "minPopularSearchHrefs": 33,
     "minE2eGuards": 1
@@ -11,7 +11,7 @@
       "expectCatalogHref": "/catalog/",
       "expectFinderHref": "/quiz/",
       "expectMinFeaturedReviews": 6,
-      "expectMinReviewCount": 140,
+      "expectMinReviewCount": 160,
       "expectMinCatalogTotal": 150,
       "expectPopularSearchHrefs": [
         "/best/rackets-under-100/",
@@ -49,12 +49,12 @@
         "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
-        "/review/yonex-nanospeed-9900-ltg-green-sword-review/",
-        "/review/yonex-voltric-z-force-ltd-2012-review/",
-        "/review/gosen-ryoga-shiden-review/",
-        "/review/victor-fz-100xx-budget-attack-review/",
         "/review/anta-ah600w-racket-review/",
-        "/review/bonny-leisu-800-lt-review/"
+        "/review/anta-dingyin-1000-racket-review/",
+        "/review/bonny-baidi-800lt-racket-review/",
+        "/review/bonny-leisu-800-lt-review/",
+        "/review/chengong-feng-racket-review/",
+        "/review/gosen-kyokugen-racket-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,

@@ -7,13 +7,18 @@ import {
   homeFeaturedReviews,
 } from "@/lib/home-featured";
 
+const ALREADY_PRECACHED_FEATURED = new Set([
+  "/review/gosen-ryoga-shiden-review/",
+  "/review/anta-ah600w-racket-review/",
+]);
+
 describe("home-featured", () => {
   it("lists six unique featured review slugs from homepage slice", () => {
     const slugs = homeFeaturedReviewSlugs();
     expect(slugs).toHaveLength(6);
     expect(new Set(slugs).size).toBe(6);
-    expect(slugs).toContain("gosen-ryoga-shiden-review");
     expect(slugs).toContain("bonny-leisu-800-lt-review");
+    expect(slugs).toContain("anta-ah600w-racket-review");
   });
 
   it("builds canonical review hrefs", () => {
@@ -24,11 +29,13 @@ describe("home-featured", () => {
 
   it("omits slugs already in Lighthouse precache from featured-only precache list", () => {
     const paths = homeFeaturedReviewPrecachePaths();
-    expect(paths).not.toContain("/review/gosen-ryoga-shiden-review/");
-    expect(paths).not.toContain("/review/anta-ah600w-racket-review/");
-    expect(paths).toContain("/review/yonex-nanospeed-9900-ltg-green-sword-review/");
-    expect(paths).toContain("/review/victor-fz-100xx-budget-attack-review/");
-    expect(paths).toHaveLength(4);
+    for (const href of ALREADY_PRECACHED_FEATURED) {
+      expect(paths).not.toContain(href);
+    }
+    const expected = homeFeaturedReviewHrefs().filter(
+      (href) => !ALREADY_PRECACHED_FEATURED.has(href)
+    );
+    expect(paths).toEqual(expected);
   });
 
   it("builds offline recovery links for every featured review", () => {
