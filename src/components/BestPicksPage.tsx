@@ -237,7 +237,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             <li
               key={p.name}
               id={p.name.toLowerCase().replace(/\s+/g, "-")}
-              className="card p-7 scroll-mt-24"
+              className="card p-6 scroll-mt-24"
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex items-start gap-4">
@@ -255,7 +255,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
                     />
                   )}
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-subtle)]">
+                    <p className="eyebrow">
                       #{p.rank} · {p.brand}
                     </p>
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--text)]">
@@ -348,15 +348,15 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
 
         <AdSlot id={`best-${config.slug}-mid`} />
 
-        <section className="card p-7">
+        <section className="card p-6">
           <h2 className="text-headline text-[var(--text)]">Frequently asked</h2>
           <div className="mt-5 divide-y divide-[color:var(--line)]">
             {config.faqs.map((f) => (
               <details key={f.q} className="group py-4">
-                <summary className="cursor-pointer list-none text-base font-semibold text-[var(--text)]">
+                <summary className="cursor-pointer list-none text-base font-medium text-[var(--text)]">
                   <span className="inline-flex w-full items-center justify-between gap-4">
                     {f.q}
-                    <span className="text-[var(--color-accent)] transition-transform group-open:rotate-45">
+                    <span className="text-[var(--color-subtle)] transition-transform group-open:rotate-45">
                       +
                     </span>
                   </span>
@@ -369,7 +369,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
+        <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-6 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             {config.ctaHeading}
           </h2>

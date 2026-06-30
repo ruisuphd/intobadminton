@@ -121,7 +121,7 @@ export default function EquipmentAuthenticityGuide() {
         </nav>
 
         <header className="space-y-3">
-          <span className="chip">Buyer protection</span>
+          <span className="eyebrow">Buyer protection</span>
           <h1 className="text-3xl font-semibold tracking-tight">
             {authenticityGuide.title}
           </h1>

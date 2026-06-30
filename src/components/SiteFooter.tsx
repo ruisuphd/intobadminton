@@ -54,7 +54,7 @@ const COLUMNS: FooterColumn[] = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t border-[color:var(--line)] py-16">
+    <footer className="mt-auto border-t border-[color:var(--line)] py-14">
       <div className="layout-band max-w-6xl">
         <div className="grid gap-10 md:grid-cols-[2fr_3fr]">
           <div>
@@ -69,9 +69,7 @@ export function SiteFooter() {
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {COLUMNS.map((col) => (
               <div key={col.heading} className="text-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
-                  {col.heading}
-                </p>
+                <p className="eyebrow">{col.heading}</p>
                 <ul className="mt-3 space-y-2">
                   {col.links.map((l) => (
                     <li key={l.path}>

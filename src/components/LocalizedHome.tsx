@@ -3,19 +3,26 @@ import { AdSlot } from "@/components/AdSlot";
 import { FinderQuickFilters } from "@/components/FinderQuickFilters";
 import { HomeContinueReading } from "@/components/HomeContinueReading";
 import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
-import { HomeRecentUpdates } from "@/components/HomeRecentUpdates";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
 import catalogStats from "@/data/catalog-stats.json";
+import { listEditorialUpdates } from "@/lib/editorial-updates";
 import { homeFeaturedReviewPath, homeFeaturedReviews, reviewArticleCount } from "@/lib/home-featured";
 import { homePopularSearches } from "@/lib/home-popular-searches";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 
-const categoryCount = (category: keyof typeof catalogStats) =>
-  catalogStats[category] ?? 0;
+const UPDATE_KIND_LABEL: Record<string, string> = {
+  best: "Best of",
+  guide: "Guide",
+  tool: "Tool",
+  compare: "Compare",
+  brand: "Brand",
+  review: "Review",
+  page: "Page",
+};
 
 const HOME_FAQ: { q: string; a: string }[] = [
   {
@@ -45,6 +52,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const localized = (path: string) => buildLocalizedPath(locale, path);
   const featuredReviews = homeFeaturedReviews;
   const reviewCount = reviewArticleCount;
+  const popularSearches = homePopularSearches;
+  const recentUpdates = listEditorialUpdates(5);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -99,7 +108,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
     ],
   };
 
-  const popularSearches = homePopularSearches;
+  const heroStats = [
+    { num: `${catalogStats.total}`, label: "items ranked" },
+    { num: String(reviewCount), label: "review notes" },
+    { num: "5", label: "fit factors per result" },
+    { num: "3", label: "major brand families" },
+  ];
 
   return (
     <main className="flex-1">
@@ -108,161 +122,117 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       <JsonLd data={breadcrumbJsonLd} />
 
       {/* Hero */}
-      <section className="hero-decoration relative overflow-hidden pt-20 pb-16 lg:pt-24 lg:pb-20">
+      <section className="hero-decoration relative overflow-hidden pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="layout-band relative max-w-6xl">
-          <div className="max-w-3xl">
-            <span className="chip">Badminton equipment finder · 2026 catalogue</span>
-            <h1 className="text-display mt-5 text-[var(--text)]">
+          <div className="max-w-2xl">
+            <span className="eyebrow">Badminton equipment finder · 2026</span>
+            <h1 className="text-display mt-4 text-[var(--text)]">
               {copy.home.title}
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">
+            <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)]">
               {copy.home.subtitle}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link href={localized("/quiz/")} className="btn-primary">
                 {copy.home.start}
               </Link>
               <Link href={localized("/review/")} className="btn-secondary">
                 Read {reviewCount} reviews
               </Link>
+              <span className="text-xs text-[var(--color-subtle)]">
+                No signup · stays on your device
+              </span>
             </div>
-            <p className="mt-6 text-xs text-[var(--color-subtle)]">
-              {"No signup · No email gate · Profiles stay on device"}
-            </p>
-            <div className="mt-8 max-w-xl">
-              <p className="text-sm font-medium text-[var(--text)]">
-                Search reviews, guides, and tools
-              </p>
-              <div className="mt-3">
-                <SiteSearchFormStatic />
-              </div>
-            </div>
-          </div>
 
-          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { num: `${catalogStats.total}`, label: "items in the finder" },
-              { num: String(reviewCount), label: "review notes" },
-              { num: "5", label: "transparent fit factors per result" },
-              { num: "3", label: "major brand families covered" },
-            ].map((s) => (
-              <div
-                key={s.label}
-                className="card p-5"
-              >
-                <p className="text-3xl font-semibold tracking-tight text-[var(--color-accent)]">
-                  {s.num}
-                </p>
-                <p className="mt-2 text-sm text-[var(--color-muted)]">{s.label}</p>
-              </div>
-            ))}
+            <div className="mt-7 max-w-xl">
+              <SiteSearchFormStatic />
+            </div>
+
+            <ul className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[var(--color-muted)]">
+              {heroStats.map((s) => (
+                <li key={s.label} className="flex items-baseline gap-1.5">
+                  <span className="text-base font-semibold text-[var(--text)]">
+                    {s.num}
+                  </span>
+                  <span>{s.label}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      <HomeContinueReading locale={locale} />
-      <HomeRecentUpdates locale={locale} />
-      <HomeRecentShortlists locale={locale} />
-
-      <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
+      {/* Quick finder — high-intent shortcut, kept close to the hero. */}
+      <section className="section-tight">
         <div className="layout-band max-w-6xl">
           <FinderQuickFilters />
         </div>
       </section>
 
-      {/* Popular searches */}
-      <section className="border-t border-[color:var(--line)] py-16 lg:py-20">
+      {/* Personalized — render only for return visitors. */}
+      <HomeContinueReading locale={locale} />
+      <HomeRecentShortlists locale={locale} />
+
+      {/* Explore — merged popular searches + category entry points. Keeps every
+          curated deep link in one calm index instead of three card grids. */}
+      <section className="section border-t border-[color:var(--line)]">
         <div className="layout-band max-w-6xl">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-2xl">
-              <h2 className="text-headline text-[var(--text)]">
-                What badminton lovers search most
+              <span className="eyebrow">Explore</span>
+              <h2 className="text-headline mt-2 text-[var(--text)]">
+                Popular with badminton players
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-                Popular landing pages, hand-picked by player intent.
-              </p>
-            </div>
-          </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {popularSearches.map((p) => (
-              <Link
-                key={p.href}
-                href={localized(p.href)}
-                className="card card-interactive p-5"
-              >
-                <span className="chip chip-secondary">{p.tag}</span>
-                <p className="mt-3 text-sm font-medium text-[var(--text)]">
-                  {p.label}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why */}
-      <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
-        <div className="layout-band max-w-6xl">
-          <div className="max-w-3xl">
-            <h2 className="text-headline text-[var(--text)]">
-              Explainable recommendations with source labels
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-[var(--color-muted)]">
-              {"Every recommendation breaks down into five named factors: style, discipline, level, budget, and body fit. Product-page sources, editor notes, and community references are labelled separately."}
-            </p>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {copy.home.proof.map((x) => (
-              <div key={x.title} className="card p-7">
-                <h3 className="text-lg font-semibold text-[var(--text)]">
-                  {x.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
-                  {x.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories covered */}
-      <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
-        <div className="layout-band max-w-6xl">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div className="max-w-2xl">
-              <h2 className="text-headline text-[var(--text)]">
-                The full badminton gear stack
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-                Rackets, strings, shoes, bags, shuttles, and grips, each scored against how you actually play.
+              <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
+                Hand-picked shortlists and guides across rackets, shoes, strings,
+                bags, shuttles, and grips.
               </p>
             </div>
             <Link
               href={localized("/brands/")}
               className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
             >
-              {"View brands →"}
+              {"View all brands →"}
             </Link>
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: `Rackets · ${categoryCount("racket")} rows`, body: "Role, level, weight class, shaft flex, balance, and source authority are shown before purchase advice." },
-              { title: `Shoes · ${categoryCount("shoes")} rows`, body: "Foot width, stability, cushioning, and comfort cautions are separated from brand preference." },
-              { title: `Strings · ${categoryCount("string")} rows`, body: "Gauge, feel, repulsion, durability, and tension fit are treated as tradeoffs, not universal upgrades." },
-              { title: `Bags · ${categoryCount("bag")} rows`, body: "Capacity, shoe compartment, and commute-vs-tournament workflow." },
-              { title: `Shuttles · ${categoryCount("shuttle")} rows`, body: "Speed code, material, approval status, and durability tier." },
-              { title: `Grips · ${categoryCount("grip")} rows`, body: "Overgrip vs replacement, tackiness, and sweat handling." },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="card p-5"
-              >
-                <p className="text-sm font-semibold text-[var(--text)]">
-                  {item.title}
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-[var(--color-muted)]">
-                  {item.body}
+          <ul className="mt-8 grid gap-x-10 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
+            {popularSearches.map((p) => (
+              <li key={p.href}>
+                <Link
+                  href={localized(p.href)}
+                  className="group flex items-baseline justify-between gap-3 border-b border-[color:var(--line)] py-2.5 text-sm text-[var(--text)] transition-colors hover:text-[var(--color-accent)]"
+                >
+                  <span className="group-hover:underline">{p.label}</span>
+                  <span className="shrink-0 text-xs text-[var(--color-subtle)]">
+                    {p.tag}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Why */}
+      <section className="section border-t border-[color:var(--line)]">
+        <div className="layout-band max-w-6xl">
+          <div className="max-w-2xl">
+            <span className="eyebrow">{"Why it's different"}</span>
+            <h2 className="text-headline mt-2 text-[var(--text)]">
+              Explainable recommendations with source labels
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
+              {"Every recommendation breaks down into five named factors: style, discipline, level, budget, and body fit. Product-page sources, editor notes, and community references are labelled separately."}
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {copy.home.proof.map((x) => (
+              <div key={x.title} className="card p-6">
+                <h3 className="text-base font-semibold text-[var(--text)]">
+                  {x.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+                  {x.body}
                 </p>
               </div>
             ))}
@@ -272,74 +242,107 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
 
       <HomeToolkitStrip locale={locale} />
 
-      {featuredReviews.length > 0 && (
-        <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
-          <div className="layout-band max-w-6xl">
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <div className="max-w-2xl">
-                <h2 className="text-headline text-[var(--text)]">
-                  Latest reviews
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-                  Recent equipment notes from club play.
-                </p>
-              </div>
-              <Link
-                href={localized("/review/")}
-                className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
-              >
-                {"View all →"}
-              </Link>
+      {/* Fresh from the site — merged latest reviews + recently updated. */}
+      <section className="section border-t border-[color:var(--line)]">
+        <div className="layout-band max-w-6xl">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="max-w-2xl">
+              <span className="eyebrow">Fresh from the site</span>
+              <h2 className="text-headline mt-2 text-[var(--text)]">
+                Latest reviews
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
+                Recent equipment notes from club play.
+              </p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <Link
+              href={localized("/review/")}
+              className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+            >
+              {"View all →"}
+            </Link>
+          </div>
+
+          {featuredReviews.length > 0 && (
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
               {featuredReviews.map((article) => (
                 <Link
                   key={article.slug}
                   href={localized(homeFeaturedReviewPath(article.slug))}
-                  className="card card-interactive p-6 block"
+                  className="card card-interactive block p-5"
                 >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs text-[var(--color-subtle)]">
-                      {article.readingMinutes} min read
-                    </span>
-                    <span className="text-xs text-[var(--color-subtle)]">·</span>
-                    <time
-                      className="text-xs text-[var(--color-subtle)]"
-                      dateTime={article.updatedAt}
-                    >
-                      {article.updatedAt}
-                    </time>
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-subtle)]">
+                    <span>{article.readingMinutes} min read</span>
+                    <span>·</span>
+                    <time dateTime={article.updatedAt}>{article.updatedAt}</time>
                   </div>
-                  <h3 className="mt-3 text-lg font-semibold text-[var(--text)]">
+                  <h3 className="mt-3 text-base font-semibold leading-snug text-[var(--text)]">
                     {article.title}
                   </h3>
                 </Link>
               ))}
             </div>
-          </div>
-        </section>
-      )}
+          )}
 
-      <div className="layout-band max-w-6xl py-12">
+          {recentUpdates.length > 0 && (
+            <div className="mt-10">
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <h3 className="text-sm font-semibold text-[var(--text)]">
+                  Recently updated
+                </h3>
+                <Link
+                  href={localized("/updates/")}
+                  className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+                >
+                  {"All updates →"}
+                </Link>
+              </div>
+              <ul className="mt-3 divide-y divide-[color:var(--line)] border-t border-[color:var(--line)]">
+                {recentUpdates.map((row) => (
+                  <li key={row.path}>
+                    <Link
+                      href={localized(row.path)}
+                      className="flex flex-wrap items-baseline justify-between gap-2 py-3 transition-colors hover:text-[var(--color-accent)]"
+                    >
+                      <span className="text-sm text-[var(--text)]">
+                        {row.title}
+                      </span>
+                      <span className="flex shrink-0 items-center gap-3 text-xs text-[var(--color-subtle)]">
+                        <span>{UPDATE_KIND_LABEL[row.kind] ?? row.kind}</span>
+                        <time dateTime={row.lastReviewedAt}>
+                          {row.lastReviewedAt}
+                        </time>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <div className="layout-band max-w-6xl section-tight">
         <AdSlot id={`${locale}-home-mid`} />
       </div>
 
       {/* FAQ */}
-      <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
+      <section className="section border-t border-[color:var(--line)]">
         <div className="layout-band max-w-3xl">
-          <h2 className="text-headline text-[var(--text)]">
+          <span className="eyebrow">FAQ</span>
+          <h2 className="text-headline mt-2 text-[var(--text)]">
             Badminton equipment questions, answered
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
+          <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
             Short practical answers with clear limits. For deeper context, jump into the finder or read a full deep-dive.
           </p>
-          <div className="mt-10 divide-y divide-[color:var(--line)]">
+          <div className="mt-8 divide-y divide-[color:var(--line)]">
             {HOME_FAQ.map((f) => (
-              <details key={f.q} className="group py-5">
-                <summary className="cursor-pointer list-none text-base font-semibold text-[var(--text)]">
+              <details key={f.q} className="group py-4">
+                <summary className="cursor-pointer list-none text-base font-medium text-[var(--text)]">
                   <span className="inline-flex w-full items-center justify-between gap-4">
                     {f.q}
-                    <span className="text-[var(--color-accent)] transition-transform group-open:rotate-45">
+                    <span className="text-[var(--color-subtle)] transition-transform group-open:rotate-45">
                       +
                     </span>
                   </span>
@@ -353,15 +356,16 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         </div>
       </section>
 
-      <section className="border-t border-[color:var(--line)] py-20 lg:py-24">
+      {/* Closing CTA */}
+      <section className="section border-t border-[color:var(--line)]">
         <div className="layout-band max-w-3xl text-center">
           <h2 className="text-headline text-[var(--text)]">
             Find the badminton gear that fits your game
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-[var(--color-muted)]">
+          <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
             Answer a few questions. We rank gear with a transparent score — no email, no account, no signup wall.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link href={localized("/quiz/")} className="btn-primary">
               {copy.home.start}
             </Link>

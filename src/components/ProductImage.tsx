@@ -60,12 +60,17 @@ export function ProductImageView({
 }) {
   if (!canShowProductImage(image) || !image) return null;
 
-  const dim = image.width ?? size;
+  // `size` is the display box (square). The intrinsic width/height only inform
+  // the HTML attributes for aspect-ratio / CLS — they must NOT drive the
+  // rendered size, otherwise every thumbnail balloons to the source image's
+  // native width (often 480–600px) and cards stop scanning as cards.
+  const intrinsicW = image.width ?? size;
+  const intrinsicH = image.height ?? size;
 
   return (
     <figure
       className={`product-image ${className}`}
-      style={{ width: dim, minHeight: dim }}
+      style={{ width: size, minHeight: size }}
     >
       {/* Plain <img> rather than next/image — the site uses output:"export"
           with images.unoptimized, so next/image gives no benefit and adds
@@ -74,13 +79,13 @@ export function ProductImageView({
       <img
         src={image.url}
         alt={image.alt}
-        width={dim}
-        height={image.height ?? size}
+        width={intrinsicW}
+        height={intrinsicH}
         loading="lazy"
         decoding="async"
         referrerPolicy="no-referrer"
         className="rounded-xl bg-[color:var(--surface-muted)] object-contain"
-        style={{ width: dim, height: dim }}
+        style={{ width: size, height: size }}
       />
       {!hideCaption && (
         <figcaption className="mt-1 text-[10px] uppercase tracking-wide text-[var(--color-subtle)]">

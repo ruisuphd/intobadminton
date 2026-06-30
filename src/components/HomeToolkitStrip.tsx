@@ -34,14 +34,15 @@ export function HomeToolkitStrip({ locale }: { locale: SiteLocale }) {
   const localized = (path: string) => buildLocalizedPath(locale, path);
 
   return (
-    <section className="border-t border-[color:var(--line)] py-16 lg:py-20">
+    <section className="section border-t border-[color:var(--line)]">
       <div className="layout-band max-w-6xl">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-headline text-[var(--text)]">
-              Free badminton toolkit
+            <span className="eyebrow">Free toolkit</span>
+            <h2 className="text-headline mt-2 text-[var(--text)]">
+              Calculators &amp; references
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
+            <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
               Original calculators and references — no account, nothing leaves
               your device.
             </p>
@@ -60,7 +61,7 @@ export function HomeToolkitStrip({ locale }: { locale: SiteLocale }) {
                 href={localized(tool.href)}
                 className="card card-interactive block p-5"
               >
-                <span className="chip chip-secondary">{tool.tag}</span>
+                <span className="chip chip-neutral">{tool.tag}</span>
                 <p className="mt-3 text-sm font-semibold text-[var(--text)]">
                   {tool.title}
                 </p>

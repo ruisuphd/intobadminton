@@ -15,11 +15,12 @@ export function HomeRecentShortlists({ locale }: { locale: SiteLocale }) {
   const localized = (path: string) => buildLocalizedPath(locale, path);
 
   return (
-    <section className="border-t border-[color:var(--line)] py-12 lg:py-16">
+    <section className="section-tight border-t border-[color:var(--line)]">
       <div className="layout-band max-w-6xl">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <h2 className="text-headline text-[var(--text)]">
+            <span className="eyebrow">On this device</span>
+            <h2 className="text-headline mt-2 text-[var(--text)]">
               Your recent shortlists
             </h2>
             <p className="mt-3 text-sm text-[var(--color-muted)]">

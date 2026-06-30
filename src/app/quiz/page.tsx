@@ -15,7 +15,7 @@ export function QuizShell() {
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
         <header className="max-w-3xl">
-          <span className="chip">Badminton equipment finder · 5 minutes · No signup</span>
+          <span className="eyebrow">Badminton equipment finder · 5 minutes · No signup</span>
           <h1 className="text-display mt-5 text-[var(--text)]">
             Find the badminton equipment that fits how you actually play
           </h1>

@@ -102,7 +102,7 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
     <main className="flex-1 py-16">
       <div className="layout-band max-w-6xl">
         <header className="max-w-3xl">
-          <span className="chip">
+          <span className="eyebrow">
             Equipment guides · {guides.length} deep dives
           </span>
           <h1 className="mt-5 text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
