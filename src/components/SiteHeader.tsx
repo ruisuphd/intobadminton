@@ -10,17 +10,26 @@ import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-const NAV_LINKS = [
+// Primary destinations live in the desktop top bar. Secondary destinations are
+// surfaced in the mobile menu and remain site-wide linked from the footer, so
+// trimming the desktop bar costs no internal links / crawl depth — it just
+// calms a previously 9-item row. Search is reachable via the inline form
+// (≥1200px), the search icon (smaller screens), and the homepage hero.
+const PRIMARY_NAV = [
   { href: "/quiz/", label: "Finder" },
   { href: "/catalog/", label: "Catalog" },
   { href: "/best/", label: "Best Of" },
   { href: "/review/", label: "Reviews" },
-  { href: "/tools/", label: "Tools" },
   { href: "/guides/", label: "Guides" },
+] as const;
+
+const SECONDARY_NAV = [
+  { href: "/tools/", label: "Tools" },
   { href: "/brands/", label: "Brands" },
   { href: "/faq/", label: "FAQ" },
-  { href: "/search/", label: "Search" },
 ] as const;
+
+const MOBILE_NAV = [...PRIMARY_NAV, ...SECONDARY_NAV] as const;
 
 function isActive(pathname: string, href: string): boolean {
   // Treat section hubs as active for their nested pages too.
@@ -95,11 +104,8 @@ export function SiteHeader() {
           <span>IntoBadminton</span>
         </Link>
 
-        <nav className="hidden items-center gap-4 text-sm sm:flex" aria-label="Primary">
-          <div className="mr-1 hidden min-[1200px]:block">
-            <SiteSearchForm compact />
-          </div>
-          {NAV_LINKS.map((l) => {
+        <nav className="hidden items-center gap-5 text-sm sm:flex" aria-label="Primary">
+          {PRIMARY_NAV.map((l) => {
             const active = isActive(pathname, l.href);
             return (
               <Link
@@ -116,6 +122,30 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <div className="ml-1 hidden min-[1200px]:block">
+            <SiteSearchForm compact />
+          </div>
+          {/* Compact search affordance for the sm–xl range where the inline
+              form is hidden. */}
+          <Link
+            href="/search/"
+            aria-label="Search"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--line-strong)] text-[var(--color-muted)] transition-colors hover:border-[var(--text)] hover:text-[var(--text)] min-[1200px]:hidden"
+          >
+            <svg
+              aria-hidden
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </Link>
           <SavedHeaderLink variant="desktop" />
           <Link
             href="/quiz/"
@@ -170,7 +200,7 @@ export function SiteHeader() {
           className="border-t border-[color:var(--line)] bg-white sm:hidden"
         >
           <ul className="layout-band max-w-6xl py-3">
-            {NAV_LINKS.map((l) => {
+            {MOBILE_NAV.map((l) => {
               const active = isActive(pathname, l.href);
               return (
                 <li key={l.href}>

@@ -31,11 +31,11 @@
   --color-warning: #b45309;
   --color-warning-soft: rgba(180, 83, 9, 0.08);
 
-  /* Elevation */
-  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04),
-    0 4px 12px rgba(15, 23, 42, 0.04);
-  --shadow-elevated: 0 4px 10px rgba(15, 23, 42, 0.05),
-    0 20px 40px rgba(15, 23, 42, 0.08);
+  /* Elevation — kept deliberately flat. Cards lean on the hairline border for
+     definition; shadow is a faint lift, not a drop. */
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-elevated: 0 2px 6px rgba(15, 23, 42, 0.05),
+    0 12px 28px rgba(15, 23, 42, 0.06);
 
   /* Radii */
   --radius-card: 0.75rem;
@@ -74,17 +74,17 @@ body {
 }
 
 .text-display {
-  font-size: clamp(2.25rem, 5vw + 1rem, 4rem);
-  line-height: 1.08;
-  letter-spacing: 0;
+  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   font-weight: 600;
   text-wrap: balance;
 }
 
 .text-headline {
-  font-size: clamp(1.75rem, 3vw + 0.75rem, 2.75rem);
-  line-height: 1.1;
-  letter-spacing: 0;
+  font-size: clamp(1.5rem, 2.5vw + 0.75rem, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   font-weight: 600;
   text-wrap: balance;
 }
@@ -150,6 +150,41 @@ details > summary:focus-visible {
   }
 }
 
+/* ---------- Section rhythm ----------
+   One calm, consistent vertical scale instead of ad-hoc py-12/14/16/20/24.
+   .section is the default; .section-tight for closely related blocks. */
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.section-tight {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .section-tight {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* Quiet uppercase label — replaces decorative red chips used as eyebrows. */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-subtle);
+}
+
 .card {
   background: var(--surface-elevated);
   border-radius: var(--radius-card);
@@ -160,7 +195,7 @@ details > summary:focus-visible {
 
 .card-interactive:hover {
   box-shadow: var(--shadow-elevated);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   border-color: var(--line-strong);
 }
 

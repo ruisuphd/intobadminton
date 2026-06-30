@@ -18,7 +18,7 @@ export default function CompareLayout({
     <>
       <section className="border-b border-[color:var(--line)] bg-[var(--surface)] py-16">
         <div className="layout-band max-w-3xl">
-          <span className="chip">Side-by-side comparison</span>
+          <span className="eyebrow">Side-by-side comparison</span>
           <h1 className="mt-5 text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
             Compare badminton equipment, spec for spec
           </h1>

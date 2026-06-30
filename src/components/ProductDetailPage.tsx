@@ -58,7 +58,7 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
           {canShowProductImage(product.image) && (
             <ProductImageView
               image={product.image}
-              size={160}
+              size={220}
               className="shrink-0 rounded-xl border border-[color:var(--line)]"
             />
           )}
