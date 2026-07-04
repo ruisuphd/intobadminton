@@ -267,20 +267,26 @@ def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
 def parse_md_table(body: str) -> tuple[str, dict | None]:
     if "|" not in body:
         return body, None
-    lines = [
+
+    lines_all = body.split("\n")
+    table_lines = [
         line.strip()
-        for line in body.split("\n")
-        if line.strip() and not re.match(r"^\|?\s*-+", line)
+        for line in lines_all
+        if "|" in line
+        and line.strip()
+        and not re.match(r"^\|?\s*-+", line.strip())
     ]
-    if len(lines) < 2:
+    if len(table_lines) < 2:
         return body, None
+
     rows_raw: list[list[str]] = []
-    for line in lines:
+    for line in table_lines:
         cells = [cell.strip() for cell in line.strip("|").split("|")]
         if any(cells):
             rows_raw.append(cells)
     if len(rows_raw) < 2 or len(rows_raw[0]) < 2:
         return body, None
+
     header = rows_raw[0]
     data_rows = []
     for row in rows_raw[1:]:
@@ -289,12 +295,31 @@ def parse_md_table(body: str) -> tuple[str, dict | None]:
         data_rows.append({"label": row[0], "values": row[1:]})
     if not data_rows:
         return body, None
+
+    first_table_idx = next(
+        i
+        for i, line in enumerate(lines_all)
+        if "|" in line and line.strip() and not re.match(r"^\|?\s*-+", line.strip())
+    )
+    last_table_idx = max(
+        i
+        for i, line in enumerate(lines_all)
+        if "|" in line and line.strip() and not re.match(r"^\|?\s*-+", line.strip())
+    )
+    intro = "\n".join(lines_all[:first_table_idx]).strip()
+    outro = "\n".join(lines_all[last_table_idx + 1 :]).strip()
+    summary_parts = [
+        intro,
+        f"Compared {len(data_rows)} rows across {', '.join(header[1:])}.",
+        outro,
+    ]
+    summary = "\n\n".join(part for part in summary_parts if part)
+
     comparison = {
         "caption": header[0] or "Comparison",
         "columns": header[1:],
         "rows": data_rows,
     }
-    summary = f"Compared {len(data_rows)} rows across {', '.join(header[1:])}."
     return summary, comparison
 
 

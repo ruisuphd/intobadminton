@@ -1662,7 +1662,13 @@
     "sections": [
       {
         "heading": "Overview",
-        "body": "This review compares the Li-Ning AxForce 100 Gen II against AxForce 90 New, Astrox 88D Pro new colour, and Astrox 100ZZ—all 4U. Gen I AxForce 100 was only briefly tested (3U/4U felt too heavy) and is excluded.\n\nExpectations for Gen II came largely from loving AxForce 90 New as a mixed-doubles main racket. Gen II launched right after 90 New—would it surprise again?"
+        "body": "This review compares the Li-Ning AxForce 100 Gen II against AxForce 90 New, Astrox 88D Pro new colour, and Astrox 100ZZ—all 4U. Gen I AxForce 100 was only briefly tested (3U/4U felt too heavy) and is excluded.\n\nExpectations for Gen II came largely from loving AxForce 90 New as a mixed-doubles main racket. Gen II launched right after 90 New—would it surprise again?",
+        "glossaryLinks": [
+          {
+            "term": "Swing weight",
+            "id": "swing-weight"
+          }
+        ]
       },
       {
         "heading": "Weight spread matters",
@@ -1670,7 +1676,7 @@
       },
       {
         "heading": "AxForce 90 New versus Gen II",
-        "body": "Compared 2 rows across 90 New, 100 Gen II."
+        "body": "Compared 2 rows across 90 New, 100 Gen II.\n\nGen II feels more head-heavy with clearly larger swing weight despite similar strung weight. Shaft between 90 New and 88D Pro—slightly harder than 90 New, softer than 88D. Both elastic; 90 New crisp-bouncy with obvious borrowing (closer to 88D); Gen II resilient-bouncy like Astrox 100ZZ—solid feel. Gen II clears borrow easily; faster, stabler, more precise output; drops stick net more; heavy smashes heavier.\n\n90 New: slightly larger sweet spot, faster swing, higher defence/passive forgiveness, faster front-court racket raise. Gen II transmits force faster on incoming fast shuttles for short-burst effect. Average-power players borrow more easily on 90 New (eight effort, ten result); Gen II gives what you put in—better power control, higher threshold, better for short burst. 90 New sweeter and wider audience; Gen II suits stronger players."
       },
       {
         "heading": "Astrox 88D Pro new colour versus Gen II",
@@ -3414,7 +3420,7 @@
     "sections": [
       {
         "heading": "Launch positioning and technology",
-        "body": "In March, Victor quietly launched a new flagship that once again maxed out its core technology: the Auraspeed 99. It is Victor's first whole-racket full alloy carbon fibre model, the first wooden handle Auraspeed with WES 3.0 (Whip Enhancement System 3.0), and a stack of front-line features: nano aerogel, Strong Core Filling, Hundred Lok (PBO) carbon, TR+ toughened carbon, Elastic Shield, and Victor's anti-torsion system. For many players it represents Victor finally combining the whip of classic Hypersonic-era WES with the alloy-carbon punch pioneered on the DriveX 10 Metallic and Auraspeed 90K Metallic—stiff yet supple construction with soul injected into the lay-up.\n\nThe frame inherits the Auraspeed 90K Metallic 76-hole large-face dynamic wind-cut profile, with alloy carbon fibre, TR+ toughened nano carbon tube, and Rebound Shield. The 6.8 mm shaft uses classic PBO carbon plus alloy carbon fibre and WES 3.0—the same whip system that defined Hypersonic and materially changed this racket's feel. Alloy carbon in both frame and shaft (upgrading from Auraspeed 90K Metallic's frame-only import) synchronously boosts frame and shaft strength and rebound: the frame import strengthens offence and frame toughness; the shaft import improves power transfer, shuttle speed, and precision. WES 3.0 is claimed to enhance reverse whip, sharpen downward angle, increase penetration, and raise continuous offensive threat. Nano aerogel in the wind-cut frame aids torsion control for faster swing and cleaner contact. The traditional wooden handle keeps feel solid—a win for wood-handle loyalists.\n\nAvailable in 3U G5 and 4U G5. Reported measurements vary by setup:\n\n| Setup | Weight | Balance |\n|-------|--------|---------|\n| 4U, empty | 82.1 g | 297 mm |\n| 4U, strung with overgrip (cap on) | 94.2 g | 298 mm |\n| 4U, cap removed, two buffer films, overgrip | 88.2 g | 310 mm |\n| 4U G5, bottomed, in use (quirky review) | 93.54 g | 295 mm |\n\nShaft length 210 mm (extended wood core—doubles-friendly). Stiffness is labelled near-maximum / level 9 extra stiff. Stringing cited: 27/29 lbs, 25–27 lbs VBS-66N, with 31 lb warranty rating. 76-hole bed, 9–3 groove pattern.",
+        "body": "In March, Victor quietly launched a new flagship that once again maxed out its core technology: the Auraspeed 99. It is Victor's first whole-racket full alloy carbon fibre model, the first wooden handle Auraspeed with WES 3.0 (Whip Enhancement System 3.0), and a stack of front-line features: nano aerogel, Strong Core Filling, Hundred Lok (PBO) carbon, TR+ toughened carbon, Elastic Shield, and Victor's anti-torsion system. For many players it represents Victor finally combining the whip of classic Hypersonic-era WES with the alloy-carbon punch pioneered on the DriveX 10 Metallic and Auraspeed 90K Metallic—stiff yet supple construction with soul injected into the lay-up.\n\nThe frame inherits the Auraspeed 90K Metallic 76-hole large-face dynamic wind-cut profile, with alloy carbon fibre, TR+ toughened nano carbon tube, and Rebound Shield. The 6.8 mm shaft uses classic PBO carbon plus alloy carbon fibre and WES 3.0—the same whip system that defined Hypersonic and materially changed this racket's feel. Alloy carbon in both frame and shaft (upgrading from Auraspeed 90K Metallic's frame-only import) synchronously boosts frame and shaft strength and rebound: the frame import strengthens offence and frame toughness; the shaft import improves power transfer, shuttle speed, and precision. WES 3.0 is claimed to enhance reverse whip, sharpen downward angle, increase penetration, and raise continuous offensive threat. Nano aerogel in the wind-cut frame aids torsion control for faster swing and cleaner contact. The traditional wooden handle keeps feel solid—a win for wood-handle loyalists.\n\nAvailable in 3U G5 and 4U G5. Reported measurements vary by setup:\n\nCompared 4 rows across Weight, Balance.\n\nShaft length 210 mm (extended wood core—doubles-friendly). Stiffness is labelled near-maximum / level 9 extra stiff. Stringing cited: 27/29 lbs, 25–27 lbs VBS-66N, with 31 lb warranty rating. 76-hole bed, 9–3 groove pattern.",
         "glossaryLinks": [
           {
             "term": "Clear",
@@ -3452,6 +3458,43 @@
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "comparison": {
+      "caption": "Setup",
+      "columns": [
+        "Weight",
+        "Balance"
+      ],
+      "rows": [
+        {
+          "label": "4U, empty",
+          "values": [
+            "82.1 g",
+            "297 mm"
+          ]
+        },
+        {
+          "label": "4U, strung with overgrip (cap on)",
+          "values": [
+            "94.2 g",
+            "298 mm"
+          ]
+        },
+        {
+          "label": "4U, cap removed, two buffer films, overgrip",
+          "values": [
+            "88.2 g",
+            "310 mm"
+          ]
+        },
+        {
+          "label": "4U G5, bottomed, in use (quirky review)",
+          "values": [
+            "93.54 g",
+            "295 mm"
+          ]
+        }
+      ]
+    },
     "relatedReviewProductId": "vic-auraspeed-99"
   },
   {
@@ -3668,7 +3711,7 @@
       },
       {
         "heading": "Weight QC data",
-        "body": "Per-shuttle weight shows the QC gap clearly. Measurements below (12 shuttles unless noted):\n\n| Model | Mean (g) | Range (g) | Max deviation (g) | Variance |\n|-------|----------|-----------|-------------------|----------|\n| Carbonsonic MAX | 4.9967 | 0.04 | 0.0033 | 0.0001 |\n| Carbonsonic PRO | 5.0058 | 0.07 | 0.0067 | 0.0003 |\n| Carbonsonic PRO Horse Year (6) | 5.0000 | 0.00 | 0.0000 | 0.0000 |\n| Yonex AS-50 | 5.3158 | 0.21 | 0.0825 | 0.0045 |\n| RSL Ultimate | 4.8925 | 0.20 | 0.1158 | 0.0057 |\n| Yonex AS-30 | 5.2683 | 0.43 | 0.1858 | 0.0087 |\n| Yonex AS-05 | 5.1783 | 0.34 | 0.1700 | 0.0094 |\n| RSL No.1 (6) | 4.8117 | 0.22 | 0.1217 | 0.0060 |\n| RSL No.2 | 4.9942 | 0.07 | 0.0058 | 0.0002 |\n| Aoklin AC50 (6) | 5.0333 | 0.20 | 0.1667 | 0.0067 |\n\nPremium naturals mostly sit within ±0.4 g spec but rarely hit the same gram every shuttle. Carbonsonic lands almost exactly 5 g each—no lottery. Flagship naturals above 200 yuan lost on consistency versus this production standardisation."
+        "body": "Per-shuttle weight shows the QC gap clearly. Measurements below (12 shuttles unless noted):\n\nCompared 10 rows across Mean (g), Range (g), Max deviation (g), Variance.\n\nPremium naturals mostly sit within ±0.4 g spec but rarely hit the same gram every shuttle. Carbonsonic lands almost exactly 5 g each—no lottery. Flagship naturals above 200 yuan lost on consistency versus this production standardisation."
       },
       {
         "heading": "Structural upgrades (gen three)",
@@ -3688,6 +3731,107 @@
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "comparison": {
+      "caption": "Model",
+      "columns": [
+        "Mean (g)",
+        "Range (g)",
+        "Max deviation (g)",
+        "Variance"
+      ],
+      "rows": [
+        {
+          "label": "Carbonsonic MAX",
+          "values": [
+            "4.9967",
+            "0.04",
+            "0.0033",
+            "0.0001"
+          ]
+        },
+        {
+          "label": "Carbonsonic PRO",
+          "values": [
+            "5.0058",
+            "0.07",
+            "0.0067",
+            "0.0003"
+          ]
+        },
+        {
+          "label": "Carbonsonic PRO Horse Year (6)",
+          "values": [
+            "5.0000",
+            "0.00",
+            "0.0000",
+            "0.0000"
+          ]
+        },
+        {
+          "label": "Yonex AS-50",
+          "values": [
+            "5.3158",
+            "0.21",
+            "0.0825",
+            "0.0045"
+          ]
+        },
+        {
+          "label": "RSL Ultimate",
+          "values": [
+            "4.8925",
+            "0.20",
+            "0.1158",
+            "0.0057"
+          ]
+        },
+        {
+          "label": "Yonex AS-30",
+          "values": [
+            "5.2683",
+            "0.43",
+            "0.1858",
+            "0.0087"
+          ]
+        },
+        {
+          "label": "Yonex AS-05",
+          "values": [
+            "5.1783",
+            "0.34",
+            "0.1700",
+            "0.0094"
+          ]
+        },
+        {
+          "label": "RSL No.1 (6)",
+          "values": [
+            "4.8117",
+            "0.22",
+            "0.1217",
+            "0.0060"
+          ]
+        },
+        {
+          "label": "RSL No.2",
+          "values": [
+            "4.9942",
+            "0.07",
+            "0.0058",
+            "0.0002"
+          ]
+        },
+        {
+          "label": "Aoklin AC50 (6)",
+          "values": [
+            "5.0333",
+            "0.20",
+            "0.1667",
+            "0.0067"
+          ]
+        }
+      ]
+    },
     "relatedReviewProductId": "vic-carbonsonic-max-shuttle"
   },
   {
@@ -3729,10 +3873,60 @@
       },
       {
         "heading": "Recommendation summary",
-        "body": "DriveX 10 METALLIC positioning is moderate control leaning attack; hold is close to Auraspeed 100X.\n\nStrong when you are strong — firm, hard, elastic, fast, satisfying.\n\nOverall stability and attack beat 100X. Treat it as an advanced 100X. If you cannot drive it, that is normal — higher stamina ceiling. Recommend players who like 100X stable feel but want more singles attack than 100X.\n\nThe biggest highlight is the alloy shaft — under paint the whole Pyrofil shaft fuses alloy; exposed shaft end is intentional. With high-tension hard string like VBS-68 at 30 lbs you feel unprecedented metallic hit — direct strong feel like iron bone clang. Without suspended handle damping, entry bar would be higher — metal vibration is obvious.\n\n| DriveX 10 METALLIC | |\n|---|---|\n| Frame material | High-toughness carbon fibre + TR toughened nano carbon tube HARD CORED TECHNOLOGY |\n| Shaft material | High-toughness carbon fibre + PYROFIL + 6.6 SHAFT |\n| Length | 675 mm |\n| Spec | 3U, 4U |\n| Grip size | G5 |\n| Recommended tension | 3U ≤ 29 lbs, 4U ≤ 28 lbs |\n| Shaft stiffness | Medium-stiff |"
+        "body": "DriveX 10 METALLIC positioning is moderate control leaning attack; hold is close to Auraspeed 100X.\n\nStrong when you are strong — firm, hard, elastic, fast, satisfying.\n\nOverall stability and attack beat 100X. Treat it as an advanced 100X. If you cannot drive it, that is normal — higher stamina ceiling. Recommend players who like 100X stable feel but want more singles attack than 100X.\n\nThe biggest highlight is the alloy shaft — under paint the whole Pyrofil shaft fuses alloy; exposed shaft end is intentional. With high-tension hard string like VBS-68 at 30 lbs you feel unprecedented metallic hit — direct strong feel like iron bone clang. Without suspended handle damping, entry bar would be higher — metal vibration is obvious.\n\nCompared 7 rows across ."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "comparison": {
+      "caption": "DriveX 10 METALLIC",
+      "columns": [
+        ""
+      ],
+      "rows": [
+        {
+          "label": "Frame material",
+          "values": [
+            "High-toughness carbon fibre + TR toughened nano carbon tube HARD CORED TECHNOLOGY"
+          ]
+        },
+        {
+          "label": "Shaft material",
+          "values": [
+            "High-toughness carbon fibre + PYROFIL + 6.6 SHAFT"
+          ]
+        },
+        {
+          "label": "Length",
+          "values": [
+            "675 mm"
+          ]
+        },
+        {
+          "label": "Spec",
+          "values": [
+            "3U, 4U"
+          ]
+        },
+        {
+          "label": "Grip size",
+          "values": [
+            "G5"
+          ]
+        },
+        {
+          "label": "Recommended tension",
+          "values": [
+            "3U ≤ 29 lbs, 4U ≤ 28 lbs"
+          ]
+        },
+        {
+          "label": "Shaft stiffness",
+          "values": [
+            "Medium-stiff"
+          ]
+        }
+      ]
+    },
     "relatedReviewProductId": "vic-drivex-10-metallic"
   },
   {
@@ -4040,7 +4234,7 @@
       },
       {
         "heading": "P8500 II versus A970 Nitro Lite",
-        "body": "At similar price and flagship tier, both are essentially blind-buy quality—strong Thomas & Uber Cup presence on feet worldwide.\n\n| Factor | P8500 II | A970 Nitro Lite |\n|--------|----------|-----------------|\n| Last | U 2.5E, broad Asian fit | V 2.5 3E, tighter forefoot |\n| Weight (size 42) | ~313 g | ~310 g (felt similar on foot) |\n| Cushioning | HyperEVA full midsole, solid | NitroLite supercritical foam + E-TPU, softer |\n| Launch | Good for P-series; less court feel | Faster start; slightly less extreme speed after forefoot cushion increase |\n| Durability / fit range | Higher durability; suits light and heavy weights | Better if narrow foot suits V last |\n| Best for | Daily driver, wide/thick feet, heavy players | Tighter fit, maximum cushioning comfort |\n\nIf foot shape suits a snugger last and budget allows, A970 Nitro Lite may edge overall cushioning and startup. P8500 II wins on durability, last compatibility and “does not pick feet”—especially recommended for heavier or wider-foot players."
+        "body": "At similar price and flagship tier, both are essentially blind-buy quality—strong Thomas & Uber Cup presence on feet worldwide.\n\nCompared 6 rows across P8500 II, A970 Nitro Lite.\n\nIf foot shape suits a snugger last and budget allows, A970 Nitro Lite may edge overall cushioning and startup. P8500 II wins on durability, last compatibility and “does not pick feet”—especially recommended for heavier or wider-foot players."
       },
       {
         "heading": "Who it suits",
@@ -4052,6 +4246,57 @@
       }
     ],
     "cta": "Use the shoe finder with wide-last + stability flags, then compare against the A970 Nitro Lite (the lighter modern stablemate) before committing.",
+    "comparison": {
+      "caption": "Factor",
+      "columns": [
+        "P8500 II",
+        "A970 Nitro Lite"
+      ],
+      "rows": [
+        {
+          "label": "Last",
+          "values": [
+            "U 2.5E, broad Asian fit",
+            "V 2.5 3E, tighter forefoot"
+          ]
+        },
+        {
+          "label": "Weight (size 42)",
+          "values": [
+            "~313 g",
+            "~310 g (felt similar on foot)"
+          ]
+        },
+        {
+          "label": "Cushioning",
+          "values": [
+            "HyperEVA full midsole, solid",
+            "NitroLite supercritical foam + E-TPU, softer"
+          ]
+        },
+        {
+          "label": "Launch",
+          "values": [
+            "Good for P-series; less court feel",
+            "Faster start; slightly less extreme speed after forefoot cushion increase"
+          ]
+        },
+        {
+          "label": "Durability / fit range",
+          "values": [
+            "Higher durability; suits light and heavy weights",
+            "Better if narrow foot suits V last"
+          ]
+        },
+        {
+          "label": "Best for",
+          "values": [
+            "Daily driver, wide/thick feet, heavy players",
+            "Tighter fit, maximum cushioning comfort"
+          ]
+        }
+      ]
+    },
     "relatedReviewProductId": "vic-p8500-ii"
   },
   {
@@ -4130,10 +4375,48 @@
       },
       {
         "heading": "Recommendation summary",
-        "body": "Overall the P9200 III merges built-in midsole tech with Victor's flagship IP — tradition and innovation passed down. I once imagined modular built-in midsole still has huge room — I hope for an E-TPU or supercritical dream combo someday.\n\nThe P9200 III has a very objective damping ceiling suited to heavier players while also offering decent launch speed. Excluding the novel feel needing adaptation, comprehensive battle performance is strongly recommended.\n\n| VICTOR P9200 III | |\n|---|---|\n| Upper | Microfiber PU + toe wear PU + double-layer breathable mesh |\n| Midsole | HYPEREVA + Solid EVA |\n| Outsole | VSR rubber |\n| Last | U-SHAPE 2.5 |\n| Price | ¥1280 |"
+        "body": "Overall the P9200 III merges built-in midsole tech with Victor's flagship IP — tradition and innovation passed down. I once imagined modular built-in midsole still has huge room — I hope for an E-TPU or supercritical dream combo someday.\n\nThe P9200 III has a very objective damping ceiling suited to heavier players while also offering decent launch speed. Excluding the novel feel needing adaptation, comprehensive battle performance is strongly recommended.\n\nCompared 5 rows across ."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "comparison": {
+      "caption": "VICTOR P9200 III",
+      "columns": [
+        ""
+      ],
+      "rows": [
+        {
+          "label": "Upper",
+          "values": [
+            "Microfiber PU + toe wear PU + double-layer breathable mesh"
+          ]
+        },
+        {
+          "label": "Midsole",
+          "values": [
+            "HYPEREVA + Solid EVA"
+          ]
+        },
+        {
+          "label": "Outsole",
+          "values": [
+            "VSR rubber"
+          ]
+        },
+        {
+          "label": "Last",
+          "values": [
+            "U-SHAPE 2.5"
+          ]
+        },
+        {
+          "label": "Price",
+          "values": [
+            "¥1280"
+          ]
+        }
+      ]
+    },
     "relatedReviewProductId": "vic-p9200-iii"
   },
   {
@@ -4595,7 +4878,7 @@
       },
       {
         "heading": "Astrox 100ZZ — specifications",
-        "body": "I consistently tested 4U G5 builds unless noted:\n\n| Parameter | Measured / stated |\n|-----------|-------------------|\n| Origin | Japan (JAPAN on cap) |\n| Rated tension | 20–28 lbs |\n| Overall length | 674 mm |\n| Bare weight | 85.3 g (92.8 g strung with overgrip) |\n| Balance point | 303 mm bare and strung |\n| Swing weight | 85–85.5 |\n| Handle to cap | 215 mm (handle +10 mm, cap +5 mm) |\n| Shaft diameter | 6.2 mm (Hyper Slim solid shaft) |\n| Shaft length (cap to throat) | 205 mm |\n| Flex | Medium-stiff |\n| Head size | Medium, ~354 cm² |\n\nFor reference, shaft lengths on related \"Z\" models were cited as 223 mm (Nanoray Z-Force II Speed), 205 mm (Duora Z-Strike), and 205 mm (Astrox 100ZZ).\n\nAxelsen and Kurenai Astrox 100ZZ variants (4U, strung with overgrip, base cap removed) were weighed at roughly 88.7 g / 309 mm and 89.7 g / 309 mm respectively, with empty weights clustering around 84.6–85.7 g—similar to navy samples and difficult to push below 84 g bare."
+        "body": "I consistently tested 4U G5 builds unless noted:\n\nCompared 11 rows across Measured / stated.\n\nFor reference, shaft lengths on related \"Z\" models were cited as 223 mm (Nanoray Z-Force II Speed), 205 mm (Duora Z-Strike), and 205 mm (Astrox 100ZZ).\n\nAxelsen and Kurenai Astrox 100ZZ variants (4U, strung with overgrip, base cap removed) were weighed at roughly 88.7 g / 309 mm and 89.7 g / 309 mm respectively, with empty weights clustering around 84.6–85.7 g—similar to navy samples and difficult to push below 84 g bare."
       },
       {
         "heading": "Frame geometry and sweet spot",
@@ -4611,7 +4894,7 @@
       },
       {
         "heading": "Astrox 100ZX — specifications and character",
-        "body": "Compared 11 rows across Measured / stated."
+        "body": "Compared 11 rows across Measured / stated.\n\nCosmetically the 100ZX reads quieter under light, with ukiyo-e tones leaning ink-green rather than the Astrox 100ZZ's star-field sparkle.\n\nPositioning: If the Astrox 100ZZ targets doubles front-court continuity and chain offence, the 100ZX is the rear-court workhorse—heavier swing weight, head feel closer to Astrox 99 and Z-Force II at the same spec. Mid-range pricing tempts buyers to treat it as a simplified Astrox 100ZZ; in practice it is harder to wield, not easier. High swing weight makes full smashes the headline, while passive defence remains on par with the Astrox 100ZZ.\n\nI frame the 100ZX as a stepped-up singles weapon or men's/mixed rear-court hammer—more manageable than Z-Force II, shaft easier to mobilise than DZS/ZF2, with defence still a strength. 4U is the practical amateur choice; heavier specs swing too slowly for the fluid box profile.\n\nIf you own both, most I admit they gravitate to the Astrox 100ZZ for cosmetics and handling; budget-limited players still get new-generation carbon attack from the 100ZX."
       },
       {
         "heading": "Axelsen edition versus Kurenai (Astrox 100ZZ variants)",
@@ -4644,7 +4927,7 @@
         {
           "label": "Origin",
           "values": [
-            "Taiwan (no JAPAN on cap)"
+            "Japan (JAPAN on cap)"
           ]
         },
         {
@@ -4662,35 +4945,35 @@
         {
           "label": "Bare weight",
           "values": [
-            "84.5 g (93.1 g strung with overgrip)"
+            "85.3 g (92.8 g strung with overgrip)"
           ]
         },
         {
           "label": "Balance point",
           "values": [
-            "310 mm bare and strung"
+            "303 mm bare and strung"
           ]
         },
         {
           "label": "Swing weight",
           "values": [
-            "89–90"
+            "85–85.5"
           ]
         },
         {
           "label": "Handle to cap",
           "values": [
-            "215 mm (+10 mm handle, +5 mm cap)"
+            "215 mm (handle +10 mm, cap +5 mm)"
           ]
         },
         {
           "label": "Shaft diameter",
           "values": [
-            "6.6 mm (non-Hyper Slim)"
+            "6.2 mm (Hyper Slim solid shaft)"
           ]
         },
         {
-          "label": "Shaft length",
+          "label": "Shaft length (cap to throat)",
           "values": [
             "205 mm"
           ]
@@ -4704,7 +4987,7 @@
         {
           "label": "Head size",
           "values": [
-            "~354 cm²"
+            "Medium, ~354 cm²"
           ]
         }
       ]
@@ -4746,7 +5029,7 @@
       },
       {
         "heading": "Astrox 100ZZ — specifications",
-        "body": "I consistently tested 4U G5 builds unless noted:\n\n| Parameter | Measured / stated |\n|-----------|-------------------|\n| Origin | Japan (JAPAN on cap) |\n| Rated tension | 20–28 lbs |\n| Overall length | 674 mm |\n| Bare weight | 85.3 g (92.8 g strung with overgrip) |\n| Balance point | 303 mm bare and strung |\n| Swing weight | 85–85.5 |\n| Handle to cap | 215 mm (handle +10 mm, cap +5 mm) |\n| Shaft diameter | 6.2 mm (Hyper Slim solid shaft) |\n| Shaft length (cap to throat) | 205 mm |\n| Flex | Medium-stiff |\n| Head size | Medium, ~354 cm² |\n\nFor reference, shaft lengths on related \"Z\" models were cited as 223 mm (Nanoray Z-Force II Speed), 205 mm (Duora Z-Strike), and 205 mm (Astrox 100ZZ).\n\nAxelsen and Kurenai Astrox 100ZZ variants (4U, strung with overgrip, base cap removed) were weighed at roughly 88.7 g / 309 mm and 89.7 g / 309 mm respectively, with empty weights clustering around 84.6–85.7 g—similar to navy samples and difficult to push below 84 g bare."
+        "body": "I consistently tested 4U G5 builds unless noted:\n\nCompared 11 rows across Measured / stated.\n\nFor reference, shaft lengths on related \"Z\" models were cited as 223 mm (Nanoray Z-Force II Speed), 205 mm (Duora Z-Strike), and 205 mm (Astrox 100ZZ).\n\nAxelsen and Kurenai Astrox 100ZZ variants (4U, strung with overgrip, base cap removed) were weighed at roughly 88.7 g / 309 mm and 89.7 g / 309 mm respectively, with empty weights clustering around 84.6–85.7 g—similar to navy samples and difficult to push below 84 g bare."
       },
       {
         "heading": "Frame geometry and sweet spot",
@@ -4762,7 +5045,7 @@
       },
       {
         "heading": "Astrox 100ZX — specifications and character",
-        "body": "Compared 11 rows across Measured / stated."
+        "body": "Compared 11 rows across Measured / stated.\n\nCosmetically the 100ZX reads quieter under light, with ukiyo-e tones leaning ink-green rather than the Astrox 100ZZ's star-field sparkle.\n\nPositioning: If the Astrox 100ZZ targets doubles front-court continuity and chain offence, the 100ZX is the rear-court workhorse—heavier swing weight, head feel closer to Astrox 99 and Z-Force II at the same spec. Mid-range pricing tempts buyers to treat it as a simplified Astrox 100ZZ; in practice it is harder to wield, not easier. High swing weight makes full smashes the headline, while passive defence remains on par with the Astrox 100ZZ.\n\nI frame the 100ZX as a stepped-up singles weapon or men's/mixed rear-court hammer—more manageable than Z-Force II, shaft easier to mobilise than DZS/ZF2, with defence still a strength. 4U is the practical amateur choice; heavier specs swing too slowly for the fluid box profile.\n\nIf you own both, most I admit they gravitate to the Astrox 100ZZ for cosmetics and handling; budget-limited players still get new-generation carbon attack from the 100ZX."
       },
       {
         "heading": "Axelsen edition versus Kurenai (Astrox 100ZZ variants)",
@@ -4795,7 +5078,7 @@
         {
           "label": "Origin",
           "values": [
-            "Taiwan (no JAPAN on cap)"
+            "Japan (JAPAN on cap)"
           ]
         },
         {
@@ -4813,35 +5096,35 @@
         {
           "label": "Bare weight",
           "values": [
-            "84.5 g (93.1 g strung with overgrip)"
+            "85.3 g (92.8 g strung with overgrip)"
           ]
         },
         {
           "label": "Balance point",
           "values": [
-            "310 mm bare and strung"
+            "303 mm bare and strung"
           ]
         },
         {
           "label": "Swing weight",
           "values": [
-            "89–90"
+            "85–85.5"
           ]
         },
         {
           "label": "Handle to cap",
           "values": [
-            "215 mm (+10 mm handle, +5 mm cap)"
+            "215 mm (handle +10 mm, cap +5 mm)"
           ]
         },
         {
           "label": "Shaft diameter",
           "values": [
-            "6.6 mm (non-Hyper Slim)"
+            "6.2 mm (Hyper Slim solid shaft)"
           ]
         },
         {
-          "label": "Shaft length",
+          "label": "Shaft length (cap to throat)",
           "values": [
             "205 mm"
           ]
@@ -4855,7 +5138,7 @@
         {
           "label": "Head size",
           "values": [
-            "~354 cm²"
+            "Medium, ~354 cm²"
           ]
         }
       ]
@@ -4908,7 +5191,7 @@
       },
       {
         "heading": "Offence compared",
-        "body": "Compared 4 rows across 88S Pro new colour, 88D Pro new colour."
+        "body": "Compared 4 rows across 88S Pro new colour, 88D Pro new colour.\n\nBoth share ~296–298 mm balance—moderate downward pressure; smash arcs tend flat. 88S Pro’s short lever makes downward pressure harder for some—first smash frames, then flat drives."
       },
       {
         "heading": "Defence and passive play",
@@ -5177,7 +5460,7 @@
       },
       {
         "heading": "Parameters",
-        "body": "Compared 7 rows across ."
+        "body": "Compared 7 rows across .\n\nAt 305 mm empty balance, drop feel in hand is obvious. Even with the multi-stage wind frame, 4U empty swings still carry clear head weight."
       },
       {
         "heading": "Stringing",
@@ -5197,7 +5480,7 @@
       },
       {
         "heading": "Summary",
-        "body": "My stereotype of Yonex: never stingy on materials, always shy on pure speed frames. NEXTAGE's new frame and bed layout feels like a staged experiment — not a revolution, not a jaw-dropper for me. Missing new-dimension carbon on an Astrox stings. Still, frame and hole count are genuine firsts. NEXTAGE trades Yonex's fine control for stable power. Mid-high positioning works, but some delicate Yonex flavour is gone — not perfect. Plenty of new bets mean a new chapter for Yonex rackets. Long road; first step taken.\n\n| Astrox NEXTAGE | |\n|---|---|\n| Frame material | Carbon + VDM + Tungsten |\n| Shaft material | Carbon + NANOMESH NEO |\n| Length | 675 mm |\n| Spec | 4U/G5 |\n| Recommended tension | 20–28 LBS |"
+        "body": "My stereotype of Yonex: never stingy on materials, always shy on pure speed frames. NEXTAGE's new frame and bed layout feels like a staged experiment — not a revolution, not a jaw-dropper for me. Missing new-dimension carbon on an Astrox stings. Still, frame and hole count are genuine firsts. NEXTAGE trades Yonex's fine control for stable power. Mid-high positioning works, but some delicate Yonex flavour is gone — not perfect. Plenty of new bets mean a new chapter for Yonex rackets. Long road; first step taken.\n\nCompared 5 rows across ."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -5588,10 +5871,47 @@
       },
       {
         "heading": "Extended Pro and Tour review (merged source)",
-        "body": "After the Nanoflare 1000 series launched, Yonex opened a new branch on the Nanoflare line — hoping to diversify the speed-racket road. The Nanoflare 800 Pro series landed as a market thunderclap; national team men's doubles Liang Wei Keng and Wang Chang won the China Masters and reached the World Tour Finals runner-up wielding the Nanoflare 800 PRO.\n\nAesthetics: Matte dark green base paint with blue-green lines at frame top and bottom, plus exposed carbon stripes that shift under varying light. Shaft gradients from matte at the T-joint to glossy at the cone — colour-shifting ink effect, low-key from afar, luminous up close.\n\nMeasured specs (review units):\n\n| Spec | 800 PRO (3U) | 800 TOUR (4U) |\n|------|--------------|---------------|\n| T-joint thickness | ~12.79 mm | ~12.91 mm |\n| Head width | ~12.21 mm | ~12.25 mm |\n| Strung weight (overgrip, cap on) | 97.2 g | 91.3 g |\n| Shaft diameter (with paint) | ~6.95 mm | ~6.92 mm |\n\nStringing reference: EXBOLT 63 at 26×28 lb. Both use wide wind-cut frames with relatively large face area, narrowing from T-joint toward the head.\n\nTechnology: Enhanced Sonic Flare System — high-elastic carbon at frame top and strong, resilient M40X carbon (PRO) at frame bottom, plus copper foil at the frame bottom to raise rebound. Enhanced Rebound String Pattern adds one cross string and tightens spacing for more flat-drive speed. Four models launch — PRO, TOUR, GAME, PLAY — for different levels.\n\nFirst impressions: PRO grip moderate; 3U weight evenly distributed. 4U TOUR lighter head, weight more on frame sides. New string-hole design gives higher bed pressure than usual 76-hole rackets. Both shafts marked hard officially: PRO feels light-elastic with excellent anti-torsion and fast rebound; TOUR slightly tough — same force gives larger shaft bend and better single-shot downward press. Copper foil improves stability and adds metallic hit sound.\n\nSpeed and defence: Wide frame, astonishing swing speed; light head reduces wrist burden — excellent flat drive. PRO anti-torsion and rebound stay sharp through long rallies. TOUR matches PRO in regular amateur games with more shaft bend and sharper downward angle; in fast high-level rhythm it lags behind PRO on multi-shot links.\n\nDefence exceeds expectations for speed rackets — PRO responds fast under fierce attack with smooth next-shot links. Large frame forgiveness boosts counter and placement. PRO light-elastic trait shines on low shots — light block clears the net.\n\nNet and offence: Both are touch-and-go light-elastic — fast shuttle speed and fast decay; drops threaten. Hold is weak versus classic Nanoflare — newcomers need short adaptation. PRO elasticity at net needs force control before adapted; TOUR trades some light-elastic feel for slightly better control.\n\nOne-shot offence is not the headline — fast continuous press and direction still win rallies. Fast shuttle but limited energy transfer — steep decay after the net. Continuous drive or precise placement force errors.\n\nBuyers: Nanoflare 800 PRO — series high-end; addictive sweet feel; excellent shaft for high-level play. Light body tests your force generation; one-shot kill is limited but continuous press and speed excel. Budget-rich fast-continuous players; men with solid base choose 3U, lighter players choose 4U.\n\nNanoflare 800 TOUR — closest to PRO in the series; speed and sweet feel match PRO with more flexible body and better downward press. Near half PRO price with far more than half the performance — strong pick if budget stops at PRO.\n\nNanoflare 800 GAME/PLAY — entry models with low threshold and friendly price; taste high-end speed without flagship cost.\n\nNew Nanoflare 800 Pro beats predecessors in continuity and fast offence but did not break Nanoflare's weak one-shot offence mould — excellent elasticity, sweet feel, and pleasing sound bring a smooth experience. Break force with extreme speed — that is the new Nanoflare 800 Pro series."
+        "body": "After the Nanoflare 1000 series launched, Yonex opened a new branch on the Nanoflare line — hoping to diversify the speed-racket road. The Nanoflare 800 Pro series landed as a market thunderclap; national team men's doubles Liang Wei Keng and Wang Chang won the China Masters and reached the World Tour Finals runner-up wielding the Nanoflare 800 PRO.\n\nAesthetics: Matte dark green base paint with blue-green lines at frame top and bottom, plus exposed carbon stripes that shift under varying light. Shaft gradients from matte at the T-joint to glossy at the cone — colour-shifting ink effect, low-key from afar, luminous up close.\n\nMeasured specs (review units):\n\nCompared 4 rows across 800 PRO (3U), 800 TOUR (4U).\n\nStringing reference: EXBOLT 63 at 26×28 lb. Both use wide wind-cut frames with relatively large face area, narrowing from T-joint toward the head.\n\nTechnology: Enhanced Sonic Flare System — high-elastic carbon at frame top and strong, resilient M40X carbon (PRO) at frame bottom, plus copper foil at the frame bottom to raise rebound. Enhanced Rebound String Pattern adds one cross string and tightens spacing for more flat-drive speed. Four models launch — PRO, TOUR, GAME, PLAY — for different levels.\n\nFirst impressions: PRO grip moderate; 3U weight evenly distributed. 4U TOUR lighter head, weight more on frame sides. New string-hole design gives higher bed pressure than usual 76-hole rackets. Both shafts marked hard officially: PRO feels light-elastic with excellent anti-torsion and fast rebound; TOUR slightly tough — same force gives larger shaft bend and better single-shot downward press. Copper foil improves stability and adds metallic hit sound.\n\nSpeed and defence: Wide frame, astonishing swing speed; light head reduces wrist burden — excellent flat drive. PRO anti-torsion and rebound stay sharp through long rallies. TOUR matches PRO in regular amateur games with more shaft bend and sharper downward angle; in fast high-level rhythm it lags behind PRO on multi-shot links.\n\nDefence exceeds expectations for speed rackets — PRO responds fast under fierce attack with smooth next-shot links. Large frame forgiveness boosts counter and placement. PRO light-elastic trait shines on low shots — light block clears the net.\n\nNet and offence: Both are touch-and-go light-elastic — fast shuttle speed and fast decay; drops threaten. Hold is weak versus classic Nanoflare — newcomers need short adaptation. PRO elasticity at net needs force control before adapted; TOUR trades some light-elastic feel for slightly better control.\n\nOne-shot offence is not the headline — fast continuous press and direction still win rallies. Fast shuttle but limited energy transfer — steep decay after the net. Continuous drive or precise placement force errors.\n\nBuyers: Nanoflare 800 PRO — series high-end; addictive sweet feel; excellent shaft for high-level play. Light body tests your force generation; one-shot kill is limited but continuous press and speed excel. Budget-rich fast-continuous players; men with solid base choose 3U, lighter players choose 4U.\n\nNanoflare 800 TOUR — closest to PRO in the series; speed and sweet feel match PRO with more flexible body and better downward press. Near half PRO price with far more than half the performance — strong pick if budget stops at PRO.\n\nNanoflare 800 GAME/PLAY — entry models with low threshold and friendly price; taste high-end speed without flagship cost.\n\nNew Nanoflare 800 Pro beats predecessors in continuity and fast offence but did not break Nanoflare's weak one-shot offence mould — excellent elasticity, sweet feel, and pleasing sound bring a smooth experience. Break force with extreme speed — that is the new Nanoflare 800 Pro series."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "comparison": {
+      "caption": "Spec",
+      "columns": [
+        "800 PRO (3U)",
+        "800 TOUR (4U)"
+      ],
+      "rows": [
+        {
+          "label": "T-joint thickness",
+          "values": [
+            "~12.79 mm",
+            "~12.91 mm"
+          ]
+        },
+        {
+          "label": "Head width",
+          "values": [
+            "~12.21 mm",
+            "~12.25 mm"
+          ]
+        },
+        {
+          "label": "Strung weight (overgrip, cap on)",
+          "values": [
+            "97.2 g",
+            "91.3 g"
+          ]
+        },
+        {
+          "label": "Shaft diameter (with paint)",
+          "values": [
+            "~6.95 mm",
+            "~6.92 mm"
+          ]
+        }
+      ]
+    },
     "relatedReviewProductId": "yy-nanoflare-800-pro-tour"
   },
   {
