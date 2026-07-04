@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import {
+  EDITORIAL_DATA_LICENSE,
+  normalizeDatasetDescription,
+} from "@/lib/structured-data";
+import {
   allClaims,
   claimFreshness,
   CLAIM_FRESHNESS_THRESHOLDS,
@@ -55,9 +59,13 @@ export default function DataRegistryPage() {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "IntoBadminton verified claims registry",
-    description:
+    description: normalizeDatasetDescription(
       "Structured registry of cited facts used across guides and tools, with source URLs and last-verified dates.",
+      "IntoBadminton verified claims registry"
+    ),
     url: `${companyInfo.siteUrl}/data/`,
+    license: EDITORIAL_DATA_LICENSE,
+    isAccessibleForFree: true,
     creator: {
       "@type": "Organization",
       name: companyInfo.siteName,

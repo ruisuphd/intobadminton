@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-28",
+  "updated": "2026-07-04",
   "coverage": {
     "minPopularSearchHrefs": 33,
     "minE2eGuards": 1
@@ -11,7 +11,7 @@
       "expectCatalogHref": "/catalog/",
       "expectFinderHref": "/quiz/",
       "expectMinFeaturedReviews": 6,
-      "expectMinReviewCount": 160,
+      "expectMinReviewCount": 167,
       "expectMinCatalogTotal": 150,
       "expectPopularSearchHrefs": [
         "/best/rackets-under-100/",
@@ -49,12 +49,12 @@
         "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
-        "/review/anta-ah600w-racket-review/",
-        "/review/anta-dingyin-1000-racket-review/",
-        "/review/bonny-baidi-800lt-racket-review/",
-        "/review/bonny-leisu-800-lt-review/",
-        "/review/chengong-feng-racket-review/",
-        "/review/gosen-kyokugen-racket-review/"
+        "/review/kumpoo-kh-g815-dragon-claw-shoes-review/",
+        "/review/kumpoo-silver-blade-shoes-review/",
+        "/review/li-ning-aeronaut-8000d-review/",
+        "/review/li-ning-bladex-800-power-review/",
+        "/review/li-ning-bladex-800-speed-review/",
+        "/review/li-ning-okay-1-shuttle-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,

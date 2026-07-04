@@ -62,6 +62,14 @@ TITLE_OVERRIDES = {
     "li-ning-halbertec-8000-vs-9000-vs-9000-power": "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which one fits your game",
     "victor-yu-12-racket-review": "Victor DriveX 12 review: control players finally have a Victor flagship",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ VA vs Kurenai: not an Anders Antonsen racket",
+    "li-ning-okay-1-shuttle-review": "Li-Ning OKAY 1 review: Li-Ning's first synthetic feather shuttle",
+    "victor-c90-ii-shoes-review": "Victor C90 II review: wide last, heavy stability, flagship cushion",
+    "li-ning-bladex-800-speed-review": "Li-Ning Bladex 800 Speed review: tight M46X speed twin",
+    "li-ning-bladex-800-power-review": "Li-Ning Bladex 800 Power review: the lubricated attack twin",
+    "li-ning-aeronaut-8000d-review": "Li-Ning Aeronaut 8000D review: the overlooked windstorm hammer",
+    "kumpoo-kh-g815-dragon-claw-shoes-review": "Kumpoo KH-G815 Dragon Claw review: ventilated speed flagship",
+    "kumpoo-silver-blade-shoes-review": "Kumpoo Silver Blade review: dial lock, maximum ventilation",
+    "mizuno-carbo-pro-823-review": "Mizuno Carbo Pro 823 review: the stick in the naughty-kid happy meal",
 }
 
 DEK_OVERRIDES = {
@@ -189,6 +197,15 @@ def extract_english(path: Path) -> str:
     return text.split(MARKER, 1)[1].strip()
 
 
+def parse_md_updated_at(path: Path) -> str | None:
+    text = path.read_text(encoding="utf-8")
+    parts = text.split("---", 2)
+    if len(parts) < 2:
+        return None
+    m = re.search(r'updatedAt:\s*"([^"]+)"', parts[1])
+    return m.group(1) if m else None
+
+
 def strip_markdown_inline(text: str) -> str:
     text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
     text = re.sub(r"\*([^*]+)\*", r"\1", text)
@@ -250,20 +267,26 @@ def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
 def parse_md_table(body: str) -> tuple[str, dict | None]:
     if "|" not in body:
         return body, None
-    lines = [
+
+    lines_all = body.split("\n")
+    table_lines = [
         line.strip()
-        for line in body.split("\n")
-        if line.strip() and not re.match(r"^\|?\s*-+", line)
+        for line in lines_all
+        if "|" in line
+        and line.strip()
+        and not re.match(r"^\|?\s*-+", line.strip())
     ]
-    if len(lines) < 2:
+    if len(table_lines) < 2:
         return body, None
+
     rows_raw: list[list[str]] = []
-    for line in lines:
+    for line in table_lines:
         cells = [cell.strip() for cell in line.strip("|").split("|")]
         if any(cells):
             rows_raw.append(cells)
     if len(rows_raw) < 2 or len(rows_raw[0]) < 2:
         return body, None
+
     header = rows_raw[0]
     data_rows = []
     for row in rows_raw[1:]:
@@ -272,12 +295,31 @@ def parse_md_table(body: str) -> tuple[str, dict | None]:
         data_rows.append({"label": row[0], "values": row[1:]})
     if not data_rows:
         return body, None
+
+    first_table_idx = next(
+        i
+        for i, line in enumerate(lines_all)
+        if "|" in line and line.strip() and not re.match(r"^\|?\s*-+", line.strip())
+    )
+    last_table_idx = max(
+        i
+        for i, line in enumerate(lines_all)
+        if "|" in line and line.strip() and not re.match(r"^\|?\s*-+", line.strip())
+    )
+    intro = "\n".join(lines_all[:first_table_idx]).strip()
+    outro = "\n".join(lines_all[last_table_idx + 1 :]).strip()
+    summary_parts = [
+        intro,
+        f"Compared {len(data_rows)} rows across {', '.join(header[1:])}.",
+        outro,
+    ]
+    summary = "\n\n".join(part for part in summary_parts if part)
+
     comparison = {
         "caption": header[0] or "Comparison",
         "columns": header[1:],
         "rows": data_rows,
     }
-    summary = f"Compared {len(data_rows)} rows across {', '.join(header[1:])}."
     return summary, comparison
 
 
@@ -466,9 +508,12 @@ def main() -> None:
         source_file = slug_map.get(slug)
         sections: list[dict] = []
         comparison: dict | None = None
+        md_updated: str | None = None
         use_legacy = slug in LEGACY_ONLY or slug in LEGACY_PREFERRED
         if source_file and not use_legacy and (BLOGS / source_file).exists():
-            en = extract_english(BLOGS / source_file)
+            md_path = BLOGS / source_file
+            md_updated = parse_md_updated_at(md_path)
+            en = extract_english(md_path)
             sections, comparison = split_sections(en)
         if not sections and sprint_meta.get("sections"):
             sections = [
@@ -488,22 +533,30 @@ def main() -> None:
         )
         raw_dek = (
             DEK_OVERRIDES.get(slug)
+            or (
+                (sections[0]["body"][:160] + "…")
+                if md_updated and sections and not DEK_OVERRIDES.get(slug)
+                else None
+            )
             or sprint_meta.get("dek")
             or meta.get("dek")
             or (sections[0]["body"][:160] + "…" if sections else "")
         )
         dek = ensure_dek(raw_dek, sections, title)
+        verdict_from_sections = extract_verdict(sections, dek)
         verdict = (
-            sprint_meta.get("verdict")
+            verdict_from_sections
+            if any("verdict" in s["heading"].lower() for s in sections)
+            else sprint_meta.get("verdict")
             or meta.get("verdict")
-            or extract_verdict(sections, dek)
+            or verdict_from_sections
         )
         verdict = clean_prose(verdict)
         apply_disambiguation(slug, sections)
         attach_glossary(sections, glossary)
         article: dict = {
             "slug": slug,
-            "updatedAt": sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
+            "updatedAt": md_updated or sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
             "title": clean_prose(title),
             "dek": clean_prose(dek),
             "verdict": verdict,

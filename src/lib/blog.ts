@@ -161,7 +161,14 @@ export const blogSlugs = [
   "victor-yinbao-a-boom-shoes-review",
   "chengong-feng-racket-review",
   "bonny-baidi-800lt-racket-review",
-  "kumpoo-js-65-string-review"
+  "kumpoo-js-65-string-review",
+  "li-ning-okay-1-shuttle-review",
+  "victor-c90-ii-shoes-review",
+  "li-ning-bladex-800-speed-review",
+  "li-ning-bladex-800-power-review",
+  "li-ning-aeronaut-8000d-review",
+  "kumpoo-kh-g815-dragon-claw-shoes-review",
+  "kumpoo-silver-blade-shoes-review",
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
