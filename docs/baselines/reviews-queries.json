@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-06-29",
+  "updated": "2026-07-04",
   "coverage": {
-    "minArticleSlugs": 149,
+    "minArticleSlugs": 156,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1502,6 +1502,76 @@
       "expectProductId": "yy-voltric-z-force-ltd",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex"
+    },
+    {
+      "id": "kumpoo-kh-g815-dragon-claw-shoes-review",
+      "slug": "kumpoo-kh-g815-dragon-claw-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "kumpoo-kh-g815",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo"
+    },
+    {
+      "id": "kumpoo-silver-blade-shoes-review",
+      "slug": "kumpoo-silver-blade-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "kumpoo-silver-blade",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo"
+    },
+    {
+      "id": "li-ning-aeronaut-8000d-review",
+      "slug": "li-ning-aeronaut-8000d-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-aeronaut-8000d",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-bladex-800-power-review",
+      "slug": "li-ning-bladex-800-power-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-bladex-800-power",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-bladex-800-speed-review",
+      "slug": "li-ning-bladex-800-speed-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-bladex-800-speed",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-okay-1-shuttle-review",
+      "slug": "li-ning-okay-1-shuttle-review",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-okay-1-shuttle",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-c90-ii-shoes-review",
+      "slug": "victor-c90-ii-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-c90-ii",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
     }
   ]
 }

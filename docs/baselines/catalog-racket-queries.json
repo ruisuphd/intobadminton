@@ -45,7 +45,7 @@
     {
       "id": "catalog-racket-ln-bladex-800-speed",
       "productId": "ln-bladex-800-speed",
-      "expectHref": "/review/li-ning-bladex-800-speed-tough-elastic/",
+      "expectHref": "/review/li-ning-bladex-800-speed-review/",
       "expectKind": "review",
       "note": "Bladex 800 Speed",
       "e2e": true

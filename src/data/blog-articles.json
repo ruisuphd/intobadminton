@@ -1,7 +1,7 @@
 [
   {
     "slug": "anta-ah600w-racket-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Anta AH600W review: a sportswear giant's first badminton racket, honestly assessed",
     "dek": "Anta's entry into rackets is a 5U/G6 (about 82g) balanced beginner blade: 299mm balance, mid-low stiffness, a 76-hole box frame, strung 24-26 lb. An OEM-built first effort that edges above 'nothing special'.",
     "verdict": "An honest entry-level all-rounder. Surprisingly drivable for an ultralight debut, but a stepping-stone rather than a destination, and most interesting as a sign that a major sportswear brand has entered the category.",
@@ -16,7 +16,7 @@
   },
   {
     "slug": "anta-dingyin-1000-racket-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Anta Dingyin 1000 Racket Review",
     "dek": "Anta Dingyin 1000 — the sportswear giant's first proper badminton flagship, and the first retail frame globally marketed with Toray M46X carbon. Eight months af…",
     "verdict": "Dingyin 1000 is not a polished museum piece — first-gen transparency and a touch of wooden directness remain. It is a serious statement: real M46X, innovative structure, attack stability tuned like a weapon, and pricing that embarrasses inflated flagships.",
@@ -269,7 +269,7 @@
   },
   {
     "slug": "bonny-baidi-800lt-racket-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Bonny Baidi 800Lt Racket Review",
     "dek": "After loving the Nanoflare 800 LT feel but not the discontinued price, I hunted an 800LT-profile frame and landed on Bonny's Baidi ( / \"White Emperor\") — same b…",
     "verdict": "After loving the Nanoflare 800 LT feel but not the discontinued price, I hunted an 800LT-profile frame and landed on Bonny's Baidi ( / \"White Emperor\") — same box-speed DNA, different badge.",
@@ -341,7 +341,7 @@
   },
   {
     "slug": "bonny-leisu-800-lt-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Bonny Leisu 800 LT review: a clear-named NF800LT tribute for continuous attack",
     "dek": "A 5U/G5 (about 85g, 305mm balance, mid-high stiffness, small box frame, 76 holes) with a nickel-titanium or boron shaft option. Bonny's most legible naming yet, openly channeling the discontinued Nanoflare 800 LT.",
     "verdict": "A precise, fast continuous-attack 5U. The small frame charges a real accuracy tax, but it delivers the NF800LT character at a sane, in-production price, which is the whole point.",
@@ -359,7 +359,7 @@
     "updatedAt": "2026-05-05",
     "title": "Bonny LeiSu 800 review: a fast attack racket with real bite",
     "dek": "NF800-style frame speed, foam-filled stability, and a 6.5mm solid shaft make the LeiSu 800 a sharper racket than its price tier suggests.",
-    "verdict": "A sharp, lower-profile speed-attack frame for players who already time the shuttle well.",
+    "verdict": "Thunder Speed 800 looks sharp under lights and performs strongly — smashing is extremely satisfying, control very stable. Modest learning curve: players who struggle to generate power may find it harder. Best for intermediate to advanced players.",
     "sections": [
       {
         "heading": "Overview",
@@ -653,7 +653,7 @@
   },
   {
     "slug": "chengong-feng-racket-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Chengong Feng Racket Review",
     "dek": "Speed-offence rackets keep multiplying — Nanoflare 1000Z basically opened the lane. Secondary brands are trying too; Chengong launched the Feng Lin Huo Shan ser…",
     "verdict": "Speed-offence rackets keep multiplying — Nanoflare 1000Z basically opened the lane.",
@@ -720,7 +720,7 @@
   },
   {
     "slug": "gosen-kyokugen-racket-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Gosen Kyokugen Racket Review",
     "dek": "Today's racket sits outside the Big Three but still plays like a major-brand product: the Gosen Kyokugen ( — Gosen's Chinese-market flagship in the Roots / Gavu…",
     "verdict": "Today's racket sits outside the Big Three but still plays like a major-brand product: the Gosen Kyokugen ( — Gosen's Chinese-market flagship in the Roots / Gavun-shaft family).",
@@ -735,7 +735,7 @@
   },
   {
     "slug": "gosen-ryoga-shiden-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Gosen Ryoga Shiden review: the cult conical-shaft speed blade, decoded",
     "dek": "The first-generation Ryoga Shiden ('Blue-Purple Lightning') is Gosen's Zylon-and-Aermet conical-shaft 3U: a tiny sweet spot, the brand's hardest shaft, and arguably the best point-smash feel ever made.",
     "verdict": "An extreme, unforgiving speed blade that has become a high-premium collector item. Sublime for precise, full-power attackers; punishing for anyone who cannot consistently find a very small sweet spot.",
@@ -1323,7 +1323,7 @@
   },
   {
     "slug": "kumpoo-js-65-string-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Kumpoo Js 65 String Review",
     "dek": "I joined Kumpoo's J-series trial by chance — here is an honest take on Kumpoo JS-65, their 0.65 mm high-rep durable line.\n\nJS-65 targets elasticity plus longevi…",
     "verdict": "I joined Kumpoo's J-series trial by chance — here is an honest take on Kumpoo JS-65, their 0.65 mm high-rep durable line.",
@@ -1373,6 +1373,41 @@
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
     "relatedReviewProductId": "kumpoo-kh-g805-lite-pro"
+  },
+  {
+    "slug": "kumpoo-kh-g815-dragon-claw-shoes-review",
+    "updatedAt": "2026-07-04",
+    "title": "Kumpoo KH-G815 Dragon Claw review: ventilated speed flagship",
+    "dek": "Kumpoo finally shipped the G815 I cared about from the spring launch. G805 and G815 share DNA with a proven ultra-light speed template, but 815 got more polish …",
+    "verdict": "Dragon Claw is sharp, violent, and precise — mobility plus protection in one package. G815 trades G805’s leather look for maximum ventilation and a more complete speed-stability blend. If you want a ventilated Kumpoo flagship that still braces hard cuts, start here.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Kumpoo finally shipped the G815 I cared about from the spring launch. G805 and G815 share DNA with a proven ultra-light speed template, but 815 got more polish and more in-house tech. They look like brothers on a chart — in hand they are different shoes."
+      },
+      {
+        "heading": "Specs",
+        "body": "Size 42, 270 mm insole, 295.2 g per shoe; 2.5E standard last; mesh + TPU + heat-film upper; EVA plus artificial cartilage ACF midsole; rubber outsole; MD shank with TPU wing and carbon plate."
+      },
+      {
+        "heading": "Upper and fit",
+        "body": "G815 looks nothing like G805 — I prefer it. Five large vent windows per side (mesh only) plus a toe triangle mean roughly half the upper is open mesh — aggressive “five-toe dragon claw” branding and real weight savings. Marketing photos are tame versus retail.\n\nSock-style entry with full padding — heel through forefoot wrap evenly. Last matches G805; Roman/Egyptian feet may want half a size up (I did). Vents fix G805’s summer stuffiness; on court it genuinely feels like air underfoot.\n\nDelicate-looking, but inner bridges and a geometric TPU shell hold the claw shape and torsion. Half size up left toe room without slack — lacing and loops lock the foot. The cupped heel limits ankle roll. Forefoot stability beats even thick “armour” shoes like Houyi Pro in my testing."
+      },
+      {
+        "heading": "Speed stack",
+        "body": "Weight comes from stripped upper and thin Verolite midsole, but speed is also rocker, foam, and rubber. Steep forefoot drop starts the first step early; light EVA plus graded Verolite returns push-off; segmented triangle lugs bite like soft slicks — leg power converts to acceleration. 815 feels faster on court than lighter 805 despite the scale."
+      },
+      {
+        "heading": "Cushion and limits",
+        "body": "ACF with EVA handles landing and launch for average-weight competitive play. Medial forefoot KPU finishes durability. Not a universal bucket shoe: strong rocker, weaker arch — my first hard session left foot fatigue and demands leg strength. I pair with KI-88 insoles when needed."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Dragon Claw is sharp, violent, and precise — mobility plus protection in one package. G815 trades G805’s leather look for maximum ventilation and a more complete speed-stability blend. If you want a ventilated Kumpoo flagship that still braces hard cuts, start here."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "kumpoo-kh-g815"
   },
   {
     "slug": "kumpoo-shanhai-new-racket-review",
@@ -1485,6 +1520,80 @@
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
     "relatedReviewProductId": "kumpoo-shura-2"
+  },
+  {
+    "slug": "kumpoo-silver-blade-shoes-review",
+    "updatedAt": "2026-07-04",
+    "title": "Kumpoo Silver Blade review: dial lock, maximum ventilation",
+    "dek": "Kumpoo Silver Blade is the summer shoe I wanted to test — dial closure instead of laces, silver upper, high spec, strong value. Quick on-off, tight wrap, and ve…",
+    "verdict": "Hot-climate players who want dial convenience, serious ventilation, and solid cushion/torsion without flagship pricing — Silver Blade is an easy recommend. Lace up once and forget until you leave the hall.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Kumpoo Silver Blade is the summer shoe I wanted to test — dial closure instead of laces, silver upper, high spec, strong value. Quick on-off, tight wrap, and vents everywhere."
+      },
+      {
+        "heading": "Build",
+        "body": "Standard last; PU + TPU + mesh upper; rubber outsole; Leopard midsole foam + TPU + 3D carbon plate; serrated traction rubber; silver colourway.\n\nReflective strips on sides and tongue; oversized toe and vamp perforations; dial at the side — faster than laces and easier to fine-tune pressure."
+      },
+      {
+        "heading": "Upper and footbed",
+        "body": "Mesh dominates — tongue and forefoot are mostly holes. Summer sessions stay breathable; PU wings still stabilise cuts. Abrasion zones are thickened in matching silver so reinforcements do not look bolted on.\n\nPull the insole and the vent pattern is deeper than most brands I have opened — surprising for this price. Dial gives stepless wrap adjustment."
+      },
+      {
+        "heading": "Sole and cushion",
+        "body": "Serrated rubber outsole with a stiff midfoot bridge — TPU plus 3D carbon; I cannot flex it by hand. Leopard supercritical ETPU feels springy standing still — at 130 lb landings absorb well and rebound comfortably. Very heavy players may compress the foam faster over time."
+      },
+      {
+        "heading": "On court",
+        "body": "Static fit: standard last, comfortable vamp, not wide-foot paradise but not cramped; stiff heel cup locks the back. Start is quick for the weight class — not ultralight race weight, but never sluggish in three–four days of play. Grip held on indoor courts throughout."
+      },
+      {
+        "heading": "Sizing",
+        "body": "True to stated length — 250 mm foot, size 40 with 255 mm insole fits."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Hot-climate players who want dial convenience, serious ventilation, and solid cushion/torsion without flagship pricing — Silver Blade is an easy recommend. Lace up once and forget until you leave the hall."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "kumpoo-silver-blade"
+  },
+  {
+    "slug": "li-ning-aeronaut-8000d-review",
+    "updatedAt": "2026-07-04",
+    "title": "Li-Ning Aeronaut 8000D review: the overlooked windstorm hammer",
+    "dek": "Li-Ning’s Aeronaut 8000 tier is the quiet sibling — same pro-court pedigree as the 7000 and 9000 lines, but never the loudest launch. Resale pricing stays calm …",
+    "verdict": "A green challenge I actually enjoy. Aeronaut 8000D rewards singles grinders who want placement, spin, and one-shot authority — not quick doubles turnover. Buy cheap, string sensibly, and swing with intent.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Li-Ning’s Aeronaut 8000 tier is the quiet sibling — same pro-court pedigree as the 7000 and 9000 lines, but never the loudest launch. Resale pricing stays calm with wide spreads between sellers.\n\nI bought a cheap 8000D to beat on — a few hundred yuan of fun beats staring at commodity charts."
+      },
+      {
+        "heading": "Specs and looks",
+        "body": "3U G6 bare handle; 93.4 g playing weight; 311 mm balance; 215 mm shaft; medium stiffness; box frame; 72 holes; grooves at 9–3; 32 lb warranty; strung 24–26 lbs BG80.\n\nThe 7000 and 9000 families shout with colour; the 8000’s darker base fades in memory until sunlight hits — green scale gradients at 3 and 9 o’clock pop, and the purple-blue base shifts like old N553 iridescence. Indoor photos never do it justice."
+      },
+      {
+        "heading": "Drive and weight",
+        "body": "Classic Aeronaut attack tuning: real mass, 305 mm strung balance before my wrap — the head always wants to drop. It reminds me of N553, but 8000D is easier to unlock — high contact borrows swing weight and sends shuttles out with authority. The shaft feels more mature than 7000 — you feel load and return. Four wind ports help; for a box frame it swings cleaner than peers. The only gate is your fitness.\n\nWang Yilu and Liu Yuchen used the line in doubles, but for most club players 8000D fits singles rhythm — control, store energy, then hammer."
+      },
+      {
+        "heading": "Control and placement",
+        "body": "The 72-hole bed is dense; centred hits fly true. Side-spin net play and rear-court slices bite and drop steep — satisfying feedback. High damping keeps repeats consistent; even slightly low contacts still dare you to fight at the tape.\n\nLong flat clears and targeted downward shots expose the “precision control” side — torsion and feedback make direction and force readable. Side-line downward shots with easy follow-through can win points off loose lifts."
+      },
+      {
+        "heading": "Smash and limits",
+        "body": "When you earn a full swing, 8000D finishes — medium shaft lets most men load a real smash; output scales with your strength. Head momentum plus shaft spring store serious energy. Advanced players keep ceiling high.\n\nThe usual box-frame tax applies: wind ports cannot fix doubles net interceptions you did not prepare for; overhead intercepts need a full turn versus a short hop on faster frames; fewer perfect smash windows; higher stamina cost. Defence and receive-kill blocking are the safety net."
+      },
+      {
+        "heading": "Verdict",
+        "body": "A green challenge I actually enjoy. Aeronaut 8000D rewards singles grinders who want placement, spin, and one-shot authority — not quick doubles turnover. Buy cheap, string sensibly, and swing with intent."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "ln-aeronaut-8000d"
   },
   {
     "slug": "li-ning-aerus-iii-pro-shoes-review",
@@ -1926,6 +2035,76 @@
     "relatedReviewProductId": "ln-blade-500-pro"
   },
   {
+    "slug": "li-ning-bladex-800-power-review",
+    "updatedAt": "2026-07-04",
+    "title": "Li-Ning Bladex 800 Power review: the lubricated attack twin",
+    "dek": "Right after 800 Speed, I borrowed 800 Power from the same friend. Forum unboxings called the pair “force and speed in one” — both twins deliver from their side …",
+    "verdict": "Bladex 800 Power is the twin I would hand to all-court doubles players who want speed with control insurance and real rear-court finish. 800 Speed wins flat wars; 800 Power wins the point when you need placement and weight. Both belong on a Bladex shortlist.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Right after 800 Speed, I borrowed 800 Power from the same friend. Forum unboxings called the pair “force and speed in one” — both twins deliver from their side of that promise. This is an easy Li-Ning recommend."
+      },
+      {
+        "heading": "Specs and looks",
+        "body": "4U G6 with cap; 91.4 g playing weight; 303 mm balance; 212 mm shaft; medium stiffness; thin-wing aero frame; 76 holes; full grooves; 30 lb warranty; strung 25–27 lbs Li-Ning L69.\n\nGen-three Bladex ditched the carnival paint for black bases. Twins share graphic language — Speed in blue, Power in red butterfly/flame motifs. Calm versus hot; the art matches the tuning."
+      },
+      {
+        "heading": "Feel vs Speed",
+        "body": "4U Power shows higher balance and swing weight immediately — more head load, easier borrowed power. Aero keeps the swing smooth despite the weight; it still feels fast and agile. The extra head mass helps beginners load the shaft on incoming balls — some newcomers may find Power friendlier than Speed’s snap-only offence.\n\nSpeed score: 90 to Speed’s 95 — still excellent. Chains stay quick; drives land solid; mid-court flat wars tilt your way when you add mass to the exchange. At the net I caught hints of first-gen Astrox 88S on blocks and pounces. When pressed low at the net, the longer swing path costs a little recovery versus Speed."
+      },
+      {
+        "heading": "Control and rear court",
+        "body": "Higher swing weight buys net confidence — tight spins, receive-kill blocks, and low net lifts felt safer on Power. L69’s hold suits control phases: hold-and-flick, flat clears to pin the line, steep slices, and soft punches to the tram lines all stressed opponents more than Speed did from passive positions."
+      },
+      {
+        "heading": "Attack",
+        "body": "The “Power” name is honest: clearer downward bite and a 6.8 mm shaft with heavier smash output. Unlike Speed’s short-burst penetration, Power carries attack-racket DNA — core-driven whip produces heavier, sharper smashes with less reliance on surprise. One-shot finishes are more common and less exhausting."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Bladex 800 Power is the twin I would hand to all-court doubles players who want speed with control insurance and real rear-court finish. 800 Speed wins flat wars; 800 Power wins the point when you need placement and weight. Both belong on a Bladex shortlist."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "ln-bladex-800-power"
+  },
+  {
+    "slug": "li-ning-bladex-800-speed-review",
+    "updatedAt": "2026-07-04",
+    "title": "Li-Ning Bladex 800 Speed review: tight M46X speed twin",
+    "dek": "A friend lent me Li-Ning’s third-generation Bladex 800 line this quarter — 800 New feels recent, yet the brand already split the family into Speed and Power twi…",
+    "verdict": "Bladex 800 Speed is a front-court and flat-drive weapon with legitimate rear-court burst for players who can retime their swing. Not the all-round touch frame — the red 800 Power covers that. For M46X speed fans, this is the twin I would demo first.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "A friend lent me Li-Ning’s third-generation Bladex 800 line this quarter — 800 New feels recent, yet the brand already split the family into Speed and Power twins. Five years post-Tokyo, Thunder, Halbertec, and Bladex have all levelled up. The question for 800 Speed is whether M46X earns the first “Speed” suffix on the card."
+      },
+      {
+        "heading": "Specs and looks",
+        "body": "5U G6 with cap; 85.3 g playing weight; 297 mm balance; 212 mm shaft; medium stiffness; thin-wing aero frame; 76 holes; full grooves; 29 lb warranty; strung 25–27 lbs Victor VX-61.\n\nAfter loud colourways on earlier Bladex frames, the black base with sparse blue lightning lines feels restrained — more confidence than flash. The art still screams speed if you know the line."
+      },
+      {
+        "heading": "Speed first",
+        "body": "In 5U, low swing weight, slim frame, and sharp aero add up to instant “this is fast.” The mould change from the first Bladex 800 is aggressive. Shuttle speed on first hits exceeded what I expected — early sessions the frame often outran the shuttle; timing and contact point needed recalibration.\n\nOfficial copy says “softer feel,” but it plays firm shaft, lively face: punchy, snappy short hits; flat exchanges in the mid-court get scary quick when both players are evenly matched."
+      },
+      {
+        "heading": "M46X elasticity",
+        "body": "M46X in the head is the difference versus older Bladex — elasticity shows from first touch. Load it with compact swings and the burst is outsized for the frame size — “thin branch, heavy fruit.” The whole racket feels tight; rear-court pressure is real, chains are wide, and recovery from scramble is strong. I had no hesitation driving from the back."
+      },
+      {
+        "heading": "Control trade-offs",
+        "body": "Speed eats some finesse budget. Face hold and torsion are fine; long clears track straight. Delicate net work and steep slices suffer — fast rebound makes net lifts easy to pop; rear-court slices fly flatter with less bite. When in doubt, solve problems with pace; that is the Power twin’s job."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Bladex 800 Speed is a front-court and flat-drive weapon with legitimate rear-court burst for players who can retime their swing. Not the all-round touch frame — the red 800 Power covers that. For M46X speed fans, this is the twin I would demo first."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "ln-bladex-800-speed"
+  },
+  {
     "slug": "li-ning-bladex-800-speed-tough-elastic",
     "updatedAt": "2026-04-29",
     "title": "Li-Ning Bladex 800 Speed: the tough-elastic answer to Yonex and Victor",
@@ -1977,7 +2156,7 @@
   },
   {
     "slug": "li-ning-bladex-880-shida-racket-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Li Ning Bladex 880 Shida Racket Review",
     "dek": "Li-Ning's Bladex 880 Shida is the Chiharu Shida signature tied to the Bladex line — the \"popular sweetheart\" edition with real spec upgrades, not just decals.\n\n…",
     "verdict": "Li-Ning's Bladex 880 Shida is the Chiharu Shida signature tied to the Bladex line — the \"popular sweetheart\" edition with real spec upgrades, not just decals.",
@@ -2670,7 +2849,7 @@
     "updatedAt": "2026-05-22",
     "title": "Li-Ning L64 string review: a sound-effect-first 0.64mm high-elasticity option",
     "dek": "Li-Ning's L64 is a thin (0.64mm) high-elasticity string that emphasises crisp hit sound and easy power — at the cost of durability for heavy-attack players.",
-    "verdict": "A value-tier high-elasticity string with strong sound feedback and friendly power assist; not for players who break strings often.",
+    "verdict": "Li-Ning L64 wears its pros and cons on its sleeve. Two or three sessions a week, moderate power, want high-rebound feel without premium pricing — try it. Feel holds up against expensive high-rebound lines. Just do not treat it like a wire cutter.",
     "sections": [
       {
         "heading": "Overview",
@@ -2788,7 +2967,7 @@
   },
   {
     "slug": "li-ning-lt66-power-string-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Li Ning Lt66 Power String Review",
     "dek": "Li-Ning LT66 Power — the coated power variant in the 0.66 mm LT family.\n\nStringing: jacket feels dry on the spool; once tensioned, surface slip drops and handli…",
     "verdict": "Li-Ning LT66 Power — the coated power variant in the 0.66 mm LT family.",
@@ -2806,6 +2985,37 @@
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
     "relatedReviewProductId": "ln-lt66-power-string"
+  },
+  {
+    "slug": "li-ning-okay-1-shuttle-review",
+    "updatedAt": "2026-07-04",
+    "title": "Li-Ning OKAY 1 review: Li-Ning's first synthetic feather shuttle",
+    "dek": "Natural feather prices pushed the majors into synthetic shuttles — BWF’s environmental push helped. Victor has been in the game a while; Yonex priced high. Li-N…",
+    "verdict": "OKAY 1 is a solid first Li-Ning synthetic. It is not a premium natural replacement for players used to top-grade feather touch. For club nights, coaching baskets, and budget-conscious play where you want predictable flight and multiples of the rally life, it is easy to recommend.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Natural feather prices pushed the majors into synthetic shuttles — BWF’s environmental push helped. Victor has been in the game a while; Yonex priced high. Li-Ning OKAY 1 arrived last. It does not chase premium natural flight; it targets entry and mid-low training and club nights — value and durability first."
+      },
+      {
+        "heading": "Build vs Victor and Yonex",
+        "body": "OKAY 1 uses 14 independent synthetic feathers instead of the traditional 16 on naturals. National standards allow 14–16, so it is still a feather shuttle by spec — not a one-piece plastic ball.\n\nVictor leans on carbon-fibre stems and foam feathers. Li-Ning uses a polymer stem — stiff enough, more flexible on break, less scary than carbon shards in the court. Feathers are polymer cloth with aerodynamic perforations, bonded for strength. Stem and feather edges are rounded — lower cut risk in play."
+      },
+      {
+        "heading": "Price and who it is for",
+        "body": "Six-pack official retail lands around ¥51; street price often under ¥50. Per-shuttle cost beats comparable-flight naturals on durability. Best for beginners, improvers, group sessions, and anyone who cares more about consistency and lifespan than tour-grade touch."
+      },
+      {
+        "heading": "Flight and feel",
+        "body": "Overall flight — except net play — matches or beats many mid-low duck and single-side goose naturals on clears and durability.\n\nClears: OKAY 1’s best zone. Rear-court lifts stay straight without float; deceleration at the top is natural; the drop is vertical and predictable — none of the weird top-side wobble or exaggerated arc some durability naturals show. After many hits, speed barely changes; one shuttle keeps a stable profile.\n\nSmashes: Clear difference from naturals. Contact is less crisp — a slightly mushy, durability-shuttle feel versus the solid crack of good feathers. Smash durability is excellent; feathers barely chip, stems flex better than carbon or natural, and hold up to repeated full hits (frame hits still kill anything).\n\nSlices: Straight-on drops fly stable. Slices and cut drops feel fine at contact but spin up faster than natural feathers — more rotation, also more predictable than the feather-to-feather variance you get from mixed plumage.\n\nNet: Spins differently from naturals — OKAY 1 can tumble on tight net play like other synthetics, though flat drives and pushes adapt quickly. Shuttle-to-shuttle consistency is high; performance does not collapse when a feather breaks."
+      },
+      {
+        "heading": "Verdict",
+        "body": "OKAY 1 is a solid first Li-Ning synthetic. It is not a premium natural replacement for players used to top-grade feather touch. For club nights, coaching baskets, and budget-conscious play where you want predictable flight and multiples of the rally life, it is easy to recommend."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "ln-okay-1-shuttle"
   },
   {
     "slug": "li-ning-thunder-100-gen-2-vs-gen-1",
@@ -2854,10 +3064,10 @@
   },
   {
     "slug": "mizuno-carbo-pro-823-review",
-    "updatedAt": "2026-06-28",
-    "title": "Mizuno Carbo Pro 823 review: a head-heavy entry-tier with limitations the cosmetics hide",
-    "dek": "Mizuno's Carbo Pro 823 looks like a mid-tier flagship and prices like one, but the on-court reality is closer to an entry-level head-heavy frame in an attractive paint job.",
-    "verdict": "An entry-tier head-heavy frame for buyers who value the Mizuno brand badge; cross-shop carefully before paying mid-tier prices.",
+    "updatedAt": "2026-07-04",
+    "title": "Mizuno Carbo Pro 823 review: the stick in the naughty-kid happy meal",
+    "dek": "Last time I joked a Mizuno product felt like disciplining a kid with a belt — but one tool is never enough; a stick works too.\n\nThat string setup sat on the ent…",
+    "verdict": "823 is a net-control specialist for patient players who can tolerate swing weight and weak elasticity. Pretty, cheap, punishing if you expect modern speed. I keep it for match-ups where placement beats pace.",
     "sections": [
       {
         "heading": "Overview",
@@ -2865,11 +3075,11 @@
       },
       {
         "heading": "Specs",
-        "body": "4U G5 with cap; playing weight 94.5 g; balance 305 mm; shaft 220 mm; medium stiffness; box frame; 72-hole string bed; grooves at 9 and 3 o’clock; 30 lb warranty; strung 24 lbs MT70.\n\nAsymmetric paint — magenta over black base, matte finish. Mizuno knows cosmetics. Stickers stay minimal (cost), only necessary tech callouts, nothing premium-feeling. At discount-platform pricing, looks absolutely overdeliver."
+        "body": "4U G5 with cap; playing weight 94.5 g; balance 305 mm; shaft 220 mm; medium stiffness; box frame; 72-hole string bed; grooves at 9 and 3 o'clock; 30 lb warranty; strung 24 lbs MT70.\n\nAsymmetric paint — magenta over black base, matte finish. Mizuno knows cosmetics. Stickers stay minimal (cost), only necessary tech callouts, nothing premium-feeling. At discount-platform pricing, looks absolutely overdeliver."
       },
       {
         "heading": "Who can actually use it",
-        "body": "Not everyone can “afford” this racket — I mean in ability. It reads almost feminine until you pick it up and get heavyweight contrast.\n\nHead weight is not useless — obvious borrowed power — but elasticity is poor. On paper: HM carbon from the Calibre line. In hand: ordinary low-modulus carbon. Basic clear exchanges still do not feel efficient."
+        "body": "Not everyone can \"afford\" this racket — I mean in ability. It reads almost feminine until you pick it up and get heavyweight contrast.\n\nHead weight is not useless — obvious borrowed power — but elasticity is poor. On paper: HM carbon from the Calibre line. In hand: ordinary low-modulus carbon. Basic clear exchanges still do not feel efficient."
       },
       {
         "heading": "Happy meal, part one — net control",
@@ -2880,12 +3090,12 @@
         "body": "Heavy swing weight, weak elasticity. Besides running hard for full downward chances (which I did not), follow-up chains after downward shots drag.\n\nFrame weight gives downward pressure — otherwise you are squeezing string performance through high-tension durability for basic offence. 72-hole face sweet spot is not concentrated — full smash with big effort still unloads.\n\nPassive escape and front-court flat drives? Depressing topic. Skip."
       },
       {
-        "heading": "OEM thoughts and 825",
-        "body": "Carbo Pro feels domestically OEM’d — training black-racket vibes, as some comments say. Pretty shell, limited means — East Asian “I’m doing this for your own good” energy.\n\nStill curious about the final balanced 825."
+        "heading": "OEM thoughts",
+        "body": "Carbo Pro feels domestically OEM'd — training black-racket vibes, as some comments say. Pretty shell, limited means — East Asian \"I'm doing this for your own good\" energy.\n\nStill curious about the balanced 825 sibling — see that review separately."
       },
       {
-        "heading": "Carbo Pro 825 — persimmon first, sweet later (Jun 2026)",
-        "body": "Wrapping the Carbo Pro line for now — everything buyable through normal channels is done. I assumed 825 was the same racket as 823 until comments said 825 was balanced-tuned. They are not close. Calling 825 a true all-rounder is generous; it is a less extreme baseline attack frame. Hard to buy solo — clearance often bundles pairs.\n\nStill: even with mediocre string, the loud Mizuno paint plays fine.\n\nSpecs: 4U G5 with cap, 94.0 g playing weight, 300 mm balance, 218 mm shaft, medium-low stiffness, fluid box frame, 72 holes, grooves at 9–3, 28 lb warranty, 24 lbs Mizuno MT75.\n\nSame Carbo Pro asymmetric look — Astrox-style black top, orange bottom. Easy to confuse with 823 in promo shots; both read boxy until you swing.\n\nEntry difficulty sits near 829, easier than 823. Swing weight stays high, but the thinner, rounder fluid box and slightly softer whole-frame tune cut resistance. Same borrowed-power feel and same mediocre string — 823 clears did not fly fast, but effort dropped and the racket felt less “get out.” Frame stability holds; slow deep clears still land in a small box.\n\nLower bed tension on this mould adds more hold than 823 or 829 — contact feels stickier. Sometimes the unload is so strong net spins need relearning: less brush, more push. Swap to a firmer, livelier string if that bothers you. Slice drops and reverse slices from the rear court fall steep and reliably when you trust the swing — I still doubt net clearance every time.\n\nAttack is real: longer dwell helps load power into the head, natural downward path on rhythm swings. Lower drag frame helps advanced players accelerate. Rear-court chains beat 823; passive rescue and receive-kill defence feel safer under pressure. Front-court flat speed still loses to the bright green 829 aero frame.\n\nMiddle-of-the-road on paper, but looks, my weekly match needs, and current taste align — restring it and most male club levels can use it. For this money the Mizuno badge and paint already justify the spend. Colour reads like a persimmon: astringent at first, sweet once ripe. White 827 (76 holes) exists but is not in gear databases — probably rare."
+        "heading": "Verdict",
+        "body": "823 is a net-control specialist for patient players who can tolerate swing weight and weak elasticity. Pretty, cheap, punishing if you expect modern speed. I keep it for match-ups where placement beats pace."
       }
     ],
     "cta": "Use the finder with entry-attack or value flags to compare the Carbo Pro 823 against Astrox Smash and Brave Sword 12.",
@@ -2893,10 +3103,10 @@
   },
   {
     "slug": "mizuno-carbo-pro-825-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Mizuno Carbo Pro 825 review: the softer, stickier sibling to the 823",
     "dek": "A 4U/G5 (about 94g, 300mm balance, mid-low stiffness, fluid box frame, 72 holes, strung around 24 lb). Not the 'balanced' racket forums claim, but a less-extreme base attacker that is friendlier than the 823.",
-    "verdict": "A forgiving, hold-on-ball attack frame with the series' premium looks. Better continuous play and defence than the 823, with weak flat drives; restring it firmer and it suits a wide range of players.",
+    "verdict": "Middle-of-the-road on paper, but looks, my weekly match needs, and current taste align — restring it and most male club levels can use it. For this money the Mizuno badge and paint already justify the spend. Colour reads like a persimmon: astringent at first, sweet once ripe.",
     "sections": [
       {
         "heading": "Overview",
@@ -3118,7 +3328,7 @@
     "updatedAt": "2026-05-22",
     "title": "Victor A970 Nitro Lite review: the all-around shoe that traded grams for cushioning",
     "dek": "Victor replaced the A970 ACE's HyperEVA midsole with a nitrogen supercritical foam (NitroLite) and added thicker upper material. The result is more cushioned and slightly heavier than the original.",
-    "verdict": "A more cushioned, more wrapped, slightly heavier evolution of the A970 ACE — the right pick for buyers who land hard and want a wrap-around fit.",
+    "verdict": "A970 Nitro Lite inherits ACE’s soul and evolves it into a more solid, rounded, stable match shoe—main upgrade is midsole and wrap comfort. NitroLite foam strengthens cushioning while staying lighter in material terms; richer upper boosts lockdown.",
     "sections": [
       {
         "heading": "Overview",
@@ -3374,6 +3584,37 @@
     "relatedReviewProductId": "vic-auraspeed-hs-plus"
   },
   {
+    "slug": "victor-c90-ii-shoes-review",
+    "updatedAt": "2026-07-04",
+    "title": "Victor C90 II review: wide last, heavy stability, flagship cushion",
+    "dek": "Victor’s release cadence is relentless — 9200 CX had barely settled when C90 II landed as the next flagship. I picked the coffee colourway because my court shoe…",
+    "verdict": "C90 II is a complete flagship stability shoe — layered looks, deep cushion, reinforced torsion, excellent wrap, and a wide last that flatters big feet. If you want maximum lateral armour with modern foam and can tolerate warm feet in peak summer, this belongs on your try list.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Victor’s release cadence is relentless — 9200 CX had barely settled when C90 II landed as the next flagship. I picked the coffee colourway because my court shoes are all light; large coffee and black synthetic panels with silver accents read mature and serious.\n\nOn paper the stack is absurd: supercritical nitrogen foam plus HYPEREVA, TPU overlays, a full split-toe carbon plate, and the largest L-S.S. lateral brace I have worn — plus double-layer toe rubber and a 2.5U wide last. That last point matters: heavier, wider feet get real room."
+      },
+      {
+        "heading": "Fit and lockdown",
+        "body": "Upper wraps the foot cleanly in movement. PU coverage makes the shell stiff in a good way — ankle padding is thick; I could chase corners without worrying about rolling out. Wrap ranks among the best I have tested."
+      },
+      {
+        "heading": "Grip, cushion, torsion",
+        "body": "VSR rubber and a busy outsole pattern — grip is never a question in any direction I tried.\n\nHYPEREVA plus nitrogen foam feels springy but stable: impact is absorbed, rebound is quick, steps link smoothly. ENERGYMAX 3.0 insole adds another layer. Size 43 weighs 369 g — light for a wide, stability-first shoe; start still feels brisk.\n\nThe side-to-side L-S.S. plate is the headline — high-strength TPU with carbon backup. Torsion in hard cuts felt maxed out."
+      },
+      {
+        "heading": "Durability and breathability",
+        "body": "Toe TPU film flexes without cracking — not as thick as 9200’s anti-abrasion layer, but meatier than 970’s film. VSR outsole rubber is thick; I would not baby it.\n\nBreathability is why I stop short of a 90+ score: summer three-hour sessions ran hot. PU and abrasion film dominate the upper despite vent holes. Other seasons should be fine."
+      },
+      {
+        "heading": "Verdict",
+        "body": "C90 II is a complete flagship stability shoe — layered looks, deep cushion, reinforced torsion, excellent wrap, and a wide last that flatters big feet. If you want maximum lateral armour with modern foam and can tolerate warm feet in peak summer, this belongs on your try list."
+      }
+    ],
+    "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
+    "relatedReviewProductId": "vic-c90-ii"
+  },
+  {
     "slug": "victor-c90nl-shoes-review",
     "updatedAt": "2026-05-08",
     "title": "Victor C90NL review: the thick-cushion shoe that doesn't drag its feet",
@@ -3427,7 +3668,7 @@
       },
       {
         "heading": "Weight QC data",
-        "body": "Per-shuttle weight shows the QC gap clearly. Measurements below (12 shuttles unless noted):\n\nPremium naturals mostly sit within ±0.4 g spec but rarely hit the same gram every shuttle. Carbonsonic lands almost exactly 5 g each—no lottery. Flagship naturals above 200 yuan lost on consistency versus this production standardisation."
+        "body": "Per-shuttle weight shows the QC gap clearly. Measurements below (12 shuttles unless noted):\n\n| Model | Mean (g) | Range (g) | Max deviation (g) | Variance |\n|-------|----------|-----------|-------------------|----------|\n| Carbonsonic MAX | 4.9967 | 0.04 | 0.0033 | 0.0001 |\n| Carbonsonic PRO | 5.0058 | 0.07 | 0.0067 | 0.0003 |\n| Carbonsonic PRO Horse Year (6) | 5.0000 | 0.00 | 0.0000 | 0.0000 |\n| Yonex AS-50 | 5.3158 | 0.21 | 0.0825 | 0.0045 |\n| RSL Ultimate | 4.8925 | 0.20 | 0.1158 | 0.0057 |\n| Yonex AS-30 | 5.2683 | 0.43 | 0.1858 | 0.0087 |\n| Yonex AS-05 | 5.1783 | 0.34 | 0.1700 | 0.0094 |\n| RSL No.1 (6) | 4.8117 | 0.22 | 0.1217 | 0.0060 |\n| RSL No.2 | 4.9942 | 0.07 | 0.0058 | 0.0002 |\n| Aoklin AC50 (6) | 5.0333 | 0.20 | 0.1667 | 0.0067 |\n\nPremium naturals mostly sit within ±0.4 g spec but rarely hit the same gram every shuttle. Carbonsonic lands almost exactly 5 g each—no lottery. Flagship naturals above 200 yuan lost on consistency versus this production standardisation."
       },
       {
         "heading": "Structural upgrades (gen three)",
@@ -3447,108 +3688,7 @@
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
-    "relatedReviewProductId": "vic-carbonsonic-max-shuttle",
-    "comparison": {
-      "caption": "Model",
-      "columns": [
-        "Mean (g)",
-        "Range (g)",
-        "Max deviation (g)",
-        "Variance"
-      ],
-      "rows": [
-        {
-          "label": "Carbonsonic MAX",
-          "values": [
-            "4.9967",
-            "0.04",
-            "0.0033",
-            "0.0001"
-          ]
-        },
-        {
-          "label": "Carbonsonic PRO",
-          "values": [
-            "5.0058",
-            "0.07",
-            "0.0067",
-            "0.0003"
-          ]
-        },
-        {
-          "label": "Carbonsonic PRO Horse Year (6)",
-          "values": [
-            "5.0000",
-            "0.00",
-            "0.0000",
-            "0.0000"
-          ]
-        },
-        {
-          "label": "Yonex AS-50",
-          "values": [
-            "5.3158",
-            "0.21",
-            "0.0825",
-            "0.0045"
-          ]
-        },
-        {
-          "label": "RSL Ultimate",
-          "values": [
-            "4.8925",
-            "0.20",
-            "0.1158",
-            "0.0057"
-          ]
-        },
-        {
-          "label": "Yonex AS-30",
-          "values": [
-            "5.2683",
-            "0.43",
-            "0.1858",
-            "0.0087"
-          ]
-        },
-        {
-          "label": "Yonex AS-05",
-          "values": [
-            "5.1783",
-            "0.34",
-            "0.1700",
-            "0.0094"
-          ]
-        },
-        {
-          "label": "RSL No.1 (6)",
-          "values": [
-            "4.8117",
-            "0.22",
-            "0.1217",
-            "0.0060"
-          ]
-        },
-        {
-          "label": "RSL No.2",
-          "values": [
-            "4.9942",
-            "0.07",
-            "0.0058",
-            "0.0002"
-          ]
-        },
-        {
-          "label": "Aoklin AC50 (6)",
-          "values": [
-            "5.0333",
-            "0.20",
-            "0.1667",
-            "0.0067"
-          ]
-        }
-      ]
-    }
+    "relatedReviewProductId": "vic-carbonsonic-max-shuttle"
   },
   {
     "slug": "victor-drivex-10-review",
@@ -3710,7 +3850,7 @@
   },
   {
     "slug": "victor-fz-100xx-budget-attack-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Victor FZ-100XX review: a 100ZZ-styled budget attack racket that overdelivers",
     "dek": "The FZ line's 100XX copies the Astrox 100ZZ look and adds Victor's second-gen floating handle plus Whip Enhance 3.0: a wide box frame, forgiving mid-tier attack racket with a low skill floor.",
     "verdict": "A near-no-weakness mid-price attacker. It trades the high threshold of a flagship for accessibility, and still produces real smash power and continuity for the money. One of the stronger value attack picks in its band.",
@@ -4209,7 +4349,7 @@
   },
   {
     "slug": "victor-yinbao-a-boom-shoes-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-05-24",
     "title": "Victor Yinbao A Boom Shoes Review",
     "dek": "Victor's A-BOOM ( / Yinbao series) is the lazy player's staple shoe — roughly 300 yuan, all-round, and hard to regret.\n\nI picked the purple-gold colourway: big …",
     "verdict": "Victor's A-BOOM ( / Yinbao series) is the lazy player's staple shoe — roughly 300 yuan, all-round, and hard to regret.",
@@ -5654,7 +5794,7 @@
   },
   {
     "slug": "yonex-nanospeed-9900-ltg-green-sword-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Yonex NanoSpeed 9900 LTG (Green Sword) review: the rarest 2011 grail still plays",
     "dek": "The 2011 London Worlds limited Green Sword is the rarer half of the NS9900 LTD pair: a 3U frame that handles like 3.5U, with a firmer shaft and the line's signature fast, forgiving drive game.",
     "verdict": "A genuinely good-playing classic that has become a collector piece. If you want the feel rather than the badge, a standard NS9900 or a modern head-light speed racket gets you most of the way for a fraction of the asking price.",
@@ -5750,7 +5890,7 @@
   },
   {
     "slug": "yonex-voltric-z-force-ltd-2012-review",
-    "updatedAt": "2026-06-28",
+    "updatedAt": "2026-06-04",
     "title": "Yonex Voltric Z-Force LTD (2012) review: the 'Purple-Gold' grail, fourteen years on",
     "dek": "The 2012 London Olympics limited Voltric Z-Force LTD is a Lee Chong Wei-era attack icon. The 4U version (about 88g) is a surprisingly all-court frame, if you can load its brutally stiff shaft.",
     "verdict": "An extreme, high-threshold attacker with fragile paint and a heavy collector premium. Worth it only for committed attacking players who can genuinely load a 100ZZ-class shaft, and who value the heritage as much as the play.",
@@ -5771,7 +5911,7 @@
       }
     ],
     "cta": "Not sure which racket fits your game? Try the finder quiz for a transparent, fit-scored shortlist.",
-    "relatedReviewProductId": "yy-voltric-z-force-ltd-2012"
+    "relatedReviewProductId": "yy-voltric-z-force-ltd"
   },
   {
     "slug": "yuan-style-shaft-hardness-explained",

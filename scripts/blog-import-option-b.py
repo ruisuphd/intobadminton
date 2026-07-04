@@ -62,6 +62,14 @@ TITLE_OVERRIDES = {
     "li-ning-halbertec-8000-vs-9000-vs-9000-power": "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which one fits your game",
     "victor-yu-12-racket-review": "Victor DriveX 12 review: control players finally have a Victor flagship",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ VA vs Kurenai: not an Anders Antonsen racket",
+    "li-ning-okay-1-shuttle-review": "Li-Ning OKAY 1 review: Li-Ning's first synthetic feather shuttle",
+    "victor-c90-ii-shoes-review": "Victor C90 II review: wide last, heavy stability, flagship cushion",
+    "li-ning-bladex-800-speed-review": "Li-Ning Bladex 800 Speed review: tight M46X speed twin",
+    "li-ning-bladex-800-power-review": "Li-Ning Bladex 800 Power review: the lubricated attack twin",
+    "li-ning-aeronaut-8000d-review": "Li-Ning Aeronaut 8000D review: the overlooked windstorm hammer",
+    "kumpoo-kh-g815-dragon-claw-shoes-review": "Kumpoo KH-G815 Dragon Claw review: ventilated speed flagship",
+    "kumpoo-silver-blade-shoes-review": "Kumpoo Silver Blade review: dial lock, maximum ventilation",
+    "mizuno-carbo-pro-823-review": "Mizuno Carbo Pro 823 review: the stick in the naughty-kid happy meal",
 }
 
 DEK_OVERRIDES = {
@@ -187,6 +195,15 @@ def extract_english(path: Path) -> str:
     if MARKER not in text:
         return ""
     return text.split(MARKER, 1)[1].strip()
+
+
+def parse_md_updated_at(path: Path) -> str | None:
+    text = path.read_text(encoding="utf-8")
+    parts = text.split("---", 2)
+    if len(parts) < 2:
+        return None
+    m = re.search(r'updatedAt:\s*"([^"]+)"', parts[1])
+    return m.group(1) if m else None
 
 
 def strip_markdown_inline(text: str) -> str:
@@ -466,9 +483,12 @@ def main() -> None:
         source_file = slug_map.get(slug)
         sections: list[dict] = []
         comparison: dict | None = None
+        md_updated: str | None = None
         use_legacy = slug in LEGACY_ONLY or slug in LEGACY_PREFERRED
         if source_file and not use_legacy and (BLOGS / source_file).exists():
-            en = extract_english(BLOGS / source_file)
+            md_path = BLOGS / source_file
+            md_updated = parse_md_updated_at(md_path)
+            en = extract_english(md_path)
             sections, comparison = split_sections(en)
         if not sections and sprint_meta.get("sections"):
             sections = [
@@ -488,22 +508,30 @@ def main() -> None:
         )
         raw_dek = (
             DEK_OVERRIDES.get(slug)
+            or (
+                (sections[0]["body"][:160] + "…")
+                if md_updated and sections and not DEK_OVERRIDES.get(slug)
+                else None
+            )
             or sprint_meta.get("dek")
             or meta.get("dek")
             or (sections[0]["body"][:160] + "…" if sections else "")
         )
         dek = ensure_dek(raw_dek, sections, title)
+        verdict_from_sections = extract_verdict(sections, dek)
         verdict = (
-            sprint_meta.get("verdict")
+            verdict_from_sections
+            if any("verdict" in s["heading"].lower() for s in sections)
+            else sprint_meta.get("verdict")
             or meta.get("verdict")
-            or extract_verdict(sections, dek)
+            or verdict_from_sections
         )
         verdict = clean_prose(verdict)
         apply_disambiguation(slug, sections)
         attach_glossary(sections, glossary)
         article: dict = {
             "slug": slug,
-            "updatedAt": sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
+            "updatedAt": md_updated or sprint_meta.get("updatedAt") or meta.get("updatedAt", "2026-05-24"),
             "title": clean_prose(title),
             "dek": clean_prose(dek),
             "verdict": verdict,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28",
+  "generatedAt": "2026-07-04",
   "manifest": [
     {
       "slug": "anta-ah600w-racket-review",
@@ -688,6 +688,12 @@
       "claims": []
     },
     {
+      "slug": "kumpoo-kh-g815-dragon-claw-shoes-review",
+      "productId": "kumpoo-kh-g815",
+      "claimCount": 0,
+      "claims": []
+    },
+    {
       "slug": "kumpoo-shanhai-new-racket-review",
       "productId": "kumpoo-shanhai-new",
       "claimCount": 3,
@@ -718,6 +724,36 @@
         {
           "type": "shaftFlex",
           "value": "medium"
+        }
+      ]
+    },
+    {
+      "slug": "kumpoo-silver-blade-shoes-review",
+      "productId": "kumpoo-silver-blade",
+      "claimCount": 2,
+      "claims": [
+        {
+          "type": "shaftFlex",
+          "value": "stiff"
+        },
+        {
+          "type": "shaftFlex",
+          "value": "flexible"
+        }
+      ]
+    },
+    {
+      "slug": "li-ning-aeronaut-8000d-review",
+      "productId": "ln-aeronaut-8000d",
+      "claimCount": 2,
+      "claims": [
+        {
+          "type": "shaftFlex",
+          "value": "medium"
+        },
+        {
+          "type": "tensionMention",
+          "value": "24–26 lb"
         }
       ]
     },
@@ -882,6 +918,36 @@
     {
       "slug": "li-ning-bladex-500-pro-curious-review",
       "productId": "ln-blade-500-pro",
+      "claimCount": 2,
+      "claims": [
+        {
+          "type": "shaftFlex",
+          "value": "medium"
+        },
+        {
+          "type": "tensionMention",
+          "value": "25–27 lb"
+        }
+      ]
+    },
+    {
+      "slug": "li-ning-bladex-800-power-review",
+      "productId": "ln-bladex-800-power",
+      "claimCount": 2,
+      "claims": [
+        {
+          "type": "shaftFlex",
+          "value": "medium"
+        },
+        {
+          "type": "tensionMention",
+          "value": "25–27 lb"
+        }
+      ]
+    },
+    {
+      "slug": "li-ning-bladex-800-speed-review",
+      "productId": "ln-bladex-800-speed",
       "claimCount": 2,
       "claims": [
         {
@@ -1131,6 +1197,21 @@
       ]
     },
     {
+      "slug": "li-ning-okay-1-shuttle-review",
+      "productId": "ln-okay-1-shuttle",
+      "claimCount": 2,
+      "claims": [
+        {
+          "type": "shaftFlex",
+          "value": "stiff"
+        },
+        {
+          "type": "shaftFlex",
+          "value": "flexible"
+        }
+      ]
+    },
+    {
       "slug": "li-ning-thunder-100-gen-2-vs-gen-1",
       "productId": "ln-axforce-100-gen-2",
       "claimCount": 0,
@@ -1336,6 +1417,21 @@
         {
           "type": "shaftFlex",
           "value": "flexible"
+        }
+      ]
+    },
+    {
+      "slug": "victor-c90-ii-shoes-review",
+      "productId": "vic-c90-ii",
+      "claimCount": 2,
+      "claims": [
+        {
+          "type": "shaftFlex",
+          "value": "stiff"
+        },
+        {
+          "type": "weightMention",
+          "value": "369 g"
         }
       ]
     },
@@ -2181,7 +2277,7 @@
     },
     {
       "slug": "yonex-voltric-z-force-ltd-2012-review",
-      "productId": "yy-voltric-z-force-ltd-2012",
+      "productId": "yy-voltric-z-force-ltd",
       "claimCount": 2,
       "claims": [
         {
