@@ -129,7 +129,7 @@ const config: BestPicksConfig = {
   ],
   ctaHeading: "See which attack frame fits your profile",
   ctaBody:
-    "The finder scores head-heavy and even-balance rows against your level, discipline, and shoulder comfort signals.",
+    "The finder scores head-heavy and even-balance rows against your level, discipline, budget, and joint flags (knee, ankle, heel). Managing shoulder load is editorial here — prefer even or head-light if recovery feels heavy.",
 };
 
 export default function HeadHeavyUnder150Page() {

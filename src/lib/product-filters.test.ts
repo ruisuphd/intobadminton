@@ -66,6 +66,39 @@ describe("filterProducts", () => {
     });
     expect(out.map((p) => p.id)).toEqual(["b"]);
   });
+
+  it("matches weightClass via weightVariants as well as primary class", () => {
+    const multi: ProductRecord[] = [
+      {
+        id: "primary-4u",
+        category: "racket",
+        name: "Primary 4U",
+        brand: "Test",
+        priceUsd: 100,
+        weightClass: "4U",
+        weightVariants: ["3U", "4U"],
+        balanceCategory: "even",
+      } as ProductRecord,
+      {
+        id: "only-4u",
+        category: "racket",
+        name: "Only 4U",
+        brand: "Test",
+        priceUsd: 100,
+        weightClass: "4U",
+        weightVariants: ["4U"],
+        balanceCategory: "even",
+      } as ProductRecord,
+    ];
+    const out = filterProducts(multi, {
+      category: "racket",
+      brand: null,
+      weightClass: "3U",
+      balance: null,
+      priceBand: null,
+    });
+    expect(out.map((p) => p.id)).toEqual(["primary-4u"]);
+  });
 });
 
 describe("racketsUnderPrice", () => {

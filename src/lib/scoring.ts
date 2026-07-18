@@ -126,6 +126,11 @@ function scoreDiscipline(
       pushReason(reasons, "MATCH_DISCIPLINE_DOUBLES_LIGHTER", 0.85);
       return 0.85;
     }
+    // Classic club doubles default: 4U even — not as quick as light/HL, but not a miss.
+    if (p.weightClass === "4U" && p.headWeight === "even") {
+      pushReason(reasons, "MATCH_DISCIPLINE_DOUBLES_LIGHTER", 0.55);
+      return 0.72;
+    }
     pushReason(reasons, "MATCH_DISCIPLINE_DOUBLES_LIGHTER", 0.45);
     return 0.55;
   }
@@ -228,13 +233,18 @@ function scoreBody(
   } else s += 0.05;
   const inj = body.injuryFlags?.filter((i) => i !== "none") ?? [];
   if (inj.length > 0 && p.shaftFlex === "extra_stiff") {
-    pushReason(reasons, "INJURY_AVOID_ULTRA_STIFF", 0.4);
+    // Penalty path — do not reuse the positive "softer setup" match label.
+    pushReason(reasons, "INJURY_PENALTY_STIFF", 0.4);
     s -= 0.25;
   } else if (inj.length > 0 && p.shaftFlex === "stiff") {
     // Stiff (not extra-stiff) shafts still ask more of joints than medium/flex.
-    // Smaller penalty so the racket can still surface, but reflected in score.
-    pushReason(reasons, "INJURY_AVOID_ULTRA_STIFF", 0.25);
+    pushReason(reasons, "INJURY_PENALTY_STIFF", 0.25);
     s -= 0.1;
+  } else if (
+    inj.length > 0 &&
+    (p.shaftFlex === "flexible" || p.shaftFlex === "medium")
+  ) {
+    pushReason(reasons, "INJURY_AVOID_ULTRA_STIFF", 0.35);
   }
   if (userLevel === "recreational" && p.shaftFlex === "extra_stiff") s -= 0.1;
   return Math.max(0, Math.min(1, s));
@@ -585,11 +595,16 @@ function scoreShoe(p: ShoeProduct, profile: UserProfile): ScoredProduct {
   const widthMatch = (() => {
     if (footWidth == null) return 0.58;
     if (p.fitWidth === footWidth) return 0.94;
+    // Wide-feet match requires the listed fit to be wide / wide_available.
+    // Bare hasWideOption (normal/narrow SKU that sells a separate wide) is weaker.
     if (
       footWidth === "wide" &&
-      (p.fitWidth === "wide_available" || p.hasWideOption)
+      (p.fitWidth === "wide" || p.fitWidth === "wide_available")
     ) {
       return 0.94;
+    }
+    if (footWidth === "wide" && p.hasWideOption) {
+      return 0.62;
     }
     if (p.fitWidth === "normal" && footWidth !== "wide") return 0.72;
     // Wide shoe on narrow/normal foot: mild looseness, still surfacable.
@@ -602,7 +617,15 @@ function scoreShoe(p: ShoeProduct, profile: UserProfile): ScoredProduct {
     // Normal shoe on wide foot — real misfit.
     return 0.28;
   })();
-  if (widthMatch >= 0.72) pushReason(reasons, "SHOE_WIDTH_MATCH", 0.8);
+  if (
+    widthMatch >= 0.72 &&
+    (footWidth == null ||
+      p.fitWidth === footWidth ||
+      p.fitWidth === "wide" ||
+      p.fitWidth === "wide_available")
+  ) {
+    pushReason(reasons, "SHOE_WIDTH_MATCH", 0.8);
+  }
 
   const injuryFlags = profile.body.injuryFlags.filter((x) => x !== "none");
   let comfort = 0.55;

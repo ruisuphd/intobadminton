@@ -1459,7 +1459,7 @@
     {
       "id": "victor-yinbao-a-boom-shoes-review",
       "slug": "victor-yinbao-a-boom-shoes-review",
-      "expectCatalogHref": "/catalog/?cat=shoe&brand=Victor",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Victor",
       "expectMinRelatedReading": 3,
       "note": "Auto-synced mapped corpus row — Sprint 61"
     },

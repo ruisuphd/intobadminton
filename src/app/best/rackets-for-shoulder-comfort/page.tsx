@@ -133,7 +133,7 @@ const config: BestPicksConfig = {
   ],
   ctaHeading: "Score rackets against your comfort flags",
   ctaBody:
-    "The finder asks about shoulder and wrist comfort — those answers feed the five-factor fit score on every result card.",
+    "This page shortlists head-light and even frames for shoulder-friendly setups. The finder’s joint flags cover knee, ankle, and heel — use those plus level and discipline for a personalised score, then keep balance and tension conservative if shoulders are the concern.",
 };
 
 export default function RacketsForShoulderComfortPage() {

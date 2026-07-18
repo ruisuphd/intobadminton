@@ -631,8 +631,8 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
               Optional: tell me what you currently use
             </summary>
             <p className="mt-2 text-xs text-[var(--color-subtle)]">
-              I use this to flag upgrades and avoid recommending something
-              you already own. Skip any field — none are required.
+              Optional context for your own notes — current gear and tension are
+              not scored yet. Skip any field; none are required.
             </p>
             <div className="mt-4 grid gap-3">
               <label className="block text-sm">
