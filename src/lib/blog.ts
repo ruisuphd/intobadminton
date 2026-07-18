@@ -169,6 +169,15 @@ export const blogSlugs = [
   "li-ning-aeronaut-8000d-review",
   "kumpoo-kh-g815-dragon-claw-shoes-review",
   "kumpoo-silver-blade-shoes-review",
+  "li-ning-mirage-ii-pro-shoes-review",
+  "victor-vbs70-string-review",
+  "gosen-raimei-58-string-review",
+  "gosen-raimei-62-string-review",
+  "decathlon-920d-racket-review",
+  "rsl-tourney-l7-shuttle-review",
+  "li-ning-g100s-shuttle-review",
+  "bonny-infinity-002-shoes-review",
+  "babolat-satelite-blast-racket-review",
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];

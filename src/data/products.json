@@ -8508,5 +8508,337 @@
         "confidence": "medium"
       }
     ]
+  },
+  {
+    "id": "ln-mirage-ii-pro",
+    "category": "shoes",
+    "name": "Mirage II Pro (影速 II Pro)",
+    "brand": "Li-Ning",
+    "priceUsd": 120,
+    "fitWidth": "narrow",
+    "cushioning": "low",
+    "stability": "medium",
+    "weightFeel": "very_light",
+    "hasWideOption": false,
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.lining.com.cn/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "speed",
+      "court_feel",
+      "lightweight"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Li-Ning Mirage II Pro (影速 II Pro) — pure speed shoe with Super Boom midsole. Not Saga III Pro and not Yonex Aerus. ~277g, RG 2.5 last.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-vbs70",
+    "category": "string",
+    "name": "VBS-70",
+    "brand": "Victor",
+    "priceUsd": 8,
+    "gaugeMm": 0.7,
+    "feel": "soft",
+    "repulsion": "low",
+    "control": "medium",
+    "durability": "very_high",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "launchYear": 2018,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "durability",
+      "budget",
+      "high_tension"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Victor durable string. Dull at normal tension; usable around 28/30 lb. Below VBS-66N on bite and sound.",
+    "reviewCount": 0
+  },
+  {
+    "id": "gosen-raimei-58-string",
+    "category": "string",
+    "name": "Raimei 58 (雷鸣 58)",
+    "brand": "Gosen",
+    "priceUsd": 10,
+    "gaugeMm": 0.58,
+    "feel": "hard",
+    "repulsion": "high",
+    "control": "medium",
+    "durability": "low",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2022,
+    "regionAvailability": [
+      "cn",
+      "jp",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.gosen.co.jp/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "thin_gauge",
+      "attack",
+      "short_force"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Gosen Raimei / Thunder 58 — 0.58mm thin string. High pleasure when fresh; BG66U-like DT drop in 48h.",
+    "reviewCount": 0
+  },
+  {
+    "id": "gosen-raimei-62-string",
+    "category": "string",
+    "name": "Raimei 62 (雷鸣 62)",
+    "brand": "Gosen",
+    "priceUsd": 10,
+    "gaugeMm": 0.62,
+    "feel": "medium",
+    "repulsion": "high",
+    "control": "very_high",
+    "durability": "high",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2022,
+    "regionAvailability": [
+      "cn",
+      "jp",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.gosen.co.jp/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "control",
+      "net_play",
+      "durability"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Gosen Raimei 62 — niche 0.62mm. Strong dwell and net forgiveness; smash rhythm awkward.",
+    "reviewCount": 0
+  },
+  {
+    "id": "decathlon-920d",
+    "category": "racket",
+    "name": "920D",
+    "brand": "Decathlon",
+    "priceUsd": 40,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "3U",
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 290,
+    "balanceCategory": "head_light",
+    "swingWeightEstimate": "fast",
+    "commonStringTensionLbs": {
+      "min": 24,
+      "max": 26
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2020,
+    "regionAvailability": [
+      "eu",
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.decathlon.com/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "value",
+      "beginner",
+      "balanced"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Decathlon 920D — plain beige 3U box frame, ~290mm balance, sugar-water elasticity. Curiosity/value pick under ~¥300 street.",
+    "reviewCount": 0
+  },
+  {
+    "id": "rsl-tourney-l7-shuttle",
+    "category": "shuttle",
+    "name": "Tourney L7 Shuttlecock",
+    "brand": "RSL",
+    "priceUsd": 15,
+    "feathered": true,
+    "material": "duck_feather",
+    "speedCode": 77,
+    "unitsPerTube": 12,
+    "bwfApproved": false,
+    "durabilityTier": "practice",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.rsl.world/shuttlecocks",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "value",
+      "club_bulk_buying",
+      "training"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "RSL Tourney L7 custom SKU — full-round duck, composite tip, Asia 3/4-ish flight. Distinct from Classic Tourney.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-g100s-shuttle",
+    "category": "shuttle",
+    "name": "G100S Shuttlecock",
+    "brand": "Li-Ning",
+    "priceUsd": 12,
+    "feathered": true,
+    "material": "goose_feather",
+    "speedCode": 77,
+    "unitsPerTube": 12,
+    "bwfApproved": false,
+    "durabilityTier": "practice",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.lining.com.cn/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "training",
+      "budget",
+      "goose_single_side"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Li-Ning G100S — goose single-side youth/downspec of G100. Training only; avoid match play.",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-infinity-002",
+    "category": "shoes",
+    "name": "Infinity 002",
+    "brand": "Bonny",
+    "priceUsd": 40,
+    "fitWidth": "normal",
+    "cushioning": "medium",
+    "stability": "medium",
+    "weightFeel": "medium",
+    "hasWideOption": false,
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn"
+    ],
+    "officialSourceUrl": "https://www.bonny.com.cn/",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "training",
+      "value",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Bonny Infinity 002 — training shoe with midfoot carbon under ~¥300. Covers mid-low intensity matches.",
+    "reviewCount": 0
+  },
+  {
+    "id": "babolat-satelite-blast",
+    "category": "racket",
+    "name": "Satelite Blast",
+    "brand": "Babolat",
+    "priceUsd": 140,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "3U",
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 27
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2022,
+    "regionAvailability": [
+      "eu",
+      "cn",
+      "global"
+    ],
+    "officialSourceUrl": "https://www.babolat.com/badminton",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "attack",
+      "power",
+      "head_heavy"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/",
+      "https://www.babolat.com/badminton"
+    ],
+    "editorNote": "Babolat Satelite Blast (星云 Blast in CN). 3U ~89g, 6.5mm flat shaft, 80 holes, 27lb warranty. Controversial mid-flagship.",
+    "reviewCount": 0
   }
 ]

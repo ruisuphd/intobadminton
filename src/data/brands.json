@@ -500,5 +500,24 @@
     "categoriesCovered": [
       "racket"
     ]
+  },
+  {
+    "id": "decathlon",
+    "name": "Decathlon",
+    "nameZh": "迪卡侬",
+    "tier": "tier4",
+    "regions": [
+      "eu",
+      "cn",
+      "global"
+    ],
+    "officialUrl": "https://www.decathlon.com/",
+    "founded": 1976,
+    "country": "France",
+    "knownFor": "Mass-market sports retailer with own-brand badminton rackets and accessories. Value-oriented frames such as the 920D appear in community curiosity reviews; distribution is wide, brand mindshare in serious badminton clubs remains modest.",
+    "knownForZh": "大众运动零售商，自有羽毛球拍与配件线。920D 等性价比拍出现在社区猎奇测评中；渠道广，严肃业余圈品牌存在感一般。",
+    "categoriesCovered": [
+      "racket"
+    ]
   }
 ]

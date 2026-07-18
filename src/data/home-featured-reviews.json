@@ -1,40 +1,40 @@
 {
-  "reviewCount": 167,
+  "reviewCount": 176,
   "featured": [
     {
-      "slug": "kumpoo-kh-g815-dragon-claw-shoes-review",
-      "title": "Kumpoo KH-G815 Dragon Claw review: ventilated speed flagship",
-      "updatedAt": "2026-07-04",
-      "readingMinutes": 2
+      "slug": "anta-dingyin-1000-racket-review",
+      "title": "Anta Dingyin 1000 Racket Review",
+      "updatedAt": "2026-07-18",
+      "readingMinutes": 4
     },
     {
-      "slug": "kumpoo-silver-blade-shoes-review",
-      "title": "Kumpoo Silver Blade review: dial lock, maximum ventilation",
-      "updatedAt": "2026-07-04",
-      "readingMinutes": 1
-    },
-    {
-      "slug": "li-ning-aeronaut-8000d-review",
-      "title": "Li-Ning Aeronaut 8000D review: the overlooked windstorm hammer",
-      "updatedAt": "2026-07-04",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "li-ning-bladex-800-power-review",
-      "title": "Li-Ning Bladex 800 Power review: the lubricated attack twin",
-      "updatedAt": "2026-07-04",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "li-ning-bladex-800-speed-review",
-      "title": "Li-Ning Bladex 800 Speed review: tight M46X speed twin",
-      "updatedAt": "2026-07-04",
+      "slug": "li-ning-axforce-10-beginner-attack-review",
+      "title": "Li-Ning AxForce 10 review: beginner offence without the scare",
+      "updatedAt": "2026-07-18",
       "readingMinutes": 2
     },
     {
       "slug": "li-ning-okay-1-shuttle-review",
       "title": "Li-Ning OKAY 1 review: Li-Ning's first synthetic feather shuttle",
-      "updatedAt": "2026-07-04",
+      "updatedAt": "2026-07-18",
+      "readingMinutes": 3
+    },
+    {
+      "slug": "victor-auraspeed-99-hayabusa-review",
+      "title": "Victor Auraspeed 99 (Hayabusa): the Antonsen flagship that earns its difficulty",
+      "updatedAt": "2026-07-18",
+      "readingMinutes": 9
+    },
+    {
+      "slug": "victor-c90-ii-shoes-review",
+      "title": "Victor C90 II review: wide last, heavy stability, flagship cushion",
+      "updatedAt": "2026-07-18",
+      "readingMinutes": 2
+    },
+    {
+      "slug": "li-ning-mirage-ii-pro-shoes-review",
+      "title": "Li-Ning Mirage II Pro review: pure speed, racing mode only",
+      "updatedAt": "2026-07-18",
       "readingMinutes": 2
     }
   ]

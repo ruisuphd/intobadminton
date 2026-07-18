@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v35";
+const CACHE_VERSION = "ib-v36";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -138,16 +138,16 @@ const PRECACHE_URLS = [
   "/review/kawasaki-star-cross-racket-review/",
   "/review/kawasaki-kace-shoes-review/",
   "/review/racket-stringing-hole-patterns-explained/",
-  "/review/kumpoo-kh-g815-dragon-claw-shoes-review/",
-  "/review/kumpoo-silver-blade-shoes-review/",
-  "/review/li-ning-aeronaut-8000d-review/",
-  "/review/li-ning-bladex-800-power-review/",
-  "/review/li-ning-bladex-800-speed-review/",
-  "/review/li-ning-okay-1-shuttle-review/",
   "/manifest.webmanifest",
   "/intobadminton-mark.png",
   "/intobadminton-icon-192.png",
   "/intobadminton-icon-512.png",
+  "/review/anta-dingyin-1000-racket-review/",
+  "/review/li-ning-axforce-10-beginner-attack-review/",
+  "/review/li-ning-okay-1-shuttle-review/",
+  "/review/victor-auraspeed-99-hayabusa-review/",
+  "/review/victor-c90-ii-shoes-review/",
+  "/review/li-ning-mirage-ii-pro-shoes-review/",
 ];
 
 self.addEventListener("install", (event) => {
