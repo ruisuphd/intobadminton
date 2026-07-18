@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 export type TocItem = { id: string; label: string };
 
 /**
- * Sticky table of contents that highlights the section the reader is
- * currently in. The list of items is generated server-side from the article's
- * `<h2>` headings (passed as a prop) so the ToC is visible without JS; the
- * active-section highlighting is the only client-only behavior.
+ * In-page table of contents that highlights the section the reader is
+ * currently in. Items come from the article `<h2>` headings (server-passed)
+ * so the ToC is visible without JS; active-section highlighting is the only
+ * client-only behavior.
  *
- * Mobile: collapses to a "Jump to" disclosure to preserve vertical space.
+ * Mobile: collapses to a "Jump to" disclosure.
+ * Desktop: static in-flow nav (not sticky) — sticky overlayed the article
+ * body when mounted in a single-column layout.
  */
 export function ArticleToc({ items }: { items: TocItem[] }) {
   const [activeId, setActiveId] = useState<string | null>(
@@ -83,11 +85,10 @@ export function ArticleToc({ items }: { items: TocItem[] }) {
         </ol>
       </details>
 
-      {/* Desktop: sticky sidebar. The parent layout decides where to mount
-          this and gives it the necessary width — we just paint the list. */}
+      {/* Desktop: in-flow nav — keeps reading column clear while scrolling. */}
       <nav
         aria-label="On this page"
-        className="hidden lg:block sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-auto"
+        className="mb-2 hidden rounded-2xl border border-[color:var(--line)] bg-white p-4 lg:block"
       >
         <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-[var(--color-subtle)]">
           On this page
