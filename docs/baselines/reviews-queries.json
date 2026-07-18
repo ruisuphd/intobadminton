@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-04",
+  "updated": "2026-07-18",
   "coverage": {
-    "minArticleSlugs": 156,
+    "minArticleSlugs": 165,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1570,6 +1570,96 @@
       "expectMinRelatedReading": 3,
       "note": "Auto-synced mapped corpus row — Sprint 61",
       "expectProductId": "vic-c90-ii",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "babolat-satelite-blast-racket-review",
+      "slug": "babolat-satelite-blast-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Babolat",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "babolat-satelite-blast",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse babolat"
+    },
+    {
+      "id": "bonny-infinity-002-shoes-review",
+      "slug": "bonny-infinity-002-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "bonny-infinity-002",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny"
+    },
+    {
+      "id": "decathlon-920d-racket-review",
+      "slug": "decathlon-920d-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Decathlon",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "decathlon-920d",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse decathlon"
+    },
+    {
+      "id": "gosen-raimei-58-string-review",
+      "slug": "gosen-raimei-58-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "gosen-raimei-58-string",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse gosen"
+    },
+    {
+      "id": "gosen-raimei-62-string-review",
+      "slug": "gosen-raimei-62-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Gosen",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "gosen-raimei-62-string",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse gosen"
+    },
+    {
+      "id": "li-ning-g100s-shuttle-review",
+      "slug": "li-ning-g100s-shuttle-review",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-g100s-shuttle",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-mirage-ii-pro-shoes-review",
+      "slug": "li-ning-mirage-ii-pro-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-mirage-ii-pro",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "rsl-tourney-l7-shuttle-review",
+      "slug": "rsl-tourney-l7-shuttle-review",
+      "expectCatalogHref": "/catalog/?cat=shuttle&brand=RSL",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "rsl-tourney-l7-shuttle",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse rsl"
+    },
+    {
+      "id": "victor-vbs70-string-review",
+      "slug": "victor-vbs70-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-vbs70",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse victor"
     }

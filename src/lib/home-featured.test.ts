@@ -17,8 +17,8 @@ describe("home-featured", () => {
     const slugs = homeFeaturedReviewSlugs();
     expect(slugs).toHaveLength(6);
     expect(new Set(slugs).size).toBe(6);
-    expect(slugs).toContain("li-ning-bladex-800-speed-review");
-    expect(slugs).toContain("kumpoo-kh-g815-dragon-claw-shoes-review");
+    expect(slugs).toContain("li-ning-mirage-ii-pro-shoes-review");
+    expect(slugs).toContain("anta-dingyin-1000-racket-review");
   });
 
   it("builds canonical review hrefs", () => {

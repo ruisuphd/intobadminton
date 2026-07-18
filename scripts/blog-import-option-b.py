@@ -70,6 +70,16 @@ TITLE_OVERRIDES = {
     "kumpoo-kh-g815-dragon-claw-shoes-review": "Kumpoo KH-G815 Dragon Claw review: ventilated speed flagship",
     "kumpoo-silver-blade-shoes-review": "Kumpoo Silver Blade review: dial lock, maximum ventilation",
     "mizuno-carbo-pro-823-review": "Mizuno Carbo Pro 823 review: the stick in the naughty-kid happy meal",
+    "li-ning-mirage-ii-pro-shoes-review": "Li-Ning Mirage II Pro review: pure speed, racing mode only",
+    "victor-vbs70-string-review": "Victor VBS-70 review: durable string that wakes up at high tension",
+    "gosen-raimei-58-string-review": "Gosen Raimei 58 review: thin-string pleasure with a short honeymoon",
+    "gosen-raimei-62-string-review": "Gosen Raimei 62 review: niche 0.62 mm built for control",
+    "decathlon-920d-racket-review": "Decathlon 920D review: plain French frame that plays sweeter than it looks",
+    "rsl-tourney-l7-shuttle-review": "RSL Tourney L7 review: custom shape, silly value",
+    "li-ning-g100s-shuttle-review": "Li-Ning G100S review: goose single-side for training, not matches",
+    "bonny-infinity-002-shoes-review": "Bonny Infinity 002 review: training shoe that covers club nights",
+    "babolat-satelite-blast-racket-review": "Babolat Satelite Blast review: controversial flagship, mid-tier soul",
+    "li-ning-axforce-10-beginner-attack-review": "Li-Ning AxForce 10 review: beginner offence without the scare",
 }
 
 DEK_OVERRIDES = {

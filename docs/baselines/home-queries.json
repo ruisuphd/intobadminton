@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-04",
+  "updated": "2026-07-18",
   "coverage": {
     "minPopularSearchHrefs": 33,
     "minE2eGuards": 1
@@ -11,7 +11,7 @@
       "expectCatalogHref": "/catalog/",
       "expectFinderHref": "/quiz/",
       "expectMinFeaturedReviews": 6,
-      "expectMinReviewCount": 167,
+      "expectMinReviewCount": 170,
       "expectMinCatalogTotal": 150,
       "expectPopularSearchHrefs": [
         "/best/rackets-under-100/",
@@ -49,18 +49,18 @@
         "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
-        "/review/kumpoo-kh-g815-dragon-claw-shoes-review/",
-        "/review/kumpoo-silver-blade-shoes-review/",
-        "/review/li-ning-aeronaut-8000d-review/",
-        "/review/li-ning-bladex-800-power-review/",
-        "/review/li-ning-bladex-800-speed-review/",
-        "/review/li-ning-okay-1-shuttle-review/"
+        "/review/anta-dingyin-1000-racket-review/",
+        "/review/li-ning-axforce-10-beginner-attack-review/",
+        "/review/li-ning-okay-1-shuttle-review/",
+        "/review/victor-auraspeed-99-hayabusa-review/",
+        "/review/victor-c90-ii-shoes-review/",
+        "/review/li-ning-mirage-ii-pro-shoes-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,
       "expectHeadingPattern": "badminton",
       "expectCatalogLinkPattern": "browse full catalog",
-      "note": "CrUX priority homepage — full popular-search grid parity (33 chips)"
+      "note": "CrUX priority homepage \u2014 full popular-search grid parity (33 chips)"
     }
   ]
 }
