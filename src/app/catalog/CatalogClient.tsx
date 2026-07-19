@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { trackEvent } from "@/components/Analytics";
 import { useProfile } from "@/context/ProfileContext";
 import { CatalogProductActions } from "@/components/CatalogProductActions";
@@ -122,6 +122,13 @@ export function CatalogClient() {
     [searchParams]
   );
   const filters = filtersFromState(state);
+  const urlKeyword = state.q ?? "";
+  const [keywordDraft, setKeywordDraft] = useState(urlKeyword);
+  const [seenUrlKeyword, setSeenUrlKeyword] = useState(urlKeyword);
+  if (urlKeyword !== seenUrlKeyword) {
+    setSeenUrlKeyword(urlKeyword);
+    setKeywordDraft(urlKeyword);
+  }
 
   const baseRows = useMemo(
     () =>
@@ -137,13 +144,23 @@ export function CatalogClient() {
 
   const filtered = useMemo(() => {
     const specFiltered = filterProducts(catalog, filters);
-    const keywordFiltered = filterProductsByKeyword(specFiltered, state.q);
+    const keywordFiltered = filterProductsByKeyword(
+      specFiltered,
+      keywordDraft.trim() || null
+    );
     return sortProducts(
       keywordFiltered,
       state.sort,
       profileReady ? profile : null
     );
-  }, [catalog, filters, state.q, state.sort, profile, profileReady]);
+  }, [
+    catalog,
+    filters,
+    keywordDraft,
+    state.sort,
+    profile,
+    profileReady,
+  ]);
 
   const brands = useMemo(() => brandOptionsFor(baseRows), [baseRows]);
   const categories = useMemo(() => categoryOptionsFor(catalog), [catalog]);
@@ -178,10 +195,16 @@ export function CatalogClient() {
     replaceState(merged);
   };
 
-  const onKeywordChange = (raw: string) => {
-    const trimmed = raw.trim();
-    patch({ q: trimmed.length > 0 ? trimmed : null });
-  };
+  useEffect(() => {
+    const trimmed = keywordDraft.trim();
+    const nextQ = trimmed.length > 0 ? trimmed : null;
+    if (nextQ === state.q) return;
+    const timer = window.setTimeout(() => {
+      patch({ q: nextQ });
+    }, 250);
+    return () => window.clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- debounce keyword → URL only
+  }, [keywordDraft, state.q]);
 
   const onFinderCta = () => {
     trackEvent("catalog_finder_cta", {
@@ -200,8 +223,8 @@ export function CatalogClient() {
         <input
           id="catalog-keyword"
           type="search"
-          value={state.q ?? ""}
-          onChange={(e) => onKeywordChange(e.target.value)}
+          value={keywordDraft}
+          onChange={(e) => setKeywordDraft(e.target.value)}
           placeholder="Search by brand, model, or spec (e.g. Yonex 4U head-light)"
           className="w-full rounded-xl border border-[color:var(--line)] bg-white px-4 py-3 text-sm text-[var(--text)] placeholder:text-[var(--color-subtle)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
           autoComplete="off"
@@ -311,7 +334,7 @@ export function CatalogClient() {
 
       <ul className="divide-y divide-[color:var(--line)] rounded-2xl border border-[color:var(--line)] bg-white">
         {filtered.map((p) => (
-          <li key={p.id} className="flex items-stretch">
+          <li key={p.id} className="flex flex-col sm:flex-row sm:items-stretch">
             <Link
               href={catalogProductHref(p)}
               onClick={() =>
@@ -360,12 +383,12 @@ export function CatalogClient() {
       {filtered.length === 0 && (
         <p className="text-sm text-[var(--color-muted)]">
           No products match — try clearing your{" "}
-          {state.q ? (
+          {keywordDraft.trim() ? (
             <>
               search or{" "}
               <button
                 type="button"
-                onClick={() => onKeywordChange("")}
+                onClick={() => setKeywordDraft("")}
                 className="text-[var(--color-accent)] underline"
               >
                 keyword

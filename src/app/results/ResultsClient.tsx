@@ -248,19 +248,18 @@ function ResultsBody() {
     );
   }
 
-  if (rows.length === 0) {
-    return (
-      <div className="card p-6">
-        <h2 className="font-semibold text-[var(--text)]">
-          No strong matches yet
-        </h2>
-        <p className="mt-2 text-[var(--color-muted)]">
-          Try relaxing budget, choosing one fewer style tag, or selecting
-          another equipment category.
-        </p>
-      </div>
-    );
-  }
+  const filtersActive =
+    brandFilter != null ||
+    priceBandFilter != null ||
+    weightFilter != null ||
+    balanceFilter != null;
+
+  const clearFilters = () => {
+    setBrandFilter(null);
+    setPriceBandFilter(null);
+    setWeightFilter(null);
+    setBalanceFilter(null);
+  };
 
   const budgetMax = profile.body.budgetMaxUsd;
   const showBudgetGuide =
@@ -268,20 +267,7 @@ function ResultsBody() {
     budgetMax != null &&
     budgetMax <= 100;
 
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <ResultsFilterSummary profile={profile} />
-        <div className="flex flex-wrap items-center gap-3">
-          <Link
-            href={catalogHrefFromProfile(profile)}
-            className="text-sm font-medium text-[var(--color-accent)] hover:underline"
-          >
-            Browse matching catalog →
-          </Link>
-          <ShareResultsLink profile={profile} topN={topN} />
-        </div>
-      </div>
+  const filterChrome = (
       <div className="space-y-3">
         {brandOptions.length > 1 && (
           <FilterChipGroup
@@ -335,7 +321,56 @@ function ResultsBody() {
           />
         )}
       </div>
-      <JsonLd data={buildProductJsonLd(rows)} />
+  );
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <ResultsFilterSummary profile={profile} />
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href={catalogHrefFromProfile(profile)}
+            className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+          >
+            Browse matching catalog →
+          </Link>
+          <ShareResultsLink profile={profile} topN={topN} />
+        </div>
+      </div>
+      {filterChrome}
+      {rows.length === 0 ? (
+        <div className="card p-6">
+          <h2 className="font-semibold text-[var(--text)]">
+            {filtersActive ? "No matches with these filters" : "No strong matches yet"}
+          </h2>
+          <p className="mt-2 text-[var(--color-muted)]">
+            {filtersActive
+              ? "Clear the brand, price, weight, or balance chips above — or edit your finder profile."
+              : "Try relaxing budget, choosing one fewer style tag, or selecting another equipment category."}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3 text-sm">
+            {filtersActive && (
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="font-medium text-[var(--color-accent)] underline"
+              >
+                Clear filters
+              </button>
+            )}
+            <Link href="/quiz/" className="font-medium text-[var(--color-accent)] underline">
+              Edit finder
+            </Link>
+            <Link
+              href={catalogHrefFromProfile(profile)}
+              className="font-medium text-[var(--color-accent)] underline"
+            >
+              Browse catalog
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <>
       {showBudgetGuide && (
         <aside className="card border-[color:var(--color-accent-soft)] bg-[color:var(--color-accent-soft)] p-5 text-sm">
           <p className="font-medium text-[var(--text)]">
@@ -353,6 +388,7 @@ function ResultsBody() {
           </Link>
         </aside>
       )}
+      <JsonLd data={buildProductJsonLd(rows)} />
       {rows.map((r, i) => (
         <ResultCard key={r.id} r={r} rank={i + 1} />
       ))}
@@ -379,6 +415,26 @@ function ResultsBody() {
           </p>
         </details>
       )}
+        </>
+      )}
+    </div>
+  );
+}
+
+function ResultsSkeleton() {
+  return (
+    <div className="space-y-6" aria-busy="true" aria-label="Loading results">
+      <div className="h-5 w-48 animate-pulse rounded bg-[color:var(--surface-muted)]" />
+      <div className="flex flex-wrap gap-2">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div
+            key={i}
+            className="h-8 w-16 animate-pulse rounded-full bg-[color:var(--surface-muted)]"
+          />
+        ))}
+      </div>
+      <div className="card h-40 animate-pulse bg-[color:var(--surface-muted)]" />
+      <div className="card h-40 animate-pulse bg-[color:var(--surface-muted)]" />
     </div>
   );
 }
@@ -388,7 +444,7 @@ export function ResultsClient() {
   // static export when consumed by a client component — Next defers the
   // search-params read until the client hydrates.
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<ResultsSkeleton />}>
       <ResultsBody />
     </Suspense>
   );

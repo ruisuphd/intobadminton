@@ -288,13 +288,15 @@ export function ResultCard({
          * picks without re-running the finder.
          */}
         <SaveProductButton id={r.id} label={`${r.brand} ${r.name}`} />
-        <Link
-          href={buildLocalizedPath(locale, "/compare/")}
-          onClick={() => trackEvent("open_compare", { product_id: r.id, rank })}
-          className="text-sm font-medium text-[var(--color-muted)] underline-offset-4 transition-colors hover:text-[var(--text)] hover:underline"
-        >
-          {"Open compare"}
-        </Link>
+        {compareIds.length > 0 && (
+          <Link
+            href={buildLocalizedPath(locale, "/compare/")}
+            onClick={() => trackEvent("open_compare", { product_id: r.id, rank })}
+            className="text-sm font-medium text-[var(--color-muted)] underline-offset-4 transition-colors hover:text-[var(--text)] hover:underline"
+          >
+            Open compare
+          </Link>
+        )}
         <Link
           href={`${buildLocalizedPath(locale, "/contact/")}?subject=Product%20data%20issue%20${encodeURIComponent(r.id)}`}
           className="ml-auto text-xs text-[var(--color-subtle)] underline-offset-4 transition-colors hover:text-[var(--text)] hover:underline"

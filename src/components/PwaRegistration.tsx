@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useConsent } from "@/context/ConsentContext";
 
 const SECOND_VISIT_KEY = "intobadminton.visit-count.v1";
 
@@ -22,6 +23,7 @@ type InstallPromptEvent = Event & {
  * SW can mask hot-reload changes.
  */
 export function PwaRegistration() {
+  const { hasChoice } = useConsent();
   const [installEvent, setInstallEvent] = useState<InstallPromptEvent | null>(
     null
   );
@@ -97,11 +99,16 @@ export function PwaRegistration() {
 
   if (!showPrompt || !installEvent) return null;
 
+  // Sit above the cookie banner when it is visible (banner is z-50, ~bottom-0).
+  const bottomClass = hasChoice
+    ? "bottom-4 pb-[env(safe-area-inset-bottom)]"
+    : "bottom-[calc(7.5rem+env(safe-area-inset-bottom))]";
+
   return (
     <div
       role="dialog"
       aria-label="Install IntoBadminton"
-      className="fixed inset-x-4 bottom-4 z-40 mx-auto max-w-md rounded-2xl border border-[color:var(--line-strong)] bg-white p-4 shadow-lg"
+      className={`fixed inset-x-4 z-40 mx-auto max-w-md rounded-2xl border border-[color:var(--line-strong)] bg-white p-4 shadow-lg ${bottomClass}`}
     >
       <p className="text-sm font-medium text-[var(--text)]">
         Install IntoBadminton

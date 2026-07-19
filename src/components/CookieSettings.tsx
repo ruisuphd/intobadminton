@@ -17,7 +17,12 @@ export function CookieSettings() {
     setDraft(consent);
     /* eslint-enable react-hooks/set-state-in-effect */
     window.setTimeout(() => closeRef.current?.focus(), 0);
-  }, [settingsOpen, consent]);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeSettings();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [settingsOpen, consent, closeSettings]);
 
   if (!settingsOpen) return null;
 
@@ -25,12 +30,14 @@ export function CookieSettings() {
     <div
       className="fixed inset-0 z-50 flex items-end bg-black/40 p-4 backdrop-blur-sm sm:items-center sm:justify-center"
       role="presentation"
+      onClick={closeSettings}
     >
       <section
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-settings-title"
         className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-[color:var(--line)] bg-[var(--surface)] p-6 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-4">
           <div>

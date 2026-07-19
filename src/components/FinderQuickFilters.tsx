@@ -145,7 +145,7 @@ export function FinderQuickFilters({
           type="button"
           disabled={!canSubmit}
           onClick={goToResults}
-          className="btn-primary h-10 px-5 text-sm disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn-secondary h-10 px-5 text-sm disabled:cursor-not-allowed disabled:opacity-50"
         >
           View ranked results
         </button>

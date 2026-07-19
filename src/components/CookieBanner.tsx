@@ -12,7 +12,7 @@ export function CookieBanner() {
   return (
     <section
       aria-label="Cookie notice"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-[color:var(--line)] bg-[var(--surface)] p-4 shadow-2xl"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-[color:var(--line)] bg-[var(--surface)] p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-2xl"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="max-w-3xl">
@@ -31,21 +31,21 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={rejectNonEssential}
-            className="rounded-2xl bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white"
+            className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm font-medium text-[var(--text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
           >
             Reject non-essential
           </button>
           <button
             type="button"
             onClick={openSettings}
-            className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
+            className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
           >
             Customize
           </button>
           <button
             type="button"
             onClick={acceptAll}
-            className="rounded-2xl border border-[color:var(--line-strong)] px-4 py-2 text-sm"
+            className="rounded-2xl bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2"
           >
             Accept all
           </button>
