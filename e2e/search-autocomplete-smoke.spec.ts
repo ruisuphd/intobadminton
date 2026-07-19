@@ -1,25 +1,27 @@
 import { expect, test } from "@playwright/test";
 
-test("header search has catalog split button", async ({ page }) => {
-  await page.setViewportSize({ width: 1280, height: 800 });
-  await page.goto("/");
-
-  const catalogBtn = page.getByRole("button", { name: "Catalog" }).first();
-  await expect(catalogBtn).toBeVisible();
-});
-
-test("header catalog button routes to catalog with q prefill", async ({
+test("header compact search has search submit without catalog button", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto("/");
 
-  const searchbox = page.getByRole("combobox", {
-    name: /search reviews, products, and guides/i,
-  });
-  await searchbox.fill("yonex astrox");
+  const headerForm = page.locator("header form[role='search']");
+  await expect(headerForm.getByRole("button", { name: "Search" })).toBeVisible();
+  await expect(headerForm.getByRole("button", { name: "Catalog" })).toHaveCount(
+    0
+  );
+});
 
-  await page.getByRole("button", { name: "Catalog" }).first().click();
+test("hero catalog button routes to catalog with q prefill", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/");
+
+  const heroSearch = page.locator('main form[role="search"][action="/search/"]');
+  await heroSearch.getByRole("searchbox").fill("yonex astrox");
+  await heroSearch.getByRole("button", { name: "Catalog" }).click();
   await expect(page).toHaveURL(/\/catalog\/\?q=yonex/);
 });
 
