@@ -9,7 +9,6 @@ import { LastArticleTracker } from "@/components/LastArticleTracker";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { RelatedPostsGrid } from "@/components/RelatedPostsGrid";
 import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
-import { ReviewMethodologyBox } from "@/components/ReviewMethodologyBox";
 import { ReviewProductPanel } from "@/components/ReviewProductPanel";
 import { SocialShare } from "@/components/SocialShare";
 import {
@@ -158,7 +157,6 @@ export function EditorialArticlePage({
                 quizPath={buildLocalizedPath(locale, "/quiz/")}
               />
             )}
-            <ReviewMethodologyBox updatedAt={article.updatedAt} />
             {tocItems.length > 0 && <ArticleToc items={tocItems} />}
             {article.comparison && article.comparison.rows.length > 0 && (
               <div className="overflow-x-auto rounded-2xl border border-[color:var(--line)]">
