@@ -12,8 +12,8 @@ type GuideCatalogCtaProps = {
 
 export function GuideCatalogCta({
   slug,
-  heading = "Ready to browse the catalogue?",
-  body = "Filter by brand, weight, balance, and price — or run the finder for a personalised shortlist.",
+  heading = "Keep going at your own pace",
+  body = "Filter the catalog by brand, weight, balance, and price — or take the five-question finder and get a shortlist scored with my fit rules.",
 }: GuideCatalogCtaProps) {
   return (
     <section className="mt-12 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">

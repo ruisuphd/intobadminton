@@ -12,8 +12,8 @@ type ToolCatalogCtaProps = {
 
 export function ToolCatalogCta({
   slug,
-  heading = "Ready to browse the catalogue?",
-  body = "Filter by brand, weight, balance, and price — or run the finder for a personalised shortlist.",
+  heading = "Put the numbers to work",
+  body = "Browse the catalog with the same specs this tool explains — or run the finder and get picks scored with my fit rules.",
 }: ToolCatalogCtaProps) {
   return (
     <section className="mt-12 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">

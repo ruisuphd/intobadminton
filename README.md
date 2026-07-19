@@ -72,7 +72,7 @@ After adding or updating `## English Translation` sections (Chinese stays above 
 ```bash
 npm run blog:check    # fail if unmapped *.md or untranslated Chinese filenames
 npm run blog:import   # merge into src/data/blog-articles.json
-npm run blog:validate # 20-pass structural/voice gate
+npm run blog:validate # structural and voice checks on imported reviews
 ```
 
 See [`docs/BLOG_INGESTION_PLAN.md`](docs/BLOG_INGESTION_PLAN.md) and

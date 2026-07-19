@@ -10,12 +10,12 @@ import { relatedReadingForPath } from "@/lib/related-content";
 export const metadata: Metadata = {
   title: "Best Badminton Rackets, Shoes, Strings, Grips & Bags (2026)",
   description:
-    "Curated 2026 badminton buying guides — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings, shuttles, grips, and bags.",
+    "2026 badminton buying guides from one competitive player — rackets for beginners, intermediates, doubles, smash; shoes by fit width; strings, shuttles, grips, and bags.",
   alternates: pageAlternates("/best/"),
   openGraph: {
     title: "Best Badminton Rackets, Shoes, Strings, Grips & Bags (2026)",
     description:
-      "Curated badminton buying guides — every pick scored on transparent fit factors with source authority labelled.",
+      "Personal badminton buying guides — every pick scored on five named fit factors with its source labelled.",
     url: "/best/",
     type: "website",
     siteName: "IntoBadminton",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best Badminton Rackets, Shoes, Strings, Grips & Bags — 2026 Buying Guides",
     description:
-      "Best badminton rackets, shoes, strings, shuttles, grips, and bags — by level, role, and fit width. Transparent scoring, source labels, no email gate.",
+      "Best badminton rackets, shoes, strings, shuttles, grips, and bags — by level, role, and fit width. One player's scored picks, no email gate.",
   },
 };
 
@@ -169,7 +169,7 @@ export default function BestIndexPage() {
     "@id": `${companyInfo.siteUrl}/best/#itemlist`,
     name: "IntoBadminton best-of buying guides",
     description:
-      "Hand-curated badminton buying guides covering rackets, shoes, and strings — each shortlist is scored on transparent fit factors.",
+      "Badminton buying guides written and scored by one player — rackets, shoes, and strings, each shortlist ranked on five named fit factors.",
     numberOfItems: SECTIONS.flatMap((s) => s.items).length,
     itemListElement: SECTIONS.flatMap((section) =>
       section.items.map((item, index) => ({

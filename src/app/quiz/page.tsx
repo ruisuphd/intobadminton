@@ -35,11 +35,11 @@ export function QuizShell() {
           {[
             {
               title: "Skill and role",
-              body: "Beginner to advanced, singles or doubles, front-court or rear-court — these set the baseline weight, balance, and shaft profile we recommend.",
+              body: "Beginner to advanced, singles or doubles, front-court or rear-court — these set the baseline weight, balance, and shaft profile I recommend.",
             },
             {
               title: "Swing and timing",
-              body: "Smash-heavy, fast-flat, control-first, or all-court? We use this to bias toward head-heavy power frames or head-light defensive frames.",
+              body: "Smash-heavy, fast-flat, control-first, or all-court? I use this to bias toward head-heavy power frames or head-light defensive frames.",
             },
             {
               title: "Body and budget",
@@ -67,7 +67,7 @@ export function QuizShell() {
           </h2>
           <p>
             Product-specific official pages are treated as the strongest spec
-            source. Editor interpretation and community references can explain
+            source. My interpretation and community references can explain
             how a product may feel on court, but they are labelled separately
             from manufacturer verification. Confidence labels show what is
             verified and what still needs cross-checking, so you can judge how
@@ -82,7 +82,7 @@ export function QuizShell() {
             is sent to a server unless you explicitly opt in to analytics from
             the cookie banner. You can clear your finder profile from the
             footer Cookie settings link or by clearing site data in your
-            browser. See our{" "}
+            browser. See the{" "}
             <Link
               href="/privacy/"
               className="text-[var(--color-accent)] underline"

@@ -235,7 +235,7 @@ export function GuidesShell({ locale = "en" }: { locale?: SiteLocale }) {
               href={localized("/contact/")}
               className="text-[var(--color-accent)] underline"
             >
-              Contact Us
+              Contact
             </Link>{" "}
             page. The most-requested gear questions move to the top of the
             roadmap.

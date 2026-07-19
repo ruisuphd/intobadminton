@@ -39,8 +39,8 @@ export function buildPriceBandRacketsConfig(
     dek: meta.dek,
     productSchemaCategory: "BadmintonRacket",
     intro: {
-      heading: `How we picked rackets under $${maxUsd}`,
-      body: `Every row below is pulled from our verified catalogue at <strong>$${maxUsd} or less</strong> (MSRP / typical retail). We rank by price ascending, then name — not by marketing tier. Specs come from manufacturer pages where available; run the <a href="/quiz/">finder</a> to see which of these actually fit your level and playing style.`,
+      heading: `How I picked rackets under $${maxUsd}`,
+      body: `Every row below is pulled from my verified catalogue at <strong>$${maxUsd} or less</strong> (MSRP / typical retail). I rank by price ascending, then name — not by marketing tier. Specs come from manufacturer pages where available; run the <a href="/quiz/">finder</a> to see which of these actually fit your level and playing style.`,
     },
     picks,
     faqs: [
@@ -50,7 +50,7 @@ export function buildPriceBandRacketsConfig(
       },
       {
         q: "Why is the list sorted by price?",
-        a: "This is a budget-discovery page, not an editor-ranked best-of. For curated picks with trade-off notes, see our beginner and intermediate best-of guides.",
+        a: "This is a budget-discovery page, not a scored best-of. For picks with trade-off notes, see my beginner and intermediate best-of guides.",
       },
     ],
     ctaHeading: "Want a scored shortlist instead?",

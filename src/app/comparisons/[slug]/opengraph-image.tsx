@@ -21,7 +21,7 @@ export default async function Image({
     article?.title ?? "IntoBadminton — badminton equipment recommendations";
   const dek =
     article?.dek ??
-    "Evidence-led badminton racket, string, shoe, and bag recommendations.";
+    "Personal badminton racket, string, shoe, and bag reviews and recommendations.";
   const tint = "#1f513d";
   const label = "Comparison";
   const updatedAt = article?.updatedAt;

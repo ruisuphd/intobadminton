@@ -188,7 +188,7 @@ const config: BestPicksConfig = {
     },
   ],
   ctaHeading: "Want a personalised pick instead of a list?",
-  ctaBody: "Our finder asks five quick questions — level, discipline, style, body, budget — then ranks the catalogue for you with reasons.",
+  ctaBody: "The finder asks five quick questions — level, discipline, style, body, budget — then ranks the catalogue for you with reasons.",
 };
 
 export default function BeginnerRacketsPage() {

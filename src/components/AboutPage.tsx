@@ -30,11 +30,11 @@ const copyEn: Copy = {
   editorialHeading: "How recommendations are made",
   editorialBody: [
     "Every score the finder produces breaks down into five named factors: style fit, discipline fit, level fit, budget fit, and body / comfort fit. You can read the exact weighting on the methodology page.",
-    "We treat source authority explicitly. A product-specific official page is the strongest source for specs. Editor interpretation translates those specs into possible on-court feel. Community evidence — BadmintonCentral threads, Reddit, BadmintonCN, YouTube reviews — appears as cited metadata summaries with links, never as copied text.",
+    "I treat source authority explicitly. A product-specific official page is the strongest source for specs. My interpretation translates those specs into possible on-court feel. Community evidence — BadmintonCentral threads, Reddit, BadmintonCN, YouTube reviews — appears as cited metadata summaries with links, never as copied text.",
   ],
   editorialPrinciples: [
     {
-      title: "We do not scrape.",
+      title: "I don't scrape.",
       body: "Third-party reviews are linked and paraphrased with attribution. Copying review text — even with translation — is a copyright issue and an AdSense policy violation, and it is also how recommender sites become noise.",
     },
     {
@@ -48,7 +48,7 @@ const copyEn: Copy = {
   ],
   monetizationHeading: "How this site is funded",
   monetizationBody: [
-    "IntoBadminton runs Google AdSense ads after you grant consent. Ads are off by default and only load when you allow non-essential cookies. We may add affiliate retailer links in the future; those will be clearly labelled and will not change the recommendation order.",
+    "IntoBadminton runs Google AdSense ads after you grant consent. Ads are off by default and only load when you allow non-essential cookies. I may add affiliate retailer links in the future; those will be clearly labelled and will not change the recommendation order.",
     "If you want to support the project without ads, the best thing you can do is share the finder with a teammate, send corrections to product data, or contribute a review with explicit usage rights.",
   ],
   contactHeading: "Contact",
@@ -167,7 +167,7 @@ export function AboutPage({ locale }: { locale: SiteLocale }) {
 
         <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">
-            Ready to find your fit?
+            Want a shortlist for your game?
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Run the five-minute finder or browse the full equipment catalog with

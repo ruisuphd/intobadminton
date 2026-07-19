@@ -16,20 +16,20 @@ export const messages = {
     },
     footer: {
       summary:
-        "Curated equipment suggestions for badminton players. Not medical advice; always try before you buy when possible.",
+        "Personal badminton reviews and a finder I built for club players. Not medical advice; always try before you buy when possible.",
       cookieSettings: "Cookie settings",
       methodology: "Methodology",
     },
     home: {
       title: "Find the badminton gear that fits your game",
       subtitle:
-        "Five quick questions about how you play. We rank rackets, strings, shoes, and the rest of the kit by level, role, swing, comfort, and budget, then label whether each spec source is an official product page or still needs verification.",
+        "Five quick questions about how you play. I rank rackets, strings, shoes, and the rest of the kit by level, role, swing, comfort, and budget, then label whether each spec comes from an official product page or still needs a second look.",
       start: "Start finder",
       guides: "Read guides",
       proof: [
         {
-          title: "You can check our work",
-          body: "Every pick separates product-page specs, editor interpretation, and cited community evidence, with confidence labels showing which parts are verified and which still need a second look.",
+          title: "You can check my work",
+          body: "Every pick separates product-page specs, my take, and cited community evidence, with confidence labels showing which parts are verified and which still need a second look.",
         },
         {
           title: "Built for how badminton is actually played",
@@ -37,7 +37,7 @@ export const messages = {
         },
         {
           title: "No account, no email gate",
-          body: "The finder runs in your browser. Your profile, history, and compare list stay on your device — we don't need them on a server to give you a result.",
+          body: "The finder runs in your browser. Your profile, history, and compare list stay on your device — nothing needs a server account to get a result.",
         },
       ],
     },
@@ -46,13 +46,13 @@ export const messages = {
       of: "of",
       levelTitle: "What is your current playing level?",
       levelHelp:
-        "Self-assessed is fine. We use this to avoid recommending frames that are too stiff or demanding.",
+        "Self-assessed is fine. I use this to avoid recommending frames that are too stiff or demanding.",
       disciplineTitle: "What do you mostly play?",
       styleTitle: "Pick up to two playing styles",
-      styleHelp: "We use this to weight head balance, speed, and power fit.",
+      styleHelp: "I use this to weight head balance, speed, and power fit.",
       categoryTitle: "What are you shopping for?",
       categoryHelp:
-        "Rackets, strings, shoes, bags, shuttles, and grips are live. Each category now uses its own fit logic.",
+        "Rackets, strings, shoes, bags, shuttles, and grips are live. Each category uses its own fit logic.",
       bodyTitle: "Optional body comfort and budget",
       bodyHelp: "Skip anything you prefer not to share. This is not medical advice.",
       continue: "Continue",
@@ -62,12 +62,12 @@ export const messages = {
     results: {
       title: "Your equipment shortlist",
       subtitle:
-        "Ranked by transparent fit scoring. Verify specs on the manufacturer site before buying, and treat body comfort notes as informational.",
+        "Ranked by fit scoring I built for club players. Verify specs on the manufacturer site before buying, and treat body comfort notes as informational.",
     },
     guides: {
       title: "Equipment guides",
       subtitle:
-        "Practical, original notes that explain the recommendation model and help badminton players inspect gear tradeoffs.",
+        "Practical notes on how I score gear and how to inspect the trade-offs before you buy.",
     },
     compare: {
       title: "Compare gear",

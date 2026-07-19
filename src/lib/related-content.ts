@@ -296,7 +296,7 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
     {
       href: "/best/",
       title: "Best-of buying guides",
-      summary: "Curated shortlists for rackets, shoes, and strings.",
+      summary: "Buying guides for rackets, shoes, and strings.",
     },
     {
       href: "/compare-guides/",
@@ -310,7 +310,7 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
     },
     {
       href: "/methodology/",
-      title: "How we score equipment",
+      title: "How I score equipment",
       summary: "Fit factors, source labels, and verification gates.",
     },
     {
@@ -328,7 +328,7 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
     {
       href: "/best/",
       title: "Best-of buying guides",
-      summary: "Curated shortlists for rackets, shoes, and strings.",
+      summary: "Buying guides for rackets, shoes, and strings.",
     },
     {
       href: "/catalog/",
@@ -365,11 +365,11 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
     {
       href: "/catalog/",
       title: "Equipment catalog",
-      summary: "Filter every brand we cover by spec and price.",
+      summary: "Filter every brand I cover by spec and price.",
     },
     {
       href: "/brands/",
-      title: "All brands we cover",
+      title: "All brands I cover",
       summary: "Tiering by global reach and catalogue depth.",
     },
   ],

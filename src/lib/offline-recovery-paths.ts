@@ -274,7 +274,7 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
   {
     href: "/about/",
     label: "About",
-    description: "Precached — who runs IntoBadminton and how we score gear.",
+    description: "Precached — who runs IntoBadminton and how I score gear.",
   },
   {
     href: "/sources/",
@@ -284,12 +284,12 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
   {
     href: "/source-policy/",
     label: "Source policy",
-    description: "Precached — how we cite retailers and manufacturer data.",
+    description: "Precached — how I cite retailers and manufacturer data.",
   },
   {
     href: "/authors/",
     label: "Authors",
-    description: "Precached — editorial team and credentials.",
+    description: "Precached — who writes the reviews.",
   },
   {
     href: "/authors/rui-su/",

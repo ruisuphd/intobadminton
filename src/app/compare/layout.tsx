@@ -30,13 +30,13 @@ export default function CompareLayout({
             shortlist, then return here for a side-by-side breakdown.
           </p>
           <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
-            For rackets we surface brand, category, balance in millimetres,
-            shaft flex, weight class, available grip sizes, and our review
-            confidence label. For strings we add gauge in millimetres so you
+            For rackets I surface brand, category, balance in millimetres,
+            shaft flex, weight class, available grip sizes, and my review
+            confidence label. For strings I add gauge in millimetres so you
             can see how a 0.66 mm BG65 stacks up against a 0.65 mm Aerobite at
-            the same tension. For shoes we show fit width, and for bags we
+            the same tension. For shoes I show fit width, and for bags I
             show capacity in racket count plus shoe-compartment notes. Used
-            resale price and approximate depreciation appear where we have
+            resale price and approximate depreciation appear where I have
             verified market data, so the comparison reflects the real long-run
             cost rather than only the box price.
           </p>
@@ -49,7 +49,7 @@ export default function CompareLayout({
             How to use the badminton compare tool
           </h2>
           <p>
-            From any results page, brand page, or curated &quot;best of&quot;
+            From any results page, brand page, or &quot;best of&quot;
             shortlist on IntoBadminton, tap the compare button on a card to
             add it to your list. Two or three items is the sweet spot — beyond
             that the table starts to feel crowded and meaningful differences
@@ -78,10 +78,10 @@ export default function CompareLayout({
           </h2>
           <p>
             Each item has a confidence label that tells you how strong the
-            evidence is behind our take. &quot;Verified&quot; means we have
-            played with the product. &quot;Spec-checked&quot; means we have
+            evidence is behind my take. &quot;Verified&quot; means I have
+            played with the product. &quot;Spec-checked&quot; means I have
             reconciled manufacturer data with at least two community
-            references. &quot;Pending&quot; means we are still cross-checking.
+            references. &quot;Pending&quot; means I am still cross-checking.
             Read the full{" "}
             <a
               href="/methodology/"

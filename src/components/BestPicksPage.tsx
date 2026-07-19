@@ -94,7 +94,7 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
 
       const review = {
         "@type": "Review" as const,
-        name: `${p.brand} ${p.name} — IntoBadminton editor's review`,
+        name: `${p.brand} ${p.name} — ${companyInfo.founderName}'s review`,
         author: {
           "@type": "Person" as const,
           name: companyInfo.founderName,

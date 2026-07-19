@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * Standard "what we tested" callout for review articles. Surfaces the
+ * Standard "what I tested" callout for review articles. Surfaces the
  * editorial spine (hands-on sessions, string setup, verification dates)
  * without requiring per-article JSON fields yet.
  */
@@ -17,15 +17,15 @@ export function ReviewMethodologyBox({
       className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface-muted)] p-5"
     >
       <p className="text-sm font-semibold text-[var(--text)]">
-        What we tested
+        What I tested
       </p>
       <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--color-muted)]">
         <li>
-          Hands-on club sessions by Rui Su (Div 4 Ireland) with named string
+          My own club sessions (Div 4, Irish league) with named string
           setups and shuttle speeds where relevant.
         </li>
         <li>
-          Manufacturer specs cross-checked against our claims registry; stale
+          Manufacturer specs cross-checked against my claims registry; stale
           numbers are flagged inline.
         </li>
         <li>

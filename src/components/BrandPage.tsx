@@ -183,10 +183,10 @@ export function BrandPage({ config }: { config: BrandPageConfig }) {
         {config.topPicks.length > 0 && (
           <section className="card p-7">
             <h2 className="text-headline text-[var(--text)]">
-              Our top {config.brandName} picks right now
+              My top {config.brandName} picks right now
             </h2>
             <p className="mt-3 text-sm text-[var(--color-muted)]">
-              These are pulled from our scored lists — links go to the relevant
+              These are pulled from my scored lists — links go to the relevant
               best-of guide so you can see the full reasoning.
             </p>
             <ul className="mt-5 space-y-3">
@@ -261,7 +261,7 @@ export function BrandPage({ config }: { config: BrandPageConfig }) {
             Not sure which {config.brandName} model is right for you?
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
-            Run our finder. Five questions, transparent fit-score reasoning,
+            Run the finder. Five questions, fit-score reasons I can show you,
             ranked picks across {config.brandName} and other brands so you can
             pick by fit, not loyalty.
           </p>

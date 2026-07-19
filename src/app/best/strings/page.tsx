@@ -175,7 +175,7 @@ const config: BestPicksConfig = {
     },
   ],
   ctaHeading: "Run the string finder to land on the right gauge and tension",
-  ctaBody: "We score strings against your level, smash style, and string-breakage history — so you do not pay for tour-tier durability you do not need.",
+  ctaBody: "I score strings against your level, smash style, and string-breakage history — so you do not pay for tour-tier durability you do not need.",
 };
 
 export default function BestStringsPage() {

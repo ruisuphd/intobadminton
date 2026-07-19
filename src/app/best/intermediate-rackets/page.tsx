@@ -186,7 +186,7 @@ const config: BestPicksConfig = {
     },
   ],
   ctaHeading: "Take the racket finder to land on the right frame",
-  ctaBody: "We score the intermediate tier against your role, level, and body — so you upgrade once, not three times in a year.",
+  ctaBody: "I score the intermediate tier against your role, level, and body — so you upgrade once, not three times in a year.",
 };
 
 export default function IntermediateRacketsPage() {

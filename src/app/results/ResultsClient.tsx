@@ -55,11 +55,11 @@ function buildProductJsonLd(rows: ScoredProduct[]) {
       const datePublished = ratingDatePublished(r);
       const reviewBody =
         r.editorNote ??
-        `Ranked #${i + 1} for this player profile by IntoBadminton's transparent fit-score model. ${r.pros[0] ?? ""}`.trim();
+        `Ranked #${i + 1} for this player profile by my fit-score model. ${r.pros[0] ?? ""}`.trim();
 
       const review = {
         "@type": "Review" as const,
-        name: `${r.brand} ${r.name} — IntoBadminton editor's review`,
+        name: `${r.brand} ${r.name} — Rui Su's review`,
         author: {
           "@type": "Person" as const,
           name: companyInfo.founderName,
@@ -235,7 +235,7 @@ function ResultsBody() {
           Complete your player profile first
         </h2>
         <p className="mt-2 text-[var(--color-muted)]">
-          We need at least your level and discipline to produce a responsible
+          I need at least your level and discipline to produce a responsible
           shortlist.
         </p>
         <Link
@@ -342,7 +342,7 @@ function ResultsBody() {
             Shopping under ${budgetMax}?
           </p>
           <p className="mt-2 leading-relaxed text-[var(--color-muted)]">
-            See our editor-ranked budget rackets with trade-offs for Play tiers
+            See my budget racket shortlist with trade-offs for Play tiers
             and entry Victor/Li-Ning frames — not a marketplace price sort.
           </p>
           <Link

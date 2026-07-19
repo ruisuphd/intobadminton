@@ -4,9 +4,9 @@ import { pageAlternates } from "@/lib/metadata";
 import { companyInfo } from "@/lib/company";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact",
   description:
-    "Contact IntoBadminton. Reach the editorial, support, and privacy teams behind our badminton equipment recommendations.",
+    "Email Rui at IntoBadminton — corrections, finder questions, sample reviews, or privacy requests.",
   alternates: pageAlternates("/contact/"),
 };
 
@@ -14,16 +14,11 @@ export default function ContactPage() {
   return (
     <main className="flex-1 py-16">
       <article className="layout-band max-w-3xl space-y-5 text-[var(--color-muted)]">
-        <h1 className="text-3xl font-semibold text-[var(--text)]">
-          Contact Us
-        </h1>
+        <h1 className="text-3xl font-semibold text-[var(--text)]">Contact</h1>
         <p>
-          Welcome to the IntoBadminton contact page. We are a small, player-led
-          editorial team and we read every message. Whether you found a wrong
-          spec, want to suggest a racket, string, shoe, or bag we should
-          review, need help interpreting a finder result, or have a partnership
-          question, please get in touch using the channels below. We aim to
-          reply within three to five working days.
+          I read every message. Wrong spec, a racket I should try next, help
+          reading a finder result, or a partnership note — email me using the
+          channels below. I aim to reply within three to five working days.
         </p>
 
         <h2 className="text-xl font-semibold text-[var(--text)]">
@@ -32,7 +27,7 @@ export default function ContactPage() {
         <p>
           IntoBadminton is operated by {companyInfo.operatorLegalName}, an
           independent company registered in{" "}
-          {companyInfo.registrationJurisdiction}. We are not affiliated with,
+          {companyInfo.registrationJurisdiction}. It is not affiliated with,
           sponsored by, or endorsed by Yonex, Victor, Li-Ning, or any other
           manufacturer mentioned on the Site. The operator&apos;s parent
           business website is available at{" "}
@@ -42,24 +37,24 @@ export default function ContactPage() {
           >
             {companyInfo.operatorWebsite}
           </a>
-          . The site is led by founder {companyInfo.founderName}, a competitive
-          player whose full background is on the{" "}
+          . I run the site — {companyInfo.founderName} — and my full background
+          is on the{" "}
           <a
             href="/about/"
             className="font-medium text-[var(--color-accent)] underline"
           >
-            About Us
+            About
           </a>{" "}
           page.
         </p>
 
         <h2 className="text-xl font-semibold text-[var(--text)]">
-          General support and editorial
+          Reviews, finder, and corrections
         </h2>
         <p>
-          For finder questions, product feedback, recommendations for new
-          models we should test, factual corrections to specs, prices, or
-          weights, and any other editorial topic, email{" "}
+          For finder questions, product feedback, models I should test, factual
+          corrections to specs, prices, or weights, and anything else about the
+          reviews or scoring, email{" "}
           <a
             href={`mailto:${companyInfo.supportEmail}`}
             className="font-medium text-[var(--color-accent)] underline"
@@ -67,7 +62,7 @@ export default function ContactPage() {
             {companyInfo.supportEmail}
           </a>
           . The same address handles review-removal requests and source-rights
-          questions about third-party material we reference.
+          questions about third-party material I reference.
         </p>
 
         <h2 className="text-xl font-semibold text-[var(--text)]">
@@ -118,7 +113,7 @@ export default function ContactPage() {
         <p>
           Manufacturers, retailers, coaches, clubs, and badminton media who
           would like to collaborate on reviews, supply samples for testing, or
-          discuss editorial partnerships can write to{" "}
+          discuss coverage can write to{" "}
           <a
             href={`mailto:${companyInfo.contactEmail}`}
             className="font-medium text-[var(--color-accent)] underline"
@@ -152,7 +147,7 @@ export default function ContactPage() {
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Browse the full catalog with filters for brand, weight, balance, and
-            price — or run the finder for a personalised shortlist.
+            price — or run the finder for a shortlist matched to how you play.
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
             <Link href="/catalog/" className="btn-primary">

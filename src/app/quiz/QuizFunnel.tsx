@@ -37,11 +37,11 @@ import {
 } from "@/lib/quiz-help";
 
 const STEP_HINTS = [
-  "Your level sets how forgiving we are on stiff shafts, high tension, and narrow sweet spots.",
+  "Your level sets how forgiving the scoring is on stiff shafts, high tension, and narrow sweet spots.",
   "Singles rewards reach and recovery; doubles rewards fast flat exchanges and front-court touch.",
   "Style tags steer balance and stiffness — you can pick two if you genuinely mix roles.",
   "Category switches the whole catalogue — shoes need foot width; rackets need swing weight context.",
-  "Budget and body signals stop us recommending gear that is technically fine but wrong for you.",
+  "Budget and body signals stop me recommending gear that is technically fine but wrong for you.",
 ] as const;
 
 const STEPS = 5;
@@ -628,10 +628,10 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           </div>
           <details className="rounded-2xl bg-[color:var(--surface-muted)] p-4">
             <summary className="cursor-pointer text-sm font-medium text-[var(--text)]">
-              Optional: tell us what you currently use
+              Optional: tell me what you currently use
             </summary>
             <p className="mt-2 text-xs text-[var(--color-subtle)]">
-              We use this to flag upgrades and avoid recommending something
+              I use this to flag upgrades and avoid recommending something
               you already own. Skip any field — none are required.
             </p>
             <div className="mt-4 grid gap-3">
