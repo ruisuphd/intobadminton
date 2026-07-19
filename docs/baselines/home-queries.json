@@ -49,12 +49,12 @@
         "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
-        "/review/anta-dingyin-1000-racket-review/",
-        "/review/li-ning-axforce-10-beginner-attack-review/",
-        "/review/li-ning-okay-1-shuttle-review/",
-        "/review/victor-auraspeed-99-hayabusa-review/",
         "/review/victor-c90-ii-shoes-review/",
-        "/review/li-ning-mirage-ii-pro-shoes-review/"
+        "/review/gosen-raimei-58-string-review/",
+        "/review/li-ning-saga-ii-se-shoes-review/",
+        "/review/li-ning-aeronaut-9000c-racket-review/",
+        "/review/victor-vbs-63-string-review/",
+        "/review/yonex-exbolt-68-string-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,

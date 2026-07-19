@@ -178,6 +178,13 @@ export const blogSlugs = [
   "li-ning-g100s-shuttle-review",
   "bonny-infinity-002-shoes-review",
   "babolat-satelite-blast-racket-review",
+  "li-ning-saga-ii-se-shoes-review",
+  "li-ning-aeronaut-9000c-racket-review",
+  "victor-vbs-63-string-review",
+  "yonex-exbolt-68-string-review",
+  "kawasaki-nezer-19-ii-racket-review",
+  "bonny-lunar-8-racket-review",
+  "victor-thruster-k-30-pro-racket-review",
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
