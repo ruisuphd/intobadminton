@@ -143,7 +143,7 @@ export default function AstroxVsNanoflarePage() {
             Decide by profile, not by family
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
-            Run the finder with your level, role, and budget. We will rank Astrox, Nanoflare, and the rest of the catalogue against your actual play pattern.
+            Run the finder with your level, role, and budget. I will rank Astrox, Nanoflare, and the rest of the catalogue against your actual play pattern.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <Link href="/quiz/" className="btn-primary">

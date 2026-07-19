@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   // Title template in `src/app/layout.tsx` appends " | IntoBadminton" — keep
   // this page's title brand-free so the audit's `duplicate-title-brand` rule
   // doesn't flag it.
-  title: "Authors — who writes for the site",
+  title: "Who writes this",
   description:
-    "Editorial bylines on IntoBadminton. Every review, comparison, and guide is signed by a named author with disclosed playing background and coach lineage.",
+    "I write every IntoBadminton review, comparison, and guide — Rui Su, with disclosed playing background and coach lineage.",
   alternates: pageAlternates(PATH),
   openGraph: {
-    title: "Authors — who writes for IntoBadminton",
+    title: "Who writes IntoBadminton",
     description:
-      "Editorial bylines on IntoBadminton — named authors with disclosed playing background.",
+      "I write every IntoBadminton review, comparison, and guide — with disclosed playing background.",
     url: PATH,
     type: "article",
     siteName: "IntoBadminton",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Authors — who writes for IntoBadminton",
+    title: "Who writes IntoBadminton",
     description:
-      "Editorial bylines on IntoBadminton — named authors with disclosed playing background.",
+      "I write every IntoBadminton review, comparison, and guide — with disclosed playing background.",
   },
 };
 
@@ -39,18 +39,18 @@ const AUTHORS = [
   {
     slug: "rui-su",
     name: companyInfo.founderName,
-    role: "Founder, lead reviewer",
+    role: "Founder and reviewer",
     summary:
-      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. Signs every IntoBadminton review and the finder methodology.",
+      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. I sign every IntoBadminton review and the finder methodology.",
   },
 ] as const;
 
 export default function AuthorsIndexPage() {
   const article = articleJsonLd({
     path: PATH,
-    headline: "Authors — who writes for IntoBadminton",
+    headline: "Who writes IntoBadminton",
     description:
-      "Editorial bylines on IntoBadminton — named authors with disclosed playing background.",
+      "I write every IntoBadminton review, comparison, and guide — with disclosed playing background.",
     section: "Guides",
   });
   const breadcrumb = {
@@ -90,14 +90,11 @@ export default function AuthorsIndexPage() {
         </nav>
 
         <header className="space-y-3">
-          <h1 className="text-display text-[var(--text)]">
-            Editorial authors
-          </h1>
+          <h1 className="text-display text-[var(--text)]">Who writes this</h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            Every review, comparison, and guide on IntoBadminton is signed by a
-            named author with disclosed playing background, coach lineage, and
-            potential conflicts of interest. The list is small today and stays
-            small on purpose — depth over volume.
+            I sign every review, comparison, and guide on IntoBadminton. Playing
+            background, coach lineage, and potential conflicts of interest stay
+            disclosed. One author on purpose — depth over volume.
           </p>
           <EditorialMeta path={PATH} />
         </header>
@@ -125,7 +122,7 @@ export default function AuthorsIndexPage() {
 
         <section className="rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">
-            Explore the equipment we review
+            Explore the equipment I review
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Every review ties back to a catalog row with source labels and fit

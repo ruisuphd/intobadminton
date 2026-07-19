@@ -61,6 +61,8 @@ scripts/__pycache__/
 scripts/merged-en/
 scripts/comparison-rewrites/
 scripts/review-batch43-*/
+scripts/*-report.json
+scripts/*-manifest.json
 
 # Local-only research material — third-party content kept out of the repo.
 # See docs/research/ for the legal cited extracts we publish from.

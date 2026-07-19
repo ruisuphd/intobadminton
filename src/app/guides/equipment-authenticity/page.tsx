@@ -380,7 +380,7 @@ export default function EquipmentAuthenticityGuide() {
             Find a racket that fits, then verify it&rsquo;s real
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
-            Run our finder to land on the right model for your game, then
+            Run the finder to land on the right model for your game, then
             use this guide to make sure the unit you buy is authentic.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-3">

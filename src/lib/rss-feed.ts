@@ -89,7 +89,7 @@ export function buildRssXml(items: RssItem[]): string {
   <channel>
     <title>${escapeXml(companyInfo.siteName)}</title>
     <link>${companyInfo.siteUrl}/</link>
-    <description>Evidence-led badminton equipment reviews, guides, and finder updates.</description>
+    <description>Personal badminton equipment reviews, guides, and finder updates from IntoBadminton.</description>
     <language>en-us</language>
     <lastBuildDate>${channelUpdated}</lastBuildDate>${itemXml}
   </channel>

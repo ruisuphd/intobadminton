@@ -89,7 +89,7 @@ const STATIC_ENTRIES: SearchEntry[] = [
     title: "Best beginner rackets",
     href: "/best/beginner-rackets/",
     kind: "best",
-    summary: "Editor-ranked starter rackets with transparent fit scoring.",
+    summary: "Starter rackets I ranked with named fit factors.",
     keywords: ["beginner", "starter", "first racket"],
   },
   {

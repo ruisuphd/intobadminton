@@ -199,7 +199,7 @@ export default function CookiesPage() {
           how to exercise your data subject rights, please email us via
           the{" "}
           <a href="/contact/" className="text-[var(--color-accent)] underline">
-            Contact Us
+            Contact
           </a>{" "}
           page or read our full{" "}
           <a href="/privacy/" className="text-[var(--color-accent)] underline">

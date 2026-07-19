@@ -62,15 +62,15 @@ type Copy = {
 
 const copyEn: Copy = {
   hero: "Sources & editorial process",
-  dek: "Where we get our data, how we label source authority, and how to report a correction.",
-  philosophyHeading: "What we believe",
+  dek: "Where I get the data, how I label source authority, and how to report a correction.",
+  philosophyHeading: "What I believe",
   philosophyBody: [
     "Equipment recommendations are only as good as the evidence behind them. A single review describes one body, one technique, one string tension, and one shuttle speed. A recommender should separate official product-page facts from player interpretation.",
-    "That means our job is reading widely, not republishing. Below are the sources we read most, and the rules we follow when citing them.",
+    "That means my job is reading widely, not republishing. Below are the sources I read most, and the rules I follow when citing them.",
   ],
-  triangulationHeading: "How we triangulate",
+  triangulationHeading: "How I triangulate",
   triangulationBody:
-    "For each product, we record the strongest source currently attached to that row and downgrade confidence when the source is not an official product page.",
+    "For each product, I record the strongest source currently attached to that row and downgrade confidence when the source is not an official product page.",
   triangulationSteps: [
     {
       title: "1. Manufacturer official spec",
@@ -87,11 +87,11 @@ const copyEn: Copy = {
   ],
   rightsHeading: "Rights, attribution, and copyright",
   rightsBody: [
-    "Our blog articles, product editor notes, and recommendation evidence may draw on independent reviewers, manufacturer official product pages, and on-court testing. Where community sources inform a finding, we paraphrase the substance, write in our own voice, and link out.",
+    "My blog articles, product notes, and recommendation evidence may draw on independent reviewers, manufacturer official product pages, and on-court testing. Where community sources inform a finding, I paraphrase the substance, write in my own voice, and link out.",
     "Community and retailer sources are useful for discovery, but the app now labels them separately from official product-page evidence.",
-    "If you are an author, forum user, or platform and want any citation, paraphrase, or link on our site removed or amended, email " +
+    "If you are an author, forum user, or platform and want any citation, paraphrase, or link on this site removed or amended, email " +
       companyInfo.contactEmail +
-      " with the page URL and the change requested. We respond within five business days. We will not contest a takedown request from a verifiable original author.",
+      " with the page URL and the change requested. I respond within five business days. I will not contest a takedown request from a verifiable original author.",
   ],
   sectionHeadings: {
     official: "Manufacturer official sources",
@@ -99,10 +99,10 @@ const copyEn: Copy = {
     video: "Video reviewers",
     event: "Events and governing body",
   },
-  columns: { source: "Source", region: "Region", use: "What we use it for" },
+  columns: { source: "Source", region: "Region", use: "What I use it for" },
   reportHeading: "Spot a bad citation?",
   reportBody:
-    "Tell us. Include the page URL, the source link, and what's wrong (broken, mis-attributed, or out of date).",
+    "Tell me. Include the page URL, the source link, and what's wrong (broken, mis-attributed, or out of date).",
   cta: "Send a correction",
   ctaLink: "/contact/",
 };

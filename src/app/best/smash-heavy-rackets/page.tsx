@@ -176,11 +176,11 @@ const config: BestPicksConfig = {
     },
     {
       q: "What about the Aeronaut 9000?",
-      a: "The Li-Ning Aeronaut 9000C is a real attack frame and a legitimate alternative to 88D Pro / 100ZZ for players who want the wind-tunnel cosmetic and a slightly different swing feel. We rate the Halbertec 9000 Power higher overall on smash density per dollar, but Aeronaut buyers rarely regret the choice.",
+      a: "The Li-Ning Aeronaut 9000C is a real attack frame and a legitimate alternative to 88D Pro / 100ZZ for players who want the wind-tunnel cosmetic and a slightly different swing feel. I rate the Halbertec 9000 Power higher overall on smash density per dollar, but Aeronaut buyers rarely regret the choice.",
     },
   ],
   ctaHeading: "Get a smash racket your timing can actually drive",
-  ctaBody: "Tell the finder your level, body, and discipline. We will rank attack frames by what you can repeat, not just what reads heaviest on paper.",
+  ctaBody: "Tell the finder your level, body, and discipline. I will rank attack frames by what you can repeat, not just what reads heaviest on paper.",
 };
 
 export default function SmashHeavyRacketsPage() {

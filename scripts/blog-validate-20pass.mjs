@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * 20-pass blog migration validation (Option B).
- * Runs structural, voice, and build checks; reports per pass.
+ * Blog validation gate for imported articles.
+ * Runs structural and voice checks; reports per pass for CI readability.
  */
 import { execSync } from "node:child_process";
 import { readFileSync, existsSync } from "node:fs";
@@ -41,6 +41,12 @@ function auditPass(articles, slugs) {
       issues.push(`${a.slug}: editorial scaffold`);
     if (/\bI's specific\b/i.test(blob)) issues.push(`${a.slug}: persona corruption`);
     if (/\bWhat makes I more\b/i.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/\bthe same I\b/.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/\bI's level\b/.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/\bSeveral sources converge\b/i.test(blob))
+      issues.push(`${a.slug}: aggregator voice`);
+    if (/\bRecommendations across reviews\b/i.test(blob))
+      issues.push(`${a.slug}: aggregator voice`);
     if (!slugSet.has(a.slug)) issues.push(`${a.slug}: orphan slug not in blogSlugs`);
   }
   return issues;

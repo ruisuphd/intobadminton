@@ -154,7 +154,7 @@ export default function YonexVictorLiningPage() {
             Pick by your role, not the badge
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
-            Our finder ranks rackets across all three brands against your level, discipline, style, body, and budget. The fit score is the score — brand loyalty is irrelevant.
+            The finder ranks rackets across all three brands against your level, discipline, style, body, and budget. The fit score is the score — brand loyalty is irrelevant.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <Link href="/quiz/" className="btn-primary">

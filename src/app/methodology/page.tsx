@@ -26,7 +26,7 @@ export default function MethodologyPage() {
           1. Player fit
         </h2>
         <p>
-          We use level, singles/doubles/mixed, play style, budget, weight, foot
+          I use level, singles/doubles/mixed, play style, budget, weight, foot
           width, preferred string tension, and comfort flags to score fit across
           rackets, strings, shoes, and bags. These rules are tested with persona
           fixtures and shown through reason codes.
@@ -46,8 +46,8 @@ export default function MethodologyPage() {
         </h2>
         <p>
           BadmintonCN and similar platforms can be useful discovery sources.
-          When we use search-visible references, we show source name, language,
-          theme summary, confidence, and a link. We do not display copied forum
+          When I use search-visible references, I show source name, language,
+          theme summary, confidence, and a link. I do not display copied forum
           review text unless rights allow it.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
@@ -67,7 +67,7 @@ export default function MethodologyPage() {
           claims while respecting source rights.
         </p>
         <p>
-          Cited numeric facts (court dimensions, weight bands, grip sizes) are tracked in our{" "}
+          Cited numeric facts (court dimensions, weight bands, grip sizes) are tracked in my{" "}
           <Link href="/data/" className="text-[var(--color-accent)] underline">
             verified claims registry
           </Link>

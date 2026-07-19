@@ -64,9 +64,9 @@
       "path": "/authors/",
       "expectCatalogHref": "/catalog/",
       "e2e": true,
-      "expectHeadingPattern": "author",
+      "expectHeadingPattern": "writes",
       "expectCatalogLinkPattern": "browse full catalog",
-      "note": "CrUX editorial-team trust path — authors hub catalog exit"
+      "note": "CrUX author hub trust path — who writes the reviews, catalog exit"
     },
     {
       "id": "crux-methodology",

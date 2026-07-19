@@ -35,8 +35,8 @@ const COLUMNS: FooterColumn[] = [
   {
     heading: "About",
     links: [
-      { label: "About Us", path: "/about/" },
-      { label: "Contact Us", path: "/contact/" },
+      { label: "About", path: "/about/" },
+      { label: "Contact", path: "/contact/" },
       { label: "Security", path: "/security/" },
     ],
   },
@@ -62,8 +62,8 @@ export function SiteFooter() {
               IntoBadminton
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-[var(--color-muted)]">
-              Curated equipment suggestions for badminton players. Not medical
-              advice; always try before you buy when possible.
+              Personal badminton reviews and a finder I built for club players.
+              Not medical advice; always try before you buy when possible.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
