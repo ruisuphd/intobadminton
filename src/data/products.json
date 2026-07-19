@@ -8840,5 +8840,251 @@
     ],
     "editorNote": "Babolat Satelite Blast (星云 Blast in CN). 3U ~89g, 6.5mm flat shaft, 80 holes, 27lb warranty. Controversial mid-flagship.",
     "reviewCount": 0
+  },
+  {
+    "id": "ln-saga-ii-se",
+    "category": "shoes",
+    "name": "Saga II SE (贴地飞行 2SE / Ground Flying 2SE)",
+    "brand": "Li-Ning",
+    "priceUsd": 65,
+    "fitWidth": "normal",
+    "cushioning": "high",
+    "stability": "high",
+    "weightFeel": "medium",
+    "hasWideOption": false,
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
+    "officialSourceUrl": "https://ae.lining.studio/products/saga-ii-se",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "cushion",
+      "ankle_stability",
+      "club_sessions"
+    ],
+    "sourceUrls": [
+      "https://ae.lining.studio/products/saga-ii-se",
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Li-Ning Saga II SE (AYZU001) — mid-tier Saga cushion shoe with cloud frame + BOOM midsole. Not Yonex Aerus.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-vbs-63",
+    "category": "string",
+    "name": "VBS-63",
+    "brand": "Victor",
+    "priceUsd": 12,
+    "gaugeMm": 0.63,
+    "feel": "hard",
+    "repulsion": "very_high",
+    "control": "medium",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2020,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "thin_gauge",
+      "attack",
+      "repulsion"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Victor 0.63 mm high-elasticity string. Firmer and wilder than EXBOLT 63 for many players; demands clean timing.",
+    "reviewCount": 0
+  },
+  {
+    "id": "yy-exbolt-68",
+    "category": "string",
+    "name": "EXBOLT 68",
+    "brand": "Yonex",
+    "priceUsd": 16,
+    "gaugeMm": 0.68,
+    "feel": "hard",
+    "repulsion": "high",
+    "control": "high",
+    "durability": "very_high",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.yonex.com/bgxb68",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "attack",
+      "durability",
+      "hard_feel"
+    ],
+    "sourceUrls": [
+      "https://www.yonex.com/bgxb68"
+    ],
+    "editorNote": "Yonex EXBOLT 68 (BGXB68) — 0.68 mm power/durability EXBOLT. Harder than 63 at mid tension with friendlier damping than classic BG80.",
+    "reviewCount": 0
+  },
+  {
+    "id": "kawasaki-nezer-19-ii",
+    "category": "racket",
+    "name": "Nezer 19 II (雷蛇 19 II)",
+    "brand": "Kawasaki",
+    "priceUsd": 110,
+    "headWeight": "even",
+    "shaftFlex": "stiff",
+    "weightClass": "3U",
+    "weightVariants": [
+      "3U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 293,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2016,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.kawasakisports.com/",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "attack",
+      "torsion_stability",
+      "compact_head"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Kawasaki Nezer 19 II — small box attack frame, C80+46T shaft. Official romanisation Nezer (not Razer).",
+    "reviewCount": 0
+  },
+  {
+    "id": "bonny-lunar-8",
+    "category": "racket",
+    "name": "Lunar 8 (弦月 8 / Classic Carbon Lunar 8)",
+    "brand": "Bonny",
+    "priceUsd": 95,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 299,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.bonnyworldwide.com/",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "speed_attack",
+      "front_court",
+      "aero_frame"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Bonny Lunar 8 (弦月8) — firmer follow-up to Lunar 7; aero face speed-attack frame with boron shaft.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-thruster-k-30-pro",
+    "category": "racket",
+    "name": "Thruster K 30 Pro (TK-30 Pro)",
+    "brand": "Victor",
+    "priceUsd": 85,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 320,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 27
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "smash",
+      "head_heavy_attack",
+      "singles_pressure"
+    ],
+    "sourceUrls": [
+      "https://bbs.badmintoncn.com/"
+    ],
+    "editorNote": "Victor Thruster K 30 Pro — mid-tier Onigiri-family attack frame with floating handle. Chinese nickname 小鬼斩Pro.",
+    "reviewCount": 0
   }
 ]

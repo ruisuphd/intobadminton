@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-18",
+  "updated": "2026-07-19",
   "coverage": {
-    "minArticleSlugs": 165,
+    "minArticleSlugs": 172,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1662,6 +1662,76 @@
       "expectProductId": "vic-vbs70",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "bonny-lunar-8-racket-review",
+      "slug": "bonny-lunar-8-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Bonny",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "bonny-lunar-8",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse bonny"
+    },
+    {
+      "id": "kawasaki-nezer-19-ii-racket-review",
+      "slug": "kawasaki-nezer-19-ii-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "kawasaki-nezer-19-ii",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kawasaki"
+    },
+    {
+      "id": "li-ning-aeronaut-9000c-racket-review",
+      "slug": "li-ning-aeronaut-9000c-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "li-aeronaut-9000c",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-saga-ii-se-shoes-review",
+      "slug": "li-ning-saga-ii-se-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-saga-ii-se",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-thruster-k-30-pro-racket-review",
+      "slug": "victor-thruster-k-30-pro-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-thruster-k-30-pro",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "victor-vbs-63-string-review",
+      "slug": "victor-vbs-63-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-vbs-63",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "yonex-exbolt-68-string-review",
+      "slug": "yonex-exbolt-68-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "yy-exbolt-68",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex"
     }
   ]
 }

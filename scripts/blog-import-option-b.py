@@ -80,6 +80,13 @@ TITLE_OVERRIDES = {
     "bonny-infinity-002-shoes-review": "Bonny Infinity 002 review: training shoe that covers club nights",
     "babolat-satelite-blast-racket-review": "Babolat Satelite Blast review: controversial flagship, mid-tier soul",
     "li-ning-axforce-10-beginner-attack-review": "Li-Ning AxForce 10 review: beginner offence without the scare",
+    "li-ning-saga-ii-se-shoes-review": "Li-Ning Saga II SE review: mid-tier cushion with real ankle lock",
+    "li-ning-aeronaut-9000c-racket-review": "Li-Ning Aeronaut 9000C review: older Combat flagship that still hits",
+    "victor-vbs-63-string-review": "Victor VBS-63 review: high-spring thin string that demands timing",
+    "yonex-exbolt-68-string-review": "Yonex EXBOLT 68 review: hard attack string with friendlier damping",
+    "kawasaki-nezer-19-ii-racket-review": "Kawasaki Nezer 19 II review: stiffer sequel with a higher drive bar",
+    "bonny-lunar-8-racket-review": "Bonny Lunar 8 review: firmer Crescent Moon speed-attack frame",
+    "victor-thruster-k-30-pro-racket-review": "Victor Thruster K 30 Pro review: little Onigiri Pro still slams",
 }
 
 DEK_OVERRIDES = {
