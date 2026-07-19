@@ -35,6 +35,7 @@ import {
   QUIZ_STEP_HELP,
   STYLE_HELP,
 } from "@/lib/quiz-help";
+import { humanize } from "@/lib/text";
 
 const STEP_HINTS = [
   "Your level sets how forgiving the scoring is on stiff shafts, high tension, and narrow sweet spots.",
@@ -128,7 +129,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
       setCompleting(true);
       const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ? 0
-        : 900;
+        : 400;
       window.setTimeout(() => router.push(target), delay);
     }
   };
@@ -425,7 +426,8 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
           <button
             type="button"
             onClick={next}
-            className="btn-primary mt-4 w-full"
+            disabled={profile.styles.length < 1}
+            className="btn-primary mt-4 w-full disabled:cursor-not-allowed disabled:opacity-50"
           >
             {copy.continue}
           </button>
@@ -580,7 +582,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                         : "border border-[color:var(--line-strong)]"
                     }`}
                   >
-                    {f}
+                    {humanize(f)}
                   </button>
                 ))}
               </div>
@@ -620,7 +622,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
                         : "border border-[color:var(--line-strong)]"
                     }`}
                   >
-                    {f}
+                    {f === "none" ? "None" : humanize(f)}
                   </button>
                 );
               })}
@@ -724,7 +726,7 @@ export function QuizFunnel({ locale = "en" }: { locale?: SiteLocale }) {
         </section>
       )}
 
-      {step > 0 && step < 4 && (
+      {step > 0 && (
         <button
           type="button"
           onClick={back}

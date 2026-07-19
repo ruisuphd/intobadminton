@@ -13,7 +13,7 @@ export function CatalogProductActions({ product }: { product: ProductRecord }) {
   const label = `${product.brand} ${product.name}`;
 
   return (
-    <div className="flex shrink-0 flex-col justify-center gap-2 border-l border-[color:var(--line)] px-4 py-4">
+    <div className="flex shrink-0 flex-row flex-wrap items-center gap-2 border-t border-[color:var(--line)] px-5 py-3 sm:flex-col sm:justify-center sm:border-l sm:border-t-0 sm:px-4 sm:py-4">
       <SaveProductButton id={product.id} label={label} size="sm" />
       <button
         type="button"

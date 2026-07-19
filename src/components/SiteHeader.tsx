@@ -112,7 +112,7 @@ export function SiteHeader() {
                 key={l.href}
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`transition-colors ${
+                className={`transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:rounded-md ${
                   active
                     ? "font-medium text-[var(--text)]"
                     : "text-[var(--color-muted)] hover:text-[var(--text)]"
@@ -130,7 +130,7 @@ export function SiteHeader() {
           <Link
             href="/search/"
             aria-label="Search"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--line-strong)] text-[var(--color-muted)] transition-colors hover:border-[var(--text)] hover:text-[var(--text)] min-[1200px]:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--line-strong)] text-[var(--color-muted)] transition-colors hover:border-[var(--text)] hover:text-[var(--text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] min-[1200px]:hidden"
           >
             <svg
               aria-hidden
@@ -147,12 +147,14 @@ export function SiteHeader() {
             </svg>
           </Link>
           <SavedHeaderLink variant="desktop" />
-          <Link
-            href="/quiz/"
-            className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--color-accent)] px-4 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
-          >
-            Start finder
-          </Link>
+          {pathname !== "/" && (
+            <Link
+              href="/quiz/"
+              className="inline-flex h-9 items-center justify-center rounded-full bg-[var(--color-accent)] px-4 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2"
+            >
+              Start finder
+            </Link>
+          )}
         </nav>
 
         <button
@@ -162,7 +164,7 @@ export function SiteHeader() {
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--line-strong)] sm:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--line-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] sm:hidden"
         >
           <svg
             aria-hidden
@@ -191,14 +193,21 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav
-          ref={mobileNavRef}
-          id="mobile-nav"
-          aria-label="Primary"
-          aria-modal="true"
-          role="dialog"
-          className="border-t border-[color:var(--line)] bg-white sm:hidden"
-        >
+        <>
+          <button
+            type="button"
+            aria-label="Close menu"
+            className="fixed inset-0 z-30 bg-black/20 sm:hidden"
+            onClick={close}
+          />
+          <nav
+            ref={mobileNavRef}
+            id="mobile-nav"
+            aria-label="Primary"
+            aria-modal="true"
+            role="dialog"
+            className="relative z-40 border-t border-[color:var(--line)] bg-white sm:hidden"
+          >
           <ul className="layout-band max-w-6xl py-3">
             {MOBILE_NAV.map((l) => {
               const active = isActive(pathname, l.href);
@@ -236,6 +245,7 @@ export function SiteHeader() {
             </li>
           </ul>
         </nav>
+        </>
       )}
     </header>
   );

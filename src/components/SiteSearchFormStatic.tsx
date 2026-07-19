@@ -3,6 +3,25 @@
  * keep Lighthouse performance within budget; interactive variant lives in
  * {@link SiteSearchForm}.
  */
+function SearchIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden
+      className={className}
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+
 export function SiteSearchFormStatic({
   defaultQuery = "",
   compact = false,
@@ -17,12 +36,11 @@ export function SiteSearchFormStatic({
     : "h-12 min-w-0 flex-1 rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-base text-[var(--text)] placeholder:text-[var(--color-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]";
 
   const primaryBtnClass = compact
-    ? "inline-flex h-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] px-3 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]"
-    : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)]";
+    ? "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2"
+    : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2";
 
-  const secondaryBtnClass = compact
-    ? "inline-flex h-9 shrink-0 items-center justify-center rounded-full border border-[color:var(--line-strong)] bg-white px-3 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)]"
-    : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)]";
+  const secondaryBtnClass =
+    "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2";
 
   return (
     <form
@@ -43,22 +61,28 @@ export function SiteSearchFormStatic({
         name="q"
         type="search"
         defaultValue={defaultQuery}
-        placeholder="Search rackets, reviews, guides…"
+        placeholder={compact ? "Search rackets…" : "Search rackets, reviews, guides…"}
         autoComplete="off"
         className={inputClass}
       />
-      <button type="submit" className={primaryBtnClass}>
-        Search
-      </button>
       <button
         type="submit"
-        formAction="/catalog/"
-        formMethod="get"
-        className={secondaryBtnClass}
-        title="Browse matching products in the catalog"
+        className={primaryBtnClass}
+        aria-label={compact ? "Search" : undefined}
       >
-        Catalog
+        {compact ? <SearchIcon /> : "Search"}
       </button>
+      {!compact && (
+        <button
+          type="submit"
+          formAction="/catalog/"
+          formMethod="get"
+          className={secondaryBtnClass}
+          title="Browse matching products in the catalog"
+        >
+          Catalog
+        </button>
+      )}
     </form>
   );
 }
