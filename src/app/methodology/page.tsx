@@ -27,9 +27,11 @@ export default function MethodologyPage() {
         </h2>
         <p>
           I use level, singles/doubles/mixed, play style, budget, weight, foot
-          width, preferred string tension, and comfort flags to score fit across
-          rackets, strings, shoes, and bags. These rules are tested with persona
-          fixtures and shown through reason codes.
+          width, preferred string tension, and comfort flags (knee, ankle, heel)
+          to score fit across rackets, strings, shoes, and bags. These rules are
+          tested with persona fixtures and shown through reason codes. Preferred
+          string tension is used when provided for string ranking; the optional
+          “current tension” quiz field is not scored yet.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           2. Official specs

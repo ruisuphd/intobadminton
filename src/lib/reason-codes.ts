@@ -12,6 +12,7 @@ export const REASON_CODES = [
   "BUDGET_FIT",
   "BUDGET_STRETCH",
   "INJURY_AVOID_ULTRA_STIFF",
+  "INJURY_PENALTY_STIFF",
   "WEIGHT_CLASS_BUILD",
   "STRING_PATTERN_CONTROL",
   "STRING_REPULSION_HELP",
@@ -49,6 +50,8 @@ export const REASON_LABELS: Record<ReasonCode, string> = {
   BUDGET_STRETCH: "Slightly above budget but strong match on other factors.",
   INJURY_AVOID_ULTRA_STIFF:
     "Softer setup to reduce shock for flagged joint concerns (not medical advice).",
+  INJURY_PENALTY_STIFF:
+    "Stiffer shaft — scored down for flagged joint concerns (not medical advice).",
   WEIGHT_CLASS_BUILD:
     "Racket weight class chosen for feel vs your build inputs.",
   STRING_PATTERN_CONTROL:

@@ -3068,7 +3068,7 @@
       "G5"
     ],
     "balanceMm": 305,
-    "balanceCategory": "head_light",
+    "balanceCategory": "head_heavy",
     "swingWeightEstimate": "fast",
     "commonStringTensionLbs": {
       "min": 22,
@@ -5282,14 +5282,12 @@
   },
   {
     "id": "vic-yinbao-a-boom",
-    "category": "shoe",
+    "category": "shoes",
     "name": "A-BOOM",
     "brand": "Victor",
     "priceUsd": 85,
-    "courtType": "indoor",
     "stability": "medium",
     "cushioning": "medium",
-    "weightClass": "standard",
     "launchYear": 2026,
     "regionAvailability": [
       "cn",
@@ -5308,7 +5306,10 @@
       "https://www.victorsport.com/badminton-shoes"
     ],
     "editorNote": "Victor A-BOOM (音爆) badminton shoes — budget attack movement shoe.",
-    "reviewCount": 0
+    "reviewCount": 0,
+    "fitWidth": "normal",
+    "weightFeel": "fast",
+    "hasWideOption": false
   },
   {
     "id": "vic-yu-12",
@@ -8518,13 +8519,12 @@
     "fitWidth": "narrow",
     "cushioning": "low",
     "stability": "medium",
-    "weightFeel": "very_light",
+    "weightFeel": "fast",
     "hasWideOption": false,
     "launchYear": 2025,
     "regionAvailability": [
       "cn",
-      "sg",
-      "asia"
+      "sg"
     ],
     "officialSourceUrl": "https://www.lining.com.cn/",
     "lastVerifiedAt": "2026-07-18",
@@ -8550,7 +8550,7 @@
     "priceUsd": 8,
     "gaugeMm": 0.7,
     "feel": "soft",
-    "repulsion": "low",
+    "repulsion": "medium",
     "control": "medium",
     "durability": "very_high",
     "tensionRangeLbs": {
@@ -8561,7 +8561,6 @@
     "regionAvailability": [
       "cn",
       "sg",
-      "asia",
       "global"
     ],
     "officialSourceUrl": "https://www.victorsport.com/",
@@ -8679,7 +8678,7 @@
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2020,
     "regionAvailability": [
-      "eu",
+      "global",
       "cn"
     ],
     "officialSourceUrl": "https://www.decathlon.com/",
@@ -8820,9 +8819,8 @@
     "shaftFlexSource": "editor_estimate",
     "launchYear": 2022,
     "regionAvailability": [
-      "eu",
-      "cn",
-      "global"
+      "global",
+      "cn"
     ],
     "officialSourceUrl": "https://www.babolat.com/badminton",
     "lastVerifiedAt": "2026-07-18",

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { scoreProductCatalog } from "@/lib/scoring";
+import { byId, scoreOneProduct, scoreProductCatalog } from "@/lib/scoring";
 import { defaultUserProfile, type UserProfile } from "@/lib/taxonomy";
 import type { ScoredProduct, ScoredRacket } from "@/lib/types/product";
 
@@ -313,6 +313,66 @@ describe("scoreProductCatalog", () => {
     expect(resaleAware?.resale?.depreciationPct).toBeGreaterThan(0);
     expect(resaleAware?.sourceChips.some((c) => c.type === "market_signal")).toBe(
       true
+    );
+  });
+
+  it("labels stiff shafts as injury penalties, not positive matches", () => {
+    const stiff = byId("ln-bladex-880-shida");
+    expect(stiff?.category).toBe("racket");
+    const scored = scoreOneProduct(
+      stiff!,
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["balanced"],
+        category: "racket",
+        body: { budgetMaxUsd: 250, injuryFlags: ["knee"] },
+      })
+    );
+    const codes = scored?.reasons.map((r) => r.code) ?? [];
+    expect(codes).toContain("INJURY_PENALTY_STIFF");
+    expect(codes).not.toContain("INJURY_AVOID_ULTRA_STIFF");
+  });
+
+  it("gives classic 4U even frames mid doubles discipline credit", () => {
+    const frame = byId("bonny-wuque-xuanwu");
+    expect(frame?.category).toBe("racket");
+    const scored = scoreOneProduct(
+      frame!,
+      profile({
+        level: "club",
+        discipline: "doubles",
+        styles: ["balanced"],
+        category: "racket",
+        body: { budgetMaxUsd: 250, injuryFlags: ["none"] },
+      })
+    );
+    expect(scored?.subscores.discipline).toBeCloseTo(0.72, 2);
+  });
+
+  it("requires fitWidth wide/wide_available for SHOE_WIDTH_MATCH on wide feet", () => {
+    const optionOnly = byId("yy-power-cushion-65-z4");
+    const trueWide = byId("yy-power-cushion-65z-wide");
+    expect(optionOnly?.category).toBe("shoes");
+    expect(trueWide?.category).toBe("shoes");
+
+    const base = profile({
+      level: "club",
+      discipline: "doubles",
+      styles: ["balanced"],
+      category: "shoes",
+      body: { budgetMaxUsd: 250, footWidth: "wide", injuryFlags: ["none"] },
+    });
+
+    const optionScored = scoreOneProduct(optionOnly!, base);
+    const wideScored = scoreOneProduct(trueWide!, base);
+
+    expect(optionScored?.reasons.map((r) => r.code)).not.toContain(
+      "SHOE_WIDTH_MATCH"
+    );
+    expect(wideScored?.reasons.map((r) => r.code)).toContain("SHOE_WIDTH_MATCH");
+    expect(optionScored!.subscores.style).toBeLessThan(
+      wideScored!.subscores.style
     );
   });
 });

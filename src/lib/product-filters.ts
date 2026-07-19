@@ -76,7 +76,11 @@ export function filterProducts(
       return false;
     if (filters.weightClass || filters.balance) {
       if (!isRacket(p)) return false;
-      if (filters.weightClass && p.weightClass !== filters.weightClass)
+      if (
+        filters.weightClass &&
+        p.weightClass !== filters.weightClass &&
+        !(p.weightVariants ?? []).includes(filters.weightClass)
+      )
         return false;
       if (filters.balance && p.balanceCategory !== filters.balance) return false;
     }

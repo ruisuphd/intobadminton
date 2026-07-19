@@ -43,13 +43,12 @@ const copyEn: Copy = {
     },
     {
       title: "Editorial separation from monetization.",
-      body: "Display ads and any future affiliate links must be labelled and cannot silently override the fit score. The score is the score; sponsorship is sponsorship.",
+      body: "Display ads and affiliate retailer links must be labelled and cannot silently override the fit score. The score is the score; sponsorship is sponsorship.",
     },
   ],
   monetizationHeading: "How this site is funded",
   monetizationBody: [
-    "IntoBadminton runs Google AdSense ads after you grant consent. Ads are off by default and only load when you allow non-essential cookies. I may add affiliate retailer links in the future; those will be clearly labelled and will not change the recommendation order.",
-    "If you want to support the project without ads, the best thing you can do is share the finder with a teammate, send corrections to product data, or contribute a review with explicit usage rights.",
+    "IntoBadminton runs Google AdSense ads after you grant consent. Ads are off by default and only load when you allow non-essential cookies. Some product cards also show labelled affiliate retailer links; those never change the recommendation order.",
   ],
   contactHeading: "Contact",
   contactBody: `Email ${companyInfo.contactEmail} for product data corrections, rights or copyright concerns, privacy questions, or recommendation issues. Include the product brand, model, region, and source link when you can — it speeds up the fix.`,
