@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-19",
+  "updated": "2026-07-20",
   "coverage": {
-    "minArticleSlugs": 172,
+    "minArticleSlugs": 176,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1732,6 +1732,47 @@
       "expectProductId": "yy-exbolt-68",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex"
+    },
+    {
+      "id": "li-ning-invincible-ace-shoes-review",
+      "slug": "li-ning-invincible-ace-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-invincible-ace",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-thruster-ryuga-ii-pro-racket-review",
+      "slug": "victor-thruster-ryuga-ii-pro-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-thruster-ryuga-ii-pro",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "yonex-bg80-string-review",
+      "slug": "yonex-bg80-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "yy-bg80",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex"
+    },
+    {
+      "id": "yonex-exbolt-63-string-review",
+      "slug": "yonex-exbolt-63-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "yy-exbolt-63",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex"
     }
-  ]
+  ],
+  "minArticleSlugs": 187
 }

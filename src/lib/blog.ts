@@ -185,6 +185,10 @@ export const blogSlugs = [
   "kawasaki-nezer-19-ii-racket-review",
   "bonny-lunar-8-racket-review",
   "victor-thruster-k-30-pro-racket-review",
+  "yonex-exbolt-63-string-review",
+  "yonex-bg80-string-review",
+  "victor-thruster-ryuga-ii-pro-racket-review",
+  "li-ning-invincible-ace-shoes-review",
 ] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];

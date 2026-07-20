@@ -1,11 +1,21 @@
 # Unmapped Blog Sources — Triage (May–Jun 2026)
 
-**Inventory date:** 2026-06-05  
-**Active source files:** 133 (`blogs/*.md`)  
-**Unmapped active files:** 0  
-**Archived (merged / duplicate):** 14 in `blogs/_archive/`
+**Inventory date:** 2026-07-20  
+**Active source files:** mapped (see `npm run blog:check`)  
+**Archived Jul 20 Chinese originals:** `blogs/_archive/jul2026-batch3/` (15 files)
 
-All active sources are mapped. Re-run verification after any new `blogs/*.md` drop.
+## 2026-07-20 drop (ingested 2026-07-20)
+
+| Cluster | Decision | Live URL / notes |
+|---------|----------|------------------|
+| Yonex EXBOLT / XB63 (3 CN) | **Merged → new** | `/review/yonex-exbolt-63-string-review/` |
+| Yonex BG80 | **New** | `/review/yonex-bg80-string-review/` |
+| Victor HS Plus / 极音速 (4 CN) | **Enriched** existing HS Plus source | `/review/victor-auraspeed-hs-plus-deep-dive/` |
+| Astrox 99 Pro gen3 (2 CN) | **Enriched** gen-3 deep dive | `/review/yonex-astrox-99-pro-3-deep-dive/` |
+| Astrox 88S/88D Pro new colour (2 CN) | **Enriched** 2024 twins note | `/review/yonex-astrox-88-pro-2024-review/` |
+| TK 龙牙之刃 2 Pro (+ series) | **New** product + review (Ryuga II Pro) | `/review/victor-thruster-ryuga-ii-pro-racket-review/` |
+| Li-Ning 无敌号 ACE | **New** product + review (Invincible ACE) | `/review/li-ning-invincible-ace-shoes-review/` |
+| Anta Dingyin / EXBOLT 68 bilingual | Re-import only if needed | already live |
 
 ---
 
