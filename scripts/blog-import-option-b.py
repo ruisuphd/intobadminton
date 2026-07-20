@@ -87,6 +87,14 @@ TITLE_OVERRIDES = {
     "kawasaki-nezer-19-ii-racket-review": "Kawasaki Nezer 19 II review: stiffer sequel with a higher drive bar",
     "bonny-lunar-8-racket-review": "Bonny Lunar 8 review: firmer Crescent Moon speed-attack frame",
     "victor-thruster-k-30-pro-racket-review": "Victor Thruster K 30 Pro review: little Onigiri Pro still slams",
+    "yonex-exbolt-63-string-review": "Yonex EXBOLT 63 review: crisp thin attack string that lasts",
+    "yonex-bg80-string-review": "Yonex BG80 review: classic hard attack string that still sets the bar",
+    "victor-thruster-ryuga-ii-pro-racket-review": "Victor Thruster Ryuga II Pro review: controlled dragon attack frame",
+    "li-ning-invincible-ace-shoes-review": "Li-Ning Invincible ACE review: stability flagship, snow-camo edition",
+    "victor-auraspeed-hs-plus-deep-dive": "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
+    "victor-auraspeed-hs-plus-attack-review": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
+    "yonex-astrox-99-pro-3-deep-dive": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
+    "yonex-astrox-88-pro-2024-review": "Yonex Astrox 88S / 88D Pro (2024): refined twins, not a radical reboot",
 }
 
 DEK_OVERRIDES = {
@@ -119,6 +127,8 @@ VOICE_FIXES = [
     (r"\breviewers?\b", "I"),
     (r"\bFor I\b", "For me"),
     (r"\bWhat makes I more\b", "What makes me more"),
+    (r"\bI's level\b", "my level"),
+    (r"\bthe same I cohort\b", "the same review cohort"),
     (r"\bI's specific notes\b", "My specific notes"),
     (r"\bI specifically reports\b", "I specifically report"),
     (r"\bFor me's\b", "For my"),

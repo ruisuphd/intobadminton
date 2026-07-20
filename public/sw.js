@@ -15,7 +15,7 @@
  */
 // Bump CACHE_VERSION whenever the offline shell HTML or PRECACHE_URLS change
 // so installed clients pick up the new copy on the next activate.
-const CACHE_VERSION = "ib-v37";
+const CACHE_VERSION = "ib-v38";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const HTML_CACHE = `${CACHE_VERSION}-html`;
 
@@ -142,12 +142,12 @@ const PRECACHE_URLS = [
   "/intobadminton-mark.png",
   "/intobadminton-icon-192.png",
   "/intobadminton-icon-512.png",
-  "/review/victor-c90-ii-shoes-review/",
-  "/review/gosen-raimei-58-string-review/",
-  "/review/li-ning-saga-ii-se-shoes-review/",
-  "/review/li-ning-aeronaut-9000c-racket-review/",
-  "/review/victor-vbs-63-string-review/",
-  "/review/yonex-exbolt-68-string-review/",
+  "/review/victor-auraspeed-hs-plus-attack-review/",
+  "/review/victor-auraspeed-hs-plus-deep-dive/",
+  "/review/yonex-astrox-88-pro-2024-review/",
+  "/review/yonex-astrox-99-pro-3-deep-dive/",
+  "/review/yonex-exbolt-63-string-review/",
+  "/review/yonex-bg80-string-review/",
 ];
 
 self.addEventListener("install", (event) => {

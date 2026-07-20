@@ -9084,5 +9084,87 @@
     ],
     "editorNote": "Victor Thruster K 30 Pro — mid-tier Onigiri-family attack frame with floating handle. Chinese nickname 小鬼斩Pro.",
     "reviewCount": 0
+  },
+  {
+    "id": "vic-thruster-ryuga-ii-pro",
+    "category": "racket",
+    "name": "Thruster Ryuga II Pro",
+    "brand": "Victor",
+    "priceUsd": 269,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 308,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 32
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/thruster-ryuga-ii-pro-b",
+    "lastVerifiedAt": "2026-07-20",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "smash",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/thruster-ryuga-ii-pro-b",
+      "https://www.victorsport.com/blog/article/tk-ryugaiipro%E9%80%B2%E6%94%BB%E7%BE%8E%E5%AD%B8%E9%80%B2%E5%8C%96%E4%B9%8B%E4%BD%9C%E5%8B%A2%E4%B8%8D%E5%8F%AF%E6%93%8B"
+    ],
+    "editorNote": "Victor Thruster Ryuga II Pro (TK-Ryuga II Pro / 龙牙之刃2 Pro) — Power Ring Pro attack flagship above Ryuga II.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-invincible-ace",
+    "category": "shoes",
+    "name": "Invincible ACE",
+    "brand": "Li-Ning",
+    "priceUsd": 160,
+    "fitWidth": "wide_available",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "protective",
+    "hasWideOption": true,
+    "launchYear": 2020,
+    "regionAvailability": [
+      "cn",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://store.lining.com/",
+    "lastVerifiedAt": "2026-07-20",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "lateral_support",
+      "stability",
+      "match_play"
+    ],
+    "sourceUrls": [
+      "https://www.badmintonplaza.com/product_info.php?products_id=4596"
+    ],
+    "editorNote": "Li-Ning Invincible ACE (无敌号 ACE) — Shi Yuqi snow-camo stability flagship; style codes include AYAR015.",
+    "reviewCount": 0
   }
 ]
