@@ -12,7 +12,7 @@ describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
   it("uses ib-v37 cache version", () => {
-    expect(source).toContain('const CACHE_VERSION = "ib-v37"');
+    expect(source).toContain('const CACHE_VERSION = "ib-v38"');
   });
 
   it("precaches finder, catalog, search, saved, compare, updates, review, guides, offline, data, methodology, tools, faq, best, brands, dedicated brand landings, compare-guides shells, tier-1 best-of landings, long-tail best-of landings, price-band best-of, contact, research, legal cluster, trust cluster, sample PDP and review shells, procedural guide landings, glossary, season-refresh, and remaining tool shells", () => {
