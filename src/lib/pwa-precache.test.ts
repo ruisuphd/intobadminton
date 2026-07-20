@@ -11,7 +11,7 @@ const SW_PATH = resolve(process.cwd(), "public/sw.js");
 describe("PWA service worker precache", () => {
   const source = readFileSync(SW_PATH, "utf8");
 
-  it("uses ib-v37 cache version", () => {
+  it("uses ib-v38 cache version", () => {
     expect(source).toContain('const CACHE_VERSION = "ib-v38"');
   });
 
