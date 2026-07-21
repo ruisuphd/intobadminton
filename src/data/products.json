@@ -9166,5 +9166,191 @@
     ],
     "editorNote": "Li-Ning Invincible ACE (无敌号 ACE) — Shi Yuqi snow-camo stability flagship; style codes include AYAR015.",
     "reviewCount": 0
+  },
+  {
+    "id": "ln-thunder-2-pro",
+    "category": "shoes",
+    "name": "Thunder 2 Pro (雷霆 2 PRO)",
+    "brand": "Li-Ning",
+    "priceUsd": 140,
+    "fitWidth": "normal",
+    "cushioning": "very_high",
+    "stability": "very_high",
+    "weightFeel": "medium_heavy",
+    "hasWideOption": true,
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton/shoes",
+    "lastVerifiedAt": "2026-07-21",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "all_round",
+      "cushioning",
+      "lateral_stability"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/shoes"
+    ],
+    "editorNote": "AYAW001 Thunder II PRO — Super BOOM fore/heel, Cloud PLUS, carbon plate, Strike Loc. Distinct from Bladesabre 2 Pro.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-vbs-66n",
+    "category": "string",
+    "name": "VBS-66N",
+    "brand": "Victor",
+    "priceUsd": 10,
+    "gaugeMm": 0.66,
+    "feel": "medium",
+    "repulsion": "high",
+    "control": "high",
+    "durability": "very_high",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 28
+    },
+    "launchYear": 2018,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/",
+    "lastVerifiedAt": "2026-07-21",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "all_round",
+      "durability",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/"
+    ],
+    "editorNote": "Victor 0.66 mm durable high-repulsion multifilament — club default string.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-axforce-cannon",
+    "category": "racket",
+    "name": "AxForce Cannon (雷霆小钢炮)",
+    "brand": "Li-Ning",
+    "priceUsd": 35,
+    "headWeight": "head_heavy",
+    "weightClass": "6U",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton/rackets",
+    "lastVerifiedAt": "2026-07-21",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "beginner",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner_attack",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
+    "editorNote": "Entry AxForce Cannon (~¥200). Not Thunder Cannon Pro.",
+    "reviewCount": 0,
+    "shaftFlex": "flexible",
+    "weightVariants": [
+      "5U",
+      "6U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
+    "shaftFlexSource": "editor_estimate"
+  },
+  {
+    "id": "vic-drivex-12-zsw",
+    "category": "racket",
+    "name": "DriveX 12 ZSW",
+    "brand": "Victor",
+    "priceUsd": 230,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 311,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 33
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "tw",
+      "kr",
+      "sg",
+      "cn",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/drivex",
+    "lastVerifiedAt": "2026-07-21",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles_attack",
+      "rear_court_smash",
+      "head_heavy_attack",
+      "all_court_attack"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/drivex"
+    ],
+    "editorNote": "Zheng Siwei signature DriveX 12 — Power Ring PRO removed for whip; softer/lighter than original DriveX 12. Not a Lee Zii Jia edition.",
+    "reviewCount": 0,
+    "marketSignals": [
+      {
+        "source": "badmintoncn",
+        "label": "BadmintonCN: DriveX 12 review (Apr 2026)",
+        "summary": "4U: 89.2g w/ underbase removed, balance 311mm. WES 3.0 shaft + 46T Bayer carbon + nano-aerogel frame fill produce a noticeably faster swing than the DriveX 10 despite the same head-heavy profile. Smash power and pointing accuracy are first-tier. Slightly softer shaft than Astrox 88D Pro 2024. Better front-court reflex than DriveX 10 thanks to the lighter swing. Best as a positional doubles back-court / singles attack racket; not a fast doubles racket.",
+        "href": "https://bbs.badmintoncn.com/",
+        "confidence": "high"
+      }
+    ],
+    "image": {
+      "url": "https://dkjulgymkya8y.cloudfront.net/victor/en_us/product-135144_0_20250508103508.webp",
+      "source": "victor",
+      "credit": "Image: Victor (victorsport.com via Cloudfront CDN)",
+      "alt": "Victor DriveX 12 O badminton racket",
+      "width": 480,
+      "height": 480,
+      "verified": true
+    }
   }
 ]
