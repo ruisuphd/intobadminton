@@ -90,7 +90,7 @@ export default function UpdatesPage() {
             recently — buying guides, deep-dive reviews, interactive tools, and
             the{" "}
             <Link href="/data/" className="text-[var(--color-accent)] underline">
-              claims registry
+              verified claims registry
             </Link>
             . Sorted by last editorial review date, not marketing launch dates.
           </p>

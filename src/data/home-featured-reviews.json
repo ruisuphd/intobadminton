@@ -1,40 +1,40 @@
 {
-  "reviewCount": 187,
+  "reviewCount": 193,
   "featured": [
     {
-      "slug": "victor-auraspeed-hs-plus-attack-review",
-      "title": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
-      "updatedAt": "2026-07-20",
+      "slug": "li-ning-axforce-100-gen-2-review",
+      "title": "Li-Ning AxForce 100 Gen 2 review: offensive peak with a wider audience",
+      "updatedAt": "2026-07-21",
+      "readingMinutes": 3
+    },
+    {
+      "slug": "li-ning-axforce-cannon-racket-review",
+      "title": "Li-Ning AxForce Cannon review: entry attack stick that can play",
+      "updatedAt": "2026-07-21",
+      "readingMinutes": 1
+    },
+    {
+      "slug": "li-ning-thunder-2-pro-shoes-review",
+      "title": "Li-Ning Thunder 2 Pro shoes: tough cushion, natural wrap",
+      "updatedAt": "2026-07-21",
       "readingMinutes": 2
     },
     {
-      "slug": "victor-auraspeed-hs-plus-deep-dive",
-      "title": "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
-      "updatedAt": "2026-07-20",
+      "slug": "victor-drivex-12-vs-zsw-vs-arc11-halbertec-8000",
+      "title": "DriveX 12 vs ZSW: with Arcsaber 11 Pro and Halbertec 8000 context",
+      "updatedAt": "2026-07-21",
+      "readingMinutes": 1
+    },
+    {
+      "slug": "victor-drivex-12-zsw-racket-review",
+      "title": "Victor DriveX 12 ZSW review: Zheng Siwei whip-first Drive flagship",
+      "updatedAt": "2026-07-21",
       "readingMinutes": 2
     },
     {
-      "slug": "yonex-astrox-88-pro-2024-review",
-      "title": "Yonex Astrox 88S / 88D Pro (2024): refined twins, not a radical reboot",
-      "updatedAt": "2026-07-20",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "yonex-astrox-99-pro-3-deep-dive",
-      "title": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
-      "updatedAt": "2026-07-20",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "yonex-exbolt-63-string-review",
-      "title": "Yonex EXBOLT 63 review: crisp thin attack string that lasts",
-      "updatedAt": "2026-07-20",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "yonex-bg80-string-review",
-      "title": "Yonex BG80 review: classic hard attack string that still sets the bar",
-      "updatedAt": "2026-07-20",
+      "slug": "victor-vbs-66n-string-review",
+      "title": "Victor VBS-66N string: durable thin all-rounder",
+      "updatedAt": "2026-07-21",
       "readingMinutes": 2
     }
   ]
