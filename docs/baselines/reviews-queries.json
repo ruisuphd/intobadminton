@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-20",
+  "updated": "2026-07-21",
   "coverage": {
-    "minArticleSlugs": 176,
+    "minArticleSlugs": 182,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1772,6 +1772,66 @@
       "expectProductId": "yy-exbolt-63",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex"
+    },
+    {
+      "id": "li-ning-axforce-100-gen-2-review",
+      "slug": "li-ning-axforce-100-gen-2-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-100-gen-2",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-axforce-cannon-racket-review",
+      "slug": "li-ning-axforce-cannon-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-cannon",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-thunder-2-pro-shoes-review",
+      "slug": "li-ning-thunder-2-pro-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-thunder-2-pro",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-drivex-12-vs-zsw-vs-arc11-halbertec-8000",
+      "slug": "victor-drivex-12-vs-zsw-vs-arc11-halbertec-8000",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-drivex-12-zsw",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "victor-drivex-12-zsw-racket-review",
+      "slug": "victor-drivex-12-zsw-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-drivex-12-zsw",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "victor-vbs-66n-string-review",
+      "slug": "victor-vbs-66n-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-vbs-66n",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
     }
   ],
   "minArticleSlugs": 187

@@ -262,12 +262,12 @@
     },
     {
       "id": "flagship-ln-axforce-100-gen-2",
-      "slug": "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
+      "slug": "li-ning-axforce-100-gen-2-review",
       "expectProductId": "ln-axforce-100-gen-2",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Li-Ning flagship attack racket review — AxForce 100 Gen 2 on /best/singles-rackets/ and compare-guide halbertec-9000-power-vs-axforce-100-gen-2"
+      "note": "Li-Ning flagship attack racket standalone review — AxForce 100 Gen 2 on /best/singles-rackets/"
     },
     {
       "id": "flagship-vic-jetspeed-12",
