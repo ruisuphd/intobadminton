@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-21",
+  "updated": "2026-07-22",
   "coverage": {
-    "minArticleSlugs": 182,
+    "minArticleSlugs": 192,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1832,6 +1832,106 @@
       "expectProductId": "vic-vbs-66n",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "li-ning-axforce-100-gen-1-review",
+      "slug": "li-ning-axforce-100-gen-1-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-100-gen-1",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-axforce-70-racket-review",
+      "slug": "li-ning-axforce-70-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-70",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-axforce-70-vs-80-vs-90",
+      "slug": "li-ning-axforce-70-vs-80-vs-90",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-70",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-axforce-90-dragon-max-dragon-vs-tiger",
+      "slug": "li-ning-axforce-90-dragon-max-dragon-vs-tiger",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-90-dragon-max",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-axforce-90-dragon-max-review",
+      "slug": "li-ning-axforce-90-dragon-max-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-90-dragon-max",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-axforce-90-dragon-max-vs-astrox-100zz",
+      "slug": "li-ning-axforce-90-dragon-max-vs-astrox-100zz",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-90-dragon-max",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-bladex-900-new-vs-1000z-auraspeed-falcon-se",
+      "slug": "li-ning-bladex-900-new-vs-1000z-auraspeed-falcon-se",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-bladex-900-new",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-bladex-900-new-vs-nanoflare-1000z",
+      "slug": "li-ning-bladex-900-new-vs-nanoflare-1000z",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-bladex-900-new",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-halbertec-5000-racket-review",
+      "slug": "li-ning-halbertec-5000-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-halbertec-5000",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-no-1-string-review",
+      "slug": "li-ning-no-1-string-review",
+      "expectCatalogHref": "/catalog/?cat=string&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-no-1-string",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
     }
   ],
   "minArticleSlugs": 187
