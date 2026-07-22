@@ -1,41 +1,41 @@
 {
-  "reviewCount": 193,
+  "reviewCount": 203,
   "featured": [
     {
-      "slug": "li-ning-axforce-100-gen-2-review",
-      "title": "Li-Ning AxForce 100 Gen 2 review: offensive peak with a wider audience",
-      "updatedAt": "2026-07-21",
-      "readingMinutes": 3
-    },
-    {
-      "slug": "li-ning-axforce-cannon-racket-review",
-      "title": "Li-Ning AxForce Cannon review: entry attack stick that can play",
-      "updatedAt": "2026-07-21",
+      "slug": "li-ning-axforce-100-gen-1-review",
+      "title": "Li-Ning AxForce 100 Gen 1 review: offensive peak champagne flagship",
+      "updatedAt": "2026-07-22",
       "readingMinutes": 1
     },
     {
-      "slug": "li-ning-thunder-2-pro-shoes-review",
-      "title": "Li-Ning Thunder 2 Pro shoes: tough cushion, natural wrap",
-      "updatedAt": "2026-07-21",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "victor-drivex-12-vs-zsw-vs-arc11-halbertec-8000",
-      "title": "DriveX 12 vs ZSW: with Arcsaber 11 Pro and Halbertec 8000 context",
-      "updatedAt": "2026-07-21",
+      "slug": "li-ning-axforce-70-racket-review",
+      "title": "Li-Ning AxForce 70 review: M40X attack for club continuity",
+      "updatedAt": "2026-07-22",
       "readingMinutes": 1
     },
     {
-      "slug": "victor-drivex-12-zsw-racket-review",
-      "title": "Victor DriveX 12 ZSW review: Zheng Siwei whip-first Drive flagship",
-      "updatedAt": "2026-07-21",
-      "readingMinutes": 2
+      "slug": "li-ning-axforce-70-vs-80-vs-90",
+      "title": "AxForce 70 vs 80 vs 90 Dragon Max: where the wolf sits",
+      "updatedAt": "2026-07-22",
+      "readingMinutes": 1
     },
     {
-      "slug": "victor-vbs-66n-string-review",
-      "title": "Victor VBS-66N string: durable thin all-rounder",
-      "updatedAt": "2026-07-21",
-      "readingMinutes": 2
+      "slug": "li-ning-axforce-90-dragon-max-dragon-vs-tiger",
+      "title": "AxForce 90 Dragon Max: Dragon vs Tiger colourways",
+      "updatedAt": "2026-07-22",
+      "readingMinutes": 1
+    },
+    {
+      "slug": "li-ning-axforce-90-dragon-max-review",
+      "title": "Li-Ning AxForce 90 Dragon Max review: thin-shaft flagship attack",
+      "updatedAt": "2026-07-22",
+      "readingMinutes": 1
+    },
+    {
+      "slug": "li-ning-axforce-90-dragon-max-vs-astrox-100zz",
+      "title": "AxForce 90 Dragon Max vs Astrox 100ZZ: attack and continuity",
+      "updatedAt": "2026-07-22",
+      "readingMinutes": 1
     }
   ]
 }

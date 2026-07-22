@@ -17,8 +17,8 @@ describe("home-featured", () => {
     const slugs = homeFeaturedReviewSlugs();
     expect(slugs).toHaveLength(6);
     expect(new Set(slugs).size).toBe(6);
-    expect(slugs).toContain("li-ning-axforce-100-gen-2-review");
-    expect(slugs).toContain("victor-drivex-12-zsw-racket-review");
+    expect(slugs).toContain("li-ning-axforce-100-gen-1-review");
+    expect(slugs).toContain("li-ning-axforce-90-dragon-max-review");
   });
 
   it("builds canonical review hrefs", () => {

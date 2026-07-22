@@ -9352,5 +9352,185 @@
       "height": 480,
       "verified": true
     }
+  },
+  {
+    "id": "ln-axforce-70",
+    "category": "racket",
+    "name": "AxForce 70 (雷霆 70)",
+    "brand": "Li-Ning",
+    "priceUsd": 120,
+    "headWeight": "head_heavy",
+    "shaftFlex": "flexible",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 298,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton/rackets",
+    "lastVerifiedAt": "2026-07-22",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "attack",
+      "continuity",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
+    "editorNote": "AxForce 70 — M40X frame, 6.6 mm shaft. Below 80 / 90 Dragon Max.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-axforce-90-dragon-max",
+    "category": "racket",
+    "name": "AxForce 90 Dragon Max (雷霆 90 MAX 龙/虎)",
+    "brand": "Li-Ning",
+    "priceUsd": 250,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 307,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 31
+    },
+    "shaftFlexSource": "retailer",
+    "launchYear": 2022,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia",
+      "global",
+      "uk",
+      "us"
+    ],
+    "officialSourceUrl": "https://li-ningsports.co.uk/products/li-ning-axforce-90-loong-max-storm-blue-racket",
+    "lastVerifiedAt": "2026-07-22",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles_attack",
+      "hard_smash"
+    ],
+    "sourceUrls": [
+      "https://sg.lining.studio/products/axforce-90-dragon-max-4u"
+    ],
+    "editorNote": "AxForce 90 Dragon Max — M50, 6.2 mm shaft. Dragon/Tiger colourways. NOT AxForce 90 New.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-halbertec-5000",
+    "category": "racket",
+    "name": "Halbertec 5000 (战戟 5000)",
+    "brand": "Li-Ning",
+    "priceUsd": 90,
+    "headWeight": "even",
+    "shaftFlex": "flexible",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 308,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton/rackets",
+    "lastVerifiedAt": "2026-07-22",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "beginner",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "control",
+      "all_round",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://in.lining.studio/products/halbertec-5000-4u"
+    ],
+    "editorNote": "Halbertec 5000 — soft-balance control mid-tier.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-no-1-string",
+    "category": "string",
+    "name": "No. 1",
+    "brand": "Li-Ning",
+    "priceUsd": 8,
+    "gaugeMm": 0.65,
+    "feel": "medium",
+    "repulsion": "high",
+    "control": "medium",
+    "durability": "medium",
+    "tensionRangeLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "launchYear": 2014,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton",
+    "lastVerifiedAt": "2026-07-22",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "value",
+      "repulsion"
+    ],
+    "sourceUrls": [
+      "https://sg.lining.studio/products/no-1"
+    ],
+    "editorNote": "Li-Ning No. 1 — ~0.65 mm budget thin string (AXJJ018).",
+    "reviewCount": 0
   }
 ]
