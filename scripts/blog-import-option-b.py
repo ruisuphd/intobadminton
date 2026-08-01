@@ -90,6 +90,8 @@ TITLE_OVERRIDES = {
     "yonex-exbolt-63-string-review": "Yonex EXBOLT 63 review: crisp thin attack string that lasts",
     "yonex-bg80-string-review": "Yonex BG80 review: classic hard attack string that still sets the bar",
     "victor-thruster-ryuga-ii-pro-racket-review": "Victor Thruster Ryuga II Pro review: controlled dragon attack frame",
+    "victor-thruster-ryuga-metallic-racket-review": "Victor Thruster Ryuga Metallic review: black-dragon smash ceiling",
+    "victor-thruster-ryuga-racket-review": "Victor Thruster Ryuga review: gen 1 original smash hammer",
     "li-ning-invincible-ace-shoes-review": "Li-Ning Invincible ACE review: stability flagship, snow-camo edition",
     "li-ning-axforce-100-gen-2-review": "Li-Ning AxForce 100 Gen 2 review: offensive peak with a wider audience",
     "li-ning-thunder-2-pro-shoes-review": "Li-Ning Thunder 2 Pro shoes: tough cushion, natural wrap",

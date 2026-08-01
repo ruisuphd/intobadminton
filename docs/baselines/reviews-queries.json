@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-22",
+  "updated": "2026-08-01",
   "coverage": {
-    "minArticleSlugs": 192,
+    "minArticleSlugs": 194,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1932,6 +1932,26 @@
       "expectProductId": "ln-no-1-string",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-thruster-ryuga-metallic-racket-review",
+      "slug": "victor-thruster-ryuga-metallic-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-thruster-ryuga-metallic",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "victor-thruster-ryuga-racket-review",
+      "slug": "victor-thruster-ryuga-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-thruster-ryuga",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
     }
   ],
   "minArticleSlugs": 187

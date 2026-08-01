@@ -158,6 +158,8 @@ export const blogSlugs = [
   "victor-thruster-hwql-nuke-review",
   "victor-thruster-k-30-pro-racket-review",
   "victor-thruster-ryuga-ii-pro-racket-review",
+  "victor-thruster-ryuga-metallic-racket-review",
+  "victor-thruster-ryuga-racket-review",
   "victor-thruster-sr-cherry-blossom-review",
   "victor-tk-f-c-ultra-review",
   "victor-vbs-63-string-review",
