@@ -196,26 +196,24 @@
     "notes": "Shi Yuqi snow-camo Invincible ACE."
   },
   {
-    "productId": "vic-yu-12",
+    "productId": "vic-drivex-12",
     "canonicalName": "Victor DriveX 12",
     "brandAliases": [
       "Victor",
-      "VIC",
-      "威克多",
-      "勝利"
+      "胜利",
+      "蓝厂"
     ],
     "modelAliases": [
       "DriveX 12",
-      "Drive X 12",
+      "DriveX 12 O",
       "DX-12",
       "DX12",
-      "驭 12",
       "Yu 12"
     ],
     "languages": [
       "en",
       "zh"
     ],
-    "notes": "The catalogue id is the legacy 'yu-12' (驭 = Yu, Victor's Chinese name for the DriveX line). Players search 'drivex 12' and 'drive x 12' in English, so both must normalise to this row. The O and ZSW rows are colourway/signature variants of the same frame."
+    "notes": "The 'O' suffix is the orange/black retail colourway, not a separate model — sources using either name map to this row. The Zheng Siwei signature build is a distinct row (vic-drivex-12-zsw)."
   }
 ]

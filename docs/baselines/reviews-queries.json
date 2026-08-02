@@ -999,7 +999,7 @@
     {
       "id": "victor-drivex-12-vs-astrox-88d-pro",
       "slug": "victor-drivex-12-vs-astrox-88d-pro",
-      "expectProductId": "vic-yu-12",
+      "expectProductId": "vic-drivex-12",
       "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
@@ -1009,7 +1009,7 @@
     {
       "id": "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
       "slug": "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
-      "expectProductId": "vic-yu-12",
+      "expectProductId": "vic-drivex-12",
       "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
@@ -1019,7 +1019,7 @@
     {
       "id": "victor-drivex-12-zsw-vs-original-comparison",
       "slug": "victor-drivex-12-zsw-vs-original-comparison",
-      "expectProductId": "vic-yu-12",
+      "expectProductId": "vic-drivex-12",
       "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
@@ -1159,7 +1159,7 @@
     {
       "id": "victor-yu-12-racket-review",
       "slug": "victor-yu-12-racket-review",
-      "expectProductId": "vic-yu-12",
+      "expectProductId": "vic-drivex-12",
       "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,

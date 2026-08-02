@@ -147,7 +147,7 @@ const config: BestPicksConfig = {
       name: "DriveX 12",
       brand: "Victor",
       priceUsd: 230,
-      productId: "vic-yu-12",
+      productId: "vic-drivex-12",
       bestFor: "Intermediate flat-drive doubles",
       specs: [
         { label: "Weight", value: "4U" },

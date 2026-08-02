@@ -342,13 +342,13 @@
       "note": "Yonex defensive control review — Arcsaber 7 Tour on /best/defensive-rackets/ and /best/all-round-rackets/"
     },
     {
-      "id": "flagship-vic-yu-12",
+      "id": "flagship-vic-drivex-12",
       "slug": "victor-yu-12-racket-review",
-      "expectProductId": "vic-yu-12",
+      "expectProductId": "vic-drivex-12",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Victor intermediate review — DriveX 12 (Yu 12) on /best/intermediate-rackets/ (DriveX 8S aliases to DriveX 10 review)"
+      "note": "Victor intermediate review — DriveX 12 on /best/intermediate-rackets/ (DriveX 8S aliases to DriveX 10 review)"
     },
     {
       "id": "flagship-ln-halbertec-9000",
