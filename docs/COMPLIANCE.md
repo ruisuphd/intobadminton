@@ -8,7 +8,8 @@ This is an engineering checklist, not legal advice.
 - Google Consent Mode v2 defaults: `analytics_storage`, `ad_storage`, `ad_user_data`, `ad_personalization` denied.
 - Global Privacy Control: treat as Do Not Sell/Share and disable advertising/personalization.
 - EEA/UK/Switzerland personalized AdSense requires a Google-certified CMP integrated with IAB TCF before production use.
-- AdSense is deployment-disabled unless `NEXT_PUBLIC_ADSENSE_MODE=cmp_tcf` is set after a compliant CMP/IAB TCF setup is live. Consent alone is not enough.
+- `NEXT_PUBLIC_ADSENSE_MODE=cmp_tcf` gates the site's **own** `<AdSlot/>` inventory; it stays `disabled` until a compliant CMP/IAB TCF setup is live. Consent alone is not enough.
+- **`ADSENSE_MODE` is not a site-wide advertising kill switch.** The `adsbygoogle.js` loader injects Auto Ads containers by itself, independent of that flag — confirmed in a local build, where it appends an Auto Ads anchor `<ins>` to pages containing no `<AdSlot/>`. Auto Ads must be turned off in the AdSense dashboard (Ads → per-site settings), not in this repo. Consent Mode defaults plus Funding Choices still constrain such inventory to non-personalised before opt-in, but that is a weaker guarantee than "no ads render".
 - The first-layer banner must keep reject/customize/accept choices similarly visible. Do not use dark patterns or pre-ticked non-essential consent.
 
 ## Source/content guardrails

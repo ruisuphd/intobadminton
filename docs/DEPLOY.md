@@ -64,6 +64,8 @@ GitHub Pages does not provide full custom response-header control by itself. For
 
 `NEXT_PUBLIC_ADSENSE_MODE` defaults to `disabled`. Set it to `cmp_tcf` only after a Google-certified CMP/IAB TCF setup is active for covered regions. User ad consent alone is not sufficient for the app to load AdSense.
 
+> **This flag controls our own `<AdSlot/>` units only.** It does not stop Google Auto Ads, which the `adsbygoogle.js` loader injects on its own. If you need genuinely zero ads on the live site, disable Auto Ads in the AdSense dashboard as well. See `docs/COMPLIANCE.md`.
+
 ## AdSense approval sequence
 
 1. Deploy the production site at `https://intobadminton.com` first.

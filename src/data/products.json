@@ -5316,7 +5316,7 @@
     "category": "racket",
     "name": "DriveX 12",
     "brand": "Victor",
-    "priceUsd": 220,
+    "priceUsd": 230,
     "headWeight": "head_heavy",
     "shaftFlex": "stiff",
     "weightClass": "4U",
@@ -5329,7 +5329,7 @@
       "G5",
       "G6"
     ],
-    "balanceMm": 303,
+    "balanceMm": 311,
     "balanceCategory": "head_heavy",
     "swingWeightEstimate": "medium",
     "commonStringTensionLbs": {
@@ -5346,9 +5346,9 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.victorsport.com/product/drivex-12",
-    "lastVerifiedAt": "2026-05-19",
-    "verificationStatus": "editor_verified",
+    "officialSourceUrl": "https://www.victorsport.com/product/drivex",
+    "lastVerifiedAt": "2026-05-21",
+    "verificationStatus": "official_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
     "bestFor": [
@@ -5359,7 +5359,7 @@
     "sourceUrls": [
       "https://www.victorsport.com/product/drivex-12"
     ],
-    "editorNote": "Standalone deep-dive variant of DriveX 12. Existing DriveX 12 O catalog row covers the 'Original' colourway; this row is the broader product family entry.",
+    "editorNote": "Victor's DriveX 12, sold in China under the 驭 (\"Yu\") name that gives this row its legacy id. Specs are the official-verified figures for the frame; the O row is the same racket in the orange/black retail cosmetic. The ZSW row is the Zheng Siwei signature and genuinely plays differently — Power Ring PRO is removed for extra whip, so treat it as its own frame rather than a colourway.",
     "reviewCount": 0,
     "image": {
       "url": "https://dkjulgymkya8y.cloudfront.net/images/dc62fdb1-96a6-4892-b400-b6bf2e642b5b.webp",
