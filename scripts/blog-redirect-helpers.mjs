@@ -70,5 +70,12 @@ export function blogRedirectsForStaticExport() {
     }
   }
 
+  // Articles retired in favour of another article — see BlogRetiredRedirect in
+  // src/lib/blog-migrations.ts. Pushed last so they override anything the loop
+  // above derived for the same source.
+  for (const entry of blogUrlMigrations.retiredRedirects ?? []) {
+    entries.push(entry);
+  }
+
   return dedupeRedirects(entries);
 }

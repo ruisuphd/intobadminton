@@ -53,17 +53,27 @@ looks authoritative. Leaving the title visibly broken keeps the problem on the
 backlog. Remove a slug from here only together with the underlying fix.
 """
 TITLE_FALLBACK_QUARANTINE = {
-    # Body is entirely about the Aerus Z2 (SHBAZ2MEX, three colourways) but the
-    # slug and the review→product map both point at the Power Cushion 88 Dial 3,
-    # a different shoe. Retitling would pick a side without evidence.
-    "yonex-power-cushion-88-dial-3-review",
-    # Body describes "Forza's Blade 88D Danish limited edition"; the mapped
-    # product record calls it a Victor and asserts a "Victor FZ sub-brand" that
-    # we have not verified exists. The catalogue also carries a separate
-    # FZ Forza "Aero Power 88D (Danish National Team LE)" with different specs,
-    # so these may be one racket published twice under two brands.
+    # Near-duplicate of fz-forza-88d-review: 99% token overlap, and
+    # blog-slug-source-map.json shows both are generated from the same
+    # reviews-fz-blade-88d-racket.md. That source says the shaft reads "Forza
+    # AERO POWER 88D" with a Danish national team badge and strings it with
+    # Forza-65, so the racket is FZ Forza's. The catalogue's "Victor FZ
+    # sub-brand" claim appears to come from the reviewer's Victor comparison
+    # points (WES 3.0, TK-15) rather than from the racket.
+    #
+    # NOT retired yet, because consolidating it needs a catalogue decision this
+    # script cannot make: vic-fz-88d-power-purple is $115 and is a live pick on
+    # /best/head-heavy-rackets-under-150/, while fz-forza-88d is $175 and would
+    # be ineligible for that page. Two other rows (vic-fz-flash-1000,
+    # vic-fz-100xx) share the same "Victor FZ" premise, so the brand question is
+    # bigger than this one racket. Resolve the brand and the price, then retire.
     "victor-fz-88d-power-purple-review",
 }
+# yonex-power-cushion-88-dial-3-review was resolved 2026-08-02: it carried an
+# Aerus Z2 review. Its source file is review-yonex-shbaz2mex-shoes.md, SHBAZ2MEX
+# is Yonex's code for the Power Cushion Aerus Z2, the body names "AZ2" outright
+# and lists three Aerus colourways, and it never mentions a dial or the number
+# 88. Republished as yonex-aerus-z2-shoes-review.
 
 
 def fallback_title(slug):
@@ -106,6 +116,9 @@ TITLE_OVERRIDES = {
     # live query clusters that should each land on the right page.
     "yonex-subaxia-gt-shoes-review": "Yonex Power Cushion Subaxia GT review: Graphite Throttle in a badminton shoe",
     "yonex-grpht-thrttl-training-shoe-review": "Yonex GRPHT THRTTL (Graphite Throttle) review: the concept cross-trainer",
+    # Was published as a "Power Cushion 88 Dial 3" review. It never was one —
+    # see the note on TITLE_FALLBACK_QUARANTINE below.
+    "yonex-aerus-z2-shoes-review": "Yonex Power Cushion Aerus Z2 review: the 240 g speed boot, three colourways",
     "li-ning-axforce-100-gen-2-vs-gen-1": "Li-Ning AxForce 100 Gen 2 vs Gen 1: a lower entry bar, same ceiling",
     "li-ning-axforce-90-new-5u-deep-dive": "Li-Ning AxForce 90 New 5U deep dive: the light build that still bites",
     "victor-drivex-12-zsw-vs-original-comparison": "Victor DriveX 12 ZSW vs original: Nanjing build against Taiwan build",

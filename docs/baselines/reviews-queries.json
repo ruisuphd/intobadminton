@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-08-01",
+  "updated": "2026-08-02",
   "coverage": {
-    "minArticleSlugs": 194,
+    "minArticleSlugs": 195,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1417,9 +1417,9 @@
       "note": "Auto-synced mapped corpus row — Sprint 61"
     },
     {
-      "id": "yonex-power-cushion-88-dial-3-review",
-      "slug": "yonex-power-cushion-88-dial-3-review",
-      "expectProductId": "yy-power-cushion-88-dial-3",
+      "id": "yonex-aerus-z2-shoes-review",
+      "slug": "yonex-aerus-z2-shoes-review",
+      "expectProductId": "yy-aerus-z2",
       "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
@@ -1952,6 +1952,16 @@
       "expectProductId": "vic-thruster-ryuga",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "yonex-aerus-z2-shoes-review",
+      "slug": "yonex-aerus-z2-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Yonex",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "yy-aerus-z2",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse yonex"
     }
   ],
   "minArticleSlugs": 187

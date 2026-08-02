@@ -246,9 +246,9 @@
       "destination": "/review/yy-nanoflare-nextage/"
     },
     {
-      "slug": "yonex-power-cushion-88-dial-3-review",
+      "slug": "yonex-aerus-z2-shoes-review",
       "type": "product",
-      "destination": "/review/yy-power-cushion-88-dial-3/"
+      "destination": "/review/yy-aerus-z2/"
     },
     {
       "slug": "yonex-grpht-thrttl-training-shoe-review",
@@ -439,11 +439,6 @@
       "slug": "victor-thruster-sr-cherry-blossom-review",
       "type": "editorial",
       "destination": "/comparisons/victor-thruster-sr-cherry-blossom-review/"
-    },
-    {
-      "slug": "victor-fz-88d-power-purple-review",
-      "type": "product",
-      "destination": "/review/vic-fz-88d-power-purple/"
     },
     {
       "slug": "yonex-arcsaber-7-play-review",
@@ -729,6 +724,11 @@
       "slug": "yonex-comfort-z3-shoes-review",
       "type": "product",
       "destination": "/review/yy-comfort-z3/"
+    },
+    {
+      "slug": "victor-fz-88d-power-purple-review",
+      "type": "product",
+      "destination": "/review/vic-fz-88d-power-purple/"
     }
   ],
   "multiBlogProducts": {
@@ -764,5 +764,15 @@
       "yonex-astrox-99-pro-3-deep-dive",
       "yonex-astrox-99-pro-gen-1-review"
     ]
-  }
+  },
+  "retiredRedirects": [
+    {
+      "source": "/review/yonex-power-cushion-88-dial-3-review/",
+      "destination": "/review/yonex-aerus-z2-shoes-review/"
+    },
+    {
+      "source": "/blog/yonex-power-cushion-88-dial-3-review/",
+      "destination": "/review/yonex-aerus-z2-shoes-review/"
+    }
+  ]
 }

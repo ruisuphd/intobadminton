@@ -202,7 +202,7 @@ export const blogSlugs = [
   "yonex-nanoflare-speed-series-explained",
   "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
   "yonex-nanospeed-9900-ltg-green-sword-review",
-  "yonex-power-cushion-88-dial-3-review",
+  "yonex-aerus-z2-shoes-review",
   "yonex-subaxia-gt-shoes-review",
   "yonex-tour-series-buying-guide",
   "yonex-voltric-z-force-ltd-2012-review",

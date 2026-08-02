@@ -10,10 +10,24 @@ export type BlogUrlMigration = {
   destination: string;
 };
 
-const { migrations, multiBlogProducts } = blogUrlMigrations as {
-  migrations: BlogUrlMigration[];
-  multiBlogProducts: Record<string, string[]>;
-};
+/**
+ * A retired article URL and the live article that replaced it.
+ *
+ * `migrations` can only say "this slug also answers to that legacy path". It
+ * cannot say "slug A was retired in favour of slug B", which is what you need
+ * when two published articles turn out to describe the same product, or when
+ * an article's slug named the wrong product entirely. Routing those through
+ * `migrations` produces a self-redirect, because the retired path has no
+ * catalogue id for reviewPath() to resolve.
+ */
+export type BlogRetiredRedirect = { source: string; destination: string };
+
+const { migrations, multiBlogProducts, retiredRedirects } =
+  blogUrlMigrations as {
+    migrations: BlogUrlMigration[];
+    multiBlogProducts: Record<string, string[]>;
+    retiredRedirects?: BlogRetiredRedirect[];
+  };
 
 const migrationBySlug = new Map(
   migrations.map((entry) => [entry.slug, entry] as const)
@@ -66,6 +80,13 @@ export function blogRedirects(): { source: string; destination: string }[] {
         destination: legacyDestination,
       });
     }
+  }
+
+  // Retired articles win over anything the migration loop derived for the same
+  // source, so a slug that was pulled from publication cannot be redirected
+  // back to its own dead URL.
+  for (const entry of retiredRedirects ?? []) {
+    entries.push(entry);
   }
 
   return dedupeRedirects(entries);
