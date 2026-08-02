@@ -5,6 +5,7 @@ import { EditorialArticlePage } from "@/components/EditorialArticlePage";
 import { blogSlugs, getBlogArticle } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
 import { routeOgImages } from "@/lib/og";
+import { isThinContentNoindex } from "@/lib/thin-content";
 
 export function generateStaticParams() {
   return blogSlugs.map((slug) => ({ slug }));
@@ -30,6 +31,11 @@ export async function generateMetadata({
     title: article.title,
     description: article.dek,
     alternates: pageAlternates(path),
+    // Thin, zero-impression articles stay live and linked but out of the
+    // index; `follow` keeps the crawl path to the catalog open.
+    ...(isThinContentNoindex(slug)
+      ? { robots: { index: false, follow: true } }
+      : {}),
     openGraph: {
       title: article.title,
       description: article.dek,

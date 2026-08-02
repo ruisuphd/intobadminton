@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { blogSlugs } from "@/lib/blog";
 import { allCatalogProductIds } from "@/lib/catalog-products";
 import { lastModifiedForRoute } from "@/lib/editorial-meta";
+import { indexableReviewSlugs } from "@/lib/thin-content";
 
 export type SitemapEntry = {
   url: string;
@@ -40,8 +41,11 @@ const SITEMAP_EXCLUDED_ROUTES = new Set([
  * the dynamic segment path to the list of slugs to expand it into.
  */
 const DYNAMIC_ROUTE_EXPANSIONS: Record<string, readonly string[]> = {
+  // Thin, zero-impression articles still build and stay linked, but they are
+  // served `noindex` by `/review/[slug]/page.tsx`, so they must not appear
+  // here. See `src/lib/thin-content.ts`.
   get "/review/[slug]/"() {
-    return blogSlugs;
+    return indexableReviewSlugs(blogSlugs);
   },
   get "/product/[id]/"() {
     return allCatalogProductIds();

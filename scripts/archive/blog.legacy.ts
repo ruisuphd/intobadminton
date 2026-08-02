@@ -642,11 +642,16 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       slug: "badminton-string-selector",
       updatedAt: "2026-04-28",
       category: "guides",
-      title: "BG80, EXBOLT 63, or BG65: choosing strings by outcome",
-      dek: "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+      // Retitled to the live query. Search Console shows the "best badminton
+      // string" cluster pulling 125+ impressions a quarter at position 29-46 —
+      // the page was 122 words and far too thin to rank for it.
+      title: "Best badminton string: choose by the problem you are fixing",
+      dek: "Strings change control, repulsion, comfort and cost per session more than most players expect. Here is how to pick one by the problem it solves.",
+      verdict:
+        "There is no single best badminton string, but there is a best string for the thing your game is currently missing. Pick the gauge first, then the character, then the tension — and judge the result at week three rather than week one.",
       story: {
         intro:
-          "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+          "Most string advice starts with a brand name. That is backwards, and it is why so many players end up with an expensive string that suits somebody else's game.",
         blocks: [
           {
             kind: "firstPerson",
@@ -659,15 +664,31 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Start with what you want to fix",
-          body: "If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.",
+          body: "If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.\n\nThat framing matters because string is the cheapest meaningful change you can make to a racket. A restring costs a fraction of a new frame and changes more about how the racket feels than most players expect — often more than moving one weight class or two pounds of tension.\n\nIt also means the honest answer to 'what is the best badminton string' is a question back: what is your racket currently not doing for you? A forgiving racket with an unforgiving string still feels wrong, and no amount of spending fixes a mismatch you have not diagnosed.",
+        },
+        {
+          heading: "Gauge is the first decision",
+          body: "Badminton strings are sold by thickness, usually between 0.70 mm and 0.61 mm, and this single number does more to set the character of a setup than the brand on the packet.\n\nThinner string bites into the shuttle cork more, which produces more repulsion, more grip on slices, and a crisper sound. It also breaks sooner and loses tension faster. Thicker string lasts longer, holds tension better and feels duller in exchange.\n\nMost club players are well served at 0.68 mm or 0.65 mm. Moving from 0.68 mm to 0.63 mm is a larger change in feel than adding two pounds of tension, so change one of the two at a time or you will not know which did what.\n\nThe common mistake is buying a 0.63 mm string to gain power and then stringing it high to gain more. Thin string at high tension is a narrow, unforgiving setup that punishes exactly the late contact that tired club players produce in the third game.",
+        },
+        {
+          heading: "The strings most club players end up choosing",
+          body: "BG65 is the conservative durability pick — around 11 US dollars, on sale since 1990, and still the sensible answer when cost per session matters more than maximum bite or sound. It suits beginners and anyone who breaks strings frequently.\n\nBG80 is the control-first reference at around 13 dollars. It is built for players who generate their own power and want bite on cuts, drops and net shots, and it holds tension well. BG80 Power is its repulsion-forward sibling: the same 0.68 mm gauge with a polymer mix tuned for extra smash power, trading away a little net touch.\n\nEXBOLT 63 sits around 15 dollars and is the lively, crisp option for players who want repulsion and sound in fast doubles, provided they can tolerate a smaller timing window than a thicker durability string. EXBOLT 68 is the 0.68 mm power-and-durability version — harder than the 63 at mid tension, with friendlier damping than classic BG80.\n\nVictor's VBS-63 is the main alternative at that thin gauge, around 12 dollars, and it is a genuinely different string rather than a cheaper clone.",
+        },
+        {
+          heading: "EXBOLT 63 vs VBS-63",
+          body: "Both are 0.63 mm high-elasticity strings aimed at players chasing repulsion, and they come up against each other constantly at the stringer.\n\nVBS-63 is firmer and wilder than EXBOLT 63 for many players, and it demands clean timing to reward you. When contact is good it is the more explosive of the two. When contact is late, it is the more punishing.\n\nEXBOLT 63 is the more forgiving of the pair and the easier one to live with across a full evening of club doubles. If you are choosing blind, start there; if you already know your timing holds up under fatigue, VBS-63 is worth trying and costs slightly less.",
         },
         {
           heading: "Match tension to level",
-          body: "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better ROI by changing two pounds at a time and logging week-one versus week-three feel.",
+          body: "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better returns by changing two pounds at a time and logging week-one versus week-three feel.\n\nTreat the tension printed on your racket as a ceiling rather than a target. Warranty limits describe what the frame survives, not what produces your best badminton, and the gap between those two numbers is usually several pounds.\n\nThe general shape of it: lower tension gives a larger sweet spot and more free power, which helps developing players and anyone whose clears are falling short. Higher tension gives control and feedback to players who already generate their own power and are losing shots long. If you want to model the trade before paying for it, the string tension calculator in the tools section walks through the same variables.",
         },
         {
-          heading: "Why we score strings separately",
-          body: "A racket recommendation without string context is incomplete. IntoBadminton now treats strings as their own category because a forgiving racket with an unforgiving string can still feel wrong.",
+          heading: "How long a string actually lasts",
+          body: "A string does not have to break to be finished. Tension loss begins immediately and is fastest in the first 48 hours after stringing, then continues steadily, and a bed that has gone soft costs you control long before anything snaps.\n\nA rough restringing cadence that works for most club players: restring roughly as many times a year as you play sessions in a typical week. Twice a week, twice a year, and so on. Players on thin gauges at high tension should assume more often than that.\n\nOne piece of context worth having before you blame a string: a break on a high-tension job at the top of a frame is usually a stringing or a mishit story rather than a bad packet of string. A break in the middle of the bed after months of play is simply the string reaching the end of its life.",
+        },
+        {
+          heading: "Cost per session beats price per set",
+          body: "Set price is the wrong comparison. What decides whether a string is expensive is the total of string plus labour divided by the number of sessions before it goes dead.\n\nA 15-dollar string that stays good for twenty sessions is cheaper per session than an 11-dollar one you replace every eight, once the stringing fee is included — and stringing labour usually costs more than the string itself.\n\nThat arithmetic is also the argument against constantly chasing new strings. Pick one that matches the problem you identified, keep everything else constant, and give it three weeks. The difference between a string that suits you and one that does not is large; the difference between two well-chosen strings in the same category is much smaller than marketing suggests.",
         },
       ],
       cta: "Run the finder for string-specific recommendations.",

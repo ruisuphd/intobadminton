@@ -130,7 +130,6 @@ TITLE_OVERRIDES = {
     "yonex-nanoflare-800-pro-tour-review": "Yonex Nanoflare 800 Pro and Tour review: the Pro badge tested",
     "asics-blast-ff-3-badminton-shoes-review": "ASICS Blast FF 3 badminton review: no carbon plate, no problem",
     "yonex-astrox-88s-tour-curious-review": "Yonex Astrox 88S Tour review: fun frame, hard-to-justify price",
-    "yonex-arcsaber-7-tour-review": "Yonex Arcsaber 7 Tour review: the Pro's easier, cheaper sibling",
     "yonex-astrox-99-pro-gen-1-review": "Yonex Astrox 99 Pro Gen 1 review: where the 99 family turned serious",
     "victor-drivex-12-vs-drivex-10-and-88d-pro-2024": "Victor DriveX 12 vs DriveX 10 and Astrox 88D Pro: Victor's best shaft yet",
     "kumpoo-kh-g805-lite-pro-shoes-review": "Kumpoo KH-G805 LITE PRO review: three weeks as a main match shoe",
@@ -165,7 +164,6 @@ TITLE_OVERRIDES = {
     "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review": "Bonny Mojun vs Yonex Arcsaber 11 Pro: does the benchmark hold up?",
     "bonny-wuque-1982-y3k-shoes-review": "Bonny Wuque 1982 Y3K review: cyberpunk paint on a classic platform",
     "bonny-carbon-armour-shoes-review": "Bonny Carbon Armour shoes review: quick notes after a long stint",
-    "rsl-aero-u-shuttle-review": "RSL Aero U shuttle review: goose feather against the Classic benchmark",
     "kumpoo-js-65-string-review": "Kumpoo JS-65 string review: the 0.65 mm durability line, honestly",
     "bonny-wuque-flagship-088-shoes-review": "Bonny Wuque 088 review: a flagship court tool with no obvious weak point",
     "jujiang-lbtu-value-racket-review": "JuJiang LBTU review: the value advanced frame I keep recommending",
@@ -248,12 +246,23 @@ TITLE_OVERRIDES = {
     "victor-auraspeed-hs-plus-deep-dive": "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
     "victor-auraspeed-hs-plus-attack-review": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
     "yonex-astrox-99-pro-3-deep-dive": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
+    "yonex-arcsaber-7-tour-review": "Yonex Arcsaber 7 Tour review: the value pick of the Arcsaber 7 line",
+    "rsl-aero-u-shuttle-review": "RSL Aero U shuttle review: late-rally consistency in a tube",
     "yonex-astrox-88-pro-2024-review": "Yonex Astrox 88S / 88D Pro (2024): refined twins, not a radical reboot",
 }
 
 DEK_OVERRIDES = {
     "victor-yu-12-racket-review": "DriveX 12 gets Victor's full control-focused rebuild: alloy carbon, WES 3.0, and a firmer all-court feel.",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ VA and Kurenai comparison, with the old Antonsen naming mistake corrected while keeping the URL for continuity.",
+    # Expanded thin pages: without an override these deks are the first 160
+    # characters of the overview with an ellipsis bolted on, which is what
+    # ships as the meta description. Written deks instead.
+    "li-ning-halbertec-5000-racket-review": "Halbertec 5000 is the cheapest way into Li-Ning's control family: flexible shaft, easy clears, low arm load, and no headline trait — which is rather the point.",
+    "li-ning-halbertec-9000-standalone-review": "The base Halbertec 9000 is head-light, stiff and built for flat drives — and it is not the 9000 Power. Specs, line comparison, and who each version suits.",
+    "rsl-aero-u-shuttle-review": "RSL's Aero U is a BWF-approved goose-feather shuttle whose case is late-rally consistency: thicker vanes, cleaner second-half flight, speed 77.",
+    "yonex-arcsaber-7-tour-review": "Arcsaber 7 Tour sits between Play and Pro, and it is the one most club players should buy. Measured specs, the tier ladder, and where it gives way.",
+    "yonex-astrox-99-pro-3-deep-dive": "The third-generation Astrox 99 Pro returns to 76 holes with full-racket Namd. A rear-court hammer with a stamina cost — and how it stacks up against the 100ZZ.",
+    "yonex-comfort-z3-shoes-review": "Comfort Z3 trades 130 g against the Aerus Z2 for landing protection that lasts a full evening. Weight, break-in, fit, and where it sits in the Z3 trio.",
 }
 
 # Prepended to the overview when two slugs would otherwise share identical JSON bodies.
@@ -262,7 +271,10 @@ SLUG_DISAMBIGUATION: dict[str, str] = {
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps the legacy Anders Antonsen slug for continuity; the comparison covers VA and Kurenai colourways only.",
     "yonex-astrox-99-pro-gen-1-review": "First-gen Astrox 99 Pro (second Astrox 99-family generation) — includes Sun Orange colourway notes. See gen-2 and gen-3 deep dives for later Pro revisions.",
     "victor-auraspeed-hs-plus-attack-review": "Attack-biased HS Plus tuning — distinct from the neutral deep-dive on the same frame.",
-    "rsl-aero-classic-tourney-shuttle-review": "Classic Tourney tier — not the Aero U shuttle review on the sibling URL.",
+    # rsl-aero-classic-tourney-shuttle-review no longer needs a disambiguation
+    # prefix: rsl-aero-u-shuttle-review now has its own source markdown
+    # (review-rsl-aero-u-shuttle.md) instead of sharing the Classic Tourney
+    # file, and both articles open by placing themselves in RSL's range.
     "li-ning-halbertec-7000-review": "Original Halbertec 7000 (2023) — not the Halbertec 7000 II refresh review.",
     "li-ning-halbertec-flagship-lineup-review": "Halbertec 5000 through 9000 lineup compare — not the standalone Halbertec 9000 product review.",
     "yonex-nanoflare-800-pro-vs-nf700": "Head-to-head Nanoflare 800 Pro vs Nanoflare 700 — not the multi-model 800 Pro/Tour/Game review.",
@@ -477,6 +489,38 @@ def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
     if len(candidate) >= 50:
         return candidate
     return f"{title}. {candidate}".strip()[:240]
+
+
+
+def _assert_no_duplicate_override_keys() -> None:
+    """Fail if TITLE_OVERRIDES or DEK_OVERRIDES declares a slug twice.
+
+    Python resolves a duplicate dict key by silently keeping the last one, so a
+    merge that brings two branches' overrides together can drop a hand-written
+    title with no error anywhere. That happened during the 2026-08-02
+    integration: two slugs ended up declared twice, and only a manual read of
+    the merged file caught it. Cheap to check, expensive to miss.
+    """
+    source = Path(__file__).read_text(encoding="utf-8")
+    for name in ("TITLE_OVERRIDES", "DEK_OVERRIDES", "SLUG_DISAMBIGUATION"):
+        # Tolerates an inline type annotation, e.g. `NAME: dict[str, str] = {`.
+        header = re.search(rf"^{name}(?::[^=]+)? = {{$", source, re.M)
+        if header is None:
+            raise SystemExit(f"blog-import: could not locate {name} to check")
+        start = header.start()
+        end = source.index("\n}", start)
+        keys = re.findall(r'^\s{4}"([^"]+)":', source[start:end], re.M)
+        duplicates = sorted({k for k in keys if keys.count(k) > 1})
+        if duplicates:
+            raise SystemExit(
+                f"blog-import: {name} declares these slugs more than once: "
+                f"{', '.join(duplicates)}.\n"
+                f"  Python keeps only the last one, so an earlier hand-written\n"
+                f"  entry would be dropped silently. Delete the stale line."
+            )
+
+
+_assert_no_duplicate_override_keys()
 
 
 def parse_md_table(body: str) -> tuple[str, dict | None]:

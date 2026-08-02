@@ -279,21 +279,43 @@
   {
     "slug": "badminton-string-selector",
     "updatedAt": "2026-04-28",
-    "title": "BG80, EXBOLT 63, or BG65: choosing strings by outcome",
-    "dek": "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
-    "verdict": "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+    "title": "Best badminton string: choose by the problem you are fixing",
+    "dek": "Strings change control, repulsion, comfort and cost per session more than most players expect. Here is how to pick one by the problem it solves.",
+    "verdict": "There is no single best badminton string, but there is a best string for the thing your game is currently missing. Pick the gauge first, then the character, then the tension — and judge the result at week three rather than week one.",
     "sections": [
       {
         "heading": "Start with what you want to fix",
-        "body": "Strings change control, repulsion, comfort, and cost per session more than many players expect. If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound."
+        "body": "Most string advice starts with a brand name. That is backwards, and it is why so many players end up with an expensive string that suits somebody else's game. If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.\n\nThat framing matters because string is the cheapest meaningful change you can make to a racket. A restring costs a fraction of a new frame and changes more about how the racket feels than most players expect — often more than moving one weight class or two pounds of tension.\n\nIt also means the honest answer to 'what is the best badminton string' is a question back: what is your racket currently not doing for you? A forgiving racket with an unforgiving string still feels wrong, and no amount of spending fixes a mismatch you have not diagnosed.",
+        "glossaryLinks": [
+          {
+            "term": "Repulsion",
+            "id": "repulsion"
+          }
+        ]
+      },
+      {
+        "heading": "Gauge is the first decision",
+        "body": "Badminton strings are sold by thickness, usually between 0.70 mm and 0.61 mm, and this single number does more to set the character of a setup than the brand on the packet.\n\nThinner string bites into the shuttle cork more, which produces more repulsion, more grip on slices, and a crisper sound. It also breaks sooner and loses tension faster. Thicker string lasts longer, holds tension better and feels duller in exchange.\n\nMost club players are well served at 0.68 mm or 0.65 mm. Moving from 0.68 mm to 0.63 mm is a larger change in feel than adding two pounds of tension, so change one of the two at a time or you will not know which did what.\n\nThe common mistake is buying a 0.63 mm string to gain power and then stringing it high to gain more. Thin string at high tension is a narrow, unforgiving setup that punishes exactly the late contact that tired club players produce in the third game."
+      },
+      {
+        "heading": "The strings most club players end up choosing",
+        "body": "BG65 is the conservative durability pick — around 11 US dollars, on sale since 1990, and still the sensible answer when cost per session matters more than maximum bite or sound. It suits beginners and anyone who breaks strings frequently.\n\nBG80 is the control-first reference at around 13 dollars. It is built for players who generate their own power and want bite on cuts, drops and net shots, and it holds tension well. BG80 Power is its repulsion-forward sibling: the same 0.68 mm gauge with a polymer mix tuned for extra smash power, trading away a little net touch.\n\nEXBOLT 63 sits around 15 dollars and is the lively, crisp option for players who want repulsion and sound in fast doubles, provided they can tolerate a smaller timing window than a thicker durability string. EXBOLT 68 is the 0.68 mm power-and-durability version — harder than the 63 at mid tension, with friendlier damping than classic BG80.\n\nVictor's VBS-63 is the main alternative at that thin gauge, around 12 dollars, and it is a genuinely different string rather than a cheaper clone."
+      },
+      {
+        "heading": "EXBOLT 63 vs VBS-63",
+        "body": "Both are 0.63 mm high-elasticity strings aimed at players chasing repulsion, and they come up against each other constantly at the stringer.\n\nVBS-63 is firmer and wilder than EXBOLT 63 for many players, and it demands clean timing to reward you. When contact is good it is the more explosive of the two. When contact is late, it is the more punishing.\n\nEXBOLT 63 is the more forgiving of the pair and the easier one to live with across a full evening of club doubles. If you are choosing blind, start there; if you already know your timing holds up under fatigue, VBS-63 is worth trying and costs slightly less."
       },
       {
         "heading": "Match tension to level",
-        "body": "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better ROI by changing two pounds at a time and logging week-one versus week-three feel."
+        "body": "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better returns by changing two pounds at a time and logging week-one versus week-three feel.\n\nTreat the tension printed on your racket as a ceiling rather than a target. Warranty limits describe what the frame survives, not what produces your best badminton, and the gap between those two numbers is usually several pounds.\n\nThe general shape of it: lower tension gives a larger sweet spot and more free power, which helps developing players and anyone whose clears are falling short. Higher tension gives control and feedback to players who already generate their own power and are losing shots long. If you want to model the trade before paying for it, the string tension calculator in the tools section walks through the same variables."
       },
       {
-        "heading": "Why we score strings separately",
-        "body": "A racket recommendation without string context is incomplete. IntoBadminton now treats strings as their own category because a forgiving racket with an unforgiving string can still feel wrong."
+        "heading": "How long a string actually lasts",
+        "body": "A string does not have to break to be finished. Tension loss begins immediately and is fastest in the first 48 hours after stringing, then continues steadily, and a bed that has gone soft costs you control long before anything snaps.\n\nA rough restringing cadence that works for most club players: restring roughly as many times a year as you play sessions in a typical week. Twice a week, twice a year, and so on. Players on thin gauges at high tension should assume more often than that.\n\nOne piece of context worth having before you blame a string: a break on a high-tension job at the top of a frame is usually a stringing or a mishit story rather than a bad packet of string. A break in the middle of the bed after months of play is simply the string reaching the end of its life."
+      },
+      {
+        "heading": "Cost per session beats price per set",
+        "body": "Set price is the wrong comparison. What decides whether a string is expensive is the total of string plus labour divided by the number of sessions before it goes dead.\n\nA 15-dollar string that stays good for twenty sessions is cheaper per session than an 11-dollar one you replace every eight, once the stringing fee is included — and stringing labour usually costs more than the string itself.\n\nThat arithmetic is also the argument against constantly chasing new strings. Pick one that matches the problem you identified, keep everything else constant, and give it three weeks. The difference between a string that suits you and one that does not is large; the difference between two well-chosen strings in the same category is much smaller than marketing suggests."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -3142,7 +3164,7 @@
     "slug": "li-ning-halbertec-5000-racket-review",
     "updatedAt": "2026-07-22",
     "title": "Li-Ning Halbertec 5000 review: soft-balance control stick",
-    "dek": "Halbertec 5000 is the easy entry to Li-Ning's Halbertec control family: a soft-enough shaft, light head feel, high forgiveness, and almost no single standout trait.",
+    "dek": "Halbertec 5000 is the cheapest way into Li-Ning's control family: flexible shaft, easy clears, low arm load, and no headline trait — which is rather the point.",
     "verdict": "Halbertec 5000 is a deliberately unexciting mid-tier control racket that earns its place through forgiveness rather than through any headline trait. Easy clears, low arm load, capable defence and genuinely good placement, at the cheapest entry point in the Halbertec line.",
     "sections": [
       {
@@ -3372,7 +3394,7 @@
     "slug": "li-ning-halbertec-9000-standalone-review",
     "updatedAt": "2026-07-22",
     "title": "Li-Ning Halbertec 9000 review: control peak with real pace",
-    "dek": "Halbertec 9000 is the peak control frame in Li-Ning's Halbertec series, and the one most often bought by accident. Two things get confused.",
+    "dek": "The base Halbertec 9000 is head-light, stiff and built for flat drives — and it is not the 9000 Power. Specs, line comparison, and who each version suits.",
     "verdict": "The base Halbertec 9000 is the fastest and firmest frame in Li-Ning's control family: head-light balance, the thinnest and hardest shaft in the line, and drive-war stability none of its siblings match. Control-first doubles players get a flagship that keeps up with their hands.\n\nBuy it deliberately, though.",
     "sections": [
       {
@@ -4030,7 +4052,7 @@
     "sections": [
       {
         "heading": "Overview",
-        "body": "Classic Tourney tier — not the Aero U shuttle review on the sibling URL.\n\nRSL splits its premium shuttles into two families, and the split confuses more buyers than it should. There is the numbered series — No.4, No.4 Plus, No.1 — and there is the Classic line, whose tournament tier is Classic Tourney. This review covers Classic Tourney; RSL's Aero U sits in the same competition range and is reviewed separately.\n\nClassic Tourney is the model that took over high-end expectations of the brand at club level. It is a BWF-approved tournament shuttle: 16 natural goose feathers on a natural cork base with a synthetic-leather wrap, speed 77, twelve shuttles per tube, each weighing 4.9–5.1 g against a BWF tolerance of 4.74–5.50 g, with roughly a 68 mm spread diameter.\n\nThe packaging announces the split before you open anything — black base, green type, deliberately unlike the gold box the numbered flagship arrives in. In the clubs where it turns up it tends to be somebody's standing order rather than an occasional treat: the tube that lives in the bag all season and gets contributed when a private game runs short."
+        "body": "RSL splits its premium shuttles into two families, and the split confuses more buyers than it should. There is the numbered series — No.4, No.4 Plus, No.1 — and there is the Classic line, whose tournament tier is Classic Tourney. This review covers Classic Tourney; RSL's Aero U sits in the same competition range and is reviewed separately.\n\nClassic Tourney is the model that took over high-end expectations of the brand at club level. It is a BWF-approved tournament shuttle: 16 natural goose feathers on a natural cork base with a synthetic-leather wrap, speed 77, twelve shuttles per tube, each weighing 4.9–5.1 g against a BWF tolerance of 4.74–5.50 g, with roughly a 68 mm spread diameter.\n\nThe packaging announces the split before you open anything — black base, green type, deliberately unlike the gold box the numbered flagship arrives in. In the clubs where it turns up it tends to be somebody's standing order rather than an occasional treat: the tube that lives in the bag all season and gets contributed when a private game runs short."
       },
       {
         "heading": "What the tube tells you first",
@@ -4067,41 +4089,33 @@
   {
     "slug": "rsl-aero-u-shuttle-review",
     "updatedAt": "2026-05-24",
-    "title": "RSL Aero U shuttle review: goose feather against the Classic benchmark",
-    "dek": "RSL splits its premium shuttles into two families, and the split confuses more buyers than it should.",
-    "verdict": "Classic Tourney is the value-per-shuttle pick in RSL's premium range: genuine goose-feather durability, unusually natural deceleration, and a failure curve you can actually read. It is the tube to standardise a club on when the numbered flagship costs more than the extra performance is worth.",
+    "title": "RSL Aero U shuttle review: late-rally consistency in a tube",
+    "dek": "RSL's Aero U is a BWF-approved goose-feather shuttle whose case is late-rally consistency: thicker vanes, cleaner second-half flight, speed 77.",
+    "verdict": "Aero U is a competition-range goose-feather shuttle whose argument is consistency late in a tube rather than anything you notice on the first rally. Thicker vanes, cleaner second-half trajectory, standard speed 77 and BWF approval — worth it for match play, harder to justify as a club's default box.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "RSL splits its premium shuttles into two families, and the split confuses more buyers than it should. There is the numbered series — No.4, No.4 Plus, No.1 — and there is the Classic line, whose tournament tier is Classic Tourney. This review covers Classic Tourney; RSL's Aero U sits in the same competition range and is reviewed separately.\n\nClassic Tourney is the model that took over high-end expectations of the brand at club level. It is a BWF-approved tournament shuttle: 16 natural goose feathers on a natural cork base with a synthetic-leather wrap, speed 77, twelve shuttles per tube, each weighing 4.9–5.1 g against a BWF tolerance of 4.74–5.50 g, with roughly a 68 mm spread diameter.\n\nThe packaging announces the split before you open anything — black base, green type, deliberately unlike the gold box the numbered flagship arrives in. In the clubs where it turns up it tends to be somebody's standing order rather than an occasional treat: the tube that lives in the bag all season and gets contributed when a private game runs short."
+        "body": "RSL's Aero line is where the brand puts its competition shuttles, and Aero U is the tier most club players end up weighing against the Classic and Supreme tubes on the same shelf. It is a BWF-approved goose-feather shuttle, speed 77, twelve to a tube, sitting at the same list price as Classic Tourney.\n\nCalling it a half-step above Aero C is the most accurate description of what you are buying. This is not a different design philosophy; it is the same shuttle concept with better feather stock, and the money goes into thickness and selection rather than into a new construction."
       },
       {
-        "heading": "What the tube tells you first",
-        "body": "Feather grade is the first honest signal, and it beats the numbered series: clean vanes, consistent thickness, and little colour spread between shuttles in the same tube. Quality control is visibly tighter than the tier below.\n\nOne detail is worth knowing before you count it as a defect. RSL selects left-wing feathers for consistency, but some tubes mix left-wing and right-wing feathers as a cost-management measure, and a mixed shuttle carries slightly more rotation variance. For amateur play that is a curiosity rather than a fault; if you are playing a serious draw, it is a reason to open your tubes the night before rather than on court.\n\nNew shuttles give clear feedback off the strings, hold a stable flight with no wobble, and follow the line the stroke intended. That last part is the quiet reason people stay on a shuttle: when the flight reports your swing honestly, you can actually diagnose your own shots."
+        "heading": "What the thicker feathers buy you",
+        "body": "Vane thickness is the specification that matters most in this tier, and it changes the shuttle's behaviour late rather than early. Straight out of the tube, a good Aero C and an Aero U fly close enough that most players would not separate them blind.\n\nThe difference appears somewhere around the middle of a shuttle's working life. Thicker vanes hold their shape under repeated smash contact, so the trajectory in the second half of a shuttle's life stays closer to what it was when new. That is the whole proposition: not a faster shuttle or a slower one, but a shuttle that stays itself for longer.\n\nFor rear-court players this shows up as trustworthy clear length deep into a tube. For doubles pairs it shows up as fewer arguments about whether a shuttle has gone, because the change when it comes is gradual rather than sudden."
       },
       {
-        "heading": "Deceleration is the standout",
-        "body": "Across RSL's range this is the most natural decelerator. Lifts and clears hit with enough arc stay inside the back line instead of drifting long, and the tube does not produce the occasional cannonball that flies a metre past everything else in the same box.\n\nConsistency within the tube is the point. A tube where shuttle three and shuttle nine need different swings is a tube that quietly trains bad length, and club players usually blame their own timing long before they blame the shuttle."
+        "heading": "Where it sits against Classic Tourney and Supreme",
+        "body": "RSL's competition range overlaps enough to be genuinely confusing, so it is worth being blunt about the split.\n\nClassic Tourney is the value-per-shuttle pick — same speed, same tube count, same BWF approval, and the tier a club standardises on when it is buying by the box. Aero U is the Aero-line equivalent aimed a notch higher, with late-rally consistency as its selling point. Supreme sits alongside both as the stable rear-guard model in the competition range and lists slightly cheaper.\n\nIf you are buying for a whole club, price per usable rally decides it and Classic Tourney is the default. If you are buying for a specific tournament weekend where a shuttle changing character mid-game would cost you points, Aero U's thicker vanes are the reason to pay attention to it."
       },
       {
-        "heading": "Why goose beats duck here",
-        "body": "Duck feather is the cheaper input and it is what the value tiers use. Goose vanes are thicker, stiffer along the quill and more uniform, and the difference shows up as durability far more than as flight.\n\nWear climbs smoothly and close to linearly with rally count instead of falling off a cliff. A goose shuttle absorbs more rallies at higher intensity, and — the part club players actually feel — its flight stays sane through the second half of its life. You can watch the vane tips fray, then split, then take full damage while the thick quills still hold the skirt in shape.\n\nThe failure mode matters as much as the lifespan. A tiring duck shuttle starts flying unpredictably while it still looks usable, which turns rallies into arguments about whether that was out. Classic Tourney degrades visibly and in the right order, so the decision to change shuttles is obvious to everyone on court.\n\nTwo habits extend that life further: avoid slicing hard across the skirt, which splits vanes early, and rotate the shuttle in hand rather than gripping the same feathers every serve."
-      },
-      {
-        "heading": "Speed 77 and your hall",
-        "body": "Shuttle speed numbers describe how far the shuttle flies, and the correct number is a property of the hall, not of the player. Higher numbers fly further. Warm, humid, low-altitude halls push shuttles further and want a slower number; cold halls and altitude want a faster one.\n\nSpeed 77 is the middle setting and the safe default for indoor club play in temperate conditions. If clears sail long all through a hot summer hall, the fix is a slower speed number rather than a stiffer racket or a tension change — and the same logic runs the other way in an unheated winter sports hall.\n\nStorage matters for the same reason. Feather shuttles are humidity-sensitive: a tube that has spent a week in a hot car flies differently from one kept at room temperature, and a tube stored against the outside wall of a bag gets crushed as well as cooked."
-      },
-      {
-        "heading": "Cost per session, done honestly",
-        "body": "Tube price is the wrong number to compare. The number that decides whether a shuttle is expensive is cost per session, which is tube price divided by the shuttles a session actually consumes.\n\nAt around thirty-five US dollars for twelve, Classic Tourney works out near three dollars a shuttle. A group that gets through four shuttles in a two-hour doubles session is spending about twelve dollars on shuttles — three dollars each across four players, or less than a coffee for the evening.\n\nRun the same arithmetic on a cheaper duck tube before assuming it wins. A value tube that costs forty per cent less but delivers forty per cent fewer usable rallies has saved you nothing and given you worse badminton in exchange. That is precisely where Classic Tourney earns its position: on durability per unit of cost it is ahead of the numbered flagship, and the experience along the way is the more likeable one."
+        "heading": "Speed 77 and hall conditions",
+        "body": "Aero U ships at speed 77, the middle setting, which is the right default for indoor club play in temperate conditions. Shuttle speed is a property of the hall rather than of the player: warm, humid, low-altitude halls make shuttles fly further and want a slower number, while cold halls and altitude want a faster one.\n\nIf clears sail long all evening, the fix is the shuttle speed rather than a tension change or a different racket. Storage follows the same physics — feather shuttles are humidity-sensitive, and a tube that has spent a week in a hot car will not fly like one kept at room temperature."
       },
       {
         "heading": "Who should buy it",
-        "body": "Clubs and competitive players who buy shuttles by the box, and anyone who wants tournament-grade flight without paying the marquee-line premium. It is also the sensible tube to standardise a group on, because consistency between tubes is what makes practice transferable to matches.\n\nSkip it if you are still learning to hit a clear — duck shuttles are cheaper and you will destroy them faster than any feather grade can fix — or if your league mandates a specific shuttle, in which case the mandate wins regardless of value."
+        "body": "Club and competitive players who care most about the back half of a shuttle's life, and anyone whose sessions run long enough that shuttle degradation genuinely affects results. It is a reasonable tournament-weekend tube.\n\nSkip it if you are buying in volume for general club nights, where Classic Tourney does the same job for the same money with a broader margin of value, or if you are still developing a clear, where the durability premium disappears into technique."
       },
       {
         "heading": "Verdict",
-        "body": "Classic Tourney is the value-per-shuttle pick in RSL's premium range: genuine goose-feather durability, unusually natural deceleration, and a failure curve you can actually read. It is the tube to standardise a club on when the numbered flagship costs more than the extra performance is worth.\n\nThe reservations are modest and worth stating: mixed-wing tubes turn up despite the left-wing-selected spec, and speed 77 will need rethinking if your hall runs hot. Neither changes the recommendation for club and tournament play."
+        "body": "Aero U is a competition-range goose-feather shuttle whose argument is consistency late in a tube rather than anything you notice on the first rally. Thicker vanes, cleaner second-half trajectory, standard speed 77 and BWF approval — worth it for match play, harder to justify as a club's default box.\n\nBuy it for the weekend that matters. For everything else in RSL's range, Classic Tourney remains the value answer at the same price."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6057,8 +6071,8 @@
   {
     "slug": "yonex-arcsaber-7-tour-review",
     "updatedAt": "2026-05-24",
-    "title": "Yonex Arcsaber 7 Tour review: the Pro's easier, cheaper sibling",
-    "dek": "Arcsaber 7 Tour is the middle rung of the current Arcsaber 7 generation, and the rung most club players should probably be looking at.",
+    "title": "Yonex Arcsaber 7 Tour review: the value pick of the Arcsaber 7 line",
+    "dek": "Arcsaber 7 Tour sits between Play and Pro, and it is the one most club players should buy. Measured specs, the tier ladder, and where it gives way.",
     "verdict": "Arcsaber 7 Tour is the sharper, slightly mischievous sibling to the Pro: head-heavier, easier to get length from, close on feel, and noticeably cheaper. For club doubles it is the better-value racket of the two and the one more players should be buying.",
     "sections": [
       {
@@ -6556,7 +6570,7 @@
     "slug": "yonex-astrox-99-pro-3-deep-dive",
     "updatedAt": "2026-07-20",
     "title": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
-    "dek": "This page covers the current Astrox 99 Pro — the third generation in the Astrox 99 family, after the 2018 Astrox 99 and the first 99 Pro revision.",
+    "dek": "The third-generation Astrox 99 Pro returns to 76 holes with full-racket Namd. A rear-court hammer with a stamina cost — and how it stacks up against the 100ZZ.",
     "verdict": "The new 99 Pro blends the early Astrox 99 smash weight with Pro-era direction and pushes the offence further than either previous generation. The ceiling is high and the energy cost is high with it — not a casual club all-rounder.\n\nAgainst the 100ZZ it is the heavier, more linear choice rather than the faster one.",
     "sections": [
       {
@@ -6758,7 +6772,7 @@
     "slug": "yonex-comfort-z3-shoes-review",
     "updatedAt": "2026-05-24",
     "title": "Yonex Power Cushion Comfort Z3: cushion-first match shoe",
-    "dek": "I switched to the Power Cushion Comfort Z3 after the Aerus Z2 and kept it as my match shoe, because the trade-off finally made sense: more weight on the scale, less…",
+    "dek": "Comfort Z3 trades 130 g against the Aerus Z2 for landing protection that lasts a full evening. Weight, break-in, fit, and where it sits in the Z3 trio.",
     "verdict": "Comfort Z3 is the cushion-first shoe in Yonex's modern Z3 trio, and it is the one I keep for matches. It trades a noticeable amount of weight and a fraction of a first step for landing protection that holds up across a full evening.",
     "sections": [
       {
