@@ -263,21 +263,43 @@
   {
     "slug": "badminton-string-selector",
     "updatedAt": "2026-04-28",
-    "title": "BG80, EXBOLT 63, or BG65: choosing strings by outcome",
-    "dek": "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
-    "verdict": "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+    "title": "Best badminton string: choose by the problem you are fixing",
+    "dek": "Strings change control, repulsion, comfort and cost per session more than most players expect. Here is how to pick one by the problem it solves.",
+    "verdict": "There is no single best badminton string, but there is a best string for the thing your game is currently missing. Pick the gauge first, then the character, then the tension — and judge the result at week three rather than week one.",
     "sections": [
       {
         "heading": "Start with what you want to fix",
-        "body": "Strings change control, repulsion, comfort, and cost per session more than many players expect. If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound."
+        "body": "Most string advice starts with a brand name. That is backwards, and it is why so many players end up with an expensive string that suits somebody else's game. If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.\n\nThat framing matters because string is the cheapest meaningful change you can make to a racket. A restring costs a fraction of a new frame and changes more about how the racket feels than most players expect — often more than moving one weight class or two pounds of tension.\n\nIt also means the honest answer to 'what is the best badminton string' is a question back: what is your racket currently not doing for you? A forgiving racket with an unforgiving string still feels wrong, and no amount of spending fixes a mismatch you have not diagnosed.",
+        "glossaryLinks": [
+          {
+            "term": "Repulsion",
+            "id": "repulsion"
+          }
+        ]
+      },
+      {
+        "heading": "Gauge is the first decision",
+        "body": "Badminton strings are sold by thickness, usually between 0.70 mm and 0.61 mm, and this single number does more to set the character of a setup than the brand on the packet.\n\nThinner string bites into the shuttle cork more, which produces more repulsion, more grip on slices, and a crisper sound. It also breaks sooner and loses tension faster. Thicker string lasts longer, holds tension better and feels duller in exchange.\n\nMost club players are well served at 0.68 mm or 0.65 mm. Moving from 0.68 mm to 0.63 mm is a larger change in feel than adding two pounds of tension, so change one of the two at a time or you will not know which did what.\n\nThe common mistake is buying a 0.63 mm string to gain power and then stringing it high to gain more. Thin string at high tension is a narrow, unforgiving setup that punishes exactly the late contact that tired club players produce in the third game."
+      },
+      {
+        "heading": "The strings most club players end up choosing",
+        "body": "BG65 is the conservative durability pick — around 11 US dollars, on sale since 1990, and still the sensible answer when cost per session matters more than maximum bite or sound. It suits beginners and anyone who breaks strings frequently.\n\nBG80 is the control-first reference at around 13 dollars. It is built for players who generate their own power and want bite on cuts, drops and net shots, and it holds tension well. BG80 Power is its repulsion-forward sibling: the same 0.68 mm gauge with a polymer mix tuned for extra smash power, trading away a little net touch.\n\nEXBOLT 63 sits around 15 dollars and is the lively, crisp option for players who want repulsion and sound in fast doubles, provided they can tolerate a smaller timing window than a thicker durability string. EXBOLT 68 is the 0.68 mm power-and-durability version — harder than the 63 at mid tension, with friendlier damping than classic BG80.\n\nVictor's VBS-63 is the main alternative at that thin gauge, around 12 dollars, and it is a genuinely different string rather than a cheaper clone."
+      },
+      {
+        "heading": "EXBOLT 63 vs VBS-63",
+        "body": "Both are 0.63 mm high-elasticity strings aimed at players chasing repulsion, and they come up against each other constantly at the stringer.\n\nVBS-63 is firmer and wilder than EXBOLT 63 for many players, and it demands clean timing to reward you. When contact is good it is the more explosive of the two. When contact is late, it is the more punishing.\n\nEXBOLT 63 is the more forgiving of the pair and the easier one to live with across a full evening of club doubles. If you are choosing blind, start there; if you already know your timing holds up under fatigue, VBS-63 is worth trying and costs slightly less."
       },
       {
         "heading": "Match tension to level",
-        "body": "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better ROI by changing two pounds at a time and logging week-one versus week-three feel."
+        "body": "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better returns by changing two pounds at a time and logging week-one versus week-three feel.\n\nTreat the tension printed on your racket as a ceiling rather than a target. Warranty limits describe what the frame survives, not what produces your best badminton, and the gap between those two numbers is usually several pounds.\n\nThe general shape of it: lower tension gives a larger sweet spot and more free power, which helps developing players and anyone whose clears are falling short. Higher tension gives control and feedback to players who already generate their own power and are losing shots long. If you want to model the trade before paying for it, the string tension calculator in the tools section walks through the same variables."
       },
       {
-        "heading": "Why we score strings separately",
-        "body": "A racket recommendation without string context is incomplete. IntoBadminton now treats strings as their own category because a forgiving racket with an unforgiving string can still feel wrong."
+        "heading": "How long a string actually lasts",
+        "body": "A string does not have to break to be finished. Tension loss begins immediately and is fastest in the first 48 hours after stringing, then continues steadily, and a bed that has gone soft costs you control long before anything snaps.\n\nA rough restringing cadence that works for most club players: restring roughly as many times a year as you play sessions in a typical week. Twice a week, twice a year, and so on. Players on thin gauges at high tension should assume more often than that.\n\nOne piece of context worth having before you blame a string: a break on a high-tension job at the top of a frame is usually a stringing or a mishit story rather than a bad packet of string. A break in the middle of the bed after months of play is simply the string reaching the end of its life."
+      },
+      {
+        "heading": "Cost per session beats price per set",
+        "body": "Set price is the wrong comparison. What decides whether a string is expensive is the total of string plus labour divided by the number of sessions before it goes dead.\n\nA 15-dollar string that stays good for twenty sessions is cheaper per session than an 11-dollar one you replace every eight, once the stringing fee is included — and stringing labour usually costs more than the string itself.\n\nThat arithmetic is also the argument against constantly chasing new strings. Pick one that matches the problem you identified, keep everything else constant, and give it three weeks. The difference between a string that suits you and one that does not is large; the difference between two well-chosen strings in the same category is much smaller than marketing suggests."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -3126,24 +3148,36 @@
     "slug": "li-ning-halbertec-5000-racket-review",
     "updatedAt": "2026-07-22",
     "title": "Li-Ning Halbertec 5000 review: soft-balance control stick",
-    "dek": "Halbertec 5000 is the sugar entry of the Halbertec control family: soft-enough shaft, light head feel, high forgiveness, and almost no single “wow” trait. That …",
-    "verdict": "Halbertec 5000 is the sugar entry of the Halbertec control family: soft-enough shaft, light head feel, high forgiveness, and almost no single “wow” trait.",
+    "dek": "Halbertec 5000 is the cheapest way into Li-Ning's control family: flexible shaft, easy clears, low arm load, and no headline trait — which is rather the point.",
+    "verdict": "Halbertec 5000 is a deliberately unexciting mid-tier control racket that earns its place through forgiveness rather than through any headline trait. Easy clears, low arm load, capable defence and genuinely good placement, at the cheapest entry point in the Halbertec line.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "Halbertec 5000 is the sugar entry of the Halbertec control family: soft-enough shaft, light head feel, high forgiveness, and almost no single “wow” trait. That boredom is why some keep it for years while flashier frames rotate out. White / crystal-purple asymmetric paint with orange marks; weapon-line frame graphics and HALBERTEC callouts."
+        "body": "Halbertec 5000 is the easy entry to Li-Ning's Halbertec control family: a soft-enough shaft, light head feel, high forgiveness, and almost no single standout trait. That flatness is the point, and it is why the 5000 survives in bags for years while flashier frames get sold on after a season. It is the racket nobody writes home about and nobody regrets.\n\nCosmetically it runs white and crystal-purple in an asymmetric layout with orange marks, weapon-line frame graphics, and Halbertec callouts. At roughly 90 US dollars it is the cheapest way into the series, sitting well under the 7000, 8000 and 9000.\n\nThe honest framing for a buyer: this is a control-and-continuity racket for players who are still building a swing, or for attackers whose arm needs a night off. It is not a stepping stone that you are expected to outgrow in three months, and it is not a flagship in a cheaper paint job either."
       },
       {
         "heading": "Specs",
-        "body": "4U common. One play setup ~88.6 g at 308 mm with two overgrips, cap off. 6.8 mm shaft; slim fluid box keeps swing lively despite paper balance. Versus 3U Halbertec 8000: harder face on 5000 relative to that blank’s sweetness, less shaft bend, less head mass, slightly less precision — and far less smash authority."
+        "body": "Commonly sold in 4U with G5 and G6 grips. One representative playing setup came out around 88.6 g at 308 mm balance with two overgrips and the cap removed — that balance number reads head-heavy on paper, but the slim fluid box section keeps the swing lively in hand.\n\nThe shaft measures 6.8 mm, the same nominal thickness as the 7000 and 8000, but tuned flexible rather than medium. Catalogue guidance puts the string range at 20 to 30 lb, with even balance and a beginner-to-club recommendation.\n\nRead those two numbers together and the frame makes sense. A 308 mm balance with a flexible shaft is a combination that loads easily and returns generously, which is exactly what a developing player needs and exactly what a power player will find soft."
+      },
+      {
+        "heading": "Halbertec 5000 vs Halbertec 8000",
+        "body": "Against a 3U Halbertec 8000, the 5000 has a harder face relative to that frame's sweetness, less shaft bend, less head mass, and slightly less precision — and far less smash authority.\n\nThe practical gap is finishing power. The 8000 nails shuttles to the floor; the 5000 presses. On placement work the two are closer than the price difference suggests, and on continuous rallying the 5000 is arguably the easier racket to play well with for a whole evening.\n\nThe 9000 and 9000 Power sit further away still. Both are stiff, fast and firm, and both ask the player to bring the power. If you are choosing between the 5000 and either 9000, you are choosing between two different sports."
       },
       {
         "heading": "On court",
-        "body": "Passive clears and defence are the comfort zone — easy depth without shock. Attack needs active arm; continuous press works, floor-nail kills do not. Control desire rises naturally: soft drops on N65-class string, stable net, clean push-intercepts. Shot speed sits behind 8000; rebound is still ahead of many older mid-tier frames. Low burden even around 30 lb on 4U."
+        "body": "Passive clears and defence are the comfort zone. Depth comes easily and without shock through the arm, which is the single biggest reason this frame suits players who are still working on rear-court technique — it does not punish a late contact the way a stiff flagship does.\n\nAttack requires an active arm. Continuous downward pressure works fine, and it is a genuinely effective doubles pattern with this racket, but the outright kill that pins a shuttle to the floor is not on the menu. Accepting that early is the difference between enjoying this racket and being disappointed by it.\n\nControl is where the desire to keep playing it comes from. Soft drops land well on an N65-class string, the net game is stable, and push-intercepts come off cleanly. Shot speed sits behind the 8000, but rebound is still ahead of many older mid-tier frames, so it does not feel dated.\n\nThe load on the arm stays low even around 30 lb in 4U, which is unusual at this tier and matters for anyone playing several sessions a week."
+      },
+      {
+        "heading": "Stringing and tension",
+        "body": "The catalogue range of 20 to 30 lb is wide, and the useful part of it for most owners is the lower half.\n\nA flexible shaft with a 308 mm balance is already doing the work of generating repulsion. Stringing high on top of that removes the forgiveness you paid for and gives back very little, because the frame cannot convert the extra tension into the crisp response a stiffer racket would. Somewhere in the low-to-mid twenties with a durable multifilament keeps the character intact.\n\nIf you want more bite for slices and drops, change the string before changing the tension. A rougher control string at the same tension shifts the feel more usefully here than adding two pounds."
       },
       {
         "heading": "Who it suits",
-        "body": "Beginners through intermediates, flexible / control patterns, and tired attackers who want a “rest racket.” Skip if you want Halbertec 8000/9000 attack or crisp speed-frame pop. Cold mid-tier hit that stays in the bag because it never fights you."
+        "body": "Beginners through intermediates, players with flexible or control-led patterns, and attackers who want a lower-effort second racket for club nights when the arm is tired.\n\nSkip it if you want the 8000 or 9000's attack, or the crisp pop of a dedicated speed frame. Skip it too if you already generate your own power — you will feel the shaft giving way under a full swing and spend the evening wishing for something firmer."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Halbertec 5000 is a deliberately unexciting mid-tier control racket that earns its place through forgiveness rather than through any headline trait. Easy clears, low arm load, capable defence and genuinely good placement, at the cheapest entry point in the Halbertec line.\n\nIt stays in the bag because it never fights you. That is a real quality, and it is worth more to a developing player than a flagship they cannot yet load."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -3344,24 +3378,50 @@
     "slug": "li-ning-halbertec-9000-standalone-review",
     "updatedAt": "2026-07-22",
     "title": "Li-Ning Halbertec 9000 review: control peak with real pace",
-    "dek": "Halbertec 9000 is the series “peak” control frame: matte high-saturation paint with fluorescent accents on black, box head, full grooves, thinnest Halbertec sha…",
-    "verdict": "Halbertec 9000 is the series “peak” control frame: matte high-saturation paint with fluorescent accents on black, box head, full grooves, thinnest Halbertec shaft in the line, and a hard-crisp hit that still points like a control racket.",
+    "dek": "The base Halbertec 9000 is head-light, stiff and built for flat drives — and it is not the 9000 Power. Specs, line comparison, and who each version suits.",
+    "verdict": "The base Halbertec 9000 is the fastest and firmest frame in Li-Ning's control family: head-light balance, the thinnest and hardest shaft in the line, and drive-war stability none of its siblings match. Control-first doubles players get a flagship that keeps up with their hands.\n\nBuy it deliberately, though.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "Halbertec 9000 is the series “peak” control frame: matte high-saturation paint with fluorescent accents on black, box head, full grooves, thinnest Halbertec shaft in the line, and a hard-crisp hit that still points like a control racket. Versus 5000 / 7000 / 8000 it is the fastest and firmest, with enough head mass to borrow without jumping to pure attack SKUs."
+        "body": "Halbertec 9000 is the peak control frame in Li-Ning's Halbertec series, and the one most often bought by accident. Two things get confused. The base 9000 and the later 9000 Power are different rackets with different balance points and different buyers. And the series numbering is often read as a straight ladder where a bigger number means more attack, which it is not. This page covers the base 9000; the Power tune has its own review.\n\nWhat Li-Ning built here is a repositioning of the Halbertec idea toward speed. Against the 8000 the frame is thinner and lighter, the shaft is stiffer, and the swing is faster — the marketing settled on control king. Matte high-saturation paint carries fluorescent accents on black, with a box head, full grooves, and the thinnest shaft in the family, yet the hit still points like a control racket rather than a hammer. Against 5000, 7000 and 8000 it is the fastest and firmest of the four, with enough head mass to borrow power without crossing into dedicated attack frames.",
+        "glossaryLinks": [
+          {
+            "term": "Head-light",
+            "id": "head-light"
+          },
+          {
+            "term": "Drive",
+            "id": "drive"
+          }
+        ]
       },
       {
         "heading": "Specs",
-        "body": "3U / 4U G5; warranty ≤31 / 30 lb. 76-hole full-groove box; length 675 mm. Sample empties ~81.8 g (4U) / ~85.3 g (3U). Play balance examples: 3U ~299 mm, 4U ~295 mm. Shaft marketed 6.6 mm (painted ~6.89 mm) — thinner than 7000/8000’s 6.8 mm — and the hardest hand-bend in the family, fast recovery. Long handle ~210 mm; eight connected grommets at 12 o’clock for tip support and a bit of head mass. ULTRA high-elastic carbon in the shaft stack."
+        "body": "Sold in 3U and 4U with G5 grips, warranty tension up to 31 lb in 3U and 30 lb in 4U. The frame is a 76-hole full-groove box at the standard 675 mm length.\n\nSample builds come out around 81.8 g empty in 4U and 85.3 g in 3U, with playing balance near 295 mm in 4U and 299 mm in 3U. That balance figure is the number to hold onto: head-light for a flagship, and the reason the racket feels quick rather than heavy despite the firm hit.\n\nThe shaft is marketed at 6.6 mm and measures nearer 6.89 mm with paint on, still thinner than the 6.8 mm shafts on the 7000 and 8000. It is the hardest hand-bend in the family with fast recovery, built on an ultra high-elastic carbon stack. The handle runs long at roughly 210 mm, and eight connected grommets at twelve o'clock support the tip while adding a little mass where it helps. Catalogue pricing sits around 215 US dollars, above the 8000 and below the Power."
       },
       {
-        "heading": "Versus the line (short)",
-        "body": "4U head feel: 9000 > 8000 >> 7000 / 5000. Entry still closer to sugar 5000 than to stiff attack flags — swing can feel freer than a 302 mm 7000. Hit: crisp frame + hard shaft, strong transmission, little buzz. Pointing is Halbertec DNA; 9000’s rigid face shortens contact versus 7000’s brush heaven — hold is low, accuracy stays high. Flat-drive wars favour 9000 among the four: small-mid box, full grooves, low drag, stable section. Attack map: 5000 easy continuous; 7000 sneaky placement with some sting; 8000 reliable accuracy; 9000 hardest pop in the control set."
+        "heading": "Halbertec 9000 vs 9000 Power",
+        "body": "This is the question most buyers actually arrive with, so here is the short answer before the detail.\n\nThe base 9000 is head-light and stiff, catalogued around 297 mm balance, with a sensible tension range starting at 20 lb. The 9000 Power is head-heavy and extra-stiff, catalogued around 305 mm, and starts at 22 lb. The Power is a separate tune for players who already generate racket-head speed and want the frame to hit back harder. The base 9000 is for players who want the same control DNA with a faster, lighter swing.\n\nIf you play front and mid court in doubles, drive constantly, and want a racket that keeps up with your hands, the base 9000 is the one. If you finish rallies from the back and want mass behind the shuttle, the Power justifies its extra outlay. Buying the Power because it is the higher number is the most common expensive mistake in this line."
+      },
+      {
+        "heading": "Where it sits in the line",
+        "body": "Head feel in 4U runs 9000 above 8000, and both comfortably above 7000 and 5000. Even so, the entry threshold sits closer to the forgiving 5000 than to a stiff attack flagship — the swing can feel freer than a 302 mm 7000 despite the harder shaft.\n\nThe hit is crisp frame plus hard shaft: strong transmission, very little buzz. Pointing accuracy is Halbertec DNA across the series, and the 9000's rigid face shortens contact compared with the 7000's brush-friendly hold. Hold is low, accuracy stays high.\n\nThe attack map across the four is worth memorising. The 5000 gives easy continuous pressure and no real finishing shot. The 7000 offers sneaky placement with some sting. The 8000 delivers reliable accuracy. The 9000 has the hardest pop of the control set without becoming an attack racket."
+      },
+      {
+        "heading": "On court",
+        "body": "Flat-drive exchanges are where the 9000 separates itself. A small-to-mid box frame with full grooves cuts drag, and the section stays stable through fast blocks, so drive wars in level doubles favour it over the rest of the family.\n\nDefence benefits from the same properties. Head-light balance means the racket arrives at the shuttle, and the stiff shaft returns a clean block without the mushy delay softer frames give against hard smashes. Lifts want a deliberate arm — this is not a frame that produces length for free.\n\nAttack is real but conditional. The connected top grommets and firm face give a genuine finishing shot when you swing through it; below that threshold the shuttle travels fast rather than down. Players expecting a smash weapon should read that as the trade that makes the racket quick, not as a fault."
+      },
+      {
+        "heading": "Stringing and setup",
+        "body": "Warranty runs to 31 lb in 3U and 30 lb in 4U, with catalogue guidance of 20 to 30 lb. That top end is not a target for most club players.\n\nThe stiff shaft already shortens dwell time, so pairing high tension with a hard string doubles down on a quality this frame has in abundance. Most club players get more out of the mid-twenties with a string that adds a little repulsion — keeping the control the frame supplies and buying back some of the free power it does not."
       },
       {
         "heading": "Who it suits",
-        "body": "Players who want Halbertec control with flagship pace and firm feedback — doubles flat-drive and placement first. Skip if you need 7000’s sticky fine touch, 5000’s maximum sugar, or 9000 Power’s separate tune. This article is the base 9000; Power stays on its own URL."
+        "body": "Players who want Halbertec control with flagship pace and firm feedback: doubles specialists who live on flat drives and placement, and anyone who found the 8000 accurate but half a step slow.\n\nSkip it if you want the 7000's sticky fine touch, the 5000's maximum forgiveness, or the 9000 Power's separate attack tune. Skip it too if you need a racket to supply power you cannot generate yourself."
+      },
+      {
+        "heading": "Verdict",
+        "body": "The base Halbertec 9000 is the fastest and firmest frame in Li-Ning's control family: head-light balance, the thinnest and hardest shaft in the line, and drive-war stability none of its siblings match. Control-first doubles players get a flagship that keeps up with their hands.\n\nBuy it deliberately, though. The 9000 Power is a different racket with a different balance and a different buyer, and the higher number is not an upgrade path."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -3972,19 +4032,39 @@
     "updatedAt": "2026-05-22",
     "title": "RSL Classic Tourney shuttlecock review: a value-tier goose-feather that competes with No.1",
     "dek": "RSL's Classic Tourney is the brand's value-priced premium goose-feather shuttle — BWF-approved, durable, and price-competitive against the marquee No.1 line.",
-    "verdict": "A genuine premium goose-feather shuttle at a meaningfully lower price than RSL No.1; the better value-per-shuttle pick for amateur tournament-quality play.",
+    "verdict": "Classic Tourney is the value-per-shuttle pick in RSL's premium range: genuine goose-feather durability, unusually natural deceleration, and a failure curve you can actually read. It is the tube to standardise a club on when the numbered flagship costs more than the extra performance is worth.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "Classic Tourney tier — not the Aero U shuttle review on the sibling URL.\n\nFinished the last post and immediately thought of another RSL — the one that took over my high-end shuttle expectations: Classic.\n\nIn my circle one player runs Classic as daily stock. Spare time: green-plate 3 Series to the neighbourhood court, or mahjong — local young-boss energy. Private games short on shuttles? He would toss a few in to save face.\n\nPackaging already feels different — black base, green type, eye-catching, faint Monster landmine vibe. No. 1’s gold box hits harder first impression; Classic’s unofficial name pulls the curious.\n\nShame the shorthand “Ya C” in Cantonese echoes a famous movie line — mildly mocking."
+        "body": "RSL splits its premium shuttles into two families, and the split confuses more buyers than it should. There is the numbered series — No.4, No.4 Plus, No.1 — and there is the Classic line, whose tournament tier is Classic Tourney. This review covers Classic Tourney; RSL's Aero U sits in the same competition range and is reviewed separately.\n\nClassic Tourney is the model that took over high-end expectations of the brand at club level. It is a BWF-approved tournament shuttle: 16 natural goose feathers on a natural cork base with a synthetic-leather wrap, speed 77, twelve shuttles per tube, each weighing 4.9–5.1 g against a BWF tolerance of 4.74–5.50 g, with roughly a 68 mm spread diameter.\n\nThe packaging announces the split before you open anything — black base, green type, deliberately unlike the gold box the numbered flagship arrives in. In the clubs where it turns up it tends to be somebody's standing order rather than an occasional treat: the tube that lives in the bag all season and gets contributed when a private game runs short."
       },
       {
-        "heading": "Tube open, feel confirmed",
-        "body": "Mixed left- and right-hand feathers. Rotation variance means not every match need satisfied — feels authentic though.\n\nFeather grade beats the numbered series: clean vanes, assured thickness, low colour spread within a tube. QC clearly tighter.\n\nNew shuttles: clear hit feedback, stable flight, no wobble, path matches stroke intent — steady emotional drip from shot-quality honesty.\n\nAlso the most natural deceleration among RSL I have used. Lifts and clears, arc high enough, stay in — no random tube “cannonballs”."
+        "heading": "What the tube tells you first",
+        "body": "Feather grade is the first honest signal, and it beats the numbered series: clean vanes, consistent thickness, and little colour spread between shuttles in the same tube. Quality control is visibly tighter than the tier below.\n\nOne detail is worth knowing before you count it as a defect. RSL selects left-wing feathers for consistency, but some tubes mix left-wing and right-wing feathers as a cost-management measure, and a mixed shuttle carries slightly more rotation variance. For amateur play that is a curiosity rather than a fault; if you are playing a serious draw, it is a reason to open your tubes the night before rather than on court.\n\nNew shuttles give clear feedback off the strings, hold a stable flight with no wobble, and follow the line the stroke intended. That last part is the quiet reason people stay on a shuttle: when the flight reports your swing honestly, you can actually diagnose your own shots."
       },
       {
-        "heading": "Why goose wins here",
-        "body": "Classic goose feathers do what duck cannot. Durability leads.\n\nWear climbs smoothly and linearly with rally count — more rallies, higher intensity, second-half flight stays sane. Avoid split feathers and you can watch tips explode through full vane damage while thick shafts stay firm.\n\nAt current price, durability value beats No. 1 — and the on-court experience is more likeable anyway."
+        "heading": "Deceleration is the standout",
+        "body": "Across RSL's range this is the most natural decelerator. Lifts and clears hit with enough arc stay inside the back line instead of drifting long, and the tube does not produce the occasional cannonball that flies a metre past everything else in the same box.\n\nConsistency within the tube is the point. A tube where shuttle three and shuttle nine need different swings is a tube that quietly trains bad length, and club players usually blame their own timing long before they blame the shuttle."
+      },
+      {
+        "heading": "Why goose beats duck here",
+        "body": "Duck feather is the cheaper input and it is what the value tiers use. Goose vanes are thicker, stiffer along the quill and more uniform, and the difference shows up as durability far more than as flight.\n\nWear climbs smoothly and close to linearly with rally count instead of falling off a cliff. A goose shuttle absorbs more rallies at higher intensity, and — the part club players actually feel — its flight stays sane through the second half of its life. You can watch the vane tips fray, then split, then take full damage while the thick quills still hold the skirt in shape.\n\nThe failure mode matters as much as the lifespan. A tiring duck shuttle starts flying unpredictably while it still looks usable, which turns rallies into arguments about whether that was out. Classic Tourney degrades visibly and in the right order, so the decision to change shuttles is obvious to everyone on court.\n\nTwo habits extend that life further: avoid slicing hard across the skirt, which splits vanes early, and rotate the shuttle in hand rather than gripping the same feathers every serve."
+      },
+      {
+        "heading": "Speed 77 and your hall",
+        "body": "Shuttle speed numbers describe how far the shuttle flies, and the correct number is a property of the hall, not of the player. Higher numbers fly further. Warm, humid, low-altitude halls push shuttles further and want a slower number; cold halls and altitude want a faster one.\n\nSpeed 77 is the middle setting and the safe default for indoor club play in temperate conditions. If clears sail long all through a hot summer hall, the fix is a slower speed number rather than a stiffer racket or a tension change — and the same logic runs the other way in an unheated winter sports hall.\n\nStorage matters for the same reason. Feather shuttles are humidity-sensitive: a tube that has spent a week in a hot car flies differently from one kept at room temperature, and a tube stored against the outside wall of a bag gets crushed as well as cooked."
+      },
+      {
+        "heading": "Cost per session, done honestly",
+        "body": "Tube price is the wrong number to compare. The number that decides whether a shuttle is expensive is cost per session, which is tube price divided by the shuttles a session actually consumes.\n\nAt around thirty-five US dollars for twelve, Classic Tourney works out near three dollars a shuttle. A group that gets through four shuttles in a two-hour doubles session is spending about twelve dollars on shuttles — three dollars each across four players, or less than a coffee for the evening.\n\nRun the same arithmetic on a cheaper duck tube before assuming it wins. A value tube that costs forty per cent less but delivers forty per cent fewer usable rallies has saved you nothing and given you worse badminton in exchange. That is precisely where Classic Tourney earns its position: on durability per unit of cost it is ahead of the numbered flagship, and the experience along the way is the more likeable one."
+      },
+      {
+        "heading": "Who should buy it",
+        "body": "Clubs and competitive players who buy shuttles by the box, and anyone who wants tournament-grade flight without paying the marquee-line premium. It is also the sensible tube to standardise a group on, because consistency between tubes is what makes practice transferable to matches.\n\nSkip it if you are still learning to hit a clear — duck shuttles are cheaper and you will destroy them faster than any feather grade can fix — or if your league mandates a specific shuttle, in which case the mandate wins regardless of value."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Classic Tourney is the value-per-shuttle pick in RSL's premium range: genuine goose-feather durability, unusually natural deceleration, and a failure curve you can actually read. It is the tube to standardise a club on when the numbered flagship costs more than the extra performance is worth.\n\nThe reservations are modest and worth stating: mixed-wing tubes turn up despite the left-wing-selected spec, and speed 77 will need rethinking if your hall runs hot. Neither changes the recommendation for club and tournament play."
       }
     ],
     "cta": "Use the shuttle finder with tournament-grade or goose-feather flags to compare the Classic Tourney against RSL No.1 and Aero U.",
@@ -3993,21 +4073,33 @@
   {
     "slug": "rsl-aero-u-shuttle-review",
     "updatedAt": "2026-05-24",
-    "title": "Rsl Aero U Shuttle Review",
-    "dek": "Finished the last post and immediately thought of another RSL — the one that took over my high-end shuttle expectations: Classic.\n\nIn my circle one player runs …",
-    "verdict": "Finished the last post and immediately thought of another RSL — the one that took over my high-end shuttle expectations: Classic.",
+    "title": "RSL Aero U shuttle review: late-rally consistency in a tube",
+    "dek": "RSL's Aero U is a BWF-approved goose-feather shuttle whose case is late-rally consistency: thicker vanes, cleaner second-half flight, speed 77.",
+    "verdict": "Aero U is a competition-range goose-feather shuttle whose argument is consistency late in a tube rather than anything you notice on the first rally. Thicker vanes, cleaner second-half trajectory, standard speed 77 and BWF approval — worth it for match play, harder to justify as a club's default box.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "Finished the last post and immediately thought of another RSL — the one that took over my high-end shuttle expectations: Classic.\n\nIn my circle one player runs Classic as daily stock. Spare time: green-plate 3 Series to the neighbourhood court, or mahjong — local young-boss energy. Private games short on shuttles? He would toss a few in to save face.\n\nPackaging already feels different — black base, green type, eye-catching, faint Monster landmine vibe. No. 1’s gold box hits harder first impression; Classic’s unofficial name pulls the curious.\n\nShame the shorthand “Ya C” in Cantonese echoes a famous movie line — mildly mocking."
+        "body": "RSL's Aero line is where the brand puts its competition shuttles, and Aero U is the tier most club players end up weighing against the Classic and Supreme tubes on the same shelf. It is a BWF-approved goose-feather shuttle, speed 77, twelve to a tube, sitting at the same list price as Classic Tourney.\n\nCalling it a half-step above Aero C is the most accurate description of what you are buying. This is not a different design philosophy; it is the same shuttle concept with better feather stock, and the money goes into thickness and selection rather than into a new construction."
       },
       {
-        "heading": "Tube open, feel confirmed",
-        "body": "Mixed left- and right-hand feathers. Rotation variance means not every match need satisfied — feels authentic though.\n\nFeather grade beats the numbered series: clean vanes, assured thickness, low colour spread within a tube. QC clearly tighter.\n\nNew shuttles: clear hit feedback, stable flight, no wobble, path matches stroke intent — steady emotional drip from shot-quality honesty.\n\nAlso the most natural deceleration among RSL I have used. Lifts and clears, arc high enough, stay in — no random tube “cannonballs”."
+        "heading": "What the thicker feathers buy you",
+        "body": "Vane thickness is the specification that matters most in this tier, and it changes the shuttle's behaviour late rather than early. Straight out of the tube, a good Aero C and an Aero U fly close enough that most players would not separate them blind.\n\nThe difference appears somewhere around the middle of a shuttle's working life. Thicker vanes hold their shape under repeated smash contact, so the trajectory in the second half of a shuttle's life stays closer to what it was when new. That is the whole proposition: not a faster shuttle or a slower one, but a shuttle that stays itself for longer.\n\nFor rear-court players this shows up as trustworthy clear length deep into a tube. For doubles pairs it shows up as fewer arguments about whether a shuttle has gone, because the change when it comes is gradual rather than sudden."
       },
       {
-        "heading": "Why goose wins here",
-        "body": "Classic goose feathers do what duck cannot. Durability leads.\n\nWear climbs smoothly and linearly with rally count — more rallies, higher intensity, second-half flight stays sane. Avoid split feathers and you can watch tips explode through full vane damage while thick shafts stay firm.\n\nAt current price, durability value beats No. 1 — and the on-court experience is more likeable anyway."
+        "heading": "Where it sits against Classic Tourney and Supreme",
+        "body": "RSL's competition range overlaps enough to be genuinely confusing, so it is worth being blunt about the split.\n\nClassic Tourney is the value-per-shuttle pick — same speed, same tube count, same BWF approval, and the tier a club standardises on when it is buying by the box. Aero U is the Aero-line equivalent aimed a notch higher, with late-rally consistency as its selling point. Supreme sits alongside both as the stable rear-guard model in the competition range and lists slightly cheaper.\n\nIf you are buying for a whole club, price per usable rally decides it and Classic Tourney is the default. If you are buying for a specific tournament weekend where a shuttle changing character mid-game would cost you points, Aero U's thicker vanes are the reason to pay attention to it."
+      },
+      {
+        "heading": "Speed 77 and hall conditions",
+        "body": "Aero U ships at speed 77, the middle setting, which is the right default for indoor club play in temperate conditions. Shuttle speed is a property of the hall rather than of the player: warm, humid, low-altitude halls make shuttles fly further and want a slower number, while cold halls and altitude want a faster one.\n\nIf clears sail long all evening, the fix is the shuttle speed rather than a tension change or a different racket. Storage follows the same physics — feather shuttles are humidity-sensitive, and a tube that has spent a week in a hot car will not fly like one kept at room temperature."
+      },
+      {
+        "heading": "Who should buy it",
+        "body": "Club and competitive players who care most about the back half of a shuttle's life, and anyone whose sessions run long enough that shuttle degradation genuinely affects results. It is a reasonable tournament-weekend tube.\n\nSkip it if you are buying in volume for general club nights, where Classic Tourney does the same job for the same money with a broader margin of value, or if you are still developing a clear, where the durability premium disappears into technique."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Aero U is a competition-range goose-feather shuttle whose argument is consistency late in a tube rather than anything you notice on the first rally. Thicker vanes, cleaner second-half trajectory, standard speed 77 and BWF approval — worth it for match play, harder to justify as a club's default box.\n\nBuy it for the weekend that matters. For everything else in RSL's range, Classic Tourney remains the value answer at the same price."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -5158,31 +5250,43 @@
     "updatedAt": "2026-05-22",
     "title": "Victor P8500 II vs A970 Nitro Lite: which Victor flagship belongs on your feet",
     "dek": "Two top-tier Victor shoes from the same year. P8500 II prioritises stability and protection; A970 Nitro Lite prioritises cushion and wrap. Pick by your weakest moment, not your favourite shot.",
-    "verdict": "P8500 II if you roll ankles or land heavy on lunges; A970 Nitro Lite if you want cushion and wrap with all-around speed.",
+    "verdict": "A970 Nitro Lite wins on cushioning and first-step liveliness thanks to the nitrogen foam, and it is the pick for narrow to medium feet that want a locked-in wrap. P8500 II wins on lateral stability, fit breadth and price, which makes it the safer daily driver and the right call for heavier or wide-footed players.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "These two recent Victor high-end models are basically blind-buy tier — call them legendary if you want. At this year's Thomas & Uber Cup, both pairs looked sharp on players from every country.\n\nSame price bracket, both top tier. How do you pick? Start with shape, then last.\n\n3E, 2.5-width U-shaped last fits most Asian feet better. Wrap and internal space feel spot-on. If you have worn P9200, P8500 II should be even more forgiving on last compatibility.\n\nFirst wear: do not lace too tight. The fit runs close — overtightening will press the instep.\n\nA970 Nitro Lite: same Hyper EVA base, but the \"soft and comfortable\" cushioning steps up again from ACE. Rear-foot shock absorption is the headline on recent Victor E-TPU shoes. I have felt the sandwich midsole pop on other models — firm centre, soft rebound. Embedding supercritical nitrogen foam in the wedge frame hits different. Refreshing in the best way. Overall cushioning comfort? A970 Nitro Lite wins clearly.\n\nP8500 II wins on durability and fit breadth. Does not care about your weight or foot width. True daily driver, price almost silly for training wear. Strong pick for heavier players with wide or thick feet."
+        "body": "Victor released both of these in 2023 and they sit close enough in the range that plenty of players buy one having meant to buy the other. They are not interchangeable. P8500 II is the P-series stability flagship, listing around 165 US dollars; A970 Nitro Lite is the cushioning-led A-series model at around 195. Both turned up under high-level pairs through the season, so neither is the compromise choice.\n\nThe way to separate them is not to ask which is better. It is to ask which of your weakest moments you want protected — the cut where your ankle rolls, or the landing that comes back up through your knee."
       },
       {
-        "heading": "P8500 II — shape and last",
-        "body": "Victor did not lazy-copy the old 8500. Years later, first step in and the shape and last upgrades are obvious."
+        "heading": "Fit decides this one",
+        "body": "Last shape settles more of this decision than any midsole technology, and the two shoes use different lasts on purpose.\n\nP8500 II runs on Victor's U2.5 last, with a wider U2.5E variant offered as well. The U shape gives a rounder, roomier forefoot, which is why it is the recommendation for wide or thick feet. Wrap and internal volume feel matched rather than generous, and anyone who has worn P9200 should find the last even more forgiving here.\n\nA970 Nitro Lite runs the V-SHAPE 2.5 standard last. The V shape tapers, the forefoot is compact, and the wrap is tight — closer to the old P950 on foot. Narrow and medium feet get a locked-in fit that feels expensive. Wide feet should try before buying, because no amount of cushioning compensates for a forefoot that pinches by the second hour.\n\nThat is the short version: U for width, V for lock. Get it wrong and the rest of the specification does not matter."
       },
       {
-        "heading": "A970 Nitro Lite — shape and last",
-        "body": "2.5 width, 3E V-last — on-foot feel matches the old P950. Forefoot is compact, wrap is tight. Wide feet: try before you buy. New heel pillow foam improves lock without adding bulk — almost inner-boot vibes, still clean and light."
+        "heading": "P8500 II shape and last",
+        "body": "Victor did not lazily reissue the original 8500. Step in and the changes to shape and last are immediately obvious.\n\nUnder the foot it runs HYPEREVA with ENERGYMAX 3.0, TPU, a Carbon Power plate and solid EVA, on a VSR rubber outsole with a V-Tough abrasion patch at the drag zone. The structural headline is an enlarged wave-shaped lateral plate with LS-S support wrapping the outside edge — the part that does the work when a hard cut tries to roll the shoe over its edge.\n\nMohammad Ahsan endorses it and wore the red colourway at the 2023 All England, which tells you the intended user: a doubles player making repeated hard lateral changes rather than one chasing the lightest possible shoe.\n\nOne habit on first wear — do not lace it tight. The fit runs close, and overtightening presses the instep for no gain."
       },
       {
-        "heading": "Weight",
-        "body": "Size 42 (270 mm): P8500 II 313 g per shoe; A970 Nitro Lite 310 g. On court, you will not feel the difference."
+        "heading": "A970 Nitro Lite shape and last",
+        "body": "A970 Nitro Lite is the platform's cushioning update. The NitroLite midsole — nitrogen supercritical foam — replaces the HyperEVA that the A970 ACE used, working alongside E-TPU, TPU, a Carbon Power plate and solid EVA on the same VSR outsole. The upper combines V-Durable+ with a double mesh and microfibre PU leather.\n\nThe practical result is that rear-foot shock absorption is the headline rather than lateral bracing. New heel pillow foam improves lock without adding bulk, giving an almost inner-boot feel while staying clean and light. Landing comfort is clearly the better of the two here.\n\nLee Zii Jia endorses the Hawaii Blue and Black colourway; Anders Antonsen, Kodai Naraoka, Kenta Nishimoto, Wang Tzu Wei and H.S. Prannoy have used the pearl white."
       },
       {
-        "heading": "Technology",
-        "body": "P8500 II: Hyper EVA frame plus E-TPU cushioning. Enough for heavy weights; durability and compression set beat traditional EVA by a mile."
+        "heading": "Weight and first step",
+        "body": "At size 42, or 270 mm, the two shoes weigh 313 g and 310 g per shoe respectively. That gap is inside the noise floor — you will not feel three grams on court, and anyone choosing between these on weight is optimising the wrong variable.\n\nWhat you will feel is the first step. The nitrogen foam gives A970 Nitro Lite a livelier launch out of a split step, while P8500 II sits more planted. Neither is slow; they simply spend their energy differently."
       },
       {
-        "heading": "Recommendation",
-        "body": "In play, A970 Nitro Lite starts faster and cushions better thanks to the nitrogen foam. Tighter last, budget OK — I would pick A970 Nitro Lite first."
+        "heading": "Where both shoes are weak",
+        "body": "Two honest caveats, because these are expensive shoes.\n\nBreathability is mediocre on both, and noticeably so in hot or humid venues. If you play in an unairconditioned hall in summer, expect wet socks well before either shoe gives out.\n\nOn P8500 II specifically, the stock insole wears markedly faster than the rest of the shoe. The upper and outsole will outlast it comfortably, so budget for an aftermarket insole as part of the purchase rather than as a repair."
+      },
+      {
+        "heading": "Sizing and break-in",
+        "body": "A970 Nitro Lite runs small — half a size up is the usual advice, and it matters more here than on a roomier last because the V shape has no spare width to absorb the error.\n\nP8500 II is closer to true to size, but the close fit means the first few sessions want a relaxed lacing pattern while the upper settles."
+      },
+      {
+        "heading": "Which one to buy",
+        "body": "Buy A970 Nitro Lite if landings are what hurt: singles players who jump, anyone coming back from a knee complaint, and players with narrow or medium feet who want the tighter wrap. It starts faster and cushions better, and if the last suits you it is the more enjoyable shoe.\n\nBuy P8500 II if stability and fit breadth matter more: heavier players, anyone who has rolled an ankle on a cut, and wide or thick feet that the V last will not accommodate. It is also the better value of the two and the more sensible daily training shoe, since it does not care much about your weight or your foot width."
+      },
+      {
+        "heading": "Verdict",
+        "body": "A970 Nitro Lite wins on cushioning and first-step liveliness thanks to the nitrogen foam, and it is the pick for narrow to medium feet that want a locked-in wrap. P8500 II wins on lateral stability, fit breadth and price, which makes it the safer daily driver and the right call for heavier or wide-footed players.\n\nNeither is a poor shoe and neither is a compromise. Choose by last shape first, then by whether your body asks for bracing or for cushioning — and budget for a replacement insole if you take the P8500 II."
       }
     ],
     "cta": "Use the shoe finder with cushioned-landing or wide-last flags to filter, then read the standalone P8500 II and A970 Nitro Lite reviews for deeper detail.",
@@ -5936,13 +6040,45 @@
   {
     "slug": "yonex-arcsaber-7-tour-review",
     "updatedAt": "2026-05-24",
-    "title": "Yonex Arcsaber 7 Tour Review",
-    "dek": "I genuinely love Arcsaber 7 Pro — absurdly low entry barrier, high forgiveness, excellent chain speed, and solid all-round performance keep it one of my Yonex f…",
-    "verdict": "I genuinely love Arcsaber 7 Pro — absurdly low entry barrier, high forgiveness, excellent chain speed, and solid all-round performance keep it one of my Yonex favourites.",
+    "title": "Yonex Arcsaber 7 Tour review: the value pick of the Arcsaber 7 line",
+    "dek": "Arcsaber 7 Tour sits between Play and Pro, and it is the one most club players should buy. Measured specs, the tier ladder, and where it gives way.",
+    "verdict": "Arcsaber 7 Tour is the sharper, slightly mischievous sibling to the Pro: head-heavier, easier to get length from, close on feel, and noticeably cheaper. For club doubles it is the better-value racket of the two and the one more players should be buying.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "I genuinely love Arcsaber 7 Pro — absurdly low entry barrier, high forgiveness, excellent chain speed, and solid all-round performance keep it one of my Yonex favourites. Naturally I wanted to see what Tour brings.\n\nSpecs: 4U G6, cap removed, playing weight 86.97 g, balance 301 mm, shaft 215 mm, medium stiffness, box frame, 76-hole string bed, four-point grooves, 27 lb warranty, strung 25–27 lbs Victor VX-63.\n\nLike I said in the 88D Play piece, Tour/Game/Play paint is not worth overthinking. Versus 7 Pro, 7 Tour adds a 7 o’clock mark and a “Tour” shaft badge — otherwise identical, even the same cap. From distance it passes for Pro.\n\nTech-wise, shaft ULTRA PE fibre and frame PB Elastic are trimmed, with no clear tech callouts in the paint.\n\n7 Tour feels more head-heavy than 7 Pro, so clears borrow power more easily — less effort to place the shuttle. Hardness and feedback stay very close to 7 Pro, especially that ultra sweet, easy power. Zero barrier for most players. Extra head weight increases head swing arc, shaft deflection after contact, and slows face recovery slightly; overall elasticity dips a touch. Still — for a Tour frame versus Pro, the completion level is surprisingly high for Yonex.\n\nStronger follow-through helps rear-court soft shots. Both faces hold well, but 7 Tour wraps more fully and pulls downward on release — half-pressure shots and diagonal drops land sharper. Extra head weight does not kill agility; at the net it adds damping that stabilises hand position and helps tighter net balls. Handy for players who mix pauses, pushes, drops, and hooks — response stays good.\n\nTour anti-torsion feels weaker to me. Several straight attacks from overhead missed line — face angle got disturbed by body position. Placement slips, but chain speed bails you out. Sweet enough that semi-active swings still transfer well, widening attack windows. 7 Tour smashes are not heavy, but focused power is easy to find and penetration stays there. Better drive and agility let you chain rear smashes into mid flat drives and front kills without needing one all-in heavy winner.\n\n7 Pro feels like the main choice; 7 Tour is the sharper, slightly mischievous sibling — both are likeable in different ways."
+        "body": "Arcsaber 7 Tour is the middle rung of the current Arcsaber 7 generation, and the rung most club players should probably be looking at. It carries the Pro's shape and much of its feel at roughly 130 US dollars against the Pro's 220, which makes the comparison between them the entire buying decision.\n\nThe Arcsaber 7 Pro is a genuinely likeable racket — very low entry difficulty, high forgiveness, excellent chain speed, and enough all-round performance that it earns a permanent slot for control players. Its Pocketing Booster frame extends contact time, and the honest caveat is that you have to bring your own power: it gives no head-heavy assist on smashes. That is the frame the Tour is measured against here."
+      },
+      {
+        "heading": "Arcsaber 7 Play vs Tour vs Pro",
+        "body": "The generation runs Play, Tour, Pro, with no Game tier in between, and that gap is the reason the ladder confuses people.\n\nPlay sits around 75 US dollars with a medium shaft, a 296 mm catalogued balance and a 18 to 25 lb string range. It is genuinely beginner-friendly, but the materials are limited and the feel is softer. The missing Game tier means the jump from Play to Tour is larger than the price gap suggests.\n\nTour is the value position: around 130 dollars, medium shaft, 293 mm catalogued balance, 19 to 27 lb, and grip sizes from G4 to G6. It is aimed at club through competitive players who lean toward control.\n\nPro is around 220 dollars with a stiff shaft and a 290 mm balance, aimed at competitive and above. The balance figures tell the story of the family — each step up is a little more head-light and a little more demanding.\n\nFor most club players the Tour is the correct buy, and not as a compromise. The Pro's stiffer shaft only pays back if you can load it consistently."
+      },
+      {
+        "heading": "Specs",
+        "body": "A measured 4U G6 build with the cap removed came in at 86.97 g with a 301 mm balance and a 215 mm shaft, medium stiffness, box frame, 76-hole string bed with four-point grooves, 27 lb warranty, strung at 25 to 27 lb.\n\nThe gap between that 301 mm measured balance and the 293 mm catalogue figure is mostly the removed cap and the grip build, which is worth knowing before you compare numbers across shops. Direction matters more than the absolute: the Tour sits head-heavier than the Pro, and you feel it."
+      },
+      {
+        "heading": "What the paint hides",
+        "body": "Tour, Game and Play paint schemes are not worth overthinking as an indicator of quality. Against the 7 Pro, the 7 Tour adds a mark at seven o'clock and a Tour badge on the shaft, and is otherwise visually identical down to the same cap. At any distance it passes for the Pro.\n\nThe material specification is where the tiering actually happens. Ultra PE fibre in the shaft and PB Elastic in the frame are trimmed back, and there are no clear technology callouts in the paint to advertise what is left. This is the usual pattern for a mid-tier frame in a flagship line, and it is why the Tour feels close to the Pro without matching it."
+      },
+      {
+        "heading": "On court",
+        "body": "The extra head weight is the defining difference. Clears borrow power more easily than on the Pro, so it takes less effort to put the shuttle where you want it — a meaningful advantage for players who do not have flagship-level swing speed.\n\nHardness and feedback stay very close to the Pro, including the ultra-sweet, easy power that made the Pro likeable in the first place. For most players there is effectively no entry barrier here.\n\nThe cost of that head weight is measurable. It increases the head's swing arc, increases shaft deflection after contact, and slows face recovery slightly, so overall elasticity dips a little against the Pro. Nothing about that is disqualifying, and for a Tour frame the completion level is high.\n\nA stronger follow-through helps rear-court soft shots. Both faces hold the shuttle well, but the Tour wraps more fully and pulls downward on release, so half-pressure shots and diagonal drops land sharper. At the net the extra head weight adds damping that stabilises the hand and helps tighter net shots — useful for players who mix pauses, pushes, drops and hooks, because the response stays consistent across all of them.\n\nSmashes are not heavy. Focused power is easy to find and penetration holds up, and the better drive and agility mean you can chain a rear smash into a mid-court flat drive and a front-court kill rather than needing one all-in winner. That is a doubles pattern, and it is what this racket is good at."
+      },
+      {
+        "heading": "Anti-torsion is the weak point",
+        "body": "The clearest gap against the Pro is torsional stability. Straight attacks from an overhead position can miss their line when body position disturbs the face angle, and placement slips accordingly.\n\nChain speed usually bails the rally out, and the frame is sweet enough that semi-active swings still transfer well, which widens the window in which you can attack at all. But if you are a singles player relying on precise steep attacks from awkward positions, this is the specification that will eventually push you to the Pro."
+      },
+      {
+        "heading": "Stringing",
+        "body": "The 27 lb warranty and a 19 to 27 lb catalogue range give plenty of room, and the mid-twenties is where measured builds have been set up.\n\nWith a medium shaft and a head-heavier balance than the Pro, high tension is not the lever that makes this racket better. If you want more bite on slices and drops, change the string type before adding pounds — the frame's hold is already generous, and hard high tension trades away the forgiveness that makes it worth buying over the Pro."
+      },
+      {
+        "heading": "Who it suits",
+        "body": "Club through competitive doubles players who want Arcsaber control with easier access to power, anyone who liked the Pro but could not justify the price, and control-leaning players who value continuity over a single heavy finishing shot.\n\nSkip it if you need best-in-class anti-torsion for steep singles attacks, or if you already own the Pro and are hoping the Tour is a lighter-swinging upgrade — it is a different trade, not a better one."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Arcsaber 7 Tour is the sharper, slightly mischievous sibling to the Pro: head-heavier, easier to get length from, close on feel, and noticeably cheaper. For club doubles it is the better-value racket of the two and the one more players should be buying.\n\nIts limits are honest — softer anti-torsion, slightly slower face recovery, and no heavy smash. Accept those and it is one of the strongest value frames in the current Yonex range."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6403,38 +6539,46 @@
     "slug": "yonex-astrox-99-pro-3-deep-dive",
     "updatedAt": "2026-07-20",
     "title": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
-    "dek": "This note covers the current Astrox 99 Pro — the third Astrox 99-family generation after the 2018 Astrox 99 and the first 99 Pro revision. Gen-1 and gen-2 Pro d…",
-    "verdict": "New 99 Pro blends early Astrox 99 smash weight with Pro-era direction and pushes offence further. High ceiling, high cost in energy — not a casual club all-rounder.",
+    "dek": "The third-generation Astrox 99 Pro returns to 76 holes with full-racket Namd. A rear-court hammer with a stamina cost — and how it stacks up against the 100ZZ.",
+    "verdict": "The new 99 Pro blends the early Astrox 99 smash weight with Pro-era direction and pushes the offence further than either previous generation. The ceiling is high and the energy cost is high with it — not a casual club all-rounder.\n\nAgainst the 100ZZ it is the heavier, more linear choice rather than the faster one.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "This note covers the current Astrox 99 Pro — the third Astrox 99-family generation after the 2018 Astrox 99 and the first 99 Pro revision. Gen-1 and gen-2 Pro deep dives live on sibling URLs. I wanted to know whether full-racket second-gen Namd and the return to 76 holes bring the old Astrox 99 smash threat back without losing Pro-era direction.",
+        "body": "This page covers the current Astrox 99 Pro — the third generation in the Astrox 99 family, after the 2018 Astrox 99 and the first 99 Pro revision. The gen-1 and gen-2 Pro deep dives have their own pages, so if you are comparing revisions rather than shopping, start there.\n\nThe question this generation had to answer was whether full-racket second-generation Namd and the return to 76 holes bring back the old Astrox 99 smash threat without losing the direction the Pro era added. The short answer is yes, at a cost in stamina that buyers should price in before ordering.",
         "glossaryLinks": [
+          {
+            "term": "Head-heavy",
+            "id": "head-heavy"
+          },
           {
             "term": "Smash",
             "id": "smash"
-          },
-          {
-            "term": "Drive",
-            "id": "drive"
           }
         ]
       },
       {
         "heading": "What changed",
-        "body": "Eight consecutive top grommets add head weight. Holes return from 68 to 76; grooves follow the newer Astrox 88 layout at 5 and 7 o'clock. Cone moves to E-B CAP Plus with a lighter metal-style cap. Biggest internal shift: second-gen Namd in frame and shaft, not shaft-only.\n\nMy 4U G5 sample (cap off) sat around 90 g built with about 312 mm balance on EXBOLT 63 at 25–27 lb — very head-heavy in hand. Cosmetics go black-green cosmic themes: starfield blacks, marble greens, lava-edge accents. Far away it looks quiet; close up it is busy."
+        "body": "Eight consecutive grommets at the top of the frame add head weight. The string bed returns from 68 holes to 76, and the grooves follow the newer Astrox 88 layout at five and seven o'clock. The cone moves to E-B CAP Plus with a lighter metal-style cap.\n\nThe biggest internal change is that second-generation Namd now runs through the frame as well as the shaft rather than the shaft alone. That is the shift responsible for how unified the racket feels at contact.\n\nA representative 4U G5 build with the cap removed sat around 90 g with roughly 312 mm balance, strung with EXBOLT 63 at 25 to 27 lb — very head-heavy in the hand. Cosmetically the generation goes for black-green cosmic themes: starfield blacks, marble greens, lava-edge accents. From across the hall it reads quiet; up close it is busy."
+      },
+      {
+        "heading": "Astrox 99 Pro vs Astrox 100ZZ",
+        "body": "This is the comparison people actually search for, and the two rackets are less interchangeable than their shared reputation suggests.\n\nThe 100ZZ has an extra-stiff shaft and a catalogued 300 mm balance, and I have played it enough to be direct about it: very demanding, but surprisingly fast, and very repulsive. It needs good timing and it is tiring over a full match. If you like that feel but find the regular ZZ punishing, the 100ZZ VA is the easier version of the same idea and the one I would point most people to first.\n\nThe gen-3 99 Pro is head-heavy with a stiff rather than extra-stiff shaft, and it plays like a heavier, more linear instrument. Where the 100ZZ rewards whip and timing, the 99 Pro rewards a full swing that drives the shaft through. The 100ZZ is the faster racket through the air; the 99 Pro puts more mass behind the shuttle.\n\nThe practical split: take the 100ZZ if your game is built on timing, speed and repulsion, and you can protect your technique when tired. Take the gen-3 99 Pro if you want a rear-court hammer and have the fitness to swing it for three games. Neither is the forgiving option, and a player unsure between them is usually better served by the 88D Pro or the gen-2 99 Pro, which keeps the same DNA at a lower entry threshold."
       },
       {
         "heading": "On court",
-        "body": "Empty swing already shows head pull; strung with overgrip the hammer feel grows. Clears borrow hard — standard action leverages the head and second-gen Namd unity for crisp, linear exits. Direction stays precise; the sweet-versus-off-sweet gap feels smaller than on 68-hole 99 Pro, so the threshold drops a notch while still demanding power.\n\nAttack is the point. Heavy rear smashes and chance kills press down with confidence when you can drive the shaft. Drop and chop kills use the anti-torsion well. Below the drive threshold the shaft feels stiff and unfinished — stamina drains faster than on milder attack frames. Long rallies punish the arm; the racket keeps inviting you to smash.\n\nFront-court flat drive is not sluggish for the head weight thanks to the elasticity, but backhand transitions and low defence still want strength. Net brush and push stay stable when technique is clean. In doubles I have used shot quality to offset slower recovery — thinking before each swing matters more than on a speed frame."
+        "body": "The empty swing already shows the head pull, and strung with an overgrip the hammer feeling grows.\n\nClears borrow power hard. A standard action leverages the head weight and the second-generation Namd unity into crisp, linear exits, and direction stays precise. The gap between a sweet-spot hit and an off-centre one feels smaller than it did on the 68-hole 99 Pro, so the threshold drops a notch — while still demanding real power to reach it.\n\nAttack is the point of the racket. Heavy rear-court smashes and chance kills press down with confidence when the shaft gets driven, and drop and chop kills make good use of the anti-torsion. Below that drive threshold the shaft feels stiff and unfinished, and stamina drains faster than on a milder attack frame. Long rallies punish the arm, partly because the racket keeps inviting another smash.\n\nFront-court flat drive is not sluggish for the head weight — the elasticity carries it — but backhand transitions and low defence still want strength. Net brush and push shots stay stable when technique is clean. In doubles the pattern that works is trading shot quality against slower recovery, which means thinking a beat earlier than you would on a speed frame."
+      },
+      {
+        "heading": "Stringing and setup",
+        "body": "Yonex guidance across the 99 Pro family runs to roughly 20 to 28 lb in 4U and 21 to 29 lb in 3U, and measured builds in this generation have landed in the mid-twenties.\n\nThe temptation with a head-heavy attack racket is to string high and chase a crisper response. It is usually the wrong lever here. The frame already shortens dwell and returns a firm, linear feel; adding tension mostly adds arm load and narrows the timing window on exactly the shots that are hardest to hit when you are tired in the third game. Mid-twenties with a livelier thin string keeps the attack and buys back some forgiveness the frame does not naturally offer."
       },
       {
         "heading": "Who should buy",
-        "body": "Buy gen-3 99 Pro if you have singles fitness, smash intent, and enough power to unlock the shaft. Skip it if you want easy doubles continuity or a light speed tool — this is a violent, stamina-taxing attack racket with excellent control when you can drive it."
+        "body": "Buy the gen-3 99 Pro if you have singles fitness, genuine smash intent, and enough power to unlock the shaft. It is a rear-court weapon with better control than the line's reputation suggests.\n\nSkip it if you want easy doubles continuity, a light speed tool, or a racket that flatters a tired arm. This is a violent, stamina-taxing attack frame, and it is honest about that from the first clear."
       },
       {
         "heading": "Verdict",
-        "body": "New 99 Pro blends early Astrox 99 smash weight with Pro-era direction and pushes offence further. High ceiling, high cost in energy — not a casual club all-rounder."
+        "body": "The new 99 Pro blends the early Astrox 99 smash weight with Pro-era direction and pushes the offence further than either previous generation. The ceiling is high and the energy cost is high with it — not a casual club all-rounder.\n\nAgainst the 100ZZ it is the heavier, more linear choice rather than the faster one. Both demand fitness; which one is still working for you in the third game depends entirely on whether your game runs on timing or on power."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6597,12 +6741,44 @@
     "slug": "yonex-comfort-z3-shoes-review",
     "updatedAt": "2026-05-24",
     "title": "Yonex Power Cushion Comfort Z3: cushion-first match shoe",
-    "dek": "I switched to Power Cushion Comfort Z3 after Aerus Z2 and kept it as a match shoe because the trade-off finally made sense: more weight on the scale, less punis…",
-    "verdict": "I switched to Power Cushion Comfort Z3 after Aerus Z2 and kept it as a match shoe because the trade-off finally made sense: more weight on the scale, less punishment on landing.",
+    "dek": "Comfort Z3 trades 130 g against the Aerus Z2 for landing protection that lasts a full evening. Weight, break-in, fit, and where it sits in the Z3 trio.",
+    "verdict": "Comfort Z3 is the cushion-first shoe in Yonex's modern Z3 trio, and it is the one I keep for matches. It trades a noticeable amount of weight and a fraction of a first step for landing protection that holds up across a full evening.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "I switched to Power Cushion Comfort Z3 after Aerus Z2 and kept it as a match shoe because the trade-off finally made sense: more weight on the scale, less punishment on landing.\n\nComfort Z3 is not pretending to be a speed shoe. Yonex positions it for players who want Power Cushion absorption first — smash landings, long club nights, knees that complain when forefoot cushioning is thin. Single-shoe weight lands around 370 g in my size; you feel it in the bag and forget it once rallies stretch past an hour.\n\nBreak-in runs stiffer than Aerus Z2 for the first few sessions — the upper and sidewall want to settle before the shoe feels truly one-piece. After that, the payoff is obvious: heel and midfoot cushioning eat repetitive jump-landings better than any featherweight I have owned. Rear-court full commits do not ricochet up the shin the way ultra-light race shoes sometimes do.\n\nForecourt movement is acceptable for club doubles — not 65Z-snappy, but stable enough for net rushes if you accept slightly slower first step. Wide-fit option matters: if Eclipsion Z3 pinched your forefoot, Comfort Z3's roomier last is the closer Yonex alternative in the current line.\n\nWho should buy: players prioritising joint comfort over split-second launch, especially heavier landers and older club regulars. Who should skip: front-court speed specialists who live in 65Z4 or Aerus — you will miss the race-shoe snap.\n\nCross-reference Eclipsion Z3 if you need stability with a tighter performance fit; Comfort Z3 is the cushion-first sibling in Yonex's modern Z3 trio."
+        "body": "I switched to the Power Cushion Comfort Z3 after the Aerus Z2 and kept it as my match shoe, because the trade-off finally made sense: more weight on the scale, less punishment on landing.\n\nComfort Z3 is not pretending to be a speed shoe. Yonex positions it for players who want Power Cushion absorption first — smash landings, long club nights, knees that complain when forefoot cushioning is thin. It lists around 165 US dollars, level with the Eclipsion Z3 and slightly under the Aerus Z2, so this is not a case of paying extra for comfort."
+      },
+      {
+        "heading": "Weight is the whole trade",
+        "body": "Single-shoe weight lands around 370 g in my size. The Aerus Z2 I came from is about 240 g. That is a 130 g difference per foot, and anyone claiming it is imperceptible has not worn both.\n\nYou feel it in two places: lifting the bag, and the first ten minutes of the first session. After that, rallies stretch past an hour and you stop noticing. What you notice instead is the absence of the ache that used to arrive around game three.\n\nThe Aerus Z2 remains a brilliant tournament shoe if your knees and ankles are happy — at 240 g it genuinely is fast. It just has barely any cushioning, and that is a bill that arrives after the match rather than during it."
+      },
+      {
+        "heading": "Break-in is real",
+        "body": "Break-in runs stiffer than the Aerus Z2 for the first few sessions. The upper and the sidewall want to settle before the shoe feels like one piece.\n\nThis matters practically: do not buy these the week before a tournament and expect them to feel right. Give them three or four club nights first. The stiffness that feels unyielding on day one is the same structure that stops the shoe folding over on a hard lateral push once it has moulded to your foot."
+      },
+      {
+        "heading": "Cushioning where it counts",
+        "body": "After break-in the payoff is obvious. Heel and midfoot cushioning absorb repetitive jump-landings better than any featherweight shoe I have owned. Rear-court full commits do not ricochet up the shin the way ultra-light race shoes sometimes do.\n\nThis is the specific case the shoe is built for. If your game involves jumping to smash and landing hard, several times a rally and many rallies a game, the cumulative load is the thing that ends seasons. A heavier shoe that absorbs it is cheaper than physiotherapy."
+      },
+      {
+        "heading": "Fit and width",
+        "body": "The wide-fit option is a genuine reason to look here rather than elsewhere in the line. If the Eclipsion Z3 pinched your forefoot, the Comfort Z3's roomier last is the closest Yonex alternative in the current range.\n\nFit advice that applies to any badminton shoe but especially this one: size with the socks you actually play in, and check the fit late in the day when your feet have spread. A shoe this well cushioned will disguise a slightly wrong size for about an hour, and then it will stop disguising it."
+      },
+      {
+        "heading": "Comfort Z3 vs Aerus Z2 vs Eclipsion Z3",
+        "body": "The three sit at genuinely different points and the naming does not make that obvious.\n\nAerus Z2 is the lightweight tournament shoe: around 240 g, fast, close to the ground, minimal cushioning. It suits players whose joints are fine and who want speed above everything.\n\nEclipsion Z3 is the firm, responsive option at roughly 351 g in a size 42 3E last, with a Power Carbon midfoot bridge and a forefoot-extended carbon plate. Ground feel is firm rather than soft-bouncing, which suits heavier players and long tournament days where rebound consistency matters more than softness. Its stock insole is worth upgrading to get the full benefit.\n\nComfort Z3 is the soft-bounce, cushion-first sibling at around 370 g with the roomier last. It is the one to take if landings are what hurt and width is what you need."
+      },
+      {
+        "heading": "Court speed, honestly",
+        "body": "Forecourt movement is acceptable for club doubles. It is not 65Z-snappy, but it is stable enough for net rushes provided you accept a slightly slower first step.\n\nI play men's doubles in Division 4 of the Irish league, and at that level the fraction of a step I lose to the extra weight costs me less than the fatigue I avoid across three games. That calculation shifts as the standard rises. A front-court specialist whose whole game is winning the net exchange by a hair should be looking at the lighter end of the range instead."
+      },
+      {
+        "heading": "Who should buy",
+        "body": "Players prioritising joint comfort over split-second launch: heavier landers, older club regulars, anyone playing several sessions a week, and wide-footed players let down by tighter lasts.\n\nSkip it if you are a front-court speed specialist who lives in the 65Z4 or the Aerus — you will miss the race-shoe snap and you will feel the 130 g on every push-off."
+      },
+      {
+        "heading": "Verdict",
+        "body": "Comfort Z3 is the cushion-first shoe in Yonex's modern Z3 trio, and it is the one I keep for matches. It trades a noticeable amount of weight and a fraction of a first step for landing protection that holds up across a full evening.\n\nBuy it for the knees, accept the break-in, and take the wide fit if the Eclipsion Z3 has ever pinched you. Buy something lighter if speed at the net is what your game is actually built on."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6739,12 +6915,12 @@
     "slug": "yonex-grpht-thrttl-training-shoe-review",
     "updatedAt": "2026-05-24",
     "title": "Yonex Grpht Thrttl Training Shoe Review",
-    "dek": "At Yonex's Hangzhou launch, one mysterious shoe stole the room — fresh midsole layout, bold looks, everyone crowding around it. That shoe is Graphite Thruster (…",
-    "verdict": "Graphite Thruster is Yonex's concept cross-trainer: twin REV layers, near full-length Power Graphite — training, city exploration, daily wear. Launch is \"concept first,\" not single-sport maxing; refined versions will follow. Midsole design is imaginative; the direction deserves credit.",
+    "dek": "At Yonex's Hangzhou launch, one mysterious shoe stole the room — fresh midsole layout, bold looks, everyone crowding around it. That shoe is Graphite Throttle (…",
+    "verdict": "Graphite Throttle is Yonex's concept cross-trainer: twin REV layers, near full-length Power Graphite — training, city exploration, daily wear. Launch is \"concept first,\" not single-sport maxing; refined versions will follow. Midsole design is imaginative; the direction deserves credit.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "At Yonex's Hangzhou launch, one mysterious shoe stole the room — fresh midsole layout, bold looks, everyone crowding around it. That shoe is Graphite Thruster (SH-GT1MEX): a new-concept cross-training model and a milestone in Yonex footwear, setting direction from light badminton and tennis training to city wear. This review focuses on badminton performance.",
+        "body": "At Yonex's Hangzhou launch, one mysterious shoe stole the room — fresh midsole layout, bold looks, everyone crowding around it. That shoe is Graphite Throttle (SH-GT1MEX): a new-concept cross-training model and a milestone in Yonex footwear, setting direction from light badminton and tennis training to city wear. This review focuses on badminton performance.",
         "glossaryLinks": [
           {
             "term": "Drive",
@@ -6770,7 +6946,7 @@
       },
       {
         "heading": "Summary and recommendation",
-        "body": "Graphite Thruster is Yonex's concept cross-trainer: twin REV layers, near full-length Power Graphite — training, city exploration, daily wear. Launch is \"concept first,\" not single-sport maxing; refined versions will follow. Midsole design is imaginative; the direction deserves credit.\n\nLooks alone could sell to a mass audience; add light badminton and it suits players wanting court style in daily dress — not a high-intensity match shoe, but strong for gentle play and lifestyle crossover."
+        "body": "Graphite Throttle is Yonex's concept cross-trainer: twin REV layers, near full-length Power Graphite — training, city exploration, daily wear. Launch is \"concept first,\" not single-sport maxing; refined versions will follow. Midsole design is imaginative; the direction deserves credit.\n\nLooks alone could sell to a mass audience; add light badminton and it suits players wanting court style in daily dress — not a high-intensity match shoe, but strong for gentle play and lifestyle crossover."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -7269,16 +7445,16 @@
     "slug": "yonex-subaxia-gt-shoes-review",
     "updatedAt": "2026-05-24",
     "title": "Yonex Subaxia Gt Shoes Review",
-    "dek": "Last month's Yonex concept shoe Graphite Thruster (SH-GT1MEX) still lingers. While players imagined what a pro badminton shoe built on that idea might look like…",
-    "verdict": "Subaxia GT translates the Graphite Thruster concept into a new flagship — minimal upper, eye-catching midsole collision echoing \"step-by-step victory.\" Config-wise it is among Yonex's most complex flagships: dual REV, dual graphite, plus outer support walls — stable speed and explosion fused.",
+    "dek": "Last month's Yonex concept shoe Graphite Throttle (SH-GT1MEX) still lingers. While players imagined what a pro badminton shoe built on that idea might look like…",
+    "verdict": "Subaxia GT translates the Graphite Throttle concept into a new flagship — minimal upper, eye-catching midsole collision echoing \"step-by-step victory.\" Config-wise it is among Yonex's most complex flagships: dual REV, dual graphite, plus outer support walls — stable speed and explosion fused.",
     "sections": [
       {
         "heading": "Overview",
-        "body": "Last month's Yonex concept shoe Graphite Thruster (SH-GT1MEX) still lingers. While players imagined what a pro badminton shoe built on that idea might look like, the new Power Cushion Subaxia flagship line arrived fast — standing alongside Aerus, Eclipsion, and the 65 series. Subaxia GT leads the generation with a redesigned midsole frame, lightweight hard shell embedding front and rear Power Cushion REV foam, and dual Power Graphite at midfoot and heel — a hardcore midsole for explosive, fast-reaction players opening a new competitive chapter."
+        "body": "Last month's Yonex concept shoe Graphite Throttle (SH-GT1MEX) still lingers. While players imagined what a pro badminton shoe built on that idea might look like, the new Power Cushion Subaxia flagship line arrived fast — standing alongside Aerus, Eclipsion, and the 65 series. Subaxia GT leads the generation with a redesigned midsole frame, lightweight hard shell embedding front and rear Power Cushion REV foam, and dual Power Graphite at midfoot and heel — a hardcore midsole for explosive, fast-reaction players opening a new competitive chapter."
       },
       {
         "heading": "Appearance",
-        "body": "Subaxia GT keeps Yonex's minimalist look but goes bold on contrast. Upper mostly grey-black; toe wear zones and side support share the hue in different materials — layered depth in touch and look.\n\nGraphics stay extremely simple — layout similar to Graphite Thruster — bright rear Yonex logo and small tech labels at key function zones.\n\nAgainst the low-key upper, the midsole steals attention: yellow-green and hot pink collide with confidence. Front and rear midsole pieces splice hard lightweight materials in those two colours; transparent pink side TPU links the sections, thinned at the heel so thick white REV foam shows through. Black propeller-blade outsole is visibly thicker, with two Power Graphite plates exposed in midfoot and heel windows.\n\nMulti-layer grey-black forms the base; yellow-green energy and hot pink impact symbolise calm force breaking ground — explosive power felt underfoot and seen in motion. Bold colour on a quiet base may be Subaxia GT's \"steady progress\" design idea."
+        "body": "Subaxia GT keeps Yonex's minimalist look but goes bold on contrast. Upper mostly grey-black; toe wear zones and side support share the hue in different materials — layered depth in touch and look.\n\nGraphics stay extremely simple — layout similar to Graphite Throttle — bright rear Yonex logo and small tech labels at key function zones.\n\nAgainst the low-key upper, the midsole steals attention: yellow-green and hot pink collide with confidence. Front and rear midsole pieces splice hard lightweight materials in those two colours; transparent pink side TPU links the sections, thinned at the heel so thick white REV foam shows through. Black propeller-blade outsole is visibly thicker, with two Power Graphite plates exposed in midfoot and heel windows.\n\nMulti-layer grey-black forms the base; yellow-green energy and hot pink impact symbolise calm force breaking ground — explosive power felt underfoot and seen in motion. Bold colour on a quiet base may be Subaxia GT's \"steady progress\" design idea."
       },
       {
         "heading": "Official technology",
@@ -7290,7 +7466,7 @@
       },
       {
         "heading": "Configuration",
-        "body": "Subaxia is Yonex's new flagship line; Subaxia GT is its first model. Design already shows a qualitative leap from past flagships — core is the Graphite Thruster concept. Below is how that setup works, then how it feels in play.\n\nMidsole frame follows today's mainstream idea: lightweight hard shell with front-rear foam fill — Yonex's first use of this in shoes. Rear foam is special: instead of a conventional embed, the whole REV pad curves to wrap the heel.\n\nIn lunge landings the heel rarely hits vertically — it meets the ground at an angle — so embedded foam often only loads on one side. Subaxia GT's wrap-style REV increases contact area for better cushioning at multiple landing angles.\n\nDual Power Graphite is another highlight. Midfoot plate handles familiar anti-torsion; rear plate under heel REV is new. When rear foam compresses, graphite rebound helps the pad reset faster — stronger rebound response without giving up cushion. That may be Yonex's fresh take on pro badminton shoes.\n\nTransparent side TPU further boosts anti-torsion. The whole package chases lightweight design while raising protection, speed, and explosion together."
+        "body": "Subaxia is Yonex's new flagship line; Subaxia GT is its first model. Design already shows a qualitative leap from past flagships — core is the Graphite Throttle concept. Below is how that setup works, then how it feels in play.\n\nMidsole frame follows today's mainstream idea: lightweight hard shell with front-rear foam fill — Yonex's first use of this in shoes. Rear foam is special: instead of a conventional embed, the whole REV pad curves to wrap the heel.\n\nIn lunge landings the heel rarely hits vertically — it meets the ground at an angle — so embedded foam often only loads on one side. Subaxia GT's wrap-style REV increases contact area for better cushioning at multiple landing angles.\n\nDual Power Graphite is another highlight. Midfoot plate handles familiar anti-torsion; rear plate under heel REV is new. When rear foam compresses, graphite rebound helps the pad reset faster — stronger rebound response without giving up cushion. That may be Yonex's fresh take on pro badminton shoes.\n\nTransparent side TPU further boosts anti-torsion. The whole package chases lightweight design while raising protection, speed, and explosion together."
       },
       {
         "heading": "Static feel",
@@ -7310,7 +7486,7 @@
       },
       {
         "heading": "Summary and recommendation",
-        "body": "Subaxia GT translates the Graphite Thruster concept into a new flagship — minimal upper, eye-catching midsole collision echoing \"step-by-step victory.\" Config-wise it is among Yonex's most complex flagships: dual REV, dual graphite, plus outer support walls — stable speed and explosion fused.\n\nOn purchase: initial centre feels slightly high but improves with wear. Midsole thickness wants some body weight or explosive power to fully drive. Cushion and jump are core strengths, with launch and movement stability kept — strong competitive character. Best for high-level competitive players and heavier players who need cushion, stability, and launch together."
+        "body": "Subaxia GT translates the Graphite Throttle concept into a new flagship — minimal upper, eye-catching midsole collision echoing \"step-by-step victory.\" Config-wise it is among Yonex's most complex flagships: dual REV, dual graphite, plus outer support walls — stable speed and explosion fused.\n\nOn purchase: initial centre feels slightly high but improves with wear. Midsole thickness wants some body weight or explosive power to fully drive. Cushion and jump are core strengths, with launch and movement stability kept — strong competitive character. Best for high-level competitive players and heavier players who need cushion, stability, and launch together."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
