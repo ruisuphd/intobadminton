@@ -710,8 +710,11 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       slug: "badminton-bag-loadout",
       updatedAt: "2026-04-28",
       category: "guides",
-      title: "What your badminton bag should carry for a normal club session",
-      dek: "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
+      // Titled to match the live query. Search Console shows "what to carry in
+      // a badminton bag" pulling 2,011 impressions a quarter at position 8.8
+      // with zero clicks — the old headline never used the words people type.
+      title: "What to carry in a badminton bag: a club-night checklist",
+      dek: "Nine things earn a place in a club-night bag, and a few popular ones do not. Here is the loadout, and what goes wrong when you skip each item.",
       story: {
         intro:
           "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
@@ -726,16 +729,32 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       },
       sections: [
         {
-          heading: "Capacity is workflow",
-          body: "A two-racket commute bag is fine for casual games. A regular club night often needs more: shoes, towel, clean shirt, wet kit, water bottle, grips, and a spare racket.",
+          heading: "The short answer: nine things",
+          body: "For a normal club night you need two rackets, court shoes, a towel, a change of shirt, a water bottle, a spare grip, a tube of shuttles, a small first-aid pouch, and somewhere to put wet kit that is not the same pocket as the dry kit. Everything past that is preference. Everything short of that is something you will eventually stand in a sports hall wishing you had brought.\n\nThe rest of this page is why each one earns its place, and what happens when you skip it.",
         },
         {
-          heading: "Compartment design matters",
-          body: "Shoe and wet compartments are not luxury features if you play after work or carry clean clothes. They keep odor and moisture away from rackets and electronics.",
+          heading: "Two rackets, strung the same",
+          body: "One racket is a single point of failure. Strings break at the worst possible moment — mid-rally, in the third game, when the hall has no stringer and the nearest shop shut at six.\n\nThe part players get wrong is bringing a back-up strung differently from the main. If your first racket is at 27 lb and the spare is at 24, you are not carrying a spare; you are carrying a completely different racket that you will need half a game to recalibrate to. Match the tension and, ideally, the string. A back-up that plays like the main is insurance. A back-up that plays like a stranger is ballast.\n\nIf you only own one good frame, an older racket at a similar tension still beats nothing.",
         },
         {
-          heading: "Why bag recommendations improve retention",
-          body: "Bag content is a repeat-use habit. A loadout checklist gives players a reason to revisit before sessions, and it creates natural future content around replacement grips, shuttles, and seasonal refreshes.",
+          heading: "Shoes belong in their own compartment",
+          body: "Court shoes are the one item that should never touch the rest of your kit. Two reasons.\n\nThe first is grip. Indoor outsoles pick up dust, grit and car-park moisture, and a gum sole that has been rubbing against a towel all week is a sole that slides on its first lunge. The second is everything else in the bag: shoes carry the moisture and odour that transfer into a clean shirt within a day.\n\nA dedicated shoe compartment is not a premium feature to pay up for — it is the difference between a bag that works after work and one that does not. If your bag has no shoe pocket, a cheap drawstring bag inside it solves the same problem.",
+        },
+        {
+          heading: "Wet kit needs somewhere to go",
+          body: "This is the compartment most players discover they need only after ruining something. Badminton is a heavy-sweat sport played indoors, and a played-in shirt sealed against a dry one for a two-hour commute home makes both smell the same.\n\nIf you play after work and carry a laptop, this stops being a comfort issue and becomes a damage issue. Keep wet separate from dry, and separate from electronics.",
+        },
+        {
+          heading: "Grips, shuttles and the small stuff",
+          body: "A spare overgrip weighs almost nothing and fixes the most common mid-session problem there is: a grip that has gone slick and is quietly costing you control on every backhand. Two in the bag means you can also hand one to a partner.\n\nOn shuttles, carry a tube if your club splits costs — and store them away from the outside wall of the bag, where they get crushed and cooked. Feather shuttles are humidity-sensitive; a tube that has spent the week in a hot car flies differently from a fresh one.\n\nThe small pouch that earns its place: plasters, tape for a hot spot, a spare pair of socks, and painkillers. None of it is glamorous. All of it has saved a session.",
+        },
+        {
+          heading: "What you can leave at home",
+          body: "Six rackets, if you play club doubles twice a week. A full-size 12-racket thermal bag is built for touring players and stringers, and for everyone else it is weight you carry to and from a car park.\n\nAlso worth reconsidering: the second water bottle (halls have taps), the bulky warm-up jacket you never put on, and — the honest one — the third racket you keep meaning to sell. Bag weight is a real cost on a commute. Two rackets and a tidy loadout beats six and a sore shoulder.",
+        },
+        {
+          heading: "Match the bag to how you actually get to the court",
+          body: "The right bag follows your commute, not your ambition.\n\nIf you drive to a club and play twice a week, a two-to-three racket backpack with a shoe pocket covers it. If you walk or cycle in from work, prioritise a proper back panel and straps over capacity — a wide thermal holdall is miserable on a bike. If you travel to tournaments and carry kit for a full weekend, that is when the six-racket thermal starts to make sense.\n\nBuy for the session you play most often, not the tournament you might enter.",
         },
       ],
       cta: "Run the finder for bag recommendations by session style.",
