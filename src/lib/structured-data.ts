@@ -207,7 +207,8 @@ export function datasetJsonLd(input: DatasetJsonLdInput) {
 
 /**
  * Product + nested Review JSON-LD for `/review/[slug]/` pages.
- * Emits editorial `reviewRating` and matching `aggregateRating` on the Product.
+ * Emits a single editorial `reviewRating` from one named critic — never an
+ * `aggregateRating`, which would claim ratings we collected from other people.
  */
 export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
   const url = `${companyInfo.siteUrl}${input.path}`;
@@ -259,15 +260,16 @@ export function productReviewJsonLd(input: ProductReviewJsonLdInput) {
     schema.image = input.product.image.url;
   }
 
-  if (input.rating) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: input.rating.ratingValue,
-      reviewCount: Math.max(1, input.rating.reviewCount),
-      bestRating: input.rating.bestRating,
-      worstRating: input.rating.worstRating,
-    };
-  }
+  /*
+   * Deliberately no `aggregateRating`.
+   *
+   * We publish one editorial verdict from one named critic. An AggregateRating
+   * asserts that we averaged ratings collected from other people, which we did
+   * not — the old `reviewCount` counted our own editor note and cited market
+   * signals as if each were a rating. Google's review-snippet guidance treats
+   * self-generated aggregates as spammy structured markup, so the Product
+   * carries only the single `review` above with its `reviewRating`.
+   */
 
   return schema;
 }

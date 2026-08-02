@@ -13,12 +13,15 @@ const catalog = products as ProductRecord[];
 
 describe("productReviewJsonLd", () => {
   it("emits Product with nested Review and editorial rating", () => {
-    const product = catalog.find((p) => p.id === "yy-as-50");
+    // Must be a verified product — unverified ones deliberately carry no star.
+    const product = catalog.find(
+      (p) => p.verificationStatus === "official_verified"
+    );
     expect(product).toBeTruthy();
 
     const schema = productReviewJsonLd({
       product: product!,
-      path: "/review/yonex-aerosensa-50-shuttle-review/",
+      path: `/review/${product!.id}/`,
       description: "Tournament feather shuttle review.",
       reviewBody: "Hands-on AS-50 notes.",
       rating: computeEditorialRating(product),
@@ -29,9 +32,42 @@ describe("productReviewJsonLd", () => {
     expect(review["@type"]).toBe("Review");
     expect(review.reviewBody).toBe("Hands-on AS-50 notes.");
     expect(review.reviewRating).toBeTruthy();
-    const aggregate = schema.aggregateRating as Record<string, unknown>;
-    expect(aggregate["@type"]).toBe("AggregateRating");
-    expect(aggregate.reviewCount).toBeGreaterThanOrEqual(1);
+  });
+
+  it("never emits AggregateRating", () => {
+    // One named critic's verdict is a Review. An AggregateRating would assert
+    // we averaged ratings collected from other people, which we never did —
+    // and self-generated aggregates are what draw a spammy-structured-markup
+    // manual action.
+    for (const product of catalog.slice(0, 40)) {
+      const schema = productReviewJsonLd({
+        product,
+        path: `/review/${product.id}/`,
+        description: "Editorial review.",
+        reviewBody: "Body.",
+        rating: computeEditorialRating(product),
+      });
+      expect(schema.aggregateRating).toBeUndefined();
+    }
+  });
+
+  it("keeps Product schema even when the product has no rating", () => {
+    // Offers/brand/spec data drive product rich results; an unverified product
+    // should lose only its star, never its whole Product node.
+    const unverified = catalog.find(
+      (p) => p.verificationStatus === "needs_review"
+    );
+    expect(unverified).toBeTruthy();
+    const schema = productReviewJsonLd({
+      product: unverified!,
+      path: `/review/${unverified!.id}/`,
+      description: "Editorial review.",
+      reviewBody: "Body.",
+      rating: computeEditorialRating(unverified!),
+    });
+    expect(schema["@type"]).toBe("Product");
+    expect(schema.offers).toBeTruthy();
+    expect((schema.review as Record<string, unknown>).reviewRating).toBeUndefined();
   });
 });
 

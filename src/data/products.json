@@ -7335,7 +7335,7 @@
   {
     "id": "yy-grpht-thrttl",
     "category": "shoes",
-    "name": "Power Cushion Grpht Thrttl",
+    "name": "GRPHT THRTTL (Graphite Throttle)",
     "brand": "Yonex",
     "priceUsd": 95,
     "fitWidth": "normal",
@@ -7352,7 +7352,7 @@
       "uk",
       "us"
     ],
-    "officialSourceUrl": "https://www.yonex.com/badminton/shoes",
+    "officialSourceUrl": "https://www.yonex.com/graphite-throttle",
     "lastVerifiedAt": "2026-05-19",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
@@ -7363,7 +7363,7 @@
       "value_yonex"
     ],
     "sourceUrls": [
-      "https://www.yonex.com/badminton/shoes"
+      "https://www.yonex.com/graphite-throttle"
     ],
     "editorNote": "Training-focused shoe with lifestyle aesthetic. Not aimed at competition use.",
     "reviewCount": 0,

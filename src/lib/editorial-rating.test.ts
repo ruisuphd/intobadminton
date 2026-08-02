@@ -22,10 +22,9 @@ describe("editorial rating", () => {
     }
   });
 
-  it("rates official_verified racket with founder firsthand testing 4.9 or 5.0", () => {
-    // The 88S Pro 2024 has all the maximums: official_verified +
-    // shaftFlexSource official + founder firsthand + high-confidence
-    // market signals. Should land at the ceiling.
+  it("rewards founder firsthand testing on a verified racket", () => {
+    // The 88S Pro 2024 carries founder firsthand testing plus high-confidence
+    // market signals — the two product-side signals that still move the score.
     const product = lookupCatalogProduct(
       CATALOG,
       "Yonex",
@@ -34,29 +33,52 @@ describe("editorial rating", () => {
     expect(product).toBeDefined();
     const rating = computeEditorialRating(product);
     expect(rating).not.toBeNull();
-    expect(rating!.ratingValue).toBeGreaterThanOrEqual(4.9);
+    expect(rating!.ratingValue).toBeGreaterThan(4.0);
   });
 
-  it("rates needs_review + editor_estimate products lower", () => {
-    const needsReview = CATALOG.find(
-      (p) =>
-        p.verificationStatus === "needs_review" &&
-        p.category === "racket" &&
-        (p as RacketProduct).shaftFlexSource === "editor_estimate"
+  it("publishes NO rating for unverified products rather than a lower one", () => {
+    // A gap in our sourcing is a fact about us, not about the racket. We must
+    // never express it as a worse star rating — the reader would read that as
+    // "this is a worse product".
+    const needsReview = CATALOG.filter(
+      (p) => p.verificationStatus === "needs_review"
     );
-    if (!needsReview) return; // shape check rather than failure
-    const rating = computeEditorialRating(needsReview);
-    expect(rating).not.toBeNull();
-    // Base 4.0 + 0 verifiability − 0.4 from two penalties = 3.6 floor
-    expect(rating!.ratingValue).toBeLessThanOrEqual(4.2);
+    expect(needsReview.length).toBeGreaterThan(0);
+    for (const product of needsReview) {
+      expect(computeEditorialRating(product)).toBeNull();
+    }
   });
 
-  it("never reports a reviewCount below 1 when product exists", () => {
-    for (const product of CATALOG) {
-      const rating = computeEditorialRating(product);
-      if (!rating) continue;
-      expect(rating.reviewCount).toBeGreaterThanOrEqual(1);
-    }
+  it("never lets our own record-keeping move the score", () => {
+    // Regression guard for the old model, which moved stars on whether the
+    // shaft-flex figure was sourced and whether our editor note ran past 100
+    // characters. Two products identical except for those fields must rate
+    // the same.
+    const base = {
+      id: "mock",
+      category: "racket" as const,
+      brand: "Test",
+      name: "Mock",
+      priceUsd: 200,
+      verificationStatus: "editor_verified" as const,
+      editorNote: "Short note.",
+      marketSignals: [],
+      reviewCount: 0,
+      lastVerifiedAt: "2026-05-21",
+    };
+    const tidyRecords = {
+      ...base,
+      shaftFlexSource: "official" as const,
+      editorNote: "A much longer editor note that comfortably runs past the old one-hundred-character threshold used before.",
+    } as unknown as ProductRecord;
+    const sparseRecords = {
+      ...base,
+      shaftFlexSource: "editor_estimate" as const,
+    } as unknown as ProductRecord;
+
+    expect(computeEditorialRating(tidyRecords)!.ratingValue).toBe(
+      computeEditorialRating(sparseRecords)!.ratingValue
+    );
   });
 
   it("rounds rating to one decimal", () => {
@@ -68,16 +90,16 @@ describe("editorial rating", () => {
     }
   });
 
-  it("only flags meetsAggregateThreshold when reviewCount >= 2", () => {
-    for (const product of CATALOG) {
-      const rating = computeEditorialRating(product);
-      if (!rating) continue;
-      if (rating.meetsAggregateThreshold) {
-        expect(rating.reviewCount).toBeGreaterThanOrEqual(2);
-      } else {
-        expect(rating.reviewCount).toBeLessThanOrEqual(1);
-      }
-    }
+  it("exposes no aggregate-shaped fields (guards against AggregateRating)", () => {
+    // `reviewCount` / `meetsAggregateThreshold` were what let callers emit a
+    // schema.org AggregateRating over ratings we never collected. Keeping them
+    // off the type is the cheapest way to stop that coming back.
+    const rating = computeEditorialRating(
+      CATALOG.find((p) => p.verificationStatus !== "needs_review")
+    );
+    expect(rating).not.toBeNull();
+    expect(rating).not.toHaveProperty("reviewCount");
+    expect(rating).not.toHaveProperty("meetsAggregateThreshold");
   });
 
   it("emits at least one rationale line for every rating", () => {

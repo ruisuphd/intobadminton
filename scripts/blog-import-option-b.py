@@ -44,6 +44,49 @@ LEGACY_ONLY = {
     "how-to-choose-a-badminton-racket",
 }
 
+"""
+Slugs knowingly left on the auto-title-cased fallback.
+
+These are NOT "we forgot" — each one has an unresolved editorial problem where
+inventing a tidy headline would launder a factual error into something that
+looks authoritative. Leaving the title visibly broken keeps the problem on the
+backlog. Remove a slug from here only together with the underlying fix.
+"""
+TITLE_FALLBACK_QUARANTINE = {
+    # Body is entirely about the Aerus Z2 (SHBAZ2MEX, three colourways) but the
+    # slug and the review→product map both point at the Power Cushion 88 Dial 3,
+    # a different shoe. Retitling would pick a side without evidence.
+    "yonex-power-cushion-88-dial-3-review",
+    # Body describes "Forza's Blade 88D Danish limited edition"; the mapped
+    # product record calls it a Victor and asserts a "Victor FZ sub-brand" that
+    # we have not verified exists. The catalogue also carries a separate
+    # FZ Forza "Aero Power 88D (Danish National Team LE)" with different specs,
+    # so these may be one racket published twice under two brands.
+    "victor-fz-88d-power-purple-review",
+}
+
+
+def fallback_title(slug):
+    """Title-case a slug, but only for slugs we have consciously quarantined.
+
+    The old unconditional `slug.replace("-", " ").title()` fallback silently
+    produced 67 published headlines with mangled model names — "Subaxia Gt",
+    "Auraspeed 90K Ii", "Rsl At70", "Drivex 10". Because it never failed, the
+    breakage was invisible until it showed up in Search Console. Now any new
+    slug without a TITLE_OVERRIDES entry stops the import.
+    """
+    if slug not in TITLE_FALLBACK_QUARANTINE:
+        raise SystemExit(
+            f"blog-import: no TITLE_OVERRIDES entry for '{slug}'.\n"
+            f"  Auto-title-casing mangles model names (e.g. 'Gt' for 'GT'), so\n"
+            f"  add a hand-written title to TITLE_OVERRIDES in this file.\n"
+            f"  If the article has an unresolved factual problem that makes a\n"
+            f"  clean title dishonest, add it to TITLE_FALLBACK_QUARANTINE\n"
+            f"  with a comment explaining what needs resolving first."
+        )
+    return slug.replace("-", " ").title()
+
+
 # Keep legacy editorial bodies when markdown would duplicate another live slug.
 LEGACY_PREFERRED = {
     "victor-drivex-12-vs-astrox-88d-pro",
@@ -51,6 +94,82 @@ LEGACY_PREFERRED = {
 }
 
 TITLE_OVERRIDES = {
+    # --- Sprint 131: titles that were falling through to slug.title() ---
+    # Every entry below replaces an auto-title-cased headline that mangled the
+    # product's own name ("Subaxia Gt", "90K Ii", "Drivex 10", "Rsl At70").
+    # Brand casing is the point: these are the exact strings players type into
+    # Google, and the top page here was carrying 139 clicks/quarter with the
+    # model name spelled wrong.
+    # "GT" is not a trim level — it is Yonex's GRPHT THRTTL (Graphite Throttle)
+    # midsole tech, confirmed on yonex.com/graphite-throttle. Both titles say so,
+    # because "subaxia gt review" and "yonex grpht thrttl review" are separate
+    # live query clusters that should each land on the right page.
+    "yonex-subaxia-gt-shoes-review": "Yonex Power Cushion Subaxia GT review: Graphite Throttle in a badminton shoe",
+    "yonex-grpht-thrttl-training-shoe-review": "Yonex GRPHT THRTTL (Graphite Throttle) review: the concept cross-trainer",
+    "li-ning-axforce-100-gen-2-vs-gen-1": "Li-Ning AxForce 100 Gen 2 vs Gen 1: a lower entry bar, same ceiling",
+    "li-ning-axforce-90-new-5u-deep-dive": "Li-Ning AxForce 90 New 5U deep dive: the light build that still bites",
+    "victor-drivex-12-zsw-vs-original-comparison": "Victor DriveX 12 ZSW vs original: Nanjing build against Taiwan build",
+    "victor-auraspeed-90k-ii-review": "Victor Auraspeed 90K II review: Antonsen's speed pillar, updated",
+    "li-ning-axforce-90-new-review": "Li-Ning AxForce 90 New review: faster and far more forgiving",
+    "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro": "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro: near-identical on court",
+    "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z": "Nanoflare 700 Pro vs 700, 800 Pro and 1000Z: which speed frame fits",
+    "yonex-nanoflare-nextage-review": "Yonex Nanoflare NEXTAGE review: soft, fast, and short on threat",
+    "yonex-nanoflare-800-pro-tour-review": "Yonex Nanoflare 800 Pro and Tour review: the Pro badge tested",
+    "asics-blast-ff-3-badminton-shoes-review": "ASICS Blast FF 3 badminton review: no carbon plate, no problem",
+    "yonex-astrox-88s-tour-curious-review": "Yonex Astrox 88S Tour review: fun frame, hard-to-justify price",
+    "yonex-arcsaber-7-tour-review": "Yonex Arcsaber 7 Tour review: the Pro's easier, cheaper sibling",
+    "yonex-astrox-99-pro-gen-1-review": "Yonex Astrox 99 Pro Gen 1 review: where the 99 family turned serious",
+    "victor-drivex-12-vs-drivex-10-and-88d-pro-2024": "Victor DriveX 12 vs DriveX 10 and Astrox 88D Pro: Victor's best shaft yet",
+    "kumpoo-kh-g805-lite-pro-shoes-review": "Kumpoo KH-G805 LITE PRO review: three weeks as a main match shoe",
+    "yonex-astrox-nextage-review": "Yonex Astrox NEXTAGE review: a staged experiment, not a revolution",
+    "victor-drivex-10-review": "Victor DriveX 10 METALLIC review: control leaning attack, firm and fast",
+    "rsl-at70-racket-review": "RSL AT70 review: a flagship-tier singles weapon outside the big three",
+    "li-ning-lt66-power-string-review": "Li-Ning LT66 Power string review: the coated 0.66 mm power variant",
+    "li-ning-bladex-880-shida-racket-review": "Li-Ning Bladex 880 Shida review: a signature edition with real upgrades",
+    "yonex-nanoflare-700-review": "Yonex Nanoflare 700 review: the frame that started the Nanoflare line",
+    "li-ning-bladex-arrow-review": "Li-Ning Bladex Arrow (Bladex EX) review: the entry-advanced Bladex",
+    "yonex-arcsaber-7-play-review": "Yonex Arcsaber 7 Play review: how much Arcsaber survives the Play tier",
+    "kawasaki-h2-6u-superlight-racket-review": "Kawasaki H2 6U review: superlight done without gutting the frame",
+    "rsl-supreme-shuttle-review": "RSL Supreme shuttle review: a real step up from RSL Classic?",
+    "victor-thruster-hwql-nuke-review": "Victor Thruster HWQL review: a blunt, effective mid-range kill racket",
+    "bonny-wind-shadow-budget-speed-shoes-review": "Bonny Wind Shadow review: dual carbon plates on a sub-200-yuan budget",
+    "li-ning-bladesabre-2-pro-shoes-review": "Li-Ning Bladesabre 2 Pro review: lighter, softer fast-launch shoe",
+    "kawasaki-glacier-800-racket-review": "Kawasaki Glacier 800 review: budget frame from a weekend buying spree",
+    "kumpoo-js-67-string-review": "Kumpoo JS-67 string review: what the ice-blue 0.67 mm line actually does",
+    "victor-thruster-sr-cherry-blossom-review": "Victor Thruster SR Cherry Blossom review: paint job or real racket?",
+    "victor-fz-flash-1000-racket-review": "Victor FZ Flash 1000 review: speed-type swing at a mid-tier price",
+    "li-ning-gp100-pro-overgrip-review": "Li-Ning GP100 Pro overgrip review: budget dry grip, honestly tested",
+    "kawasaki-star-cross-second-perspective-review": "Kawasaki Star Cross review: a high-end speed-offence frame, second look",
+    "victor-sonic-boom-pro-budget-attack-review": "Victor Sonic Boom Pro review: broad, stable attack just north of 300 yuan",
+    "victor-thruster-falcon-review": "Victor Thruster F Falcon Ultra review: a full upgrade on Black Gold",
+    "bonny-zhangui-dao-8888ax-ultra-review": "Bonny Zhangui Dao 8888AX Ultra review: high-end balance without ego specs",
+    "yonex-arcsaber-7-pro-review": "Yonex Arcsaber 7 Pro review: light, stable control for doubles front court",
+    "bonny-snake-breath-second-tier-flagship-review": "Bonny Snake's Breath review: a self-developed flagship, not a clone",
+    "victor-jetspeed-12-curious-review": "Victor Jetspeed 12 review: a doubles classic that earned its reputation",
+    "victor-thruster-9900-curiosity-review": "Victor Thruster K 9900 review: the small-frame cult racket revisited",
+    "li-ning-l66-string-first-look": "Li-Ning L66 string first look: a balanced 0.66 mm answer to BG65",
+    "bonny-wuque-xuanwu-review": "Bonny Wuque Xuanwu review: nine months on from the factory's promise",
+    "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review": "Bonny Mojun vs Yonex Arcsaber 11 Pro: does the benchmark hold up?",
+    "bonny-wuque-1982-y3k-shoes-review": "Bonny Wuque 1982 Y3K review: cyberpunk paint on a classic platform",
+    "bonny-carbon-armour-shoes-review": "Bonny Carbon Armour shoes review: quick notes after a long stint",
+    "rsl-aero-u-shuttle-review": "RSL Aero U shuttle review: goose feather against the Classic benchmark",
+    "kumpoo-js-65-string-review": "Kumpoo JS-65 string review: the 0.65 mm durability line, honestly",
+    "bonny-wuque-flagship-088-shoes-review": "Bonny Wuque 088 review: a flagship court tool with no obvious weak point",
+    "jujiang-lbtu-value-racket-review": "JuJiang LBTU review: the value advanced frame I keep recommending",
+    "bonny-phantom-100-racket-review": "Bonny Phantom 100 review: solid craft without the luxury markup",
+    "bonny-future-land-3-polaris-shoes-review": "Bonny Future Land III Polaris review: an all-round stable court shoe",
+    "gosen-kyokugen-racket-review": "Gosen Kyokugen review: a big-three-grade frame from outside the big three",
+    "bonny-baidi-800lt-racket-review": "Bonny Baidi 800LT review: Nanoflare 800 LT feel without the price",
+    "anta-dingyin-1000-racket-review": "Anta Dingyin 1000 review: the first retail frame marketed with Toray M46X",
+    "jujiang-mzs-66un-string-review": "JuJiang MZS-66UN string review: second-tier hype, first-tier questions",
+    "goshen-leiming-69-string-review": "Gosen Leiming 69 string review: a beginner's honest first impression",
+    "kawasaki-twilight-shoes-review": "Kawasaki Twilight shoes review: dial fit and carbon anti-torsion, tested",
+    "chengong-feng-racket-review": "Chengong Feng review: a secondary brand chasing the Nanoflare 1000Z lane",
+    "kawasaki-crimson-blade-racket-review": "Kawasaki Crimson Blade review: strong tech at a borrowed-gear price",
+    "li-ning-bladex-500-pro-curious-review": "Li-Ning Bladex 500 Pro review: a rare honest Pro upgrade",
+    "victor-jipo-ls-racket-review": "Victor Jipo LS review: the racket I reached for in a bad patch",
+    "victor-yinbao-a-boom-shoes-review": "Victor A-BOOM review: the lazy player's 300-yuan staple shoe",
+
     "yonex-nanoflare-1000z-review": "Yonex Nanoflare 1000 Z review: speed flagship with real control",
     "yonex-nanoflare-1000z-play-review": "Nanoflare 1000 Z vs 1000 Play: speed flagship vs entry tier",
     "rsl-no4-plus-shuttle-review": "RSL No.4 Plus shuttle: mixed-feather upgrade that misses",
@@ -578,7 +697,7 @@ def main() -> None:
             TITLE_OVERRIDES.get(slug)
             or sprint_meta.get("title")
             or meta.get("title")
-            or slug.replace("-", " ").title()
+            or fallback_title(slug)
         )
         raw_dek = (
             DEK_OVERRIDES.get(slug)

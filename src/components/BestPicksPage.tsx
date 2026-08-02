@@ -119,16 +119,17 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
           : {}),
       };
 
-      const aggregateRating = rating
-        ? {
-            "@type": "AggregateRating" as const,
-            ratingValue: rating.ratingValue,
-            reviewCount: Math.max(1, rating.reviewCount),
-            bestRating: rating.bestRating,
-            worstRating: rating.worstRating,
-          }
-        : undefined;
-
+      /*
+       * No AggregateRating here, deliberately.
+       *
+       * An aggregate rating has to summarise ratings we genuinely collected
+       * from other people. Ours is a single editorial judgement by one named
+       * critic, so the honest schema is one Review with a reviewRating — which
+       * is exactly what Google's critic-review guidance asks for. Emitting
+       * AggregateRating over a synthetic reviewCount ("editor note + market
+       * signals") would be self-generated aggregate data and is the pattern
+       * that earns a spammy-structured-markup manual action.
+       */
       return {
         "@type": "ListItem" as const,
         position: p.rank,
@@ -147,7 +148,6 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             value: spec.value,
           })),
           review,
-          ...(aggregateRating ? { aggregateRating } : {}),
         },
       };
     }),

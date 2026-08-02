@@ -12,7 +12,12 @@ import type { EditorialRating } from "@/lib/editorial-rating";
 export type ReviewArticleEnrichment = {
   product: ProductRecord;
   scored: ScoredProduct | null;
-  rating: EditorialRating;
+  /**
+   * Null when the product's specs are not yet verified. The review page still
+   * gets its full Product + Review schema — we simply publish no star for it,
+   * rather than a star that would encode our own sourcing gap.
+   */
+  rating: EditorialRating | null;
   productSchema: ReturnType<typeof productReviewJsonLd>;
 };
 
@@ -30,8 +35,9 @@ export function enrichmentForReviewArticle(
   const product = reviewProductById(productId);
   if (!product) return null;
 
+  // A missing rating must NOT suppress the Product schema. Offers, brand and
+  // spec data are what earn product rich results; the star is optional garnish.
   const rating = computeEditorialRating(product);
-  if (!rating) return null;
 
   const path = articlePathForSlug(slug);
   const reviewBody = article.sections
