@@ -256,8 +256,8 @@
       "e2e": true
     },
     {
-      "id": "commercial-racket-vic-yu-12",
-      "productId": "vic-yu-12",
+      "id": "commercial-racket-vic-drivex-12",
+      "productId": "vic-drivex-12",
       "expectHref": "/review/victor-yu-12-racket-review/",
       "expectKind": "review",
       "expectBestSlug": "intermediate-rackets",

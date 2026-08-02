@@ -95,7 +95,7 @@ describe("product data integrity", () => {
     expect(racket("vic-drivex-8s").image).toMatchObject({ verified: true });
     expect(racket("vic-jetspeed-12").image).toMatchObject({ verified: true });
     expect(racket("yy-arcsaber-7-tour").image).toMatchObject({ verified: true });
-    expect(racket("vic-yu-12").image).toMatchObject({ verified: true });
+    expect(racket("vic-drivex-12").image).toMatchObject({ verified: true });
     expect(racket("ln-halbertec-9000").image).toMatchObject({ verified: true });
   });
 

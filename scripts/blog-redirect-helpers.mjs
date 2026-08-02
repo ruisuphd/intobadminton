@@ -30,7 +30,7 @@ function blogSlugForProduct(productId) {
     })[0]?.slug;
 }
 
-function reviewPath(productId) {
+export function reviewPath(productId) {
   const slug = blogSlugForProduct(productId);
   if (slug) return `/review/${slug}/`;
   return `/review/${productId}/`;
