@@ -9135,6 +9135,103 @@
     "reviewCount": 0
   },
   {
+    "id": "vic-thruster-ryuga",
+    "category": "racket",
+    "name": "Thruster Ryuga",
+    "brand": "Victor",
+    "priceUsd": 229,
+    "headWeight": "head_heavy",
+    "shaftFlex": "stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 303,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 32
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2021,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
+    "officialSourceUrl": "https://ca.victorsport.com/product/thruster-ryuga-d",
+    "lastVerifiedAt": "2026-08-01",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "smash",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://ca.victorsport.com/product/thruster-ryuga-d"
+    ],
+    "editorNote": "Victor Thruster Ryuga gen 1 (TK-Ryuga / 龙牙之刃) — original Lee Zii Jia-era attack hammer; distinct from II / II Pro / Metallic.",
+    "reviewCount": 0
+  },
+  {
+    "id": "vic-thruster-ryuga-metallic",
+    "category": "racket",
+    "name": "Thruster Ryuga Metallic",
+    "brand": "Victor",
+    "priceUsd": 279,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 306,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 32
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2023,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn",
+      "jp"
+    ],
+    "officialSourceUrl": "https://www.victorsport.com/product/thruster-ryuga-metallic",
+    "lastVerifiedAt": "2026-08-01",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "singles",
+      "smash",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://www.victorsport.com/product/thruster-ryuga-metallic"
+    ],
+    "editorNote": "Victor Thruster Ryuga Metallic (TK-Ryuga Metallic / 黑龙牙) — metallic-carbon hoop, wood handle, Lee Zii Jia black-dragon brief; distinct from II Pro.",
+    "reviewCount": 0
+  },
+  {
     "id": "ln-invincible-ace",
     "category": "shoes",
     "name": "Invincible ACE",
