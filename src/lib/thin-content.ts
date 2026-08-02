@@ -3,6 +3,10 @@ import type { BlogSlug } from "@/lib/blog";
 /**
  * Review articles held back from the search index because they are thin.
  *
+ * One of two noindex lists in this file. This one is about length; see
+ * `duplicateNoindexSlugs` for pages held back because they duplicate a
+ * sibling. Both feed `isThinContentNoindex` and the sitemap.
+ *
  * Every slug below is under 400 words of body copy and recorded zero
  * impressions in the 2026-08-02 Search Console export. Individually they are
  * harmless; collectively they are the "low value content" signal that blocks
@@ -71,9 +75,51 @@ export const thinContentNoindexSlugs: readonly BlogSlug[] = [
   "victor-drivex-12-vs-zsw-vs-arc11-halbertec-8000",
 ];
 
-const thinContentNoindexSet: ReadonlySet<string> = new Set(
-  thinContentNoindexSlugs
-);
+/**
+ * Review articles held back from the index because they duplicate a sibling.
+ *
+ * A separate list from `thinContentNoindexSlugs`, and deliberately so: these
+ * pages are not thin. They clear the word-count threshold comfortably. Their
+ * problem is that they render a near-copy of another live URL's body and draw
+ * effectively no search demand of their own, which is the same "low value
+ * content" signal arriving by a different route.
+ *
+ * The bar for adding a slug here is high, because the usual fix for a
+ * duplicate pair is to give the weaker slug its own source markdown rather
+ * than to hide it. Five pairs were resolved that way in Sprint 132. A slug
+ * belongs on this list only when writing genuine content for it would require
+ * asserting something the catalogue cannot yet support.
+ */
+export const duplicateNoindexSlugs: readonly BlogSlug[] = [
+  // Renders the same body as `fz-forza-88d-review` from the same source file,
+  // `reviews-fz-blade-88d-racket.md`, and drew 13 impressions in the quarter
+  // to 2026-08-02 against that page's 225 — no independent query cluster.
+  //
+  // It is the one pair of the five that could not be split by writing a second
+  // article, because the two catalogue rows may not be two rackets. The source
+  // says the shaft reads "FZ FORZA AERO POWER 88D" with a Danish national team
+  // badge, while `vic-fz-88d-power-purple` files the same frame under Victor
+  // at $115 against FZ Forza's $175. Writing a distinct review would mean
+  // narrating a brand and a price the catalogue has not settled — exactly what
+  // the TITLE_FALLBACK_QUARANTINE note in `scripts/blog-import-option-b.py`
+  // exists to prevent.
+  //
+  // Noindex is the interim, not the resolution. When the brand question is
+  // decided, either the row merges into `fz-forza-88d` and this slug becomes a
+  // redirect, or it earns a real review and comes off this list.
+  "victor-fz-88d-power-purple-review",
+];
+
+const thinContentNoindexSet: ReadonlySet<string> = new Set([
+  ...thinContentNoindexSlugs,
+  ...duplicateNoindexSlugs,
+]);
+
+/** Every review slug served `noindex, follow`, whatever the reason. */
+export const noindexReviewSlugs: readonly BlogSlug[] = [
+  ...thinContentNoindexSlugs,
+  ...duplicateNoindexSlugs,
+];
 
 /** True when `/review/<slug>/` should render `noindex, follow`. */
 export function isThinContentNoindex(slug: string): boolean {

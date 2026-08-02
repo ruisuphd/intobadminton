@@ -191,7 +191,11 @@ TITLE_OVERRIDES = {
     "yonex-comfort-z3-shoes-review": "Yonex Power Cushion Comfort Z3: cushion-first match shoe",
     "li-ning-halbertec-8000-vs-9000-vs-9000-power": "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which one fits your game",
     "victor-yu-12-racket-review": "Victor DriveX 12 review: control players finally have a Victor flagship",
-    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ VA vs Kurenai: not an Anders Antonsen racket",
+    # The URL keeps the legacy Anders Antonsen string, but the page is the
+    # standard Astrox 100ZZ against its 100ZX sibling. The VA-versus-Kurenai
+    # comparison moved to yonex-astrox-100zz-axelsen-va-vs-kurenai, which is
+    # the slug the product map already points at the VA catalogue row.
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ vs 100ZX: the Hyper Slim flagship and its Taiwan sibling",
     "li-ning-okay-1-shuttle-review": "Li-Ning OKAY 1 review: Li-Ning's first synthetic feather shuttle",
     "victor-c90-ii-shoes-review": "Victor C90 II review: wide last, heavy stability, flagship cushion",
     "li-ning-bladex-800-speed-review": "Li-Ning Bladex 800 Speed review: tight M46X speed twin",
@@ -245,6 +249,20 @@ TITLE_OVERRIDES = {
 
     "victor-auraspeed-hs-plus-deep-dive": "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
     "victor-auraspeed-hs-plus-attack-review": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
+    # --- Sprint 132: the five duplicate-source pairs, split ---
+    # Each of these slugs used to render a sibling's body with a one-line
+    # disambiguation prefix bolted on. They now have their own source markdown,
+    # so the titles describe what the page actually contains.
+    #
+    # The 100ZZ pair splits along the product map: the legacy Antonsen URL is
+    # wired to `yy-astrox-100zz` and covers the standard flagship and the
+    # 100ZX, while the Axelsen URL is wired to `yy-astrox-100zz-va` and is now
+    # a review of that variant rather than a second copy of the same article.
+    "yonex-astrox-100zz-axelsen-va-vs-kurenai": "Yonex Astrox 100ZZ VA review: the Axelsen edition against Kurenai",
+    # Gen 2 is a distinct catalogue product (`yy-astrox-99-pro-2`, 2023) and no
+    # longer shares the gen-1 source. The old title said only "Astrox 99 Pro",
+    # which is what made the two pages indistinguishable in the SERP.
+    "yonex-astrox-99-pro-2-deep-dive": "Yonex Astrox 99 Pro (gen 2) review: same violence, lower entry fee",
     "yonex-astrox-99-pro-3-deep-dive": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
     "yonex-arcsaber-7-tour-review": "Yonex Arcsaber 7 Tour review: the value pick of the Arcsaber 7 line",
     "rsl-aero-u-shuttle-review": "RSL Aero U shuttle review: late-rally consistency in a tube",
@@ -253,7 +271,19 @@ TITLE_OVERRIDES = {
 
 DEK_OVERRIDES = {
     "victor-yu-12-racket-review": "DriveX 12 gets Victor's full control-focused rebuild: alloy carbon, WES 3.0, and a firmer all-court feel.",
-    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ VA and Kurenai comparison, with the old Antonsen naming mistake corrected while keeping the URL for continuity.",
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ against the 100ZX: Hyper Slim shaft, measured builds, and why the cheaper sibling is the harder racket to handle.",
+    # Sprint 132 — deks for the five split pairs. Each of these pages used to
+    # inherit its sibling's opening paragraph, so the meta description in the
+    # SERP was identical on both URLs of the pair.
+    "li-ning-axforce-90-new-5u-deep-dive": "The 5U AxForce 90 New keeps the 4U shaft hardness and drops the head mass. What that buys in fast doubles, and how it compares with the 3U and 4U builds.",
+    "yonex-astrox-100zz-axelsen-va-vs-kurenai": "Volume Cut Resin instead of Black Micro Core makes the VA a lighter-swinging 100ZZ. Measured builds, shaft hardness, and whether Kurenai is still worth it.",
+    "victor-auraspeed-hs-plus-deep-dive": "Victor's hardest shaft in a small aero frame: specs, WES 3.0 construction, on-court character across every phase, and where the Auraspeed badge misleads.",
+    "victor-auraspeed-hs-plus-attack-review": "A near-even speed frame that smashes from shaft whip rather than head mass — what it out-hits, what it costs to drive, and when the attack case breaks down.",
+    "yonex-astrox-99-pro-2-deep-dive": "The 2023 Astrox 99 Pro keeps the head weight and the intent, and lowers the power you need to reach them. How gen 2 sits between the original Pro and gen 3.",
+    # Without this the dek is the first sentence of the generation-context
+    # paragraph, so the meta description opens "Generation context:" — scaffold
+    # language in the SERP snippet.
+    "yonex-astrox-99-pro-gen-1-review": "The first Astrox 99 Pro: a 68-hole bed, a weighted handle and almost no forgiveness. Why it built the line's reputation, and why gen 2 exists.",
     # Expanded thin pages: without an override these deks are the first 160
     # characters of the overview with an ellipsis bolted on, which is what
     # ships as the meta description. Written deks instead.
@@ -267,10 +297,16 @@ DEK_OVERRIDES = {
 
 # Prepended to the overview when two slugs would otherwise share identical JSON bodies.
 SLUG_DISAMBIGUATION: dict[str, str] = {
-    "li-ning-axforce-90-new-5u-deep-dive": "This article focuses on the 5U AxForce 90 New weight class — not the broader AxForce 90 vs 80 vs Yonex 88D Pro comparison.",
-    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps the legacy Anders Antonsen slug for continuity; the comparison covers VA and Kurenai colourways only.",
-    "yonex-astrox-99-pro-gen-1-review": "First-gen Astrox 99 Pro (second Astrox 99-family generation) — includes Sun Orange colourway notes. See gen-2 and gen-3 deep dives for later Pro revisions.",
-    "victor-auraspeed-hs-plus-attack-review": "Attack-biased HS Plus tuning — distinct from the neutral deep-dive on the same frame.",
+    # Sprint 132 removed four entries from this table. A disambiguation prefix
+    # is a patch over two slugs sharing one markdown file; once each slug has
+    # its own source and opens by saying what it covers, the prefix is a second
+    # copy of the first paragraph. Removed along with the shared sources:
+    # li-ning-axforce-90-new-5u-deep-dive, yonex-astrox-99-pro-gen-1-review,
+    # victor-auraspeed-hs-plus-attack-review, and the Axelsen 100ZZ URL.
+    #
+    # This one stays because the URL still carries a name the article does not:
+    # the slug says Anders Antonsen and the page is about the standard 100ZZ.
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps a legacy Anders Antonsen slug for continuity — it is not an Antonsen signature racket. The VA edition has its own review.",
     # rsl-aero-classic-tourney-shuttle-review no longer needs a disambiguation
     # prefix: rsl-aero-u-shuttle-review now has its own source markdown
     # (review-rsl-aero-u-shuttle.md) instead of sharing the Classic Tourney

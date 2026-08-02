@@ -2,6 +2,30 @@
   "reviewCount": 205,
   "featured": [
     {
+      "slug": "li-ning-axforce-90-new-5u-deep-dive",
+      "title": "Li-Ning AxForce 90 New 5U deep dive: the light build that still bites",
+      "updatedAt": "2026-08-02",
+      "readingMinutes": 4
+    },
+    {
+      "slug": "victor-auraspeed-hs-plus-attack-review",
+      "title": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
+      "updatedAt": "2026-08-02",
+      "readingMinutes": 4
+    },
+    {
+      "slug": "yonex-astrox-100zz-axelsen-va-vs-kurenai",
+      "title": "Yonex Astrox 100ZZ VA review: the Axelsen edition against Kurenai",
+      "updatedAt": "2026-08-02",
+      "readingMinutes": 5
+    },
+    {
+      "slug": "yonex-astrox-99-pro-2-deep-dive",
+      "title": "Yonex Astrox 99 Pro (gen 2) review: same violence, lower entry fee",
+      "updatedAt": "2026-08-02",
+      "readingMinutes": 5
+    },
+    {
       "slug": "li-ning-mirage-ii-pro-shoes-review",
       "title": "Li-Ning Mirage II Pro review: pure speed, racing mode only",
       "updatedAt": "2026-08-01",
@@ -12,30 +36,6 @@
       "title": "Li-Ning Thunder 2 Pro shoes: tough cushion, natural wrap",
       "updatedAt": "2026-08-01",
       "readingMinutes": 3
-    },
-    {
-      "slug": "victor-thruster-ryuga-ii-pro-racket-review",
-      "title": "Victor Thruster Ryuga II Pro review: controlled dragon attack frame",
-      "updatedAt": "2026-08-01",
-      "readingMinutes": 3
-    },
-    {
-      "slug": "victor-thruster-ryuga-metallic-racket-review",
-      "title": "Victor Thruster Ryuga Metallic review: black-dragon smash ceiling",
-      "updatedAt": "2026-08-01",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "victor-thruster-ryuga-racket-review",
-      "title": "Victor Thruster Ryuga review: gen 1 original smash hammer",
-      "updatedAt": "2026-08-01",
-      "readingMinutes": 2
-    },
-    {
-      "slug": "li-ning-axforce-100-gen-1-review",
-      "title": "Li-Ning AxForce 100 Gen 1 review: offensive peak champagne flagship",
-      "updatedAt": "2026-07-22",
-      "readingMinutes": 1
     }
   ]
 }

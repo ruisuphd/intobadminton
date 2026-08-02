@@ -182,11 +182,11 @@
     {
       "id": "flagship-astrox-99-pro-2",
       "slug": "yonex-astrox-99-pro-2-deep-dive",
-      "expectProductId": "yy-astrox-99-pro",
+      "expectProductId": "yy-astrox-99-pro-2",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Flagship attack racket review — Astrox 99 Pro 2 deep-dive linked from compare guides"
+      "note": "Second-generation Astrox 99 Pro (2023) — its own source and catalogue row, split from the gen-1 review"
     },
     {
       "id": "flagship-arcsaber-11-pro",

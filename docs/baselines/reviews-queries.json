@@ -1279,7 +1279,7 @@
     {
       "id": "yonex-astrox-99-pro-2-deep-dive",
       "slug": "yonex-astrox-99-pro-2-deep-dive",
-      "expectProductId": "yy-astrox-99-pro",
+      "expectProductId": "yy-astrox-99-pro-2",
       "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,

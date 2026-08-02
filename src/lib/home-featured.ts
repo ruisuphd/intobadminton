@@ -35,8 +35,8 @@ export function homeFeaturedReviewHrefs(): string[] {
 /** Featured review shells not already covered by Lighthouse / brand / compare precache. */
 export function homeFeaturedReviewPrecachePaths(): string[] {
   const alreadyPrecached = new Set([
-    "/review/gosen-ryoga-shiden-review/",
-    "/review/anta-ah600w-racket-review/",
+    "/review/li-ning-halbertec-5000-racket-review/",
+    "/review/yonex-arcsaber-7-tour-review/",
   ]);
   return homeFeaturedReviewHrefs().filter((href) => !alreadyPrecached.has(href));
 }
