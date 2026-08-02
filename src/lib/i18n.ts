@@ -22,8 +22,13 @@ export const messages = {
     },
     home: {
       title: "Find the badminton gear that fits your game",
+      // Kept short deliberately: at 235 characters this ran to seven lines and
+      // 205px on a 375px screen, pushing the search box and the proof stats
+      // below the fold on the device that brings ~65% of the site's traffic.
+      // The two things worth saying above the fold are what the finder does and
+      // what makes it different — the source labelling.
       subtitle:
-        "Five quick questions about how you play. I rank rackets, strings, shoes, and the rest of the kit by level, role, swing, comfort, and budget, then label whether each spec comes from an official product page or still needs a second look.",
+        "Five questions about how you play, then a shortlist of rackets, strings, shoes and bags that fit — with every spec labelled by where it came from.",
       start: "Start finder",
       guides: "Read guides",
       proof: [

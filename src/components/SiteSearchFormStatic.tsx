@@ -39,8 +39,12 @@ export function SiteSearchFormStatic({
     ? "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2"
     : "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-accent)] px-5 text-sm font-medium text-white hover:bg-[var(--color-accent-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2";
 
+  // Hidden below `sm`. At 375px an input + Search + Catalog left the field
+  // about 130px wide, clipping its own placeholder to "Search rack". Catalog is
+  // already one tap away in the header nav, so the phone gets the field and one
+  // action; wider screens keep both.
   const secondaryBtnClass =
-    "inline-flex h-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2";
+    "hidden sm:inline-flex h-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 text-sm font-medium text-[var(--text)] hover:bg-[color:var(--surface-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2";
 
   return (
     <form
@@ -61,7 +65,7 @@ export function SiteSearchFormStatic({
         name="q"
         type="search"
         defaultValue={defaultQuery}
-        placeholder={compact ? "Search rackets…" : "Search rackets, reviews, guides…"}
+        placeholder={compact ? "Search rackets…" : "Search rackets, reviews…"}
         autoComplete="off"
         className={inputClass}
       />

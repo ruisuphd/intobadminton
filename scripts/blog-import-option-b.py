@@ -433,6 +433,40 @@ def merge_overview_sections(sections: list[dict[str, str]]) -> list[dict[str, st
     return [{"heading": "Overview", "body": "\n\n".join(overviews)}] + rest
 
 
+def sentence_dek(body: str, limit: int = 165) -> str:
+    """Build a dek that ends on a full stop instead of mid-word.
+
+    The dek is this site's meta description, so it is the sentence Google shows
+    under the title in the SERP. The old rule was `body[:160] + "…"`, which cut
+    63% of articles (130 of 205) mid-sentence — the top page ended on "what a
+    pro badminton shoe built on that idea might look like…". Snippets that
+    break off mid-thought read as machine-generated and cost clicks on a site
+    already converting at ~2.2%.
+
+    Take whole sentences while they fit. Fall back to a word boundary with an
+    ellipsis only when the very first sentence is longer than the budget.
+    """
+    text = " ".join(body.split()).strip()
+    if not text:
+        return ""
+    if len(text) <= limit:
+        return text
+
+    sentences = [s for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    out = ""
+    for sentence in sentences:
+        candidate = f"{out} {sentence}".strip() if out else sentence
+        if len(candidate) > limit:
+            break
+        out = candidate
+    if out:
+        return out
+
+    # First sentence alone blows the budget — cut on a word, never mid-word.
+    clipped = text[:limit].rsplit(" ", 1)[0].rstrip(",;:—-")
+    return f"{clipped}…"
+
+
 def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
     dek = dek.strip()
     if len(dek) >= 50:
@@ -715,13 +749,13 @@ def main() -> None:
         raw_dek = (
             DEK_OVERRIDES.get(slug)
             or (
-                (sections[0]["body"][:160] + "…")
+                sentence_dek(sections[0]["body"])
                 if md_updated and sections and not DEK_OVERRIDES.get(slug)
                 else None
             )
             or sprint_meta.get("dek")
             or meta.get("dek")
-            or (sections[0]["body"][:160] + "…" if sections else "")
+            or (sentence_dek(sections[0]["body"]) if sections else "")
         )
         dek = ensure_dek(raw_dek, sections, title)
         verdict_from_sections = extract_verdict(sections, dek)
