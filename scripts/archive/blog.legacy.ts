@@ -642,11 +642,16 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       slug: "badminton-string-selector",
       updatedAt: "2026-04-28",
       category: "guides",
-      title: "BG80, EXBOLT 63, or BG65: choosing strings by outcome",
-      dek: "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+      // Retitled to the live query. Search Console shows the "best badminton
+      // string" cluster pulling 125+ impressions a quarter at position 29-46 —
+      // the page was 122 words and far too thin to rank for it.
+      title: "Best badminton string: choose by the problem you are fixing",
+      dek: "Strings change control, repulsion, comfort and cost per session more than most players expect. Here is how to pick one by the problem it solves.",
+      verdict:
+        "There is no single best badminton string, but there is a best string for the thing your game is currently missing. Pick the gauge first, then the character, then the tension — and judge the result at week three rather than week one.",
       story: {
         intro:
-          "Strings change control, repulsion, comfort, and cost per session more than many players expect.",
+          "Most string advice starts with a brand name. That is backwards, and it is why so many players end up with an expensive string that suits somebody else's game.",
         blocks: [
           {
             kind: "firstPerson",
@@ -659,15 +664,31 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       sections: [
         {
           heading: "Start with what you want to fix",
-          body: "If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.",
+          body: "If clears need help and defence feels late, a livelier thin string can add repulsion. If slices, drops, and net control are your priority, a rougher control string may be worth the extra effort. If you break strings often, durability and tension hold should outrank sound.\n\nThat framing matters because string is the cheapest meaningful change you can make to a racket. A restring costs a fraction of a new frame and changes more about how the racket feels than most players expect — often more than moving one weight class or two pounds of tension.\n\nIt also means the honest answer to 'what is the best badminton string' is a question back: what is your racket currently not doing for you? A forgiving racket with an unforgiving string still feels wrong, and no amount of spending fixes a mismatch you have not diagnosed.",
+        },
+        {
+          heading: "Gauge is the first decision",
+          body: "Badminton strings are sold by thickness, usually between 0.70 mm and 0.61 mm, and this single number does more to set the character of a setup than the brand on the packet.\n\nThinner string bites into the shuttle cork more, which produces more repulsion, more grip on slices, and a crisper sound. It also breaks sooner and loses tension faster. Thicker string lasts longer, holds tension better and feels duller in exchange.\n\nMost club players are well served at 0.68 mm or 0.65 mm. Moving from 0.68 mm to 0.63 mm is a larger change in feel than adding two pounds of tension, so change one of the two at a time or you will not know which did what.\n\nThe common mistake is buying a 0.63 mm string to gain power and then stringing it high to gain more. Thin string at high tension is a narrow, unforgiving setup that punishes exactly the late contact that tired club players produce in the third game.",
+        },
+        {
+          heading: "The strings most club players end up choosing",
+          body: "BG65 is the conservative durability pick — around 11 US dollars, on sale since 1990, and still the sensible answer when cost per session matters more than maximum bite or sound. It suits beginners and anyone who breaks strings frequently.\n\nBG80 is the control-first reference at around 13 dollars. It is built for players who generate their own power and want bite on cuts, drops and net shots, and it holds tension well. BG80 Power is its repulsion-forward sibling: the same 0.68 mm gauge with a polymer mix tuned for extra smash power, trading away a little net touch.\n\nEXBOLT 63 sits around 15 dollars and is the lively, crisp option for players who want repulsion and sound in fast doubles, provided they can tolerate a smaller timing window than a thicker durability string. EXBOLT 68 is the 0.68 mm power-and-durability version — harder than the 63 at mid tension, with friendlier damping than classic BG80.\n\nVictor's VBS-63 is the main alternative at that thin gauge, around 12 dollars, and it is a genuinely different string rather than a cheaper clone.",
+        },
+        {
+          heading: "EXBOLT 63 vs VBS-63",
+          body: "Both are 0.63 mm high-elasticity strings aimed at players chasing repulsion, and they come up against each other constantly at the stringer.\n\nVBS-63 is firmer and wilder than EXBOLT 63 for many players, and it demands clean timing to reward you. When contact is good it is the more explosive of the two. When contact is late, it is the more punishing.\n\nEXBOLT 63 is the more forgiving of the pair and the easier one to live with across a full evening of club doubles. If you are choosing blind, start there; if you already know your timing holds up under fatigue, VBS-63 is worth trying and costs slightly less.",
         },
         {
           heading: "Match tension to level",
-          body: "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better ROI by changing two pounds at a time and logging week-one versus week-three feel.",
+          body: "Higher tension can sharpen feedback, but it narrows the sweet spot and punishes late contact. Most club players get better returns by changing two pounds at a time and logging week-one versus week-three feel.\n\nTreat the tension printed on your racket as a ceiling rather than a target. Warranty limits describe what the frame survives, not what produces your best badminton, and the gap between those two numbers is usually several pounds.\n\nThe general shape of it: lower tension gives a larger sweet spot and more free power, which helps developing players and anyone whose clears are falling short. Higher tension gives control and feedback to players who already generate their own power and are losing shots long. If you want to model the trade before paying for it, the string tension calculator in the tools section walks through the same variables.",
         },
         {
-          heading: "Why we score strings separately",
-          body: "A racket recommendation without string context is incomplete. IntoBadminton now treats strings as their own category because a forgiving racket with an unforgiving string can still feel wrong.",
+          heading: "How long a string actually lasts",
+          body: "A string does not have to break to be finished. Tension loss begins immediately and is fastest in the first 48 hours after stringing, then continues steadily, and a bed that has gone soft costs you control long before anything snaps.\n\nA rough restringing cadence that works for most club players: restring roughly as many times a year as you play sessions in a typical week. Twice a week, twice a year, and so on. Players on thin gauges at high tension should assume more often than that.\n\nOne piece of context worth having before you blame a string: a break on a high-tension job at the top of a frame is usually a stringing or a mishit story rather than a bad packet of string. A break in the middle of the bed after months of play is simply the string reaching the end of its life.",
+        },
+        {
+          heading: "Cost per session beats price per set",
+          body: "Set price is the wrong comparison. What decides whether a string is expensive is the total of string plus labour divided by the number of sessions before it goes dead.\n\nA 15-dollar string that stays good for twenty sessions is cheaper per session than an 11-dollar one you replace every eight, once the stringing fee is included — and stringing labour usually costs more than the string itself.\n\nThat arithmetic is also the argument against constantly chasing new strings. Pick one that matches the problem you identified, keep everything else constant, and give it three weeks. The difference between a string that suits you and one that does not is large; the difference between two well-chosen strings in the same category is much smaller than marketing suggests.",
         },
       ],
       cta: "Run the finder for string-specific recommendations.",
@@ -710,8 +731,11 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       slug: "badminton-bag-loadout",
       updatedAt: "2026-04-28",
       category: "guides",
-      title: "What your badminton bag should carry for a normal club session",
-      dek: "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
+      // Titled to match the live query. Search Console shows "what to carry in
+      // a badminton bag" pulling 2,011 impressions a quarter at position 8.8
+      // with zero clicks — the old headline never used the words people type.
+      title: "What to carry in a badminton bag: a club-night checklist",
+      dek: "Nine things earn a place in a club-night bag, and a few popular ones do not. Here is the loadout, and what goes wrong when you skip each item.",
       story: {
         intro:
           "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
@@ -726,16 +750,32 @@ const rawBlogArticles: Record<SiteLocale, BlogArticle[]> = {
       },
       sections: [
         {
-          heading: "Capacity is workflow",
-          body: "A two-racket commute bag is fine for casual games. A regular club night often needs more: shoes, towel, clean shirt, wet kit, water bottle, grips, and a spare racket.",
+          heading: "The short answer: nine things",
+          body: "For a normal club night you need two rackets, court shoes, a towel, a change of shirt, a water bottle, a spare grip, a tube of shuttles, a small first-aid pouch, and somewhere to put wet kit that is not the same pocket as the dry kit. Everything past that is preference. Everything short of that is something you will eventually stand in a sports hall wishing you had brought.\n\nThe rest of this page is why each one earns its place, and what happens when you skip it.",
         },
         {
-          heading: "Compartment design matters",
-          body: "Shoe and wet compartments are not luxury features if you play after work or carry clean clothes. They keep odor and moisture away from rackets and electronics.",
+          heading: "Two rackets, strung the same",
+          body: "One racket is a single point of failure. Strings break at the worst possible moment — mid-rally, in the third game, when the hall has no stringer and the nearest shop shut at six.\n\nThe part players get wrong is bringing a back-up strung differently from the main. If your first racket is at 27 lb and the spare is at 24, you are not carrying a spare; you are carrying a completely different racket that you will need half a game to recalibrate to. Match the tension and, ideally, the string. A back-up that plays like the main is insurance. A back-up that plays like a stranger is ballast.\n\nIf you only own one good frame, an older racket at a similar tension still beats nothing.",
         },
         {
-          heading: "Why bag recommendations improve retention",
-          body: "Bag content is a repeat-use habit. A loadout checklist gives players a reason to revisit before sessions, and it creates natural future content around replacement grips, shuttles, and seasonal refreshes.",
+          heading: "Shoes belong in their own compartment",
+          body: "Court shoes are the one item that should never touch the rest of your kit. Two reasons.\n\nThe first is grip. Indoor outsoles pick up dust, grit and car-park moisture, and a gum sole that has been rubbing against a towel all week is a sole that slides on its first lunge. The second is everything else in the bag: shoes carry the moisture and odour that transfer into a clean shirt within a day.\n\nA dedicated shoe compartment is not a premium feature to pay up for — it is the difference between a bag that works after work and one that does not. If your bag has no shoe pocket, a cheap drawstring bag inside it solves the same problem.",
+        },
+        {
+          heading: "Wet kit needs somewhere to go",
+          body: "This is the compartment most players discover they need only after ruining something. Badminton is a heavy-sweat sport played indoors, and a played-in shirt sealed against a dry one for a two-hour commute home makes both smell the same.\n\nIf you play after work and carry a laptop, this stops being a comfort issue and becomes a damage issue. Keep wet separate from dry, and separate from electronics.",
+        },
+        {
+          heading: "Grips, shuttles and the small stuff",
+          body: "A spare overgrip weighs almost nothing and fixes the most common mid-session problem there is: a grip that has gone slick and is quietly costing you control on every backhand. Two in the bag means you can also hand one to a partner.\n\nOn shuttles, carry a tube if your club splits costs — and store them away from the outside wall of the bag, where they get crushed and cooked. Feather shuttles are humidity-sensitive; a tube that has spent the week in a hot car flies differently from a fresh one.\n\nThe small pouch that earns its place: plasters, tape for a hot spot, a spare pair of socks, and painkillers. None of it is glamorous. All of it has saved a session.",
+        },
+        {
+          heading: "What you can leave at home",
+          body: "Six rackets, if you play club doubles twice a week. A full-size 12-racket thermal bag is built for touring players and stringers, and for everyone else it is weight you carry to and from a car park.\n\nAlso worth reconsidering: the second water bottle (halls have taps), the bulky warm-up jacket you never put on, and — the honest one — the third racket you keep meaning to sell. Bag weight is a real cost on a commute. Two rackets and a tidy loadout beats six and a sore shoulder.",
+        },
+        {
+          heading: "Match the bag to how you actually get to the court",
+          body: "The right bag follows your commute, not your ambition.\n\nIf you drive to a club and play twice a week, a two-to-three racket backpack with a shoe pocket covers it. If you walk or cycle in from work, prioritise a proper back panel and straps over capacity — a wide thermal holdall is miserable on a bike. If you travel to tournaments and carry kit for a full weekend, that is when the six-racket thermal starts to make sense.\n\nBuy for the session you play most often, not the tournament you might enter.",
         },
       ],
       cta: "Run the finder for bag recommendations by session style.",

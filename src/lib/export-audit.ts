@@ -18,6 +18,7 @@ export type ExportAuditIssue = {
     | "legacy-url-in-sitemap"
     | "missing-affiliate-disclosure"
     | "missing-article-schema"
+    | "self-generated-aggregate-rating"
     | "sitemap-target-missing";
   path: string;
   detail: string;
@@ -188,12 +189,7 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
   const requiresArticle = requiresArticleSchema(routePath) && !noindex;
   let hasArticle = false;
 
-  // Three previously-strict rules were intentionally relaxed in #35:
-  //   - `rating-markup-on-list-page`: Google does support Review +
-  //     aggregateRating on Product items inside an ItemList when the
-  //     ratings are authentic. src/lib/editorial-rating.ts enforces
-  //     authenticity at source (suppresses aggregate when fewer than 2
-  //     review sources back the score).
+  // Two previously-strict rules remain intentionally relaxed from #35:
   //   - `invalid-review-item-reviewed`: blog reviews that compare
   //     multiple products correctly use itemReviewed: Thing rather than
   //     overclaiming a single Product subject. The downside is reduced
@@ -203,6 +199,9 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
   //     in SERPs. Emitting JSON-LD on /results/ is therefore wasted but
   //     not harmful, and keeps the schema shape consistent with /best/*
   //     for QA tooling.
+  //
+  // `rating-markup-on-list-page` was reinstated as a hard rule: we no longer
+  // emit aggregateRating anywhere. See src/lib/structured-data.ts.
 
   for (const script of scripts) {
     let parsed: unknown;
@@ -219,6 +218,23 @@ function auditJsonLd(file: ExportFile, issues: ExportAuditIssue[]) {
 
     if (!hasArticle && hasValidArticleSchema(parsed)) {
       hasArticle = true;
+    }
+
+    /*
+     * Hard stop on AggregateRating anywhere in the export.
+     *
+     * We have no genuinely collected third-party ratings to aggregate, so any
+     * AggregateRating we emit is self-generated — the exact pattern Google
+     * treats as spammy structured markup. This guard exists because the markup
+     * previously crept back in via three separate call sites.
+     */
+    if (script.includes('"AggregateRating"')) {
+      issues.push({
+        code: "self-generated-aggregate-rating",
+        path: file.path,
+        detail:
+          "AggregateRating found in JSON-LD. We publish one critic Review per product and never aggregate ratings we did not collect.",
+      });
     }
   }
 

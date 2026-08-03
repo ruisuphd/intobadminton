@@ -78,7 +78,7 @@
     {
       "slug": "victor-drivex-12-vs-astrox-88d-pro",
       "type": "product",
-      "destination": "/review/vic-yu-12/"
+      "destination": "/review/vic-drivex-12/"
     },
     {
       "slug": "li-ning-l69-string-review",
@@ -173,7 +173,7 @@
     {
       "slug": "victor-yu-12-racket-review",
       "type": "product",
-      "destination": "/review/vic-yu-12/"
+      "destination": "/review/vic-drivex-12/"
     },
     {
       "slug": "victor-auraspeed-fantome-review",
@@ -246,9 +246,9 @@
       "destination": "/review/yy-nanoflare-nextage/"
     },
     {
-      "slug": "yonex-power-cushion-88-dial-3-review",
+      "slug": "yonex-aerus-z2-shoes-review",
       "type": "product",
-      "destination": "/review/yy-power-cushion-88-dial-3/"
+      "destination": "/review/yy-aerus-z2/"
     },
     {
       "slug": "yonex-grpht-thrttl-training-shoe-review",
@@ -441,11 +441,6 @@
       "destination": "/comparisons/victor-thruster-sr-cherry-blossom-review/"
     },
     {
-      "slug": "victor-fz-88d-power-purple-review",
-      "type": "product",
-      "destination": "/review/vic-fz-88d-power-purple/"
-    },
-    {
       "slug": "yonex-arcsaber-7-play-review",
       "type": "product",
       "destination": "/review/yy-arcsaber-7-play/"
@@ -513,12 +508,12 @@
     {
       "slug": "victor-drivex-12-zsw-vs-original-comparison",
       "type": "product",
-      "destination": "/review/vic-yu-12/"
+      "destination": "/review/vic-drivex-12/"
     },
     {
       "slug": "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
       "type": "product",
-      "destination": "/review/vic-yu-12/"
+      "destination": "/review/vic-drivex-12/"
     },
     {
       "slug": "bonny-zhangui-dao-8888ax-ultra-review",
@@ -729,6 +724,11 @@
       "slug": "yonex-comfort-z3-shoes-review",
       "type": "product",
       "destination": "/review/yy-comfort-z3/"
+    },
+    {
+      "slug": "victor-fz-88d-power-purple-review",
+      "type": "product",
+      "destination": "/review/vic-fz-88d-power-purple/"
     }
   ],
   "multiBlogProducts": {
@@ -745,7 +745,7 @@
       "victor-auraspeed-hs-plus-attack-review",
       "victor-auraspeed-hs-plus-deep-dive"
     ],
-    "vic-yu-12": [
+    "vic-drivex-12": [
       "victor-drivex-12-vs-astrox-88d-pro",
       "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
       "victor-drivex-12-zsw-vs-original-comparison",
@@ -764,5 +764,15 @@
       "yonex-astrox-99-pro-3-deep-dive",
       "yonex-astrox-99-pro-gen-1-review"
     ]
-  }
+  },
+  "retiredRedirects": [
+    {
+      "source": "/review/yonex-power-cushion-88-dial-3-review/",
+      "destination": "/review/yonex-aerus-z2-shoes-review/"
+    },
+    {
+      "source": "/blog/yonex-power-cushion-88-dial-3-review/",
+      "destination": "/review/yonex-aerus-z2-shoes-review/"
+    }
+  ]
 }

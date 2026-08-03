@@ -1,5 +1,7 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdSlot } from "@/components/AdSlot";
 import { GlossaryLinkedText } from "@/components/GlossaryLinkedText";
 import { ArticleToc } from "@/components/ArticleToc";
 import { HelpfulReaction } from "@/components/HelpfulReaction";
@@ -59,6 +61,21 @@ export function EditorialArticlePage({
     id: sectionIds[index] ?? sectionAnchorId(section.heading, index, new Map()),
     label: section.heading,
   }));
+
+  /*
+   * In-article ad position.
+   *
+   * Reviews carry ~75% of the site's search traffic but had no ad inventory at
+   * all, so the two slots here are the ones that matter commercially. Placement
+   * rules: never above the fold (the consent banner already dominates the first
+   * mobile viewport), and never inside a short article — sandwiching a
+   * three-section review between two ad units reads as a made-for-ads page,
+   * which is the thing AdSense reviewers reject.
+   *
+   * -1 disables the in-article slot; the end-of-article slot always renders.
+   * Both are no-ops until NEXT_PUBLIC_ADSENSE_MODE flips off "disabled".
+   */
+  const inArticleAdAfterIndex = sections.length >= 5 ? 2 : -1;
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
@@ -211,21 +228,25 @@ export function EditorialArticlePage({
                 sectionIds[index] ??
                 sectionAnchorId(section.heading, index, new Map());
               return (
-                <section
-                  key={`${section.heading}-${index}`}
-                  id={anchorId}
-                  className="scroll-mt-24 space-y-3"
-                >
-                  <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)] text-balance">
-                    {section.heading}
-                  </h2>
-                  <p className="whitespace-pre-line text-base leading-[1.75] text-[var(--text-secondary)]">
-                    <GlossaryLinkedText
-                      body={section.body}
-                      glossaryLinks={section.glossaryLinks}
-                    />
-                  </p>
-                </section>
+                <Fragment key={`${section.heading}-${index}`}>
+                  <section
+                    id={anchorId}
+                    className="scroll-mt-24 space-y-3"
+                  >
+                    <h2 className="text-2xl font-semibold tracking-tight text-[var(--text)] text-balance">
+                      {section.heading}
+                    </h2>
+                    <p className="whitespace-pre-line text-base leading-[1.75] text-[var(--text-secondary)]">
+                      <GlossaryLinkedText
+                        body={section.body}
+                        glossaryLinks={section.glossaryLinks}
+                      />
+                    </p>
+                  </section>
+                  {index === inArticleAdAfterIndex && (
+                    <AdSlot id={`review-inarticle-${article.slug}`} />
+                  )}
+                </Fragment>
               );
             })}
 
@@ -233,6 +254,7 @@ export function EditorialArticlePage({
             <HelpfulReaction key={article.slug} contentId={`review:${article.slug}`} />
         </div>
 
+        <AdSlot id={`review-end-${article.slug}`} />
         <RelatedPostsGrid locale={locale} articles={related} />
         <RelatedReadingShelf items={decisionPath} />
       </article>

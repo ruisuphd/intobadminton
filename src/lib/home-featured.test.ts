@@ -7,9 +7,11 @@ import {
   homeFeaturedReviews,
 } from "@/lib/home-featured";
 
+// Mirrors the Lighthouse precache block in pwa-precache-paths.ts — those paths
+// are covered there, so homeFeaturedReviewPrecachePaths() must not repeat them.
 const ALREADY_PRECACHED_FEATURED = new Set([
-  "/review/gosen-ryoga-shiden-review/",
-  "/review/anta-ah600w-racket-review/",
+  "/review/li-ning-halbertec-5000-racket-review/",
+  "/review/yonex-arcsaber-7-tour-review/",
 ]);
 
 describe("home-featured", () => {
@@ -18,8 +20,8 @@ describe("home-featured", () => {
     expect(slugs).toHaveLength(6);
     expect(new Set(slugs).size).toBe(6);
     expect(slugs).toContain("li-ning-mirage-ii-pro-shoes-review");
-    expect(slugs).toContain("victor-thruster-ryuga-metallic-racket-review");
-    expect(slugs).toContain("li-ning-axforce-100-gen-1-review");
+    expect(slugs).toContain("li-ning-thunder-2-pro-shoes-review");
+    expect(slugs).toContain("yonex-astrox-99-pro-2-deep-dive");
   });
 
   it("builds canonical review hrefs", () => {

@@ -187,8 +187,8 @@
       "e2e": true
     },
     {
-      "id": "catalog-racket-vic-yu-12",
-      "productId": "vic-yu-12",
+      "id": "catalog-racket-vic-drivex-12",
+      "productId": "vic-drivex-12",
       "expectHref": "/review/victor-yu-12-racket-review/",
       "expectKind": "review",
       "note": "DriveX 12",

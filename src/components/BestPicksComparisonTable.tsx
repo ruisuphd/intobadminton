@@ -31,7 +31,6 @@ type SortKey = "rank" | "name" | "priceUsd" | "rating" | "fitScore";
 type Row = {
   pick: Pick;
   ratingValue: number | null;
-  ratingCount: number | null;
   fitScore: number | null;
   specMap: Record<string, string>;
 };
@@ -48,7 +47,6 @@ function deriveRows(picks: Pick[]): { rows: Row[]; specLabels: string[] } {
     return {
       pick,
       ratingValue: rating?.ratingValue ?? null,
-      ratingCount: rating?.meetsAggregateThreshold ? rating.reviewCount : null,
       fitScore: scored?.fitScore ?? null,
       specMap,
     };
@@ -231,11 +229,6 @@ export function BestPicksComparisonTable({ picks }: { picks: Pick[] }) {
                     <span className="tabular-nums font-medium text-[var(--text)]">
                       {row.ratingValue.toFixed(1)}
                     </span>
-                    {row.ratingCount != null && (
-                      <span className="text-xs text-[var(--color-subtle)]">
-                        ({row.ratingCount})
-                      </span>
-                    )}
                   </span>
                 ) : (
                   <span className="text-xs text-[var(--color-subtle)]">—</span>

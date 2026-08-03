@@ -7,6 +7,7 @@ import {
 } from "@/lib/locale";
 import { blogSlugs } from "@/lib/blog";
 import { sitemapEntries } from "@/lib/sitemap";
+import { indexableReviewSlugs } from "@/lib/thin-content";
 
 describe("locale routing", () => {
   it("ships English-only", () => {
@@ -85,10 +86,13 @@ describe("sitemapEntries", () => {
     expect(urls).not.toContain("https://example.com/review/submit/");
   });
 
-  it("emits every blog article under /review/ and excludes legacy hubs", () => {
+  it("emits every indexable blog article under /review/ and excludes legacy hubs", () => {
     const urls = sitemapEntries("https://example.com").map((entry) => entry.url);
 
-    for (const slug of blogSlugs) {
+    // Thin, zero-impression articles are served `noindex, follow` and are
+    // deliberately absent — see `src/lib/thin-content.ts`. Their exclusion is
+    // asserted in `thin-content.test.ts`.
+    for (const slug of indexableReviewSlugs(blogSlugs)) {
       expect(urls).toContain(`https://example.com/review/${slug}/`);
     }
     expect(urls).not.toContain("https://example.com/blog/");

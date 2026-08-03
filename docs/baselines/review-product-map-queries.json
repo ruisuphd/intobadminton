@@ -182,11 +182,11 @@
     {
       "id": "flagship-astrox-99-pro-2",
       "slug": "yonex-astrox-99-pro-2-deep-dive",
-      "expectProductId": "yy-astrox-99-pro",
+      "expectProductId": "yy-astrox-99-pro-2",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Flagship attack racket review — Astrox 99 Pro 2 deep-dive linked from compare guides"
+      "note": "Second-generation Astrox 99 Pro (2023) — its own source and catalogue row, split from the gen-1 review"
     },
     {
       "id": "flagship-arcsaber-11-pro",
@@ -342,13 +342,13 @@
       "note": "Yonex defensive control review — Arcsaber 7 Tour on /best/defensive-rackets/ and /best/all-round-rackets/"
     },
     {
-      "id": "flagship-vic-yu-12",
+      "id": "flagship-vic-drivex-12",
       "slug": "victor-yu-12-racket-review",
-      "expectProductId": "vic-yu-12",
+      "expectProductId": "vic-drivex-12",
       "expectCategory": "racket",
       "expectProductJsonLd": true,
       "e2e": true,
-      "note": "Victor intermediate review — DriveX 12 (Yu 12) on /best/intermediate-rackets/ (DriveX 8S aliases to DriveX 10 review)"
+      "note": "Victor intermediate review — DriveX 12 on /best/intermediate-rackets/ (DriveX 8S aliases to DriveX 10 review)"
     },
     {
       "id": "flagship-ln-halbertec-9000",

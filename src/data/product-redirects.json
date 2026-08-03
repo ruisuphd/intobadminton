@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "from": "vic-yu-12",
+      "to": "vic-drivex-12",
+      "note": "Duplicate catalogue row for the same frame. `vic-drivex-12` is the official-verified row and keeps the name 'DriveX 12'; the 'O' suffix was only the orange/black retail colourway. `vic-drivex-12-zsw` stays separate (Zheng Siwei signature, Power Ring PRO removed)."
+    }
+  ]
+}

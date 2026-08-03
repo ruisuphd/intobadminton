@@ -84,16 +84,8 @@ function buildProductJsonLd(rows: ScoredProduct[]) {
           : {}),
       };
 
-      const aggregateRating = rating
-        ? {
-            "@type": "AggregateRating" as const,
-            ratingValue: rating.ratingValue,
-            reviewCount: Math.max(1, rating.reviewCount),
-            bestRating: rating.bestRating,
-            worstRating: rating.worstRating,
-          }
-        : undefined;
-
+      // No AggregateRating — see the note in BestPicksPage.tsx. One named
+      // critic's judgement is a Review, not an aggregate of collected ratings.
       return {
         "@type": "ListItem" as const,
         position: i + 1,
@@ -119,7 +111,6 @@ function buildProductJsonLd(rows: ScoredProduct[]) {
             },
           ],
           review,
-          ...(aggregateRating ? { aggregateRating } : {}),
         },
       };
     }),

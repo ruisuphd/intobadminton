@@ -44,6 +44,59 @@ LEGACY_ONLY = {
     "how-to-choose-a-badminton-racket",
 }
 
+"""
+Slugs knowingly left on the auto-title-cased fallback.
+
+These are NOT "we forgot" — each one has an unresolved editorial problem where
+inventing a tidy headline would launder a factual error into something that
+looks authoritative. Leaving the title visibly broken keeps the problem on the
+backlog. Remove a slug from here only together with the underlying fix.
+"""
+TITLE_FALLBACK_QUARANTINE = {
+    # Near-duplicate of fz-forza-88d-review: 99% token overlap, and
+    # blog-slug-source-map.json shows both are generated from the same
+    # reviews-fz-blade-88d-racket.md. That source says the shaft reads "Forza
+    # AERO POWER 88D" with a Danish national team badge and strings it with
+    # Forza-65, so the racket is FZ Forza's. The catalogue's "Victor FZ
+    # sub-brand" claim appears to come from the reviewer's Victor comparison
+    # points (WES 3.0, TK-15) rather than from the racket.
+    #
+    # NOT retired yet, because consolidating it needs a catalogue decision this
+    # script cannot make: vic-fz-88d-power-purple is $115 and is a live pick on
+    # /best/head-heavy-rackets-under-150/, while fz-forza-88d is $175 and would
+    # be ineligible for that page. Two other rows (vic-fz-flash-1000,
+    # vic-fz-100xx) share the same "Victor FZ" premise, so the brand question is
+    # bigger than this one racket. Resolve the brand and the price, then retire.
+    "victor-fz-88d-power-purple-review",
+}
+# yonex-power-cushion-88-dial-3-review was resolved 2026-08-02: it carried an
+# Aerus Z2 review. Its source file is review-yonex-shbaz2mex-shoes.md, SHBAZ2MEX
+# is Yonex's code for the Power Cushion Aerus Z2, the body names "AZ2" outright
+# and lists three Aerus colourways, and it never mentions a dial or the number
+# 88. Republished as yonex-aerus-z2-shoes-review.
+
+
+def fallback_title(slug):
+    """Title-case a slug, but only for slugs we have consciously quarantined.
+
+    The old unconditional `slug.replace("-", " ").title()` fallback silently
+    produced 67 published headlines with mangled model names — "Subaxia Gt",
+    "Auraspeed 90K Ii", "Rsl At70", "Drivex 10". Because it never failed, the
+    breakage was invisible until it showed up in Search Console. Now any new
+    slug without a TITLE_OVERRIDES entry stops the import.
+    """
+    if slug not in TITLE_FALLBACK_QUARANTINE:
+        raise SystemExit(
+            f"blog-import: no TITLE_OVERRIDES entry for '{slug}'.\n"
+            f"  Auto-title-casing mangles model names (e.g. 'Gt' for 'GT'), so\n"
+            f"  add a hand-written title to TITLE_OVERRIDES in this file.\n"
+            f"  If the article has an unresolved factual problem that makes a\n"
+            f"  clean title dishonest, add it to TITLE_FALLBACK_QUARANTINE\n"
+            f"  with a comment explaining what needs resolving first."
+        )
+    return slug.replace("-", " ").title()
+
+
 # Keep legacy editorial bodies when markdown would duplicate another live slug.
 LEGACY_PREFERRED = {
     "victor-drivex-12-vs-astrox-88d-pro",
@@ -51,6 +104,83 @@ LEGACY_PREFERRED = {
 }
 
 TITLE_OVERRIDES = {
+    # --- Sprint 131: titles that were falling through to slug.title() ---
+    # Every entry below replaces an auto-title-cased headline that mangled the
+    # product's own name ("Subaxia Gt", "90K Ii", "Drivex 10", "Rsl At70").
+    # Brand casing is the point: these are the exact strings players type into
+    # Google, and the top page here was carrying 139 clicks/quarter with the
+    # model name spelled wrong.
+    # "GT" is not a trim level — it is Yonex's GRPHT THRTTL (Graphite Throttle)
+    # midsole tech, confirmed on yonex.com/graphite-throttle. Both titles say so,
+    # because "subaxia gt review" and "yonex grpht thrttl review" are separate
+    # live query clusters that should each land on the right page.
+    "yonex-subaxia-gt-shoes-review": "Yonex Power Cushion Subaxia GT review: Graphite Throttle in a badminton shoe",
+    "yonex-grpht-thrttl-training-shoe-review": "Yonex GRPHT THRTTL (Graphite Throttle) review: the concept cross-trainer",
+    # Was published as a "Power Cushion 88 Dial 3" review. It never was one —
+    # see the note on TITLE_FALLBACK_QUARANTINE below.
+    "yonex-aerus-z2-shoes-review": "Yonex Power Cushion Aerus Z2 review: the 240 g speed boot, three colourways",
+    "li-ning-axforce-100-gen-2-vs-gen-1": "Li-Ning AxForce 100 Gen 2 vs Gen 1: a lower entry bar, same ceiling",
+    "li-ning-axforce-90-new-5u-deep-dive": "Li-Ning AxForce 90 New 5U deep dive: the light build that still bites",
+    "victor-drivex-12-zsw-vs-original-comparison": "Victor DriveX 12 ZSW vs original: Nanjing build against Taiwan build",
+    "victor-auraspeed-90k-ii-review": "Victor Auraspeed 90K II review: Antonsen's speed pillar, updated",
+    "li-ning-axforce-90-new-review": "Li-Ning AxForce 90 New review: faster and far more forgiving",
+    "kawasaki-chocolate-88d-vs-yonex-astrox-88d-pro": "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro: near-identical on court",
+    "yonex-nanoflare-700-pro-vs-nf700-800-pro-1000z": "Nanoflare 700 Pro vs 700, 800 Pro and 1000Z: which speed frame fits",
+    "yonex-nanoflare-nextage-review": "Yonex Nanoflare NEXTAGE review: soft, fast, and short on threat",
+    "yonex-nanoflare-800-pro-tour-review": "Yonex Nanoflare 800 Pro and Tour review: the Pro badge tested",
+    "asics-blast-ff-3-badminton-shoes-review": "ASICS Blast FF 3 badminton review: no carbon plate, no problem",
+    "yonex-astrox-88s-tour-curious-review": "Yonex Astrox 88S Tour review: fun frame, hard-to-justify price",
+    "yonex-astrox-99-pro-gen-1-review": "Yonex Astrox 99 Pro Gen 1 review: where the 99 family turned serious",
+    "victor-drivex-12-vs-drivex-10-and-88d-pro-2024": "Victor DriveX 12 vs DriveX 10 and Astrox 88D Pro: Victor's best shaft yet",
+    "kumpoo-kh-g805-lite-pro-shoes-review": "Kumpoo KH-G805 LITE PRO review: three weeks as a main match shoe",
+    "yonex-astrox-nextage-review": "Yonex Astrox NEXTAGE review: a staged experiment, not a revolution",
+    "victor-drivex-10-review": "Victor DriveX 10 METALLIC review: control leaning attack, firm and fast",
+    "rsl-at70-racket-review": "RSL AT70 review: a flagship-tier singles weapon outside the big three",
+    "li-ning-lt66-power-string-review": "Li-Ning LT66 Power string review: the coated 0.66 mm power variant",
+    "li-ning-bladex-880-shida-racket-review": "Li-Ning Bladex 880 Shida review: a signature edition with real upgrades",
+    "yonex-nanoflare-700-review": "Yonex Nanoflare 700 review: the frame that started the Nanoflare line",
+    "li-ning-bladex-arrow-review": "Li-Ning Bladex Arrow (Bladex EX) review: the entry-advanced Bladex",
+    "yonex-arcsaber-7-play-review": "Yonex Arcsaber 7 Play review: how much Arcsaber survives the Play tier",
+    "kawasaki-h2-6u-superlight-racket-review": "Kawasaki H2 6U review: superlight done without gutting the frame",
+    "rsl-supreme-shuttle-review": "RSL Supreme shuttle review: a real step up from RSL Classic?",
+    "victor-thruster-hwql-nuke-review": "Victor Thruster HWQL review: a blunt, effective mid-range kill racket",
+    "bonny-wind-shadow-budget-speed-shoes-review": "Bonny Wind Shadow review: dual carbon plates on a sub-200-yuan budget",
+    "li-ning-bladesabre-2-pro-shoes-review": "Li-Ning Bladesabre 2 Pro review: lighter, softer fast-launch shoe",
+    "kawasaki-glacier-800-racket-review": "Kawasaki Glacier 800 review: budget frame from a weekend buying spree",
+    "kumpoo-js-67-string-review": "Kumpoo JS-67 string review: what the ice-blue 0.67 mm line actually does",
+    "victor-thruster-sr-cherry-blossom-review": "Victor Thruster SR Cherry Blossom review: paint job or real racket?",
+    "victor-fz-flash-1000-racket-review": "Victor FZ Flash 1000 review: speed-type swing at a mid-tier price",
+    "li-ning-gp100-pro-overgrip-review": "Li-Ning GP100 Pro overgrip review: budget dry grip, honestly tested",
+    "kawasaki-star-cross-second-perspective-review": "Kawasaki Star Cross review: a high-end speed-offence frame, second look",
+    "victor-sonic-boom-pro-budget-attack-review": "Victor Sonic Boom Pro review: broad, stable attack just north of 300 yuan",
+    "victor-thruster-falcon-review": "Victor Thruster F Falcon Ultra review: a full upgrade on Black Gold",
+    "bonny-zhangui-dao-8888ax-ultra-review": "Bonny Zhangui Dao 8888AX Ultra review: high-end balance without ego specs",
+    "yonex-arcsaber-7-pro-review": "Yonex Arcsaber 7 Pro review: light, stable control for doubles front court",
+    "bonny-snake-breath-second-tier-flagship-review": "Bonny Snake's Breath review: a self-developed flagship, not a clone",
+    "victor-jetspeed-12-curious-review": "Victor Jetspeed 12 review: a doubles classic that earned its reputation",
+    "victor-thruster-9900-curiosity-review": "Victor Thruster K 9900 review: the small-frame cult racket revisited",
+    "li-ning-l66-string-first-look": "Li-Ning L66 string first look: a balanced 0.66 mm answer to BG65",
+    "bonny-wuque-xuanwu-review": "Bonny Wuque Xuanwu review: nine months on from the factory's promise",
+    "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review": "Bonny Mojun vs Yonex Arcsaber 11 Pro: does the benchmark hold up?",
+    "bonny-wuque-1982-y3k-shoes-review": "Bonny Wuque 1982 Y3K review: cyberpunk paint on a classic platform",
+    "bonny-carbon-armour-shoes-review": "Bonny Carbon Armour shoes review: quick notes after a long stint",
+    "kumpoo-js-65-string-review": "Kumpoo JS-65 string review: the 0.65 mm durability line, honestly",
+    "bonny-wuque-flagship-088-shoes-review": "Bonny Wuque 088 review: a flagship court tool with no obvious weak point",
+    "jujiang-lbtu-value-racket-review": "JuJiang LBTU review: the value advanced frame I keep recommending",
+    "bonny-phantom-100-racket-review": "Bonny Phantom 100 review: solid craft without the luxury markup",
+    "bonny-future-land-3-polaris-shoes-review": "Bonny Future Land III Polaris review: an all-round stable court shoe",
+    "gosen-kyokugen-racket-review": "Gosen Kyokugen review: a big-three-grade frame from outside the big three",
+    "bonny-baidi-800lt-racket-review": "Bonny Baidi 800LT review: Nanoflare 800 LT feel without the price",
+    "anta-dingyin-1000-racket-review": "Anta Dingyin 1000 review: the first retail frame marketed with Toray M46X",
+    "jujiang-mzs-66un-string-review": "JuJiang MZS-66UN string review: second-tier hype, first-tier questions",
+    "goshen-leiming-69-string-review": "Gosen Leiming 69 string review: a beginner's honest first impression",
+    "kawasaki-twilight-shoes-review": "Kawasaki Twilight shoes review: dial fit and carbon anti-torsion, tested",
+    "chengong-feng-racket-review": "Chengong Feng review: a secondary brand chasing the Nanoflare 1000Z lane",
+    "kawasaki-crimson-blade-racket-review": "Kawasaki Crimson Blade review: strong tech at a borrowed-gear price",
+    "li-ning-bladex-500-pro-curious-review": "Li-Ning Bladex 500 Pro review: a rare honest Pro upgrade",
+    "victor-jipo-ls-racket-review": "Victor Jipo LS review: the racket I reached for in a bad patch",
+    "victor-yinbao-a-boom-shoes-review": "Victor A-BOOM review: the lazy player's 300-yuan staple shoe",
+
     "yonex-nanoflare-1000z-review": "Yonex Nanoflare 1000 Z review: speed flagship with real control",
     "yonex-nanoflare-1000z-play-review": "Nanoflare 1000 Z vs 1000 Play: speed flagship vs entry tier",
     "rsl-no4-plus-shuttle-review": "RSL No.4 Plus shuttle: mixed-feather upgrade that misses",
@@ -61,7 +191,11 @@ TITLE_OVERRIDES = {
     "yonex-comfort-z3-shoes-review": "Yonex Power Cushion Comfort Z3: cushion-first match shoe",
     "li-ning-halbertec-8000-vs-9000-vs-9000-power": "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power: which one fits your game",
     "victor-yu-12-racket-review": "Victor DriveX 12 review: control players finally have a Victor flagship",
-    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ VA vs Kurenai: not an Anders Antonsen racket",
+    # The URL keeps the legacy Anders Antonsen string, but the page is the
+    # standard Astrox 100ZZ against its 100ZX sibling. The VA-versus-Kurenai
+    # comparison moved to yonex-astrox-100zz-axelsen-va-vs-kurenai, which is
+    # the slug the product map already points at the VA catalogue row.
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "Yonex Astrox 100ZZ vs 100ZX: the Hyper Slim flagship and its Taiwan sibling",
     "li-ning-okay-1-shuttle-review": "Li-Ning OKAY 1 review: Li-Ning's first synthetic feather shuttle",
     "victor-c90-ii-shoes-review": "Victor C90 II review: wide last, heavy stability, flagship cushion",
     "li-ning-bladex-800-speed-review": "Li-Ning Bladex 800 Speed review: tight M46X speed twin",
@@ -115,22 +249,68 @@ TITLE_OVERRIDES = {
 
     "victor-auraspeed-hs-plus-deep-dive": "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
     "victor-auraspeed-hs-plus-attack-review": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
+    # --- Sprint 132: the five duplicate-source pairs, split ---
+    # Each of these slugs used to render a sibling's body with a one-line
+    # disambiguation prefix bolted on. They now have their own source markdown,
+    # so the titles describe what the page actually contains.
+    #
+    # The 100ZZ pair splits along the product map: the legacy Antonsen URL is
+    # wired to `yy-astrox-100zz` and covers the standard flagship and the
+    # 100ZX, while the Axelsen URL is wired to `yy-astrox-100zz-va` and is now
+    # a review of that variant rather than a second copy of the same article.
+    "yonex-astrox-100zz-axelsen-va-vs-kurenai": "Yonex Astrox 100ZZ VA review: the Axelsen edition against Kurenai",
+    # Gen 2 is a distinct catalogue product (`yy-astrox-99-pro-2`, 2023) and no
+    # longer shares the gen-1 source. The old title said only "Astrox 99 Pro",
+    # which is what made the two pages indistinguishable in the SERP.
+    "yonex-astrox-99-pro-2-deep-dive": "Yonex Astrox 99 Pro (gen 2) review: same violence, lower entry fee",
     "yonex-astrox-99-pro-3-deep-dive": "Yonex Astrox 99 Pro (gen 3): violence with clearer control",
+    "yonex-arcsaber-7-tour-review": "Yonex Arcsaber 7 Tour review: the value pick of the Arcsaber 7 line",
+    "rsl-aero-u-shuttle-review": "RSL Aero U shuttle review: late-rally consistency in a tube",
     "yonex-astrox-88-pro-2024-review": "Yonex Astrox 88S / 88D Pro (2024): refined twins, not a radical reboot",
 }
 
 DEK_OVERRIDES = {
     "victor-yu-12-racket-review": "DriveX 12 gets Victor's full control-focused rebuild: alloy carbon, WES 3.0, and a firmer all-court feel.",
-    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ VA and Kurenai comparison, with the old Antonsen naming mistake corrected while keeping the URL for continuity.",
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ against the 100ZX: Hyper Slim shaft, measured builds, and why the cheaper sibling is the harder racket to handle.",
+    # Sprint 132 — deks for the five split pairs. Each of these pages used to
+    # inherit its sibling's opening paragraph, so the meta description in the
+    # SERP was identical on both URLs of the pair.
+    "li-ning-axforce-90-new-5u-deep-dive": "The 5U AxForce 90 New keeps the 4U shaft hardness and drops the head mass. What that buys in fast doubles, and how it compares with the 3U and 4U builds.",
+    "yonex-astrox-100zz-axelsen-va-vs-kurenai": "Volume Cut Resin instead of Black Micro Core makes the VA a lighter-swinging 100ZZ. Measured builds, shaft hardness, and whether Kurenai is still worth it.",
+    "victor-auraspeed-hs-plus-deep-dive": "Victor's hardest shaft in a small aero frame: specs, WES 3.0 construction, on-court character across every phase, and where the Auraspeed badge misleads.",
+    "victor-auraspeed-hs-plus-attack-review": "A near-even speed frame that smashes from shaft whip rather than head mass — what it out-hits, what it costs to drive, and when the attack case breaks down.",
+    "yonex-astrox-99-pro-2-deep-dive": "The 2023 Astrox 99 Pro keeps the head weight and the intent, and lowers the power you need to reach them. How gen 2 sits between the original Pro and gen 3.",
+    # Without this the dek is the first sentence of the generation-context
+    # paragraph, so the meta description opens "Generation context:" — scaffold
+    # language in the SERP snippet.
+    "yonex-astrox-99-pro-gen-1-review": "The first Astrox 99 Pro: a 68-hole bed, a weighted handle and almost no forgiveness. Why it built the line's reputation, and why gen 2 exists.",
+    # Expanded thin pages: without an override these deks are the first 160
+    # characters of the overview with an ellipsis bolted on, which is what
+    # ships as the meta description. Written deks instead.
+    "li-ning-halbertec-5000-racket-review": "Halbertec 5000 is the cheapest way into Li-Ning's control family: flexible shaft, easy clears, low arm load, and no headline trait — which is rather the point.",
+    "li-ning-halbertec-9000-standalone-review": "The base Halbertec 9000 is head-light, stiff and built for flat drives — and it is not the 9000 Power. Specs, line comparison, and who each version suits.",
+    "rsl-aero-u-shuttle-review": "RSL's Aero U is a BWF-approved goose-feather shuttle whose case is late-rally consistency: thicker vanes, cleaner second-half flight, speed 77.",
+    "yonex-arcsaber-7-tour-review": "Arcsaber 7 Tour sits between Play and Pro, and it is the one most club players should buy. Measured specs, the tier ladder, and where it gives way.",
+    "yonex-astrox-99-pro-3-deep-dive": "The third-generation Astrox 99 Pro returns to 76 holes with full-racket Namd. A rear-court hammer with a stamina cost — and how it stacks up against the 100ZZ.",
+    "yonex-comfort-z3-shoes-review": "Comfort Z3 trades 130 g against the Aerus Z2 for landing protection that lasts a full evening. Weight, break-in, fit, and where it sits in the Z3 trio.",
 }
 
 # Prepended to the overview when two slugs would otherwise share identical JSON bodies.
 SLUG_DISAMBIGUATION: dict[str, str] = {
-    "li-ning-axforce-90-new-5u-deep-dive": "This article focuses on the 5U AxForce 90 New weight class — not the broader AxForce 90 vs 80 vs Yonex 88D Pro comparison.",
-    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps the legacy Anders Antonsen slug for continuity; the comparison covers VA and Kurenai colourways only.",
-    "yonex-astrox-99-pro-gen-1-review": "First-gen Astrox 99 Pro (second Astrox 99-family generation) — includes Sun Orange colourway notes. See gen-2 and gen-3 deep dives for later Pro revisions.",
-    "victor-auraspeed-hs-plus-attack-review": "Attack-biased HS Plus tuning — distinct from the neutral deep-dive on the same frame.",
-    "rsl-aero-classic-tourney-shuttle-review": "Classic Tourney tier — not the Aero U shuttle review on the sibling URL.",
+    # Sprint 132 removed four entries from this table. A disambiguation prefix
+    # is a patch over two slugs sharing one markdown file; once each slug has
+    # its own source and opens by saying what it covers, the prefix is a second
+    # copy of the first paragraph. Removed along with the shared sources:
+    # li-ning-axforce-90-new-5u-deep-dive, yonex-astrox-99-pro-gen-1-review,
+    # victor-auraspeed-hs-plus-attack-review, and the Axelsen 100ZZ URL.
+    #
+    # This one stays because the URL still carries a name the article does not:
+    # the slug says Anders Antonsen and the page is about the standard 100ZZ.
+    "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "This URL keeps a legacy Anders Antonsen slug for continuity — it is not an Antonsen signature racket. The VA edition has its own review.",
+    # rsl-aero-classic-tourney-shuttle-review no longer needs a disambiguation
+    # prefix: rsl-aero-u-shuttle-review now has its own source markdown
+    # (review-rsl-aero-u-shuttle.md) instead of sharing the Classic Tourney
+    # file, and both articles open by placing themselves in RSL's range.
     "li-ning-halbertec-7000-review": "Original Halbertec 7000 (2023) — not the Halbertec 7000 II refresh review.",
     "li-ning-halbertec-flagship-lineup-review": "Halbertec 5000 through 9000 lineup compare — not the standalone Halbertec 9000 product review.",
     "yonex-nanoflare-800-pro-vs-nf700": "Head-to-head Nanoflare 800 Pro vs Nanoflare 700 — not the multi-model 800 Pro/Tour/Game review.",
@@ -301,6 +481,40 @@ def merge_overview_sections(sections: list[dict[str, str]]) -> list[dict[str, st
     return [{"heading": "Overview", "body": "\n\n".join(overviews)}] + rest
 
 
+def sentence_dek(body: str, limit: int = 165) -> str:
+    """Build a dek that ends on a full stop instead of mid-word.
+
+    The dek is this site's meta description, so it is the sentence Google shows
+    under the title in the SERP. The old rule was `body[:160] + "…"`, which cut
+    63% of articles (130 of 205) mid-sentence — the top page ended on "what a
+    pro badminton shoe built on that idea might look like…". Snippets that
+    break off mid-thought read as machine-generated and cost clicks on a site
+    already converting at ~2.2%.
+
+    Take whole sentences while they fit. Fall back to a word boundary with an
+    ellipsis only when the very first sentence is longer than the budget.
+    """
+    text = " ".join(body.split()).strip()
+    if not text:
+        return ""
+    if len(text) <= limit:
+        return text
+
+    sentences = [s for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    out = ""
+    for sentence in sentences:
+        candidate = f"{out} {sentence}".strip() if out else sentence
+        if len(candidate) > limit:
+            break
+        out = candidate
+    if out:
+        return out
+
+    # First sentence alone blows the budget — cut on a word, never mid-word.
+    clipped = text[:limit].rsplit(" ", 1)[0].rstrip(",;:—-")
+    return f"{clipped}…"
+
+
 def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
     dek = dek.strip()
     if len(dek) >= 50:
@@ -311,6 +525,38 @@ def ensure_dek(dek: str, sections: list[dict[str, str]], title: str) -> str:
     if len(candidate) >= 50:
         return candidate
     return f"{title}. {candidate}".strip()[:240]
+
+
+
+def _assert_no_duplicate_override_keys() -> None:
+    """Fail if TITLE_OVERRIDES or DEK_OVERRIDES declares a slug twice.
+
+    Python resolves a duplicate dict key by silently keeping the last one, so a
+    merge that brings two branches' overrides together can drop a hand-written
+    title with no error anywhere. That happened during the 2026-08-02
+    integration: two slugs ended up declared twice, and only a manual read of
+    the merged file caught it. Cheap to check, expensive to miss.
+    """
+    source = Path(__file__).read_text(encoding="utf-8")
+    for name in ("TITLE_OVERRIDES", "DEK_OVERRIDES", "SLUG_DISAMBIGUATION"):
+        # Tolerates an inline type annotation, e.g. `NAME: dict[str, str] = {`.
+        header = re.search(rf"^{name}(?::[^=]+)? = {{$", source, re.M)
+        if header is None:
+            raise SystemExit(f"blog-import: could not locate {name} to check")
+        start = header.start()
+        end = source.index("\n}", start)
+        keys = re.findall(r'^\s{4}"([^"]+)":', source[start:end], re.M)
+        duplicates = sorted({k for k in keys if keys.count(k) > 1})
+        if duplicates:
+            raise SystemExit(
+                f"blog-import: {name} declares these slugs more than once: "
+                f"{', '.join(duplicates)}.\n"
+                f"  Python keeps only the last one, so an earlier hand-written\n"
+                f"  entry would be dropped silently. Delete the stale line."
+            )
+
+
+_assert_no_duplicate_override_keys()
 
 
 def parse_md_table(body: str) -> tuple[str, dict | None]:
@@ -578,18 +824,18 @@ def main() -> None:
             TITLE_OVERRIDES.get(slug)
             or sprint_meta.get("title")
             or meta.get("title")
-            or slug.replace("-", " ").title()
+            or fallback_title(slug)
         )
         raw_dek = (
             DEK_OVERRIDES.get(slug)
             or (
-                (sections[0]["body"][:160] + "…")
+                sentence_dek(sections[0]["body"])
                 if md_updated and sections and not DEK_OVERRIDES.get(slug)
                 else None
             )
             or sprint_meta.get("dek")
             or meta.get("dek")
-            or (sections[0]["body"][:160] + "…" if sections else "")
+            or (sentence_dek(sections[0]["body"]) if sections else "")
         )
         dek = ensure_dek(raw_dek, sections, title)
         verdict_from_sections = extract_verdict(sections, dek)

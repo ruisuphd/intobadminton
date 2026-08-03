@@ -49,12 +49,12 @@
         "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
+        "/review/li-ning-axforce-90-new-5u-deep-dive/",
+        "/review/victor-auraspeed-hs-plus-attack-review/",
+        "/review/yonex-astrox-100zz-axelsen-va-vs-kurenai/",
+        "/review/yonex-astrox-99-pro-2-deep-dive/",
         "/review/li-ning-mirage-ii-pro-shoes-review/",
-        "/review/li-ning-thunder-2-pro-shoes-review/",
-        "/review/victor-thruster-ryuga-ii-pro-racket-review/",
-        "/review/victor-thruster-ryuga-metallic-racket-review/",
-        "/review/victor-thruster-ryuga-racket-review/",
-        "/review/li-ning-axforce-100-gen-1-review/"
+        "/review/li-ning-thunder-2-pro-shoes-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,

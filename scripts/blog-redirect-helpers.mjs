@@ -30,7 +30,7 @@ function blogSlugForProduct(productId) {
     })[0]?.slug;
 }
 
-function reviewPath(productId) {
+export function reviewPath(productId) {
   const slug = blogSlugForProduct(productId);
   if (slug) return `/review/${slug}/`;
   return `/review/${productId}/`;
@@ -68,6 +68,13 @@ export function blogRedirectsForStaticExport() {
         destination: productMatch ? reviewPath(productMatch[1]) : destination,
       });
     }
+  }
+
+  // Articles retired in favour of another article — see BlogRetiredRedirect in
+  // src/lib/blog-migrations.ts. Pushed last so they override anything the loop
+  // above derived for the same source.
+  for (const entry of blogUrlMigrations.retiredRedirects ?? []) {
+    entries.push(entry);
   }
 
   return dedupeRedirects(entries);

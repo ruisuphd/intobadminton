@@ -114,6 +114,11 @@ App change:
 - `vic-drivex-12` renamed to `DriveX 12 O`.
 - Source changed to the product-specific official page and status changed to `official_verified`.
 
+> Superseded 2026-08-02: the `O` suffix is the orange/black retail colourway, not a
+> separate model, so `vic-drivex-12` is named `DriveX 12` again. The duplicate
+> `vic-yu-12` row was merged into it and now redirects via
+> `src/data/product-redirects.json`. `vic-drivex-12-zsw` remains a distinct build.
+
 ## Rows downgraded for source authority
 
 The app now treats generic brand homepages, retailer pages, blogs, and forum pages as insufficient for manufacturer-verified specs. These rows may still appear as recommendations, but their confidence and UI labels are downgraded until an official product-specific source is attached.

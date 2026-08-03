@@ -3,6 +3,10 @@ import path from "node:path";
 import legacyDestinations from "../src/data/legacy-redirect-destinations.json" with { type: "json" };
 import claimsRegistry from "../content/claims.json" with { type: "json" };
 import { blogRedirectsForStaticExport } from "./blog-redirect-helpers.mjs";
+import {
+  productRedirectIssues,
+  productRedirectRoutes,
+} from "./product-redirect-helpers.mjs";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -337,8 +341,16 @@ function legacyRedirects() {
 
 const files = readHtmlFiles();
 const sitemapUrls = readSitemapUrls();
-const redirects = [...legacyRedirects(), ...blogRedirectsFromMigrations()];
+const redirects = [
+  ...legacyRedirects(),
+  ...blogRedirectsFromMigrations(),
+  ...productRedirectRoutes(),
+];
 const issues = [];
+
+for (const issue of productRedirectIssues()) {
+  issues.push(["src/data/product-redirects.json", "product-redirect-invalid", issue]);
+}
 const filePaths = new Set(files.map((file) => file.path));
 const exportedRoutes = new Set(files.map((file) => routePathForFile(file.path)));
 const legacySources = new Set(redirects.map((entry) => entry.source));

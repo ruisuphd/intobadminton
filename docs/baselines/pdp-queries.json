@@ -698,8 +698,8 @@
       "e2e": true
     },
     {
-      "id": "pdp-racket-vic-yu-12",
-      "productId": "vic-yu-12",
+      "id": "pdp-racket-vic-drivex-12",
+      "productId": "vic-drivex-12",
       "expectCategory": "racket",
       "expectReviewSlug": "victor-yu-12-racket-review",
       "expectReviewKind": "review",
