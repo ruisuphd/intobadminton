@@ -9076,6 +9076,185 @@
     "reviewCount": 0
   },
   {
+    "id": "vic-thruster-hmrl-ex",
+    "category": "racket",
+    "name": "Thruster HMRL EX",
+    "brand": "Victor",
+    "priceUsd": 79,
+    "headWeight": "head_heavy",
+    "shaftFlex": "flexible",
+    "weightClass": "5U",
+    "weightVariants": [
+      "5U",
+      "6U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 28
+    },
+    "shaftFlexSource": "official",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "global",
+      "sg",
+      "cn"
+    ],
+    "officialSourceUrl": "https://ca.victorsport.com/product/tk-hmrl-ex-ad",
+    "lastVerifiedAt": "2026-08-08",
+    "verificationStatus": "official_verified",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner",
+      "smash",
+      "doubles"
+    ],
+    "sourceUrls": [
+      "https://ca.victorsport.com/product/tk-hmrl-ex-ad"
+    ],
+    "editorNote": "Victor Thruster HMRL EX (TK-HMRL EX / 小铁锤EX) — light entry attack Hammer Light refresh; 5U/6U, 6.8 shaft.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-axforce-100-max",
+    "category": "racket",
+    "name": "AxForce 100 MAX",
+    "brand": "Li-Ning",
+    "priceUsd": 249,
+    "headWeight": "head_heavy",
+    "shaftFlex": "extra_stiff",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 310,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 31
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "asia",
+      "global"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton/rackets",
+    "lastVerifiedAt": "2026-08-08",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "competitive",
+    "maxRecommendedLevel": "pro_oriented",
+    "bestFor": [
+      "smash",
+      "singles",
+      "power"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
+    "editorNote": "Li-Ning AxForce 100 MAX (雷霆100MAX) — expert trim vs Gen 2; stiffer, higher balance, less pocket.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-li-jian-dual-pack",
+    "category": "racket",
+    "name": "Li Jian Dual Pack",
+    "brand": "Li-Ning",
+    "priceUsd": 45,
+    "headWeight": "even",
+    "shaftFlex": "medium",
+    "weightClass": "5U",
+    "weightVariants": [
+      "5U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 295,
+    "balanceCategory": "even",
+    "swingWeightEstimate": "light",
+    "commonStringTensionLbs": {
+      "min": 18,
+      "max": 26
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2024,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://en.lining.com/badminton/rackets",
+    "lastVerifiedAt": "2026-08-08",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "club",
+    "bestFor": [
+      "beginner",
+      "control"
+    ],
+    "sourceUrls": [
+      "https://en.lining.com/badminton/rackets"
+    ],
+    "editorNote": "Li-Ning Li Jian (利箭) dual-pack beginner set — NOT Bladex Arrow (锋影利箭).",
+    "reviewCount": 0
+  },
+  {
+    "id": "kumpoo-beimo",
+    "category": "racket",
+    "name": "Beimo",
+    "brand": "Kumpoo",
+    "priceUsd": 99,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium_heavy",
+    "commonStringTensionLbs": {
+      "min": 20,
+      "max": 30
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2025,
+    "regionAvailability": [
+      "cn",
+      "asia"
+    ],
+    "officialSourceUrl": "https://www.kumpoo.com/",
+    "lastVerifiedAt": "2026-08-08",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "smash",
+      "singles"
+    ],
+    "sourceUrls": [
+      "https://www.kumpoo.com/"
+    ],
+    "editorNote": "Kumpoo Beimo (北漠) — mid attack blank; replace stock string.",
+    "reviewCount": 0
+  },
+  {
     "id": "vic-thruster-ryuga",
     "category": "racket",
     "name": "Thruster Ryuga",
