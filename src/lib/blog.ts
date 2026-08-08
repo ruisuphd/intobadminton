@@ -55,6 +55,7 @@ export const blogSlugs = [
   "kawasaki-star-cross-racket-review",
   "kawasaki-star-cross-second-perspective-review",
   "kawasaki-twilight-shoes-review",
+  "kumpoo-beimo-racket-review",
   "kumpoo-fourth-major-badminton-brand-profile",
   "kumpoo-js-63-string-review",
   "kumpoo-js-65-string-review",
@@ -72,6 +73,7 @@ export const blogSlugs = [
   "li-ning-axforce-100-gen-2-review",
   "li-ning-axforce-100-gen-2-vs-100zz-vs-90-new",
   "li-ning-axforce-100-gen-2-vs-gen-1",
+  "li-ning-axforce-100-max-racket-review",
   "li-ning-axforce-70-racket-review",
   "li-ning-axforce-70-vs-80-vs-90",
   "li-ning-axforce-80-jr-junior-review",
@@ -110,6 +112,7 @@ export const blogSlugs = [
   "li-ning-l64-string-review",
   "li-ning-l66-string-first-look",
   "li-ning-l69-string-review",
+  "li-ning-li-jian-dual-pack-racket-review",
   "li-ning-lt66-power-string-review",
   "li-ning-mirage-ii-pro-shoes-review",
   "li-ning-no-1-string-review",
@@ -155,6 +158,7 @@ export const blogSlugs = [
   "victor-sonic-boom-pro-budget-attack-review",
   "victor-thruster-9900-curiosity-review",
   "victor-thruster-falcon-review",
+  "victor-thruster-hmrl-ex-racket-review",
   "victor-thruster-hwql-nuke-review",
   "victor-thruster-k-30-pro-racket-review",
   "victor-thruster-ryuga-ii-pro-racket-review",
@@ -169,6 +173,7 @@ export const blogSlugs = [
   "victor-yu-12-racket-review",
   "yonex-65z4-shoes-review",
   "yonex-aerosensa-50-shuttle-review",
+  "yonex-aerus-z2-shoes-review",
   "yonex-arcsaber-10-complete-buying-guide",
   "yonex-arcsaber-11-pro-review",
   "yonex-arcsaber-7-play-review",
@@ -202,12 +207,11 @@ export const blogSlugs = [
   "yonex-nanoflare-speed-series-explained",
   "yonex-nanoray-zspeed-duora-zstrike-legacy-comparison",
   "yonex-nanospeed-9900-ltg-green-sword-review",
-  "yonex-aerus-z2-shoes-review",
   "yonex-subaxia-gt-shoes-review",
   "yonex-tour-series-buying-guide",
   "yonex-voltric-z-force-ltd-2012-review",
-  "yuan-style-shaft-hardness-explained"
-] as const;
+  "yuan-style-shaft-hardness-explained",
+];
 
 export type BlogSlug = (typeof blogSlugs)[number];
 

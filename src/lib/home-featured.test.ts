@@ -20,8 +20,11 @@ describe("home-featured", () => {
     expect(slugs).toHaveLength(6);
     expect(new Set(slugs).size).toBe(6);
     expect(slugs).toContain("li-ning-mirage-ii-pro-shoes-review");
-    expect(slugs).toContain("li-ning-thunder-2-pro-shoes-review");
-    expect(slugs).toContain("yonex-astrox-99-pro-2-deep-dive");
+    expect(slugs).toContain("kawasaki-kace-shoes-review");
+    expect(slugs).toContain("li-ning-axforce-100-max-racket-review");
+    expect(slugs).toContain("kumpoo-beimo-racket-review");
+    expect(slugs).toContain("li-ning-li-jian-dual-pack-racket-review");
+    expect(slugs).toContain("kumpoo-kh-g805-lite-pro-shoes-review");
   });
 
   it("builds canonical review hrefs", () => {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-01",
+  "updated": "2026-08-08",
   "coverage": {
     "minPopularSearchHrefs": 33,
     "minE2eGuards": 1
@@ -49,12 +49,12 @@
         "/review/kumpoo-fourth-major-badminton-brand-profile/"
       ],
       "expectFeaturedReviewHrefs": [
-        "/review/li-ning-axforce-90-new-5u-deep-dive/",
-        "/review/victor-auraspeed-hs-plus-attack-review/",
-        "/review/yonex-astrox-100zz-axelsen-va-vs-kurenai/",
-        "/review/yonex-astrox-99-pro-2-deep-dive/",
-        "/review/li-ning-mirage-ii-pro-shoes-review/",
-        "/review/li-ning-thunder-2-pro-shoes-review/"
+        "/review/kawasaki-kace-shoes-review/",
+        "/review/kumpoo-beimo-racket-review/",
+        "/review/kumpoo-kh-g805-lite-pro-shoes-review/",
+        "/review/li-ning-axforce-100-max-racket-review/",
+        "/review/li-ning-li-jian-dual-pack-racket-review/",
+        "/review/li-ning-mirage-ii-pro-shoes-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-08-02",
+  "updated": "2026-08-08",
   "coverage": {
-    "minArticleSlugs": 195,
+    "minArticleSlugs": 199,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -1962,6 +1962,46 @@
       "expectProductId": "yy-aerus-z2",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse yonex"
+    },
+    {
+      "id": "kumpoo-beimo-racket-review",
+      "slug": "kumpoo-beimo-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Kumpoo",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "kumpoo-beimo",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse kumpoo"
+    },
+    {
+      "id": "li-ning-axforce-100-max-racket-review",
+      "slug": "li-ning-axforce-100-max-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-axforce-100-max",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "li-ning-li-jian-dual-pack-racket-review",
+      "slug": "li-ning-li-jian-dual-pack-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-li-jian-dual-pack",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-thruster-hmrl-ex-racket-review",
+      "slug": "victor-thruster-hmrl-ex-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-thruster-hmrl-ex",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
     }
   ],
   "minArticleSlugs": 187
