@@ -213,6 +213,8 @@ export const blogSlugs = [
   "yuan-style-shaft-hardness-explained",
 ];
 
+export type BlogSlug = (typeof blogSlugs)[number];
+
 export type BlogComparison = {
   caption?: string;
   columns: string[];
