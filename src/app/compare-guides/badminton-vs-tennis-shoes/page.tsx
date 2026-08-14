@@ -126,7 +126,7 @@ export default function BadmintonVsTennisShoesPage() {
         <p className="text-base leading-relaxed text-[var(--color-muted)]">
           If the budget is a fight, a $90–120 badminton shoe still beats a
           $180 tennis shoe on a wooden hall. Borrow a pair for one session
-          rather than 'making do'. The injury risk is the reason this page
+          rather than making do. The injury risk is the reason this page
           exists, not a brand preference.
         </p>
 
