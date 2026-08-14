@@ -1,3 +1,4 @@
+import { AdSenseScript } from "@/components/AdSenseScript";
 import {
   CompareGuideEngagementFooter,
   CompareGuideReadingChrome,
@@ -10,6 +11,7 @@ export default function CompareGuidesLayout({
 }) {
   return (
     <>
+      <AdSenseScript />
       <CompareGuideReadingChrome />
       {children}
       <CompareGuideEngagementFooter />

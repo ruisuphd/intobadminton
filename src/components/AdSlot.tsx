@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useConsent } from "@/context/ConsentContext";
+import { adsBlockedOnPath } from "@/lib/ads-inventory";
 import { adConsentOperational, type AdOperationalMode } from "@/lib/consent";
 
 /**
@@ -31,12 +33,14 @@ export function AdSlot({
     process.env.NEXT_PUBLIC_ADSENSE_MODE || "disabled";
   const resolvedSlot = slot || defaultSlot;
   const { consent } = useConsent();
+  const pathname = usePathname();
   const canLoadAd = canRenderAdSlot({
     client,
     slot: resolvedSlot,
     adsConsent: consent.ads,
     doNotSellShare: consent.doNotSellShare,
     operationalMode,
+    inventoryAllowed: !adsBlockedOnPath(pathname ?? "/"),
   });
 
   useEffect(() => {
@@ -82,15 +86,18 @@ export function canRenderAdSlot({
   adsConsent,
   doNotSellShare = false,
   operationalMode = "disabled",
+  inventoryAllowed = true,
 }: {
   client: string | undefined;
   slot: string | undefined;
   adsConsent: boolean;
   doNotSellShare?: boolean;
   operationalMode?: AdOperationalMode | string;
+  inventoryAllowed?: boolean;
 }) {
   return Boolean(
-    client &&
+    inventoryAllowed &&
+      client &&
       slot &&
       adConsentOperational(
         { ads: adsConsent, doNotSellShare },

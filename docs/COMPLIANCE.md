@@ -9,7 +9,9 @@ This is an engineering checklist, not legal advice.
 - Global Privacy Control: treat as Do Not Sell/Share and disable advertising/personalization.
 - EEA/UK/Switzerland personalized AdSense requires a Google-certified CMP integrated with IAB TCF before production use.
 - `NEXT_PUBLIC_ADSENSE_MODE=cmp_tcf` gates the site's **own** `<AdSlot/>` inventory; it stays `disabled` until a compliant CMP/IAB TCF setup is live. Consent alone is not enough.
-- **`ADSENSE_MODE` is not a site-wide advertising kill switch.** The `adsbygoogle.js` loader injects Auto Ads containers by itself, independent of that flag — confirmed in a local build, where it appends an Auto Ads anchor `<ins>` to pages containing no `<AdSlot/>`. Auto Ads must be turned off in the AdSense dashboard (Ads → per-site settings), not in this repo. Consent Mode defaults plus Funding Choices still constrain such inventory to non-personalised before opt-in, but that is a weaker guarantee than "no ads render".
+- **`ADSENSE_MODE` is not a dashboard kill switch for Auto Ads.** The loader script (`adsbygoogle.js`) can inject Auto Ads by itself if it is mounted site-wide. This repo no longer mounts that loader in the root layout. It returns null while `NEXT_PUBLIC_ADSENSE_MODE` is `disabled`, and publication templates mount it only after mode is `cmp_tcf`. Spec PDPs, quiz/results/saved/compare, catalog, and noindexed court notes must not load it.
+- **Operator action (AdSense dashboard):** Ads → per-site settings → Auto ads **off** for intobadminton.com until the site is approved. Keep ads.txt and the `google-adsense-account` meta tag so Google can still verify the site. Resubmit once, on the schedule in `docs/ADSENSE_RESUBMIT.md`.
+- Consent Mode defaults plus Funding Choices still constrain inventory to non-personalised before opt-in. That is weaker than "no ads render", which is why the loader stays off during review.
 - The first-layer banner must keep reject/customize/accept choices similarly visible. Do not use dark patterns or pre-ticked non-essential consent.
 
 ## Source/content guardrails

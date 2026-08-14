@@ -22,8 +22,8 @@ describe("lighthouse-paths", () => {
     // Swapped in when the originals were noindexed as thin content —
     // Lighthouse scores a noindexed page ~0.69 on SEO, which is an error-
     // level assertion. See src/lib/thin-content.test.ts.
-    expect(slugs).toContain("li-ning-halbertec-5000-racket-review");
-    expect(slugs).toContain("yonex-arcsaber-7-tour-review");
+    expect(slugs).toContain("yonex-comfort-z3-shoes-review");
+    expect(slugs).toContain("yonex-astrox-88d-pro-vs-88s-pro-2024");
     expect(slugs).toContain("yonex-tour-series-buying-guide");
     expect(slugs).toContain("how-to-choose-a-badminton-racket");
     expect(slugs.length).toBe(6);

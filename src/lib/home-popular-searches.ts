@@ -42,11 +42,11 @@ export const homePopularSearches: HomePopularSearch[] = [
   { label: "Yonex vs Victor vs Li-Ning", href: "/compare-guides/yonex-victor-li-ning/", tag: "Compare" },
   { label: "Spot fake rackets — authenticity check", href: "/guides/equipment-authenticity/", tag: "Authenticity" },
   { label: "Glossary — 4U, head-heavy, T-throat explained", href: "/guides/glossary/", tag: "Glossary" },
-  { label: "68 / 72 / 76 / 78 / 80 hole rackets explained", href: "/review/racket-stringing-hole-patterns-explained/", tag: "Stringing" },
+  { label: "String tension — a practical guide", href: "/guides/string-tension/", tag: "Strings" },
   { label: "Reviews hub", href: "/review/", tag: "Reviews" },
   { label: "Nanoflare 1000 Z review", href: "/review/yonex-nanoflare-1000z-review/", tag: "Reviews" },
   { label: "Yonex Tour vs Pro: which Tour is worth buying", href: "/review/yonex-tour-series-buying-guide/", tag: "Value" },
-  { label: "Kumpoo — the fourth major badminton brand", href: "/review/kumpoo-fourth-major-badminton-brand-profile/", tag: "Brand" },
+  { label: "Kumpoo rackets decoded", href: "/brands/kumpoo/", tag: "Brand" },
 ];
 
 export function homePopularSearchHrefs(): string[] {
@@ -75,14 +75,10 @@ export type OfflineRecoveryLink = {
 };
 
 const POPULAR_SEARCH_OFFLINE_DESCRIPTIONS: Record<string, string> = {
-  "/review/racket-stringing-hole-patterns-explained/":
-    "Precached — homepage popular-search stringing hole explainer.",
   "/review/yonex-nanoflare-1000z-review/":
     "Precached — homepage popular-search flagship speed racket review.",
   "/review/yonex-tour-series-buying-guide/":
     "Precached — homepage popular-search Tour vs Pro value guide.",
-  "/review/kumpoo-fourth-major-badminton-brand-profile/":
-    "Precached — homepage popular-search Kumpoo brand profile.",
 };
 
 /** Popular-search review deep links for `/offline/` recovery sidebar — shared with parity CI. */
@@ -142,6 +138,10 @@ const POPULAR_SEARCH_EDITORIAL_OFFLINE_DESCRIPTIONS: Record<string, string> = {
     "Precached — homepage popular-search Victor brand hub.",
   "/brands/li-ning/":
     "Precached — homepage popular-search Li-Ning brand hub.",
+  "/brands/kumpoo/":
+    "Precached — homepage popular-search Kumpoo brand hub.",
+  "/guides/string-tension/":
+    "Precached — homepage popular-search string tension guide.",
 };
 
 /** Best-of, guide, and brand popular-search picks for `/offline/` recovery — shared with parity CI. */

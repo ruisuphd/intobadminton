@@ -64,6 +64,8 @@ export type CompareGuideConfig = {
   middleParagraph?: string;
   /** Optional founder firsthand callout. */
   founderNote?: string;
+  /** Extra on-court essay so the page is not a spec table with captions. */
+  onCourt?: string;
   /** Related internal links. Keep to ~6. */
   relatedLinks: { label: string; href: string }[];
 };
@@ -265,6 +267,15 @@ export function CompareGuidePage({ config }: { config: CompareGuideConfig }) {
               — {companyInfo.authorByline}.
             </p>
           </blockquote>
+        )}
+
+        {config.onCourt && (
+          <section className="space-y-3">
+            <h2 className="text-headline text-[var(--text)]">On court</h2>
+            <p className="whitespace-pre-line text-base leading-relaxed text-[var(--color-muted)]">
+              {config.onCourt}
+            </p>
+          </section>
         )}
 
         {config.relatedLinks.length > 0 && (

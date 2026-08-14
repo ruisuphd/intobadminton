@@ -34,8 +34,8 @@ const copyEn: Copy = {
   ],
   editorialPrinciples: [
     {
-      title: "I don't scrape.",
-      body: "Third-party reviews are linked and paraphrased with attribution. Copying review text — even with translation — is a copyright issue and an AdSense policy violation, and it is also how recommender sites become noise.",
+      title: "I don't republish forum reviews as content.",
+      body: "SKU court notes that started as Chinese-language community reports are noindexed and are not AdSense inventory. Indexed pages are original analysis or founder-firsthand tests. Community threads are cited as themes with links — never copied or translated as the article body.",
     },
     {
       title: "Confidence is visible.",

@@ -72,6 +72,8 @@ const config: CompareGuideConfig = {
     "Buy the 88S Pro 2024 if you are a competitive club or league player, your overhead timing is consistent (mishit rate under ~15%), your primary discipline is doubles (especially front court or mixed), and you want the current market benchmark for control-balance doubles.",
   founderNote:
     "If you smash from the back court as your primary attack pattern, consider the 88D Pro instead of 88S. If you switch roles or play significant front court, stay with 88S.",
+  onCourt:
+    "I played the 77 Pro for two seasons of Dublin club doubles before moving to the 88S Pro 2024 as my current front-court frame. The 77 Pro is the one I lend to clubmates who are stepping up from Play-tier Astrox: medium shaft, easy length, no extra-stiff tax on a late clear. The 88S is the one I keep in the bag now because my role is interception and half-court blocks, not rear-court smash duty.\n\nThe gap that reviews oversell is stiffness. On a 24–26 lb BG80 bed, the 88S asks for cleaner timing on the overhead; the 77 Pro still produces a usable clear when contact is a fraction late. If your mishit rate is visible in match play, stay on 77 Pro. If your blocks already travel and you want a tighter drive, 88S is the current-racket answer — not because it is newer, but because that is the role I actually play in Division 4.",
   relatedLinks: [
     {
       label: "Read the full Astrox 77 Pro review",

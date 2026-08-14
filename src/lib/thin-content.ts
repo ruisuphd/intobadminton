@@ -1,132 +1,151 @@
-import type { BlogSlug } from "@/lib/blog";
+import reviewProductMap from "@/data/blog-review-product-map.json";
+import productsCatalog from "@/data/products.json";
+import { blogArticles, blogSlugs, type BlogSlug } from "@/lib/blog";
+import { editorNoteIsFounderFirsthand } from "@/lib/founder-notes";
+import type { ProductRecord } from "@/lib/types/product";
 
 /**
- * Review articles held back from the search index because they are thin.
- *
- * One of two noindex lists in this file. This one is about length; see
- * `duplicateNoindexSlugs` for pages held back because they duplicate a
- * sibling. Both feed `isThinContentNoindex` and the sitemap.
- *
- * Every slug below is under 400 words of body copy and recorded zero
- * impressions in the 2026-08-02 Search Console export. Individually they are
- * harmless; collectively they are the "low value content" signal that blocks
- * AdSense review, because they are a third of the corpus that no query has
- * ever reached.
- *
- * They are noindexed rather than deleted. Deleting a slug is not a small
- * change here: every one of these is wired into
- * `docs/baselines/reviews-queries.json` and `src/data/blog-review-product-map.json`,
- * and several are also referenced by PDP, catalog, home-featured, PWA precache
- * and e2e baselines. Noindexing keeps the pages live, keeps the catalog exits
- * and brand-hub shelves that point at them intact, and still removes them from
- * the index.
- *
- * `follow` is deliberate. These pages link out to the catalog and to the
- * indexed round-ups above them, and that crawl path should stay open.
- *
- * How an article graduates: expand it past the thin threshold, confirm the
- * word count, then delete its entry here. `li-ning-halbertec-5000-racket-review`
- * was on this list and came off it that way — the "halbertec 5000" query
- * cluster draws 277 impressions a quarter that a 205-word page could not reach.
+ * Internal gate (not a Google quota): do not index or put ads on a review
+ * under this many body words, or that fails the originality test below.
  */
-export const thinContentNoindexSlugs: readonly BlogSlug[] = [
-  // Li-Ning — AxForce and Bladex line pages that duplicate coverage already
-  // carried by the flagship round-ups and head-to-heads.
-  "li-ning-aeronaut-9000c-racket-review",
-  "li-ning-axforce-90-dragon-max-dragon-vs-tiger",
-  "li-ning-axforce-90-dragon-max-review",
-  "li-ning-axforce-90-dragon-max-vs-astrox-100zz",
-  "li-ning-axforce-cannon-racket-review",
-  "li-ning-bladex-900-new-vs-1000z-auraspeed-falcon-se",
-  "li-ning-bladex-900-new-vs-nanoflare-1000z",
-  "li-ning-invincible-ace-shoes-review",
+export const REVIEW_INDEX_MIN_BODY_WORDS = 800;
 
-  // Strings — single-SKU pages that the string selector guide covers better.
-  "gosen-raimei-58-string-review",
-  "gosen-raimei-62-string-review",
-  "li-ning-no-1-string-review",
-  "victor-vbs-63-string-review",
-  "victor-vbs70-string-review",
-  "yonex-bg80-string-review",
-  "yonex-exbolt-68-string-review",
-
-  // Shuttles.
-  "li-ning-g100s-shuttle-review",
-  "rsl-tourney-l7-shuttle-review",
-
-  // Shoes.
-  "bonny-infinity-002-shoes-review",
-  "victor-yinbao-a-boom-shoes-review",
-
-  // Rackets — one-off and legacy SKUs with no live query cluster.
-  "anta-ah600w-racket-review",
-  "bonny-leisu-800-lt-review",
-  "bonny-lunar-8-racket-review",
-  "decathlon-920d-racket-review",
-  "gosen-ryoga-shiden-review",
-  "kawasaki-crimson-blade-racket-review",
-  "kawasaki-nezer-19-ii-racket-review",
-  "mizuno-carbo-pro-825-review",
-  "victor-fz-100xx-budget-attack-review",
-  "yonex-nanospeed-9900-ltg-green-sword-review",
-  "yonex-voltric-z-force-ltd-2012-review",
-
-  // Comparisons already covered by a stronger sibling article.
-  "victor-drivex-12-vs-zsw-vs-arc11-halbertec-8000",
+/**
+ * Slugs whose source map entry is null — original IntoBadminton editorials,
+ * not imported forum markdown. Tests assert this matches
+ * `scripts/blog-slug-source-map.json`.
+ */
+export const ORIGINAL_EDITORIAL_SLUGS: readonly string[] = [
+  "badminton-bag-loadout",
+  "badminton-equipment-for-kids",
+  "badminton-glossary-terms-every-player-should-know",
+  "badminton-shoe-fit-stability",
+  "badminton-string-selector",
+  "beginner-racket-mistakes",
+  "how-to-choose-a-badminton-racket",
+  "how-to-read-badminton-reviews",
+  "li-ning-thunder-100-gen-2-vs-gen-1",
+  "racket-balance-vs-swing-speed",
+  "used-racket-depreciation",
+  "victor-drivex-12-vs-astrox-88d-pro",
+  "yonex-grip-sizes-explained",
 ];
 
+const originalEditorialSet: ReadonlySet<string> = new Set(
+  ORIGINAL_EDITORIAL_SLUGS
+);
+
+const CATALOG = productsCatalog as ProductRecord[];
+const REVIEW_MAP = reviewProductMap as Record<string, string>;
+
+const founderFirsthandProductIds: ReadonlySet<string> = new Set(
+  CATALOG.filter((product) =>
+    editorNoteIsFounderFirsthand(product.editorNote)
+  ).map((product) => product.id)
+);
+
+export function reviewBodyWordCount(slug: string): number {
+  const article = blogArticles.en.find((row) => row.slug === slug);
+  if (!article) return 0;
+  return article.sections
+    .flatMap((section) => section.body.split(/\s+/))
+    .filter(Boolean).length;
+}
+
+export function isOriginalEditorialSlug(slug: string): boolean {
+  return originalEditorialSet.has(slug);
+}
+
+export function isFounderFirsthandSlug(slug: string): boolean {
+  const productId = REVIEW_MAP[slug];
+  return Boolean(productId && founderFirsthandProductIds.has(productId));
+}
+
 /**
- * Review articles held back from the index because they duplicate a sibling.
- *
- * A separate list from `thinContentNoindexSlugs`, and deliberately so: these
- * pages are not thin. They clear the word-count threshold comfortably. Their
- * problem is that they render a near-copy of another live URL's body and draw
- * effectively no search demand of their own, which is the same "low value
- * content" signal arriving by a different route.
- *
- * The bar for adding a slug here is high, because the usual fix for a
- * duplicate pair is to give the weaker slug its own source markdown rather
- * than to hide it. Five pairs were resolved that way in Sprint 132. A slug
- * belongs on this list only when writing genuine content for it would require
- * asserting something the catalogue cannot yet support.
+ * A public content URL must be original editorial or mapped to a catalogue
+ * row the founder actually played. Length is not a licence to index a
+ * translated forum note.
+ */
+export function passesOriginalityGate(slug: string): boolean {
+  return isOriginalEditorialSlug(slug) || isFounderFirsthandSlug(slug);
+}
+
+export function passesLengthGate(slug: string): boolean {
+  return reviewBodyWordCount(slug) >= REVIEW_INDEX_MIN_BODY_WORDS;
+}
+
+/**
+ * Weaker siblings of a duplicate pair. These pages can clear the word-count
+ * gate; they are held back because they republish the same SKU as another URL.
  */
 export const duplicateNoindexSlugs: readonly BlogSlug[] = [
-  // Renders the same body as `fz-forza-88d-review` from the same source file,
-  // `reviews-fz-blade-88d-racket.md`, and drew 13 impressions in the quarter
-  // to 2026-08-02 against that page's 225 — no independent query cluster.
-  //
-  // It is the one pair of the five that could not be split by writing a second
-  // article, because the two catalogue rows may not be two rackets. The source
-  // says the shaft reads "FZ FORZA AERO POWER 88D" with a Danish national team
-  // badge, while `vic-fz-88d-power-purple` files the same frame under Victor
-  // at $115 against FZ Forza's $175. Writing a distinct review would mean
-  // narrating a brand and a price the catalogue has not settled — exactly what
-  // the TITLE_FALLBACK_QUARANTINE note in `scripts/blog-import-option-b.py`
-  // exists to prevent.
-  //
-  // Noindex is the interim, not the resolution. When the brand question is
-  // decided, either the row merges into `fz-forza-88d` and this slug becomes a
-  // redirect, or it earns a real review and comes off this list.
+  // Same source file as `fz-forza-88d-review`. Brand/price still unsettled.
   "victor-fz-88d-power-purple-review",
 ];
 
-const thinContentNoindexSet: ReadonlySet<string> = new Set([
+/**
+ * Overlapping SKU coverage Google asks us to expand or consolidate. Weaker
+ * URLs stay in the corpus (and may 301 in the static export) so inbound
+ * links do not 404.
+ */
+export const consolidatedNoindexSlugs: readonly BlogSlug[] = [
+  "kawasaki-star-cross-second-perspective-review",
+  "victor-auraspeed-hs-plus-attack-review",
+  "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
+  "victor-drivex-12-zsw-vs-original-comparison",
+  "victor-yu-12-racket-review",
+  "victor-p8500-ii-shoes-review",
+  "yonex-astrox-99-pro-2-deep-dive",
+  "yonex-astrox-99-pro-gen-1-review",
+  "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
+  "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
+];
+
+const duplicateSet: ReadonlySet<string> = new Set(duplicateNoindexSlugs);
+const consolidatedSet: ReadonlySet<string> = new Set(consolidatedNoindexSlugs);
+
+function failsQualityGate(slug: string): boolean {
+  return !passesLengthGate(slug) || !passesOriginalityGate(slug);
+}
+
+/**
+ * Review slugs held back for length or originality (not duplicate/consolidate).
+ * Computed from the live corpus so the list cannot drift from the JSON.
+ */
+export const thinContentNoindexSlugs: readonly BlogSlug[] = blogSlugs.filter(
+  (slug) =>
+    !duplicateSet.has(slug) &&
+    !consolidatedSet.has(slug) &&
+    failsQualityGate(slug)
+);
+
+const noindexSet: ReadonlySet<string> = new Set([
   ...thinContentNoindexSlugs,
   ...duplicateNoindexSlugs,
+  ...consolidatedNoindexSlugs,
 ]);
 
 /** Every review slug served `noindex, follow`, whatever the reason. */
 export const noindexReviewSlugs: readonly BlogSlug[] = [
   ...thinContentNoindexSlugs,
   ...duplicateNoindexSlugs,
+  ...consolidatedNoindexSlugs,
 ];
 
 /** True when `/review/<slug>/` should render `noindex, follow`. */
 export function isThinContentNoindex(slug: string): boolean {
-  return thinContentNoindexSet.has(slug);
+  return noindexSet.has(slug);
 }
 
-/** Review slugs that belong in the sitemap — the corpus minus the thin set. */
+/** Review slugs that belong in the sitemap — the corpus minus the noindex set. */
 export function indexableReviewSlugs(slugs: readonly string[]): string[] {
   return slugs.filter((slug) => !isThinContentNoindex(slug));
+}
+
+/**
+ * Ads may sit on a review only when it is also indexable publication content.
+ * Auto Ads bypasses `<AdSlot/>`; keep the loader off these screens as well.
+ */
+export function adsAllowedOnReview(slug: string): boolean {
+  return !isThinContentNoindex(slug);
 }

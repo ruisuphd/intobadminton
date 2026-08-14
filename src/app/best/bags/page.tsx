@@ -82,6 +82,16 @@ const config: BestPicksConfig = {
   ],
   ctaHeading: "Browse all bags in the catalog",
   ctaBody: "Filter by capacity, carry style, and compartment layout — then compare specs before you commit.",
+  essays: [
+    {
+      heading: "Two bags, two workflows — why this page is short on SKUs",
+      body: "The catalogue only carries two bag rows worth recommending: a six-racket Yonex tournament bag and a two-racket Victor commute backpack. Padding this URL with unstocked Amazon lookalikes would be a generated affiliate page. The useful content is the workflow, not a fake top-ten.\n\nClub night, twice a week, driving to the hall: Yonex Pro Tournament. Dedicated shoe pocket and wet zone so Saturday's kit does not sit on Sunday's frames. Six-racket capacity is the spare-frame tax of anyone who strings at two tensions.\n\nCommute, bike or Luas, one or two rackets: Victor Compact Backpack. Shoe pocket yes, wet compartment no — pack a drybag. If you later add a third frame, you have outgrown the backpack; that is the upgrade signal, not a logo.",
+    },
+    {
+      heading: "What I actually pack",
+      body: "Racket bag nights: two frames (current doubles + spare with a different string), court shoes in the shoe well, a towel and a wet shirt in the wet pocket, overgrips, a tube of shuttles only if the club is short. I do not pack a fourth 'maybe' racket — that is how bags get heavy enough to skip the walk.\n\nCommute nights: one Nanoflare 1000 Z, shoes, water, overgrip. If the Victor backpack starts to bulge, the next purchase is not a bigger logo — it is the Yonex tournament bag.\n\nSkip: novelty keychains, a full bottle of stringing tools, and a bag that holds nine rackets you do not own. Capacity you cannot fill is dead weight on the shoulder you need for overheads.",
+    },
+  ],
 };
 
 export default function BestBagsPage() {

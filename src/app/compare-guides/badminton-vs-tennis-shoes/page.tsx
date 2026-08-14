@@ -113,6 +113,24 @@ export default function BadmintonVsTennisShoesPage() {
         <AdSlot id="compare-badminton-tennis-shoes-mid" />
 
         <h2 className="text-headline text-[var(--text)]">
+          What I wear, and why tennis shoes stayed off court
+        </h2>
+        <p className="text-base leading-relaxed text-[var(--color-muted)]">
+          I currently play in Yonex Comfort Z3 after Aerus Z2. Both are
+          badminton lasts: low drop, gum rubber, lateral work. I have not used
+          a tennis shoe as a badminton shoe. The heel drop and the outsole
+          pattern are built for a different sport. Clubmates who show up in
+          trainers or tennis shoes are the ones who look fast in the first
+          rally and careful after the first lunge.
+        </p>
+        <p className="text-base leading-relaxed text-[var(--color-muted)]">
+          If the budget is a fight, a $90–120 badminton shoe still beats a
+          $180 tennis shoe on a wooden hall. Borrow a pair for one session
+          rather than 'making do'. The injury risk is the reason this page
+          exists, not a brand preference.
+        </p>
+
+        <h2 className="text-headline text-[var(--text)]">
           What about court shoes generally?
         </h2>
         <p className="text-base leading-relaxed text-[var(--color-muted)]">

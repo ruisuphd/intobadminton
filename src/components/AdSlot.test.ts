@@ -86,10 +86,22 @@ describe("canRenderAdSlot", () => {
     ).toBe(false);
   });
 
+  it("renders nothing when inventory is blocked, even when enabled", () => {
+    expect(
+      canRenderAdSlot({
+        client: "ca-pub-9641207581771694",
+        slot: "1234567890",
+        adsConsent: true,
+        operationalMode: "cmp_tcf",
+        inventoryAllowed: false,
+      })
+    ).toBe(false);
+  });
+
   it("renders nothing when no slot id is configured, even when enabled", () => {
-    // The new review/product regions ship before slot ids exist. Until each is
-    // given one in NEXT_PUBLIC_ADSENSE_SLOT_DEFAULT they must stay invisible
-    // rather than emitting an empty <ins> that AdSense flags as a policy issue.
+    // Slot regions ship before slot ids exist. Until each is given one in
+    // NEXT_PUBLIC_ADSENSE_SLOT_DEFAULT they must stay invisible rather than
+    // emitting an empty <ins> that AdSense flags as a policy issue.
     expect(
       canRenderAdSlot({
         client: "ca-pub-9641207581771694",

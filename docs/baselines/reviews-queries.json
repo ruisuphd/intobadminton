@@ -93,6 +93,16 @@
       "note": "Explainer slug must stay outside product map — decision-path shelf only"
     },
     {
+      "id": "explainer-badminton-string-selector",
+      "slug": "badminton-string-selector",
+      "expectUnmapped": true,
+      "expectCatalogHref": "/catalog/",
+      "expectMinRelatedReading": 3,
+      "e2e": true,
+      "expectKeepReadingShelf": true,
+      "note": "Homepage featured slice — original string selector explainer"
+    },
+    {
       "id": "featured-anta-ah600w",
       "slug": "anta-ah600w-racket-review",
       "expectProductId": "anta-ah600w",

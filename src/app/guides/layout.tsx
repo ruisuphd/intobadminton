@@ -1,3 +1,4 @@
+import { AdSenseScript } from "@/components/AdSenseScript";
 import {
   GuideEngagementFooter,
   GuideInPageNavigation,
@@ -11,6 +12,7 @@ export default function GuidesLayout({
 }) {
   return (
     <>
+      <AdSenseScript />
       <GuideReadingChrome />
       {children}
       <GuideInPageNavigation />

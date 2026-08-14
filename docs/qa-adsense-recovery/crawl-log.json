@@ -1,0 +1,220 @@
+{
+  "failed": 0,
+  "checks": [
+    {
+      "name": "home author Rui Su",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home primary Read guides",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home Read guides → /guides/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home shelf /guides/string-tension/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home shelf /review/how-to-choose-a-badminton-racket/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home shelf /compare-guides/yonex-astrox-vs-nanoflare/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home shelf /review/yonex-nanoflare-1000z-review/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home shelf /best/beginner-rackets/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home shelf /guides/badminton-shoes-vs-running-shoes/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home no 209 reviews",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home no 1–2 min featured",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home Founder-tested heading",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home no PWA install toast",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home cookie not only content",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home no adsbygoogle.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home popular search not forum Kumpoo/holes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home popular search has string-tension + kumpoo brand",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "string-tension long prose",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "string-tension indexed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "string-tension no adsbygoogle.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "1000Z long prose",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "1000Z skip/who-should-not",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "1000Z indexed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "1000Z no adsbygoogle.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PDP noindex",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PDP no adsbygoogle.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PDP has specs or finder",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PDP no Weak match 5/100 without profile",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reviews hub default ~26 publication pieces",
+      "ok": true,
+      "detail": "Showing 26 of 26"
+    },
+    {
+      "name": "reviews hub Astrox hits founder pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reviews hub checkbox jumps toward 209",
+      "ok": true,
+      "detail": "Showing 209 of 209"
+    },
+    {
+      "name": "rackets-under-150 distinct why/tradeoff copy",
+      "ok": true,
+      "detail": "words=1490"
+    },
+    {
+      "name": "rackets-under-200 distinct why/tradeoff copy",
+      "ok": true,
+      "detail": "words=1430"
+    },
+    {
+      "name": "bags page has essay length",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "about no I-don't-scrape claim",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "about noindex imported notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quiz reaches results",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saved shelf has item",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "compare tray has product",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "BG65 catalog → string-selector",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unmapped Super Grap → PDP",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Yonex brand lists Comfort Z3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search defensive doubles racket",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

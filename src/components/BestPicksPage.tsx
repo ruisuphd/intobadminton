@@ -69,6 +69,8 @@ export type BestPicksConfig = {
   ctaBody: string;
   breadcrumbLabel: string;
   productSchemaCategory: string;
+  /** Extra original sections so a two-pick list is still a full buying essay. */
+  essays?: { heading: string; body: string }[];
 };
 
 export function BestPicksPage({ config }: { config: BestPicksConfig }) {
@@ -222,6 +224,17 @@ export function BestPicksPage({ config }: { config: BestPicksConfig }) {
             dangerouslySetInnerHTML={{ __html: config.intro.body }}
           />
         </section>
+
+        {config.essays?.map((essay) => (
+          <section key={essay.heading} className="space-y-3">
+            <h2 className="text-lg font-semibold text-[var(--text)]">
+              {essay.heading}
+            </h2>
+            <p className="text-sm leading-relaxed text-[var(--color-muted)] whitespace-pre-line">
+              {essay.body}
+            </p>
+          </section>
+        ))}
 
         {/*
          * At-a-glance comparison table. Renders the same picks as the cards

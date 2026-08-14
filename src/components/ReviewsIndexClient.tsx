@@ -49,23 +49,36 @@ const EQUIPMENT_OPTIONS: { value: ReviewEquipmentFilter; label: string }[] = [
 
 export function ReviewsIndexClient({
   articles,
+  publicationSlugs,
   locale,
 }: {
   articles: BlogArticle[];
+  publicationSlugs: string[];
   locale: SiteLocale;
 }) {
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState<ReviewHubFilter>("all");
   const [equipment, setEquipment] = useState<ReviewEquipmentFilter>("all");
+  const [showCourtNotes, setShowCourtNotes] = useState(false);
+
+  const publicationSet = useMemo(
+    () => new Set(publicationSlugs),
+    [publicationSlugs]
+  );
+
+  const scoped = useMemo(() => {
+    if (showCourtNotes) return articles;
+    return articles.filter((article) => publicationSet.has(article.slug));
+  }, [articles, publicationSet, showCourtNotes]);
 
   const filtered = useMemo(
     () =>
-      filterReviewArticles(articles, {
+      filterReviewArticles(scoped, {
         query,
         kind,
         equipment,
       }),
-    [articles, query, kind, equipment]
+    [scoped, query, kind, equipment]
   );
 
   return (
@@ -114,8 +127,17 @@ export function ReviewsIndexClient({
           ))}
         </div>
         <p className="text-sm text-[var(--color-subtle)]">
-          Showing {filtered.length} of {articles.length}
+          Showing {filtered.length} of {scoped.length}
         </p>
+        <label className="flex items-center gap-2 text-sm text-[var(--color-muted)]">
+          <input
+            type="checkbox"
+            checked={showCourtNotes}
+            onChange={(event) => setShowCourtNotes(event.target.checked)}
+            className="h-4 w-4 rounded border-[color:var(--line)]"
+          />
+          Include short court notes (not indexed)
+        </label>
       </div>
 
       <div className="mt-6">

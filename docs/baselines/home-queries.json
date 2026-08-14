@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-08",
+  "updated": "2026-08-14",
   "coverage": {
     "minPopularSearchHrefs": 33,
     "minE2eGuards": 1
@@ -42,19 +42,19 @@
         "/compare-guides/yonex-victor-li-ning/",
         "/guides/equipment-authenticity/",
         "/guides/glossary/",
-        "/review/racket-stringing-hole-patterns-explained/",
+        "/guides/string-tension/",
         "/review/",
         "/review/yonex-nanoflare-1000z-review/",
         "/review/yonex-tour-series-buying-guide/",
-        "/review/kumpoo-fourth-major-badminton-brand-profile/"
+        "/brands/kumpoo/"
       ],
       "expectFeaturedReviewHrefs": [
-        "/review/kawasaki-kace-shoes-review/",
-        "/review/kumpoo-beimo-racket-review/",
-        "/review/kumpoo-kh-g805-lite-pro-shoes-review/",
-        "/review/li-ning-axforce-100-max-racket-review/",
-        "/review/li-ning-li-jian-dual-pack-racket-review/",
-        "/review/li-ning-mirage-ii-pro-shoes-review/"
+        "/review/how-to-choose-a-badminton-racket/",
+        "/review/badminton-string-selector/",
+        "/review/yonex-nanoflare-1000z-review/",
+        "/review/yonex-comfort-z3-shoes-review/",
+        "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/",
+        "/review/yonex-arcsaber-7-pro-review/"
       ],
       "e2e": true,
       "expectContinueReadingSlot": true,

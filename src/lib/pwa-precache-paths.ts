@@ -118,10 +118,8 @@ export const PRECACHE_ASSERT_PATHS = [
   "/review/kawasaki-kace-shoes-review/",
   "/review/racket-stringing-hole-patterns-explained/",
   // Homepage featured six — see the matching block in public/sw.js.
-  // KACE + G805 Lite Pro are already listed above; only add the rest here
-  // (cache.addAll rejects duplicate URLs and would leave the SW cache empty).
-  "/review/kumpoo-beimo-racket-review/",
-  "/review/li-ning-axforce-100-max-racket-review/",
-  "/review/li-ning-li-jian-dual-pack-racket-review/",
-  "/review/li-ning-mirage-ii-pro-shoes-review/",
+  // Five of the six are already in the Lighthouse review block above;
+  // only add shells that are not already listed (cache.addAll rejects
+  // duplicate URLs and would leave the SW cache empty).
+  "/review/badminton-string-selector/",
 ] as const;

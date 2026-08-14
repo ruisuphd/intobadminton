@@ -10,11 +10,13 @@ describe("lighthouse lab exempt paths", () => {
       "/results/",
       "/compare/",
       "/saved/",
+      "/product/yy-grpht-thrttl/",
     ]);
   });
 
   it("recognises exempt paths", () => {
     expect(isLighthouseLabExemptPath("/results/")).toBe(true);
+    expect(isLighthouseLabExemptPath("/product/yy-grpht-thrttl/")).toBe(true);
     expect(isLighthouseLabExemptPath("/quiz/")).toBe(false);
   });
 });

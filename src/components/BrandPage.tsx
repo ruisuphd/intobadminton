@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { EditorialMeta } from "@/components/EditorialMeta";
 import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
@@ -177,8 +176,6 @@ export function BrandPage({ config }: { config: BrandPageConfig }) {
             ))}
           </div>
         </section>
-
-        <AdSlot id={`brand-${config.slug}-mid`} />
 
         {config.topPicks.length > 0 && (
           <section className="card p-7">
