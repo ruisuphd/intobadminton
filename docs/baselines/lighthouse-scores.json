@@ -217,12 +217,6 @@
       "best-practices": 1,
       "seo": 1
     },
-    "http://localhost:4173/product/yy-grpht-thrttl/index.html": {
-      "performance": 0.93,
-      "accessibility": 0.93,
-      "best-practices": 1,
-      "seo": 1
-    },
     "http://localhost:4173/guides/string-tension/index.html": {
       "performance": 0.99,
       "accessibility": 0.96,

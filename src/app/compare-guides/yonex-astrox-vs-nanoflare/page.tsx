@@ -138,6 +138,26 @@ export default function AstroxVsNanoflarePage() {
           Voltric was Yonex&rsquo;s previous heavy-attack line — most models are now discontinued or repositioned as value-tier options like the Voltric 8DG. Arcsaber survives as the control-oriented family, with the 11 Pro and 7 Pro as the modern flagships. If you grew up on Arcsaber 10, the 11 Pro is the closest spiritual successor.
         </p>
 
+        <h2 className="text-headline text-[var(--text)]">
+          What I actually play
+        </h2>
+        <p className="text-base leading-relaxed text-[var(--color-muted)]">
+          My current doubles racket is the Nanoflare 1000 Z. Head-light Z-axis
+          speed is the point of the frame: drives and defence come first, smash
+          power second. I previously spent two seasons on Astrox 77 Pro and now
+          keep 88S Pro 2024 as the other bag frame when the role is front-court
+          control rather than pure speed. That is the family split in one bag —
+          Nanoflare when I need to organise the rally, Astrox when I need a
+          loaded overhead that still recovers.
+        </p>
+        <p className="text-base leading-relaxed text-[var(--color-muted)]">
+          I would not put a clubmate on 100ZZ because a YouTube smash compilation
+          used one. 100ZZ is extra-stiff and tiring over a full match; 100ZZ VA
+          is the version I would demo first if someone insists on that line.
+          Most Division 4 players who think they want Astrox power are happier
+          on 77 Pro or 88S.
+        </p>
+
         <div className="card p-6">
           <h2 className="text-xl font-semibold text-[var(--text)]">
             Decide by profile, not by family

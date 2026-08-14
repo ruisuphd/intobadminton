@@ -20,7 +20,7 @@ const setupItems = [
   {
     area: "Google AdSense",
     action:
-      "Create/approve an AdSense account, add the site, verify ownership, then replace ads.txt with the exact publisher line.",
+      "Ownership is verified. Keep ads.txt and the google-adsense-account meta. Auto ads OFF in the AdSense dashboard (Ads → per-site settings) until approval. Do not set NEXT_PUBLIC_ADSENSE_MODE=cmp_tcf until CMP/TCF is real. Follow docs/ADSENSE_RESUBMIT.md — one request, not before 17 Aug 2026 AND ~14 days after the quality deploy.",
     owner: "You",
   },
   {

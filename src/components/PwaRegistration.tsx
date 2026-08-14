@@ -19,9 +19,11 @@ type InstallPromptEvent = Event & {
  * the user has any reason to install us. Counts are stored locally; the
  * prompt is suppressed once dismissed.
  *
- * Service worker is registered in production only. In dev mode, an active
- * SW can mask hot-reload changes.
+ * Service worker stays registered. The install toast is off while AdSense
+ * review is pending so it does not compete with the cookie banner.
  */
+export const PWA_INSTALL_PROMPT_ENABLED = false;
+
 export function PwaRegistration() {
   const { hasChoice } = useConsent();
   const [installEvent, setInstallEvent] = useState<InstallPromptEvent | null>(
@@ -73,7 +75,9 @@ export function PwaRegistration() {
       } catch {
         /* ignore */
       }
-      if (visits >= 2 && !dismissed) setShowPrompt(true);
+      if (PWA_INSTALL_PROMPT_ENABLED && visits >= 2 && !dismissed) {
+        setShowPrompt(true);
+      }
     };
 
     window.addEventListener("beforeinstallprompt", handler);

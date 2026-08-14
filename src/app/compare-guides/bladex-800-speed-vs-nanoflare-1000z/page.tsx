@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the Nanoflare 1000Z if drive speed and end-speed precision are your priority, if you value Yonex's verified product-page spec, and if the $90 price premium is acceptable for the resale and warranty network advantages.",
   founderNote:
     "Bladex 800 Speed feels heavier through contact than the 1000Z despite similar listed weight — that's the tough-elastic design at work. It's a real racket and a fair-value pick at $200. The 1000Z is sharper on the drives I most often need to win points; that's why it's my doubles main.",
+  onCourt:
+    "1000 Z is in my bag. Bladex 800 Speed is the Li-Ning I would demo if a clubmate wanted Nanoflare-like speed without Yonex MAP. Through contact it feels heavier than the listed weight suggests — that is the point of the tough-elastic frame, not a QC surprise. On the drives that win my doubles points, 1000 Z is still sharper. I would only switch if stock or price made 1000 Z unrealistic, not because Bladex is 'the same racket'.",
   relatedLinks: [
     { label: "Read the full Bladex 800 Speed review", href: reviewPath("ln-bladex-800-speed") },
     { label: "Read the full Nanoflare 1000Z review", href: reviewPath("yy-nanoflare-1000z") },

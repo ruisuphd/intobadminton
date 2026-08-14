@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AdSenseScript } from "@/components/AdSenseScript";
 import { Analytics, ConsentModeDefaults } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import { CookieSettings } from "@/components/CookieSettings";
@@ -103,8 +102,13 @@ export default function RootLayout({
           <ConsentModeDefaults />
           <FundingChoicesScript />
           <Analytics />
-          <AdSenseScript />
           {/*
+           * adsbygoogle.js is not loaded here. Auto Ads from a site-wide loader
+           * would inventory PDPs, quiz/results, and thin court notes — the
+           * screens Publisher Policy 11112688 forbids. Keep the ca-pub meta
+           * above for verification. After approval, mount <AdSenseScript/> only
+           * on publication templates.
+           *
            * Site-wide Organization + WebSite JSON-LD. Emitting these from the
            * root layout means every page (not just the homepage) advertises the
            * organization entity Google uses for E-E-A-T / knowledge-graph

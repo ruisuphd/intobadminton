@@ -1,29 +1,21 @@
 import { describe, expect, it } from "vitest";
-import { buildPriceBandRacketsConfig } from "@/lib/price-band-best";
+import { config as under150 } from "@/app/best/rackets-under-150/page";
+import { config as under200 } from "@/app/best/rackets-under-200/page";
 
-describe("buildPriceBandRacketsConfig", () => {
-  it("builds picks from catalogue under max price", () => {
-    const { config } = buildPriceBandRacketsConfig("rackets-under-100", 100, {
-      title: "Test",
-      description: "Test desc",
-      breadcrumbLabel: "Under $100",
-      pageTitle: "Under $100",
-      dek: "Test dek",
-    });
-    expect(config.slug).toBe("rackets-under-100");
-    expect(config.picks.length).toBeGreaterThan(0);
-    expect(config.picks.every((p) => p.priceUsd <= 100)).toBe(true);
+describe("hand-written price-band best-ofs", () => {
+  it("keeps six unique under-$150 picks with original why copy", () => {
+    expect(under150.picks).toHaveLength(6);
+    expect(under150.picks.every((pick) => pick.priceUsd <= 150)).toBe(true);
+    expect(new Set(under150.picks.map((pick) => pick.productId)).size).toBe(6);
+    expect(under150.picks.every((pick) => pick.why.length > 80)).toBe(true);
+    expect(under150.essays?.length).toBeGreaterThan(0);
   });
 
-  it("builds under-200 band with higher cap", () => {
-    const { config } = buildPriceBandRacketsConfig("rackets-under-200", 200, {
-      title: "Test",
-      description: "Test desc",
-      breadcrumbLabel: "Under $200",
-      pageTitle: "Under $200",
-      dek: "Test dek",
-    });
-    expect(config.picks.every((p) => p.priceUsd <= 200)).toBe(true);
-    expect(config.picks.length).toBeGreaterThan(0);
+  it("keeps six unique under-$200 picks and does not share a template tradeoff", () => {
+    expect(under200.picks).toHaveLength(6);
+    expect(under200.picks.every((pick) => pick.priceUsd <= 200)).toBe(true);
+    const tradeoffs = under200.picks.map((pick) => pick.tradeoff);
+    expect(new Set(tradeoffs).size).toBe(tradeoffs.length);
+    expect(under200.essays?.length).toBeGreaterThan(0);
   });
 });

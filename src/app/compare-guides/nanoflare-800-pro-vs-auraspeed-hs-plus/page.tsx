@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the Auraspeed HS Plus if you already play Victor, if you specifically value the slightly thinner shaft's flick feel, and if you're comfortable with the community-sourced spec posture for Victor rackets that don't yet have a product-page link in IntoBadminton's database. The HS Plus is also a great pick if you're upgrading from an earlier Auraspeed and want continuity of feel.",
   founderNote:
     "I've hit with the 800 Pro at club level (4U/G5, BG80 at 26 lb). It feels exactly like a Nanoflare should — fast, light, sharp on drives, demanding on smash. The HS Plus is in the same ballpark with a slightly more flickable shaft. For a club player picking their first mid-flagship speed racket, the 800 Pro's spec confidence makes it the lower-risk default.",
+  onCourt:
+    "800 Pro is the Nanoflare I hit at club when 1000 Z is not in my hand. Same family speed, less Z-axis drama. HS Plus sits in the same speed band with a slightly more flickable shaft. I would default a first mid-flagship speed buyer to 800 Pro because Yonex spec pages and spare grommets are easier to source in Ireland.\n\nIf your shop is Victor-native and you already like Auraspeed, HS Plus is not a consolation prize — it is the in-family speed frame. Do not buy both. Pick the brand your stringer stocks.",
   relatedLinks: [
     { label: "Read the full Nanoflare 800 Pro review", href: reviewPath("yy-nanoflare-800-pro-2024") },
     { label: "Read the full Auraspeed HS Plus review", href: reviewPath("vic-auraspeed-hs-plus") },

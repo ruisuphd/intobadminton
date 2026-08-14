@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { ArticleEngagementFooter } from "@/components/ArticleEngagementFooter";
 import { JsonLd } from "@/components/JsonLd";
 import { ProductDetailActions } from "@/components/ProductDetailActions";
@@ -130,10 +129,6 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
             for verification tiers.
           </p>
         </section>
-
-        {/* Below the spec table, above related reading — no-op until
-            NEXT_PUBLIC_ADSENSE_MODE leaves "disabled". */}
-        <AdSlot id={`pdp-${product.id}`} />
 
         <RelatedReadingShelf items={related} />
 

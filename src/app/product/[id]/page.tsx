@@ -34,6 +34,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: pageAlternates(path),
+    robots: { index: false, follow: true },
     openGraph: {
       title,
       description,

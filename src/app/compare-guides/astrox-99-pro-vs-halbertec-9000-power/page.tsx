@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the Halbertec 9000 Power if you already play Li-Ning's Halbertec line and want the most aggressive tier of it, if you value the slightly sharper first-contact feel, and if you're comfortable buying a frame whose spec is community-sourced rather than manufacturer-verified. The 9000 Power is a real instrument; the source-authority caveat is about confidence in the published numbers, not the racket itself.",
   founderNote:
     "I've hit with both in club sessions. On a clean smash they trade blows; the Halbertec feels marginally heavier through contact, which some players prefer. The decision rarely turns on the racket — it turns on what your local stringer is familiar with and whether you can get the right grommets when you need them.",
+  onCourt:
+    "Neither of these is my current doubles racket (that is 1000 Z). The club-session takeaway: 99 Pro still feels like Astrox — rotational smash, familiar Yonex sweet spot. Halbertec 9000 Power feels a touch heavier through contact, which some smash-first players like and which I do not need in my doubles role.\n\nIf your stringer already knows Yonex grommets and BG80, 99 Pro is the lower-friction buy. If your shop is Li-Ning and you want pocketing on the smash, 9000 Power is the demo. Do not pick 9000 Power to 'be different' from Astrox; pick it because your contact already likes a heavier pocket.",
   relatedLinks: [
     { label: "Read the full Astrox 99 Pro review", href: reviewPath("yy-astrox-99-pro") },
     { label: "Read the full Halbertec 9000 Power review", href: reviewPath("ln-halbertec-9000-power") },

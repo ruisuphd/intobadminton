@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the AxForce 100 Gen 2 if you want a slightly faster, more rotational attack profile, if you're moving up from AxForce 80 or 90 New within the same line, and if marginal better continuous-attack stamina matters at your level of play. The AxForce 100 Gen 2 also has a more tour-derived character if that lineage matters to you.",
   founderNote:
     "I've held both at club level. Halbertec 9000 Power and AxForce 100 Gen 2 are within a hair of each other on absolute smash; the difference is character. If you've previously played a Halbertec, you'll prefer the 9000 Power; if you've previously played AxForce, the 100 Gen 2 will feel like home. Cross-line switches inside Li-Ning are real and worth a demo before buying.",
+  onCourt:
+    "These are not frames I currently play. Club hits only: smash peak is close; the character is not. Halbertec 9000 Power pockets; AxForce 100 Gen 2 hits more like a stiff attack stick. Players who already like Halbertec 8000 will recognise 9000 Power. Players who already like AxForce 90 will recognise 100 Gen 2.\n\nCross-line inside Li-Ning is a real switch, not a colourway. Demo before you spend flagship money because a friend said 'Li-Ning smash'. If you do not already have a Li-Ning stringer, Yonex 77 Pro or 88S is still the lower-friction club buy in Ireland.",
   relatedLinks: [
     { label: "Read the full Halbertec 9000 Power review", href: reviewPath("ln-halbertec-9000-power") },
     { label: "Read the full AxForce 100 Gen 2 review", href: reviewPath("ln-axforce-100-gen-2") },

@@ -11,34 +11,28 @@
  *
  * IMPORTANT — this loader CAN render ads on its own.
  *
- * An earlier version of this comment claimed the loader "does NOT render ads"
- * and that all inventory stays consent-gated behind <AdSlot/>. That is false.
  * With Auto Ads enabled on the AdSense account, this script injects its own
  * ad containers directly into <body> — verified in a local build, where it
  * appends <ins class="adsbygoogle adsbygoogle-noablate" data-ad-hi="true">
- * (the Auto Ads anchor unit) on pages that contain no <AdSlot/> at all. It
- * currently reports data-ad-status="unfilled" only because the site is not
- * approved yet.
+ * (the Auto Ads anchor unit) on pages that contain no <AdSlot/> at all.
  *
- * Consequences to keep in mind:
- *   - NEXT_PUBLIC_ADSENSE_MODE="disabled" gates OUR <AdSlot/> components only.
- *     It has no effect on Auto Ads. It is not a kill switch for advertising.
- *   - The kill switch for Auto Ads lives in the AdSense dashboard
- *     (Ads → per-site settings → Auto ads), not in this repository.
- *
- * What this file does still guarantee: Google Consent Mode defaults, set by
- * <ConsentModeDefaults/> before this script loads, hold ad_storage /
- * ad_user_data / ad_personalization at "denied", and <FundingChoicesScript/>
- * supplies the TCF signal in regulated regions — so Auto Ads inventory should
- * serve non-personalised until the user opts in. That is a weaker guarantee
- * than "no ads render", and the difference matters for the compliance posture
- * described in docs/COMPLIANCE.md.
+ * Inventory-value recovery:
+ *   - The root layout keeps `google-adsense-account` meta + ads.txt so Google
+ *     can still verify the site. This loader is NOT mounted site-wide.
+ *   - `NEXT_PUBLIC_ADSENSE_MODE="disabled"` skips the loader entirely. That is
+ *     the in-repo half of "Auto ads off"; the dashboard kill switch
+ *     (Ads → per-site settings → Auto ads) is still required.
+ *   - After approval, mount this component only on publication templates
+ *     (guides, best-of, compare-guides, indexable reviews). Never on PDPs,
+ *     quiz/results/saved/compare, or noindexed court notes.
  */
+
+import { shouldLoadAdSenseLoader } from "@/lib/ads-inventory";
 
 const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
 export function AdSenseScript() {
-  if (!client) return null;
+  if (!client || !shouldLoadAdSenseLoader()) return null;
 
   return (
     <script

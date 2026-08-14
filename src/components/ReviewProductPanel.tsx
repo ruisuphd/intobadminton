@@ -17,6 +17,7 @@ import {
   profileForProductCategory,
 } from "@/lib/profile-ready";
 import { referenceClubDoublesProfile } from "@/lib/reference-profile";
+import { editorNoteIsFounderFirsthand } from "@/lib/founder-notes";
 import { scoreOneProduct } from "@/lib/scoring";
 import type { ProductRecord } from "@/lib/types/product";
 
@@ -65,6 +66,10 @@ export function ReviewProductPanel({
 
   if (!scored) return null;
 
+  const founderTested = editorNoteIsFounderFirsthand(product.editorNote);
+  const hideIllustrativeScore =
+    founderTested && !usingPersonalProfile;
+
   return (
     <aside
       aria-label="Equipment finder"
@@ -76,32 +81,51 @@ export function ReviewProductPanel({
             In the finder
           </p>
           <p className="text-base font-semibold text-[var(--text)]">{label}</p>
-          <FitScoreBadge fitScore={scored.fitScore} size={56} />
-          <p className="text-xs text-[var(--color-muted)]">
-            {usingPersonalProfile ? (
-              <>
-                Fit for your saved profile —{" "}
-                <Link
-                  href={quizPath}
-                  className="text-[var(--color-accent)] hover:underline"
-                >
-                  retake the quiz
-                </Link>{" "}
-                to update.
-              </>
-            ) : (
-              <>
-                Illustrative fit for a club doubles player —{" "}
-                <Link
-                  href={quizPath}
-                  className="text-[var(--color-accent)] hover:underline"
-                >
-                  take the quiz
-                </Link>{" "}
-                for your shortlist.
-              </>
-            )}
-          </p>
+          {hideIllustrativeScore ? (
+            <p className="text-sm text-[var(--color-muted)]">
+              Founder-tested — take the quiz for a fit score that matches your
+              game, not a generic club-doubles profile.
+            </p>
+          ) : (
+            <FitScoreBadge fitScore={scored.fitScore} size={56} />
+          )}
+          {hideIllustrativeScore ? (
+            <p className="text-xs text-[var(--color-muted)]">
+              <Link
+                href={quizPath}
+                className="text-[var(--color-accent)] hover:underline"
+              >
+                Take the quiz
+              </Link>{" "}
+              for a personal shortlist.
+            </p>
+          ) : (
+            <p className="text-xs text-[var(--color-muted)]">
+              {usingPersonalProfile ? (
+                <>
+                  Fit for your saved profile —{" "}
+                  <Link
+                    href={quizPath}
+                    className="text-[var(--color-accent)] hover:underline"
+                  >
+                    retake the quiz
+                  </Link>{" "}
+                  to update.
+                </>
+              ) : (
+                <>
+                  Illustrative fit for a club doubles player —{" "}
+                  <Link
+                    href={quizPath}
+                    className="text-[var(--color-accent)] hover:underline"
+                  >
+                    take the quiz
+                  </Link>{" "}
+                  for your shortlist.
+                </>
+              )}
+            </p>
+          )}
         </div>
         <div className="flex flex-col items-end gap-2">
           <SaveProductButton id={scored.id} label={label} />
@@ -114,24 +138,35 @@ export function ReviewProductPanel({
         </div>
       </div>
 
-      <details className="mt-4">
-        <summary className="cursor-pointer text-sm font-medium text-[var(--color-accent)]">
-          How this scores on five factors
-        </summary>
-        <div className="mt-3 flex justify-center">
-          <ProductFitScoreRadar product={scored} size={200} />
-        </div>
-      </details>
+      {!hideIllustrativeScore && (
+        <details className="mt-4">
+          <summary className="cursor-pointer text-sm font-medium text-[var(--color-accent)]">
+            How this scores on five factors
+          </summary>
+          <div className="mt-3 flex justify-center">
+            <ProductFitScoreRadar product={scored} size={200} />
+          </div>
+        </details>
+      )}
 
       <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-        <Link
-          href={shortlistPath}
-          className="font-medium text-[var(--color-accent)] hover:underline"
-        >
-          {usingPersonalProfile
-            ? "See your shortlist →"
-            : "See club doubles shortlist →"}
-        </Link>
+        {hideIllustrativeScore ? (
+          <Link
+            href={quizPath}
+            className="font-medium text-[var(--color-accent)] hover:underline"
+          >
+            Get your fit score →
+          </Link>
+        ) : (
+          <Link
+            href={shortlistPath}
+            className="font-medium text-[var(--color-accent)] hover:underline"
+          >
+            {usingPersonalProfile
+              ? "See your shortlist →"
+              : "See club doubles shortlist →"}
+          </Link>
+        )}
         <Link
           href={catalogHrefFromProduct(product)}
           className="font-medium text-[var(--color-accent)] hover:underline"

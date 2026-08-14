@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the AxForce 90 New if you already play Li-Ning's AxForce line, if you specifically prefer the heavier dwell-time feel at contact, or if budget pressure pushes you toward the slightly cheaper option. Li-Ning's AxForce 90 New is a real attack frame — the source-authority caveat is about Li-Ning's publishing posture, not racket quality.",
   founderNote:
     "I've hit with both at club level. The 88D Pro 2024 is the more amateur-friendly of the two — its shaft unloads faster, which protects you over long rallies. The AxForce 90 New rewards conditioned timing on first attack but punishes mid-rally fatigue harder. For most Division 3–4 amateur players I would lean 88D Pro; for league players with conditioned smash mechanics, either works.",
+  onCourt:
+    "I have hit 88D Pro 2024. Compared with 77 Pro, it is harder to generate power — for most players I still recommend 77 Pro unless they already load a stiffer Astrox. AxForce 90 New is not a frame I currently play; the comparison is club-hit, not a season in the bag. The practical split: 88D Pro if you want Yonex smash geometry with a slightly faster unload; AxForce 90 New if your stringer and spare grommets are already Li-Ning and your smash timing is already clean.\n\nFatigue is the tie-break. Late in a third game, 88D Pro has been the more forgiving of the two in the sessions I have had. That is why I would send a Division 4 player to 88D Pro or 77 Pro before an AxForce flagship.",
   relatedLinks: [
     { label: "Read the full Astrox 88D Pro 2024 review", href: reviewPath("yy-astrox-88d-pro-2024") },
     { label: "Li-Ning AxForce 90 New vs AxForce 80 vs Yonex 88DP — three-way", href: "/review/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/" },

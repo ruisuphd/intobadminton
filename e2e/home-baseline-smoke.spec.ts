@@ -74,7 +74,7 @@ for (const {
     await expect(catalogLink).toHaveAttribute("href", expectCatalogHref);
 
     await expect(
-      page.getByRole("heading", { name: /latest reviews/i })
+      page.getByRole("heading", { name: /founder-tested/i })
     ).toBeVisible();
 
     if (expectFeaturedReviewHrefs?.length) {

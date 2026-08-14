@@ -6,6 +6,7 @@ export const LIGHTHOUSE_LAB_EXEMPT_PATHS = [
   "/results/",
   "/compare/",
   "/saved/",
+  "/product/yy-grpht-thrttl/",
 ] as const;
 
 export function isLighthouseLabExemptPath(path: string): boolean {

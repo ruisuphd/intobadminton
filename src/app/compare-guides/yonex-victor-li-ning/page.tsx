@@ -143,6 +143,26 @@ export default function YonexVictorLiningPage() {
         <AdSlot id="compare-three-brands-mid" />
 
         <h2 className="text-headline text-[var(--text)]">
+          What I actually buy and restring
+        </h2>
+        <p className="text-base leading-relaxed text-[var(--color-muted)]">
+          My current doubles racket is Yonex Nanoflare 1000 Z. The other bag
+          frame is Astrox 88S Pro 2024. Shoes are Comfort Z3. That is a Yonex
+          bag because in Dublin the stringers stock BG80, spare grommets arrive,
+          and I can demo the next SKU. It is not a claim that Yonex is the best
+          brand. It is a supply-chain choice plus frames I have actually played.
+        </p>
+        <p className="text-base leading-relaxed text-[var(--color-muted)]">
+          I would tell a clubmate to pick Victor if their shop is Victor-native
+          and their points already live in drives and recovery — DriveX and
+          Auraspeed exist for that job. I would tell them to pick Li-Ning if
+          they already have a Li-Ning stringer and they want smash mass per
+          euro. I would not tell them to switch brands to chase a national-team
+          paint job. Cross-brand switches cost a season of grommets, string
+          habits, and a last that may not fit.
+        </p>
+
+        <h2 className="text-headline text-[var(--text)]">
           What about other brands?
         </h2>
         <p className="text-base leading-relaxed text-[var(--color-muted)]">

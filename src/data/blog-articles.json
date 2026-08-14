@@ -123,7 +123,7 @@
   },
   {
     "slug": "badminton-bag-loadout",
-    "updatedAt": "2026-04-28",
+    "updatedAt": "2026-08-14",
     "title": "What to carry in a badminton bag: a club-night checklist",
     "dek": "Nine things earn a place in a club-night bag, and a few popular ones do not. Here is the loadout, and what goes wrong when you skip each item.",
     "verdict": "A good bag reduces friction: shoes, wet clothes, spare racket, grip, and shuttle storage should not fight each other.",
@@ -155,13 +155,17 @@
       {
         "heading": "Match the bag to how you actually get to the court",
         "body": "The right bag follows your commute, not your ambition.\n\nIf you drive to a club and play twice a week, a two-to-three racket backpack with a shoe pocket covers it. If you walk or cycle in from work, prioritise a proper back panel and straps over capacity — a wide thermal holdall is miserable on a bike. If you travel to tournaments and carry kit for a full weekend, that is when the six-racket thermal starts to make sense.\n\nBuy for the session you play most often, not the tournament you might enter."
+      },
+      {
+        "heading": "What is in my bag on a league night",
+        "body": "Two frames — Nanoflare 1000 Z and 88S Pro 2024 — shoes in the well, a wet shirt pocket, overgrips, water. Not a fourth experimental racket. Not a stringing kit. The Yonex tournament bag exists for the nights I drive; the Victor backpack exists for the nights I commute. If the backpack starts to bulge, that is the upgrade signal, not a new logo.\n\nLeave the novelty at home. Capacity you cannot fill is dead weight on the shoulder you need for overheads."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
   },
   {
     "slug": "badminton-equipment-for-kids",
-    "updatedAt": "2026-04-30",
+    "updatedAt": "2026-08-14",
     "title": "Badminton equipment for kids: rackets, shoes, and shuttles for ages 6-14",
     "dek": "How to equip a young player without burning hundreds of dollars or stunting their technique. Honest picks from a coach-trained parent's perspective.",
     "verdict": "How to equip a young player without burning hundreds of dollars or stunting their technique.",
@@ -193,13 +197,29 @@
       {
         "heading": "Total reasonable budget by age",
         "body": "Ages 6-8: $60-100 covers everything — junior racket, shoes if needed, plastic shuttles, basic bag. Ages 8-11: $100-180 — better racket, dedicated junior badminton shoes, mix of plastic and feathered shuttles. Ages 12-14 once committed to the sport: $200-300 covers an adult-tier 5U racket, proper court shoes, restringing twice a year, and feathered shuttles for competition. Spending more than $300 on a junior is almost never justified by performance — keep the money for coaching and court time instead."
+      },
+      {
+        "heading": "What I would actually spend the money on",
+        "body": "Court time and a coach who will stop a nine-year-old from muscling clears with the shoulder. Equipment is second. A 5U adult frame for a tall twelve-year-old is fine; a head-heavy extra-stiff 'pro' frame is how you teach the wrong pattern. Shoes that fit this season beat a bag that holds six rackets they do not own.\n\nIf a parent wants a number: keep the first two years under a few hundred euro all-in, including plastic shuttles and one restring cycle, and put the rest into hours. The child will outgrow the racket faster than they outgrow a good habit."
+      },
+      {
+        "heading": "A season plan that does not fight growing feet",
+        "body": "Re-check shoe fit every three months. Re-check racket length when the child starts crowding the grip or dropping the head because the frame is now a lever they cannot finish. Do not buy next year's 'tournament bag' as a gift. Buy hours, a restring, and shoes that match this season's foot.\n\nIf they play once a week, plastic shuttles at home and whatever the club provides is enough. Feathered tournament tubes are for kids who already hit in club drills and will actually use the flight. A 10-year-old does not need AS-50. They need a coach who will stop a shoulder-only clear."
+      },
+      {
+        "heading": "What parents ask me after a bad first buy",
+        "body": "Usually they bought a head-heavy adult frame because it looked serious. The fix is not another expensive racket. The fix is a lighter, more flexible frame and a lower tension, then time. Keep the expensive frame for later if it is authentic and the right length. Do not make the child 'grow into' extra-stiff. That is how you lock a muscling pattern."
+      },
+      {
+        "heading": "Restringing is part of the junior budget",
+        "body": "If the child is already in club drills twice a week, budget restringing on a calendar, not when the string snaps in a match. Low tension dies quietly. A dead bed teaches a muscling pattern just like a heavy racket does. Keep the spare overgrip in the bag; kids lose tack faster than adults because they hold harder."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
   },
   {
     "slug": "badminton-glossary-terms-every-player-should-know",
-    "updatedAt": "2026-04-30",
+    "updatedAt": "2026-08-14",
     "title": "Badminton glossary: 40+ terms every club player should understand",
     "dek": "From sweet spot to U-class to BWF tour — the working vocabulary you need to read reviews, talk to your stringer, and follow professional matches.",
     "verdict": "From sweet spot to U-class to BWF tour — the working vocabulary you need to read reviews, talk to your stringer, and follow professional matches.",
@@ -231,6 +251,14 @@
       {
         "heading": "Player and tactical jargon",
         "body": "Sugar-water: forum slang for an extra-easy, forgiving racket — derives from Chinese badminton community usage. T0 / T1 / S-tier: forum tier rankings used on the forum to compare racket classes. Kurenai / Camel-gold / (Axelsen): colourway names that distinguish racket generations (e.g. Astrox 100ZZ Kurenai is the original red Black-Micro-Core edition; 100ZZ is the Viktor Axelsen / VA edition that uses Volume Cut Resin instead). Note: is the Chinese transliteration of Viktor Axelsen, not Anders Antonsen — Antonsen is sponsored by Victor, not Yonex. YuanShi shaft hardness: shaft-deflection numbers measured and published by a Chinese badminton creator using a professional racket testing rig (lower number = stiffer); widely cited on the forum but not an official manufacturer spec. SE / VA / Tour: subvariants of pro frames signed off by specific players (e.g. Mohammad Ahsan SE, Viktor Axelsen VA, Tour, Game)."
+      },
+      {
+        "heading": "How to use this glossary with the finder",
+        "body": "When a result card says head-heavy or extra-stiff, come back here, then go to the balance and tension guides. The glossary is a map, not a shopping list. If a term only exists in a marketing PDF, it does not change how you should buy. Flex, balance, weight class, and grip size do."
+      },
+      {
+        "heading": "Words reviewers overuse",
+        "body": "Crisp, dead, holding, repulsive — none of those are specs. Pair them with a named string and tension or ignore them. 'Flagship' means price. 'Beginner' should mean a shaft you can load late. If a review cannot say which, it is a catalogue page."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -256,22 +284,46 @@
   },
   {
     "slug": "badminton-shoe-fit-stability",
-    "updatedAt": "2026-04-28",
+    "updatedAt": "2026-08-14",
     "title": "Badminton shoe fit: why width and stability beat brand loyalty",
-    "dek": "The best shoe is the one that locks your foot during lunges without creating pressure points.",
-    "verdict": "The best shoe is the one that locks your foot during lunges without creating pressure points.",
+    "dek": "The best shoe locks the heel in a lunge without crushing the forefoot. Brand is a last shape, not a personality.",
+    "verdict": "Fit the last. Then choose cushion versus speed. My current pair is Comfort Z3 because landing after smashes started to matter more than weight.",
     "sections": [
       {
-        "heading": "Width is not just size",
-        "body": "The best shoe is the one that locks your foot during lunges without creating pressure points. Going longer to solve a narrow toe box can create heel slip and slower recovery. A better fit keeps the heel locked while leaving enough forefoot room for lateral lunges."
+        "heading": "Width is not a bigger size",
+        "body": "Going longer to solve a narrow toe box creates heel slip and slower recovery. A better fit keeps the heel locked and leaves enough forefoot room for lateral lunges. Yonex Wide, Victor 2.5E/3.0E, and some ASICS indoor lasts exist because 'just buy 0.5 up' is how people roll ankles.\n\nIf you already know you have wide feet, start on those factory wide SKUs. Forum 'runs wide' comments are not a last measurement."
       },
       {
         "heading": "Protection has a weight cost",
-        "body": "Protective shoes often feel more stable and cushioned, but may not feel as quick as low-profile speed shoes. For knee, ankle, or heel comfort flags, the recommendation engine gives more credit to stability and cushioning."
+        "body": "I switched from Aerus Z2 to Comfort Z3 for exactly this trade. Aerus Z2 is fast — about 240 g per shoe — and I liked the lightness until my knees and ankles asked for a vote. Comfort Z3 is heavier (around 370 g) and slower to break in. Landing after smashes is why it stayed. If your joints are happy, a lighter shoe is a gift. If they are not, speed is a loan.\n\nThe finder gives more credit to stability and cushioning when you flag knee, ankle, or heel comfort. Use the flag. Do not hero through a speed shoe because a ranking player looks quick in one."
       },
       {
         "heading": "Try movement, not standing",
-        "body": "Static comfort is not enough. Test split steps, side lunges, toe drags, and braking movements with the socks you actually use."
+        "body": "Static comfort in the shop is not enough. Test split steps, side lunges, toe drags, and braking with the socks you actually wear. A shoe that feels plush while you stand on carpet can still roll on a wooden hall. If you cannot demo, buy from a retailer with a real return window and do the movement test at home on a clean floor before match night."
+      },
+      {
+        "heading": "Replacement is a session count, not a calendar",
+        "body": "Gum rubber dies from lateral work, not from looking dirty. If the pivot point is smooth or the midfoot has collapsed, the shoe is done even if the upper looks fine. Club players who replace once a year are often late. Track hall hours, not Instagram colourways."
+      },
+      {
+        "heading": "What I would skip",
+        "body": "Running shoes on court. A raised heel and a road outsole are an ankle-roll kit. Fashion sneakers. A second pair of speed shoes when your current complaint is landing pain. Buy the structure first; buy the light pair when the joints are quiet."
+      },
+      {
+        "heading": "Last shape before brand loyalty",
+        "body": "Yonex, Victor, Li-Ning, and some ASICS indoor shoes are different lasts. If Yonex standard feels like a vice on your forefoot, a Wide SKU or a Victor 2.5E is the experiment, not a half-size jump that leaves your heel sliding. I have seen club players 'size up' for three seasons and still tape their fifth toe. That is a last problem.\n\nStand, then lunge, then brake. The shop carpet test is advertising. If you cannot demo, use a return window and do the movement test at home on a clean floor in badminton socks. Pain on the first session is data. 'It will break in' is how people play through a hotspot until the nail goes."
+      },
+      {
+        "heading": "When I tell someone to buy cushion instead of speed",
+        "body": "If you already mention knees, heels, or a heavy smash landing, start on a protective shoe. My own switch from Aerus Z2 to Comfort Z3 was that conversation with myself. Speed is fun until the bill arrives. A heavier shoe that lets you train next week beats a 240 g pair you rest.\n\nIf your joints are quiet and you play mostly doubles defence on a dry wooden hall, a lighter shoe is still honest. Do not copy my Z3 because I play Division 4. Copy the test: which pain shows up after the third game, and which shoe removes it."
+      },
+      {
+        "heading": "Replace on the rubber, not the mesh",
+        "body": "Replacement is a hall-hour count. When the pivot circle is bald or the midfoot has collapsed, the shoe is finished even if the mesh looks new. Club players who replace once a year are often late. Keep a second pair in rotation if you play league plus clubs so you are never forced onto a dead outsole.\n\nKeep running shoes for the road. A raised heel on a wooden hall is how lateral work becomes an ankle story. If you already flagged wide feet, start on factory wide SKUs rather than hoping a speed last will stretch. Yonex Wide and Victor 2.5E exist because 'buy a half size up' leaves the heel sliding while the fifth toe still hits the mesh.\n\nMy own switch from Aerus Z2 to Comfort Z3 was a landing conversation, not a fashion one. If your third game is when the knee speaks, you are shopping cushion. If your first game is when you feel slow and the joints are quiet, you are still allowed a lighter shoe. Fit the last, then pick the stack."
+      },
+      {
+        "heading": "What I check before I buy the pair",
+        "body": "Hall dust, sock thickness, and whether the last matches the foot you already know. If the fifth toe hits the mesh on the first try-on, do not hope it will break in. If the heel lifts when you lunge, the last is wrong even when the length looks right. I would rather walk out of a shop than play three games in a shoe that already talks at the heel."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -322,22 +374,38 @@
   },
   {
     "slug": "beginner-racket-mistakes",
-    "updatedAt": "2026-04-28",
+    "updatedAt": "2026-08-14",
     "title": "Three beginner racket mistakes that make badminton harder",
-    "dek": "Avoid buying a frame that fights your timing before your technique is ready.",
-    "verdict": "Avoid buying a frame that fights your timing before your technique is ready.",
+    "dek": "The frame that fights your timing will cost you more sessions than a cheaper Play-tier racket. Here is what I tell clubmates who are about to buy their first 'real' Yonex.",
+    "verdict": "Buy a medium-flex 4U or 5U you can finish a club night with. Extra-stiff, head-heavy flagships are a later problem.",
     "sections": [
       {
         "heading": "Buying too stiff too early",
-        "body": "Avoid buying a frame that fights your timing before your technique is ready. Extra-stiff shafts reward clean timing. For recreational and early club players, they can make clears shorter and mishits harsher. A little more flex often helps learning."
+        "body": "Extra-stiff shafts reward clean timing. Recreational and early club players do not have that timing yet. What you feel on a demo smash in the shop is not what you feel in the third game of mixed doubles when the shuttle is late and your shoulder is already tired. A medium or even hi-flex Play-tier frame keeps clears long enough to learn footwork. I have watched clubmates buy Astrox 100ZZ because a ranking player used one, then spend three months wondering why their lifts die at the service line. That is not a talent problem. That is a shaft that will not help a late contact.\n\nIf you already mishit a visible share of overheads, do not 'grow into' extra-stiff. Grow on a shaft that still produces length when contact is a fraction late. The upgrade to 77 Pro or 88S is cheaper once you can actually load it."
       },
       {
-        "heading": "Ignoring total setup",
-        "body": "A head-heavy racket, high tension, thick grip, and slow shuttles can stack into a demanding setup. Change one variable at a time so you know what helped."
+        "heading": "Stacking a demanding setup",
+        "body": "A head-heavy racket, 28 lb tension, a thick grip, and slow shuttles can each be fine. Together they are a shoulder tax. Beginners change four variables at once because a YouTube video stacked them. Change one. Keep tension in the low-to-mid 20s until your clears hold. Keep grip at the size that lets you bevel for backhand without over-squeezing. If you add head weight, do not also jump tension in the same restring.\n\nThe finder on this site scores those interactions. Use it. The score is not a purchase order — it is a warning when your flags (shoulder, wide feet, budget) disagree with the SKU you liked in a photo."
       },
       {
-        "heading": "Overvaluing price",
-        "body": "The best beginner racket is not the most expensive pro frame. It is the racket that lets you repeat length, recover in defence, and play pain-free."
+        "heading": "Overvaluing price and pro paint",
+        "body": "The best beginner racket is not the most expensive Pro in the shop. It is the racket that lets you repeat length, recover in defence, and leave the hall without ice on your elbow. Yonex Nanoflare 700 Play and Arcsaber 7 Play exist for this. I have hit the 700 Play 5U — it is the least punishing way to feel head-light speed. Astrox 77 Play is the least punishing way to feel Astrox head weight. Neither will impress a collector. Both will let you finish drills.\n\nUsed Pro frames can be a better spend than a new Game SKU if you can verify authenticity. That is a different article. For a first purchase off the shelf, Play-tier plus a decent string job beats a discounted extra-stiff with factory string at 28 lb."
+      },
+      {
+        "heading": "What I actually tell a first-racket buyer in Dublin",
+        "body": "Budget under €100: Nanoray Light 70i or Nanoflare 700 Play. You want low swing weight and a shaft that still works when you are late. Budget around €130: Arcsaber 7 Tour or Nanoflare 700 Game if you already know you like speed. Do not start on 100ZZ, 88D Pro, or AxForce 100 because a friend at a higher division uses one.\n\nString: BG65 or equivalent durable gauge, 22–24 lb, and a stringer who will write the tension on the cone. Shoes matter more than the second racket. If the budget is a fight, buy court shoes first and keep the club loaner frame another month."
+      },
+      {
+        "heading": "When you have outgrown the beginner frame",
+        "body": "You are ready to move when your clears hold length on a medium shaft, your mishits are rare enough that you notice them, and you can name a role — front court, rear court, or mixed. Then the conversation becomes 77 Pro versus 88S versus 700 Pro, not 'which flagship did An Se-young use'. Until those three things are true, a stiffer racket will hide your footwork problems behind a shorter shuttle."
+      },
+      {
+        "heading": "A first-month checklist that actually prevents a bad buy",
+        "body": "Before you pay, write four lines on a note: your usual role tonight (front, rear, mixed), whether your shoulder or elbow already complains, your hard budget, and whether you can demo. If you cannot demo, buy from a shop with a return window and hit the frame on a wooden hall within a week. Do not buy extra-stiff because a ranking smash compilation used that paint. Do not buy head-heavy because a friend at a higher division said it would 'teach you power'. Power you cannot time is just a shorter shuttle and a louder joint.\n\nString the new frame at 22–24 lb on a durable gauge for the first month. If clears hold and mishits are rare, you can talk about going up. If clears die, the answer is footwork and a softer shaft, not 28 lb to 'make it Pro'. Keep the receipt. A Play-tier racket with a receipt is a better first purchase than a discounted flagship with factory string and no returns."
+      },
+      {
+        "heading": "What I see go wrong in Dublin club nights",
+        "body": "The pattern is stable. Someone buys a stiff Astrox, strings it tight, plays mixed doubles, and spends the third game defending with a frame they cannot recover. They blame their fitness. The frame is late on every drive because the swing weight and flex were chosen for a rear-court smash they hit twice a match. Meanwhile the person next to them on a 700 Play is still moving at 10 pm.\n\nI lend 77 Pro to people who already have length on a medium shaft. I do not lend 100ZZ. If you are still deciding, the beginner mistakes in this article are the whole decision: flex you can load late, one variable at a time, and a price that does not pretend to be a ranking player's bag."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -1011,7 +1079,7 @@
   },
   {
     "slug": "how-to-choose-a-badminton-racket",
-    "updatedAt": "2026-04-30",
+    "updatedAt": "2026-08-14",
     "title": "How to choose a badminton racket: a buyer's guide for beginners and intermediates",
     "dek": "Five decisions that matter — weight class, balance, shaft flex, string tension, grip size — and three that do not. The honest guide that pro shops will not give you.",
     "verdict": "Five decisions that matter — weight class, balance, shaft flex, string tension, grip size — and three that do not.",
@@ -1061,28 +1129,56 @@
       {
         "heading": "Three honest first-racket recommendations",
         "body": "If you have $80-120 to spend: Yonex Nanoray Light 70i (5U, even-balance, flexible — friendliest possible first racket). If you have $120-180 and play 2+ times per week: Victor DriveX 8S or Yonex Astrox 7 (4U, even-to-slight-head-heavy, medium — handles attack and defence). If you have $180-250 and you are committed to staying with badminton for years: Yonex Astrox 77 Pro or Astrox 7 Pro (4U, slightly head-heavy, medium-stiff — the friendliest pro-tier upgrade Yonex makes). Avoid 100ZZ, 99 Pro, 88D Pro 2024, and 1000Z as a first racket — they are pro flagships that can slow development before you learn to drive them."
+      },
+      {
+        "heading": "What I play, and why that is not your answer",
+        "body": "My current doubles racket is Nanoflare 1000 Z. My other bag frame is Astrox 88S Pro 2024. I previously spent seasons on Astrox 77 Pro. That mix is a role split: speed when I organise the rally, a friendlier Astrox when the job is front-court control, 77 Pro when I am lending a frame to someone stepping up. It is not a ranking of which paint is best.\n\nIf your shoulder is loud, start softer and more even than my bag. If you already load a stiff shaft and live at the rear court, you can ignore my doubles speed bias. The five questions in this article still come first."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
   },
   {
     "slug": "how-to-read-badminton-reviews",
-    "updatedAt": "2026-04-28",
-    "title": "How to read badminton equipment reviews without copying someone else’s fit",
-    "dek": "A review is useful only when you translate it through I’s level, setup, and style.",
-    "verdict": "A review is useful only when you translate it through I’s level, setup, and style.",
+    "updatedAt": "2026-08-14",
+    "title": "How to read badminton equipment reviews without copying someone else's fit",
+    "dek": "A review is useful only when you translate it through the reviewer's level, setup, and role — not through marketing adjectives.",
+    "verdict": "Specs are facts. Words like crisp and heavy are opinions. Copy the method, not the purchase.",
     "sections": [
       {
-        "heading": "Start with context",
-        "body": "A review is useful only when you translate it through I’s level, setup, and style. Look For me’s level, event, racket weight, grip size, string, tension, and how long they tested the product. One session can reveal first feel, but it cannot prove durability or long-term comfort."
+        "heading": "Start with the reviewer's context",
+        "body": "Look for level, event, racket weight, grip size, string, tension, and how long they tested the product. One session can reveal first feel. It cannot prove durability or long-term comfort. A Division 4 mixed-doubles player on 4U G5 at 24 lb is not the same data as a men's singles player on 3U at 28 lb, even when both write 'powerful'.\n\nIf the review never names those variables, treat it as entertainment. IntoBadminton's indexed reviews that stay in search are either original editorials or frames I have actually played. Short court notes translated from forums are noindexed for this reason — they look like reviews and they are not your fit."
       },
       {
         "heading": "Separate fact from feel",
-        "body": "Weight variant, grip sizes, official flex, and listed tension range are factual specs. Words like crisp, dead, heavy, forgiving, or unstable are subjective and should be compared across multiple sources."
+        "body": "Weight variant, grip sizes, official flex, and listed tension range are factual specs. Words like crisp, dead, heavy, forgiving, or unstable are subjective and should be compared across multiple sources. Manufacturer pages win on specs. A player who names their string and tension wins on feel. A retailer blurb that repeats the catalogue line wins on neither.\n\nWhen two reviews disagree, the usual cause is setup, not a conspiracy. Head-heavy at 22 lb and head-heavy at 27 lb are different rackets. Write down your own setup before you decide the reviewer is wrong."
+      },
+      {
+        "heading": "Beware first person that is not firsthand",
+        "body": "Imported forum posts are also written in first person. 'I play' is not a quality signal. On this site, founder-firsthand means the catalogue editor note says so, or the article is an original editorial with no import source. If a page cannot say who played it, in which role, it should not be in the search index and it should not carry ads.\n\nThat is also why you should not paste a Chinese-language thread into a translator and publish it as your review. Scaled translation is a spam policy example, not a content strategy."
+      },
+      {
+        "heading": "Use reviews to form questions, not shopping lists",
+        "body": "A good review should leave you with three questions: does this match my role, can I load this shaft, and what do I skip if I buy it. If the only leftover thought is 'I want that paint', you read a catalogue. Run the finder with your real flags after you read. The score will disagree with hype more often than it agrees, which is the point."
       },
       {
         "heading": "Respect source rights",
-        "body": "Community posts are valuable, but copying or translating review text without permission creates rights risk. IntoBadminton uses metadata summaries and links unless explicit rights allow more."
+        "body": "Community posts are valuable. Copying or translating review text without permission is a rights problem and an AdSense problem. Cite the theme, link the thread, write the next sentence yourself. That is the only version of 'research' that belongs on a site that wants to stay a publication."
+      },
+      {
+        "heading": "A practical filter for the next review you open",
+        "body": "Score the page in thirty seconds. Does it name weight, grip, string, tension, and role? Does it say who should skip the product? Does it compare the frame to something the reviewer has also used? If the answers are no, you are reading a catalogue with adjectives. Close it and use a spec table plus the finder.\n\nIf the answers are yes, copy the method into your own notes: their level versus yours, their discipline versus yours, their tension versus yours. The useful output is not 'buy this'. The useful output is 'this reviewer is a rear-court singles player at 28 lb, and I am mixed doubles at 24 lb, so their smash praise does not transfer'. That translation is the whole skill."
+      },
+      {
+        "heading": "How IntoBadminton labels what you are reading",
+        "body": "Indexed reviews on this site are original editorials or founder-firsthand tests. Short court notes that started as imported community reports stay live for the finder but are noindexed and carry no ads. That split exists so a reviewer — human or AdsBot — does not land on a 300-word translated SKU note and conclude the publication is a dump.\n\nWhen you see an editor note that starts with Founder firsthand or Founder current, that is the only first-person signal we treat as court time. Imported threads also say 'I'. Do not confuse the two. If you are an author or a forum user who wants a citation changed, the About page has the contact path."
+      },
+      {
+        "heading": "Skip pages that cannot say who should skip",
+        "body": "Affiliate language is another filter. A page that cannot say who should skip the product, then pushes a buy button, is a catalogue. IntoBadminton keeps retailer links labelled sponsored. Indexed reviews still have to earn the click with a skip section and a named setup. If you cannot find those, you are not reading a review. You are reading a listing with a byline.\n\nDo the same filter on video. A ten-minute unboxing that never names tension or role is a colourway ad. A five-minute clip that shows mishits and says who should not buy the frame is closer to a review. Pause and write the reviewer's level next to yours. If you cannot, the video did not give you data."
+      },
+      {
+        "heading": "Write the skip line yourself",
+        "body": "After you finish a review, write one sentence: who should not buy this. If you cannot, the page did not give you a decision. That is the test I use on my own pages before they stay indexed. A skip line is cheaper than another 400 words of specs."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -3930,7 +4026,7 @@
   },
   {
     "slug": "li-ning-thunder-100-gen-2-vs-gen-1",
-    "updatedAt": "2026-05-08",
+    "updatedAt": "2026-08-14",
     "title": "Li-Ning AxForce 100 II vs AxForce 100 (Gen 1): the rebuild that earns the name",
     "dek": "Two years on, Li-Ning rebuilds the AxForce 100 with new construction, broader sweet spot, and meaningfully cleaner hit feel. Here is how the generations actually compare.",
     "verdict": "AxForce 100 II is a real upgrade — sharper feel, better build, broader timing window than Gen 1.",
@@ -3968,6 +4064,22 @@
       {
         "heading": "Who should buy it",
         "body": "Buy AxForce 100 II if you are an intermediate-to-advanced singles player or a rear-court doubles attacker, and your current racket is an Astrox 88D Pro, AxForce 80, or earlier Halbertec model. Skip if you play primarily front-court doubles or fast flat drives — AxForce 100 II is unambiguously a rear-court attack frame. Gen 1 owners should only upgrade if they find Gen 1's timing demands holding back their match results."
+      },
+      {
+        "heading": "How to use this comparison without a Li-Ning religion",
+        "body": "I do not currently play AxForce 100. This page exists because shoppers land on Gen 1 versus Gen 2 as if the number were a skill rank. It is a product generation. If you do not already have a Li-Ning stringer and spare grommets, Yonex 77 Pro or 88S is still the lower-friction club buy in Ireland.\n\nIf you do live in Li-Ning, demo both generations on the same string and tension. Buy the one that still produces length in the third game, not the one whose colourway is newer. Cross-line switches inside Li-Ning (Halbertec versus AxForce) are a bigger decision than Gen 1 versus Gen 2."
+      },
+      {
+        "heading": "Who should skip both",
+        "body": "Front-court doubles players who already like head-light speed. Anyone with a shoulder flag. Anyone buying their first 'serious' racket. AxForce 100 is a smash-first conversation. If that is not your job, this comparison is not your page — use the finder."
+      },
+      {
+        "heading": "What a generation number is not",
+        "body": "Gen 2 is not a rank above you. It is a product refresh. If you cannot feel a difference on the same string and tension in a demo, buy the cheaper generation or skip the line. I do not play AxForce 100. This page is here so shoppers stop treating the number as a skill certificate.\n\nIf your stringer and grommet drawer are already Li-Ning, a generation choice inside AxForce can be rational. If they are not, you are adding a supply-chain hobby to a smash-first frame. Yonex 77 Pro or 88S is still the lower-friction club buy in the halls I play."
+      },
+      {
+        "heading": "Used market warnings",
+        "body": "Grommets and cone stamps differ across batches. If you buy used, photograph the cone and confirm the generation with a shop that sees Li-Ning weekly. Paying Gen 2 money for a Gen 1 frame is a common classifieds trick. If you cannot tell them apart in the hand, you do not need this upgrade. You need a demo of a different line.\n\nIf your stringer does not stock Li-Ning grommets, this comparison is academic. A smash-first frame you cannot maintain is a worse season than a Yonex 77 Pro you can restring this week. Generation numbers do not outrank supply."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -4072,22 +4184,50 @@
   },
   {
     "slug": "racket-balance-vs-swing-speed",
-    "updatedAt": "2026-04-28",
+    "updatedAt": "2026-08-14",
     "title": "Racket balance vs swing speed: why the best smash racket may not fit you",
-    "dek": "A practical guide to matching head weight, timing, and doubles speed without chasing the most powerful spec on paper.",
-    "verdict": "A practical guide to matching head weight, timing, and doubles speed without chasing the most powerful spec on paper.",
+    "dek": "Head weight helps a smash you can already time. Doubles defence is won by recovery. Pick the one that matches your role.",
+    "verdict": "I play Nanoflare 1000 Z in doubles because speed is my job. Head-heavy Astrox stays in the bag for the role that actually needs it.",
     "sections": [
       {
-        "heading": "The tradeoff",
-        "body": "A practical guide to matching head weight, timing, and doubles speed without chasing the most powerful spec on paper. Head-heavy rackets can help load a bigger smash, but they also ask more from your shoulder, timing, and recovery. If your points are won through blocks, drives, and interceptions, a faster frame may produce better match results than a heavier power frame."
+        "heading": "The tradeoff in plain language",
+        "body": "Head-heavy rackets can help load a bigger smash, but they also ask more from your shoulder, timing, and recovery. If your points are won through blocks, drives, and interceptions, a faster frame may produce better match results than a heavier power frame. That is not a moral argument. It is a count of which shots you actually hit.\n\nI currently play 1000 Z in Division 4 doubles for this reason. Power is harder to generate than from a comparable head-heavy frame. With timing, the drives and defence are the weapon. Without timing, it is just a light stick that does not smash for you."
       },
       {
-        "heading": "How reviews can mislead",
-        "body": "Online reviews often come from players with different technique, string tension, shuttle speed, and playing role. Treat review themes as signals, not verdicts. A phrase like powerful is only useful when you know whether I plays singles, rear-court doubles, or front-court pressure."
+        "heading": "How reviews mislead on 'powerful'",
+        "body": "Online reviews often come from players with different technique, string tension, shuttle speed, and playing role. A phrase like powerful is only useful when you know whether the reviewer plays singles, rear-court doubles, or front-court pressure. Copying a singles smash review into a mixed-doubles bag is how people buy 100ZZ and then cannot recover on the next drive.\n\nI have hit 100ZZ. It is very demanding, surprisingly fast, and tiring across a full match. 100ZZ VA is the version I would demo first if someone insists on that line. Most club players who think they want Astrox power are happier on 77 Pro or 88S."
       },
       {
-        "heading": "What IntoBadminton does",
-        "body": "The finder weighs official balance and shaft information first, then adds editor interpretation and rights-safe review themes. It lowers confidence when a model needs source verification."
+        "heading": "What the finder actually weighs",
+        "body": "The finder weighs official balance and shaft information first, then adds editor interpretation and rights-safe review themes. It lowers confidence when a model still needs source verification. It will not hide a head-heavy flagship from you — it will show why the score dropped if you flagged shoulder comfort or a front-court role."
+      },
+      {
+        "heading": "A simple role test",
+        "body": "After your next club night, mark which third of the court you won points from. If the answer is the net and the mid-court, you do not have a smash-racket problem. If the answer is the rear court and your shoulder is quiet, then a slightly head-heavy even-Astrox like 77 Pro is the conversation, not a speed frame you will under-use."
+      },
+      {
+        "heading": "Balance is not identity",
+        "body": "You can own both geometries. I keep 88S Pro 2024 as the other bag frame when the role is front-court control. That is a role split, not a brand loyalty test. Buy the second frame when you can name the job. Until then, one honest racket beats a bag of identities."
+      },
+      {
+        "heading": "Count the shots, then pick the mass",
+        "body": "After two club nights, tally smash winners versus drive/block/intercept winners. If the second pile is larger, a head-light or even frame will usually score more points than a smash stick you recover late. That is the whole balance argument without a marketing name.\n\nI play 1000 Z in doubles because the second pile is my job. I keep 88S in the bag when the role is front-court control. 77 Pro is what I lend when someone needs Astrox help on the overhead without 100ZZ punishment. None of those choices is 'the best racket'. Each is a mass distribution matched to a job."
+      },
+      {
+        "heading": "Shoulder flags change the answer",
+        "body": "Head-heavy plus extra-stiff plus high tension is a common injury sandwich. If you already flagged shoulder comfort in the finder, do not override the score because a YouTuber called a frame 'easy power'. Easy power on a healthy shoulder is still a late recovery on a tired one. Start more even, more flex, and add mass only when length is free.\n\nThe finder already down-weights demanding frames when you set that flag. Believe it. The review you liked was written by someone whose shoulder is not yours."
+      },
+      {
+        "heading": "Do not change balance and tension together",
+        "body": "String tension interacts with balance more than people admit. A head-heavy frame at 22 lb and the same frame at 27 lb are different recoveries. If you add mass, do not also jump tension in the same restring. Change one variable, play two sessions, then decide. That is how you learn whether you wanted head weight or you wanted a louder smash sound.\n\nShoulder flags belong in that experiment. Head-heavy plus extra-stiff plus high tension is a common injury sandwich. The finder already down-weights that stack when you set the flag. Do not override it because a smash compilation looked easy. Easy on camera is not easy in the third game of mixed doubles."
+      },
+      {
+        "heading": "A two-session protocol that actually teaches you",
+        "body": "Session one: your current frame, same string, same tension. Count how often you are late on the second shot of a drive exchange. Session two: the candidate frame, same string if you can, same hall. If you are later more often, the extra smash sound is not a win. If you are earlier and your shoulder is quiet, keep the change.\n\nThat protocol is boring. It is also how you stop buying a third frame in six months because a colourway arrived."
+      },
+      {
+        "heading": "Shoulder flags close the experiment",
+        "body": "If the finder already down-weights head-heavy plus extra-stiff plus high tension, do not override it because a smash compilation looked easy. Easy on camera is not easy in the third game of mixed doubles. End the two-session protocol early if the shoulder speaks. That is the result."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -4304,22 +4444,50 @@
   },
   {
     "slug": "used-racket-depreciation",
-    "updatedAt": "2026-04-28",
+    "updatedAt": "2026-08-14",
     "title": "Used racket depreciation: how much value does badminton gear keep?",
-    "dek": "Resale value depends on brand demand, authenticity, generation, region, condition, and whether the model still has hype.",
-    "verdict": "Resale value depends on brand demand, authenticity, generation, region, condition, and whether the model still has hype.",
+    "dek": "Resale depends on brand demand, authenticity, generation, region, condition, and leftover hype — not on what you paid at MAP.",
+    "verdict": "Treat resale as a risk band. A higher sticker can still be rational if the frame is easy to sell later.",
     "sections": [
       {
-        "heading": "The big drivers",
-        "body": "Resale value depends on brand demand, authenticity, generation, region, condition, and whether the model still has hype. Recognizable flagship Yonex, Victor, and Li-Ning models usually have better resale liquidity than obscure or entry-tier rackets. Cosmetic chips, clashes, missing serial confidence, and unknown stringing history reduce value quickly."
+        "heading": "The drivers that actually move price",
+        "body": "Recognisable flagship Yonex, Victor, and Li-Ning models usually have better resale liquidity than obscure or entry-tier rackets. Cosmetic chips, clashes, missing serial confidence, and unknown stringing history reduce value quickly. A clean 77 Pro with a readable cone and a known stringer history will outsell a mint-looking no-name 4U with a story.\n\nGeneration matters. Last year's Tour SKU drops faster than a still-current Pro. Region matters: Ireland and Singapore do not share the same second-hand pools. Hype matters for about one season, then the market remembers whether the frame is actually easy to play."
       },
       {
-        "heading": "Why IntoBadminton shows estimates",
-        "body": "A higher purchase price can still be rational if the product keeps value and is easy to resell. The app now shows depreciation estimates as decision support, not as guaranteed market prices."
+        "heading": "What IntoBadminton's estimate is for",
+        "body": "A higher purchase price can still be rational if the product keeps value and is easy to resell. The app shows depreciation estimates as decision support, not as a guaranteed marketplace quote. If two recommendations fit equally, the one with stronger resale liquidity may have a better real cost of ownership over three seasons.\n\nDo not use the number to argue with a Facebook seller. Use it to decide whether a €220 Pro you might sell in 18 months is smarter than a €90 Play you will throw in a cupboard."
       },
       {
-        "heading": "How to use the number",
-        "body": "Treat resale as a risk band. If two recommendations fit equally, the one with stronger resale liquidity may have better real cost of ownership."
+        "heading": "Authenticity is the first filter",
+        "body": "A used flagship with a fake paint job is not a bargain. Read the authenticity guide before you pay cash. Check grommets, cap, cone stamp, and whether the weight/grip combo existed for that SKU. If the seller will not meet at a hall so you can hit it, walk away. The depreciation curve assumes a real racket."
+      },
+      {
+        "heading": "When used beats new in this band",
+        "body": "A clean used Arcsaber 7 Pro or Astrox 77 Pro often beats a new Game frame in the same money. I have hit both Pros. They are the frames I would rather see in a club bag than a $130 Game SKU that looks like a flagship in photos. The catch is inspection. If you cannot verify the frame, the Play-tier new racket with a receipt is the less stupid buy."
+      },
+      {
+        "heading": "How to use the number without fooling yourself",
+        "body": "Treat resale as a band, not a promise. If you play twice a week, you will mark the grommets and the paint. That is use, not failure. Budget the loss. The players who get hurt are the ones who buy a hype SKU at full MAP and assume last year's YouTube video still sets the second-hand price."
+      },
+      {
+        "heading": "A working band, not a marketplace fantasy",
+        "body": "In Ireland and Singapore, a clean current-generation Yonex Pro often holds a usable fraction of MAP if you can prove it is real and the grommets are not destroyed. Entry frames and last-year colourways do not. Li-Ning and Victor liquidity depends on whether your city has a shop and a stringer, not on global hype. A frame that is easy to demo locally is easier to sell later.\n\nBudget the loss as the cost of a season, the way you budget shuttles. If you cannot afford to lose a third of the sticker, do not buy the sticker. Buy Play-tier new, or buy used only after an authenticity check and a hit on court. Cash in a car park for a 'barely used 100ZZ' is how people fund someone else's paint operation."
+      },
+      {
+        "heading": "Condition checklist before you pay",
+        "body": "Look at the cone stamp, cap, grommets, and whether the weight/grip combo existed for that SKU. Hit it if you can — a cracked shaft can still look pretty. Ask who strung it and at what tension. Unknown high tension on a used extra-stiff frame is a risk, not a feature. If the seller will not meet at a hall, the discount is not big enough.\n\nAfter you own it, keep the spare grommets and a photo of the cone. Future you will sell it faster. The depreciation number in the app assumes that kind of boring record-keeping, not a mystery stick from a group chat."
+      },
+      {
+        "heading": "Strings and grommets on resale",
+        "body": "Strings are not part of the resale story unless they are fresh and named. A dead bed makes a good frame feel cheap in a car-park demo and you will take a worse price. Cut them or say when they were strung. Keep spare grommets in the case. Buyers who know what they are looking at will pay for boring evidence. Buyers who do not will only pay for paint, and those sales fall over.\n\nAuthenticity remains the first filter. A used flagship with a fake cone is not a bargain. Read the authenticity guide, check the weight/grip combo existed, and hit the frame if you can. Depreciation curves assume a real racket. Fake paint has a depreciation of one hundred percent the moment you need to restring it."
+      },
+      {
+        "heading": "What I would pay for, and what I would not",
+        "body": "I pay for a named string date, a cone that matches a real SKU, and a frame I can hit. I do not pay for a dust bag and a story. If the seller will not meet at a hall, the discount has to cover the risk that the paint is the only original part. Paint is not a racket."
+      },
+      {
+        "heading": "A one-line floor",
+        "body": "If you cannot photograph the cone, name the string date, and hit the frame, the floor is not a price. It is zero. Walk away."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -4938,7 +5106,7 @@
   },
   {
     "slug": "victor-drivex-12-vs-astrox-88d-pro",
-    "updatedAt": "2026-04-30",
+    "updatedAt": "2026-08-14",
     "title": "Victor DriveX 12: a credible Astrox 88D Pro alternative for 2/3 the money",
     "dek": "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket.",
     "verdict": "A smart attack buy if you want flagship-grade punch without paying the full Yonex premium.",
@@ -4966,6 +5134,18 @@
       {
         "heading": "Who should buy it",
         "body": "Buy the DriveX 12 if: you want a tournament head-heavy attack racket but can't justify Yonex flagship pricing, you play singles or back-court doubles, and you're willing to drive a stiff-shaft attack frame. Skip it if: you primarily play fast doubles (the swing weight is still high — look at the Auraspeed 100X SE or Nanoflare 1000Z instead), or your kit standardizes on Yonex shafts and you're willing to pay for that consistency."
+      },
+      {
+        "heading": "On court, in roles rather than brands",
+        "body": "I have hit Astrox 88D Pro 2024. It is harder to generate power than 77 Pro; for most players I still send them to 77 Pro unless they already load a stiffer Astrox. DriveX 12 is the even-balance Victor I would demo when a clubmate wants drive speed without Yonex MAP, not as a smash substitute for 88D.\n\nIf your points are rear-court smash, 88D Pro (or 77 Pro) is the Yonex conversation. If your points are flat drives and recovery, DriveX geometry is the Victor conversation. Do not buy DriveX 12 because it is 'the 88D killer'. Buy it because your role matches even-balance drives."
+      },
+      {
+        "heading": "Stock, stringers, and the boring reason people stay Yonex",
+        "body": "In Dublin, Yonex grommets and BG80 are easy. Victor is fine when the shop is Victor-native. The comparison that matters after feel is who can restring you this week. A slightly better frame you cannot maintain is a worse season."
+      },
+      {
+        "heading": "A one-session test that settles the brand argument",
+        "body": "Hit twenty rear-court smashes and twenty flat drives on each frame with your usual string. Whichever frame still lets you recover for the next shot in the twentieth rally is the one that matches your night, not the one whose badge you wanted. 88D Pro is the Yonex smash conversation. DriveX 12 is the even-balance drive conversation. They are not substitutes.\n\nI have hit 88D Pro. I still send most club players to 77 Pro. DriveX 12 is what I would demo when the shop is Victor-native and the player's points already live in the mid-court. Stock and a stringer this week beat a slightly nicer shaft you cannot maintain."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6131,14 +6311,54 @@
   },
   {
     "slug": "yonex-aerus-z2-shoes-review",
-    "updatedAt": "2026-05-24",
-    "title": "Yonex Power Cushion Aerus Z2 review: the 240 g speed boot, three colourways",
-    "dek": "Yonex's hugely popular AZ2 men's badminton shoe — three colourways, one deep dive. Looks and performance both dialled up.",
-    "verdict": "Yonex's hugely popular AZ2 men's badminton shoe — three colourways, one deep dive.",
+    "updatedAt": "2026-08-14",
+    "title": "Yonex Aerus Z2 — founder note after switching off it",
+    "dek": "I liked the lightness. I did not like what it did to my joints. This is why Comfort Z3 replaced it.",
+    "verdict": "Brilliant tournament speed shoe if your knees and ankles are quiet. I am not that player anymore.",
     "sections": [
       {
-        "heading": "Overview",
-        "body": "Yonex's hugely popular AZ2 men's badminton shoe — three colourways, one deep dive. Looks and performance both dialled up.\n\nSHBAZ2MEX Indigo: gradient purple-cyan finish — lively, eye-catching, you will stand out on court at a glance.\n\nSHBAZ2MEX White/Blue: clean, simple, easy to pair — works for court sessions and everyday wear.\n\nSHBAX2MEX Deep Pure Blue: low-key and steady with a full retro sport vibe.\n\nFirst thing on foot: lightness. Versus traditional heavy badminton shoes, court mobility feels roughly doubled — especially obvious chasing passive shots or staying in long rallies.\n\nCushioning and rebound are tuned just right: not so soft that power leaks away, not so firm that your feet take a beating. Casual recreational games or high-intensity singles and doubles — foot feel stays consistent through the session, and your feet should not feel wrecked after a full match.\n\nColour pick: bold and personal — Indigo gradient. Clean and versatile — White/Blue. Low-key classic — Pure Blue.\n\nBuild quality is solid and durable, suitable for everyday indoor courts and serious club halls. If you want a lightweight speed boot with comfort and protection, this is one of the best value picks of the year."
+        "heading": "What I played, and for how long",
+        "body": "Aerus Z2 was my previous match shoe in Division 4 Ireland. About 240 g per shoe — it really is fast. Split steps and recovery felt cheap in the best way. I did not switch because the upper failed. I switched because landing after smashes started to accumulate, and a speed shoe will not invent cushion that is not there."
+      },
+      {
+        "heading": "On court",
+        "body": "Dry wooden halls, twice a week, plus league. First hour: excellent. Third game of a stacked night: I could still move, but my knees were the bill. If you are light on your feet, play mostly doubles defence, and have no joint flags, I would still point you at Aerus Z2. If you already ice after sessions, skip it. That is not toughness. That is the wrong tool."
+      },
+      {
+        "heading": "Who should buy it",
+        "body": "Players who want a tournament-light shoe and whose joints already tolerate speed lasts. Demo with badminton socks. Do not buy it as a 'pro look' if your current complaint is landing pain — Comfort Z3 exists for that, and it is what I wear now."
+      },
+      {
+        "heading": "Who should skip it",
+        "body": "Anyone with knee, ankle, or heel flags. Heavier players who land hard on smash. Once-a-week club players who do not need 240 g. Buy structure first."
+      },
+      {
+        "heading": "Compared with Comfort Z3",
+        "body": "Z3 is heavier and slower to break in. Cushioning on landing is the reason it stayed in the bag. I would not call Z3 'better' in the abstract. It is better for the problem I actually had. If your problem is slow feet on a dry court and quiet joints, Z2 is still the more honest shoe."
+      },
+      {
+        "heading": "Sessions, not a catalogue paragraph",
+        "body": "I wore Aerus Z2 as a match shoe through club nights and league in Ireland. The first impression is always the weight. You feel quick on split step and on the recovery after a low defence. That impression is true. The second impression arrives later: landing after a full smash, especially when the night stacks matches, does not have much midsole to argue with. I liked the shoe. I outgrew the trade.\n\nIf you are deciding from photos, ignore the colourway. Ask whether your current pain is slow feet or sore landings. Slow feet and quiet joints: Z2 is still a serious answer. Sore landings: you are shopping the problem I solved by leaving Z2, and Comfort Z3 is what I reached for."
+      },
+      {
+        "heading": "Fit and break-in",
+        "body": "Treat it like a speed last. Heel lock matters. If you size up for width, you will slide. If you have wide feet, this may not be your line — look at factory wide SKUs instead of hoping a light shoe will magically last wider. Socks you actually play in, not the cotton pair from the shop chair.\n\nBreak-in is shorter than Comfort Z3. That is part of the appeal and part of the lack of structure. A shoe that feels match-ready on night one can still be under-built for your landing. Believe the third game, not the first rally."
+      },
+      {
+        "heading": "When I would still buy Z2 tomorrow",
+        "body": "Dry hall, doubles defence, no knee or heel flag, and a schedule that is not three matches back to back. Tournament days where I wanted to feel light and my joints had been quiet that month. I would not buy it as my only pair if I already knew I had a landing problem. I would not buy it because it is 'the fast Yonex'. I would buy it because the test above is my test."
+      },
+      {
+        "heading": "Outsole life and when I still say yes",
+        "body": "Outsole life on a gum-rubber speed shoe is the other half of the story. Lateral work kills the pivot before the upper looks tired. If you play twice a week on a dusty hall, you will see the circle go smooth while the shoe still feels light. That is not a reason to keep it. A slick pivot on a light last is a roll waiting to happen. Replace on the rubber, not on the colourway.\n\nI would still buy Z2 tomorrow for a dry hall, doubles defence, no knee or heel flag, and a schedule that is not three matches back to back. I would not buy it as my only pair if I already knew I had a landing problem. Comfort Z3 is what I reached for when that problem showed up. The two shoes are a sequence in my bag, not a ranking of which Yonex is 'best'."
+      },
+      {
+        "heading": "Who I would still send to Z2",
+        "body": "Club doubles, dry hall, no knee flag, and a player who already likes a low last. Not a first shoe for someone coming from running trainers. Not a league weekend with three matches if you already know your landings are loud.\n\nIf that description is you, Z2 is still a yes. If it is not, Comfort Z3 is the pair I actually wear now, and the Z2 page is a record of why I left, not a ranking of which Yonex is best."
+      },
+      {
+        "heading": "One more skip",
+        "body": "Skip Z2 if the hall is dusty and you already saw a pivot circle go smooth in a month. A slick light last is a roll. Comfort Z3 is what I reached for when landings got loud. That is the end of the comparison."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6191,32 +6411,54 @@
   },
   {
     "slug": "yonex-arcsaber-7-pro-review",
-    "updatedAt": "2026-05-24",
-    "title": "Yonex Arcsaber 7 Pro review: light, stable control for doubles front court",
-    "dek": "In forum discussion, the mixed doubles pairs Zheng/Huang, Wang/Huang, Watanabe/Higashino, and Dechapol/Sapsiree are so dominant that players call them the “Big4.”…",
-    "verdict": "Arcsaber 7 Pro is a light, stable, control-leaning all-round racket for front/mid-focused doubles players. Low swing weight lowers the entry barrier; the thin box frame gives speed with stability; front/mid play and passive defence are strong.",
+    "updatedAt": "2026-08-14",
+    "title": "Yonex Arcsaber 7 Pro — founder court note",
+    "dek": "Very good overall racket, but you need to bring the power. Excellent for control players. Not a smash crutch.",
+    "verdict": "I have hit 7 Pro. Fast, stable, control-leaning. Pair it with thinner strings if you want to keep the speed advantage.",
     "sections": [
       {
-        "heading": "Overview",
-        "body": "In forum discussion, the mixed doubles pairs Zheng/Huang, Wang/Huang, Watanabe/Higashino, and Dechapol/Sapsiree are so dominant that players call them the “Big4.” Since Tokyo 2020, Super Series gold has largely belonged to them. Recently Zheng/Huang look especially strong and stable at the front of the pack; the other three are still serious threats.\n\nHuang/Ya beat Zheng/Huang at Tokyo for gold; Dechapol/Sapsiree joined the elite with their 2021 Worlds title; Watanabe/Higashino have All England gold and Worlds silver among other honours. As a racket chosen by Olympic champion Huang Dongping and World champion Dechapol Sapsiree for the 2022 Japan World Championships, I had high expectations.",
-        "glossaryLinks": [
-          {
-            "term": "Swing weight",
-            "id": "swing-weight"
-          }
-        ]
+        "heading": "What I actually felt",
+        "body": "Arcsaber 7 Pro is a light, stable, control-leaning frame. Like Nanoflare 700 Pro, it is hard to generate smash power if you are used to head-heavy Astrox. The upside is speed and a holding feel on blocks and drives. I would put a front/mid doubles player here before I put them on 100ZZ.\n\nPOCKETING BOOSTER marketing is not why I like it. The on-court fact is dwell on contact and a shaft that does not panic when you are a fraction late — as long as you are not asking it to manufacture rear-court mass."
       },
       {
-        "heading": "Appearance and paint",
-        "body": "Arcsaber 7 Pro follows Arcsaber 11 Pro in overall paint direction: pearl grey is understated and elegant; yellow-green contrast adds punch — like badminton itself, always energy on court.\n\nStraight-line frame graphics in silver, grey, and yellow sharpen the look — matching Yonex’s line for Arcsaber 7 Pro: ride the sword, born for battle. It taps that wuxia fantasy — sword on the wind, demons between heaven and earth. On court with a racket you love, sprinting and trading blows with strong opponents — hard to beat."
+        "heading": "Who it is for",
+        "body": "Doubles players whose job is organisation: block, drive, intercept. Control-first singles players who already have length. Anyone stepping up from Arcsaber 7 Tour who can accept that Pro will not smash for them."
       },
       {
-        "heading": "On-court experience",
-        "body": "Review unit: 4U G5, made in Japan, recommended tension 19–27 lbs. Frame uses 76 holes, length 675 mm, cap matches Arcsaber 11 Pro — E-B CAP Plus. Strung Yonex ABBT at 26 lbs.\n\nDesign philosophy largely mirrors Arcsaber 11 Pro; Arcsaber 7 Pro adds small shaft and frame tweaks for better flex and torque. Specs are a starting point — hands-on time tells the truth. I ran Arcsaber 7 Pro as a daily main racket and logged feel across situations.\n\nArcsaber 7 Pro is mainly a box frame: grooved top and bottom, smooth mid section. Versus typical box-frame rackets, the thinner frame and lower swing weight feel light and fast like a speed racket at first — but the box frame still delivers excellent stability on contact.\n\nNew Arcsaber Pro materials and tech make sweet-spot feedback very clear; off-centre hits feel less ideal. Unlike older, very sweet Arcsaber feel, feedback adds crispness and resilience. Higher-modulus carbon raises frame and shaft stiffness clearly. PB Elastic plus the fish-mouth cap improve precision and shuttle speed but sacrifice some dwell.\n\nFrom endorsed players and fixed specs, I read it as front- and mid-court focused. In daily play it suits mixed doubles players who fight hard up front — where Arcsaber 7 Pro met expectations. Flat drives and fast blocks are almost effortless; low swing weight cuts fatigue in fast front/mid exchanges. Fast drives, net drops, and pushes stay quick and stable; the large frame helps attack-defence transitions; net play stays Arcsaber-grade; clearer feedback makes power and angle adjustments easier.\n\nRear court is what most players ask about. Clears are crisp with good direction, but you cannot lean much on racket mass — you need your own power. Drops are strong: high stability and speed help control while staying threatening. Smashes are weaker — no one-shot finisher — but stability and precision open more placement and variation. Rear-court continuity is as easy as front/mid, almost relaxed.\n\nFeel shifts with effort level. On big rear-court drives and smashes the shaft flexes clearly; with suitable frame flex and torque, power flows smoothly. Back at front/mid, feedback turns firm again — faster, more precise output."
+        "heading": "Who should skip it",
+        "body": "Rear-court smash-first players. Beginners who still need a flexible shaft to produce clears. Anyone buying it because 11 Pro paint is expensive — 7 Pro is its own geometry, not a cheaper 11 Pro."
       },
       {
-        "heading": "Summary",
-        "body": "Arcsaber 7 Pro is a light, stable, control-leaning all-round racket for front/mid-focused doubles players. Low swing weight lowers the entry barrier; the thin box frame gives speed with stability; front/mid play and passive defence are strong. Clears and drops need focused power for ideal results; rear smash threat is limited but control and line variation are rich.\n\nArcsaber 7 Pro specs: frame — high-resilience carbon + PB Elastic; shaft — high-resilience carbon + ULTRA PE fibre; length 675 mm; weight 4U; grip G5/G6; shaft stiffness stiff; recommended tension 19–27 lbs."
+        "heading": "Strings I would try first",
+        "body": "Thinner gauges to keep the speed: Aerobite or BG66 Ultimax rather than a thick durable bed that dulls the frame. Tension in the mid-20s until your mishits disappear. Then decide if you even want to go up."
+      },
+      {
+        "heading": "Compared with 77 Pro and 1000 Z",
+        "body": "77 Pro is the friendlier Astrox upgrade if you want some head weight. 1000 Z is my current doubles speed frame. 7 Pro sits with the control-speed people. If you cannot name which of those three jobs you have, do not buy 7 Pro because a mixed-doubles pair on TV used an Arcsaber."
+      },
+      {
+        "heading": "Court context, not a mixed-doubles ranking list",
+        "body": "I have hit Arcsaber 7 Pro as a control-speed frame, not as a smash crutch. The useful comparison in my bag is 700 Pro and 1000 Z on the speed side, 77 Pro on the easy-power side. 7 Pro sits with people who win points by holding the shuttle on the strings and placing it, then recovering. If you need the frame to manufacture rear-court mass, you will call it weak. That is the geometry, not a QC miss.\n\nPaint and 'Big4' mixed-doubles chatter do not change that. A ranking pair on Arcsaber is not a fitting session. Your mishit rate and your role are the fitting session."
+      },
+      {
+        "heading": "Drives, blocks, and the overhead you should not expect",
+        "body": "On flat drives the frame is quick enough to stay in the rally. On net blocks it does not feel like a head-heavy Astrox trying to get out of its own way. On a full overhead, you bring the speed. I would string it thinner rather than thicker if I wanted to keep that speed. A thick durable bed will make people say the racket is dead when they asked the string to be a trampoline.\n\nIf your clears are already short on a medium shaft, 7 Pro will not lengthen them. Go back to a more flexible frame or fix contact. Do not buy 7 Pro to 'learn control' if you cannot already produce length. Control without length is just a tidy short shuttle."
+      },
+      {
+        "heading": "Who I would hand this to at the hall",
+        "body": "A club doubles player whose job is organisation, who already likes even or slightly head-light frames, and who will not panic when the smash is not free. Not a beginner. Not a rear-court specialist shopping a first Pro. Not someone who wanted 11 Pro and settled. Demo 7 Pro because you want this geometry. Then decide."
+      },
+      {
+        "heading": "Set the grip, then play a full session",
+        "body": "Grip size still matters on a control frame because bevel changes are the point of the geometry. I play G5 plus one wrap on Yonex 4U. If the handle is too large you will not rotate; if it is too small you will squeeze and call the frame harsh. Set the grip before you judge the shaft. Then hit drives and blocks for a full session, not three shop smashes.\n\nIf your clears are already short on a medium shaft, 7 Pro will not lengthen them. Go back to a more flexible frame or fix contact. I would hand this racket to a club doubles player whose job is organisation, who already likes even or slightly head-light frames, and who will not panic when the smash is not free. Not a beginner. Not a rear-court specialist shopping a first Pro."
+      },
+      {
+        "heading": "Who should skip 7 Pro",
+        "body": "Skip it if your clears are already short. Skip it if you want a free smash. Skip it if you are still learning bevel changes and a forgiving Play-tier frame would let you finish the session. I would rather you stay on a medium shaft you can load than buy a Pro cone you fight.\n\nBuy it if organisation is the job and you already like even or slightly head-light frames. That is a short list. It is also an honest one."
+      },
+      {
+        "heading": "String and a stringer",
+        "body": "Demo on a reel you already know. Factory string at a shop tension you do not play will make 7 Pro feel dead or harsh and you will blame the shaft. The shaft cannot out-talk a bad bed. If your stringer has not done this cone, that is a supply problem, not a review problem."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6479,14 +6721,58 @@
   },
   {
     "slug": "yonex-astrox-77-pro-review",
-    "updatedAt": "2026-05-22",
-    "title": "Yonex Astrox 77 Pro review: the Astrox that prefers patience over thunder",
-    "dek": "The 77 Pro is sold as the balanced entry to the Astrox line, but on court it plays softer and more control-leaning than the rest of the family. That trade-off is intentional and worth understanding before you buy.",
-    "verdict": "A balanced Astrox for players who win through placement rather than smash, with a softer feel than the family branding suggests.",
+    "updatedAt": "2026-08-14",
+    "title": "Yonex Astrox 77 Pro — founder court note",
+    "dek": "Very good overall and not that demanding — easy power. The upgrade I recommend before 88D Pro for most club players.",
+    "verdict": "Recommended over 88D Pro for players who want head-heavy help without the stiffer-shaft penalty.",
     "sections": [
       {
-        "heading": "Overview",
-        "body": "Several Chinese national team women use it; plenty of vocal gear heads rate it highly.\n\nIt is Astrox, but the adjectives are balanced, all-round, even sweet. I had played the newer-colour Astrox 77; 77 Pro clearly continues that line — yet before trying it I could not picture what it would feel like.\n\nSpecs: 4U G6, cap removed, playing weight 92.9 g, balance 300 mm, shaft 220 mm, medium stiffness, box frame, 76 holes, 9–3 grooves, 28 lb warranty, strung 24–26 lbs VBS66N.\n\nAsymmetric paint again, but beyond colour 77 Pro adds design elements the old/new colour swap did not. Floral decals and pearl finish echo another Astrox — no wonder people call it mini 99.\n\nI agree 77 Pro is the balanced Astrox in the line. Medium head weight still borrows well; a few extra rear clears and you adapt to swing weight and speed quickly.\n\nFirst clear in doubles warmup stopped me — slightly mushy, obvious hold. Not very Astrox. I never settled, warmup flat, session ended early. I see why many recommend it as a first Astrox for beginners — soft, comfortable feel lowers burden — but does it deserve the Astrox badge?\n\nDownward press is there, but burst is not extreme — already edging toward sweet/easy territory. Original 77 had no NAMD; Pro still skips it — sudden stiffening on full power comes mainly from the shaft while the face still holds. On a fully active chance it reminded me of Arcsaber 8 DX.\n\nOverall it is steady — every shot lets you judge quality at contact. Good anti-torsion face excels on long shots; slight stickiness helps fine play — net hooks, drops, and spins stay stable; rear slice drops get higher tolerance.\n\nWhat impressed me is chain feel. Press follow-up and fast flat blocks even had a hint of 88S flavour. On this spec, when I need a point — even with an early rear high — I would rather change line to an uncomfortable spot and score on shot two than swing for a one-shot smash winner.\n\nBetter players can park me in the rear, but I did not lose stamina; passive escapes stay easy. Very drivable — helps amateurs survive longer rallies.\n\nGear reviews are subjective. Sometimes a friend’s confident recommendation does not match your taste and writing feels awkward. Yes, the racket is good — just too steady for me.\n\nI agree with a senior line: review is subjective, test is objective. At my level this is a casual curious note."
+        "heading": "What I played",
+        "body": "I played 77 Pro for two seasons of Dublin club doubles before moving my current front-court frame to 88S Pro 2024. 77 Pro is still the racket I lend to clubmates stepping up from Play-tier Astrox. Medium-enough shaft, easy length, no extra-stiff tax on a late clear. It is Astrox head weight without 100ZZ punishment."
+      },
+      {
+        "heading": "On court",
+        "body": "Easy power is the point. You do not have to be a conditioned singles smasher to get length. In mixed doubles it covers rotating roles better than a pure speed frame. The trade-off versus 88S is a looser drive and a more generous overhead window. Versus 88D Pro, 77 Pro is simply easier — 88D Pro is similar in family feel but harder to generate power unless your timing is already there."
+      },
+      {
+        "heading": "Who should buy it",
+        "body": "Recreational-to-club players. Mixed disciplines. Shoulder comfort flags that still want some smash mass. Anyone about to buy 88D Pro because the number is higher — try 77 Pro first."
+      },
+      {
+        "heading": "Who should skip it",
+        "body": "Players who already live at the net and want 1000 Z speed. Players who already load extra-stiff Astrox and want 100ZZ VA. Beginners who still need Play-tier flex — buy 77 Play or 700 Play, then come back."
+      },
+      {
+        "heading": "Setup I would start on",
+        "body": "4U G5, BG80 or similar in the mid-20s. Do not jump to 28 lb to 'make it Pro'. The frame already helps. Let your timing catch up before you shrink the sweet spot."
+      },
+      {
+        "heading": "Two seasons, then why I still recommend it",
+        "body": "I played 77 Pro as a main club doubles frame for two seasons in Dublin before 88S Pro 2024 took the front-court job. I still think it is the most honest Astrox step for people leaving Play-tier. You get head weight that helps a smash without extra-stiff punishment on a late clear. When clubmates ask what to buy instead of 88D Pro 'because the number is higher', this is the answer I give.\n\nIt is not my current doubles main. 1000 Z is, because my job is speed. 77 Pro remains the frame I trust in someone else's bag when they need Astrox help and their timing is not yet a 88D conversation."
+      },
+      {
+        "heading": "What easy power means on a Tuesday night",
+        "body": "Easy power means the twentieth overhead still has length. It does not mean you can skip footwork. It means a medium-enough shaft still cooperates when you are a fraction late, which is most amateur overheads. 88D Pro, in my hits, asks for more of that smash yourself. 100ZZ asks for all of it and then bills your shoulder.\n\nString in the mid-20s on a bed you already know. Do not jump tension to chase a sound. The frame already has a voice. Let your contact catch up."
+      },
+      {
+        "heading": "Who should not take my lending copy as a purchase order",
+        "body": "If you already live at the net and like Nanoflare, you do not need 77 Pro to complete a collection. If you already load extra-stiff and want VA, this is a step down in demand and you will feel it. If you are a true beginner, buy 77 Play or 700 Play first. Lending a Pro to a clubmate who has length is different from selling a first racket."
+      },
+      {
+        "heading": "Why mixed doubles kept it in the bag",
+        "body": "Mixed doubles is where 77 Pro earned two seasons in my bag. Rotating roles need a frame that still clears when you are late and still recovers when you are pulled in. Pure rear-court smash nights will make you want something stiffer. Pure front-court nights will make you want 1000 Z or 88S. If your club night is mixed, this is still the Astrox I would buy first.\n\nI lend it to clubmates who already have length on a medium shaft. I do not lend 100ZZ. If you are leaving Play-tier Astrox, 77 Pro is the step that still lets you finish a two-hour session. If you already load extra-stiff and want VA, this will feel like a step down in demand and you will notice. That is information, not an insult to the frame."
+      },
+      {
+        "heading": "The skip line for 77 Pro",
+        "body": "Skip 77 Pro if you already live on extra-stiff and you want VA geometry. Skip it if your only night is rear-court smash duty and you have already loaded 88D without mishits. Skip it if you still need a flexible Play frame to finish two hours.\n\nBuy it if mixed doubles is the default and you need one Astrox that still clears when you are late. That was my two-season reason. It is still the reason I lend this frame and not 100ZZ."
+      },
+      {
+        "heading": "String, grommets, and the next frame",
+        "body": "Same rule as every other Pro I have kept: demo on your reel. A medium-stiff Astrox with a dead bed feels like a cheap Play frame and you will walk away from a racket that would have lasted two seasons.\n\nIf 77 Pro is already easy and you want a tighter smash, that is the 88D conversation, not a reason to skip this page. If 77 Pro is already hard, go back a step. Do not climb because the cone says Pro."
+      },
+      {
+        "heading": "The last sentence I tell clubmates",
+        "body": "If you are leaving Play-tier Astrox and you need one frame for mixed club nights, borrow 77 Pro before you buy 88D. If 77 Pro already feels easy and your mishits are rare, then we talk 88D. That order has saved more money in my club than any colourway."
       }
     ],
     "cta": "Use the racket finder with balanced or control-first preferences to compare Astrox 77 Pro against Astrox 88S Pro and Arcsaber 11 Pro.",
@@ -6494,30 +6780,58 @@
   },
   {
     "slug": "yonex-astrox-88-pro-2024-review",
-    "updatedAt": "2026-07-20",
-    "title": "Yonex Astrox 88S / 88D Pro (2024): refined twins, not a radical reboot",
-    "dek": "Yonex Astrox 88S Pro and 88D Pro new colourways are an evolution pass, not a clean-sheet redesign.",
-    "verdict": "Buy 88D Pro new colour for doubles rear-court weight with a higher floor than 100ZZ. Buy 88S Pro new colour for attack-leaning mid-court speed with honest press. Neither is a beginner frame; both are completed flagships if the street price is not absurd.",
+    "updatedAt": "2026-08-14",
+    "title": "Yonex Astrox 88D Pro 2024 — founder court note",
+    "dek": "Similar feel to 77 Pro but harder to generate power. For most players the 77 Pro is the better pick.",
+    "verdict": "Buy 88D Pro when your overhead timing is already clean and you want that stiffer Astrox smash profile — not as a first Pro.",
     "sections": [
       {
-        "heading": "Overview",
-        "body": "Yonex Astrox 88S Pro and 88D Pro new colourways are an evolution pass, not a clean-sheet redesign. Second-gen Namd and eight consecutive top grommets are the main hardware stories. I play both as doubles tools with different jobs: 88D Pro for rear-court weight, 88S Pro for faster mid-court manners with enough press."
+        "heading": "What I felt versus 77 Pro",
+        "body": "Same family, harder work. If 77 Pro is the friendly Astrox, 88D Pro 2024 is the one that asks you to bring more of the smash yourself. Players coming from 77 Pro notice the stiffer profile before they notice any extra 'flagship' quality. That is the honest review. The paint is not a skill upgrade."
       },
       {
-        "heading": "Shared upgrades",
-        "body": "Eight top nails add head presence versus older camel-gold 88D Pro. Grooves at 5–7 o'clock, familiar 76-hole beds, and clearer shaft rebound from second-gen Namd. Both twins stay box-frame attack tools with strong anti-torsion on long balls."
+        "heading": "Who it is for",
+        "body": "Club and league players whose mishit rate on overheads is already low. Rear-court doubles and singles players who want Astrox smash geometry and already load a stiff shaft. Anyone who demoed 77 Pro and specifically wanted a tighter smash, not a different brand."
       },
       {
-        "heading": "Astrox 88D Pro new colour",
-        "body": "My 4U samples: one ~91 g built at 26–28 lb BG80 without stripping the heat-shrink, balance about 305 mm; another ~89.5 g with NBG65 after removing the butt, balance about 308 mm. Empty frames often sit near 84 g versus ~85.5 g on camel-gold samples I weighed — slightly lighter swing weight and quicker recovery in blogger charts I trust.\n\nVersus camel-gold 88D Pro: new colour runs a smaller head with stronger concentration and higher effective bed firmness at the same tension; camel-gold forgives more with more dwell. New colour exits faster and more linear with less sticky hold — short force still loads the shaft. Head-heavy smash weight is similar; continuity and stamina cost favour the new colour when centred. Versus Astrox 100ZZ: 88D Pro borrows easier on clears and drops and keeps a higher floor when you are tired; 100ZZ spikes harder on perfect timing with a sharper tip and higher barrier."
+        "heading": "Who should skip it",
+        "body": "Most Division 4 players I play with. I send them to 77 Pro or 88S. 88D Tour is heavier still — I have hit that too, and it is not an upgrade unless you want extra swing weight on purpose."
       },
       {
-        "heading": "Astrox 88S Pro new colour",
-        "body": "My 4U G5 sample: empty about 84.3 g, built about 89.5 g on BG80 at 26–28 lb, balance about 301–308 mm depending on butt setup. Silver-arrow cosmetics read cleaner than busier older paints. Eight top nails make this S feel more attack-weighted than older 88S colourways — hammer press without turning it into a pure D.\n\nShaft is stiff but readable; 76-hole forgiveness beats 68-hole Pro beds for me. Rear-court press and linear power delivery are the first impressions; drops and net work stay stable when technique is clean. Continuity is close to older 88S with a touch more takeback time from the extra swing weight. Passive balls still fight the stiffness, but spring helps depth more than older stubborn S frames."
+        "heading": "88S versus 88D in my bag",
+        "body": "My current Yonex doubles control frame is 88S Pro 2024, not 88D. Front-court and mixed role. If your job is rear-court smash, 88D is the sibling to demo. Do not buy both hoping the paint will teach you a role."
       },
       {
-        "heading": "Verdict",
-        "body": "Buy 88D Pro new colour for doubles rear-court weight with a higher floor than 100ZZ. Buy 88S Pro new colour for attack-leaning mid-court speed with honest press. Neither is a beginner frame; both are completed flagships if the street price is not absurd."
+        "heading": "Setup",
+        "body": "4U, mid-20s tension, a string you already know. Changing string and racket in the same week will hide whether you like the shaft. Demo on your usual bed if you can."
+      },
+      {
+        "heading": "Same family, more work than 77 Pro",
+        "body": "I have hit 88D Pro 2024. The honest sentence is the editor note: similar feel to 77 Pro, harder to generate power. Most players should buy 77 Pro unless they already load a stiffer Astrox and want that smash profile on purpose. The 2024 paint does not add timing.\n\nMy current Yonex control frame is 88S, not 88D, because my doubles role is not rear-court smash duty. If yours is, demo 88D against 77 Pro on the same string. Keep the one that still produces length in the third game. That test beats a spec table."
+      },
+      {
+        "heading": "Tour versus Pro, since shops will offer both",
+        "body": "I have also hit 88D Tour. It feels heavier than Pro. That is not an upgrade for most people. If the shop only has Tour, ask whether you actually want extra swing weight. If you do not, wait for Pro or look at used Pro after an authenticity check. Tour money sits close to that used market."
+      },
+      {
+        "heading": "Who this page is for",
+        "body": "Players who already know they want Astrox smash geometry, whose mishits on overheads are rare, and who are choosing between 77 Pro and 88D rather than choosing a brand. Not a first Pro. Not a speed-family player. Not a collection completion."
+      },
+      {
+        "heading": "Demo on your string, then pick 77 or 88D",
+        "body": "Grommets and a stringer who has done 88D before are part of the purchase. A stiffer Astrox with a bad bed will feel like a door. Demo on a string you already know. If the shop only has factory string at a high tension, you are not demoing 88D Pro — you are demoing a setup. Take your usual reel or wait.\n\nThe honest comparison remains 77 Pro. Same family, more work on 88D. Most Division 4 players I play with should stay on 77 Pro. Buy 88D when your overhead mishits are already rare and you want that tighter smash on purpose. My current Yonex control frame is 88S, not 88D, because my doubles role is not rear-court smash duty. If yours is, this is the sibling to demo — after 77 Pro, not instead of learning to load a shaft."
+      },
+      {
+        "heading": "88D after 77 Pro, not instead of it",
+        "body": "Most club players I hit with should stay on 77 Pro. 88D is the next demand step: tighter smash, less help on late contact. If your overhead mishits are still common, 88D will punish them and you will call the frame harsh. The frame is doing what you asked.\n\nMy current Yonex control frame is 88S, not 88D, because my doubles role is not rear-court smash duty. If yours is, demo 88D on your usual reel after you already know 77 Pro. Same family. More work. That sentence is the review.\n\nGrommets and a stringer who has done this cone matter more than the year on the paint. A stiff Astrox with a dead bed is a door. Do not judge 88D on factory string at a shop tension you do not play."
+      },
+      {
+        "heading": "Who I would not lend 88D",
+        "body": "I do not lend 88D to clubmates who still spray clears. I lend 77 Pro. The extra demand on 88D is the point of the SKU. If you are not ready for it, the frame will feel like a door and you will write a one-star note about a racket that was never aimed at you.\n\nBuy 88D when mishits are rare, mixed or men's doubles has a rear-court job, and you already know 77 Pro. That is a short list on purpose."
+      },
+      {
+        "heading": "Paint is not a skill upgrade",
+        "body": "Shops will sell 88D as the 2024 flagship you are supposed to want. I sold myself that story once. The shaft asked for work I was not bringing on a Tuesday mixed night. Buy it when the work is already there. Until then, 77 Pro is the honest Astrox."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -6990,7 +7304,7 @@
   },
   {
     "slug": "yonex-grip-sizes-explained",
-    "updatedAt": "2026-04-30",
+    "updatedAt": "2026-08-14",
     "title": "Yonex grip sizes (G4, G5, G6) explained — and how to pick yours",
     "dek": "How Yonex grip sizes compare to Victor and Li-Ning, why most adults pick G5 or G6, and what an overgrip actually changes about size.",
     "verdict": "How Yonex grip sizes compare to Victor and Li-Ning, why most adults pick G5 or G6, and what an overgrip actually changes about size.",
@@ -7018,6 +7332,18 @@
       {
         "heading": "How often to replace grips",
         "body": "Replace overgrips every 4-12 sessions of regular play, or whenever they feel slick. Replace underbase grips every 6-12 months — they degrade slowly and are easy to ignore, but a degraded underbase changes the racket's feel meaningfully. Good rule of thumb: if your grip is darker than the day you put it on, treat it as ready for replacement."
+      },
+      {
+        "heading": "How I pick a grip in the hall",
+        "body": "I play G5 on Yonex 4U frames and add one overgrip. If the handle starts to feel like I am squeezing to keep bevels, the overgrip is due — not a jump to G4. If I cannot rotate for backhand, I have stacked too much wrap. That is the whole diagnostic. Measure circumference if you switch brands; do not assume a Victor G5 is a Yonex G5.\n\nJuniors and smaller hands should start G6 and add wrap, not the other way around. Stripping an underbase to shrink a G4 is a last resort and an easy way to wreck a cone if you have never done it."
+      },
+      {
+        "heading": "Sweat, climate, and replacement",
+        "body": "Dublin halls are not Singapore halls, but sweat still kills tack. Replace overgrips when they shine, not when they look 'used enough' in photos. A slick grip changes how late you can still hold a drive. That shows up as mishits people blame on the shaft.\n\nTowel grips in humid halls are a real choice. They add thickness. Account for it in the G-number. Do not copy a Malaysian player's towel setup onto a G5 and then wonder why the handle is a club."
+      },
+      {
+        "heading": "A five-minute fitting you can do without a shop",
+        "body": "Wrap a string around the handle at the bevel you use for a forehand, mark it, measure. Compare to your current racket that already feels right. If you are between sizes, buy the smaller G-number and add an overgrip rather than buying large and trying to strip the underbase in a car park. Overgrip is reversible. A ruined cone is not.\n\nWhen you switch from Yonex to Victor or Li-Ning, repeat the string test. Do not trust the printed G or S code. I play G5 plus one wrap on Yonex 4U. If I pick up a Victor with a 'G5' that measures larger, I do not force it — I change wrap or I change SKU."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -7394,18 +7720,58 @@
   },
   {
     "slug": "yonex-nanoflare-speed-series-explained",
-    "updatedAt": "2026-04-29",
-    "title": "Yonex Nanoflare 700, 700 Pro, and 1000Z: the speed series decoded",
-    "dek": "Three speed rackets, three different jobs. Here is who each one is for, and why the lighter sample sometimes smashes harder.",
-    "verdict": "For offensive doubles wanting threatening rear-court pressure, I think balance should be at least 296 mm — best 298–300 mm.",
+    "updatedAt": "2026-08-14",
+    "title": "Yonex Nanoflare speed series — how I would step through it",
+    "dek": "Play, Game, Pro, 800, 1000 Z. The useful question is which shaft you can load, not which number is on the box.",
+    "verdict": "I play 1000 Z in doubles. Most club players should start on 700 Play or Game, not on Z.",
     "sections": [
       {
-        "heading": "Overview",
-        "body": "For offensive doubles wanting threatening rear-court pressure, I think balance should be at least 296 mm — best 298–300 mm. Higher and you lose agility in fast doubles rhythm. Swing speed must be fast; frame must be aero enough. Overall torsion stability solid. You guessed it — I mean Astrox 88D Pro. Fits me perfectly. Wrong — today's star is Nanoflare 700 Pro.\n\nStraight to 700 Pro offence — the long intro was for this. At 293 mm balance you really cannot press down; flat drives sit higher than usual. On G5 grip, however hard I pull the overgrip it is not slim enough. I stripped the butt cap and added two layers of shock film — balance hit 300 mm. Only then did I unlock 700 Pro's final form.\n\nWith EXBOT63 at 27 lb plus Toray M40X — not mysticism: Nanoflare with M40X vs without are totally different; Astrox new-dimension carbon same idea. Once added, torsion and shot rigidity jump at least two levels. 700 Pro frame contact very direct, bright crisp bounce — shuttle almost shoots straight out with no drag. Large frame deformation still obvious; whip smashes sweet-spot flex slightly hurts precision versus smaller 88D Pro directionality.\n\nLight crisp agility makes tap attacks more threatening. Small motion, hidden-action drops comfortable — no forearm burden. Front-mid court you press freely — big motion no fear, smooth even sharp attacks.\n\nDrive-block is 700 Pro's unmatched strength — silky fore-back switch, crisp fast push hard block, inspired passive placement. Every link lives up to Nanoflare 700 Pro fame. Doubles front-mid players are blessed. After cap removal — press harder; forward court feels invincible. Strongly suggest removing the butt cap.\n\nNet play: drop finish softness not as obvious as original Nanoflare 700 — somewhat like recent Pro Nanoflare 800 with same string holes but harder crisper frame, more direct output, needs more touch. Rigidity is not as strong as 78-hole Nanoflare 800 Pro; impact not that exaggerated.\n\nDefence: large face, high forgiveness, thin-wing aero frame — but stiff shaft plus face rebound leverage not as focused and powerful as 88D Pro small frame. For me 700 Pro's speed-plus-large-face defence boost is not that obvious.\n\nVersus original Nanoflare 700, 700 Pro feedback crisper, more accurate, naturally faster. To some degree it Pro'd speed and some offence — same as my launch-event feel. Frame hardness between Nanoflare 700 Pro and Nanoflare 800 Pro; among the three, 700 Pro shaft hardness feedback is hardest. For better offence I suggest removing the butt cap — all NF series recommend it.\n\nRecommend for players who like Nanoflare 700 but cannot accept Nanoflare 800 Pro's overly hard direct crispness, yet want some offence boost — safe buy, will not step on landmines."
+        "heading": "The ladder I actually recommend",
+        "body": "700 Play 5U is the beginner-friendly first serious club racket I have hit — head-light speed without stiff-shaft demand. Game sits between Play forgiveness and Pro demand. 700 Pro is fast and hard to generate power, like 7 Pro. 800 Pro is the mid-flagship speed frame I would default a first 'real Nanoflare' buyer to. 1000 Z is the Z-axis doubles weapon I currently play — only after you can already whip a head-light frame."
       },
       {
-        "heading": "Recommendation",
-        "body": "Versus original, no higher entry — still easy accessible seamless doubles speed racket. Large sweet area suits most players, men and women."
+        "heading": "What 1000 Z is not",
+        "body": "It is not a smash crutch. Power has to come from your swing. If your clears already die on 700 Play, Z will not save you. If your job is defence and drives, Z is why I switched off heavier Astrox for doubles."
+      },
+      {
+        "heading": "Who should stop on Play or Game",
+        "body": "Anyone still learning overhead timing. Anyone with a shoulder flag. Anyone whose budget is a Play-tier conversation. Game is the $130 answer when Play feels vague at the net and Pro feels late on drives."
+      },
+      {
+        "heading": "Who should talk about Z",
+        "body": "Doubles players who already like Nanoflare speed, whose timing is consistent, and who accept that smash mass will not be manufactured. Demo before you pay flagship money because a ranking player used one."
+      },
+      {
+        "heading": "Astrox is still next door",
+        "body": "If your night is rear-court smash, this series is the wrong family. Read the Astrox versus Nanoflare guide and be honest about which third of the court you win points from."
+      },
+      {
+        "heading": "Play to Z, as a fitting ladder",
+        "body": "I have hit 700 Play and 700 Game. Play 5U is the beginner-friendly first serious club racket in this family. Game is the middle when Play feels vague and Pro feels late. 700 Pro is fast and, like 7 Pro, does not smash for you. 800 Pro is the mid-flagship I would default a first 'real Nanoflare' buyer to if they already whip a head-light frame. 1000 Z is what I play in doubles — Z-axis speed, power from the swing, not from the head.\n\nDo not skip to Z because the number is bigger. If your clears die on Play, Z will not save them. If your job is rear-court smash, this series is the wrong family."
+      },
+      {
+        "heading": "What changes when the shaft gets serious",
+        "body": "Play forgives. Pro and Z stop forgiving. That is the product. People describe it as 'more repulsive' when their timing is ready and as 'too thin' when it is not. Believe the second description if it is yours. A shop demo of three smashes will lie. A club night will not.\n\nString thinner if you want to keep speed. Do not use a thick trampoline bed and then say Nanoflare is dead. You asked the string to do a different job."
+      },
+      {
+        "heading": "Where Astrox still sits next to this ladder",
+        "body": "I keep 88S in the bag for a different role. The series explainer is not a ban on Astrox. It is a map of Nanoflare steps so you stop treating 1000 Z as the default adult racket. Default adult rackets are the ones you can load for two hours. For many club players that is still 700 Play or 77 Pro, not Z."
+      },
+      {
+        "heading": "Discipline still picks the family",
+        "body": "Women's doubles and mixed at club level default to this family more often than men's doubles because rally speed beats smash payoff. That is a tendency, not a rule. If your mixed role is rear-court smash, you may still want 77 Pro. If your job is to organise the rally, stay on the Nanoflare ladder and stop climbing when the shaft starts to tell you that you are late.\n\nI play 1000 Z because that job is mine. I do not put clubmates on Z because the number is bigger. Play and Game exist so you can feel head-light speed without extra-stiff demand. Climb when clears hold and mishits are rare. That is the same rule as the beginner-mistakes article, applied to one family."
+      },
+      {
+        "heading": "Stop climbing when the shaft says you are late",
+        "body": "Play and Game exist so you can feel head-light speed without extra-stiff demand. Climb when clears hold and mishits are rare. Z is not a prize for buying the expensive cone. I play 1000 Z because the job is mine. I do not put clubmates on Z because the number is bigger.\n\nIf mixed doubles for you is rear-court smash, you may still want 77 Pro. If the job is to organise the rally, stay on this ladder. Women's doubles and mixed at club level default here more often than men's doubles because rally speed beats smash payoff. Tendency, not a rule."
+      },
+      {
+        "heading": "String tension on a speed frame",
+        "body": "Head-light plus high tension is a common way to make a Nanoflare feel harsh. Start where you already play, then move one pound at a time. If you add tension because the smash sounded quiet, you are chasing a different family. Stay on this ladder for recovery, not for a louder overhead.\n\nIf the shaft already tells you that you are late, drop a tier. Play and Game are not insults. They are how you keep the session."
+      },
+      {
+        "heading": "A buying order I would actually follow",
+        "body": "Hit 700 Play or Game first. If clears hold and you still want more recovery, 800 Pro. If your job is already defence and drives at club league pace, then 1000 Z. Skip a rung only when you have already loaded the one below. Skipping because the box looks faster is how people buy a shaft they fight."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",
@@ -7590,14 +7956,58 @@
   },
   {
     "slug": "yonex-tour-series-buying-guide",
-    "updatedAt": "2026-05-19",
-    "title": "Yonex Tour-line rackets: which Tour is worth buying and which is a price-cut compromise",
-    "dek": "From AX88D Tour to Arcsaber 11 Tour, the Yonex Tour line saves up to 50% off Pro pricing — but the value depends entirely on which Tour you choose. Here is the honest breakdown.",
-    "verdict": "Preface: Yonex Tour editions have always been controversial.",
+    "updatedAt": "2026-08-14",
+    "title": "Yonex Tour series — founder buying note",
+    "dek": "Tour saves money versus Pro. It is not automatically the smarter frame. I have hit 88D Tour: heavier than Pro, not an upgrade unless you want that mass.",
+    "verdict": "Buy Tour when you want that specific geometry on purpose. Do not buy it because it is the leftover SKU next to a sold-out Pro.",
     "sections": [
       {
-        "heading": "Overview",
-        "body": "Preface: Yonex Tour editions have always been controversial. Some people think they are pure cash-grabs, but when certain Yonex high-end models went from around 499, 750, 699, 850, and 800 yuan (I will not name names) up to 1499, 1200, 2500, 3000, even 8000 yuan (SP prices fluctuate), some Tour models are still a solid choice. The better Tours keep the Pro's core technology at a lower price and are easier to pick up. Overseas, Tour rackets are sold as high-end products. This post also covers some Tours to avoid (prices fluctuate).\n\n1. Astrox 88D/S Tour\n\nThe Tour costs only about half of the Pro, yet the feel is around eighty to ninety percent of it—and it is easier to handle than the original Pro. It is like two bowls of soup from the same chef: one with dried tangerine peel, one without, but the one without costs half as much while everything else is the same. Unless you taste very carefully, it is hard to tell them apart at first glance—that is exactly how the 88 Tour feels to me.\n\nReference first-hand price: 700–800 yuan.\n\nPro first-hand price: 1600–1700 yuan (JP).\n\n2. Arcsaber 11 Tour (new colour)\n\nThe Tour again costs only about half of the Pro. The Arcsaber 11 Pro was already an easy racket to use, so the Tour needs little explanation. The difference in feel between Tour and Pro is actually easier to notice. Most of the Pro's technology is retained on the Tour. The Tour gives up some of the Pro's control, but that high clear still carries a smooth, refined quality. It suits beginners who cannot afford the Pro—but at this price you could also look at comparable Li-Ning or Victor alternatives. I would suggest buying a used Tour.\n\nTour: 700–800 yuan.\n\nPro: 1700–1800 yuan (JP).\n\nUsed Tour: 400–700 yuan.\n\nThere is more in the next post. Welcome everyone to share your own views in the comments.\n\nOn Yonex Tours worth buying (middle part).\n\nOn Yonex Tours to avoid (bottom part).\n\nClick my profile."
+        "heading": "What Tour is for",
+        "body": "Yonex Tour editions sit under Pro MAP. Some are honest mid-steps (Arcsaber 7 Tour as control doubles on a mid budget). Some are heavier or differently specced cousins that shops push when Pro is out of stock. Read the SKU, not the word Tour."
+      },
+      {
+        "heading": "88D Tour, which I have hit",
+        "body": "Feels heavier than 88D Pro. For most players I would send them to the Pro instead. The Tour's extra swing weight is not a gift unless you specifically want that loaded rear-court feel and you already clear length on a stiff Astrox. At Tour money you are also close to used Pro — check authenticity and buy the frame you mean."
+      },
+      {
+        "heading": "7 Tour versus 7 Pro",
+        "body": "7 Tour is the honest middle of the Arcsaber 7 line: more stable on blocks than Play, without 7 Pro's 'bring the power' extra-stiff feel. If your points are net and drives, $130 Tour can be the right stop. If you already load Pro, do not downgrade to save a colourway."
+      },
+      {
+        "heading": "Who should skip Tour entirely",
+        "body": "Beginners — buy Play. Players who can afford the Pro they actually demoed and liked. Anyone using Tour as a synonym for 'almost flagship'. It is a product line, not a rank."
+      },
+      {
+        "heading": "How I would shop it",
+        "body": "Demo Pro and Tour on the same string if the shop will let you. If they will not, prefer a used Pro you can inspect over a new Tour you are buying from a photo. The authenticity guide applies either way."
+      },
+      {
+        "heading": "Read the SKU, not the word Tour",
+        "body": "Tour is a product line under Pro MAP. Arcsaber 7 Tour can be an honest mid-budget control frame. 88D Tour, which I have hit, is heavier than 88D Pro and not an upgrade unless you want that mass. Shops will say Tour when Pro is out of stock. That is inventory, not a fitting.\n\nIf you can afford the Pro you demoed and liked, buy the Pro. If you are shopping 7 Tour versus 7 Play, that is a real step and this page is for you. If you are shopping 88D Tour versus a used 88D Pro, inspect authenticity and hit the used frame if you can."
+      },
+      {
+        "heading": "Value only exists if the geometry matches",
+        "body": "Fifty percent off the wrong shaft is not value. It is a cheaper mistake. Tour pricing is useful when you already know you want that family's middle step. It is harmful when it is a consolation flagship. I would rather you stay on Play for another season than buy Tour paint to feel like you bought Pro.\n\nBring the same string to the demo. If the shop will not demo, you are guessing. Guessing at Tour money is how people fund a second purchase six months later."
+      },
+      {
+        "heading": "My short list of Tour conversations that are real",
+        "body": "Arcsaber 7 Tour for control doubles on a mid budget. 88D Tour only if you want extra swing weight on purpose after hitting Pro. Other Tour SKUs: treat them as individual frames, not as a brand rank. Then run the finder with your actual budget cap so a $195 Tour against a $160 cap still shows the stretch."
+      },
+      {
+        "heading": "Receipt versus used Pro",
+        "body": "Warranty and returns are the unromantic reason to buy Tour new instead of used Pro. If you need a receipt and a shop that will see you again, Tour can be rational even when the geometry is a step down. If you can inspect a used Pro and hit it at a hall, used Pro is often the better frame at similar money. Pick the risk you can live with, not the word on the cone.\n\nI have hit 88D Tour. Heavier than Pro, not an upgrade unless you want that mass. 7 Tour is a more honest mid-budget control step. Other Tour SKUs: treat them as individual frames. Then set a hard cap in the finder so a $195 Tour against a $160 budget still shows the stretch instead of hiding in a twelve-row dump."
+      },
+      {
+        "heading": "Tour is a receipt, Pro is a geometry",
+        "body": "Buy Tour new when you need a shop that will see you again. Buy used Pro when you can inspect a cone, hit the frame, and live with no warranty. Those are different purchases that happen to share a family name.\n\nI have hit 88D Tour. Heavier than Pro, not an upgrade unless you want that mass. 7 Tour is a more honest mid-budget control step. Other Tour SKUs: treat them as individual frames, then set a hard cap in the finder so a $195 Tour against a $160 budget still shows the stretch."
+      },
+      {
+        "heading": "When I would still buy Tour",
+        "body": "I would buy Tour if I needed a receipt this week and I could not inspect a used Pro. I would not buy Tour as a secret upgrade over Pro. The word on the cone is a warranty story, not a geometry story.\n\nSet the finder cap so a Tour SKU above budget still shows as a stretch. Hiding it in a twelve-row dump is how people overpay for the wrong word."
+      },
+      {
+        "heading": "The used Pro check I run first",
+        "body": "Before I spend Tour money, I look at used Pro of the same family. If the cone is real, the grommets are intact, and I can hit it, used Pro usually wins. Tour wins when I need a receipt this week and I cannot inspect a used frame. That is the whole decision."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",

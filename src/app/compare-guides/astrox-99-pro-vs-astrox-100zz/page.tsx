@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the Astrox 100ZZ if you have already played a stiff Astrox cleanly for at least six months, you consistently win points from concentrated rotational power, and you specifically value the narrower frame's precision on placement. Pro-tour players use it for exactly these reasons. Most amateurs who upgrade from a friendlier frame to a 100ZZ report their smash gets shorter, not longer, because the bed cannot give back what the swing did not deliver. Earn the frame, then upgrade.",
   founderNote:
     "I've held both. The 99 Pro feels closer to the rest of the Astrox line — it still flatters a strong rotational pattern. The 100ZZ feels like an instrument: pristine when you hit clean, brittle when you don't. For most amateurs at my division and below (Div 4 IE and equivalents), the 99 Pro is more racket than they will fully use; 100ZZ is more racket than is honest to recommend.",
+  onCourt:
+    "I have hit 100ZZ and I prefer 100ZZ VA when someone wants that family. Regular 100ZZ is very demanding, surprisingly fast, and tiring across a full match. VA keeps the head-heavy extra-stiff DNA with a load I can actually finish. 99 Pro sits closer to the rest of Astrox — if your smash already has rotation, it flatters you without the 100ZZ punishment.\n\nI would not put a Division 4 player on 100ZZ because a ranking player used it. Demo VA or stay on 77 Pro / 88S. The honest 99 vs 100ZZ question is whether your mishits already disappear. If they do not, 100ZZ will advertise every one of them.",
   relatedLinks: [
     { label: "Read the full Astrox 99 Pro review", href: reviewPath("yy-astrox-99-pro") },
     { label: "Read the full Astrox 100ZZ review", href: reviewPath("yy-astrox-100zz") },

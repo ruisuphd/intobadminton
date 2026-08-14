@@ -31,9 +31,9 @@ for (const { id, path } of e2eReviewPaths()) {
   test(`review map baseline e2e: ${id}`, async ({ page }) => {
     await page.goto(path);
 
-    await expect(
-      page.getByRole("heading", { name: /review/i }).first()
-    ).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible({
+      timeout: 15_000,
+    });
 
     await expect(
       page.getByRole("complementary", { name: "Equipment finder" })

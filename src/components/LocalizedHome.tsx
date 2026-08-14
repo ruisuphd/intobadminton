@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { AdSenseScript } from "@/components/AdSenseScript";
 import { AdSlot } from "@/components/AdSlot";
 import { FinderQuickFilters } from "@/components/FinderQuickFilters";
 import { HomeContinueReading } from "@/components/HomeContinueReading";
@@ -6,9 +6,11 @@ import { HomeRecentShortlists } from "@/components/HomeRecentShortlists";
 import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
+import Link from "next/link";
 import catalogStats from "@/data/catalog-stats.json";
 import { listEditorialUpdates } from "@/lib/editorial-updates";
-import { homeFeaturedReviewPath, homeFeaturedReviews, reviewArticleCount } from "@/lib/home-featured";
+import { homeFeaturedReviewPath, homeFeaturedReviews } from "@/lib/home-featured";
+import { HOME_PUBLICATION_LINKS } from "@/lib/home-publication";
 import { homePopularSearches } from "@/lib/home-popular-searches";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { t } from "@/lib/i18n";
@@ -51,7 +53,6 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = t(locale);
   const localized = (path: string) => buildLocalizedPath(locale, path);
   const featuredReviews = homeFeaturedReviews;
-  const reviewCount = reviewArticleCount;
   const popularSearches = homePopularSearches;
   const recentUpdates = listEditorialUpdates(5);
 
@@ -110,13 +111,13 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
 
   const heroStats = [
     { num: `${catalogStats.total}`, label: "items ranked" },
-    { num: String(reviewCount), label: "review notes" },
     { num: "5", label: "fit factors per result" },
     { num: "3", label: "major brand families" },
   ];
 
   return (
     <main className="flex-1">
+      <AdSenseScript />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={collectionJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
@@ -125,19 +126,29 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       <section className="hero-decoration relative overflow-hidden pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="layout-band relative max-w-6xl">
           <div className="max-w-2xl">
-            <span className="eyebrow">Badminton equipment finder · 2026</span>
+            <span className="eyebrow">Reviews and equipment finder · 2026</span>
             <h1 className="text-display mt-4 text-[var(--text)]">
               {copy.home.title}
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)]">
               {copy.home.subtitle}
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <Link href={localized("/quiz/")} className="btn-primary">
-                {copy.home.start}
+            <p className="mt-3 text-sm text-[var(--color-muted)]">
+              Written by{" "}
+              <Link
+                href={localized(companyInfo.authorPagePath)}
+                className="font-medium text-[var(--color-accent)] hover:underline"
+              >
+                {companyInfo.founderName}
               </Link>
-              <Link href={localized("/review/")} className="btn-secondary">
-                Read {reviewCount} reviews
+              , Division 4 Ireland — original guides, not a catalogue dump.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <Link href={localized("/guides/")} className="btn-primary">
+                {copy.home.guides}
+              </Link>
+              <Link href={localized("/quiz/")} className="btn-secondary">
+                {copy.home.start}
               </Link>
               <span className="text-xs text-[var(--color-subtle)]">
                 No signup · stays on your device
@@ -162,7 +173,49 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         </div>
       </section>
 
-      {/* Quick finder — high-intent shortcut, kept close to the hero. */}
+      <section className="section-tight">
+        <div className="layout-band max-w-6xl">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="max-w-2xl">
+              <span className="eyebrow">From the editor</span>
+              <h2 className="text-headline mt-2 text-[var(--text)]">
+                Start with original analysis
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
+                Guides, buying lists, and frames I actually play — the pages a
+                club player cannot get from a spec sheet.
+              </p>
+            </div>
+            <Link
+              href={localized("/about/")}
+              className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+            >
+              About Rui Su →
+            </Link>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {HOME_PUBLICATION_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={localized(item.href)}
+                className="card card-interactive block p-5"
+              >
+                <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
+                  {item.kicker}
+                </p>
+                <h3 className="mt-3 text-base font-semibold leading-snug text-[var(--text)]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+                  {item.dek}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick finder — below the publication shelf so a reviewer hits original copy first. */}
       <section className="section-tight">
         <div className="layout-band max-w-6xl">
           <FinderQuickFilters />
@@ -247,12 +300,12 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
         <div className="layout-band max-w-6xl">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-2xl">
-              <span className="eyebrow">Fresh from the site</span>
+              <span className="eyebrow">Longer reads</span>
               <h2 className="text-headline mt-2 text-[var(--text)]">
-                Latest reviews
+                Founder-tested and original pieces
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
-                Recent equipment notes from club play.
+                Publication reviews only — not one-minute SKU notes.
               </p>
             </div>
             <Link

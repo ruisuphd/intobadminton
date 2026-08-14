@@ -773,6 +773,86 @@
     {
       "source": "/blog/yonex-power-cushion-88-dial-3-review/",
       "destination": "/review/yonex-aerus-z2-shoes-review/"
+    },
+    {
+      "source": "/review/kawasaki-star-cross-second-perspective-review/",
+      "destination": "/review/kawasaki-star-cross-racket-review/"
+    },
+    {
+      "source": "/blog/kawasaki-star-cross-second-perspective-review/",
+      "destination": "/review/kawasaki-star-cross-racket-review/"
+    },
+    {
+      "source": "/review/victor-auraspeed-hs-plus-attack-review/",
+      "destination": "/review/victor-auraspeed-hs-plus-deep-dive/"
+    },
+    {
+      "source": "/blog/victor-auraspeed-hs-plus-attack-review/",
+      "destination": "/review/victor-auraspeed-hs-plus-deep-dive/"
+    },
+    {
+      "source": "/review/victor-drivex-12-vs-drivex-10-and-88d-pro-2024/",
+      "destination": "/review/victor-drivex-12-vs-astrox-88d-pro/"
+    },
+    {
+      "source": "/blog/victor-drivex-12-vs-drivex-10-and-88d-pro-2024/",
+      "destination": "/review/victor-drivex-12-vs-astrox-88d-pro/"
+    },
+    {
+      "source": "/review/victor-drivex-12-zsw-vs-original-comparison/",
+      "destination": "/review/victor-drivex-12-vs-astrox-88d-pro/"
+    },
+    {
+      "source": "/blog/victor-drivex-12-zsw-vs-original-comparison/",
+      "destination": "/review/victor-drivex-12-vs-astrox-88d-pro/"
+    },
+    {
+      "source": "/review/victor-yu-12-racket-review/",
+      "destination": "/review/victor-drivex-12-vs-astrox-88d-pro/"
+    },
+    {
+      "source": "/blog/victor-yu-12-racket-review/",
+      "destination": "/review/victor-drivex-12-vs-astrox-88d-pro/"
+    },
+    {
+      "source": "/review/victor-p8500-ii-shoes-review/",
+      "destination": "/review/victor-p8500-ii-vs-a970-nitro-lite/"
+    },
+    {
+      "source": "/blog/victor-p8500-ii-shoes-review/",
+      "destination": "/review/victor-p8500-ii-vs-a970-nitro-lite/"
+    },
+    {
+      "source": "/review/yonex-astrox-99-pro-2-deep-dive/",
+      "destination": "/review/yonex-astrox-99-pro-3-deep-dive/"
+    },
+    {
+      "source": "/blog/yonex-astrox-99-pro-2-deep-dive/",
+      "destination": "/review/yonex-astrox-99-pro-3-deep-dive/"
+    },
+    {
+      "source": "/review/yonex-astrox-99-pro-gen-1-review/",
+      "destination": "/review/yonex-astrox-99-pro-3-deep-dive/"
+    },
+    {
+      "source": "/blog/yonex-astrox-99-pro-gen-1-review/",
+      "destination": "/review/yonex-astrox-99-pro-3-deep-dive/"
+    },
+    {
+      "source": "/review/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
+      "destination": "/review/yonex-arcsaber-11-pro-review/"
+    },
+    {
+      "source": "/blog/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
+      "destination": "/review/yonex-arcsaber-11-pro-review/"
+    },
+    {
+      "source": "/review/li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro/",
+      "destination": "/review/yonex-arcsaber-11-pro-review/"
+    },
+    {
+      "source": "/blog/li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro/",
+      "destination": "/review/yonex-arcsaber-11-pro-review/"
     }
   ]
 }

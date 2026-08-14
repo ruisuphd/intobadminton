@@ -3,12 +3,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedReadingShelf } from "@/components/RelatedReadingShelf";
 import { ReviewsIndexClient } from "@/components/ReviewsIndexClient";
 import { articlesByDateDesc, blogArticles } from "@/lib/blog";
+import { isThinContentNoindex } from "@/lib/thin-content";
 import type { SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 import { relatedReadingForPath } from "@/lib/related-content";
 
 export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
   const articles = articlesByDateDesc(blogArticles[locale]);
+  const publication = articles.filter(
+    (article) => !isThinContentNoindex(article.slug)
+  );
   const related = relatedReadingForPath("/review/");
 
   const jsonLd = {
@@ -30,14 +34,16 @@ export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
         <header className="space-y-3">
           <h1 className="text-display text-[var(--text)]">Reviews</h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            Equipment notes from club play.{" "}
-            <span className="text-[var(--color-subtle)]">
-              {articles.length} articles, newest first.
-            </span>
+            Original guides and founder-tested pieces first. Short court notes
+            stay off the default list.
           </p>
         </header>
 
-        <ReviewsIndexClient articles={articles} locale={locale} />
+        <ReviewsIndexClient
+          articles={articles}
+          publicationSlugs={publication.map((article) => article.slug)}
+          locale={locale}
+        />
 
         <RelatedReadingShelf items={related} />
 

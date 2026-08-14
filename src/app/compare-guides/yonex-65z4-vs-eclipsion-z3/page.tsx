@@ -73,6 +73,8 @@ const config: CompareGuideConfig = {
     "Buy the Eclipsion Z3 if you weigh over 80kg, if your knees, ankles, or heels feel tired in the back half of long sessions, or if you specifically need wide-foot accommodation that Yonex doesn't reliably offer in the 65 Z series. The Eclipsion Z3 is also the right pick for heavy-tournament players whose body wears down on consecutive-day play.",
   founderNote:
     "I've worn both extensively. The 65 Z4 is great when I'm light on my feet and the court is dry; the Eclipsion Z3 is the shoe I reach for on consecutive-game tournament days. They're not interchangeable — buying the wrong one because of price or fashion has cost amateur players I've coached a real number of session-time missed to ankle and knee soreness.",
+  onCourt:
+    "My current shoe is Comfort Z3, switched from Aerus Z2. This page is 65 Z4 vs Eclipsion Z3 — both Yonex, both shoes I have worn for blocks of club nights, neither is my current pair. 65 Z4 is the lighter, quicker shoe on a dry wooden hall. Eclipsion Z3 is the one I used when the schedule stacked matches and I wanted more structure under the landing.\n\nIf your knees already complain after smashes, skip both of these and look at Comfort Z3 (heavier, more cushion). If you are light, dry-court, and healthy, 65 Z4 is the session shoe. Do not buy Eclipsion because it looks more 'pro' if you only play once a week — you will feel the extra bulk without using the protection.",
   relatedLinks: [
     { label: "Read the full 65 Z4 review", href: reviewPath("yy-power-cushion-65-z4") },
     { label: "Read the full Eclipsion Z3 review", href: reviewPath("yy-eclipsion-z3") },

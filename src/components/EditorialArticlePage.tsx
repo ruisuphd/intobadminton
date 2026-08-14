@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdSenseScript } from "@/components/AdSenseScript";
 import { AdSlot } from "@/components/AdSlot";
 import { GlossaryLinkedText } from "@/components/GlossaryLinkedText";
 import { ArticleToc } from "@/components/ArticleToc";
@@ -21,6 +22,7 @@ import {
   sectionAnchorId,
 } from "@/lib/blog";
 import { articlePathForSlug } from "@/lib/blog-migrations";
+import { adsAllowedOnReview } from "@/lib/thin-content";
 import { buildLocalizedPath, type SiteLocale } from "@/lib/locale";
 import { companyInfo, organizationJsonLd } from "@/lib/company";
 import { enrichmentForReviewArticle } from "@/lib/review-article-enrichment";
@@ -72,10 +74,14 @@ export function EditorialArticlePage({
    * three-section review between two ad units reads as a made-for-ads page,
    * which is the thing AdSense reviewers reject.
    *
-   * -1 disables the in-article slot; the end-of-article slot always renders.
-   * Both are no-ops until NEXT_PUBLIC_ADSENSE_MODE flips off "disabled".
+   * -1 disables the in-article slot; the end-of-article slot always renders
+   * on indexable publication reviews. Both are no-ops until
+   * NEXT_PUBLIC_ADSENSE_MODE flips off "disabled", and both stay off
+   * noindexed court notes.
    */
-  const inArticleAdAfterIndex = sections.length >= 5 ? 2 : -1;
+  const allowAds = adsAllowedOnReview(article.slug);
+  const inArticleAdAfterIndex =
+    allowAds && sections.length >= 5 ? 2 : -1;
 
   const blogPostingJsonLd = {
     "@context": "https://schema.org",
@@ -133,6 +139,7 @@ export function EditorialArticlePage({
 
   return (
     <main className="flex-1">
+      {allowAds ? <AdSenseScript /> : null}
       <LastArticleTracker href={path} title={article.title} />
       <ReadingProgress />
       <JsonLd data={blogPostingJsonLd} />
@@ -254,7 +261,7 @@ export function EditorialArticlePage({
             <HelpfulReaction key={article.slug} contentId={`review:${article.slug}`} />
         </div>
 
-        <AdSlot id={`review-end-${article.slug}`} />
+        {allowAds ? <AdSlot id={`review-end-${article.slug}`} /> : null}
         <RelatedPostsGrid locale={locale} articles={related} />
         <RelatedReadingShelf items={decisionPath} />
       </article>
