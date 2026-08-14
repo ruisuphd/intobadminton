@@ -189,7 +189,6 @@ try {
       fullPage: false,
     });
     const text = await page.locator("body").innerText();
-    const whys = [...text.matchAll(/Why[\s\S]{20,400}/gi)].length;
     check(
       `${slug} distinct why/tradeoff copy`,
       /trade-?off/i.test(text) && text.split(/\s+/).length > 400,
