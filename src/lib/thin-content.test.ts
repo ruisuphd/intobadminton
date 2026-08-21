@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import reviewProductMap from "@/data/blog-review-product-map.json";
-import { blogArticles, blogSlugs } from "./blog";
+import { blogArticles, blogSlugs, relatedArticles } from "./blog";
 import { homeFeaturedReviews } from "./home-featured";
 import { sitemapEntries } from "./sitemap";
 import {
@@ -182,6 +182,26 @@ describe("indexable core publication", () => {
       expect(isThinContentNoindex(slug), slug).toBe(false);
       expect(adsAllowedOnReview(slug), slug).toBe(true);
     }
+  });
+});
+
+describe("related SKU notes on court-note URLs", () => {
+  it("filters Beimo related reading down to indexable slugs only", () => {
+    const current = blogArticles.en.find(
+      (article) => article.slug === "kumpoo-beimo-racket-review"
+    );
+    expect(current).toBeDefined();
+    expect(isThinContentNoindex("kumpoo-beimo-racket-review")).toBe(true);
+    const raw = relatedArticles(blogArticles.en, current!, 3);
+    expect(raw.some((article) => isThinContentNoindex(article.slug))).toBe(
+      true
+    );
+    const publication = raw.filter(
+      (article) => adsAllowedOnReview(article.slug)
+    );
+    expect(publication.every((article) => adsAllowedOnReview(article.slug))).toBe(
+      true
+    );
   });
 });
 
