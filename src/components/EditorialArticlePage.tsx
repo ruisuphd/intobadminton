@@ -56,7 +56,6 @@ export function EditorialArticlePage({
   const sectionIds = sections.map((section, index) =>
     sectionAnchorId(section.heading, index, anchorSeen)
   );
-  const related = relatedArticles(blogArticles[locale], article, 3);
   const decisionPath = relatedReadingForReviewSlug(article.slug);
   const enrichment = enrichmentForReviewArticle(slug, article);
   const tocItems = sections.map((section, index) => ({
@@ -80,6 +79,11 @@ export function EditorialArticlePage({
    * noindexed court notes.
    */
   const allowAds = adsAllowedOnReview(article.slug);
+  const related = allowAds
+    ? relatedArticles(blogArticles[locale], article, 3).filter((entry) =>
+        adsAllowedOnReview(entry.slug)
+      )
+    : [];
   const inArticleAdAfterIndex =
     allowAds && sections.length >= 5 ? 2 : -1;
 

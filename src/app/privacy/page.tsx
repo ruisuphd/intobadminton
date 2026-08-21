@@ -94,7 +94,7 @@ export default function PrivacyPage() {
           policy must define server retention periods for profiles, reviews,
           moderation records, logs, and support requests.
         </p>
-        <p className="text-sm">Last reviewed: 2026-04-28.</p>
+        <p className="text-sm">Last reviewed: 2026-08-21.</p>
 
         <section className="mt-16 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">

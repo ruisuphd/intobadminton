@@ -7,7 +7,6 @@ import { HomeToolkitStrip } from "@/components/HomeToolkitStrip";
 import { SiteSearchFormStatic } from "@/components/SiteSearchFormStatic";
 import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
-import catalogStats from "@/data/catalog-stats.json";
 import { listEditorialUpdates } from "@/lib/editorial-updates";
 import { homeFeaturedReviewPath, homeFeaturedReviews } from "@/lib/home-featured";
 import { HOME_PUBLICATION_LINKS } from "@/lib/home-publication";
@@ -110,9 +109,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   };
 
   const heroStats = [
-    { num: `${catalogStats.total}`, label: "items ranked" },
-    { num: "5", label: "fit factors per result" },
-    { num: "3", label: "major brand families" },
+    { num: `${HOME_PUBLICATION_LINKS.length}`, label: "original first-reads" },
+    { num: "5", label: "named fit factors" },
+    { num: "Div 4", label: "Ireland — founder-tested" },
   ];
 
   return (
