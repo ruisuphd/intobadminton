@@ -176,7 +176,13 @@
       },
       {
         "heading": "Rackets by age and height",
-        "body": "Ages 6-8 / under 130cm: aluminium-shaft junior racket, 22-26 inches long, 80-90 grams. Yonex B-350Jr, Victor AL-2200JR, or any club-issued junior racket. Ages 8-11 / 130-150cm: Yonex Muscle Power 2 Junior, Astrox 01 Clear, or 5U adult lightweight rackets like the Nanoray Light 70i (the latter is fine for taller pre-teens). Ages 12-14 / 150cm+: most kids are ready for proper 5U adult rackets — Astrox 1, Nanoray 7, or Arcsaber 7 Junior. Avoid head-heavy or extra-stiff frames at every junior tier."
+        "body": "Ages 6-8 / under 130cm: aluminium-shaft junior racket, 22-26 inches long, 80-90 grams. Yonex B-350Jr, Victor AL-2200JR, or any club-issued junior racket. Ages 8-11 / 130-150cm: Yonex Muscle Power 2 Junior, Astrox 01 Clear, or 5U adult lightweight rackets like the Nanoray Light 70i (the latter is fine for taller pre-teens). Ages 12-14 / 150cm+: most kids are ready for proper 5U adult rackets — Astrox 1, Nanoray 7, or Arcsaber 7 Junior. Avoid head-heavy or extra-stiff frames at every junior tier.",
+        "glossaryLinks": [
+          {
+            "term": "Head-heavy",
+            "id": "head-heavy"
+          }
+        ]
       },
       {
         "heading": "Shoes — buy fitted, replace as feet grow",
@@ -381,7 +387,13 @@
     "sections": [
       {
         "heading": "Buying too stiff too early",
-        "body": "Extra-stiff shafts reward clean timing. Recreational and early club players do not have that timing yet. What you feel on a demo smash in the shop is not what you feel in the third game of mixed doubles when the shuttle is late and your shoulder is already tired. A medium or even hi-flex Play-tier frame keeps clears long enough to learn footwork. I have watched clubmates buy Astrox 100ZZ because a ranking player used one, then spend three months wondering why their lifts die at the service line. That is not a talent problem. That is a shaft that will not help a late contact.\n\nIf you already mishit a visible share of overheads, do not 'grow into' extra-stiff. Grow on a shaft that still produces length when contact is a fraction late. The upgrade to 77 Pro or 88S is cheaper once you can actually load it."
+        "body": "Extra-stiff shafts reward clean timing. Recreational and early club players do not have that timing yet. What you feel on a demo smash in the shop is not what you feel in the third game of mixed doubles when the shuttle is late and your shoulder is already tired. A medium or even hi-flex Play-tier frame keeps clears long enough to learn footwork. I have watched clubmates buy Astrox 100ZZ because a ranking player used one, then spend three months wondering why their lifts die at the service line. That is not a talent problem. That is a shaft that will not help a late contact.\n\nIf you already mishit a visible share of overheads, do not 'grow into' extra-stiff. Grow on a shaft that still produces length when contact is a fraction late. The upgrade to 77 Pro or 88S is cheaper once you can actually load it.",
+        "glossaryLinks": [
+          {
+            "term": "Smash",
+            "id": "smash"
+          }
+        ]
       },
       {
         "heading": "Stacking a demanding setup",
@@ -4191,11 +4203,27 @@
     "sections": [
       {
         "heading": "The tradeoff in plain language",
-        "body": "Head-heavy rackets can help load a bigger smash, but they also ask more from your shoulder, timing, and recovery. If your points are won through blocks, drives, and interceptions, a faster frame may produce better match results than a heavier power frame. That is not a moral argument. It is a count of which shots you actually hit.\n\nI currently play 1000 Z in Division 4 doubles for this reason. Power is harder to generate than from a comparable head-heavy frame. With timing, the drives and defence are the weapon. Without timing, it is just a light stick that does not smash for you."
+        "body": "Head-heavy rackets can help load a bigger smash, but they also ask more from your shoulder, timing, and recovery. If your points are won through blocks, drives, and interceptions, a faster frame may produce better match results than a heavier power frame. That is not a moral argument. It is a count of which shots you actually hit.\n\nI currently play 1000 Z in Division 4 doubles for this reason. Power is harder to generate than from a comparable head-heavy frame. With timing, the drives and defence are the weapon. Without timing, it is just a light stick that does not smash for you.",
+        "glossaryLinks": [
+          {
+            "term": "Head-heavy",
+            "id": "head-heavy"
+          },
+          {
+            "term": "Smash",
+            "id": "smash"
+          }
+        ]
       },
       {
         "heading": "How reviews mislead on 'powerful'",
-        "body": "Online reviews often come from players with different technique, string tension, shuttle speed, and playing role. A phrase like powerful is only useful when you know whether the reviewer plays singles, rear-court doubles, or front-court pressure. Copying a singles smash review into a mixed-doubles bag is how people buy 100ZZ and then cannot recover on the next drive.\n\nI have hit 100ZZ. It is very demanding, surprisingly fast, and tiring across a full match. 100ZZ VA is the version I would demo first if someone insists on that line. Most club players who think they want Astrox power are happier on 77 Pro or 88S."
+        "body": "Online reviews often come from players with different technique, string tension, shuttle speed, and playing role. A phrase like powerful is only useful when you know whether the reviewer plays singles, rear-court doubles, or front-court pressure. Copying a singles smash review into a mixed-doubles bag is how people buy 100ZZ and then cannot recover on the next drive.\n\nI have hit 100ZZ. It is very demanding, surprisingly fast, and tiring across a full match. 100ZZ VA is the version I would demo first if someone insists on that line. Most club players who think they want Astrox power are happier on 77 Pro or 88S.",
+        "glossaryLinks": [
+          {
+            "term": "Drive",
+            "id": "drive"
+          }
+        ]
       },
       {
         "heading": "What the finder actually weighs",
@@ -5137,7 +5165,17 @@
       },
       {
         "heading": "On court, in roles rather than brands",
-        "body": "I have hit Astrox 88D Pro 2024. It is harder to generate power than 77 Pro; for most players I still send them to 77 Pro unless they already load a stiffer Astrox. DriveX 12 is the even-balance Victor I would demo when a clubmate wants drive speed without Yonex MAP, not as a smash substitute for 88D.\n\nIf your points are rear-court smash, 88D Pro (or 77 Pro) is the Yonex conversation. If your points are flat drives and recovery, DriveX geometry is the Victor conversation. Do not buy DriveX 12 because it is 'the 88D killer'. Buy it because your role matches even-balance drives."
+        "body": "I have hit Astrox 88D Pro 2024. It is harder to generate power than 77 Pro; for most players I still send them to 77 Pro unless they already load a stiffer Astrox. DriveX 12 is the even-balance Victor I would demo when a clubmate wants drive speed without Yonex MAP, not as a smash substitute for 88D.\n\nIf your points are rear-court smash, 88D Pro (or 77 Pro) is the Yonex conversation. If your points are flat drives and recovery, DriveX geometry is the Victor conversation. Do not buy DriveX 12 because it is 'the 88D killer'. Buy it because your role matches even-balance drives.",
+        "glossaryLinks": [
+          {
+            "term": "Smash",
+            "id": "smash"
+          },
+          {
+            "term": "Drive",
+            "id": "drive"
+          }
+        ]
       },
       {
         "heading": "Stock, stringers, and the boring reason people stay Yonex",
@@ -6418,7 +6456,13 @@
     "sections": [
       {
         "heading": "What I actually felt",
-        "body": "Arcsaber 7 Pro is a light, stable, control-leaning frame. Like Nanoflare 700 Pro, it is hard to generate smash power if you are used to head-heavy Astrox. The upside is speed and a holding feel on blocks and drives. I would put a front/mid doubles player here before I put them on 100ZZ.\n\nPOCKETING BOOSTER marketing is not why I like it. The on-court fact is dwell on contact and a shaft that does not panic when you are a fraction late — as long as you are not asking it to manufacture rear-court mass."
+        "body": "Arcsaber 7 Pro is a light, stable, control-leaning frame. Like Nanoflare 700 Pro, it is hard to generate smash power if you are used to head-heavy Astrox. The upside is speed and a holding feel on blocks and drives. I would put a front/mid doubles player here before I put them on 100ZZ.\n\nPOCKETING BOOSTER marketing is not why I like it. The on-court fact is dwell on contact and a shaft that does not panic when you are a fraction late — as long as you are not asking it to manufacture rear-court mass.",
+        "glossaryLinks": [
+          {
+            "term": "Smash",
+            "id": "smash"
+          }
+        ]
       },
       {
         "heading": "Who it is for",
@@ -6446,7 +6490,13 @@
       },
       {
         "heading": "Who I would hand this to at the hall",
-        "body": "A club doubles player whose job is organisation, who already likes even or slightly head-light frames, and who will not panic when the smash is not free. Not a beginner. Not a rear-court specialist shopping a first Pro. Not someone who wanted 11 Pro and settled. Demo 7 Pro because you want this geometry. Then decide."
+        "body": "A club doubles player whose job is organisation, who already likes even or slightly head-light frames, and who will not panic when the smash is not free. Not a beginner. Not a rear-court specialist shopping a first Pro. Not someone who wanted 11 Pro and settled. Demo 7 Pro because you want this geometry. Then decide.",
+        "glossaryLinks": [
+          {
+            "term": "Head-light",
+            "id": "head-light"
+          }
+        ]
       },
       {
         "heading": "Set the grip, then play a full session",
@@ -6736,7 +6786,13 @@
       },
       {
         "heading": "Who should buy it",
-        "body": "Recreational-to-club players. Mixed disciplines. Shoulder comfort flags that still want some smash mass. Anyone about to buy 88D Pro because the number is higher — try 77 Pro first."
+        "body": "Recreational-to-club players. Mixed disciplines. Shoulder comfort flags that still want some smash mass. Anyone about to buy 88D Pro because the number is higher — try 77 Pro first.",
+        "glossaryLinks": [
+          {
+            "term": "Smash",
+            "id": "smash"
+          }
+        ]
       },
       {
         "heading": "Who should skip it",
@@ -6787,7 +6843,13 @@
     "sections": [
       {
         "heading": "What I felt versus 77 Pro",
-        "body": "Same family, harder work. If 77 Pro is the friendly Astrox, 88D Pro 2024 is the one that asks you to bring more of the smash yourself. Players coming from 77 Pro notice the stiffer profile before they notice any extra 'flagship' quality. That is the honest review. The paint is not a skill upgrade."
+        "body": "Same family, harder work. If 77 Pro is the friendly Astrox, 88D Pro 2024 is the one that asks you to bring more of the smash yourself. Players coming from 77 Pro notice the stiffer profile before they notice any extra 'flagship' quality. That is the honest review. The paint is not a skill upgrade.",
+        "glossaryLinks": [
+          {
+            "term": "Smash",
+            "id": "smash"
+          }
+        ]
       },
       {
         "heading": "Who it is for",
@@ -7727,11 +7789,23 @@
     "sections": [
       {
         "heading": "The ladder I actually recommend",
-        "body": "700 Play 5U is the beginner-friendly first serious club racket I have hit — head-light speed without stiff-shaft demand. Game sits between Play forgiveness and Pro demand. 700 Pro is fast and hard to generate power, like 7 Pro. 800 Pro is the mid-flagship speed frame I would default a first 'real Nanoflare' buyer to. 1000 Z is the Z-axis doubles weapon I currently play — only after you can already whip a head-light frame."
+        "body": "700 Play 5U is the beginner-friendly first serious club racket I have hit — head-light speed without stiff-shaft demand. Game sits between Play forgiveness and Pro demand. 700 Pro is fast and hard to generate power, like 7 Pro. 800 Pro is the mid-flagship speed frame I would default a first 'real Nanoflare' buyer to. 1000 Z is the Z-axis doubles weapon I currently play — only after you can already whip a head-light frame.",
+        "glossaryLinks": [
+          {
+            "term": "Head-light",
+            "id": "head-light"
+          }
+        ]
       },
       {
         "heading": "What 1000 Z is not",
-        "body": "It is not a smash crutch. Power has to come from your swing. If your clears already die on 700 Play, Z will not save you. If your job is defence and drives, Z is why I switched off heavier Astrox for doubles."
+        "body": "It is not a smash crutch. Power has to come from your swing. If your clears already die on 700 Play, Z will not save you. If your job is defence and drives, Z is why I switched off heavier Astrox for doubles.",
+        "glossaryLinks": [
+          {
+            "term": "Smash",
+            "id": "smash"
+          }
+        ]
       },
       {
         "heading": "Who should stop on Play or Game",
