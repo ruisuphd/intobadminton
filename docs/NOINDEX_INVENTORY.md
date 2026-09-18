@@ -7,9 +7,10 @@ against this list — if the affected URL is in this file, the exclusion is
 intentional and the GSC "Validate fix" / "Mark as expected" action is the
 correct response.
 
-Last audited: **2026-08-14**. Every noindex URL is omitted from `sitemap.xml`
-(no mixed signals). Spec PDPs and thin court notes also have ads off;
-`noindex` does not hide a URL from AdsBot.
+Last audited: **2026-09-18**. Every noindex URL is omitted from `sitemap.xml`
+(no mixed signals). Spec PDPs also have ads off; `noindex` does not hide a URL
+from AdsBot, which is why the translated review corpus was removed rather than
+noindexed (section 2).
 
 ## 1. Spec product pages (all `/product/[id]/`)
 
@@ -21,26 +22,23 @@ publication Google should inventory for AdSense.
 
 Declaration: `src/app/product/[id]/page.tsx` (`robots: { index: false, follow: true }`).
 
-## 2. Review URLs held back by `src/lib/thin-content.ts`
+## 2. Review URLs
 
-The live list is computed from the corpus. Do not hand-maintain a slug dump
-here. `noindexReviewSlugs` is the union of:
+**None are noindexed.** In Sept 2026 the 196 articles translated from forum
+posts were removed from the build instead; their `/review/`, `/blog/` and
+`/comparisons/` URLs return 404. The list is in
+`docs/qa-adsense-recovery/removed-review-slugs.json`, and
+`scripts/check-published-provenance.mjs` fails the build if a derived article
+is published again.
 
-| Reason | Source | What it is |
-|---|---|---|
-| Thin / unoriginal | `thinContentNoindexSlugs` | Body under ~800 words **or** not original editorial / founder-firsthand |
-| Duplicate SKU | `duplicateNoindexSlugs` | Weaker twin of a kept review |
-| Consolidated SKU | `consolidatedNoindexSlugs` | Overlapping sibling; 301 in `retiredRedirects` on static export |
+The 13 published articles are original editorials and are all indexable.
+`src/lib/thin-content.ts` still applies a length and originality gate
+(`noindexReviewSlugs` is empty today), so a future article that fails it would
+be served `noindex, follow` and left out of the sitemap.
 
-Indexed reviews are original editorials (`ORIGINAL_EDITORIAL_SLUGS`) or
-founder-firsthand product maps, and they clear the length gate. Imported
-forum translations are not padded to pass that gate.
-
-As of 2026-08-14: **26** indexable `/review/<slug>/` URLs, **183** noindex
-review URLs, corpus **209**.
-
-Declaration: `src/app/review/[slug]/page.tsx` via `isThinContentNoindex`.
-Ads: `adsAllowedOnReview` (same gate). Sitemap: `indexableReviewSlugs`.
+A handful of retired duplicate URLs (`retiredRedirects` in
+`src/data/blog-url-migrations.json`) are `noindex` meta-refresh stubs to a kept
+original.
 
 ## 3. Legacy locale redirects (66 URLs)
 
@@ -83,7 +81,7 @@ pages with no useful content for a crawler.
 ## What to do when GSC sends a "noindex" exclusion alert
 
 1. Open the GSC alert and note the affected URL(s).
-2. If it is `/product/<id>/`, a slug in `noindexReviewSlugs`, a legacy
+2. If it is `/product/<id>/`, a retired-redirect stub, a legacy
    `/en/` or `/zh/` redirect, or one of the operational/404 rows above, the
    exclusion is **intentional** — dismiss or mark as expected.
 3. If the URL is **not** in those buckets, the noindex is unintentional.
@@ -96,7 +94,7 @@ pages with no useful content for a crawler.
 | File | What it controls |
 |---|---|
 | `src/app/product/[id]/page.tsx` | Every spec PDP |
-| `src/lib/thin-content.ts` | Review quality / duplicate / consolidate gates |
+| `src/lib/thin-content.ts` | Review length / originality gate (empty today) |
 | `src/app/review/[slug]/page.tsx` | Applies the review gate |
 | `src/app/setup/page.tsx` | `/setup/` |
 | `src/app/results/page.tsx` | `/results/` |

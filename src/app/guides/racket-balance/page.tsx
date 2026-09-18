@@ -234,8 +234,8 @@ export default function RacketBalanceGuide() {
             best intermediate rackets
           </Link>
           , and{" "}
-          <Link href="/review/yuan-style-shaft-hardness-explained/" className="text-[var(--color-accent)] underline">
-            YuanShi shaft hardness measurements explained
+          <Link href="/review/racket-balance-vs-swing-speed/" className="text-[var(--color-accent)] underline">
+            racket balance vs swing speed
           </Link>
           .
         </p>

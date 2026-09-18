@@ -106,6 +106,8 @@ export function evaluateBagEditorialParity(
   const catalogProductIds = new Set(catalog.queries.map((row) => row.productId));
   for (const pdpRow of pdp.queries) {
     if (pdpRow.expectCategory !== "bag") continue;
+    // A no-review row guards the absence of an exit; it has no catalog twin.
+    if (pdpRow.expectNoReviewSlug) continue;
     if (!catalogProductIds.has(pdpRow.productId)) {
       issues.push({
         productId: pdpRow.productId,

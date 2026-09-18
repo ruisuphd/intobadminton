@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Nanoflare 1000Z vs Victor Auraspeed 99",
@@ -76,9 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "League nights in Dublin, 4U G5, usually BG80 in the mid-20s: the 1000 Z is the frame I finish matches with. The first hour is easy — head-light recovery on defence is the reason I switched off a heavier Astrox for doubles. The third game is the test. If my legs are late, the Z-axis speed still lets me get the racket on the shuttle; the smash from the back is the shot that gets shorter, because the frame will not manufacture head-heavy mass I did not bring.\n\nAuraspeed 99 is not my current racket. I have held it. The thinner shaft flicks faster at the net than 1000 Z. I would only move to it if my role shifted to full-time front court. Until then, 1000 Z stays in the bag because my doubles job is still half defence, half drive, not a pure net-kill diet.",
   relatedLinks: [
-    { label: "Read the full Nanoflare 1000Z review", href: reviewPath("yy-nanoflare-1000z") },
-    { label: "Read the full Auraspeed 99 Hayabusa review", href: reviewPath("vic-auraspeed-99") },
-    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series explained", href: "/review/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Yonex Astrox vs Nanoflare", href: "/compare-guides/yonex-astrox-vs-nanoflare/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },

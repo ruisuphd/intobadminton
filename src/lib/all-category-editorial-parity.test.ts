@@ -145,7 +145,7 @@ describe("all-category-editorial-parity", () => {
       );
     }
 
-    expect(result.totalChecked).toBeGreaterThanOrEqual(80);
+    expect(result.totalChecked).toBeGreaterThanOrEqual(14);
   });
 
   it("reports aggregate totals", () => {

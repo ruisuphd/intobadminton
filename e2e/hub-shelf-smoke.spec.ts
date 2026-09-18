@@ -165,15 +165,15 @@ test("faq page links to full catalog browse", async ({ page }) => {
 test("mapped review article links to filtered catalog browse", async ({
   page,
 }) => {
-  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await page.goto("/review/victor-drivex-12-vs-astrox-88d-pro/");
 
   const catalogLink = page.getByRole("link", {
-    name: /browse yonex in catalog/i,
+    name: /browse victor in catalog/i,
   });
   await expect(catalogLink).toBeVisible();
   await expect(catalogLink).toHaveAttribute(
     "href",
-    "/catalog/?cat=racket&brand=Yonex"
+    "/catalog/?cat=racket&brand=Victor"
   );
 });
 

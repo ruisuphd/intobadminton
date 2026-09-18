@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-06",
+  "updated": "2026-09-18",
   "coverage": {
     "minCatalogFilterSlugs": 12,
     "minManifestEntries": 12,
@@ -58,13 +58,12 @@
       "expectCatalogHref": "/catalog/?cat=racket&brand=Yonex",
       "expectMinRelatedReading": 3,
       "expectInManifest": true,
-      "expectProductIds": ["yy-astrox-99-pro", "yy-astrox-100zz"],
       "e2e": true,
       "expectHeadingPattern": "100zz",
       "expectCatalogLinkPattern": "browse matching catalog",
       "expectComparisonTable": true,
       "expectKeepReadingShelf": true,
-      "note": "Lighthouse duel layout — side-by-side table + mapped picks"
+      "note": "Lighthouse duel layout — side-by-side table (picks link to spec pages since Sept 2026)"
     },
     {
       "id": "even-balance-duel",

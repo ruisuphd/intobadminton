@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Astrox 99 Pro vs Li-Ning Halbertec 9000 Power",
@@ -76,9 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "Neither of these is my current doubles racket (that is 1000 Z). The club-session takeaway: 99 Pro still feels like Astrox — rotational smash, familiar Yonex sweet spot. Halbertec 9000 Power feels a touch heavier through contact, which some smash-first players like and which I do not need in my doubles role.\n\nIf your stringer already knows Yonex grommets and BG80, 99 Pro is the lower-friction buy. If your shop is Li-Ning and you want pocketing on the smash, 9000 Power is the demo. Do not pick 9000 Power to 'be different' from Astrox; pick it because your contact already likes a heavier pocket.",
   relatedLinks: [
-    { label: "Read the full Astrox 99 Pro review", href: reviewPath("yy-astrox-99-pro") },
-    { label: "Read the full Halbertec 9000 Power review", href: reviewPath("ln-halbertec-9000-power") },
-    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power — full Halbertec line", href: "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },
     { label: "Source-authority methodology", href: "/methodology/" },

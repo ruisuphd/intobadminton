@@ -9,11 +9,11 @@ import {
 
 describe("enrichmentForReviewArticle", () => {
   it("returns Product schema for a mapped review slug", () => {
-    const article = getBlogArticle("en", "yonex-arcsaber-7-pro-review");
+    const article = getBlogArticle("en", "victor-drivex-12-vs-astrox-88d-pro");
     expect(article).toBeTruthy();
 
     const enrichment = enrichmentForReviewArticle(
-      "yonex-arcsaber-7-pro-review",
+      "victor-drivex-12-vs-astrox-88d-pro",
       article!
     );
 
@@ -22,31 +22,15 @@ describe("enrichmentForReviewArticle", () => {
     expect(enrichment!.product.id).toBeTruthy();
   });
 
-  it("returns Product schema for a (newly mapped) li-ning-axforce-80-review", () => {
-    const article = getBlogArticle("en", "li-ning-axforce-80-review");
+  it("returns Product schema for a mapped comparison slug", () => {
+    const slug = "li-ning-thunder-100-gen-2-vs-gen-1";
+    const article = getBlogArticle("en", slug);
     expect(article).toBeTruthy();
 
-    const enrichment = enrichmentForReviewArticle(
-      "li-ning-axforce-80-review",
-      article!
-    );
+    const enrichment = enrichmentForReviewArticle(slug, article!);
 
     expect(enrichment).not.toBeNull();
-    expect(enrichment!.product.id).toBe("ln-axforce-80");
-  });
-
-  it("returns Product schema for Sprint 8 mapped slugs", () => {
-    const cases: [string, string][] = [
-      ["yonex-nanoflare-700-review", "yy-nanoflare-700-pro-2024"],
-      ["li-ning-aerus-iii-pro-shoes-review", "ln-saga-iii-pro"],
-      ["victor-thruster-falcon-review", "vic-thruster-falcon-enhanced"],
-    ];
-    for (const [slug, productId] of cases) {
-      const article = getBlogArticle("en", slug);
-      expect(article).toBeTruthy();
-      const enrichment = enrichmentForReviewArticle(slug, article!);
-      expect(enrichment?.product.id).toBe(productId);
-    }
+    expect(enrichment!.product.id).toBe("ln-axforce-100-gen-2");
   });
 
   it("returns null when slug has no product map", () => {

@@ -50,7 +50,7 @@ describe("product redirects", () => {
     });
     expect(routes).toContainEqual({
       source: "/review/vic-yu-12/",
-      destination: "/review/victor-yu-12-racket-review/",
+      destination: "/review/victor-drivex-12-vs-astrox-88d-pro/",
     });
   });
 });

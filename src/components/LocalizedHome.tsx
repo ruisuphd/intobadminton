@@ -111,7 +111,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const heroStats = [
     { num: `${HOME_PUBLICATION_LINKS.length}`, label: "original first-reads" },
     { num: "5", label: "named fit factors" },
-    { num: "Div 4", label: "Ireland — founder-tested" },
+    { num: "Div 4", label: "Irish league — the editor's level" },
   ];
 
   return (
@@ -181,8 +181,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 Start with original analysis
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
-                Guides, buying lists, and frames I actually play — the pages a
-                club player cannot get from a spec sheet.
+                Guides, buying lists, and tools — the pages a club player cannot
+                get from a spec sheet.
               </p>
             </div>
             <Link
@@ -301,10 +301,10 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <div className="max-w-2xl">
               <span className="eyebrow">Longer reads</span>
               <h2 className="text-headline mt-2 text-[var(--text)]">
-                Founder-tested and original pieces
+                Original guides and explainers
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
-                Publication reviews only — not one-minute SKU notes.
+                Long-form buying guides and explainers written for this site.
               </p>
             </div>
             <Link

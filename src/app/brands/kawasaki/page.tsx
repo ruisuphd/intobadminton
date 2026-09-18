@@ -136,22 +136,6 @@ const config: BrandPageConfig = {
   ],
   relatedLinks: [
     {
-      label: "Kawasaki Chocolate 88D vs Yonex Astrox 88D Pro",
-      href: reviewPath("kawasaki-chocolate-88d"),
-    },
-    {
-      label: "Kawasaki Master Mao 20 racket review",
-      href: reviewPath("kawasaki-master-mao-20"),
-    },
-    {
-      label: "Kawasaki Star Cross review",
-      href: reviewPath("kawasaki-star-cross"),
-    },
-    {
-      label: "Kawasaki KACE shoes review",
-      href: reviewPath("kawasaki-kace"),
-    },
-    {
       label: "Best beginner badminton rackets",
       href: "/best/beginner-rackets/",
     },

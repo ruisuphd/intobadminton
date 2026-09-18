@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Li-Ning Halbertec 9000 Power vs AxForce 100 Gen 2",
@@ -76,10 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "These are not frames I currently play. Club hits only: smash peak is close; the character is not. Halbertec 9000 Power pockets; AxForce 100 Gen 2 hits more like a stiff attack stick. Players who already like Halbertec 8000 will recognise 9000 Power. Players who already like AxForce 90 will recognise 100 Gen 2.\n\nCross-line inside Li-Ning is a real switch, not a colourway. Demo before you spend flagship money because a friend said 'Li-Ning smash'. If you do not already have a Li-Ning stringer, Yonex 77 Pro or 88S is still the lower-friction club buy in Ireland.",
   relatedLinks: [
-    { label: "Read the full Halbertec 9000 Power review", href: reviewPath("ln-halbertec-9000-power") },
-    { label: "Read the full AxForce 100 Gen 2 review", href: reviewPath("ln-axforce-100-gen-2") },
-    { label: "Li-Ning Halbertec 8000 vs 9000 vs 9000 Power", href: "/review/li-ning-halbertec-8000-vs-9000-vs-9000-power/" },
-    { label: "Li-Ning AxForce 100 Gen 2 vs 100ZZ vs 90 New", href: "/review/li-ning-axforce-100-gen-2-vs-100zz-vs-90-new/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best smash-heavy badminton rackets", href: "/best/smash-heavy-rackets/" },
   ],

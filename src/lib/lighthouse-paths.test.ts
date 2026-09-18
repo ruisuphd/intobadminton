@@ -10,23 +10,17 @@ describe("lighthouse-paths", () => {
     expect(lighthouseUrlToPath("http://localhost:4173/index.html")).toBe("/");
     expect(
       lighthouseUrlToPath(
-        "http://localhost:4173/review/yonex-arcsaber-7-pro-review/index.html"
+        "http://localhost:4173/review/how-to-choose-a-badminton-racket/index.html"
       )
-    ).toBe("/review/yonex-arcsaber-7-pro-review/");
+    ).toBe("/review/how-to-choose-a-badminton-racket/");
   });
 
   it("lists review article slugs from committed Lighthouse CI config", () => {
-    const slugs = lighthouseReviewArticleSlugs();
-    expect(slugs).toContain("yonex-arcsaber-7-pro-review");
-    expect(slugs).toContain("yonex-nanoflare-1000z-review");
-    // Swapped in when the originals were noindexed as thin content —
-    // Lighthouse scores a noindexed page ~0.69 on SEO, which is an error-
-    // level assertion. See src/lib/thin-content.test.ts.
-    expect(slugs).toContain("yonex-comfort-z3-shoes-review");
-    expect(slugs).toContain("yonex-astrox-88d-pro-vs-88s-pro-2024");
-    expect(slugs).toContain("yonex-tour-series-buying-guide");
-    expect(slugs).toContain("how-to-choose-a-badminton-racket");
-    expect(slugs.length).toBe(6);
+    // Only original editorials are published; the translated reviews that
+    // used to fill these slots were removed in Sept 2026.
+    expect(lighthouseReviewArticleSlugs()).toEqual([
+      "how-to-choose-a-badminton-racket",
+    ]);
   });
 
   it("includes every review article path in full Lighthouse path list", () => {

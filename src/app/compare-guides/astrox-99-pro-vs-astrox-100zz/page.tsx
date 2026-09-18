@@ -76,8 +76,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "I have hit 100ZZ and I prefer 100ZZ VA when someone wants that family. Regular 100ZZ is very demanding, surprisingly fast, and tiring across a full match. VA keeps the head-heavy extra-stiff DNA with a load I can actually finish. 99 Pro sits closer to the rest of Astrox — if your smash already has rotation, it flatters you without the 100ZZ punishment.\n\nI would not put a Division 4 player on 100ZZ because a ranking player used it. Demo VA or stay on 77 Pro / 88S. The honest 99 vs 100ZZ question is whether your mishits already disappear. If they do not, 100ZZ will advertise every one of them.",
   relatedLinks: [
-    { label: "Read the full Astrox 99 Pro review", href: reviewPath("yy-astrox-99-pro") },
-    { label: "Read the full Astrox 100ZZ review", href: reviewPath("yy-astrox-100zz") },
     { label: "Astrox 100ZZ Axelsen VA vs Kurenai — generation breakdown", href: reviewPath("yy-astrox-100zz") },
     { label: "Astrox 77 Pro vs Astrox 88S Pro — friendlier alternatives", href: "/compare-guides/astrox-77-pro-vs-88s-pro/" },
     { label: "Yonex brand overview", href: "/brands/yonex/" },

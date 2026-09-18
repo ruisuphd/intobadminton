@@ -24,7 +24,7 @@ describe("catalog-racket-baseline", () => {
     const parsed = validateCatalogRacketBaselineFile(raw);
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
+      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(2);
     }
   });
 
@@ -45,13 +45,13 @@ describe("catalog-racket-baseline", () => {
   });
 
   it("flags href mismatches", () => {
-    const product = catalogProductById("yy-arcsaber-7-pro");
+    const product = catalogProductById("vic-drivex-12");
     expect(product).toBeDefined();
     const issue = evaluateCatalogRacketBaselineQuery(
       {
         id: "test",
-        productId: "yy-arcsaber-7-pro",
-        expectHref: "/product/yy-arcsaber-7-pro/",
+        productId: "vic-drivex-12",
+        expectHref: "/product/vic-drivex-12/",
         expectKind: "review",
       },
       product
@@ -64,18 +64,18 @@ describe("catalog-racket-baseline", () => {
     const parsed = validateCatalogRacketBaselineFile(raw);
     expect(parsed.ok).toBe(true);
     if (!parsed.ok) return;
-    expect(parsed.file.coverage?.minE2eGuards).toBe(44);
-    expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(44);
+    expect(parsed.file.coverage?.minE2eGuards).toBe(2);
+    expect(parsed.file.queries.filter((q) => q.e2e).length).toBe(2);
   });
 
   it("flags editorial kind mismatches", () => {
-    const product = catalogProductById("yy-arcsaber-7-pro");
+    const product = catalogProductById("vic-drivex-12");
     expect(product).toBeDefined();
     const issue = evaluateCatalogRacketBaselineQuery(
       {
         id: "test",
-        productId: "yy-arcsaber-7-pro",
-        expectHref: "/review/yonex-arcsaber-7-pro-review/",
+        productId: "vic-drivex-12",
+        expectHref: "/review/victor-drivex-12-vs-astrox-88d-pro/",
         expectKind: "guide",
       },
       product

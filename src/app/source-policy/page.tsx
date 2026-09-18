@@ -29,6 +29,8 @@ export default function SourcePolicyPage() {
           Reddit, BadmintonCN, BadmintonCentral, blogs, and retailers each have
           their own rights and terms. We do not train models on or republish
           user-generated content from those sources without appropriate rights.
+          Every article on IntoBadminton is original; none is a translation of
+          a forum or social post.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           BadmintonCN search references

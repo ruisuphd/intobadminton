@@ -11,36 +11,37 @@ import {
 
 describe("content-links", () => {
   it("maps product review blog slugs to catalogue ids", () => {
-    expect(reviewProductIdForBlog("yonex-arcsaber-7-pro-review")).toBe(
-      "yy-arcsaber-7-pro"
+    expect(reviewProductIdForBlog("victor-drivex-12-vs-astrox-88d-pro")).toBe(
+      "vic-drivex-12"
     );
   });
 
-  it("finds a hands-on blog slug from a review product id", () => {
-    const slug = blogSlugForReview("yy-arcsaber-7-pro");
-    expect(slug).toBeTruthy();
-  });
-
-  it("returns all mapped blog slugs for multi-review products", () => {
-    const slugs = blogSlugsForReview("yy-astrox-99-pro");
-    expect(slugs.length).toBeGreaterThan(1);
-    expect(slugs).toContain("yonex-astrox-99-pro-gen-1-review");
-  });
-
-  it("maps Nanoflare 1000 Play review to the Play catalogue id", () => {
-    expect(reviewProductIdForBlog("yonex-nanoflare-1000z-play-review")).toBe(
-      "yy-nanoflare-1000-play"
+  it("finds a blog slug from a review product id", () => {
+    expect(blogSlugForReview("vic-drivex-12")).toBe(
+      "victor-drivex-12-vs-astrox-88d-pro"
     );
-    const flagship = blogArticlesForReview("yy-nanoflare-1000z");
-    expect(flagship.map((a) => a.slug)).toContain("yonex-nanoflare-1000z-review");
-    const play = blogArticlesForReview("yy-nanoflare-1000-play");
-    expect(play.map((a) => a.slug)).toContain("yonex-nanoflare-1000z-play-review");
   });
 
-  it("links Play comparison from flagship review editorially", () => {
-    const editorial = editorialComparisonsForReview("yy-nanoflare-1000z");
+  it("returns the mapped blog slugs for a product", () => {
+    expect(blogSlugsForReview("vic-drivex-12")).toEqual([
+      "victor-drivex-12-vs-astrox-88d-pro",
+    ]);
+    expect(blogSlugsForReview("yy-nanoflare-1000z")).toEqual([]);
+  });
+
+  it("returns article records for a mapped product", () => {
+    const articles = blogArticlesForReview("vic-drivex-12");
+    expect(articles.map((a) => a.slug)).toEqual([
+      "victor-drivex-12-vs-astrox-88d-pro",
+    ]);
+  });
+
+  it("links editorial comparisons through relatedReviewProductId", () => {
+    const editorial = editorialComparisonsForReview("ln-axforce-100-gen-2");
     expect(
-      editorial.some((link) => link.href.includes("yonex-nanoflare-1000z-play-review"))
+      editorial.some((link) =>
+        link.href.includes("li-ning-thunder-100-gen-2-vs-gen-1")
+      )
     ).toBe(true);
   });
 
@@ -56,7 +57,7 @@ describe("content-links", () => {
   });
 
   it("merges manual and relatedReviewProductId editorial links", () => {
-    const links = editorialComparisonsForReview("yy-nanoflare-1000z");
+    const links = editorialComparisonsForReview("ln-axforce-100-gen-2");
     expect(links.length).toBeGreaterThan(0);
     expect(links.every((link) => link.href.startsWith("/review/"))).toBe(
       true

@@ -36,7 +36,7 @@ describe("commercial-grip-baseline", () => {
     const parsed = validateCommercialGripBaselineFile(raw);
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
+      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(5);
     }
   });
 
@@ -69,15 +69,15 @@ describe("commercial-grip-baseline", () => {
   });
 
   it("flags link label mismatches", () => {
-    const product = catalogProductById("ln-gp100-pro-grip");
+    const product = catalogProductById("yy-ac102c");
     expect(product).toBeDefined();
     const issue = evaluateCommercialGripBaselineQuery(
       {
         id: "test",
-        productId: "ln-gp100-pro-grip",
-        expectHref: "/review/li-ning-gp100-pro-overgrip-review/",
-        expectKind: "review",
-        expectLinkLabel: "Read grip guide →",
+        productId: "yy-ac102c",
+        expectHref: "/review/yonex-grip-sizes-explained/",
+        expectKind: "guide",
+        expectLinkLabel: "Read full review →",
       },
       product
     );

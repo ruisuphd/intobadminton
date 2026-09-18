@@ -303,7 +303,6 @@ Priority URLs:
 - `https://intobadminton.com/`
 - `https://intobadminton.com/quiz/`
 - `https://intobadminton.com/best/beginner-rackets/`
-- `https://intobadminton.com/review/yonex-arcsaber-7-pro-review/`
 - `https://intobadminton.com/compare-guides/yonex-astrox-vs-nanoflare/`
 
 ## Google Search Console

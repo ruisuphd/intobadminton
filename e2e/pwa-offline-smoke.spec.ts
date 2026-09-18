@@ -18,8 +18,8 @@ async function ensureServiceWorker(page: import("@playwright/test").Page) {
   await page.waitForFunction(
     async () => {
       const keys = await caches.keys();
-      if (!keys.some((key) => key.startsWith("ib-v45"))) return false;
-      const cache = await caches.open("ib-v45-static");
+      if (!keys.some((key) => key.startsWith("ib-v46"))) return false;
+      const cache = await caches.open("ib-v46-static");
       return (await cache.keys()).length >= 5;
     },
     undefined,
@@ -33,7 +33,7 @@ test("service worker precaches search, review, and offline shells", async ({
   await ensureServiceWorker(page);
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open("ib-v45-static");
+    const cache = await caches.open("ib-v46-static");
     return (await cache.keys()).map((request) => {
       try {
         return new URL(request.url).pathname;
@@ -119,16 +119,16 @@ test("precached homepage featured review loads offline after prior visit", async
 }) => {
   await ensureServiceWorker(page);
 
-  await page.goto("/review/gosen-ryoga-shiden-review/");
+  await page.goto("/review/badminton-bag-loadout/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /Ryoga Shiden/i
+    /badminton bag/i
   );
 
   await context.setOffline(true);
 
-  await page.goto("/review/gosen-ryoga-shiden-review/");
+  await page.goto("/review/badminton-bag-loadout/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /Ryoga Shiden/i
+    /badminton bag/i
   );
 });
 
@@ -143,9 +143,9 @@ test("precached PDP and review load offline after prior visit", async ({
     /Grpht Thrttl/i
   );
 
-  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await page.goto("/review/how-to-choose-a-badminton-racket/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /Arcsaber 7 Pro/i
+    /choose a badminton racket/i
   );
 
   await context.setOffline(true);
@@ -155,9 +155,9 @@ test("precached PDP and review load offline after prior visit", async ({
     /Grpht Thrttl/i
   );
 
-  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await page.goto("/review/how-to-choose-a-badminton-racket/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    /Arcsaber 7 Pro/i
+    /choose a badminton racket/i
   );
 });
 

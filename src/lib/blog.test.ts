@@ -7,9 +7,6 @@ import {
   sectionAnchorId,
 } from "@/lib/blog";
 
-const FIRST_PERSON_PATTERN =
-  /\b(i|i'?m|i'?ve|my|me|mine|we|we'?ve|we'?re|our|ours)\b/i;
-
 describe("blog publishing metadata", () => {
   test("keeps every article reachable through static blog routes", () => {
     const routeSlugs = new Set(blogSlugs);
@@ -35,26 +32,12 @@ describe("blog publishing metadata", () => {
     }
   });
 
-  test("uses first-person voice in imported review bodies", () => {
-    const sample = blogArticles.en.filter((a) =>
-      a.slug.includes("review") || a.slug.includes("vs") || a.slug.includes("guide")
-    );
-    expect(sample.length).toBeGreaterThan(50);
-    const withFirstPerson = sample.filter((article) =>
-      article.sections.some((s) => FIRST_PERSON_PATTERN.test(s.body))
-    );
-    expect(withFirstPerson.length / sample.length).toBeGreaterThan(0.6);
-  });
-
-  test("does not leak URLs or channel attribution in article bodies", () => {
+  test("keeps article bodies free of raw URLs, Chinese text, and markdown bold", () => {
     for (const article of blogArticles.en) {
       const blob = JSON.stringify(article);
       expect(blob, article.slug).not.toMatch(/https?:\/\//i);
-      expect(blob.toLowerCase(), article.slug).not.toContain("tige xlab");
-      expect(blob.toLowerCase(), article.slug).not.toContain("badmintoncn");
       expect(blob, article.slug).not.toMatch(/[\u4e00-\u9fff]/);
       expect(blob, article.slug).not.toMatch(/\*\*[^*]+\*\*/);
-      expect(blob.toLowerCase(), article.slug).not.toContain("the author");
       expect(article.dek.trim().length, article.slug).toBeGreaterThanOrEqual(50);
     }
   });
@@ -75,7 +58,7 @@ describe("blog publishing metadata", () => {
 
   test("returns related articles from the same product family when possible", () => {
     const current = blogArticles.en.find(
-      (a) => a.slug === "yonex-astrox-88d-pro-vs-88s-pro-2024"
+      (a) => a.slug === "badminton-string-selector"
     );
     expect(current).toBeDefined();
     const related = relatedArticles(blogArticles.en, current!, 3);

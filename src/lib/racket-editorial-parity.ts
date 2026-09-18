@@ -113,6 +113,8 @@ export function evaluateRacketEditorialParity(
   for (const pdpRow of pdp.queries) {
     if (pdpRow.expectCategory !== "racket") continue;
     if (PDP_PARITY_EXCLUSIONS.has(pdpRow.productId)) continue;
+    // A no-review row guards the absence of an exit; it has no catalog twin.
+    if (pdpRow.expectNoReviewSlug) continue;
     if (!catalogProductIds.has(pdpRow.productId)) {
       issues.push({
         productId: pdpRow.productId,

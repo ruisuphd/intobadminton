@@ -96,13 +96,15 @@ describe("pdp-baseline", () => {
   });
 
   it("resolves reverse review slug from map", () => {
-    expect(reviewSlugForProductId("yy-arcsaber-7-pro", map)).toBe(
-      "yonex-arcsaber-7-pro-review"
+    expect(reviewSlugForProductId("vic-drivex-12", map)).toBe(
+      "victor-drivex-12-vs-astrox-88d-pro"
     );
   });
 
   it("resolves sibling alias review slugs from map", () => {
-    expect(reviewSlugForProductId("vic-thruster-ryuga-ii", map)).toBe(
+    // Inline map: the sibling's committed review was removed in Sept 2026.
+    const aliasMap = { "victor-thruster-9900-curiosity-review": "vic-thruster-9900" };
+    expect(reviewSlugForProductId("vic-thruster-ryuga-ii", aliasMap)).toBe(
       "victor-thruster-9900-curiosity-review"
     );
   });

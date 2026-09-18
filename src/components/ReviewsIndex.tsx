@@ -34,8 +34,7 @@ export function ReviewsIndex({ locale }: { locale: SiteLocale }) {
         <header className="space-y-3">
           <h1 className="text-display text-[var(--text)]">Reviews</h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            Original guides and founder-tested pieces first. Short court notes
-            stay off the default list.
+            Original buying guides and explainers, written from club play.
           </p>
         </header>
 

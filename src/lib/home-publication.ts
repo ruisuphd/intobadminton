@@ -1,5 +1,5 @@
 /**
- * First-screen homepage shelf: original guides, best-ofs, and founder reviews.
+ * First-screen homepage shelf: original guides, best-ofs, and tools.
  * Not a count of SKU notes.
  */
 export type HomePublicationLink = {
@@ -29,10 +29,10 @@ export const HOME_PUBLICATION_LINKS: readonly HomePublicationLink[] = [
     dek: "Power line versus speed line, mapped to singles, doubles, and front-court roles.",
   },
   {
-    href: "/review/yonex-nanoflare-1000z-review/",
-    kicker: "Founder review",
-    title: "Nanoflare 1000 Z — current doubles frame",
-    dek: "Why I play it in Division 4 Ireland, and who should skip the Z-axis speed.",
+    href: "/tools/string-tension-calculator/",
+    kicker: "Tool",
+    title: "String tension calculator",
+    dek: "A starting tension from your level, racket frame, and arm-comfort signals.",
   },
   {
     href: "/best/beginner-rackets/",

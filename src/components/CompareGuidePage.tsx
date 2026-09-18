@@ -9,7 +9,7 @@ import { EditorialNotice } from "@/components/EditorialNotice";
 import { JsonLd } from "@/components/JsonLd";
 import { catalogHrefFromCompareSlug } from "@/lib/catalog-url";
 import { companyInfo } from "@/lib/company";
-import { reviewPath } from "@/lib/review-pages";
+import { editorialReviewHref, reviewPath } from "@/lib/review-pages";
 import { relatedReadingForPath } from "@/lib/related-content";
 import { articleJsonLd } from "@/lib/structured-data";
 
@@ -18,7 +18,7 @@ export type CompareSide = {
   name: string;
   /** Brand, e.g. "Yonex". */
   brand: string;
-  /** Optional `products.json` id; if set, name links to the blog review. */
+  /** Optional `products.json` id; links to its review, or its spec page when none is published. */
   productId?: string;
   /** One-line description of who the racket is built for. */
   bestFor: string;
@@ -72,12 +72,15 @@ export type CompareGuideConfig = {
 
 function sideAnchor(side: CompareSide) {
   if (!side.productId) return null;
+  const hasReview = editorialReviewHref(side.productId) !== null;
   return (
     <Link
       href={reviewPath(side.productId)}
       className="text-[var(--color-accent)] hover:underline"
     >
-      Read the full {side.brand} {side.name} review →
+      {hasReview
+        ? `Read the full ${side.brand} ${side.name} review →`
+        : `See ${side.brand} ${side.name} specs →`}
     </Link>
   );
 }

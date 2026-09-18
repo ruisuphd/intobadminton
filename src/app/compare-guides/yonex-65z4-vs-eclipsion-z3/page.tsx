@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex 65 Z4 vs Eclipsion Z3 — Power Cushion shoes compared",
@@ -76,8 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "My current shoe is Comfort Z3, switched from Aerus Z2. This page is 65 Z4 vs Eclipsion Z3 — both Yonex, both shoes I have worn for blocks of club nights, neither is my current pair. 65 Z4 is the lighter, quicker shoe on a dry wooden hall. Eclipsion Z3 is the one I used when the schedule stacked matches and I wanted more structure under the landing.\n\nIf your knees already complain after smashes, skip both of these and look at Comfort Z3 (heavier, more cushion). If you are light, dry-court, and healthy, 65 Z4 is the session shoe. Do not buy Eclipsion because it looks more 'pro' if you only play once a week — you will feel the extra bulk without using the protection.",
   relatedLinks: [
-    { label: "Read the full 65 Z4 review", href: reviewPath("yy-power-cushion-65-z4") },
-    { label: "Read the full Eclipsion Z3 review", href: reviewPath("yy-eclipsion-z3") },
     { label: "Yonex shoes overview", href: "/brands/yonex/" },
     { label: "Badminton shoe fit and stability guide", href: "/guides/shoes-footwork/" },
     { label: "Badminton vs tennis shoes — court shoe explainer", href: "/compare-guides/badminton-vs-tennis-shoes/" },

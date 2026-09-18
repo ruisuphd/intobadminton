@@ -58,7 +58,7 @@ describe("racket-editorial-parity", () => {
       console.error(formatRacketEditorialParityIssues(result));
     }
     expect(result.ok).toBe(true);
-    expect(result.checked).toBeGreaterThanOrEqual(16);
+    expect(result.checked).toBeGreaterThanOrEqual(2);
   });
 
   it("flags missing PDP rows", () => {

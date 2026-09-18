@@ -24,7 +24,12 @@ test("Anta brand page renders catalogue context", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: /anta badminton/i })
   ).toBeVisible();
-  await expect(page.getByRole("link", { name: /anta ah600w review/i })).toBeVisible();
+  // The translated AH600W review was removed in Sept 2026; the pick links
+  // to its spec page and no review link remains.
+  await expect(
+    page.locator('a[href="/product/anta-ah600w/"]').first()
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: /anta ah600w review/i })).toHaveCount(0);
 });
 
 test("Anta brand page links to filtered catalog browse", async ({ page }) => {

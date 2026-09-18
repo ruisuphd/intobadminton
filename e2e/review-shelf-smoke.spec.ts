@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test("review article shows decision-path shelf", async ({ page }) => {
-  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await page.goto("/review/victor-drivex-12-vs-astrox-88d-pro/");
 
   await expect(
     page.getByRole("heading", { name: "Keep reading" })
@@ -23,7 +23,7 @@ test("explainer review shows decision-path shelf", async ({ page }) => {
 });
 
 test("helpful reaction records vote without API", async ({ page }) => {
-  await page.goto("/review/yonex-arcsaber-7-pro-review/");
+  await page.goto("/review/victor-drivex-12-vs-astrox-88d-pro/");
 
   await page.getByRole("button", { name: "Yes" }).click();
   await expect(page.getByText("Thanks for the feedback.")).toBeVisible();

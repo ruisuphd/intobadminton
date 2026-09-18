@@ -13,7 +13,7 @@ describe("mapped-review-slugs", () => {
   });
 
   it("resolves product ids for mapped slugs", () => {
-    const slug = "yonex-arcsaber-7-pro-review";
-    expect(mappedProductIdForSlug(slug)).toBe("yy-arcsaber-7-pro");
+    const slug = "victor-drivex-12-vs-astrox-88d-pro";
+    expect(mappedProductIdForSlug(slug)).toBe("vic-drivex-12");
   });
 });

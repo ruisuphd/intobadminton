@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Astrox 88D Pro vs Li-Ning AxForce 90 New",
@@ -76,9 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "I have hit 88D Pro 2024. Compared with 77 Pro, it is harder to generate power — for most players I still recommend 77 Pro unless they already load a stiffer Astrox. AxForce 90 New is not a frame I currently play; the comparison is club-hit, not a season in the bag. The practical split: 88D Pro if you want Yonex smash geometry with a slightly faster unload; AxForce 90 New if your stringer and spare grommets are already Li-Ning and your smash timing is already clean.\n\nFatigue is the tie-break. Late in a third game, 88D Pro has been the more forgiving of the two in the sessions I have had. That is why I would send a Division 4 player to 88D Pro or 77 Pro before an AxForce flagship.",
   relatedLinks: [
-    { label: "Read the full Astrox 88D Pro 2024 review", href: reviewPath("yy-astrox-88d-pro-2024") },
-    { label: "Li-Ning AxForce 90 New vs AxForce 80 vs Yonex 88DP — three-way", href: "/review/li-ning-axforce-90-new-vs-axforce-80-and-yonex-88dp/" },
-    { label: "Astrox 88D Pro vs Astrox 88S Pro 2024", href: "/review/yonex-astrox-88d-pro-vs-88s-pro-2024/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
     { label: "Source-authority methodology", href: "/methodology/" },

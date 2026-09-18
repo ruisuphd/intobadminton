@@ -164,7 +164,7 @@
     },
     {
       "query": "BG80",
-      "expectHrefContains": "l69-string",
+      "expectHrefContains": "badminton-string-selector",
       "minResults": 1,
       "note": "String model code in body",
       "e2e": true
