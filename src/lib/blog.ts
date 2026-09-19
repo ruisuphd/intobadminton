@@ -15,7 +15,7 @@ export const blogSlugs = [
   "used-racket-depreciation",
   "victor-drivex-12-vs-astrox-88d-pro",
   "yonex-grip-sizes-explained",
-];
+] as const;
 
 export type BlogSlug = (typeof blogSlugs)[number];
 

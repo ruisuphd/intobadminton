@@ -46,7 +46,7 @@ describe("review article product schema wiring", () => {
 
   it("maps review slugs only to valid catalogue ids and published articles", () => {
     const map = blogReviewMap as Record<string, string>;
-    const published = new Set(blogArticles.en.map((article) => article.slug));
+    const published = new Set<string>(blogArticles.en.map((article) => article.slug));
     for (const [slug, id] of Object.entries(map)) {
       expect(catalog.some((p) => p.id === id), id).toBe(true);
       expect(published.has(slug), slug).toBe(true);
