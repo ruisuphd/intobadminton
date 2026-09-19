@@ -7,15 +7,8 @@
 > process: README "Articles (hand-maintained, originals only)" and
 > `docs/ADSENSE_RESUBMIT.md`.
 
-> Status (2026-05-24): this document is historical. The live blog pipeline now
-> uses `blogs/*.md` English sections as editorial source and imports them into
-> `src/data/blog-articles.json` with `scripts/blog-import-option-b.py`.
-> Current scale: 124+ local source files mapped onto 134 preserved public blog
-> URLs. Run `npm run blog:import && npm run blog:validate` after editing blog
-> English sections.
-
 **Historical source:** `/blogs/` (originally 72 harvested forum markdown files; expanded to ~148 files across May 19–22 source additions)
-**Current target:** generated English blog JSON in `src/data/blog-articles.json`
+**Historical target:** English blog JSON in `src/data/blog-articles.json` (now hand-maintained, originals only)
 **Historical template:** `src/lib/blog-source-reviews.ts` (superseded by the Option B import pipeline)
 **Catalogue:** `src/data/products.json`
 

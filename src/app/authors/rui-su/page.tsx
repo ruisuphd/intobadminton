@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   // The root layout's title template appends " | IntoBadminton" — keep the
   // page title brand-free here so we don't emit the brand twice (the
   // postbuild SEO audit fails on `duplicate-title-brand`).
-  title: "Rui Su — Founder & lead reviewer",
+  title: "Rui Su — Founder & editor",
   description:
-    "Rui Su is the founder of IntoBadminton — a competitive Division 4 Ireland player who has trained under former Malaysia national-team and China provincial-team coaches. Equipment reviews and the finder methodology are signed by Rui.",
+    "Rui Su is the founder of IntoBadminton — a competitive Division 4 Ireland player who has trained under former Malaysia national-team and China provincial-team coaches. Buying guides, comparisons, and the finder methodology are signed by Rui.",
   alternates: pageAlternates(PATH),
   openGraph: {
     title: "Rui Su — Founder, IntoBadminton",
@@ -102,7 +102,7 @@ export default function RuiSuAuthorPage() {
 
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-            Founder · Reviewer · Coach lineage
+            Founder · Editor · Coach lineage
           </p>
           <h1 className="text-display text-[var(--text)]">
             {companyInfo.founderName}

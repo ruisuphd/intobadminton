@@ -9,7 +9,7 @@ This is an engineering audit, not legal advice.
 - **AdSense/CMP risk:** AdSense no longer loads from consent alone. It requires `NEXT_PUBLIC_ADSENSE_MODE=cmp_tcf`, a configured client, a slot, and user ad consent.
 - **Cookie dark-pattern risk:** The banner now gives a prominent reject option and keeps non-essential storage off by default.
 - **Storage transparency:** Cookie settings and the cookie policy now list necessary, analytics, advertising, and personalization storage categories.
-- **Copyright/source risk:** Blog and guide content is original analysis. Third-party review evidence remains metadata-summary/link-only unless rights allow more.
+- **Copyright/source risk:** Every published article is original. Third-party review evidence appears only as short credited summaries or links; no forum text is copied or translated. The 196 articles translated from forum posts were removed in Sept 2026.
 - **Security reporting:** Added `/.well-known/security.txt` and a public security page.
 - **Static-hosting headers:** Added Cloudflare/Netlify-style `_headers` and Firebase Hosting header configuration.
 

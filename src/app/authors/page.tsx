@@ -39,7 +39,7 @@ const AUTHORS = [
   {
     slug: "rui-su",
     name: companyInfo.founderName,
-    role: "Founder and reviewer",
+    role: "Founder and editor",
     summary:
       "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. I sign every IntoBadminton article and the finder methodology.",
   },
