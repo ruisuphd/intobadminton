@@ -38,7 +38,7 @@ describe("shuttle-editorial-parity", () => {
     expect(editorialHrefToSlug("/product/yy-bg65/")).toBeNull();
   });
 
-  it("passes all committed string baselines with three-way PDP parity", () => {
+  it("passes all committed shuttle baselines with three-way PDP parity", () => {
     const catalogRaw = JSON.parse(readFileSync(CATALOG_BASELINE_PATH, "utf8"));
     const commercialRaw = JSON.parse(
       readFileSync(COMMERCIAL_BASELINE_PATH, "utf8")
@@ -62,7 +62,13 @@ describe("shuttle-editorial-parity", () => {
       console.error(formatShuttleEditorialParityIssues(result));
     }
     expect(result.ok).toBe(true);
-    expect(result.checked).toBeGreaterThanOrEqual(0);
+    if (catalog.file.queries.length === 0) {
+      // No shuttle review is published, so no shuttle PDP row may expect one.
+      const expectingReview = pdp.file.queries.filter(
+        (row) => row.expectCategory === "shuttle" && row.expectReviewSlug
+      );
+      expect(expectingReview).toEqual([]);
+    }
   });
 
   it("flags missing PDP rows", () => {

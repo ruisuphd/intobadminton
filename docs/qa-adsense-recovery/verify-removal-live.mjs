@@ -114,7 +114,7 @@ const STALE_COPY = [
 ];
 const textOf = (html) =>
   html
-    .replace(/<script[\s\S]*?<\/script>/g, " ")
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/gi, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&#x27;/g, "'");
 const copyPages = [

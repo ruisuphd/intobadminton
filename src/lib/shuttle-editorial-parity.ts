@@ -111,7 +111,7 @@ export function evaluateShuttleEditorialParity(
     if (!catalogProductIds.has(pdpRow.productId)) {
       issues.push({
         productId: pdpRow.productId,
-        message: "PDP shuttle row missing from catalog string baseline",
+        message: "PDP shuttle row missing from catalog shuttle baseline",
       });
     }
   }

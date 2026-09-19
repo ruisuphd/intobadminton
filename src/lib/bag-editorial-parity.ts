@@ -111,7 +111,7 @@ export function evaluateBagEditorialParity(
     if (!catalogProductIds.has(pdpRow.productId)) {
       issues.push({
         productId: pdpRow.productId,
-        message: "PDP bag row missing from catalog string baseline",
+        message: "PDP bag row missing from catalog bag baseline",
       });
     }
   }

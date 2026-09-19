@@ -111,7 +111,7 @@ export function evaluateGripEditorialParity(
     if (!catalogProductIds.has(pdpRow.productId)) {
       issues.push({
         productId: pdpRow.productId,
-        message: "PDP grip row missing from catalog string baseline",
+        message: "PDP grip row missing from catalog grip baseline",
       });
     }
   }
