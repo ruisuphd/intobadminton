@@ -47,9 +47,9 @@ const CORE_OFFLINE_RECOVERY_LINKS = [
     description: "Precached index — open articles you visited before.",
   },
   {
-    href: "/review/yonex-arcsaber-7-pro-review/",
-    label: "Arcsaber 7 Pro review",
-    description: "Precached — flagship first-person racket review.",
+    href: "/review/how-to-choose-a-badminton-racket/",
+    label: "How to choose a racket",
+    description: "Precached — racket buying guide for beginners and intermediates.",
   },
   {
     href: "/product/yy-grpht-thrttl/",
@@ -394,7 +394,6 @@ export const CRUX_OFFLINE_RECOVERY_PATHS = [
   "/best/rackets-under-150/",
   "/best/rackets-under-200/",
   "/review/",
-  "/review/yonex-arcsaber-7-pro-review/",
   "/tools/string-tension-calculator/",
   "/compare-guides/",
   "/compare-guides/yonex-astrox-vs-nanoflare/",

@@ -105,7 +105,7 @@ const config: BrandPageConfig = {
       line: "MoJun",
       bestFor: "Arcsaber 11 Pro alternative",
       priceUsd: 155,
-      href: "/review/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
+      href: reviewPath("bonny-mojun"),
     },
     {
       name: "Bonny Leisu 800",
@@ -138,22 +138,6 @@ const config: BrandPageConfig = {
     },
   ],
   relatedLinks: [
-    {
-      label: "Bonny Snake Breath review (TiGe XLab attributed)",
-      href: reviewPath("bonny-snake-breath"),
-    },
-    {
-      label: "Bonny ZhanGui Dao 8888AX Ultra review",
-      href: "/review/bonny-zhangui-dao-8888ax-ultra-review/",
-    },
-    {
-      label: "Bonny MoJun vs Arcsaber 11 Pro attack review",
-      href: "/review/bonny-mojun-vs-arcsaber-11-pro-attack-racket-review/",
-    },
-    {
-      label: "Bonny Leisu 800 review",
-      href: reviewPath("bonny-leisu-800"),
-    },
     {
       label: "Best beginner badminton rackets",
       href: "/best/beginner-rackets/",

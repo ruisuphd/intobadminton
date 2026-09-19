@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
  * Regenerate `src/data/home-featured-reviews.json` from `blog-articles.json`.
- * Homepage featured slots are publication pieces only: original editorial or
- * founder-firsthand, long enough to read, never a 1–2 minute court note.
+ * Homepage featured slots are original editorial only (`source: null` in the
+ * slug source map), long enough to read. A rewritten founder review qualifies
+ * once its source entry is cleared, never while it is derived from a forum post.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -18,20 +19,9 @@ const sourceMap = JSON.parse(
 const reviewProductMap = JSON.parse(
   readFileSync(join(root, "src/data/blog-review-product-map.json"), "utf8")
 );
-const products = JSON.parse(
-  readFileSync(join(root, "src/data/products.json"), "utf8")
-);
 
 const MIN_BODY_WORDS = 800;
 const MIN_MINUTES = 4;
-const FOUNDER_NOTE = /Founder (?:firsthand|current)/i;
-
-const founderProductIds = new Set(
-  products
-    .filter((product) => FOUNDER_NOTE.test(product.editorNote ?? ""))
-    .map((product) => product.id)
-);
-
 function bodyWords(article) {
   return article.sections
     .flatMap((section) => section.body.split(/\s+/))
@@ -49,25 +39,16 @@ function isOriginal(slug) {
   return sourceMap[slug] == null;
 }
 
-function isFounderFirsthand(slug) {
-  const productId = reviewProductMap[slug];
-  return Boolean(productId && founderProductIds.has(productId));
-}
-
 function isPublication(article) {
   const words = bodyWords(article);
   if (words < MIN_BODY_WORDS) return false;
   if (readingMinutes(article) < MIN_MINUTES) return false;
-  return isOriginal(article.slug) || isFounderFirsthand(article.slug);
+  return isOriginal(article.slug);
 }
 
 const PREFERRED = [
   "how-to-choose-a-badminton-racket",
   "badminton-string-selector",
-  "yonex-nanoflare-1000z-review",
-  "yonex-comfort-z3-shoes-review",
-  "yonex-astrox-88d-pro-vs-88s-pro-2024",
-  "yonex-arcsaber-7-pro-review",
 ];
 
 const bySlug = new Map(articles.map((article) => [article.slug, article]));

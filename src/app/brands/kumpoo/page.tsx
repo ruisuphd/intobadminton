@@ -62,7 +62,7 @@ const config: BrandPageConfig = {
       name: "JS-67 and JS-63 — premium strings",
       bestFor: "Club-durability buyers (JS-67) and thin-gauge tournament players (JS-63)",
       description:
-        "Two premium strings covering durability-versus-repulsion trade-offs. JS-67 is the 0.67mm club-durability string with a distinctive ice-blue colour signature. JS-63 (subtitled 音爆 / Sonic Boom) is the 0.63mm thin-gauge tournament-tier repulsion option. Gauge dominates the buying decision — see the dedicated comparison for the buyer-question filter.",
+        "Two premium strings covering durability-versus-repulsion trade-offs. JS-67 is the 0.67mm club-durability string with a distinctive ice-blue colour signature. JS-63 (subtitled 音爆 / Sonic Boom) is the 0.63mm thin-gauge tournament-tier repulsion option. Gauge dominates the buying decision.",
       signatureModels: [
         "JS-67 String",
         "JS-63 Sonic Boom String",
@@ -89,7 +89,7 @@ const config: BrandPageConfig = {
       line: "Strings",
       bestFor: "Club durability with ice-blue colour signature",
       priceUsd: 12,
-      href: "/review/kumpoo-js-67-string-review/",
+      href: reviewPath("kumpoo-js-67-string"),
     },
     {
       name: "Kumpoo KH-G805 Lite Pro shoes",
@@ -106,7 +106,7 @@ const config: BrandPageConfig = {
     },
     {
       q: "Shura II vs Shanhai NEW — which Kumpoo flagship should I buy?",
-      a: "By playing identity. Shura II for aggressive attack — head-heavy, stiffer shaft, demanding swing profile, violent-totem styling. Shanhai NEW for controlled attack — slightly more rounded weight, more forgiving sweet spot, controlled-attack identity. The two are not redundant; they emphasise different attack identities within the same flagship-tier price range. See the dedicated comparison article for the buyer-question filter.",
+      a: "By playing identity. Shura II for aggressive attack — head-heavy, stiffer shaft, demanding swing profile, violent-totem styling. Shanhai NEW for controlled attack — slightly more rounded weight, more forgiving sweet spot, controlled-attack identity. The two are not redundant; they emphasise different attack identities within the same flagship-tier price range.",
     },
     {
       q: "JS-67 vs JS-63 strings — which to buy?",
@@ -122,26 +122,6 @@ const config: BrandPageConfig = {
     },
   ],
   relatedLinks: [
-    {
-      label: "Kumpoo Shanhai NEW racket review",
-      href: reviewPath("kumpoo-shanhai-new"),
-    },
-    {
-      label: "Kumpoo Shura II racket review",
-      href: reviewPath("kumpoo-shura-2"),
-    },
-    {
-      label: "Kumpoo JS-67 string review",
-      href: "/review/kumpoo-js-67-string-review/",
-    },
-    {
-      label: "Kumpoo KH-G805 Lite Pro shoes review",
-      href: reviewPath("kumpoo-kh-g805-lite-pro"),
-    },
-    {
-      label: "Kumpoo — the fourth credible badminton brand decoded",
-      href: "/review/kumpoo-fourth-major-badminton-brand-profile/",
-    },
     {
       label: "Best beginner badminton rackets",
       href: "/best/beginner-rackets/",

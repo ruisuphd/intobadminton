@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Yonex Nanoflare 800 Pro vs Victor Auraspeed HS Plus",
@@ -76,10 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "800 Pro is the Nanoflare I hit at club when 1000 Z is not in my hand. Same family speed, less Z-axis drama. HS Plus sits in the same speed band with a slightly more flickable shaft. I would default a first mid-flagship speed buyer to 800 Pro because Yonex spec pages and spare grommets are easier to source in Ireland.\n\nIf your shop is Victor-native and you already like Auraspeed, HS Plus is not a consolation prize — it is the in-family speed frame. Do not buy both. Pick the brand your stringer stocks.",
   relatedLinks: [
-    { label: "Read the full Nanoflare 800 Pro review", href: reviewPath("yy-nanoflare-800-pro-2024") },
-    { label: "Read the full Auraspeed HS Plus review", href: reviewPath("vic-auraspeed-hs-plus") },
-    { label: "Nanoflare 800 Pro and Victor HS Plus — extended notes", href: "/review/yonex-nanoflare-800-pro-and-victor-hs-plus/" },
-    { label: "Yonex Nanoflare 700, 700 Pro, 1000Z — speed series", href: "/review/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning — brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
   ],

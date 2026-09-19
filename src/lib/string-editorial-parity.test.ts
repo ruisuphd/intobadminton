@@ -62,7 +62,7 @@ describe("string-editorial-parity", () => {
       console.error(formatStringEditorialParityIssues(result));
     }
     expect(result.ok).toBe(true);
-    expect(result.checked).toBeGreaterThanOrEqual(6);
+    expect(result.checked).toBeGreaterThanOrEqual(5);
   });
 
   it("flags missing PDP rows", () => {

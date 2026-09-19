@@ -62,7 +62,7 @@ describe("grip-editorial-parity", () => {
       console.error(formatGripEditorialParityIssues(result));
     }
     expect(result.ok).toBe(true);
-    expect(result.checked).toBeGreaterThanOrEqual(6);
+    expect(result.checked).toBeGreaterThanOrEqual(5);
   });
 
   it("flags missing PDP rows", () => {

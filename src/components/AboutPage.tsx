@@ -34,8 +34,8 @@ const copyEn: Copy = {
   ],
   editorialPrinciples: [
     {
-      title: "I don't republish forum reviews as content.",
-      body: "SKU court notes that started as Chinese-language community reports are noindexed and are not AdSense inventory. Indexed pages are original analysis or founder-firsthand tests. Community threads are cited as themes with links — never copied or translated as the article body.",
+      title: "I don't republish other people's reviews.",
+      body: "Every article on the site is original to IntoBadminton. Community threads — BadmintonCN, BadmintonCentral, Reddit — are research: when one shapes a recommendation, it is summarised in a sentence or two and credited by name, never copied or translated into an article. I only write in the first person about gear I have played, and product cards mark which products those are.",
     },
     {
       title: "Confidence is visible.",

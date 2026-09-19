@@ -106,13 +106,13 @@ test("catalog links Yonex BG80 Power string to string-selector guide", async ({
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });
 
-test("catalog links Li-Ning L69 string to dedicated review", async ({
+test("catalog links Li-Ning L69 string to its spec page", async ({
   page,
 }) => {
   await page.goto("/catalog/?cat=string&brand=Li-Ning");
 
   await page.getByRole("link", { name: /L69/i }).first().click();
 
-  await expect(page).toHaveURL(/\/review\/li-ning-l69-string-review\/?$/);
+  await expect(page).toHaveURL(/\/product\/ln-l69-string\/?$/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });

@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   // The root layout's title template appends " | IntoBadminton" — keep the
   // page title brand-free here so we don't emit the brand twice (the
   // postbuild SEO audit fails on `duplicate-title-brand`).
-  title: "Rui Su — Founder & lead reviewer",
+  title: "Rui Su — Founder & editor",
   description:
-    "Rui Su is the founder of IntoBadminton — a competitive Division 4 Ireland player who has trained under former Malaysia national-team and China provincial-team coaches. Equipment reviews and the finder methodology are signed by Rui.",
+    "Rui Su is the founder of IntoBadminton — a competitive Division 4 Ireland player who has trained under former Malaysia national-team and China provincial-team coaches. Buying guides, comparisons, and the finder methodology are signed by Rui.",
   alternates: pageAlternates(PATH),
   openGraph: {
     title: "Rui Su — Founder, IntoBadminton",
     description:
-      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. Signs every IntoBadminton equipment review.",
+      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. Signs every IntoBadminton article and guide.",
     url: PATH,
     type: "profile",
     siteName: "IntoBadminton",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rui Su — Founder, IntoBadminton",
     description:
-      "Competitive Division 4 Ireland player. Signs every IntoBadminton equipment review.",
+      "Competitive Division 4 Ireland player. Signs every IntoBadminton article and guide.",
   },
 };
 
@@ -102,7 +102,7 @@ export default function RuiSuAuthorPage() {
 
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-wide text-[var(--color-subtle)]">
-            Founder · Reviewer · Coach lineage
+            Founder · Editor · Coach lineage
           </p>
           <h1 className="text-display text-[var(--text)]">
             {companyInfo.founderName}
@@ -132,7 +132,7 @@ export default function RuiSuAuthorPage() {
               <strong className="text-[var(--text)]">Coaches.</strong>{" "}
               Trained under a former Malaysian national-team player and a former
               Chinese provincial-team player. Coach lineage is disclosed on
-              every review where personal preference might influence the
+              every article where personal preference might influence the
               verdict.
             </li>
           </ul>
@@ -147,11 +147,11 @@ export default function RuiSuAuthorPage() {
               <strong className="text-[var(--text)]">
                 Founder firsthand notes.
               </strong>{" "}
-              Where a review or comparison says &quot;Founder firsthand (Rui,
-              Div 4 IE)&quot;, that prose is mine and reflects my own racket
-              setup, stringbed, and on-court experience. Where the prose
-              attributes a measurement to BadmintonCN, YuanShi, or a community
-              tester, the source — not me — owns the number.
+              Where a catalogue editor note says &quot;Founder firsthand (Rui,
+              Div 4 IE)&quot;, that note is mine and reflects my own racket
+              setup, stringbed, and on-court experience. Where an article
+              credits a measurement to BadmintonCN, YuanShi, or a community
+              reviewer, the source — not me — owns the number.
             </li>
             <li>
               <strong className="text-[var(--text)]">

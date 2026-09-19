@@ -107,8 +107,14 @@ export function validateCommercialShoeBaselineFile(
     });
   }
 
-  if (queries.length === 0) {
-    return { ok: false, message: "baseline.queries must not be empty" };
+  // Empty is allowed only with a stated reason, so an accidental wipe still fails.
+  const emptyReason =
+    typeof record.emptyReason === "string" ? record.emptyReason.trim() : "";
+  if (queries.length === 0 && !emptyReason) {
+    return {
+      ok: false,
+      message: "baseline.queries must not be empty (or set emptyReason)",
+    };
   }
 
   let coverage: BaselineE2eCoverage | undefined;

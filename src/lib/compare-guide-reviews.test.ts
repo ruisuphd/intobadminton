@@ -6,17 +6,14 @@ import {
 } from "@/lib/compare-guide-reviews";
 
 describe("compare-guide-reviews", () => {
-  it("lists seven unique editorial review slugs from compare-guide shelves", () => {
-    const slugs = compareGuideReviewSlugs();
-    expect(slugs).toHaveLength(7);
-    expect(new Set(slugs).size).toBe(7);
-    expect(slugs).toContain("yonex-nanoflare-speed-series-explained");
-    expect(slugs).toContain("li-ning-halbertec-8000-vs-9000-vs-9000-power");
+  // Every review these shelves linked was a translation removed in Sept 2026.
+  it("lists no editorial review slugs until a rewritten review returns", () => {
+    expect(compareGuideReviewSlugs()).toEqual([]);
   });
 
-  it("builds canonical review hrefs", () => {
+  it("builds one canonical review href per link", () => {
     const hrefs = compareGuideReviewHrefs();
     expect(hrefs).toHaveLength(compareGuideReviewLinks.length);
-    expect(hrefs[0]).toMatch(/^\/review\/.+\/$/);
+    for (const href of hrefs) expect(href).toMatch(/^\/review\/.+\/$/);
   });
 });

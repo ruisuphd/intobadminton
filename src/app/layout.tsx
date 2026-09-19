@@ -104,7 +104,7 @@ export default function RootLayout({
           <Analytics />
           {/*
            * adsbygoogle.js is not loaded here. Auto Ads from a site-wide loader
-           * would inventory PDPs, quiz/results, and thin court notes — the
+           * would inventory PDPs and quiz/results — the
            * screens Publisher Policy 11112688 forbids. Keep the ca-pub meta
            * above for verification. After approval, mount <AdSenseScript/> only
            * on publication templates.

@@ -111,7 +111,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const heroStats = [
     { num: `${HOME_PUBLICATION_LINKS.length}`, label: "original first-reads" },
     { num: "5", label: "named fit factors" },
-    { num: "Div 4", label: "Ireland — founder-tested" },
+    { num: "Div 4", label: "Irish league — the editor's level" },
   ];
 
   return (
@@ -125,7 +125,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       <section className="hero-decoration relative overflow-hidden pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="layout-band relative max-w-6xl">
           <div className="max-w-2xl">
-            <span className="eyebrow">Reviews and equipment finder · 2026</span>
+            <span className="eyebrow">Equipment finder and buying guides · 2026</span>
             <h1 className="text-display mt-4 text-[var(--text)]">
               {copy.home.title}
             </h1>
@@ -181,8 +181,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
                 Start with original analysis
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
-                Guides, buying lists, and frames I actually play — the pages a
-                club player cannot get from a spec sheet.
+                Guides, buying lists, and tools — the pages a club player cannot
+                get from a spec sheet.
               </p>
             </div>
             <Link
@@ -301,10 +301,10 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <div className="max-w-2xl">
               <span className="eyebrow">Longer reads</span>
               <h2 className="text-headline mt-2 text-[var(--text)]">
-                Founder-tested and original pieces
+                Original guides and explainers
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[var(--color-muted)]">
-                Publication reviews only — not one-minute SKU notes.
+                Long-form buying guides and explainers written for this site.
               </p>
             </div>
             <Link

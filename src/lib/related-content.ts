@@ -143,11 +143,6 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       summary: "G4, G5, G6 sizing and how overgrips change handle thickness.",
     },
     {
-      href: "/review/li-ning-gp100-pro-overgrip-review/",
-      title: "Li-Ning GP100 Pro overgrip review",
-      summary: "Dry-feel value alternative to Yonex Super Grap.",
-    },
-    {
       href: "/catalog/?cat=grip",
       title: "Browse grips in catalog",
       summary: "Filter by brand, feel, and thickness.",
@@ -180,16 +175,6 @@ const CLUSTER_ITEMS: Record<string, RelatedReadingItem[]> = {
       href: "/best/shuttles/",
       title: "Best badminton shuttles",
       summary: "Feather and nylon picks ranked by flight and durability per tube.",
-    },
-    {
-      href: "/review/yonex-aerosensa-50-shuttle-review/",
-      title: "Yonex AS-50 shuttle review",
-      summary: "Tournament feather reference — flight, cork, and tube consistency.",
-    },
-    {
-      href: "/review/victor-carbonsonic-max-shuttle-review/",
-      title: "Victor Carbonsonic MAX review",
-      summary: "Synthetic shuttle that closes the gap with mid-tier naturals.",
     },
     {
       href: "/catalog/?cat=shuttle",

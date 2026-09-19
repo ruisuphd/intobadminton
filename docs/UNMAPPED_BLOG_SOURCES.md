@@ -1,7 +1,11 @@
 # Unmapped Blog Sources — Triage (May–Jun 2026)
 
+> **HISTORICAL — DO NOT RUN.** This was a worklist for the forum-markdown import
+> pipeline, which was deleted in Sept 2026 along with the translated articles. See
+> README "Articles (hand-maintained, originals only)".
+
 **Inventory date:** 2026-07-20  
-**Active source files:** mapped (see `npm run blog:check`)  
+**Active source files:** mapped (`blog:check` was deleted in Sept 2026)  
 **Archived Jul 20 Chinese originals:** `blogs/_archive/jul2026-batch3/` (15 files)
 
 ## 2026-07-20 drop (ingested 2026-07-20)
@@ -67,7 +71,7 @@ all_md = {p.name for p in Path("blogs").glob("*.md")}
 print("\n".join(sorted(all_md - mapped)) or "(none)")
 PY
 
-npm run blog:check && npm run blog:import && npm run blog:validate && npm test && npm run build
+# Historical only: blog:check and blog:import were deleted in Sept 2026.
 ```
 
 ---

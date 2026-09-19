@@ -1,22 +1,33 @@
 import { test, expect } from "@playwright/test";
+import blogSlugsList from "../scripts/blog-slugs-list.json";
+
+/** Published review slugs — only original editorials since Sept 2026. */
+const PUBLISHED = new Set<string>(blogSlugsList);
+
+/** Review hrefs a page may link to: the hub or a published article. */
+function isPublishedReviewHref(href: string): boolean {
+  if (href === "/review/") return true;
+  const slug = href.replace(/^\/review\//, "").replace(/\/$/, "");
+  return PUBLISHED.has(slug);
+}
 
 test.describe("review blog style", () => {
-  test("Nanoflare 1000Z review shows blog prose only", async ({ page }) => {
-    await page.goto("/review/yonex-nanoflare-1000z-review/");
+  test("original editorial shows blog prose only", async ({ page }) => {
+    await page.goto("/review/how-to-choose-a-badminton-racket/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      /Nanoflare 1000/i
+      /choose a badminton racket/i
     );
     await expect(page.getByRole("heading", { name: /specs|specifications/i })).toHaveCount(0);
     await expect(page.getByText("Spec verified against manufacturer page")).toHaveCount(0);
   });
 
   test("legacy blog URL redirects to review page", async ({ page }) => {
-    await page.goto("/blog/yonex-nanoflare-1000z-play-review/");
+    await page.goto("/blog/li-ning-thunder-100-gen-2-vs-gen-1/");
     await expect(page).toHaveURL(
-      /\/review\/yonex-nanoflare-1000z-play-review\/?$/
+      /\/review\/li-ning-thunder-100-gen-2-vs-gen-1\/?$/
     );
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      /1000/i
+      /AxForce 100/i
     );
   });
 
@@ -28,8 +39,8 @@ test.describe("review blog style", () => {
   test("legacy product review URL redirects to blog-style review page", async ({
     page,
   }) => {
-    await page.goto("/review/yy-nanoflare-1000z/", { waitUntil: "domcontentloaded" });
-    await page.waitForURL(/\/review\/yonex-nanoflare-1000z-review\/?$/, {
+    await page.goto("/review/vic-drivex-12/", { waitUntil: "domcontentloaded" });
+    await page.waitForURL(/\/review\/victor-drivex-12-vs-astrox-88d-pro\/?$/, {
       timeout: 15_000,
     });
   });
@@ -45,15 +56,21 @@ test.describe("review blog style", () => {
       "Reviews"
     );
     await expect(page.getByRole("link").first()).toBeVisible();
+    await expect(page.getByText(/court notes/i)).toHaveCount(0);
   });
 
-  test("Comfort Z3 shoe review renders blog prose", async ({ page }) => {
-    await page.goto("/review/yonex-comfort-z3-shoes-review/");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      /Comfort Z3/i
-    );
-    await expect(page.getByRole("heading", { name: /specs|specifications/i })).toHaveCount(0);
-  });
+  for (const path of [
+    "/review/yonex-nanoflare-1000z-review/",
+    "/review/yonex-comfort-z3-shoes-review/",
+    "/review/anta-ah600w-racket-review/",
+    "/review/yy-nanoflare-1000z/",
+    "/blog/yonex-nanoflare-1000z-review/",
+  ]) {
+    test(`removed translated review ${path} returns 404`, async ({ page }) => {
+      const response = await page.goto(path);
+      expect(response?.status()).toBe(404);
+    });
+  }
 
   test("header has Reviews nav link only (no Comparisons)", async ({ page }) => {
     await page.goto("/");
@@ -65,188 +82,63 @@ test.describe("review blog style", () => {
     ).toHaveCount(0);
   });
 
-  test("Yonex brand page links to blog-style review URLs", async ({ page }) => {
-    await page.goto("/brands/yonex/");
-    await expect(
-      page.getByRole("link", { name: /Comfort Z3 shoe review/i })
-    ).toHaveAttribute("href", "/review/yonex-comfort-z3-shoes-review/");
-    await expect(
-      page.getByRole("link", { name: /Aerosensa 50 shuttle review/i })
-    ).toHaveAttribute("href", "/review/yonex-aerosensa-50-shuttle-review/");
-  });
+  for (const path of [
+    "/",
+    "/brands/yonex/",
+    "/brands/bonny/",
+    "/brands/kumpoo/",
+    "/best/shoes/",
+    "/compare-guides/astrox-99-pro-vs-astrox-100zz/",
+  ]) {
+    test(`${path} links only to published reviews`, async ({ page }) => {
+      await page.goto(path);
+      const hrefs = await page
+        .locator('a[href^="/review/"]')
+        .evaluateAll((links) => links.map((a) => a.getAttribute("href") ?? ""));
+      const dead = hrefs.filter((href) => !isPublishedReviewHref(href));
+      expect(dead).toEqual([]);
+    });
+  }
 
-  test("best shoes page links ranked picks to editorial reviews", async ({
+  test("best shoes page shows no review links for unreviewed picks", async ({
     page,
   }) => {
     await page.goto("/best/shoes/");
     await expect(
       page
-        .locator("#power-cushion-65-z-wide")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-65z4-shoes-review/");
-    await expect(
-      page
-        .locator("#power-cushion-aerus-z2")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-eclipsion-z3-shoes-review/");
-    await expect(
-      page
         .locator("#power-cushion-comfort-z3")
         .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-comfort-z3-shoes-review/");
+    ).toHaveCount(0);
   });
 
-  test("beginner rackets page links DriveX 8S to DriveX 10 editorial review", async ({
+  test("intermediate rackets page links DriveX 12 to its original review", async ({
     page,
   }) => {
-    await page.goto("/best/beginner-rackets/");
+    await page.goto("/best/intermediate-rackets/");
     await expect(
       page
-        .locator("#drivex-8s")
+        .locator("#drivex-12")
         .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/victor-drivex-10-review/");
+    ).toHaveAttribute("href", "/review/victor-drivex-12-vs-astrox-88d-pro/");
   });
 
-  test("head-heavy-under-150 page links Astrox 100 Game to Nextage review", async ({
-    page,
-  }) => {
-    await page.goto("/best/head-heavy-rackets-under-150/");
-    await expect(
-      page
-        .locator("#astrox-100-game")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-astrox-nextage-review/");
-  });
+  for (const anchor of ["bg65", "exbolt-63", "bg80", "aerobite", "bg80-power"]) {
+    test(`strings page links ${anchor} to string-selector guide`, async ({
+      page,
+    }) => {
+      await page.goto("/best/strings/");
+      await expect(
+        page
+          .locator(`#${anchor}`)
+          .getByRole("link", { name: "Read string guide →" })
+      ).toHaveAttribute("href", "/review/badminton-string-selector/");
+    });
+  }
 
-  test("all-round rackets page links Brave Sword 12 to Jetspeed 12 review", async ({
-    page,
-  }) => {
-    await page.goto("/best/all-round-rackets/");
-    await expect(
-      page
-        .locator("#brave-sword-12")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/victor-jetspeed-12-curious-review/");
-  });
-
-  test("smash-heavy rackets page links Auraspeed 100X SE to 90K II review", async ({
-    page,
-  }) => {
-    await page.goto("/best/smash-heavy-rackets/");
-    await expect(
-      page
-        .locator('[id="auraspeed-100x-se-(mohammad-ahsan)"]')
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/victor-auraspeed-90k-ii-review/");
-  });
-
-  test("head-heavy-under-150 page links Voltric 8DG to Voltric Z-Force LTD review", async ({
-    page,
-  }) => {
-    await page.goto("/best/head-heavy-rackets-under-150/");
-    await expect(
-      page
-        .locator("#voltric-8dg")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-voltric-z-force-ltd-2012-review/");
-  });
-
-  test("rackets-under-100 page links Nanoray Light 70i to Nanoflare 1000 Play review", async ({
-    page,
-  }) => {
-    await page.goto("/best/rackets-under-100/");
-    await expect(
-      page
-        .locator("#nanoray-light-70i")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-nanoflare-1000z-play-review/");
-  });
-
-  test("beginner rackets page links Nanoflare 700 Play to Nanoflare 700 review", async ({
-    page,
-  }) => {
-    await page.goto("/best/beginner-rackets/");
-    await expect(
-      page
-        .locator("#nanoflare-700-play")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/yonex-nanoflare-700-review/");
-  });
-
-  test("beginner rackets page links Mizuno Altius N-Feel to Carbo Pro 823 review", async ({
-    page,
-  }) => {
-    await page.goto("/best/beginner-rackets/");
-    await expect(
-      page
-        .locator("#altius-n-feel")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/mizuno-carbo-pro-823-review/");
-  });
-
-  test("strings page links Yonex BG65 to string-selector guide", async ({
-    page,
-  }) => {
+  test("strings page shows no review link for Li-Ning L69", async ({ page }) => {
     await page.goto("/best/strings/");
     await expect(
-      page
-        .locator("#bg65")
-        .getByRole("link", { name: "Read string guide →" })
-    ).toHaveAttribute("href", "/review/badminton-string-selector/");
-  });
-
-  test("strings page links Yonex EXBOLT 63 to string-selector guide", async ({
-    page,
-  }) => {
-    await page.goto("/best/strings/");
-    await expect(
-      page
-        .locator("#exbolt-63")
-        .getByRole("link", { name: "Read string guide →" })
-    ).toHaveAttribute("href", "/review/badminton-string-selector/");
-  });
-
-  test("strings page links Yonex BG80 to string-selector guide", async ({
-    page,
-  }) => {
-    await page.goto("/best/strings/");
-    await expect(
-      page
-        .locator("#bg80")
-        .getByRole("link", { name: "Read string guide →" })
-    ).toHaveAttribute("href", "/review/badminton-string-selector/");
-  });
-
-  test("strings page links Yonex Aerobite to string-selector guide", async ({
-    page,
-  }) => {
-    await page.goto("/best/strings/");
-    await expect(
-      page
-        .locator("#aerobite")
-        .getByRole("link", { name: "Read string guide →" })
-    ).toHaveAttribute("href", "/review/badminton-string-selector/");
-  });
-
-  test("strings page links Yonex BG80 Power to string-selector guide", async ({
-    page,
-  }) => {
-    await page.goto("/best/strings/");
-    await expect(
-      page
-        .locator("#bg80-power")
-        .getByRole("link", { name: "Read string guide →" })
-    ).toHaveAttribute("href", "/review/badminton-string-selector/");
-  });
-
-  test("strings page links Li-Ning L69 to dedicated string review", async ({
-    page,
-  }) => {
-    await page.goto("/best/strings/");
-    await expect(
-      page
-        .locator("#l69")
-        .getByRole("link", { name: "Read full review →" })
-    ).toHaveAttribute("href", "/review/li-ning-l69-string-review/");
+      page.locator("#l69").getByRole("link", { name: "Read full review →" })
+    ).toHaveCount(0);
   });
 });

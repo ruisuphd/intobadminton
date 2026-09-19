@@ -1,5 +1,5 @@
 {
-  "reviewCount": 209,
+  "reviewCount": 13,
   "featured": [
     {
       "slug": "how-to-choose-a-badminton-racket",
@@ -14,26 +14,26 @@
       "readingMinutes": 5
     },
     {
-      "slug": "yonex-nanoflare-1000z-review",
-      "title": "Yonex Nanoflare 1000 Z review: speed flagship with real control",
-      "updatedAt": "2026-05-24",
-      "readingMinutes": 6
-    },
-    {
-      "slug": "yonex-comfort-z3-shoes-review",
-      "title": "Yonex Power Cushion Comfort Z3: cushion-first match shoe",
-      "updatedAt": "2026-05-24",
+      "slug": "badminton-bag-loadout",
+      "title": "What to carry in a badminton bag: a club-night checklist",
+      "updatedAt": "2026-08-14",
       "readingMinutes": 4
     },
     {
-      "slug": "yonex-astrox-88d-pro-vs-88s-pro-2024",
-      "title": "Yonex Astrox 88D Pro vs 88S Pro 2024: which 88 Pro fits your role",
-      "updatedAt": "2026-04-29",
-      "readingMinutes": 5
+      "slug": "badminton-equipment-for-kids",
+      "title": "Badminton equipment for kids: rackets, shoes, and shuttles for ages 6-14",
+      "updatedAt": "2026-08-14",
+      "readingMinutes": 4
     },
     {
-      "slug": "yonex-arcsaber-7-pro-review",
-      "title": "Yonex Arcsaber 7 Pro — founder court note",
+      "slug": "badminton-glossary-terms-every-player-should-know",
+      "title": "Badminton glossary: 40+ terms every club player should understand",
+      "updatedAt": "2026-08-14",
+      "readingMinutes": 4
+    },
+    {
+      "slug": "badminton-shoe-fit-stability",
+      "title": "Badminton shoe fit: why width and stability beat brand loyalty",
       "updatedAt": "2026-08-14",
       "readingMinutes": 4
     }

@@ -2,16 +2,14 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import reviewProductMap from "@/data/blog-review-product-map.json";
-import { blogArticles, blogSlugs, relatedArticles } from "./blog";
+import { blogArticles, blogSlugs } from "./blog";
 import { homeFeaturedReviews } from "./home-featured";
 import { sitemapEntries } from "./sitemap";
 import {
   ORIGINAL_EDITORIAL_SLUGS,
   REVIEW_INDEX_MIN_BODY_WORDS,
   adsAllowedOnReview,
-  consolidatedNoindexSlugs,
   indexableReviewSlugs,
-  isFounderFirsthandSlug,
   isOriginalEditorialSlug,
   isThinContentNoindex,
   noindexReviewSlugs,
@@ -21,7 +19,6 @@ import {
 
 const FORUM_VOICE =
   /this post|this thread|CN forum|I still remembers|For me’s|I’s level|zhongyu|中羽|the original poster|netizen|upstairs said/i;
-
 
 describe("original editorial allowlist", () => {
   it("matches null entries in the import source map", () => {
@@ -50,7 +47,7 @@ describe("thin-content noindex set", () => {
     expect(new Set(noindexReviewSlugs).size).toBe(noindexReviewSlugs.length);
   });
 
-  it("noindexes every imported translation that is not founder-firsthand", () => {
+  it("noindexes anything that fails the originality gate", () => {
     for (const slug of blogSlugs) {
       if (passesOriginalityGate(slug)) continue;
       expect(isThinContentNoindex(slug), slug).toBe(true);
@@ -75,19 +72,13 @@ describe("thin-content noindex set", () => {
   });
 });
 
-describe("duplicate noindex set", () => {
-  it("keeps the weaker FZ 88D slug out of the index", () => {
-    expect(isThinContentNoindex("victor-fz-88d-power-purple-review")).toBe(
-      true
-    );
-  });
-});
-
-describe("consolidated noindex set", () => {
-  it("holds back overlapping SKU siblings", () => {
-    expect(consolidatedNoindexSlugs.length).toBeGreaterThan(0);
-    for (const slug of consolidatedNoindexSlugs) {
-      expect(isThinContentNoindex(slug), slug).toBe(true);
+describe("published corpus", () => {
+  // The translated forum reviews were removed in Sept 2026. Only articles
+  // IntoBadminton wrote may ship; a rewrite clears its source-map entry.
+  it("publishes only original editorial", () => {
+    expect([...blogSlugs].sort()).toEqual([...ORIGINAL_EDITORIAL_SLUGS].sort());
+    for (const slug of blogSlugs) {
+      expect(isOriginalEditorialSlug(slug), slug).toBe(true);
     }
   });
 });
@@ -171,37 +162,6 @@ describe("indexable core publication", () => {
       expect(isThinContentNoindex(slug), slug).toBe(false);
       expect(adsAllowedOnReview(slug), slug).toBe(true);
     }
-  });
-
-  it("indexes every founder-firsthand review", () => {
-    for (const slug of blogSlugs) {
-      if (!isFounderFirsthandSlug(slug)) continue;
-      expect(reviewBodyWordCount(slug), slug).toBeGreaterThanOrEqual(
-        REVIEW_INDEX_MIN_BODY_WORDS
-      );
-      expect(isThinContentNoindex(slug), slug).toBe(false);
-      expect(adsAllowedOnReview(slug), slug).toBe(true);
-    }
-  });
-});
-
-describe("related SKU notes on court-note URLs", () => {
-  it("filters Beimo related reading down to indexable slugs only", () => {
-    const current = blogArticles.en.find(
-      (article) => article.slug === "kumpoo-beimo-racket-review"
-    );
-    expect(current).toBeDefined();
-    expect(isThinContentNoindex("kumpoo-beimo-racket-review")).toBe(true);
-    const raw = relatedArticles(blogArticles.en, current!, 3);
-    expect(raw.some((article) => isThinContentNoindex(article.slug))).toBe(
-      true
-    );
-    const publication = raw.filter(
-      (article) => adsAllowedOnReview(article.slug)
-    );
-    expect(publication.every((article) => adsAllowedOnReview(article.slug))).toBe(
-      true
-    );
   });
 });
 

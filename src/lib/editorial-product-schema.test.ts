@@ -12,7 +12,7 @@ const catalog = products as ProductRecord[];
 
 describe("review article product schema wiring", () => {
   it("builds Product+Review JSON-LD for a mapped blog slug", () => {
-    const slug = "yonex-arcsaber-7-pro-review";
+    const slug = "victor-drivex-12-vs-astrox-88d-pro";
     const productId = reviewProductIdForBlog(slug);
     expect(productId).toBeTruthy();
 
@@ -37,20 +37,19 @@ describe("review article product schema wiring", () => {
     expect(mapped.some((id) => catalog.some((p) => p.id === id))).toBe(true);
   });
 
-  it("enriches a Phase D mapped slug (DriveX 10)", () => {
-    const slug = "victor-drivex-10-review";
+  it("enriches a mapped comparison slug (AxForce 100 II)", () => {
+    const slug = "li-ning-thunder-100-gen-2-vs-gen-1";
     const productId = reviewProductIdForBlog(slug);
-    expect(productId).toBe("vic-drivex-10-metallic");
+    expect(productId).toBe("ln-axforce-100-gen-2");
     expect(reviewProductById(productId!)).toBeTruthy();
   });
 
-  it("maps at least 85% of review slugs to valid catalogue ids", () => {
+  it("maps review slugs only to valid catalogue ids and published articles", () => {
     const map = blogReviewMap as Record<string, string>;
-    const ids = Object.values(map);
-    expect(ids.every((id) => catalog.some((p) => p.id === id))).toBe(true);
-    const pct = Math.round(
-      (Object.keys(map).length / blogArticles.en.length) * 100
-    );
-    expect(pct).toBeGreaterThanOrEqual(85);
+    const published = new Set<string>(blogArticles.en.map((article) => article.slug));
+    for (const [slug, id] of Object.entries(map)) {
+      expect(catalog.some((p) => p.id === id), id).toBe(true);
+      expect(published.has(slug), slug).toBe(true);
+    }
   });
 });

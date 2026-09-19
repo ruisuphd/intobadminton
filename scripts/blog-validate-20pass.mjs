@@ -1,16 +1,19 @@
 #!/usr/bin/env node
 /**
- * Blog validation gate for imported articles.
+ * Validation gate for published articles (originals only since Sept 2026).
  * Runs structural and voice checks; reports per pass for CI readability.
+ *
+ * Crediting a named source (e.g. "a BadmintonCN reviewer measured…") is
+ * allowed and expected. What fails is leftover persona-normalizer output from
+ * the retired translation pipeline, which turned other testers into "I".
  */
 import { execSync } from "node:child_process";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const JSON_PATH = `${ROOT}/src/data/blog-articles.json`;
-const REPORT_PATH = `${ROOT}/scripts/blog-import-option-b-report.json`;
 const SLUGS_PATH = `${ROOT}/scripts/blog-slugs-list.json`;
 
 function loadArticles() {
@@ -33,8 +36,6 @@ function auditPass(articles, slugs) {
     if (!a.sections?.length) issues.push(`${a.slug}: no sections`);
     if (/https?:\/\//i.test(blob)) issues.push(`${a.slug}: URL in content`);
     if (/[\u4e00-\u9fff]/.test(blob)) issues.push(`${a.slug}: CJK in content`);
-    if (/tige xlab|badmintoncn/i.test(blob)) issues.push(`${a.slug}: channel attribution`);
-    if (/\bthe author\b/i.test(blob)) issues.push(`${a.slug}: third-person author`);
     if (/\*\*[^*]+\*\*/.test(blob)) issues.push(`${a.slug}: markdown bold leaked`);
     if ((a.dek?.trim().length ?? 0) < 50) issues.push(`${a.slug}: dek too short`);
     if (/source-to-buyer|fact-check snapshot/i.test(blob))
@@ -43,6 +44,12 @@ function auditPass(articles, slugs) {
     if (/\bWhat makes I more\b/i.test(blob)) issues.push(`${a.slug}: persona corruption`);
     if (/\bthe same I\b/.test(blob)) issues.push(`${a.slug}: persona corruption`);
     if (/\bI's level\b/.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    // Debris like "the forum I report" and "I' measured" from the old normalizer.
+    if (/\bthe forum I\b/i.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/(?<!')\bI'\s/.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/\bI report\b/.test(blob)) issues.push(`${a.slug}: persona corruption`);
+    if (/\bmy test pair\b|\bin my own long-term testing\b/i.test(blob))
+      issues.push(`${a.slug}: persona corruption`);
     if (/\bSeveral sources converge\b/i.test(blob))
       issues.push(`${a.slug}: aggregator voice`);
     if (/\bRecommendations across reviews\b/i.test(blob))
@@ -54,9 +61,6 @@ function auditPass(articles, slugs) {
 
 function main() {
   const slugs = JSON.parse(readFileSync(SLUGS_PATH, "utf8"));
-  const importReport = existsSync(REPORT_PATH)
-    ? JSON.parse(readFileSync(REPORT_PATH, "utf8"))
-    : null;
   const passes = [];
   let articles = loadArticles();
 
@@ -78,7 +82,6 @@ function main() {
 
   const out = {
     date: new Date().toISOString().slice(0, 10),
-    import_final_issues: importReport?.final_issue_count ?? null,
     validate_final_issues: passes[19].issues,
     tests_pass: buildOk,
     passes,

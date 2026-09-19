@@ -141,7 +141,7 @@ export default function UpdatesPage() {
           </h2>
           <p className="mt-3 text-sm text-[var(--color-muted)]">
             Browse the full catalog with category, brand, and price filters —
-            the same inventory behind every review and guide.
+            the same inventory behind every guide and buying list.
           </p>
           <Link href="/catalog/" className="btn-secondary mt-5">
             Browse full catalog

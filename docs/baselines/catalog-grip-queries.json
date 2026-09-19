@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-08",
+  "updated": "2026-09-18",
   "queries": [
     {
       "id": "catalog-grip-yy-ac102c",
@@ -41,17 +41,9 @@
       "expectKind": "guide",
       "e2e": true,
       "note": "Yonex Strong Grap catalog browse exits to grip-sizes guide"
-    },
-    {
-      "id": "catalog-grip-ln-gp100-pro",
-      "productId": "ln-gp100-pro-grip",
-      "expectHref": "/review/li-ning-gp100-pro-overgrip-review/",
-      "expectKind": "review",
-      "e2e": true,
-      "note": "Li-Ning GP100 Pro catalog browse exits to dedicated overgrip review"
     }
   ],
   "coverage": {
-    "minE2eGuards": 6
+    "minE2eGuards": 5
   }
 }

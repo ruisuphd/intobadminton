@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { BrandPage, type BrandPageConfig } from "@/components/BrandPage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Anta Badminton (安踏) — AH600W entry racket decoded",
@@ -44,7 +43,7 @@ const config: BrandPageConfig = {
       name: "AH600 / AH600W — entry balanced rackets",
       bestFor: "True beginners and casual knock-about play inside the Anta retail ecosystem",
       description:
-        "The AH600W tested on IntoBadminton is a 5U/G6 frame (~82 g) with 299 mm balance, mid-low stiffness, a 76-hole box frame, and factory stringing in the 24–26 lb range. Handling is light and drivable rather than explosive. Build quality is honest entry-level — likely OEM-sourced — but edges above 'nothing special' for the price tier. The AH600 is the 4U sibling; weight class is the main buying filter.",
+        "Community measurements put the AH600W at 5U/G6 (~82 g) with 299 mm balance, mid-low stiffness, a 76-hole box frame, and factory stringing in the 24–26 lb range. Community reports describe light, drivable handling rather than explosive power, and honest entry-level build that is likely OEM-sourced. IntoBadminton has not played it. The AH600 is the 4U sibling; weight class is the main buying filter.",
       signatureModels: ["AH600W (5U)", "AH600 (4U)"],
     },
   ],
@@ -72,7 +71,6 @@ const config: BrandPageConfig = {
     },
   ],
   relatedLinks: [
-    { label: "Anta AH600W review", href: "/review/anta-ah600w-racket-review/" },
     { label: "Beginner rackets best-of", href: "/best/beginner-rackets/" },
     { label: "Equipment finder quiz", href: "/quiz/" },
     { label: "How to choose a racket", href: "/review/how-to-choose-a-badminton-racket/" },

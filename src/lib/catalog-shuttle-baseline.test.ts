@@ -23,8 +23,10 @@ describe("catalog-shuttle-baseline", () => {
     const raw = JSON.parse(readFileSync(BASELINE_PATH, "utf8"));
     const parsed = validateCatalogShuttleBaselineFile(raw);
     expect(parsed.ok).toBe(true);
-    if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
+    if (parsed.ok && parsed.file.queries.length === 0) {
+      // Empty is allowed only with a stated reason, so a wipe still fails.
+      expect(String(raw.emptyReason ?? "").trim()).not.toBe("");
+      expect(validateCatalogShuttleBaselineFile({ ...raw, emptyReason: undefined }).ok).toBe(false);
     }
   });
 
@@ -51,7 +53,7 @@ describe("catalog-shuttle-baseline", () => {
       {
         id: "test",
         productId: "yy-as-50",
-        expectHref: "/product/yy-as-50/",
+        expectHref: "/review/yonex-aerosensa-50-shuttle-review/",
         expectKind: "review",
       },
       product
@@ -66,7 +68,7 @@ describe("catalog-shuttle-baseline", () => {
       {
         id: "test",
         productId: "rsl-supreme-shuttle",
-        expectHref: "/review/rsl-supreme-shuttle-review/",
+        expectHref: "/product/rsl-supreme-shuttle/",
         expectKind: "guide",
       },
       product

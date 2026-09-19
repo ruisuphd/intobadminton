@@ -106,10 +106,15 @@ function blogSlugForProduct(productId: string): BlogSlug | undefined {
     })[0]?.slug;
 }
 
+/**
+ * The product's published review, or its spec page when none exists. The old
+ * id-keyed `/review/<id>/` fallback only worked while every catalogue row had
+ * a legacy redirect stub; those went with the translated review corpus.
+ */
 export function reviewPath(id: string): string {
   const slug = blogSlugForProduct(id);
   if (slug) return `/review/${slug}/`;
-  return `/review/${id}/`;
+  return productPath(id);
 }
 
 /** Link target for catalog rows — only emits URLs that exist in the static export. */

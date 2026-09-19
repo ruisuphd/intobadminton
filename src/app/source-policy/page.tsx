@@ -29,6 +29,8 @@ export default function SourcePolicyPage() {
           Reddit, BadmintonCN, BadmintonCentral, blogs, and retailers each have
           their own rights and terms. We do not train models on or republish
           user-generated content from those sources without appropriate rights.
+          Every article on IntoBadminton is original; none is a translation of
+          a forum or social post.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           BadmintonCN search references
@@ -39,16 +41,6 @@ export default function SourcePolicyPage() {
           metadata: source name, link, language, theme summary, and confidence.
           We do not bypass verification prompts, log in with automated tools,
           or display copied review excerpts.
-        </p>
-        <h2 className="text-xl font-semibold text-[var(--text)]">
-          Evidence model
-        </h2>
-        <p>
-          The planned ingestion pipeline stores source URLs, language, product
-          matches, timestamps, hashes, themes, confidence, and human-reviewed
-          summaries. It avoids copied third-party posts unless expressly
-          permitted, and any row without an official product-page source is
-          marked for review.
         </p>
 
         <section className="mt-10 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">

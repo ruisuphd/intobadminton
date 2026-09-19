@@ -18,7 +18,7 @@ const sample = (slug: string, title: string): BlogArticle => ({
 
 describe("review-hub-filters", () => {
   it("classifies catalog vs guide slugs", () => {
-    expect(reviewHubKind("yonex-astrox-88d-pro-vs-88s-pro-2024")).toBe("catalog");
+    expect(reviewHubKind("victor-drivex-12-vs-astrox-88d-pro")).toBe("catalog");
     expect(reviewHubKind("how-to-read-badminton-reviews")).toBe("guides");
   });
 

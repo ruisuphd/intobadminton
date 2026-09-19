@@ -88,11 +88,11 @@ export const ALL_CATEGORY_EDITORIAL_PARITY_MIN: Record<
   keyof AllCategoryEditorialParityInput,
   number
 > = {
-  racket: 44,
-  shoe: 16,
-  string: 6,
-  shuttle: 6,
-  grip: 6,
+  racket: 2,
+  shoe: 0,
+  string: 5,
+  shuttle: 0,
+  grip: 5,
   bag: 2,
 };
 

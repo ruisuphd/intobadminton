@@ -58,7 +58,13 @@ describe("shoe-editorial-parity", () => {
       console.error(formatShoeEditorialParityIssues(result));
     }
     expect(result.ok).toBe(true);
-    expect(result.checked).toBeGreaterThanOrEqual(16);
+    if (catalog.file.queries.length === 0) {
+      // No shoe review is published, so no shoe PDP row may expect one.
+      const expectingReview = pdp.file.queries.filter(
+        (row) => row.expectCategory === "shoes" && row.expectReviewSlug
+      );
+      expect(expectingReview).toEqual([]);
+    }
   });
 
   it("flags missing PDP rows", () => {

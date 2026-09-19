@@ -35,8 +35,10 @@ describe("commercial-shoe-baseline", () => {
     const raw = JSON.parse(readFileSync(COMMERCIAL_BASELINE_PATH, "utf8"));
     const parsed = validateCommercialShoeBaselineFile(raw);
     expect(parsed.ok).toBe(true);
-    if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
+    if (parsed.ok && parsed.file.queries.length === 0) {
+      // Empty is allowed only with a stated reason, so a wipe still fails.
+      expect(String(raw.emptyReason ?? "").trim()).not.toBe("");
+      expect(validateCommercialShoeBaselineFile({ ...raw, emptyReason: undefined }).ok).toBe(false);
     }
   });
 
@@ -68,20 +70,20 @@ describe("commercial-shoe-baseline", () => {
     expect(issue?.message).toContain("expected href");
   });
 
-  it("flags link label mismatches", () => {
+  it("flags rows that have no editorial exit", () => {
     const product = catalogProductById("yy-comfort-z3");
     expect(product).toBeDefined();
     const issue = evaluateCommercialShoeBaselineQuery(
       {
         id: "test",
         productId: "yy-comfort-z3",
-        expectHref: "/review/yonex-comfort-z3-shoes-review/",
+        expectHref: "/product/yy-comfort-z3/",
         expectKind: "review",
-        expectLinkLabel: "Read string guide →",
+        expectLinkLabel: "Read full review →",
       },
       product
     );
-    expect(issue?.message).toContain("link label");
+    expect(issue?.message).toContain('got "none"');
   });
 
   it("catalog and commercial shoe baselines agree on href and kind per productId", () => {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-06-09",
+  "updated": "2026-09-18",
   "queries": [
     {
       "id": "commercial-string-yy-bg65",
@@ -51,19 +51,9 @@
       "expectLinkLabel": "Read string guide →",
       "e2e": true,
       "note": "Yonex BG80 Power on /best/strings/ exits to string-selector guide"
-    },
-    {
-      "id": "commercial-string-ln-l69",
-      "productId": "ln-l69-string",
-      "expectHref": "/review/li-ning-l69-string-review/",
-      "expectKind": "review",
-      "expectAnchor": "l69",
-      "expectLinkLabel": "Read full review →",
-      "e2e": true,
-      "note": "Li-Ning L69 on /best/strings/ exits to dedicated string review"
     }
   ],
   "coverage": {
-    "minE2eGuards": 6
+    "minE2eGuards": 5
   }
 }

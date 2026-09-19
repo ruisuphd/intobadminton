@@ -1,8 +1,4 @@
-import reviewProductMap from "@/data/blog-review-product-map.json";
-import productsCatalog from "@/data/products.json";
 import { blogArticles, blogSlugs, type BlogSlug } from "@/lib/blog";
-import { editorNoteIsFounderFirsthand } from "@/lib/founder-notes";
-import type { ProductRecord } from "@/lib/types/product";
 
 /**
  * Internal gate (not a Google quota): do not index or put ads on a review
@@ -35,15 +31,6 @@ const originalEditorialSet: ReadonlySet<string> = new Set(
   ORIGINAL_EDITORIAL_SLUGS
 );
 
-const CATALOG = productsCatalog as ProductRecord[];
-const REVIEW_MAP = reviewProductMap as Record<string, string>;
-
-const founderFirsthandProductIds: ReadonlySet<string> = new Set(
-  CATALOG.filter((product) =>
-    editorNoteIsFounderFirsthand(product.editorNote)
-  ).map((product) => product.id)
-);
-
 export function reviewBodyWordCount(slug: string): number {
   const article = blogArticles.en.find((row) => row.slug === slug);
   if (!article) return 0;
@@ -56,18 +43,14 @@ export function isOriginalEditorialSlug(slug: string): boolean {
   return originalEditorialSet.has(slug);
 }
 
-export function isFounderFirsthandSlug(slug: string): boolean {
-  const productId = REVIEW_MAP[slug];
-  return Boolean(productId && founderFirsthandProductIds.has(productId));
-}
-
 /**
- * A public content URL must be original editorial or mapped to a catalogue
- * row the founder actually played. Length is not a licence to index a
- * translated forum note.
+ * A public content URL must be original editorial (`source: null` in the slug
+ * source map). "Founder firsthand" is not enough: that label sat on reviews
+ * translated from forum posts. A rewritten review passes once its source
+ * entry is cleared.
  */
 export function passesOriginalityGate(slug: string): boolean {
-  return isOriginalEditorialSlug(slug) || isFounderFirsthandSlug(slug);
+  return isOriginalEditorialSlug(slug);
 }
 
 export function passesLengthGate(slug: string): boolean {
@@ -78,28 +61,14 @@ export function passesLengthGate(slug: string): boolean {
  * Weaker siblings of a duplicate pair. These pages can clear the word-count
  * gate; they are held back because they republish the same SKU as another URL.
  */
-export const duplicateNoindexSlugs: readonly BlogSlug[] = [
-  // Same source file as `fz-forza-88d-review`. Brand/price still unsettled.
-  "victor-fz-88d-power-purple-review",
-];
+export const duplicateNoindexSlugs: readonly BlogSlug[] = [];
 
 /**
  * Overlapping SKU coverage Google asks us to expand or consolidate. Weaker
  * URLs stay in the corpus (and may 301 in the static export) so inbound
  * links do not 404.
  */
-export const consolidatedNoindexSlugs: readonly BlogSlug[] = [
-  "kawasaki-star-cross-second-perspective-review",
-  "victor-auraspeed-hs-plus-attack-review",
-  "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
-  "victor-drivex-12-zsw-vs-original-comparison",
-  "victor-yu-12-racket-review",
-  "victor-p8500-ii-shoes-review",
-  "yonex-astrox-99-pro-2-deep-dive",
-  "yonex-astrox-99-pro-gen-1-review",
-  "bonny-mojun-vs-arcsaber-11-pro-attack-racket-review",
-  "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
-];
+export const consolidatedNoindexSlugs: readonly BlogSlug[] = [];
 
 const duplicateSet: ReadonlySet<string> = new Set(duplicateNoindexSlugs);
 const consolidatedSet: ReadonlySet<string> = new Set(consolidatedNoindexSlugs);

@@ -20,6 +20,8 @@ test("editorial updates feed lists recent pages with labels", async ({
   await expect(
     page.getByRole("heading", { name: /editorial updates/i })
   ).toBeVisible();
-  await expect(page.getByRole("link", { name: /verified claims registry/i })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /verified claims registry/i }).first()
+  ).toBeVisible();
   await expect(page.getByRole("link").first()).toBeVisible();
 });

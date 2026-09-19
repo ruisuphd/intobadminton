@@ -35,8 +35,10 @@ describe("commercial-shuttle-baseline", () => {
     const raw = JSON.parse(readFileSync(COMMERCIAL_BASELINE_PATH, "utf8"));
     const parsed = validateCommercialShuttleBaselineFile(raw);
     expect(parsed.ok).toBe(true);
-    if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
+    if (parsed.ok && parsed.file.queries.length === 0) {
+      // Empty is allowed only with a stated reason, so a wipe still fails.
+      expect(String(raw.emptyReason ?? "").trim()).not.toBe("");
+      expect(validateCommercialShuttleBaselineFile({ ...raw, emptyReason: undefined }).ok).toBe(false);
     }
   });
 
@@ -68,20 +70,20 @@ describe("commercial-shuttle-baseline", () => {
     expect(issue?.message).toContain("expected href");
   });
 
-  it("flags link label mismatches", () => {
+  it("flags rows that have no editorial exit", () => {
     const product = catalogProductById("rsl-supreme-shuttle");
     expect(product).toBeDefined();
     const issue = evaluateCommercialShuttleBaselineQuery(
       {
         id: "test",
         productId: "rsl-supreme-shuttle",
-        expectHref: "/review/rsl-supreme-shuttle-review/",
+        expectHref: "/product/rsl-supreme-shuttle/",
         expectKind: "review",
-        expectLinkLabel: "Read string guide →",
+        expectLinkLabel: "Read full review →",
       },
       product
     );
-    expect(issue?.message).toContain("link label");
+    expect(issue?.message).toContain('got "none"');
   });
 
   it("catalog and commercial shuttle baselines agree on href and kind per productId", () => {

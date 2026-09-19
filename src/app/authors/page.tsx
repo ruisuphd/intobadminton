@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   // doesn't flag it.
   title: "Who writes this",
   description:
-    "I write every IntoBadminton review, comparison, and guide — Rui Su, with disclosed playing background and coach lineage.",
+    "I write every IntoBadminton article, comparison, and guide — Rui Su, with disclosed playing background and coach lineage.",
   alternates: pageAlternates(PATH),
   openGraph: {
     title: "Who writes IntoBadminton",
     description:
-      "I write every IntoBadminton review, comparison, and guide — with disclosed playing background.",
+      "I write every IntoBadminton article, comparison, and guide — with disclosed playing background.",
     url: PATH,
     type: "article",
     siteName: "IntoBadminton",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Who writes IntoBadminton",
     description:
-      "I write every IntoBadminton review, comparison, and guide — with disclosed playing background.",
+      "I write every IntoBadminton article, comparison, and guide — with disclosed playing background.",
   },
 };
 
@@ -39,9 +39,9 @@ const AUTHORS = [
   {
     slug: "rui-su",
     name: companyInfo.founderName,
-    role: "Founder and reviewer",
+    role: "Founder and editor",
     summary:
-      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. I sign every IntoBadminton review and the finder methodology.",
+      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. I sign every IntoBadminton article and the finder methodology.",
   },
 ] as const;
 
@@ -50,7 +50,7 @@ export default function AuthorsIndexPage() {
     path: PATH,
     headline: "Who writes IntoBadminton",
     description:
-      "I write every IntoBadminton review, comparison, and guide — with disclosed playing background.",
+      "I write every IntoBadminton article, comparison, and guide — with disclosed playing background.",
     section: "Guides",
   });
   const breadcrumb = {
@@ -92,7 +92,7 @@ export default function AuthorsIndexPage() {
         <header className="space-y-3">
           <h1 className="text-display text-[var(--text)]">Who writes this</h1>
           <p className="text-lg leading-relaxed text-[var(--color-muted)]">
-            I sign every review, comparison, and guide on IntoBadminton. Playing
+            I sign every article, comparison, and guide on IntoBadminton. Playing
             background, coach lineage, and potential conflicts of interest stay
             disclosed. One author on purpose — depth over volume.
           </p>

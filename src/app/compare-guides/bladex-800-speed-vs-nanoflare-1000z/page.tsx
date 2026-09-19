@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageAlternates } from "@/lib/metadata";
 import { CompareGuidePage, type CompareGuideConfig } from "@/components/CompareGuidePage";
 import { defaultOgImages } from "@/lib/og";
-import { reviewPath } from "@/lib/review-pages";
 
 export const metadata: Metadata = {
   title: "Li-Ning Bladex 800 Speed vs Yonex Nanoflare 1000Z",
@@ -76,10 +75,6 @@ const config: CompareGuideConfig = {
   onCourt:
     "1000 Z is in my bag. Bladex 800 Speed is the Li-Ning I would demo if a clubmate wanted Nanoflare-like speed without Yonex MAP. Through contact it feels heavier than the listed weight suggests — that is the point of the tough-elastic frame, not a QC surprise. On the drives that win my doubles points, 1000 Z is still sharper. I would only switch if stock or price made 1000 Z unrealistic, not because Bladex is 'the same racket'.",
   relatedLinks: [
-    { label: "Read the full Bladex 800 Speed review", href: reviewPath("ln-bladex-800-speed") },
-    { label: "Read the full Nanoflare 1000Z review", href: reviewPath("yy-nanoflare-1000z") },
-    { label: "Li-Ning Bladex 800 Speed deep dive", href: "/review/li-ning-bladex-800-speed-tough-elastic/" },
-    { label: "Yonex Nanoflare speed series explained", href: "/review/yonex-nanoflare-speed-series-explained/" },
     { label: "Yonex vs Victor vs Li-Ning brand showdown", href: "/compare-guides/yonex-victor-li-ning/" },
     { label: "Best doubles badminton rackets", href: "/best/doubles-rackets/" },
   ],

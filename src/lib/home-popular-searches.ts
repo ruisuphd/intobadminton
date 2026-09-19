@@ -44,8 +44,8 @@ export const homePopularSearches: HomePopularSearch[] = [
   { label: "Glossary — 4U, head-heavy, T-throat explained", href: "/guides/glossary/", tag: "Glossary" },
   { label: "String tension — a practical guide", href: "/guides/string-tension/", tag: "Strings" },
   { label: "Reviews hub", href: "/review/", tag: "Reviews" },
-  { label: "Nanoflare 1000 Z review", href: "/review/yonex-nanoflare-1000z-review/", tag: "Reviews" },
-  { label: "Yonex Tour vs Pro: which Tour is worth buying", href: "/review/yonex-tour-series-buying-guide/", tag: "Value" },
+  { label: "How to choose a badminton racket", href: "/review/how-to-choose-a-badminton-racket/", tag: "Reviews" },
+  { label: "Used racket depreciation: what gear keeps its value", href: "/review/used-racket-depreciation/", tag: "Value" },
   { label: "Kumpoo rackets decoded", href: "/brands/kumpoo/", tag: "Brand" },
 ];
 
@@ -75,10 +75,10 @@ export type OfflineRecoveryLink = {
 };
 
 const POPULAR_SEARCH_OFFLINE_DESCRIPTIONS: Record<string, string> = {
-  "/review/yonex-nanoflare-1000z-review/":
-    "Precached — homepage popular-search flagship speed racket review.",
-  "/review/yonex-tour-series-buying-guide/":
-    "Precached — homepage popular-search Tour vs Pro value guide.",
+  "/review/how-to-choose-a-badminton-racket/":
+    "Precached — homepage popular-search racket buying guide.",
+  "/review/used-racket-depreciation/":
+    "Precached — homepage popular-search resale value guide.",
 };
 
 /** Popular-search review deep links for `/offline/` recovery sidebar — shared with parity CI. */

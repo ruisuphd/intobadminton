@@ -24,7 +24,7 @@
  *     (Ads → per-site settings → Auto ads) is still required.
  *   - After approval, mount this component only on publication templates
  *     (guides, best-of, compare-guides, indexable reviews). Never on PDPs,
- *     quiz/results/saved/compare, or noindexed court notes.
+ *     quiz/results/saved/compare, or any article the thin-content gate holds back.
  */
 
 import { shouldLoadAdSenseLoader } from "@/lib/ads-inventory";

@@ -124,20 +124,7 @@ export function compareGuidesForBlog(slug: string, limit = 2): string[] {
 }
 
 const REVIEW_EDITORIAL_LINKS: Record<string, { href: string; label: string }[]> =
-  {
-    "yy-nanoflare-1000z": [
-      {
-        href: "/review/yonex-nanoflare-1000z-play-review/",
-        label: "Nanoflare 1000 Z vs 1000 Play",
-      },
-    ],
-    "yy-nanoflare-1000-play": [
-      {
-        href: "/review/yonex-nanoflare-1000z-play-review/",
-        label: "Nanoflare 1000 Z vs 1000 Play",
-      },
-    ],
-  };
+  {};
 
 export function editorialComparisonsForReview(productId: string) {
   const manual = REVIEW_EDITORIAL_LINKS[productId] ?? [];

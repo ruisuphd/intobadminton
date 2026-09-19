@@ -75,8 +75,8 @@ export function EditorialArticlePage({
    *
    * -1 disables the in-article slot; the end-of-article slot always renders
    * on indexable publication reviews. Both are no-ops until
-   * NEXT_PUBLIC_ADSENSE_MODE flips off "disabled", and both stay off
-   * noindexed court notes.
+   * NEXT_PUBLIC_ADSENSE_MODE flips off "disabled", and both stay off any
+   * article the thin-content gate holds back.
    */
   const allowAds = adsAllowedOnReview(article.slug);
   const related = allowAds

@@ -24,7 +24,7 @@ describe("catalog-string-baseline", () => {
     const parsed = validateCatalogStringBaselineFile(raw);
     expect(parsed.ok).toBe(true);
     if (parsed.ok) {
-      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(6);
+      expect(parsed.file.queries.length).toBeGreaterThanOrEqual(5);
     }
   });
 
@@ -60,14 +60,14 @@ describe("catalog-string-baseline", () => {
   });
 
   it("flags editorial kind mismatches", () => {
-    const product = catalogProductById("ln-l69-string");
+    const product = catalogProductById("yy-bg65");
     expect(product).toBeDefined();
     const issue = evaluateCatalogStringBaselineQuery(
       {
         id: "test",
-        productId: "ln-l69-string",
-        expectHref: "/review/li-ning-l69-string-review/",
-        expectKind: "guide",
+        productId: "yy-bg65",
+        expectHref: "/review/badminton-string-selector/",
+        expectKind: "review",
       },
       product
     );
