@@ -16,7 +16,8 @@ Full diagnosis and plan: [AdSense Root Cause & Remediation Plan](https://claude.
 - **Build gate inverted.** `scripts/check-source-attribution.mjs` (which failed the build if an article credited BadmintonCN) is gone. `scripts/check-published-provenance.mjs` now fails the build if any published article has a non-null source entry.
 - **Import pipeline retired.** `blog:import`, `blog:sync`, `blog:check` and their scripts are removed, so the next markdown drop cannot recreate the problem.
 - **Founder reviews come back one at a time**, each rewritten from scratch from Rui's own play, with borrowed measurements removed and its source-map entry cleared. The 1000 Z review stays down until its measurements are his.
-- **About, Methodology and Source policy** describe what the site now does.
+- **About, Methodology and Source policy** describe what the site now does: articles are original, community reports are credited by name in a sentence or two, and the planned-pipeline and "unless rights allow it" wording is gone.
+- **Copy pass on the kept articles.** The provenance gate only checks the source map, not prose, so the 13 were read by hand. `how-to-read-badminton-reviews` no longer describes noindexed court notes; `victor-drivex-12-vs-astrox-88d-pro` credits BadmintonCN reviewers for measurements and on-court findings instead of "the forum I report" / "I' measured", and now matches Victor's head-heavy spec; the Thunder 100 II comparison no longer implies a side-by-side test; the glossary's broken Axelsen sentence is repaired. `npm run blog:validate` now fails on that normalizer debris.
 - **No dead links.** `reviewPath()` falls back to the product spec page instead of the old `/review/<id>/` stub; brand hubs, compare guides, the homepage shelf, popular searches and the offline page link only to published articles.
 - PWA cache bumped to `ib-v46`.
 
@@ -25,7 +26,7 @@ Full diagnosis and plan: [AdSense Root Cause & Remediation Plan](https://claude.
 **Not this week.** In order:
 
 1. Deploy this branch to GitHub Pages.
-2. Run `node docs/qa-adsense-recovery/verify-removal-live.mjs` against production until it passes (404s live, sitemap = 13 reviews, no hub links into removed URLs, `ib-v46` served, About updated).
+2. Run `node docs/qa-adsense-recovery/verify-removal-live.mjs` against production until it passes: removed URLs 404, sitemap lists the 13 articles, no sitemap page links into removed URLs, no article or trust page matches the stale-copy patterns, client JS carries no removed slugs, and `ib-v46` is served.
 3. Regenerate and resubmit `sitemap.xml` in Search Console. The Removals tool is optional; the 404s do the permanent job.
 4. Pull Search Console clicks for the removed URLs so the traffic cost is measured, not guessed.
 5. Wait about **14 days** after the deploy so AdsBot and Googlebot recrawl.

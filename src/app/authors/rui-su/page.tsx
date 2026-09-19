@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rui Su — Founder, IntoBadminton",
     description:
-      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. Signs every IntoBadminton equipment review.",
+      "Competitive Division 4 Ireland player. Trained under former Malaysia national-team and China provincial-team coaches. Signs every IntoBadminton article and guide.",
     url: PATH,
     type: "profile",
     siteName: "IntoBadminton",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rui Su — Founder, IntoBadminton",
     description:
-      "Competitive Division 4 Ireland player. Signs every IntoBadminton equipment review.",
+      "Competitive Division 4 Ireland player. Signs every IntoBadminton article and guide.",
   },
 };
 
@@ -132,7 +132,7 @@ export default function RuiSuAuthorPage() {
               <strong className="text-[var(--text)]">Coaches.</strong>{" "}
               Trained under a former Malaysian national-team player and a former
               Chinese provincial-team player. Coach lineage is disclosed on
-              every review where personal preference might influence the
+              every article where personal preference might influence the
               verdict.
             </li>
           </ul>
@@ -147,11 +147,11 @@ export default function RuiSuAuthorPage() {
               <strong className="text-[var(--text)]">
                 Founder firsthand notes.
               </strong>{" "}
-              Where a review or comparison says &quot;Founder firsthand (Rui,
-              Div 4 IE)&quot;, that prose is mine and reflects my own racket
-              setup, stringbed, and on-court experience. Where the prose
-              attributes a measurement to BadmintonCN, YuanShi, or a community
-              tester, the source — not me — owns the number.
+              Where a catalogue editor note says &quot;Founder firsthand (Rui,
+              Div 4 IE)&quot;, that note is mine and reflects my own racket
+              setup, stringbed, and on-court experience. Where an article
+              credits a measurement to BadmintonCN, YuanShi, or a community
+              reviewer, the source — not me — owns the number.
             </li>
             <li>
               <strong className="text-[var(--text)]">

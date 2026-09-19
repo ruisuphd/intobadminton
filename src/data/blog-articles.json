@@ -134,7 +134,7 @@
       },
       {
         "heading": "Player and tactical jargon",
-        "body": "Sugar-water: forum slang for an extra-easy, forgiving racket — derives from Chinese badminton community usage. T0 / T1 / S-tier: forum tier rankings used on the forum to compare racket classes. Kurenai / Camel-gold / (Axelsen): colourway names that distinguish racket generations (e.g. Astrox 100ZZ Kurenai is the original red Black-Micro-Core edition; 100ZZ is the Viktor Axelsen / VA edition that uses Volume Cut Resin instead). Note: is the Chinese transliteration of Viktor Axelsen, not Anders Antonsen — Antonsen is sponsored by Victor, not Yonex. YuanShi shaft hardness: shaft-deflection numbers measured and published by a Chinese badminton creator using a professional racket testing rig (lower number = stiffer); widely cited on the forum but not an official manufacturer spec. SE / VA / Tour: subvariants of pro frames signed off by specific players (e.g. Mohammad Ahsan SE, Viktor Axelsen VA, Tour, Game)."
+        "body": "Sugar-water: forum slang for an extra-easy, forgiving racket — derives from Chinese badminton community usage. T0 / T1 / S-tier: tier rankings used on Chinese badminton forums to compare racket classes. Kurenai / Camel-gold / VA: colourway and edition names that distinguish racket generations (e.g. Astrox 100ZZ Kurenai is the original red Black-Micro-Core edition; the 100ZZ VA is the Viktor Axelsen edition that uses Volume Cut Resin instead). Chinese forums often call the VA edition by a transliteration of Axelsen's name; it is not an Anders Antonsen edition — Antonsen is sponsored by Victor, not Yonex. YuanShi shaft hardness: shaft-deflection numbers measured and published by a Chinese badminton creator using a professional racket testing rig (lower number = stiffer); widely cited on Chinese badminton forums but not an official manufacturer spec. SE / VA / Tour: subvariants of pro frames signed off by specific players (e.g. Mohammad Ahsan SE, Viktor Axelsen VA, Tour, Game)."
       },
       {
         "heading": "How to use this glossary with the finder",
@@ -350,7 +350,7 @@
     "sections": [
       {
         "heading": "Start with the reviewer's context",
-        "body": "Look for level, event, racket weight, grip size, string, tension, and how long they tested the product. One session can reveal first feel. It cannot prove durability or long-term comfort. A Division 4 mixed-doubles player on 4U G5 at 24 lb is not the same data as a men's singles player on 3U at 28 lb, even when both write 'powerful'.\n\nIf the review never names those variables, treat it as entertainment. IntoBadminton's indexed reviews that stay in search are either original editorials or frames I have actually played. Short court notes translated from forums are noindexed for this reason — they look like reviews and they are not your fit."
+        "body": "Look for level, event, racket weight, grip size, string, tension, and how long they tested the product. One session can reveal first feel. It cannot prove durability or long-term comfort. A Division 4 mixed-doubles player on 4U G5 at 24 lb is not the same data as a men's singles player on 3U at 28 lb, even when both write 'powerful'.\n\nIf the review never names those variables, treat it as entertainment. Hold this site to the same test. Every article here is written for IntoBadminton. When one leans on someone else's report, it says whose, summarises it in a sentence or two, and does not pass it off as its own court time."
       },
       {
         "heading": "Separate fact from feel",
@@ -358,7 +358,7 @@
       },
       {
         "heading": "Beware first person that is not firsthand",
-        "body": "Imported forum posts are also written in first person. 'I play' is not a quality signal. On this site, founder-firsthand means the catalogue editor note says so, or the article is an original editorial with no import source. If a page cannot say who played it, in which role, it should not be in the search index and it should not carry ads.\n\nThat is also why you should not paste a Chinese-language thread into a translator and publish it as your review. Scaled translation is a spam policy example, not a content strategy."
+        "body": "Forum posts, retailer copy, and machine-translated threads are all written in the first person. 'I play' is not a quality signal on its own. It does not tell you who held the racket, in which role, or for how long. Look for the setup and the length of the test before you trust the pronoun.\n\nThat is also why you should not paste a Chinese-language thread into a translator and publish it as your own review. Google's spam policies list translating other people's content into new pages, with little added value, as scaled content abuse. It is someone else's court time under your name."
       },
       {
         "heading": "Use reviews to form questions, not shopping lists",
@@ -374,15 +374,15 @@
       },
       {
         "heading": "How IntoBadminton labels what you are reading",
-        "body": "Indexed reviews on this site are original editorials or founder-firsthand tests. Short court notes that started as imported community reports stay live for the finder but are noindexed and carry no ads. That split exists so a reviewer — human or AdsBot — does not land on a 300-word translated SKU note and conclude the publication is a dump.\n\nWhen you see an editor note that starts with Founder firsthand or Founder current, that is the only first-person signal we treat as court time. Imported threads also say 'I'. Do not confuse the two. If you are an author or a forum user who wants a citation changed, the About page has the contact path."
+        "body": "Every article on IntoBadminton is original to the site. Community threads are research. When one shapes a recommendation, the article names it, summarises it in a sentence or two, and does not reproduce it as the article.\n\nFirst person is reserved for court time. I write 'I' only about gear I have played, and the catalogue marks those products with an editor note that starts Founder firsthand or Founder current. Everything else is written from official specs, the finder's scoring, or a named community report, and the page says which. If you are an author or a forum user who wants a citation corrected, the About page has the contact path."
       },
       {
         "heading": "Skip pages that cannot say who should skip",
-        "body": "Affiliate language is another filter. A page that cannot say who should skip the product, then pushes a buy button, is a catalogue. IntoBadminton keeps retailer links labelled sponsored. Indexed reviews still have to earn the click with a skip section and a named setup. If you cannot find those, you are not reading a review. You are reading a listing with a byline.\n\nDo the same filter on video. A ten-minute unboxing that never names tension or role is a colourway ad. A five-minute clip that shows mishits and says who should not buy the frame is closer to a review. Pause and write the reviewer's level next to yours. If you cannot, the video did not give you data."
+        "body": "Affiliate language is another filter. A page that cannot say who should skip the product, then pushes a buy button, is a catalogue. IntoBadminton keeps retailer links labelled sponsored. Reviews here still have to earn the click with a skip section and a named setup. If you cannot find those, you are not reading a review. You are reading a listing with a byline.\n\nDo the same filter on video. A ten-minute unboxing that never names tension or role is a colourway ad. A five-minute clip that shows mishits and says who should not buy the frame is closer to a review. Pause and write the reviewer's level next to yours. If you cannot, the video did not give you data."
       },
       {
         "heading": "Write the skip line yourself",
-        "body": "After you finish a review, write one sentence: who should not buy this. If you cannot, the page did not give you a decision. That is the test I use on my own pages before they stay indexed. A skip line is cheaper than another 400 words of specs."
+        "body": "After you finish a review, write one sentence: who should not buy this. If you cannot, the page did not give you a decision. That is the test I use on my own pages before I publish them. A skip line is cheaper than another 400 words of specs."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz."
@@ -414,7 +414,7 @@
       },
       {
         "heading": "Where Gen 2 wins on hit feel",
-        "body": "Three observations from side-by-side comparison. First, the smash sound on Gen 2 is denser and lower-pitched, which usually correlates with cleaner energy transfer. Second, drops feel more controlled because the broader sweet spot reduces the muddy feel on off-centre net contact. Third, the shaft on Gen 2 snaps back faster — clears and drives both feel sharper. None of these are massive shifts, but together they make Gen 2 the polished version of Gen 1."
+        "body": "Reviewers who have compared the two generations describe three differences. First, the smash sound on Gen 2 is denser and lower-pitched, which usually correlates with cleaner energy transfer. Second, drops feel more controlled because the broader sweet spot reduces the muddy feel on off-centre net contact. Third, the Gen 2 shaft snaps back faster — clears and drives both feel sharper. None of these are massive shifts, but together they make Gen 2 the polished version of Gen 1."
       },
       {
         "heading": "Where Gen 1 still holds up",
@@ -573,7 +573,7 @@
     "sections": [
       {
         "heading": "Why DriveX 10 owners should pay attention",
-        "body": "Nano-aerogel frame fill, WES 3.0 shaft, Power Ring Pro junction. The DriveX 12 fixes the DriveX 10's well-known shaft-rotation issue and pulls within striking distance of the Yonex flagship attack racket. Early DriveX 10 buyers documented a shaft-rotation problem at the cone-cap junction — the shaft would rotate in the handle under sustained big-swing load. Victor's warranty replaced affected frames, but the issue lingered as a hesitation point for serious attack-racket buyers. The DriveX 12 introduces Power Ring Pro: a mechanical clip-style junction that adds a rigid physical connection between the shaft and the suspension grip system. the forum I report the rotation issue is fully resolved on the new generation, and the additional rigidity also produces measurably better anti-torsion when the frame is loaded off-axis."
+        "body": "Early DriveX 10 buyers documented a shaft-rotation problem at the cone-cap junction — the shaft would rotate in the handle under sustained big-swing load. Victor's warranty replaced affected frames, but the issue lingered as a hesitation point for serious attack-racket buyers. The DriveX 12 introduces Power Ring Pro: a mechanical clip-style junction that adds a rigid physical connection between the shaft and the suspension grip system. BadmintonCN reviewers who have hit the new frame report that the rotation problem is gone, and that the frame resists twisting better on off-centre hits. The DriveX 12 is not a frame I have played, so treat that as their finding rather than mine. A shop demo on your own string will tell you more than any review, this one included."
       },
       {
         "heading": "What's new under the paint",
@@ -581,11 +581,17 @@
       },
       {
         "heading": "On court vs the DriveX 10",
-        "body": "the forum measurements put both rackets in the same class — same frame footprint, similar weight and balance. But the DriveX 12 swings faster than the DriveX 10 at equal mass thanks to the aerogel fill, and I report better continuity in fast doubles where the DriveX 10's heavier swing dragged. Defense and front-court reflexes are notably improved. Smashes feel comparable in raw power but the 12 has crisper feedback, so you know when you've hit the sweet spot. If you bought a DriveX 10 and felt like the swing was holding you back, the 12 is the upgrade — assuming you can absorb the cost of replacing rather than reselling."
+        "body": "BadmintonCN reviewers who compared the two put them in the same class — same frame footprint, similar weight and balance. Their consistent finding is that the DriveX 12 swings faster at equal mass, which they credit to the aerogel fill, and holds up better in fast doubles exchanges where the DriveX 10's heavier swing dragged. They also describe quicker defence and front-court reactions, similar raw smash power, and crisper feedback on clean contact. If you own a DriveX 10 and the swing felt like it was holding you back, those reports point to the 12 as the upgrade — assuming you can absorb the cost of replacing rather than reselling, and ideally after a demo."
       },
       {
         "heading": "On court vs the Astrox 88D Pro 2024",
-        "body": "The closer comparison for DriveX 12 buyers, since both are head-heavy stiff-shaft attack rackets in the same price tier. I' measured 4U DriveX 12: 89.2g unstrung at balance 311mm. 4U Astrox 88D Pro 2024: 89.2g unstrung at balance 308mm. The 88D Pro's shaft is slightly stiffer and crisper off-string, with the Yonex 2nd-gen Namd shaft producing snappier counter-attack on defence; the 88D Pro feels more 'connected' on the contact moment. The DriveX 12 has slightly better pocketing for net play and drops, where the 88D Pro can feel quick-firing. Smashes go to the 88D Pro by a small margin in absolute power; the DriveX 12 is sharper on placement."
+        "body": "This is the closer comparison, since both are head-heavy stiff-shaft attack rackets in the same price tier. A BadmintonCN reviewer measured a 4U DriveX 12 at 89.2 g with the underbase removed and a 311 mm balance, in line with Victor's head-heavy listing. Yonex lists the 88D Pro 2024 as head-heavy with a stiff shaft in 3U and 4U. Reviewers who have hit both describe the 88D Pro's shaft as slightly stiffer and crisper off the string, with snappier counter-attack on defence and a more 'connected' feel at contact. They give the DriveX 12 slightly better pocketing for net play and drops, where the 88D Pro can feel quick-firing. Smashes go to the 88D Pro by a small margin; the DriveX 12 is sharper on placement.",
+        "glossaryLinks": [
+          {
+            "term": "Head-heavy",
+            "id": "head-heavy"
+          }
+        ]
       },
       {
         "heading": "The price argument",
@@ -597,7 +603,7 @@
       },
       {
         "heading": "On court, in roles rather than brands",
-        "body": "I have hit Astrox 88D Pro 2024. It is harder to generate power than 77 Pro; for most players I still send them to 77 Pro unless they already load a stiffer Astrox. DriveX 12 is the even-balance Victor I would demo when a clubmate wants drive speed without Yonex MAP, not as a smash substitute for 88D.\n\nIf your points are rear-court smash, 88D Pro (or 77 Pro) is the Yonex conversation. If your points are flat drives and recovery, DriveX geometry is the Victor conversation. Do not buy DriveX 12 because it is 'the 88D killer'. Buy it because your role matches even-balance drives.",
+        "body": "I have hit Astrox 88D Pro 2024. It is harder to generate power than 77 Pro; for most players I still send them to 77 Pro unless they already load a stiffer Astrox. The DriveX 12 is not a frame I have played. Victor lists it as head-heavy with a stiff shaft, so it belongs in the same rear-court attack conversation as 88D Pro, not the drive-speed one.\n\nIf your points are rear-court smash, both frames are candidates, and the deciding questions are price, stock, and who strings for you. If your points are flat drives and recovery, neither is your racket — look at a head-light frame instead. Do not buy DriveX 12 because someone called it 'the 88D killer'. Buy it because your role matches a head-heavy attack frame and a demo agrees.",
         "glossaryLinks": [
           {
             "term": "Smash",
@@ -615,7 +621,7 @@
       },
       {
         "heading": "A one-session test that settles the brand argument",
-        "body": "Hit twenty rear-court smashes and twenty flat drives on each frame with your usual string. Whichever frame still lets you recover for the next shot in the twentieth rally is the one that matches your night, not the one whose badge you wanted. 88D Pro is the Yonex smash conversation. DriveX 12 is the even-balance drive conversation. They are not substitutes.\n\nI have hit 88D Pro. I still send most club players to 77 Pro. DriveX 12 is what I would demo when the shop is Victor-native and the player's points already live in the mid-court. Stock and a stringer this week beat a slightly nicer shaft you cannot maintain."
+        "body": "Hit twenty rear-court smashes and twenty flat drives on each frame with your usual string. Whichever frame still lets you recover for the next shot in the twentieth rally is the one that matches your night, not the one whose badge you wanted. Both are head-heavy smash frames; the demo tells you which one your arm and timing prefer.\n\nI have hit 88D Pro. I still send most club players to 77 Pro. DriveX 12 is what I would point a Victor-native player toward for the same rear-court job, with a demo first, because I have not played it myself. Stock and a stringer this week beat a slightly nicer shaft you cannot maintain."
       }
     ],
     "cta": "Not sure which racket or shoe fits your game? Try the finder quiz.",

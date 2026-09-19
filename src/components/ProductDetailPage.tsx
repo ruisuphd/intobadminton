@@ -72,8 +72,7 @@ export function ProductDetailPage({ product }: { product: ProductRecord }) {
               <Link href="/quiz/" className="text-[var(--color-accent)] underline">
                 equipment finder
               </Link>{" "}
-              to see how it ranks for your level and style — or read the full
-              first-person review when we have one.
+              to see how it ranks for your level and style.
             </p>
             <ProductDetailActions product={product} />
             {reviewHref && reviewLabel && (

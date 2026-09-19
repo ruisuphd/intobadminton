@@ -125,7 +125,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
       <section className="hero-decoration relative overflow-hidden pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="layout-band relative max-w-6xl">
           <div className="max-w-2xl">
-            <span className="eyebrow">Reviews and equipment finder · 2026</span>
+            <span className="eyebrow">Equipment finder and buying guides · 2026</span>
             <h1 className="text-display mt-4 text-[var(--text)]">
               {copy.home.title}
             </h1>

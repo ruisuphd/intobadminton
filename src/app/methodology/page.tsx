@@ -50,8 +50,8 @@ export default function MethodologyPage() {
           BadmintonCN and similar platforms can be useful discovery sources.
           When I use search-visible references, I show source name, language,
           theme summary, confidence, and a link. I do not display copied forum
-          review text unless rights allow it, and no article on this site is a
-          translation of a forum post.
+          review text, and no article on this site is a translation of a forum
+          post.
         </p>
         <h2 className="text-xl font-semibold text-[var(--text)]">
           4. Resale and depreciation

@@ -42,16 +42,6 @@ export default function SourcePolicyPage() {
           We do not bypass verification prompts, log in with automated tools,
           or display copied review excerpts.
         </p>
-        <h2 className="text-xl font-semibold text-[var(--text)]">
-          Evidence model
-        </h2>
-        <p>
-          The planned ingestion pipeline stores source URLs, language, product
-          matches, timestamps, hashes, themes, confidence, and human-reviewed
-          summaries. It avoids copied third-party posts unless expressly
-          permitted, and any row without an official product-page source is
-          marked for review.
-        </p>
 
         <section className="mt-10 rounded-2xl bg-[color:var(--color-accent-soft)] p-7 text-center">
           <h2 className="text-xl font-semibold text-[var(--text)]">

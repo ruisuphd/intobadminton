@@ -1,5 +1,9 @@
 # Unmapped Blog Sources — Triage (May–Jun 2026)
 
+> **HISTORICAL — DO NOT RUN.** This was a worklist for the forum-markdown import
+> pipeline, which was deleted in Sept 2026 along with the translated articles. See
+> README "Articles (hand-maintained, originals only)".
+
 **Inventory date:** 2026-07-20  
 **Active source files:** mapped (see `npm run blog:check`)  
 **Archived Jul 20 Chinese originals:** `blogs/_archive/jul2026-batch3/` (15 files)

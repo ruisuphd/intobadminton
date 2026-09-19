@@ -1,5 +1,12 @@
 # Blog Ingestion Plan — Historical Chinese Reviews Triage
 
+> **HISTORICAL — DO NOT RUN.** In Sept 2026 the translated review corpus described
+> below was removed from the site, and the import pipeline it documents
+> (`blog:import`, `blog-import-option-b.py`, `blog-en-persona-normalize.py`, `blog:sync`,
+> `blog:check`) was deleted. Nothing in this file describes the live site. Current
+> process: README "Articles (hand-maintained, originals only)" and
+> `docs/ADSENSE_RESUBMIT.md`.
+
 > Status (2026-05-24): this document is historical. The live blog pipeline now
 > uses `blogs/*.md` English sections as editorial source and imports them into
 > `src/data/blog-articles.json` with `scripts/blog-import-option-b.py`.

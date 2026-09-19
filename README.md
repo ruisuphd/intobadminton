@@ -10,8 +10,8 @@ Evidence-led badminton equipment finder and review site. Live at
   returns a ranked shortlist with transparent fit-score reasoning. Logic in
   [`src/lib/scoring.ts`](src/lib/scoring.ts); product catalog in
   [`src/data/products.json`](src/data/products.json).
-- **Reviews** at `/review/` — a flat personal-blog style archive of equipment
-  notes. Legacy `/blog/` and `/comparisons/` URLs redirect here.
+- **Reviews** at `/review/` — original buying guides and explainers written for
+  the site. Legacy `/blog/` and `/comparisons/` URLs redirect here.
 - **Decision pages** at `/compare-guides/`, `/best/`, and `/brands/` — structured
   finder support with explicit source-authority labels (manufacturer official
   page vs independent measurement vs editor interpretation).
@@ -57,26 +57,25 @@ npm run build       # next build → static export to out/
 npm run postbuild   # legacy redirects + SEO audit gate (runs after build)
 ```
 
-### Review ingestion (private `blogs/` drop)
+### Articles (hand-maintained, originals only)
 
-Source markdown lives in a **gitignored** `blogs/` folder on the editor machine (not committed).
-Cloud cron agents cannot read `~/Desktop/.../blogs` until you sync a copy into the repo:
+The review corpus is hand-maintained in
+[`src/data/blog-articles.json`](src/data/blog-articles.json), with the slug list in
+[`src/lib/blog.ts`](src/lib/blog.ts). There is no import pipeline: the old
+`blog:import` / `blog:sync` / `blog:check` tooling that translated forum markdown
+was retired in Sept 2026, when the 196 translated articles were removed (see
+[`docs/ADSENSE_RESUBMIT.md`](docs/ADSENSE_RESUBMIT.md)).
+
+Every published article needs a `null` entry in
+[`scripts/blog-slug-source-map.json`](scripts/blog-slug-source-map.json), meaning
+IntoBadminton wrote it. `scripts/check-published-provenance.mjs` runs in `postbuild`
+and fails the build on any non-null source. The gitignored `blogs/` folder is research
+input only: cite a community report by name in a sentence or two, never translate it
+into an article.
 
 ```bash
-npm run blog:sync -- "/path/to/intobadminton/blogs"
-# or: BLOGS_DROP_PATH="/path/to/blogs" npm run blog:sync
+npm run blog:validate # structural checks on the published articles
 ```
-
-After adding or updating `## English Translation` sections (Chinese stays above the marker):
-
-```bash
-npm run blog:check    # fail if unmapped *.md or untranslated Chinese filenames
-npm run blog:import   # merge into src/data/blog-articles.json
-npm run blog:validate # structural and voice checks on imported reviews
-```
-
-See [`docs/BLOG_INGESTION_PLAN.md`](docs/BLOG_INGESTION_PLAN.md) and
-[`docs/AUTOMATION_RUNLOG.md`](docs/AUTOMATION_RUNLOG.md).
 
 The postbuild SEO audit at
 [`scripts/postbuild-seo-audit.mjs`](scripts/postbuild-seo-audit.mjs) blocks the
