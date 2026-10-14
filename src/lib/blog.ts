@@ -76,6 +76,7 @@ export const blogSlugs = [
   "li-ning-axforce-100-max-racket-review",
   "li-ning-axforce-70-racket-review",
   "li-ning-axforce-70-vs-80-vs-90",
+  "li-ning-axforce-80-ii-review",
   "li-ning-axforce-80-jr-junior-review",
   "li-ning-axforce-80-review",
   "li-ning-axforce-90-dragon-max-dragon-vs-tiger",
