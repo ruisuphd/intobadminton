@@ -151,6 +151,8 @@ TITLE_OVERRIDES = {
     "victor-thruster-sr-cherry-blossom-review": "Victor Thruster SR Cherry Blossom review: paint job or real racket?",
     "victor-fz-flash-1000-racket-review": "Victor FZ Flash 1000 review: speed-type swing at a mid-tier price",
     "li-ning-gp100-pro-overgrip-review": "Li-Ning GP100 Pro overgrip review: budget dry grip, honestly tested",
+    "li-ning-axforce-80-ii-review": "Li-Ning AxForce 80 II review: the all-round attack racket, in 4U and 5U",
+    "li-ning-l69-string-review": "Li-Ning L69 string review: balanced at 25 lb, crisper once you pull it tight",
     "kawasaki-star-cross-second-perspective-review": "Kawasaki Star Cross review: a high-end speed-offence frame, second look",
     "victor-sonic-boom-pro-budget-attack-review": "Victor Sonic Boom Pro review: broad, stable attack just north of 300 yuan",
     "victor-thruster-falcon-review": "Victor Thruster F Falcon Ultra review: a full upgrade on Black Gold",
@@ -275,6 +277,7 @@ TITLE_OVERRIDES = {
 }
 
 DEK_OVERRIDES = {
+    "li-ning-l69-string-review": "Li-Ning L69 is a China-made 0.69 mm nylon with a spiral braid. At 25 lb it stays stable and muted; at 27–28 lb on a stiff frame it starts to bite.",
     "victor-yu-12-racket-review": "DriveX 12 gets Victor's full control-focused rebuild: alloy carbon, WES 3.0, and a firmer all-court feel.",
     "yonex-astrox-100zz-anders-antonsen-vs-va-vs-kurenai": "The Astrox 100ZZ against the 100ZX: Hyper Slim shaft, measured builds, and why the cheaper sibling is the harder racket to handle.",
     # Sprint 132 — deks for the five split pairs. Each of these pages used to

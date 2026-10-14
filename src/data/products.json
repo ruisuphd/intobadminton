@@ -2190,6 +2190,54 @@
     }
   },
   {
+    "id": "ln-axforce-80-ii",
+    "category": "racket",
+    "name": "AxForce 80 II (雷霆 80 二代)",
+    "brand": "Li-Ning",
+    "priceUsd": 210,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "3U",
+      "4U",
+      "5U"
+    ],
+    "gripSizes": [
+      "G5",
+      "G6"
+    ],
+    "balanceMm": 305,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 24,
+      "max": 31
+    },
+    "shaftFlexSource": "retailer",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.liningtw.com/products/aypw049",
+    "lastVerifiedAt": "2026-10-13",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "all_round_attack",
+      "doubles_continuity",
+      "controlled_smash"
+    ],
+    "sourceUrls": [
+      "https://www.liningtw.com/products/aypw049",
+      "https://e78shop.com/products/li-ning-axforce-80-ii-aypw049-electro-purple"
+    ],
+    "editorNote": "Model AYPW049, Electro Purple. Li-Ning's global site has no AYPW049 page as of 2026-10-13. Taiwan Li-Ning store listing and a matching Hong Kong retailer sheet: box frame in M46 + T1100 + ULTRA carbon with a polymer energy layer, ULTRA shaft with high-density damping, 6.6 mm shaft, 675 mm length, medium hit feel, swing weight slightly heavy / moderate / slightly light across 3U / 4U / 5U, max tension 31 / 30 / 29 lb, grips 3U G5, 4U G5 or G6, 5U G6. Balance in millimetres is not printed; court samples landed between 301 and 307 mm depending on trim, so 305 mm here is an editor midpoint, not a factory figure. Street price seen at NT$5,460 (list NT$7,800) and HK$1,650. 4U keeps the original 80's all-round attack with faster shaft recovery. 5U needs your own swing.",
+    "reviewCount": 0
+  },
+  {
     "id": "ln-axforce-80-jr",
     "category": "racket",
     "name": "AxForce 80 JR",
@@ -2791,7 +2839,7 @@
       "sg"
     ],
     "officialSourceUrl": "https://en.lining.com/badminton/accessories",
-    "lastVerifiedAt": "2026-05-19",
+    "lastVerifiedAt": "2026-10-13",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "competitive",
@@ -2801,9 +2849,10 @@
       "value"
     ],
     "sourceUrls": [
-      "https://en.lining.com/badminton/accessories"
+      "https://en.lining.com/badminton/accessories",
+      "https://www.shopnings.com/li-ning-gp100-pro-badminton-overgrip-3-pcs/"
     ],
-    "editorNote": "Dry-feel overgrip with micro-perforations for sweat absorption. Grip improves with sweat exposure. Strong value vs Yonex Super Grap.",
+    "editorNote": "ASJV021. Polyurethane, 1200 x 25 x 0.6 mm, three per pack. Dry when fresh, grip increases once the hand sweats. Firmer and less tacky than GP1000 New. Dry hands can find the tooth abrasive until there is a little moisture. International three-pack about $9; China street about 17–20 yuan for three.",
     "reviewCount": 0
   },
   {
@@ -3130,7 +3179,7 @@
     "category": "string",
     "name": "L64 String",
     "brand": "Li-Ning",
-    "priceUsd": 15,
+    "priceUsd": 8,
     "gaugeMm": 0.64,
     "feel": "medium",
     "repulsion": "very_high",
@@ -3146,8 +3195,8 @@
       "asia"
     ],
     "officialSourceUrl": "https://en.lining.com/badminton/strings",
-    "lastVerifiedAt": "2026-05-22",
-    "verificationStatus": "source_only",
+    "lastVerifiedAt": "2026-10-13",
+    "verificationStatus": "editor_verified",
     "minRecommendedLevel": "recreational",
     "maxRecommendedLevel": "club",
     "bestFor": [
@@ -3157,9 +3206,10 @@
     ],
     "sourceUrls": [
       "https://en.lining.com/badminton/strings",
-      "https://bbs.badmintoncn.com/"
+      "https://www.shopnings.com/pub/media/descriptions/2026ssbadmintongear.pdf",
+      "https://www.shopnings.com/li-ning-l64-high-repulsion-badminton-string/"
     ],
-    "editorNote": "Li-Ning L64 high-elasticity string — 0.64mm diameter, woven outer + nylon core, Made in China. Source-reviewer's name is 'L64'; Li-Ning's closest officially-documented 0.64mm string is AP64 Rainbow (multifilament core + nylon monofilament outer + Nano-Tec coating). Source-only verification. Best for amateur players (2-3 sessions/week) who value crisp hit sound and easy power; not for hard smashers.",
+    "editorNote": "Official L64, item AXJU011, not AP64. Li-Ning 2026 gear list: 0.64 mm, China list 43 yuan for 10 m. Retailer sheet: high-elasticity nylon core, high-density high-strength nylon braid, made in China. Printed scorecard repulsion 10, sound 10, durability 6, control 9, shock 9. No nano coating on the sheet. International shelf about $8. Easy power and a loud crack; durability falls off if you smash hard.",
     "reviewCount": 0
   },
   {
@@ -3203,7 +3253,7 @@
     "category": "string",
     "name": "L69 String",
     "brand": "Li-Ning",
-    "priceUsd": 14,
+    "priceUsd": 8,
     "gaugeMm": 0.69,
     "feel": "hard",
     "repulsion": "high",
@@ -3222,7 +3272,7 @@
       "us"
     ],
     "officialSourceUrl": "https://lining.com/",
-    "lastVerifiedAt": "2026-04-30",
+    "lastVerifiedAt": "2026-10-13",
     "verificationStatus": "editor_verified",
     "minRecommendedLevel": "club",
     "maxRecommendedLevel": "pro_oriented",
@@ -3234,9 +3284,10 @@
     ],
     "sourceUrls": [
       "https://lining.com/",
-      "https://bbs.badmintoncn.com/"
+      "https://www.shopnings.com/pub/media/descriptions/2026ssbadmintongear.pdf",
+      "https://www.shopnings.com/li-ning-l69-well-balanced-badminton-string/"
     ],
-    "editorNote": "Marketed as a durable balanced string but in practice it leans crisp and rewards strong swings.",
+    "editorNote": "AXJV033. Li-Ning 2026 gear list: 0.69 mm nylon, well balanced, made in China, 10 m at 38 yuan list, January 2026. Symmetrical spiral braid. No titanium coat on the spec sheet. At 25–26 lb it plays stable and a bit muted; at 27–28 lb on a stiff attack frame it crisps up. International shelf about $8.",
     "reviewCount": 0,
     "marketSignals": [
       {

@@ -662,6 +662,16 @@
       "note": "Auto-synced mapped corpus row — Sprint 61"
     },
     {
+      "id": "li-ning-axforce-80-ii-review",
+      "slug": "li-ning-axforce-80-ii-review",
+      "expectProductId": "ln-axforce-80-ii",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning",
+      "note": "AxForce 80 II, 4U and 5U, checked against the Taiwan listing"
+    },
+    {
       "id": "li-ning-axforce-90-new-5u-deep-dive",
       "slug": "li-ning-axforce-90-new-5u-deep-dive",
       "expectProductId": "ln-axforce-90-new",
