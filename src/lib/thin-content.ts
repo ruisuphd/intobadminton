@@ -89,8 +89,6 @@ export const duplicateNoindexSlugs: readonly BlogSlug[] = [
  * links do not 404.
  */
 export const consolidatedNoindexSlugs: readonly BlogSlug[] = [
-  "kawasaki-star-cross-second-perspective-review",
-  "victor-auraspeed-hs-plus-attack-review",
   "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
   "victor-drivex-12-zsw-vs-original-comparison",
   "victor-yu-12-racket-review",

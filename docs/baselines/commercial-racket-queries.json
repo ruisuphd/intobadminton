@@ -170,7 +170,7 @@
     {
       "id": "commercial-racket-vic-auraspeed-hs-plus",
       "productId": "vic-auraspeed-hs-plus",
-      "expectHref": "/review/victor-auraspeed-hs-plus-attack-review/",
+      "expectHref": "/review/victor-auraspeed-hs-plus-deep-dive/",
       "expectKind": "review",
       "expectBestSlug": "doubles-rackets",
       "expectAnchor": "auraspeed-hs-plus",

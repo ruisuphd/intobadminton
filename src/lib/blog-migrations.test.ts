@@ -51,7 +51,7 @@ describe("blog-migrations", () => {
   });
 
   it("splits mapped and editorial inventories", () => {
-    expect(mappedProductBlogSlugs().length).toBe(80);
-    expect(editorialSlugs().length).toBe(66);
+    expect(mappedProductBlogSlugs().length).toBe(78);
+    expect(editorialSlugs().length).toBe(65);
   });
 });

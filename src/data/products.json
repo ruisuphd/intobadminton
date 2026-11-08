@@ -5014,6 +5014,50 @@
     "reviewCount": 0
   },
   {
+    "id": "vic-tk-boom-max",
+    "category": "racket",
+    "name": "Thruster K BOOM MAX (TK-BOOM MAX)",
+    "brand": "Victor",
+    "priceUsd": 60,
+    "headWeight": "head_heavy",
+    "shaftFlex": "medium",
+    "weightClass": "4U",
+    "weightVariants": [
+      "4U"
+    ],
+    "gripSizes": [
+      "G5"
+    ],
+    "balanceMm": 300,
+    "balanceCategory": "head_heavy",
+    "swingWeightEstimate": "medium",
+    "commonStringTensionLbs": {
+      "min": 22,
+      "max": 29
+    },
+    "shaftFlexSource": "editor_estimate",
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg"
+    ],
+    "officialSourceUrl": "https://www.victorsports.sg/product/victor-thruster-k-boom-tk-boom-racket",
+    "lastVerifiedAt": "2026-11-08",
+    "verificationStatus": "needs_review",
+    "minRecommendedLevel": "recreational",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "rear_court_attack",
+      "budget_attack",
+      "value"
+    ],
+    "sourceUrls": [
+      "https://www.victorsports.sg/product/victor-thruster-k-boom-tk-boom-racket"
+    ],
+    "editorNote": "Thruster K BOOM MAX (TK-BOOM MAX / 音爆 MAX). Reviews print BOOM MAX on the frame and describe a 6.6 mm Flash shaft, against 6.8 mm on TK-BOOM and TK-BOOM PRO. Victor Singapore lists Thruster K BOOM (TK-BOOM) and had no MAX product page on 2026-11-08. Strung sample about 90 g, balance near 300 mm. Sale price just over ¥400, not an official RRP. Distinct from Sonic Boom Pro.",
+    "reviewCount": 0
+  },
+  {
     "id": "vic-thruster-9900",
     "category": "racket",
     "name": "Thruster 9900 (TK9900)",
@@ -9466,6 +9510,40 @@
       "https://en.lining.com/badminton/shoes"
     ],
     "editorNote": "AYAW001 Thunder II PRO — Super BOOM fore/heel, Cloud PLUS, carbon plate, Strike Loc. Distinct from Bladesabre 2 Pro.",
+    "reviewCount": 0
+  },
+  {
+    "id": "ln-yun-ting-2-pro",
+    "category": "shoes",
+    "name": "Yun Ting II Pro (雲霆Ⅱ PRO)",
+    "brand": "Li-Ning",
+    "priceUsd": 155,
+    "fitWidth": "normal",
+    "cushioning": "high",
+    "stability": "very_high",
+    "weightFeel": "medium",
+    "hasWideOption": false,
+    "launchYear": 2026,
+    "regionAvailability": [
+      "cn",
+      "sg",
+      "asia"
+    ],
+    "officialSourceUrl": "https://w.store.lining.com/goods/list?key=AYAW037",
+    "lastVerifiedAt": "2026-11-08",
+    "verificationStatus": "editor_verified",
+    "minRecommendedLevel": "club",
+    "maxRecommendedLevel": "competitive",
+    "bestFor": [
+      "cushioning",
+      "lateral_stability",
+      "all_round"
+    ],
+    "sourceUrls": [
+      "https://w.store.lining.com/goods/list?key=AYAW037",
+      "https://www.lining.my/SalePage/Index/341851"
+    ],
+    "editorNote": "AYAW037 Yun Ting II Pro (雲霆Ⅱ PRO). Li-Ning China store lists standard white/black AYAW037-2 at a ¥1099 tag, ¥879 at check on 2026-11-08. Malaysia titles the same code Solid II Pro. Not Thunder 2 Pro (AYAW001). Court notes: RG last, forefoot BOUNSE+, heel Super Boom, dynamic ankle lock. Some shop listings instead describe Cloud PLUS, Super Boom and a carbon plate.",
     "reviewCount": 0
   },
   {
