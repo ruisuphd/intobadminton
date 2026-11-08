@@ -261,11 +261,6 @@
       "destination": "/comparisons/li-ning-bladex-900-new-review/"
     },
     {
-      "slug": "victor-auraspeed-hs-plus-attack-review",
-      "type": "product",
-      "destination": "/review/vic-auraspeed-hs-plus/"
-    },
-    {
       "slug": "yonex-astrox-88-pro-2024-review",
       "type": "editorial",
       "destination": "/comparisons/yonex-astrox-88-pro-2024-review/"
@@ -344,11 +339,6 @@
       "slug": "rsl-aero-u-shuttle-review",
       "type": "product",
       "destination": "/review/rsl-aero-u-shuttle/"
-    },
-    {
-      "slug": "li-ning-axforce-90-new-5u-deep-dive",
-      "type": "editorial",
-      "destination": "/comparisons/li-ning-axforce-90-new-5u-deep-dive/"
     },
     {
       "slug": "bonny-future-land-3-polaris-shoes-review",
@@ -454,11 +444,6 @@
       "slug": "kawasaki-h2-6u-superlight-racket-review",
       "type": "product",
       "destination": "/review/kawasaki-h2/"
-    },
-    {
-      "slug": "kawasaki-star-cross-second-perspective-review",
-      "type": "product",
-      "destination": "/review/kawasaki-star-cross/"
     },
     {
       "slug": "bonny-snake-breath-second-tier-flagship-review",
@@ -737,14 +722,6 @@
       "li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro",
       "yonex-arcsaber-11-pro-review"
     ],
-    "kawasaki-star-cross": [
-      "kawasaki-star-cross-racket-review",
-      "kawasaki-star-cross-second-perspective-review"
-    ],
-    "vic-auraspeed-hs-plus": [
-      "victor-auraspeed-hs-plus-attack-review",
-      "victor-auraspeed-hs-plus-deep-dive"
-    ],
     "vic-drivex-12": [
       "victor-drivex-12-vs-astrox-88d-pro",
       "victor-drivex-12-vs-drivex-10-and-88d-pro-2024",
@@ -853,6 +830,18 @@
     {
       "source": "/blog/li-ning-halbertec-8000-vs-yonex-arcsaber-11-pro/",
       "destination": "/review/yonex-arcsaber-11-pro-review/"
+    },
+    {
+      "source": "/review/li-ning-axforce-90-new-5u-deep-dive/",
+      "destination": "/review/li-ning-axforce-90-new-review/"
+    },
+    {
+      "source": "/blog/li-ning-axforce-90-new-5u-deep-dive/",
+      "destination": "/review/li-ning-axforce-90-new-review/"
+    },
+    {
+      "source": "/comparisons/li-ning-axforce-90-new-5u-deep-dive/",
+      "destination": "/review/li-ning-axforce-90-new-review/"
     }
   ]
 }

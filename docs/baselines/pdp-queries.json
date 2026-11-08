@@ -613,7 +613,7 @@
       "id": "pdp-racket-vic-auraspeed-hs-plus",
       "productId": "vic-auraspeed-hs-plus",
       "expectCategory": "racket",
-      "expectReviewSlug": "victor-auraspeed-hs-plus-attack-review",
+      "expectReviewSlug": "victor-auraspeed-hs-plus-deep-dive",
       "expectReviewKind": "review",
       "expectMinSpecRows": 8,
       "expectMinRelatedReading": 3,

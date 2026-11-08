@@ -120,7 +120,6 @@ TITLE_OVERRIDES = {
     # see the note on TITLE_FALLBACK_QUARANTINE below.
     "yonex-aerus-z2-shoes-review": "Yonex Power Cushion Aerus Z2 review: the 240 g speed boot, three colourways",
     "li-ning-axforce-100-gen-2-vs-gen-1": "Li-Ning AxForce 100 Gen 2 vs Gen 1: a lower entry bar, same ceiling",
-    "li-ning-axforce-90-new-5u-deep-dive": "Li-Ning AxForce 90 New 5U deep dive: the light build that still bites",
     "victor-drivex-12-zsw-vs-original-comparison": "Victor DriveX 12 ZSW vs original: Nanjing build against Taiwan build",
     "victor-auraspeed-90k-ii-review": "Victor Auraspeed 90K II review: Antonsen's speed pillar, updated",
     "li-ning-axforce-90-new-review": "Li-Ning AxForce 90 New review: faster and far more forgiving",
@@ -153,8 +152,10 @@ TITLE_OVERRIDES = {
     "li-ning-gp100-pro-overgrip-review": "Li-Ning GP100 Pro overgrip review: budget dry grip, honestly tested",
     "li-ning-axforce-80-ii-review": "Li-Ning AxForce 80 II review: the all-round attack racket, in 4U and 5U",
     "li-ning-l69-string-review": "Li-Ning L69 string review: balanced at 25 lb, crisper once you pull it tight",
-    "kawasaki-star-cross-second-perspective-review": "Kawasaki Star Cross review: a high-end speed-offence frame, second look",
+    "kawasaki-star-cross-racket-review": "Kawasaki Star Cross review: high-end speed without the high-end weight",
     "victor-sonic-boom-pro-budget-attack-review": "Victor Sonic Boom Pro review: broad, stable attack just north of 300 yuan",
+    "victor-tk-boom-max-racket-review": "Victor TK-BOOM MAX review: a mid-price smash racket that rewards a proper swing",
+    "li-ning-yun-ting-2-pro-shoes-review": "Li-Ning Yun Ting II Pro review: heel lock first, cushion that stays connected",
     "victor-thruster-falcon-review": "Victor Thruster F Falcon Ultra review: a full upgrade on Black Gold",
     "bonny-zhangui-dao-8888ax-ultra-review": "Bonny Zhangui Dao 8888AX Ultra review: high-end balance without ego specs",
     "yonex-arcsaber-7-pro-review": "Yonex Arcsaber 7 Pro review: light, stable control for doubles front court",
@@ -255,7 +256,6 @@ TITLE_OVERRIDES = {
     "li-ning-bladex-900-new-review": "Li-Ning Bladex 900 New review: speed peak with usable stability",
 
     "victor-auraspeed-hs-plus-deep-dive": "Victor Auraspeed HS Plus: the speed racket that turned into a smash weapon",
-    "victor-auraspeed-hs-plus-attack-review": "Victor Auraspeed HS Plus attack review: WES 3.0 doubles weapon",
     # --- Sprint 132: the five duplicate-source pairs, split ---
     # Each of these slugs used to render a sibling's body with a one-line
     # disambiguation prefix bolted on. They now have their own source markdown,
@@ -283,10 +283,8 @@ DEK_OVERRIDES = {
     # Sprint 132 — deks for the five split pairs. Each of these pages used to
     # inherit its sibling's opening paragraph, so the meta description in the
     # SERP was identical on both URLs of the pair.
-    "li-ning-axforce-90-new-5u-deep-dive": "The 5U AxForce 90 New keeps the 4U shaft hardness and drops the head mass. What that buys in fast doubles, and how it compares with the 3U and 4U builds.",
     "yonex-astrox-100zz-axelsen-va-vs-kurenai": "Volume Cut Resin instead of Black Micro Core makes the VA a lighter-swinging 100ZZ. Measured builds, shaft hardness, and whether Kurenai is still worth it.",
     "victor-auraspeed-hs-plus-deep-dive": "Victor's hardest shaft in a small aero frame: specs, WES 3.0 construction, on-court character across every phase, and where the Auraspeed badge misleads.",
-    "victor-auraspeed-hs-plus-attack-review": "A near-even speed frame that smashes from shaft whip rather than head mass — what it out-hits, what it costs to drive, and when the attack case breaks down.",
     "yonex-astrox-99-pro-2-deep-dive": "The 2023 Astrox 99 Pro keeps the head weight and the intent, and lowers the power you need to reach them. How gen 2 sits between the original Pro and gen 3.",
     # Without this the dek is the first sentence of the generation-context
     # paragraph, so the meta description opens "Generation context:" — scaffold

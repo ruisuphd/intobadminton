@@ -5,7 +5,7 @@
     "minMappedCount": 140,
     "minMappablePct": 100,
     "minExplainerGuards": 13,
-    "minMappedE2eGuards": 57
+    "minMappedE2eGuards": 56
   },
   "queries": [
     {
@@ -502,15 +502,6 @@
       "expectProductJsonLd": true,
       "e2e": true,
       "note": "Astrox 99 Pro gen-1 review — alternate editorial path for /best/smash-heavy-rackets/ and /best/singles-rackets/"
-    },
-    {
-      "id": "commercial-vic-auraspeed-hs-plus-attack",
-      "slug": "victor-auraspeed-hs-plus-attack-review",
-      "expectProductId": "vic-auraspeed-hs-plus",
-      "expectCategory": "racket",
-      "expectProductJsonLd": true,
-      "e2e": true,
-      "note": "Victor HS Plus attack tuning review — compare-guide wiring + speed-attack cluster"
     },
     {
       "id": "commercial-ln-axforce-90-new-standalone",

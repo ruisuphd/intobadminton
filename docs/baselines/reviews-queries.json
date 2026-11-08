@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-08-08",
+  "updated": "2026-11-08",
   "coverage": {
-    "minArticleSlugs": 199,
+    "minArticleSlugs": 200,
     "minE2eGuards": 15,
     "requireReviewMapParity": true,
     "requireFeaturedParity": true,
@@ -548,16 +548,6 @@
       "note": "Auto-synced mapped corpus row — Sprint 61"
     },
     {
-      "id": "kawasaki-star-cross-second-perspective-review",
-      "slug": "kawasaki-star-cross-second-perspective-review",
-      "expectProductId": "kawasaki-star-cross",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Kawasaki",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "expectCatalogLinkPattern": "browse kawasaki",
-      "note": "Auto-synced mapped corpus row — Sprint 61"
-    },
-    {
       "id": "kawasaki-twilight-shoes-review",
       "slug": "kawasaki-twilight-shoes-review",
       "expectProductId": "kawasaki-twilight",
@@ -670,16 +660,6 @@
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse li-ning",
       "note": "AxForce 80 II, 4U and 5U, checked against the Taiwan listing"
-    },
-    {
-      "id": "li-ning-axforce-90-new-5u-deep-dive",
-      "slug": "li-ning-axforce-90-new-5u-deep-dive",
-      "expectProductId": "ln-axforce-90-new",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Li-Ning",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "expectCatalogLinkPattern": "browse li-ning",
-      "note": "Auto-synced mapped corpus row — Sprint 61"
     },
     {
       "id": "li-ning-axforce-90-new-review",
@@ -970,16 +950,6 @@
       "id": "victor-auraspeed-fantome-review",
       "slug": "victor-auraspeed-fantome-review",
       "expectProductId": "vic-auraspeed-fantome",
-      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
-      "expectMinRelatedReading": 3,
-      "expectEquipmentFinderPanel": true,
-      "expectCatalogLinkPattern": "browse victor",
-      "note": "Auto-synced mapped corpus row — Sprint 61"
-    },
-    {
-      "id": "victor-auraspeed-hs-plus-attack-review",
-      "slug": "victor-auraspeed-hs-plus-attack-review",
-      "expectProductId": "vic-auraspeed-hs-plus",
       "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
       "expectMinRelatedReading": 3,
       "expectEquipmentFinderPanel": true,
@@ -2020,6 +1990,26 @@
       "expectMinRelatedReading": 3,
       "note": "Auto-synced mapped corpus row — Sprint 61",
       "expectProductId": "vic-thruster-hmrl-ex",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse victor"
+    },
+    {
+      "id": "li-ning-yun-ting-2-pro-shoes-review",
+      "slug": "li-ning-yun-ting-2-pro-shoes-review",
+      "expectCatalogHref": "/catalog/?cat=shoes&brand=Li-Ning",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "ln-yun-ting-2-pro",
+      "expectEquipmentFinderPanel": true,
+      "expectCatalogLinkPattern": "browse li-ning"
+    },
+    {
+      "id": "victor-tk-boom-max-racket-review",
+      "slug": "victor-tk-boom-max-racket-review",
+      "expectCatalogHref": "/catalog/?cat=racket&brand=Victor",
+      "expectMinRelatedReading": 3,
+      "note": "Auto-synced mapped corpus row — Sprint 61",
+      "expectProductId": "vic-tk-boom-max",
       "expectEquipmentFinderPanel": true,
       "expectCatalogLinkPattern": "browse victor"
     }
